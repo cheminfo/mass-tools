@@ -3,6 +3,8 @@
 module.exports = {
     BEGIN: 'begin',
     ATOM: 'atom',
+    MULTIPLIER_RANGE: 'multiplierRange',
+    ISOTOPE: 'isotope',
     CHARGE: 'charge',
     SALT: 'salt',
     OPENING_PARENTHESIS: 'openingParenthesis',
