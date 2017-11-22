@@ -80,16 +80,10 @@ class MFParser {
                     throw new MFError(this.mf, this.i, 'isotopic composition has to follow an atom');
                 }
             } else if (char === '}') {
-
+                throw new MFError(this.mf, this.i, 'found a unexpected closing curly bracket');
             } else if (char === '+') { // charge not in parenthesis
                 let charge = this.getNonParenthesisCharge(ascii);
                 this.result.push({kind: Kind.CHARGE, value: charge});
-            } else if (char === '-') { // charge not in parenthesis OR a negative number of atom
-                if (this.result.pop().kind === Kind.ATOM) {
-
-                } else {
-
-                }
             } else {
                 this.result.push({kind: Kind.TEXT, value: char});
             }
@@ -147,9 +141,8 @@ class MFParser {
         } while (ascii !== 125); // closing curly bracket
         if (substring.match(/^\([0-9,]+$/)) {
             return substring.split(',').map(a => Number(a));
-        } else {
-            new MFError(this.mf, this.i, 'Curly brackets should contain only number and comma');
         }
+        throw new MFError(this.mf, this.i, 'Curly brackets should contain only number and comma');
     }
 
     getParenthesisCharge(ascii) {
