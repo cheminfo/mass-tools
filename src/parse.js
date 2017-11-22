@@ -133,13 +133,18 @@ class MFParser {
 
     getCurlyBracketIsotopeRatio(ascii) {
         let substring = '';
-
+        let first = true;
         do {
-            substring += String.fromCharCode(ascii);
+            if (!first) {
+                substring += String.fromCharCode(ascii);
+            } else {
+                first = false;
+            }
             this.i++;
             ascii = this.mf.charCodeAt(this.i);
         } while (ascii !== 125); // closing curly bracket
-        if (substring.match(/^\([0-9,]+$/)) {
+        console.log(substring);
+        if (substring.match(/^[0-9,]+$/)) {
             return substring.split(',').map(a => Number(a));
         }
         throw new MFError(this.mf, this.i, 'Curly brackets should contain only number and comma');
