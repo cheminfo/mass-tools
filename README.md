@@ -17,8 +17,19 @@ Parse molecular formula
 ## Example
 
 ```js
-const mfParser = require('mf-parser');
+const parseToHtml = require('mf-parser').parseToHtml;
+let html = parseToHtml('Et3N . 2HCl);
 ```
+
+You may also be interested to parse first the MF and then retrieve display representation
+```js
+const MFParser = require('mf-parser');
+let parsed = MFParser.parse('Et3N . 2HCl');
+let displayed = MFParser.toDisplay(parsed);
+console.log(displayed);
+```
+
+This could be used to create your own renderer.
 
 
 ## License
