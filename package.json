@@ -12,7 +12,7 @@
     "test": "run-s testonly eslint",
     "test-travis": "eslint src && jest --coverage && codecov",
     "testonly": "jest",
-    "build": "cheminfo build"
+    "build": "cheminfo build --no-source-map"
   },
   "repository": {
     "type": "git",
