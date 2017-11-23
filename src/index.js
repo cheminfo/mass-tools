@@ -4,11 +4,13 @@ const toDisplay = require('./util/toDisplay');
 const parse = require('./parse');
 const toHtml = require('./util/toHtml');
 
+/**
+ * Parse a molecular formula and converts it to an HTML code
+ * @param {String} mf String containing the molecular formula
+ */
 function parseToHtml(mf) {
     var parsed = parse(mf);
-    console.log(parsed);
     var display = toDisplay(parsed);
-    console.log(display);
     return toHtml(display);
 }
 

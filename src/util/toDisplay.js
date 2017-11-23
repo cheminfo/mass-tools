@@ -4,6 +4,11 @@ const Kind = require('../Kind');
 const Format = require('../Format');
 const formatCharge = require('./formatCharge');
 
+/**
+ * Converts an array of mf elements to an array of formatting information
+ * @param {Array<Object>} result of the parse method
+ */
+
 module.exports = function convertForDisplay(lines) {
     let results = [];
     let result = {};

@@ -1,4 +1,7 @@
 'use strict';
+/**
+ * Define static variable corresponding to the various Kinds of a molecular formula part.
+ */
 
 module.exports = {
     BEGIN: 'begin',

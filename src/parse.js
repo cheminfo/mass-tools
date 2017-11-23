@@ -1,12 +1,13 @@
 'use strict';
 
-/**
- * Parse a mf to an array of kind / value
- * @param {string} mf
- *
- */
+
 const Kind = require('./Kind');
 const parseCharge = require('./util/parseCharge');
+
+/**
+ * Parse a mf to an array of kind / value
+ * @param {String} mf
+ */
 
 module.exports = function parse(mf) {
     return new MFParser().parse(mf);
@@ -143,7 +144,6 @@ class MFParser {
             this.i++;
             ascii = this.mf.charCodeAt(this.i);
         } while (ascii !== 125); // closing curly bracket
-        console.log(substring);
         if (substring.match(/^[0-9,]+$/)) {
             return substring.split(',').map(a => Number(a));
         }
