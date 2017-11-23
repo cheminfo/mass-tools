@@ -124,7 +124,7 @@ class MFParser {
             substring += String.fromCharCode(ascii);
             this.i++;
             ascii = this.mf.charCodeAt(this.i);
-        } while (ascii !== 93);
+        } while (ascii !== 93 && this.i <= this.mf.length);
 
         let atom = substring.replace(/[^a-zA-Z]/g, '');
         let isotope = Number(substring.replace(/[^0-9]/g, ''));
@@ -143,7 +143,7 @@ class MFParser {
             }
             this.i++;
             ascii = this.mf.charCodeAt(this.i);
-        } while (ascii !== 125); // closing curly bracket
+        } while (ascii !== 125 && this.i <= this.mf.length); // closing curly bracket
         if (substring.match(/^[0-9,]+$/)) {
             return substring.split(',').map(a => Number(a));
         }
@@ -157,7 +157,7 @@ class MFParser {
             substring += String.fromCharCode(ascii);
             this.i++;
             ascii = this.mf.charCodeAt(this.i);
-        } while (ascii !== 41); // closing parenthesis
+        } while (ascii !== 41 && this.i <= this.mf.length); // closing parenthesis
         if (substring.match(/^\([0-9+-]+$/)) {
             return parseCharge(substring.substring(1));
         } else {

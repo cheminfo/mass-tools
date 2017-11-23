@@ -23,6 +23,7 @@ var tests = {
     'H{1,1}': [{kind: 'isotopeRatio', value: {atom: 'H', ratio: [1, 1]}}],
     'C10 . H20': [{kind: 'atom', value: 'C'}, {kind: 'multiplier', value: 10}, {kind: 'text', value: ' '}, {kind: 'salt', value: '.'}, {kind: 'text', value: ' '}, {kind: 'atom', value: 'H'}, {kind: 'multiplier', value: 20}],
     '(CH(CH3)2)3N.2HCl': [{kind: 'openingParenthesis', value: '('}, {kind: 'atom', value: 'C'}, {kind: 'atom', value: 'H'}, {kind: 'openingParenthesis', value: '('}, {kind: 'atom', value: 'C'}, {kind: 'atom', value: 'H'}, {kind: 'multiplier', value: 3}, {kind: 'closingParenthesis', value: ')'}, {kind: 'multiplier', value: 2}, {kind: 'closingParenthesis', value: ')'}, {kind: 'multiplier', value: 3}, {kind: 'atom', value: 'N'}, {kind: 'salt', value: '.'}, {kind: 'preMultiplier', value: 2}, {kind: 'atom', value: 'H'}, {kind: 'atom', value: 'Cl'}],
+    'C(2': [{kind: 'atom', value: 'C'}, {kind: 'openingParenthesis', value: '('}, {kind: 'preMultiplier', value: 2}],
 };
 
 
