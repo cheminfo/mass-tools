@@ -26,10 +26,9 @@ You may also be interested to parse first the MF and then retrieve display repre
 const MFParser = require('mf-parser');
 let parsed = MFParser.parse('Et3N . 2HCl');
 let displayed = MFParser.toDisplay(parsed);
+// displayed could be used to ocreate a custom renderer
 console.log(displayed);
 ```
-
-This could be used to create your own renderer.
 
 
 ## License
