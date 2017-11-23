@@ -1,9 +1,7 @@
 'use strict';
 
-const defaultOptions = {};
-
-function mfParser(options) {
-    options = Object.assign({}, defaultOptions, options);
-}
-
-module.exports = mfParser;
+module.exports = {
+    Kind: require('./Kind'),
+    Format: require('./Format'),
+    parse: require('./parse')
+};
