@@ -2,8 +2,7 @@
 
 const Format = require('../Format');
 
-const STYLE_SUPERIMPOSE = 'flex-direction: column;display: inline-flex;justify-content: center;text-align: left;vertical-align: middle;';
-const STYLE_SUPERIMPOSE_SUP_SUB = 'line-height: 1; font-size: 70%';
+const Style = require('../Style');
 
 module.exports = function getHtml(lines) {
     var html = [];
@@ -16,9 +15,9 @@ module.exports = function getHtml(lines) {
                 html.push('<sup>' + line.value + '</sup>');
                 break;
             case Format.SUPERIMPOSE:
-                html.push(`<span style="${STYLE_SUPERIMPOSE}">`);
-                html.push(`<sup style="${STYLE_SUPERIMPOSE_SUP_SUB}">${line.over}</sup>`);
-                html.push(`<sub style="${STYLE_SUPERIMPOSE_SUP_SUB}">${line.under}</sub>`);
+                html.push(`<span style="${Style.SUPERIMPOSE}">`);
+                html.push(`<sup style="${Style.SUPERIMPOSE_SUP_SUB}">${line.over}</sup>`);
+                html.push(`<sub style="${Style.SUPERIMPOSE_SUP_SUB}">${line.under}</sub>`);
                 html.push('</span>');
                 break;
             default:

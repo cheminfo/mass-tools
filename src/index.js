@@ -17,6 +17,7 @@ function parseToHtml(mf) {
 module.exports = {
     Kind: require('./Kind'),
     Format: require('./Format'),
+    Style: require('./style'),
     parse: require('./parse'),
     toDisplay,
     toHtml,
