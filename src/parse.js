@@ -90,7 +90,21 @@ class MFParser {
             }
             this.i++;
         }
+
+        this.checkParenthesis();
+
         return this.result;
+    }
+
+    checkParenthesis() {
+        let counter = 0;
+        for (let line of this.result) {
+            if (line.kind === Kind.OPENING_PARENTHESIS) counter++;
+            if (line.kind === Kind.CLOSING_PARENTHESIS) counter--;
+        }
+        if (counter !== 0) {
+            throw new MFError(this.mf, this.i, 'number of opening and closing parenthesis not equal');
+        }
     }
 
     getNumber(ascii) {
