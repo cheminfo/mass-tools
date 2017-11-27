@@ -1,6 +1,8 @@
 'use strict';
 
 const Kind = require('../Kind');
+const groups = require('chemical-elements/src/groupsObject.js');
+const atomSorter = require('atom-sorter');
 
 module.exports = function toParts(lines) {
     let parts = [];
@@ -42,7 +44,7 @@ module.exports = function toParts(lines) {
         previousKind = line.kind;
     }
     globalPartMultiplier(currentPart);
-
+    expandGroups(parts);
     return combineAtoms(parts);
 };
 
@@ -93,6 +95,30 @@ function postMultiplier(currentPart, value, previousKind) {
     }
 }
 
+function expandGroups(parts) {
+    for (let part of parts) {
+        let expanded = false;
+        for (let i = 0; i < part.lines.length; i++) {
+            let line = part.lines[i];
+            if (line.kind === Kind.ATOM) {
+                let group = groups[line.value];
+                if (group) {
+                    expanded = true;
+                    for (let element of group.elements) {
+                        part.lines.push({
+                            kind: 'atom',
+                            value: element.symbol,
+                            multiplier: line.multiplier * element.number
+                        });
+                    }
+                    part.lines[i] = undefined;
+                }
+            }
+        }
+        if (expanded) part.lines = part.lines.filter((a) => a);
+    }
+}
+
 function combineAtoms(parts) {
     let results = [];
     for (let part of parts) {
@@ -112,6 +138,7 @@ function combineAtoms(parts) {
                 }
             }
         }
+        result.sort((a, b) => atomSorter(a.value, b.value));
     }
     return results;
 }

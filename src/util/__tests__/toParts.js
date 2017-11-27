@@ -31,10 +31,11 @@ var tests = [
 
     },
     {
-        mf: 'Et3N.HCl',
+        mf: 'Et3N.ClH',
         result: [
             [
-                {kind: 'atom', value: 'Et', multiplier: 3},
+                {kind: 'atom', value: 'C', multiplier: 6},
+                {kind: 'atom', value: 'H', multiplier: 15},
                 {kind: 'atom', value: 'N', multiplier: 1}
             ], [
                 {kind: 'atom', value: 'Cl', multiplier: 1},
