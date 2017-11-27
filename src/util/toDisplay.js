@@ -79,7 +79,7 @@ module.exports = function convertForDisplay(lines) {
                 } else {
                     result = {
                         kind: Format.TEXT,
-                        value: '•'
+                        value: ' • '
                     };
                     results.push(result);
                 }

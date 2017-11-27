@@ -13,7 +13,6 @@ test('MF', () => {
             {kind: 'atom', value: 'Cl', multiplier: 1},
             {kind: 'atom', value: 'H', multiplier: 1}
         ]]
-    );
-    var toCanonicalHtml = mf.toCanonicalHtml();
-    expect(toCanonicalHtml).toBe('Et<sub>3</sub>N<sub>1</sub> • Cl<sub>1</sub>H<sub>1</sub>');
+    ); mf.canonize(); var toHtml = mf.toHtml();
+    expect(toHtml).toBe('Et<sub>3</sub>N<sub>1</sub> • Cl<sub>1</sub>H<sub>1</sub>');
 });
