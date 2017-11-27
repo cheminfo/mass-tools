@@ -4,6 +4,8 @@
 const parse = require('./parse');
 const toDisplay = require('./util/toDisplay');
 const toHtml = require('./util/toHtml');
+const toParts = require('./util/toParts');
+const toCanonicalHtml = require('./util/toCanonicalHtml');
 
 class MF {
     constructor(mf) {
@@ -23,7 +25,17 @@ class MF {
         return this.html;
     }
 
+    toParts() {
+        if (!this.parts) {
+            this.parts = toParts(this.parsed);
+        }
+        return this.parts;
+    }
 
+    toCanonicalHtml() {
+        this.toParts();
+        return toCanonicalHtml(this.parts);
+    }
 }
 
 module.exports = MF;
