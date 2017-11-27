@@ -5,6 +5,7 @@ const parse = require('./parse');
 const toDisplay = require('./util/toDisplay');
 const toHtml = require('./util/toHtml');
 const toParts = require('./util/toParts');
+const toInfo = require('./util/toInfo');
 const partsToDisplay = require('./util/partsToDisplay');
 
 class MF {
@@ -31,6 +32,17 @@ class MF {
             this.cache.parts = toParts(this.parsed);
         }
         return this.cache.parts;
+    }
+
+    /**
+     * Returns an object with the global MF, global charge, monoisotopic mass and mass
+     * as well as the same informations for all the parts
+     */
+    toInfo() {
+        if (!this.cache.parts) {
+            this.toParts();
+            this.cache.info = toInfo(this.cache.parts);
+        }
     }
 
     canonize() {
