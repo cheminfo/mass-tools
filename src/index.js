@@ -22,4 +22,5 @@ module.exports = {
     toDisplay,
     toHtml,
     parseToHtml,
+    MF: require('./MF'),
 };
