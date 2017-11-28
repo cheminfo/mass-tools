@@ -19,8 +19,8 @@ module.exports = function getInfo(parts) {
         for (let line of part) {
             switch (line.kind) {
                 case Kind.ATOM:
-                    currentPart.monoisotopicMass += elements[line.value].monoisotopicMass;
-                    currentPart.mass += elements[line.value].mass;
+                    currentPart.monoisotopicMass += elements[line.value].monoisotopicMass * line.multiplier;
+                    currentPart.mass += elements[line.value].mass * line.multiplier;
                     break;
                 case Kind.CHARGE:
                     currentPart.charge = line.value;
@@ -44,8 +44,6 @@ module.exports = function getInfo(parts) {
         result.monoisotopicMass += a.monoisotopicMass;
         result.charge += a.charge;
     });
-
     return result;
-
 };
 

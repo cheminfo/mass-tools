@@ -26,10 +26,20 @@ test('MF of Et3N.HCl', () => {
     expect(html).toBe('C<sub>6</sub>H<sub>15</sub>N<sub>1</sub> • H<sub>1</sub>Cl<sub>1</sub>');
 
     let info = mf.getInfo();
-    expect(info).toEqual({
-        mf: '',
-        parts: []
-    });
+    expect(info).toEqual({parts:
+        [{mass: 101.19022990269394,
+            monoisotopicMass: 101.12044948788001,
+            charge: 0,
+            mf: 'C6H15N'},
+        {mass: 36.460878336663775,
+            monoisotopicMass: 35.97667771423,
+            charge: 0,
+            mf: 'HCl'}],
+    monoisotopicMass: 137.09712720211002,
+    mass: 137.6511082393577,
+    charge: 0,
+    mf: 'C6H15N.HCl'}
+    );
 });
 
 test('MF of (-)SO4(-)(+2)2', () => {
@@ -46,6 +56,9 @@ test('MF of (-)SO4(-)(+2)2', () => {
 
     var newMF = mf.toMF();
     expect(newMF).toBe('O4S(+2)');
+
+    let info = mf.getInfo();
+    expect(info).toEqual([]);
 
 });
 
