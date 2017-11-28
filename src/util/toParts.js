@@ -45,7 +45,7 @@ module.exports = function toParts(lines) {
     }
     globalPartMultiplier(currentPart);
     expandGroups(parts);
-    return combineAtoms(parts);
+    return combineAtomsIsotopesCharges(parts);
 };
 
 function createNewPart() {
@@ -119,26 +119,42 @@ function expandGroups(parts) {
     }
 }
 
-function combineAtoms(parts) {
+function combineAtomsIsotopesCharges(parts) {
     let results = [];
     for (let part of parts) {
         let result = [];
         results.push(result);
         calculateAndSortKeys(part);
 
-        // Kind.ATOM
-        {
-            let currentKey = '';
-            for (let key of part.keys) {
+        let currentKey = '';
+        for (let key of part.keys) {
+            if (key.key === Kind.CHARGE) {
                 if (currentKey !== key.key) {
-                    currentKey = key.key;
+                    result.push({
+                        kind: Kind.CHARGE,
+                        value: key.value.value * key.value.multiplier
+                    });
+                } else {
+                    result[result.length - 1].value += key.value.value * key.value.multiplier;
+                }
+            } else {
+                if (currentKey !== key.key) {
                     result.push(key.value);
                 } else {
                     result[result.length - 1].multiplier += key.value.multiplier;
                 }
             }
+            currentKey = key.key;
         }
-        result.sort((a, b) => atomSorter(a.value, b.value));
+
+        result.sort((a, b) => {
+            if (a.kind === Kind.CHARGE) return 1;
+            if (b.kind === Kind.CHARGE) return -1;
+            return atomSorter(
+                a.kind === Kind.ATOM ? a.value : a.value.atom + a.value.isotope,
+                b.kind === Kind.ATOM ? b.value : b.value.atom + b.value.isotope
+            );
+        });
     }
     return results;
 }
@@ -156,12 +172,18 @@ function calculateAndSortKeys(part) {
 
 function getKey(line) {
     let key = [line.kind];
-    if (typeof line.value === 'string') {
-        key.push(line.value);
-    } else {
-        for (let prop of Object.keys(line.value).sort()) {
-            key.push(line.value[prop]);
-        }
+
+    switch (line.kind) {
+        case (Kind.CHARGE):
+            break;
+        default:
+            if (typeof line.value === 'string') {
+                key.push(line.value);
+            } else {
+                for (let prop of Object.keys(line.value).sort()) {
+                    key.push(line.value[prop]);
+                }
+            }
     }
     return key.join('-');
 }

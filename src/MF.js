@@ -39,10 +39,11 @@ class MF {
      * as well as the same informations for all the parts
      */
     toInfo() {
-        if (!this.cache.parts) {
+        if (!this.cache.info) {
             this.toParts();
             this.cache.info = toInfo(this.cache.parts);
         }
+        return this.cache.info;
     }
 
     canonize() {
