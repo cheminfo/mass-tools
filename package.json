@@ -29,10 +29,12 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "atom-sorter": "0.0.3",
+    "atom-sorter": "0.0.4",
     "chemical-elements": "^0.2.0"
   },
   "devDependencies": {
+    "benchmark": "^2.1.4",
+    "chemcalc": "^3.4.1",
     "cheminfo-tools": "^1.20.1",
     "codecov": "^3.0.0",
     "eslint": "^4.12.0",
