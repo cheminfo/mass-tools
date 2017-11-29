@@ -91,3 +91,28 @@ test('MF of NC[13C][15N]2NN2', () => {
     var newMF = mf.toMF();
     expect(newMF).toBe('C[13C]N4[15N]2');
 });
+
+test.only('MF of CC{50,50}H', () => {
+    var mf = new MF('HC{50,50}C');
+    var parts = mf.toParts();
+    expect(parts).toEqual(
+        [[
+            {kind: 'atom', value: 'C', multiplier: 1},
+            {kind: 'atom', value: 'H', multiplier: 1},
+            {kind: 'isotopeRatio', value: {atom: 'C', ratio: [50, 50]}, multiplier: 1}
+        ]]
+    );
+
+    var newMF = mf.toMF();
+    expect(newMF).toBe('C[13C]N4[15N]2');
+
+    let info = mf.getInfo();
+    expect(info).toEqual({
+        monoisotopicMass: 111.01586865055,
+        mass: 111.04112137534844,
+        charge: 0,
+        mf: 'C[13C]N4[15N]2'}
+    );
+
+
+});

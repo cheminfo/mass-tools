@@ -146,14 +146,15 @@ function combineAtomsIsotopesCharges(parts) {
             }
             currentKey = key.key;
         }
-
+        console.log(result);
         result.sort((a, b) => {
             if (a.kind === Kind.CHARGE) return 1;
             if (b.kind === Kind.CHARGE) return -1;
-            return atomSorter(
-                a.kind === Kind.ATOM ? a.value : a.value.atom + a.value.isotope,
-                b.kind === Kind.ATOM ? b.value : b.value.atom + b.value.isotope
-            );
+
+            let indexA = a.kind === Kind.ATOM ? a.value : a.value.atom + a.value.isotope;
+            let indexB = b.kind === Kind.ATOM ? b.value : b.value.atom + b.value.isotope;
+            console.log(indexA, indexB);
+            return atomSorter(indexA, indexB);
         });
     }
     return results;
