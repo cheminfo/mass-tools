@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "atom-sorter": "0.0.4",
-    "chemical-elements": "^0.4.0"
+    "chemical-elements": "^0.4.1"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",

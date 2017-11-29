@@ -18,7 +18,7 @@ suite
     .add('chemcalc', function () {
         let info = {mf: ''};
         for (let i = 0; i < 1000; i++) {
-            let mf = info.mf + 'H' + i + 'C' + i;
+            let mf = info.mf + 'H' + i + 'C' + i + 'N' + i + 'O' + i;
             info = CC.analyseMF(mf);
         }
     })

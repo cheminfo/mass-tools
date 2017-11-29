@@ -146,18 +146,38 @@ function combineAtomsIsotopesCharges(parts) {
             }
             currentKey = key.key;
         }
-        console.log(result);
+
         result.sort((a, b) => {
             if (a.kind === Kind.CHARGE) return 1;
             if (b.kind === Kind.CHARGE) return -1;
 
-            let indexA = a.kind === Kind.ATOM ? a.value : a.value.atom + a.value.isotope;
-            let indexB = b.kind === Kind.ATOM ? b.value : b.value.atom + b.value.isotope;
-            console.log(indexA, indexB);
-            return atomSorter(indexA, indexB);
+            let atomA = a.kind === Kind.ATOM ? a.value : a.value.atom;
+            let atomB = b.kind === Kind.ATOM ? b.value : b.value.atom;
+            if (atomA !== atomB) return atomSorter(atomA, atomB);
+            // same atome but some isotopes ...
+            if (a.kind === Kind.ATOM) return -1;
+            if (b.kind === Kind.ATOM) return 1;
+            if (a.kind === Kind.ISOTOPE) return -1;
+            if (b.kind === Kind.ISOTOPE) return 1;
+            if (a.kind === Kind.ISOTOPE_RATIO) return -1;
+            if (b.kind === Kind.ISOTOPE_RATIO) return 1;
+            return 0;
         });
     }
     return results;
+}
+
+function getAtomIndex(line) {
+    switch (line.kind) {
+        case Kind.ATOM:
+            return line.value;
+        case Kind.ISOTOPE:
+            return line.value.atom + line.value.isotope;
+        case Kind.ISOTOPE_RATIO:
+            return line.value.atom + line.value.ratio.join(',');
+        default:
+            throw new Error('Can not kind index for ', line.kind);
+    }
 }
 
 function calculateAndSortKeys(part) {

@@ -38,8 +38,8 @@ var tests = [
                 {kind: 'atom', value: 'H', multiplier: 15},
                 {kind: 'atom', value: 'N', multiplier: 1}
             ], [
-                {kind: 'atom', value: 'Cl', multiplier: 1},
-                {kind: 'atom', value: 'H', multiplier: 1}
+                {kind: 'atom', value: 'H', multiplier: 1},
+                {kind: 'atom', value: 'Cl', multiplier: 1}
             ]
         ]
     },
