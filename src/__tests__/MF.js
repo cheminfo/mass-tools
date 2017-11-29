@@ -42,23 +42,29 @@ test('MF of Et3N.HCl', () => {
     );
 });
 
-test('MF of (-)SO4(-)(+2)2', () => {
-    var mf = new MF('(-)SO4(-)(+2)2');
+test('MF of (+)SO4(+)(-2)2', () => {
+    var mf = new MF('(+)SO4(+)(-2)2');
     var parts = mf.toParts();
 
     expect(parts).toEqual(
         [[
             {kind: 'atom', value: 'O', multiplier: 4},
             {kind: 'atom', value: 'S', multiplier: 1},
-            {kind: 'charge', value: 2},
+            {kind: 'charge', value: -2},
         ]]
     );
 
     var newMF = mf.toMF();
-    expect(newMF).toBe('O4S(+2)');
+    expect(newMF).toBe('O4S(-2)');
 
     let info = mf.getInfo();
-    expect(info).toEqual([]);
+    expect(info).toEqual({
+        monoisotopicMass: 95.95172965268,
+        mass: 96.06240710340018,
+        charge: -2,
+        observedMonoisotopicMass: 47.97641340624907,
+        mf: 'O4S(-2)'}
+    );
 
 });
 
@@ -72,6 +78,14 @@ test('MF of NC[13C][15N]2NN2', () => {
             {kind: 'atom', value: 'N', multiplier: 4},
             {kind: 'isotope', value: {atom: 'N', isotope: 15}, multiplier: 2}
         ]]
+    );
+
+    let info = mf.getInfo();
+    expect(info).toEqual({
+        monoisotopicMass: 111.01586865055,
+        mass: 111.04112137534844,
+        charge: 0,
+        mf: 'C[13C]N4[15N]2'}
     );
 
     var newMF = mf.toMF();
