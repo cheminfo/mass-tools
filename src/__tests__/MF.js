@@ -42,6 +42,33 @@ test('MF of Et3N.HCl', () => {
     );
 });
 
+test.only('MF of (Me2CH)3N no expand', () => {
+    var mf = new MF('(Me2CH)3N');
+    var parts = mf.toParts({expand: false});
+
+    expect(parts).toEqual(
+        [[
+            {kind: 'atom', value: 'C', multiplier: 3},
+            {kind: 'atom', value: 'H', multiplier: 3},
+            {kind: 'atom', value: 'Me', multiplier: 6},
+            {kind: 'atom', value: 'N', multiplier: 1}
+        ]]
+
+    );
+
+    var newMF = mf.toMF();
+    expect(newMF).toBe('C3H3Me6N');
+
+    let info = mf.getInfo();
+    expect(info).toEqual(
+        {mass: 143.27008211723435,
+            monoisotopicMass: 143.16739968126,
+            charge: 0,
+            mf: 'C3H3Me6N'
+        }
+    );
+});
+
 test('MF of (+)SO4(+)(-2)2', () => {
     var mf = new MF('(+)SO4(+)(-2)2');
     var parts = mf.toParts();

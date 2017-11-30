@@ -28,9 +28,9 @@ class MF {
         return this.cache.html;
     }
 
-    toParts() {
+    toParts(options) {
         if (!this.cache.parts) {
-            this.cache.parts = toParts(this.parsed);
+            this.cache.parts = toParts(this.parsed, options);
         }
         return this.cache.parts;
     }

@@ -4,7 +4,17 @@ const Kind = require('../Kind');
 const groups = require('chemical-elements/src/groupsObject.js');
 const atomSorter = require('atom-sorter');
 
-module.exports = function toParts(lines) {
+/**
+ *
+ * @param {*} lines
+ * @param {object} options
+ * @param {boolean} [true] options.expand - Should we expand the groups
+ */
+
+module.exports = function toParts(lines, options = {}) {
+    const {
+        expand: shouldExpandGroups = true
+    } = options;
     let parts = [];
 
     let currentPart = createNewPart();
@@ -39,12 +49,12 @@ module.exports = function toParts(lines) {
                 );
                 break;
             default:
-                throw new Error('Can not process mf having ', line.kind);
+                throw new Error('Can not process mf having: ' + line.kind);
         }
         previousKind = line.kind;
     }
     globalPartMultiplier(currentPart);
-    expandGroups(parts);
+    if (shouldExpandGroups) expandGroups(parts);
     return combineAtomsIsotopesCharges(parts);
 };
 

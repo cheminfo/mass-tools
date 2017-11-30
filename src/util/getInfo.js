@@ -2,6 +2,7 @@
 
 const partToMF = require('./partToMF');
 const elements = require('chemical-elements/src/elementsAndStableIsotopesObject.js');
+const groups = require('chemical-elements/src/groupsObject.js');
 const Kind = require('../Kind');
 const {ELECTRON_MASS} = require('chemical-elements/src/constants');
 
@@ -51,14 +52,16 @@ function getProcessedPart(part) {
         switch (line.kind) {
             case Kind.ATOM: {
                 let element = elements[line.value];
-                if (!element) throw new Error('Unknown element', line.value);
+                // todo should we have a kind GROUP ?
+                if (!element) element = groups[line.value];
+                if (!element) throw new Error('Unknown element: ' + line.value);
                 currentPart.monoisotopicMass += element.monoisotopicMass * line.multiplier;
                 currentPart.mass += element.mass * line.multiplier;
                 break;
             }
             case Kind.ISOTOPE: {
                 let isotope = isotopes[line.value.isotope + line.value.atom];
-                if (!isotope) throw new Error('Unknown isotope', line.value.isotope + line.value.atom);
+                if (!isotope) throw new Error('Unknown isotope: ' + line.value.isotope + line.value.atom);
                 currentPart.monoisotopicMass += isotope.mass * line.multiplier;
                 currentPart.mass += isotope.mass * line.multiplier;
                 break;
