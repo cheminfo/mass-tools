@@ -42,7 +42,7 @@ test('MF of Et3N.HCl', () => {
     );
 });
 
-test.only('MF of (Me2CH)3N no expand', () => {
+test('MF of (Me2CH)3N no expand', () => {
     var mf = new MF('(Me2CH)3N');
     var parts = mf.toParts({expand: false});
 
