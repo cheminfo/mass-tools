@@ -1,0 +1,109 @@
+symbol	name	mf
+Abu	2-Aminobutyric acid diradical	C4H7NO
+Acet	Acetyl	C2H3O
+Acm	Acetamidomethyl	C3H6NO
+Adao	Adamantyloxy	C10H15O
+Aib	alpha-Aminoisobutyric acid diradical	C4H7NO
+Ala	Alainine diradical	C3H5NO
+Arg	Arginine diradical	C6H12N4O
+Argp	Arginine triradical	C6H11N4O
+Asn	Asparagine diradical	C4H6N2O2
+Asnp	Asparagine triradical	C4H5N2O2
+Asp	Aspartic acid diradical	C4H5NO3
+Aspp	Aspartic acid triradical	C4H4NO3
+Asu	alpha-Aminosuberic acid diradical	C8H13NO3
+Asup	alpha-Aminosuberic acid triradical	C8H12NO3
+Boc	t-Butoxycarbonyl	C5H9O2
+Bom	Benzyloxymethyl	C8H9O
+Brz	2-Bromobenzyloxycarbonyl	C8H6BrO2
+Bu	Butyl	C4H9
+Bum	t-Butoxymethyl	C5H11O
+Bz	Benzoyl	C7H5O
+Bzl	Benzyl	C7H7
+Bn	Benzyl	C7H7
+Bzlo	Benzyloxy	C7H7O
+Cha	beta-Cyclohexylalanine diradical	C9H15NO
+Chxo	Cyclohexyloxy	C6H11O
+Cit	Citrulline diradical	C6H11N3O2
+Citp	Citrulline triradical	C6H10N3O2
+Clz	2-Chlorobenzyloxycarbonyl	C8H6ClO2
+Cp	Cyclopentadienyl	C5H5
+Cys	Cysteine diradical	C3H5NOS
+Cysp	Cysteine triradical	C3H4NOS
+D	Deuterium	[2H]
+Dde	Dde	C10H13O2
+Dnp	2,4-Dinitrophenyl	C6H3N2O4
+Et	Ethyl	C2H5
+Fmoc	Fluorenylmethoxycarbonyl	C15H11O2
+For	Formyl	CHO
+Gln	Glutamine diradical	C5H8N2O2
+Glnp	Glutamine triradical	C5H7N2O2
+Glp	Pyroglutamine	C5H5NO2
+Glu	Glutamic acid diradical	C5H7NO3
+Glup	Glutamic acid triradical	C5H6NO3
+Gly	Glycine diradical	C2H3NO
+Hci	Homocitrulline diradical	C7H13N3O2
+Hcip	Homocitrulline triradical	C7H12N3O2
+His	Histidine diradical	C6H7N3O
+Hisp	Histidine triradical	C6H6N3O
+Hser	Homoserine diradical	C4H7NO2
+Hserp	Homoserine triradical	C4H6NO2
+Hyp	Hydroxyproline diradical	C5H7NO2
+Hypp	Hydroxyproline triradical	C5H6NO2
+Ile	Isoleucine diradical	C6H11NO
+Ivdde	1-[4,4-dimethyl-2,6-dioxocyclohexylidene)-3-methylbutyl	C14H21O2
+Leu	Leucine diradical	C6H11NO
+Lys	Lysine diradical	C6H12N2O
+Lysp	Lysine triradical	C6H11N2O
+Mbh	4,4'-Dimethoxybenzhydryl	C15H15O2
+Me	Methyl	CH3
+Mebzl	4-Methylbenzyl	C8H9
+Meobzl	4-Methoxybenzyl	C8H9O
+Met	Methionine diradical	C5H9NOS
+Mmt	4-Methoxytrityl	C20H17O
+Mtc	2,2,5,7,8-pentamethylchroman-6-sulphonyl	C14H19O3S
+Mtr	4-Methoxy-2,3,6-trimethylbenzenesulphonyl	C10H13O3S
+Mts	Mesitylene-2-sulphonyl	C9H11O2S
+Mtt	4-Methyltrityl	C20H17
+Nle	Norleucine diradical	C6H11NO
+Npys	3-Nitro-2-pyridinesulphenyl	C5H3N2O2S
+Nva	Norvaline diradical	C5H9NO
+Odmab	Odmab	C20H26NO3
+Orn	Ornithine diradical	C5H10N2O
+Ornp	Ornithine triradical	C5H9N2O
+Pbf	2,2,4,6,7-pentamethyldihydrobenzofurane-5-sulfonyl	C13H17O3S
+Pen	Penicillamine diradical	C5H9NOS
+Penp	Penicillamine triradical	C5H8NOS
+Ph	Phenyl	C6H5
+Phe	Phenylalanine diradical	C9H9NO
+Phepcl	4-Chlorophenylalanine diradical	C9H8ClNO
+Phg	Phenylglycine	C8H7NO
+Pmc	2,2,5,7,8-Pentamethylchroman-6-sulphonyl	C14H19O3S
+Pro	Proline diradical	C5H7NO
+Pyr	Pyroglutamine	C5H5NO2
+Sar	Sarcosine diradical	C3H5NO
+Ser	Serine diradical	C3H5NO2
+Serp	Serine triradical	C3H4NO2
+Sta	Statine diradical	C8H15NO2
+Stap	Statine triradical	C8H14NO2
+Tacm	Trimethylacetamidomethyl	C6H12NO
+Tbdms	t-Butyldimethylsilyl	C6H15Si
+Tbu	t-Butyl	C4H9
+Tbuo	t-Butoxy	C4H9O
+Tbuthio	t-Butylthio	C4H9S
+Tfa	Trifluoroacetyl	C2F3O
+Thr	Threonine diradical	C4H7NO2
+Thrp	Threonine triradical	C4H6NO2
+Tips	Triisopropylsilyl	C9H21Si
+Tms	Trimethylsilyl	C3H9Si
+Tos	Tosyl	C7H7O2S
+Trp	Tryptophan diradical	C11H10N2O
+Trpp	Tryptophan triradical	C11H9N2O
+Trt	Trityl	C19H15
+Tyr	Tyrosine diradical	C9H9NO2
+Tyrp	Tyrosine triradical	C9H8NO2
+Val	Valine	C5H9NO
+Valoh	beta-Hydroxyvaline diradical	C5H9NO2
+Valohp	beta-Hydroxyvaline triradical	C5H8NO2
+Xan	Xanthyl	C13H9O
+Z	Benzyloxycarbonyl	C8H7O2

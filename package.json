@@ -1,24 +1,20 @@
 {
-  "name": "mf-parser",
+  "private": true,
+  "name": "molecular-formula",
   "version": "0.1.0",
-  "description": "Parse molecular formula",
-  "main": "./src/index.js",
-  "files": [
-    "src"
-  ],
   "scripts": {
-    "eslint": "eslint src test",
+    "eslint": "eslint packages *.js --cache",
     "eslint-fix": "npm run eslint -- --fix",
+    "prepare": "lerna bootstrap",
+    "publish": "git pull --rebase && npm run test && lerna publish",
     "test": "run-s testonly eslint",
     "test-travis": "eslint src && jest --coverage && codecov",
-    "testonly": "jest",
-    "build": "cheminfo build --no-source-map"
+    "testonly": "jest"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/cheminfo-js/mf-parser.git"
   },
-  "keywords": [],
   "author": "Luc Patiny <luc@patiny.com>",
   "license": "MIT",
   "bugs": {
@@ -27,10 +23,6 @@
   "homepage": "https://github.com/cheminfo-js/mf-parser#readme",
   "jest": {
     "testEnvironment": "node"
-  },
-  "dependencies": {
-    "atom-sorter": "0.0.4",
-    "chemical-elements": "^0.4.1"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
@@ -41,6 +33,7 @@
     "eslint-config-cheminfo": "^1.8.0",
     "eslint-plugin-no-only-tests": "^2.0.0",
     "jest": "^21.2.1",
+    "lerna": "^2.5.1",
     "npm-run-all": "^4.1.2"
   }
 }

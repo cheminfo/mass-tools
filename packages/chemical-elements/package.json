@@ -1,0 +1,22 @@
+{
+  "name": "chemical-elements",
+  "version": "0.0.0",
+  "description": "JSON containing information about chemical elements and isotopes",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo-js/mf-parser.git"
+  },
+  "keywords": [],
+  "author": "Luc Patiny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo-js/mf-parser/issues"
+  },
+  "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/chemical-elements#readme"
+}

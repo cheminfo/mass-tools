@@ -1,0 +1,20 @@
+{
+  "name": "atom-sorter",
+  "version": "0.0.0",
+  "description": "Callback allowing to sort chemical elements (atoms) in Hill order",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo-js/mf-parser.git"
+  },
+  "keywords": [],
+  "author": "Luc Patiny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo-js/mf-parser/issues"
+  },
+  "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/atom-sorter#readme"
+}
