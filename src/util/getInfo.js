@@ -29,6 +29,8 @@ module.exports = function getInfo(parts) {
     for (let part of parts) {
         result.parts.push(getProcessedPart(part));
     }
+
+
     result.monoisotopicMass = 0;
     result.mass = 0;
     result.charge = 0;
