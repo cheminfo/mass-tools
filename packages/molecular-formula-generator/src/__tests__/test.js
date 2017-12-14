@@ -1,6 +1,6 @@
 'use strict';
 
-const generateMFs = require('../generateMFs');
+const generateMFs = require('..');
 
 test('generateMFs from array of array with comment', function () {
     var mfsArray = [['C', 'H$YY'], [], [''], ['Cl', 'Br$XX']];
@@ -68,8 +68,9 @@ test('From array of string with some range', function () {
     expect(result.length).toBe(26);
 });
 
-test('From array of string chem em and msem', function () {
+test.only('From array of string chem em and msem', function () {
     var mfsArray = ['C0-2.O', ['+', '-', '++', '--']];
+    var mfsArray = ['['-']];
     var result = generateMFs(mfsArray);
     expect(result[0].mf).toBe('+');
     expect(result[0].charge).toBe(1);

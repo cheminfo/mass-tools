@@ -1,0 +1,11 @@
+'use strict';
+
+const request = require('request-promise');
+
+module.exports = async function fetchJSON(url) {
+    let response = await request({
+        uri: url,
+        encoding: 'application/json'
+    });
+    return response;
+};
