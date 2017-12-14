@@ -17,6 +17,7 @@ var tests = {
     'C(+2)': [{kind: 'atom', value: 'C'}, {kind: 'charge', value: 2}],
     'C(2-)': [{kind: 'atom', value: 'C'}, {kind: 'charge', value: -2}],
     'C(--)': [{kind: 'atom', value: 'C'}, {kind: 'charge', value: -2}],
+    C$ABC: [{kind: 'atom', value: 'C'}, {kind: 'comment', value: 'ABC'}],
     'C(-1)(-3)': [{kind: 'atom', value: 'C'}, {kind: 'charge', value: -1}, {kind: 'charge', value: -3}],
     'C(-1)2(-3)3': [{kind: 'atom', value: 'C'}, {kind: 'charge', value: -1}, {kind: 'multiplier', value: 2}, {kind: 'charge', value: -3}, {kind: 'multiplier', value: 3}],
     'C(-2)': [{kind: 'atom', value: 'C'}, {kind: 'charge', value: -2}],

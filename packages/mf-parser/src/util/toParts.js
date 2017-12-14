@@ -20,7 +20,6 @@ module.exports = function toParts(lines, options = {}) {
     let currentPart = createNewPart();
     let previousKind = Kind.BEGIN;
     parts.push(currentPart);
-
     for (let line of lines) {
         switch (line.kind) {
             case Kind.OPENING_PARENTHESIS:

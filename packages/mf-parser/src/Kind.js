@@ -15,5 +15,6 @@ module.exports = {
     CLOSING_PARENTHESIS: 'closingParenthesis',
     PRE_MULTIPLIER: 'preMultiplier',
     MULTIPLIER: 'multiplier',
-    TEXT: 'text'
+    TEXT: 'text',
+    COMMENT: 'comment'
 };
