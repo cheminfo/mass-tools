@@ -1,12 +1,14 @@
-import loadGoogleSheet from '../loadGoogleSheet';
+'use strict';
 
-describe('test loadKnapSack', () => {
-    it('should return 42', async () => {
-        let data = await loadGoogleSheet();
+const loadGoogleSheet = require('../loadGoogleSheet');
 
-        console.log(data);
+test('test loadKnapSack', async () => {
+
+    let data = await loadGoogleSheet();
+
+    console.log('xx', data.length);
 
 
-        // expect(myModule()).toEqual(42);
-    });
+    // expect(myModule()).toEqual(42);
+
 });

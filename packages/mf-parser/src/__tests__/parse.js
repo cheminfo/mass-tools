@@ -17,6 +17,7 @@ var tests = {
     'C(+2)': [{kind: 'atom', value: 'C'}, {kind: 'charge', value: 2}],
     'C(2-)': [{kind: 'atom', value: 'C'}, {kind: 'charge', value: -2}],
     'C(--)': [{kind: 'atom', value: 'C'}, {kind: 'charge', value: -2}],
+    '(H+)': [{kind: 'openingParenthesis', value: '('}, {kind: 'atom', value: 'H'}, {kind: 'charge', value: 1}, {kind: 'closingParenthesis', value: ')'}],
     C$ABC: [{kind: 'atom', value: 'C'}, {kind: 'comment', value: 'ABC'}],
     'C(-1)(-3)': [{kind: 'atom', value: 'C'}, {kind: 'charge', value: -1}, {kind: 'charge', value: -3}],
     'C(-1)2(-3)3': [{kind: 'atom', value: 'C'}, {kind: 'charge', value: -1}, {kind: 'multiplier', value: 2}, {kind: 'charge', value: -3}, {kind: 'multiplier', value: 3}],
@@ -28,7 +29,7 @@ var tests = {
     '(CH(CH3)2)3N.2HCl': [{kind: 'openingParenthesis', value: '('}, {kind: 'atom', value: 'C'}, {kind: 'atom', value: 'H'}, {kind: 'openingParenthesis', value: '('}, {kind: 'atom', value: 'C'}, {kind: 'atom', value: 'H'}, {kind: 'multiplier', value: 3}, {kind: 'closingParenthesis', value: ')'}, {kind: 'multiplier', value: 2}, {kind: 'closingParenthesis', value: ')'}, {kind: 'multiplier', value: 3}, {kind: 'atom', value: 'N'}, {kind: 'salt', value: '.'}, {kind: 'preMultiplier', value: 2}, {kind: 'atom', value: 'H'}, {kind: 'atom', value: 'Cl'}],
 };
 
-test('parse molecular formula', function () {
+test.only('parse molecular formula', function () {
     for (var key of Object.keys(tests)) {
         check(key, tests[key]);
     }

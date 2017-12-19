@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = async function fetchArrayBuffer(url) {
+module.exports = async function fetchArrayBufferBrowser(url) {
     const result = await fetch(url);
     return result.arrayBuffer();
 };

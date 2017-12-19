@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/cheminfo/molecular-formula/issues"
   },
-  "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/isotopic-distribution#readme"
+  "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/isotopic-distribution#readme",
+  "dependencies": {
+    "molecular-formula-generator": "^0.0.0"
+  }
 }

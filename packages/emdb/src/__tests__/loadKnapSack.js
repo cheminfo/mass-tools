@@ -1,4 +1,6 @@
-import loadKnapSack from '../loadKnapSack';
+'use strict';
+
+const loadKnapSack = require('../loadKnapSack');
 
 describe('test loadKnapSack', () => {
     it('should return 42', async () => {

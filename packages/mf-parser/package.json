@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/mf-parser#readme",
   "dependencies": {
-    "atom-sorter": "^0.0.0"
+    "atom-sorter": "^0.0.0",
+    "molecular-formula-generator": "^0.0.0"
   }
 }

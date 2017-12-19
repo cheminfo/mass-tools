@@ -1,1 +1,3 @@
-export {default as appendKnapSack} from './loadKnapSack';
+module.exports = {
+    loadKanpSack: require('./loadKnapSack')
+};

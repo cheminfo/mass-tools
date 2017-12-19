@@ -1,12 +1,14 @@
 {
-  "name": "emdb",
-  "version": "0.0.0",
-  "description": "Database manager for exact mass query",
+  "name": "mf-from-sheet",
   "browser": {
-    "./src/util/fetchArrayBuffer.js": "./src/util/fetchArrayBufferBrowser.js"
+    "./src/util/fetchText.js": "./src/util/fetchTextBrowser.js"
   },
+  "version": "0.0.0",
+  "description": "Retrieve and format molecular formula from google sheet",
+  "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
+    "lib",
     "src"
   ],
   "repository": {
@@ -19,10 +21,10 @@
   "bugs": {
     "url": "https://github.com/cheminfo-js/molecular-formula/issues"
   },
-  "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/emdb#readme",
+  "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/mf-from-sheet#readme",
   "dependencies": {
-    "jszip": "^3.1.5",
     "molecular-formula-generator": "^0.0.0",
+    "papaparse": "^4.3.6",
     "request-promise": "^4.2.2"
   }
 }

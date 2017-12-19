@@ -188,7 +188,8 @@ class MFParser {
             substring += String.fromCharCode(ascii);
             this.i++;
             ascii = this.mf.charCodeAt(this.i);
-        } while (ascii === 43 || ascii === 45 || (ascii > 47 && ascii < 58)); // closing parenthesis
+        } while (ascii === 43 || ascii === 45 || (ascii > 47 && ascii < 58));
+        this.i--;
         return parseCharge(substring);
     }
 }
