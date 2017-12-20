@@ -17,7 +17,7 @@ const MF = require('mf-parser').MF;
  * @param {number} [options.maxMSMass=+Infinity] - Maximal observed monoisotopic mass
  * @param {number} [options.minCharge=-Infinity] - Minimal charge
  * @param {number} [options.maxCharge=+Infinity] - Maximal charge
- * @param {boolean} [canonize=true] - Canonize molecular formula
+ * @param {boolean} [canonizeMF=true] - Canonize molecular formula
  * @returns {Array}
  */
 
@@ -142,7 +142,7 @@ function appendResult(results, currents, keys, options = {}) {
         maxMSMass = +Infinity,
         minCharge = -Infinity,
         maxCharge = +Infinity,
-        canonize
+        canonizeMF
     } = options;
 
     // this script is designed to combine molecular formula
@@ -180,7 +180,7 @@ function appendResult(results, currents, keys, options = {}) {
         }
     }
 
-    if (canonize) {
+    if (canonizeMF) {
         result.mf = (new MF(result.mf)).toMF();
     }
 

@@ -2,7 +2,7 @@
 
 const loadGoogleSheet = require('../loadGoogleSheet');
 
-test('test loadKnapSack', async () => {
+test('test load google sheet', async () => {
 
     let data = await loadGoogleSheet();
 

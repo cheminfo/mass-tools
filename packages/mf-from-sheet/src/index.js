@@ -3,7 +3,7 @@
 const fetchText = require('./util/fetchText');
 var Papa = require('papaparse');
 var generateMFs = require('molecular-formula-generator');
-var MF = require('mf-parser').MF;
+var MF = require('mf-parser/src/MF');
 
 async function getReferenceList(url, urlReferences) {
     if (urlReferences) {
@@ -18,12 +18,16 @@ async function getReferenceList(url, urlReferences) {
     }
 
     function parse(tsv, tsvReferences) {
-        var contaminants = Papa.parse(tsv,
+        var parsed = Papa.parse(tsv,
             {
                 delimiter: '\t',
                 header: true
             }
-        ).data;
+        );
+        var fields = parsed.meta.fields;
+        var infoFields = fields.filter(a => !['mf', 'modif', 'ESI', 'MALDI', 'positive', 'negative'].includes(a));
+        var contaminants = parsed.data;
+
 
         if (tsvReferences) {
             var referencesArray = Papa.parse(tsvReferences,
@@ -58,26 +62,32 @@ async function getReferenceList(url, urlReferences) {
             try {
                 var mfs = generateMFs([contaminant.mf, contaminant.modif]);
                 for (var mf of mfs) {
-                    mf.info = contaminant;
-                    if (!contaminant.ESI && !contaminant.MALDI && !contaminant.positive && !contaminant.negative) {
-                        mf.ESI = true;
-                        mf.MALDI = true;
-                        mf.positive = true;
-                        mf.negative = true;
-                    } else {
-                        mf.ESI = contaminant.ESI === 'X' ? true : false;
-                        mf.MALDI = contaminant.MALDI === 'X' ? true : false;
-                        mf.positive = contaminant.positive === 'X' ? true : false;
-                        mf.negative = contaminant.negative === 'X' ? true : false;
+                    mf.info = {};
+                    for (let infoField of infoFields) {
+                        mf.info[infoField] = contaminant[infoField];
                     }
-                    mf.similarity = '';
+                    if (!contaminant.ESI && !contaminant.MALDI && !contaminant.positive && !contaminant.negative) {
+                        mf.filter = {
+                            ESI: true,
+                            MALDI: true,
+                            positive: true,
+                            negative: true
+                        };
+                    } else {
+                        mf.filter = {
+                            ESI: contaminant.ESI === 'X' ? true : false,
+                            MALDI: contaminant.MALDI === 'X' ? true : false,
+                            positive: contaminant.positive === 'X' ? true : false,
+                            negative: contaminant.negative === 'X' ? true : false
+                        };
+                    }
                     mf.mf = (new MF(mf.mf)).toMF();
                     results.push(mf);
                 }
             } catch (e) {
+                // eslint-disable-next-line no-console
                 console.warn('Non parsable molecular formula: ', contaminant.mf, contaminant.modif, e.toString());
             }
-
         }
 
         results = results.filter(function (a) {

@@ -63,7 +63,7 @@ test('From array of string with some range and non range C(Me(N2))0-2(CH3)0-1K',
 
 test('From array of string with some range', function () {
     var mfsArray = ['C1-3N0-2Cl0-0BrO1-1.C2-3H3-4', ['C', 'O']];
-    var result = generateMFs(mfsArray, {canonize: true});
+    var result = generateMFs(mfsArray, {canonizeMF: true});
     expect(result[0].mf).toBe('C2BrO');
     expect(result.length).toBe(26);
 });
@@ -101,7 +101,7 @@ test('Strange comments', function () {
 
 test('Check info', function () {
     var mfsArray = ['C', '', 'C5(C)2'];
-    var result = generateMFs(mfsArray, {canonize: true})[0];
+    var result = generateMFs(mfsArray, {canonizeMF: true})[0];
     expect(result).toEqual({mf: 'C8',
         em: 96,
         msem: 0,
