@@ -1,5 +1,5 @@
 {
-  "name": "molecular-formula-generator",
+  "name": "mf-generator",
   "version": "0.0.0",
   "description": "",
   "main": "src/index.js",
@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/cheminfo/molecular-formula/issues"
   },
-  "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/molecular-formula-generator#readme",
+  "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/mf-generator#readme",
   "dependencies": {
     "mf-parser": "^0.0.0"
   }

@@ -1,4 +1,6 @@
-import myModule from '..';
+'use strict';
+
+const myModule = require('..');
 
 describe('test myModule', () => {
     it('should return 42', () => {

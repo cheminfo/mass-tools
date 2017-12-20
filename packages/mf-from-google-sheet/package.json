@@ -1,5 +1,5 @@
 {
-  "name": "mf-from-sheet",
+  "name": "mf-from-google-sheet",
   "browser": {
     "./src/util/fetchText.js": "./src/util/fetchTextBrowser.js"
   },
@@ -21,10 +21,10 @@
   "bugs": {
     "url": "https://github.com/cheminfo-js/molecular-formula/issues"
   },
-  "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/mf-from-sheet#readme",
+  "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/mf-from-google-sheet#readme",
   "dependencies": {
+    "mf-generator": "^0.0.0",
     "mf-parser": "^0.0.0",
-    "molecular-formula-generator": "^0.0.0",
     "papaparse": "^4.3.6",
     "request-promise": "^4.2.2"
   }

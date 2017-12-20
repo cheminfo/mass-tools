@@ -1,8 +1,10 @@
 'use strict';
 
-const CCE = require('chemcalc-extended');
 const DB = require('./DB');
 
+var ab = require('mf-from-google-sheet');
+console.log('---------', ab);
+const mfFromGoogleSheet = require('mf-from-google-sheet');
 
 module.exports = async function loadGoogleSheet(options = {}) {
     let {
@@ -13,7 +15,8 @@ module.exports = async function loadGoogleSheet(options = {}) {
 
     var url = 'https://googledocs.cheminfo.org/spreadsheets/d/' + uuid + '/export?format=tsv';
     var refURL = (refUUID) ? refURL = 'https://googledocs.cheminfo.org/spreadsheets/d/' + refUUID + '/export?format=tsv' : '';
-    let data = await CCE.getReferenceList(url, refURL);
+    let data = await mfFromGoogleSheet(url, refURL);
+    console.log(data);
     return new DB(data, {
         filter: datum => ({
             id: datum.id,
