@@ -47,6 +47,8 @@ module.exports = function toParts(lines, options = {}) {
                     Object.assign({}, line, {multiplier: 1})
                 );
                 break;
+            case Kind.COMMENT: // we ignore comments to create the parts and canonized MF
+                break;
             default:
                 throw new Error('Can not process mf having: ' + line.kind);
         }
@@ -174,19 +176,6 @@ function combineAtomsIsotopesCharges(parts) {
         });
     }
     return results;
-}
-
-function getAtomIndex(line) {
-    switch (line.kind) {
-        case Kind.ATOM:
-            return line.value;
-        case Kind.ISOTOPE:
-            return line.value.atom + line.value.isotope;
-        case Kind.ISOTOPE_RATIO:
-            return line.value.atom + line.value.ratio.join(',');
-        default:
-            throw new Error('Can not kind index for ', line.kind);
-    }
 }
 
 function calculateAndSortKeys(part) {

@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/mf-from-sheet#readme",
   "dependencies": {
+    "mf-parser": "^0.0.0",
     "molecular-formula-generator": "^0.0.0",
     "papaparse": "^4.3.6",
     "request-promise": "^4.2.2"

@@ -17,6 +17,7 @@ const MF = require('mf-parser').MF;
  * @param {number} [options.maxMSMass=+Infinity] - Maximal observed monoisotopic mass
  * @param {number} [options.minCharge=-Infinity] - Minimal charge
  * @param {number} [options.maxCharge=+Infinity] - Maximal charge
+ * @param {boolean} [canonize=true] - Canonize molecular formula
  * @returns {Array}
  */
 
@@ -86,14 +87,16 @@ module.exports = function combineMFs(keys, options = {}) {
 
 var ems = {};
 
-function getEM(mfString) {
+// internal method to for cache
+function getMonoisotopicMass(mfString) {
     let currentInfo = ems[mf];
     if (!currentInfo) {
         // we need to calculate based on the mf but not very often ...
+
         var mf = new MF(mfString);
         var info = mf.getInfo();
         currentInfo = {
-            em: info.em,
+            em: info.monoisotopicMass,
             charge: info.charge
         };
         ems[mf] = currentInfo;
@@ -111,7 +114,7 @@ function getEMFromParts(parts, currents) {
     for (var i = 0; i < parts.length; i++) {
         var part = parts[i][currents[i]];
         if (part) {
-            var info = getEM(part);
+            var info = getMonoisotopicMass(part);
             charge += info.charge;
             em += info.em;
         }
@@ -138,7 +141,8 @@ function appendResult(results, currents, keys, options = {}) {
         minMSMass = 0,
         maxMSMass = +Infinity,
         minCharge = -Infinity,
-        maxCharge = +Infinity
+        maxCharge = +Infinity,
+        canonize
     } = options;
 
     // this script is designed to combine molecular formula
@@ -151,6 +155,7 @@ function appendResult(results, currents, keys, options = {}) {
     var msem = info.msem;
     var charge = info.charge;
 
+
     if ((em < minMass) || (em > maxMass)) return;
     if ((msem < minMSMass) || (msem > maxMSMass)) return;
     if ((charge < minCharge) || (charge > maxCharge)) return;
@@ -159,19 +164,24 @@ function appendResult(results, currents, keys, options = {}) {
         mf: '',
         em,
         msem,
-        charge
+        charge,
+        parts: []
     };
     var comments = [];
     for (var i = 0; i < keys.length; i++) {
         var key = keys[i][currents[i]];
         if (key) {
-            result['part' + (i + 1)] = key;
+            result.parts[i] = key;
             if (key.indexOf('$') > -1) {
                 comments.push(key.replace(/^[^$]*\$/, ''));
                 key = key.replace(/\$.*/, '');
             }
             result.mf += key;
         }
+    }
+
+    if (canonize) {
+        result.mf = (new MF(result.mf)).toMF();
     }
 
     if (comments.length > 0) result.mf += '$' + comments.join(' ');

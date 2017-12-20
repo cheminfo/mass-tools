@@ -50,7 +50,7 @@ test('From array of string with some range and non range NaK0-2', function () {
 
 test('From array of string with some range and non range C(Me(N2))0-2(CH3)0-1K', function () {
     var mfsArray = ['C(Me(N2))0-2(CH3)0-1K'];
-    var result = generateMFs(mfsArray);
+    var result = generateMFs(mfsArray, {canonize: false});
     expect(result[0].mf).toBe('CK');
     expect(result[1].mf).toBe('C(Me(N2))K');
     expect(result[2].mf).toBe('C(Me(N2))2K');
@@ -63,18 +63,17 @@ test('From array of string with some range and non range C(Me(N2))0-2(CH3)0-1K',
 
 test('From array of string with some range', function () {
     var mfsArray = ['C1-3N0-2Cl0-0BrO1-1.C2-3H3-4', ['C', 'O']];
-    var result = generateMFs(mfsArray);
-    expect(result[0].mf).toBe('CBrOC');
+    var result = generateMFs(mfsArray, {canonize: true});
+    expect(result[0].mf).toBe('C2BrO');
     expect(result.length).toBe(26);
 });
 
-test.only('From array of string chem em and msem', function () {
-    var mfsArray = ['C0-2.O', ['+', '-', '++', '--']];
-    var mfsArray = ['['-']];
+test('From array of string chem em and msem', function () {
+    var mfsArray = ['C0-2.O', ['+', '(-)', '++', '(--)']];
     var result = generateMFs(mfsArray);
-    expect(result[0].mf).toBe('+');
+    expect(result[0].mf).toBe('C+');
     expect(result[0].charge).toBe(1);
-    expect(result.length).toBe(16);
+    expect(result.length).toBe(14);
 });
 
 
@@ -100,3 +99,13 @@ test('Strange comments', function () {
     expect(result[0].mf).toBe('CO$1>10 D2>20');
 });
 
+test('Check info', function () {
+    var mfsArray = ['C', '', 'C5(C)2'];
+    var result = generateMFs(mfsArray, {canonize: true})[0];
+    expect(result).toEqual({mf: 'C8',
+        em: 96,
+        msem: 0,
+        charge: 0,
+        parts: ['C', undefined, 'C5(C)2']
+    });
+});
