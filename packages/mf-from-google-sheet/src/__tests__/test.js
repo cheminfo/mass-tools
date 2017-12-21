@@ -6,6 +6,7 @@ var mfFromGoogleSheet = require('..');
 test('Test getReferenceList with existing', async () => {
     var result = await mfFromGoogleSheet('https://googledocs.cheminfo.org/spreadsheets/d/15Kuc5MeOhvm4oeTMvEuP1rWdRFiVWosxXhYwAmuf3Uo/export?format=tsv');
     expect(result.length).toBe(1684);
+    expect(result[0].mw).toBeCloseTo(5.963091372400585, 5);
     expect(result[0].em).toBeCloseTo(5.95304980662, 5);
     expect(result[0].msem).toBeCloseTo(5.95250122671093, 5);
 });

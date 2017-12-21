@@ -89,27 +89,23 @@ var ems = {};
 
 // internal method to for cache
 function getMonoisotopicMass(mfString) {
-    let currentInfo = ems[mf];
-    if (!currentInfo) {
+    if (!ems[mfString]) {
         // we need to calculate based on the mf but not very often ...
-
         var mf = new MF(mfString);
         var info = mf.getInfo();
-        currentInfo = {
+        ems[mfString] = {
             em: info.monoisotopicMass,
-            charge: info.charge
+            charge: info.charge,
+            mw: info.mass
         };
-        ems[mf] = currentInfo;
     }
-    return {
-        em: currentInfo.em,
-        charge: currentInfo.charge
-    };
+    return ems[mfString];
 }
 
 function getEMFromParts(parts, currents) {
     var charge = 0;
     var em = 0;
+    var mw = 0;
 
     for (var i = 0; i < parts.length; i++) {
         var part = parts[i][currents[i]];
@@ -117,6 +113,7 @@ function getEMFromParts(parts, currents) {
             var info = getMonoisotopicMass(part);
             charge += info.charge;
             em += info.em;
+            mw += info.mw;
         }
     }
     var msem = em;
@@ -128,9 +125,10 @@ function getEMFromParts(parts, currents) {
         msem = 0;
     }
     return {
-        charge: charge,
-        em: em,
-        msem: msem
+        charge,
+        em,
+        msem,
+        mw
     };
 }
 
@@ -152,17 +150,19 @@ function appendResult(results, currents, keys, options = {}) {
     var info = getEMFromParts(keys, currents);
 
     var em = info.em;
+    var mw = info.mw;
     var msem = info.msem;
     var charge = info.charge;
 
 
-    if ((em < minMass) || (em > maxMass)) return;
+    if ((mw < minMass) || (mw > maxMass)) return;
     if ((msem < minMSMass) || (msem > maxMSMass)) return;
     if ((charge < minCharge) || (charge > maxCharge)) return;
 
     var result = {
         mf: '',
         em,
+        mw,
         msem,
         charge,
         parts: []

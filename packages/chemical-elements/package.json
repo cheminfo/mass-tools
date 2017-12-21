@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/chemical-elements#readme",
   "dependencies": {
-    "molecular-formula-generator": "^0.0.0"
+    "mf-parser": "^0.4.2",
+    "papaparse": "^4.3.6"
   }
 }

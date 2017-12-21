@@ -4,6 +4,7 @@ const Papa = require('papaparse');
 const fs = require('fs');
 const {MF, Kind} = require('mf-parser');
 
+const MODULE = "'use strict';\nmodule.exports=";
 
 var names = Papa.parse(fs.readFileSync(__dirname + '/names.tsv') + '', {header: true}).data;
 
@@ -13,6 +14,7 @@ for (var i = 0; i < elementsAndIsotopes.length; i++) {
     let element = elementsAndIsotopes[i];
     let name = names[i];
     if (element.symbol !== name.symbol) {
+        // eslint-disable-next-line no-console
         console.log('Symbol inconsistency:', i + 1, element.symbol, name.symbol);
         element.symbol = name.symbol;
     }
@@ -23,7 +25,7 @@ for (var i = 0; i < elementsAndIsotopes.length; i++) {
     element.mass = (massFromIsotopes) ? massFromIsotopes : null;
 }
 
-fs.writeFileSync(__dirname + '/../src/elementsAndIsotopes.js', 'module.exports=' + JSON.stringify(elementsAndIsotopes));
+fs.writeFileSync(__dirname + '/../src/elementsAndIsotopes.js', MODULE + JSON.stringify(elementsAndIsotopes));
 
 var elementsAndStableIsotopes = JSON.parse(JSON.stringify(elementsAndIsotopes));
 // we remove all the unstable isotopes
@@ -37,8 +39,8 @@ elementsAndStableIsotopes.forEach((e) => {
         };
     });
 });
-fs.writeFileSync(__dirname + '/../src/elementsAndStableIsotopes.js', 'module.exports=' + JSON.stringify(elementsAndStableIsotopes));
-fs.writeFileSync(__dirname + '/../src/stableIsotopesObject.js', 'module.exports=' + JSON.stringify(stableIsotopesObject));
+fs.writeFileSync(__dirname + '/../src/elementsAndStableIsotopes.js', MODULE + JSON.stringify(elementsAndStableIsotopes));
+fs.writeFileSync(__dirname + '/../src/stableIsotopesObject.js', MODULE + JSON.stringify(stableIsotopesObject));
 
 
 var elements = JSON.parse(JSON.stringify(elementsAndStableIsotopes));
@@ -46,7 +48,7 @@ elements.forEach((e) => {
     e.monoisotopicMass = getMonoisotopicMass(e);
     e.isotopes = undefined;
 });
-fs.writeFileSync(__dirname + '/../src/elements.js', 'module.exports=' + JSON.stringify(elements));
+fs.writeFileSync(__dirname + '/../src/elements.js', MODULE + JSON.stringify(elements));
 
 
 var elementsObject = {};
@@ -54,7 +56,7 @@ elements.forEach((e) => {
     elementsObject[e.symbol] = e;
     e.symbol = undefined;
 });
-fs.writeFileSync(__dirname + '/../src/elementsObject.js', 'module.exports=' + JSON.stringify(elementsObject));
+fs.writeFileSync(__dirname + '/../src/elementsObject.js', MODULE + JSON.stringify(elementsObject));
 
 
 var elementsAndIsotopesObject = {};
@@ -62,14 +64,14 @@ elementsAndIsotopes.forEach((e) => {
     elementsAndIsotopesObject[e.symbol] = e;
     e.symbol = undefined;
 });
-fs.writeFileSync(__dirname + '/../src/elementsAndIsotopesObject.js', 'module.exports=' + JSON.stringify(elementsAndIsotopesObject));
+fs.writeFileSync(__dirname + '/../src/elementsAndIsotopesObject.js', MODULE + JSON.stringify(elementsAndIsotopesObject));
 
 var elementsAndStableIsotopesObject = {};
 elementsAndStableIsotopes.forEach((e) => {
     elementsAndStableIsotopesObject[e.symbol] = e;
     e.symbol = undefined;
 });
-fs.writeFileSync(__dirname + '/../src/elementsAndStableIsotopesObject.js', 'module.exports=' + JSON.stringify(elementsAndStableIsotopesObject));
+fs.writeFileSync(__dirname + '/../src/elementsAndStableIsotopesObject.js', MODULE + JSON.stringify(elementsAndStableIsotopesObject));
 
 
 var groups = Papa.parse(fs.readFileSync(__dirname + '/groups.tsv') + '', {header: true}).data;
@@ -113,7 +115,7 @@ for (let group of groups) {
     });
 }
 
-fs.writeFileSync(__dirname + '/../src/groups.js', 'module.exports=' + JSON.stringify(groups));
+fs.writeFileSync(__dirname + '/../src/groups.js', MODULE + JSON.stringify(groups));
 
 
 var groupsObject = {};
@@ -121,7 +123,7 @@ groups.forEach((e) => {
     groupsObject[e.symbol] = e;
     e.symbol = undefined;
 });
-fs.writeFileSync(__dirname + '/../src/groupsObject.js', 'module.exports=' + JSON.stringify(groupsObject));
+fs.writeFileSync(__dirname + '/../src/groupsObject.js', MODULE + JSON.stringify(groupsObject));
 
 
 function getMass(element) {
@@ -132,7 +134,7 @@ function getMass(element) {
 }
 
 function getMonoisotopicMass(element) {
-    var monoisotopicMass = undefined;
+    var monoisotopicMass;
     var maxAbundance = 0;
     for (let isotope of element.isotopes) {
         if (isotope.abundance > maxAbundance) {

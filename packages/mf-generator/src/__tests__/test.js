@@ -105,6 +105,7 @@ test('Check info', function () {
     expect(result).toEqual({mf: 'C8',
         em: 96,
         msem: 0,
+        mw: 96.08588717388199,
         charge: 0,
         parts: ['C', undefined, 'C5(C)2']
     });

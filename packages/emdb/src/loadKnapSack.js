@@ -17,6 +17,8 @@ module.exports = async function loadKnapSack(options = {}) {
     let fileData = await zip.files['data.json'].async('string');
     let data = JSON.parse(fileData);
 
+    console.log(data.length);
+
     return new DB(data, {
         filter: datum => ({
             id: datum.id,

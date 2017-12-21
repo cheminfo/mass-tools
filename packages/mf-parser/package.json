@@ -19,6 +19,6 @@
   "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/mf-parser#readme",
   "dependencies": {
     "atom-sorter": "^0.4.2",
-    "molecular-formula-generator": "^0.0.0"
+    "chemical-elements": "^0.4.2"
   }
 }

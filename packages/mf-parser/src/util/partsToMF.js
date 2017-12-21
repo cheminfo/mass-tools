@@ -1,6 +1,5 @@
 'use strict';
 
-const Kind = require('../Kind');
 const partToMF = require('./partToMF');
 
 module.exports = function partsToMF(parts) {

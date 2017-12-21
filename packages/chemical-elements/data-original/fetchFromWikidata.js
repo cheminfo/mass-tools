@@ -5,7 +5,6 @@ var fetch = require('node-fetch');
 
 async function compileIsotopes() {
 
-    var CRLF = '\r\n';
     var url = Wikidata.sparqlQuery(`
     PREFIX wd: <http://www.wikidata.org/entity/>
     PREFIX wdt: <http://www.wikidata.org/prop/direct/>
@@ -41,11 +40,9 @@ async function compileIsotopes() {
 
     var result = await fetch(url);
     var data = await result.text();
-    //  console.log(result);
 
-
+    // eslint-disable-next-line no-console
     console.log(data);
-
 
     return true;
 }

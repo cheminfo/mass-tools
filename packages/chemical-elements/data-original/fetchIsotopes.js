@@ -63,7 +63,10 @@ async function retrieve(refresh = false) {
                 break;
             case 'Relative Atomic Mass':
                 isotope.mass = Number(value.replace(/\(.*/, ''));
-                if (isotope.nominal !== Math.round(isotope.mass)) console.log('strange', isotope.nominal, isotope.mass);
+                if (isotope.nominal !== Math.round(isotope.mass)) {
+                    // eslint-disable-next-line no-console
+                    console.log('strange', isotope.nominal, isotope.mass);
+                }
                 break;
             case 'Notes':
                 break;

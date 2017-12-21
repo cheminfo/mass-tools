@@ -29,7 +29,7 @@ var tests = {
     '(CH(CH3)2)3N.2HCl': [{kind: 'openingParenthesis', value: '('}, {kind: 'atom', value: 'C'}, {kind: 'atom', value: 'H'}, {kind: 'openingParenthesis', value: '('}, {kind: 'atom', value: 'C'}, {kind: 'atom', value: 'H'}, {kind: 'multiplier', value: 3}, {kind: 'closingParenthesis', value: ')'}, {kind: 'multiplier', value: 2}, {kind: 'closingParenthesis', value: ')'}, {kind: 'multiplier', value: 3}, {kind: 'atom', value: 'N'}, {kind: 'salt', value: '.'}, {kind: 'preMultiplier', value: 2}, {kind: 'atom', value: 'H'}, {kind: 'atom', value: 'Cl'}],
 };
 
-test.only('parse molecular formula', function () {
+test('parse molecular formula', function () {
     for (var key of Object.keys(tests)) {
         check(key, tests[key]);
     }
