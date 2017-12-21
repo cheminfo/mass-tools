@@ -1,6 +1,6 @@
 {
   "name": "isotopic-distribution",
-  "version": "0.0.0",
+  "version": "0.4.2",
   "description": "",
   "main": "lib/index.js",
   "module": "src/index.js",
