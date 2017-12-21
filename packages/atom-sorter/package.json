@@ -1,6 +1,6 @@
 {
   "name": "atom-sorter",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Callback allowing to sort chemical elements (atoms) in Hill order",
   "main": "src/index.js",
   "files": [
@@ -16,7 +16,5 @@
   "bugs": {
     "url": "https://github.com/cheminfo-js/mf-parser/issues"
   },
-  "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/atom-sorter#readme",
-  "dependencies": {
-  }
+  "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/atom-sorter#readme"
 }

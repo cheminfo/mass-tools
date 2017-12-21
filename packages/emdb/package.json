@@ -1,6 +1,6 @@
 {
   "name": "emdb",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Database manager for exact mass query",
   "browser": {
     "./src/util/fetchArrayBuffer.js": "./src/util/fetchArrayBufferBrowser.js"
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/emdb#readme",
   "dependencies": {
     "jszip": "^3.1.5",
-    "mf-from-google-sheet": "^0.4.2",
+    "mf-from-google-sheet": "^0.4.3",
     "request-promise": "^4.2.2"
   }
 }
