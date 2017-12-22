@@ -2,13 +2,14 @@
 
 const loadKnapSack = require('../loadKnapSack');
 
-describe('test loadKnapSack', () => {
-    it('should return 42', async () => {
-        let data = await loadKnapSack();
+test('test loadKnapSack', async () => {
 
-        console.log(data.length);
+    let data = await loadKnapSack();
+    expect(data.length).toBeGreaterThan(1000);
 
-
-        // expect(myModule()).toEqual(42);
-    });
+    let first = data[0];
+    expect(first.mf).toBe('H3N');
+    expect(first.em).toBeGreaterThan(0);
+    expect(first.charge).not.toBe(0);
+    expect(first.msem).toBeUndefined();
 });

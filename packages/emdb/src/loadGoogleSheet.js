@@ -1,6 +1,5 @@
 'use strict';
 
-const DB = require('./DB');
 const mfFromGoogleSheet = require('mf-from-google-sheet');
 
 module.exports = async function loadGoogleSheet(options = {}) {
@@ -13,6 +12,7 @@ module.exports = async function loadGoogleSheet(options = {}) {
     var url = 'https://googledocs.cheminfo.org/spreadsheets/d/' + uuid + '/export?format=tsv';
     var refURL = (refUUID) ? refURL = 'https://googledocs.cheminfo.org/spreadsheets/d/' + refUUID + '/export?format=tsv' : '';
     let data = await mfFromGoogleSheet(url, refURL);
-    return new DB(data);
+    data.sort((a, b) => a.em - b.em);
+    return data;
 };
 

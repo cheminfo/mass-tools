@@ -9,6 +9,24 @@ Database manager for exact mass query.
 
 `$ npm install --save emdb`
 
+
+The following fields in the json are expected to be returned
+* id
+* url: optional external link
+* mf
+* em
+* mw
+* msem: calculated from em and charge
+* charge
+* ocl: either a string or an object with value / coordinates
+* parts: array of mf if the mf is the result of a combination of mf
+* info: object of free information
+* filter: optional information about the kind of mass spectra that yields to this mass
+  * ESI
+  * MALDI
+  * positive
+  * negative
+
 ## Usage
 
 ```js
