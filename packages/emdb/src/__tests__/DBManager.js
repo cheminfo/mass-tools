@@ -1,6 +1,6 @@
 'use strict';
 
-const DBManager = require('../DBManager');
+const DBManager = require('../index');
 
 test('test DBManager', async () => {
 
