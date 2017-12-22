@@ -28,7 +28,7 @@ DBManager.prototype.loadGoogleSheet = async function loadContaminants(options = 
     this.databases[databaseName] = await loadGoogleSheetPromise();
 };
 
-DBManager.listDatabases = function listDatabases() {
+DBManager.prototype.listDatabases = function listDatabases() {
     return Object.keys(this.databases);
 };
 

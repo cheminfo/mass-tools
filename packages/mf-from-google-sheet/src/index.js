@@ -5,7 +5,7 @@ var Papa = require('papaparse');
 var generateMFs = require('mf-generator');
 var MF = require('mf-parser/src/MF');
 
-async function getReferenceList(url, urlReferences) {
+async function mfFromGoogleSheet(url, urlReferences) {
     if (urlReferences) {
         let results = await Promise.all([
             fetchText(url),
@@ -110,5 +110,5 @@ async function getReferenceList(url, urlReferences) {
     }
 }
 
-module.exports = getReferenceList;
+module.exports = mfFromGoogleSheet;
 

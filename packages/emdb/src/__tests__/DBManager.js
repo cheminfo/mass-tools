@@ -1,16 +1,13 @@
 'use strict';
 
-const DBManager = require('../index');
+const DBManager = require('..');
 
 test('test DBManager', async () => {
-
     let dbManager = new DBManager();
-
-    console.log(dbManager);
 
     await dbManager.loadContaminants();
     await dbManager.loadKnapSack();
 
-    expect(dbManager.listDatabases()).toEqual();
+    expect(dbManager.listDatabases()).toEqual(['contaminants', 'knapSact']);
 
 });

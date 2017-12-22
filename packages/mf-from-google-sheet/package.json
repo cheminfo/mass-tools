@@ -24,6 +24,6 @@
     "mf-generator": "^0.4.3",
     "mf-parser": "^0.4.3",
     "papaparse": "^4.3.6",
-    "request-promise": "^4.2.2"
+    "request-promise-native": "^1.0.5"
   }
 }
