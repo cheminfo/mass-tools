@@ -8,6 +8,5 @@ test('test DBManager', async () => {
     await dbManager.loadContaminants();
     await dbManager.loadKnapSack();
 
-    expect(dbManager.listDatabases()).toEqual(['contaminants', 'knapSact']);
-
+    expect(dbManager.listDatabases()).toEqual(['contaminants', 'knapSack']);
 });

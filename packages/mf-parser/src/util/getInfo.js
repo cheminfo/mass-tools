@@ -3,6 +3,7 @@
 const partToMF = require('./partToMF');
 const elements = require('chemical-elements/src/elementsAndStableIsotopesObject.js');
 const groups = require('chemical-elements/src/groupsObject.js');
+const unsaturations = require('chemical-elements/src/unsaturationsObject.js');
 const Kind = require('../Kind');
 const {ELECTRON_MASS} = require('chemical-elements/src/constants');
 
@@ -19,17 +20,23 @@ Object.keys(elements).forEach((key) => {
     });
 });
 
-module.exports = function getInfo(parts) {
+/**
+ * 
+ * @param {*} parts 
+ * @param {*} options 
+ */
+module.exports = function getInfo(parts, options={
+    customUnsaturation={}
+}) {
     if (parts.length === 0) return {};
-    if (parts.length === 1) return getProcessedPart(parts[0]);
+    if (parts.length === 1) return getProcessedPart(parts[0],customUnsaturation);
 
     var result = {
         parts: []
     };
     for (let part of parts) {
-        result.parts.push(getProcessedPart(part));
+        result.parts.push(getProcessedPart(part),customUnsaturation);
     }
-
 
     result.monoisotopicMass = 0;
     result.mass = 0;
@@ -43,17 +50,22 @@ module.exports = function getInfo(parts) {
     return result;
 };
 
-function getProcessedPart(part) {
+function getProcessedPart(part, customUnsaturation) {
     let currentPart = {
         mass: 0,
         monoisotopicMass: 0,
-        charge: 0
+        charge: 0,
+        mf: ''
     };
+    let unsaturation = 0;
+    let validUnsaturation=true;
     currentPart.mf = partToMF(part);
     for (let line of part) {
+        let currentElement='';
         switch (line.kind) {
             case Kind.ATOM: {
-                let element = elements[line.value];
+                currentElement=line.value;
+                element = elements[line.value];
                 // todo should we have a kind GROUP ?
                 if (!element) element = groups[line.value];
                 if (!element) throw new Error('Unknown element: ' + line.value);
@@ -62,6 +74,7 @@ function getProcessedPart(part) {
                 break;
             }
             case Kind.ISOTOPE: {
+                currentElement=line.value.atom;
                 let isotope = isotopes[line.value.isotope + line.value.atom];
                 if (!isotope) throw new Error('Unknown isotope: ' + line.value.isotope + line.value.atom);
                 currentPart.monoisotopicMass += isotope.mass * line.multiplier;
@@ -69,6 +82,7 @@ function getProcessedPart(part) {
                 break;
             }
             case Kind.ISOTOPE_RATIO: {
+                currentElement=line.value.isotope;
                 let isotopeRatioInfo = getIsotopeRatioInfo(line.value);
                 currentPart.monoisotopicMass += isotopeRatioInfo.monoisotopicMass * line.multiplier;
                 currentPart.mass += isotopeRatioInfo.mass * line.multiplier;
@@ -76,17 +90,32 @@ function getProcessedPart(part) {
             }
             case Kind.CHARGE:
                 currentPart.charge = line.value;
+                unsaturation+=line.value;
                 break;
             default:
                 throw new Error('Unimplemented Kind in getInfo', line.kind);
+        }
+    }
+    if (currentElement) {
+        if (customUnsaturation[currentElement]) {
+            unsaturation+=customUnsaturation[currentElement];
+        } else if (unsaturations[currentElement]) {
+            unsaturation+=customUnsaturation[currentElement];
+        } else {
+            validUnsaturation=false;
         }
     }
     // need to calculate the observedMonoisotopicMass
     if (currentPart.charge) {
         currentPart.observedMonoisotopicMass = (currentPart.monoisotopicMass - currentPart.charge * ELECTRON_MASS) / Math.abs(currentPart.charge);
     }
+    if (validUnsaturation) {
+        currentPart.unsaturation=unsaturation/2+1;
+    }
     return currentPart;
 }
+
+
 
 function getIsotopeRatioInfo(value) {
     let result = {

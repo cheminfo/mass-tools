@@ -39,10 +39,10 @@ class MF {
      * Returns an object with the global MF, global charge, monoisotopic mass and mass
      * as well as the same informations for all the parts
      */
-    getInfo() {
+    getInfo(options = {}) {
         if (!this.cache.info) {
             this.toParts();
-            this.cache.info = getInfo(this.cache.parts);
+            this.cache.info = getInfo(this.cache.parts, options);
         }
         return this.cache.info;
     }
