@@ -30,11 +30,13 @@ test('MF of Et3N.HCl', () => {
         [{mass: 101.19022990269394,
             monoisotopicMass: 101.12044948788001,
             charge: 0,
-            mf: 'C6H15N'},
+            mf: 'C6H15N',
+            unsaturation: 0},
         {mass: 36.460878336663775,
             monoisotopicMass: 35.97667771423,
             charge: 0,
-            mf: 'HCl'}],
+            mf: 'HCl',
+            unsaturation:0}],
     monoisotopicMass: 137.09712720211002,
     mass: 137.6511082393577,
     charge: 0,
@@ -64,7 +66,8 @@ test('MF of (Me2CH)3N no expand', () => {
         {mass: 143.27008211723435,
             monoisotopicMass: 143.16739968126,
             charge: 0,
-            mf: 'C3H3Me6N'
+            mf: 'C3H3Me6N',
+            unsaturation: 0
         }
     );
 });
@@ -84,13 +87,18 @@ test('MF of (+)SO4(+)(-2)2', () => {
     var newMF = mf.toMF();
     expect(newMF).toBe('O4S(-2)');
 
-    let info = mf.getInfo();
+    let info = mf.getInfo({
+        customUnsaturations: {
+            S:4
+        }
+    });
     expect(info).toEqual({
         monoisotopicMass: 95.95172965268,
         mass: 96.06240710340018,
         charge: -2,
         observedMonoisotopicMass: 47.97641340624907,
-        mf: 'O4S(-2)'}
+        mf: 'O4S(-2)',
+        unsaturation: 2}
     );
 });
 
@@ -111,7 +119,8 @@ test('MF of NC[13C][15N]2NN2', () => {
         monoisotopicMass: 111.01586865055,
         mass: 111.04112137534844,
         charge: 0,
-        mf: 'C[13C]N4[15N]2'}
+        mf: 'C[13C]N4[15N]2',
+    unsaturation: 6}
     );
 
     var newMF = mf.toMF();
@@ -138,6 +147,7 @@ test('MF of CC{50,50}H', () => {
         monoisotopicMass: 25.00782503223,
         mass: 25.520354068326025,
         charge: 0,
-        mf: 'CC{50,50}H'}
+        mf: 'CC{50,50}H',
+        unsaturation: 2.5}
     );
 });

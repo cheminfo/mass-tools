@@ -82,6 +82,8 @@ for (let group of groups) {
     let parts = mfObject.toParts()[0];
     group.mass = 0;
     group.monoisotopicMass = 0;
+    group.unsaturation = (mfObject.getInfo().unsaturation-1)*2;
+    if (! group.unsaturation) console.log(mf, mfObject.getInfo());
     group.elements = parts.map(part => {
         let number = part.multiplier;
         let symbol;

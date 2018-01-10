@@ -28,7 +28,8 @@ test('getGroupsObject', () => {
         mf: 'C3H5NO',
         name:
         'Alainine diradical',
-        symbol: 'Ala'
+        symbol: 'Ala',
+        unsaturation: 2
     });
 });
 

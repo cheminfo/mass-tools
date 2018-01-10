@@ -20,7 +20,7 @@ DBManager.prototype.loadContaminants = async function loadContaminants(options =
     } = options;
     this.databases[databaseName] = await loadGoogleSheetPromise();
 
-    console.log(this.databases[databaseName]);
+ //   console.log(this.databases[databaseName]);
 
 };
 
