@@ -6,6 +6,7 @@ const groups = require('chemical-elements/src/groupsObject.js');
 const unsaturations = require('chemical-elements/src/unsaturationsObject.js');
 const Kind = require('../Kind');
 const {ELECTRON_MASS} = require('chemical-elements/src/constants');
+const partToAtoms = require('./partToAtoms');
 
 const isotopes = {};
 Object.keys(elements).forEach((key) => {
@@ -56,7 +57,8 @@ function getProcessedPart(part, customUnsaturations) {
         mass: 0,
         monoisotopicMass: 0,
         charge: 0,
-        mf: ''
+        mf: '',
+        atoms: partToAtoms(part)
     };
     let unsaturation = 0;
     let validUnsaturation=true;

@@ -31,12 +31,14 @@ test('MF of Et3N.HCl', () => {
             monoisotopicMass: 101.12044948788001,
             charge: 0,
             mf: 'C6H15N',
-            unsaturation: 0},
+            unsaturation: 0,
+            atoms: {C:6, H:15, N:1}},
         {mass: 36.460878336663775,
             monoisotopicMass: 35.97667771423,
             charge: 0,
             mf: 'HCl',
-            unsaturation:0}],
+            unsaturation:0,
+            atoms: {H:1, Cl:1}}],
     monoisotopicMass: 137.09712720211002,
     mass: 137.6511082393577,
     charge: 0,
@@ -63,11 +65,13 @@ test('MF of (Me2CH)3N no expand', () => {
 
     let info = mf.getInfo();
     expect(info).toEqual(
-        {mass: 143.27008211723435,
+        {
+            mass: 143.27008211723435,
             monoisotopicMass: 143.16739968126,
             charge: 0,
             mf: 'C3H3Me6N',
-            unsaturation: 0
+            unsaturation: 0,
+            atoms: {C:9, H:21, N:1}
         }
     );
 });
@@ -98,7 +102,8 @@ test('MF of (+)SO4(+)(-2)2', () => {
         charge: -2,
         observedMonoisotopicMass: 47.97641340624907,
         mf: 'O4S(-2)',
-        unsaturation: 2}
+        unsaturation: 2,
+        atoms: {O:4, S:1}}
     );
 });
 
@@ -110,7 +115,7 @@ test('MF of NC[13C][15N]2NN2', () => {
             {kind: 'atom', value: 'C', multiplier: 1},
             {kind: 'isotope', value: {atom: 'C', isotope: 13}, multiplier: 1},
             {kind: 'atom', value: 'N', multiplier: 4},
-            {kind: 'isotope', value: {atom: 'N', isotope: 15}, multiplier: 2}
+            {kind: 'isotope', value: {atom: 'N', isotope: 15}, multiplier: 2},
         ]]
     );
 
@@ -120,8 +125,9 @@ test('MF of NC[13C][15N]2NN2', () => {
         mass: 111.04112137534844,
         charge: 0,
         mf: 'C[13C]N4[15N]2',
-    unsaturation: 6}
-    );
+        unsaturation: 6,
+        atoms: {C:2, N:6},
+    });
 
     var newMF = mf.toMF();
     expect(newMF).toBe('C[13C]N4[15N]2');
@@ -135,7 +141,6 @@ test('MF of CC{50,50}H', () => {
             {kind: 'atom', value: 'C', multiplier: 1},
             {kind: 'isotopeRatio', value: {atom: 'C', ratio: [50, 50]}, multiplier: 1},
             {kind: 'atom', value: 'H', multiplier: 1}
-
         ]]
     );
 
@@ -143,11 +148,14 @@ test('MF of CC{50,50}H', () => {
     expect(newMF).toBe('CC{50,50}H');
 
     let info = mf.getInfo();
-    expect(info).toEqual({
-        monoisotopicMass: 25.00782503223,
-        mass: 25.520354068326025,
-        charge: 0,
-        mf: 'CC{50,50}H',
-        unsaturation: 2.5}
+    expect(info).toEqual(
+        {
+            monoisotopicMass: 25.00782503223,
+            mass: 25.520354068326025,
+            charge: 0,
+            mf: 'CC{50,50}H',
+            unsaturation: 2.5,
+            atoms: {C:2, H:1}
+        }
     );
 });

@@ -1,5 +1,3 @@
-import { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } from "constants";
-
 'use strict';
 
 
@@ -10,9 +8,22 @@ import { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } from "constants";
 */
 
 module.exports = function searchEM(targetMass, options = {}) {
-    
-    data.sort((a, b) => a.em - b.em);
+    let {
+        databases=Object.keys(this.databases)
+    } = options;
 
-    return data;
+    let results={};
+    for (let database of databases) {
+        let result=[];
+        results[database]=result;
+        for (let entry of this.databases[database]) {
+            console.log(entry);
+        }
+        console.log(database);
+    }
+
+    console.log(results);
+
+    return results;
 };
 

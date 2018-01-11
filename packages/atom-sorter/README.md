@@ -12,9 +12,9 @@
 ## Usage
 
 ```js
-import library from 'atom-sorter';
+import atomSorter from 'atom-sorter';
 
-const result = library(args);
+['C','O','N','H'].osrt(atomSorter);
 // result is ...
 ```
 

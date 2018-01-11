@@ -1,8 +1,8 @@
 'use strict';
 
 const {ELECTRON_MASS} = require('chemical-elements/src/constants');
-
 const MF = require('mf-parser').MF;
+const sum = require('sum-object-keys');
 
 /**
  * Generate all the possible combinations of molecular formula and calculate
@@ -17,6 +17,10 @@ const MF = require('mf-parser').MF;
  * @param {number} [options.maxMSMass=+Infinity] - Maximal observed monoisotopic mass
  * @param {number} [options.minCharge=-Infinity] - Minimal charge
  * @param {number} [options.maxCharge=+Infinity] - Maximal charge
+ *  @param {number} [options.minUnsaturation=-Infinity] - Minimal unsaturation
+ *  @param {number} [options.maxUnsaturation=+Infinity] - Maximal unsaturation
+ *  @param {number} [options.onlyIntegerUnsaturation=false] - Integer unsaturation
+ *  @param {number} [options.onlyNonIntegerUnsaturation=false] - Non integer unsaturation
  * @param {boolean} [canonizeMF=true] - Canonize molecular formula
  * @returns {Array}
  */
@@ -87,7 +91,7 @@ module.exports = function combineMFs(keys, options = {}) {
 
 var ems = {};
 
-// internal method to for cache
+// internal method used as a cache
 function getMonoisotopicMass(mfString) {
     if (!ems[mfString]) {
         // we need to calculate based on the mf but not very often ...
@@ -96,7 +100,9 @@ function getMonoisotopicMass(mfString) {
         ems[mfString] = {
             em: info.monoisotopicMass,
             charge: info.charge,
-            mw: info.mass
+            mw: info.mass,
+            unsaturation: (info.unsaturation-1)*2,
+            atoms: info.atoms
         };
     }
     return ems[mfString];
@@ -106,6 +112,9 @@ function getEMFromParts(parts, currents) {
     var charge = 0;
     var em = 0;
     var mw = 0;
+    var unsaturation = 0;
+    var validUnsaturation=true;
+    var atoms={};
 
     for (var i = 0; i < parts.length; i++) {
         var part = parts[i][currents[i]];
@@ -114,6 +123,10 @@ function getEMFromParts(parts, currents) {
             charge += info.charge;
             em += info.em;
             mw += info.mw;
+            sum(atoms,info.atoms);
+            if (info.unsaturation && validUnsaturation) {
+                unsaturation += info.unsaturation;
+            }
         }
     }
     var msem = em;
@@ -128,7 +141,9 @@ function getEMFromParts(parts, currents) {
         charge,
         em,
         msem,
-        mw
+        mw,
+        unsaturation: validUnsaturation ? unsaturation / 2 + 1: undefined,
+        atoms
     };
 }
 
@@ -140,6 +155,10 @@ function appendResult(results, currents, keys, options = {}) {
         maxMSMass = +Infinity,
         minCharge = -Infinity,
         maxCharge = +Infinity,
+        minUnsaturation = -Infinity,
+        maxUnsaturation = +Infinity,
+        onlyIntegerUnsaturation,
+        onlyNonIntegerUnsaturation,
         canonizeMF
     } = options;
 
@@ -153,9 +172,16 @@ function appendResult(results, currents, keys, options = {}) {
     var mw = info.mw;
     var msem = info.msem;
     var charge = info.charge;
-
+    var unsaturation = info.unsaturation;
+    var atoms = info.atoms;
 
     if ((mw < minMass) || (mw > maxMass)) return;
+    if (unsaturation) {
+        if (unsaturation<minUnsaturation || unsaturation > maxUnsaturation) return;
+        if (onlyIntegerUnsaturation && ! Number.isInteger(unsaturation)) return;
+        if (onlyNonIntegerUnsaturation && Number.isInteger(unsaturation)) return;
+
+    }
     if ((msem < minMSMass) || (msem > maxMSMass)) return;
     if ((charge < minCharge) || (charge > maxCharge)) return;
 
@@ -165,6 +191,8 @@ function appendResult(results, currents, keys, options = {}) {
         mw,
         msem,
         charge,
+        unsaturation,
+        atoms,
         parts: []
     };
     var comments = [];

@@ -35,6 +35,7 @@ DBManager.prototype.listDatabases = function listDatabases() {
     return Object.keys(this.databases).sort();
 };
 
+DBManager.prototype.searchEM = require('./searchEM');
 
 
 module.exports = DBManager;

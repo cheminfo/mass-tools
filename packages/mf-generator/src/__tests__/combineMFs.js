@@ -93,6 +93,27 @@ test('From array of string to large array and filter', function () {
     expect(result.length).toBe(1);
 });
 
+test('From array of string to large array and filter unsaturation', function () {
+    var mfsArray = ['C0-100', 'H0-100'];
+    var result = generateMFs(mfsArray,
+        {
+            minUnsaturation: 0,
+            maxUnsaturation: 1
+        });
+    expect(result.length).toBe(151);
+});
+
+test('From array of string to large array and filter unsaturation min/max and integer unsaturation', function () {
+    var mfsArray = ['C0-100', 'H0-100'];
+    var result = generateMFs(mfsArray,
+        {
+            minUnsaturation: 0,
+            maxUnsaturation: 1,
+            onlyIntegerUnsaturation: true
+        });
+    expect(result.length).toBe(101);
+});
+
 test('Strange comments', function () {
     var mfsArray = ['C$1>10', 'O$D2>20'];
     var result = generateMFs(mfsArray);
@@ -107,6 +128,8 @@ test('Check info', function () {
         msem: 0,
         mw: 96.08588717388199,
         charge: 0,
-        parts: ['C', undefined, 'C5(C)2']
+        parts: ['C', undefined, 'C5(C)2'],
+        atoms: {'C':8},
+        unsaturation: 9
     });
 });

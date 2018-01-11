@@ -35,5 +35,8 @@
     "jest": "^22.0.4",
     "lerna": "^2.6.0",
     "npm-run-all": "^4.1.2"
+  },
+  "dependencies": {
+    "sum-object-keys": "^1.0.0"
   }
 }

@@ -10,6 +10,6 @@ test('test loadKnapSack', async () => {
     let first = data[0];
     expect(first.mf).toBe('H3N');
     expect(first.em).toBeGreaterThan(0);
-    expect(first.charge).not.toBe(0);
-    expect(first.msem).toBeUndefined();
+    expect(first.charge).toBe(0);
+    expect(first.msem).toBeDefined();
 });
