@@ -11,8 +11,9 @@ const sum = require('sum-object-keys');
  *
  * @param keys
  * @param options
- * @param {number} [options.limit=1000000] - Maximum number of results
+ * @param {number} [options.limit=10000000] - Maximum number of results
  * @param {boolean} [canonizeMF=true] - Canonize molecular formula
+ * @param {boolean} [uniqueMFs=true] - Force canonization and make MF unique
  * @param {number} [options.filter.minMass=0] - Minimal monoisotopic mass
  * @param {number} [options.filter.maxMass=+Infinity] - Maximal monoisotopic mass
  * @param {number} [options.filter.minEM=0] - Minimal neutral monoisotopic mass
@@ -32,8 +33,12 @@ const sum = require('sum-object-keys');
 
 module.exports = function combineMFs(keys, options = {}) {
     let {
-        limit = 1000000,
+        limit = 10000000,
+        uniqueMFs
     } = options;
+    if (uniqueMFs===undefined) uniqueMFs=true;
+    if (uniqueMFs===true) options.canonizeMF=true;
+    if (options.canonizeMF===undefined) options.canonizeMF=true;
 
     if (!Array.isArray(keys)) throw new Error('You need to specify an array of strings or arrays');
 
@@ -85,10 +90,16 @@ module.exports = function combineMFs(keys, options = {}) {
             position++;
         }
         if (evolution > limit) {
-            throw new Error('You have reached the limit of ' + options.limit + '. You could still change this value using the limit option but it is likely to crash.');
+            throw new Error('You have reached the limit of ' + limit + '. You could still change this value using the limit option but it is likely to crash.');
         }
     }
     appendResult(results, currents, keys, options);
+    if (uniqueMFs) {
+        var uniqueMFsObject = {};
+        results.forEach( r => uniqueMFsObject[r.mf]=r);
+        results=Object.keys(uniqueMFsObject).map(k => uniqueMFsObject[k]);
+    }
+    results.sort( (a,b) => (a.em-b.em));
     return results;
 };
 

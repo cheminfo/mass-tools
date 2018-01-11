@@ -22,7 +22,7 @@ module.exports = function searchEM(targetMass, options = {}) {
         console.log(database);
     }
 
-    console.log(results);
+ //   console.log(results);
 
     return results;
 };

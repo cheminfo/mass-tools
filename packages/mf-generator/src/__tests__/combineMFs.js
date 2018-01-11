@@ -5,14 +5,14 @@ const generateMFs = require('..');
 test('generateMFs from array of array with comment', function () {
     var mfsArray = [['C', 'H$YY'], [], [''], ['Cl', 'Br$XX']];
     var result = generateMFs(mfsArray);
-    expect(result[0].mf).toBe('CCl');
+    expect(result[0].mf).toBe('HCl$YY');
     expect(result.length).toBe(4);
 });
 
 test('generateMFs from array of string with comment', function () {
     var mfsArray = ['C.H.O', '+,++', ['Cl', 'Br$XX']];
     var result = generateMFs(mfsArray);
-    expect(result[0].mf).toBe('C+Cl');
+    expect(result[0].mf).toBe('HCl(+2)');
     expect(result.length).toBe(12);
 });
 
@@ -25,16 +25,15 @@ test('generateMFs from  array of string with some range and non range', function
     expect(result.length).toBe(3);
 });
 
-
 test('From array of string with some range and non range CN0-2O00-1K', function () {
     var mfsArray = ['CN0-2O00-1K'];
     var result = generateMFs(mfsArray);
     expect(result[0].mf).toBe('CK');
-    expect(result[1].mf).toBe('CNK');
-    expect(result[2].mf).toBe('CN2K');
-    expect(result[3].mf).toBe('COK');
-    expect(result[4].mf).toBe('CNOK');
-    expect(result[5].mf).toBe('CN2OK');
+    expect(result[1].mf).toBe('CKN');
+    expect(result[2].mf).toBe('CKO');
+    expect(result[3].mf).toBe('CKN2');
+    expect(result[4].mf).toBe('CKNO');
+    expect(result[5].mf).toBe('CKN2O');
     expect(result.length).toBe(6);
 });
 
@@ -42,36 +41,37 @@ test('From array of string with some range and non range NaK0-2', function () {
     var mfsArray = ['NaK0-2'];
     var result = generateMFs(mfsArray);
     expect(result[0].mf).toBe('Na');
-    expect(result[1].mf).toBe('NaK');
-    expect(result[2].mf).toBe('NaK2');
+    expect(result[1].mf).toBe('KNa');
+    expect(result[2].mf).toBe('K2Na');
     expect(result.length).toBe(3);
 });
 
 test('From array of string with some range and non range C(Me(N2))0-2(CH3)0-1K', function () {
     var mfsArray = ['C(Me(N2))0-2(CH3)0-1K'];
-    var result = generateMFs(mfsArray, {canonize: false});
+    var result = generateMFs(mfsArray, {
+        canonizeMF: false,
+        uniqueMFs: false});
     expect(result[0].mf).toBe('CK');
-    expect(result[1].mf).toBe('C(Me(N2))K');
-    expect(result[2].mf).toBe('C(Me(N2))2K');
-    expect(result[3].mf).toBe('C(CH3)K');
-    expect(result[4].mf).toBe('C(Me(N2))(CH3)K');
+    expect(result[1].mf).toBe('C(CH3)K');
+    expect(result[2].mf).toBe('C(Me(N2))K');
+    expect(result[3].mf).toBe('C(Me(N2))(CH3)K');
+    expect(result[4].mf).toBe('C(Me(N2))2K');
     expect(result[5].mf).toBe('C(Me(N2))2(CH3)K');
     expect(result.length).toBe(6);
 });
-
-
+ 
 test('From array of string with some range', function () {
     var mfsArray = ['C1-3N0-2Cl0-0BrO1-1.C2-3H3-4', ['C', 'O']];
     var result = generateMFs(mfsArray, {canonizeMF: true});
-    expect(result[0].mf).toBe('C2BrO');
+    expect(result[0].mf).toBe('C3H3');
     expect(result.length).toBe(26);
 });
 
 test('From array of string chem em and msem', function () {
     var mfsArray = ['C0-2.O', ['+', '(-)', '++', '(--)']];
     var result = generateMFs(mfsArray);
-    expect(result[0].mf).toBe('C+');
-    expect(result[0].charge).toBe(1);
+    expect(result[0].mf).toBe('(-1)');
+    expect(result[0].charge).toBe(-1);
     expect(result.length).toBe(14);
 });
 

@@ -9,6 +9,6 @@ test('test searchEM', async () => {
 
     let result = dbManager.searchEM(100.123);
 
-    console.log(result);
+   // console.log(result);
     
 });
