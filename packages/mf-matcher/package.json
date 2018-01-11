@@ -1,0 +1,20 @@
+{
+  "name": "mf-matcher",
+  "version": "0.0.0",
+  "description": "Returns true / false for an object using mw, em, msem, unsaturation and atoms",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo-js/molecular-formula.git"
+  },
+  "keywords": [],
+  "author": "Luc Patiny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo-js/molecular-formula/issues"
+  },
+  "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/mf-matcher#readme"
+}
