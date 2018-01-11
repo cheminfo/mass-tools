@@ -2,6 +2,7 @@
 
 const loadKnapSackPromise = require('./loadKnapSack');
 const loadGoogleSheetPromise = require('./loadGoogleSheet');
+const combineMFs = require('mf-generator');
 
 function DBManager() {
     this.databases = {};
@@ -31,11 +32,17 @@ DBManager.prototype.loadGoogleSheet = async function loadContaminants(options = 
     this.databases[databaseName] = await loadGoogleSheetPromise();
 };
 
+DBManager.prototype.createDatatabaseFromArray = function createDatatabaseFromArray(mfsArray, options = {}) {
+    const {
+        databaseName = 'created'
+    } = options;
+    this.databases[databaseName] = combineMFs(mfsArray, options);
+}
+
 DBManager.prototype.listDatabases = function listDatabases() {
     return Object.keys(this.databases).sort();
 };
 
-DBManager.prototype.searchEM = require('./searchEM');
-
+DBManager.prototype.search = require('./search');
 
 module.exports = DBManager;
