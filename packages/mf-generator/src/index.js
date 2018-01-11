@@ -2,6 +2,7 @@
 
 const {ELECTRON_MASS} = require('chemical-elements/src/constants');
 const MF = require('mf-parser').MF;
+const matcher = require('mf-matcher');
 const sum = require('sum-object-keys');
 
 /**
@@ -11,17 +12,20 @@ const sum = require('sum-object-keys');
  * @param keys
  * @param options
  * @param {number} [options.limit=1000000] - Maximum number of results
- * @param {number} [options.minMass=0] - Minimal monoisotopic mass
- * @param {number} [options.maxMass=+Infinity] - Maximal monoisotopic mass
- * @param {number} [options.minMSMass=0] - Minimal observed monoisotopic mass
- * @param {number} [options.maxMSMass=+Infinity] - Maximal observed monoisotopic mass
- * @param {number} [options.minCharge=-Infinity] - Minimal charge
- * @param {number} [options.maxCharge=+Infinity] - Maximal charge
- *  @param {number} [options.minUnsaturation=-Infinity] - Minimal unsaturation
- *  @param {number} [options.maxUnsaturation=+Infinity] - Maximal unsaturation
- *  @param {number} [options.onlyIntegerUnsaturation=false] - Integer unsaturation
- *  @param {number} [options.onlyNonIntegerUnsaturation=false] - Non integer unsaturation
  * @param {boolean} [canonizeMF=true] - Canonize molecular formula
+ * @param {number} [options.filter.minMass=0] - Minimal monoisotopic mass
+ * @param {number} [options.filter.maxMass=+Infinity] - Maximal monoisotopic mass
+ * @param {number} [options.filter.minEM=0] - Minimal neutral monoisotopic mass
+ * @param {number} [options.filter.maxEM=+Infinity] - Maximal neutral monoisotopic mass
+ * @param {number} [options.filter.minMSEM=0] - Minimal observed monoisotopic mass
+ * @param {number} [options.filter.maxMSEM=+Infinity] - Maximal observed monoisotopic mass
+ * @param {number} [options.filter.minCharge=-Infinity] - Minimal charge
+ * @param {number} [options.filter.maxCharge=+Infinity] - Maximal charge
+ * @param {number} [options.filter.minUnsaturation=-Infinity] - Minimal unsaturation
+ * @param {number} [options.filter.maxUnsaturation=+Infinity] - Maximal unsaturation
+ * @param {number} [options.filter.onlyIntegerUnsaturation=false] - Integer unsaturation
+ * @param {number} [options.filter.onlyNonIntegerUnsaturation=false] - Non integer unsaturation
+ * @param {object} [options.filter.atoms] - object of atom:{min, max}
  * @returns {Array}
  */
 
@@ -149,52 +153,19 @@ function getEMFromParts(parts, currents) {
 
 function appendResult(results, currents, keys, options = {}) {
     const {
-        minMass = 0,
-        maxMass = +Infinity,
-        minMSMass = 0,
-        maxMSMass = +Infinity,
-        minCharge = -Infinity,
-        maxCharge = +Infinity,
-        minUnsaturation = -Infinity,
-        maxUnsaturation = +Infinity,
-        onlyIntegerUnsaturation,
-        onlyNonIntegerUnsaturation,
-        canonizeMF
+        canonizeMF,
+        filter
     } = options;
-
     // this script is designed to combine molecular formula
     // that may contain comments after a "$" sign
     // therefore we should put all the comments at the ned
 
-    var info = getEMFromParts(keys, currents);
-
-    var em = info.em;
-    var mw = info.mw;
-    var msem = info.msem;
-    var charge = info.charge;
-    var unsaturation = info.unsaturation;
-    var atoms = info.atoms;
-
-    if ((mw < minMass) || (mw > maxMass)) return;
-    if (unsaturation) {
-        if (unsaturation<minUnsaturation || unsaturation > maxUnsaturation) return;
-        if (onlyIntegerUnsaturation && ! Number.isInteger(unsaturation)) return;
-        if (onlyNonIntegerUnsaturation && Number.isInteger(unsaturation)) return;
-
-    }
-    if ((msem < minMSMass) || (msem > maxMSMass)) return;
-    if ((charge < minCharge) || (charge > maxCharge)) return;
-
-    var result = {
-        mf: '',
-        em,
-        mw,
-        msem,
-        charge,
-        unsaturation,
-        atoms,
-        parts: []
-    };
+    var result = getEMFromParts(keys, currents);
+    if (! matcher(result, filter)) return;
+    
+    result.parts=[];
+    result.mf='';
+    
     var comments = [];
     for (var i = 0; i < keys.length; i++) {
         var key = keys[i][currents[i]];

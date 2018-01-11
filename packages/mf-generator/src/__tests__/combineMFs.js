@@ -47,7 +47,6 @@ test('From array of string with some range and non range NaK0-2', function () {
     expect(result.length).toBe(3);
 });
 
-
 test('From array of string with some range and non range C(Me(N2))0-2(CH3)0-1K', function () {
     var mfsArray = ['C(Me(N2))0-2(CH3)0-1K'];
     var result = generateMFs(mfsArray, {canonize: false});
@@ -76,7 +75,6 @@ test('From array of string chem em and msem', function () {
     expect(result.length).toBe(14);
 });
 
-
 test('From array of string to large array', function () {
     var mfsArray = ['C0-100', 'O0-100'];
     var result = generateMFs(mfsArray);
@@ -85,32 +83,36 @@ test('From array of string to large array', function () {
 
 test('From array of string to large array and filter', function () {
     var mfsArray = ['C0-100', 'O0-100'];
-    var result = generateMFs(mfsArray,
-        {
-            minMass: 0.1,
-            maxMass: 13
-        });
+    var result = generateMFs(mfsArray, {
+            filter: {
+                minMW: 0.1,
+                maxMW: 13
+            }
+        }
+    );
     expect(result.length).toBe(1);
 });
 
 test('From array of string to large array and filter unsaturation', function () {
     var mfsArray = ['C0-100', 'H0-100'];
-    var result = generateMFs(mfsArray,
-        {
+    var result = generateMFs(mfsArray, {
+        filter:{
             minUnsaturation: 0,
             maxUnsaturation: 1
-        });
+        }
+    });
     expect(result.length).toBe(151);
 });
 
 test('From array of string to large array and filter unsaturation min/max and integer unsaturation', function () {
     var mfsArray = ['C0-100', 'H0-100'];
-    var result = generateMFs(mfsArray,
-        {
+    var result = generateMFs(mfsArray, {
+        filter: {
             minUnsaturation: 0,
             maxUnsaturation: 1,
             onlyIntegerUnsaturation: true
-        });
+        }
+    });
     expect(result.length).toBe(101);
 });
 
