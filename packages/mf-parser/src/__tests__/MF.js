@@ -71,6 +71,34 @@ test('MF of (Me2CH)3N no expand', () => {
             charge: 0,
             mf: 'C3H3Me6N',
             unsaturation: 0,
+            atoms: {C:3, H:3, Me:6, N:1}
+        }
+    );
+});
+
+test('MF of (Me2CH)3N with expand', () => {
+    var mf = new MF('(Me2CH)3N');
+    var parts = mf.toParts({expand: true});
+
+    expect(parts).toEqual(
+        [[
+            {kind: 'atom', value: 'C', multiplier: 9},
+            {kind: 'atom', value: 'H', multiplier: 21},
+            {kind: 'atom', value: 'N', multiplier: 1}
+        ]]
+    );
+
+    var newMF = mf.toMF();
+    expect(newMF).toBe('C9H21N');
+
+    let info = mf.getInfo();
+    expect(info).toEqual(
+        {
+            mass: 143.27008211723435,
+            monoisotopicMass: 143.16739968126,
+            charge: 0,
+            mf: 'C9H21N',
+            unsaturation: 0,
             atoms: {C:9, H:21, N:1}
         }
     );
