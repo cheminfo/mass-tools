@@ -31,8 +31,9 @@
     "codecov": "^3.0.0",
     "eslint": "^4.15.0",
     "eslint-config-cheminfo": "^1.10.0",
+    "eslint-plugin-jest": "^21.6.2",
     "eslint-plugin-no-only-tests": "^2.0.0",
-    "jest": "^22.0.4",
+    "jest": "^22.1.1",
     "lerna": "^2.6.0",
     "npm-run-all": "^4.1.2"
   },

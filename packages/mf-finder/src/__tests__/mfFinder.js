@@ -3,7 +3,21 @@
 const findMFs=require('../');
 
 describe('test mf-finder', () => {
-    it.only('check brute force iteration', () => {
+    it.only('simple combinations', () => {
+        let result=findMFs(24, {
+           ranges: [
+                {mf:'C', min:0,max:2},
+                {mf:'H', min:0,max:1},
+            ],
+            precision: 1e5,
+        })
+
+      //   console.log(result.mfs);
+    });
+
+
+
+    it('check brute force iteration', () => {
 
         let result=findMFs(24, {
            ranges: [
@@ -13,7 +27,7 @@ describe('test mf-finder', () => {
             precision: 1e5
         })
 
-      //  console.log(result.mfs);
+      //   console.log(result.mfs);
     });
 
     it('check one possibility 12', () => {
