@@ -86,7 +86,6 @@ module.exports = function preprocessRanges(ranges) {
                 possibility.innerCharge = true;
             }
         }
-
     }
 
     return possibilities;

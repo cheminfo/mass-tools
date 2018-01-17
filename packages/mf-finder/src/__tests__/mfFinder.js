@@ -29,13 +29,13 @@ describe('test mf-finder', () => {
         expect(result.mfs[1].mf).toBe('C2H');
     });
 
-    it('simple combinations with optimisation', () => {
-        let result = findMFs(24, {
+    it.only('simple combinations with optimisation', () => {
+        let result = findMFs(24.001, {
             ranges: [
                 { mf: 'C', min: 0, max: 100 },
                 { mf: 'H', min: 0, max: 100 },
             ],
-            precision: 1,
+            precision: 1000,
             allowNeutral: true
         });
         expect(result.info.numberMFEvaluated).toBe(7);
@@ -79,7 +79,8 @@ describe('test mf-finder', () => {
         let result = findMFs(12, {
             ranges: [
                 { mf: 'C', min: 1, max: 1 },
-            ]
+            ],
+            allowNeutral: true
         });
         expect(result.mfs).toHaveLength(1);
         expect(result.mfs[0].mf).toBe('C');
@@ -91,6 +92,7 @@ describe('test mf-finder', () => {
                 { mf: 'C', min: 0, max: 100 },
                 { mf: 'H', min: 0, max: 100 },
             ],
+            allowNeutral: true,
         });
         expect(result.mfs).toHaveLength(1);
         expect(result.mfs[0].mf).toBe('C2');
@@ -103,10 +105,22 @@ describe('test mf-finder', () => {
                 { mf: 'C', min: 0, max: 3 },
                 { mf: 'H', min: 0, max: 40 },
             ],
-            precision: 10000
+            precision: 10000,
+            allowNeutral: true
         });
         expect(result.mfs).toHaveLength(3);
     });
 
+    it('check one possibility 12 with charge', () => {
+        let result = findMFs(12, {
+            ranges: [
+                { mf: 'C+', min: 1, max: 2 },
+            ],
+            allowNeutral: true
+        });
+        expect(result.mfs).toHaveLength(2);
+        expect(result.mfs[0].mf).toBe('(C+)');
+        expect(result.mfs[1].mf).toBe('(C+)2');
+    });
 
 });
