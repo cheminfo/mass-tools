@@ -23,6 +23,10 @@ module.exports = function preprocessRanges(ranges) {
             maxInnerMass: 0,
             minInnerCharge: 0,
             maxInnerCharge: 0,
+            minCharge: 0,
+            maxCharge: 0,
+            minMass: 0,
+            maxMass: 0,
             innerCharge: false
         };
         possibilities.push(possibility);
@@ -51,26 +55,39 @@ module.exports = function preprocessRanges(ranges) {
     // we calculate couple of fixed values
 
     for (let i = 0; i < possibilities.length; i++) {
-        for (let j = i + 1; j < possibilities.length; j++) {
+        for (let j = i; j < possibilities.length; j++) {
             let possibility = possibilities[j];
             if (possibility.em > 0) {
-                possibilities[i].minInnerMass += possibility.em * possibility.originalMinCount;
-                possibilities[i].maxInnerMass += possibility.em * possibility.originalMaxCount;
+                possibilities[i].minMass += possibility.em * possibility.originalMinCount;
+                possibilities[i].maxMass += possibility.em * possibility.originalMaxCount;
             } else {
-                possibilities[i].minInnerMass += possibility.em * possibility.originalMaxCount;
-                possibilities[i].maxInnerMass += possibility.em * possibility.originalMinCount;
+                possibilities[i].minMass += possibility.em * possibility.originalMaxCount;
+                possibilities[i].maxMass += possibility.em * possibility.originalMinCount;
             }
             if (possibility.charge > 0) {
-                possibilities[i].minInnerCharge += possibility.charge * possibility.originalMinCount;
-                possibilities[i].maxInnerCharge += possibility.charge * possibility.originalMaxCount;
+                possibilities[i].minCharge += possibility.charge * possibility.originalMinCount;
+                possibilities[i].maxCharge += possibility.charge * possibility.originalMaxCount;
             } else {
-                possibilities[i].minInnerCharge += possibility.charge * possibility.originalMaxCount;
-                possibilities[i].maxInnerCharge += possibility.charge * possibility.originalMinCount;
+                possibilities[i].minCharge += possibility.charge * possibility.originalMaxCount;
+                possibilities[i].maxCharge += possibility.charge * possibility.originalMinCount;
             }
         }
-        if (possibilities[i].minInnerCharge || possibilities[i].maxInnerCharge) {
-            possibilities[i].innerCharge = true;
-        }
     }
+
+    for (let i = 0; i < possibilities.length; i++) {
+        if (i < (possibilities.length - 1)) {
+            let possibility = possibilities[i];
+            let innerPossibility = possibilities[i + 1];
+            possibility.minInnerMass = innerPossibility.minMass;
+            possibility.maxInnerMass = innerPossibility.maxMass;
+            possibility.minInnerCharge = innerPossibility.minCharge;
+            possibility.maxInnerCharge = innerPossibility.maxCharge;
+            if (possibility.minInnerCharge || possibility.maxInnerCharge) {
+                possibility.innerCharge = true;
+            }
+        }
+
+    }
+
     return possibilities;
 };

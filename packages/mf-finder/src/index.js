@@ -28,12 +28,12 @@ module.exports = function findMF(targetMass, options = {}) {
         onlyNonIntegerUnsaturation,
         maxIterations = 1e8,
         maxResults = 1e5,
-        allowNeutralMolecules = false, // msem because em in this case !
+        allowNeutral = false, // msem because em in this case !
         ranges = [
-            {mf: 'C', min: 0, max: 100},
-            {mf: 'H', min: 0, max: 100},
-            {mf: 'O', min: 0, max: 100},
-            {mf: 'N', min: 0, max: 100},
+            { mf: 'C', min: 0, max: 100 },
+            { mf: 'H', min: 0, max: 100 },
+            { mf: 'O', min: 0, max: 100 },
+            { mf: 'N', min: 0, max: 100 },
         ],
         precision = 100,
         modifications = '',
@@ -78,7 +78,7 @@ module.exports = function findMF(targetMass, options = {}) {
 
     while (!theEnd) {
 
-        console.log(possibilities.map(a => a.currentCount));
+        console.log(possibilities.map((a) => a.currentCount));
 
         if (currentPosition === lastPosition) {
             let isValid = true;
@@ -99,14 +99,14 @@ module.exports = function findMF(targetMass, options = {}) {
             }
 
             if (isValid) {
-                result.mfs.push(getResult(possibilities, targetMass, allowNeutralMolecules));
+                result.mfs.push(getResult(possibilities, targetMass, allowNeutral));
             }
         }
 
         // we need to setup all the arrays if possible
         while (currentPosition < maxPosition && currentPosition >= 0) {
             if (iterationNumber++ > maxIterations) {
-                throw Error('Iteration number is over the current maximum of: ' + maxIterations);
+                throw Error(`Iteration number is over the current maximum of: ${  maxIterations}`);
             }
             currentAtom = possibilities[currentPosition];
             previousAtom = (currentPosition === 0) ? undefined : possibilities[currentPosition - 1];
@@ -170,7 +170,7 @@ function getResult(possibilities, targetMass, allowNeutralMolecules) {
             result.charge += possibility.charge * possibility.currentCount;
             result.unsaturation += possibility.unsaturation * possibility.currentCount;
             if (possibility.isGroup) {
-                result.mf += '(' + possibility.mf + ')' + possibility.currentCount;
+                result.mf += `(${  possibility.mf  })${  possibility.currentCount}`;
             } else {
                 result.mf += possibility.mf;
                 if (possibility.currentCount !== 1) result.mf += possibility.currentCount;
@@ -216,31 +216,3 @@ function setCurrentMinMax(currentAtom, previousAtom, targetMass, massRange) {
     }
 }
 
-
-function getTargetMassCache(possibilities, options = {}) {
-    const {
-        allowNeutralMolecules = false, // msem because em in this case !
-        minCharge = Number.MIN_SAFE_INTEGER,
-        maxCharge = Number.MAX_SAFE_INTEGER,
-    } = options;
-    // we need to calculate the minimal and maximal global charge
-    let minCharge = 0;
-    let maxCharge = 0;
-    if (possibilities.length > 0) {
-        let possibility = possibilities[0];
-        if (possibility.charge > 0) {
-            minCharge += possibility.charge * possibility.originalMinCount;
-            maxCharge += possibility.charge * possibility.originalMaxCount;
-        } else {
-            minCharge -= possibility.charge * possibility.originalMinCount;
-            maxCharge -= possibility.charge * possibility.originalMaxCount;
-        }
-        if (possibilities.length > 1) {
-            let nextPossibility = possibilities[1];
-            minCharge += nextPossibility.minCharge;
-            maxCharge += nextPossibility.maxCharge;
-        }
-    }
-
-
-}
