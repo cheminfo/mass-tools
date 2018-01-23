@@ -16,10 +16,6 @@ const ELECTRON_MASS = require('chemical-elements/src/constants').ELECTRON_MASS;
  * @return {}
  */
 
-let log = console;
-log = {
-    debug: () => {}
-};
 
 let targetMassCache;
 
@@ -69,16 +65,18 @@ module.exports = function findMF(targetMass, options = {}) {
     let previousAtom;
     let lastPossibility = possibilities[lastPosition];
 
-    log.debug('initializing the possibilities');
+    // console.debug('initializing the possibilities');
     initializePossibilities(possibilities);
 
 
     while (!theEnd) {
-        log.debug(
+        /*
+         console..debug(
             'Currently evaluating',
             result.info.numberMFEvaluated,
             possibilitiesToString(possibilities)
         );
+        */
         if (result.info.numberMFEvaluated++ > maxIterations) {
             throw Error(`Iteration number is over the current maximum of: ${maxIterations}`);
         }
@@ -86,9 +84,10 @@ module.exports = function findMF(targetMass, options = {}) {
         let isValid = true;
         if (filterUnsaturation) {
             let unsaturation = lastPossibility.currentUnsaturation;
+            let isOdd = Math.abs(unsaturation % 2);
             if (
-                (onlyIntegerUnsaturation && unsaturation % 2 === 1) ||
-                (onlyNonIntegerUnsaturation && unsaturation % 2 === 0) ||
+                (onlyIntegerUnsaturation && isOdd === 1) ||
+                (onlyNonIntegerUnsaturation && isOdd === 0) ||
                 (fakeMinUnsaturation > unsaturation) ||
                 (fakeMaxUnsaturation < unsaturation)
             ) isValid = false;
@@ -101,6 +100,7 @@ module.exports = function findMF(targetMass, options = {}) {
 
             let minMass = targetMassCache.getMinMass(lastPossibility.currentCharge);
             let maxMass = targetMassCache.getMaxMass(lastPossibility.currentCharge);
+
             if ((lastPossibility.currentMonoisotopicMass < minMass) || (lastPossibility.currentMonoisotopicMass > maxMass)) {
                 isValid = false;
             }
@@ -124,7 +124,7 @@ module.exports = function findMF(targetMass, options = {}) {
                 if (currentPosition < lastPosition) {
                     currentPosition++;
                     setCurrentMinMax(possibilities[currentPosition], possibilities[currentPosition - 1]);
-                    log.debug('MIN/MAX', currentPosition, possibilitiesToString(possibilities));
+                    // console..debug('MIN/MAX', currentPosition, possibilitiesToString(possibilities));
                 } else {
                     break;
                 }
@@ -133,7 +133,7 @@ module.exports = function findMF(targetMass, options = {}) {
             }
         }
 
-        log.debug('After', possibilities.map((a) => [a.currentCount, a.currentMinCount, a.currentMaxCount]));
+        // console..debug('After', possibilities.map((a) => [a.currentCount, a.currentMinCount, a.currentMaxCount]));
 
         if (currentPosition < 0) {
             theEnd = true;
@@ -217,8 +217,9 @@ function setCurrentMinMax(currentAtom, previousAtom) {
 function initializePossibilities(possibilities) {
     for (let i = 0; i < possibilities.length; i++) {
         if (i === 0) {
-            updateCurrentAtom(possibilities[i]);
             setCurrentMinMax(possibilities[i]);
+            updateCurrentAtom(possibilities[i]);
+
         } else {
             updateCurrentAtom(possibilities[i], possibilities[i - 1]);
         }

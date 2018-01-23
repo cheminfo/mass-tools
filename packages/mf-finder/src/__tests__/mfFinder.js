@@ -29,6 +29,38 @@ describe('test mf-finder', () => {
         expect(result.mfs[1].mf).toBe('C2H');
     });
 
+    it('simple combinations with unsaturation', () => {
+        let result = findMFs(16, {
+            ranges: [
+                { mf: 'C', min: 0, max: 100 },
+                { mf: 'H', min: 0, max: 100 },
+            ],
+            precision: 1e5,
+            allowNeutral: true,
+            minUnsaturation: 0,
+            maxUnsaturation: 1
+        });
+        expect(result.mfs).toHaveLength(2);
+        expect(result.mfs[0].mf).toBe('CH4');
+    });
+
+
+    it('simple combinations with integer unsaturation', () => {
+        let result = findMFs(16, {
+            ranges: [
+                { mf: 'C', min: 0, max: 100 },
+                { mf: 'H', min: 0, max: 100 },
+            ],
+            precision: 1e5,
+            allowNeutral: true,
+            minUnsaturation: 0,
+            maxUnsaturation: 1,
+            onlyIntegerUnsaturation: true,
+        });
+        expect(result.mfs).toHaveLength(1);
+        expect(result.mfs[0].mf).toBe('CH4');
+    });
+
     it('simple combinations with impossible', () => {
         let result = findMFs(24, {
             ranges: [
@@ -42,6 +74,19 @@ describe('test mf-finder', () => {
         expect(result.mfs).toHaveLength(2);
         expect(result.mfs[0].mf).toBe('C2');
         expect(result.mfs[1].mf).toBe('C2H');
+    });
+
+    it('combinations with no answer', () => {
+        let result = findMFs(5, {
+            ranges: [
+                { mf: 'C', min: 0, max: 100 },
+                { mf: 'N', min: 0, max: 100 },
+                { mf: 'S', min: 0, max: 100 },
+            ],
+            precision: 1e4,
+            allowNeutral: true
+        });
+        expect(result.mfs).toHaveLength(0);
     });
 
     it('simple combinations with optimisation for large values', () => {
@@ -122,7 +167,6 @@ describe('test mf-finder', () => {
     });
 
     it('check charge', () => {
-
         let result = findMFs(12, {
             ranges: [
                 { mf: 'C', min: 0, max: 2 },
@@ -135,14 +179,42 @@ describe('test mf-finder', () => {
         //      expect(result.mfs).toHaveLength(0);
     });
 
-    it.only('check one possibility 12', () => {
+    it('check when all are charged', () => {
+        let result = findMFs(12, {
+            ranges: [
+                { mf: 'H+', min: 0, max: 2 },
+                { mf: 'C+', min: 0, max: 2 },
+                { mf: 'S+', min: 0, max: 2 },
+            ],
+            precision: 1e5
+        });
+
+        expect(result.mfs).toHaveLength(5);
+    });
+
+    it('check when all are charged and filter by charge', () => {
+        let result = findMFs(12, {
+            ranges: [
+                { mf: 'H+', min: 0, max: 2 },
+                { mf: 'C+', min: 0, max: 2 },
+                { mf: 'S+', min: 0, max: 2 },
+            ],
+            precision: 1e5,
+            maxCharge: 1,
+            minCharge: 1
+        });
+        expect(result.mfs).toHaveLength(1);
+        expect(result.mfs[0].mf).toBe('(C+)');
+    });
+
+
+    it('check one possibility 12', () => {
         let result = findMFs(12, {
             ranges: [
                 { mf: 'C', min: 1, max: 1 },
             ],
             allowNeutral: true
         });
-        console.log(result);
         expect(result.mfs).toHaveLength(1);
         expect(result.mfs[0].mf).toBe('C');
     });
