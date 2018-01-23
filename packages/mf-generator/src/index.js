@@ -1,6 +1,6 @@
 'use strict';
 
-const {ELECTRON_MASS} = require('chemical-elements/src/constants');
+const { ELECTRON_MASS } = require('chemical-elements/src/constants');
 const MF = require('mf-parser').MF;
 const matcher = require('mf-matcher');
 const sum = require('sum-object-keys');
@@ -36,9 +36,9 @@ module.exports = function combineMFs(keys, options = {}) {
         limit = 10000000,
         uniqueMFs
     } = options;
-    if (uniqueMFs===undefined) uniqueMFs=true;
-    if (uniqueMFs===true) options.canonizeMF=true;
-    if (options.canonizeMF===undefined) options.canonizeMF=true;
+    if (uniqueMFs === undefined) uniqueMFs = true;
+    if (uniqueMFs === true) options.canonizeMF = true;
+    if (options.canonizeMF === undefined) options.canonizeMF = true;
 
     if (!Array.isArray(keys)) throw new Error('You need to specify an array of strings or arrays');
 
@@ -90,16 +90,18 @@ module.exports = function combineMFs(keys, options = {}) {
             position++;
         }
         if (evolution > limit) {
-            throw new Error('You have reached the limit of ' + limit + '. You could still change this value using the limit option but it is likely to crash.');
+            throw new Error(`You have reached the limit of ${limit}. You could still change this value using the limit option but it is likely to crash.`);
         }
     }
     appendResult(results, currents, keys, options);
     if (uniqueMFs) {
         var uniqueMFsObject = {};
-        results.forEach( r => uniqueMFsObject[r.mf]=r);
-        results=Object.keys(uniqueMFsObject).map(k => uniqueMFsObject[k]);
+        results.forEach((r) => {
+            uniqueMFsObject[r.mf] = r;
+        });
+        results = Object.keys(uniqueMFsObject).map((k) => uniqueMFsObject[k]);
     }
-    results.sort( (a,b) => (a.em-b.em));
+    results.sort((a, b) => (a.em - b.em));
     return results;
 };
 
@@ -116,7 +118,7 @@ function getMonoisotopicMass(mfString) {
             em: info.monoisotopicMass,
             charge: info.charge,
             mw: info.mass,
-            unsaturation: (info.unsaturation-1)*2,
+            unsaturation: (info.unsaturation - 1) * 2,
             atoms: info.atoms
         };
     }
@@ -128,8 +130,8 @@ function getEMFromParts(parts, currents) {
     var em = 0;
     var mw = 0;
     var unsaturation = 0;
-    var validUnsaturation=true;
-    var atoms={};
+    var validUnsaturation = true;
+    var atoms = {};
 
     for (var i = 0; i < parts.length; i++) {
         var part = parts[i][currents[i]];
@@ -138,7 +140,7 @@ function getEMFromParts(parts, currents) {
             charge += info.charge;
             em += info.em;
             mw += info.mw;
-            sum(atoms,info.atoms);
+            sum(atoms, info.atoms);
             if (info.unsaturation && validUnsaturation) {
                 unsaturation += info.unsaturation;
             }
@@ -157,7 +159,7 @@ function getEMFromParts(parts, currents) {
         em,
         msem,
         mw,
-        unsaturation: validUnsaturation ? unsaturation / 2 + 1: undefined,
+        unsaturation: validUnsaturation ? unsaturation / 2 + 1 : undefined,
         atoms
     };
 }
@@ -172,11 +174,11 @@ function appendResult(results, currents, keys, options = {}) {
     // therefore we should put all the comments at the ned
 
     var result = getEMFromParts(keys, currents);
-    if (! matcher(result, filter)) return;
-    
-    result.parts=[];
-    result.mf='';
-    
+    if (!matcher(result, filter)) return;
+
+    result.parts = [];
+    result.mf = '';
+
     var comments = [];
     for (var i = 0; i < keys.length; i++) {
         var key = keys[i][currents[i]];
@@ -194,13 +196,13 @@ function appendResult(results, currents, keys, options = {}) {
         result.mf = (new MF(result.mf)).toMF();
     }
 
-    if (comments.length > 0) result.mf += '$' + comments.join(' ');
+    if (comments.length > 0) result.mf += `$${comments.join(' ')}`;
     results.push(result);
 }
 
 function processRange(string, comment) {
     var results = [];
-    var parts = string.split(/([0-9]+-[0-9]+)/).filter(v => v); // remove empty parts
+    var parts = string.split(/([0-9]+-[0-9]+)/).filter((v) => v); // remove empty parts
     let position = -1;
     var mfs = [];
     for (var i = 0; i < parts.length; i++) {
@@ -252,7 +254,7 @@ function getMF(mfs, currents, comment) {
             }
         }
     }
-    if (comment) mf += '$' + comment;
+    if (comment) mf += `$${comment}`;
     return mf;
 }
 

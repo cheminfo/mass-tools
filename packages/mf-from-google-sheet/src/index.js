@@ -5,11 +5,11 @@ var Papa = require('papaparse');
 var generateMFs = require('mf-generator');
 var MF = require('mf-parser/src/MF');
 
-async function mfFromGoogleSheet(url, options={}) {
+async function mfFromGoogleSheet(url, options = {}) {
     let {
         urlReferences
     } = options;
-    
+
     if (urlReferences) {
         let results = await Promise.all([
             fetchText(url),
@@ -29,7 +29,7 @@ async function mfFromGoogleSheet(url, options={}) {
             }
         );
         var fields = parsed.meta.fields;
-        var infoFields = fields.filter(a => !['mf', 'modif', 'ESI', 'MALDI', 'positive', 'negative'].includes(a));
+        var infoFields = fields.filter((a) => !['mf', 'modif', 'ESI', 'MALDI', 'positive', 'negative'].includes(a));
         var formulas = parsed.data;
 
 

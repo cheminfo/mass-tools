@@ -24,7 +24,7 @@ module.exports = function convertForDisplay(lines) {
             case Kind.MULTIPLIER_RANGE:
                 result = {
                     kind: Format.SUBSCRIPT,
-                    value: String(line.value.from) + '-' + line.value.to
+                    value: `${String(line.value.from)}-${line.value.to}`
                 };
                 results.push(result);
                 break;
@@ -69,7 +69,7 @@ module.exports = function convertForDisplay(lines) {
                 }
                 result = {
                     kind: Format.SUPERSCRIPT,
-                    value: '{' + line.value.ratio.join(',') + '}'
+                    value: `{${line.value.ratio.join(',')}}`
                 };
                 results.push(result);
                 break;

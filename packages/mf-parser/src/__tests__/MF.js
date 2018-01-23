@@ -8,12 +8,12 @@ test('MF of Et3N.HCl', () => {
 
     expect(parts).toEqual(
         [[
-            {kind: 'atom', value: 'C', multiplier: 6},
-            {kind: 'atom', value: 'H', multiplier: 15},
-            {kind: 'atom', value: 'N', multiplier: 1}
+            { kind: 'atom', value: 'C', multiplier: 6 },
+            { kind: 'atom', value: 'H', multiplier: 15 },
+            { kind: 'atom', value: 'N', multiplier: 1 }
         ], [
-            {kind: 'atom', value: 'H', multiplier: 1},
-            {kind: 'atom', value: 'Cl', multiplier: 1}
+            { kind: 'atom', value: 'H', multiplier: 1 },
+            { kind: 'atom', value: 'Cl', multiplier: 1 }
         ]]
     );
 
@@ -26,36 +26,36 @@ test('MF of Et3N.HCl', () => {
     expect(html).toBe('C<sub>6</sub>H<sub>15</sub>N<sub>1</sub> • H<sub>1</sub>Cl<sub>1</sub>');
 
     let info = mf.getInfo();
-    expect(info).toEqual({parts:
-        [{mass: 101.19022990269394,
+    expect(info).toEqual({ parts:
+        [{ mass: 101.19022990269394,
             monoisotopicMass: 101.12044948788001,
             charge: 0,
             mf: 'C6H15N',
             unsaturation: 0,
-            atoms: {C:6, H:15, N:1}},
-        {mass: 36.460878336663775,
+            atoms: { C: 6, H: 15, N: 1 } },
+        { mass: 36.460878336663775,
             monoisotopicMass: 35.97667771423,
             charge: 0,
             mf: 'HCl',
-            unsaturation:0,
-            atoms: {H:1, Cl:1}}],
+            unsaturation: 0,
+            atoms: { H: 1, Cl: 1 } }],
     monoisotopicMass: 137.09712720211002,
     mass: 137.6511082393577,
     charge: 0,
-    mf: 'C6H15N.HCl'}
+    mf: 'C6H15N.HCl' }
     );
 });
 
 test('MF of (Me2CH)3N no expand', () => {
     var mf = new MF('(Me2CH)3N');
-    var parts = mf.toParts({expand: false});
+    var parts = mf.toParts({ expand: false });
 
     expect(parts).toEqual(
         [[
-            {kind: 'atom', value: 'C', multiplier: 3},
-            {kind: 'atom', value: 'H', multiplier: 3},
-            {kind: 'atom', value: 'Me', multiplier: 6},
-            {kind: 'atom', value: 'N', multiplier: 1}
+            { kind: 'atom', value: 'C', multiplier: 3 },
+            { kind: 'atom', value: 'H', multiplier: 3 },
+            { kind: 'atom', value: 'Me', multiplier: 6 },
+            { kind: 'atom', value: 'N', multiplier: 1 }
         ]]
 
     );
@@ -71,20 +71,20 @@ test('MF of (Me2CH)3N no expand', () => {
             charge: 0,
             mf: 'C3H3Me6N',
             unsaturation: 0,
-            atoms: {C:3, H:3, Me:6, N:1}
+            atoms: { C: 3, H: 3, Me: 6, N: 1 }
         }
     );
 });
 
 test('MF of (Me2CH)3N with expand', () => {
     var mf = new MF('(Me2CH)3N');
-    var parts = mf.toParts({expand: true});
+    var parts = mf.toParts({ expand: true });
 
     expect(parts).toEqual(
         [[
-            {kind: 'atom', value: 'C', multiplier: 9},
-            {kind: 'atom', value: 'H', multiplier: 21},
-            {kind: 'atom', value: 'N', multiplier: 1}
+            { kind: 'atom', value: 'C', multiplier: 9 },
+            { kind: 'atom', value: 'H', multiplier: 21 },
+            { kind: 'atom', value: 'N', multiplier: 1 }
         ]]
     );
 
@@ -99,7 +99,7 @@ test('MF of (Me2CH)3N with expand', () => {
             charge: 0,
             mf: 'C9H21N',
             unsaturation: 0,
-            atoms: {C:9, H:21, N:1}
+            atoms: { C: 9, H: 21, N: 1 }
         }
     );
 });
@@ -110,9 +110,9 @@ test('MF of (+)SO4(+)(-2)2', () => {
 
     expect(parts).toEqual(
         [[
-            {kind: 'atom', value: 'O', multiplier: 4},
-            {kind: 'atom', value: 'S', multiplier: 1},
-            {kind: 'charge', value: -2},
+            { kind: 'atom', value: 'O', multiplier: 4 },
+            { kind: 'atom', value: 'S', multiplier: 1 },
+            { kind: 'charge', value: -2 },
         ]]
     );
 
@@ -121,7 +121,7 @@ test('MF of (+)SO4(+)(-2)2', () => {
 
     let info = mf.getInfo({
         customUnsaturations: {
-            S:4
+            S: 4
         }
     });
     expect(info).toEqual({
@@ -131,7 +131,7 @@ test('MF of (+)SO4(+)(-2)2', () => {
         observedMonoisotopicMass: 47.97641340624907,
         mf: 'O4S(-2)',
         unsaturation: 2,
-        atoms: {O:4, S:1}}
+        atoms: { O: 4, S: 1 } }
     );
 });
 
@@ -140,10 +140,10 @@ test('MF of NC[13C][15N]2NN2', () => {
     var parts = mf.toParts();
     expect(parts).toEqual(
         [[
-            {kind: 'atom', value: 'C', multiplier: 1},
-            {kind: 'isotope', value: {atom: 'C', isotope: 13}, multiplier: 1},
-            {kind: 'atom', value: 'N', multiplier: 4},
-            {kind: 'isotope', value: {atom: 'N', isotope: 15}, multiplier: 2},
+            { kind: 'atom', value: 'C', multiplier: 1 },
+            { kind: 'isotope', value: { atom: 'C', isotope: 13 }, multiplier: 1 },
+            { kind: 'atom', value: 'N', multiplier: 4 },
+            { kind: 'isotope', value: { atom: 'N', isotope: 15 }, multiplier: 2 },
         ]]
     );
 
@@ -154,7 +154,7 @@ test('MF of NC[13C][15N]2NN2', () => {
         charge: 0,
         mf: 'C[13C]N4[15N]2',
         unsaturation: 6,
-        atoms: {C:2, N:6},
+        atoms: { C: 2, N: 6 },
     });
 
     var newMF = mf.toMF();
@@ -166,9 +166,9 @@ test('MF of CC{50,50}H', () => {
     var parts = mf.toParts();
     expect(parts).toEqual(
         [[
-            {kind: 'atom', value: 'C', multiplier: 1},
-            {kind: 'isotopeRatio', value: {atom: 'C', ratio: [50, 50]}, multiplier: 1},
-            {kind: 'atom', value: 'H', multiplier: 1}
+            { kind: 'atom', value: 'C', multiplier: 1 },
+            { kind: 'isotopeRatio', value: { atom: 'C', ratio: [50, 50] }, multiplier: 1 },
+            { kind: 'atom', value: 'H', multiplier: 1 }
         ]]
     );
 
@@ -183,7 +183,7 @@ test('MF of CC{50,50}H', () => {
             charge: 0,
             mf: 'CC{50,50}H',
             unsaturation: 2.5,
-            atoms: {C:2, H:1}
+            atoms: { C: 2, H: 1 }
         }
     );
 });

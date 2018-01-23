@@ -9,8 +9,8 @@ module.exports = async function loadGoogleSheet(options = {}) {
     } = options;
     if (options.uuid && !options.refUUID) refUUID = '';
 
-    var url = 'https://googledocs.cheminfo.org/spreadsheets/d/' + uuid + '/export?format=tsv';
-    var refURL = (refUUID) ? refURL = 'https://googledocs.cheminfo.org/spreadsheets/d/' + refUUID + '/export?format=tsv' : '';
+    var url = `https://googledocs.cheminfo.org/spreadsheets/d/${uuid}/export?format=tsv`;
+    var refURL = (refUUID) ? refURL = `https://googledocs.cheminfo.org/spreadsheets/d/${refUUID}/export?format=tsv` : '';
     let data = await mfFromGoogleSheet(url, refURL);
     data.sort((a, b) => a.em - b.em);
     return data;

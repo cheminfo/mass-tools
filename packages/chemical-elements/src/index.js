@@ -2,7 +2,7 @@
 
 const elements = require('./elementsAndStableIsotopes.js');
 const groups = require('./groups.js');
-const {ELECTRON_MASS} = require('./constants');
+const { ELECTRON_MASS } = require('./constants');
 
 function getElementsObject() {
     var object = {};

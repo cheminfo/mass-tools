@@ -9,10 +9,10 @@ module.exports = function getHtml(lines) {
     for (let line of lines) {
         switch (line.kind) {
             case Format.SUBSCRIPT:
-                html.push('<sub>' + line.value + '</sub>');
+                html.push(`<sub>${line.value}</sub>`);
                 break;
             case Format.SUPERSCRIPT:
-                html.push('<sup>' + line.value + '</sup>');
+                html.push(`<sup>${line.value}</sup>`);
                 break;
             case Format.SUPERIMPOSE:
                 html.push(`<span style="${Style.SUPERIMPOSE}">`);

@@ -44,13 +44,13 @@ module.exports = function toParts(lines, options = {}) {
             case Kind.ISOTOPE:
             case Kind.CHARGE:
                 currentPart.lines.push(
-                    Object.assign({}, line, {multiplier: 1})
+                    Object.assign({}, line, { multiplier: 1 })
                 );
                 break;
             case Kind.COMMENT: // we ignore comments to create the parts and canonized MF
                 break;
             default:
-                throw new Error('Can not process mf having: ' + line.kind);
+                throw new Error(`Can not process mf having: ${line.kind}`);
         }
         previousKind = line.kind;
     }
@@ -60,7 +60,7 @@ module.exports = function toParts(lines, options = {}) {
 };
 
 function createNewPart() {
-    let currentMultiplier = {value: 1, fromIndex: 0};
+    let currentMultiplier = { value: 1, fromIndex: 0 };
     return {
         lines: [],
         multipliers: [currentMultiplier],

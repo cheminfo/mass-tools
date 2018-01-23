@@ -9,18 +9,17 @@ const matcher = require('mf-matcher');
 
 module.exports = function search(filter = {}, options = {}) {
     let {
-        databases=Object.keys(this.databases),
-        modification='',
-        flatten=false
+        databases = Object.keys(this.databases),
+        flatten = false
     } = options;
 
-    let results={};
+    let results = {};
     for (let database of databases) {
-        results[database]=this.databases[database].filter( entry => matcher(entry, filter));
+        results[database] = this.databases[database].filter((entry) => matcher(entry, filter));
     }
 
     if (flatten) {
-        let flattenResults=[];
+        let flattenResults = [];
         for (let database of databases) {
             for (let entry of results[database]) {
                 entry.database = database;

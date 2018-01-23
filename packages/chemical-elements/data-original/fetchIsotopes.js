@@ -9,9 +9,9 @@ async function retrieve(refresh = false) {
     if (refresh) {
         var response = await fetch('http://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=&ascii=ascii2&isotype=all');
         text = await response.text();
-        fs.writeFileSync(__dirname + '/isotopes.txt', text);
+        fs.writeFileSync(`${__dirname}/isotopes.txt`, text);
     } else {
-        text = String(fs.readFileSync(__dirname + '/isotopes.txt'));
+        text = String(fs.readFileSync(`${__dirname}/isotopes.txt`));
     }
     var lines = text.split(/[\r\n]+/).filter((a) => a.match(/^[a-zA-Z ]+= /));
 
@@ -76,7 +76,7 @@ async function retrieve(refresh = false) {
         fields[label] = true;
     }
 
-    fs.writeFileSync(__dirname + '/isotopes.json', JSON.stringify(elements));
+    fs.writeFileSync(`${__dirname}/isotopes.json`, JSON.stringify(elements));
 }
 
 retrieve();

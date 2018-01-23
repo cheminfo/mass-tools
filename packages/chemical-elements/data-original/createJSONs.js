@@ -2,13 +2,13 @@
 
 const Papa = require('papaparse');
 const fs = require('fs');
-const {MF, Kind} = require('mf-parser');
+const { MF, Kind } = require('mf-parser');
 
 const MODULE = "'use strict';\nmodule.exports=";
 
-var names = Papa.parse(fs.readFileSync(__dirname + '/names.tsv') + '', {header: true}).data;
+var names = Papa.parse(`${fs.readFileSync(`${__dirname}/names.tsv`)}`, { header: true }).data;
 
-var elementsAndIsotopes = JSON.parse(fs.readFileSync(__dirname + '/isotopes.json'));
+var elementsAndIsotopes = JSON.parse(fs.readFileSync(`${__dirname}/isotopes.json`));
 
 for (var i = 0; i < elementsAndIsotopes.length; i++) {
     let element = elementsAndIsotopes[i];
@@ -25,7 +25,7 @@ for (var i = 0; i < elementsAndIsotopes.length; i++) {
     element.mass = (massFromIsotopes) ? massFromIsotopes : null;
 }
 
-fs.writeFileSync(__dirname + '/../src/elementsAndIsotopes.js', MODULE + JSON.stringify(elementsAndIsotopes));
+fs.writeFileSync(`${__dirname}/../src/elementsAndIsotopes.js`, MODULE + JSON.stringify(elementsAndIsotopes));
 
 var elementsAndStableIsotopes = JSON.parse(JSON.stringify(elementsAndIsotopes));
 // we remove all the unstable isotopes
@@ -39,8 +39,8 @@ elementsAndStableIsotopes.forEach((e) => {
         };
     });
 });
-fs.writeFileSync(__dirname + '/../src/elementsAndStableIsotopes.js', MODULE + JSON.stringify(elementsAndStableIsotopes));
-fs.writeFileSync(__dirname + '/../src/stableIsotopesObject.js', MODULE + JSON.stringify(stableIsotopesObject));
+fs.writeFileSync(`${__dirname}/../src/elementsAndStableIsotopes.js`, MODULE + JSON.stringify(elementsAndStableIsotopes));
+fs.writeFileSync(`${__dirname}/../src/stableIsotopesObject.js`, MODULE + JSON.stringify(stableIsotopesObject));
 
 
 var elements = JSON.parse(JSON.stringify(elementsAndStableIsotopes));
@@ -48,7 +48,7 @@ elements.forEach((e) => {
     e.monoisotopicMass = getMonoisotopicMass(e);
     e.isotopes = undefined;
 });
-fs.writeFileSync(__dirname + '/../src/elements.js', MODULE + JSON.stringify(elements));
+fs.writeFileSync(`${__dirname}/../src/elements.js`, MODULE + JSON.stringify(elements));
 
 
 var elementsObject = {};
@@ -56,7 +56,7 @@ elements.forEach((e) => {
     elementsObject[e.symbol] = e;
     e.symbol = undefined;
 });
-fs.writeFileSync(__dirname + '/../src/elementsObject.js', MODULE + JSON.stringify(elementsObject));
+fs.writeFileSync(`${__dirname}/../src/elementsObject.js`, MODULE + JSON.stringify(elementsObject));
 
 
 var elementsAndIsotopesObject = {};
@@ -64,17 +64,17 @@ elementsAndIsotopes.forEach((e) => {
     elementsAndIsotopesObject[e.symbol] = e;
     e.symbol = undefined;
 });
-fs.writeFileSync(__dirname + '/../src/elementsAndIsotopesObject.js', MODULE + JSON.stringify(elementsAndIsotopesObject));
+fs.writeFileSync(`${__dirname}/../src/elementsAndIsotopesObject.js`, MODULE + JSON.stringify(elementsAndIsotopesObject));
 
 var elementsAndStableIsotopesObject = {};
 elementsAndStableIsotopes.forEach((e) => {
     elementsAndStableIsotopesObject[e.symbol] = e;
     e.symbol = undefined;
 });
-fs.writeFileSync(__dirname + '/../src/elementsAndStableIsotopesObject.js', MODULE + JSON.stringify(elementsAndStableIsotopesObject));
+fs.writeFileSync(`${__dirname}/../src/elementsAndStableIsotopesObject.js`, MODULE + JSON.stringify(elementsAndStableIsotopesObject));
 
 
-var groups = Papa.parse(fs.readFileSync(__dirname + '/groups.tsv') + '', {header: true}).data;
+var groups = Papa.parse(`${fs.readFileSync(`${__dirname}/groups.tsv`)}`, { header: true }).data;
 // we will create an object for the elements
 for (let group of groups) {
     let mf = group.mf;
@@ -82,32 +82,32 @@ for (let group of groups) {
     let parts = mfObject.toParts()[0];
     group.mass = 0;
     group.monoisotopicMass = 0;
-    group.unsaturation = (mfObject.getInfo().unsaturation-1)*2;
-    if (! group.unsaturation) console.log(mf, mfObject.getInfo());
-    group.elements = parts.map(part => {
+    group.unsaturation = (mfObject.getInfo().unsaturation - 1) * 2;
+
+    group.elements = parts.map((part) => {
         let number = part.multiplier;
         let symbol;
         switch (part.kind) {
             case Kind.ATOM: {
                 symbol = part.value;
                 let element = elementsObject[symbol];
-                if (!element) throw new Error('element unknown: ' + symbol + ' - ' + part);
+                if (!element) throw new Error(`element unknown: ${symbol} - ${part}`);
                 group.mass += element.mass * number;
                 group.monoisotopicMass += element.monoisotopicMass * number;
             }
                 break;
             case Kind.ISOTOPE: {
-                symbol = '[' + part.value.isotope + part.value.atom + ']';
+                symbol = `[${part.value.isotope}${part.value.atom}]`;
                 let element = elementsAndIsotopesObject[part.value.atom];
-                if (!element) throw new Error('element unknown: ' + part.value.atom + ' - ' + part);
-                let isotope = element.isotopes.filter(a => a.nominal === part.value.isotope)[0];
-                if (!isotope) throw new Error('isotope unknown: ' + part.value.isotope + ' - ' + part);
+                if (!element) throw new Error(`element unknown: ${part.value.atom} - ${part}`);
+                let isotope = element.isotopes.filter((a) => a.nominal === part.value.isotope)[0];
+                if (!isotope) throw new Error(`isotope unknown: ${part.value.isotope} - ${part}`);
                 group.mass += isotope.mass * number;
                 group.monoisotopicMass += isotope.mass * number;
             }
                 break;
             default:
-                throw new Error('unknown type: ' + part.kind);
+                throw new Error(`unknown type: ${part.kind}`);
         }
 
         return {
@@ -117,7 +117,7 @@ for (let group of groups) {
     });
 }
 
-fs.writeFileSync(__dirname + '/../src/groups.js', MODULE + JSON.stringify(groups));
+fs.writeFileSync(`${__dirname}/../src/groups.js`, MODULE + JSON.stringify(groups));
 
 
 var groupsObject = {};
@@ -125,13 +125,15 @@ groups.forEach((e) => {
     groupsObject[e.symbol] = e;
     e.symbol = undefined;
 });
-fs.writeFileSync(__dirname + '/../src/groupsObject.js', MODULE + JSON.stringify(groupsObject));
+fs.writeFileSync(`${__dirname}/../src/groupsObject.js`, MODULE + JSON.stringify(groupsObject));
 
 
 function getMass(element) {
     var stable = element.isotopes.filter((a) => a.abundance > 0);
     var mass = 0;
-    stable.forEach(a => mass += a.abundance * a.mass);
+    stable.forEach((a) => {
+        mass += a.abundance * a.mass;
+    });
     return mass;
 }
 

@@ -240,6 +240,7 @@ function initializePossibilities(possibilities) {
     }
 }
 
+// eslint-disable-next-line no-unused-vars
 function possibilitiesToString(possibilities) {
     return possibilities.map((a) => [`mf:${a.mf}`, `current:${a.currentCount}`, `min:${a.currentMinCount}`, `max:${a.currentMaxCount}`, `charge:${a.currentCharge}`]);
 }

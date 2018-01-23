@@ -10,7 +10,7 @@ const toDisplay = require('./toDisplay');
 module.exports = function partsToDisplay(parts) {
     var lines = [];
     for (let part of parts) {
-        if (lines.length > 0) lines.push({kind: Kind.SALT, value: '•'});
+        if (lines.length > 0) lines.push({ kind: Kind.SALT, value: '•' });
         for (let partLine of part) {
             lines.push(partLine);
             if (partLine.multiplier) {
