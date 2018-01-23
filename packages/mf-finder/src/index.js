@@ -6,15 +6,7 @@ const TargetMassCache = require('./TargetMassCache');
 const ELECTRON_MASS = require('chemical-elements/src/constants').ELECTRON_MASS;
 /**
  * Returns possible combinations
- *
- * ranges=[{
- * unaturation,
- * em,
- * min
- * max
- * }]
- *
- * @return {}
+ * * @return {}
  */
 
 
@@ -224,7 +216,6 @@ function setCurrentMinMax(currentAtom, previousAtom) {
         currentAtom.currentCount = currentAtom.currentMinCount - 1;
         //     console.log('After MIN / MAX', previousAtom.currentCount, currentAtom);
     }
-
 }
 
 

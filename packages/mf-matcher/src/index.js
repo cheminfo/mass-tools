@@ -4,6 +4,8 @@
  * Returns a very important number
  * @return {boolean}
  */
+
+
 module.exports = function mfFilter(entry, options = {}) {
     const {
         minMW = 0,
@@ -12,10 +14,10 @@ module.exports = function mfFilter(entry, options = {}) {
         maxEM = +Infinity,
         minMSEM = 0,
         maxMSEM = +Infinity,
-        minCharge = -Infinity,
-        maxCharge = +Infinity,
-        minUnsaturation = -Infinity,
-        maxUnsaturation = +Infinity,
+        minCharge = Number.MIN_SAFE_INTEGER,
+        maxCharge = Number.MAX_SAFE_INTEGER,
+        minUnsaturation = Number.MIN_SAFE_INTEGER,
+        maxUnsaturation = Number.MAX_SAFE_INTEGER,
         onlyIntegerUnsaturation,
         onlyNonIntegerUnsaturation,
         atoms
