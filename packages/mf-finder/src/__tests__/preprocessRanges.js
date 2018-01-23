@@ -28,6 +28,7 @@ describe('preprocessRanges', () => {
                 { mf: '(C-1H)2', min: 0, max: 2 },
             ]
         );
+
         expect(Array.isArray(possibilities)).toBeTruthy();
         expect(possibilities[0]).toMatchObject({
             minCharge: -4,

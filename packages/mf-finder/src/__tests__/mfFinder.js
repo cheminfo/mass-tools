@@ -76,6 +76,31 @@ describe('test mf-finder', () => {
         expect(result.mfs[1].mf).toBe('C2H');
     });
 
+    it('simple combinations from string ranges', () => {
+        let result = findMFs(24, {
+            ranges: 'C0-2H0-1S0-100',
+            precision: 1e5,
+            allowNeutral: true
+        });
+        expect(result.mfs).toHaveLength(2);
+        expect(result.mfs[0].mf).toBe('C2');
+        expect(result.mfs[1].mf).toBe('C2H');
+    });
+
+    it('simple combinations from string ranges with modifications', () => {
+        let result = findMFs(12, {
+            ranges: [
+                { mf: 'C', min: 0, max: 2 },
+                { mf: 'H', min: 0, max: 1 },
+                { mf: 'H+', min: 0, max: 2 },
+            ],
+            precision: 1e5,
+            modifications: 'H+, H++'
+        });
+        expect(result.mfs).toHaveLength(4);
+        expect(result.mfs[0].mf).toBe('C');
+    });
+
     it('combinations with no answer', () => {
         let result = findMFs(5, {
             ranges: [
@@ -244,7 +269,7 @@ describe('test mf-finder', () => {
         expect(result.mfs).toHaveLength(3);
     });
 
-    it('check one possibility 12 with charge', () => {
+    it.only('check one possibility 12 with charge', () => {
         let result = findMFs(12, {
             ranges: [
                 { mf: 'C+', min: 1, max: 2 },

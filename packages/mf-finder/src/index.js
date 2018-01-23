@@ -1,6 +1,7 @@
 'use strict';
 
 const preprocessRanges = require('./preprocessRanges');
+const preprocessModifications = require('./preprocessModifications');
 const TargetMassCache = require('./TargetMassCache');
 const ELECTRON_MASS = require('chemical-elements/src/constants').ELECTRON_MASS;
 /**
@@ -47,98 +48,103 @@ module.exports = function findMF(targetMass, options = {}) {
     let result = {
         mfs: []
     };
-    let possibilities = preprocessRanges(ranges);
-    if (possibilities.length === 0) return { mfs: [] };
 
-    targetMassCache = new TargetMassCache(targetMass, possibilities, options);
-    result.info = {
-        numberMFEvaluated: 0,
-        numberResults: 0,
-    };
+    // we need to make the processing for all the modifications
+    let modifications = preprocessModifications(options.modifications);
+    for (let modification of modifications) {
+        let possibilities = preprocessRanges(ranges, modification);
+        if (possibilities.length === 0) return { mfs: [] };
 
-
-    let theEnd = false;
-    let maxPosition = possibilities.length;
-    let lastPosition = possibilities.length - 1;
-    let currentPosition = 0;
-    let currentAtom;
-    let previousAtom;
-    let lastPossibility = possibilities[lastPosition];
-
-    // console.debug('initializing the possibilities');
-    initializePossibilities(possibilities);
+        targetMassCache = new TargetMassCache(targetMass, possibilities, options);
+        result.info = {
+            numberMFEvaluated: 0,
+            numberResults: 0,
+        };
 
 
-    while (!theEnd) {
-        /*
-         console..debug(
-            'Currently evaluating',
-            result.info.numberMFEvaluated,
-            possibilitiesToString(possibilities)
-        );
-        */
-        if (result.info.numberMFEvaluated++ > maxIterations) {
-            throw Error(`Iteration number is over the current maximum of: ${maxIterations}`);
-        }
+        let theEnd = false;
+        let maxPosition = possibilities.length;
+        let lastPosition = possibilities.length - 1;
+        let currentPosition = 0;
+        let currentAtom;
+        let previousAtom;
+        let lastPossibility = possibilities[lastPosition];
 
-        let isValid = true;
-        if (filterUnsaturation) {
-            let unsaturation = lastPossibility.currentUnsaturation;
-            let isOdd = Math.abs(unsaturation % 2);
-            if (
-                (onlyIntegerUnsaturation && isOdd === 1) ||
-                (onlyNonIntegerUnsaturation && isOdd === 0) ||
-                (fakeMinUnsaturation > unsaturation) ||
-                (fakeMaxUnsaturation < unsaturation)
-            ) isValid = false;
-        }
-        if (filterCharge && (lastPossibility.currentCharge < minCharge || lastPossibility.currentCharge > maxCharge)) {
-            isValid = false;
-        }
+        // console.debug('initializing the possibilities');
+        initializePossibilities(possibilities);
 
-        if (isValid) {
+        while (!theEnd) {
+            /*
+             console..debug(
+                'Currently evaluating',
+                result.info.numberMFEvaluated,
+                possibilitiesToString(possibilities)
+            );
+            */
+            if (result.info.numberMFEvaluated++ > maxIterations) {
+                throw Error(`Iteration number is over the current maximum of: ${maxIterations}`);
+            }
 
-            let minMass = targetMassCache.getMinMass(lastPossibility.currentCharge);
-            let maxMass = targetMassCache.getMaxMass(lastPossibility.currentCharge);
-
-            if ((lastPossibility.currentMonoisotopicMass < minMass) || (lastPossibility.currentMonoisotopicMass > maxMass)) {
+            let isValid = true;
+            if (filterUnsaturation) {
+                let unsaturation = lastPossibility.currentUnsaturation;
+                let isOdd = Math.abs(unsaturation % 2);
+                if (
+                    (onlyIntegerUnsaturation && isOdd === 1) ||
+                    (onlyNonIntegerUnsaturation && isOdd === 0) ||
+                    (fakeMinUnsaturation > unsaturation) ||
+                    (fakeMaxUnsaturation < unsaturation)
+                ) isValid = false;
+            }
+            if (filterCharge && (lastPossibility.currentCharge < minCharge || lastPossibility.currentCharge > maxCharge)) {
                 isValid = false;
             }
-            // console.log('xxxxx', isValid, minMass, maxMass, lastPossibility);
-        }
-        if (isValid) {
-            result.mfs.push(getResult(possibilities, targetMass, allowNeutral));
-            result.info.numberResults++;
-        }
 
+            if (isValid) {
 
-        // we need to setup all the arrays if possible
-        while (currentPosition < maxPosition && currentPosition >= 0) {
-            currentAtom = possibilities[currentPosition];
-            previousAtom = (currentPosition === 0) ? undefined : possibilities[currentPosition - 1];
-            if (currentAtom.currentCount < currentAtom.currentMaxCount) {
-                //      console.log('currentPosition', currentPosition, currentAtom.currentCount, currentAtom.currentMaxCount);
-                currentAtom.currentCount++;
-                updateCurrentAtom(currentAtom, previousAtom);
-                //  console.log('updated', currentAtom);
-                if (currentPosition < lastPosition) {
-                    currentPosition++;
-                    setCurrentMinMax(possibilities[currentPosition], possibilities[currentPosition - 1]);
-                    // console..debug('MIN/MAX', currentPosition, possibilitiesToString(possibilities));
-                } else {
-                    break;
+                let minMass = targetMassCache.getMinMass(lastPossibility.currentCharge);
+                let maxMass = targetMassCache.getMaxMass(lastPossibility.currentCharge);
+
+                if ((lastPossibility.currentMonoisotopicMass < minMass) || (lastPossibility.currentMonoisotopicMass > maxMass)) {
+                    isValid = false;
                 }
-            } else {
-                currentPosition--;
+                // console.log('xxxxx', isValid, minMass, maxMass, lastPossibility);
+            }
+            if (isValid) {
+                result.mfs.push(getResult(possibilities, targetMass, allowNeutral, modification));
+                result.info.numberResults++;
+            }
+
+
+            // we need to setup all the arrays if possible
+            while (currentPosition < maxPosition && currentPosition >= 0) {
+                currentAtom = possibilities[currentPosition];
+                previousAtom = (currentPosition === 0) ? undefined : possibilities[currentPosition - 1];
+                if (currentAtom.currentCount < currentAtom.currentMaxCount) {
+                    //      console.log('currentPosition', currentPosition, currentAtom.currentCount, currentAtom.currentMaxCount);
+                    currentAtom.currentCount++;
+                    updateCurrentAtom(currentAtom, previousAtom);
+                    //  console.log('updated', currentAtom);
+                    if (currentPosition < lastPosition) {
+                        currentPosition++;
+                        setCurrentMinMax(possibilities[currentPosition], possibilities[currentPosition - 1]);
+                        // console..debug('MIN/MAX', currentPosition, possibilitiesToString(possibilities));
+                    } else {
+                        break;
+                    }
+                } else {
+                    currentPosition--;
+                }
+            }
+
+            // console..debug('After', possibilities.map((a) => [a.currentCount, a.currentMinCount, a.currentMaxCount]));
+
+            if (currentPosition < 0) {
+                theEnd = true;
             }
         }
-
-        // console..debug('After', possibilities.map((a) => [a.currentCount, a.currentMinCount, a.currentMaxCount]));
-
-        if (currentPosition < 0) {
-            theEnd = true;
-        }
     }
+
     result.mfs.sort((a, b) => a.ppm - b.ppm);
     return result;
 };
@@ -159,26 +165,34 @@ function updateCurrentAtom(currentAtom, previousAtom) {
 
 }
 
-function getResult(possibilities, targetMass, allowNeutralMolecules) {
+function getResult(possibilities, targetMass, allowNeutralMolecules, modification) {
     let result = {
         em: 0,
         unsaturation: 0,
         mf: '',
         charge: 0,
         msem: 0,
-        delta: 0
+        delta: 0,
+        modification: modification ? modification.mf : undefined
     };
+
+    let firstModification = modification ? true : false;
     for (let possibility of possibilities) {
         if (possibility.currentCount !== 0) {
-            result.em += possibility.em * possibility.currentCount;
+
             result.charge += possibility.charge * possibility.currentCount;
-            result.unsaturation += possibility.unsaturation * possibility.currentCount;
-            if (possibility.isGroup) {
-                result.mf += `(${possibility.mf})`;
-                if (possibility.currentCount !== 1) result.mf += possibility.currentCount;
+            if (firstModification && modification.mf === possibility.mf) {
+                firstModification = false;
             } else {
-                result.mf += possibility.mf;
-                if (possibility.currentCount !== 1) result.mf += possibility.currentCount;
+                result.em += possibility.em * possibility.currentCount;
+                result.unsaturation += possibility.unsaturation * possibility.currentCount;
+                if (possibility.isGroup) {
+                    result.mf += `(${possibility.mf})`;
+                    if (possibility.currentCount !== 1) result.mf += possibility.currentCount;
+                } else {
+                    result.mf += possibility.mf;
+                    if (possibility.currentCount !== 1) result.mf += possibility.currentCount;
+                }
             }
         }
     }
@@ -191,7 +205,7 @@ function getResult(possibilities, targetMass, allowNeutralMolecules) {
         result.delta = result.em - targetMass;
         result.ppm = Math.abs((targetMass - result.msem) / targetMass * 1e6);
     }
-    result.unsaturation = (result.unsaturation + result.charge) / 2 + 1;
+    result.unsaturation = (result.unsaturation + result.charge - modification.charge) / 2 + 1;
     return result;
 }
 

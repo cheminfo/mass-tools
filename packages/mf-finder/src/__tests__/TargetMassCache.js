@@ -69,7 +69,7 @@ describe('TargetMassCache', () => {
             minCharge: 0,
             maxCharge: 2,
             data: [
-                { charge: 0, minMass: 0, maxMass: 0 },
+                { charge: 0, minMass: Number.MAX_SAFE_INTEGER, maxMass: Number.MIN_SAFE_INTEGER },
                 { charge: 1, minMass: 99.90054857990907, maxMass: 100.10054857990906 },
                 { charge: 2, minMass: 199.80109715981814, maxMass: 200.20109715981812 }
             ]
@@ -88,7 +88,7 @@ describe('TargetMassCache', () => {
             maxCharge: 1,
             data: [
                 { charge: -1, minMass: -0.00054857990907, maxMass: 199.99945142009094 },
-                { charge: 0, minMass: 0, maxMass: 0 },
+                { charge: 0, minMass: Number.MAX_SAFE_INTEGER, maxMass: Number.MIN_SAFE_INTEGER },
                 { charge: 1, minMass: 0.00054857990907, maxMass: 200.00054857990906 }
             ]
         });

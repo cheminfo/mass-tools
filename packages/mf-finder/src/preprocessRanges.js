@@ -1,8 +1,49 @@
 'use strict';
 
-const MF = require('mf-parser').MF;
+const MF = require('mf-parser/src/MF');
+const parse = require('mf-parser/src/parse');
+const Kind = require('mf-parser/src/Kind');
 
-module.exports = function preprocessRanges(ranges) {
+module.exports = function preprocessRanges(ranges, modification = { mf: '' }) {
+    ranges = JSON.parse(JSON.stringify(ranges));
+    if (typeof ranges === 'string') {
+        // need to convert to ranges
+        let parsed = parse(ranges.replace(/ /g, ''));
+        let newRanges = [];
+        let current;
+        for (let item of parsed) {
+            switch (item.kind) {
+                case Kind.ATOM:
+                    current = {
+                        mf: item.value
+                    };
+                    newRanges.push(current);
+                    break;
+                case Kind.MULTIPLIER:
+                    if (current) {
+                        current.min = item.value;
+                        current.max = item.value;
+                    }
+                    break;
+                case Kind.MULTIPLIER_RANGE:
+                    current.min = item.value.from;
+                    current.max = item.value.to;
+                    break;
+                default:
+                    throw Error(`can not preprocess ${ranges}`);
+            }
+        }
+        ranges = newRanges;
+    }
+
+    if (modification && modification.mf) {
+        ranges.push({
+            mf: modification.mf,
+            min: 1,
+            max: 1,
+        });
+    }
+
     var possibilities = [];
     for (let i = 0; i < ranges.length; i++) {
         let range = ranges[i];
@@ -42,6 +83,8 @@ module.exports = function preprocessRanges(ranges) {
     // 2. The charged part
     // 3. Decreasing em
     possibilities.sort((a, b) => {
+        if (a.originalMinCount === a.originalMaxCount) return -1; // should be in front, they are 'static'
+        if (b.originalMinCount === b.originalMaxCount) return 1;
         if (a.charge && b.charge) {
             if (Math.abs(a.charge) > Math.abs(b.charge)) return -1;
             if (Math.abs(a.charge) < Math.abs(b.charge)) return 1;

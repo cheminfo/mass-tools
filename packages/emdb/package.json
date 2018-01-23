@@ -22,6 +22,7 @@
   "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/emdb#readme",
   "dependencies": {
     "jszip": "^3.1.5",
+    "mf-finder": "^0.0.0",
     "mf-from-google-sheet": "^0.4.3",
     "mf-generator": "^0.4.3",
     "mf-matcher": "^0.0.0",
