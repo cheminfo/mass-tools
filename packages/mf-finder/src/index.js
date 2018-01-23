@@ -16,6 +16,11 @@ const ELECTRON_MASS = require('chemical-elements/src/constants').ELECTRON_MASS;
  * @return {}
  */
 
+let log = console;
+log = {
+    debug: () => {}
+};
+
 let targetMassCache;
 
 module.exports = function findMF(targetMass, options = {}) {
@@ -64,9 +69,16 @@ module.exports = function findMF(targetMass, options = {}) {
     let previousAtom;
     let lastPossibility = possibilities[lastPosition];
 
+    log.debug('initializing the possibilities');
     initializePossibilities(possibilities);
 
+
     while (!theEnd) {
+        log.debug(
+            'Currently evaluating',
+            result.info.numberMFEvaluated,
+            possibilitiesToString(possibilities)
+        );
         if (result.info.numberMFEvaluated++ > maxIterations) {
             throw Error(`Iteration number is over the current maximum of: ${maxIterations}`);
         }
@@ -84,12 +96,15 @@ module.exports = function findMF(targetMass, options = {}) {
         if (filterCharge && (lastPossibility.currentCharge < minCharge || lastPossibility.currentCharge > maxCharge)) {
             isValid = false;
         }
+
         if (isValid) {
+
             let minMass = targetMassCache.getMinMass(lastPossibility.currentCharge);
             let maxMass = targetMassCache.getMaxMass(lastPossibility.currentCharge);
             if ((lastPossibility.currentMonoisotopicMass < minMass) || (lastPossibility.currentMonoisotopicMass > maxMass)) {
                 isValid = false;
             }
+            // console.log('xxxxx', isValid, minMass, maxMass, lastPossibility);
         }
         if (isValid) {
             result.mfs.push(getResult(possibilities, targetMass, allowNeutral));
@@ -102,12 +117,14 @@ module.exports = function findMF(targetMass, options = {}) {
             currentAtom = possibilities[currentPosition];
             previousAtom = (currentPosition === 0) ? undefined : possibilities[currentPosition - 1];
             if (currentAtom.currentCount < currentAtom.currentMaxCount) {
-                //  console.log(currentPosition, currentAtom.currentCount, currentAtom.currentMaxCount);
+                //      console.log('currentPosition', currentPosition, currentAtom.currentCount, currentAtom.currentMaxCount);
                 currentAtom.currentCount++;
                 updateCurrentAtom(currentAtom, previousAtom);
+                //  console.log('updated', currentAtom);
                 if (currentPosition < lastPosition) {
                     currentPosition++;
                     setCurrentMinMax(possibilities[currentPosition], possibilities[currentPosition - 1]);
+                    log.debug('MIN/MAX', currentPosition, possibilitiesToString(possibilities));
                 } else {
                     break;
                 }
@@ -115,23 +132,31 @@ module.exports = function findMF(targetMass, options = {}) {
                 currentPosition--;
             }
         }
+
+        log.debug('After', possibilities.map((a) => [a.currentCount, a.currentMinCount, a.currentMaxCount]));
+
         if (currentPosition < 0) {
             theEnd = true;
         }
     }
+    result.mfs.sort((a, b) => a.ppm - b.ppm);
     return result;
 };
 
 function updateCurrentAtom(currentAtom, previousAtom) {
+//    console.log('UPDATE');
     if (previousAtom !== undefined) {
         currentAtom.currentMonoisotopicMass = previousAtom.currentMonoisotopicMass + currentAtom.em * currentAtom.currentCount;
         currentAtom.currentCharge = previousAtom.currentCharge + currentAtom.charge * currentAtom.currentCount;
         currentAtom.currentUnsaturation = previousAtom.currentUnsaturation + currentAtom.unsaturation * currentAtom.currentCount;
+        //       console.log('PREVIOUS', previousAtom.mf, previousAtom.charge, previousAtom.currentCount, previousAtom.currentCharge);
     } else {
         currentAtom.currentMonoisotopicMass = currentAtom.em * currentAtom.currentCount;
         currentAtom.currentCharge = currentAtom.charge * currentAtom.currentCount;
         currentAtom.currentUnsaturation = currentAtom.unsaturation * currentAtom.currentCount;
     }
+    //  console.log('CURRENT', currentAtom.mf, currentAtom.charge, currentAtom.currentCount, currentAtom.currentCharge);
+
 }
 
 function getResult(possibilities, targetMass, allowNeutralMolecules) {
@@ -160,11 +185,11 @@ function getResult(possibilities, targetMass, allowNeutralMolecules) {
     if (result.charge !== 0) {
         result.msem = (result.em - ELECTRON_MASS * result.charge) / result.charge;
         result.delta = result.msem - targetMass;
-        result.ppm = (targetMass - result.msem) / targetMass * 1e6;
+        result.ppm = Math.abs((targetMass - result.msem) / targetMass * 1e6);
     } else if (allowNeutralMolecules) {
         result.msem = result.em;
         result.delta = result.em - targetMass;
-        result.ppm = (targetMass - result.msem) / targetMass * 1e6;
+        result.ppm = Math.abs((targetMass - result.msem) / targetMass * 1e6);
     }
     result.unsaturation = (result.unsaturation + result.charge) / 2 + 1;
     return result;
@@ -172,17 +197,20 @@ function getResult(possibilities, targetMass, allowNeutralMolecules) {
 
 function setCurrentMinMax(currentAtom, previousAtom) {
     // the current min max can only be optimize if the charge will not change anymore
+
     if (currentAtom.innerCharge === true || currentAtom.charge !== 0) {
         currentAtom.currentMinCount = currentAtom.originalMinCount;
         currentAtom.currentMaxCount = currentAtom.originalMaxCount;
         currentAtom.currentCount = currentAtom.currentMinCount - 1;
     } else { // no more change of charge, we can optimize
         let currentMass = previousAtom !== undefined ? previousAtom.currentMonoisotopicMass : 0;
-        let charge = currentAtom.currentCharge;
-        currentAtom.currentMinCount = Math.max(Math.floor((targetMassCache.getMinMass(charge) - currentMass - currentAtom.maxInnerMass) / currentAtom.em), currentAtom.originalMinCount);
-        currentAtom.currentMaxCount = Math.min(Math.ceil((targetMassCache.getMaxMass(charge) - currentMass - currentAtom.minInnerMass) / currentAtom.em), currentAtom.originalMaxCount);
+        let currentCharge = previousAtom !== undefined ? previousAtom.currentCharge : 0;
+        currentAtom.currentMinCount = Math.max(Math.floor((targetMassCache.getMinMass(currentCharge) - currentMass - currentAtom.maxInnerMass) / currentAtom.em), currentAtom.originalMinCount);
+        currentAtom.currentMaxCount = Math.min(Math.floor((targetMassCache.getMaxMass(currentCharge) - currentMass - currentAtom.minInnerMass) / currentAtom.em), currentAtom.originalMaxCount);
         currentAtom.currentCount = currentAtom.currentMinCount - 1;
+        //     console.log('After MIN / MAX', previousAtom.currentCount, currentAtom);
     }
+
 }
 
 
@@ -190,8 +218,13 @@ function initializePossibilities(possibilities) {
     for (let i = 0; i < possibilities.length; i++) {
         if (i === 0) {
             updateCurrentAtom(possibilities[i]);
+            setCurrentMinMax(possibilities[i]);
         } else {
             updateCurrentAtom(possibilities[i], possibilities[i - 1]);
         }
     }
+}
+
+function possibilitiesToString(possibilities) {
+    return possibilities.map((a) => [`mf:${a.mf}`, `current:${a.currentCount}`, `min:${a.currentMinCount}`, `max:${a.currentMaxCount}`, `charge:${a.currentCharge}`]);
 }

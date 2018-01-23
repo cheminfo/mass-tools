@@ -35,8 +35,8 @@ let TargetMassCache = function TargetMassCache(targetMass, possibilities, option
                 minMass = targetMass - range;
                 maxMass = targetMass + range;
             } else {
-                minMass = 0;
-                maxMass = 0;
+                minMass = Number.MAX_SAFE_INTEGER;
+                maxMass = Number.MIN_SAFE_INTEGER;
             }
         } else {
             minMass = (targetMass - range) * Math.abs(charge) + ELECTRON_MASS * charge;
@@ -55,9 +55,9 @@ let TargetMassCache = function TargetMassCache(targetMass, possibilities, option
 module.exports = TargetMassCache;
 
 TargetMassCache.prototype.getMinMass = function (charge) {
-    return this.data[charge - this.minCharge].minMass;
+    return (this.data[charge - this.minCharge]) ? this.data[charge - this.minCharge].minMass : Number.MAX_SAFE_INTEGER;
 };
 
 TargetMassCache.prototype.getMaxMass = function (charge) {
-    return this.data[charge - this.minCharge].maxMass;
+    return (this.data[charge - this.minCharge]) ? this.data[charge - this.minCharge].maxMass : Number.MIN_SAFE_INTEGER;
 };
