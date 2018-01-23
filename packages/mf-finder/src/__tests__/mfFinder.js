@@ -44,7 +44,6 @@ describe('test mf-finder', () => {
         expect(result.mfs[0].mf).toBe('CH4');
     });
 
-
     it('simple combinations with integer unsaturation', () => {
         let result = findMFs(16, {
             ranges: [
@@ -256,7 +255,6 @@ describe('test mf-finder', () => {
         expect(result.mfs[0].mf).toBe('C2');
     });
 
-
     it('should yield to 3 results', () => {
         let result = findMFs(24, {
             ranges: [
@@ -269,7 +267,7 @@ describe('test mf-finder', () => {
         expect(result.mfs).toHaveLength(3);
     });
 
-    it.only('check one possibility 12 with charge', () => {
+    it('check one possibility 12 with charge', () => {
         let result = findMFs(12, {
             ranges: [
                 { mf: 'C+', min: 1, max: 2 },
