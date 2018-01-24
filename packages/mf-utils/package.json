@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/cheminfo/molecular-formula/issues"
   },
-  "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/mf-utils#readme"
+  "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/mf-utils#readme",
+  "dependencies": {
+    "chemical-elements": "^0.5.0",
+    "mf-parser": "^0.5.0"
+  }
 }
