@@ -9,4 +9,6 @@ test('test DBManager', async () => {
     await dbManager.loadKnapSack();
 
     expect(dbManager.listDatabases()).toEqual(['contaminants', 'knapSack']);
+    expect(dbManager.get('contaminants').length).toBeGreaterThan(1000);
+
 });
