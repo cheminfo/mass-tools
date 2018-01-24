@@ -4,7 +4,7 @@ const preprocessRanges = require('./preprocessRanges');
 const preprocessModifications = require('mf-utils/src/preprocessModifications');
 const getMsem = require('mf-utils/src/getMsem');
 const TargetMassCache = require('./TargetMassCache');
-const ELECTRON_MASS = require('chemical-elements/src/constants').ELECTRON_MASS;
+
 /**
  * Returns possible combinations
  * * @return {}
