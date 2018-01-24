@@ -116,6 +116,18 @@ test('From array of string to large array and filter unsaturation min/max and in
     expect(result).toHaveLength(101);
 });
 
+test('Combine with modifications', function () {
+    var result = generateMFs(['C1-2'], { modifications: 'H+,Na+,H++' });
+    expect(result.map((a) => a.msem).sort((a, b) => a - b)).toEqual([
+        6.50336393620593,
+        12.503363936205929,
+        13.00727645232093,
+        25.00727645232093,
+        34.989220702090925,
+        46.989220702090925,
+    ]);
+});
+
 test('Strange comments', function () {
     var mfsArray = ['C$1>10', 'O$D2>20'];
     var result = generateMFs(mfsArray);
@@ -130,6 +142,7 @@ test('Check info', function () {
         msem: 0,
         mw: 96.08588717388199,
         charge: 0,
+        modification: '',
         parts: ['C', undefined, 'C5(C)2'],
         atoms: { C: 8 },
         unsaturation: 9

@@ -1,10 +1,11 @@
 'use strict';
 
-const { ELECTRON_MASS } = require('chemical-elements/src/constants');
+
 const MF = require('mf-parser').MF;
 const matcher = require('mf-matcher');
 const sum = require('sum-object-keys');
-
+const preprocessModifications = require('mf-utils/src/preprocessModifications');
+const getMsem = require('mf-utils/src/getMsem');
 /**
  * Generate all the possible combinations of molecular formula and calculate
  * for each of them the monoisotopic mass and observed moniisotopic mass (m/z)
@@ -14,6 +15,7 @@ const sum = require('sum-object-keys');
  * @param {number} [options.limit=10000000] - Maximum number of results
  * @param {boolean} [canonizeMF=true] - Canonize molecular formula
  * @param {boolean} [uniqueMFs=true] - Force canonization and make MF unique
+ * @param {string} [modifications=''] - Comma separated list of modifications (to charge the molecule)
  * @param {number} [options.filter.minMass=0] - Minimal monoisotopic mass
  * @param {number} [options.filter.maxMass=+Infinity] - Maximal monoisotopic mass
  * @param {number} [options.filter.minEM=0] - Minimal neutral monoisotopic mass
@@ -34,11 +36,13 @@ const sum = require('sum-object-keys');
 module.exports = function combineMFs(keys, options = {}) {
     let {
         limit = 10000000,
-        uniqueMFs
+        uniqueMFs,
     } = options;
     if (uniqueMFs === undefined) uniqueMFs = true;
     if (uniqueMFs === true) options.canonizeMF = true;
     if (options.canonizeMF === undefined) options.canonizeMF = true;
+    options.modifications = preprocessModifications(options.modifications);
+
 
     if (!Array.isArray(keys)) throw new Error('You need to specify an array of strings or arrays');
 
@@ -94,10 +98,11 @@ module.exports = function combineMFs(keys, options = {}) {
         }
     }
     appendResult(results, currents, keys, options);
+
     if (uniqueMFs) {
         var uniqueMFsObject = {};
         results.forEach((r) => {
-            uniqueMFsObject[r.mf] = r;
+            uniqueMFsObject[r.mf + r.modification] = r;
         });
         results = Object.keys(uniqueMFsObject).map((k) => uniqueMFsObject[k]);
     }
@@ -125,13 +130,14 @@ function getMonoisotopicMass(mfString) {
     return ems[mfString];
 }
 
-function getEMFromParts(parts, currents) {
-    var charge = 0;
+function getEMFromParts(parts, currents, modification) {
+    var charge = modification.charge;
     var em = 0;
     var mw = 0;
     var unsaturation = 0;
     var validUnsaturation = true;
     var atoms = {};
+
 
     for (var i = 0; i < parts.length; i++) {
         var part = parts[i][currents[i]];
@@ -146,19 +152,13 @@ function getEMFromParts(parts, currents) {
             }
         }
     }
-    var msem = em;
-    if (charge > 0) {
-        msem = msem / charge - ELECTRON_MASS;
-    } else if (charge < 0) {
-        msem = msem / (charge * -1) + ELECTRON_MASS;
-    } else {
-        msem = 0;
-    }
+    var msem = getMsem(em + modification.em, charge);
     return {
         charge,
         em,
         msem,
         mw,
+        modification: modification.mf,
         unsaturation: validUnsaturation ? unsaturation / 2 + 1 : undefined,
         atoms
     };
@@ -167,37 +167,44 @@ function getEMFromParts(parts, currents) {
 function appendResult(results, currents, keys, options = {}) {
     const {
         canonizeMF,
-        filter
+        filter,
+        modifications
     } = options;
+
     // this script is designed to combine molecular formula
     // that may contain comments after a "$" sign
     // therefore we should put all the comments at the ned
 
-    var result = getEMFromParts(keys, currents);
-    if (!matcher(result, filter)) return;
+    for (var modification of modifications) {
 
-    result.parts = [];
-    result.mf = '';
+        var result = getEMFromParts(keys, currents, modification);
 
-    var comments = [];
-    for (var i = 0; i < keys.length; i++) {
-        var key = keys[i][currents[i]];
-        if (key) {
-            result.parts[i] = key;
-            if (key.indexOf('$') > -1) {
-                comments.push(key.replace(/^[^$]*\$/, ''));
-                key = key.replace(/\$.*/, '');
+        if (!matcher(result, filter)) return;
+
+        result.parts = [];
+        result.mf = '';
+
+        var comments = [];
+        for (var i = 0; i < keys.length; i++) {
+            var key = keys[i][currents[i]];
+            if (key) {
+                result.parts[i] = key;
+                if (key.indexOf('$') > -1) {
+                    comments.push(key.replace(/^[^$]*\$/, ''));
+                    key = key.replace(/\$.*/, '');
+                }
+                result.mf += key;
             }
-            result.mf += key;
         }
+
+        if (canonizeMF) {
+            result.mf = (new MF(result.mf)).toMF();
+        }
+
+        if (comments.length > 0) result.mf += `$${comments.join(' ')}`;
+        results.push(result);
     }
 
-    if (canonizeMF) {
-        result.mf = (new MF(result.mf)).toMF();
-    }
-
-    if (comments.length > 0) result.mf += `$${comments.join(' ')}`;
-    results.push(result);
 }
 
 function processRange(string, comment) {

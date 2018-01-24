@@ -19,7 +19,10 @@
   "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/mf-generator#readme",
   "dependencies": {
     "chemical-elements": "^0.5.0",
+    "mf-finder": "^0.5.0",
     "mf-matcher": "^0.5.0",
-    "mf-parser": "^0.5.0"
+    "mf-parser": "^0.5.0",
+    "mf-utils": "^0.0.0",
+    "sum-object-keys": "^1.0.2"
   }
 }
