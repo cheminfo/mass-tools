@@ -19,6 +19,10 @@ DBManager.prototype.loadKnapSack = async function loadKnapSack(options = {}) {
     this.databases[databaseName] = await loadKnapSackPromise();
 };
 
+DBManager.prototype.get = function get(databaseName) {
+    return this.databases[databaseName];
+};
+
 /**
  * Load the contaminants databvase from a google sheet document
  * @param {*} options
@@ -30,7 +34,7 @@ DBManager.prototype.loadContaminants = async function loadContaminants(options =
     } = options;
     this.databases[databaseName] = await loadGoogleSheetPromise();
 
-    //   console.log(this.databases[databaseName]);
+    // console.log(this.databases[databaseName]);
 
 };
 
