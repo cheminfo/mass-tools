@@ -1,7 +1,8 @@
 'use strict';
 
 const preprocessRanges = require('./preprocessRanges');
-const preprocessModifications = require('./preprocessModifications');
+const preprocessModifications = require('mf-utils/src/preprocessModifications');
+const getMsem = require('mf-utils/src/getMsem');
 const TargetMassCache = require('./TargetMassCache');
 const ELECTRON_MASS = require('chemical-elements/src/constants').ELECTRON_MASS;
 /**
@@ -189,7 +190,7 @@ function getResult(possibilities, targetMass, allowNeutralMolecules, modificatio
         }
     }
     if (result.charge !== 0) {
-        result.msem = (result.em - ELECTRON_MASS * result.charge) / result.charge;
+        result.msem = getMsem(result.em, result.charge);
         result.delta = result.msem - targetMass;
         result.ppm = Math.abs((targetMass - result.msem) / targetMass * 1e6);
     } else if (allowNeutralMolecules) {
