@@ -3,6 +3,8 @@
   "name": "molecular-formula",
   "version": "0.1.0",
   "scripts": {
+    "build": "npm run build-emdb",
+    "build-emdb": "cheminfo build --cwd=./packages/emdb --out=../../dist",
     "eslint": "eslint packages *.js --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "prepare": "lerna bootstrap",
