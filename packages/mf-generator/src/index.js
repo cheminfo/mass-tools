@@ -2,7 +2,7 @@
 
 
 const MF = require('mf-parser').MF;
-const matcher = require('mf-matcher');
+const matcher = require('mf-matcher').general;
 const sum = require('sum-object-keys');
 const preprocessModifications = require('mf-utils/src/preprocessModifications');
 const getMsem = require('mf-utils/src/getMsem');
@@ -11,7 +11,7 @@ const getMsem = require('mf-utils/src/getMsem');
  * for each of them the monoisotopic mass and observed moniisotopic mass (m/z)
  *
  * @param keys
- * @param options
+ * @param {object} options
  * @param {number} [options.limit=10000000] - Maximum number of results
  * @param {boolean} [canonizeMF=true] - Canonize molecular formula
  * @param {boolean} [uniqueMFs=true] - Force canonization and make MF unique
@@ -33,7 +33,7 @@ const getMsem = require('mf-utils/src/getMsem');
  */
 
 
-module.exports = function combineMFs(keys, options = {}) {
+module.exports = function generateMFs(keys, options = {}) {
     let {
         limit = 10000000,
         uniqueMFs,
@@ -102,7 +102,7 @@ module.exports = function combineMFs(keys, options = {}) {
     if (uniqueMFs) {
         var uniqueMFsObject = {};
         results.forEach((r) => {
-            uniqueMFsObject[r.mf + r.modification] = r;
+            uniqueMFsObject[r.mf + r.modification.mf] = r;
         });
         results = Object.keys(uniqueMFsObject).map((k) => uniqueMFsObject[k]);
     }
@@ -158,7 +158,7 @@ function getEMFromParts(parts, currents, modification) {
         em,
         msem,
         mw,
-        modification: modification.mf,
+        modification: modification,
         unsaturation: validUnsaturation ? unsaturation / 2 + 1 : undefined,
         atoms
     };

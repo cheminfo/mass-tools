@@ -111,4 +111,6 @@ DBManager.prototype.listDatabases = function listDatabases() {
 
 DBManager.prototype.search = require('./search');
 
+DBManager.prototype.searchMSEM = require('./searchMSEM');
+
 module.exports = DBManager;

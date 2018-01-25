@@ -9,7 +9,6 @@ module.exports = function preprocessModifications(modificationsString = '') {
         let info = new MF(modification.mf).getInfo();
         modification.em = info.monoisotopicMass;
         modification.charge = info.charge;
-        modification.unsaturation = info.unsaturation;
     }
 
     return modifications;
