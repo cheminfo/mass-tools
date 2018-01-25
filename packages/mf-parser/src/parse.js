@@ -85,6 +85,9 @@ class MFParser {
             } else if (char === '+') { // charge not in parenthesis
                 let charge = this.getNonParenthesisCharge(ascii);
                 this.result.push({ kind: Kind.CHARGE, value: charge });
+            } else if (char === '-') { // charge not in parenthesis
+                let charge = this.getNonParenthesisCharge(ascii);
+                this.result.push({ kind: Kind.CHARGE, value: charge });
             } else if (char === '$') { // it is a comment after
                 this.result.push({ kind: Kind.COMMENT, value: this.mf.substring(this.i + 1) });
                 break;
