@@ -166,7 +166,7 @@ function getResult(possibilities, targetMass, allowNeutralMolecules, modificatio
         charge: 0,
         msem: 0,
         delta: 0,
-        modification: modification ? modification.mf : undefined
+        modification: modification ? modification : undefined
     };
 
     let firstModification = modification ? true : false;

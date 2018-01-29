@@ -2,6 +2,7 @@
 
 const loadKnapSackPromise = require('./loadKnapSack');
 const loadGoogleSheetPromise = require('./loadGoogleSheet');
+const loadCommercialPromise = require('./loadCommercial');
 const combineMFs = require('mf-generator');
 const findMFs = require('mf-finder');
 
@@ -19,6 +20,17 @@ DBManager.prototype.loadKnapSack = async function loadKnapSack(options = {}) {
     this.databases[databaseName] = await loadKnapSackPromise();
 };
 
+/**
+ * Add a new database using the KnapSack content
+ * @param {*} options
+ */
+DBManager.prototype.loadCommercial = async function loadCommercial(options = {}) {
+    const {
+        databaseName = 'commercial'
+    } = options;
+    this.databases[databaseName] = await loadCommercialPromise();
+};
+
 DBManager.prototype.get = function get(databaseName) {
     return this.databases[databaseName];
 };
@@ -33,9 +45,6 @@ DBManager.prototype.loadContaminants = async function loadContaminants(options =
         databaseName = 'contaminants'
     } = options;
     this.databases[databaseName] = await loadGoogleSheetPromise();
-
-    // console.log(this.databases[databaseName]);
-
 };
 
 /**

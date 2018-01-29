@@ -131,7 +131,7 @@ function getMonoisotopicMass(mfString) {
 }
 
 function getEMFromParts(parts, currents, modification) {
-    var charge = modification.charge;
+    var charge = 0;
     var em = 0;
     var mw = 0;
     var unsaturation = 0;
@@ -152,11 +152,10 @@ function getEMFromParts(parts, currents, modification) {
             }
         }
     }
-    var msem = getMsem(em + modification.em, charge);
+
     return {
         charge,
         em,
-        msem,
         mw,
         modification: modification,
         unsaturation: validUnsaturation ? unsaturation / 2 + 1 : undefined,

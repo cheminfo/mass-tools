@@ -10,6 +10,8 @@ var tests = {
     'C1-10': [{ kind: 'atom', value: 'C' }, { kind: 'multiplierRange', value: { from: 1, to: 10 } }],
     '2H': [{ kind: 'preMultiplier', value: 2 }, { kind: 'atom', value: 'H' }],
     '[13C]': [{ kind: 'isotope', value: { atom: 'C', isotope: 13 } }],
+    '[2H]': [{ kind: 'isotope', value: { atom: 'H', isotope: 2 } }],
+    D: [{ kind: 'isotope', value: { atom: 'H', isotope: 2 } }],
     'C+': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: 1 }],
     'C-': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: -1 }],
     'C-H': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: -1 }, { kind: 'atom', value: 'H' }],
@@ -31,6 +33,10 @@ var tests = {
     'H{1,1}': [{ kind: 'isotopeRatio', value: { atom: 'H', ratio: [1, 1] } }],
     'C10 . H20': [{ kind: 'atom', value: 'C' }, { kind: 'multiplier', value: 10 }, { kind: 'text', value: ' ' }, { kind: 'salt', value: '.' }, { kind: 'text', value: ' ' }, { kind: 'atom', value: 'H' }, { kind: 'multiplier', value: 20 }],
     '(CH(CH3)2)3N.2HCl': [{ kind: 'openingParenthesis', value: '(' }, { kind: 'atom', value: 'C' }, { kind: 'atom', value: 'H' }, { kind: 'openingParenthesis', value: '(' }, { kind: 'atom', value: 'C' }, { kind: 'atom', value: 'H' }, { kind: 'multiplier', value: 3 }, { kind: 'closingParenthesis', value: ')' }, { kind: 'multiplier', value: 2 }, { kind: 'closingParenthesis', value: ')' }, { kind: 'multiplier', value: 3 }, { kind: 'atom', value: 'N' }, { kind: 'salt', value: '.' }, { kind: 'preMultiplier', value: 2 }, { kind: 'atom', value: 'H' }, { kind: 'atom', value: 'Cl' }],
+};
+
+var tests = {
+    D: [{ kind: 'isotope', value: { atom: 'H', isotope: 2 } }],
 };
 
 test('parse molecular formula', function () {
