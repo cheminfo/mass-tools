@@ -24,7 +24,7 @@ describe('test searchMSEM', () => {
         expect(results.contaminants).toHaveLength(4);
     });
 
-    it.only('should filter one database with forced ionization', async () => {
+    it('should filter one database with forced ionization', async () => {
         let dbManager = new DBManager();
         await dbManager.loadContaminants();
 
@@ -33,8 +33,8 @@ describe('test searchMSEM', () => {
             ionizations: 'H+',
             forceIonization: true
         });
-        expect(results.contaminants).toHaveLength(4);
-        //  console.log(results);
+
+        expect(results.contaminants).toHaveLength(3);
     });
 
 });

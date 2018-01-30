@@ -11,6 +11,6 @@ test('test load google sheet', async () => {
     expect(first.mf).toBe('CN');
     expect(first.ionization).toEqual({ charge: -1, em: 0, mf: '(-)' });
     expect(first.em).toBeGreaterThan(0);
-    expect(first.charge).not.toBe(0);
-    expect(first.msem).toBeGreaterThan(0);
+    expect(first.ms.charge).not.toBe(0);
+    expect(first.ms.em).toBeGreaterThan(0);
 });

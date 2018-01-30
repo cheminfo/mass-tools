@@ -4,7 +4,6 @@ const preprocessRanges = require('./preprocessRanges');
 const preprocessIonizations = require('mf-utils/src/preprocessIonizations');
 const getMsInfo = require('mf-utils/src/getMsInfo');
 const TargetMassCache = require('./TargetMassCache');
-const DEBUG = false;
 /**
  * Returns possible combinations
  * * @return {}
@@ -51,7 +50,7 @@ module.exports = function findMF(targetMass, options = {}) {
             currentCharge: ionization.charge,
             currentUnsaturation: 0 // we don't take into account the unsaturation of the ionization agent
         };
-        if (DEBUG) console.log('new ionization', ionization.mf, ionization.em, ionization.charge);
+        // if (DEBUG) console.log('new ionization', ionization.mf, ionization.em, ionization.charge);
         // ionization em and charge will be used to set the first atom value
         let possibilities = preprocessRanges(ranges);
         if (possibilities.length === 0) return { mfs: [] };
@@ -72,7 +71,7 @@ module.exports = function findMF(targetMass, options = {}) {
 
         initializePossibilities(possibilities, currentIonization);
 
-        if (DEBUG) console.log('possibilities', possibilities.map((a) => `${a.mf + a.originalMinCount}-${a.originalMaxCount}`));
+        //  if (DEBUG) console.log('possibilities', possibilities.map((a) => `${a.mf + a.originalMinCount}-${a.originalMaxCount}`));
 
         let isValid = false; // designed so that the first time it is not a valid solution
         while (!theEnd) {
@@ -96,7 +95,6 @@ module.exports = function findMF(targetMass, options = {}) {
             if (isValid) {
                 let minMass = targetMassCache.getMinMass(lastPossibility.currentCharge);
                 let maxMass = targetMassCache.getMaxMass(lastPossibility.currentCharge);
-                if (DEBUG) console.log('min/max', minMass, maxMass, lastPossibility.currentMonoisotopicMass);
                 if ((lastPossibility.currentMonoisotopicMass < minMass) || (lastPossibility.currentMonoisotopicMass > maxMass)) {
                     isValid = false;
                 }

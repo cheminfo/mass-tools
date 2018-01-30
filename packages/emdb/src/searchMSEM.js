@@ -23,22 +23,23 @@ Search for an experimental monoisotopic mass
 
 module.exports = function searchMSEM(msem, options = {}) {
 
-    options = Object.assign({}, options);
+    options = Object.assign({}, options, { targetMass: msem });
     let {
         databases = Object.keys(this.databases),
         flatten = false,
     } = options;
 
     let ionizations = preprocessIonizations(options.ionizations);
+
     let results = {};
     for (let ionization of ionizations) {
         options.ionization = ionization;
         for (let database of databases) {
             results[database] = [];
             for (let entry of this.databases[database]) {
-                let match = matcher(entry, msem, options);
+                let match = matcher(entry, options);
                 if (match) {
-                    results[database].push(Object.assign({}, entry, match));
+                    results[database].push(Object.assign({}, entry, { ms: match }));
                 }
             }
         }

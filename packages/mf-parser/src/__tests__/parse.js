@@ -11,7 +11,6 @@ var tests = {
     '2H': [{ kind: 'preMultiplier', value: 2 }, { kind: 'atom', value: 'H' }],
     '[13C]': [{ kind: 'isotope', value: { atom: 'C', isotope: 13 } }],
     '[2H]': [{ kind: 'isotope', value: { atom: 'H', isotope: 2 } }],
-    D: [{ kind: 'isotope', value: { atom: 'H', isotope: 2 } }],
     'C+': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: 1 }],
     'C-': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: -1 }],
     'C-H': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: -1 }, { kind: 'atom', value: 'H' }],

@@ -30,7 +30,7 @@ test('test msemMatcher', () => {
 });
 
 
-test.only('test msemMatcher with forced ionization', () => {
+test('test msemMatcher with forced ionization', () => {
     let entry = {
         mf: 'C10',
         em: 120,

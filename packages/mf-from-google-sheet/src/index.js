@@ -94,17 +94,17 @@ async function mfFromGoogleSheet(url, options = {}) {
         }
 
         results = results.filter(function (a) {
-            return a.msem !== 0;
+            return a.ms.em !== 0;
         });
 
         results.sort(function (a, b) {
-            return a.msem - b.msem;
+            return a.ms.em - b.ms.em;
         });
 
 
         var uniqueResults = [results[0]];
         for (var i = 1; i < results.length; i++) {
-            if (results[i - 1].msem !== results[i].msem) {
+            if (results[i - 1].ms.em !== results[i].ms.em) {
                 uniqueResults.push(results[i]);
             }
         }

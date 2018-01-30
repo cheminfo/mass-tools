@@ -8,7 +8,7 @@ test('Test getReferenceList with existing', async () => {
     expect(result).toHaveLength(1684);
     expect(result[0].mw).toBeCloseTo(5.963091372400585, 5);
     expect(result[0].em).toBeCloseTo(5.95304980662, 5);
-    expect(result[0].msem).toBeCloseTo(5.95250122671093, 5);
+    expect(result[0].ms.em).toBeCloseTo(5.95250122671093, 5);
 });
 
 test('Test getReferenceList with non existing document', () => {
