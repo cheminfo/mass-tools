@@ -93,4 +93,21 @@ describe('TargetMassCache', () => {
             ]
         });
     });
+
+    it('check the result with extra default charge', () => {
+        let possibilities = preprocessRanges(
+            [
+                { mf: 'C+', min: -1, max: 1 },
+            ]
+        );
+        let cache = new TargetMassCache(100, possibilities, { charge: 1, minCharge: -1, maxCharge: 1, allowNeutral: false, precision: 1e6 });
+        expect(cache).toEqual({
+            minCharge: 0,
+            maxCharge: 1,
+            data: [
+                { charge: 0, minMass: Number.MAX_SAFE_INTEGER, maxMass: Number.MIN_SAFE_INTEGER },
+                { charge: 1, minMass: 0.00054857990907, maxMass: 200.00054857990906 }
+            ]
+        });
+    });
 });

@@ -69,10 +69,11 @@ test('From array of string with some range', function () {
 
 test('From array of string chem em and msem', function () {
     var mfsArray = ['C0-2.O', ['+', '(-)', '++', '(--)']];
+
     var result = generateMFs(mfsArray);
-    expect(result[0].mf).toBe('(-1)');
-    expect(result[0].charge).toBe(-1);
-    expect(result).toHaveLength(14);
+    expect(result[0].mf).toMatch(/^(.*)$/);
+    expect(result[0].charge).not.toBe(0);
+    expect(result).toHaveLength(16);
 });
 
 test('From array of string to large array', function () {
@@ -85,8 +86,8 @@ test('From array of string to large array and filter', function () {
     var mfsArray = ['C0-100', 'O0-100'];
     var result = generateMFs(mfsArray, {
         filter: {
-            minMW: 0.1,
-            maxMW: 13
+            minEM: 0.1,
+            maxEM: 13
         }
     }
     );
@@ -116,9 +117,9 @@ test('From array of string to large array and filter unsaturation min/max and in
     expect(result).toHaveLength(101);
 });
 
-test('Combine with modifications', function () {
-    var result = generateMFs(['C1-2'], { modifications: 'H+,Na+,H++' });
-    expect(result.map((a) => a.msem).sort((a, b) => a - b)).toEqual([
+test('Combine with ionizations', function () {
+    var result = generateMFs(['C1-2'], { ionizations: 'H+,Na+,H++' });
+    expect(result.map((a) => a.ms.em).sort((a, b) => a - b)).toEqual([
         6.50336393620593,
         12.503363936205929,
         13.00727645232093,
@@ -139,10 +140,14 @@ test('Check info', function () {
     var result = generateMFs(mfsArray, { canonizeMF: true })[0];
     expect(result).toEqual({ mf: 'C8',
         em: 96,
-        msem: 0,
+        ms: {
+            em: 0,
+            charge: 0,
+            ionization: ''
+        },
         mw: 96.08588717388199,
         charge: 0,
-        modification: {
+        ionization: {
             mf: '',
             charge: 0,
             em: 0

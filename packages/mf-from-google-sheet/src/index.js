@@ -63,7 +63,7 @@ async function mfFromGoogleSheet(url, options = {}) {
             }
             // we need to calculate all the possibilities
             try {
-                var mfs = generateMFs([formula.mf], { modifications: formula.modif });
+                var mfs = generateMFs([formula.mf], { ionizations: formula.modif });
                 for (var mf of mfs) {
                     mf.info = {};
                     for (let infoField of infoFields) {

@@ -28,6 +28,11 @@ let displayed = MFParser.toDisplay(parsed);
 console.log(displayed);
 ```
 
+## Unsaturation
+
+Unsaturation is based on Pretsch
+
+http://pubs.acs.org/doi/pdf/10.1021/ci000135o
 
 
 ## License

@@ -130,9 +130,20 @@ test('MF of (+)SO4(+)(-2)2', () => {
         charge: -2,
         observedMonoisotopicMass: 47.97641340624907,
         mf: 'O4S(-2)',
-        unsaturation: 2,
+        unsaturation: 4,
         atoms: { O: 4, S: 1 } }
     );
+});
+
+test('test unsaturation with charges', () => {
+    expect((new MF('CH4')).getInfo().unsaturation).toBe(0);
+    expect((new MF('C10H22O')).getInfo().unsaturation).toBe(0);
+    expect((new MF('H+')).getInfo().unsaturation).toBe(0);
+    expect((new MF('CO3(--)')).getInfo().unsaturation).toBe(3);
+    expect((new MF('HO(-)')).getInfo().unsaturation).toBe(1);
+    expect((new MF('F(-)')).getInfo().unsaturation).toBe(1);
+    expect((new MF('Na+')).getInfo().unsaturation).toBe(0);
+    expect((new MF('NH4+')).getInfo().unsaturation).toBe(-1);
 });
 
 test('MF of NC[13C][15N]2NN2', () => {

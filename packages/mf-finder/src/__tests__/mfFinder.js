@@ -15,6 +15,62 @@ describe('test mf-finder', () => {
         expect(result.mfs).toHaveLength(1);
     });
 
+    it('basic case with charge', () => {
+        let result = findMFs(24, {
+            ranges: [
+                { mf: 'C', min: 1, max: 2 },
+            ],
+            precision: 1e5,
+            ionizations: 'H+'
+        });
+        expect(result.mfs).toHaveLength(1);
+        expect(result.mfs[0]).toMatchObject({ em: 24,
+            unsaturation: 3,
+            mf: 'C2',
+            charge: 0,
+            ionization: { charge: 1, em: 1.00782503223, mf: 'H+' },
+            ms: {
+                delta: 1.00727645232093,
+                em: 25.00727645232093,
+                ppm: 41969.85218003875,
+                charge: 1
+            }
+        });
+    });
+
+    it('basic case with charge and extreme error', () => {
+        let result = findMFs(24, {
+            ranges: [
+                { mf: 'C', min: 1, max: 2 },
+            ],
+            precision: 1e6,
+            ionizations: 'H+'
+        });
+        expect(result.mfs).toHaveLength(2);
+    });
+
+    it('basic case with double charge and extreme error', () => {
+        let result = findMFs(24, {
+            ranges: [
+                { mf: 'C', min: 1, max: 2 },
+            ],
+            precision: 1e6,
+            ionizations: 'H++'
+        });
+        expect(result.mfs[1]).toMatchObject({ em: 12,
+            unsaturation: 2,
+            mf: 'C',
+            charge: 0,
+            ionization: { mf: 'H++', em: 1.00782503223, charge: 2 },
+            ms:
+             { em: 6.50336393620593,
+                 delta: -17.49663606379407,
+                 charge: 2,
+                 ppm: 729026.5026580864 } });
+
+        expect(result.mfs).toHaveLength(2);
+    });
+
     it('simple combinations', () => {
         let result = findMFs(24, {
             ranges: [
@@ -86,7 +142,7 @@ describe('test mf-finder', () => {
         expect(result.mfs[1].mf).toBe('C2H');
     });
 
-    it('simple combinations from string ranges with modifications', () => {
+    it('simple combinations from string ranges with ionizations', () => {
         let result = findMFs(12, {
             ranges: [
                 { mf: 'C', min: 0, max: 2 },
@@ -94,10 +150,10 @@ describe('test mf-finder', () => {
                 { mf: 'H+', min: 0, max: 2 },
             ],
             precision: 1e5,
-            modifications: 'H+, H++'
+            ionizations: 'H+, H++'
         });
         expect(result.mfs).toHaveLength(4);
-        expect(result.mfs[0].mf).toBe('C');
+        expect(result.mfs[0].mf).toBe('C2');
     });
 
     it('combinations with no answer', () => {

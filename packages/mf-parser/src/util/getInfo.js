@@ -99,7 +99,9 @@ function getProcessedPart(part, customUnsaturations) {
             }
             case Kind.CHARGE:
                 currentPart.charge = line.value;
-                unsaturation += line.value;
+                if (validUnsaturation) {
+                    unsaturation -= line.value;
+                }
                 break;
             default:
                 throw new Error('Unimplemented Kind in getInfo', line.kind);

@@ -2,10 +2,10 @@
 
 
 const MF = require('mf-parser').MF;
-const matcher = require('mf-matcher').general;
+const matcher = require('mf-matcher').msem;
 const sum = require('sum-object-keys');
-const preprocessModifications = require('mf-utils/src/preprocessModifications');
-const getMsem = require('mf-utils/src/getMsem');
+const preprocessIonizations = require('mf-utils/src/preprocessIonizations');
+
 /**
  * Generate all the possible combinations of molecular formula and calculate
  * for each of them the monoisotopic mass and observed moniisotopic mass (m/z)
@@ -15,13 +15,13 @@ const getMsem = require('mf-utils/src/getMsem');
  * @param {number} [options.limit=10000000] - Maximum number of results
  * @param {boolean} [canonizeMF=true] - Canonize molecular formula
  * @param {boolean} [uniqueMFs=true] - Force canonization and make MF unique
- * @param {string} [modifications=''] - Comma separated list of modifications (to charge the molecule)
+ * @param {string} [ionizations=''] - Comma separated list of ionizations (to charge the molecule)
  * @param {number} [options.filter.minMass=0] - Minimal monoisotopic mass
  * @param {number} [options.filter.maxMass=+Infinity] - Maximal monoisotopic mass
  * @param {number} [options.filter.minEM=0] - Minimal neutral monoisotopic mass
  * @param {number} [options.filter.maxEM=+Infinity] - Maximal neutral monoisotopic mass
- * @param {number} [options.filter.minMSEM=0] - Minimal observed monoisotopic mass
- * @param {number} [options.filter.maxMSEM=+Infinity] - Maximal observed monoisotopic mass
+ * @param {number} [options.filter.targetMass] - Experimental observed mass
+ * @param {number} [options.filter.precision=1000] - Precision
  * @param {number} [options.filter.minCharge=-Infinity] - Minimal charge
  * @param {number} [options.filter.maxCharge=+Infinity] - Maximal charge
  * @param {number} [options.filter.minUnsaturation=-Infinity] - Minimal unsaturation
@@ -41,7 +41,7 @@ module.exports = function generateMFs(keys, options = {}) {
     if (uniqueMFs === undefined) uniqueMFs = true;
     if (uniqueMFs === true) options.canonizeMF = true;
     if (options.canonizeMF === undefined) options.canonizeMF = true;
-    options.modifications = preprocessModifications(options.modifications);
+    options.ionizations = preprocessIonizations(options.ionizations);
 
 
     if (!Array.isArray(keys)) throw new Error('You need to specify an array of strings or arrays');
@@ -102,7 +102,7 @@ module.exports = function generateMFs(keys, options = {}) {
     if (uniqueMFs) {
         var uniqueMFsObject = {};
         results.forEach((r) => {
-            uniqueMFsObject[r.mf + r.modification.mf] = r;
+            uniqueMFsObject[r.mf + r.ionization.mf] = r;
         });
         results = Object.keys(uniqueMFsObject).map((k) => uniqueMFsObject[k]);
     }
@@ -130,7 +130,7 @@ function getMonoisotopicMass(mfString) {
     return ems[mfString];
 }
 
-function getEMFromParts(parts, currents, modification) {
+function getEMFromParts(parts, currents, ionization) {
     var charge = 0;
     var em = 0;
     var mw = 0;
@@ -157,7 +157,7 @@ function getEMFromParts(parts, currents, modification) {
         charge,
         em,
         mw,
-        modification: modification,
+        ionization: ionization,
         unsaturation: validUnsaturation ? unsaturation / 2 + 1 : undefined,
         atoms
     };
@@ -167,19 +167,20 @@ function appendResult(results, currents, keys, options = {}) {
     const {
         canonizeMF,
         filter,
-        modifications
+        ionizations
     } = options;
 
     // this script is designed to combine molecular formula
     // that may contain comments after a "$" sign
     // therefore we should put all the comments at the ned
 
-    for (var modification of modifications) {
+    for (var ionization of ionizations) {
 
-        var result = getEMFromParts(keys, currents, modification);
+        var result = getEMFromParts(keys, currents, ionization);
 
-        if (!matcher(result, filter)) return;
-
+        var match = matcher(result, filter);
+        if (!match) return;
+        result.ms = match;
         result.parts = [];
         result.mf = '';
 

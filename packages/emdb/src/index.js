@@ -103,7 +103,7 @@ DBManager.prototype.fromArray = function fromArray(mfsArray, options = {}) {
  * @param {number} [options.onlyNonIntegerUnsaturation=false] - Non integer unsaturation
  * @param {number} [options.maxIterations=1e8] - Max number of iterations
  * @param {boolean} [options.allowNeutral=false] - Allow neutral molecules
- * @param {string} [options.modifications=''] - Comma separated list of modifications
+ * @param {string} [options.ionizations=''] - Comma separated list of ionizations
  * @param {string} [options.ranges=''] - Range to search the molecular formula like 'C0-10 H0-10'
  */
 

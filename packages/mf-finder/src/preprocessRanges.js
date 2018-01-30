@@ -4,7 +4,7 @@ const MF = require('mf-parser/src/MF');
 const parse = require('mf-parser/src/parse');
 const Kind = require('mf-parser/src/Kind');
 
-module.exports = function preprocessRanges(ranges, modification = { mf: '' }) {
+module.exports = function preprocessRanges(ranges) {
     ranges = JSON.parse(JSON.stringify(ranges));
     if (typeof ranges === 'string') {
         // need to convert to ranges
@@ -34,14 +34,6 @@ module.exports = function preprocessRanges(ranges, modification = { mf: '' }) {
             }
         }
         ranges = newRanges;
-    }
-
-    if (modification && modification.mf) {
-        ranges.push({
-            mf: modification.mf,
-            min: 1,
-            max: 1,
-        });
     }
 
     var possibilities = [];

@@ -10,10 +10,10 @@ test('test fromMonoisotopicMass', () => {
     expect(dbManager.databases.monoisotopic).toHaveLength(8);
 });
 
-test('test fromMonoisotopicMass with modifications', () => {
+test('test fromMonoisotopicMass with ionizations', () => {
     let dbManager = new DBManager();
     dbManager.fromMonoisotopicMass(120, {
-        modifications: ', H+, K+',
+        ionizations: ', H+, K+',
         precision: 100,
     });
     expect(dbManager.databases.monoisotopic).toHaveLength(9);

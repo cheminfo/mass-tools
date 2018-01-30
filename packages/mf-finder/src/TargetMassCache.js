@@ -11,14 +11,14 @@ let TargetMassCache = function TargetMassCache(targetMass, possibilities, option
         allowNeutral = false, // msem because em in this case !
         minCharge = Number.MIN_SAFE_INTEGER,
         maxCharge = Number.MAX_SAFE_INTEGER,
+        charge = 0,
         precision = 100
     } = options;
-
     if (!possibilities || possibilities.length === 0) return {};
 
     let firstPossibility = possibilities[0];
-    let currentMinCharge = Math.max(minCharge, firstPossibility.minCharge);
-    let currentMaxCharge = Math.min(maxCharge, firstPossibility.maxCharge);
+    let currentMinCharge = Math.max(minCharge, firstPossibility.minCharge + charge);
+    let currentMaxCharge = Math.min(maxCharge, firstPossibility.maxCharge + charge);
 
     this.minCharge = currentMinCharge;
     this.maxCharge = currentMaxCharge;
