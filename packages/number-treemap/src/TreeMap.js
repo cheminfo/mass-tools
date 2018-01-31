@@ -3,41 +3,54 @@
 const Node = require('./Node');
 
 
-function TreeMap() {
-    this.root = null;
-    this.size = 0;
-}
-
-TreeMap.prototype.get = function (key) {
-// todo
-};
-
-TreeMap.prototype.put = function (key, value) {
-    if (this.root === null) {
-        this.root = new Node(key, value);
-        this.size = 1;
-        return;
+class TreeMap {
+    constructor() {
+        this.root = null;
+        this.size = 0;
     }
-    let currentNode = this.root;
-    let parent;
-    do {
-        parent = currentNode;
-        if (key < currentNode.key) {
-            currentNode = currentNode.left;
-        } else if (key > currentNode.key) {
-            currentNode = currentNode.right;
-        } else {
-            currentNode.value = value;
+
+    get(key) {
+        let currentNode = this.root;
+        while (currentNode != null) {
+            if (key < currentNode.key) {
+                currentNode = currentNode.left;
+            } else if (key > currentNode.key) {
+                currentNode = currentNode.right;
+            } else {
+                return currentNode.value;
+            }
+        }
+        return null;
+    }
+
+    set(key, value) {
+        if (this.root === null) {
+            this.root = new Node(key, value);
+            this.size = 1;
             return;
         }
-    } while (currentNode !== null);
-    let node = new Node(key, value);
-    if (key < parent.key) {
-        parent.left = node;
-    } else {
-        parent.right = node;
+        let currentNode = this.root;
+        let parent;
+        do {
+            parent = currentNode;
+            if (key < currentNode.key) {
+                currentNode = currentNode.left;
+            } else if (key > currentNode.key) {
+                currentNode = currentNode.right;
+            } else {
+                currentNode.value = value;
+                return;
+            }
+        } while (currentNode !== null);
+        let node = new Node(key, value);
+        if (key < parent.key) {
+            parent.left = node;
+        } else {
+            parent.right = node;
+        }
+        this.size++;
     }
-    this.size++;
-};
+}
+
 
 module.exports = TreeMap;
