@@ -1,15 +1,15 @@
 'use strict';
 
-const loadCommercial = require('../loadCommercial');
+const loadCommercials = require('../loadCommercials');
 
-test('test loadCommercial', async () => {
+test('test loadCommercials', async () => {
 
-    let data = await loadCommercial();
-
+    let data = await loadCommercials();
     expect(data.length).toBeGreaterThan(10000);
     let first = data[0];
     expect(first.mf).toBe('Li');
     expect(first.em).toBeGreaterThan(0);
     expect(first.charge).toBe(0);
+    expect(first.unsaturation).toBeDefined();
     expect(first.msem).toBeUndefined();
 });

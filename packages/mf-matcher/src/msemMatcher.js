@@ -28,16 +28,19 @@ module.exports = function msemMatcher(entry, options = {}) {
         atoms
     } = options;
 
+
     let ms = getMsInfo(entry, {
         ionization,
         forceIonization,
         targetMass,
     });
 
+
     if (entry.em !== undefined) {
         if ((entry.em < minEM) || (entry.em > maxEM)) return false;
     }
-    if (targetMass && (Math.abs(ms.em - targetMass) * 1e6) > precision) return false;
+    if (targetMass && ms.ppm > precision) return false;
+
     if (entry.charge !== undefined) {
         if ((ms.charge < minCharge) || (ms.charge > maxCharge)) return false;
     }

@@ -22,7 +22,6 @@ Search for an experimental monoisotopic mass
 */
 
 module.exports = function searchMSEM(msem, options = {}) {
-
     options = Object.assign({}, options, { targetMass: msem });
     let {
         databases = Object.keys(this.databases),
@@ -30,7 +29,6 @@ module.exports = function searchMSEM(msem, options = {}) {
     } = options;
 
     let ionizations = preprocessIonizations(options.ionizations);
-
     let results = {};
     for (let ionization of ionizations) {
         options.ionization = ionization;
@@ -45,7 +43,6 @@ module.exports = function searchMSEM(msem, options = {}) {
         }
     }
 
-
     if (flatten) {
         let flattenResults = [];
         for (let database of databases) {
@@ -54,8 +51,10 @@ module.exports = function searchMSEM(msem, options = {}) {
                 flattenResults.push(entry);
             }
         }
+        flattenResults.sort((a, b) => a.ms.ppm - b.ms.ppm);
         return flattenResults;
     } else {
+        Object.keys(results).forEach((k) => results[k].sort((a, b) => a.ms.ppm - b.ms.ppm));
         return results;
     }
 };
