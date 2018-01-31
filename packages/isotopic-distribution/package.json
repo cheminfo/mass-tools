@@ -1,0 +1,20 @@
+{
+  "name": "isotopic-distribution",
+  "version": "0.0.0",
+  "description": "Calculate the isotopic distribution of a molecular formula",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo/molecular-formula.git"
+  },
+  "keywords": [],
+  "author": "Luc Patiny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo/molecular-formula/issues"
+  },
+  "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/isotopic-distribution#readme"
+}
