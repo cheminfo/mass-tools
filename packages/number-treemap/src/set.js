@@ -21,12 +21,11 @@ module.exports = function set(key, value) {
             return;
         }
     } while (currentNode !== null);
-    let node = new Node(key, value);
+    let node = new Node(key, value, parent);
     if (key < parent.key) {
         parent.left = node;
     } else {
         parent.right = node;
     }
     this.size++;
-}
-;
+};

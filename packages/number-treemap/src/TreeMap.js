@@ -8,6 +8,7 @@ class TreeMap {
 }
 
 TreeMap.prototype.get = require('./get.js');
+TreeMap.prototype.getEntry = require('./getEntry.js');
 TreeMap.prototype.set = require('./set.js');
 TreeMap.prototype.getClosestEntry = require('./getClosestEntry.js');
 TreeMap.prototype.getFirstEntry = require('./getFirstEntry.js');
