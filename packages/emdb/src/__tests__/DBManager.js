@@ -2,7 +2,7 @@
 
 const DBManager = require('..');
 
-test('test DBManager', async () => {
+test('test DBManager contaminants and knapSack', async () => {
     let dbManager = new DBManager();
 
     await dbManager.loadContaminants();
@@ -10,5 +10,18 @@ test('test DBManager', async () => {
 
     expect(dbManager.listDatabases()).toEqual(['contaminants', 'knapSack']);
     expect(dbManager.get('contaminants').length).toBeGreaterThan(1000);
+
+});
+
+test('test DBManager fromMonoisotopicMass', async () => {
+    let dbManager = new DBManager();
+
+    dbManager.fromMonoisotopicMass(300, {
+        ionizations: 'H+,Na+'
+    });
+
+    expect(dbManager.listDatabases()).toEqual(['monoisotopic']);
+    expect(dbManager.get('monoisotopic').length).toBeGreaterThan(100);
+
 
 });

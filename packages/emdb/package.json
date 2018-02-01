@@ -26,6 +26,7 @@
     "mf-from-google-sheet": "^0.5.0",
     "mf-generator": "^0.5.0",
     "mf-matcher": "^0.5.0",
+    "mf-utils": "^0.0.0",
     "request-promise-native": "^1.0.5"
   }
 }
