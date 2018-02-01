@@ -1,7 +1,6 @@
-/**
- * Returns a very important number
- * @return {number}
- */
-export default function myModule() {
+'use strict';
+
+
+module.exports = function isotopicDistribution() {
     return 42;
-}
+};
