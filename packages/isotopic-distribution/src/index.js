@@ -1,6 +1,6 @@
 'use strict';
 
+const Distribution = require('./Distribution');
 
-module.exports = function isotopicDistribution() {
-    return 42;
-};
+module.exports = Distribution;
+
