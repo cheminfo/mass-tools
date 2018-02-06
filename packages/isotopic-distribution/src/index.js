@@ -2,5 +2,18 @@
 
 const Distribution = require('./Distribution');
 
-module.exports = Distribution;
 
+// for each element we need to find the isotopes
+
+class IsotopicDistribution {
+    constructor(mf) {
+        this.mf = mf;
+    }
+
+    calculateDistribution() {
+
+        this.distribution = new Distribution();
+    }
+}
+
+module.exports = IsotopicDistribution;
