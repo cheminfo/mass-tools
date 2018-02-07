@@ -8,18 +8,8 @@ const Kind = require('../Kind');
 const { ELECTRON_MASS } = require('chemical-elements/src/constants');
 const partToAtoms = require('./partToAtoms');
 
-const isotopes = {};
-Object.keys(elements).forEach((key) => {
-    let e = elements[key];
+const isotopes = require('./getIsotopesObject');
 
-    e.monoisotopicMass = getMonoisotopicMass(e);
-    e.isotopes.forEach((i) => {
-        isotopes[i.nominal + key] = {
-            abundance: i.abundance,
-            mass: i.mass
-        };
-    });
-});
 
 /**
  *

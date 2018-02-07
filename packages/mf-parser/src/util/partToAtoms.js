@@ -8,7 +8,7 @@ const Kind = require('../Kind');
  * This is mainly used to make queries
  */
 
-module.exports = function partToMF(part) {
+module.exports = function partToAtoms(part) {
     var atoms = {};
     for (let line of part) {
         switch (line.kind) {

@@ -6,6 +6,7 @@ const toDisplay = require('./util/toDisplay');
 const toHtml = require('./util/toHtml');
 const toParts = require('./util/toParts');
 const getInfo = require('./util/getInfo');
+const getIsotopesInfo = require('./util/getIsotopesInfo');
 const partsToMF = require('./util/partsToMF');
 const partsToDisplay = require('./util/partsToDisplay');
 
@@ -45,6 +46,17 @@ class MF {
             this.cache.info = getInfo(this.cache.parts, options);
         }
         return this.cache.info;
+    }
+
+    /**
+     * Returns an array with each atom and isotopic composition
+     */
+    getIsotopesInfo(options = {}) {
+        if (!this.cache.isotopesInfo) {
+            this.toParts();
+            this.cache.isotopesInfo = getIsotopesInfo(this.cache.parts, options);
+        }
+        return this.cache.isotopesInfo;
     }
 
     /**
