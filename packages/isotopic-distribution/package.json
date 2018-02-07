@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/cheminfo/molecular-formula/issues"
   },
-  "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/isotopic-distribution#readme"
+  "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/isotopic-distribution#readme",
+  "dependencies": {
+    "mf-parser": "^0.5.0"
+  }
 }

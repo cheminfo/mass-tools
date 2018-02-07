@@ -1,16 +1,29 @@
 'use strict';
 
 class Distribution {
-    constructor() {
-        this.array = [];
-        this.xSorted = true;
-        this.ySorted = true;
+    constructor(array) {
+        if (Array.isArray(array)) {
+            this.array = array;
+            this.xSorted = false;
+            this.ySorted = false;
+        } else {
+            this.array = [];
+            this.xSorted = true;
+            this.ySorted = true;
+        }
+
     }
 
     get length() {
         return this.array.length;
     }
 }
+
+Distribution.prototype.setArray = function setArray(array) {
+    this.array = array;
+    this.xSorted = false;
+    this.ySorted = false;
+};
 
 Distribution.prototype.move = function move(other) {
     this.xSorted = other.xSorted;

@@ -1,6 +1,6 @@
 'use strict';
 
-const Distribution = require('../index.js');
+const Distribution = require('../Distribution.js');
 
 describe('test Distribution', () => {
 
