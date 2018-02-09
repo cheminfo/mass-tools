@@ -55,4 +55,24 @@ describe('test isotopicDistribution', () => {
         expect(distribution.array[0]).toEqual({ x: 71076.21791348715, y: 1 });
     });
 
+    it('create distribution with charged molecule C+', () => {
+        let isotopicDistribution = new IsotopicDistribution('C+');
+        let distribution = isotopicDistribution.getDistribution();
+        expect(isotopicDistribution.confidence).toBeGreaterThan(0.9999);
+        expect(distribution.array[0].x).toBeCloseTo(11.99945, 5);
+    });
+    it('create distribution with charged molecule C2(+2)', () => {
+        let isotopicDistribution = new IsotopicDistribution('C2(+2)');
+        let distribution = isotopicDistribution.getDistribution();
+        expect(isotopicDistribution.confidence).toBeGreaterThan(0.9999);
+        expect(distribution.array[0].x).toBeCloseTo(11.99945, 5);
+    });
+    it('create distribution with charged molecule C2(-2)', () => {
+        let isotopicDistribution = new IsotopicDistribution('C2(-2)');
+        let distribution = isotopicDistribution.getDistribution();
+        expect(isotopicDistribution.confidence).toBeGreaterThan(0.9999);
+        expect(distribution.array[0].x).toBeCloseTo(12.00055, 5);
+    });
+
+
 });

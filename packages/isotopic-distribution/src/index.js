@@ -1,7 +1,7 @@
 'use strict';
 
 const Distribution = require('./Distribution');
-
+const ELECTRON_MASS = require('chemical-elements').ELECTRON_MASS;
 
 // for each element we need to find the isotopes
 
@@ -11,6 +11,8 @@ class IsotopicDistribution {
     constructor(mf, options = {}) {
         this.mf = new MF(mf);
         this.isotopesInfo = this.mf.getIsotopesInfo();
+        this.charge = this.isotopesInfo.charge;
+        this.absoluteCharge = Math.abs(this.isotopesInfo.charge);
         this.cache = {};
         this.options = options;
         this.fwhm = options.fwhm || 0.001;
@@ -31,6 +33,14 @@ class IsotopicDistribution {
         }
         this.cache.distribution = totalDistribution;
         this.confidence = this.cache.distribution.array.reduce((sum, value) => (sum + value.y), 0);
+
+        // we finally deal with the charge
+        if (this.isotopesInfo.charge) {
+            this.cache.distribution.array.forEach((e) => {
+                e.x = (e.x - ELECTRON_MASS * this.charge) / this.absoluteCharge;
+            });
+        }
+
         return this.cache.distribution;
     }
 

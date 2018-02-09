@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/isotopic-distribution#readme",
   "dependencies": {
+    "chemical-elements": "^0.5.0",
     "mf-parser": "^0.5.0"
   }
 }
