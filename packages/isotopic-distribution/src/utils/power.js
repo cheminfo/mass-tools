@@ -1,5 +1,7 @@
 'use strict';
 
+// https://en.wikipedia.org/wiki/Exponentiation_by_squaring
+
 module.exports = function power(p, options = {}) {
     if (p <= 0) throw new Error('power must be larger than 0');
     if (p === 1) return this;
