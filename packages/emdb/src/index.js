@@ -119,7 +119,7 @@ DBManager.prototype.listDatabases = function listDatabases() {
 };
 
 DBManager.prototype.search = require('./search');
-
 DBManager.prototype.searchMSEM = require('./searchMSEM');
+DBManager.prototype.searchSimilarity = require('./searchSimilarity');
 
 module.exports = DBManager;
