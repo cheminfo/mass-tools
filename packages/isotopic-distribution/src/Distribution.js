@@ -11,7 +11,6 @@ class Distribution {
             this.xSorted = true;
             this.ySorted = true;
         }
-
     }
 
     get length() {

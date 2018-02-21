@@ -14,7 +14,7 @@ module.exports = function parse(mf) {
 };
 
 class MFParser {
-    parse(mf) {
+    parse(mf = '') {
         this.mf = mf;
         this.i = 0;
         this.result = [];

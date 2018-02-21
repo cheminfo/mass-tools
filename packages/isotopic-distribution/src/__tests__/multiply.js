@@ -11,8 +11,9 @@ describe('test distribution multiply', () => {
         dist2.push(1, 2);
         dist2.push(2, 3);
         let dist3 = dist1.multiply(dist2);
+
         dist3.sortX();
-        expect(dist1.dist).toEqual([{ x: 2, y: 4 }, { x: 3, y: 12 }, { x: 4, y: 9 }]);
-        expect(dist3.dist).toEqual([{ x: 2, y: 4 }, { x: 3, y: 12 }, { x: 4, y: 9 }]);
+        expect(dist1.array).toEqual([{ x: 2, y: 4 }, { x: 3, y: 12 }, { x: 4, y: 9 }]);
+        expect(dist3.array).toEqual([{ x: 2, y: 4 }, { x: 3, y: 12 }, { x: 4, y: 9 }]);
     });
 });

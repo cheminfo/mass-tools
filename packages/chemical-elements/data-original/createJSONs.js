@@ -38,6 +38,7 @@ elementsAndStableIsotopes.forEach((e) => {
             mass: i.mass
         };
     });
+    e.monoisotopicMass = getMonoisotopicMass(e);
 });
 fs.writeFileSync(`${__dirname}/../src/elementsAndStableIsotopes.js`, MODULE + JSON.stringify(elementsAndStableIsotopes));
 fs.writeFileSync(`${__dirname}/../src/stableIsotopesObject.js`, MODULE + JSON.stringify(stableIsotopesObject));
@@ -45,7 +46,6 @@ fs.writeFileSync(`${__dirname}/../src/stableIsotopesObject.js`, MODULE + JSON.st
 
 var elements = JSON.parse(JSON.stringify(elementsAndStableIsotopes));
 elements.forEach((e) => {
-    e.monoisotopicMass = getMonoisotopicMass(e);
     e.isotopes = undefined;
 });
 fs.writeFileSync(`${__dirname}/../src/elements.js`, MODULE + JSON.stringify(elements));

@@ -43,7 +43,6 @@ module.exports = function findMF(targetMass, options = {}) {
 
     // we need to make the processing for all the ionizations
     let ionizations = preprocessIonizations(options.ionizations);
-    console.log(ionizations);
     for (let ionization of ionizations) {
 
         let currentIonization = {

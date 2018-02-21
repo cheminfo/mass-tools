@@ -2,6 +2,38 @@
 
 var MF = require('../MF');
 
+test('MF of C', () => {
+    var mf = new MF('C');
+    var parts = mf.toParts();
+
+    expect(parts).toEqual(
+        [[
+            { kind: 'atom', value: 'C', multiplier: 1 },
+        ]]
+    );
+
+    var newMF = mf.toMF();
+    expect(newMF).toBe('C');
+
+    mf.canonize();
+    let html = mf.toHtml();
+
+    expect(html).toBe('C');
+
+    let info = mf.getInfo();
+
+    expect(info).toEqual({
+        monoisotopicMass: 12,
+        mass: 12.010735896735248,
+        charge: 0,
+        unsaturation: 2,
+        mf: 'C',
+        atoms: {
+            C: 1
+        }
+    });
+});
+
 test('MF of Et3N.HCl', () => {
     var mf = new MF('Et3N.HCl');
     var parts = mf.toParts();
@@ -23,7 +55,7 @@ test('MF of Et3N.HCl', () => {
     mf.canonize();
     let html = mf.toHtml();
 
-    expect(html).toBe('C<sub>6</sub>H<sub>15</sub>N<sub>1</sub> • H<sub>1</sub>Cl<sub>1</sub>');
+    expect(html).toBe('C<sub>6</sub>H<sub>15</sub>N•HCl');
 
     let info = mf.getInfo();
     expect(info).toEqual({ parts:

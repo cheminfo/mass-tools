@@ -1,6 +1,6 @@
 'use strict';
 
-const Distribution = require('../index.js');
+const Distribution = require('../Distribution.js');
 
 describe('test distribution topY', () => {
 
@@ -11,6 +11,7 @@ describe('test distribution topY', () => {
         dist.push(2, 1);
         dist.push(2, 4);
         dist.topY(2);
+
         expect(dist.array).toEqual([{ x: 2, y: 4 }, { x: 2, y: 3 }]);
     });
 
