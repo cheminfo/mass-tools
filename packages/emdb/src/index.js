@@ -87,7 +87,13 @@ DBManager.prototype.fromArray = function fromArray(mfsArray, options = {}) {
         databaseName = 'generated'
     } = options;
     this.databases[databaseName] = combineMFs(mfsArray, options);
+
 };
+
+DBManager.prototype.loadTest = function loadTest() {
+    this.fromArray(['C1-100'], { databaseName: 'test', ionizations: '+' });
+};
+
 
 /**
  * Generates a database 'monoisotopic' from an array of molecular formula
@@ -121,5 +127,6 @@ DBManager.prototype.listDatabases = function listDatabases() {
 DBManager.prototype.search = require('./search');
 DBManager.prototype.searchMSEM = require('./searchMSEM');
 DBManager.prototype.searchSimilarity = require('./searchSimilarity');
+
 
 module.exports = DBManager;
