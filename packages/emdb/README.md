@@ -3,11 +3,40 @@
   [![NPM version][npm-image]][npm-url]
   [![npm download][download-image]][download-url]
 
-Database manager for exact mass query.
+Database manager for molecular formula with various query feature.
 
 ## Installation
 
-`$ npm install --save emdb`
+`npm install --save emdb`
+
+## Using the project
+
+There are 2 parts: 
+* adding databases in the database manager
+* checking the databases
+* searching the databases
+
+### Adding database in the database manager
+
+```
+  const emdb = require('emdb');
+
+  emdb.loadTest();  // add a database named test containing all the molecular formula from C1 to C100
+```
+
+#### loadTest
+
+A method that allows to create a database named 'test' and that contains all the molecular formula from C1 to C100
+
+#### fromArray
+
+A method that creates a database (by default named `generated`) that contains all the posible combination based on an array of strings.
+
+```
+  emdb.fromArray( ['C1-10','N1-10']);
+```
+
+This method use the project 'mf-generator'
 
 
 The following fields in the json are expected to be returned

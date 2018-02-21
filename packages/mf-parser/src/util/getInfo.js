@@ -145,14 +145,3 @@ function normalize(array) {
     return array.map((a) => a / sum);
 }
 
-function getMonoisotopicMass(element) {
-    var monoisotopicMass;
-    var maxAbundance = 0;
-    for (let isotope of element.isotopes) {
-        if (isotope.abundance > maxAbundance) {
-            maxAbundance = isotope.abundance;
-            monoisotopicMass = isotope.mass;
-        }
-    }
-    return monoisotopicMass;
-}

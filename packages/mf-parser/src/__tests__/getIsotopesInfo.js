@@ -2,7 +2,7 @@
 
 var MF = require('../MF');
 
-test.only('getIsotopesInfo from C{50,50}[13C]H2', () => {
+test('getIsotopesInfo from C{50,50}[13C]H2', () => {
     var mf = new MF('[13C]3CC{50,50}((2+))2');
     var info = mf.getIsotopesInfo();
 
@@ -13,13 +13,15 @@ test.only('getIsotopesInfo from C{50,50}[13C]H2', () => {
 });
 
 test('getIsotopesInfo from C.H', () => {
-    var mf = new MF('C.H');
-    expect(mf.getIsotopesInfo()).toThrow();
+    expect(() => {
+        var mf = new MF('C.H');
+        mf.getIsotopesInfo();
+    }).toThrow('getIsotopesInfo can not be applied on multipart MF');
 });
 
 test('getIsotopesInfo from (CH3(+))2', () => {
     var mf = new MF('(CH3(+))2');
     var info = mf.getIsotopesInfo();
-    expect(info.charge).toBe(0);
+    expect(info.charge).toBe(2);
 });
 

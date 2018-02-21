@@ -13,7 +13,7 @@ test('test DBManager contaminants and knapSack', async () => {
 
 });
 
-test('test DBManager fromMonoisotopicMass', async () => {
+test('test DBManager fromMonoisotopicMass', () => {
     let dbManager = new DBManager();
 
     dbManager.fromMonoisotopicMass(300, {

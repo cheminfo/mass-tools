@@ -74,7 +74,7 @@ function getDistribution(isotopes, ratio) {
     let ratios = normalize(ratio);
     let result = [];
     if (ratios.length > isotopes.length) {
-        throw new Error(`the number of specified ratios is bigger that the number of stable isotopes: ${value.atom}`);
+        throw new Error(`the number of specified ratios is bigger that the number of stable isotopes: ${isotopes}`);
     }
     for (let i = 0; i < ratios.length; i++) {
         result.push({
