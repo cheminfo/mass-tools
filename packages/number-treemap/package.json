@@ -1,6 +1,6 @@
 {
   "name": "number-treemap",
-  "version": "0.0.0",
+  "version": "0.5.1",
   "description": "Manage a sorted tree of numbers",
   "main": "src/TreeMap.js",
   "files": [

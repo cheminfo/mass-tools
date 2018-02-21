@@ -1,6 +1,6 @@
 {
   "name": "mf-utils",
-  "version": "0.0.0",
+  "version": "0.5.1",
   "description": "Small utilities dealing with molecular formula",
   "main": "src/index.js",
   "files": [
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/mf-utils#readme",
   "dependencies": {
-    "chemical-elements": "^0.5.0",
-    "mf-parser": "^0.5.0"
+    "chemical-elements": "^0.5.1",
+    "mf-parser": "^0.5.1"
   }
 }
