@@ -19,14 +19,31 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @param {number}   [options.onlyIntegerUnsaturation=false] - Integer unsaturation
 * @param {number}   [options.onlyNonIntegerUnsaturation=false] - Non integer unsaturation
 * @param {object}   [options.atoms] - object of atom:{min, max}
-
+* @param {object}   [options.widthBottom]
+* @param {object}   [options.widthTop]
+* @param {object}   [options.widthFunction] - function called with mass that should return an object width containing top and bottom
+* @param {object}   [options.from] - from value for the comparison window
+* @param {object}   [options.to] - to value for the comparison window
+* @param {object}   [options.common]
 */
 
 module.exports = function searchSimilarity(msem, massSpectrum, options = {}) {
 
-    if (!msem) return;
+    if (!msem) {
+        if (options.flatten) {
+            return [];
+        } else {
+            return {};
+        }
+    }
 
-    if (!massSpectrum || !massSpectrum.x || !massSpectrum.x.length > 0) return;
+    if (!massSpectrum || !massSpectrum.x || !massSpectrum.x.length > 0) {
+        if (options.flatten) {
+            return [];
+        } else {
+            return {};
+        }
+    }
 
     // the result of this query will be stored in a property 'ms'
     let results = this.searchMSEM(msem, options);
@@ -43,9 +60,8 @@ module.exports = function searchSimilarity(msem, massSpectrum, options = {}) {
 
     const {
         widthFunction,
-        from = -0.5,
-        to = 3.5,
     } = options;
+
 
     // we need to calculate the similarity of the isotopic distribution
     let similarity = new Similarity(options);
@@ -59,13 +75,16 @@ module.exports = function searchSimilarity(msem, massSpectrum, options = {}) {
 
         if (widthFunction) {
             var width = widthFunction(targetMass);
-            similarity.setTrapezoid(width.widthBottom, width.widthTop);
+            similarity.setTrapezoid(width.bottom, width.top);
         }
+        similarity.setPeaks2([distribution.xs, distribution.ys]);
+        let result = similarity.getSimilarity();
 
         entry.ms.similarity = {
-            value: similarity.fastSimilarity([distribution.xs, distribution.ys], targetMass + from, targetMass + to),
-            experiment: similarity.getExtract1(),
-            theoretical: similarity.getExtract2(),
+            value: result.similarity,
+            experiment: result.extract1,
+            theoretical: result.extract2,
+            difference: result.diff,
         };
     }
 
