@@ -15,11 +15,13 @@ module.exports = function convertForDisplay(lines) {
     for (let line of lines) {
         switch (line.kind) {
             case Kind.MULTIPLIER:
-                result = {
-                    kind: Format.SUBSCRIPT,
-                    value: String(line.value)
-                };
-                results.push(result);
+                if (line.value !== 1) {
+                    result = {
+                        kind: Format.SUBSCRIPT,
+                        value: String(line.value)
+                    };
+                    results.push(result);
+                }
                 break;
             case Kind.MULTIPLIER_RANGE:
                 result = {
