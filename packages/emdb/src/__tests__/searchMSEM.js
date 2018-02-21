@@ -34,6 +34,7 @@ describe('test searchMSEM', () => {
             ionizations: 'H+',
             forceIonization: true
         });
+
         expect(results.contaminants).toHaveLength(3);
     });
 

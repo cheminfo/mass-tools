@@ -16,6 +16,14 @@ class Distribution {
     get length() {
         return this.array.length;
     }
+
+    get xs() {
+        return this.array.map((p) => p.x);
+    }
+
+    get ys() {
+        return this.array.map((p) => p.y);
+    }
 }
 
 Distribution.prototype.setArray = function setArray(array) {

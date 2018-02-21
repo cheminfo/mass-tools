@@ -1,5 +1,7 @@
 'use strict';
 
+var Similarity = require('peaks-similarity');
+var IsotopicDistribution = require('isotopic-distribution');
 /**
 Search for an experimental monoisotopic mass and calculate the similarity
 * @param {number}   msem - The observed monoisotopic mass
@@ -21,8 +23,52 @@ Search for an experimental monoisotopic mass and calculate the similarity
 */
 
 module.exports = function searchSimilarity(msem, massSpectrum, options = {}) {
-    let results = this.searchMSEM(msem, options);
-    console.log(results.contaminants[0]);
 
+    if (!msem) return;
+
+    if (!massSpectrum || !massSpectrum.x || !massSpectrum.x.length > 0) return;
+
+    // the result of this query will be stored in a property 'ms'
+    let results = this.searchMSEM(msem, options);
+    let flatEntries = [];
+    if (!options.flatten) {
+        for (let database of Object.keys(results)) {
+            for (let entry of results[database]) {
+                flatEntries.push(entry);
+            }
+        }
+    } else {
+        flatEntries = results;
+    }
+
+    const {
+        widthFunction,
+        from = -0.5,
+        to = 3.5,
+    } = options;
+
+    // we need to calculate the similarity of the isotopic distribution
+    let similarity = new Similarity(options);
+    similarity.setPeaks1([massSpectrum.x, massSpectrum.y]);
+
+    let targetMass = massSpectrum.x[0];
+
+    for (let entry of flatEntries) {
+        let isotopicDistribution = new IsotopicDistribution(entry.mf + entry.ionization.mf);
+        let distribution = isotopicDistribution.getDistribution();
+
+        if (widthFunction) {
+            var width = widthFunction(targetMass);
+            similarity.setTrapezoid(width.widthBottom, width.widthTop);
+        }
+
+        entry.ms.similarity = {
+            value: similarity.fastSimilarity([distribution.xs, distribution.ys], targetMass + from, targetMass + to),
+            experiment: similarity.getExtract1(),
+            theoretical: similarity.getExtract2(),
+        };
+    }
+
+    return results;
 };
 

@@ -1,0 +1,298 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test searchSimilarity should filter one database with existing ionization 1`] = `
+Array [
+  Object {
+    "atoms": Object {
+      "C": 2,
+      "H": 6,
+      "O": 2,
+    },
+    "charge": 0,
+    "em": 62.03677943252,
+    "filter": Object {
+      "ESI": true,
+      "MALDI": false,
+      "negative": false,
+      "positive": true,
+    },
+    "info": Object {
+      "comments": "Polyethylene glycol, ubiquitous polyether",
+      "ionType": "[Mn+H2O+X]+",
+      "mfInfo": "[C2H4O]nH2O",
+      "origin": "PEG",
+      "references": "D, K",
+      "smiles": "",
+    },
+    "ionization": Object {
+      "charge": 1,
+      "em": 38.9637064864,
+      "mf": "(K+)",
+    },
+    "mf": "C2H6O2",
+    "ms": Object {
+      "charge": 1,
+      "delta": -0.00006266098907303785,
+      "em": 100.99993733901093,
+      "ionization": "(K+)",
+      "ppm": 0.6204058324063153,
+      "similarity": Object {
+        "experiment": Array [
+          Array [
+            101,
+          ],
+          Array [
+            1,
+          ],
+        ],
+        "theoretical": Array [
+          Array [
+            100.99993733901093,
+            102.0033908001822,
+            102.99840333872008,
+            104.00185240709155,
+            104.01292375504093,
+            105.00249997560964,
+            106.005844335416,
+            107.00687964638274,
+          ],
+          Array [
+            0.9076735100846313,
+            0.021066054273096012,
+            0.06937312124356303,
+            0.0015973369545080568,
+            7.327236943322461e-8,
+            0.00028336790062832786,
+            0.0000061985235419305536,
+            3.127096246053778e-7,
+          ],
+        ],
+        "value": 0.9076735351226686,
+      },
+    },
+    "mw": 62.067926166441715,
+    "parts": Array [
+      "(C2H4O)(H2O)1",
+    ],
+    "unsaturation": 0,
+  },
+  Object {
+    "atoms": Object {
+      "C": 2,
+      "H": 6,
+      "O": 1,
+      "S": 1,
+    },
+    "charge": 0,
+    "em": 78.01393598735,
+    "filter": Object {
+      "ESI": true,
+      "MALDI": false,
+      "negative": false,
+      "positive": true,
+    },
+    "info": Object {
+      "comments": "Dimethylsulfoxide, solvent",
+      "ionType": "[M+X]+",
+      "mfInfo": "C2H6OS",
+      "origin": "DMSO",
+      "references": "A",
+      "smiles": "",
+    },
+    "ionization": Object {
+      "charge": 1,
+      "em": 22.989769282,
+      "mf": "(Na+)",
+    },
+    "mf": "C2H6OS",
+    "ms": Object {
+      "charge": 1,
+      "delta": 0.003156689440928062,
+      "em": 101.00315668944093,
+      "ionization": "(Na+)",
+      "ppm": 31.254350900277846,
+      "similarity": Object {
+        "experiment": Array [
+          Array [
+            101,
+          ],
+          Array [
+            1,
+          ],
+        ],
+        "theoretical": Array [
+          Array [
+            101.00315668944093,
+            102.00556448046225,
+            102.9993815446463,
+            104.00284410939169,
+            105.00069970591134,
+            105.01445029425508,
+            106.00395245831038,
+            107.00297522301412,
+          ],
+          Array [
+            0.926782032406602,
+            0.028357704012540636,
+            0.043666635612916414,
+            0.0010000724647896374,
+            0.0001889450015957171,
+            2.5159965446678447e-7,
+            0.000004122484151858975,
+            2.2547369364876405e-7,
+          ],
+        ],
+        "value": 0.9267820433506576,
+      },
+    },
+    "mw": 78.1333086482505,
+    "parts": Array [
+      "(C2H6OS)",
+    ],
+    "unsaturation": 0,
+  },
+  Object {
+    "atoms": Object {
+      "C": 2,
+      "H": 12,
+      "O": 4,
+    },
+    "charge": 0,
+    "em": 100.07355886504,
+    "filter": Object {
+      "ESI": true,
+      "MALDI": false,
+      "negative": false,
+      "positive": true,
+    },
+    "info": Object {
+      "comments": "ESI solvents",
+      "ionType": "[AnBm+X]+",
+      "mfInfo": "[MeOH]n[H2O]m",
+      "origin": "Methanol/Water",
+      "references": "K",
+      "smiles": "",
+    },
+    "ionization": Object {
+      "charge": 1,
+      "em": 1.00782503223,
+      "mf": "(H+)",
+    },
+    "mf": "C2H12O4",
+    "ms": Object {
+      "charge": 1,
+      "delta": 0.08083531736093619,
+      "em": 101.08083531736094,
+      "ionization": "(H+)",
+      "ppm": 800.3496768409523,
+      "similarity": Object {
+        "experiment": Array [
+          Array [
+            101,
+          ],
+          Array [
+            1,
+          ],
+        ],
+        "theoretical": Array [
+          Array [
+            101.08083531736094,
+            102.0844206828298,
+            103.08515152368007,
+            104.08866593145969,
+            105.08949857219106,
+            106.09286924222211,
+            107.09357044512954,
+          ],
+          Array [
+            0.967787995852072,
+            0.02385629455902116,
+            0.008135649572328107,
+            0.00019350008414395492,
+            0.000025929435029619765,
+            5.671333827910522e-7,
+            3.359595553476973e-8,
+          ],
+        ],
+        "value": 2.9768066678315108e-8,
+      },
+    },
+    "mw": 100.11438053941293,
+    "parts": Array [
+      "(MeOH)2(H2O)2",
+    ],
+    "unsaturation": -3,
+  },
+  Object {
+    "atoms": Object {
+      "C": 5,
+      "H": 10,
+      "N": 1,
+      "O": 1,
+    },
+    "charge": 0,
+    "em": 100.0762389463,
+    "filter": Object {
+      "ESI": true,
+      "MALDI": false,
+      "negative": false,
+      "positive": true,
+    },
+    "info": Object {
+      "comments": "N-methyl 2-pyrrolidone; solvent, floor stripper",
+      "ionType": "[M+H]+",
+      "mfInfo": "C5H10NO",
+      "origin": "NMP",
+      "references": "K",
+      "smiles": "",
+    },
+    "ionization": Object {
+      "charge": 1,
+      "em": 1.00782503223,
+      "mf": "(H+)",
+    },
+    "mf": "C5H10NO",
+    "ms": Object {
+      "charge": 1,
+      "delta": 0.08351539862093205,
+      "em": 101.08351539862093,
+      "ionization": "(H+)",
+      "ppm": 826.8851348607134,
+      "similarity": Object {
+        "experiment": Array [
+          Array [
+            101,
+          ],
+          Array [
+            1,
+          ],
+        ],
+        "theoretical": Array [
+          Array [
+            101.08351539862093,
+            102.08654918030662,
+            103.08848771563085,
+            104.09100383265609,
+            105.0937899829073,
+            106.09657847035413,
+          ],
+          Array [
+            0.9406981617182659,
+            0.05585678542680468,
+            0.00330993976227648,
+            0.00013215433906511168,
+            0.0000029140181168424306,
+            3.614521998564913e-8,
+          ],
+        ],
+        "value": 8.590250955009537e-9,
+      },
+    },
+    "mw": 100.13919515999808,
+    "parts": Array [
+      "C5H10NO",
+    ],
+    "unsaturation": 1.5,
+  },
+]
+`;

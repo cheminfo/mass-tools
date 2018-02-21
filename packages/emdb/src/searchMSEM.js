@@ -8,7 +8,7 @@ Search for an experimental monoisotopic mass
 * @param {number}   msem - The observed monoisotopic mass
 * @param {object}   [options={}]
 * @param {array}    [options.databases] - an array containing the name of the databases so search, by default all
-* @param {boolean}  [options.flatten] - should we return the array as a flat result
+* @param {boolean}  [options.flatten=false] - should we return the array as a flat result
 * @param {string}   [options.ionizations=''] - Comma separated list of ionizations (to charge the molecule)
 * @param {boolean}  [options.forceIonization=false] - If true ignore existing ionizations
 * @param {number}   [options.precision=1000] - The precision on the experimental mass
