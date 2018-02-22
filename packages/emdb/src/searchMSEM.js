@@ -1,7 +1,7 @@
 'use strict';
 
 const matcher = require('mf-matcher/src/msemMatcher');
-const preprocessIonizations = require('mf-utils/src/preprocessIonizations');
+const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 
 /**
 Search for an experimental monoisotopic mass

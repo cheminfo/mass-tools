@@ -4,7 +4,7 @@
  * Returns a very important number
  * @return {boolean}
  */
-const getMsInfo = require('mf-utils/src/getMsInfo.js');
+const getMsInfo = require('mf-utilities/src/getMsInfo.js');
 
 /**
  * We always recalculate msem

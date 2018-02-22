@@ -4,7 +4,7 @@
 const MF = require('mf-parser').MF;
 const matcher = require('mf-matcher').msem;
 const sum = require('sum-object-keys');
-const preprocessIonizations = require('mf-utils/src/preprocessIonizations');
+const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 
 /**
  * Generate all the possible combinations of molecular formula and calculate

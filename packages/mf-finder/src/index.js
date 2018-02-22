@@ -1,8 +1,8 @@
 'use strict';
 
 const preprocessRanges = require('./preprocessRanges');
-const preprocessIonizations = require('mf-utils/src/preprocessIonizations');
-const getMsInfo = require('mf-utils/src/getMsInfo');
+const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
+const getMsInfo = require('mf-utilities/src/getMsInfo');
 const TargetMassCache = require('./TargetMassCache');
 /**
  * Returns possible combinations
