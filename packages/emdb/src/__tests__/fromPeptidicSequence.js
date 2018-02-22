@@ -8,11 +8,16 @@ test('test fromArray', () => {
         allowNeutralLoss: false,
         protonation: false,
         protonationPH: 7,
-
+        ionizations: 'H+,Na+',
+        fragmentation: {
+            a: true
+        },
+        mfFilter: {
+            minMSEM: 100,
+            maxMSEM: 300
+        },
     });
 
-    console.log(dbManager.databases.peptidic.length);
-
-    dbManager.databases.peptidic.forEach((e) => console.log(e.mf));
-    //  expect(dbManager.databases.peptidic).toHaveLength(4);
+    expect(dbManager.databases.peptidic).toHaveLength(2);
+    expect(dbManager.databases.peptidic).toMatchSnapshot();
 });

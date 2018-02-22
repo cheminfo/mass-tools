@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test fromArray 1`] = `
+Array [
+  Object {
+    "atoms": Object {
+      "C": 11,
+      "H": 23,
+      "N": 4,
+      "O": 2,
+    },
+    "charge": 1,
+    "comment": "a3",
+    "em": 243.18210099815,
+    "ionization": Object {
+      "charge": 1,
+      "em": 1.00782503223,
+      "mf": "H+",
+    },
+    "mf": "C11H23N4O2(+1)",
+    "ms": Object {
+      "charge": 2,
+      "em": 122.09441443528092,
+      "ionization": "H+",
+    },
+    "mw": 243.32635490179035,
+    "parts": Array [
+      "HAlaAlaLysC-1O-1(+1)",
+    ],
+    "unsaturation": 2,
+  },
+  Object {
+    "atoms": Object {
+      "C": 11,
+      "H": 23,
+      "N": 4,
+      "O": 2,
+    },
+    "charge": 1,
+    "comment": "a3",
+    "em": 243.18210099815,
+    "ionization": Object {
+      "charge": 1,
+      "em": 22.989769282,
+      "mf": "Na+",
+    },
+    "mf": "C11H23N4O2(+1)",
+    "ms": Object {
+      "charge": 2,
+      "em": 133.08538656016594,
+      "ionization": "Na+",
+    },
+    "mw": 243.32635490179035,
+    "parts": Array [
+      "HAlaAlaLysC-1O-1(+1)",
+    ],
+    "unsaturation": 2,
+  },
+]
+`;

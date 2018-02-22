@@ -33,7 +33,6 @@ const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
  * @returns {Array}
  */
 
-
 module.exports = function generateMFs(keys, options = {}) {
     let {
         limit = 10000000,
