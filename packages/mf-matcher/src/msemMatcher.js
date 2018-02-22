@@ -25,6 +25,8 @@ module.exports = function msemMatcher(entry, options = {}) {
         targetMass, // if present we will calculate the errors
         minEM = 0,
         maxEM = +Infinity,
+        minMSEM = -Infinity,
+        maxMSEM = +Infinity,
         atoms
     } = options;
 
@@ -39,6 +41,11 @@ module.exports = function msemMatcher(entry, options = {}) {
     if (entry.em !== undefined) {
         if ((entry.em < minEM) || (entry.em > maxEM)) return false;
     }
+
+    if (ms.em !== undefined) {
+        if ((ms.em < minMSEM) || (ms.em > maxMSEM)) return false;
+    }
+
     if (targetMass && ms.ppm > precision) return false;
 
     if (entry.charge !== undefined) {
