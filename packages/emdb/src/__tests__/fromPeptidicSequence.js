@@ -14,7 +14,9 @@ test('test fromArray', () => {
         },
         mfFilter: {
             minMSEM: 100,
-            maxMSEM: 300
+            maxMSEM: 300,
+            targetMass: 150, // just to test, this is useless with precision 1e6
+            precision: 1e6
         },
     });
 
