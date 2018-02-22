@@ -5,7 +5,8 @@ const generateMFs = require('..');
 test('generateMFs from array of array with comment', function () {
     var mfsArray = [['C', 'H$YY'], [], [''], ['Cl', 'Br$XX']];
     var result = generateMFs(mfsArray);
-    expect(result[0].mf).toBe('HCl$YY');
+    expect(result[0].mf).toBe('HCl');
+    expect(result[0].comment).toBe('YY');
     expect(result).toHaveLength(4);
 });
 
@@ -132,7 +133,8 @@ test('Combine with ionizations', function () {
 test('Strange comments', function () {
     var mfsArray = ['C$1>10', 'O$D2>20'];
     var result = generateMFs(mfsArray);
-    expect(result[0].mf).toBe('CO$1>10 D2>20');
+    expect(result[0].mf).toBe('CO');
+    expect(result[0].comment).toBe('1>10 D2>20');
 });
 
 test('Check info', function () {

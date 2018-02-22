@@ -9,6 +9,7 @@ const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 /**
  * Generate all the possible combinations of molecular formula and calculate
  * for each of them the monoisotopic mass and observed moniisotopic mass (m/z)
+ * In the molecular formula there may be a comment after the '$' symbol
  *
  * @param keys
  * @param {object} options
@@ -188,11 +189,11 @@ function appendResult(results, currents, keys, options = {}) {
         for (var i = 0; i < keys.length; i++) {
             var key = keys[i][currents[i]];
             if (key) {
-                result.parts[i] = key;
                 if (key.indexOf('$') > -1) {
                     comments.push(key.replace(/^[^$]*\$/, ''));
                     key = key.replace(/\$.*/, '');
                 }
+                result.parts[i] = key;
                 result.mf += key;
             }
         }
@@ -201,10 +202,11 @@ function appendResult(results, currents, keys, options = {}) {
             result.mf = (new MF(result.mf)).toMF();
         }
 
-        if (comments.length > 0) result.mf += `$${comments.join(' ')}`;
+        if (comments.length > 0) {
+            result.comment = comments.join(' ');
+        }
         results.push(result);
     }
-
 }
 
 function processRange(string, comment) {

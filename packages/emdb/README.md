@@ -48,6 +48,7 @@ The following fields in the json are expected to be returned
 * msem: calculated from em and charge
 * charge
 * ocl: either a string or an object with value / coordinates
+* comment: if in the molecular formula there is a '$' this will end-up in this field
 * parts: array of mf if the mf is the result of a combination of mf
 * info: object of free information
 * filter: optional information about the kind of mass spectra that yields to this mass

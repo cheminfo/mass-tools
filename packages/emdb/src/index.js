@@ -120,6 +120,13 @@ DBManager.prototype.fromMonoisotopicMass = function fromMonoisotopicMass(mass, o
     this.databases[databaseName] = findMFs(mass, options).mfs;
 };
 
+DBManager.prototype.fromPeptidicSequence = function fromPeptidicSequence(sequence, options = {}) {
+    const {
+        databaseName = 'peptidic'
+    } = options;
+    this.databases[databaseName] = require('./fromPeptidicSequence')(sequence, options);
+};
+
 DBManager.prototype.listDatabases = function listDatabases() {
     return Object.keys(this.databases).sort();
 };
