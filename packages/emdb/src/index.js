@@ -8,7 +8,13 @@ const findMFs = require('mf-finder');
 
 function DBManager() {
     this.databases = {};
+    this.experimentalSpectrum = undefined;
 }
+
+DBManager.prototype.setExperimentalSpectrum = function setExperimentalSpectrum(experimentalSpectrum) {
+    this.experimentalSpectrum = experimentalSpectrum;
+};
+
 /**
  * Add a new database using the KnapSack content
  * @param {*} options

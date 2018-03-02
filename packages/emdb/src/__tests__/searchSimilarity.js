@@ -6,7 +6,8 @@ describe('test searchSimilarity', () => {
     it('should find one result with bad distribution', () => {
         let dbManager = new DBManager();
         dbManager.loadTest();
-        let results = dbManager.searchSimilarity(120, { x: [120], y: [1] }, {
+        dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
+        let results = dbManager.searchSimilarity(120, {
             precision: 1000,
             widthBottom: 0.05,
             widthTop: 0.01,
@@ -19,7 +20,8 @@ describe('test searchSimilarity', () => {
     it('should find one result with bad bad distribution, small window', () => {
         let dbManager = new DBManager();
         dbManager.loadTest();
-        let results = dbManager.searchSimilarity(120, { x: [120, 121], y: [1, 1] }, {
+        dbManager.setExperimentalSpectrum({ x: [120, 121], y: [1, 1] });
+        let results = dbManager.searchSimilarity(120, {
             precision: 1000,
             from: 120 - 0.5,
             to: 120 + 0.5,
@@ -33,7 +35,8 @@ describe('test searchSimilarity', () => {
     it('should find one result with bad bad distribution, large window', () => {
         let dbManager = new DBManager();
         dbManager.loadTest();
-        let results = dbManager.searchSimilarity(120, { x: [120], y: [1] }, {
+        dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
+        let results = dbManager.searchSimilarity(120, {
             precision: 1000,
             from: 120 - 0.5,
             to: 120 + 2.5,
@@ -47,7 +50,8 @@ describe('test searchSimilarity', () => {
     it('should find one result with bad bad distribution, large window huge width ', () => {
         let dbManager = new DBManager();
         dbManager.loadTest();
-        let results = dbManager.searchSimilarity(120, { x: [120], y: [1] }, {
+        dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
+        let results = dbManager.searchSimilarity(120, {
             precision: 1000,
             from: 120 - 0.5,
             to: 120 + 2.5,
@@ -61,7 +65,8 @@ describe('test searchSimilarity', () => {
     it('should find one result with overlap', () => {
         let dbManager = new DBManager();
         dbManager.loadTest();
-        let results = dbManager.searchSimilarity(120, { x: [120], y: [1] }, {
+        dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
+        let results = dbManager.searchSimilarity(120, {
             precision: 1000,
             widthBottom: 0.05,
             widthTop: 0.01,
@@ -75,7 +80,8 @@ describe('test searchSimilarity', () => {
     it('should find one result with good distribution', () => {
         let dbManager = new DBManager();
         dbManager.loadTest();
-        let results = dbManager.searchSimilarity(120, { x: [120, 121], y: [1, 0.11] }, {
+        dbManager.setExperimentalSpectrum({ x: [120, 121], y: [1, 0.11] });
+        let results = dbManager.searchSimilarity(120, {
             precision: 1000,
             widthBottom: 0.05,
             widthTop: 0.01,

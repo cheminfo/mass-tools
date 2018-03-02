@@ -5,7 +5,6 @@ var IsotopicDistribution = require('isotopic-distribution');
 /**
 Search for an experimental monoisotopic mass and calculate the similarity
 * @param {number}   msem - The observed monoisotopic mass
-* @param {Array}    massSpectrum - Mass spectrum as an object of {x: [], y:[]}sear
 * @param {object}   [options={}]
 * @param {array}    [options.databases] - an array containing the name of the databases so search, by default all
 * @param {boolean}  [options.flatten] - should we return the array as a flat result
@@ -27,23 +26,16 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @param {object}   [options.common]
 */
 
-module.exports = function searchSimilarity(msem, massSpectrum, options = {}) {
+module.exports = function searchSimilarity(msem, options = {}) {
+
+    if (!this.experimentalSpectrum || !this.experimentalSpectrum.x || !this.experimentalSpectrum.x.length > 0) {
+        throw Error('You need to add an experimental spectrum first using setMassSpectrum');
+    }
 
     if (!msem) {
-        if (options.flatten) {
-            return [];
-        } else {
-            return {};
-        }
+        throw Error('You need to specify a target mass');
     }
 
-    if (!massSpectrum || !massSpectrum.x || !massSpectrum.x.length > 0) {
-        if (options.flatten) {
-            return [];
-        } else {
-            return {};
-        }
-    }
 
     // the result of this query will be stored in a property 'ms'
     let results = this.searchMSEM(msem, options);
@@ -65,9 +57,9 @@ module.exports = function searchSimilarity(msem, massSpectrum, options = {}) {
 
     // we need to calculate the similarity of the isotopic distribution
     let similarity = new Similarity(options);
-    similarity.setPeaks1([massSpectrum.x, massSpectrum.y]);
+    similarity.setPeaks1([this.experimentalSpectrum.x, this.experimentalSpectrum.y]);
 
-    let targetMass = massSpectrum.x[0];
+    let targetMass = this.experimentalSpectrum.x[0];
 
     for (let entry of flatEntries) {
         let isotopicDistribution = new IsotopicDistribution(entry.mf + entry.ionization.mf);
