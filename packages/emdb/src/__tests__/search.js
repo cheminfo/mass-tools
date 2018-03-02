@@ -8,8 +8,10 @@ describe('test search', () => {
         await dbManager.loadContaminants();
 
         let results = dbManager.search({
-            minEM: 100.123,
-            maxEM: 140
+            filter: {
+                minEM: 100.123,
+                maxEM: 140
+            }
         });
         expect(results.contaminants).toHaveLength(31);
     });
@@ -19,14 +21,13 @@ describe('test search', () => {
         await dbManager.loadContaminants();
 
         let results = dbManager.search({
-            minEM: 100.123,
-            maxEM: 140
-        }, {
+            filter: {
+                minEM: 100.123,
+                maxEM: 140
+            },
             flatten: true
         });
         expect(results).toHaveLength(31);
         expect(results[0].database).toBe('contaminants');
     });
-
-
 });

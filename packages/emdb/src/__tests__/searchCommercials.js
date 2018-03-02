@@ -9,17 +9,19 @@ describe('test search commercial', () => {
         await dbManager.loadCommercials();
 
         let results = dbManager.search({
-            minMW: 100,
-            maxMW: 101
-        }, {
+            filter: {
+                minMW: 100,
+                maxMW: 101
+            },
             flatten: true
         });
         expect(results).toHaveLength(66);
 
         results = dbManager.search({
-            minMW: 100,
-            maxMW: 101
-        }, {
+            filter: {
+                minMW: 100,
+                maxMW: 101
+            },
             flatten: false
         });
         expect(results.commercials).toHaveLength(66);

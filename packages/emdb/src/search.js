@@ -11,10 +11,11 @@ const matcher = require('mf-matcher').general;
     {boolean}   [options.flatten] - should we return the array as a flat result
 */
 
-module.exports = function search(filter = {}, options = {}) {
+module.exports = function search(options = {}) {
     let {
         databases = Object.keys(this.databases),
-        flatten = false
+        flatten = false,
+        filter = {}
     } = options;
 
     let results = {};
