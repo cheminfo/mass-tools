@@ -32,7 +32,6 @@ Search for an experimental monoisotopic mass and calculate the similarity
 
 module.exports = function searchSimilarity(msem, options = {}) {
     const {
-        filter = {},
         similarity = {},
     } = options;
 
