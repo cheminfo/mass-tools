@@ -28,19 +28,20 @@ const combineMFs = require('mf-generator');
  * @param {number} [options.fragmentation.minInternal=0] Minimal internal fragment length
  * @param {number} [options.fragmentation.maxInternal=+Infinity] Maximal internal fragment length
  *
- * @param {object} [options.mfFilter={}] Object defining options for molecular formula filter
- * @param {number} [options.mfFilter.minMass=0] - Minimal monoisotopic mass
- * @param {number} [options.mfFilter.maxMass=+Infinity] - Maximal monoisotopic mass
- * @param {number} [options.mfFilter.minEM=0] - Minimal neutral monoisotopic mass
- * @param {number} [options.mfFilter.maxEM=+Infinity] - Maximal neutral monoisotopic mass
- * @param {number} [options.mfFilter.minMSEM=0] - Minimal observed monoisotopic mass
- * @param {number} [options.mfFilter.maxMSEM=+Infinity] - Maximal observed monoisotopic mass
- * @param {number} [options.mfFilter.minCharge=-Infinity] - Minimal charge
- * @param {number} [options.mfFilter.maxCharge=+Infinity] - Maximal charge
- * @param {number} [options.mfFilter.minUnsaturation=-Infinity] - Minimal unsaturation
- * @param {number} [options.mfFilter.maxUnsaturation=+Infinity] - Maximal unsaturation
- * @param {number} [options.mfFilter.onlyIntegerUnsaturation=false] - Integer unsaturation
- * @param {number} [options.mfFilter.onlyNonIntegerUnsaturation=false] - Non
+ * @param {object} [options.filter={}] Object defining options for molecular formula filter
+ * @param {number} [options.filter.minMass=0] - Minimal monoisotopic mass
+ * @param {number} [options.filter.maxMass=+Infinity] - Maximal monoisotopic mass
+ * @param {number} [options.filter.minEM=0] - Minimal neutral monoisotopic mass
+ * @param {number} [options.filter.maxEM=+Infinity] - Maximal neutral monoisotopic mass
+ * @param {number} [options.filter.minMSEM=0] - Minimal observed monoisotopic mass
+ * @param {number} [options.filter.maxMSEM=+Infinity] - Maximal observed monoisotopic mass
+ * @param {number} [options.filter.minCharge=-Infinity] - Minimal charge
+ * @param {number} [options.filter.maxCharge=+Infinity] - Maximal charge
+ * @param {number} [options.filter.unsaturation={}}]
+ * @param {number} [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
+ * @param {number} [options.filter.maxUnsaturation=+Infinity] - Maximal unsaturation
+ * @param {number} [options.filter.onlyIntegerUnsaturation=false] - Integer unsaturation
+ * @param {number} [options.filter.onlyNonIntegerUnsaturation=false] - Non
  */
 
 
@@ -52,7 +53,7 @@ module.exports = function fromPeptidicSequence(sequence, options = {}) {
         protonation = false,
         protonationPH = 7,
         fragmentation = {},
-        mfFilter = {},
+        filter = {},
         ionizations = '',
     } = options;
 
@@ -87,7 +88,7 @@ module.exports = function fromPeptidicSequence(sequence, options = {}) {
 
     let combined = combineMFs(mfsArray, {
         ionizations,
-        filter: mfFilter
+        filter: filter
     });
 
     return combined;
