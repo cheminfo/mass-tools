@@ -3,7 +3,6 @@
 const loadCommercials = require('../loadCommercials');
 
 test('test loadCommercials', async () => {
-
     let data = await loadCommercials();
     expect(data.length).toBeGreaterThan(10000);
     let first = data[0];

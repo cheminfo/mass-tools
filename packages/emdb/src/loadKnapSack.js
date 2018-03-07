@@ -3,12 +3,17 @@
 const fetch = require('./util/fetchArrayBuffer');
 const JSZip = require('jszip');
 
+const loadingPromises = {};
+
 module.exports = async function loadKnapSack(options = {}) {
     const {
         url = 'https://couch.cheminfo.org/cheminfo-public/d2eb480198c80275a1d05dd3609414f9/upload/ms.zip'
     } = options;
 
-    const buffer = await fetch(url);
+    if (!loadingPromises[url]) {
+        loadingPromises[url] = fetch(url);
+    }
+    const buffer = await loadingPromises[url];
 
     const jsZip = new JSZip();
     var zip = await jsZip.loadAsync(buffer);

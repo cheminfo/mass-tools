@@ -7,7 +7,14 @@ const ELECTRON_MASS = require('chemical-elements').ELECTRON_MASS;
 
 const MF = require('mf-parser').MF;
 
+
 class IsotopicDistribution {
+    /**
+     * Class that manage isotopic distribution
+     * @param {string} mf - Molecular formula
+     * @param {object} [options={}]
+     * @param {number} [fwhm=0.001] - Amount of Dalton under which 2 peaks are joined
+     */
     constructor(mf, options = {}) {
         this.mf = new MF(mf);
         this.isotopesInfo = this.mf.getIsotopesInfo();
@@ -18,6 +25,10 @@ class IsotopicDistribution {
         this.fwhm = options.fwhm || 0.001;
         this.confidence = 0;
     }
+
+    /**
+     * @return {Distribution} returns the internal object that contains the isotopic distribution
+     */
 
     getDistribution() {
         let options = {
@@ -44,6 +55,9 @@ class IsotopicDistribution {
         return this.cache.distribution;
     }
 
+    /**
+     * @return an object containing 2 properties: x:[] and y:[]
+     */
     getXY() {
         let points = this.getDistribution().array;
         if (points.length === 0) return [];
