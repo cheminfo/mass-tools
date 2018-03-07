@@ -55,8 +55,16 @@ class IsotopicDistribution {
         return this.cache.distribution;
     }
 
+
     /**
-     * @return an object containing 2 properties: x:[] and y:[]
+    * An object containing two arrays
+    * @typedef {object} XY
+    * @property {Array<number>} x - The x array
+    * @property {Array<number>} y - The y array
+    */
+
+    /**
+     * @return {XY} an object containing 2 properties: x:[] and y:[]
      */
     getXY() {
         let points = this.getDistribution().array;
