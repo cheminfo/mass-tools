@@ -2,20 +2,33 @@
 
 const matcher = require('mf-matcher').general;
 
-/*
+/**
     Searching by various criteria. This mass will not take into account the mass
     of the mass of the electron
+* @param {object}   [filter={}}]
+* @param {number}   [filter.minMW=0] - Minimal molecular weight
+* @param {number}   [filter.maxMW=+Infinity] - Maximal molecular weight
+* @param {number}   [filter.minEM=0] - Minimal monoisotopic mass
+* @param {number}   [filter.maxEM=+Infinity] - Maximal monoisotopic mass
+* @param {number}   [filter.minCharge=-Infinity] - Minimal charge
+* @param {number}   [filter.maxCharge=+Infinity] - Maximal charge
+* @param {number}   [filter.minUnsaturation=-Infinity] - Minimal unsaturation
+* @param {number}   [filter.maxUnsaturation=+Infinity] - Maximal unsaturation
+* @param {number}   [filter.onlyIntegerUnsaturation=false] - Integer unsaturation
+* @param {number}   [filter.onlyNonIntegerUnsaturation=false] - Non integer unsaturation
+* @param {object}   [filter.atoms] - object of atom:{min, max}
 
-    {object}    [options={}]
-    {array}     [options.databases] - an array containing the name of the databases so search, by default all
-    {boolean}   [options.flatten] - should we return the array as a flat result
+* @param {object}   [options={}]
+* @param {array}    [options.databases] - an array containing the name of the databases so search, by default all
+* @param {boolean}  [options.flatten=false] - should we return the array as a flat result
+
+ *
 */
 
-module.exports = function search(options = {}) {
+module.exports = function search(filter, options = {}) {
     let {
         databases = Object.keys(this.databases),
-        flatten = false,
-        filter = {}
+        flatten = false
     } = options;
 
     let results = {};

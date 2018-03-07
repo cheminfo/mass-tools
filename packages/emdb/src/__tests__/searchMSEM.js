@@ -8,7 +8,9 @@ describe('test searchMSEM', () => {
         await dbManager.loadContaminants();
 
         let results = dbManager.searchMSEM(101, {
-            precision: 1000
+            filter: {
+                precision: 1000
+            }
         });
 
         expect(results.contaminants).toHaveLength(4);
@@ -19,8 +21,10 @@ describe('test searchMSEM', () => {
         await dbManager.loadContaminants();
 
         let results = dbManager.searchMSEM(101, {
-            precision: 1000,
-            ionizations: 'H+'
+            ionizations: 'H+',
+            filter: {
+                precision: 1000,
+            }
         });
         expect(results.contaminants).toHaveLength(4);
     });
@@ -30,9 +34,11 @@ describe('test searchMSEM', () => {
         await dbManager.loadContaminants();
 
         let results = dbManager.searchMSEM(101, {
-            precision: 1000,
             ionizations: 'H+',
-            forceIonization: true
+            filter: {
+                precision: 1000,
+                forceIonization: true
+            }
         });
 
         expect(results.contaminants).toHaveLength(3);

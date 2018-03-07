@@ -1,7 +1,23 @@
 'use strict';
 
 /**
- * Returns a very important number
+ * @param {object}   [entry={}}]
+ * @param {object}   [options={}}]
+ * @param {object}   [options.ionization={ mf: '', em: 0, charge: 0 }] - ionization method
+ * @param {boolean}  [options.forceIonization=false] - If true ignore existing ionizations
+ * @param {number}   [options.precision=1000] - The precision on the experimental mass
+ * @param {number}   [options.minEM=0] - Minimal monoisotopic mass
+ * @param {number}   [options.maxEM=+Infinity] - Maximal monoisotopic mass
+ * @param {number}   [options.minMSEM=0] - Minimal monoisotopic mass observed by mass
+ * @param {number}   [options.maxMSEM=+Infinity] - Maximal monoisotopic mass observed by mass
+ * @param {number}   [options.minCharge=-Infinity] - Minimal charge
+ * @param {number}   [options.maxCharge=+Infinity] - Maximal charge
+ * @param {number}   [options.minUnsaturation=-Infinity] - Minimal unsaturation
+ * @param {number}   [options.maxUnsaturation=+Infinity] - Maximal unsaturation
+ * @param {number}   [options.onlyIntegerUnsaturation=false] - Integer unsaturation
+ * @param {number}   [options.onlyNonIntegerUnsaturation=false] - Non integer unsaturation
+ * @param {object}   [options.atoms] - object of atom:{min, max}
+ * @return {boolean}
  * @return {boolean}
  */
 const getMsInfo = require('mf-utilities/src/getMsInfo.js');
