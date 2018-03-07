@@ -24,6 +24,27 @@ class Distribution {
     get ys() {
         return this.array.map((p) => p.y);
     }
+
+    get minX() {
+        if (!this.xSorted) this.sortX();
+        return this.array[0].x;
+    }
+
+    get maxX() {
+        if (!this.xSorted) this.sortX();
+        return this.array[this.array.length - 1].x;
+    }
+
+    get minY() {
+        if (!this.ySorted) this.sortY();
+        return this.array[0].y;
+    }
+
+    get maxY() {
+        if (!this.ySorted) this.sortY();
+        return this.array[this.array.length - 1];
+    }
+
 }
 
 Distribution.prototype.setArray = function setArray(array) {

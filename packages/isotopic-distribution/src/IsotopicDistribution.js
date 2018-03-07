@@ -2,6 +2,7 @@
 
 const Distribution = require('./Distribution');
 const ELECTRON_MASS = require('chemical-elements').ELECTRON_MASS;
+const SpectrumGenerator = require('spectrum-generator').SpectrumGenerator;
 
 // for each element we need to find the isotopes
 
@@ -79,6 +80,27 @@ class IsotopicDistribution {
             x: points.map((a) => a.x),
             y: points.map((a) => a.y / maxY)
         };
+    }
+
+    getGaussian(options = {}) {
+        let distribution = this.getDistribution();
+        let points = distribution.array;
+        if (points.length === 0) return [];
+        let gaussianOptions = {
+            start: Math.floor(options.from || distribution.minX - 10),
+            end: Math.ceil(options.to || distribution.maxX + 10),
+            pointsPerUnit: options.pointsPerUnit || 10,
+            getWidth: options.getWidth ? options.getWidth : () => 0.1,
+        };
+
+        console.log(gaussianOptions);
+        let spectrumGenerator = new SpectrumGenerator(gaussianOptions);
+        for (let point of points) {
+            console.log(point);
+            spectrumGenerator.addPeak([point.x, point.y]);
+        }
+        let spectrum = spectrumGenerator.getSpectrum();
+        return spectrum;
     }
 
 }
