@@ -99,8 +99,10 @@ test('From array of string to large array and filter unsaturation', function () 
     var mfsArray = ['C0-100', 'H0-100'];
     var result = generateMFs(mfsArray, {
         filter: {
-            minUnsaturation: 0,
-            maxUnsaturation: 1
+            unsaturation: {
+                min: 0,
+                max: 1,
+            }
         }
     });
     expect(result).toHaveLength(151);
@@ -110,9 +112,11 @@ test('From array of string to large array and filter unsaturation min/max and in
     var mfsArray = ['C0-100', 'H0-100'];
     var result = generateMFs(mfsArray, {
         filter: {
-            minUnsaturation: 0,
-            maxUnsaturation: 1,
-            onlyIntegerUnsaturation: true
+            unsaturation: {
+                min: 0,
+                max: 1,
+                onlyInteger: true,
+            }
         }
     });
     expect(result).toHaveLength(101);

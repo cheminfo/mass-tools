@@ -40,9 +40,11 @@ describe('test search commercial', () => {
             flatten: true,
             filter: {
                 precision: 1e4,
-                onlyIntegerUnsaturation: true,
-                minUnsaturation: 2,
-                maxUnsaturation: 3,
+                unsaturation: {
+                    onlyInteger: true,
+                    min: 2,
+                    max: 3,
+                }
             }
         });
         expect(results[0].ms.charge).toBe(1);

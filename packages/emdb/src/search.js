@@ -12,10 +12,11 @@ const matcher = require('mf-matcher').general;
 * @param {number}   [filter.maxEM=+Infinity] - Maximal monoisotopic mass
 * @param {number}   [filter.minCharge=-Infinity] - Minimal charge
 * @param {number}   [filter.maxCharge=+Infinity] - Maximal charge
-* @param {number}   [filter.minUnsaturation=-Infinity] - Minimal unsaturation
-* @param {number}   [filter.maxUnsaturation=+Infinity] - Maximal unsaturation
-* @param {number}   [filter.onlyIntegerUnsaturation=false] - Integer unsaturation
-* @param {number}   [filter.onlyNonIntegerUnsaturation=false] - Non integer unsaturation
+* @param {object}   [filter.unsaturation={}}]
+* @param {number}   [filter.unsaturation.min=-Infinity] - Minimal unsaturation
+* @param {number}   [filter.unsaturation.max=+Infinity] - Maximal unsaturation
+* @param {number}   [filter.unsaturation.onlyIntege=false] - Integer unsaturation
+* @param {number}   [filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
 * @param {object}   [filter.atoms] - object of atom:{min, max}
 
 * @param {object}   [options={}]

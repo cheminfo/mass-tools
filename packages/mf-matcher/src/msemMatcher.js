@@ -12,10 +12,11 @@
  * @param {number}   [options.maxMSEM=+Infinity] - Maximal monoisotopic mass observed by mass
  * @param {number}   [options.minCharge=-Infinity] - Minimal charge
  * @param {number}   [options.maxCharge=+Infinity] - Maximal charge
- * @param {number}   [options.minUnsaturation=-Infinity] - Minimal unsaturation
- * @param {number}   [options.maxUnsaturation=+Infinity] - Maximal unsaturation
- * @param {number}   [options.onlyIntegerUnsaturation=false] - Integer unsaturation
- * @param {number}   [options.onlyNonIntegerUnsaturation=false] - Non integer unsaturation
+ * @param {object}   [options.unsaturation={}}]
+ * @param {number}   [options.unsaturation.min=-Infinity] - Minimal unsaturation
+ * @param {number}   [options.unsaturation.max=+Infinity] - Maximal unsaturation
+ * @param {number}   [options.unsaturation.onlyIntege=false] - Integer unsaturation
+ * @param {number}   [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {object}   [options.atoms] - object of atom:{min, max}
  * @return {boolean}
  * @return {boolean}
@@ -34,10 +35,7 @@ module.exports = function msemMatcher(entry, options = {}) {
         precision = 1000,
         minCharge = Number.MIN_SAFE_INTEGER,
         maxCharge = Number.MAX_SAFE_INTEGER,
-        minUnsaturation = Number.MIN_SAFE_INTEGER,
-        maxUnsaturation = Number.MAX_SAFE_INTEGER,
-        onlyIntegerUnsaturation,
-        onlyNonIntegerUnsaturation,
+        unsaturation = {},
         targetMass, // if present we will calculate the errors
         minEM = 0,
         maxEM = +Infinity,
@@ -45,7 +43,6 @@ module.exports = function msemMatcher(entry, options = {}) {
         maxMSEM = +Infinity,
         atoms
     } = options;
-
 
     let ms = getMsInfo(entry, {
         ionization,
@@ -67,10 +64,8 @@ module.exports = function msemMatcher(entry, options = {}) {
     if (entry.charge !== undefined) {
         if ((ms.charge < minCharge) || (ms.charge > maxCharge)) return false;
     }
-    if (entry.unsaturation !== undefined) {
-        if (entry.unsaturation < minUnsaturation || entry.unsaturation > maxUnsaturation) return false;
-        if (onlyIntegerUnsaturation && !Number.isInteger(entry.unsaturation)) return false;
-        if (onlyNonIntegerUnsaturation && Number.isInteger(entry.unsaturation)) return false;
+    if (unsaturation !== undefined && entry.unsaturation !== undefined) {
+        if (!require('./unsaturationMatcher')(entry, unsaturation)) return false;
     }
     if (entry.atoms !== undefined && atoms) {
         // all the atoms of the entry must fit in the range

@@ -21,8 +21,10 @@ DBManager.prototype.setExperimentalSpectrum = function setExperimentalSpectrum(e
  */
 DBManager.prototype.loadKnapSack = async function loadKnapSack(options = {}) {
     const {
-        databaseName = 'knapSack'
+        databaseName = 'knapSack',
+        forceReload = false
     } = options;
+    if (this.databases[databaseName] && !forceReload) return;
     this.databases[databaseName] = await loadKnapSackPromise();
 };
 
@@ -32,8 +34,10 @@ DBManager.prototype.loadKnapSack = async function loadKnapSack(options = {}) {
  */
 DBManager.prototype.loadCommercials = async function loadCommercials(options = {}) {
     const {
-        databaseName = 'commercials'
+        databaseName = 'commercials',
+        forceReload = false
     } = options;
+    if (this.databases[databaseName] && !forceReload) return;
     this.databases[databaseName] = await loadCommercialsPromise();
 };
 
@@ -48,8 +52,10 @@ DBManager.prototype.get = function get(databaseName) {
  */
 DBManager.prototype.loadContaminants = async function loadContaminants(options = {}) {
     const {
-        databaseName = 'contaminants'
+        databaseName = 'contaminants',
+        forceReload = false,
     } = options;
+    if (this.databases[databaseName] && !forceReload) return;
     this.databases[databaseName] = await loadGoogleSheetPromise();
 };
 
@@ -61,8 +67,10 @@ DBManager.prototype.loadContaminants = async function loadContaminants(options =
 
 DBManager.prototype.loadGoogleSheet = async function loadGoogleSheet(options = {}) {
     const {
-        databaseName = 'sheet'
+        databaseName = 'sheet',
+        forceReload = false,
     } = options;
+    if (this.databases[databaseName] && !forceReload) return;
     this.databases[databaseName] = await loadGoogleSheetPromise();
 };
 
