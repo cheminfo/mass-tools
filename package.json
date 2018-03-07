@@ -5,6 +5,7 @@
   "scripts": {
     "build": "npm run build-emdb",
     "build-emdb": "cheminfo build --cwd=./packages/emdb --out=../../dist",
+    "build-docs": "ls packages | xargs -I % sh -c 'cd packages/%; documentation build /src/index.js -f html -o ../../docs/%; cd ../..'",
     "eslint": "eslint packages *.js --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "prepare": "lerna bootstrap",
@@ -40,6 +41,7 @@
     "npm-run-all": "^4.1.2"
   },
   "dependencies": {
+    "documentation": "^6.0.0",
     "sum-object-keys": "^1.0.0"
   }
 }
