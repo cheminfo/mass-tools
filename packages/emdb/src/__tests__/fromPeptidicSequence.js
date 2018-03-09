@@ -12,7 +12,7 @@ test('test fromArray', () => {
         fragmentation: {
             a: true
         },
-        mfFilter: {
+        filter: {
             minMSEM: 100,
             maxMSEM: 300,
             targetMass: 150, // just to test, this is useless with precision 1e6
