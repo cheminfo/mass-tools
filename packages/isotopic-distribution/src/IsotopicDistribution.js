@@ -93,10 +93,8 @@ class IsotopicDistribution {
             getWidth: options.getWidth ? options.getWidth : () => 0.1,
         };
 
-        console.log(gaussianOptions);
         let spectrumGenerator = new SpectrumGenerator(gaussianOptions);
         for (let point of points) {
-            console.log(point);
             spectrumGenerator.addPeak([point.x, point.y]);
         }
         let spectrum = spectrumGenerator.getSpectrum();

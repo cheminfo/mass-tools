@@ -16,8 +16,6 @@ describe('test isotopicDistribution', () => {
         expect(Math.max(...gaussian.x)).toBe(13);
         expect(Math.min(...gaussian.y)).toBe(0);
         expect(Math.max(...gaussian.y)).toBe(0.9893);
-
     });
-
 
 });
