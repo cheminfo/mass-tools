@@ -21,7 +21,7 @@ module.exports = function findMF(targetMass, options = {}) {
         onlyIntegerUnsaturation = false,
         onlyNonIntegerUnsaturation = false,
         maxIterations = 1e8,
-        allowNeutral = false, // msem because em in this case !
+        allowNeutral = true, // if there is no msem we use em !
         ranges = [
             { mf: 'C', min: 0, max: 100 },
             { mf: 'H', min: 0, max: 100 },

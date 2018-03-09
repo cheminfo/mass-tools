@@ -13,6 +13,7 @@ test('test fromMonoisotopicMass', () => {
 test('test fromMonoisotopicMass with ionizations', () => {
     let dbManager = new DBManager();
     dbManager.fromMonoisotopicMass(120, {
+        allowNeutral: false,
         ionizations: ', H+, K+',
         precision: 100,
     });
