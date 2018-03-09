@@ -1,6 +1,6 @@
 {
   "name": "mf-finder",
-  "version": "0.5.2",
+  "version": "0.5.7",
   "description": "Find a molecular formula from a monoisotopic mass",
   "main": "src/index.js",
   "files": [
