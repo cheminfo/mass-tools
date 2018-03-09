@@ -27,6 +27,7 @@
     "mf-from-google-sheet": "^0.5.6",
     "mf-generator": "^0.5.6",
     "mf-matcher": "^0.5.6",
+    "mf-parser": "^0.5.2",
     "mf-utilities": "^0.5.2",
     "peaks-similarity": "^2.3.0",
     "peptide": "^1.5.2",

@@ -4,6 +4,7 @@ const loadKnapSackPromise = require('./loadKnapSack');
 const loadGoogleSheetPromise = require('./loadGoogleSheet');
 const loadCommercialsPromise = require('./loadCommercials');
 
+
 function DBManager() {
     this.databases = {};
     this.experimentalSpectrum = undefined;
@@ -105,6 +106,11 @@ DBManager.prototype.listDatabases = function listDatabases() {
 DBManager.prototype.search = require('./search');
 DBManager.prototype.searchMSEM = require('./searchMSEM');
 DBManager.prototype.searchSimilarity = require('./searchSimilarity');
+
+DBManager.Util = {
+    IsotopicDistribution: require('isotopic-distribution'),
+    MF: require('mf-parser').MF,
+};
 
 
 module.exports = DBManager;
