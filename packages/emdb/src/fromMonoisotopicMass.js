@@ -9,11 +9,12 @@ const findMFs = require('mf-finder');
 /**
  * Generates a database 'generated' from an array of molecular formula
  * @param {number} mass - Monoisotopic mass
- * @param {*} options
+ * @param {object} [options={}]
  * @param {string} [options.databaseName='monoisotopic']
  * @param {number} [options.limit=10000000] - Maximum number of results
- * @param {boolean} [canonizeMF=true] - Canonize molecular formula
- * @param {boolean} [uniqueMFs=true] - Force canonization and make MF unique
+ * @param {boolean} [options.canonizeMF=true] - Canonize molecular formula
+ * @param {boolean} [options.uniqueMFs=true] - Force canonization and make MF unique
+ * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
  *
  * @param {number} [options.filter={}]
  * @param {number} [options.filter.minMass=0] - Minimal monoisotopic mass

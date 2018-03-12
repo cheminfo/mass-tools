@@ -10,10 +10,46 @@ describe('test isotopicDistribution', () => {
         expect(distribution.array[0].x).toBe(12000);
     });
 
-    it.skip('create distribution for multiplepart, C.C2', () => {
+    it('create distribution for multiplepart, C.C2', () => {
         let isotopicDistribution = new IsotopicDistribution('C.C2');
         let distribution = isotopicDistribution.getDistribution();
-        expect(distribution.array[0].x).toBe(12000);
+        expect(distribution.array).toMatchObject([{ x: 12, y: 0.9893 },
+            { x: 13.00335483507, y: 0.0107 },
+            { x: 24, y: 0.9787144899999999 },
+            { x: 25.00335483507, y: 0.02117102 },
+            { x: 26.00670967014, y: 0.00011448999999999998 }]
+        );
+    });
+
+    it('create distribution for multiplepart, C.C2.C3', () => {
+        let isotopicDistribution = new IsotopicDistribution('C.C2.C3');
+        let distribution = isotopicDistribution.getDistribution();
+        expect(distribution.array.reduce((e, p) => e += p.y, 0)).toBeCloseTo(3, 5);
+    });
+
+    it('create distribution for charged multiplepart, C+.(C+)2', () => {
+        let isotopicDistribution = new IsotopicDistribution('C+.(C+)2');
+        let distribution = isotopicDistribution.getDistribution();
+        expect(distribution.array).toMatchObject(
+            [
+                { x: 11.99945142009093, y: 1.9680144899999998 },
+                { x: 12.501128837625929, y: 0.02117102 },
+                { x: 13.00280625516093, y: 0.01081449 }
+            ]
+        );
+    });
+
+    it('create distribution for many ionizations, C + (+, ++)', () => {
+        let isotopicDistribution = new IsotopicDistribution('C', { ionizations: '+,++' });
+        let distribution = isotopicDistribution.getDistribution();
+        expect(distribution.array).toMatchObject(
+            [
+                { x: 5.99945142009093, y: 0.9893 },
+                { x: 6.50112883762593, y: 0.0107 },
+                { x: 11.99945142009093, y: 0.9893 },
+                { x: 13.00280625516093, y: 0.0107 }
+            ]
+        );
     });
 
 

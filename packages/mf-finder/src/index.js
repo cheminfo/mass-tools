@@ -4,8 +4,12 @@ const preprocessRanges = require('./preprocessRanges');
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 const getMsInfo = require('mf-utilities/src/getMsInfo');
 const TargetMassCache = require('./TargetMassCache');
+
 /**
  * Returns possible combinations
+ * {number} [targetMass]
+ * {object} [options={}]
+ * {string} [options.ionizations=''] - comma separated list of ionizations
  * * @return {}
  */
 

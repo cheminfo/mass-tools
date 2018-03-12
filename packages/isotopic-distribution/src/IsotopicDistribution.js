@@ -7,7 +7,7 @@ const SpectrumGenerator = require('spectrum-generator').SpectrumGenerator;
 // for each element we need to find the isotopes
 
 const MF = require('mf-parser').MF;
-
+const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 
 /**
     * An object containing two arrays
@@ -18,52 +18,68 @@ const MF = require('mf-parser').MF;
 
 
 class IsotopicDistribution {
+
+
     /**
      * Class that manage isotopic distribution
      * @param {string} mf - Molecular formula
      * @param {object} [options={}]
-     * @param {string} [options.modifications=''] - string containing a comma separated list of modifications
+     * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
      * @param {number} [options.fwhm=0.01] - Amount of Dalton under which 2 peaks are joined
      */
 
     constructor(mf, options = {}) {
+        this.ionizations = preprocessIonizations(options.ionizations);
         this.mf = new MF(mf);
-        this.isotopesInfo = this.mf.getIsotopesInfo();
-        this.charge = this.isotopesInfo.charge;
-        this.absoluteCharge = Math.abs(this.isotopesInfo.charge);
-        this.cache = {};
+        this.mfInfo = this.mf.getInfo();
+        let parts = this.mfInfo.parts || [this.mfInfo];
+        this.parts = [];
+        for (let partOriginal of parts) { // we calculate informations for each part
+            for (const ionization of this.ionizations) {
+                let part = JSON.parse(JSON.stringify(partOriginal));
+                part.isotopesInfo = (new MF(part.mf)).getIsotopesInfo();
+                part.confidence = 0;
+                part.ionization = ionization;
+                this.parts.push(part);
+            }
+        }
         this.options = options;
-        this.fwhm = options.fwhm || 0.001;
-        this.confidence = 0;
+        this.fwhm = options.fwhm || 0.01;
     }
 
     /**
-     * @return {Distribution} returns the internal object that contains the isotopic distribution
+     * @return {Distribution} returns the total distribution (for all parts)
      */
 
     getDistribution() {
         let options = {
             threshold: this.fwhm
         };
-        if (this.cache.distribution) return this.cache.distribution;
-        let totalDistribution = new Distribution([{ x: 0, y: 1 }]);
+        let finalDistribution = new Distribution();
+        this.confidence = 0;
+        for (let part of this.parts) {
+            let totalDistribution = new Distribution([{ x: 0, y: 1 }]);
 
-        for (let isotope of this.isotopesInfo.isotopes) {
-            let isotopeDistribution = new Distribution(isotope.distribution);
-            isotopeDistribution.power(isotope.number, options);
-            totalDistribution.multiply(isotopeDistribution, options);
+            for (let isotope of part.isotopesInfo.isotopes) {
+                let isotopeDistribution = new Distribution(isotope.distribution);
+                isotopeDistribution.power(isotope.number, options);
+                totalDistribution.multiply(isotopeDistribution, options);
+            }
+            this.confidence += totalDistribution.array.reduce((sum, value) => (sum + value.y), 0);
+
+            // we finally deal with the charge
+            let charge = part.isotopesInfo.charge + part.ionization.charge;
+            let absoluteCharge = Math.abs(charge);
+            if (charge) {
+                totalDistribution.array.forEach((e) => {
+                    e.x = (e.x - ELECTRON_MASS * charge) / absoluteCharge;
+                });
+            }
+            finalDistribution.append(totalDistribution);
         }
-        this.cache.distribution = totalDistribution;
-        this.confidence = this.cache.distribution.array.reduce((sum, value) => (sum + value.y), 0);
-
-        // we finally deal with the charge
-        if (this.isotopesInfo.charge) {
-            this.cache.distribution.array.forEach((e) => {
-                e.x = (e.x - ELECTRON_MASS * this.charge) / this.absoluteCharge;
-            });
-        }
-
-        return this.cache.distribution;
+        finalDistribution.join(this.fwhm);
+        this.confidence /= this.parts.length;
+        return finalDistribution;
     }
 
     /**
