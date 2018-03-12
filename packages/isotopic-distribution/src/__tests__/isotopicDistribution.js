@@ -10,6 +10,13 @@ describe('test isotopicDistribution', () => {
         expect(distribution.array[0].x).toBe(12000);
     });
 
+    it.skip('create distribution for multiplepart, C.C2', () => {
+        let isotopicDistribution = new IsotopicDistribution('C.C2');
+        let distribution = isotopicDistribution.getDistribution();
+        expect(distribution.array[0].x).toBe(12000);
+    });
+
+
     it('create distribution of C10 and getXY', () => {
         let isotopicDistribution = new IsotopicDistribution('C10');
         let xy = isotopicDistribution.getXY();

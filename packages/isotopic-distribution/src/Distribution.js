@@ -73,6 +73,18 @@ Distribution.prototype.push = function push(x, y) {
     this.ySorted = false;
 };
 
+/**
+ * Appen another distribution to the current distribution
+ * @param {*} distribution
+ */
+Distribution.prototype.append = function append(distribution) {
+    for (let item of distribution.array) {
+        this.array.push(item);
+    }
+    this.xSorted = false;
+    this.ySorted = false;
+};
+
 Distribution.prototype.sortX = require('./utils/sortX.js');
 Distribution.prototype.sortY = require('./utils/sortY.js');
 Distribution.prototype.join = require('./utils/join.js');
