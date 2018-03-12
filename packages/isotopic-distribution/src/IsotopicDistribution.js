@@ -47,6 +47,10 @@ class IsotopicDistribution {
         this.fwhm = options.fwhm || 0.01;
     }
 
+    getParts() {
+        return this.parts;
+    }
+
     /**
      * @return {Distribution} returns the total distribution (for all parts)
      */
@@ -55,15 +59,18 @@ class IsotopicDistribution {
         let options = {
             threshold: this.fwhm
         };
-        let finalDistribution = new Distribution();
+        let finalDistribution;
         this.confidence = 0;
-        for (let part of this.parts) {
+        for (let i = 0; i < this.parts.length; i++) {
+            let part = this.parts[i];
             let totalDistribution = new Distribution([{ x: 0, y: 1 }]);
 
             for (let isotope of part.isotopesInfo.isotopes) {
-                let isotopeDistribution = new Distribution(isotope.distribution);
-                isotopeDistribution.power(isotope.number, options);
-                totalDistribution.multiply(isotopeDistribution, options);
+                if (isotope.number) {
+                    let isotopeDistribution = new Distribution(isotope.distribution);
+                    isotopeDistribution.power(isotope.number, options);
+                    totalDistribution.multiply(isotopeDistribution, options);
+                }
             }
             this.confidence += totalDistribution.array.reduce((sum, value) => (sum + value.y), 0);
 
@@ -75,7 +82,11 @@ class IsotopicDistribution {
                     e.x = (e.x - ELECTRON_MASS * charge) / absoluteCharge;
                 });
             }
-            finalDistribution.append(totalDistribution);
+            if (i === 0) {
+                finalDistribution = totalDistribution;
+            } else {
+                finalDistribution.append(totalDistribution);
+            }
         }
         finalDistribution.join(this.fwhm);
         this.confidence /= this.parts.length;

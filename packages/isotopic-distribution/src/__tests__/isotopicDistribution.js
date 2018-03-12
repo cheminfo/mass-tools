@@ -117,5 +117,17 @@ describe('test isotopicDistribution', () => {
         expect(distribution.array[0].x).toBeCloseTo(12.00055, 5);
     });
 
+    it('create distribution with no elements Ru0', () => {
+        let isotopicDistribution = new IsotopicDistribution('Ru0');
+        let distribution = isotopicDistribution.getDistribution();
+        expect(distribution.array).toMatchObject([{ x: 0, y: 1 }]);
+    });
+
+
+    it('create distribution with null elements', () => {
+        let isotopicDistribution = new IsotopicDistribution('CRu0C');
+        let distribution = isotopicDistribution.getDistribution();
+        expect(distribution.array[0].x).toBe(24);
+    });
 
 });
