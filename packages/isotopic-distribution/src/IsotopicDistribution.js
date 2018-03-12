@@ -8,6 +8,7 @@ const SpectrumGenerator = require('spectrum-generator').SpectrumGenerator;
 
 const MF = require('mf-parser').MF;
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
+const getMsInfo = require('mf-utilities/src/getMsInfo');
 
 /**
     * An object containing two arrays
@@ -41,6 +42,7 @@ class IsotopicDistribution {
                 part.confidence = 0;
                 part.ionization = ionization;
                 this.parts.push(part);
+                getMsInfo(part);
             }
         }
         this.options = options;
@@ -79,7 +81,7 @@ class IsotopicDistribution {
             let absoluteCharge = Math.abs(charge);
             if (charge) {
                 totalDistribution.array.forEach((e) => {
-                    e.x = (e.x - ELECTRON_MASS * charge) / absoluteCharge;
+                    e.x = (e.x + part.ionization.em - ELECTRON_MASS * charge) / absoluteCharge;
                 });
             }
             if (i === 0) {

@@ -52,6 +52,17 @@ describe('test isotopicDistribution', () => {
         );
     });
 
+    it.only('create distribution for many ionizations, C + H+', () => {
+        let isotopicDistribution = new IsotopicDistribution('C', { ionizations: 'H+' });
+        let distribution = isotopicDistribution.getDistribution();
+        expect(distribution.array).toMatchObject(
+            [
+                { x: 13.00727645232093, y: 0.9893 },
+                { x: 14.01063128739093, y: 0.0107 }
+            ]
+        );
+    });
+
 
     it('create distribution of C10 and getXY', () => {
         let isotopicDistribution = new IsotopicDistribution('C10');
