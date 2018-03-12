@@ -91,6 +91,7 @@ class IsotopicDistribution {
             end: Math.ceil(options.to || distribution.maxX + 10),
             pointsPerUnit: options.pointsPerUnit || 10,
             getWidth: options.getWidth ? options.getWidth : () => 0.1,
+            maxSize: options.maxSize
         };
 
         let spectrumGenerator = new SpectrumGenerator(gaussianOptions);
