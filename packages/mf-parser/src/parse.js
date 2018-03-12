@@ -47,7 +47,6 @@ class MFParser {
                 this.result.push({ kind: Kind.SALT, value: char });
                 // it is not in a number otherwise it would have been taken before
                 // it must be in a salt
-
             } else if (ascii > 64 && ascii < 91) { // an uppercase = new atom
                 let value = this.getAtom(ascii);
                 this.result.push({ kind: Kind.ATOM, value });
@@ -114,13 +113,17 @@ class MFParser {
 
     getNumber(ascii) {
         let number = '';
+        let previous;
         do {
+            previous = ascii;
             number += String.fromCharCode(ascii);
             this.i++;
             ascii = this.mf.charCodeAt(this.i);
         } while (ascii > 47 && ascii < 58 || ascii === 46 || ascii === 45); // number, . or -
         // we need to deal with the case there is a from / to
+        if (previous === 46) this.i--;
         let indexOfDash = number.indexOf('-', 1);
+
         if (indexOfDash > -1) {
             return { from: Number(number.substr(0, indexOfDash)), to: Number(number.substr(indexOfDash + 1)) };
         }
