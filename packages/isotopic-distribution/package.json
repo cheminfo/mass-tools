@@ -21,6 +21,6 @@
     "chemical-elements": "^0.5.2",
     "mf-parser": "^0.5.2",
     "mf-utilities": "^0.5.2",
-    "spectrum-generator": "^1.0.1"
+    "spectrum-generator": "^1.1.0"
   }
 }
