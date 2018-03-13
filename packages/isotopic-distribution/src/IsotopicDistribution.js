@@ -27,6 +27,8 @@ class IsotopicDistribution {
      * @param {object} [options={}]
      * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
      * @param {number} [options.fwhm=0.01] - Amount of Dalton under which 2 peaks are joined
+     * @param {number} [options.maxLines=5000] - Maximal number of lines during calculations
+     * @param {number} [options.minY=1e-8] - Minimal signal height during calculations
      */
 
     constructor(mf, options = {}) {
@@ -41,12 +43,16 @@ class IsotopicDistribution {
                 part.isotopesInfo = (new MF(part.mf)).getIsotopesInfo();
                 part.confidence = 0;
                 part.ionization = ionization;
+                part.ms = getMsInfo(part, {
+                    ionization,
+                });
                 this.parts.push(part);
-                getMsInfo(part);
             }
         }
         this.options = options;
         this.fwhm = options.fwhm || 0.01;
+        this.minY = options.minY || 1e-8;
+        this.maxLines = options.maxLines || 5000;
     }
 
     getParts() {
@@ -59,7 +65,9 @@ class IsotopicDistribution {
 
     getDistribution() {
         let options = {
-            threshold: this.fwhm
+            maxLines: this.maxLines,
+            minY: this.minY,
+            deltaX: this.fwhm,
         };
         let finalDistribution;
         this.confidence = 0;

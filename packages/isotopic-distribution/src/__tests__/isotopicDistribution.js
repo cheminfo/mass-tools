@@ -24,7 +24,7 @@ describe('test isotopicDistribution', () => {
     it('create distribution for multiplepart, C.C2.C3', () => {
         let isotopicDistribution = new IsotopicDistribution('C.C2.C3');
         let distribution = isotopicDistribution.getDistribution();
-        expect(distribution.array.reduce((e, p) => e += p.y, 0)).toBeCloseTo(3, 5);
+        expect(distribution.array.reduce((e, p) => (e += p.y), 0)).toBeCloseTo(3, 5);
     });
 
     it('create distribution for charged multiplepart, C+.(C+)2', () => {
@@ -52,7 +52,7 @@ describe('test isotopicDistribution', () => {
         );
     });
 
-    it.only('create distribution for many ionizations, C + H+', () => {
+    it('create distribution for many ionizations, C + H+', () => {
         let isotopicDistribution = new IsotopicDistribution('C', { ionizations: 'H+' });
         let distribution = isotopicDistribution.getDistribution();
         expect(distribution.array).toMatchObject(
