@@ -40,6 +40,7 @@ class IsotopicDistribution {
         for (let partOriginal of parts) { // we calculate informations for each part
             for (const ionization of this.ionizations) {
                 let part = JSON.parse(JSON.stringify(partOriginal));
+                part.em = part.monoisotopicMass; // TODO: To remove !!! we change the name !?
                 part.isotopesInfo = (new MF(part.mf)).getIsotopesInfo();
                 part.confidence = 0;
                 part.ionization = ionization;
@@ -101,6 +102,24 @@ class IsotopicDistribution {
         finalDistribution.join(this.fwhm);
         this.confidence /= this.parts.length;
         return finalDistribution;
+    }
+
+
+    getCSV() {
+        return this.getText(',');
+    }
+
+    getTSV() {
+        return this.getText('\t');
+    }
+
+    getText(delimiter) {
+        let points = this.getDistribution().array;
+        let csv = [];
+        for (let point of points) {
+            csv.push(`${point.x.toFixed(5)}${delimiter}${(point.y * 100).toFixed(3)}`);
+        }
+        return csv.join('\n');
     }
 
     /**

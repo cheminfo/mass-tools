@@ -39,6 +39,14 @@ describe('test isotopicDistribution', () => {
         );
     });
 
+    it('getParts of isotopic distribution', () => {
+        let isotopicDistribution = new IsotopicDistribution('C', {
+            ionizations: 'H+'
+        });
+        let parts = isotopicDistribution.getParts();
+        expect(parts[0].ms.em).toBeCloseTo(13.00727645232093, 5);
+    });
+
     it('create distribution for many ionizations, C + (+, ++)', () => {
         let isotopicDistribution = new IsotopicDistribution('C', { ionizations: '+,++' });
         let distribution = isotopicDistribution.getDistribution();
