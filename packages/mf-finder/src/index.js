@@ -1,5 +1,6 @@
 'use strict';
 
+const atomSorter = require('atom-sorter');
 const preprocessRanges = require('./preprocessRanges');
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 const getMsInfo = require('mf-utilities/src/getMsInfo');
@@ -44,6 +45,7 @@ module.exports = function findMF(targetMass, options = {}) {
     let result = {
         mfs: []
     };
+    let orderMapping = []; // used to sort the atoms
 
     // we need to make the processing for all the ionizations
     let ionizations = preprocessIonizations(options.ionizations);
@@ -57,6 +59,8 @@ module.exports = function findMF(targetMass, options = {}) {
         // if (DEBUG) console.log('new ionization', ionization.mf, ionization.em, ionization.charge);
         // ionization em and charge will be used to set the first atom value
         let possibilities = preprocessRanges(ranges);
+        orderMapping = getOrderMapping(possibilities);
+
         if (possibilities.length === 0) return { mfs: [] };
         targetMassCache = new TargetMassCache(targetMass, possibilities, Object.assign({}, options, { charge: ionization.charge }));
         result.info = {
@@ -104,7 +108,7 @@ module.exports = function findMF(targetMass, options = {}) {
                 }
             }
             if (isValid) {
-                result.mfs.push(getResult(possibilities, targetMass, allowNeutral, ionization));
+                result.mfs.push(getResult(possibilities, targetMass, allowNeutral, ionization, orderMapping));
                 result.info.numberResults++;
             }
 
@@ -143,7 +147,7 @@ function updateCurrentAtom(currentAtom, previousAtom) {
     currentAtom.currentUnsaturation = previousAtom.currentUnsaturation + currentAtom.unsaturation * currentAtom.currentCount;
 }
 
-function getResult(possibilities, targetMass, allowNeutralMolecules, ionization) {
+function getResult(possibilities, targetMass, allowNeutralMolecules, ionization, orderMapping) {
     let lastPossibility = possibilities[possibilities.length - 1];
 
     let result = {
@@ -157,7 +161,9 @@ function getResult(possibilities, targetMass, allowNeutralMolecules, ionization)
 
     // we check that the first time we meet the ionization group it does not end
     // in the final result
-    for (let possibility of possibilities) {
+
+    for (let i = 0; i < possibilities.length; i++) {
+        let possibility = possibilities[orderMapping[i]];
         if (possibility.currentCount !== 0) {
             if (possibility.isGroup) {
                 result.mf += `(${possibility.mf})`;
@@ -203,4 +209,12 @@ function initializePossibilities(possibilities, currentIonization) {
 // eslint-disable-next-line no-unused-vars
 function possibilitiesToString(possibilities) {
     return possibilities.map((a) => [`mf:${a.mf}`, `current:${a.currentCount}`, `min:${a.currentMinCount}`, `max:${a.currentMaxCount}`, `charge:${a.currentCharge}`]);
+}
+
+function getOrderMapping(possibilities) {
+    let mapping = possibilities.map((p, i) => ({ atom: p.mf, index: i }));
+    mapping.sort((a, b) => {
+        return atomSorter(a.atom, b.atom);
+    });
+    return mapping.map((a) => a.index);
 }

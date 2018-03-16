@@ -234,6 +234,21 @@ describe('test mf-finder', () => {
         expect(result.mfs[0].mf).toBe('C100');
     });
 
+    it('check order in molecular formula', () => {
+        let result = findMFs(1199, {
+            ranges: [
+                { mf: 'C', min: 0, max: 100 },
+                { mf: 'H', min: 0, max: 100 },
+                { mf: 'S', min: 0, max: 10 },
+                { mf: 'N', min: 0, max: 10 },
+                { mf: 'O', min: 0, max: 10 },
+            ],
+            precision: 1,
+            allowNeutral: true
+        });
+        expect(result.mfs[0].mf).toBe('C88H5N3O4S');
+    });
+
     it('check impossible charge', () => {
 
         let result = findMFs(24, {
