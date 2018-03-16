@@ -93,8 +93,10 @@ describe('test mf-finder', () => {
             ],
             precision: 1e5,
             allowNeutral: true,
-            minUnsaturation: 0,
-            maxUnsaturation: 1
+            unsaturation: {
+                min: 0,
+                max: 1
+            }
         });
         expect(result.mfs).toHaveLength(2);
         expect(result.mfs[0].mf).toBe('CH4');
@@ -108,9 +110,11 @@ describe('test mf-finder', () => {
             ],
             precision: 1e5,
             allowNeutral: true,
-            minUnsaturation: 0,
-            maxUnsaturation: 1,
-            onlyIntegerUnsaturation: true,
+            unsaturation: {
+                min: 0,
+                max: 1,
+                onlyInteger: true
+            }
         });
         expect(result.mfs).toHaveLength(1);
         expect(result.mfs[0].mf).toBe('CH4');

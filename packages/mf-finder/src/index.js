@@ -21,10 +21,7 @@ module.exports = function findMF(targetMass, options = {}) {
     const {
         minCharge = Number.MIN_SAFE_INTEGER,
         maxCharge = Number.MAX_SAFE_INTEGER,
-        minUnsaturation = Number.MIN_SAFE_INTEGER,
-        maxUnsaturation = Number.MAX_SAFE_INTEGER,
-        onlyIntegerUnsaturation = false,
-        onlyNonIntegerUnsaturation = false,
+        unsaturation = {},
         maxIterations = 1e8,
         allowNeutral = true, // if there is no msem we use em !
         ranges = [
@@ -35,10 +32,10 @@ module.exports = function findMF(targetMass, options = {}) {
         ],
     } = options;
 
-    let filterUnsaturation = (minUnsaturation !== Number.MIN_SAFE_INTEGER || maxUnsaturation !== Number.MAX_SAFE_INTEGER || onlyIntegerUnsaturation || onlyNonIntegerUnsaturation);
+    let filterUnsaturation = unsaturation ? true : false;
     // we calculate not the real unsaturation but the one before dividing by 2 + 1
-    let fakeMinUnsaturation = (minUnsaturation === Number.MIN_SAFE_INTEGER) ? Number.MIN_SAFE_INTEGER : (minUnsaturation - 1) * 2;
-    let fakeMaxUnsaturation = (maxUnsaturation === Number.MAX_SAFE_INTEGER) ? Number.MAX_SAFE_INTEGER : (maxUnsaturation - 1) * 2;
+    let fakeMinUnsaturation = (unsaturation.min === undefined) ? Number.MIN_SAFE_INTEGER : (unsaturation.min - 1) * 2;
+    let fakeMaxUnsaturation = (unsaturation.max === undefined) ? Number.MAX_SAFE_INTEGER : (unsaturation.max - 1) * 2;
 
     let filterCharge = (minCharge !== Number.MIN_SAFE_INTEGER || maxCharge !== Number.MAX_SAFE_INTEGER);
 
@@ -87,13 +84,13 @@ module.exports = function findMF(targetMass, options = {}) {
                 throw Error(`Iteration number is over the current maximum of: ${maxIterations}`);
             }
             if (filterUnsaturation) {
-                let unsaturation = lastPossibility.currentUnsaturation;
-                let isOdd = Math.abs(unsaturation % 2);
+                let unsaturationValue = lastPossibility.currentUnsaturation;
+                let isOdd = Math.abs(unsaturationValue % 2);
                 if (
-                    (onlyIntegerUnsaturation && isOdd === 1) ||
-                    (onlyNonIntegerUnsaturation && isOdd === 0) ||
-                    (fakeMinUnsaturation > unsaturation) ||
-                    (fakeMaxUnsaturation < unsaturation)
+                    (unsaturation.onlyInteger && isOdd === 1) ||
+                    (unsaturation.onlyNonInteger && isOdd === 0) ||
+                    (fakeMinUnsaturation > unsaturationValue) ||
+                    (fakeMaxUnsaturation < unsaturationValue)
                 ) isValid = false;
             }
             if (filterCharge && (lastPossibility.currentCharge < minCharge || lastPossibility.currentCharge > maxCharge)) {
