@@ -43,8 +43,8 @@ async function mfFromGoogleSheet(url, options = {}) {
 
             var references = {};
             referencesArray.forEach(
-                function (ref) {
-                    references[ref.label] = ref;
+                function (r) {
+                    references[r.label] = r;
                 }
             );
         }
@@ -55,7 +55,7 @@ async function mfFromGoogleSheet(url, options = {}) {
                 // we add references
                 var refs = formula.references.split(/[ ,]+/);
                 formula.references = [];
-                for (var ref of refs) {
+                for (let ref of refs) {
                     formula.references.push(
                         references[ref]
                     );

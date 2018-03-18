@@ -117,8 +117,8 @@ var ems = {};
 function getMonoisotopicMass(mfString) {
     if (!ems[mfString]) {
         // we need to calculate based on the mf but not very often ...
-        var mf = new MF(mfString);
-        var info = mf.getInfo();
+        let mf = new MF(mfString);
+        let info = mf.getInfo();
         ems[mfString] = {
             em: info.monoisotopicMass,
             charge: info.charge,
@@ -139,10 +139,10 @@ function getEMFromParts(parts, currents, ionization) {
     var atoms = {};
 
 
-    for (var i = 0; i < parts.length; i++) {
-        var part = parts[i][currents[i]];
+    for (let i = 0; i < parts.length; i++) {
+        let part = parts[i][currents[i]];
         if (part) {
-            var info = getMonoisotopicMass(part);
+            let info = getMonoisotopicMass(part);
             charge += info.charge;
             em += info.em;
             mw += info.mw;
@@ -174,19 +174,19 @@ function appendResult(results, currents, keys, options = {}) {
     // that may contain comments after a "$" sign
     // therefore we should put all the comments at the ned
 
-    for (var ionization of ionizations) {
+    for (let ionization of ionizations) {
 
-        var result = getEMFromParts(keys, currents, ionization);
+        let result = getEMFromParts(keys, currents, ionization);
 
-        var match = matcher(result, filter);
+        let match = matcher(result, filter);
         if (!match) return;
         result.ms = match;
         result.parts = [];
         result.mf = '';
 
-        var comments = [];
-        for (var i = 0; i < keys.length; i++) {
-            var key = keys[i][currents[i]];
+        let comments = [];
+        for (let i = 0; i < keys.length; i++) {
+            let key = keys[i][currents[i]];
             if (key) {
                 if (key.indexOf('$') > -1) {
                     comments.push(key.replace(/^[^$]*\$/, ''));
@@ -213,8 +213,8 @@ function processRange(string, comment) {
     var parts = string.split(/([0-9]+-[0-9]+)/).filter((v) => v); // remove empty parts
     let position = -1;
     var mfs = [];
-    for (var i = 0; i < parts.length; i++) {
-        var part = parts[i];
+    for (let i = 0; i < parts.length; i++) {
+        let part = parts[i];
         if (!~part.search(/[0-9]-[0-9]/)) {
             position++;
             mfs[position] = {
@@ -250,8 +250,8 @@ function processRange(string, comment) {
 }
 
 function getMF(mfs, currents, comment) {
-    var mf = '';
-    for (var i = 0; i < mfs.length; i++) {
+    let mf = '';
+    for (let i = 0; i < mfs.length; i++) {
         if (currents[i] === 0) {
             // TODO we need to remove from currents[i] till we reach another part of the MF
             mf += removeMFLastPart(mfs[i].mf);
@@ -274,10 +274,10 @@ function getMF(mfs, currents, comment) {
  C10Ala((Me)N) -> C10Ala
  */
 function removeMFLastPart(mf) {
-    var parenthesis = 0;
-    var start = true;
-    for (var i = mf.length - 1; i >= 0; i--) {
-        var ascii = mf.charCodeAt(i);
+    let parenthesis = 0;
+    let start = true;
+    for (let i = mf.length - 1; i >= 0; i--) {
+        let ascii = mf.charCodeAt(i);
 
         if (ascii > 96 && ascii < 123) { // lowercase
             if (!start && !parenthesis) {

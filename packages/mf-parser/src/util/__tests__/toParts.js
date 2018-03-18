@@ -60,11 +60,11 @@ const toParts = require('../toParts');
 
 test('toParts', function () {
     for (let aTest of tests) {
-        check(aTest.mf, aTest.result);
+        checkMF(aTest.mf, aTest.result);
     }
 });
 
-function check(mf, result) {
+function checkMF(mf, result) {
     var parsed = parse(mf);
     var parts = toParts(parsed);
     expect(parts).toMatchObject(result);

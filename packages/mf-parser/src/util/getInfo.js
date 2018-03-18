@@ -125,16 +125,16 @@ function getIsotopeRatioInfo(value) {
     };
     let element = elements[value.atom];
     if (!element) throw new Error(`Element not found: ${value.atom}`);
-    let isotopes = element.isotopes;
+    let isotopesArray = element.isotopes;
     let ratios = normalize(value.ratio);
     let max = Math.max(...ratios);
-    if (ratios.length > isotopes.length) {
+    if (ratios.length > isotopesArray.length) {
         throw new Error(`the number of specified ratios is bigger that the number of stable isotopes: ${value.atom}`);
     }
     for (let i = 0; i < ratios.length; i++) {
-        result.mass += ratios[i] * isotopes[i].mass;
+        result.mass += ratios[i] * isotopesArray[i].mass;
         if (max === ratios[i] && result.monoisotopicMass === 0) {
-            result.monoisotopicMass = isotopes[i].mass;
+            result.monoisotopicMass = isotopesArray[i].mass;
         }
     }
     return result;

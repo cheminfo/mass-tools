@@ -10,7 +10,7 @@ var names = Papa.parse(`${fs.readFileSync(`${__dirname}/names.tsv`)}`, { header:
 
 var elementsAndIsotopes = JSON.parse(fs.readFileSync(`${__dirname}/isotopes.json`));
 
-for (var i = 0; i < elementsAndIsotopes.length; i++) {
+for (let i = 0; i < elementsAndIsotopes.length; i++) {
     let element = elementsAndIsotopes[i];
     let name = names[i];
     if (element.symbol !== name.symbol) {

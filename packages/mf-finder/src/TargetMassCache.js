@@ -28,9 +28,9 @@ let TargetMassCache = function TargetMassCache(targetMass, possibilities, option
     let minMass = 0;
     let maxMass = 0;
     let range = targetMass * precision / 1e6;
-    for (var i = 0; i < size; i++) {
-        let charge = i + this.minCharge;
-        if (charge === 0) {
+    for (let i = 0; i < size; i++) {
+        let currentCharge = i + this.minCharge;
+        if (currentCharge === 0) {
             if (allowNeutral) {
                 minMass = targetMass - range;
                 maxMass = targetMass + range;
@@ -39,13 +39,13 @@ let TargetMassCache = function TargetMassCache(targetMass, possibilities, option
                 maxMass = Number.MIN_SAFE_INTEGER;
             }
         } else {
-            minMass = (targetMass - range) * Math.abs(charge) + ELECTRON_MASS * charge;
-            maxMass = (targetMass + range) * Math.abs(charge) + ELECTRON_MASS * charge;
+            minMass = (targetMass - range) * Math.abs(currentCharge) + ELECTRON_MASS * currentCharge;
+            maxMass = (targetMass + range) * Math.abs(currentCharge) + ELECTRON_MASS * currentCharge;
         }
 
 
         this.data.push({
-            charge,
+            charge: currentCharge,
             minMass,
             maxMass
         });

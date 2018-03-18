@@ -40,7 +40,7 @@ var tests = {
 
 test('parse molecular formula', function () {
     for (var key of Object.keys(tests)) {
-        check(key, tests[key]);
+        checkMF(key, tests[key]);
     }
 });
 
@@ -51,7 +51,7 @@ test('not same opening and closing parenthesis', function () {
 });
 
 
-function check(mf, result) {
-    var parsed = parse(mf);
+function checkMF(mf, result) {
+    let parsed = parse(mf);
     expect(parsed).toMatchObject(result);
 }

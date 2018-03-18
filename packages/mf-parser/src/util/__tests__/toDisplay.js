@@ -61,11 +61,11 @@ const toDisplay = require('../toDisplay');
 
 test('toDisplay', function () {
     for (let aTest of tests) {
-        check(aTest.parsed, aTest.result);
+        checkMF(aTest.parsed, aTest.result);
     }
 });
 
-function check(parsed, result) {
+function checkMF(parsed, result) {
     var display = toDisplay(parsed);
     expect(display).toMatchObject(result);
 }

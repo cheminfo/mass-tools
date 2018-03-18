@@ -40,7 +40,7 @@ describe('test distribution power', () => {
         dist.push(1, 0.5);
         dist.push(2, 0.5);
         dist.power(100000);
-        let sum = dist.array.reduce((sum, a) => sum + a.y, 0);
+        let sum = dist.array.reduce((s, a) => s + a.y, 0);
         expect(sum).toBeGreaterThan(0.99);
         expect(sum).toBeLessThan(1);
     });

@@ -70,15 +70,15 @@ function getProcessedPart(part) {
 }
 
 
-function getDistribution(isotopes, ratio) {
+function getDistribution(isotopesArray, ratio) {
     let ratios = normalize(ratio);
     let result = [];
-    if (ratios.length > isotopes.length) {
+    if (ratios.length > isotopesArray.length) {
         throw new Error(`the number of specified ratios is bigger that the number of stable isotopes: ${isotopes}`);
     }
     for (let i = 0; i < ratios.length; i++) {
         result.push({
-            x: isotopes[i].mass,
+            x: isotopesArray[i].mass,
             y: ratios[i]
         });
     }
