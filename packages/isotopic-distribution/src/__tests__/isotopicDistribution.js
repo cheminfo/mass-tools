@@ -20,7 +20,6 @@ describe('test isotopicDistribution', () => {
             { x: 26.00670967014, y: 0.00011448999999999998 }]
         );
     });
-
     it('create distribution for multiplepart, C.C2.C3', () => {
         let isotopicDistribution = new IsotopicDistribution('C.C2.C3');
         let distribution = isotopicDistribution.getDistribution();
@@ -58,6 +57,7 @@ describe('test isotopicDistribution', () => {
                 { x: 13.00280625516093, y: 0.0107 }
             ]
         );
+        expect(isotopicDistribution.getParts()).toMatchSnapshot();
     });
 
     it('create distribution for many ionizations, C + H+', () => {

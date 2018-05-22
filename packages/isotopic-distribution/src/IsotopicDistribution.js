@@ -37,7 +37,7 @@ class IsotopicDistribution {
         this.mfInfo = this.mf.getInfo();
         let parts = this.mfInfo.parts || [this.mfInfo];
         this.parts = [];
-        for (let partOriginal of parts) { // we calculate informations for each part
+        for (let partOriginal of parts) { // we calculate information for each part
             for (const ionization of this.ionizations) {
                 let part = JSON.parse(JSON.stringify(partOriginal));
                 part.em = part.monoisotopicMass; // TODO: To remove !!! we change the name !?
@@ -63,7 +63,6 @@ class IsotopicDistribution {
     /**
      * @return {Distribution} returns the total distribution (for all parts)
      */
-
     getDistribution() {
         let options = {
             maxLines: this.maxLines,
@@ -93,6 +92,15 @@ class IsotopicDistribution {
                     e.x = (e.x + part.ionization.em - ELECTRON_MASS * charge) / absoluteCharge;
                 });
             }
+
+            if (totalDistribution.array) {
+                totalDistribution.sortX();
+                part.fromX = totalDistribution.array[0].x;
+                part.toX = totalDistribution.array[totalDistribution.array.length - 1].x;
+            }
+
+            part.isotopicDistribution = totalDistribution.array;
+
             if (i === 0) {
                 finalDistribution = totalDistribution;
             } else {
