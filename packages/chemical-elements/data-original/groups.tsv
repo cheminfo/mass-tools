@@ -5,7 +5,6 @@ Acm	Acetamidomethyl	C3H6NO
 Adao	Adamantyloxy	C10H15O
 Aib	alpha-Aminoisobutyric acid diradical	C4H7NO
 Ala	Alanine diradical	C3H5NO
-Amp Adenosine monophosphate diratical C10H12N5O6P
 Arg	Arginine diradical	C6H12N4O
 Argp	Arginine triradical	C6H11N4O
 Asn	Asparagine diradical	C4H6N2O2
@@ -43,7 +42,6 @@ Glp	Pyroglutamine	C5H5NO2
 Glu	Glutamic acid diradical	C5H7NO3
 Glup	Glutamic acid triradical	C5H6NO3
 Gly	Glycine diradical	C2H3NO
-
 Hci	Homocitrulline diradical	C7H13N3O2
 Hcip	Homocitrulline triradical	C7H12N3O2
 His	Histidine diradical	C6H7N3O
@@ -110,3 +108,15 @@ Valoh	beta-Hydroxyvaline diradical	C5H9NO2
 Valohp	beta-Hydroxyvaline triradical	C5H8NO2
 Xan	Xanthyl	C13H9O
 Z	Benzyloxycarbonyl	C8H7O2
+
+Damp Desocyadenosine monophosphate diratical   C10H12N5O6P
+Dcmp Desoxycytidine monophosphate diratical   C9H12N3O6P
+Dgmp Desoxyguanosine monophosphate diratical   C10H12N5O6P
+Dtmp Desoxythymidine monophosphate diratical  C10H13N2O7P
+Dump Desoxyuridine monophosphate diratical   C9H11N2O7P
+
+Amp Adenosine monophosphate diratical   C10H12N5O6P
+Cmp Cytidine monophosphate diratical   C9H12N3O7P
+Gmp Guanosine monophosphate diratical   C10H12N5O7P
+Tmp Thymidine monophosphate diratical  C10H13N2O8P3
+Ump Uridine monophosphate diratical   C9H11N2O8P
