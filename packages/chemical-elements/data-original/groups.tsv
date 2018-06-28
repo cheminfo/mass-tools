@@ -4,7 +4,8 @@ Acet	Acetyl	C2H3O
 Acm	Acetamidomethyl	C3H6NO
 Adao	Adamantyloxy	C10H15O
 Aib	alpha-Aminoisobutyric acid diradical	C4H7NO
-Ala	Alainine diradical	C3H5NO
+Ala	Alanine diradical	C3H5NO
+Amp Adenosine monophosphate diratical C10H12N5O6P
 Arg	Arginine diradical	C6H12N4O
 Argp	Arginine triradical	C6H11N4O
 Asn	Asparagine diradical	C4H6N2O2
@@ -42,6 +43,7 @@ Glp	Pyroglutamine	C5H5NO2
 Glu	Glutamic acid diradical	C5H7NO3
 Glup	Glutamic acid triradical	C5H6NO3
 Gly	Glycine diradical	C2H3NO
+
 Hci	Homocitrulline diradical	C7H13N3O2
 Hcip	Homocitrulline triradical	C7H12N3O2
 His	Histidine diradical	C6H7N3O
