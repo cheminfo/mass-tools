@@ -109,14 +109,14 @@ Valohp	beta-Hydroxyvaline triradical	C5H8NO2
 Xan	Xanthyl	C13H9O
 Z	Benzyloxycarbonyl	C8H7O2
 
-Damp Desocyadenosine monophosphate diratical   C10H12N5O6P
-Dcmp Desoxycytidine monophosphate diratical   C9H12N3O6P
-Dgmp Desoxyguanosine monophosphate diratical   C10H12N5O6P
-Dtmp Desoxythymidine monophosphate diratical  C10H13N2O7P
-Dump Desoxyuridine monophosphate diratical   C9H11N2O7P
+Damp	Desoxyadenosine monophosphate diratical	C10H12N5O5P
+Dcmp	Desoxycytidine monophosphate diratical	C9H12N3O6P
+Dgmp	Desoxyguanosine monophosphate diratical	C10H12N5O6P
+Dtmp	Desoxythymidine monophosphate diratical	C10H13N2O7P
+Dump	Desoxyuridine monophosphate diratical	C9H11N2O7P
 
-Amp Adenosine monophosphate diratical   C10H12N5O6P
-Cmp Cytidine monophosphate diratical   C9H12N3O7P
-Gmp Guanosine monophosphate diratical   C10H12N5O7P
-Tmp Thymidine monophosphate diratical  C10H13N2O8P3
-Ump Uridine monophosphate diratical   C9H11N2O8P
+Amp	Adenosine monophosphate diratical	C10H12N5O6P
+Cmp	Cytidine monophosphate diratical	C9H12N3O7P
+Gmp	Guanosine monophosphate diratical	C10H12N5O7P
+Tmp	Thymidine monophosphate diratical	C10H13N2O8P3
+Ump	Uridine monophosphate diratical	C9H11N2O8P
