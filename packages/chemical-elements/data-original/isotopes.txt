@@ -26752,7 +26752,7 @@ Standard Atomic Weight = &nbsp;
 Notes = &nbsp;
 
 Atomic Number = 115
-Atomic Symbol = Uup
+Atomic Symbol = Mc
 Mass Number = 291
 Relative Atomic Mass = 291.19707(88#)
 Isotopic Composition = 
@@ -26824,7 +26824,7 @@ Standard Atomic Weight = &nbsp;
 Notes = &nbsp;
 
 Atomic Number = 117
-Atomic Symbol = Uus
+Atomic Symbol = Ts
 Mass Number = 294
 Relative Atomic Mass = 294.21046(74#)
 Isotopic Composition = 

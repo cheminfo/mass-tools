@@ -210,21 +210,26 @@ test('MF of NC[13C][15N]2NN2', () => {
     expect(newMF).toBe('C[13C]N4[15N]2');
 });
 
-test('MF of HODampDtmpDcmpDgmpH', () => {
-    var mf = new MF('HODampODtmpH');
+test('MF of DNA HODampDtmpDcmpDgmpH  ', () => {
+    var mf = new MF('HODampDtmpDgmpDcmpH');
     var info = mf.getInfo();
-    console.log(info);
-    expect(info).toEqual({
-        monoisotopicMass: 111.01586865055,
-        mass: 111.04112137534844,
+    expect(info).toEqual({ mass: 1253.8043977028433,
+        monoisotopicMass: 1253.21310019311,
         charge: 0,
-        mf: 'C[13C]N4[15N]2',
-        unsaturation: 6,
-        atoms: { C: 2, N: 6 }
-    });
+        mf: 'C39H51N15O25P4',
+        atoms: { C: 39, H: 51, N: 15, O: 25, P: 4 },
+        unsaturation: 24 });
+});
 
-    var newMF = mf.toMF();
-    expect(newMF).toBe('C[13C]N4[15N]2');
+test('MF of RNA HOAmpUmpH  ', () => {
+    var mf = new MF('HOAmpUmpH');
+    var info = mf.getInfo();
+    expect(info).toEqual({ mass: 653.388021231099,
+        monoisotopicMass: 653.08838712715,
+        charge: 0,
+        mf: 'C19H25N7O15P2',
+        atoms: { C: 19, H: 25, N: 7, O: 15, P: 2 },
+        unsaturation: 12 });
 });
 
 test('MF of CC{50,50}H', () => {
