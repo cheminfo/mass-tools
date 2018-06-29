@@ -1,6 +1,6 @@
 {
   "name": "nucleotide",
-  "version": "0.0.0",
+  "version": "0.5.11",
   "description": "Deal with nucleotides and molecular formula",
   "module": "src/index.js",
   "files": [
