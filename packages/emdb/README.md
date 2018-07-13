@@ -28,7 +28,27 @@ There are 2 parts:
 
 A method that allows to create a database named 'test' and that contains all the molecular formula from C1 to C100
 
+#### loadKnapSack
+
+#### loadCommercials
+
+#### loadContaminants
+
 #### fromArray
+
+#### loadGoogleSheet
+
+
+## Static methods
+
+### EMDB.Util.MF
+
+Example:
+````
+var mf = new EMDB.Util.MF('Et3N');
+
+
+### EMDB.Util.IsotopicDistribution
 
 A method that creates a database (by default named `generated`) that contains all the posible combination based on an array of strings.
 
