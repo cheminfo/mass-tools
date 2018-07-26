@@ -96,7 +96,12 @@ let mf = Peptide.mfFromSequence('AAA');
 
 #### EMDB.Util.Nucleotide.sequenceToMF
 
-Generates a molecular formula from a nucleotide sequence.
+Generates a molecular formula from a nucleotide sequence. Will correctly deal with
+`dna`, `rna` and `ds-dna`.
+
+By default if the sequence contains a 'U' it is `rna` otherwise it is `ds-dna`. You
+can force the type by using the option `kind`. A nucleotide sequence may also be
+either circular or non circular (default value).
 
 Example:
 
