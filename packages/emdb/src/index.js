@@ -4,13 +4,14 @@ const loadKnapSackPromise = require('./loadKnapSack');
 const loadGoogleSheetPromise = require('./loadGoogleSheet');
 const loadCommercialsPromise = require('./loadCommercials');
 
-
 function DBManager() {
     this.databases = {};
     this.experimentalSpectrum = undefined;
 }
 
-DBManager.prototype.setExperimentalSpectrum = function setExperimentalSpectrum(experimentalSpectrum) {
+DBManager.prototype.setExperimentalSpectrum = function setExperimentalSpectrum(
+    experimentalSpectrum
+) {
     this.experimentalSpectrum = experimentalSpectrum;
 };
 
@@ -19,10 +20,7 @@ DBManager.prototype.setExperimentalSpectrum = function setExperimentalSpectrum(e
  * @param {*} options
  */
 DBManager.prototype.loadKnapSack = async function loadKnapSack(options = {}) {
-    const {
-        databaseName = 'knapSack',
-        forceReload = false
-    } = options;
+    const { databaseName = 'knapSack', forceReload = false } = options;
     if (this.databases[databaseName] && !forceReload) return;
     this.databases[databaseName] = await loadKnapSackPromise();
 };
@@ -31,11 +29,10 @@ DBManager.prototype.loadKnapSack = async function loadKnapSack(options = {}) {
  * Add a new database using the KnapSack content
  * @param {*} options
  */
-DBManager.prototype.loadCommercials = async function loadCommercials(options = {}) {
-    const {
-        databaseName = 'commercials',
-        forceReload = false
-    } = options;
+DBManager.prototype.loadCommercials = async function loadCommercials(
+    options = {}
+) {
+    const { databaseName = 'commercials', forceReload = false } = options;
     if (this.databases[databaseName] && !forceReload) return;
     this.databases[databaseName] = await loadCommercialsPromise();
 };
@@ -49,11 +46,10 @@ DBManager.prototype.get = function get(databaseName) {
  * @param {*} options
  * @param {string} ['contaminants'] databaseName
  */
-DBManager.prototype.loadContaminants = async function loadContaminants(options = {}) {
-    const {
-        databaseName = 'contaminants',
-        forceReload = false,
-    } = options;
+DBManager.prototype.loadContaminants = async function loadContaminants(
+    options = {}
+) {
+    const { databaseName = 'contaminants', forceReload = false } = options;
     if (this.databases[databaseName] && !forceReload) return;
     this.databases[databaseName] = await loadGoogleSheetPromise();
 };
@@ -64,11 +60,10 @@ DBManager.prototype.loadContaminants = async function loadContaminants(options =
  * @param {string} ['sheet'] databaseName
  */
 
-DBManager.prototype.loadGoogleSheet = async function loadGoogleSheet(options = {}) {
-    const {
-        databaseName = 'sheet',
-        forceReload = false,
-    } = options;
+DBManager.prototype.loadGoogleSheet = async function loadGoogleSheet(
+    options = {}
+) {
+    const { databaseName = 'sheet', forceReload = false } = options;
     if (this.databases[databaseName] && !forceReload) return;
     this.databases[databaseName] = await loadGoogleSheetPromise();
 };
@@ -77,26 +72,31 @@ DBManager.prototype.loadTest = function loadTest() {
     this.fromArray(['C1-100'], { databaseName: 'test', ionizations: '+' });
 };
 
-
-DBManager.prototype.fromMonoisotopicMass = function fromMonoisotopicMass(mass, options = {}) {
-    const {
-        databaseName = 'monoisotopic'
-    } = options;
-    this.databases[databaseName] = require('./fromMonoisotopicMass')(mass, options);
+DBManager.prototype.fromMonoisotopicMass = function fromMonoisotopicMass(
+    mass,
+    options = {}
+) {
+    const { databaseName = 'monoisotopic' } = options;
+    this.databases[databaseName] = require('./fromMonoisotopicMass')(
+        mass,
+        options
+    );
 };
 
 DBManager.prototype.fromArray = function fromArray(sequence, options = {}) {
-    const {
-        databaseName = 'generated'
-    } = options;
+    const { databaseName = 'generated' } = options;
     this.databases[databaseName] = require('./fromArray')(sequence, options);
 };
 
-DBManager.prototype.fromPeptidicSequence = function fromPeptidicSequence(sequence, options = {}) {
-    const {
-        databaseName = 'peptidic'
-    } = options;
-    this.databases[databaseName] = require('./fromPeptidicSequence')(sequence, options);
+DBManager.prototype.fromPeptidicSequence = function fromPeptidicSequence(
+    sequence,
+    options = {}
+) {
+    const { databaseName = 'peptidic' } = options;
+    this.databases[databaseName] = require('./fromPeptidicSequence')(
+        sequence,
+        options
+    );
 };
 
 DBManager.prototype.listDatabases = function listDatabases() {
@@ -110,9 +110,8 @@ DBManager.prototype.searchSimilarity = require('./searchSimilarity');
 DBManager.Util = {
     IsotopicDistribution: require('isotopic-distribution'),
     MF: require('mf-parser').MF,
-    peptide: require('peptide'),
-    nucleotide: require('nucleotide'),
+    Peptide: require('peptide'),
+    Nucleotide: require('nucleotide')
 };
-
 
 module.exports = DBManager;
