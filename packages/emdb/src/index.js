@@ -110,6 +110,8 @@ DBManager.prototype.searchSimilarity = require('./searchSimilarity');
 DBManager.Util = {
     IsotopicDistribution: require('isotopic-distribution'),
     MF: require('mf-parser').MF,
+    peptide: require('peptide'),
+    nucleotide: require('nucleotide'),
 };
 
 
