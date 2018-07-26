@@ -1,6 +1,6 @@
 {
     "name": "emdb",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "description": "Database manager for exact mass query",
     "browser": {
         "./src/util/fetchArrayBuffer.js": "./src/util/fetchArrayBufferBrowser.js"
