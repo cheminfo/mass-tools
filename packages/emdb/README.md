@@ -80,7 +80,7 @@ The following fields in the json are expected to be returned
 
 ### EMDB.Util.Peptide
 
-#### EMDB.Util.Peptide.mfFromSequence
+#### EMDB.Util.Peptide.sequenceToMF
 
 Generates a molecular formula from a peptidic sequence.
 
@@ -94,7 +94,7 @@ let mf = Peptide.mfFromSequence('AAA');
 
 ### EMDB.Util.Nucleotide
 
-#### EMDB.Util.Nucleotide.mfFromSequence
+#### EMDB.Util.Nucleotide.sequenceToMF
 
 Generates a molecular formula from a nucleotide sequence.
 
@@ -102,7 +102,7 @@ Example:
 
 ```
 const Nucleotide = require('emdb').Util.Nucleotide;
-let mf = Nucleotide.mfFromSequence('AAA');
+let mf = Nucleotide.mfFromSequence('AAA', {circular: false, kind: 'dna'});
 // mf = HODampDampDampH
 ```
 
