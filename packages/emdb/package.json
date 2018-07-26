@@ -1,6 +1,6 @@
 {
     "name": "emdb",
-    "version": "0.5.12",
+    "version": "0.6.0",
     "description": "Database manager for exact mass query",
     "browser": {
         "./src/util/fetchArrayBuffer.js": "./src/util/fetchArrayBufferBrowser.js"
@@ -23,13 +23,13 @@
     "dependencies": {
         "isotopic-distribution": "^0.5.12",
         "jszip": "^3.1.5",
-        "mf-finder": "^0.5.12",
-        "mf-from-google-sheet": "^0.5.12",
-        "mf-generator": "^0.5.12",
+        "mf-finder": "^0.6.0",
+        "mf-from-google-sheet": "^0.6.0",
+        "mf-generator": "^0.6.0",
         "mf-matcher": "^0.5.12",
         "mf-parser": "^0.5.12",
         "mf-utilities": "^0.5.12",
-        "nucleotide": "^0.5.11",
+        "nucleotide": "^0.6.0",
         "peaks-similarity": "^2.3.0",
         "peptide": "^1.6.1",
         "request-promise-native": "^1.0.5"
