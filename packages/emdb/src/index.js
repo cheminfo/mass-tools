@@ -27,7 +27,7 @@ DBManager.prototype.loadKnapSack = async function loadKnapSack(options = {}) {
 };
 
 /**
- * Add a new database using the KnapSack content
+ * Add a new database of 12000 commercial products
  * @param {*} options
  */
 DBManager.prototype.loadCommercials = async function loadCommercials(
