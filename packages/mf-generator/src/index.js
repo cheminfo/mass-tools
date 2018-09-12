@@ -61,7 +61,7 @@ module.exports = function generateMFs(keys, options = {}) {
         for (let j = 0; j < parts.length; j++) {
             let part = parts[j];
             let comment = part.replace(/^([^$]*\$|.*)/, '');
-            part = part.replace(/\$.*/, '');
+            part = part.replace(/\$.*/, '').replace(/\s/g,'');
             if (~part.indexOf('-')) { // there are ranges ... we are in trouble !
                 newParts = newParts.concat(processRange(part, comment));
             } else {

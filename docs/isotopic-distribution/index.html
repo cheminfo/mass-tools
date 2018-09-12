@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>isotopic-distribution 0.5.2 | Documentation</title>
+  <title>isotopic-distribution 0.6.2 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>isotopic-distribution</h3>
-          <div class='mb1'><code>0.5.2</code></div>
+          <div class='mb1'><code>0.6.2</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -22,6 +22,56 @@
             type='text' />
           <div id='toc'>
             <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#xy'
+                  class="">
+                  XY
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getdistribution'
+                  class="">
+                  getDistribution
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getxy'
+                  class="">
+                  getXY
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getgaussian'
+                  class="">
+                  getGaussian
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#append'
+                  class="">
+                  append
+                  
+                </a>
+                
+                </li>
               
                 
                 <li><a
@@ -61,6 +111,315 @@
         </div>
       </div>
       <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='xy'>
+      XY
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>An object containing two arrays</p>
+
+
+  <div class='pre p1 fill-light mt0'>XY</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+          : The x array
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>y</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+          : The y array
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getdistribution'>
+      getDistribution
+    </h3>
+    
+    
+  </div>
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>getDistribution(): Distribution</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Distribution</code>:
+        returns the total distribution (for all parts)
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getxy'>
+      getXY
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns the isotopic distirubtion</p>
+
+
+  <div class='pre p1 fill-light mt0'>getXY(): <a href="#xy">XY</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#xy">XY</a></code>:
+        an object containing 2 properties: x:[] and y:[]
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getgaussian'>
+      getGaussian
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns the isotopic distirubtion as the sum of gaussians</p>
+
+
+  <div class='pre p1 fill-light mt0'>getGaussian(options: any): <a href="#xy">XY</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(any
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#xy">XY</a></code>:
+        isotopic distribution as an object containing 2 properties: x:[] and y:[]
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='append'>
+      append
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Appen another distribution to the current distribution</p>
+
+
+  <div class='pre p1 fill-light mt0'>append(distribution: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>distribution</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
         
           
             <section class='p2 mb2 clearfix bg-white minishadow'>

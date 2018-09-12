@@ -2,7 +2,6 @@
 
 const findMFs = require('mf-finder');
 
-
 /**
  * Generates a database 'monoisotopic' from an array of molecular formula
 
@@ -25,6 +24,5 @@ const findMFs = require('mf-finder');
  */
 
 module.exports = function fromMonoisotopicMass(mass, options = {}) {
-    return findMFs(mass, options).mfs;
+    return findMFs(mass, options);
 };
-

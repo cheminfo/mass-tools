@@ -78,10 +78,9 @@ DBManager.prototype.fromMonoisotopicMass = function fromMonoisotopicMass(
     options = {}
 ) {
     const { databaseName = 'monoisotopic' } = options;
-    this.databases[databaseName] = require('./fromMonoisotopicMass')(
-        mass,
-        options
-    );
+    let result = require('./fromMonoisotopicMass')(mass, options);
+    this.databases[databaseName] = result.mfs;
+    return result;
 };
 
 DBManager.prototype.fromArray = function fromArray(sequence, options = {}) {
