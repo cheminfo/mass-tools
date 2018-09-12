@@ -3,6 +3,7 @@
 const loadKnapSackPromise = require('./loadKnapSack');
 const loadGoogleSheetPromise = require('./loadGoogleSheet');
 const loadCommercialsPromise = require('./loadCommercials');
+const peptide = require('peptide');
 
 function DBManager() {
     this.databases = {};
