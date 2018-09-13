@@ -11,6 +11,7 @@ Search for an experimental monoisotopic mass
 * @param {boolean}  [options.flatten=false] - should we return the array as a flat result
 
 * @param {object}   [options.filter={}]
+* @param {string}   [options.ionizations] - list the allowed ionizations possibilities
 * @param {boolean}  [options.filter.forceIonization=false] - If true ignore existing ionizations
 * @param {number}   [options.filter.precision=1000] - The precision on the experimental mass
 * @param {number}   [options.filter.minCharge=-Infinity] - Minimal charge
@@ -26,21 +27,22 @@ Search for an experimental monoisotopic mass
 
 module.exports = function searchMSEM(msem, options = {}) {
     let filter = Object.assign({}, options.filter || {}, { targetMass: msem });
-    let {
-        databases = Object.keys(this.databases),
-        flatten = false,
-    } = options;
+    let { databases = Object.keys(this.databases), flatten = false } = options;
 
     let ionizations = preprocessIonizations(options.ionizations);
     let results = {};
+    for (let database of databases) {
+        results[database] = [];
+    }
     for (let ionization of ionizations) {
         filter.ionization = ionization;
         for (let database of databases) {
-            results[database] = [];
             for (let entry of this.databases[database]) {
                 let match = matcher(entry, filter);
                 if (match) {
-                    results[database].push(Object.assign({}, entry, { ms: match }));
+                    results[database].push(
+                        Object.assign({}, entry, { ms: match })
+                    );
                 }
             }
         }
@@ -57,8 +59,9 @@ module.exports = function searchMSEM(msem, options = {}) {
         flattenResults.sort((a, b) => a.ms.ppm - b.ms.ppm);
         return flattenResults;
     } else {
-        Object.keys(results).forEach((k) => results[k].sort((a, b) => a.ms.ppm - b.ms.ppm));
+        Object.keys(results).forEach((k) =>
+            results[k].sort((a, b) => a.ms.ppm - b.ms.ppm)
+        );
         return results;
     }
 };
-
