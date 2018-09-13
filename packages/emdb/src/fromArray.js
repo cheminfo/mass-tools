@@ -2,7 +2,6 @@
 
 const combineMFs = require('mf-generator');
 
-
 /**
  * Generates a database 'generated' from an array of molecular formula
  * @param {*} options
@@ -10,7 +9,7 @@ const combineMFs = require('mf-generator');
  * @param {number} [options.limit=10000000] - Maximum number of results
  * @param {boolean} [canonizeMF=true] - Canonize molecular formula
  * @param {boolean} [uniqueMFs=true] - Force canonization and make MF unique
- *
+ * @param {string} [ionizations=''] - Comma separated list of ionizations (to charge the molecule)
  * @param {number} [options.filter={}]
  * @param {number} [options.filter.minMass=0] - Minimal monoisotopic mass
  * @param {number} [options.filter.maxMass=+Infinity] - Maximal monoisotopic mass
@@ -32,4 +31,3 @@ const combineMFs = require('mf-generator');
 module.exports = function fromArray(mfsArray, options = {}) {
     return combineMFs(mfsArray, options);
 };
-
