@@ -47,25 +47,26 @@ module.exports = function msemMatcher(entry, options = {}) {
     let ms = getMsInfo(entry, {
         ionization,
         forceIonization,
-        targetMass,
+        targetMass
     });
 
-
     if (entry.em !== undefined) {
-        if ((entry.em < minEM) || (entry.em > maxEM)) return false;
+        if (entry.em < minEM || entry.em > maxEM) return false;
     }
 
     if (ms.em !== undefined) {
-        if ((ms.em < minMSEM) || (ms.em > maxMSEM)) return false;
+        if (ms.em < minMSEM || ms.em > maxMSEM) return false;
     }
 
     if (targetMass && ms.ppm > precision) return false;
 
     if (entry.charge !== undefined) {
-        if ((ms.charge < minCharge) || (ms.charge > maxCharge)) return false;
+        if (ms.charge < minCharge || ms.charge > maxCharge) return false;
     }
     if (unsaturation !== undefined && entry.unsaturation !== undefined) {
-        if (!require('./unsaturationMatcher')(entry, unsaturation)) return false;
+        if (!require('./unsaturationMatcher')(entry, unsaturation)) {
+            return false;
+        }
     }
     if (entry.atoms !== undefined && atoms) {
         // all the atoms of the entry must fit in the range
