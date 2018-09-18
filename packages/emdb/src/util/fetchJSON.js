@@ -5,7 +5,7 @@ const request = require('request-promise-native');
 module.exports = async function fetchJSON(url) {
     let response = await request({
         uri: url,
-        encoding: 'application/json'
+        encoding: 'utf8'
     });
-    return response;
+    return JSON.parse(response);
 };

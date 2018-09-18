@@ -12,9 +12,7 @@ const atomSorter = require('atom-sorter');
  */
 
 module.exports = function toParts(lines, options = {}) {
-    const {
-        expand: shouldExpandGroups = true
-    } = options;
+    const { expand: shouldExpandGroups = true } = options;
     let parts = [];
 
     let currentPart = createNewPart();
@@ -49,6 +47,8 @@ module.exports = function toParts(lines, options = {}) {
                 break;
             case Kind.COMMENT: // we ignore comments to create the parts and canonized MF
                 break;
+            case Kind.TEXT:
+                break;
             default:
                 throw new Error(`Can not process mf having: ${line.kind}`);
         }
@@ -79,8 +79,13 @@ function openingParenthesis(currentPart) {
 function closingParenthesis(currentPart) {
     currentPart.currentMultiplier = currentPart.multipliers.pop();
     if (currentPart.currentMultiplier !== 1) {
-        for (let i = currentPart.currentMultiplier.fromIndex; i < currentPart.lines.length; i++) {
-            currentPart.lines[i].multiplier *= currentPart.currentMultiplier.value;
+        for (
+            let i = currentPart.currentMultiplier.fromIndex;
+            i < currentPart.lines.length;
+            i++
+        ) {
+            currentPart.lines[i].multiplier *=
+                currentPart.currentMultiplier.value;
         }
     }
 }
@@ -90,7 +95,11 @@ function preMultiplier(currentPart, line) {
 }
 
 function globalPartMultiplier(currentPart) {
-    for (let i = currentPart.multipliers[0].fromIndex; i < currentPart.lines.length; i++) {
+    for (
+        let i = currentPart.multipliers[0].fromIndex;
+        i < currentPart.lines.length;
+        i++
+    ) {
         currentPart.lines[i].multiplier *= currentPart.multipliers[0].value;
     }
 }
@@ -98,10 +107,15 @@ function globalPartMultiplier(currentPart) {
 function postMultiplier(currentPart, value, previousKind) {
     if (previousKind === Kind.CLOSING_PARENTHESIS) {
         // need to apply to everything till the previous parenthesis
-        for (let i = currentPart.currentMultiplier.fromIndex; i < currentPart.lines.length; i++) {
+        for (
+            let i = currentPart.currentMultiplier.fromIndex;
+            i < currentPart.lines.length;
+            i++
+        ) {
             currentPart.lines[i].multiplier *= value;
         }
-    } else { // just applies to the previous element
+    } else {
+        // just applies to the previous element
         currentPart.lines[currentPart.lines.length - 1].multiplier *= value;
     }
 }
@@ -146,13 +160,15 @@ function combineAtomsIsotopesCharges(parts) {
                         value: key.value.value * key.value.multiplier
                     });
                 } else {
-                    result[result.length - 1].value += key.value.value * key.value.multiplier;
+                    result[result.length - 1].value +=
+                        key.value.value * key.value.multiplier;
                 }
             } else {
                 if (currentKey !== key.key) {
                     result.push(key.value);
                 } else {
-                    result[result.length - 1].multiplier += key.value.multiplier;
+                    result[result.length - 1].multiplier +=
+                        key.value.multiplier;
                 }
             }
             currentKey = key.key;
@@ -193,7 +209,7 @@ function getKey(line) {
     let key = [line.kind];
 
     switch (line.kind) {
-        case (Kind.CHARGE):
+        case Kind.CHARGE:
             break;
         default:
             if (typeof line.value === 'string') {
@@ -212,4 +228,3 @@ function stringComparator(a, b) {
     if (a > b) return 1;
     return 0;
 }
-

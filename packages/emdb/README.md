@@ -37,20 +37,6 @@ A method that allows to create a database named 'test' and that contains all the
 
 #### fromArray
 
-#### loadGoogleSheet
-
-## Static methods
-
-### EMDB.Util.MF
-
-Example:
-
-```
-var mf = new EMDB.Util.MF('Et3N');
-```
-
-### EMDB.Util.IsotopicDistribution
-
 A method that creates a database (by default named `generated`) that contains all the posible combination based on an array of strings.
 
 ```
@@ -77,6 +63,20 @@ The following fields in the json are expected to be returned
   - MALDI
   - positive
   - negative
+
+#### loadGoogleSheet
+
+## Static methods
+
+### EMDB.Util.MF
+
+Example:
+
+```
+var mf = new EMDB.Util.MF('Et3N');
+```
+
+### EMDB.Util.IsotopicDistribution
 
 ### EMDB.Util.Peptide
 

@@ -9,12 +9,20 @@ let emdb = new EMDB();
     uniqueMFs=true
 */
 
-emdb.fromArray(['C0-9 H0-9 Cl0-9 N0-9']);
+emdb.fromArray(['(CH2CH2O)0-10 H0-10 N0-10 O0-10', 'F, Br, Cl, I, '], {
+    ionizations: 'H+, Na+, K+, (H+)2',
+    filter: {
+        minMSEM: 30,
+        maxMSEM: 40
+    }
+});
+
+console.log(emdb.get('generated').length);
 
 let results = emdb.searchMSEM(36, {
     ionizations: '+,++,H+',
     filter: {
-        precision: 100,
+        precision: 10000,
         forceIonization: true
     }
 });

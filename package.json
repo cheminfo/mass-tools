@@ -6,11 +6,11 @@
     "build": "npm run build-emdb && npm run build-docs",
     "build-emdb": "cheminfo build --cwd=./packages/emdb --out=../../dist",
     "build-docs": "ls packages | xargs -I % sh -c 'cd packages/%; documentation build src/index.js -f html -o ../../docs/%; cd ../..'",
-    "eslint": "eslint packages *.js --cache",
+    "eslint": "eslint packages/*.js --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "prepare": "lerna bootstrap",
     "publish": "git pull --rebase && npm run test && lerna publish",
-    "test": "npm run testonly && eslint",
+    "test": "npm run testonly && npm run eslint",
     "test-travis": "eslint src && jest --coverage && codecov",
     "testonly": "jest"
   },

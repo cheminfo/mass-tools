@@ -11,7 +11,7 @@ module.exports = function getMsInfo(entry, options = {}) {
         allowNeutralMolecules,
         ionization = { mf: '', em: 0, charge: 0 },
         forceIonization = false,
-        targetMass,
+        targetMass
     } = options;
 
     let realIonization = ionization;
@@ -22,7 +22,7 @@ module.exports = function getMsInfo(entry, options = {}) {
     let result = {
         ionization: realIonization.mf,
         em: 0,
-        charge: entry.charge + realIonization.charge,
+        charge: entry.charge + realIonization.charge
     };
 
     if (result.charge !== 0) {
@@ -32,7 +32,7 @@ module.exports = function getMsInfo(entry, options = {}) {
     }
     if (targetMass) {
         result.delta = result.em - targetMass;
-        result.ppm = Math.abs((targetMass - result.em) / targetMass * 1e6);
+        result.ppm = Math.abs(((targetMass - result.em) / targetMass) * 1e6);
     }
     return result;
 };

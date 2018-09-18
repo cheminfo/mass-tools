@@ -19,7 +19,7 @@ const findMFs = require('mf-finder');
  * @param {number} [options.unsaturation={}]
  * @param {number} [options.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number} [options.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {number} [options.unsaturation.onlyIntege=false] - Integer unsaturation
+ * @param {number} [options.unsaturation.onlyInteger=false] - Integer unsaturation
  * @param {number} [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  */
 

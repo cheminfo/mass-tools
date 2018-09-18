@@ -13,7 +13,7 @@ const isotopes = require('./getIsotopesObject');
 /**
  *
  * @param {*} parts
- * @param {*} options
+ * @param {*} [options={}]
  */
 module.exports = function getInfo(parts, options = {}) {
     let { customUnsaturations = {} } = options;

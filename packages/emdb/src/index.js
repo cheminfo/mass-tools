@@ -3,7 +3,6 @@
 const loadKnapSackPromise = require('./loadKnapSack');
 const loadGoogleSheetPromise = require('./loadGoogleSheet');
 const loadCommercialsPromise = require('./loadCommercials');
-const peptide = require('peptide');
 
 function DBManager() {
     this.databases = {};
@@ -105,6 +104,7 @@ DBManager.prototype.listDatabases = function listDatabases() {
 
 DBManager.prototype.search = require('./search');
 DBManager.prototype.searchMSEM = require('./searchMSEM');
+DBManager.prototype.searchPubchem = require('./searchPubchem');
 DBManager.prototype.searchSimilarity = require('./searchSimilarity');
 
 DBManager.Util = {
