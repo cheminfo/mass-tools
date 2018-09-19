@@ -1,6 +1,6 @@
 {
   "name": "mf-parser",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "",
   "main": "src/index.js",
   "files": [
@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/mf-parser#readme",
   "dependencies": {
-    "atom-sorter": "^0.6.2",
-    "chemical-elements": "^0.6.2",
-    "mf-utilities": "^0.6.2"
+    "atom-sorter": "^0.6.3",
+    "chemical-elements": "^0.6.3",
+    "mf-utilities": "^0.6.3"
   }
 }
