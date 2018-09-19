@@ -1,37 +1,38 @@
 {
-    "name": "emdb",
-    "version": "0.6.3",
-    "description": "Database manager for exact mass query",
-    "browser": {
-        "./src/util/fetchArrayBuffer.js": "./src/util/fetchArrayBufferBrowser.js"
-    },
-    "main": "src/index.js",
-    "files": [
-        "src"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/cheminfo-js/molecular-formula.git"
-    },
-    "keywords": [],
-    "author": "Luc Patiny",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/cheminfo-js/molecular-formula/issues"
-    },
-    "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/emdb#readme",
-    "dependencies": {
-        "isotopic-distribution": "^0.6.3",
-        "jszip": "^3.1.5",
-        "mf-finder": "^0.6.3",
-        "mf-from-google-sheet": "^0.6.3",
-        "mf-generator": "^0.6.3",
-        "mf-matcher": "^0.6.3",
-        "mf-parser": "^0.6.3",
-        "mf-utilities": "^0.6.3",
-        "nucleotide": "^0.6.2",
-        "peaks-similarity": "^2.3.0",
-        "peptide": "^1.6.1",
-        "request-promise-native": "^1.0.5"
-    }
+  "name": "emdb",
+  "version": "0.6.3",
+  "description": "Database manager for exact mass query",
+  "browser": {
+    "./src/util/fetchArrayBuffer.js": "./src/util/fetchArrayBufferBrowser.js",
+    "./src/util/fetchJSON.js": "./src/util/fetchJSONBrowser.js"
+  },
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo-js/molecular-formula.git"
+  },
+  "keywords": [],
+  "author": "Luc Patiny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo-js/molecular-formula/issues"
+  },
+  "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/emdb#readme",
+  "dependencies": {
+    "isotopic-distribution": "^0.6.3",
+    "jszip": "^3.1.5",
+    "mf-finder": "^0.6.3",
+    "mf-from-google-sheet": "^0.6.3",
+    "mf-generator": "^0.6.3",
+    "mf-matcher": "^0.6.3",
+    "mf-parser": "^0.6.3",
+    "mf-utilities": "^0.6.3",
+    "nucleotide": "^0.6.2",
+    "peaks-similarity": "^2.3.0",
+    "peptide": "^1.6.1",
+    "request-promise-native": "^1.0.5"
+  }
 }
