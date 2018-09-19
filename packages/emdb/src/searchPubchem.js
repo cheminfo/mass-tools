@@ -49,7 +49,7 @@ module.exports = async function searchPubchem(mass, options = {}) {
                 };
                 mfs.push(mfInfo);
             } catch (e) {
-                console.warn(e);
+                console.warn(e+'');
             }
         }
     }
