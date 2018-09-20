@@ -2,9 +2,12 @@
   "private": true,
   "name": "molecular-formula",
   "version": "0.1.2",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
   "scripts": {
-    "build": "npm run build-emdb && npm run build-docs",
-    "build-emdb": "cheminfo build --cwd=./packages/emdb --out=../../dist",
+    "build": "cheminfo build && npm run build-docs",
     "build-docs": "ls packages | xargs -I % sh -c 'cd packages/%; documentation build src/index.js -f html -o ../../docs/%; cd ../..'",
     "eslint": "eslint packages/*.js --cache",
     "eslint-fix": "npm run eslint -- --fix",
@@ -44,6 +47,7 @@
   },
   "dependencies": {
     "documentation": "^6.3.3",
+    "peptide": "^1.6.1",
     "sum-object-keys": "^1.0.2"
   }
 }

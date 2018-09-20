@@ -107,11 +107,4 @@ DBManager.prototype.searchMSEM = require('./searchMSEM');
 DBManager.prototype.searchPubchem = require('./searchPubchem');
 DBManager.prototype.searchSimilarity = require('./searchSimilarity');
 
-DBManager.Util = {
-    IsotopicDistribution: require('isotopic-distribution'),
-    MF: require('mf-parser').MF,
-    Peptide: require('peptide'),
-    Nucleotide: require('nucleotide')
-};
-
 module.exports = DBManager;
