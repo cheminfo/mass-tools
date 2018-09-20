@@ -49,10 +49,11 @@ module.exports = async function searchPubchem(mass, options = {}) {
                 };
                 mfs.push(mfInfo);
             } catch (e) {
-                console.warn(e+'');
+                console.warn(`${e}`);
             }
         }
     }
-
+    // because we can combine many ionizations we should resort the data
+    mfs.sort((a, b) => a.ms.ppm - b.ms.ppm);
     return mfs;
 };
