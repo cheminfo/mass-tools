@@ -20,6 +20,7 @@
   "dependencies": {
     "atom-sorter": "^0.6.3",
     "chemical-elements": "^0.6.3",
+    "chemical-groups": "^0.6.3",
     "mf-utilities": "^0.6.3"
   }
 }

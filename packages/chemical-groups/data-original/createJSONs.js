@@ -3,6 +3,8 @@
 const Papa = require('papaparse');
 const fs = require('fs');
 const { MF, Kind } = require('mf-parser');
+const elementsObject = require('chemical-elements/src/elementsObject');
+const elementsAndIsotopesObject = require('chemical-elements/src/elementsAndIsotopesObject');
 
 const MODULE = "'use strict';\nmodule.exports=";
 
