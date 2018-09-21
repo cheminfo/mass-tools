@@ -120,3 +120,10 @@ Cmp	Cytidine monophosphate diratical	C9H12N3O7P
 Gmp	Guanosine monophosphate diratical	C10H12N5O7P
 Tmp	Thymidine monophosphate diratical	C10H13N2O8P
 Ump	Uridine monophosphate diratical	C9H11N2O8P
+
+Ade Adenine diratical   C10H11N5O3
+Cyt Cytosine diratical  C9H11N3O4
+Gua Guanine diratical   C10H11N5O4
+Thy Thymine	diratical   C10H12N2O5
+Ura Uracil diratical    C9H10N2O5
+
