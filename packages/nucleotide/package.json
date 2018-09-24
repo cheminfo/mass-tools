@@ -1,24 +1,27 @@
 {
-    "author": {
-        "name": "Luc Patiny"
-    },
-    "bugs": {
-        "url": "https://github.com/cheminfo/molecular-formula/issues"
-    },
-    "bundleDependencies": false,
-    "deprecated": false,
-    "description": "Deal with nucleotides and molecular formula",
-    "main": "src/index.js",
-    "files": [
-        "src"
-    ],
-    "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/nucleotide#readme",
-    "keywords": [],
-    "license": "MIT",
-    "name": "nucleotide",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/cheminfo/molecular-formula.git"
-    },
-    "version": "0.6.2"
+  "author": {
+    "name": "Luc Patiny"
+  },
+  "bugs": {
+    "url": "https://github.com/cheminfo/molecular-formula/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Deal with nucleotides and molecular formula",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/nucleotide#readme",
+  "keywords": [],
+  "license": "MIT",
+  "name": "nucleotide",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo/molecular-formula.git"
+  },
+  "version": "0.6.2",
+  "devDependencies": {
+    "mf-parser": "^0.6.3"
+  }
 }
