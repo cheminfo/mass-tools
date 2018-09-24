@@ -4,7 +4,9 @@ const Nucleotide = require('..');
 
 describe('test nucleotide', () => {
   test('sequenceToMF of ATC ', () => {
-    expect(Nucleotide.sequenceToMF('ATC')).toEqual('HOAmpTmpCmpH.HOGmpAmpTmpH');
+    expect(Nucleotide.sequenceToMF('ATC')).toEqual(
+      'HODampDtmpDcmpH.HODgmpDampDtmpH'
+    );
   });
 
   test('sequenceToMF of AAU ', () => {
@@ -13,7 +15,7 @@ describe('test nucleotide', () => {
 
   test('sequenceToMF of circular AAA ', () => {
     expect(Nucleotide.sequenceToMF('AAA', { circular: true })).toEqual(
-      'AmpAmpAmp.TmpTmpTmp'
+      'DampDampDamp.DtmpDtmpDtmp'
     );
   });
 
@@ -23,7 +25,7 @@ describe('test nucleotide', () => {
     );
   });
 
-  test('sequenceToMF of ds DNA AAA ', () => {
+  test('sequenceToMF of ds-DNA AAA ', () => {
     expect(Nucleotide.sequenceToMF('AAA', { kind: 'ds-DNA' })).toEqual(
       'HODampDampDampH.HODtmpDtmpDtmpH'
     );
