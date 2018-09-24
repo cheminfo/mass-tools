@@ -94,7 +94,7 @@ Tbuthio	t-Butylthio	C4H9S
 Tfa	Trifluoroacetyl	C2F3O
 Thr	Threonine diradical	C4H7NO2
 Thrp	Threonine triradical	C4H6NO2
-Tfsi    (Bis)(trifluoromethanesulfonyl)imide    C2F6NO4S2
+Tfsi	(Bis)(trifluoromethanesulfonyl)imide	C2F6NO4S2
 Tips	Triisopropylsilyl	C9H21Si
 Tms	Trimethylsilyl	C3H9Si
 Tos	Tosyl	C7H7O2S
@@ -108,52 +108,51 @@ Valoh	beta-Hydroxyvaline diradical	C5H9NO2
 Valohp	beta-Hydroxyvaline triradical	C5H8NO2
 Xan	Xanthyl	C13H9O
 Z	Benzyloxycarbonyl	C8H7O2
-
+		
 Damp	Desoxyadenosine monophosphate diratical	C10H12N5O5P
 Dcmp	Desoxycytidine monophosphate diratical	C9H12N3O6P
 Dgmp	Desoxyguanosine monophosphate diratical	C10H12N5O6P
 Dtmp	Desoxythymidine monophosphate diratical	C10H13N2O7P
 Dump	Desoxyuridine monophosphate diratical	C9H11N2O7P
-
+		
 Dadp	Desoxyadenosine diphosphate diratical	C10H13N5O8P2
 Dcdp	Desoxycytidine diphosphate diratical	C9H13N3O9P2
 Dgdp	Desoxyguanosine diphosphate diratical	C10H13N5O9P2
 Dtdp	Desoxythymidine diphosphate diratical	C10H14N2O10P2
 Dudp	Desoxyuridine diphosphate diratical	C9H12N2O10P2
-
+		
 Datp	Desoxyadenosine triphosphate diratical	C10H14N5O11P3
 Dctp	Desoxycytidine triphosphate diratical	C9H14N3O12P3
 Dgtp	Desoxyguanosine triphosphate diratical	C10H14N5O12P3
 Dttp	Desoxythymidine triphosphate diratical	C10H15N2O13P3
 Dutp	Desoxyuridine triphosphate diratical	C9H13N2O13P3
-
-Dade Desoxyadenine diratical   C10H11N5O2
-Dcyt Desoxycytosine diratical  C9H11N3O3
-Dgua Desoxyguanine diratical   C10H11N5O3
-Dthy Desoxythymine	diratical   C10H12N2O4
-Dura Desoxyuracil diratical    C9H10N2O4
-
+		
+Dade	Desoxyadenine diratical	C10H11N5O2
+Dcyt	Desoxycytosine diratical	C9H11N3O3
+Dgua	Desoxyguanine diratical	C10H11N5O3
+Dthy	Desoxythymine diratical	C10H12N2O4
+Dura	Desoxyuracil diratical	C9H10N2O4
+		
 Amp	Adenosine monophosphate diratical	C10H12N5O6P
 Cmp	Cytidine monophosphate diratical	C9H12N3O7P
 Gmp	Guanosine monophosphate diratical	C10H12N5O7P
 Tmp	Thymidine monophosphate diratical	C10H13N2O8P
 Ump	Uridine monophosphate diratical	C9H11N2O8P
-
+		
 Adp	Adenosine diphosphate diratical	C10H13N5O9P2
 Cdp	Cytidine diphosphate diratical	C9H13N3O10P2
 Gdp	Guanosine diphosphate diratical	C10H13N5O10P2
 Tdp	Thymidine diphosphate diratical	C10H14N2O11P2
 Udp	Uridine diphosphate diratical	C9H12N2O11P2
-
+		
 Atp	Adenosine triphosphate diratical	C10H14N5O12P3
 Ctp	Cytidine triphosphate diratical	C9H14N3O13P3
 Gtp	Guanosine triphosphate diratical	C10H14N5O13P3
 Ttp	Thymidine triphosphate diratical	C10H15N2O14P3
 Utp	Uridine triphosphate diratical	C9H13N2O14P3
-
-Ade Adenine diratical   C10H11N5O3
-Cyt Cytosine diratical  C9H11N3O4
-Gua Guanine diratical   C10H11N5O4
-Thy Thymine	diratical   C10H12N2O5
-Ura Uracil diratical    C9H10N2O5
-
+		
+Ade 	Adenine diratical	C10H11N5O3
+Cyt	Cytosine diratical	C9H11N3O4
+Gua	Guanine diratical	C10H11N5O4
+Thy	Thymine diratical  	C10H12N2O5
+Ura	Uracil diratical	C9H10N2O5
