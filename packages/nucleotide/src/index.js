@@ -5,12 +5,14 @@
  * @param {String} sequence
  * @param {object} [options={}]
  * @param {string} [options.kind] - rna, ds-dna or dna. Default if contains U: rna, otherwise ds-dna
- * @param {string} [options.5prime=alcohol] - alcohol, monophosphate, diphosphate, triphosphate
+ * @param {string} [options.fivePrime=monophosphate] - alcohol, monophosphate, diphosphate, triphosphate
  * @param {string} [options.circular=false]
  */
 
 function sequenceToMF(sequence, options = {}) {
-  let { kind, circular } = options;
+  let { kind, circular, fivePrime = 'monophosphate' } = options;
+  fivePrime = fivePrime.replace(/[^a-zA-Z]/g, '').toLowerCase();
+
   sequence = sequence.toUpperCase().replace(/[^ATCGU]/g, '');
   if (!kind) {
     if (sequence.includes('U')) {
@@ -25,30 +27,31 @@ function sequenceToMF(sequence, options = {}) {
   let results = [[]];
   if (kind === 'dsdna') results.push([]);
 
-  switch (kind) {
-    case 'dna':
-      for (let nucleotide of sequence) {
-        results[0].push(desoxyNucleotides[nucleotide]);
-      }
-      break;
-    case 'rna':
-      for (let nucleotide of sequence) {
-        results[0].push(oxyNucleotides[nucleotide]);
-      }
-      break;
-    case 'dsdna':
-      for (let nucleotide of sequence) {
-        results[0].push(desoxyNucleotides[nucleotide]);
-        results[1].unshift(desoxyNucleotides[complementary[nucleotide]]);
-      }
-      break;
-    default:
-      throw new Error(`Nucleotide sequenceToMF: unknown kind: ${kind}`);
+  for (let i = 0; i < sequence.length; i++) {
+    let nucleotide = sequence[i];
+    let nucleotideType = i === 0 ? fivePrime : 'monophosphate';
+
+    switch (kind) {
+      case 'dna':
+        results[0].push(desoxyNucleotides[nucleotideType][nucleotide]);
+        break;
+      case 'rna':
+        results[0].push(oxyNucleotides[nucleotideType][nucleotide]);
+        break;
+      case 'dsdna':
+        results[0].push(desoxyNucleotides[nucleotideType][nucleotide]);
+        results[1].unshift(
+          desoxyNucleotides[nucleotideType][complementary[nucleotide]]
+        );
+        break;
+      default:
+        throw new Error(`Nucleotide sequenceToMF: unknown kind: ${kind}`);
+    }
   }
 
   if (!circular) {
-    results.forEach(result => result.unshift('HO'));
-    results.forEach(result => result.push('H'));
+    results.forEach(result => result.unshift('H'));
+    results.forEach(result => result.push('OH'));
   }
 
   return results.map(result => result.join('')).join('.');
@@ -66,17 +69,63 @@ const complementary = {
 };
 
 const desoxyNucleotides = {
-  A: 'Damp',
-  C: 'Dcmp',
-  G: 'Dgmp',
-  T: 'Dtmp',
-  U: 'Dump'
+  alcohol: {
+    A: 'Dade',
+    C: 'Dcyt',
+    G: 'Dgua',
+    T: 'Dthy',
+    U: 'Dura'
+  },
+  monophosphate: {
+    A: 'Damp',
+    C: 'Dcmp',
+    G: 'Dgmp',
+    T: 'Dtmp',
+    U: 'Dump'
+  },
+  diphosphate: {
+    A: 'Dadp',
+    C: 'Dcdp',
+    G: 'Dgdp',
+    T: 'Dtdp',
+    U: 'Dudp'
+  },
+  triphosphate: {
+    A: 'Datp',
+    C: 'Dctp',
+    G: 'Dgtp',
+    T: 'Dttp',
+    U: 'Dutp'
+  }
 };
 
 const oxyNucleotides = {
-  A: 'Amp',
-  C: 'Cmp',
-  G: 'Gmp',
-  T: 'Tmp',
-  U: 'Ump'
+  alcohol: {
+    A: 'Ade',
+    C: 'Cyt',
+    G: 'Gua',
+    T: 'Thy',
+    U: 'Ura'
+  },
+  monophosphate: {
+    A: 'Amp',
+    C: 'Cmp',
+    G: 'Gmp',
+    T: 'Tmp',
+    U: 'Ump'
+  },
+  diphosphate: {
+    A: 'Adp',
+    C: 'Cdp',
+    G: 'Gdp',
+    T: 'Tdp',
+    U: 'Udp'
+  },
+  triphosphate: {
+    A: 'Atp',
+    C: 'Ctp',
+    G: 'Gtp',
+    T: 'Ttp',
+    U: 'Utp'
+  }
 };
