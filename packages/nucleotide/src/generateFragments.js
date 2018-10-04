@@ -1,5 +1,7 @@
 'use strict';
 
+const furanThreeTerm = require('./furanThreeTerm');
+
 module.exports = function(mf, options) {
   if (options === undefined) {
     options = {
@@ -40,7 +42,7 @@ module.exports = function(mf, options) {
 
 function addFiveTerm(mfs, fiveTerm, i, options) {
   if (options.a) mfs.push(fiveTerm + '$a' + i);
-  if (options.ab) mfs.push(furanThreeTerm(fiveTerm) + '$a-B' + i);
+  if (options.ab) mfs.push(furanThreeTerm(fiveTerm) + '$a' + i + ' - B');
   if (options.b) mfs.push(fiveTerm + 'O$b' + i);
   if (options.c) mfs.push(fiveTerm + 'OPO2H$c' + i);
   if (options.d) mfs.push(fiveTerm + 'OPO3H$d' + i);

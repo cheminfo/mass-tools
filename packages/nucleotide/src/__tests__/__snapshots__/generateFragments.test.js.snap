@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test generate fragments nucleotide to sequence of HDampDtmpDcmpOH 1`] = `
+Array [
+  "HDamp$a1",
+  "HC5H5O5P$a1 - B",
+  "HDampDtmp$a2",
+  "HDampC5H5O5P$a2 - B",
+]
+`;
