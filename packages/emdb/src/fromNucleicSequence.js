@@ -1,6 +1,6 @@
 'use strict';
 
-const peptide = require('peptide');
+const nucleotide = require('nucleotide');
 const combineMFs = require('mf-generator');
 
 /**
@@ -10,9 +10,6 @@ const combineMFs = require('mf-generator');
  * @param {object} [options={}]
  * @param {string} [options.ionizations='']
  * @param {array} [options.mfsArray=[]]
- *  * @param {boolean} [options.protonation=false]
- * @param {number} [options.protonationPH=7]
- * @param {boolean} [options.allowNeutralLoss=false]
  * @param {object} [options.digestion={}] Object defining options for digestion
  * @param {number} [options.digestion.minMissed=0] Minimal number of allowed missed cleavage
  * @param {number} [options.digestion.maxMissed=0] Maximal number of allowed missed cleavage
@@ -22,17 +19,14 @@ const combineMFs = require('mf-generator');
  *
  * @param {object} [options.fragmentation={}] Object defining options for fragmentation
  * @param {boolean} [options.fragmentation.a=false] If true allow fragments of type 'a'
+ * @param {boolean} [options.fragmentation.ab=false] If true allow fragments of type 'a' minus base
  * @param {boolean} [options.fragmentation.b=false] If true allow fragments of type 'b'
  * @param {boolean} [options.fragmentation.c=false] If true allow fragments of type 'c'
+ * @param {boolean} [options.fragmentation.d=false] If true allow fragments of type 'd'
+ * @param {boolean} [options.fragmentation.w=false] If true allow fragments of type 'w'
  * @param {boolean} [options.fragmentation.x=false] If true allow fragments of type 'x'
  * @param {boolean} [options.fragmentation.y=false] If true allow fragments of type 'y'
  * @param {boolean} [options.fragmentation.z=false] If true allow fragments of type 'z'
- * @param {boolean} [options.fragmentation.ya=false] If true allow fragments of type 'ya'
- * @param {boolean} [options.fragmentation.yb=false] If true allow fragments of type 'yb'
- * @param {boolean} [options.fragmentation.yc=false] If true allow fragments of type 'yc'
- * @param {boolean} [options.fragmentation.zc=false] If true allow fragments of type 'zc'
- * @param {number} [options.fragmentation.minInternal=0] Minimal internal fragment length
- * @param {number} [options.fragmentation.maxInternal=+Infinity] Maximal internal fragment length
  *
  * @param {object} [options.filter={}] Object defining options for molecular formula filter
  * @param {number} [options.filter.minMass=0] - Minimal monoisotopic mass
@@ -50,44 +44,22 @@ const combineMFs = require('mf-generator');
  * @param {number} [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  */
 
-module.exports = function fromPeptidicSequence(sequence, options = {}) {
+module.exports = function fromNucleicSequence(sequence, options = {}) {
   const {
-    digestion = {},
     mfsArray = [],
-    allowNeutralLoss = false,
-    protonation = false,
-    protonationPH = 7,
     fragmentation = {},
     filter = {},
-    ionizations = ''
+    ionizations = '',
+    info = {}
   } = options;
 
-  sequence = peptide.convertAASequence(sequence);
+  sequence = nucleotide.sequenceToMF(sequence, info);
 
   let fragmentsArray = [sequence];
   // do we also have some digest fragments ?
-  if (digestion.enzyme) {
-    var digests = peptide.digestPeptide(sequence, digestion);
-    if (options.protonation) {
-      digests = peptide.chargePeptide(digests, {
-        pH: options.protonationPH
-      });
-    }
-    fragmentsArray = fragmentsArray.concat(digests);
-  }
-
-  // allow neutral loss
-  if (allowNeutralLoss) {
-    sequence = peptide.allowNeutralLoss(sequence);
-  }
-
-  // apply protonation
-  if (protonation) {
-    sequence = peptide.chargePeptide(sequence, { pH: protonationPH });
-  }
 
   // calculate fragmentation
-  var fragments = peptide.generatePeptideFragments(sequence, fragmentation);
+  var fragments = nucleotide.generateFragments(sequence, fragmentation);
   fragmentsArray = fragmentsArray.concat(fragments);
 
   mfsArray.push(fragmentsArray);
