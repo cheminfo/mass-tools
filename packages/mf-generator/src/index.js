@@ -1,6 +1,5 @@
 'use strict';
 
-
 const MF = require('mf-parser').MF;
 const matcher = require('mf-matcher').msem;
 const sum = require('sum-object-keys');
@@ -34,236 +33,229 @@ const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
  */
 
 module.exports = function generateMFs(keys, options = {}) {
-    let {
-        limit = 10000000,
-        uniqueMFs,
-    } = options;
-    if (uniqueMFs === undefined) uniqueMFs = true;
-    if (uniqueMFs === true) options.canonizeMF = true;
-    if (options.canonizeMF === undefined) options.canonizeMF = true;
-    options.ionizations = preprocessIonizations(options.ionizations);
+  let { limit = 10000000, uniqueMFs } = options;
+  if (uniqueMFs === undefined) uniqueMFs = true;
+  if (uniqueMFs === true) options.canonizeMF = true;
+  if (options.canonizeMF === undefined) options.canonizeMF = true;
+  options.ionizations = preprocessIonizations(options.ionizations);
 
+  if (!Array.isArray(keys))
+    throw new Error('You need to specify an array of strings or arrays');
 
-    if (!Array.isArray(keys)) throw new Error('You need to specify an array of strings or arrays');
-
-    // we allow String delimited by ". , or ;" instead of an array
-    for (let i = 0; i < keys.length; i++) {
-        if (!Array.isArray(keys[i])) {
-            keys[i] = keys[i].split(/[.,;]/).filter((a) => a);
-        }
+  // we allow String delimited by ". , or ;" instead of an array
+  for (let i = 0; i < keys.length; i++) {
+    if (!Array.isArray(keys[i])) {
+      keys[i] = keys[i].split(/[.,;]/);
     }
+  }
 
-    // we allow ranges in a string ...
-    // problem with ranges is that we need to now to what the range applies
-    for (let i = 0; i < keys.length; i++) {
-        let parts = keys[i];
-        let newParts = [];
-        for (let j = 0; j < parts.length; j++) {
-            let part = parts[j];
-            let comment = part.replace(/^([^$]*\$|.*)/, '');
-            part = part.replace(/\$.*/, '').replace(/\s/g,'');
-            if (~part.indexOf('-')) { // there are ranges ... we are in trouble !
-                newParts = newParts.concat(processRange(part, comment));
-            } else {
-                newParts.push(parts[j]); // the part with the comments !
-            }
-        }
-        keys[i] = newParts;
+  // we allow ranges in a string ...
+  // problem with ranges is that we need to now to what the range applies
+  for (let i = 0; i < keys.length; i++) {
+    let parts = keys[i];
+    let newParts = [];
+    for (let j = 0; j < parts.length; j++) {
+      let part = parts[j];
+      let comment = part.replace(/^([^$]*\$|.*)/, '');
+      part = part.replace(/\$.*/, '').replace(/\s/g, '');
+      if (~part.indexOf('-')) {
+        // there are ranges ... we are in trouble !
+        newParts = newParts.concat(processRange(part, comment));
+      } else {
+        newParts.push(parts[j]); // the part with the comments !
+      }
     }
+    keys[i] = newParts;
+  }
 
-    let results = [];
-    let sizes = [];
-    let currents = [];
-    for (let i = 0; i < keys.length; i++) {
-        sizes.push(keys[i].length - 1);
-        currents.push(0);
-    }
-    let position = 0;
-    let evolution = 0;
+  let results = [];
+  let sizes = [];
+  let currents = [];
+  for (let i = 0; i < keys.length; i++) {
+    sizes.push(keys[i].length - 1);
+    currents.push(0);
+  }
+  let position = 0;
+  let evolution = 0;
 
-    while (position < currents.length) {
-        if (currents[position] < sizes[position]) {
-            evolution++;
-            appendResult(results, currents, keys, options);
-            currents[position]++;
-            for (let i = 0; i < position; i++) {
-                currents[i] = 0;
-            }
-            position = 0;
-        } else {
-            position++;
-        }
-        if (evolution > limit) {
-            throw new Error(`You have reached the limit of ${limit}. You could still change this value using the limit option but it is likely to crash.`);
-        }
+  while (position < currents.length) {
+    if (currents[position] < sizes[position]) {
+      evolution++;
+      appendResult(results, currents, keys, options);
+      currents[position]++;
+      for (let i = 0; i < position; i++) {
+        currents[i] = 0;
+      }
+      position = 0;
+    } else {
+      position++;
     }
-    appendResult(results, currents, keys, options);
+    if (evolution > limit) {
+      throw new Error(
+        `You have reached the limit of ${limit}. You could still change this value using the limit option but it is likely to crash.`
+      );
+    }
+  }
+  appendResult(results, currents, keys, options);
 
-    if (uniqueMFs) {
-        var uniqueMFsObject = {};
-        results.forEach((r) => {
-            uniqueMFsObject[r.mf + r.ionization.mf] = r;
-        });
-        results = Object.keys(uniqueMFsObject).map((k) => uniqueMFsObject[k]);
-    }
-    results.sort((a, b) => (a.em - b.em));
-    return results;
+  if (uniqueMFs) {
+    var uniqueMFsObject = {};
+    results.forEach(r => {
+      uniqueMFsObject[r.mf + r.ionization.mf] = r;
+    });
+    results = Object.keys(uniqueMFsObject).map(k => uniqueMFsObject[k]);
+  }
+  results.sort((a, b) => a.em - b.em);
+  return results;
 };
-
 
 var ems = {};
 
 // internal method used as a cache
 function getMonoisotopicMass(mfString) {
-    if (!ems[mfString]) {
-        // we need to calculate based on the mf but not very often ...
-        let mf = new MF(mfString);
-        let info = mf.getInfo();
-        ems[mfString] = {
-            em: info.monoisotopicMass,
-            charge: info.charge,
-            mw: info.mass,
-            unsaturation: (info.unsaturation - 1) * 2,
-            atoms: info.atoms
-        };
-    }
-    return ems[mfString];
+  if (!ems[mfString]) {
+    // we need to calculate based on the mf but not very often ...
+    let mf = new MF(mfString);
+    let info = mf.getInfo();
+    ems[mfString] = {
+      em: info.monoisotopicMass,
+      charge: info.charge,
+      mw: info.mass,
+      unsaturation: (info.unsaturation - 1) * 2,
+      atoms: info.atoms
+    };
+  }
+  return ems[mfString];
 }
 
 function getEMFromParts(parts, currents, ionization) {
-    var charge = 0;
-    var em = 0;
-    var mw = 0;
-    var unsaturation = 0;
-    var validUnsaturation = true;
-    var atoms = {};
+  var charge = 0;
+  var em = 0;
+  var mw = 0;
+  var unsaturation = 0;
+  var validUnsaturation = true;
+  var atoms = {};
 
-
-    for (let i = 0; i < parts.length; i++) {
-        let part = parts[i][currents[i]];
-        if (part) {
-            let info = getMonoisotopicMass(part);
-            charge += info.charge;
-            em += info.em;
-            mw += info.mw;
-            sum(atoms, info.atoms);
-            if (info.unsaturation && validUnsaturation) {
-                unsaturation += info.unsaturation;
-            }
-        }
+  for (let i = 0; i < parts.length; i++) {
+    let part = parts[i][currents[i]];
+    if (part) {
+      let info = getMonoisotopicMass(part);
+      charge += info.charge;
+      em += info.em;
+      mw += info.mw;
+      sum(atoms, info.atoms);
+      if (info.unsaturation && validUnsaturation) {
+        unsaturation += info.unsaturation;
+      }
     }
+  }
 
-    return {
-        charge,
-        em,
-        mw,
-        ionization: ionization,
-        unsaturation: validUnsaturation ? unsaturation / 2 + 1 : undefined,
-        atoms
-    };
+  return {
+    charge,
+    em,
+    mw,
+    ionization: ionization,
+    unsaturation: validUnsaturation ? unsaturation / 2 + 1 : undefined,
+    atoms
+  };
 }
 
 function appendResult(results, currents, keys, options = {}) {
-    const {
-        canonizeMF,
-        filter,
-        ionizations
-    } = options;
+  const { canonizeMF, filter, ionizations } = options;
 
-    // this script is designed to combine molecular formula
-    // that may contain comments after a "$" sign
-    // therefore we should put all the comments at the ned
+  // this script is designed to combine molecular formula
+  // that may contain comments after a "$" sign
+  // therefore we should put all the comments at the ned
 
-    for (let ionization of ionizations) {
+  for (let ionization of ionizations) {
+    let result = getEMFromParts(keys, currents, ionization);
 
-        let result = getEMFromParts(keys, currents, ionization);
+    let match = matcher(result, filter);
+    if (!match) return;
+    result.ms = match;
+    result.parts = [];
+    result.mf = '';
 
-        let match = matcher(result, filter);
-        if (!match) return;
-        result.ms = match;
-        result.parts = [];
-        result.mf = '';
-
-        let comments = [];
-        for (let i = 0; i < keys.length; i++) {
-            let key = keys[i][currents[i]];
-            if (key) {
-                if (key.indexOf('$') > -1) {
-                    comments.push(key.replace(/^[^$]*\$/, ''));
-                    key = key.replace(/\$.*/, '');
-                }
-                result.parts[i] = key;
-                result.mf += key;
-            }
+    let comments = [];
+    for (let i = 0; i < keys.length; i++) {
+      let key = keys[i][currents[i]];
+      if (key) {
+        if (key.indexOf('$') > -1) {
+          comments.push(key.replace(/^[^$]*\$/, ''));
+          key = key.replace(/\$.*/, '');
         }
-
-        if (canonizeMF) {
-            result.mf = (new MF(result.mf)).toMF();
-        }
-
-        if (comments.length > 0) {
-            result.comment = comments.join(' ');
-        }
-        results.push(result);
+        result.parts[i] = key;
+        result.mf += key;
+      }
     }
+
+    if (canonizeMF) {
+      result.mf = new MF(result.mf).toMF();
+    }
+
+    if (comments.length > 0) {
+      result.comment = comments.join(' ');
+    }
+    results.push(result);
+  }
 }
 
 function processRange(string, comment) {
-    var results = [];
-    var parts = string.split(/([0-9]+-[0-9]+)/).filter((v) => v); // remove empty parts
-    let position = -1;
-    var mfs = [];
-    for (let i = 0; i < parts.length; i++) {
-        let part = parts[i];
-        if (!~part.search(/[0-9]-[0-9]/)) {
-            position++;
-            mfs[position] = {
-                mf: part,
-                min: 1,
-                max: 1
-            };
-        } else {
-            mfs[position].min = part.replace(/^(-?[0-9]*)-(-?[0-9]*)/, '$1') >> 0;
-            mfs[position].max = part.replace(/^(-?[0-9]*)-(-?[0-9]*)/, '$2') >> 0;
-        }
+  var results = [];
+  var parts = string.split(/([0-9]+-[0-9]+)/).filter(v => v); // remove empty parts
+  let position = -1;
+  var mfs = [];
+  for (let i = 0; i < parts.length; i++) {
+    let part = parts[i];
+    if (!~part.search(/[0-9]-[0-9]/)) {
+      position++;
+      mfs[position] = {
+        mf: part,
+        min: 1,
+        max: 1
+      };
+    } else {
+      mfs[position].min = part.replace(/^(-?[0-9]*)-(-?[0-9]*)/, '$1') >> 0;
+      mfs[position].max = part.replace(/^(-?[0-9]*)-(-?[0-9]*)/, '$2') >> 0;
     }
+  }
 
-    let currents = new Array(mfs.length);
-    for (let i = 0; i < currents.length; i++) {
+  let currents = new Array(mfs.length);
+  for (let i = 0; i < currents.length; i++) {
+    currents[i] = mfs[i].min;
+  }
+  position = 0;
+  while (position < currents.length) {
+    if (currents[position] < mfs[position].max) {
+      results.push(getMF(mfs, currents, comment));
+      currents[position]++;
+      for (let i = 0; i < position; i++) {
         currents[i] = mfs[i].min;
+      }
+      position = 0;
+    } else {
+      position++;
     }
-    position = 0;
-    while (position < currents.length) {
-        if (currents[position] < mfs[position].max) {
-            results.push(getMF(mfs, currents, comment));
-            currents[position]++;
-            for (let i = 0; i < position; i++) {
-                currents[i] = mfs[i].min;
-            }
-            position = 0;
-        } else {
-            position++;
-        }
-    }
-    results.push(getMF(mfs, currents, comment));
-    return results;
+  }
+  results.push(getMF(mfs, currents, comment));
+  return results;
 }
 
 function getMF(mfs, currents, comment) {
-    let mf = '';
-    for (let i = 0; i < mfs.length; i++) {
-        if (currents[i] === 0) {
-            // TODO we need to remove from currents[i] till we reach another part of the MF
-            mf += removeMFLastPart(mfs[i].mf);
-        } else {
-            mf += mfs[i].mf;
-            if (currents[i] !== 1) {
-                mf += currents[i];
-            }
-        }
+  let mf = '';
+  for (let i = 0; i < mfs.length; i++) {
+    if (currents[i] === 0) {
+      // TODO we need to remove from currents[i] till we reach another part of the MF
+      mf += removeMFLastPart(mfs[i].mf);
+    } else {
+      mf += mfs[i].mf;
+      if (currents[i] !== 1) {
+        mf += currents[i];
+      }
     }
-    if (comment) mf += `$${comment}`;
-    return mf;
+  }
+  if (comment) mf += `$${comment}`;
+  return mf;
 }
 
 /*
@@ -274,29 +266,33 @@ function getMF(mfs, currents, comment) {
  C10Ala((Me)N) -> C10Ala
  */
 function removeMFLastPart(mf) {
-    let parenthesis = 0;
-    let start = true;
-    for (let i = mf.length - 1; i >= 0; i--) {
-        let ascii = mf.charCodeAt(i);
+  let parenthesis = 0;
+  let start = true;
+  for (let i = mf.length - 1; i >= 0; i--) {
+    let ascii = mf.charCodeAt(i);
 
-        if (ascii > 96 && ascii < 123) { // lowercase
-            if (!start && !parenthesis) {
-                return mf.substr(0, i + 1);
-            }
-        } else if (ascii > 64 && ascii < 91) { // uppercase
-            if (!start && !parenthesis) {
-                return mf.substr(0, i + 1);
-            }
-            start = false;
-        } else if (ascii === 40) { // (
-            parenthesis--;
-            if (!parenthesis) return mf.substr(0, i);
-        } else if (ascii === 41) { // )
-            parenthesis++;
-        } else {
-            start = false;
-            if (!parenthesis) return mf.substr(0, i + 1);
-        }
+    if (ascii > 96 && ascii < 123) {
+      // lowercase
+      if (!start && !parenthesis) {
+        return mf.substr(0, i + 1);
+      }
+    } else if (ascii > 64 && ascii < 91) {
+      // uppercase
+      if (!start && !parenthesis) {
+        return mf.substr(0, i + 1);
+      }
+      start = false;
+    } else if (ascii === 40) {
+      // (
+      parenthesis--;
+      if (!parenthesis) return mf.substr(0, i);
+    } else if (ascii === 41) {
+      // )
+      parenthesis++;
+    } else {
+      start = false;
+      if (!parenthesis) return mf.substr(0, i + 1);
     }
-    return '';
+  }
+  return '';
 }
