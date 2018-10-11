@@ -18,7 +18,7 @@ test('test fromNucleicSequence', () => {
   expect(dbManager.databases.nucleic).toMatchSnapshot();
 });
 
-test('test fromNucleicSequence ds-DNA', () => {
+test.only('test fromNucleicSequence ds-DNA', () => {
   let dbManager = new DBManager();
   dbManager.fromNucleicSequence('AAA', {
     ionizations: 'H+,Na+',

@@ -182,7 +182,7 @@ Array [
       "P": 1,
     },
     "charge": 0,
-    "comment": "a1",
+    "comment": "cmp-a1",
     "em": 305.05386279549003,
     "ionization": Object {
       "charge": 1,
@@ -210,7 +210,7 @@ Array [
       "P": 1,
     },
     "charge": 0,
-    "comment": "a1",
+    "comment": "cmp-a1",
     "em": 305.05386279549003,
     "ionization": Object {
       "charge": 1,
@@ -294,7 +294,7 @@ Array [
       "P": 2,
     },
     "charge": 0,
-    "comment": "a2",
+    "comment": "cmp-a2",
     "em": 609.09990055875,
     "ionization": Object {
       "charge": 1,
@@ -322,7 +322,7 @@ Array [
       "P": 2,
     },
     "charge": 0,
-    "comment": "a2",
+    "comment": "cmp-a2",
     "em": 609.09990055875,
     "ionization": Object {
       "charge": 1,

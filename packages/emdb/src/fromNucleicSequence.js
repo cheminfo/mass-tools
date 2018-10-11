@@ -51,7 +51,7 @@ module.exports = function fromNucleicSequence(sequence, options = {}) {
   } = options;
 
   let sequences = nucleotide.sequenceToMF(sequence, info).split('.');
-
+  console.log(sequences);
   let fragmentsArray = sequences.slice();
 
   // calculate fragmentation
@@ -60,7 +60,7 @@ module.exports = function fromNucleicSequence(sequence, options = {}) {
     var fragments = nucleotide.generateFragments(sequence, fragmentation);
     if (i === 1) {
       // complementary sequence
-      fragments.forEach(fragment => fragment.replace(/\$/g, 'cmp-'));
+      fragments = fragments.map(fragment => fragment.replace(/\$/g, '$cmp-'));
     }
     fragmentsArray = fragmentsArray.concat(fragments);
   }
