@@ -9,14 +9,11 @@ const combineMFs = require('mf-generator');
  * @param {string} [sequence] Sequence as a string of 1 letter or 3 letters code. Could also be a correct molecular formula respecting uppercase, lowercase
  * @param {object} [options={}]
  * @param {string} [options.ionizations='']
+ * @param {object} [options.info={}]
+ * @param {string} [options.info.kind] - rna, ds-dna or dna. Default if contains U: rna, otherwise ds-dna
+ * @param {string} [options.info.fivePrime=monophosphate] - alcohol, monophosphate, diphosphate, triphosphate
+ * @param {string} [options.info.circular=false]
  * @param {array} [options.mfsArray=[]]
- * @param {object} [options.digestion={}] Object defining options for digestion
- * @param {number} [options.digestion.minMissed=0] Minimal number of allowed missed cleavage
- * @param {number} [options.digestion.maxMissed=0] Maximal number of allowed missed cleavage
- * @param {number} [options.digestion.minResidue=0] Minimal number of residues
- * @param {number} [options.digestion.maxResidue=+Infinity] Maximal number of residues
- * @param {string} [options.digestion.enzyme] Mandatory field containing the name of the enzyme among: chymotrypsin, trypsin, glucph4, glucph8, thermolysin, cyanogenbromide
- *
  * @param {object} [options.fragmentation={}] Object defining options for fragmentation
  * @param {boolean} [options.fragmentation.a=false] If true allow fragments of type 'a'
  * @param {boolean} [options.fragmentation.ab=false] If true allow fragments of type 'a' minus base
@@ -53,14 +50,20 @@ module.exports = function fromNucleicSequence(sequence, options = {}) {
     info = {}
   } = options;
 
-  sequence = nucleotide.sequenceToMF(sequence, info);
+  let sequences = nucleotide.sequenceToMF(sequence, info).split('.');
 
-  let fragmentsArray = [sequence];
-  // do we also have some digest fragments ?
+  let fragmentsArray = sequences.slice();
 
   // calculate fragmentation
-  var fragments = nucleotide.generateFragments(sequence, fragmentation);
-  fragmentsArray = fragmentsArray.concat(fragments);
+  for (let i = 0; i < sequences.length; i++) {
+    let sequence = sequences[i];
+    var fragments = nucleotide.generateFragments(sequence, fragmentation);
+    if (i === 1) {
+      // complementary sequence
+      fragments.forEach(fragment => fragment.replace(/\$/g, 'cmp-'));
+    }
+    fragmentsArray = fragmentsArray.concat(fragments);
+  }
 
   mfsArray.push(fragmentsArray);
 
