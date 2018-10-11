@@ -45,7 +45,7 @@ function sequenceToMF(sequence, options = {}) {
         );
         break;
       default:
-        throw new Error(`Nucleotide sequenceToMF: unknown kind: ${kind}`);
+        console.warn(`Nucleotide sequenceToMF: unknown kind: ${kind}`);
     }
   }
 
