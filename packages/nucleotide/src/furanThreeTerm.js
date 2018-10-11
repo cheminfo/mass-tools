@@ -8,7 +8,7 @@ function furanThreeTerm(nucleotide) {
     .split(/ /);
   let last = parts.pop();
   if (!last.match(/^D[atcg]mp/)) {
-    throw new Error(
+    console.warn(
       'furanThreeTerm can not remove a non monophosphate nucleic acid: ' + last
     );
   }
