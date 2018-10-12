@@ -12,7 +12,7 @@ function furanThreeTerm(nucleotide) {
       'furanThreeTerm can not remove a non monophosphate nucleic acid: ' + last
     );
   }
-  return parts.join('') + 'C5H5O5P';
+  return parts.join('') + 'C5H6O4P';
 }
 
 module.exports = furanThreeTerm;

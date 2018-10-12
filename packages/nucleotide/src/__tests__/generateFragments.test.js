@@ -15,7 +15,6 @@ describe('test generate fragments', () => {
 
   test('nucleotide fragmentation y of HODadeDtmpDcmpH', () => {
     let fragments = generateFragments('HODadeDtmpDcmpH', { y: true });
-    console.log(fragments);
     expect(fragments).toMatchSnapshot();
   });
 
