@@ -197,7 +197,7 @@ Array [
     },
     "mw": 305.20153241567294,
     "parts": Array [
-      "HDtmp",
+      "HODtmpO-1",
     ],
     "unsaturation": 5.5,
   },
@@ -225,7 +225,7 @@ Array [
     },
     "mw": 305.20153241567294,
     "parts": Array [
-      "HDtmp",
+      "HODtmpO-1",
     ],
     "unsaturation": 5.5,
   },
@@ -253,7 +253,7 @@ Array [
     },
     "mw": 314.21489144731794,
     "parts": Array [
-      "HDamp",
+      "HODampO-1",
     ],
     "unsaturation": 7.5,
   },
@@ -281,7 +281,7 @@ Array [
     },
     "mw": 314.21489144731794,
     "parts": Array [
-      "HDamp",
+      "HODampO-1",
     ],
     "unsaturation": 7.5,
   },
@@ -309,7 +309,7 @@ Array [
     },
     "mw": 609.39512407729,
     "parts": Array [
-      "HDtmpDtmp",
+      "HODtmpDtmpO-1",
     ],
     "unsaturation": 10.5,
   },
@@ -337,7 +337,7 @@ Array [
     },
     "mw": 609.39512407729,
     "parts": Array [
-      "HDtmpDtmp",
+      "HODtmpDtmpO-1",
     ],
     "unsaturation": 10.5,
   },
@@ -365,7 +365,7 @@ Array [
     },
     "mw": 627.4218421405801,
     "parts": Array [
-      "HDampDamp",
+      "HODampDampO-1",
     ],
     "unsaturation": 14.5,
   },
@@ -393,7 +393,7 @@ Array [
     },
     "mw": 627.4218421405801,
     "parts": Array [
-      "HDampDamp",
+      "HODampDampO-1",
     ],
     "unsaturation": 14.5,
   },
@@ -420,7 +420,7 @@ Array [
     },
     "mw": 930.5960614172811,
     "parts": Array [
-      "HDtmpDtmpDtmpOH",
+      "HODtmpDtmpDtmpH",
     ],
     "unsaturation": 15,
   },
@@ -447,7 +447,7 @@ Array [
     },
     "mw": 930.5960614172811,
     "parts": Array [
-      "HDtmpDtmpDtmpOH",
+      "HODtmpDtmpDtmpH",
     ],
     "unsaturation": 15,
   },
@@ -474,7 +474,7 @@ Array [
     },
     "mw": 957.6361385122163,
     "parts": Array [
-      "HDampDampDampOH",
+      "HODampDampDampH",
     ],
     "unsaturation": 21,
   },
@@ -501,7 +501,7 @@ Array [
     },
     "mw": 957.6361385122163,
     "parts": Array [
-      "HDampDampDampOH",
+      "HODampDampDampH",
     ],
     "unsaturation": 21,
   },

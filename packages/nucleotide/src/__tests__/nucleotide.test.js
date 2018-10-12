@@ -6,14 +6,14 @@ const MF = require('mf-parser').MF;
 describe('test nucleotide', () => {
   test('nucleotide to sequence of ATC', () => {
     let sequence = Nucleotide.sequenceToMF('ATC');
-    expect(sequence).toEqual('HDampDtmpDcmpOH.HDgmpDampDtmpOH');
+    expect(sequence).toEqual('HODampDtmpDcmpH.HODgmpDampDtmpH');
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(1889.23, 1);
   });
 
   test('nucleotide to sequence of AAU ', () => {
     let sequence = Nucleotide.sequenceToMF('AAU');
-    expect(sequence).toEqual('HAmpAmpUmpOH');
+    expect(sequence).toEqual('HOAmpAmpUmpH');
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(982.6, 1);
   });
@@ -27,14 +27,14 @@ describe('test nucleotide', () => {
 
   test('nucleotide to sequence of DNA AAA ', () => {
     let sequence = Nucleotide.sequenceToMF('AAA', { kind: 'DNA' });
-    expect(sequence).toEqual('HDampDampDampOH');
+    expect(sequence).toEqual('HODampDampDampH');
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(957.64, 1);
   });
 
   test('nucleotide to sequence of ds-DNA AAA ', () => {
     let sequence = Nucleotide.sequenceToMF('AAA', { kind: 'ds-DNA' });
-    expect(sequence).toEqual('HDampDampDampOH.HDtmpDtmpDtmpOH');
+    expect(sequence).toEqual('HODampDampDampH.HODtmpDtmpDtmpH');
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(1888.24, 1);
   });
@@ -44,7 +44,7 @@ describe('test nucleotide', () => {
       fivePrime: 'alcohol',
       kind: 'DNA'
     });
-    expect(sequence).toEqual('HDadeDampDampOH');
+    expect(sequence).toEqual('HODadeDampDampH');
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(877.66, 1);
   });
@@ -54,7 +54,7 @@ describe('test nucleotide', () => {
       fivePrime: 'monophosphate',
       kind: 'DNA'
     });
-    expect(sequence).toEqual('HDampDampDampOH');
+    expect(sequence).toEqual('HODampDampDampH');
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(957.64, 1);
   });
@@ -63,7 +63,7 @@ describe('test nucleotide', () => {
       fivePrime: 'diphosphate',
       kind: 'DNA'
     });
-    expect(sequence).toEqual('HDadpDampDampOH');
+    expect(sequence).toEqual('HODadpDampDampH');
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(1037.62, 1);
   });
@@ -73,7 +73,7 @@ describe('test nucleotide', () => {
       fivePrime: 'triphosphate',
       kind: 'DNA'
     });
-    expect(sequence).toEqual('HDatpDampDampOH');
+    expect(sequence).toEqual('HODatpDampDampH');
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(1117.6, 1);
   });

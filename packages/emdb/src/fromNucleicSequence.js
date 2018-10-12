@@ -51,7 +51,6 @@ module.exports = function fromNucleicSequence(sequence, options = {}) {
   } = options;
 
   let sequences = nucleotide.sequenceToMF(sequence, info).split('.');
-  console.log(sequences);
   let fragmentsArray = sequences.slice();
 
   // calculate fragmentation

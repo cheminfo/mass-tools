@@ -50,8 +50,8 @@ function sequenceToMF(sequence, options = {}) {
   }
 
   if (!circular) {
-    results.forEach(result => result.unshift('H'));
-    results.forEach(result => result.push('OH'));
+    results.forEach(result => result.unshift('HO'));
+    results.forEach(result => result.push('H'));
   }
 
   return results.map(result => result.join('')).join('.');
