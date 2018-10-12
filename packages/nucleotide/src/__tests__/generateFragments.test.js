@@ -3,8 +3,25 @@
 const { generateFragments } = require('..');
 
 describe('test generate fragments', () => {
-  test('nucleotide to sequence of OHDampDtmpDcmpH', () => {
+  test('nucleotide fragmentation a of HODadeDtmpDcmpH', () => {
+    let fragments = generateFragments('HODadeDtmpDcmpH', { a: true });
+    expect(fragments).toMatchSnapshot();
+  });
+
+  test('nucleotide fragmentation ab of HODadeDtmpDcmpH', () => {
+    let fragments = generateFragments('HODadeDtmpDcmpH', { ab: true });
+    expect(fragments).toMatchSnapshot();
+  });
+
+  test('nucleotide fragmentation y of HODadeDtmpDcmpH', () => {
+    let fragments = generateFragments('HODadeDtmpDcmpH', { y: true });
+    console.log(fragments);
+    expect(fragments).toMatchSnapshot();
+  });
+
+  test('nucleotide to sequence of HODampDtmpDcmpH', () => {
     let fragments = generateFragments('HODampDtmpDcmpH', { a: true });
+    expect(fragments).toMatchSnapshot();
   });
   test('nucleotide to sequence of HODampDtmpDcmpH', () => {
     let fragments = generateFragments('HODampDtmpDcmpH', { a: true, ab: true });

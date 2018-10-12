@@ -1,27 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`test generate fragments nucleotide fragmentation a of HODadeDtmpDcmpH 1`] = `
+Array [
+  "HODadeO-1$a1",
+  "HODadeDtmpO-1$a2",
+]
+`;
+
+exports[`test generate fragments nucleotide fragmentation ab of HODadeDtmpDcmpH 1`] = `
+Array [
+  "HODadeC5H5O5P$a2 - B",
+]
+`;
+
+exports[`test generate fragments nucleotide fragmentation y of HODadeDtmpDcmpH 1`] = `
+Array [
+  "O-2H-1P-1DcmpH$y1",
+  "O-2H-1P-1DtmpDcmpH$y2",
+]
+`;
+
 exports[`test generate fragments nucleotide to sequence of HODampDtmpDcmpH 1`] = `
 Array [
   "HODampO-1$a1",
-  "HC5H5O5P$a1 - B",
   "HODampDtmpO-1$a2",
-  "HODampC5H5O5P$a2 - B",
 ]
 `;
 
 exports[`test generate fragments nucleotide to sequence of HODampDtmpDcmpH 2`] = `
 Array [
   "HODampO-1$a1",
-  "HC5H5O5P$a1 - B",
+  "HODampDtmpO-1$a2",
+  "HODampC5H5O5P$a2 - B",
+]
+`;
+
+exports[`test generate fragments nucleotide to sequence of HODampDtmpDcmpH 3`] = `
+Array [
+  "HODampO-1$a1",
   "HODamp$b1",
   "HODampPO2H$c1",
   "HODampPO3H$d1",
   "ODcmpH$w1",
-  "PO3HDcmpH$w1",
   "DcmpH$x1",
-  "PO2HDcmpH$x1",
   "O-2H-1P-1DcmpH$y1",
-  "DcmpH$y1",
   "O-3H-1P-1DcmpH$z1",
   "HODampDtmpO-1$a2",
   "HODampC5H5O5P$a2 - B",
@@ -29,11 +51,8 @@ Array [
   "HODampDtmpPO2H$c2",
   "HODampDtmpPO3H$d2",
   "ODtmpDcmpH$w2",
-  "PO3HDtmpDcmpH$w2",
   "DtmpDcmpH$x2",
-  "PO2HDtmpDcmpH$x2",
   "O-2H-1P-1DtmpDcmpH$y2",
-  "DtmpDcmpH$y2",
   "O-3H-1P-1DtmpDcmpH$z2",
 ]
 `;
