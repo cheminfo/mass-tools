@@ -49,8 +49,8 @@ function addFiveTerm(mfs, fiveTerm, i, options) {
 }
 
 function addThreeTerm(mfs, threeTerm, i, options) {
-  if (options.w) mfs.push('PO3H' + threeTerm + '$w' + i);
-  if (options.x) mfs.push('PO2H' + threeTerm + '$x' + i);
-  if (options.y) mfs.push('' + threeTerm + '$y' + i);
-  if (options.z) mfs.push('O-1' + threeTerm + '$z' + i);
+    if (options.w) mfs.push('' + threeTerm + '$w' + i);	  if (options.w) mfs.push('PO3H' + threeTerm + '$w' + i);
+    if (options.x) mfs.push('O-1' + threeTerm + '$x' + i);	  if (options.x) mfs.push('PO2H' + threeTerm + '$x' + i);
+    if (options.y) mfs.push('O-3H-1P-1' + threeTerm + '$y' + i);	  if (options.y) mfs.push('' + threeTerm + '$y' + i);
+    if (options.z) mfs.push('O-4H-1P-1' + threeTerm + '$z' + i);
 }
