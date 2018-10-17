@@ -41,7 +41,7 @@ module.exports = function(mf, options) {
 };
 
 function addFiveTerm(mfs, fiveTerm, i, options) {
-  if (options.a) mfs.push(fiveTerm + 'O-1$a' + i);
+  if (options.a) mfs.push(fiveTerm + 'O-1H-1$a' + i);
   if (options.ab && i > 1)
     mfs.push(furanThreeTerm(fiveTerm) + '$a' + i + ' - B');
   if (options.b) mfs.push(fiveTerm + '$b' + i);
@@ -53,5 +53,5 @@ function addThreeTerm(mfs, threeTerm, i, options) {
   if (options.w) mfs.push('O' + threeTerm + '$w' + i);
   if (options.x) mfs.push('' + threeTerm + '$x' + i);
   if (options.y) mfs.push('O-2H-1P-1' + threeTerm + '$y' + i);
-  if (options.z) mfs.push('O-3H-1P-1' + threeTerm + '$z' + i);
+  if (options.z) mfs.push('O-3H-2P-1' + threeTerm + '$z' + i);
 }
