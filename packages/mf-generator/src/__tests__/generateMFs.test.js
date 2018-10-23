@@ -170,3 +170,26 @@ test('Check info', function() {
     unsaturation: 9
   });
 });
+
+test('generateMFs from array of array with negative ionisation', function() {
+  var mfsArray = ['H2', ['Cl', 'Br']];
+  var result = generateMFs(mfsArray, {
+    ionizations: '(H+)-2'
+  });
+  expect(result[0].ms.em).toBe(17.484974920909067);
+  expect(result[1].ms.em).toBe(39.45971737990907);
+  expect(result).toHaveLength(2);
+});
+
+test('generateMFs from array of array with negative ionisation', function() {
+  var mfsArray = ['(H+)2-3'];
+  var result = generateMFs(mfsArray, {
+    ionizations: '(H+)-2,Na+'
+  });
+  expect(result.map(a => a.ms.em).sort((a, b) => a - b)).toEqual([
+    0,
+    1.0072764523209299,
+    6.50276251476343,
+    8.334591202244264
+  ]);
+});
