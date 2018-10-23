@@ -27,6 +27,7 @@ module.exports = function partToMF(part) {
           mf.push(line.value + (line.multiplier !== 1 ? line.multiplier : ''));
         break;
       case Kind.CHARGE:
+        if (line.value === 0) break;
         mf.push(`(${line.value > 0 ? `+${line.value}` : line.value})`);
         break;
       default:
