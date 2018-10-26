@@ -2,8 +2,8 @@
 
 exports[`test generate fragments nucleotide fragmentation a of HODadeDtmpDcmpH 1`] = `
 Array [
-  "HODadeO-1$a1",
-  "HODadeDtmpO-1$a2",
+  "HODadeO-1H-1$a1",
+  "HODadeDtmpO-1H-1$a2",
 ]
 `;
 
@@ -22,30 +22,30 @@ Array [
 
 exports[`test generate fragments nucleotide to sequence of HODampDtmpDcmpH 1`] = `
 Array [
-  "HODampO-1$a1",
-  "HODampDtmpO-1$a2",
+  "HODampO-1H-1$a1",
+  "HODampDtmpO-1H-1$a2",
 ]
 `;
 
 exports[`test generate fragments nucleotide to sequence of HODampDtmpDcmpH 2`] = `
 Array [
-  "HODampO-1$a1",
-  "HODampDtmpO-1$a2",
+  "HODampO-1H-1$a1",
+  "HODampDtmpO-1H-1$a2",
   "HODampC5H6O4P$a2 - B",
 ]
 `;
 
 exports[`test generate fragments nucleotide to sequence of HODampDtmpDcmpH 3`] = `
 Array [
-  "HODampO-1$a1",
+  "HODampO-1H-1$a1",
   "HODamp$b1",
   "HODampPO2H$c1",
   "HODampPO3H$d1",
   "ODcmpH$w1",
   "DcmpH$x1",
   "O-2H-1P-1DcmpH$y1",
-  "O-3H-1P-1DcmpH$z1",
-  "HODampDtmpO-1$a2",
+  "O-3H-2P-1DcmpH$z1",
+  "HODampDtmpO-1H-1$a2",
   "HODampC5H6O4P$a2 - B",
   "HODampDtmp$b2",
   "HODampDtmpPO2H$c2",
@@ -53,6 +53,6 @@ Array [
   "ODtmpDcmpH$w2",
   "DtmpDcmpH$x2",
   "O-2H-1P-1DtmpDcmpH$y2",
-  "O-3H-1P-1DtmpDcmpH$z2",
+  "O-3H-2P-1DtmpDcmpH$z2",
 ]
 `;
