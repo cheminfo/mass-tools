@@ -47,7 +47,7 @@ test('MF of Et3N.HCl', () => {
   ]);
 
   var newMF = mf.toMF();
-  expect(newMF).toBe('C6H15N.HCl');
+  expect(newMF).toBe('C6H15N . HCl');
 
   mf.canonize();
   let html = mf.toHtml();
@@ -280,4 +280,11 @@ test('MF of H(+)(H+)-1H', () => {
     monoisotopicMass: 1.00782503223,
     unsaturation: 0.5
   });
+});
+
+test('MF of 2NH3 . 2HCl', () => {
+  var mf = new MF('2NH3 . 2HCl');
+
+  var newMF = mf.toMF();
+  expect(newMF).toBe('H6N2 . H2Cl2');
 });
