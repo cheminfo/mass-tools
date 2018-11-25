@@ -14,7 +14,6 @@ const atomSorter = require('atom-sorter');
 module.exports = function toParts(lines, options = {}) {
   const { expand: shouldExpandGroups = true } = options;
   let parts = [];
-
   let currentPart = createNewPart();
   let previousKind = Kind.BEGIN;
   parts.push(currentPart);
@@ -59,11 +58,7 @@ module.exports = function toParts(lines, options = {}) {
 
 function createNewPart() {
   let currentMultiplier = { value: 1, fromIndex: 0 };
-  return {
-    lines: [],
-    multipliers: [currentMultiplier],
-    currentMultiplier
-  };
+  return { lines: [], multipliers: [currentMultiplier], currentMultiplier };
 }
 
 function openingParenthesis(currentPart) {
@@ -124,14 +119,23 @@ function expandGroups(parts) {
       let line = part.lines[i];
       if (line.kind === Kind.ATOM) {
         let group = groups[line.value];
+
         if (group) {
           expanded = true;
           for (let element of group.elements) {
-            part.lines.push({
-              kind: 'atom',
-              value: element.symbol,
-              multiplier: line.multiplier * element.number
-            });
+            if (element.isotope) {
+              part.lines.push({
+                kind: 'isotope',
+                value: { atom: element.symbol, isotope: element.isotope },
+                multiplier: line.multiplier * element.number
+              });
+            } else {
+              part.lines.push({
+                kind: 'atom',
+                value: element.symbol,
+                multiplier: line.multiplier * element.number
+              });
+            }
           }
           part.lines[i] = undefined;
         }
@@ -193,10 +197,7 @@ function combineAtomsIsotopesCharges(parts) {
 function calculateAndSortKeys(part) {
   part.keys = [];
   for (var line of part.lines) {
-    part.keys.push({
-      key: getKey(line),
-      value: line
-    });
+    part.keys.push({ key: getKey(line), value: line });
   }
   part.keys.sort((a, b) => stringComparator(a.key, b.key));
 }

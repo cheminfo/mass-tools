@@ -22,9 +22,7 @@ module.exports = function getInfo(parts, options = {}) {
     return getProcessedPart(parts[0], customUnsaturations);
   }
 
-  var result = {
-    parts: []
-  };
+  var result = { parts: [] };
   for (let part of parts) {
     result.parts.push(getProcessedPart(part, customUnsaturations));
   }
@@ -52,12 +50,14 @@ function getProcessedPart(part, customUnsaturations) {
   let unsaturation = 0;
   let validUnsaturation = true;
   currentPart.mf = partToMF(part);
+
   for (let line of part) {
     let currentElement = '';
     switch (line.kind) {
       case Kind.ATOM: {
         currentElement = line.value;
         let element = elements[line.value];
+
         // todo should we have a kind GROUP ?
         if (!element) {
           element = groups[line.value];
@@ -126,10 +126,7 @@ function getProcessedPart(part, customUnsaturations) {
 }
 
 function getIsotopeRatioInfo(value) {
-  let result = {
-    mass: 0,
-    monoisotopicMass: 0
-  };
+  let result = { mass: 0, monoisotopicMass: 0 };
   let element = elements[value.atom];
   if (!element) throw new Error(`Element not found: ${value.atom}`);
   let isotopesArray = element.isotopes;
