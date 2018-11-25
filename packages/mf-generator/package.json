@@ -1,6 +1,6 @@
 {
   "name": "mf-generator",
-  "version": "0.6.4",
+  "version": "0.7.0",
   "description": "",
   "main": "src/index.js",
   "files": [
@@ -18,11 +18,11 @@
   },
   "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/mf-generator#readme",
   "dependencies": {
-    "chemical-elements": "^0.6.4",
-    "mf-finder": "^0.6.4",
-    "mf-matcher": "^0.6.4",
-    "mf-parser": "^0.6.4",
-    "mf-utilities": "^0.6.4",
+    "chemical-elements": "^0.7.0",
+    "mf-finder": "^0.7.0",
+    "mf-matcher": "^0.7.0",
+    "mf-parser": "^0.7.0",
+    "mf-utilities": "^0.7.0",
     "sum-object-keys": "^1.0.2"
   }
 }
