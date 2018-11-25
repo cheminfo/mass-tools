@@ -12,14 +12,12 @@ test('test DBManager contaminants and knapSack', async () => {
 
   expect(dbManager.listDatabases()).toEqual(['contaminants', 'knapSack']);
   expect(dbManager.get('contaminants').length).toBeGreaterThan(1000);
-});
+}, 10000);
 
 test('test DBManager fromMonoisotopicMass', () => {
   let dbManager = new DBManager();
 
-  dbManager.fromMonoisotopicMass(300, {
-    ionizations: 'H+,Na+'
-  });
+  dbManager.fromMonoisotopicMass(300, {ionizations: 'H+,Na+'});
 
   expect(dbManager.listDatabases()).toEqual(['monoisotopic']);
   expect(dbManager.get('monoisotopic').length).toBeGreaterThan(100);

@@ -2,15 +2,15 @@
 
 const loadGoogleSheet = require('../loadGoogleSheet');
 
+
 test('test load google sheet', async () => {
+  let data = await loadGoogleSheet();
+  expect(data.length).toBeGreaterThan(1000);
 
-    let data = await loadGoogleSheet();
-    expect(data.length).toBeGreaterThan(1000);
-
-    let first = data[0];
-    expect(first.mf).toBe('CN');
-    expect(first.ionization).toEqual({ charge: -1, em: 0, mf: '(-)' });
-    expect(first.em).toBeGreaterThan(0);
-    expect(first.ms.charge).not.toBe(0);
-    expect(first.ms.em).toBeGreaterThan(0);
-});
+  let first = data[0];
+  expect(first.mf).toBe('CN');
+  expect(first.ionization).toEqual({charge: -1, em: 0, mf: '(-)'});
+  expect(first.em).toBeGreaterThan(0);
+  expect(first.ms.charge).not.toBe(0);
+  expect(first.ms.em).toBeGreaterThan(0);
+}, 10000);
