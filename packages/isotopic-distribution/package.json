@@ -1,6 +1,6 @@
 {
   "name": "isotopic-distribution",
-  "version": "0.6.4",
+  "version": "0.7.0",
   "description": "Calculate the isotopic distribution of a molecular formula",
   "main": "src/index.js",
   "files": [
@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/isotopic-distribution#readme",
   "dependencies": {
-    "chemical-elements": "^0.6.4",
-    "mf-parser": "^0.6.4",
-    "mf-utilities": "^0.6.4",
+    "chemical-elements": "^0.7.0",
+    "mf-parser": "^0.7.0",
+    "mf-utilities": "^0.7.0",
     "spectrum-generator": "^1.1.0"
   }
 }

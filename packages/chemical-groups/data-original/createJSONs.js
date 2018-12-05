@@ -32,30 +32,23 @@ for (let group of groups) {
           group.mass += element.mass * number;
           group.monoisotopicMass += element.monoisotopicMass * number;
         }
-        break;
-      case Kind.ISOTOPE:
-        {
-          symbol = `[${part.value.isotope}${part.value.atom}]`;
-          let element = elementsAndIsotopesObject[part.value.atom];
-          if (!element)
-            throw new Error(`element unknown: ${part.value.atom} - ${part}`);
-          let isotope = element.isotopes.filter(
-            a => a.nominal === part.value.isotope
-          )[0];
-          if (!isotope)
-            throw new Error(`isotope unknown: ${part.value.isotope} - ${part}`);
-          group.mass += isotope.mass * number;
-          group.monoisotopicMass += isotope.mass * number;
-        }
-        break;
+        return { symbol, number };
+      case Kind.ISOTOPE: {
+        let element = elementsAndIsotopesObject[part.value.atom];
+        if (!element)
+          throw new Error(`element unknown: ${part.value.atom} - ${part}`);
+        let isotope = element.isotopes.filter(
+          a => a.nominal === part.value.isotope
+        )[0];
+        if (!isotope)
+          throw new Error(`isotope unknown: ${part.value.isotope} - ${part}`);
+        group.mass += isotope.mass * number;
+        group.monoisotopicMass += isotope.mass * number;
+        return { symbol: part.value.atom, number, isotope: part.value.isotope };
+      }
       default:
         throw new Error(`unknown type: ${part.kind}`);
     }
-
-    return {
-      symbol,
-      number
-    };
   });
 }
 

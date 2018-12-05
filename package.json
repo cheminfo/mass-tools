@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "molecular-formula",
-  "version": "0.3.12",
+  "version": "0.3.14",
   "main": "src/index.js",
   "files": [
     "src"
@@ -35,12 +35,12 @@
     "babel-preset-stage-2": "^6.24.1",
     "benchmark": "^2.1.4",
     "chemcalc": "^3.4.1",
-    "cheminfo-tools": "^1.21.0",
+    "cheminfo-tools": "^1.22.4",
     "codecov": "^3.1.0",
     "eslint": "^4.19.1",
     "eslint-config-cheminfo": "^1.18.0",
     "eslint-plugin-jest": "^21.22.1",
-    "eslint-plugin-no-only-tests": "^2.0.1",
+    "eslint-plugin-no-only-tests": "^2.1.0",
     "jest": "^22.4.4",
     "lerna": "^2.11.0",
     "npm-run-all": "^4.1.3"
