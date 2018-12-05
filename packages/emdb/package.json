@@ -1,6 +1,6 @@
 {
   "name": "emdb",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Database manager for exact mass query",
   "browser": {
     "./src/util/fetchArrayBuffer.js": "./src/util/fetchArrayBufferBrowser.js",
@@ -22,15 +22,15 @@
   },
   "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/emdb#readme",
   "dependencies": {
-    "isotopic-distribution": "^0.7.0",
+    "isotopic-distribution": "^0.8.0",
     "jszip": "^3.1.5",
-    "mf-finder": "^0.7.0",
-    "mf-from-google-sheet": "^0.7.0",
-    "mf-generator": "^0.7.0",
-    "mf-matcher": "^0.7.0",
-    "mf-parser": "^0.7.0",
-    "mf-utilities": "^0.7.0",
-    "nucleotide": "^0.7.0",
+    "mf-finder": "^0.8.0",
+    "mf-from-google-sheet": "^0.8.0",
+    "mf-generator": "^0.8.0",
+    "mf-matcher": "^0.8.0",
+    "mf-parser": "^0.8.0",
+    "mf-utilities": "^0.8.0",
+    "nucleotide": "^0.8.0",
     "peaks-similarity": "^2.3.0",
     "peptide": "^1.6.1",
     "request-promise-native": "^1.0.5"
