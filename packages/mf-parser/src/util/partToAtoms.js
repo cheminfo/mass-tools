@@ -4,7 +4,7 @@ const Kind = require('../Kind');
 
 /**
  * Convert a MF part to an array of atoms
- * This procedure will suppress the isotpes !
+ * This procedure will suppress the isotopes !
  * This is mainly used to make queries
  */
 
