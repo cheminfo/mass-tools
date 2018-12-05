@@ -5,7 +5,6 @@
 const elements = require('chemical-elements/src/elementsAndStableIsotopesObject.js');
 const groups = require('chemical-groups/src/groupsObject.js');
 const Kind = require('../Kind');
-const partToAtoms = require('./partToAtoms');
 
 const isotopes = require('./getIsotopesObject');
 const getIsotopeRatioInfo = require('./getIsotopeRatioInfo');
@@ -57,7 +56,22 @@ module.exports = function getInfo(parts, options = {}) {
       }
     }
   }
-  return results;
+
+  let eas = [];
+  let sum = 0;
+  for (let key in results) {
+    sum += results[key];
+    eas.push({
+      element: key,
+      mass: results[key]
+    });
+  }
+
+  eas.forEach(ea => {
+    ea.ratio = ea.mass / sum;
+  });
+
+  return eas;
 };
 
 function addMass(results, atom, mass) {
