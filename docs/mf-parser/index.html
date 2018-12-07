@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>mf-parser 0.6.3 | Documentation</title>
+  <title>mf-parser 0.8.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>mf-parser</h3>
-          <div class='mb1'><code>0.6.3</code></div>
+          <div class='mb1'><code>0.8.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -95,6 +95,16 @@
               
                 
                 <li><a
+                  href='#getea'
+                  class="">
+                  getEA
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#getisotopesinfo'
                   class="">
                   getIsotopesInfo
@@ -138,6 +148,16 @@
                   href='#parttoatoms'
                   class="">
                   partToAtoms
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getea'
+                  class="">
+                  getEA
                   
                 </a>
                 
@@ -585,6 +605,67 @@ as well as the same informations for all the parts</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='getea'>
+      getEA
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns an object with the elemental analysis</p>
+
+
+  <div class='pre p1 fill-light mt0'>getEA(options: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(any
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='getisotopesinfo'>
       getIsotopesInfo
     </h3>
@@ -847,7 +928,7 @@ as well as the same informations for all the parts</p>
   
 
   <p>Convert a MF part to an array of atoms
-This procedure will suppress the isotpes !
+This procedure will suppress the isotopes !
 This is mainly used to make queries</p>
 
 
@@ -869,6 +950,74 @@ This is mainly used to make queries</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>part</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getea'>
+      getEA
+    </h3>
+    
+    
+  </div>
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>getEA(parts: any, options: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>parts</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(any
+            = <code>{}</code>)</code>
 	    
           </div>
           
