@@ -10,7 +10,7 @@ const MODULE = "'use strict';\nmodule.exports=";
 
 var groups = Papa.parse(`${fs.readFileSync(`${__dirname}/groups.tsv`)}`, {
   header: true
-}).data;
+}).data.filter(line => line.symbol !== '');
 // we will create an object for the elements
 for (let group of groups) {
   let mf = group.mf;
