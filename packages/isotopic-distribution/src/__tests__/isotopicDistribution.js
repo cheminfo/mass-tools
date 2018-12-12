@@ -3,10 +3,22 @@
 const IsotopicDistribution = require('../IsotopicDistribution.js');
 
 describe('test isotopicDistribution', () => {
-  it.only('create distribution of CH0', () => {
+  it('create distribution of CH0', () => {
     let isotopicDistribution = new IsotopicDistribution('CH0');
     let distribution = isotopicDistribution.getDistribution();
     expect(distribution.array[0].x).toBe(12);
+  });
+
+  it('create distribution of CN default res', () => {
+    let isotopicDistribution = new IsotopicDistribution('CN');
+    let distribution = isotopicDistribution.getDistribution();
+    expect(distribution.length).toBe(3);
+  });
+
+  it('create distribution of CN high res', () => {
+    let isotopicDistribution = new IsotopicDistribution('CN', {fwhm: 0});
+    let distribution = isotopicDistribution.getDistribution();
+    expect(distribution.length).toBe(4);
   });
 
   it('create distribution of C1000', () => {

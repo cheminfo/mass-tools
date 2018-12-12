@@ -51,8 +51,8 @@ class IsotopicDistribution {
             }
         }
         this.options = options;
-        this.fwhm = options.fwhm || 0.01;
-        this.minY = options.minY || 1e-8;
+        this.fwhm = (options.fwhm === undefined) ? 0.01 : options.fwhm;
+        this.minY = (options.minY === undefined) ? 1e-8 : options.minY;
         this.maxLines = options.maxLines || 5000;
     }
 
