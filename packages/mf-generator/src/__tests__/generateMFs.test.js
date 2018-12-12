@@ -23,30 +23,26 @@ test('generateMFs from array of string with comment', function () {
   expect(result).toHaveLength(12);
 });
 
-test(
-  'generateMFs from  array of string with some range and non range',
-  function () {
-    var mfsArray = ['CN0-2'];
-    var result = generateMFs(mfsArray);
-    expect(result[0].mf).toBe('C');
-    expect(result[1].mf).toBe('CN');
-    expect(result[2].mf).toBe('CN2');
-    expect(result).toHaveLength(3);
-  });
+test('generateMFs from  array of string with some range and non range', function () {
+  var mfsArray = ['CN0-2'];
+  var result = generateMFs(mfsArray);
+  expect(result[0].mf).toBe('C');
+  expect(result[1].mf).toBe('CN');
+  expect(result[2].mf).toBe('CN2');
+  expect(result).toHaveLength(3);
+});
 
-test(
-  'From array of string with some range and non range CN0-2O00-1K',
-  function () {
-    var mfsArray = ['CN0-2O00-1K'];
-    var result = generateMFs(mfsArray);
-    expect(result[0].mf).toBe('CK');
-    expect(result[1].mf).toBe('CKN');
-    expect(result[2].mf).toBe('CKO');
-    expect(result[3].mf).toBe('CKN2');
-    expect(result[4].mf).toBe('CKNO');
-    expect(result[5].mf).toBe('CKN2O');
-    expect(result).toHaveLength(6);
-  });
+test('From array of string with some range and non range CN0-2O00-1K', function () {
+  var mfsArray = ['CN0-2O00-1K'];
+  var result = generateMFs(mfsArray);
+  expect(result[0].mf).toBe('CK');
+  expect(result[1].mf).toBe('CKN');
+  expect(result[2].mf).toBe('CKO');
+  expect(result[3].mf).toBe('CKN2');
+  expect(result[4].mf).toBe('CKNO');
+  expect(result[5].mf).toBe('CKN2O');
+  expect(result).toHaveLength(6);
+});
 
 test('From array of string with some range and non range NaK0-2', function () {
   var mfsArray = ['NaK0-2'];
@@ -57,19 +53,17 @@ test('From array of string with some range and non range NaK0-2', function () {
   expect(result).toHaveLength(3);
 });
 
-test(
-  'From array of string with some range and non range C(Me(N2))0-2(CH3)0-1K',
-  function () {
-    var mfsArray = ['C(Me(N2))0-2(CH3)0-1K'];
-    var result = generateMFs(mfsArray, { canonizeMF: false, uniqueMFs: false });
-    expect(result[0].mf).toBe('CK');
-    expect(result[1].mf).toBe('C(CH3)K');
-    expect(result[2].mf).toBe('C(Me(N2))K');
-    expect(result[3].mf).toBe('C(Me(N2))(CH3)K');
-    expect(result[4].mf).toBe('C(Me(N2))2K');
-    expect(result[5].mf).toBe('C(Me(N2))2(CH3)K');
-    expect(result).toHaveLength(6);
-  });
+test('From array of string with some range and non range C(Me(N2))0-2(CH3)0-1K', function () {
+  var mfsArray = ['C(Me(N2))0-2(CH3)0-1K'];
+  var result = generateMFs(mfsArray, { canonizeMF: false, uniqueMFs: false });
+  expect(result[0].mf).toBe('CK');
+  expect(result[1].mf).toBe('C(CH3)K');
+  expect(result[2].mf).toBe('C(Me(N2))K');
+  expect(result[3].mf).toBe('C(Me(N2))(CH3)K');
+  expect(result[4].mf).toBe('C(Me(N2))2K');
+  expect(result[5].mf).toBe('C(Me(N2))2(CH3)K');
+  expect(result).toHaveLength(6);
+});
 
 test('From array of string with some range', function () {
   var mfsArray = ['C1-3N0-2Cl0-0BrO1-1.C2-3H3-4', ['C', 'O']];
@@ -101,26 +95,29 @@ test('From array of string to large array and filter', function () {
 
 test('From array of string to large array and filter unsaturation', function () {
   var mfsArray = ['C0-100', 'H0-100'];
-  var result =
-      generateMFs(mfsArray, { filter: { unsaturation: { min: 0, max: 1 } } });
+  var result = generateMFs(mfsArray, {
+    filter: { unsaturation: { min: 0, max: 1 } }
+  });
   expect(result).toHaveLength(151);
 });
 
-test(
-  'From array of string to large array and filter unsaturation min/max and integer unsaturation',
-  function () {
-    var mfsArray = ['C0-100', 'H0-100'];
-    var result = generateMFs(
-      mfsArray,
-      { filter: { unsaturation: { min: 0, max: 1, onlyInteger: true } } });
-    expect(result).toHaveLength(101);
+test('From array of string to large array and filter unsaturation min/max and integer unsaturation', function () {
+  var mfsArray = ['C0-100', 'H0-100'];
+  var result = generateMFs(mfsArray, {
+    filter: { unsaturation: { min: 0, max: 1, onlyInteger: true } }
   });
+  expect(result).toHaveLength(101);
+});
 
 test('Combine with ionizations', function () {
   var result = generateMFs(['C1-2'], { ionizations: 'H+,Na+,H++' });
   expect(result.map((a) => a.ms.em).sort((a, b) => a - b)).toStrictEqual([
-    6.50336393620593, 12.503363936205929, 13.00727645232093, 25.00727645232093,
-    34.989220702090925, 46.989220702090925
+    6.50336393620593,
+    12.503363936205929,
+    13.00727645232093,
+    25.00727645232093,
+    34.989220702090925,
+    46.989220702090925
   ]);
 });
 
@@ -155,8 +152,13 @@ test('generateMFs from array of array with negative ionisation', function () {
   expect(result).toHaveLength(2);
 });
 
-test('generateMFs from array of array with negative ionisation', function () {
+test('generateMFs from array with charge and range', function () {
   var mfsArray = ['(H+)2-3'];
   var result = generateMFs(mfsArray, { ionizations: '(H+)-2,Na+' });
-  expect(result.map((a) => a.ms.em).sort((a, b) => a - b)).toStrictEqual([0, 1.0072764523209299, 6.50276251476343, 8.334591202244264]);
+  expect(result.map((a) => a.ms.em).sort((a, b) => a - b)).toStrictEqual([
+    0,
+    1.0072764523209299,
+    6.50276251476343,
+    8.334591202244264
+  ]);
 });

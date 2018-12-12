@@ -45,6 +45,7 @@ function sequenceToMF(sequence, options = {}) {
         );
         break;
       default:
+        // eslint-disable-next-line no-console
         console.warn(`Nucleotide sequenceToMF: unknown kind: ${kind}`);
     }
   }

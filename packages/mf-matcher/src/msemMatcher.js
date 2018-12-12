@@ -19,7 +19,6 @@
  * @param {number}   [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {object}   [options.atoms] - object of atom:{min, max}
  * @return {boolean}
- * @return {boolean}
  */
 const getMsInfo = require('mf-utilities/src/getMsInfo.js');
 

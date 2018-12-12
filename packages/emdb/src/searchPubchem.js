@@ -41,11 +41,14 @@ module.exports = async function searchPubchem(mass, options = {}) {
         let mfInfo = new mfParser.MF(mf.mf).getInfo();
         mfInfo.ionization = ionizations[i];
         mfInfo.em = mfInfo.monoisotopicMass;
-        mfInfo.ms =
-            getMsInfo(mfInfo, { targetMass: mass, allowNeutralMolecules });
+        mfInfo.ms = getMsInfo(mfInfo, {
+          targetMass: mass,
+          allowNeutralMolecules
+        });
         mfInfo.info = { nbPubchemEntries: mf.total };
         mfs.push(mfInfo);
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.warn(`${e}`);
       }
     }

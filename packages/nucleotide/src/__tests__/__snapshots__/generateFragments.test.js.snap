@@ -9,7 +9,7 @@ Array [
 ]
 `;
 
-exports[`test generate fragments nucleotide to sequence of HODampDtmpDcmpH 2`] = `
+exports[`test generate fragments nucleotide to sequence of HODampDtmpDcmpH and many fragments 1`] = `
 Array [
   "HODampO-1$a1",
   "HC5H6O4P$a1 - B",
@@ -29,5 +29,12 @@ Array [
   "DtmpDcmpH$x2",
   "O-2H-1P-1DtmpDcmpH$y2",
   "O-3H-2P-1DtmpDcmpH$z2",
+]
+`;
+
+exports[`test generate fragments nucleotide to sequence of OHDampDtmpDcmpH 1`] = `
+Array [
+  "HODampO-1$a1",
+  "HODampDtmpO-1$a2",
 ]
 `;

@@ -1,6 +1,5 @@
 'use strict';
 
-
 const elements = require('chemical-elements/src/elementsAndStableIsotopesObject.js');
 const groups = require('chemical-groups/src/groupsObject.js');
 
@@ -40,7 +39,7 @@ module.exports = function getInfo(parts) {
           break;
         }
 
-        case Kind.ATOM:
+        case Kind.ATOM: {
           let element = elements[line.value];
           if (!element) {
             element = groups[line.value];
@@ -49,6 +48,8 @@ module.exports = function getInfo(parts) {
           }
           addMass(results, line.value, element.mass * line.multiplier);
           break;
+        }
+
         case Kind.CHARGE:
           break;
         default:

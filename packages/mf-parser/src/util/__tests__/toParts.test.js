@@ -7,7 +7,11 @@ var tests = [
   { mf: 'C2', result: [[{ kind: 'atom', value: 'C', multiplier: 2 }]] },
   { mf: 'CCC', result: [[{ kind: 'atom', value: 'C', multiplier: 3 }]] },
   { mf: '2CCC', result: [[{ kind: 'atom', value: 'C', multiplier: 6 }]] },
-  { mf: '2C(C(C2)2)3', result: [[{ kind: 'atom', value: 'C', multiplier: 32 }]] }, {
+  {
+    mf: '2C(C(C2)2)3',
+    result: [[{ kind: 'atom', value: 'C', multiplier: 32 }]]
+  },
+  {
     mf: '3C.2C.C4',
     result: [
       [{ kind: 'atom', value: 'C', multiplier: 3 }],
@@ -40,8 +44,7 @@ var tests = [
   },
   {
     mf: 'D',
-    result:
-        [[{ kind: 'isotope', value: { atom: 'H', isotope: 2 }, multiplier: 1 }]]
+    result: [[{ kind: 'isotope', value: { atom: 'H', isotope: 2 }, multiplier: 1 }]]
   }
 ];
 
@@ -49,12 +52,8 @@ const toParts = require('../toParts');
 
 test('toParts', function () {
   for (let aTest of tests) {
-    checkMF(aTest.mf, aTest.result);
+    var parsed = parse(aTest.mf);
+    var parts = toParts(parsed);
+    expect(parts).toMatchObject(aTest.result);
   }
 });
-
-function checkMF(mf, result) {
-  var parsed = parse(mf);
-  var parts = toParts(parsed);
-  expect(parts).toMatchObject(result);
-}

@@ -5,13 +5,14 @@ const { generateFragments } = require('..');
 describe('test generate fragments', () => {
   it('nucleotide to sequence of OHDampDtmpDcmpH', () => {
     let fragments = generateFragments('HODampDtmpDcmpH', { a: true });
+    expect(fragments).toMatchSnapshot();
   });
   it('nucleotide to sequence of HODampDtmpDcmpH', () => {
     let fragments = generateFragments('HODampDtmpDcmpH', { a: true, ab: true });
     expect(fragments).toMatchSnapshot();
   });
 
-  it('nucleotide to sequence of HODampDtmpDcmpH', () => {
+  it('nucleotide to sequence of HODampDtmpDcmpH and many fragments', () => {
     let fragments = generateFragments('HODampDtmpDcmpH', {
       a: true,
       ab: true,

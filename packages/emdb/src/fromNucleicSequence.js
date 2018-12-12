@@ -41,7 +41,7 @@ const combineMFs = require('mf-generator');
  * @param {number} [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  */
 
-module.exports = function fromNucleicSequence(sequence, options = {}) {
+module.exports = function fromNucleicSequence(sequencesString, options = {}) {
   const {
     mfsArray = [],
     fragmentation = {},
@@ -50,7 +50,7 @@ module.exports = function fromNucleicSequence(sequence, options = {}) {
     info = {}
   } = options;
 
-  let sequences = nucleotide.sequenceToMF(sequence, info).split('.');
+  let sequences = nucleotide.sequenceToMF(sequencesString, info).split('.');
   let fragmentsArray = sequences.slice();
 
   // calculate fragmentation

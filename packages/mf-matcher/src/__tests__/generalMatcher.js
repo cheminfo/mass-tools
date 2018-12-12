@@ -15,21 +15,37 @@ test('test mfFilter', () => {
     }
   };
 
-  expect(matcher(entry, { minCharge: 1 })).toBeFalsy();
-  expect(matcher(entry, { maxCharge: -1 })).toBeFalsy();
-  expect(matcher(entry, { maxCharge: 0 })).toBeTruthy();
-  expect(matcher(entry, { minCharge: -1 })).toBeTruthy();
-  expect(matcher(entry, { atoms: {
-    C: { min: 10, max: 20 }
-  } })).toBeTruthy();
-  expect(matcher(entry, { atoms: {
-    N: { min: 10, max: 20 }
-  } })).toBeFalsy();
-  expect(matcher(entry, { atoms: {
-    C: { min: 5, max: 9 }
-  } })).toBeFalsy();
-  expect(matcher(entry, { atoms: {
-    C: { min: 10, max: 20 },
-    N: { min: 0, max: 10 }
-  } })).toBeTruthy();
+  expect(matcher(entry, { minCharge: 1 })).toBe(false);
+  expect(matcher(entry, { maxCharge: -1 })).toBe(false);
+  expect(matcher(entry, { maxCharge: 0 })).toBe(true);
+  expect(matcher(entry, { minCharge: -1 })).toBe(true);
+  expect(
+    matcher(entry, {
+      atoms: {
+        C: { min: 10, max: 20 }
+      }
+    })
+  ).toBe(true);
+  expect(
+    matcher(entry, {
+      atoms: {
+        N: { min: 10, max: 20 }
+      }
+    })
+  ).toBe(false);
+  expect(
+    matcher(entry, {
+      atoms: {
+        C: { min: 5, max: 9 }
+      }
+    })
+  ).toBe(false);
+  expect(
+    matcher(entry, {
+      atoms: {
+        C: { min: 10, max: 20 },
+        N: { min: 0, max: 10 }
+      }
+    })
+  ).toBe(true);
 });
