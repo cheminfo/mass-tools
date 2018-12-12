@@ -1,10 +1,10 @@
 'use strict';
 
 class TreeMap {
-    constructor() {
-        this.root = null;
-        this.size = 0;
-    }
+  constructor() {
+    this.root = null;
+    this.size = 0;
+  }
 }
 
 TreeMap.prototype.get = require('./get.js');

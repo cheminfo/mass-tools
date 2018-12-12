@@ -74,7 +74,7 @@ module.exports = function preprocessRanges(ranges) {
     if (possibility.mf !== info.mf) possibility.isGroup = true;
   }
   possibilities = possibilities.filter(
-    r => r.originalMinCount !== 0 || r.originalMaxCount !== 0
+    (r) => r.originalMinCount !== 0 || r.originalMaxCount !== 0
   );
   // we will sort the way we analyse the data
   // 1. The one possibility parameter

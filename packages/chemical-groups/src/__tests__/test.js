@@ -8,7 +8,7 @@ test('data size', () => {
 
 test('getGroupsObject', () => {
   var groupsObject = data.getGroupsObject();
-  expect(groupsObject.Ala).toEqual({
+  expect(groupsObject.Ala).toStrictEqual({
     elements: [
       { number: 3, symbol: 'C' },
       { number: 5, symbol: 'H' },

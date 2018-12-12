@@ -59,7 +59,7 @@ module.exports = function fromNucleicSequence(sequence, options = {}) {
     var fragments = nucleotide.generateFragments(sequence, fragmentation);
     if (i === 1) {
       // complementary sequence
-      fragments = fragments.map(fragment => fragment.replace(/\$/g, '$cmp-'));
+      fragments = fragments.map((fragment) => fragment.replace(/\$/g, '$cmp-'));
     }
     fragmentsArray = fragmentsArray.concat(fragments);
   }

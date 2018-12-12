@@ -1,9 +1,10 @@
 'use strict';
 
-const fetch = require('./util/fetchJSON');
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 const mfParser = require('mf-parser');
 const getMsInfo = require('mf-utilities/src/getMsInfo');
+
+const fetch = require('./util/fetchJSON');
 
 /**
  * Generates a database 'pubchem' based on all molecular formula available
@@ -41,8 +42,8 @@ module.exports = async function searchPubchem(mass, options = {}) {
         mfInfo.ionization = ionizations[i];
         mfInfo.em = mfInfo.monoisotopicMass;
         mfInfo.ms =
-            getMsInfo(mfInfo, {targetMass: mass, allowNeutralMolecules});
-        mfInfo.info = {nbPubchemEntries: mf.total};
+            getMsInfo(mfInfo, { targetMass: mass, allowNeutralMolecules });
+        mfInfo.info = { nbPubchemEntries: mf.total };
         mfs.push(mfInfo);
       } catch (e) {
         console.warn(`${e}`);

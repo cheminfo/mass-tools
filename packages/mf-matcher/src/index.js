@@ -1,6 +1,6 @@
 'use strict';
 
 module.exports = {
-    general: require('./generalMatcher'),
-    msem: require('./msemMatcher')
+  general: require('./generalMatcher'),
+  msem: require('./msemMatcher')
 };

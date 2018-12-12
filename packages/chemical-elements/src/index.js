@@ -5,7 +5,7 @@ const { ELECTRON_MASS } = require('./constants');
 
 function getElementsObject() {
   var object = {};
-  elements.forEach(e => {
+  elements.forEach((e) => {
     object[e.symbol] = e;
   });
   return object;

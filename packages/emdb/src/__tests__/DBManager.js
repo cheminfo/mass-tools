@@ -8,7 +8,7 @@ test('test DBManager contaminants and knapSack', async () => {
   await dbManager.loadContaminants();
   await dbManager.loadKnapSack();
 
-  expect(dbManager.listDatabases()).toEqual(['contaminants', 'knapSack']);
+  expect(dbManager.listDatabases()).toStrictEqual(['contaminants', 'knapSack']);
   expect(dbManager.get('contaminants').length).toBeGreaterThan(1000);
 }, 30000);
 
@@ -17,6 +17,6 @@ test('test DBManager fromMonoisotopicMass', () => {
 
   dbManager.fromMonoisotopicMass(300, { ionizations: 'H+,Na+' });
 
-  expect(dbManager.listDatabases()).toEqual(['monoisotopic']);
+  expect(dbManager.listDatabases()).toStrictEqual(['monoisotopic']);
   expect(dbManager.get('monoisotopic').length).toBeGreaterThan(100);
 });

@@ -12,17 +12,17 @@
 
 
 module.exports = function unsaturationMatcher(entry, options = {}) {
-    const {
-        min = Number.MIN_SAFE_INTEGER,
-        max = Number.MAX_SAFE_INTEGER,
-        onlyInteger,
-        onlyNonInteger,
-    } = options;
+  const {
+    min = Number.MIN_SAFE_INTEGER,
+    max = Number.MAX_SAFE_INTEGER,
+    onlyInteger,
+    onlyNonInteger,
+  } = options;
 
-    if (entry.unsaturation !== undefined) {
-        if (entry.unsaturation < min || entry.unsaturation > max) return false;
-        if (onlyInteger && !Number.isInteger(entry.unsaturation)) return false;
-        if (onlyNonInteger && Number.isInteger(entry.unsaturation)) return false;
-    }
-    return true;
+  if (entry.unsaturation !== undefined) {
+    if (entry.unsaturation < min || entry.unsaturation > max) return false;
+    if (onlyInteger && !Number.isInteger(entry.unsaturation)) return false;
+    if (onlyNonInteger && Number.isInteger(entry.unsaturation)) return false;
+  }
+  return true;
 };

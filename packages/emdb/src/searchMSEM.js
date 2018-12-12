@@ -26,42 +26,42 @@ Search for an experimental monoisotopic mass
 */
 
 module.exports = function searchMSEM(msem, options = {}) {
-    let filter = Object.assign({}, options.filter || {}, { targetMass: msem });
-    let { databases = Object.keys(this.databases), flatten = false } = options;
+  let filter = Object.assign({}, options.filter || {}, { targetMass: msem });
+  let { databases = Object.keys(this.databases), flatten = false } = options;
 
-    let ionizations = preprocessIonizations(options.ionizations);
-    let results = {};
+  let ionizations = preprocessIonizations(options.ionizations);
+  let results = {};
+  for (let database of databases) {
+    results[database] = [];
+  }
+  for (let ionization of ionizations) {
+    filter.ionization = ionization;
     for (let database of databases) {
-        results[database] = [];
-    }
-    for (let ionization of ionizations) {
-        filter.ionization = ionization;
-        for (let database of databases) {
-            for (let entry of this.databases[database]) {
-                let match = matcher(entry, filter);
-                if (match) {
-                    results[database].push(
-                        Object.assign({}, entry, { ms: match })
-                    );
-                }
-            }
+      for (let entry of this.databases[database]) {
+        let match = matcher(entry, filter);
+        if (match) {
+          results[database].push(
+            Object.assign({}, entry, { ms: match })
+          );
         }
+      }
     }
+  }
 
-    if (flatten) {
-        let flattenResults = [];
-        for (let database of databases) {
-            for (let entry of results[database]) {
-                entry.database = database;
-                flattenResults.push(entry);
-            }
-        }
-        flattenResults.sort((a, b) => a.ms.ppm - b.ms.ppm);
-        return flattenResults;
-    } else {
-        Object.keys(results).forEach((k) =>
-            results[k].sort((a, b) => a.ms.ppm - b.ms.ppm)
-        );
-        return results;
+  if (flatten) {
+    let flattenResults = [];
+    for (let database of databases) {
+      for (let entry of results[database]) {
+        entry.database = database;
+        flattenResults.push(entry);
+      }
     }
+    flattenResults.sort((a, b) => a.ms.ppm - b.ms.ppm);
+    return flattenResults;
+  } else {
+    Object.keys(results).forEach((k) =>
+      results[k].sort((a, b) => a.ms.ppm - b.ms.ppm)
+    );
+    return results;
+  }
 };

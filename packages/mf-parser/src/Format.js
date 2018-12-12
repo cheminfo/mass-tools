@@ -5,8 +5,8 @@
  */
 
 module.exports = {
-    SUBSCRIPT: 'subscript',
-    SUPERSCRIPT: 'superscript',
-    SUPERIMPOSE: 'superimpose',
-    TEXT: 'text'
+  SUBSCRIPT: 'subscript',
+  SUPERSCRIPT: 'superscript',
+  SUPERIMPOSE: 'superimpose',
+  TEXT: 'text'
 };

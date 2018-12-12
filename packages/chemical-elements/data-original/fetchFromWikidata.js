@@ -4,8 +4,7 @@ var Wikidata = require('wikidata-sdk');
 var fetch = require('node-fetch');
 
 async function compileIsotopes() {
-
-    var url = Wikidata.sparqlQuery(`
+  var url = Wikidata.sparqlQuery(`
     PREFIX wd: <http://www.wikidata.org/entity/>
     PREFIX wdt: <http://www.wikidata.org/prop/direct/>
     
@@ -36,15 +35,15 @@ async function compileIsotopes() {
     ORDER BY ?protons
     LIMIT 10
        `
-    );
+  );
 
-    var result = await fetch(url);
-    var data = await result.text();
+  var result = await fetch(url);
+  var data = await result.text();
 
-    // eslint-disable-next-line no-console
-    console.log(data);
+  // eslint-disable-next-line no-console
+  console.log(data);
 
-    return true;
+  return true;
 }
 
 compileIsotopes();

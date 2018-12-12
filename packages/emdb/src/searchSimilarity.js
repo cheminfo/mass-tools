@@ -32,62 +32,62 @@ Search for an experimental monoisotopic mass and calculate the similarity
 */
 
 module.exports = function searchSimilarity(msem, options = {}) {
-    const {
-        similarity = {},
-    } = options;
+  const {
+    similarity = {},
+  } = options;
 
-    if (!this.experimentalSpectrum || !this.experimentalSpectrum.x || !this.experimentalSpectrum.x.length > 0) {
-        throw Error('You need to add an experimental spectrum first using setMassSpectrum');
+  if (!this.experimentalSpectrum || !this.experimentalSpectrum.x || !this.experimentalSpectrum.x.length > 0) {
+    throw Error('You need to add an experimental spectrum first using setMassSpectrum');
+  }
+
+  if (!msem) {
+    throw Error('You need to specify a target mass');
+  }
+
+
+  // the result of this query will be stored in a property 'ms'
+  let results = this.searchMSEM(msem, options);
+  let flatEntries = [];
+  if (!options.flatten) {
+    for (let database of Object.keys(results)) {
+      for (let entry of results[database]) {
+        flatEntries.push(entry);
+      }
     }
+  } else {
+    flatEntries = results;
+  }
 
-    if (!msem) {
-        throw Error('You need to specify a target mass');
+  const {
+    widthFunction,
+  } = options;
+
+
+  // we need to calculate the similarity of the isotopic distribution
+  let similarityProcessor = new Similarity(similarity);
+  similarityProcessor.setPeaks1([this.experimentalSpectrum.x, this.experimentalSpectrum.y]);
+
+  let targetMass = this.experimentalSpectrum.x[0];
+
+  for (let entry of flatEntries) {
+    let isotopicDistribution = new IsotopicDistribution(entry.mf + entry.ionization.mf);
+    let distribution = isotopicDistribution.getDistribution();
+
+    if (widthFunction) {
+      var width = widthFunction(targetMass);
+      similarityProcessor.setTrapezoid(width.bottom, width.top);
     }
+    similarityProcessor.setPeaks2([distribution.xs, distribution.ys]);
+    let result = similarityProcessor.getSimilarity();
 
+    entry.ms.similarity = {
+      value: result.similarity,
+      experiment: result.extract1,
+      theoretical: result.extract2,
+      difference: result.diff,
+    };
+  }
 
-    // the result of this query will be stored in a property 'ms'
-    let results = this.searchMSEM(msem, options);
-    let flatEntries = [];
-    if (!options.flatten) {
-        for (let database of Object.keys(results)) {
-            for (let entry of results[database]) {
-                flatEntries.push(entry);
-            }
-        }
-    } else {
-        flatEntries = results;
-    }
-
-    const {
-        widthFunction,
-    } = options;
-
-
-    // we need to calculate the similarity of the isotopic distribution
-    let similarityProcessor = new Similarity(similarity);
-    similarityProcessor.setPeaks1([this.experimentalSpectrum.x, this.experimentalSpectrum.y]);
-
-    let targetMass = this.experimentalSpectrum.x[0];
-
-    for (let entry of flatEntries) {
-        let isotopicDistribution = new IsotopicDistribution(entry.mf + entry.ionization.mf);
-        let distribution = isotopicDistribution.getDistribution();
-
-        if (widthFunction) {
-            var width = widthFunction(targetMass);
-            similarityProcessor.setTrapezoid(width.bottom, width.top);
-        }
-        similarityProcessor.setPeaks2([distribution.xs, distribution.ys]);
-        let result = similarityProcessor.getSimilarity();
-
-        entry.ms.similarity = {
-            value: result.similarity,
-            experiment: result.extract1,
-            theoretical: result.extract2,
-            difference: result.diff,
-        };
-    }
-
-    return results;
+  return results;
 };
 

@@ -27,7 +27,7 @@ function getIsotopeRatioInfo(value) {
 
 function normalize(array) {
   let sum = array.reduce((prev, current) => prev + current, 0);
-  return array.map(a => a / sum);
+  return array.map((a) => a / sum);
 }
 
 module.exports = getIsotopeRatioInfo;

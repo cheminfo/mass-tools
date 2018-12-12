@@ -29,5 +29,5 @@ const combineMFs = require('mf-generator');
  */
 
 module.exports = function fromArray(mfsArray, options = {}) {
-    return combineMFs(mfsArray, options);
+  return combineMFs(mfsArray, options);
 };

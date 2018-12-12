@@ -24,5 +24,5 @@ const findMFs = require('mf-finder');
  */
 
 module.exports = function fromMonoisotopicMass(mass, options = {}) {
-    return findMFs(mass, options);
+  return findMFs(mass, options);
 };

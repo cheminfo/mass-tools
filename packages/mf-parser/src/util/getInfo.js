@@ -1,13 +1,15 @@
 'use strict';
 
-const partToMF = require('./partToMF');
 const elements = require('chemical-elements/src/elementsAndStableIsotopesObject.js');
 const groups = require('chemical-groups/src/groupsObject.js');
 const unsaturations = require('chemical-elements/src/unsaturationsObject.js');
-const Kind = require('../Kind');
-const { ELECTRON_MASS } = require('chemical-elements/src/constants');
-const partToAtoms = require('./partToAtoms');
 
+const Kind = require('../Kind');
+
+const { ELECTRON_MASS } = require('chemical-elements/src/constants');
+
+const partToMF = require('./partToMF');
+const partToAtoms = require('./partToAtoms');
 const isotopes = require('./getIsotopesObject');
 const getIsotopeRatioInfo = require('./getIsotopeRatioInfo');
 
@@ -31,8 +33,8 @@ module.exports = function getInfo(parts, options = {}) {
   result.monoisotopicMass = 0;
   result.mass = 0;
   result.charge = 0;
-  result.mf = result.parts.map(a => a.mf).join('.');
-  result.parts.forEach(a => {
+  result.mf = result.parts.map((a) => a.mf).join('.');
+  result.parts.forEach((a) => {
     result.mass += a.mass;
     result.monoisotopicMass += a.monoisotopicMass;
     result.charge += a.charge;
@@ -125,5 +127,4 @@ function getProcessedPart(part, customUnsaturations) {
   }
   return currentPart;
 }
-
 

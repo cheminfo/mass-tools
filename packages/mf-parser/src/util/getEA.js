@@ -1,9 +1,9 @@
 'use strict';
 
-'use strict';
 
 const elements = require('chemical-elements/src/elementsAndStableIsotopesObject.js');
 const groups = require('chemical-groups/src/groupsObject.js');
+
 const Kind = require('../Kind');
 
 const isotopes = require('./getIsotopesObject');
@@ -14,7 +14,7 @@ const getIsotopeRatioInfo = require('./getIsotopeRatioInfo');
  * @param {*} parts
  * @param {*} [options={}]
  */
-module.exports = function getInfo(parts, options = {}) {
+module.exports = function getInfo(parts) {
   var results = {};
   for (let part of parts) {
     for (let line of part) {
@@ -67,7 +67,7 @@ module.exports = function getInfo(parts, options = {}) {
     });
   }
 
-  eas.forEach(ea => {
+  eas.forEach((ea) => {
     ea.ratio = ea.mass / sum;
   });
 

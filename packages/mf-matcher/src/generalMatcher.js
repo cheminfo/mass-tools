@@ -21,40 +21,40 @@
 
 
 module.exports = function generalMatcher(entry, options = {}) {
-    const {
-        minMW = 0,
-        maxMW = +Infinity,
-        minEM = 0,
-        maxEM = +Infinity,
-        minCharge = Number.MIN_SAFE_INTEGER,
-        maxCharge = Number.MAX_SAFE_INTEGER,
-        unsaturation = {},
-        atoms
-    } = options;
+  const {
+    minMW = 0,
+    maxMW = +Infinity,
+    minEM = 0,
+    maxEM = +Infinity,
+    minCharge = Number.MIN_SAFE_INTEGER,
+    maxCharge = Number.MAX_SAFE_INTEGER,
+    unsaturation = {},
+    atoms
+  } = options;
 
-    if (entry.mw !== undefined) {
-        if ((entry.mw < minMW) || (entry.mw > maxMW)) return false;
-    }
+  if (entry.mw !== undefined) {
+    if ((entry.mw < minMW) || (entry.mw > maxMW)) return false;
+  }
 
-    if (entry.em !== undefined) {
-        if ((entry.em < minEM) || (entry.em > maxEM)) return false;
-    }
+  if (entry.em !== undefined) {
+    if ((entry.em < minEM) || (entry.em > maxEM)) return false;
+  }
 
-    if (entry.charge !== undefined) {
-        if ((entry.charge < minCharge) || (entry.charge > maxCharge)) return false;
-    }
+  if (entry.charge !== undefined) {
+    if ((entry.charge < minCharge) || (entry.charge > maxCharge)) return false;
+  }
 
-    if (unsaturation !== undefined && entry.unsaturation !== undefined) {
-        if (!require('./unsaturationMatcher')(entry, unsaturation)) return false;
-    }
+  if (unsaturation !== undefined && entry.unsaturation !== undefined) {
+    if (!require('./unsaturationMatcher')(entry, unsaturation)) return false;
+  }
 
-    if (entry.atoms !== undefined && atoms) {
-        // all the atoms of the entry must fit in the range
-        for (let atom of Object.keys(entry.atoms)) {
-            if (!atoms[atom]) return false;
-            if (entry.atoms[atom] < atoms[atom].min) return false;
-            if (entry.atoms[atom] > atoms[atom].max) return false;
-        }
+  if (entry.atoms !== undefined && atoms) {
+    // all the atoms of the entry must fit in the range
+    for (let atom of Object.keys(entry.atoms)) {
+      if (!atoms[atom]) return false;
+      if (entry.atoms[atom] < atoms[atom].min) return false;
+      if (entry.atoms[atom] > atoms[atom].max) return false;
     }
-    return true;
+  }
+  return true;
 };

@@ -1,8 +1,9 @@
 'use strict';
 
-const Kind = require('../Kind');
 const groups = require('chemical-groups/src/groupsObject.js');
 const atomSorter = require('atom-sorter');
+
+const Kind = require('../Kind');
 
 /**
  *
@@ -141,7 +142,7 @@ function expandGroups(parts) {
         }
       }
     }
-    if (expanded) part.lines = part.lines.filter(a => a);
+    if (expanded) part.lines = part.lines.filter((a) => a);
   }
 }
 

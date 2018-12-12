@@ -6,7 +6,7 @@ test('MF of C', () => {
   var mf = new MF('C');
   var parts = mf.toParts();
 
-  expect(parts).toEqual([[{ kind: 'atom', value: 'C', multiplier: 1 }]]);
+  expect(parts).toStrictEqual([[{ kind: 'atom', value: 'C', multiplier: 1 }]]);
 
   var newMF = mf.toMF();
   expect(newMF).toBe('C');
@@ -18,7 +18,7 @@ test('MF of C', () => {
 
   let info = mf.getInfo();
 
-  expect(info).toEqual({
+  expect(info).toStrictEqual({
     monoisotopicMass: 12,
     mass: 12.010735896735248,
     charge: 0,
@@ -33,8 +33,8 @@ test('MF of D', () => {
   var infoD = mfD.getInfo();
   var mf2H = new MF('[2H]');
   var info2H = mf2H.getInfo();
-  expect(infoD).toEqual(info2H);
-  expect(infoD).toEqual({
+  expect(infoD).toStrictEqual(info2H);
+  expect(infoD).toStrictEqual({
     atoms: { H: 1 },
     charge: 0,
     mass: 2.01410177812,
@@ -48,7 +48,7 @@ test('MF of Et3N.HCl', () => {
   var mf = new MF('Et3N.HCl');
   var parts = mf.toParts();
 
-  expect(parts).toEqual([
+  expect(parts).toStrictEqual([
     [
       { kind: 'atom', value: 'C', multiplier: 6 },
       { kind: 'atom', value: 'H', multiplier: 15 },
@@ -69,7 +69,7 @@ test('MF of Et3N.HCl', () => {
   expect(html).toBe('C<sub>6</sub>H<sub>15</sub>N•HCl');
 
   let info = mf.getInfo();
-  expect(info).toEqual({
+  expect(info).toStrictEqual({
     parts: [
       {
         mass: 101.19022990269394,
@@ -99,7 +99,7 @@ test('MF of (Me2CH)3N no expand', () => {
   var mf = new MF('(Me2CH)3N');
   var parts = mf.toParts({ expand: false });
 
-  expect(parts).toEqual([
+  expect(parts).toStrictEqual([
     [
       { kind: 'atom', value: 'C', multiplier: 3 },
       { kind: 'atom', value: 'H', multiplier: 3 },
@@ -112,7 +112,7 @@ test('MF of (Me2CH)3N no expand', () => {
   expect(newMF).toBe('C3H3Me6N');
 
   let info = mf.getInfo();
-  expect(info).toEqual({
+  expect(info).toStrictEqual({
     mass: 143.27008211723435,
     monoisotopicMass: 143.16739968126,
     charge: 0,
@@ -126,7 +126,7 @@ test('MF of (Me2CH)3N with expand', () => {
   var mf = new MF('(Me2CH)3N');
   var parts = mf.toParts({ expand: true });
 
-  expect(parts).toEqual([
+  expect(parts).toStrictEqual([
     [
       { kind: 'atom', value: 'C', multiplier: 9 },
       { kind: 'atom', value: 'H', multiplier: 21 },
@@ -138,7 +138,7 @@ test('MF of (Me2CH)3N with expand', () => {
   expect(newMF).toBe('C9H21N');
 
   let info = mf.getInfo();
-  expect(info).toEqual({
+  expect(info).toStrictEqual({
     mass: 143.27008211723435,
     monoisotopicMass: 143.16739968126,
     charge: 0,
@@ -152,7 +152,7 @@ test('MF of (+)SO4(+)(-2)2', () => {
   var mf = new MF('(+)SO4(+)(-2)2');
   var parts = mf.toParts();
 
-  expect(parts).toEqual([
+  expect(parts).toStrictEqual([
     [
       { kind: 'atom', value: 'O', multiplier: 4 },
       { kind: 'atom', value: 'S', multiplier: 1 },
@@ -164,7 +164,7 @@ test('MF of (+)SO4(+)(-2)2', () => {
   expect(newMF).toBe('O4S(-2)');
 
   let info = mf.getInfo({ customUnsaturations: { S: 4 } });
-  expect(info).toEqual({
+  expect(info).toStrictEqual({
     monoisotopicMass: 95.95172965268,
     mass: 96.06240710340018,
     charge: -2,
@@ -191,7 +191,7 @@ test('test unsaturation with charges', () => {
 test('MF of NC[13C][15N]2NN2', () => {
   var mf = new MF('NC[13C][15N]2NN2');
   var parts = mf.toParts();
-  expect(parts).toEqual([
+  expect(parts).toStrictEqual([
     [
       { kind: 'atom', value: 'C', multiplier: 1 },
       { kind: 'isotope', value: { atom: 'C', isotope: 13 }, multiplier: 1 },
@@ -201,7 +201,7 @@ test('MF of NC[13C][15N]2NN2', () => {
   ]);
 
   let info = mf.getInfo();
-  expect(info).toEqual({
+  expect(info).toStrictEqual({
     monoisotopicMass: 111.01586865055,
     mass: 111.04112137534844,
     charge: 0,
@@ -217,7 +217,7 @@ test('MF of NC[13C][15N]2NN2', () => {
 test('MF of DNA HODampDtmpDcmpDgmpH  ', () => {
   var mf = new MF('HODampDtmpDgmpDcmpH');
   var info = mf.getInfo();
-  expect(info).toEqual({
+  expect(info).toStrictEqual({
     mass: 1253.8043977028433,
     monoisotopicMass: 1253.21310019311,
     charge: 0,
@@ -230,7 +230,7 @@ test('MF of DNA HODampDtmpDcmpDgmpH  ', () => {
 test('MF of RNA HOAmpUmpH  ', () => {
   var mf = new MF('HOAmpUmpH');
   var info = mf.getInfo();
-  expect(info).toEqual({
+  expect(info).toStrictEqual({
     mass: 653.388021231099,
     monoisotopicMass: 653.08838712715,
     charge: 0,
@@ -243,7 +243,7 @@ test('MF of RNA HOAmpUmpH  ', () => {
 test('MF of CC{50,50}H', () => {
   var mf = new MF('HC{50,50}C');
   var parts = mf.toParts();
-  expect(parts).toEqual([
+  expect(parts).toStrictEqual([
     [
       { kind: 'atom', value: 'C', multiplier: 1 },
       {
@@ -259,7 +259,7 @@ test('MF of CC{50,50}H', () => {
   expect(newMF).toBe('CC{50,50}H');
 
   let info = mf.getInfo();
-  expect(info).toEqual({
+  expect(info).toStrictEqual({
     monoisotopicMass: 25.00782503223,
     mass: 25.520354068326025,
     charge: 0,
@@ -276,7 +276,7 @@ test('MF of H(+)(H+)-1H', () => {
   expect(newMF).toBe('H');
 
   let info = mf.getInfo();
-  expect(info).toEqual({
+  expect(info).toStrictEqual({
     atoms: { H: 1 },
     charge: 0,
     mass: 1.0079407540557772,

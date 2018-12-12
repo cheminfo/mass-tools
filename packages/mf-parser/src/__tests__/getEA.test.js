@@ -1,6 +1,7 @@
 'use strict';
 
 const toMatchCloseTo = require('jest-matcher-deep-close-to').toMatchCloseTo;
+
 expect.extend({ toMatchCloseTo });
 
 var MF = require('../MF');
@@ -15,9 +16,9 @@ test('getEA', () => {
   let result2 = new MF('2C2').getEA();
   let result3 = new MF('C4').getEA();
   let result4 = new MF('C2 . 2C').getEA();
-  expect(result1).toEqual(result2);
-  expect(result1).toEqual(result3);
-  expect(result1).toEqual(result4);
+  expect(result1).toStrictEqual(result2);
+  expect(result1).toStrictEqual(result3);
+  expect(result1).toStrictEqual(result4);
 
   expect(new MF('[13C]').getEA()).toMatchCloseTo(
     [{ element: 'C', mass: 13.0033, ratio: 1 }],

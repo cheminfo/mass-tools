@@ -39,8 +39,9 @@ module.exports = function generateMFs(keys, options = {}) {
   if (options.canonizeMF === undefined) options.canonizeMF = true;
   options.ionizations = preprocessIonizations(options.ionizations);
 
-  if (!Array.isArray(keys))
+  if (!Array.isArray(keys)) {
     throw new Error('You need to specify an array of strings or arrays');
+  }
 
   // we allow String delimited by ". , or ;" instead of an array
   for (let i = 0; i < keys.length; i++) {
@@ -100,10 +101,10 @@ module.exports = function generateMFs(keys, options = {}) {
 
   if (uniqueMFs) {
     var uniqueMFsObject = {};
-    results.forEach(r => {
+    results.forEach((r) => {
       uniqueMFsObject[r.mf + r.ionization.mf] = r;
     });
-    results = Object.keys(uniqueMFsObject).map(k => uniqueMFsObject[k]);
+    results = Object.keys(uniqueMFsObject).map((k) => uniqueMFsObject[k]);
   }
   results.sort((a, b) => a.em - b.em);
   return results;
@@ -202,7 +203,7 @@ function appendResult(results, currents, keys, options = {}) {
 
 function processRange(string, comment) {
   var results = [];
-  var parts = string.split(/([0-9]+-[0-9]+)/).filter(v => v); // remove empty parts
+  var parts = string.split(/([0-9]+-[0-9]+)/).filter((v) => v); // remove empty parts
   let position = -1;
   var mfs = [];
   for (let i = 0; i < parts.length; i++) {

@@ -9,18 +9,18 @@ const toHtml = require('./util/toHtml');
  * @param {String} mf String containing the molecular formula
  */
 function parseToHtml(mf) {
-    var parsed = parse(mf);
-    var display = toDisplay(parsed);
-    return toHtml(display);
+  var parsed = parse(mf);
+  var display = toDisplay(parsed);
+  return toHtml(display);
 }
 
 module.exports = {
-    Kind: require('./Kind'),
-    Format: require('./Format'),
-    Style: require('./Style'),
-    parse: require('./parse'),
-    toDisplay,
-    toHtml,
-    parseToHtml,
-    MF: require('./MF'),
+  Kind: require('./Kind'),
+  Format: require('./Format'),
+  Style: require('./Style'),
+  parse: require('./parse'),
+  toDisplay,
+  toHtml,
+  parseToHtml,
+  MF: require('./MF'),
 };
