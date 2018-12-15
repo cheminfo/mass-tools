@@ -49,6 +49,7 @@ class IsotopicDistribution {
         this.parts.push(part);
       }
     }
+    this.cachedDistribution = undefined;
     this.options = options;
     this.fwhm = options.fwhm === undefined ? 0.01 : options.fwhm;
     this.minY = options.minY === undefined ? 1e-8 : options.minY;
@@ -63,6 +64,7 @@ class IsotopicDistribution {
    * @return {Distribution} returns the total distribution (for all parts)
    */
   getDistribution() {
+    if (this.cachedDistribution) return this.cachedDistribution;
     let options = {
       maxLines: this.maxLines,
       minY: this.minY,
@@ -114,6 +116,7 @@ class IsotopicDistribution {
     }
     finalDistribution.join(this.fwhm);
     this.confidence /= this.parts.length;
+    this.cachedDistribution = finalDistribution;
     return finalDistribution;
   }
 
