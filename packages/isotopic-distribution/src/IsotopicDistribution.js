@@ -52,6 +52,8 @@ class IsotopicDistribution {
     this.cachedDistribution = undefined;
     this.options = options;
     this.fwhm = options.fwhm === undefined ? 0.01 : options.fwhm;
+    // if fwhm is under 1e-8 there are some artifacts in the spectra
+    if (this.fwhm < 1e-8) this.fwhm = 1e-8;
     this.minY = options.minY === undefined ? 1e-8 : options.minY;
     this.maxLines = options.maxLines || 5000;
   }
@@ -74,7 +76,10 @@ class IsotopicDistribution {
     this.confidence = 0;
     for (let i = 0; i < this.parts.length; i++) {
       let part = this.parts[i];
-      let totalDistribution = new Distribution([{ x: 0, y: 1 }]);
+      let totalDistribution = new Distribution([{
+        x: 0,
+        y: 1
+      }]);
 
       for (let isotope of part.isotopesInfo.isotopes) {
         if (isotope.number) {
