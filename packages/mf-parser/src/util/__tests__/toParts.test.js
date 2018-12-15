@@ -50,10 +50,8 @@ var tests = [
 
 const toParts = require('../toParts');
 
-test('toParts', function () {
-  for (let aTest of tests) {
-    var parsed = parse(aTest.mf);
-    var parts = toParts(parsed);
-    expect(parts).toMatchObject(aTest.result);
-  }
+test.each(tests)('toParts %p', function (aTest) {
+  var parsed = parse(aTest.mf);
+  var parts = toParts(parsed);
+  expect(parts).toMatchObject(aTest.result);
 });

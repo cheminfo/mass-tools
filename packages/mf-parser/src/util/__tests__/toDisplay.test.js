@@ -82,9 +82,7 @@ var tests = [
 
 const toDisplay = require('../toDisplay');
 
-test('toDisplay', function () {
-  for (let aTest of tests) {
-    var display = toDisplay(aTest.parsed);
-    expect(display).toMatchObject(aTest.result);
-  }
+test.each(tests)('toDisplay', function (aTest) {
+  var display = toDisplay(aTest.parsed);
+  expect(display).toMatchObject(aTest.result);
 });

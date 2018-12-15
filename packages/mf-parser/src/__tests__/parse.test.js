@@ -148,11 +148,9 @@ var tests = {
   D: [{ kind: 'atom', value: 'D' }]
 };
 
-test('parse molecular formula', function () {
-  for (var key of Object.keys(tests)) {
-    let parsed = parse(key);
-    expect(parsed).toMatchObject(tests[key]);
-  }
+test.each(Object.keys(tests))('parse molecular formula %s', function (key) {
+  let parsed = parse(key);
+  expect(parsed).toMatchObject(tests[key]);
 });
 
 test('not same opening and closing parenthesis', function () {
