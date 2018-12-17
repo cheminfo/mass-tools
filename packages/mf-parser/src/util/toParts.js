@@ -20,6 +20,12 @@ module.exports = function toParts(lines, options = {}) {
   parts.push(currentPart);
   for (let line of lines) {
     switch (line.kind) {
+      case Kind.ATOM:
+      case Kind.ISOTOPE_RATIO:
+      case Kind.ISOTOPE:
+      case Kind.CHARGE:
+        currentPart.lines.push(Object.assign({}, line, { multiplier: 1 }));
+        break;
       case Kind.OPENING_PARENTHESIS:
         openingParenthesis(currentPart);
         break;
@@ -36,12 +42,6 @@ module.exports = function toParts(lines, options = {}) {
         globalPartMultiplier(currentPart);
         currentPart = createNewPart();
         parts.push(currentPart);
-        break;
-      case Kind.ATOM:
-      case Kind.ISOTOPE_RATIO:
-      case Kind.ISOTOPE:
-      case Kind.CHARGE:
-        currentPart.lines.push(Object.assign({}, line, { multiplier: 1 }));
         break;
       case Kind.COMMENT: // we ignore comments to create the parts and canonized MF
         break;

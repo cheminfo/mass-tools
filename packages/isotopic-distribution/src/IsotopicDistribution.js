@@ -76,10 +76,12 @@ class IsotopicDistribution {
     this.confidence = 0;
     for (let i = 0; i < this.parts.length; i++) {
       let part = this.parts[i];
-      let totalDistribution = new Distribution([{
-        x: 0,
-        y: 1
-      }]);
+      let totalDistribution = new Distribution([
+        {
+          x: 0,
+          y: 1
+        }
+      ]);
 
       for (let isotope of part.isotopesInfo.isotopes) {
         if (isotope.number) {

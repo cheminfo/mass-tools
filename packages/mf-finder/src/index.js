@@ -12,7 +12,7 @@ const TargetMassCache = require('./TargetMassCache');
  * {number} [targetMass]
  * {object} [options={}]
  * {string} [options.ionizations=''] - comma separated list of ionizations
- * * @return {}
+ * @return {}
  */
 
 let targetMassCache;
@@ -35,17 +35,17 @@ module.exports = function findMF(targetMass, options = {}) {
   let filterUnsaturation = unsaturation ? true : false;
   // we calculate not the real unsaturation but the one before dividing by 2 + 1
   let fakeMinUnsaturation =
-        unsaturation.min === undefined
-          ? Number.MIN_SAFE_INTEGER
-          : (unsaturation.min - 1) * 2;
+    unsaturation.min === undefined
+      ? Number.MIN_SAFE_INTEGER
+      : (unsaturation.min - 1) * 2;
   let fakeMaxUnsaturation =
-        unsaturation.max === undefined
-          ? Number.MAX_SAFE_INTEGER
-          : (unsaturation.max - 1) * 2;
+    unsaturation.max === undefined
+      ? Number.MAX_SAFE_INTEGER
+      : (unsaturation.max - 1) * 2;
 
   let filterCharge =
-        minCharge !== Number.MIN_SAFE_INTEGER ||
-        maxCharge !== Number.MAX_SAFE_INTEGER;
+    minCharge !== Number.MIN_SAFE_INTEGER ||
+    maxCharge !== Number.MAX_SAFE_INTEGER;
 
   let result = {
     mfs: [],
@@ -100,31 +100,27 @@ module.exports = function findMF(targetMass, options = {}) {
         let isOdd = Math.abs(unsaturationValue % 2);
         if (
           (unsaturation.onlyInteger && isOdd === 1) ||
-                    (unsaturation.onlyNonInteger && isOdd === 0) ||
-                    fakeMinUnsaturation > unsaturationValue ||
-                    fakeMaxUnsaturation < unsaturationValue
+          (unsaturation.onlyNonInteger && isOdd === 0) ||
+          fakeMinUnsaturation > unsaturationValue ||
+          fakeMaxUnsaturation < unsaturationValue
         ) {
           isValid = false;
         }
       }
       if (
         filterCharge &&
-                (lastPossibility.currentCharge < minCharge ||
-                    lastPossibility.currentCharge > maxCharge)
+        (lastPossibility.currentCharge < minCharge ||
+          lastPossibility.currentCharge > maxCharge)
       ) {
         isValid = false;
       }
 
       if (isValid) {
-        let minMass = targetMassCache.getMinMass(
-          lastPossibility.currentCharge
-        );
-        let maxMass = targetMassCache.getMaxMass(
-          lastPossibility.currentCharge
-        );
+        let minMass = targetMassCache.getMinMass(lastPossibility.currentCharge);
+        let maxMass = targetMassCache.getMaxMass(lastPossibility.currentCharge);
         if (
           lastPossibility.currentMonoisotopicMass < minMass ||
-                    lastPossibility.currentMonoisotopicMass > maxMass
+          lastPossibility.currentMonoisotopicMass > maxMass
         ) {
           isValid = false;
         }
@@ -147,9 +143,9 @@ module.exports = function findMF(targetMass, options = {}) {
       while (currentPosition < maxPosition && currentPosition >= 0) {
         currentAtom = possibilities[currentPosition];
         previousAtom =
-                    currentPosition === 0
-                      ? currentIonization
-                      : possibilities[currentPosition - 1];
+          currentPosition === 0
+            ? currentIonization
+            : possibilities[currentPosition - 1];
         if (currentAtom.currentCount < currentAtom.currentMaxCount) {
           currentAtom.currentCount++;
           updateCurrentAtom(currentAtom, previousAtom);
@@ -179,14 +175,13 @@ module.exports = function findMF(targetMass, options = {}) {
 
 function updateCurrentAtom(currentAtom, previousAtom) {
   currentAtom.currentMonoisotopicMass =
-        previousAtom.currentMonoisotopicMass +
-        currentAtom.em * currentAtom.currentCount;
+    previousAtom.currentMonoisotopicMass +
+    currentAtom.em * currentAtom.currentCount;
   currentAtom.currentCharge =
-        previousAtom.currentCharge +
-        currentAtom.charge * currentAtom.currentCount;
+    previousAtom.currentCharge + currentAtom.charge * currentAtom.currentCount;
   currentAtom.currentUnsaturation =
-        previousAtom.currentUnsaturation +
-        currentAtom.unsaturation * currentAtom.currentCount;
+    previousAtom.currentUnsaturation +
+    currentAtom.unsaturation * currentAtom.currentCount;
 }
 
 function getResult(
@@ -225,8 +220,7 @@ function getResult(
       }
     }
   }
-  result.unsaturation =
-        (result.unsaturation + Math.abs(result.charge)) / 2 + 1;
+  result.unsaturation = (result.unsaturation + Math.abs(result.charge)) / 2 + 1;
   result.ms = getMsInfo(result, { targetMass, allowNeutralMolecules });
   return result;
 }
@@ -240,26 +234,24 @@ function setCurrentMinMax(currentAtom, previousAtom) {
   } else {
     // no more change of charge, we can optimize
     let currentMass =
-            previousAtom !== undefined
-              ? previousAtom.currentMonoisotopicMass
-              : 0;
+      previousAtom !== undefined ? previousAtom.currentMonoisotopicMass : 0;
     let currentCharge =
-            previousAtom !== undefined ? previousAtom.currentCharge : 0;
+      previousAtom !== undefined ? previousAtom.currentCharge : 0;
     currentAtom.currentMinCount = Math.max(
       Math.floor(
         (targetMassCache.getMinMass(currentCharge) -
-                    currentMass -
-                    currentAtom.maxInnerMass) /
-                    currentAtom.em
+          currentMass -
+          currentAtom.maxInnerMass) /
+          currentAtom.em
       ),
       currentAtom.originalMinCount
     );
     currentAtom.currentMaxCount = Math.min(
       Math.floor(
         (targetMassCache.getMaxMass(currentCharge) -
-                    currentMass -
-                    currentAtom.minInnerMass) /
-                    currentAtom.em
+          currentMass -
+          currentAtom.minInnerMass) /
+          currentAtom.em
       ),
       currentAtom.originalMaxCount
     );

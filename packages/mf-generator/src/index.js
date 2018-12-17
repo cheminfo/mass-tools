@@ -193,7 +193,6 @@ function appendResult(results, currents, keys, options = {}) {
     if (canonizeMF) {
       result.mf = new MF(result.mf).toMF();
     }
-
     if (comments.length > 0) {
       result.comment = comments.join(' ');
     }
