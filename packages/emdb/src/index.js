@@ -113,6 +113,16 @@ DBManager.prototype.listDatabases = function listDatabases() {
   return Object.keys(this.databases).sort();
 };
 
+DBManager.prototype.getInfo = function getInfo() {
+  return {
+    databases: Object.keys(this.databases)
+      .sort()
+      .map((key) => {
+        return { name: key, nbEntries: this.databases[key].length };
+      })
+  };
+};
+
 DBManager.prototype.search = require('./search');
 DBManager.prototype.searchMSEM = require('./searchMSEM');
 DBManager.prototype.searchPubchem = require('./searchPubchem');

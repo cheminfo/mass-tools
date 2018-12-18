@@ -23,7 +23,7 @@ describe('test searchMSEM', () => {
     let results = dbManager.searchMSEM(101, {
       ionizations: 'H+',
       filter: {
-        precision: 1000,
+        precision: 1000
       }
     });
     expect(results.contaminants).toHaveLength(4);
