@@ -15,7 +15,7 @@ const matcher = require('mf-matcher').general;
 * @param {object}   [filter.unsaturation={}}]
 * @param {number}   [filter.unsaturation.min=-Infinity] - Minimal unsaturation
 * @param {number}   [filter.unsaturation.max=+Infinity] - Maximal unsaturation
-* @param {number}   [filter.unsaturation.onlyIntege=false] - Integer unsaturation
+* @param {number}   [filter.unsaturation.onlyInteger=false] - Integer unsaturation
 * @param {number}   [filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
 * @param {object}   [filter.atoms] - object of atom:{min, max}
 
@@ -27,14 +27,13 @@ const matcher = require('mf-matcher').general;
 */
 
 module.exports = function search(filter, options = {}) {
-  let {
-    databases = Object.keys(this.databases),
-    flatten = false
-  } = options;
+  let { databases = Object.keys(this.databases), flatten = false } = options;
 
   let results = {};
   for (let database of databases) {
-    results[database] = this.databases[database].filter((entry) => matcher(entry, filter));
+    results[database] = this.databases[database].filter((entry) =>
+      matcher(entry, filter)
+    );
   }
 
   if (flatten) {
@@ -50,4 +49,3 @@ module.exports = function search(filter, options = {}) {
     return results;
   }
 };
-

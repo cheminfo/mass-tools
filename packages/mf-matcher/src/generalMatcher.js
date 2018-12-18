@@ -13,12 +13,11 @@
  * @param {object}   [options.unsaturation={}}]
  * @param {number}   [options.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number}   [options.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {number}   [options.unsaturation.onlyIntege=false] - Integer unsaturation
+ * @param {number}   [options.unsaturation.onlyInteger=false] - Integer unsaturation
  * @param {number}   [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {object}   [options.atoms] - object of atom:{min, max}
  * @return {boolean}
  */
-
 
 module.exports = function generalMatcher(entry, options = {}) {
   const {
@@ -33,15 +32,15 @@ module.exports = function generalMatcher(entry, options = {}) {
   } = options;
 
   if (entry.mw !== undefined) {
-    if ((entry.mw < minMW) || (entry.mw > maxMW)) return false;
+    if (entry.mw < minMW || entry.mw > maxMW) return false;
   }
 
   if (entry.em !== undefined) {
-    if ((entry.em < minEM) || (entry.em > maxEM)) return false;
+    if (entry.em < minEM || entry.em > maxEM) return false;
   }
 
   if (entry.charge !== undefined) {
-    if ((entry.charge < minCharge) || (entry.charge > maxCharge)) return false;
+    if (entry.charge < minCharge || entry.charge > maxCharge) return false;
   }
 
   if (unsaturation !== undefined && entry.unsaturation !== undefined) {

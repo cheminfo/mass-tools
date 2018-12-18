@@ -23,7 +23,7 @@ const combineMFs = require('mf-generator');
  * @param {number} [options.filter.unsaturation={}]
  * @param {number} [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number} [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {number} [options.filter.unsaturation.onlyIntege=false] - Integer unsaturation
+ * @param {number} [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
  * @param {number} [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {object} [options.filter.atoms] - object of atom:{min, max}
  */

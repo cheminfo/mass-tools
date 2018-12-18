@@ -19,7 +19,7 @@ Search for an experimental monoisotopic mass
 * @param {object}   [options.filter.unsaturation={}}]
 * @param {number}   [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
 * @param {number}   [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
-* @param {number}   [options.filter.unsaturation.onlyIntege=false] - Integer unsaturation
+* @param {number}   [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
 * @param {number}   [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
 * @param {object}   [options.filter.atoms] - object of atom:{min, max}
 
@@ -40,9 +40,7 @@ module.exports = function searchMSEM(msem, options = {}) {
       for (let entry of this.databases[database]) {
         let match = matcher(entry, filter);
         if (match) {
-          results[database].push(
-            Object.assign({}, entry, { ms: match })
-          );
+          results[database].push(Object.assign({}, entry, { ms: match }));
         }
       }
     }
