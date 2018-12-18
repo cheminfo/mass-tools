@@ -1,9 +1,9 @@
-extends: 'eslint-config-cheminfo'
+extends: cheminfo
 rules:
   no-shadow:
-  - error
-  - builtinGlobals: true
-    hoist: all
-    allow: []
+    - error
+    - builtinGlobals: true
+      hoist: all
+      allow: []
 env:
   jest: true
