@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test searchSimilarity should find one result with bad distribution 1`] = `
+Array [
+  Object {
+    "atoms": Object {
+      "C": 10,
+    },
+    "charge": 0,
+    "em": 120,
+    "ionization": Object {
+      "charge": 3,
+      "em": 3.02347509669,
+      "mf": "(H+)3",
+    },
+    "mf": "C10",
+    "ms": Object {
+      "charge": 3,
+      "em": 41.00727645232093,
+      "ionization": "(H+)3",
+      "similarity": Object {
+        "difference": Array [
+          Array [
+            41.00727645232093,
+            41.34172806401093,
+            41.67617967570093,
+          ],
+          Array [
+            0.011955179514731795,
+            0.09713957777327428,
+            0.004727858758499098,
+          ],
+        ],
+        "experimental": Array [
+          Array [
+            41,
+          ],
+          Array [
+            1,
+          ],
+        ],
+        "theoretical": Array [
+          Array [
+            41.00727645232093,
+            41.34172806401093,
+            41.67617967570093,
+          ],
+          Array [
+            0.8981325634682266,
+            0.09713957777327428,
+            0.004727858758499098,
+          ],
+        ],
+        "value": 0.8861773839534948,
+      },
+    },
+    "mw": 120.10735896735248,
+    "parts": Array [
+      "C10",
+    ],
+    "unsaturation": 11,
+  },
+  Object {
+    "atoms": Object {
+      "C": 10,
+    },
+    "charge": 0,
+    "em": 120,
+    "ionization": Object {
+      "charge": 1,
+      "em": 1.00782503223,
+      "mf": "H+",
+    },
+    "mf": "C10",
+    "ms": Object {
+      "charge": 1,
+      "em": 121.00727645232094,
+      "ionization": "H+",
+      "similarity": Object {
+        "difference": Array [
+          Array [
+            121.00727645232094,
+            122.01063128739094,
+            123.01398612246093,
+          ],
+          Array [
+            0.011955179515087067,
+            0.09713957777327428,
+            0.004727858758499098,
+          ],
+        ],
+        "experimental": Array [
+          Array [
+            121,
+          ],
+          Array [
+            1,
+          ],
+        ],
+        "theoretical": Array [
+          Array [
+            121.00727645232094,
+            122.01063128739094,
+            123.01398612246093,
+          ],
+          Array [
+            0.8981325634682266,
+            0.09713957777327428,
+            0.004727858758499098,
+          ],
+        ],
+        "value": 0.8861773839531395,
+      },
+    },
+    "mw": 120.10735896735248,
+    "parts": Array [
+      "C10",
+    ],
+    "unsaturation": 11,
+  },
+]
+`;
