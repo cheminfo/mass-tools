@@ -2,9 +2,6 @@
 
 const ELECTRON_MASS = require('chemical-elements').ELECTRON_MASS;
 const SpectrumGenerator = require('spectrum-generator').SpectrumGenerator;
-
-// for each element we need to find the isotopes
-
 const MF = require('mf-parser').MF;
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 const getMsInfo = require('mf-utilities/src/getMsInfo');
@@ -27,6 +24,7 @@ class IsotopicDistribution {
    * @param {number} [options.fwhm=0.01] - Amount of Dalton under which 2 peaks are joined
    * @param {number} [options.maxLines=5000] - Maximal number of lines during calculations
    * @param {number} [options.minY=1e-8] - Minimal signal height during calculations
+   * @param {number} [options.allowNeutral=true] - Should we keep the distribution if the molecule has no charge
    */
 
   constructor(mf, options = {}) {
@@ -42,20 +40,22 @@ class IsotopicDistribution {
         part.em = part.monoisotopicMass; // TODO: To remove !!! we change the name !?
         part.isotopesInfo = new MF(part.mf).getIsotopesInfo();
         part.confidence = 0;
-        part.ionization = ionization;
-        part.ms = getMsInfo(part, {
+        let msInfo = getMsInfo(part, {
           ionization
         });
+        part.ionization = msInfo.ionization;
+        part.ms = msInfo.ms;
         this.parts.push(part);
       }
     }
     this.cachedDistribution = undefined;
-    this.options = options;
     this.fwhm = options.fwhm === undefined ? 0.01 : options.fwhm;
     // if fwhm is under 1e-8 there are some artifacts in the spectra
     if (this.fwhm < 1e-8) this.fwhm = 1e-8;
     this.minY = options.minY === undefined ? 1e-8 : options.minY;
     this.maxLines = options.maxLines || 5000;
+    this.allowNeutral =
+      options.allowNeutral === undefined ? true : options.allowNeutral;
   }
 
   getParts() {
@@ -72,56 +72,59 @@ class IsotopicDistribution {
       minY: this.minY,
       deltaX: this.fwhm
     };
-    let finalDistribution;
+    let finalDistribution = new Distribution();
     this.confidence = 0;
-    for (let i = 0; i < this.parts.length; i++) {
-      let part = this.parts[i];
+    // TODO need to cache each part without ionization
+    // in case of many ionization we don't need to recalculate everything !
+    for (let part of this.parts) {
       let totalDistribution = new Distribution([
         {
           x: 0,
           y: 1
         }
       ]);
+      let charge = part.ms.charge;
+      let absoluteCharge = Math.abs(charge);
+      if (charge || this.allowNeutral) {
+        for (let isotope of part.isotopesInfo.isotopes) {
+          if (isotope.number) {
+            let isotopeDistribution = new Distribution(isotope.distribution);
+            isotopeDistribution.power(isotope.number, options);
+            totalDistribution.multiply(isotopeDistribution, options);
+          }
+        }
+        this.confidence += totalDistribution.array.reduce(
+          (sum, value) => sum + value.y,
+          0
+        );
 
-      for (let isotope of part.isotopesInfo.isotopes) {
-        if (isotope.number) {
-          let isotopeDistribution = new Distribution(isotope.distribution);
-          isotopeDistribution.power(isotope.number, options);
-          totalDistribution.multiply(isotopeDistribution, options);
+        // we finally deal with the charge
+
+        if (charge) {
+          totalDistribution.array.forEach((e) => {
+            e.x =
+              (e.x + part.ionization.em - ELECTRON_MASS * charge) /
+              absoluteCharge;
+          });
+        }
+
+        if (totalDistribution.array) {
+          totalDistribution.sortX();
+          part.fromX = totalDistribution.array[0].x;
+          part.toX =
+            totalDistribution.array[totalDistribution.array.length - 1].x;
+        }
+
+        part.isotopicDistribution = totalDistribution.array;
+
+        if (finalDistribution.array.length === 0) {
+          finalDistribution = totalDistribution;
+        } else {
+          finalDistribution.append(totalDistribution);
         }
       }
-      this.confidence += totalDistribution.array.reduce(
-        (sum, value) => sum + value.y,
-        0
-      );
-
-      // we finally deal with the charge
-      let charge = part.isotopesInfo.charge + part.ionization.charge;
-      let absoluteCharge = Math.abs(charge);
-      if (charge) {
-        totalDistribution.array.forEach((e) => {
-          e.x =
-            (e.x + part.ionization.em - ELECTRON_MASS * charge) /
-            absoluteCharge;
-        });
-      }
-
-      if (totalDistribution.array) {
-        totalDistribution.sortX();
-        part.fromX = totalDistribution.array[0].x;
-        part.toX =
-          totalDistribution.array[totalDistribution.array.length - 1].x;
-      }
-
-      part.isotopicDistribution = totalDistribution.array;
-
-      if (i === 0) {
-        finalDistribution = totalDistribution;
-      } else {
-        finalDistribution.append(totalDistribution);
-      }
     }
-    finalDistribution.join(this.fwhm);
+    if (finalDistribution) finalDistribution.join(this.fwhm);
     this.confidence /= this.parts.length;
     this.cachedDistribution = finalDistribution;
     return finalDistribution;

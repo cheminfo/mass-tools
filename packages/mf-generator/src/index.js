@@ -172,8 +172,10 @@ function appendResult(results, currents, keys, options = {}) {
     let result = getEMFromParts(keys, currents, ionization);
 
     let match = matcher(result, filter);
+
     if (!match) return;
-    result.ms = match;
+    result.ms = match.ms;
+    result.ionization = match.ionization;
     result.parts = [];
     result.mf = '';
 

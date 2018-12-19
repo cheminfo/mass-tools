@@ -2,12 +2,15 @@
 
 const fs = require('fs');
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 const fetch = require('node-fetch');
 
 async function retrieve(refresh = false) {
   var text;
   if (refresh) {
-    var response = await fetch('http://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=&ascii=ascii2&isotype=all');
+    var response = await fetch(
+      'http://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=&ascii=ascii2&isotype=all'
+    );
     text = await response.text();
     fs.writeFileSync(`${__dirname}/isotopes.txt`, text);
   } else {

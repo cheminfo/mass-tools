@@ -43,11 +43,14 @@ test('test msemMatcher', () => {
       }
     })
   ).toStrictEqual({
-    charge: 1,
-    delta: -0.0005485799090649834,
-    em: 119.99945142009094,
-    ionization: undefined,
-    ppm: 4.571499242208195
+    ionization: { charge: 1, em: 0 },
+    ms: {
+      charge: 1,
+      delta: -0.0005485799090649834,
+      em: 119.99945142009094,
+      ionization: undefined,
+      ppm: 4.571499242208195
+    }
   });
 });
 
@@ -73,10 +76,13 @@ test('test msemMatcher with forced ionization', () => {
       forceIonization: true
     })
   ).toStrictEqual({
-    ionization: 'H+',
-    em: 119.99945142009094,
-    delta: -0.0005485799090649834,
-    ppm: 4.571499242208195,
-    charge: 1
+    ionization: { charge: 1, em: 0, mf: 'H+' },
+    ms: {
+      charge: 1,
+      delta: -0.0005485799090649834,
+      em: 119.99945142009094,
+      ionization: 'H+',
+      ppm: 4.571499242208195
+    }
   });
 });

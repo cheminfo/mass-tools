@@ -31,7 +31,7 @@
     "mf-parser": "^0.8.0",
     "mf-utilities": "^0.8.0",
     "nucleotide": "^0.8.0",
-    "peaks-similarity": "^2.3.0",
+    "peaks-similarity": "^2.3.1",
     "peptide": "^1.6.1",
     "request-promise-native": "^1.0.5"
   }

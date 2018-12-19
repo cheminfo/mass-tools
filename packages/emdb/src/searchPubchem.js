@@ -44,7 +44,7 @@ module.exports = async function searchPubchem(mass, options = {}) {
         mfInfo.ms = getMsInfo(mfInfo, {
           targetMass: mass,
           allowNeutralMolecules
-        });
+        }).ms;
         mfInfo.info = { nbPubchemEntries: mf.total };
         mfs.push(mfInfo);
       } catch (e) {

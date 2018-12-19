@@ -3,7 +3,9 @@
 const getMsem = require('./getMsem');
 
 /**
- * Adds a field 'ms' to an object containing em, charge and ioniwation
+ * Returns an object containing:
+ * {ms: {em, charge, ionization}, ionization: {}}
+ * We return the ionization in order to know which one has been selected
  */
 
 module.exports = function getMsInfo(entry, options = {}) {
@@ -15,24 +17,27 @@ module.exports = function getMsInfo(entry, options = {}) {
   } = options;
 
   let realIonization = ionization;
-  if (!forceIonization && entry.ionization) {
+  if (!forceIonization && entry.ionization && entry.ionization.mf !== '') {
     realIonization = entry.ionization;
   }
 
-  let result = {
+  let ms = {
     ionization: realIonization.mf,
     em: 0,
     charge: entry.charge + realIonization.charge
   };
 
-  if (result.charge !== 0) {
-    result.em = getMsem(entry.em + realIonization.em, result.charge);
+  if (ms.charge !== 0) {
+    ms.em = getMsem(entry.em + realIonization.em, ms.charge);
   } else if (allowNeutralMolecules) {
-    result.em = entry.em + realIonization.em;
+    ms.em = entry.em + realIonization.em;
   }
   if (targetMass) {
-    result.delta = result.em - targetMass;
-    result.ppm = Math.abs(((targetMass - result.em) / targetMass) * 1e6);
+    ms.delta = ms.em - targetMass;
+    ms.ppm = Math.abs(((targetMass - ms.em) / targetMass) * 1e6);
   }
-  return result;
+  return {
+    ms,
+    ionization: realIonization
+  };
 };

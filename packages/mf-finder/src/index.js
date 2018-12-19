@@ -221,7 +221,7 @@ function getResult(
     }
   }
   result.unsaturation = (result.unsaturation + Math.abs(result.charge)) / 2 + 1;
-  result.ms = getMsInfo(result, { targetMass, allowNeutralMolecules });
+  result.ms = getMsInfo(result, { targetMass, allowNeutralMolecules }).ms;
   return result;
 }
 

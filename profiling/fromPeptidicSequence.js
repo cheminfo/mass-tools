@@ -1,12 +1,13 @@
 'use strict';
 
-var fromPeptidicSequence = require('../packages/emdb/src/fromPeptidicSequence');
+const fromPeptidicSequence = require('../packages/emdb/src/fromPeptidicSequence');
+const IsotopicDistribution = require('../packages/isotopic-distribution/src/IsotopicDistribution');
 
-console.time('start');
+console.time('parsing');
 let results = fromPeptidicSequence(
-  'MQIFVKTLTSDTIENVKAKIQDKEGIPPDQQMQIFVKTLTSDTIENVKAKIQDKEGIPPDQQMQIFVKTLTSDTIENVKAKIQDKEGIPPDQQ',
+  'MQIFVKTLTSDTIENVKAKIQDKEGIPPDQQMQIFVKTLTSDTIENVKAKIQDKEGIPPDQQMQIFVKTLTSDTIENVKAKIQDKEIQDKEGIPPDQQ',
   {
-    mfsArray: [],
+    mfsArray: ['Ru,'],
     digestion: {},
     filter: {},
     nucleic: {},
@@ -20,6 +21,18 @@ let results = fromPeptidicSequence(
     }
   }
 );
+console.timeEnd('parsing');
+console.time('distribution');
+let counter = 0;
+
+for (let i = 0; i < results.length; i++) {
+  let result = results[i];
+  if (i % 1000 === 0) {
+    console.log(`Isotopic distribution: ${i}/${results.length}`);
+  }
+  let isotopicDistribution = new IsotopicDistribution(result.mf);
+  let xy = isotopicDistribution.getXY();
+}
 
 console.log('Number results:', results.length);
-console.timeEnd('start');
+console.timeEnd('distribution');

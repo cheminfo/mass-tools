@@ -40,12 +40,16 @@ module.exports = function searchMSEM(msem, options = {}) {
       for (let entry of this.databases[database]) {
         let match = matcher(entry, filter);
         if (match) {
-          results[database].push(Object.assign({}, entry, { ms: match }));
+          results[database].push(
+            Object.assign({}, entry, {
+              ms: match.ms,
+              ionization: match.ionization
+            })
+          );
         }
       }
     }
   }
-
   if (flatten) {
     let flattenResults = [];
     for (let database of databases) {

@@ -19,7 +19,6 @@ test('test fromPeptidicSequence', () => {
       precision: 1e6
     }
   });
-
   expect(dbManager.databases.peptidic).toHaveLength(2);
   expect(dbManager.databases.peptidic).toMatchSnapshot();
 });

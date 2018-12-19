@@ -1,6 +1,8 @@
 'use strict';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 var Wikidata = require('wikidata-sdk');
+// eslint-disable-next-line import/no-extraneous-dependencies
 var fetch = require('node-fetch');
 
 async function compileIsotopes() {
@@ -34,8 +36,7 @@ async function compileIsotopes() {
     }
     ORDER BY ?protons
     LIMIT 10
-       `
-  );
+       `);
 
   var result = await fetch(url);
   var data = await result.text();

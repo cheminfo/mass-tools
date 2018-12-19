@@ -15,7 +15,7 @@
  * @param {object}   [options.unsaturation={}}]
  * @param {number}   [options.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number}   [options.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {number}   [options.unsaturation.onlyIntege=false] - Integer unsaturation
+ * @param {number}   [options.unsaturation.onlyInteger=false] - Integer unsaturation
  * @param {number}   [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {object}   [options.atoms] - object of atom:{min, max}
  * @return {boolean}
@@ -43,11 +43,12 @@ module.exports = function msemMatcher(entry, options = {}) {
     atoms
   } = options;
 
-  let ms = getMsInfo(entry, {
+  let msInfo = getMsInfo(entry, {
     ionization,
     forceIonization,
     targetMass
   });
+  let ms = msInfo.ms;
 
   if (entry.em !== undefined) {
     if (entry.em < minEM || entry.em > maxEM) return false;
@@ -75,5 +76,5 @@ module.exports = function msemMatcher(entry, options = {}) {
       if (entry.atoms[atom] > atoms[atom].max) return false;
     }
   }
-  return ms;
+  return msInfo;
 };

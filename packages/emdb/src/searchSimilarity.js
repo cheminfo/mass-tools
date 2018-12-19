@@ -11,7 +11,6 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @param {object}   [options.minSimilarity=0.5] - min similarity value
 
 * @param {object}   [options.filter={}]
-* @param {string}   [options.ionizations] - list the allowed ionizations possibilities
 * @param {boolean}  [options.filter.forceIonization=false] - If true ignore existing ionizations
 * @param {number}   [options.filter.msem] - Observed monoisotopic mass in mass spectrometer
 * @param {number}   [options.filter.precision=1000] - The precision on the experimental mass
@@ -28,8 +27,9 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @param {object}   [options.similarity.widthBottom]
 * @param {object}   [options.similarity.widthTop]
 * @param {object}   [options.similarity.widthFunction] - function called with mass that should return an object width containing top and bottom
-* @param {object}   [options.similarity.from] - from value for the comparison window
-* @param {object}   [options.similarity.to] - to value for the comparison window
+* @param {object}   [options.similarity.zone={}]
+* @param {object}   [options.similarity.zone.low=-0.5] - window shift based on observed monoisotopic mass
+* @param {object}   [options.similarity.zone.high=2.5] - to value for the comparison window
 * @param {object}   [options.similarity.common]
 */
 
@@ -47,8 +47,8 @@ module.exports = function searchSimilarity(options = {}) {
   }
 
   // the result of this query will be stored in a property 'ms'
-  let results = this.searchMSEM(filter.msem, filter);
 
+  let results = this.searchMSEM(filter.msem, options);
   let flatEntries = [];
   if (!options.flatten) {
     for (let database of Object.keys(results)) {
@@ -60,7 +60,8 @@ module.exports = function searchSimilarity(options = {}) {
     flatEntries = results;
   }
 
-  const { widthFunction } = options.similarity;
+  const { widthFunction, zone = {} } = similarity;
+  const { low = -0.5, high = 2.5 } = zone;
 
   // we need to calculate the similarity of the isotopic distribution
   let similarityProcessor = new Similarity(similarity);
@@ -72,20 +73,28 @@ module.exports = function searchSimilarity(options = {}) {
   let targetMass = this.experimentalSpectrum.x[0];
 
   for (let entry of flatEntries) {
-    let isotopicDistribution = new IsotopicDistribution(
-      entry.mf + entry.ionization.mf
-    );
+    let isotopicDistribution = new IsotopicDistribution(entry.mf, {
+      allowNeutral: false,
+      ionizations: [entry.ionization]
+    });
+
     let distribution = isotopicDistribution.getDistribution();
+    // we need to define the comparison zone that depends of the charge
+    let from = entry.ms.em + low / entry.ms.charge;
+    let to = entry.ms.em + high / entry.ms.charge;
+    similarityProcessor.setFromTo(from, to);
+
     if (widthFunction) {
       var width = widthFunction(targetMass);
       similarityProcessor.setTrapezoid(width.bottom, width.top);
     }
     similarityProcessor.setPeaks2([distribution.xs, distribution.ys]);
     let result = similarityProcessor.getSimilarity();
+
     if (result.similarity > minSimilarity) {
       entry.ms.similarity = {
         value: result.similarity,
-        experiment: result.extract1,
+        experimental: result.extract1,
         theoretical: result.extract2,
         difference: result.diff
       };
@@ -94,15 +103,17 @@ module.exports = function searchSimilarity(options = {}) {
 
   if (!options.flatten) {
     for (let database of Object.keys(results)) {
-      results[database] = results[database].filter(
-        (entry) => entry.ms.similarity
-      );
+      results[database] = results[database]
+        .filter((entry) => entry.ms.similarity)
+        .sort((a, b) => b.ms.similarity.value - a.ms.similarity.value);
       for (let entry of results[database]) {
         flatEntries.push(entry);
       }
     }
   } else {
-    results = results.filter((entry) => entry.ms.similarity);
+    results = results
+      .filter((entry) => entry.ms.similarity)
+      .sort((a, b) => b.ms.similarity.value - a.ms.similarity.value);
   }
 
   return results;

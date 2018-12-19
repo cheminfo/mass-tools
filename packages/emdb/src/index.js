@@ -72,6 +72,11 @@ DBManager.prototype.loadTest = function loadTest() {
   this.fromArray(['C1-100'], { databaseName: 'test', ionizations: '+' });
 };
 
+DBManager.prototype.loadNeutralTest = function loadNeutralTest(options = {}) {
+  const { maxC = 100 } = options;
+  this.fromArray([`C1-${maxC}`], { databaseName: 'test' });
+};
+
 DBManager.prototype.fromMonoisotopicMass = function fromMonoisotopicMass(
   mass,
   options = {}
