@@ -1,5 +1,7 @@
 'use strict';
 
+const normed = require('ml-array-normed');
+
 const loadKnapSackPromise = require('./loadKnapSack');
 const loadGoogleSheetPromise = require('./loadGoogleSheet');
 const loadCommercialsPromise = require('./loadCommercials');
@@ -12,7 +14,10 @@ function DBManager() {
 DBManager.prototype.setExperimentalSpectrum = function setExperimentalSpectrum(
   experimentalSpectrum
 ) {
-  this.experimentalSpectrum = experimentalSpectrum;
+  this.experimentalSpectrum = {
+    x: experimentalSpectrum.x,
+    y: normed(experimentalSpectrum.y)
+  };
 };
 
 /**

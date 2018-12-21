@@ -30,6 +30,8 @@
     "mf-matcher": "^0.8.0",
     "mf-parser": "^0.8.0",
     "mf-utilities": "^0.8.0",
+    "ml-array-normed": "^1.0.2",
+    "ml-array-rescale": "^1.2.1",
     "nucleotide": "^0.8.0",
     "peaks-similarity": "^2.3.1",
     "peptide": "^1.6.1",

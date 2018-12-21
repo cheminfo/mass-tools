@@ -91,12 +91,18 @@ module.exports = function searchSimilarity(options = {}) {
     similarityProcessor.setPeaks2([distribution.xs, distribution.ys]);
     let result = similarityProcessor.getSimilarity();
 
+    result.extractInfo1.from = from;
+    result.extractInfo1.to = to;
+
     if (result.similarity > minSimilarity) {
       entry.ms.similarity = {
         value: result.similarity,
         experimental: result.extract1,
         theoretical: result.extract2,
-        difference: result.diff
+        difference: result.diff,
+        experimentalInfo: result.extractInfo1,
+        thereoticalInfo: result.extractInfo2,
+        quantity: result.extractInfo1.sum / result.extractInfo2.sum
       };
     }
   }
