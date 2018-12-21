@@ -1,6 +1,6 @@
 'use strict';
 
-const normed = require('ml-array-normed');
+const normed = require('ml-array-normed/lib/index.js');
 
 const loadKnapSackPromise = require('./loadKnapSack');
 const loadGoogleSheetPromise = require('./loadGoogleSheet');
