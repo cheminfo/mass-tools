@@ -1,6 +1,6 @@
 {
   "name": "chemical-groups",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "JSON containing information about chemical groups",
   "main": "src/index.js",
   "files": [
@@ -19,7 +19,7 @@
   "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/chemical-elements#readme",
   "dependencies": {
     "chemical-elements": "^0.7.0",
-    "mf-parser": "^0.8.0",
+    "mf-parser": "^0.9.0",
     "papaparse": "^4.3.6"
   }
 }
