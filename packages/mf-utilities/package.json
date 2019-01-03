@@ -19,6 +19,7 @@
   "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/mf-utilities#readme",
   "dependencies": {
     "chemical-elements": "^0.7.0",
+    "chemical-groups": "^0.8.0",
     "mf-parser": "^0.8.0"
   }
 }
