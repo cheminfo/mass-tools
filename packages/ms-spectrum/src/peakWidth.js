@@ -36,10 +36,7 @@ function peaksWidth(peaks) {
     },
     score: regression.score(xs, widths),
     // eslint-disable-next-line no-new-func
-    predictFct: new Function(
-      'x',
-      `return ${regression.A} * Math.pow(x, ${regression.B})`
-    ),
+    predictFct: regression.predict.bind(regression),
     tex: regression.toLaTeX()
   };
 }
