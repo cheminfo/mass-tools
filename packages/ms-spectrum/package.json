@@ -19,6 +19,7 @@
   "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/emdb#readme",
   "dependencies": {
     "ml-array-normed": "^1.0.2",
-    "ml-gsd": "^2.0.4"
+    "ml-gsd": "^2.0.4",
+    "ml-regression-power": "^1.0.0"
   }
 }

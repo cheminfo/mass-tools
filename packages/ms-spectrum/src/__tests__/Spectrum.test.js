@@ -25,6 +25,6 @@ describe('test Spectrum', () => {
       data.x.push(i);
       data.y.push(i > 5 ? 10 - i : i);
     }
-    expect(new Spectrum(data).gsd()).toStrictEqual([{ base: 0, index: 5, soft: false, width: 5, x: 5, y: 5 }]);
+    expect(new Spectrum(data).peakPicking()).toStrictEqual([{ base: 0, index: 5, soft: false, width: 5, x: 5, y: 5 }]);
   });
 });

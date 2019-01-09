@@ -1,7 +1,8 @@
 'use strict';
 
 const normed = require('ml-array-normed/lib/index.js');
-const gsd = require('ml-gsd').gsd;
+
+const peakPicking = require('./peakPicking');
 
 function Spectrum(data = { x: [], y: [] }) {
   if (
@@ -19,17 +20,8 @@ Spectrum.prototype.normedY = function () {
   return this;
 };
 
-Spectrum.prototype.gsd = function () {
-  if (!this.peaks) {
-    this.peaks = gsd(this.data.x, this.data.y, {
-      noiseLevel: 0,
-      minMaxRatio: 0.0,
-      realTopDetection: true,
-      maxCriteria: true, // inverted:false
-      smoothY: false,
-      sgOptions: { windowSize: 7, polynomial: 3 }
-    });
-  }
+Spectrum.prototype.peakPicking = function () {
+  peakPicking(this);
   return this.peaks;
 };
 
