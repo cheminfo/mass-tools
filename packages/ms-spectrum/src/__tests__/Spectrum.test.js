@@ -27,4 +27,12 @@ describe('test Spectrum', () => {
     }
     expect(new Spectrum(data).peakPicking()).toStrictEqual([{ base: 0, index: 5, soft: false, width: 5, x: 5, y: 5 }]);
   });
+
+  it('fromText', () => {
+    let spectrum = Spectrum.fromText(`Title of spectrum
+    1 2
+    2 3
+    3 4`);
+    expect(spectrum.data).toStrictEqual({ x: [1, 2, 3], y: [2, 3, 4] });
+  });
 });

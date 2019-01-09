@@ -1,6 +1,7 @@
 'use strict';
 
 const normed = require('ml-array-normed/lib/index.js');
+const { parseXY } = require('xy-parser');
 
 const peakPicking = require('./peakPicking');
 
@@ -14,6 +15,11 @@ function Spectrum(data = { x: [], y: [] }) {
   }
   this.data = data;
 }
+
+Spectrum.fromText = function fromText(text) {
+  const data = parseXY(text, { arrayType: 'xxyy' });
+  return new Spectrum({ x: data[0], y: data[1] });
+};
 
 Spectrum.prototype.normedY = function () {
   this.data.y = normed(this.data.y);
