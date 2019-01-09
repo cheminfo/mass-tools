@@ -1,0 +1,24 @@
+{
+  "name": "ms-spectrum",
+  "version": "0.0.0",
+  "description": "A mass spectrum",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo-js/molecular-formula.git"
+  },
+  "keywords": [],
+  "author": "Luc Patiny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo-js/molecular-formula/issues"
+  },
+  "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/emdb#readme",
+  "dependencies": {
+    "ml-array-normed": "^1.0.2",
+    "ml-gsd": "^2.0.4"
+  }
+}

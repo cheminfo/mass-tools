@@ -3,7 +3,8 @@
 const loadKnapSackPromise = require('./loadKnapSack');
 const loadGoogleSheetPromise = require('./loadGoogleSheet');
 const loadCommercialsPromise = require('./loadCommercials');
-const Spectrum = require('./spectrum/Spectrum');
+
+const { Spectrum } = require('ms-spectrum');
 
 function DBManager() {
   this.databases = {};
