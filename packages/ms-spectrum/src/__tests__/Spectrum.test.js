@@ -28,6 +28,26 @@ describe('test Spectrum', () => {
     expect(new Spectrum(data).peakPicking()).toStrictEqual([{ base: 0, index: 5, soft: false, width: 5, x: 5, y: 5 }]);
   });
 
+  it('gsd realtop', () => {
+    let data = { x: [], y: [] };
+    for (let i = 0; i <= 10; i++) {
+      data.x.push(i);
+      data.y.push(i > 5 ? 10 - i : i);
+    }
+    data.y[4] = 4.5;
+    let peaks = new Spectrum(data).peakPicking();
+    expect(peaks).toStrictEqual([
+      {
+        base: 0,
+        index: 5,
+        soft: false,
+        width: 6,
+        x: 4.820728192588237,
+        y: 5.022408975926471
+      }
+    ]);
+  });
+
   it('fromText', () => {
     let spectrum = Spectrum.fromText(`Title of spectrum
     1 2
