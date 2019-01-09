@@ -38,13 +38,14 @@ module.exports = function searchSimilarity(options = {}) {
 
   if (
     !this.experimentalSpectrum ||
-    !this.experimentalSpectrum.x ||
-    !this.experimentalSpectrum.x.length > 0
+    !this.experimentalSpectrum.data.x.length > 0
   ) {
     throw Error(
       'You need to add an experimental spectrum first using setMassSpectrum'
     );
   }
+
+  let experimentalData = this.experimentalSpectrum.data;
 
   // the result of this query will be stored in a property 'ms'
 
@@ -65,12 +66,9 @@ module.exports = function searchSimilarity(options = {}) {
 
   // we need to calculate the similarity of the isotopic distribution
   let similarityProcessor = new Similarity(similarity);
-  similarityProcessor.setPeaks1([
-    this.experimentalSpectrum.x,
-    this.experimentalSpectrum.y
-  ]);
+  similarityProcessor.setPeaks1([experimentalData.x, experimentalData.y]);
 
-  let targetMass = this.experimentalSpectrum.x[0];
+  let targetMass = experimentalData.x[0];
 
   for (let entry of flatEntries) {
     let isotopicDistribution = new IsotopicDistribution(entry.mf, {

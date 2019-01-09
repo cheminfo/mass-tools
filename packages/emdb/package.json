@@ -32,6 +32,7 @@
     "mf-utilities": "^0.9.1",
     "ml-array-normed": "^1.0.2",
     "ml-array-rescale": "^1.2.1",
+    "ml-gsd": "^2.0.4",
     "nucleotide": "^0.9.1",
     "peaks-similarity": "^2.3.1",
     "peptide": "^1.6.1",
