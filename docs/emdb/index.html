@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>emdb 0.8.0 | Documentation</title>
+  <title>emdb 0.9.1 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>emdb</h3>
-          <div class='mb1'><code>0.8.0</code></div>
+          <div class='mb1'><code>0.9.1</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -510,6 +510,17 @@ Generates a database 'generated' from an array of molecular formula</p>
 
               
                 <tr>
+  <td class='break-word'><span class='code bold'>options.ranges</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  
+    (default <code>&#39;C0-100 H0-100 O0-100 N0-100&#39;</code>)
+  </td>
+  <td class='break-word'><span>range of mfs to search
+</span></td>
+</tr>
+
+
+              
+                <tr>
   <td class='break-word'><span class='code bold'>options.minCharge</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
     (default <code>-Infinity</code>)
@@ -526,6 +537,17 @@ Generates a database 'generated' from an array of molecular formula</p>
     (default <code>+Infinity</code>)
   </td>
   <td class='break-word'><span>Maximal charge
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.precision</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>100</code>)
+  </td>
+  <td class='break-word'><span>Allowed mass range based on precision
 </span></td>
 </tr>
 
@@ -822,7 +844,7 @@ Generates a database 'generated' from an array of molecular formula</p>
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.filter.unsaturation.onlyIntege</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  <td class='break-word'><span class='code bold'>options.filter.unsaturation.onlyInteger</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
     (default <code>false</code>)
   </td>
@@ -1427,7 +1449,7 @@ Generates a database 'generated' from an array of molecular formula</p>
   <p>Add a database starting from a peptidic sequence</p>
 
 
-  <div class='pre p1 fill-light mt0'>fromNucleicSequence(sequence: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+  <div class='pre p1 fill-light mt0'>fromNucleicSequence(sequencesString: any, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>, sequence: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?)</div>
   
   
 
@@ -1444,9 +1466,8 @@ Generates a database 'generated' from an array of molecular formula</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>sequence</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?)</code>
-	    Sequence as a string of 1 letter or 3 letters code. Could also be a correct molecular formula respecting uppercase, lowercase
-
+            <span class='code bold'>sequencesString</span> <code class='quiet'>(any)</code>
+	    
           </div>
           
         </div>
@@ -1807,6 +1828,15 @@ Generates a database 'generated' from an array of molecular formula</p>
           
         </div>
       
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>sequence</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?)</code>
+	    Sequence as a string of 1 letter or 3 letters code. Could also be a correct molecular formula respecting uppercase, lowercase
+
+          </div>
+          
+        </div>
+      
     </div>
   
 
@@ -1978,7 +2008,7 @@ of the mass of the electron</p>
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>filter.unsaturation.onlyIntege</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  <td class='break-word'><span class='code bold'>filter.unsaturation.onlyInteger</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
     (default <code>false</code>)
   </td>
@@ -2247,7 +2277,7 @@ of the mass of the electron</p>
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.filter.unsaturation.onlyIntege</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  <td class='break-word'><span class='code bold'>options.filter.unsaturation.onlyInteger</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
     (default <code>false</code>)
   </td>
@@ -2475,7 +2505,7 @@ in the database and a monoisotopic mass.</p>
   <p>Search for an experimental monoisotopic mass and calculate the similarity</p>
 
 
-  <div class='pre p1 fill-light mt0'>searchSimilarity(msem: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+  <div class='pre p1 fill-light mt0'>searchSimilarity(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
   
   
 
@@ -2489,15 +2519,6 @@ in the database and a monoisotopic mass.</p>
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
     <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>msem</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
-	    The observed monoisotopic mass
-
-          </div>
-          
-        </div>
       
         <div class='space-bottom0'>
           <div>
@@ -2549,6 +2570,17 @@ in the database and a monoisotopic mass.</p>
 
               
                 <tr>
+  <td class='break-word'><span class='code bold'>options.minSimilarity</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  
+    (default <code>0.5</code>)
+  </td>
+  <td class='break-word'><span>min similarity value
+</span></td>
+</tr>
+
+
+              
+                <tr>
   <td class='break-word'><span class='code bold'>options.filter</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
   
     (default <code>{}</code>)
@@ -2563,6 +2595,15 @@ in the database and a monoisotopic mass.</p>
     (default <code>false</code>)
   </td>
   <td class='break-word'><span>If true ignore existing ionizations
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.msem</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  </td>
+  <td class='break-word'><span>Observed monoisotopic mass in mass spectrometer
 </span></td>
 </tr>
 
@@ -2633,7 +2674,7 @@ in the database and a monoisotopic mass.</p>
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.filter.unsaturation.onlyIntege</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  <td class='break-word'><span class='code bold'>options.filter.unsaturation.onlyInteger</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
     (default <code>false</code>)
   </td>
@@ -2704,20 +2745,36 @@ in the database and a monoisotopic mass.</p>
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.from</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>?</code>
+  <td class='break-word'><span class='code bold'>options.similarity.zone</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  
+    (default <code>{}</code>)
   </td>
-  <td class='break-word'><span>from value for the comparison window
+  <td class='break-word'><span></span></td>
+</tr>
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.similarity.zone.low</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  
+    (default <code>-0.5</code>)
+  </td>
+  <td class='break-word'><span>window shift based on observed monoisotopic mass
 </span></td>
 </tr>
 
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.to</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>?</code>
+  <td class='break-word'><span class='code bold'>options.similarity.zone.high</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  
+    (default <code>2.5</code>)
   </td>
   <td class='break-word'><span>to value for the comparison window
 </span></td>
 </tr>
+
+
+  
 
 
   
