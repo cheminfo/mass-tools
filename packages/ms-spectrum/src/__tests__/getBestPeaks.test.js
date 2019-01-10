@@ -31,4 +31,13 @@ describe('test test getBestPeaks', () => {
       { close: true, x: 5, y: 3 }
     ]);
   });
+
+  it('custom options threshold', () => {
+    let result = getBestPeaks(peaks, { threshold: 0.5 });
+    expect(result).toStrictEqual([
+      { close: false, x: 2, y: 4 },
+      { close: false, x: 4, y: 5 },
+      { close: false, x: 5, y: 3 }
+    ]);
+  });
 });
