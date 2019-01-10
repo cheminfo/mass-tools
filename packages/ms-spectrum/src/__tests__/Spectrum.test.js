@@ -5,7 +5,7 @@ const Spectrum = require('../Spectrum');
 describe('test Spectrum', () => {
   it('constructor', () => {
     expect(() => {
-      new Spectrum(1);
+      Spectrum(1);
     }).toThrow('Spectrum data must be an object');
   });
 

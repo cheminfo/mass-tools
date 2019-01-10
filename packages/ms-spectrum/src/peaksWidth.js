@@ -31,9 +31,7 @@ function peaksWidth(peaks) {
       x: xs,
       y: widths
     },
-    fit: {
-      regressionChart
-    },
+    fit: regressionChart,
     score: regression.score(xs, widths),
     // eslint-disable-next-line no-new-func
     predictFct: regression.predict.bind(regression),
