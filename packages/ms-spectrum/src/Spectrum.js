@@ -4,6 +4,7 @@ const normed = require('ml-array-normed/lib/index.js');
 const { parseXY } = require('xy-parser');
 
 const peakPicking = require('./peakPicking');
+const getBestPeaks = require('./getBestPeaks');
 
 function Spectrum(data = { x: [], y: [] }) {
   if (
@@ -30,5 +31,12 @@ Spectrum.prototype.peakPicking = function () {
   peakPicking(this);
   return this.peaks;
 };
+
+Spectrum.prototype.getBestPeaks = function (options) {
+  peakPicking(this);
+  return getBestPeaks(this.peaks, options);
+};
+
+Spectrum.JsGraph = require('./jsgraph/index');
 
 module.exports = Spectrum;

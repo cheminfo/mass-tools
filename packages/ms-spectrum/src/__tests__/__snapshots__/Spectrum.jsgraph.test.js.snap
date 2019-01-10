@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Spectrum JSGraph getAnnotation 1`] = `
+Array [
+  Object {
+    "_highlight": undefined,
+    "labels": Array [
+      Object {
+        "position": Object {
+          "dx": "2px",
+          "dy": "-17px",
+          "x": 1,
+          "y": 2,
+        },
+        "text": "1.00000",
+      },
+    ],
+    "position": Array [
+      Object {
+        "dy": "-5px",
+        "x": 1,
+        "y": 2,
+      },
+      Object {
+        "dy": "-25px",
+        "x": 1,
+        "y": 2,
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "_highlight": undefined,
+    "info": Object {
+      "close": true,
+      "x": 2,
+      "y": 3,
+    },
+    "position": Array [
+      Object {
+        "dy": "-5px",
+        "x": 2,
+        "y": 3,
+      },
+      Object {
+        "dy": "-10px",
+        "x": 2,
+        "y": 3,
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
