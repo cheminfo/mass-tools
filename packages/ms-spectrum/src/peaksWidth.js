@@ -1,6 +1,6 @@
 'use strict';
 
-const Regression = require('ml-regression-power');
+const Regression = require('ml-regression-power/lib/index.js');
 
 function peaksWidth(peaks) {
   let xs = peaks.map((peak) => peak.x);

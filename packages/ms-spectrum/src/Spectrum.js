@@ -43,6 +43,6 @@ Spectrum.prototype.getBestPeaks = function (options) {
   return getBestPeaks(this.peaks, options);
 };
 
-Spectrum.prototype.JsGraph = require('./jsgraph/index');
+Spectrum.JsGraph = Spectrum.prototype.JsGraph = require('./jsgraph/index');
 
 module.exports = Spectrum;
