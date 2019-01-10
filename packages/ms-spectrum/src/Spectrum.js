@@ -33,7 +33,7 @@ Spectrum.prototype.peakPicking = function () {
   return this.peaks;
 };
 
-Spectrum.prototype.peakWidth = function () {
+Spectrum.prototype.peaksWidth = function () {
   peakPicking(this);
   return peaksWidth(this.peaks);
 };
