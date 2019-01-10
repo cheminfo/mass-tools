@@ -179,7 +179,11 @@ class IsotopicDistribution {
 
   getGaussian(options = {}) {
     let distribution = this.getDistribution();
-    const { gaussianWidth = 10, peakWidthFct = () => this.fwhm } = options;
+    const {
+      gaussianWidth = 10,
+      peakWidthFct = () => this.fwhm,
+      threshold = 0.0001
+    } = options;
 
     let points = distribution.array;
 
@@ -196,7 +200,7 @@ class IsotopicDistribution {
     for (let point of points) {
       spectrumGenerator.addPeak([point.x, point.y]);
     }
-    let spectrum = spectrumGenerator.getSpectrum();
+    let spectrum = spectrumGenerator.getSpectrum({ threshold });
     return spectrum;
   }
 }
