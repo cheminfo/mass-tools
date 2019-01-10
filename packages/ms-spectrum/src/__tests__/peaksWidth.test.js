@@ -13,7 +13,7 @@ describe('test test peakWidth', () => {
     ];
     let result = peaksWidth(peaks);
     expect(result.score).toStrictEqual({ chi2: 0, r: 1, r2: 1, rmsd: 0 });
-    expect(result.tex).toBe('f(x) = 2x^{2}');
+    expect(result.tex).toBe('f(x) = 2.00x^{2.00}');
     expect(result.predictFct(2)).toBe(8);
     expect(result.fit).toMatchSnapshot();
     expect(result.widths).toStrictEqual({

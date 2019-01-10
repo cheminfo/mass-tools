@@ -35,7 +35,7 @@ function peaksWidth(peaks) {
     score: regression.score(xs, widths),
     // eslint-disable-next-line no-new-func
     predictFct: regression.predict.bind(regression),
-    tex: regression.toLaTeX()
+    tex: regression.toLaTeX(3)
   };
 }
 
