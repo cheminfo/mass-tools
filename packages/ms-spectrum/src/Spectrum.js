@@ -3,6 +3,7 @@
 const normed = require('ml-array-normed/lib/index.js');
 const { parseXY } = require('xy-parser');
 
+const peakWidth = require('./peakWidth');
 const peakPicking = require('./peakPicking');
 const getBestPeaks = require('./getBestPeaks');
 
@@ -30,6 +31,11 @@ Spectrum.prototype.normedY = function () {
 Spectrum.prototype.peakPicking = function () {
   peakPicking(this);
   return this.peaks;
+};
+
+Spectrum.prototype.peakWidth = function () {
+  peakPicking(this);
+  return peakWidth(this.peaks);
 };
 
 Spectrum.prototype.getBestPeaks = function (options) {
