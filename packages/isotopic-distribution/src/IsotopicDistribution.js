@@ -173,21 +173,23 @@ class IsotopicDistribution {
   }
 
   /**
-   * Returns the isotopic distirubtion as the sum of gaussians
+   * Returns the isotopic distribution as the sum of gaussian
    *  @return {XY} isotopic distribution as an object containing 2 properties: x:[] and y:[]
    */
 
   getGaussian(options = {}) {
     let distribution = this.getDistribution();
+    const { gaussianWidth = 10, peakWidthFct = () => this.fwhm } = options;
+
     let points = distribution.array;
-    let pointsPerUnit = 10 / this.fwhm;
+
+    let pointsPerUnit = Math.round(gaussianWidth / this.fwhm);
     if (points.length === 0) return [];
     let gaussianOptions = {
-      start: Math.floor(options.from || distribution.minX - 10),
-      end: Math.ceil(options.to || distribution.maxX + 10),
+      start: Math.floor(options.from || distribution.minX - 2),
+      end: Math.ceil(options.to || distribution.maxX + 2),
       pointsPerUnit,
-      getWidth: options.getWidth ? options.getWidth : () => this.fwhm,
-      maxSize: options.maxSize
+      peakWidthFct
     };
 
     let spectrumGenerator = new SpectrumGenerator(gaussianOptions);
