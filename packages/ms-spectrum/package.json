@@ -20,7 +20,7 @@
   "dependencies": {
     "ml-array-normed": "^1.0.2",
     "ml-gsd": "^2.0.5",
-    "ml-regression-power": "^1.0.0",
+    "ml-regression-power": "^1.0.1",
     "xy-parser": "^2.2.2"
   }
 }
