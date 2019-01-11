@@ -21,29 +21,38 @@ describe('test Spectrum', () => {
 
   it('gsd', () => {
     let data = { x: [], y: [] };
-    for (let i = 0; i <= 10; i++) {
-      data.x.push(i);
-      data.y.push(i > 5 ? 10 - i : i);
+    for (let i = 0; i <= 200; i++) {
+      data.x.push(i / 20);
+      data.y.push(i > 100 ? (200 - i) ** 2 : i * i);
     }
-    expect(new Spectrum(data).peakPicking()).toStrictEqual([{ base: 0, index: 5, soft: false, width: 5, x: 5, y: 5 }]);
+    expect(new Spectrum(data).peakPicking()).toStrictEqual([
+      {
+        base: 0,
+        index: 100,
+        soft: false,
+        width: 0.1999999999999993,
+        x: 5,
+        y: 10000
+      }
+    ]);
   });
 
   it('gsd realtop', () => {
     let data = { x: [], y: [] };
-    for (let i = 0; i <= 10; i++) {
-      data.x.push(i);
-      data.y.push(i > 5 ? 10 - i : i);
+    for (let i = 0; i <= 200; i++) {
+      data.x.push(i / 20);
+      data.y.push(i > 100 ? (200 - i) ** 2 : i * i);
     }
-    data.y[4] = 4.5;
+    data.y[99] = data.y[100];
     let peaks = new Spectrum(data).peakPicking();
     expect(peaks).toStrictEqual([
       {
         base: 0,
-        index: 5,
+        index: 100,
         soft: false,
-        width: 6,
-        x: 4.820728192588237,
-        y: 5.022408975926471
+        width: 0.14999999999999947,
+        x: 4.975,
+        y: 10049.5
       }
     ]);
   });
