@@ -19,6 +19,23 @@ describe('test Spectrum', () => {
     ).toStrictEqual({ x: [1, 2, 3, 4], y: [0.25, 0.25, 0.25, 0.25] });
   });
 
+  it('gsd of non continuous spectrum', () => {
+    let data = { x: [], y: [] };
+    for (let i = 0; i <= 6; i++) {
+      data.x.push(i);
+      data.y.push(i > 3 ? 6 - i : i);
+    }
+    expect(new Spectrum(data).peakPicking()).toStrictEqual([
+      { width: 0, x: 0, y: 0 },
+      { width: 0, x: 1, y: 1 },
+      { width: 0, x: 2, y: 2 },
+      { width: 0, x: 3, y: 3 },
+      { width: 0, x: 4, y: 2 },
+      { width: 0, x: 5, y: 1 },
+      { width: 0, x: 6, y: 0 }
+    ]);
+  });
+
   it('gsd', () => {
     let data = { x: [], y: [] };
     for (let i = 0; i <= 200; i++) {
