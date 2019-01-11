@@ -1,6 +1,8 @@
 'use strict';
 
 const Regression = require('ml-regression-power/lib/index.js');
+const min = require('ml-array-min');
+const max = require('ml-array-max');
 
 function peaksWidth(peaks) {
   let xs = peaks.map((peak) => peak.x);
@@ -18,8 +20,8 @@ function peaksWidth(peaks) {
     computeCoefficient: true
   });
 
-  var from = Math.min(...xs);
-  var to = Math.max(...xs);
+  var from = min(xs);
+  var to = max(xs);
 
   var regressionChart = { x: [], y: [] };
   for (let x = from; x <= to; x += (to - from) / 1000) {
