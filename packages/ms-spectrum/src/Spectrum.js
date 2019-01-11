@@ -6,6 +6,7 @@ const { parseXY } = require('xy-parser');
 const peaksWidth = require('./peaksWidth');
 const peakPicking = require('./peakPicking');
 const getBestPeaks = require('./getBestPeaks');
+const isContinuous = require('./isContinuous');
 
 function Spectrum(data = { x: [], y: [] }) {
   if (
@@ -41,6 +42,10 @@ Spectrum.prototype.peaksWidth = function () {
 Spectrum.prototype.getBestPeaks = function (options) {
   peakPicking(this);
   return getBestPeaks(this.peaks, options);
+};
+
+Spectrum.prototype.isContinuous = function () {
+  return isContinuous(this);
 };
 
 Spectrum.JsGraph = Spectrum.prototype.JsGraph = require('./jsgraph/index');

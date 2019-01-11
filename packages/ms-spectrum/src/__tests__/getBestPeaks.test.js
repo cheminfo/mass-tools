@@ -2,7 +2,7 @@
 
 const getBestPeaks = require('../getBestPeaks');
 
-describe('test test getBestPeaks', () => {
+describe('test getBestPeaks', () => {
   let peaks = [
     { x: 1, y: 1 },
     { x: 2, y: 4 },
