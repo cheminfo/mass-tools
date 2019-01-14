@@ -15,7 +15,7 @@ const fetch = require('./util/fetchJSON');
  * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
  * @param {number} [options.precision=1000] - Precision of the monoisotopic mass in ppm
  * @param {number} [options.limit=1000] - Maximal number of entries to return
- * @param {number} [options.minMolecules=5] - Minimal number of molecules having a specific MF
+ * @param {number} [options.minPubchemEntries=5] - Minimal number of molecules having a specific MF
  * @param {number} [options.allowNeutralMolecules=false] - Should we display uncharged molecules (non observable by mass)
  * @param {number} [options.url='https://pubchem.cheminfo.org/mfs/em'] - URL of the webservice
  */
@@ -25,7 +25,7 @@ module.exports = async function searchPubchem(mass, options = {}) {
     url = 'https://pubchem.cheminfo.org/mfs/em',
     precision = 1000,
     limit = 1000,
-    minMolecules = 5,
+    minPubchemEntries = 5,
     allowNeutralMolecules = false
   } = options;
 
@@ -35,7 +35,7 @@ module.exports = async function searchPubchem(mass, options = {}) {
     let realMass = mass * ionization.charge - ionization.em;
     promises.push(
       fetch(
-        `${url}?em=${realMass}&precision=${precision}&limit=${limit}&minMolecules=${minMolecules}`
+        `${url}?em=${realMass}&precision=${precision}&limit=${limit}&minPubchemEntries=${minPubchemEntries}`
       )
     );
   }
