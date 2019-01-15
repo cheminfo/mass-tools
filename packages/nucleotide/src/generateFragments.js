@@ -71,6 +71,6 @@ function addThreeTerm(mfs, threeTerm, i, options) {
 function addInternalTerm(mfs, internal, i, j, options = {}) {
   if (options.abw) {
     let fragment = furanThreeTerm(internal);
-    mfs.push(`HO${fragment}$B${i + 1}:B${j + 1}`);
+    mfs.push(`HO${fragment}$B${i + 1}:B${j}`);
   }
 }
