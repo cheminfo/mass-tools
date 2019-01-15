@@ -34,9 +34,9 @@ module.exports = function (mf, options) {
     addThreeTerm(mfs, threeTerm, i, options);
   }
 
-  for (let i = 1; i < mfparts.length - 1; i++) {
+  for (let i = 1; i < mfparts.length; i++) {
     let internal = '';
-    for (var j = i; j < mfparts.length - 1; j++) {
+    for (var j = i; j < mfparts.length; j++) {
       internal += mfparts[j];
       if (j > i) {
         addInternalTerm(mfs, internal, i, j, options);

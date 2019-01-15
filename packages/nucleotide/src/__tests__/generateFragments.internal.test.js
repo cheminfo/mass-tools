@@ -10,7 +10,10 @@ describe('test generate interal fragments', () => {
     expect(fragments).toStrictEqual([
       'HODtmpC5H6O4P$B2:B2',
       'HODtmpDcmpC5H6O4P$B2:B3',
-      'HODcmpC5H6O4P$B3:B3'
+      'HODtmpDcmpDgmpDampC5H6O4P$B2:B4',
+      'HODcmpC5H6O4P$B3:B3',
+      'HODcmpDgmpDampC5H6O4P$B3:B4',
+      'HODgmpDampC5H6O4P$B4:B4'
     ]);
   });
 

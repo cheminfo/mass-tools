@@ -46,6 +46,6 @@ test('test TACGTGCCAATAC internal fragment', () => {
     }
   });
 
-  expect(dbManager.databases.nucleic).toHaveLength(56);
+  expect(dbManager.databases.nucleic).toHaveLength(67);
   expect(dbManager.databases.nucleic).toMatchSnapshot();
 });
