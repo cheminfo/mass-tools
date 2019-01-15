@@ -68,7 +68,8 @@ module.exports = function fromNucleicSequence(sequencesString, options = {}) {
 
   let combined = combineMFs(mfsArray, {
     ionizations,
-    filter: filter
+    filter: filter,
+    uniqueMFs: true
   });
 
   return combined;

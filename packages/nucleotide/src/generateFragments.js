@@ -69,8 +69,8 @@ function addThreeTerm(mfs, threeTerm, i, options) {
 // https://books.google.ch/books?id=B57e37bJjqAC&pg=PA172&lpg=PA172&dq=oligonucleotide+b+fragmentation&source=bl&ots=mRr29Pexx2&sig=1NUQcWV-wuj6o9q81my86AVoRto&hl=fr&sa=X&ved=2ahUKEwjI5M3yn-7fAhUJMewKHQR6Bcs4ChDoATADegQIBhAB#v=onepage&q=oligonucleotide%20b%20fragmentation&f=false
 
 function addInternalTerm(mfs, internal, i, j, options = {}) {
-  let fragment = furanThreeTerm(internal);
   if (options.abw) {
+    let fragment = furanThreeTerm(internal);
     mfs.push(`HO${fragment}$B${i + 1}:B${j + 1}`);
   }
 }

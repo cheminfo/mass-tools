@@ -33,3 +33,19 @@ test('test fromNucleicSequence ds-DNA', () => {
   expect(dbManager.databases.nucleic).toHaveLength(12);
   expect(dbManager.databases.nucleic).toMatchSnapshot();
 });
+
+test('test TACGTGCCAATAC internal fragment', () => {
+  let dbManager = new DBManager();
+  dbManager.fromNucleicSequence('TACGTGCCAATAC', {
+    ionizations: '(H+)-5',
+    fragmentation: {
+      abw: true
+    },
+    info: {
+      kind: 'dna'
+    }
+  });
+
+  expect(dbManager.databases.nucleic).toHaveLength(56);
+  expect(dbManager.databases.nucleic).toMatchSnapshot();
+});

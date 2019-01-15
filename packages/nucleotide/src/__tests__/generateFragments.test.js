@@ -49,15 +49,4 @@ describe('test generate fragments', () => {
       'O-3H-4P-1DtmpDcmpH$z2'
     ]);
   });
-
-  it('nucleotide HODampDtmpDcmpH internal aby fragments', () => {
-    let fragments = generateFragments('HODampDtmpDcmpDgmpDampH', {
-      abw: true
-    });
-    expect(fragments).toStrictEqual([
-      'HODtmpC5H6O4P$B2:B3',
-      'HODtmpDcmpC5H6O4P$B2:B4',
-      'HODcmpC5H6O4P$B3:B4'
-    ]);
-  });
 });
