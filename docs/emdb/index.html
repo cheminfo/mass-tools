@@ -85,6 +85,16 @@
               
                 
                 <li><a
+                  href='#fromrange'
+                  class="">
+                  fromRange
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#frompeptidicsequence'
                   class="">
                   fromPeptidicSequence
@@ -651,7 +661,7 @@ Generates a database 'generated' from an array of molecular formula</p>
   <p>Generates a database 'generated' from an array of molecular formula</p>
 
 
-  <div class='pre p1 fill-light mt0'>fromArray(mfsArray: any, options: any, canonizeMF: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, uniqueMFs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, ionizations: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  <div class='pre p1 fill-light mt0'>fromArray(mfsArray: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>, options: any, canonizeMF: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, uniqueMFs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, ionizations: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
   
   
 
@@ -668,8 +678,9 @@ Generates a database 'generated' from an array of molecular formula</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>mfsArray</span> <code class='quiet'>(any)</code>
-	    
+            <span class='code bold'>mfsArray</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+	    Array of string or Array of array containing the parts to combine
+
           </div>
           
         </div>
@@ -924,6 +935,370 @@ Generates a database 'generated' from an array of molecular formula</p>
 
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> EMDB = <span class="hljs-built_in">require</span>(<span class="hljs-string">'emdb'</span>);
+<span class="hljs-keyword">let</span> emdb = <span class="hljs-keyword">new</span> EMDB();
+<span class="hljs-keyword">let</span> array = [<span class="hljs-string">'C1-10'</span>, <span class="hljs-string">'H1-10'</span>];
+emdb.fromArray(array); <span class="hljs-comment">// create a database 'generated' combining all possibilies</span>
+<span class="hljs-built_in">console</span>.log(emdb.get(<span class="hljs-string">'generated'</span>).length); <span class="hljs-comment">// 100</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> EMDB = <span class="hljs-built_in">require</span>(<span class="hljs-string">'emdb'</span>);
+<span class="hljs-keyword">let</span> emdb = <span class="hljs-keyword">new</span> EMDB();
+<span class="hljs-keyword">let</span> array = [<span class="hljs-string">'C1-10 H1-10'</span>];
+emdb.fromArray(array); <span class="hljs-comment">// create a database 'generated' combining all possibilies</span>
+<span class="hljs-built_in">console</span>.log(emdb.get(<span class="hljs-string">'generated'</span>).length); <span class="hljs-comment">// 100</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> EMDB = <span class="hljs-built_in">require</span>(<span class="hljs-string">'emdb'</span>);
+<span class="hljs-keyword">let</span> emdb = <span class="hljs-keyword">new</span> EMDB();
+<span class="hljs-comment">// in case of an array of array, one of the group is allwed</span>
+<span class="hljs-keyword">let</span> array = [[<span class="hljs-string">'C1-10'</span>,<span class="hljs-string">'H1-10'</span>],<span class="hljs-string">'Cl0-1 Br0-1'</span>];
+emdb.fromArray(array); <span class="hljs-comment">// create a database 'generated' combining all possibilies</span>
+<span class="hljs-built_in">console</span>.log(emdb.get(<span class="hljs-string">'generated'</span>).length); <span class="hljs-comment">// 80</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;script src=<span class="hljs-string">"https://www.lactame.com/lib/molecular-formula/HEAD/molecular-formula.js"</span> /&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">let</span> emdb = <span class="hljs-keyword">new</span> MolecularFormula.EMDB();
+  <span class="hljs-keyword">let</span> array = [<span class="hljs-string">'C1-10'</span>, <span class="hljs-string">'H1-10'</span>];
+  emdb.fromArray(array); <span class="hljs-comment">// create a database 'generated' combining all possibilies</span>
+  <span class="hljs-built_in">console</span>.log(emdb.get(<span class="hljs-string">'generated'</span>).length); <span class="hljs-comment">// 100</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+
+<span class="hljs-comment">// from the browser</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fromrange'>
+      fromRange
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Generates a database 'generated' from an array of molecular formula</p>
+
+
+  <div class='pre p1 fill-light mt0'>fromRange(rangesString: any, options: any, range: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, canonizeMF: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, uniqueMFs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, ionizations: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>rangesString</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(any
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.databaseName</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  
+    (default <code>&#39;generated&#39;</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.limit</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>10000000</code>)
+  </td>
+  <td class='break-word'><span>Maximum number of results
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.filter</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>{}</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.minMass</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0</code>)
+  </td>
+  <td class='break-word'><span>Minimal monoisotopic mass
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.maxMass</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>+Infinity</code>)
+  </td>
+  <td class='break-word'><span>Maximal monoisotopic mass
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.minEM</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0</code>)
+  </td>
+  <td class='break-word'><span>Minimal neutral monoisotopic mass
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.maxEM</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>+Infinity</code>)
+  </td>
+  <td class='break-word'><span>Maximal neutral monoisotopic mass
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.minMSEM</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0</code>)
+  </td>
+  <td class='break-word'><span>Minimal observed monoisotopic mass
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.maxMSEM</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>+Infinity</code>)
+  </td>
+  <td class='break-word'><span>Maximal observed monoisotopic mass
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.minCharge</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>-Infinity</code>)
+  </td>
+  <td class='break-word'><span>Minimal charge
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.maxCharge</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>+Infinity</code>)
+  </td>
+  <td class='break-word'><span>Maximal charge
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.unsaturation</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>{}</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.unsaturation.min</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>-Infinity</code>)
+  </td>
+  <td class='break-word'><span>Minimal unsaturation
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.unsaturation.max</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>+Infinity</code>)
+  </td>
+  <td class='break-word'><span>Maximal unsaturation
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.unsaturation.onlyInteger</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>Integer unsaturation
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.unsaturation.onlyNonInteger</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>Non integer unsaturation
+</span></td>
+</tr>
+
+
+  
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.atoms</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>?</code>
+  </td>
+  <td class='break-word'><span>object of atom:{min, max}
+</span></td>
+</tr>
+
+
+  
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>range</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    a string representing the range to search
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>canonizeMF</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+            = <code>true</code>)</code>
+	    Canonize molecular formula
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>uniqueMFs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+            = <code>true</code>)</code>
+	    Force canonization and make MF unique
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ionizations</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>&#39;&#39;</code>)</code>
+	    Comma separated list of ionizations (to charge the molecule)
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code>:
+        list of possible molecular formula
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> EMDB = <span class="hljs-built_in">require</span>(<span class="hljs-string">'emdb'</span>);
+<span class="hljs-keyword">let</span> emdb = <span class="hljs-keyword">new</span> EMDB();
+<span class="hljs-comment">// semi-columns separated for combination, comma for 'or'</span>
+emdb.fromRange(<span class="hljs-string">'C1-10, H1-10; Cl0-1 Br0-1'</span>); <span class="hljs-comment">// create a database 'generated' combining all possibilies</span>
+<span class="hljs-built_in">console</span>.log(emdb.get(<span class="hljs-string">'generated'</span>).length); <span class="hljs-comment">// 80</span></pre>
+    
   
 
   
