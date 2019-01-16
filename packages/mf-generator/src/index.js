@@ -43,10 +43,10 @@ module.exports = function generateMFs(keys, options = {}) {
     throw new Error('You need to specify an array of strings or arrays');
   }
 
-  // we allow String delimited by ". , or ;" instead of an array
+  // we allow String delimited by ". or ;" instead of an array
   for (let i = 0; i < keys.length; i++) {
     if (!Array.isArray(keys[i])) {
-      keys[i] = keys[i].split(/[.,;]/);
+      keys[i] = keys[i].split(/[.,]/);
     }
   }
 
