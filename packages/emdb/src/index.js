@@ -94,6 +94,11 @@ DBManager.prototype.fromArray = function fromArray(sequence, options = {}) {
   this.databases[databaseName] = require('./fromArray')(sequence, options);
 };
 
+DBManager.prototype.fromRange = function fromRange(sequence, options = {}) {
+  const { databaseName = 'generated' } = options;
+  this.databases[databaseName] = require('./fromRange')(sequence, options);
+};
+
 DBManager.prototype.fromPeptidicSequence = function fromPeptidicSequence(
   sequence,
   options = {}
