@@ -5,6 +5,13 @@ const Nucleotide = require('..');
 const MF = require('mf-parser').MF;
 
 describe('test nucleotide', () => {
+  it('nucleotide to sequence of emtpy string', () => {
+    let sequence = Nucleotide.sequenceToMF('');
+    expect(sequence).toStrictEqual('');
+    let mass = new MF(sequence).getInfo().mass;
+    expect(mass).toBeCloseTo(0, 1);
+  });
+
   it('nucleotide to sequence of ATC', () => {
     let sequence = Nucleotide.sequenceToMF('ATC');
     expect(sequence).toStrictEqual('HODampDtmpDcmpH.HODgmpDampDtmpH');
@@ -40,7 +47,7 @@ describe('test nucleotide', () => {
     expect(mass).toBeCloseTo(1888.24, 1);
   });
 
-  it('nucleotide to sequence of DNA AAA with 5\' alcohol', () => {
+  it("nucleotide to sequence of DNA AAA with 5' alcohol", () => {
     let sequence = Nucleotide.sequenceToMF('AAA', {
       fivePrime: 'alcohol',
       kind: 'DNA'
@@ -50,7 +57,7 @@ describe('test nucleotide', () => {
     expect(mass).toBeCloseTo(877.66, 1);
   });
 
-  it('nucleotide to sequence of DNA AAA with 5\' monophosphate', () => {
+  it("nucleotide to sequence of DNA AAA with 5' monophosphate", () => {
     let sequence = Nucleotide.sequenceToMF('AAA', {
       fivePrime: 'monophosphate',
       kind: 'DNA'
@@ -59,7 +66,7 @@ describe('test nucleotide', () => {
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(957.64, 1);
   });
-  it('nucleotide to sequence of DNA AAA with 5\' diphosphate', () => {
+  it("nucleotide to sequence of DNA AAA with 5' diphosphate", () => {
     let sequence = Nucleotide.sequenceToMF('AAA', {
       fivePrime: 'diphosphate',
       kind: 'DNA'
@@ -69,7 +76,7 @@ describe('test nucleotide', () => {
     expect(mass).toBeCloseTo(1037.62, 1);
   });
 
-  it('nucleotide to sequence of DNA AAA with 5\' triphosphate', () => {
+  it("nucleotide to sequence of DNA AAA with 5' triphosphate", () => {
     let sequence = Nucleotide.sequenceToMF('AAA', {
       fivePrime: 'triphosphate',
       kind: 'DNA'

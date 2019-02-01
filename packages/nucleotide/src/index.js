@@ -10,6 +10,7 @@
  */
 
 function sequenceToMF(sequence, options = {}) {
+  if (sequence === '') return '';
   let { kind, circular, fivePrime = 'monophosphate' } = options;
   fivePrime = fivePrime.replace(/[^a-zA-Z]/g, '').toLowerCase();
 
