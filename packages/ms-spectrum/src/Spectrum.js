@@ -1,6 +1,7 @@
 'use strict';
 
 const normed = require('ml-array-normed/lib/index.js');
+const max = require('ml-array-max/lib/index.js');
 const { parseXY } = require('xy-parser');
 
 const peaksWidth = require('./peaksWidth');
@@ -24,7 +25,11 @@ Spectrum.fromText = function fromText(text) {
   return new Spectrum({ x: data[0], y: data[1] });
 };
 
-Spectrum.prototype.normedY = function () {
+Spectrum.prototype.maxY = function maxY() {
+  return max(this.data.y);
+};
+
+Spectrum.prototype.normedY = function normedY() {
   this.data.y = normed(this.data.y);
   return this;
 };

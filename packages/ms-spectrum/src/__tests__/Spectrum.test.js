@@ -19,6 +19,10 @@ describe('test Spectrum', () => {
     ).toStrictEqual({ x: [1, 2, 3, 4], y: [0.25, 0.25, 0.25, 0.25] });
   });
 
+  it('maxY', () => {
+    expect(new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).maxY()).toBe(2);
+  });
+
   it('gsd of non continuous spectrum', () => {
     let data = { x: [], y: [] };
     for (let i = 0; i <= 6; i++) {
