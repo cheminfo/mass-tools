@@ -29,7 +29,6 @@ describe('preprocessRanges', () => {
       { mf: 'Cl(-)', min: 0, max: 2 },
       { mf: '(C-1H)2', min: 0, max: 2 }
     ]);
-
     expect(Array.isArray(possibilities)).toBe(true);
     expect(possibilities[0]).toMatchObject({
       minCharge: -4,
@@ -42,12 +41,25 @@ describe('preprocessRanges', () => {
   it('check a string', () => {
     let possibilities = preprocessRanges('C1-10H1-10ClBr2N0');
     expect(Array.isArray(possibilities)).toBe(true);
-    expect(possibilities).toHaveLength(4);
+    expect(possibilities).toHaveLength(3);
     expect(possibilities[0]).toMatchObject({
       minCharge: 0,
       maxCharge: 0,
-      originalMinCount: 2,
-      originalMaxCount: 2
+      originalMinCount: 1,
+      originalMaxCount: 1
+    });
+  });
+
+  it('check a string polymer kind', () => {
+    let possibilities = preprocessRanges('ClBr2(CH2)0-2NO');
+    expect(Array.isArray(possibilities)).toBe(true);
+    expect(possibilities).toHaveLength(2);
+    expect(possibilities[0]).toMatchObject({
+      mf: 'ClBr2NO',
+      minCharge: 0,
+      maxCharge: 0,
+      originalMinCount: 1,
+      originalMaxCount: 1
     });
   });
 });

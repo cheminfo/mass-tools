@@ -132,6 +132,16 @@ describe('test mf-finder', () => {
     expect(result.mfs[1].mf).toBe('C2H');
   });
 
+  it('simple combinations for polymers', () => {
+    let result = findMFs(92.99814, {
+      ranges: '(CH2)0-10NOCl',
+      precision: 1e4,
+      allowNeutral: true
+    });
+    expect(result.mfs).toHaveLength(1);
+    expect(result.mfs[0].mf).toBe('((CH2))2(NOCl)');
+  });
+
   it('simple combinations from string ranges with ionizations', () => {
     let result = findMFs(12, {
       ranges: [
