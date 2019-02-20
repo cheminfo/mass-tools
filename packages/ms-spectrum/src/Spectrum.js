@@ -49,6 +49,11 @@ Spectrum.prototype.getBestPeaks = function (options) {
   return getBestPeaks(this.peaks, options);
 };
 
+Spectrum.prototype.getPeaks = function (options) {
+  peakPicking(this);
+  return getBestPeaks(this.peaks, options);
+};
+
 Spectrum.prototype.isContinuous = function () {
   return isContinuous(this);
 };
