@@ -1,26 +1,31 @@
 'use strict';
 
+const getMsInfo = require('mf-utilities/src/getMsInfo.js');
+
+const closest = require('./closest');
+
 /**
- * @param {object}   [entry={}}]
- * @param {object}   [options={}}]
- * @param {object}   [options.ionization={ mf: '', em: 0, charge: 0 }] - ionization method
- * @param {boolean}  [options.forceIonization=false] - If true ignore existing ionizations
- * @param {number}   [options.precision=1000] - The precision on the experimental mass
- * @param {number}   [options.minEM=0] - Minimal monoisotopic mass
- * @param {number}   [options.maxEM=+Infinity] - Maximal monoisotopic mass
- * @param {number}   [options.minMSEM=0] - Minimal monoisotopic mass observed by mass
- * @param {number}   [options.maxMSEM=+Infinity] - Maximal monoisotopic mass observed by mass
- * @param {number}   [options.minCharge=-Infinity] - Minimal charge
- * @param {number}   [options.maxCharge=+Infinity] - Maximal charge
- * @param {object}   [options.unsaturation={}}]
- * @param {number}   [options.unsaturation.min=-Infinity] - Minimal unsaturation
- * @param {number}   [options.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {number}   [options.unsaturation.onlyInteger=false] - Integer unsaturation
- * @param {number}   [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
- * @param {object}   [options.atoms] - object of atom:{min, max}
+ * @param {object}         [entry={}}]
+ * @param {object}         [options={}}]
+ * @param {object}         [options.ionization={ mf: '', em: 0, charge: 0 }] - ionization method
+ * @param {boolean}        [options.forceIonization=false] - If true ignore existing ionizations
+ * @param {number}         [options.precision=1000] - The precision on the experimental mass
+ * @param {number}         [options.targetMass] - Target mass, allows to calculate error and filter results
+ * @param {Array<number>}  [options.targetMasses] - Target masses: SORTED array of numbers
+ * @param {number}         [options.minEM=0] - Minimal monoisotopic mass
+ * @param {number}         [options.maxEM=+Infinity] - Maximal monoisotopic mass
+ * @param {number}         [options.minMSEM=0] - Minimal monoisotopic mass observed by mass
+ * @param {number}         [options.maxMSEM=+Infinity] - Maximal monoisotopic mass observed by mass
+ * @param {number}         [options.minCharge=-Infinity] - Minimal charge
+ * @param {number}         [options.maxCharge=+Infinity] - Maximal charge
+ * @param {object}         [options.unsaturation={}}]
+ * @param {number}         [options.unsaturation.min=-Infinity] - Minimal unsaturation
+ * @param {number}         [options.unsaturation.max=+Infinity] - Maximal unsaturation
+ * @param {number}         [options.unsaturation.onlyInteger=false] - Integer unsaturation
+ * @param {number}         [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ * @param {object}         [options.atoms] - object of atom:{min, max}
  * @return {boolean}
  */
-const getMsInfo = require('mf-utilities/src/getMsInfo.js');
 
 /**
  * We always recalculate msem
@@ -36,6 +41,7 @@ module.exports = function msemMatcher(entry, options = {}) {
     maxCharge = Number.MAX_SAFE_INTEGER,
     unsaturation = {},
     targetMass, // if present we will calculate the errors
+    targetMasses, // if present we will calculate the smallest error
     minEM = 0,
     maxEM = +Infinity,
     minMSEM = -Infinity,
@@ -76,5 +82,17 @@ module.exports = function msemMatcher(entry, options = {}) {
       if (entry.atoms[atom] > atoms[atom].max) return false;
     }
   }
+
+  if (targetMasses && targetMasses.length > 0) {
+    let closestMass = closest(targetMasses, ms.em);
+    msInfo = getMsInfo(entry, {
+      ionization,
+      forceIonization,
+      targetMass: closestMass
+    });
+    // need to find the closest targetMasses
+    if (msInfo.ms.ppm > precision) return false;
+  }
+
   return msInfo;
 };
