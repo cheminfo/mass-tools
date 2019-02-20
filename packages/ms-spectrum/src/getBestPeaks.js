@@ -38,6 +38,7 @@ function getBestPeaks(peaks, options = {}) {
     .sort((a, b) => b.y - a.y);
   // we can only take `limit` number of peaks
   let toReturn = [];
+  if (selected.length === 0) return [];
   let minY = selected[0].y * threshold;
   peakLoop: for (let peak of selected) {
     if (peak.y < minY) break;
