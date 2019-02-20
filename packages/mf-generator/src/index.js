@@ -51,7 +51,7 @@ module.exports = function generateMFs(keys, options = {}) {
   }
 
   // we allow ranges in a string ...
-  // problem with ranges is that we need to now to what the range applies
+  // problem with ranges is that we need to know to what the range applies
   for (let i = 0; i < keys.length; i++) {
     let parts = keys[i];
     let newParts = [];

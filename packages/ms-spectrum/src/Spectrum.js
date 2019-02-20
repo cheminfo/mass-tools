@@ -7,6 +7,7 @@ const { parseXY } = require('xy-parser');
 const peaksWidth = require('./peaksWidth');
 const peakPicking = require('./peakPicking');
 const getBestPeaks = require('./getBestPeaks');
+const getPeaks = require('./getPeaks');
 const isContinuous = require('./isContinuous');
 
 function Spectrum(data = { x: [], y: [] }) {
@@ -51,7 +52,7 @@ Spectrum.prototype.getBestPeaks = function (options) {
 
 Spectrum.prototype.getPeaks = function (options) {
   peakPicking(this);
-  return getBestPeaks(this.peaks, options);
+  return getPeaks(this.peaks, options);
 };
 
 Spectrum.prototype.isContinuous = function () {
