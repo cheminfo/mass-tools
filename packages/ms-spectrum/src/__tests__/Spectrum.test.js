@@ -23,6 +23,11 @@ describe('test Spectrum', () => {
     expect(new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).maxY()).toBe(2);
   });
 
+  it('scaleY', () => {
+    expect(
+      new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).scaleY(100).data
+    ).toStrictEqual({ x: [1, 2, 3, 4], y: [50, 50, 100, 50] });
+  });
   it('gsd of non continuous spectrum', () => {
     let data = { x: [], y: [] };
     for (let i = 0; i <= 6; i++) {

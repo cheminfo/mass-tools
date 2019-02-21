@@ -30,6 +30,12 @@ Spectrum.prototype.maxY = function maxY() {
   return max(this.data.y);
 };
 
+Spectrum.prototype.scaleY = function scaleY(intensity = 1) {
+  let basePeak = this.maxY() / intensity;
+  this.data.y = this.data.y.map((y) => y / basePeak);
+  return this;
+};
+
 Spectrum.prototype.normedY = function normedY() {
   this.data.y = normed(this.data.y);
   return this;
