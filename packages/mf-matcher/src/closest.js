@@ -11,18 +11,18 @@ function closest(array, target) {
     } else if (array[middle] > target) {
       high = middle - 1;
     } else {
-      return array[middle];
+      return middle;
     }
   }
 
   if (middle > 0) {
     if (target - array[middle - 1] < array[middle] - target) {
-      return array[middle - 1];
+      return middle - 1;
     } else {
-      return array[middle];
+      return middle;
     }
   } else {
-    return array[middle];
+    return middle;
   }
 }
 

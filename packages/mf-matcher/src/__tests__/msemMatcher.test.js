@@ -79,7 +79,25 @@ test('test msemMatcher with list of target mass', () => {
       em: 119.99945142009094,
       ionization: 'H+',
       ppm: 4.571499242208195
-    }
+    },
+    target: { mass: 120 }
+  });
+
+  expect(
+    matcher(entry, {
+      targetMasses: [119, 120, 121, 122, 123],
+      targetIntensities: [5, 10, 15, 10, 5]
+    })
+  ).toStrictEqual({
+    ionization: { charge: 1, em: 0, mf: 'H+' },
+    ms: {
+      charge: 1,
+      delta: -0.0005485799090649834,
+      em: 119.99945142009094,
+      ionization: 'H+',
+      ppm: 4.571499242208195
+    },
+    target: { mass: 120, intensity: 10 }
   });
 });
 

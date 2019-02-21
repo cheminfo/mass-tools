@@ -12,6 +12,7 @@ const closest = require('./closest');
  * @param {number}         [options.precision=1000] - The precision on the experimental mass
  * @param {number}         [options.targetMass] - Target mass, allows to calculate error and filter results
  * @param {Array<number>}  [options.targetMasses] - Target masses: SORTED array of numbers
+ * @param {Array<number>}  [options.targetIntensities] - Target intensities: SORTED array of numbers
  * @param {number}         [options.minEM=0] - Minimal monoisotopic mass
  * @param {number}         [options.maxEM=+Infinity] - Maximal monoisotopic mass
  * @param {number}         [options.minMSEM=0] - Minimal monoisotopic mass observed by mass
@@ -42,6 +43,7 @@ module.exports = function msemMatcher(entry, options = {}) {
     unsaturation = {},
     targetMass, // if present we will calculate the errors
     targetMasses, // if present we will calculate the smallest error
+    targetIntensities,
     minEM = 0,
     maxEM = +Infinity,
     minMSEM = -Infinity,
@@ -84,12 +86,15 @@ module.exports = function msemMatcher(entry, options = {}) {
   }
 
   if (targetMasses && targetMasses.length > 0) {
-    let closestMass = closest(targetMasses, ms.em);
+    let index = closest(targetMasses, ms.em);
+    let closestMass = targetMasses[index];
     msInfo = getMsInfo(entry, {
       ionization,
       forceIonization,
       targetMass: closestMass
     });
+    msInfo.target = { mass: closestMass };
+    if (targetIntensities) msInfo.target.intensity = targetIntensities[index];
     // need to find the closest targetMasses
     if (msInfo.ms.ppm > precision) return false;
   }
