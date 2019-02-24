@@ -13,7 +13,7 @@ const getIsotopeRatioInfo = require('./getIsotopeRatioInfo');
  * @param {*} parts
  * @param {*} [options={}]
  */
-module.exports = function getInfo(parts) {
+module.exports = function getEA(parts) {
   var results = {};
   for (let part of parts) {
     for (let line of part) {
@@ -71,7 +71,6 @@ module.exports = function getInfo(parts) {
   eas.forEach((ea) => {
     ea.ratio = ea.mass / sum;
   });
-
   return eas;
 };
 

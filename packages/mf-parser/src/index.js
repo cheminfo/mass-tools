@@ -19,8 +19,9 @@ module.exports = {
   Format: require('./Format'),
   Style: require('./Style'),
   parse: require('./parse'),
+  capitalize: require('./capitalize'),
   toDisplay,
   toHtml,
   parseToHtml,
-  MF: require('./MF'),
+  MF: require('./MF')
 };
