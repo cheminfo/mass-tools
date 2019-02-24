@@ -95,6 +95,11 @@ test('MF of Et3N.HCl', () => {
   });
 });
 
+test('MF of (ch3ch2)3n', () => {
+  var mf = new MF('(ch3ch2)3n', { ensureCase: true });
+  expect(mf.toMF()).toBe('C6H15N');
+});
+
 test('MF of (Me2CH)3N no expand', () => {
   var mf = new MF('(Me2CH)3N');
   var parts = mf.toParts({ expand: false });

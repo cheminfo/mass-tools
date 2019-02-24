@@ -5,13 +5,17 @@ const toDisplay = require('./util/toDisplay');
 const toHtml = require('./util/toHtml');
 const toParts = require('./util/toParts');
 const getInfo = require('./util/getInfo');
+const ensureCase = require('./ensureCase');
 const getEA = require('./util/getEA');
 const getIsotopesInfo = require('./util/getIsotopesInfo');
 const partsToMF = require('./util/partsToMF');
 const partsToDisplay = require('./util/partsToDisplay');
 
 class MF {
-  constructor(mf) {
+  constructor(mf, options = {}) {
+    if (options.ensureCase) {
+      mf = ensureCase(mf);
+    }
     this.parsed = parse(mf);
     this.cache = {};
   }
