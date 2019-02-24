@@ -22,7 +22,7 @@ function capitalize(mf) {
       parts[i] = parts[i].toUpperCase();
     } else if (parts[i].match(/^[a-z]+$/)) {
       let newPart = '';
-      for (let j = 0; j < parts[i].length - 1; j++) {
+      for (let j = 0; j < parts[i].length; j++) {
         let two = parts[i].substr(j, 2);
         let one = parts[i].charAt(j).toUpperCase();
         if (

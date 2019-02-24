@@ -3,6 +3,7 @@
 const ensureCase = require('../ensureCase');
 
 test('ensureCase', () => {
+  expect(ensureCase('ch3cooh')).toBe('CH3COOH');
   expect(ensureCase('c10')).toBe('C10');
   expect(ensureCase('c5h6o3')).toBe('C5H6O3');
   expect(ensureCase('h2o')).toBe('H2O');
