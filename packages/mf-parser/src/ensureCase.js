@@ -26,11 +26,8 @@ function capitalize(mf) {
         let two = parts[i].substr(j, 2);
         let one = parts[i].charAt(j).toUpperCase();
         if (
-          two === 'on' ||
-          two === 'no' ||
-          two === 'ch' ||
-          two === 'co' ||
-          two === 'cn'
+          ['c', 'h', 'o', 'n'].includes(two.charAt(0)) &&
+          ['h', 'o', 'n'].includes(two.charAt(1))
         ) {
           newPart += two.toUpperCase();
           j++;
