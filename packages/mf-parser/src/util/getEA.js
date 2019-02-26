@@ -68,7 +68,7 @@ module.exports = function getEA(parts) {
     });
   }
 
-  eas.forEach((ea) => {
+  eas.forEach(ea => {
     ea.ratio = ea.mass / sum;
   });
   return eas;
