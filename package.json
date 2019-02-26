@@ -52,7 +52,7 @@
     "xy-parser": "^2.2.2"
   },
   "dependencies": {
-    "peptide": "^1.6.1",
+    "peptide": "^1.6.2",
     "sum-object-keys": "^1.0.2"
   }
 }
