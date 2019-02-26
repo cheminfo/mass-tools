@@ -17,8 +17,8 @@ function getEutrophicationPotential(mfString) {
     if (!['C', 'H', 'N', 'O', 'P'].includes(atom)) {
       return {
         log:
-          'EP can not be calculated because the MF contains the element: ' +
-          atom
+          `EP can not be calculated because the MF contains the element: ${
+            atom}`
       };
     }
   }

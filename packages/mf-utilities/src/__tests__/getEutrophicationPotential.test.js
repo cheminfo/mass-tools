@@ -3,7 +3,7 @@
 const getEutrophicationPotential = require('../getEutrophicationPotential');
 
 describe('getEutrophicationPotential', () => {
-  test('result for C5 H10 O2 P N3', () => {
+  it('result for C5 H10 O2 P N3', () => {
     var resultEP = getEutrophicationPotential('C5 H10 O2 P N3');
 
     expect(resultEP.v).toBe(1.2182971014492754);

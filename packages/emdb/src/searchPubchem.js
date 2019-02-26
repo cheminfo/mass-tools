@@ -4,7 +4,7 @@ const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 const mfParser = require('mf-parser');
 const getMsInfo = require('mf-utilities/src/getMsInfo');
 
-const fetch = require('./util/fetchJSON');
+const fetch = require('./util/fetchJSON.js');
 
 /**
  * Generates a database 'pubchem' based on all molecular formula available

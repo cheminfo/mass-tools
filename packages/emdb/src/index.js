@@ -1,8 +1,8 @@
 'use strict';
 
-const loadKnapSackPromise = require('./loadKnapSack');
-const loadGoogleSheetPromise = require('./loadGoogleSheet');
-const loadCommercialsPromise = require('./loadCommercials');
+const loadKnapSackPromise = require('./loadKnapSack.js');
+const loadGoogleSheetPromise = require('./loadGoogleSheet.js');
+const loadCommercialsPromise = require('./loadCommercials.js');
 
 const { Spectrum } = require('ms-spectrum');
 

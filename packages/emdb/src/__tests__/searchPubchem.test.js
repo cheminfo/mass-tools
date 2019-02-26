@@ -1,6 +1,6 @@
 'use strict';
 
-const searchPubchem = require('../searchPubchem');
+const searchPubchem = require('../searchPubchem.js');
 
 test('test searchPubchem', async () => {
   let data = await searchPubchem(60, {

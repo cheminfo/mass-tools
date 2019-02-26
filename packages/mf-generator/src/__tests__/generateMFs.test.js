@@ -131,17 +131,9 @@ test('Strange comments', function () {
 test('Check info', function () {
   var mfsArray = ['C', '', 'C5(C)2'];
   var result = generateMFs(mfsArray, { canonizeMF: true })[0];
-  expect(result).toStrictEqual({
-    mf: 'C8',
-    em: 96,
-    ms: { em: 0, charge: 0, ionization: '' },
-    mw: 96.08588717388199,
-    charge: 0,
-    ionization: { mf: '', charge: 0, em: 0 },
-    parts: ['C', undefined, 'C5(C)2'],
-    atoms: { C: 8 },
-    unsaturation: 9
-  });
+  expect(JSON.stringify(result)).toBe(
+    '{"charge":0,"em":96,"mw":96.08588717388199,"ionization":{"mf":"","em":0,"charge":0},"unsaturation":9,"atoms":{"C":8},"ms":{"ionization":"","em":0,"charge":0},"parts":["C",null,"C5(C)2"],"mf":"C8"}'
+  );
 });
 
 test('generateMFs from array of array with negative ionisation', function () {
