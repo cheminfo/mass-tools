@@ -45,9 +45,9 @@
               
                 
                 <li><a
-                  href='#getmsinfo'
+                  href='#msemmatcher'
                   class="">
-                  getMsInfo
+                  msemMatcher
                   
                 </a>
                 
@@ -441,8 +441,8 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='getmsinfo'>
-      getMsInfo
+    <h3 class='fl m0' id='msemmatcher'>
+      msemMatcher
     </h3>
     
     
@@ -451,7 +451,7 @@
 
   
 
-  <div class='pre p1 fill-light mt0'>getMsInfo</div>
+  <div class='pre p1 fill-light mt0'>msemMatcher(entry: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
   
 
@@ -523,6 +523,33 @@
     (default <code>1000</code>)
   </td>
   <td class='break-word'><span>The precision on the experimental mass
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.targetMass</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  </td>
+  <td class='break-word'><span>Target mass, allows to calculate error and filter results
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.targetMasses</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>?</code>
+  </td>
+  <td class='break-word'><span>Target masses: SORTED array of numbers
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.targetIntensities</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>?</code>
+  </td>
+  <td class='break-word'><span>Target intensities: SORTED array of numbers
 </span></td>
 </tr>
 
