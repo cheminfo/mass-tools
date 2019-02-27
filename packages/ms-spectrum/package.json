@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/emdb#readme",
   "dependencies": {
+    "emdb": "^0.9.1",
     "ml-array-max": "^1.1.1",
     "ml-array-min": "^1.1.1",
     "ml-array-normed": "^1.0.2",
