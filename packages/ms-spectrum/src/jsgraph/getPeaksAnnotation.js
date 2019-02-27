@@ -1,6 +1,7 @@
 'use strict';
 
-function getPeaksAnnotation(bestPeaks) {
+function getPeaksAnnotation(bestPeaks, options = {}) {
+  const { numberDigits = 5, shift = 0 } = options;
   let annotations = [];
   for (let peak of bestPeaks) {
     let annotation;
@@ -40,7 +41,7 @@ function getPeaksAnnotation(bestPeaks) {
         ],
         labels: [
           {
-            text: peak.x.toFixed(5),
+            text: (peak.x + shift).toFixed(numberDigits),
             position: {
               x: peak.x,
               y: peak.y,
