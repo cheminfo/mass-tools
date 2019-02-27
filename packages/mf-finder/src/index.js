@@ -60,7 +60,7 @@ module.exports = function (targetMass, options = {}) {
   let ionizations = preprocessIonizations(options.ionizations);
   for (let ionization of ionizations) {
     let currentIonization = {
-      currentMonoisotopicMass: ionization.em,
+      currentMonoisotopicMass: ionization.em || 0,
       currentCharge: ionization.charge,
       currentUnsaturation: 0 // we don't take into account the unsaturation of the ionization agent
     };

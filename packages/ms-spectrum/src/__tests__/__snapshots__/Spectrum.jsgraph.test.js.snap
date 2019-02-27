@@ -6,6 +6,7 @@ Array [
     "_highlight": undefined,
     "labels": Array [
       Object {
+        "color": "red",
         "position": Object {
           "dx": "2px",
           "dy": "-17px",

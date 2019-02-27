@@ -13,4 +13,13 @@ describe('test getPeaksAnnotation', () => {
     let result = getPeaksAnnotation(peaks);
     expect(result).toMatchSnapshot();
   });
+
+  it('shift -12', () => {
+    let result = getPeaksAnnotation(peaks, {
+      shift: -11.99999,
+      showMF: true,
+      charge: 2
+    });
+    expect(result).toMatchSnapshot();
+  });
 });
