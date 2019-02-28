@@ -1,14 +1,29 @@
 'use strict';
 
+/**
+ *
+ * @param {array} bestPeaks
+ * @param {object} [options={}]
+ * @param {array} [options.mfColors={}]
+ * @param {number} [options.numberDigits=5]
+ * @param {boolean} [options.showMF=false]
+ * @param {array} [options.mfColors={}]
+ * @param {number} [options.charge=1]
+ * @param {number} [options.shift=0]
+ * @param {object} [options.mfPrefs]
+ */
+
 function getPeaksAnnotation(bestPeaks, options = {}) {
   const emdb = new (require('emdb'))();
-  const {
+
+  options = Object.assign({ limit: 5, precision: 100 }, options);
+
+  let {
     numberDigits = 5,
     shift = 0,
     showMF = false,
-    ranges = 'C0-30 H0-60 N0-5 O0-10 F0-3 Cl0-3',
-    precision = 100,
     charge = 1,
+    mfPrefs = {},
     mfColors = [
       { limit: 3, color: 'green' },
       { limit: 20, color: 'lightgreen' },
@@ -66,15 +81,26 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
         ]
       };
       if (showMF) {
-        // currently we only deal with difference, when shift is not equal to zero
-        // it is expected to be a neutral loss
+        // we have 2 cases. Either there is a shift and we deal with differences
+        // otherwise it is absolute
+        // if there is a shift we consider only a neutral loss and the parameter charge is important
+        if (shift) {
+          // neutral loss
+          mfPrefs = Object.assign(mfPrefs, {
+            allowNeutral: true,
+            ionizations: ''
+          });
+          emdb.fromMonoisotopicMass(
+            Math.abs((peak.x + shift) * charge),
+            mfPrefs
+          );
+        } else {
+          emdb.fromMonoisotopicMass(
+            Math.abs((peak.x + shift) * charge),
+            mfPrefs
+          );
+        }
 
-        emdb.fromMonoisotopicMass(Math.abs((peak.x + shift) * charge), {
-          ranges,
-          limit: 20,
-          precision,
-          allowNeutral: true
-        });
         let mfs = emdb.get('monoisotopic');
 
         if (mfs.length > 0) {
