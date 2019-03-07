@@ -11,7 +11,7 @@
  * @param {number} [to] - max X value of the window to consider
  * @param {number} [limit=20] - max number of peaks
  * @param {number} [threshold=0.01] - minimal intensity compare to base peak
- * @param {number} [numberSlots=10] - define the number of slots and inderectly the slot width
+ * @param {number} [numberSlots=10] - define the number of slots and indirectly the slot width
  * @param {number} [numberCloseSlots=50]
  * @returns {array} - copy of peaks with 'close' annotation
  */

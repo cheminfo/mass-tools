@@ -4,9 +4,9 @@
  * Filter the array of peaks
  * @param {array} peaks - array of all the peaks
  * @param {object} [options={}]
- * @param {number} [from] - min X value of the window to consider
- * @param {number} [to] - max X value of the window to consider
- * @param {number} [threshold=0.01] - minimal intensity compare to base peak
+ * @param {number} [options.from] - min X value of the window to consider
+ * @param {number} [options.to] - max X value of the window to consider
+ * @param {number} [options.threshold=0.01] - minimal intensity compare to base peak
  * @returns {array} - copy of peaks with 'close' annotation
  */
 
