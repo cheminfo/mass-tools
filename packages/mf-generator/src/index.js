@@ -61,7 +61,8 @@ module.exports = function generateMFs(keys, options = {}) {
       let part = parts[j];
       let comment = part.replace(/^([^$]*\$|.*)/, '');
       part = part.replace(/\$.*/, '').replace(/\s/g, '');
-      if (~part.indexOf('-')) {
+      if (part.match(/[0-9]-[0-9-]/)) {
+        // deal with negative numbers
         // there are ranges ... we are in trouble !
         newParts = newParts.concat(processRange(part, comment));
       } else {
@@ -172,9 +173,7 @@ function appendResult(results, currents, keys, options = {}) {
 
   for (let ionization of ionizations) {
     let result = getEMFromParts(keys, currents, ionization);
-
     let match = matcher(result, filter);
-
     if (!match) return;
     result.ms = match.ms;
     result.ionization = match.ionization;
@@ -193,7 +192,6 @@ function appendResult(results, currents, keys, options = {}) {
         result.mf += key;
       }
     }
-
     if (canonizeMF) {
       result.mf = new MF(result.mf).toMF();
     }
@@ -205,13 +203,14 @@ function appendResult(results, currents, keys, options = {}) {
 }
 
 function processRange(string, comment) {
-  var results = [];
-  var parts = string.split(/([0-9]+-[0-9]+)/).filter((v) => v); // remove empty parts
+  let results = [];
+  let parts = string.split(/(-?[0-9]+--?[0-9]+)/).filter((v) => v); // remove empty parts
+
   let position = -1;
-  var mfs = [];
+  let mfs = [];
   for (let i = 0; i < parts.length; i++) {
     let part = parts[i];
-    if (!~part.search(/[0-9]-[0-9]/)) {
+    if (!~part.search(/-?[0-9]--?[0-9]/)) {
       position++;
       mfs[position] = {
         mf: part,
@@ -219,8 +218,10 @@ function processRange(string, comment) {
         max: 1
       };
     } else {
-      mfs[position].min = part.replace(/^(-?[0-9]*)-(-?[0-9]*)/, '$1') >> 0;
-      mfs[position].max = part.replace(/^(-?[0-9]*)-(-?[0-9]*)/, '$2') >> 0;
+      let min = part.replace(/^(-?[0-9]*)-(-?[0-9]*)/, '$1') >> 0;
+      let max = part.replace(/^(-?[0-9]*)-(-?[0-9]*)/, '$2') >> 0;
+      mfs[position].min = Math.min(min, max);
+      mfs[position].max = Math.max(min, max);
     }
   }
 
@@ -228,6 +229,7 @@ function processRange(string, comment) {
   for (let i = 0; i < currents.length; i++) {
     currents[i] = mfs[i].min;
   }
+
   position = 0;
   while (position < currents.length) {
     if (currents[position] < mfs[position].max) {
@@ -241,6 +243,7 @@ function processRange(string, comment) {
       position++;
     }
   }
+
   results.push(getMF(mfs, currents, comment));
   return results;
 }

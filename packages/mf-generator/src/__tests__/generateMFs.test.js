@@ -154,3 +154,13 @@ test('generateMFs from array with charge and range', function () {
     8.334591202244264
   ]);
 });
+
+test.only('generateMFs from array with charge and negative range', function () {
+  var mfsArray = ['(H+)-2--4'];
+  var result = generateMFs(mfsArray);
+  expect(result.map((a) => a.ms.em).sort((a, b) => a - b)).toStrictEqual([
+    -1.0072764523209299,
+    -1.0072764523209299,
+    -1.0072764523209299
+  ]);
+});

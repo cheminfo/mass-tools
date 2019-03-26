@@ -44,7 +44,7 @@ module.exports = function msemMatcher(entry, options = {}) {
     targetMass, // if present we will calculate the errors
     targetMasses, // if present we will calculate the smallest error
     targetIntensities,
-    minEM = 0,
+    minEM = -Infinity,
     maxEM = +Infinity,
     minMSEM = -Infinity,
     maxMSEM = +Infinity,
