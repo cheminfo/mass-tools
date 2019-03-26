@@ -1,6 +1,5 @@
 'use strict';
 
-
 const Kind = require('./Kind');
 const parseCharge = require('./util/parseCharge');
 
@@ -21,7 +20,10 @@ class MFParser {
 
     let lastKind = Kind.BEGIN;
     while (this.i < mf.length) {
-      if (this.result.length > 0 && this.result[this.result.length - 1].kind !== Kind.TEXT) {
+      if (
+        this.result.length > 0 &&
+        this.result[this.result.length - 1].kind !== Kind.TEXT
+      ) {
         lastKind = this.result[this.result.length - 1].kind;
       }
       let char = mf.charAt(this.i);
@@ -29,30 +31,57 @@ class MFParser {
       let nextAscii = 0;
       if (this.i + 1 < mf.length) nextAscii = mf.charCodeAt(this.i + 1);
 
-      if ((ascii > 47 && ascii < 58) || (char === '-' && nextAscii > 47 && nextAscii < 58)) { // a number
+      if (
+        (ascii > 47 && ascii < 58) ||
+        (char === '-' && nextAscii > 47 && nextAscii < 58)
+      ) {
+        // a number
         let value = this.getNumber(ascii);
-        if (lastKind === Kind.SALT || lastKind === Kind.BEGIN || lastKind === Kind.OPENING_PARENTHESIS) {
-          if (value.to) throw new MFError(this.mf, this.i, 'Premultiplier may not contain a -');
+        if (
+          lastKind === Kind.SALT ||
+          lastKind === Kind.BEGIN ||
+          lastKind === Kind.OPENING_PARENTHESIS
+        ) {
+          if (value.to) {
+            throw new MFError(
+              this.mf,
+              this.i,
+              'Premultiplier may not contain a -'
+            );
+          }
           this.result.push({ kind: Kind.PRE_MULTIPLIER, value: value.from });
         } else {
           if (value.to) {
-            this.result.push({ kind: Kind.MULTIPLIER_RANGE, value });
+            this.result.push({
+              kind: Kind.MULTIPLIER_RANGE,
+              value: {
+                from: Math.min(value.from, value.to),
+                to: Math.max(value.from, value.to)
+              }
+            });
           } else {
             this.result.push({ kind: Kind.MULTIPLIER, value: value.from });
           }
         }
 
         continue;
-      } else if (char === '.') { // a point
+      } else if (char === '.') {
+        // a point
         this.result.push({ kind: Kind.SALT, value: char });
         // it is not in a number otherwise it would have been taken before
         // it must be in a salt
-      } else if (ascii > 64 && ascii < 91) { // an uppercase = new atom
+      } else if (ascii > 64 && ascii < 91) {
+        // an uppercase = new atom
         let value = this.getAtom(ascii);
         this.result.push({ kind: Kind.ATOM, value });
         continue;
-      } else if (ascii > 96 && ascii < 123) { // a lowercase
-        throw new MFError(this.mf, this.i, 'found a lowercase not following an uppercase');
+      } else if (ascii > 96 && ascii < 123) {
+        // a lowercase
+        throw new MFError(
+          this.mf,
+          this.i,
+          'found a lowercase not following an uppercase'
+        );
       } else if (char === '(') {
         let charge = this.getParenthesisCharge(ascii);
         if (charge) {
@@ -62,12 +91,18 @@ class MFParser {
         }
       } else if (char === ')') {
         this.result.push({ kind: Kind.CLOSING_PARENTHESIS, value: ')' });
-      } else if (char === '[') { // defines an isotope
+      } else if (char === '[') {
+        // defines an isotope
         let isotope = this.getIsotope(ascii);
         this.result.push({ kind: Kind.ISOTOPE, value: isotope });
       } else if (char === ']') {
-        throw new MFError(this.mf, this.i, 'should never meet an closing bracket not in isotopes');
-      } else if (char === '{') { // can define an exotic isotopic ratio or mixtures of groups
+        throw new MFError(
+          this.mf,
+          this.i,
+          'should never meet an closing bracket not in isotopes'
+        );
+      } else if (char === '{') {
+        // can define an exotic isotopic ratio or mixtures of groups
         let isotopeRatio = this.getCurlyBracketIsotopeRatio(ascii);
         if (lastKind === Kind.ATOM) {
           let lastResult = this.result[this.result.length - 1];
@@ -77,18 +112,32 @@ class MFParser {
             ratio: isotopeRatio
           };
         } else {
-          throw new MFError(this.mf, this.i, 'isotopic composition has to follow an atom');
+          throw new MFError(
+            this.mf,
+            this.i,
+            'isotopic composition has to follow an atom'
+          );
         }
       } else if (char === '}') {
-        throw new MFError(this.mf, this.i, 'found a unexpected closing curly bracket');
-      } else if (char === '+') { // charge not in parenthesis
+        throw new MFError(
+          this.mf,
+          this.i,
+          'found a unexpected closing curly bracket'
+        );
+      } else if (char === '+') {
+        // charge not in parenthesis
         let charge = this.getNonParenthesisCharge(ascii);
         this.result.push({ kind: Kind.CHARGE, value: charge });
-      } else if (char === '-') { // charge not in parenthesis
+      } else if (char === '-') {
+        // charge not in parenthesis
         let charge = this.getNonParenthesisCharge(ascii);
         this.result.push({ kind: Kind.CHARGE, value: charge });
-      } else if (char === '$') { // it is a comment after
-        this.result.push({ kind: Kind.COMMENT, value: this.mf.substring(this.i + 1) });
+      } else if (char === '$') {
+        // it is a comment after
+        this.result.push({
+          kind: Kind.COMMENT,
+          value: this.mf.substring(this.i + 1)
+        });
         break;
       } else {
         this.result.push({ kind: Kind.TEXT, value: char });
@@ -107,7 +156,11 @@ class MFParser {
       if (line.kind === Kind.CLOSING_PARENTHESIS) counter--;
     }
     if (counter !== 0) {
-      throw new MFError(this.mf, this.i, 'number of opening and closing parenthesis not equal');
+      throw new MFError(
+        this.mf,
+        this.i,
+        'number of opening and closing parenthesis not equal'
+      );
     }
   }
 
@@ -119,13 +172,16 @@ class MFParser {
       number += String.fromCharCode(ascii);
       this.i++;
       ascii = this.mf.charCodeAt(this.i);
-    } while (ascii > 47 && ascii < 58 || ascii === 46 || ascii === 45); // number, . or -
+    } while ((ascii > 47 && ascii < 58) || ascii === 46 || ascii === 45); // number, . or -
     // we need to deal with the case there is a from / to
     if (previous === 46) this.i--;
     let indexOfDash = number.indexOf('-', 1);
 
     if (indexOfDash > -1) {
-      return { from: Number(number.substr(0, indexOfDash)), to: Number(number.substr(indexOfDash + 1)) };
+      return {
+        from: Number(number.substr(0, indexOfDash)),
+        to: Number(number.substr(indexOfDash + 1))
+      };
     }
     return { from: Number(number) };
   }
@@ -140,7 +196,8 @@ class MFParser {
     return atom;
   }
 
-  getIsotope(ascii) { // [13C]
+  getIsotope(ascii) {
+    // [13C]
     let substring = '';
     do {
       substring += String.fromCharCode(ascii);
@@ -152,7 +209,6 @@ class MFParser {
     let isotope = Number(substring.replace(/[^0-9]/g, ''));
     return { atom, isotope };
   }
-
 
   getCurlyBracketIsotopeRatio(ascii) {
     let substring = '';
@@ -169,7 +225,11 @@ class MFParser {
     if (substring.match(/^[0-9,]+$/)) {
       return substring.split(',').map((a) => Number(a));
     }
-    throw new MFError(this.mf, this.i, 'Curly brackets should contain only number and comma');
+    throw new MFError(
+      this.mf,
+      this.i,
+      'Curly brackets should contain only number and comma'
+    );
   }
 
   getParenthesisCharge(ascii) {

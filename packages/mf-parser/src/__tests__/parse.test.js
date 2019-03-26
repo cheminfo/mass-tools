@@ -145,7 +145,19 @@ var tests = {
     { kind: 'atom', value: 'H' },
     { kind: 'atom', value: 'Cl' }
   ],
-  D: [{ kind: 'atom', value: 'D' }]
+  D: [{ kind: 'atom', value: 'D' }],
+  'C1-2': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'multiplierRange', value: { from: 1, to: 2 } }
+  ],
+  'C2-1': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'multiplierRange', value: { from: 1, to: 2 } }
+  ],
+  'C-1--2': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'multiplierRange', value: { from: -2, to: -1 } }
+  ]
 };
 
 test.each(Object.keys(tests))('parse molecular formula %s', function (key) {
