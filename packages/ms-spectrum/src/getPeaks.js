@@ -28,7 +28,9 @@ function getPeaks(peaks, options = {}) {
   }
   let minY = maxY * threshold;
 
-  return peaks.filter((peak) => peak.x >= from && peak.x <= to && peak.y >= minY);
+  return peaks
+    .filter((peak) => peak.x >= from && peak.x <= to && peak.y >= minY)
+    .sort((a, b) => a.x - b.x);
 }
 
 module.exports = getPeaks;
