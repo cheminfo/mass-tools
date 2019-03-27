@@ -33,7 +33,7 @@
     "ms-spectrum": "^0.0.0",
     "nucleotide": "^0.9.1",
     "peaks-similarity": "^2.3.1",
-    "peptide": "^1.6.2",
+    "peptide": "^1.8.0",
     "request-promise-native": "^1.0.5"
   }
 }
