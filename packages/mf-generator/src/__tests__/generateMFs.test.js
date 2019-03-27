@@ -155,7 +155,22 @@ test('generateMFs from array with charge and range', function () {
   ]);
 });
 
-test.only('generateMFs from array with charge and negative range', function () {
+test('generateMFs from array with target masses', function () {
+  let mfsArray = ['C1-100'];
+  let result = generateMFs(mfsArray, {
+    ionizations: '+,++',
+    filter: {
+      targetMasses: [120, 240],
+      precision: 10,
+      targetIntensities: [1, 5]
+    }
+  });
+  expect(result).toHaveLength(4);
+
+  expect(result.sort((a, b) => a.em - b.em)).toMatchSnapshot();
+});
+
+test('generateMFs from array with charge and negative range', function () {
   var mfsArray = ['(H+)-2--4'];
   var result = generateMFs(mfsArray);
   expect(result.map((a) => a.ms.em).sort((a, b) => a - b)).toStrictEqual([

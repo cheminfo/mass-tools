@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateMFs from array with target masses 1`] = `
+Array [
+  Object {
+    "atoms": Object {
+      "C": 10,
+    },
+    "charge": 0,
+    "em": 120,
+    "ionization": Object {
+      "charge": 1,
+      "em": 0,
+      "mf": "+",
+    },
+    "mf": "C10",
+    "ms": Object {
+      "charge": 1,
+      "delta": -0.0005485799090649834,
+      "em": 119.99945142009094,
+      "ionization": "+",
+      "ppm": 4.571499242208195,
+      "target": Object {
+        "intensity": 1,
+        "mass": 120,
+      },
+    },
+    "mw": 120.10735896735248,
+    "parts": Array [
+      "C10",
+    ],
+    "unsaturation": 11,
+  },
+  Object {
+    "atoms": Object {
+      "C": 20,
+    },
+    "charge": 0,
+    "em": 240,
+    "ionization": Object {
+      "charge": 1,
+      "em": 0,
+      "mf": "+",
+    },
+    "mf": "C20",
+    "ms": Object {
+      "charge": 1,
+      "delta": -0.0005485799090649834,
+      "em": 239.99945142009094,
+      "ionization": "+",
+      "ppm": 2.2857496211040975,
+      "target": Object {
+        "intensity": 5,
+        "mass": 240,
+      },
+    },
+    "mw": 240.21471793470496,
+    "parts": Array [
+      "C20",
+    ],
+    "unsaturation": 21,
+  },
+  Object {
+    "atoms": Object {
+      "C": 20,
+    },
+    "charge": 0,
+    "em": 240,
+    "ionization": Object {
+      "charge": 2,
+      "em": 0,
+      "mf": "++",
+    },
+    "mf": "C20",
+    "ms": Object {
+      "charge": 2,
+      "delta": -0.0005485799090649834,
+      "em": 119.99945142009094,
+      "ionization": "++",
+      "ppm": 4.571499242208195,
+      "target": Object {
+        "intensity": 1,
+        "mass": 120,
+      },
+    },
+    "mw": 240.21471793470496,
+    "parts": Array [
+      "C20",
+    ],
+    "unsaturation": 21,
+  },
+  Object {
+    "atoms": Object {
+      "C": 40,
+    },
+    "charge": 0,
+    "em": 480,
+    "ionization": Object {
+      "charge": 2,
+      "em": 0,
+      "mf": "++",
+    },
+    "mf": "C40",
+    "ms": Object {
+      "charge": 2,
+      "delta": -0.0005485799090649834,
+      "em": 239.99945142009094,
+      "ionization": "++",
+      "ppm": 2.2857496211040975,
+      "target": Object {
+        "intensity": 5,
+        "mass": 240,
+      },
+    },
+    "mw": 480.42943586940993,
+    "parts": Array [
+      "C40",
+    ],
+    "unsaturation": 41,
+  },
+]
+`;

@@ -81,7 +81,6 @@ module.exports = function generateMFs(keys, options = {}) {
   }
   let position = 0;
   let evolution = 0;
-
   while (position < currents.length) {
     if (currents[position] < sizes[position]) {
       evolution++;
@@ -101,7 +100,6 @@ module.exports = function generateMFs(keys, options = {}) {
     }
   }
   appendResult(results, currents, keys, options);
-
   if (uniqueMFs) {
     var uniqueMFsObject = {};
     results.forEach((r) => {
@@ -166,15 +164,15 @@ function getEMFromParts(parts, currents, ionization) {
 
 function appendResult(results, currents, keys, options = {}) {
   const { canonizeMF, filter, ionizations } = options;
-
   // this script is designed to combine molecular formula
   // that may contain comments after a "$" sign
   // therefore we should put all the comments at the ned
 
   for (let ionization of ionizations) {
     let result = getEMFromParts(keys, currents, ionization);
+
     let match = matcher(result, filter);
-    if (!match) return;
+    if (!match) continue;
     result.ms = match.ms;
     result.ionization = match.ionization;
     result.parts = [];

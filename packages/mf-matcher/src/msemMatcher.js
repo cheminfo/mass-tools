@@ -43,7 +43,7 @@ module.exports = function msemMatcher(entry, options = {}) {
     unsaturation = {},
     targetMass, // if present we will calculate the errors
     targetMasses, // if present we will calculate the smallest error
-    targetIntensities,
+    targetIntensities, // if present it will be added in the report
     minEM = -Infinity,
     maxEM = +Infinity,
     minMSEM = -Infinity,
@@ -93,8 +93,10 @@ module.exports = function msemMatcher(entry, options = {}) {
       forceIonization,
       targetMass: closestMass
     });
-    msInfo.target = { mass: closestMass };
-    if (targetIntensities) msInfo.target.intensity = targetIntensities[index];
+    msInfo.ms.target = { mass: closestMass };
+    if (targetIntensities) {
+      msInfo.ms.target.intensity = targetIntensities[index];
+    }
     // need to find the closest targetMasses
     if (msInfo.ms.ppm > precision) return false;
   }
