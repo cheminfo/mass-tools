@@ -4,25 +4,25 @@ function closest(array, target) {
   let low = 0;
   let high = array.length - 1;
   let middle = 0;
-  while (low <= high) {
+  while (high - low > 1) {
     middle = low + ((high - low) >> 1);
     if (array[middle] < target) {
-      low = middle + 1;
+      low = middle;
     } else if (array[middle] > target) {
-      high = middle - 1;
+      high = middle;
     } else {
       return middle;
     }
   }
 
-  if (middle > 0) {
-    if (target - array[middle - 1] < array[middle] - target) {
-      return middle - 1;
+  if (low < array.length - 1) {
+    if (Math.abs(target - array[low]) < Math.abs(array[low + 1] - target)) {
+      return low;
     } else {
-      return middle;
+      return low + 1;
     }
   } else {
-    return middle;
+    return low;
   }
 }
 
