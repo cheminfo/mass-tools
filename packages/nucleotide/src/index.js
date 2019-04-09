@@ -62,7 +62,8 @@ function sequenceToMF(sequence, options = {}) {
 module.exports = {
   sequenceToMF,
   generateFragments: require('./generateFragments'),
-  furanThreeTerm: require('./furanThreeTerm')
+  furanThreeTerm: require('./furanThreeTerm'),
+  baseLoss: require('./baseLoss')
 };
 
 const complementary = {

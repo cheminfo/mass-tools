@@ -40,4 +40,13 @@ describe('test getPeaks', () => {
       { x: 5, y: 3 }
     ]);
   });
+
+  it('custom options limit', () => {
+    let result = getPeaks(peaks, { limit: 3 });
+    expect(result).toStrictEqual([
+      { x: 2, y: 4 },
+      { x: 4, y: 5 },
+      { x: 5, y: 3 }
+    ]);
+  });
 });
