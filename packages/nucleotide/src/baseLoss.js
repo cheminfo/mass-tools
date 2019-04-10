@@ -8,9 +8,16 @@ function baseLoss(nucleotide) {
     .replace(/([a-zA-Z0-9)])([A-Z])/g, '$1 $2')
     .split(/ /);
   for (let i = 0; i < parts.length; i++) {
-    if (parts[i].length !== 4) continue;
+    let part = parts[i];
+    let middle = '';
+    if (part.match(/^D[atcgu]mp$/)) {
+      middle = 'Drmp';
+    } else if (part.match(/^[ATCGU]mp$/)) {
+      middle = 'Rmp';
+    } else {
+      continue;
+    }
     let begin = parts.slice(0, i);
-    let middle = 'XXX';
     let end = parts.slice(i + 1);
 
     results.push(begin.join('') + middle + end.join(''));

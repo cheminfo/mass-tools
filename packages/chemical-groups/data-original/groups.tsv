@@ -114,7 +114,9 @@ Dcmp	Desoxycytidine monophosphate diratical	C9H12N3O6P
 Dgmp	Desoxyguanosine monophosphate diratical	C10H12N5O6P
 Dtmp	Desoxythymidine monophosphate diratical	C10H13N2O7P
 Dump	Desoxyuridine monophosphate diratical	C9H11N2O7P
+Drmp	Desoxyribose monophosphate diratical	C5H7O5P
 		
+
 Dadp	Desoxyadenosine diphosphate diratical	C10H13N5O8P2
 Dcdp	Desoxycytidine diphosphate diratical	C9H13N3O9P2
 Dgdp	Desoxyguanosine diphosphate diratical	C10H13N5O9P2
@@ -138,7 +140,8 @@ Cmp	Cytidine monophosphate diratical	C9H12N3O7P
 Gmp	Guanosine monophosphate diratical	C10H12N5O7P
 Tmp	Thymidine monophosphate diratical	C10H13N2O8P
 Ump	Uridine monophosphate diratical	C9H11N2O8P
-		
+Rmp	Ribose monophosphate diratical	C5H7O6P
+
 Adp	Adenosine diphosphate diratical	C10H13N5O9P2
 Cdp	Cytidine diphosphate diratical	C9H13N3O10P2
 Gdp	Guanosine diphosphate diratical	C10H13N5O10P2
