@@ -10,6 +10,7 @@ module.exports = function (mf, options) {
       b: false,
       c: false,
       d: false,
+      dh2o: false,
       w: false,
       x: false,
       y: false,
@@ -57,6 +58,7 @@ function addFiveTerm(mfs, fiveTerm, i, options) {
   if (options.b) mfs.push(`${fiveTerm}$bH-1${i}`);
   if (options.c) mfs.push(`${fiveTerm}PO2$c${i}`);
   if (options.d) mfs.push(`${fiveTerm}PO3H2$d${i}`);
+  if (options.dh2o) mfs.push(`${fiveTerm}PO2$d${i}`);
 }
 
 function addThreeTerm(mfs, threeTerm, i, options) {

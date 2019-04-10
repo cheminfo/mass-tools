@@ -16,6 +16,14 @@ describe('test generate fragments', () => {
       'HODampC5H6O4P$a2 - B'
     ]);
   });
+
+  it('nucleotide HODampDtmpDcmpH dh2o (d with loss of water)', () => {
+    let fragments = generateFragments('HODampDampH', {
+      dh2o: true
+    });
+    expect(fragments).toStrictEqual(['HODampPO2$d1']);
+  });
+
   it('nucleotide to sequence of HODampDtmpDcmpH and many fragments', () => {
     let fragments = generateFragments('HODampDtmpDcmpH', {
       a: true,

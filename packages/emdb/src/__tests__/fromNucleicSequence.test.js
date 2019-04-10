@@ -45,7 +45,21 @@ test('test TACGTGCCAATAC internal fragment', () => {
       kind: 'dna'
     }
   });
-
   expect(dbManager.databases.nucleic).toHaveLength(67);
+  expect(dbManager.databases.nucleic).toMatchSnapshot();
+});
+
+test('test AGGCAG fragment', () => {
+  let dbManager = new DBManager();
+  dbManager.fromNucleicSequence('AGGCAG', {
+    ionizations: '(H+)-',
+    fragmentation: {
+      y: true
+    },
+    info: {
+      kind: 'dna'
+    }
+  });
+  expect(dbManager.databases.nucleic).toHaveLength(6);
   expect(dbManager.databases.nucleic).toMatchSnapshot();
 });
