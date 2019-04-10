@@ -1,5 +1,149 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`test AGG with d-h2o and base loss 1`] = `
+Array [
+  Object {
+    "atoms": Object {
+      "C": 10,
+      "H": 13,
+      "N": 5,
+      "O": 8,
+      "P": 2,
+    },
+    "charge": 0,
+    "comment": "d1",
+    "em": 393.02393639454,
+    "ionization": Object {
+      "charge": -1,
+      "em": -1.00782503223,
+      "mf": "(H+)-1",
+    },
+    "mf": "C10H13N5O8P2",
+    "ms": Object {
+      "charge": -1,
+      "em": 392.01665994221906,
+      "ionization": "(H+)-1",
+    },
+    "mw": 393.1868682186928,
+    "parts": Array [
+      "HODampPO2",
+    ],
+    "unsaturation": 8,
+  },
+  Object {
+    "atoms": Object {
+      "C": 20,
+      "H": 25,
+      "N": 10,
+      "O": 14,
+      "P": 3,
+    },
+    "charge": 0,
+    "comment": "d2",
+    "em": 722.07645651929,
+    "ionization": Object {
+      "charge": -1,
+      "em": -1.00782503223,
+      "mf": "(H+)-1",
+    },
+    "mf": "C20H25N10O14P3",
+    "ms": Object {
+      "charge": -1,
+      "em": 721.069180066969,
+      "ionization": "(H+)-1",
+    },
+    "mw": 722.3932238362731,
+    "parts": Array [
+      "HODampDgmpPO2",
+    ],
+    "unsaturation": 15,
+  },
+  Object {
+    "atoms": Object {
+      "C": 25,
+      "H": 33,
+      "N": 10,
+      "O": 17,
+      "P": 3,
+    },
+    "charge": 0,
+    "comment": "-B1",
+    "em": 838.1238006358399,
+    "ionization": Object {
+      "charge": -1,
+      "em": -1.00782503223,
+      "mf": "(H+)-1",
+    },
+    "mf": "C25H33N10O17P3",
+    "ms": Object {
+      "charge": -1,
+      "em": 837.1165241835189,
+      "ionization": "(H+)-1",
+    },
+    "mw": 838.5086441253504,
+    "parts": Array [
+      "HODampDrmpDgmpH",
+    ],
+    "unsaturation": 16,
+  },
+  Object {
+    "atoms": Object {
+      "C": 25,
+      "H": 33,
+      "N": 10,
+      "O": 17,
+      "P": 3,
+    },
+    "charge": 0,
+    "comment": "-B2",
+    "em": 838.1238006358399,
+    "ionization": Object {
+      "charge": -1,
+      "em": -1.00782503223,
+      "mf": "(H+)-1",
+    },
+    "mf": "C25H33N10O17P3",
+    "ms": Object {
+      "charge": -1,
+      "em": 837.1165241835189,
+      "ionization": "(H+)-1",
+    },
+    "mw": 838.5086441253504,
+    "parts": Array [
+      "HODampDgmpDrmpH",
+    ],
+    "unsaturation": 16,
+  },
+  Object {
+    "atoms": Object {
+      "C": 30,
+      "H": 38,
+      "N": 15,
+      "O": 18,
+      "P": 3,
+    },
+    "charge": 0,
+    "em": 989.1732104387099,
+    "ionization": Object {
+      "charge": -1,
+      "em": -1.00782503223,
+      "mf": "(H+)-1",
+    },
+    "mf": "C30H38N15O18P3",
+    "ms": Object {
+      "charge": -1,
+      "em": 988.165933986389,
+      "ionization": "(H+)-1",
+    },
+    "mw": 989.6349483608528,
+    "parts": Array [
+      "HODampDgmpDgmpH",
+    ],
+    "unsaturation": 21,
+  },
+]
+`;
+
 exports[`test AGGCAG fragment 1`] = `
 Array [
   Object {

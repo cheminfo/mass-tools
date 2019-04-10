@@ -20,10 +20,12 @@ const combineMFs = require('mf-generator');
  * @param {boolean} [options.fragmentation.b=false] If true allow fragments of type 'b'
  * @param {boolean} [options.fragmentation.c=false] If true allow fragments of type 'c'
  * @param {boolean} [options.fragmentation.d=false] If true allow fragments of type 'd'
+ * @param {boolean} [options.fragmentation.dh2o=false] If true allow fragments of type 'd' with water loss
  * @param {boolean} [options.fragmentation.w=false] If true allow fragments of type 'w'
  * @param {boolean} [options.fragmentation.x=false] If true allow fragments of type 'x'
  * @param {boolean} [options.fragmentation.y=false] If true allow fragments of type 'y'
  * @param {boolean} [options.fragmentation.z=false] If true allow fragments of type 'z'
+ * @param {boolean} [options.baseLoss=false] If true allow base loss at all the positions
  *
  * @param {object} [options.filter={}] Object defining options for molecular formula filter
  * @param {number} [options.filter.minMass=0] - Minimal monoisotopic mass
@@ -62,6 +64,9 @@ module.exports = function fromNucleicSequence(sequencesString, options = {}) {
       fragments = fragments.map((fragment) => fragment.replace(/\$/g, '$cmp-'));
     }
     fragmentsArray = fragmentsArray.concat(fragments);
+    if (fragmentation.baseLoss) {
+      fragmentsArray = fragmentsArray.concat(nucleotide.baseLoss(sequence));
+    }
   }
 
   mfsArray.push(fragmentsArray);

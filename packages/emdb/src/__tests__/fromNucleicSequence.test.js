@@ -63,3 +63,20 @@ test('test AGGCAG fragment', () => {
   expect(dbManager.databases.nucleic).toHaveLength(6);
   expect(dbManager.databases.nucleic).toMatchSnapshot();
 });
+
+test('test AGG with d-h2o and base loss', () => {
+  let dbManager = new DBManager();
+  dbManager.fromNucleicSequence('AGG', {
+    ionizations: '(H+)-1',
+    fragmentation: {
+      dh2o: true,
+      baseLoss: true
+    },
+
+    info: {
+      kind: 'dna'
+    }
+  });
+  expect(dbManager.databases.nucleic).toHaveLength(5);
+  expect(dbManager.databases.nucleic).toMatchSnapshot();
+});

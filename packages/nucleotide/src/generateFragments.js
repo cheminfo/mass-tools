@@ -54,7 +54,7 @@ module.exports = function (mf, options) {
 
 function addFiveTerm(mfs, fiveTerm, i, options) {
   if (options.a) mfs.push(`${fiveTerm}O-1H-1$a${i}`);
-  if (options.ab) mfs.push(`${furanThreeTerm(fiveTerm)}$a${i} - B`);
+  if (options.ab) mfs.push(`${furanThreeTerm(fiveTerm)}$a${i} - B`); // A minus base
   if (options.b) mfs.push(`${fiveTerm}$bH-1${i}`);
   if (options.c) mfs.push(`${fiveTerm}PO2$c${i}`);
   if (options.d) mfs.push(`${fiveTerm}PO3H2$d${i}`);
@@ -73,6 +73,6 @@ function addThreeTerm(mfs, threeTerm, i, options) {
 function addInternalTerm(mfs, internal, i, j, options = {}) {
   if (options.abw) {
     let fragment = furanThreeTerm(internal);
-    mfs.push(`HO${fragment}$B${i + 1}:B${j}`);
+    mfs.push(`HO${fragment}$B${i + 1}:B${j}`); // A minus base - W
   }
 }

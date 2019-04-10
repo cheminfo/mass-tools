@@ -7,10 +7,10 @@ describe('test base loss', () => {
     let nucleotides = baseLoss('HAlaDampDtmpDcmpDcmpOH');
     expect(nucleotides).toHaveLength(4);
     expect(nucleotides).toStrictEqual([
-      'HAlaDrmpDtmpDcmpDcmpOH',
-      'HAlaDampDrmpDcmpDcmpOH',
-      'HAlaDampDtmpDrmpDcmpOH',
-      'HAlaDampDtmpDcmpDrmpOH'
+      'HAlaDrmpDtmpDcmpDcmpOH$-B1',
+      'HAlaDampDrmpDcmpDcmpOH$-B2',
+      'HAlaDampDtmpDrmpDcmpOH$-B3',
+      'HAlaDampDtmpDcmpDrmpOH$-B4'
     ]);
   });
 });
