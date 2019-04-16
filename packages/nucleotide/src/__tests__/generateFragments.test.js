@@ -43,18 +43,18 @@ describe('test generate fragments', () => {
       'HODampPO2$c1',
       'HODampPO3H2$d1',
       'HODcmpH$w1',
-      'H-2DcmpH$x1',
-      'O-2H-1P-1DcmpH$y1',
-      'O-3H-4P-1DcmpH$z1',
+      'H-1DcmpH$x1',
+      'O-2P-1DcmpH$y1',
+      'O-3H-1P-1(+)DcmpH$z1',
       'HODampDtmpO-1H-1$a2',
       'HODampC5H6O4P$a2 - B',
       'HODampDtmp$bH-12',
       'HODampDtmpPO2$c2',
       'HODampDtmpPO3H2$d2',
       'HODtmpDcmpH$w2',
-      'H-2DtmpDcmpH$x2',
-      'O-2H-1P-1DtmpDcmpH$y2',
-      'O-3H-4P-1DtmpDcmpH$z2'
+      'H-1DtmpDcmpH$x2',
+      'O-2P-1DtmpDcmpH$y2',
+      'O-3H-1P-1(+)DtmpDcmpH$z2'
     ]);
   });
 });
