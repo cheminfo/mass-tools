@@ -68,7 +68,7 @@ function addThreeTerm(mfs, threeTerm, i, options) {
   if (options.y) mfs.push(`O-2P-1${threeTerm}$y${i}`); // neutral ok
   if (options.z) mfs.push(`O-3H-1P-1(+)${threeTerm}$z${i}`);
   if (options.zch2) mfs.push(`O-3H-3C-1P-1(+)${threeTerm}$z${i}`);
-}
+
 
 // https://books.google.ch/books?id=B57e37bJjqAC&pg=PA172&lpg=PA172&dq=oligonucleotide+b+fragmentation&source=bl&ots=mRr29Pexx2&sig=1NUQcWV-wuj6o9q81my86AVoRto&hl=fr&sa=X&ved=2ahUKEwjI5M3yn-7fAhUJMewKHQR6Bcs4ChDoATADegQIBhAB#v=onepage&q=oligonucleotide%20b%20fragmentation&f=false
 
