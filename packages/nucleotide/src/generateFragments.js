@@ -56,7 +56,7 @@ module.exports = function (mf, options) {
 function addFiveTerm(mfs, fiveTerm, i, options) {
   if (options.a) mfs.push(`${fiveTerm}O-1H-1$a${i}`); // neutral ok
   if (options.ab) mfs.push(`${furanThreeTerm(fiveTerm)}$a${i} - B`); // A minus base
-  if (options.b) mfs.push(`${fiveTerm}$bH-1${i}`);
+  if (options.b) mfs.push(`${fiveTerm}H-1$b${i}`);
   if (options.c) mfs.push(`${fiveTerm}PO2$c${i}`); // neutral ok
   if (options.d) mfs.push(`${fiveTerm}PO3H2$d${i}`);
   if (options.dh2o) mfs.push(`${fiveTerm}PO2$d-H2O${i}`);
@@ -67,7 +67,7 @@ function addThreeTerm(mfs, threeTerm, i, options) {
   if (options.x) mfs.push(`H-1${threeTerm}$x${i}`); // neutral ok
   if (options.y) mfs.push(`O-2P-1${threeTerm}$y${i}`); // neutral ok
   if (options.z) mfs.push(`O-3H-1P-1(+)${threeTerm}$z${i}`);
-  if (options.zch2) mfs.push(`O-3H-3C-1P-1(+)${threeTerm}$z${i}`);
+  if (options.zch2) mfs.push(`O-3H-3C-1P-1(+)${threeTerm}$z-CH2${i}`);
 }
 
 // https://books.google.ch/books?id=B57e37bJjqAC&pg=PA172&lpg=PA172&dq=oligonucleotide+b+fragmentation&source=bl&ots=mRr29Pexx2&sig=1NUQcWV-wuj6o9q81my86AVoRto&hl=fr&sa=X&ved=2ahUKEwjI5M3yn-7fAhUJMewKHQR6Bcs4ChDoATADegQIBhAB#v=onepage&q=oligonucleotide%20b%20fragmentation&f=false
