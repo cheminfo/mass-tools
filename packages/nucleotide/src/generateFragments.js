@@ -16,7 +16,8 @@ module.exports = function (mf, options) {
       y: false,
       z: false,
       zch2: false,
-      abw: false
+      abw: false,
+      aby: false
     };
   }
 
@@ -75,6 +76,11 @@ function addThreeTerm(mfs, threeTerm, i, options) {
 function addInternalTerm(mfs, internal, i, j, options = {}) {
   if (options.abw) {
     let fragment = furanThreeTerm(internal);
-    mfs.push(`HO${fragment}$B${i + 1}:B${j}`); // A minus base - W
+    mfs.push(`HO${fragment}$Bw${i + 1}:B${j}`); // A minus base - W
+  }
+
+  if (options.aby) {
+    let fragment = furanThreeTerm(internal);
+    mfs.push(`O-2P-1${fragment}$By${i + 1}:B${j}`); // A minus base - Y
   }
 }
