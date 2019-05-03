@@ -16,7 +16,7 @@ Array [
       "mf": "+",
     },
     "isotopesInfo": Object {
-      "charge": 0,
+      "charge": 1,
       "isotopes": Array [
         Object {
           "atom": "C",
@@ -77,7 +77,7 @@ Array [
       "mf": "++",
     },
     "isotopesInfo": Object {
-      "charge": 0,
+      "charge": 2,
       "isotopes": Array [
         Object {
           "atom": "C",

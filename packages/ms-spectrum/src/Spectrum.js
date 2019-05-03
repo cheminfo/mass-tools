@@ -19,6 +19,7 @@ function Spectrum(data = { x: [], y: [] }) {
     throw new TypeError('Spectrum data must be an object with x:[], y:[]');
   }
   this.data = data;
+  this.cache = {};
 }
 
 Spectrum.fromText = function fromText(text) {
@@ -30,14 +31,27 @@ Spectrum.prototype.maxY = function maxY() {
   return max(this.data.y);
 };
 
+Spectrum.prototype.sumY = function sumY() {
+  if (!this.cache.sumY) {
+    this.cache.sumY = this.data.y.reduce(
+      (previous, current) => previous + current,
+      0
+    );
+  }
+  return this.cache.sumY;
+};
+
 Spectrum.prototype.scaleY = function scaleY(intensity = 1) {
   let basePeak = this.maxY() / intensity;
   this.data.y = this.data.y.map((y) => y / basePeak);
   return this;
 };
 
-Spectrum.prototype.normedY = function normedY() {
+Spectrum.prototype.normedY = function normedY(total = 1) {
   this.data.y = normed(this.data.y);
+  if (total !== 1) {
+    this.data.y = this.data.y.map((y) => y * total);
+  }
   return this;
 };
 

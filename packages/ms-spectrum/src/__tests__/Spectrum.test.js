@@ -23,6 +23,10 @@ describe('test Spectrum', () => {
     expect(new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).maxY()).toBe(2);
   });
 
+  it('sumY', () => {
+    let spectrum = new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] });
+    expect(spectrum.sumY()).toBe(5);
+  });
   it('scaleY', () => {
     expect(
       new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).scaleY(100).data

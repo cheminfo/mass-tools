@@ -46,6 +46,7 @@ module.exports = function searchSimilarity(options = {}) {
   }
 
   let experimentalData = this.experimentalSpectrum.data;
+  let sumY = this.experimentalSpectrum.sumY();
 
   // the result of this query will be stored in a property 'ms'
 
@@ -63,6 +64,7 @@ module.exports = function searchSimilarity(options = {}) {
 
   let { widthFunction, zone = {} } = similarity;
   if (typeof widthFunction === 'string') {
+    // eslint-disable-next-line no-new-func
     widthFunction = new Function('mass', widthFunction);
   }
   const { low = -0.5, high = 2.5 } = zone;
@@ -103,7 +105,7 @@ module.exports = function searchSimilarity(options = {}) {
         difference: result.diff,
         experimentalInfo: result.extractInfo1,
         thereoticalInfo: result.extractInfo2,
-        quantity: result.extractInfo1.sum / result.extractInfo2.sum
+        quantity: result.extractInfo1.sum / sumY
       };
     }
   }

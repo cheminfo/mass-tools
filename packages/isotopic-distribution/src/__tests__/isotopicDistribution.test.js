@@ -9,6 +9,19 @@ describe('test isotopicDistribution', () => {
     expect(distribution.array[0].x).toBe(12);
   });
 
+  it('create distribution of C Ag+', () => {
+    let isotopicDistribution = new IsotopicDistribution('C', {
+      ionizations: 'Ag+'
+    });
+    let distribution = isotopicDistribution.getDistribution();
+    expect(distribution.array).toStrictEqual([
+      { x: 118.90454302009094, y: 0.512843227 },
+      { x: 119.90789785516094, y: 0.005546773 },
+      { x: 120.90420672009094, y: 0.47645677299999994 },
+      { x: 121.90756155516094, y: 0.005153227 }
+    ]);
+  });
+
   it('create distribution for multiplepart, C.C.C2', () => {
     let isotopicDistribution = new IsotopicDistribution('C.C.C2');
     let distribution = isotopicDistribution.getDistribution();
@@ -122,8 +135,9 @@ describe('test isotopicDistribution', () => {
     });
     let distribution = isotopicDistribution.getDistribution();
     expect(distribution.array).toMatchObject([
-      { x: 13.00727645232093, y: 0.9893 },
-      { x: 14.01063128739093, y: 0.0107 }
+      { x: 13.00727645232093, y: 0.9891862305 },
+      { x: 14.010662031727025, y: 0.010812539 },
+      { x: 15.01690803328093, y: 0.0000012305 }
     ]);
   });
 
