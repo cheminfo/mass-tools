@@ -9,6 +9,43 @@ describe('test isotopicDistribution', () => {
     expect(distribution.array[0].x).toBe(12);
   });
 
+  it('create distribution for multiplepart, C.C.C2', () => {
+    let isotopicDistribution = new IsotopicDistribution('C.C.C2');
+    let distribution = isotopicDistribution.getDistribution();
+    expect(distribution.array).toMatchObject([
+      { x: 12, y: 1.9786 },
+      { x: 13.00335483507, y: 0.0214 },
+      { x: 24, y: 0.9787144899999999 },
+      { x: 25.00335483507, y: 0.02117102 },
+      { x: 26.00670967014, y: 0.00011448999999999998 }
+    ]);
+  });
+
+  it('create distribution from parts', () => {
+    let parts = [
+      {
+        mf: 'C',
+        intensity: 2,
+        ms: { ionization: '', em: 0, charge: 0 },
+        ionization: { mf: '', em: 0, charge: 0 }
+      },
+      {
+        mf: 'C2',
+        ms: { ionization: '', em: 0, charge: 0 },
+        ionization: { mf: '', em: 0, charge: 0 }
+      }
+    ];
+    let isotopicDistribution = new IsotopicDistribution(parts);
+    let distribution = isotopicDistribution.getDistribution();
+    expect(distribution.array).toMatchObject([
+      { x: 12, y: 1.9786 },
+      { x: 13.00335483507, y: 0.0214 },
+      { x: 24, y: 0.9787144899999999 },
+      { x: 25.00335483507, y: 0.02117102 },
+      { x: 26.00670967014, y: 0.00011448999999999998 }
+    ]);
+  });
+
   it('create distribution of CN default res', () => {
     let isotopicDistribution = new IsotopicDistribution('CN');
     let distribution = isotopicDistribution.getDistribution();
@@ -113,7 +150,10 @@ describe('test isotopicDistribution', () => {
     expect(isotopicDistribution.confidence).toBeGreaterThan(0.99999);
     distribution.maxToOne();
     distribution.sortY();
-    expect(distribution.array[0]).toStrictEqual({ x: 13017.858890698088, y: 1 });
+    expect(distribution.array[0]).toStrictEqual({
+      x: 13017.858890698088,
+      y: 1
+    });
   });
 
   it('create distribution of C1000H1000N1000', () => {
@@ -122,7 +162,10 @@ describe('test isotopicDistribution', () => {
     expect(isotopicDistribution.confidence).toBeGreaterThan(0.99999);
     distribution.maxToOne();
     distribution.sortY();
-    expect(distribution.array[0]).toStrictEqual({ x: 27024.926947823435, y: 1 });
+    expect(distribution.array[0]).toStrictEqual({
+      x: 27024.926947823435,
+      y: 1
+    });
   });
 
   it('create distribution of Ala1000', () => {

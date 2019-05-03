@@ -46,6 +46,10 @@ class Distribution {
   }
 }
 
+Distribution.prototype.multiplyY = function multiplyY(value) {
+  this.array.forEach((item) => (item.y *= value));
+};
+
 Distribution.prototype.setArray = function setArray(array) {
   this.array = array;
   this.xSorted = false;
@@ -93,6 +97,5 @@ Distribution.prototype.multiply = require('./utils/multiply.js');
 Distribution.prototype.square = require('./utils/square.js');
 Distribution.prototype.power = require('./utils/power.js');
 Distribution.prototype.normalize = require('./utils/normalize.js');
-
 
 module.exports = Distribution;

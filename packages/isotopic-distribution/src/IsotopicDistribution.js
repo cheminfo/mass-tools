@@ -18,7 +18,7 @@ const Distribution = require('./Distribution');
 class IsotopicDistribution {
   /**
    * Class that manage isotopic distribution
-   * @param {string} mf - Molecular formula
+   * @param {string|array} value - Molecular formula or an array of parts
    * @param {object} [options={}]
    * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
    * @param {number} [options.fwhm=0.01] - Amount of Dalton under which 2 peaks are joined
@@ -27,27 +27,37 @@ class IsotopicDistribution {
    * @param {number} [options.allowNeutral=true] - Should we keep the distribution if the molecule has no charge
    */
 
-  constructor(mf, options = {}) {
+  constructor(value, options = {}) {
     this.ionizations = preprocessIonizations(options.ionizations);
-    this.mf = new MF(mf);
-    this.mfInfo = this.mf.getInfo();
-    let parts = this.mfInfo.parts || [this.mfInfo];
-    this.parts = [];
-    for (let partOriginal of parts) {
-      // we calculate information for each part
-      for (const ionization of this.ionizations) {
-        let part = JSON.parse(JSON.stringify(partOriginal));
-        part.em = part.monoisotopicMass; // TODO: To remove !!! we change the name !?
-        part.isotopesInfo = new MF(part.mf).getIsotopesInfo();
+    if (Array.isArray(value)) {
+      this.parts = JSON.parse(JSON.stringify(value));
+      for (let part of this.parts) {
         part.confidence = 0;
-        let msInfo = getMsInfo(part, {
-          ionization
-        });
-        part.ionization = msInfo.ionization;
-        part.ms = msInfo.ms;
-        this.parts.push(part);
+        part.isotopesInfo = new MF(part.mf).getIsotopesInfo();
+      }
+    } else {
+      let mf = new MF(value);
+      let mfInfo = mf.getInfo();
+      let parts = mfInfo.parts || [mfInfo];
+      this.parts = [];
+      for (let partOriginal of parts) {
+        // we calculate information for each part
+        for (const ionization of this.ionizations) {
+          let part = JSON.parse(JSON.stringify(partOriginal));
+          part.em = part.monoisotopicMass; // TODO: To remove !!! we change the name !?
+          part.isotopesInfo = new MF(part.mf).getIsotopesInfo();
+          part.confidence = 0;
+          let msInfo = getMsInfo(part, {
+            ionization
+          });
+          part.ionization = msInfo.ionization;
+          part.ms = msInfo.ms;
+          this.parts.push(part);
+        }
       }
     }
+
+    console.log(this.parts);
     this.cachedDistribution = undefined;
     this.fwhm = options.fwhm === undefined ? 0.01 : options.fwhm;
     // if fwhm is under 1e-8 there are some artifacts in the spectra
@@ -113,6 +123,10 @@ class IsotopicDistribution {
           part.fromX = totalDistribution.array[0].x;
           part.toX =
             totalDistribution.array[totalDistribution.array.length - 1].x;
+        }
+
+        if (part.intensity && part.intensity !== 1) {
+          totalDistribution.multiplyY(part.intensity);
         }
 
         part.isotopicDistribution = totalDistribution.array;
