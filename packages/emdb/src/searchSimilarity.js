@@ -61,7 +61,10 @@ module.exports = function searchSimilarity(options = {}) {
     flatEntries = results;
   }
 
-  const { widthFunction, zone = {} } = similarity;
+  let { widthFunction, zone = {} } = similarity;
+  if (typeof widthFunction === 'string') {
+    widthFunction = new Function('mass', widthFunction);
+  }
   const { low = -0.5, high = 2.5 } = zone;
 
   // we need to calculate the similarity of the isotopic distribution
