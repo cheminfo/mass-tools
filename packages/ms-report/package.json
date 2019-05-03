@@ -1,0 +1,27 @@
+{
+  "name": "ms-report",
+  "version": "0.10.0",
+  "description": "Generate report for mass analysis",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo-js/mf-parser.git"
+  },
+  "keywords": [],
+  "author": "Luc Patiny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo-js/mf-parser/issues"
+  },
+  "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/ms-report#readme",
+  "dependencies": {
+    "mf-utilities": "^0.10.0",
+    "phantom": "^6.2.0",
+    "puppeteer": "^1.14.0",
+    "snapsvg": "^0.5.1",
+    "webpage": "^0.3.0"
+  }
+}
