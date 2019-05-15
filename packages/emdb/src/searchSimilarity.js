@@ -83,8 +83,8 @@ module.exports = function searchSimilarity(options = {}) {
 
     let distribution = isotopicDistribution.getDistribution();
     // we need to define the comparison zone that depends of the charge
-    let from = entry.ms.em + low / entry.ms.charge;
-    let to = entry.ms.em + high / entry.ms.charge;
+    let from = entry.ms.em + low / Math.abs(entry.ms.charge);
+    let to = entry.ms.em + high / Math.abs(entry.ms.charge);
     similarityProcessor.setFromTo(from, to);
 
     if (widthFunction) {
