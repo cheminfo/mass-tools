@@ -19,7 +19,6 @@ function peaksWidth(peaks) {
     computeQuality: true,
     computeCoefficient: true
   });
-
   var from = min(xs);
   var to = max(xs);
 
@@ -37,7 +36,10 @@ function peaksWidth(peaks) {
     score: regression.score(xs, widths),
     // eslint-disable-next-line no-new-func
     predictFct: regression.predict.bind(regression),
-    tex: regression.toLaTeX(3)
+    tex: regression.toLaTeX(3),
+    A: regression.A,
+    B: regression.B,
+    predictFctString: `${regression.A} * mass ** ${regression.B}`
   };
 }
 

@@ -63,9 +63,16 @@ module.exports = function searchSimilarity(options = {}) {
   }
 
   let { widthFunction, zone = {} } = similarity;
-  if (typeof widthFunction === 'string') {
+  console.log({ similarity });
+  if (widthFunction && typeof widthFunction === 'string') {
     // eslint-disable-next-line no-new-func
     widthFunction = new Function('mass', widthFunction);
+    let test = widthFunction(123);
+    if (!test.bottom || !test.top) {
+      throw Error(
+        'widthFunction should return an object with bottom and top properties'
+      );
+    }
   }
   const { low = -0.5, high = 2.5 } = zone;
 
@@ -88,6 +95,7 @@ module.exports = function searchSimilarity(options = {}) {
     similarityProcessor.setFromTo(from, to);
 
     if (widthFunction) {
+      console.log(widthFunction);
       var width = widthFunction(targetMass);
       similarityProcessor.setTrapezoid(width.bottom, width.top);
     }
