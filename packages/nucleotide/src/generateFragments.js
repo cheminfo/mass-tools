@@ -47,10 +47,6 @@ module.exports = function (mf, options) {
     }
   }
 
-  if (mfs.length === 0) {
-    mfs = mfs.concat([mf]);
-  }
-
   return mfs;
 };
 
