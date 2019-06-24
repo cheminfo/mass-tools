@@ -4,6 +4,7 @@ const furanThreeTerm = require('./furanThreeTerm');
 const addFiveTerm = require('./addFiveTerm');
 const addFiveTermBaseLoss = require('./addFiveTermBaseLoss');
 const addThreeTerm = require('./addThreeTerm');
+const addThreeTermBaseLoss = require('./addThreeTermBaseLoss');
 
 module.exports = function generateFragments(mf, options) {
   if (options === undefined) {
@@ -21,7 +22,8 @@ module.exports = function generateFragments(mf, options) {
       zch2: false,
       abw: false,
       aby: false,
-      abcdBaseLoss: true
+      abcdBaseLoss: true,
+      wxyzBaseLoss: true
     };
   }
 
@@ -41,6 +43,7 @@ module.exports = function generateFragments(mf, options) {
     addFiveTerm(mfs, fiveTerm, i, options);
     addFiveTermBaseLoss(mfs, fiveTerm, i, options);
     addThreeTerm(mfs, threeTerm, i, options);
+    addThreeTermBaseLoss(mfs, threeTerm, i, options);
   }
 
   for (let i = 1; i < mfparts.length; i++) {
