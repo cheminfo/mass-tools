@@ -77,6 +77,6 @@ test('test AGG with d-h2o and base loss', () => {
       kind: 'dna'
     }
   });
-  expect(dbManager.databases.nucleic).toHaveLength(5);
+  expect(dbManager.databases.nucleic).toHaveLength(6);
   expect(dbManager.databases.nucleic).toMatchSnapshot();
 });

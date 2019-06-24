@@ -13,4 +13,21 @@ describe('test base loss', () => {
       'HAlaDampDtmpDcmpDrmpOH$-B4'
     ]);
   });
+
+  it('Base loss of HODampDtmpDcmpDcmpH', () => {
+    let nucleotides = baseLoss('HODampDtmpDcmpDcmpH');
+    expect(nucleotides).toHaveLength(4);
+    expect(nucleotides).toStrictEqual([
+      'HODrmpDtmpDcmpDcmpH$-B1',
+      'HODampDrmpDcmpDcmpH$-B2',
+      'HODampDtmpDrmpDcmpH$-B3',
+      'HODampDtmpDcmpDrmpH$-B4'
+    ]);
+  });
+
+  it('Base loss of HODampH', () => {
+    let nucleotides = baseLoss('HODampH');
+    expect(nucleotides).toHaveLength(1);
+    expect(nucleotides).toStrictEqual(['HODrmpH$-B1']);
+  });
 });

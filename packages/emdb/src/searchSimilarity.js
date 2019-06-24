@@ -63,7 +63,7 @@ module.exports = function searchSimilarity(options = {}) {
   }
 
   let { widthFunction, zone = {} } = similarity;
-  console.log({ similarity });
+
   if (widthFunction && typeof widthFunction === 'string') {
     // eslint-disable-next-line no-new-func
     widthFunction = new Function('mass', widthFunction);
@@ -95,7 +95,6 @@ module.exports = function searchSimilarity(options = {}) {
     similarityProcessor.setFromTo(from, to);
 
     if (widthFunction) {
-      console.log(widthFunction);
       var width = widthFunction(targetMass);
       similarityProcessor.setTrapezoid(width.bottom, width.top);
     }

@@ -5,7 +5,7 @@ function baseLoss(nucleotide) {
   let results = [];
   let parts = nucleotide
     .replace(/ /g, '')
-    .replace(/([a-zA-Z0-9)])([A-Z])/g, '$1 $2')
+    .replace(/([a-zA-Z0-9)])(?=[A-Z])/g, '$1 ')
     .split(/ /);
   let counter = 0;
   for (let i = 0; i < parts.length; i++) {
