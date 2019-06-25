@@ -18,13 +18,13 @@ function addInternalTerm(mfs, internal, i, j, options = {}) {
   if (options.abw) {
     // with base loss
     let fragment = furanThreeTerm(internal);
-    mfs.push(`HO${fragment}$w${i + 1}:aB${j + 1}`); // A minus base - W
+    mfs.push(`HO${fragment}$w${i + 1}:a-B${j + 1}`); // A minus base - W
   }
 
   if (options.aby) {
     // with base loss
     let fragment = furanThreeTerm(internal);
-    mfs.push(`O-2P-1${fragment}$y${i + 1}:aB${j + 1}`); // A minus base - Y
+    mfs.push(`O-2P-1${fragment}$y${i + 1}:a-B${j + 1}`); // A minus base - Y
   }
 }
 
