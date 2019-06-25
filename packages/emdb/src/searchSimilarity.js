@@ -36,6 +36,11 @@ Search for an experimental monoisotopic mass and calculate the similarity
 module.exports = function searchSimilarity(options = {}) {
   const { similarity = {}, minSimilarity = 0.5, filter = {} } = options;
 
+  let width = {
+    bottom: similarity.widthBottom,
+    top: similarity.widthTop
+  };
+
   if (
     !this.experimentalSpectrum ||
     !this.experimentalSpectrum.data.x.length > 0
@@ -95,7 +100,7 @@ module.exports = function searchSimilarity(options = {}) {
     similarityProcessor.setFromTo(from, to);
 
     if (widthFunction) {
-      var width = widthFunction(targetMass);
+      width = widthFunction(targetMass);
       similarityProcessor.setTrapezoid(width.bottom, width.top);
     }
     similarityProcessor.setPeaks2([distribution.xs, distribution.ys]);
@@ -112,7 +117,8 @@ module.exports = function searchSimilarity(options = {}) {
         difference: result.diff,
         experimentalInfo: result.extractInfo1,
         thereoticalInfo: result.extractInfo2,
-        quantity: result.extractInfo1.sum / sumY
+        quantity: result.extractInfo1.sum / sumY,
+        width
       };
     }
   }
