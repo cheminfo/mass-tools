@@ -712,34 +712,6 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 24,
-      "H": 31,
-      "N": 8,
-      "O": 16,
-      "P": 3,
-    },
-    "charge": 0,
-    "comment": "w12:aB13",
-    "em": 780.1070879429499,
-    "ionization": Object {
-      "charge": -5,
-      "em": -5.03912516115,
-      "mf": "(H+)-5",
-    },
-    "mf": "C24H31N8O16P3",
-    "ms": Object {
-      "charge": -5,
-      "em": 155.01414113626905,
-      "ionization": "(H+)-5",
-    },
-    "mw": 780.4692153732938,
-    "parts": Array [
-      "HODampDcmpC5H6O4P",
-    ],
-    "unsaturation": 15,
-  },
-  Object {
-    "atoms": Object {
       "C": 25,
       "H": 32,
       "N": 7,
@@ -931,34 +903,6 @@ Array [
     "mw": 1069.6514286712475,
     "parts": Array [
       "HODcmpDcmpDampC5H6O4P",
-    ],
-    "unsaturation": 20,
-  },
-  Object {
-    "atoms": Object {
-      "C": 34,
-      "H": 44,
-      "N": 10,
-      "O": 23,
-      "P": 4,
-    },
-    "charge": 0,
-    "comment": "w11:aB13",
-    "em": 1084.15312570621,
-    "ionization": Object {
-      "charge": -5,
-      "em": -5.03912516115,
-      "mf": "(H+)-5",
-    },
-    "mf": "C34H44N10O23P4",
-    "ms": Object {
-      "charge": -5,
-      "em": 215.82334868892107,
-      "ionization": "(H+)-5",
-    },
-    "mw": 1084.6628070349109,
-    "parts": Array [
-      "HODtmpDampDcmpC5H6O4P",
     ],
     "unsaturation": 20,
   },
@@ -1244,34 +1188,6 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 44,
-      "H": 56,
-      "N": 15,
-      "O": 28,
-      "P": 5,
-    },
-    "charge": 0,
-    "comment": "w10:aB13",
-    "em": 1397.21073121139,
-    "ionization": Object {
-      "charge": -5,
-      "em": -5.03912516115,
-      "mf": "(H+)-5",
-    },
-    "mf": "C44H56N15O28P5",
-    "ms": Object {
-      "charge": -5,
-      "em": 278.43486978995713,
-      "ionization": "(H+)-5",
-    },
-    "mw": 1397.8697577281732,
-    "parts": Array [
-      "HODampDtmpDampDcmpC5H6O4P",
-    ],
-    "unsaturation": 27,
-  },
-  Object {
-    "atoms": Object {
       "C": 43,
       "H": 55,
       "N": 16,
@@ -1440,34 +1356,6 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 54,
-      "H": 68,
-      "N": 20,
-      "O": 33,
-      "P": 6,
-    },
-    "charge": 0,
-    "comment": "w9:aB13",
-    "em": 1710.2683367165698,
-    "ionization": Object {
-      "charge": -5,
-      "em": -5.03912516115,
-      "mf": "(H+)-5",
-    },
-    "mf": "C54H68N20O33P6",
-    "ms": Object {
-      "charge": -5,
-      "em": 341.04639089099305,
-      "ionization": "(H+)-5",
-    },
-    "mw": 1711.0767084214351,
-    "parts": Array [
-      "HODampDampDtmpDampDcmpC5H6O4P",
-    ],
-    "unsaturation": 34,
-  },
-  Object {
-    "atoms": Object {
       "C": 53,
       "H": 67,
       "N": 21,
@@ -1577,34 +1465,6 @@ Array [
       "HODampDcmpDgmpDtmpDgmpC5H6O4P",
     ],
     "unsaturation": 34,
-  },
-  Object {
-    "atoms": Object {
-      "C": 63,
-      "H": 80,
-      "N": 23,
-      "O": 39,
-      "P": 7,
-    },
-    "charge": 0,
-    "comment": "w8:aB13",
-    "em": 1999.31470883246,
-    "ionization": Object {
-      "charge": -5,
-      "em": -5.03912516115,
-      "mf": "(H+)-5",
-    },
-    "mf": "C63H80N23O39P7",
-    "ms": Object {
-      "charge": -5,
-      "em": 398.85566531417106,
-      "ionization": "(H+)-5",
-    },
-    "mw": 2000.2589217193888,
-    "parts": Array [
-      "HODcmpDampDampDtmpDampDcmpC5H6O4P",
-    ],
-    "unsaturation": 39,
   },
   Object {
     "atoms": Object {
@@ -1748,34 +1608,6 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 72,
-      "H": 92,
-      "N": 26,
-      "O": 45,
-      "P": 8,
-    },
-    "charge": 0,
-    "comment": "w7:aB13",
-    "em": 2288.36108094835,
-    "ionization": Object {
-      "charge": -5,
-      "em": -5.03912516115,
-      "mf": "(H+)-5",
-    },
-    "mf": "C72H92N26O45P8",
-    "ms": Object {
-      "charge": -5,
-      "em": 456.6649397373491,
-      "ionization": "(H+)-5",
-    },
-    "mw": 2289.4411350173423,
-    "parts": Array [
-      "HODcmpDcmpDampDampDtmpDampDcmpC5H6O4P",
-    ],
-    "unsaturation": 44,
-  },
-  Object {
-    "atoms": Object {
       "C": 73,
       "H": 93,
       "N": 25,
@@ -1891,34 +1723,6 @@ Array [
       "C": 82,
       "H": 104,
       "N": 31,
-      "O": 51,
-      "P": 9,
-    },
-    "charge": 0,
-    "comment": "w6:aB13",
-    "em": 2617.4136010731,
-    "ionization": Object {
-      "charge": -5,
-      "em": -5.03912516115,
-      "mf": "(H+)-5",
-    },
-    "mf": "C82H104N31O51P9",
-    "ms": Object {
-      "charge": -5,
-      "em": 522.475443762299,
-      "ionization": "(H+)-5",
-    },
-    "mw": 2618.6474906349226,
-    "parts": Array [
-      "HODgmpDcmpDcmpDampDampDtmpDampDcmpC5H6O4P",
-    ],
-    "unsaturation": 51,
-  },
-  Object {
-    "atoms": Object {
-      "C": 82,
-      "H": 104,
-      "N": 31,
       "O": 52,
       "P": 9,
     },
@@ -2003,34 +1807,6 @@ Array [
       "C": 92,
       "H": 117,
       "N": 33,
-      "O": 58,
-      "P": 10,
-    },
-    "charge": 0,
-    "comment": "w5:aB13",
-    "em": 2921.45963883636,
-    "ionization": Object {
-      "charge": -5,
-      "em": -5.03912516115,
-      "mf": "(H+)-5",
-    },
-    "mf": "C92H117N33O58P10",
-    "ms": Object {
-      "charge": -5,
-      "em": 583.2846513149511,
-      "ionization": "(H+)-5",
-    },
-    "mw": 2922.8410822965407,
-    "parts": Array [
-      "HODtmpDgmpDcmpDcmpDampDampDtmpDampDcmpC5H6O4P",
-    ],
-    "unsaturation": 56,
-  },
-  Object {
-    "atoms": Object {
-      "C": 92,
-      "H": 117,
-      "N": 33,
       "O": 59,
       "P": 10,
     },
@@ -2109,90 +1885,6 @@ Array [
       "HODampDcmpDgmpDtmpDgmpDcmpDcmpDampDampDtmpC5H6O4P",
     ],
     "unsaturation": 63,
-  },
-  Object {
-    "atoms": Object {
-      "C": 102,
-      "H": 129,
-      "N": 38,
-      "O": 64,
-      "P": 11,
-    },
-    "charge": 0,
-    "comment": "w4:aB13",
-    "em": 3250.51215896111,
-    "ionization": Object {
-      "charge": -5,
-      "em": -5.03912516115,
-      "mf": "(H+)-5",
-    },
-    "mf": "C102H129N38O64P11",
-    "ms": Object {
-      "charge": -5,
-      "em": 649.095155339901,
-      "ionization": "(H+)-5",
-    },
-    "mw": 3252.0474379141206,
-    "parts": Array [
-      "HODgmpDtmpDgmpDcmpDcmpDampDampDtmpDampDcmpC5H6O4P",
-    ],
-    "unsaturation": 63,
-  },
-  Object {
-    "atoms": Object {
-      "C": 111,
-      "H": 141,
-      "N": 41,
-      "O": 70,
-      "P": 12,
-    },
-    "charge": 0,
-    "comment": "w3:aB13",
-    "em": 3539.5585310769998,
-    "ionization": Object {
-      "charge": -5,
-      "em": -5.03912516115,
-      "mf": "(H+)-5",
-    },
-    "mf": "C111H141N41O70P12",
-    "ms": Object {
-      "charge": -5,
-      "em": 706.904429763079,
-      "ionization": "(H+)-5",
-    },
-    "mw": 3541.229651212074,
-    "parts": Array [
-      "HODcmpDgmpDtmpDgmpDcmpDcmpDampDampDtmpDampDcmpC5H6O4P",
-    ],
-    "unsaturation": 68,
-  },
-  Object {
-    "atoms": Object {
-      "C": 121,
-      "H": 153,
-      "N": 46,
-      "O": 75,
-      "P": 13,
-    },
-    "charge": 0,
-    "comment": "w2:aB13",
-    "em": 3852.6161365821804,
-    "ionization": Object {
-      "charge": -5,
-      "em": -5.03912516115,
-      "mf": "(H+)-5",
-    },
-    "mf": "C121H153N46O75P13",
-    "ms": Object {
-      "charge": -5,
-      "em": 769.5159508641151,
-      "ionization": "(H+)-5",
-    },
-    "mw": 3854.436601905337,
-    "parts": Array [
-      "HODampDcmpDgmpDtmpDgmpDcmpDcmpDampDampDtmpDampDcmpC5H6O4P",
-    ],
-    "unsaturation": 75,
   },
   Object {
     "atoms": Object {
