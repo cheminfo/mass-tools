@@ -9,7 +9,7 @@ const addThreeTermBaseLoss = require('./addThreeTermBaseLoss');
 module.exports = function generateFragments(mf, options) {
   if (options === undefined) {
     options = {
-      a: true,
+      a: false,
       ab: false,
       b: false,
       c: false,
@@ -20,10 +20,12 @@ module.exports = function generateFragments(mf, options) {
       y: false,
       z: false,
       zch2: false,
+      aw: false,
+      bw: false,
       abw: false,
       aby: false,
-      abcdBaseLoss: true,
-      wxyzBaseLoss: true
+      abcdBaseLoss: false,
+      wxyzBaseLoss: false
     };
   }
 
@@ -64,19 +66,23 @@ module.exports = function generateFragments(mf, options) {
 function addInternalTerm(mfs, internal, i, j, options = {}) {
   if (options.aw) {
     // without base loss
-    let fragment = furanThreeTerm(internal);
-    mfs.push(`HO${fragment}$Bw${i + 1}:B${j}`); // A minus base - W
+    mfs.push(`HO${internal}O-1H-1$w${i + 1}:a${j + 1}`); // A W
+  }
+
+  if (options.bw) {
+    // without base loss
+    mfs.push(`HO${internal}H-1$w${i + 1}:a${j + 1}`); // B W
   }
 
   if (options.abw) {
     // with base loss
     let fragment = furanThreeTerm(internal);
-    mfs.push(`HO${fragment}$Bw${i + 1}:B${j}`); // A minus base - W
+    mfs.push(`HO${fragment}$w${i + 1}:aB${j + 1}`); // A minus base - W
   }
 
   if (options.aby) {
     // with base loss
     let fragment = furanThreeTerm(internal);
-    mfs.push(`O-2P-1${fragment}$By${i + 1}:B${j}`); // A minus base - Y
+    mfs.push(`O-2P-1${fragment}$y${i + 1}:aB${j + 1}`); // A minus base - Y
   }
 }
