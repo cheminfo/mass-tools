@@ -85,8 +85,6 @@ module.exports = function searchSimilarity(options = {}) {
   let similarityProcessor = new Similarity(similarity);
   similarityProcessor.setPeaks1([experimentalData.x, experimentalData.y]);
 
-  let targetMass = experimentalData.x[0];
-
   for (let entry of flatEntries) {
     let isotopicDistribution = new IsotopicDistribution(entry.mf, {
       allowNeutral: false,
@@ -100,7 +98,7 @@ module.exports = function searchSimilarity(options = {}) {
     similarityProcessor.setFromTo(from, to);
 
     if (widthFunction) {
-      width = widthFunction(targetMass);
+      width = widthFunction(entry.ms.em);
       similarityProcessor.setTrapezoid(width.bottom, width.top);
     }
     similarityProcessor.setPeaks2([distribution.xs, distribution.ys]);
