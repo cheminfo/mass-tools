@@ -18,7 +18,14 @@ function Spectrum(data = { x: [], y: [] }) {
   ) {
     throw new TypeError('Spectrum data must be an object with x:[], y:[]');
   }
-  this.data = data;
+  this.data = {
+    x: data.x,
+    y: data.y
+  };
+  Object.defineProperty(this.data, 'xOriginal', {
+    enumerable: false,
+    writable: true
+  });
   this.cache = {};
 }
 
@@ -45,6 +52,22 @@ Spectrum.prototype.scaleY = function scaleY(intensity = 1) {
   let basePeak = this.maxY() / intensity;
   this.data.y = this.data.y.map((y) => y / basePeak);
   return this;
+};
+
+Spectrum.prototype.rescaleX = function rescaleX(callback) {
+  this.ensureOriginalX();
+
+  for (let i = 0; i < this.data.x.length; i++) {
+    this.data.x[i] = callback(this.data.xOriginal[i]);
+  }
+
+  return this;
+};
+
+Spectrum.prototype.ensureOriginalX = function ensureOriginalX() {
+  if (!this.data.xOriginal) {
+    this.data.xOriginal = this.data.x.slice(0);
+  }
 };
 
 Spectrum.prototype.normedY = function normedY(total = 1) {
