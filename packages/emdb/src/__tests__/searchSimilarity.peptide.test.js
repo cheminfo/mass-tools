@@ -46,7 +46,7 @@ describe('test searchSimilarity for peptide', () => {
     });
 
     expect(results).toMatchSnapshot();
-    expect(results.peptidic[0].ms.similarity.value).toBeCloseTo(0.9, 2);
+    expect(results.peptidic[0].ms.similarity.value).toBeCloseTo(0.96, 2);
   });
 
   it('should find one result with bad distribution and string fucntion', () => {
@@ -83,7 +83,7 @@ describe('test searchSimilarity for peptide', () => {
     });
 
     expect(results).toMatchSnapshot();
-    expect(results.peptidic[0].ms.similarity.value).toBeCloseTo(0.9, 2);
+    expect(results.peptidic[0].ms.similarity.value).toBeCloseTo(0.96, 2);
   });
 });
 
