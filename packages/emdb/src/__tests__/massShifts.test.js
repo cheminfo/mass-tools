@@ -1,8 +1,8 @@
 'use strict';
 
-const xShifts = require('../xShifts');
+const massShifts = require('../massShifts');
 
-describe('test xShifts', () => {
+describe('test massShifts', () => {
   it('should give the right function', async () => {
     let data = [
       {
@@ -28,7 +28,7 @@ describe('test xShifts', () => {
       }
     ];
 
-    let result = xShifts(data, { minLength: 2 });
+    let result = massShifts(data, { minLength: 2 });
     expect(result.intercept).toBe(0.1);
     expect(result.slope).toBe(0.01);
     expect(result.shifts).toStrictEqual({
