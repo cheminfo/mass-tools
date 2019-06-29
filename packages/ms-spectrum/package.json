@@ -24,6 +24,7 @@
     "ml-array-normed": "^1.0.2",
     "ml-gsd": "^2.0.5",
     "ml-regression-power": "^1.0.1",
+    "ml-regression-theil-sen": "^1.0.0",
     "xy-parser": "^2.2.2"
   }
 }
