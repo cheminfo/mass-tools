@@ -4,8 +4,19 @@ const Regression = require('ml-regression-theil-sen/lib/index');
 const min = require('ml-array-min/lib/index');
 const max = require('ml-array-max/lib/index');
 
-function xShifts(results, options = {}) {
+function xShifts(similarities, options = {}) {
   const { minSimilarity = 0.95, minLength = 10 } = options;
+
+  let results = [];
+  if (!Array.isArray(similarities)) {
+    for (let key of results) {
+      for (let entry of results[key]) {
+        results.push(entry);
+      }
+    }
+  } else {
+    results = similarities;
+  }
 
   results = results.filter(
     (result) => result.ms.similarity.value > minSimilarity

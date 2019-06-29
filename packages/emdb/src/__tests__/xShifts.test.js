@@ -29,7 +29,14 @@ describe('test xShifts', () => {
     ];
 
     let result = xShifts(data, { minLength: 2 });
-    console.log(result);
-    expect(result).toStrictEqual({});
+    expect(result.intercept).toBe(0.1);
+    expect(result.slope).toBe(0.01);
+    expect(result.shifts).toStrictEqual({
+      x: [10, 20, 30],
+      y: [0.2, 0.3, 0.4]
+    });
+    expect(result.score.r).toBe(1);
+    expect(result.fit.x).toHaveLength(1001);
+    expect(result.fit.y).toHaveLength(1001);
   });
 });

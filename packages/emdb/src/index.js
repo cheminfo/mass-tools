@@ -135,14 +135,7 @@ DBManager.prototype.getInfo = function getInfo() {
   };
 };
 
-DBManager.prototype.xShifts = function xShifts(results) {
-  if (!this.experimentalSpectrum) {
-    throw Error('No existing experimental spectrum');
-  }
-  let peaks = this.experimentalSpectrum.getPeaks();
-  return require('./xShifts')(peaks, results);
-};
-
+DBManager.prototype.xShifts = require('./xShifts');
 DBManager.prototype.search = require('./search');
 DBManager.prototype.searchMSEM = require('./searchMSEM');
 DBManager.prototype.searchPubchem = require('./searchPubchem');
