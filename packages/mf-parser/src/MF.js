@@ -43,6 +43,7 @@ class MF {
   /**
    * Returns an object with the global MF, global charge, monoisotopic mass and mass
    * as well as the same informations for all the parts
+   * @param {object} [options={}] options
    */
   getInfo(options = {}) {
     if (!this.cache.info) {
