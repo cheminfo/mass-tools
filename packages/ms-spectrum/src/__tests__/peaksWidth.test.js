@@ -15,7 +15,8 @@ describe('test test peakWidth', () => {
     expect(result.score).toStrictEqual({ chi2: 0, r: 1, r2: 1, rmsd: 0 });
     expect(result.tex).toBe('f(x) = 2.00x^{2.00}');
     expect(result.predictFct(2)).toBe(8);
-    expect(result.fit).toMatchSnapshot();
+    expect(result.fit.x).toHaveLength(1001);
+    expect(result.fit.y).toHaveLength(1001);
     expect(result.widths).toStrictEqual({
       x: [1, 2, 3, 4, 5],
       y: [2, 8, 18, 32, 50]
@@ -26,7 +27,8 @@ describe('test test peakWidth', () => {
     let peaks = [{ width: 2, x: 1, y: 1 }, { width: 8, x: 2, y: 1 }];
     let result = peaksWidth(peaks);
     expect(result.predictFct(2)).toBeCloseTo(8, 5);
-    expect(result.fit).toMatchSnapshot();
+    expect(result.fit.x).toHaveLength(1001);
+    expect(result.fit.y).toHaveLength(1001);
     expect(result.widths).toStrictEqual({
       x: [1, 2],
       y: [2, 8]
