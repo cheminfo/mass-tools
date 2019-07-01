@@ -1,5 +1,7 @@
 'use strict';
 
+// editor of groups.tsv
+
 const fs = require('fs');
 
 const Papa = require('papaparse');
@@ -17,6 +19,14 @@ for (let group of groups) {
   let mf = group.mf;
   let mfObject = new MF(mf);
   let parts = mfObject.toParts()[0];
+  if (group.oclID) {
+    group.ocl = {
+      value: group.oclID,
+      coordinates: group.oclCoordinates
+    };
+  }
+  delete group.oclCoordinates;
+  delete group.oclID;
   group.mass = 0;
   group.monoisotopicMass = 0;
   group.unsaturation = (mfObject.getInfo().unsaturation - 1) * 2;

@@ -1,161 +1,160 @@
-symbol	name	mf
-Abu	2-Aminobutyric acid diradical	C4H7NO
-Acet	Acetyl	C2H3O
-Acm	Acetamidomethyl	C3H6NO
-Adao	Adamantyloxy	C10H15O
-Aib	alpha-Aminoisobutyric acid diradical	C4H7NO
-Ala	Alanine diradical	C3H5NO
-Arg	Arginine diradical	C6H12N4O
-Argp	Arginine triradical	C6H11N4O
-Asn	Asparagine diradical	C4H6N2O2
-Asnp	Asparagine triradical	C4H5N2O2
-Asp	Aspartic acid diradical	C4H5NO3
-Aspp	Aspartic acid triradical	C4H4NO3
-Asu	alpha-Aminosuberic acid diradical	C8H13NO3
-Asup	alpha-Aminosuberic acid triradical	C8H12NO3
-Boc	t-Butoxycarbonyl	C5H9O2
-Bom	Benzyloxymethyl	C8H9O
-Brz	2-Bromobenzyloxycarbonyl	C8H6BrO2
-Bu	Butyl	C4H9
-Bum	t-Butoxymethyl	C5H11O
-Bz	Benzoyl	C7H5O
-Bzl	Benzyl	C7H7
-Bn	Benzyl	C7H7
-Bzlo	Benzyloxy	C7H7O
-Cha	beta-Cyclohexylalanine diradical	C9H15NO
-Chxo	Cyclohexyloxy	C6H11O
-Cit	Citrulline diradical	C6H11N3O2
-Citp	Citrulline triradical	C6H10N3O2
-Clz	2-Chlorobenzyloxycarbonyl	C8H6ClO2
-Cp	Cyclopentadienyl	C5H5
-Cys	Cysteine diradical	C3H5NOS
-Cysp	Cysteine triradical	C3H4NOS
-D	Deuterium	[2H]
-Dde	Dde	C10H13O2
-Dnp	2,4-Dinitrophenyl	C6H3N2O4
-Et	Ethyl	C2H5
-Fmoc	Fluorenylmethoxycarbonyl	C15H11O2
-For	Formyl	CHO
-Gln	Glutamine diradical	C5H8N2O2
-Glnp	Glutamine triradical	C5H7N2O2
-Glp	Pyroglutamine	C5H5NO2
-Glu	Glutamic acid diradical	C5H7NO3
-Glup	Glutamic acid triradical	C5H6NO3
-Gly	Glycine diradical	C2H3NO
-Hci	Homocitrulline diradical	C7H13N3O2
-Hcip	Homocitrulline triradical	C7H12N3O2
-His	Histidine diradical	C6H7N3O
-Hisp	Histidine triradical	C6H6N3O
-Hser	Homoserine diradical	C4H7NO2
-Hserp	Homoserine triradical	C4H6NO2
-Hyp	Hydroxyproline diradical	C5H7NO2
-Hypp	Hydroxyproline triradical	C5H6NO2
-Ile	Isoleucine diradical	C6H11NO
-Ivdde	1-[4,4-dimethyl-2,6-dioxocyclohexylidene)-3-methylbutyl	C14H21O2
-Leu	Leucine diradical	C6H11NO
-Lys	Lysine diradical	C6H12N2O
-Lysp	Lysine triradical	C6H11N2O
-Mbh	4,4'-Dimethoxybenzhydryl	C15H15O2
-Me	Methyl	CH3
-Mebzl	4-Methylbenzyl	C8H9
-Meobzl	4-Methoxybenzyl	C8H9O
-Met	Methionine diradical	C5H9NOS
-Mmt	4-Methoxytrityl	C20H17O
-Mtc	2,2,5,7,8-pentamethylchroman-6-sulphonyl	C14H19O3S
-Mtr	4-Methoxy-2,3,6-trimethylbenzenesulphonyl	C10H13O3S
-Mts	Mesitylene-2-sulphonyl	C9H11O2S
-Mtt	4-Methyltrityl	C20H17
-Nle	Norleucine diradical	C6H11NO
-Npys	3-Nitro-2-pyridinesulphenyl	C5H3N2O2S
-Nva	Norvaline diradical	C5H9NO
-Odmab	Odmab	C20H26NO3
-Orn	Ornithine diradical	C5H10N2O
-Ornp	Ornithine triradical	C5H9N2O
-Pbf	2,2,4,6,7-pentamethyldihydrobenzofurane-5-sulfonyl	C13H17O3S
-Pen	Penicillamine diradical	C5H9NOS
-Penp	Penicillamine triradical	C5H8NOS
-Ph	Phenyl	C6H5
-Phe	Phenylalanine diradical	C9H9NO
-Phepcl	4-Chlorophenylalanine diradical	C9H8ClNO
-Phg	Phenylglycine	C8H7NO
-Pmc	2,2,5,7,8-Pentamethylchroman-6-sulphonyl	C14H19O3S
-Pro	Proline diradical	C5H7NO
-Pyr	Pyroglutamine	C5H5NO2
-Sar	Sarcosine diradical	C3H5NO
-Ser	Serine diradical	C3H5NO2
-Serp	Serine triradical	C3H4NO2
-Sta	Statine diradical	C8H15NO2
-Stap	Statine triradical	C8H14NO2
-Tacm	Trimethylacetamidomethyl	C6H12NO
-Tbdms	t-Butyldimethylsilyl	C6H15Si
-Tbu	t-Butyl	C4H9
-Tbuo	t-Butoxy	C4H9O
-Tbuthio	t-Butylthio	C4H9S
-Tfa	Trifluoroacetyl	C2F3O
-Thr	Threonine diradical	C4H7NO2
-Thrp	Threonine triradical	C4H6NO2
-Tfsi	(Bis)(trifluoromethanesulfonyl)imide	C2F6NO4S2
-Tips	Triisopropylsilyl	C9H21Si
-Tms	Trimethylsilyl	C3H9Si
-Tos	Tosyl	C7H7O2S
-Trp	Tryptophan diradical	C11H10N2O
-Trpp	Tryptophan triradical	C11H9N2O
-Trt	Trityl	C19H15
-Tyr	Tyrosine diradical	C9H9NO2
-Tyrp	Tyrosine triradical	C9H8NO2
-Val	Valine	C5H9NO
-Valoh	beta-Hydroxyvaline diradical	C5H9NO2
-Valohp	beta-Hydroxyvaline triradical	C5H8NO2
-Xan	Xanthyl	C13H9O
-Z	Benzyloxycarbonyl	C8H7O2
-		
-Damp	Desoxyadenosine monophosphate diratical	C10H12N5O5P
-Dcmp	Desoxycytidine monophosphate diratical	C9H12N3O6P
-Dgmp	Desoxyguanosine monophosphate diratical	C10H12N5O6P
-Dtmp	Desoxythymidine monophosphate diratical	C10H13N2O7P
-Dump	Desoxyuridine monophosphate diratical	C9H11N2O7P
-Drmp	Desoxyribose monophosphate diratical	C5H7O5P
-		
-
-Dadp	Desoxyadenosine diphosphate diratical	C10H13N5O8P2
-Dcdp	Desoxycytidine diphosphate diratical	C9H13N3O9P2
-Dgdp	Desoxyguanosine diphosphate diratical	C10H13N5O9P2
-Dtdp	Desoxythymidine diphosphate diratical	C10H14N2O10P2
-Dudp	Desoxyuridine diphosphate diratical	C9H12N2O10P2
-		
-Datp	Desoxyadenosine triphosphate diratical	C10H14N5O11P3
-Dctp	Desoxycytidine triphosphate diratical	C9H14N3O12P3
-Dgtp	Desoxyguanosine triphosphate diratical	C10H14N5O12P3
-Dttp	Desoxythymidine triphosphate diratical	C10H15N2O13P3
-Dutp	Desoxyuridine triphosphate diratical	C9H13N2O13P3
-		
-Dade	Desoxyadenine diratical	C10H11N5O2
-Dcyt	Desoxycytosine diratical	C9H11N3O3
-Dgua	Desoxyguanine diratical	C10H11N5O3
-Dthy	Desoxythymine diratical	C10H12N2O4
-Dura	Desoxyuracil diratical	C9H10N2O4
-		
-Amp	Adenosine monophosphate diratical	C10H12N5O6P
-Cmp	Cytidine monophosphate diratical	C9H12N3O7P
-Gmp	Guanosine monophosphate diratical	C10H12N5O7P
-Tmp	Thymidine monophosphate diratical	C10H13N2O8P
-Ump	Uridine monophosphate diratical	C9H11N2O8P
-Rmp	Ribose monophosphate diratical	C5H7O6P
-
-Adp	Adenosine diphosphate diratical	C10H13N5O9P2
-Cdp	Cytidine diphosphate diratical	C9H13N3O10P2
-Gdp	Guanosine diphosphate diratical	C10H13N5O10P2
-Tdp	Thymidine diphosphate diratical	C10H14N2O11P2
-Udp	Uridine diphosphate diratical	C9H12N2O11P2
-		
-Atp	Adenosine triphosphate diratical	C10H14N5O12P3
-Ctp	Cytidine triphosphate diratical	C9H14N3O13P3
-Gtp	Guanosine triphosphate diratical	C10H14N5O13P3
-Ttp	Thymidine triphosphate diratical	C10H15N2O14P3
-Utp	Uridine triphosphate diratical	C9H13N2O14P3
-		
-Ade 	Adenine diratical	C10H11N5O3
-Cyt	Cytosine diratical	C9H11N3O4
-Gua	Guanine diratical	C10H11N5O4
-Thy	Thymine diratical  	C10H12N2O5
-Ura	Uracil diratical	C9H10N2O5
+symbol	name	mf	oclID	oclCoordinates
+Abu	2-Aminobutyric acid diradical	C4H7NO	dazHPBPOEgEInVZjcH@	!BJLtni|c|rDvN@Dc|rOp
+Acet	Acetyl	C2H3O	gCaHDEeIi`@	!BbOrN@HbM
+Acm	Acetamidomethyl	C3H6NO	d@	
+Adao	Adamantyloxy	C10H15O		
+Aib	alpha-Aminoisobutyric acid diradical	C4H7NO	dazHPBPOGgEInfZj@@	!BJLtni|c|rDvN@Ao|RGp
+Ala	Alanine diradical	C3H5NO	gNyDBaxmqR[fZjZ@	!BJLtni|c|rDvN@Dc|
+Arg	Arginine diradical	C6H12N4O	dkLhPBgSPOEgEInWUijjihr@@	!BJLtni|c|rDvN@Dc|rOqnpLc|[lB[Lc|
+Argp	Arginine triradical	C6H11N4O	dglhpHpil@gWDEI[UYZfjji`T@	!BuSWK]^L[mWKV{_urw^_xAMu~t@mE]LKn|
+Asn	Asparagine diradical	C4H6N2O2	deeDPBeACqYqR[ezZjZL`@	!BJLtni|c|rDvN@Dc|ROpnPDcM
+Asnp	Asparagine triradical	C4H5N2O2	dmUDpH[E@IEqgqRVvVijjXi@@	!Bvrt{Bx@N~w^]xaMv~tHoEo|Kn\
+Asp	Aspartic acid diradical	C4H5NO3	defLPBPYCqYqR[ezZjZL`@	!BJLtni|c|rDvN@Dc|ROpnPDcM
+Aspp	Aspartic acid triradical	C4H4NO3	dmVLpFcE@IEqgqRVvVijjXi@@	!Bfru[Bx@Vzv^MxaMfztHoAm|Kn\
+Asu	alpha-Aminosuberic acid diradical	C8H13NO3	dgnLPBP{CqYqR[euVfjjihr@@	!BJJtny|c|bDwN@@b|ROqn`Dc|[hAHFz@RJt
+Asup	alpha-Aminosuberic acid triradical	C8H12NO3	do^LpEcG@IMqoqRVuUejZjjibT@	!Bvzw[Fx@vzunM}nm[c_[[YzwBDu[k_@|fpnEp
+Boc	t-Butoxycarbonyl	C5H9O2	daxD`DpEeImjZj@@	!BbOqn@HambOrH[Vx@bOp
+Bom	Benzyloxymethyl	C8H9O	deTH`DAYRUYTYj`@@@	!B@OP@[PCt@Et@}Fz@Ft@[Vz
+Brz	2-Bromobenzyloxycarbonyl	C8H6BrO2	d@	
+Bu	Butyl	C4H9	d@	
+Bum	t-Butoxymethyl	C5H11O	gNqHDEeIVjj`@	!BbOrH[Xa|bFun@Mo|
+Bz	Benzoyl	C7H5O	didH`DAYR[e^FX@@@@	!BbOrn@HbmbOrnUxbmbJvnUp
+Bzl	Benzyl	C7H7	daD@`@VTeeVz`@@@	!B@OP@[PCtkm|@[PBmkm|
+Bn	Benzyl	C7H7	daD@`@VTeeVz`@@@	!B@OP@[PCtkm|@[PBmkm|
+Bzlo	Benzyloxy	C7H7O	didH`HAYRUe^Fh@@@@	!B@Jt@}@Am@ORnwpBm@Jvnwp
+Cha	beta-Cyclohexylalanine diradical	C9H15NO		
+Chxo	Cyclohexyloxy	C6H11O	daDH`HAYRVU[jjj@@	!B@OP@[PCtkm|@[PBmkm|
+Cit	Citrulline diradical	C6H11N3O2	d@	
+Citp	Citrulline triradical	C6H10N3O2		
+Clz	2-Chlorobenzyloxycarbonyl	C8H6ClO2		
+Cp	Cyclopentadienyl	C5H5		
+Cys	Cysteine diradical	C3H5NOS	d@	
+Cysp	Cysteine triradical	C3H4NOS		
+D	Deuterium	[2H]	eFAAYhBLCEH@	!B@Mt
+Dde	Dde	C10H13O2		
+Dnp	2,4-Dinitrophenyl	C6H3N2O4		
+Et	Ethyl	C2H5	eMBAYRZ@	!B@Fp@wP
+Fmoc	Fluorenylmethoxycarbonyl	C15H11O2	d@	
+For	Formyl	CHO		
+Gln	Glutamine diradical	C5H8N2O2		
+Glnp	Glutamine triradical	C5H7N2O2		
+Glp	Pyroglutamine	C5H5NO2		
+Glu	Glutamic acid diradical	C5H7NO3	dmVLPBRUCqYqR[evfjihr@@	!BJLtni|a|rDvN@Dc|RGpnPLa|zwp
+Glup	Glutamic acid triradical	C5H6NO3		
+Gly	Glycine diradical	C2H3NO	gGYDBaxuqR[Yj@@	!BPLtn{xCt`Dt@}@
+Hci	Homocitrulline diradical	C7H13N3O2		
+Hcip	Homocitrulline triradical	C7H12N3O2		
+His	Histidine diradical	C6H7N3O		
+Hisp	Histidine triradical	C6H6N3O		
+Hser	Homoserine diradical	C4H7NO2		
+Hserp	Homoserine triradical	C4H6NO2		
+Hyp	Hydroxyproline diradical	C5H7NO2		
+Hypp	Hydroxyproline triradical	C5H6NO2		
+Ile	Isoleucine diradical	C6H11NO		
+Ivdde	1-[4,4-dimethyl-2,6-dioxocyclohexylidene)-3-methylbutyl	C14H21O2		
+Leu	Leucine diradical	C6H11NO		
+Lys	Lysine diradical	C6H12N2O		
+Lysp	Lysine triradical	C6H11N2O		
+Mbh	4,4'-Dimethoxybenzhydryl	C15H15O2		
+Me	Methyl	CH3		
+Mebzl	4-Methylbenzyl	C8H9		
+Meobzl	4-Methoxybenzyl	C8H9O		
+Met	Methionine diradical	C5H9NOS		
+Mmt	4-Methoxytrityl	C20H17O		
+Mtc	2,2,5,7,8-pentamethylchroman-6-sulphonyl	C14H19O3S		
+Mtr	4-Methoxy-2,3,6-trimethylbenzenesulphonyl	C10H13O3S		
+Mts	Mesitylene-2-sulphonyl	C9H11O2S		
+Mtt	4-Methyltrityl	C20H17		
+Nle	Norleucine diradical	C6H11NO	defHPBPOEgEInWYjjhr@@	!BJLtni|a|rDvN@Dc|ROpnPLc|
+Npys	3-Nitro-2-pyridinesulphenyl	C5H3N2O2S	d@	
+Nva	Norvaline diradical	C5H9NO	diFHPBPOEgEInWfjjL`@	!BJLtni|c|rDvN@Dc|ROpnP@
+Odmab	Odmab	C20H26NO3		
+Orn	Ornithine diradical	C5H10N2O		
+Ornp	Ornithine triradical	C5H9N2O		
+Pbf	2,2,4,6,7-pentamethyldihydrobenzofurane-5-sulfonyl	C13H17O3S		
+Pen	Penicillamine diradical	C5H9NOS	d@	
+Penp	Penicillamine triradical	C5H8NOS		
+Ph	Phenyl	C6H5		
+Phe	Phenylalanine diradical	C9H9NO		
+Phepcl	4-Chlorophenylalanine diradical	C9H8ClNO		
+Phg	Phenylglycine	C8H7NO	dcNHPBPOEgEInVuWYj`@Hr@@	!BJBvny|c|rLuN@Dc|jwrHDy@SdBH@
+Pmc	2,2,5,7,8-Pentamethylchroman-6-sulphonyl	C14H19O3S		
+Pro	Proline diradical	C5H7NO		
+Pyr	Pyroglutamine	C5H5NO2	d@	
+Sar	Sarcosine diradical	C3H5NO		
+Ser	Serine diradical	C3H5NO2	dazDPBS`|V\TfyYjjL`@	!BJBvny|a|rLuN@Dc|jwp
+Serp	Serine triradical	C3H4NO2	diFDpB`PBV\^|TeYZjjXq@@	!B`OR`gUy`LwW[PBtUprngp
+Sta	Statine diradical	C8H15NO2		
+Stap	Statine triradical	C8H14NO2		
+Tacm	Trimethylacetamidomethyl	C6H12NO		
+Tbdms	t-Butyldimethylsilyl	C6H15Si		
+Tbu	t-Butyl	C4H9		
+Tbuo	t-Butoxy	C4H9O		
+Tbuthio	t-Butylthio	C4H9S		
+Tfa	Trifluoroacetyl	C2F3O		
+Thr	Threonine diradical	C4H7NO2		
+Thrp	Threonine triradical	C4H6NO2		
+Tfsi	(Bis)(trifluoromethanesulfonyl)imide	C2F6NO4S2		
+Tips	Triisopropylsilyl	C9H21Si		
+Tms	Trimethylsilyl	C3H9Si		
+Tos	Tosyl	C7H7O2S		
+Trp	Tryptophan diradical	C11H10N2O		
+Trpp	Tryptophan triradical	C11H9N2O		
+Trt	Trityl	C19H15	fbm@B@@KJSSLrjkyhnRGMT@@@@@@@@	!Bvzun@Hamvvw[_Ha|bGqnMvxwvwqn@Fx@bFvH[]mmvvvH_Fxwvwp
+Tyr	Tyrosine diradical	C9H9NO2	d@	
+Tyrp	Tyrosine triradical	C9H8NO2		
+Val	Valine	C5H9NO		
+Valoh	beta-Hydroxyvaline diradical	C5H9NO2		
+Valohp	beta-Hydroxyvaline triradical	C5H8NO2		
+Xan	Xanthyl	C13H9O		
+Z	Benzyloxycarbonyl	C8H7O2		
+				
+Damp	Desoxyadenosine monophosphate diradical	C10H12N5O5P	fnsiS@IASUlJB]xGbkplxyDhhldhiEEUeSdTekUUUULBATXPlKd@@	!BneB]^HipIvzsgGBJvW@XSRx@f@Ks[K`|fJu^TEyWY{DJ|Ifp_RS}I@kpBo@
+Dcmp	Desoxycytidine monophosphate diradical	C9H12N3O6P	fjmps@IQKB`g^BCqUxV\\bTTVRTTbb^iqNZjjjifVkBEa\`@	!BneB]^HipIvzsgGBJvW@XSRx@f@I[N`RfJu^TEyWapvntJ{PzAJnt@
+Dgmp	Desoxyguanosine monophosphate diradical	C10H12N5O6P	fakhs@IASUlJB]{hOEWaYqrIQQYIQRJJkQTyEIZuUUUSRtsUaBpnP@	!BneB]^HipIvzsgGBJvW@XSRx@fOss[K`|fJu^TEyWY{DJ|Ifp_RQ}I@kpMsDJ|@
+Dtmp	Desoxythymidine monophosphate diradical	C10H13N2O7P	ff}Qs@IQaPSoAjCqUxV\\bTTVRTTbbZUNIsUUUULsSVDKBy@@	!BneB]^HipIvzsgGBJvW@XSRx@fOq[N`RfJu^TEyWapvntJ{PzAKhDj{P
+Dump	Desoxyuridine monophosphate diradical	C9H11N2O7P	fjmQs@IQaPSoAJCqUxV\\bTTVRTTbb^iqNZjjjifYkBEa\`@	!BneB]^HipIvzsgGBJvW@XSRx@f@I[N`RfJu^TEyWapvntJ{PzAJnt@
+Drmp	Desoxyribose monophosphate diradical	C5H7O5P		
+				
+Dadp	Desoxyadenosine diphosphate diradical	C10H13N5O8P2	fmwhH`IASM\JBl{wQ`|U^F_AkbdlsjsSOoRtyEMYuUUUM@pSEQaBpnP@	!BneB]^HipIvzsgGBJvW@XSRx@f@Ks[K`|WeBXkUyWY{DJ|Ifpf@K}IOtdfJu^TEyWBo@J|@
+Dcdp	Desoxycytidine diphosphate diradical	C9H13N3O9P2	fikqH`IQGB`kN|EoP^JoCOaUqrIQQYIQRJKGRJgDejjjjZYfZkBEa\`@	!BneB]^HipIvzsgGBJvW@XSRx@fOq[N`RWeBXkUyWapvntJ{Pf@KhDibmWeA^Uz{P
+Dgdp	Desoxyguanosine diphosphate diradical	C10H13N5O9P2	fcoiH`IASM\JBl{wQ{Axj|L~CWEIYgUff_^fZ\bflzjjjfiZifZlHVEr@@	!BneB]^HipIvzsgGBJvW@XSRx@fOss[K`|WeBXkUyWY{DJ|IfpfOs}IOtdfJu^TEyWBo@wLPkp
+Dtdp	Desoxythymidine diphosphate diradical	C10H14N2O10P2	fe{Ph`IQaPUg^Ct\p^JoCO`uqrIQQYIQRJKEJQTxdmUUUSSMTsVDKBy@@	!BneB]^HipIvzsgGBJvW@XSRx@f@I[N`RWeBXkUyWapvntJ{Pf@KhDn`RfJu^TEyWkm@
+Dudp	Desoxyuridine diphosphate diradical	C9H12N2O10P2	fikPh`IQaPUg^Bwhp^JoCOaUqrIQQYIQRJKGRJgDejjjjZYjYkBEa\`@	!BneB]^HipIvzsgGBJvW@XSRx@fOq[N`RWeBXkUyWapvntJ{Pf@KhDibmWeA^Uz{P
+				
+Datp	Desoxyadenosine triphosphate diradical	C10H14N5O11P3	eohZMJ@I@diehJAKGOFnakg`OESpr|Mo@yqrIQQYIQRJKYZQKVRcbIJjZjjjihFAhjZcAAXKb@@	!BneB]^HipIvzsgGBJvW@XSRx@f@Ks[K`|WeBXkUyWY{DJ|IfpfOs}IOtdWeBXkUyWBo@J|I`BfJu^TEyW
+Dctp	Desoxycytidine triphosphate diradical	C9H14N3O12P3	fkopZ`IQGB`kN|Fk^{NCqUxY|I~BwGHeEEdeEHhl]HlYJ\RVjjjiifVjfkBEa\`@	!BneB]^HipIvzsgGBJvW@XSRx@f@I[_N`RWeBXkUyWapvntJ{Pf@KhDeyPfJu^Uz{Pf@JXkUyPWe\
+Dgtp	Desoxyguanosine triphosphate diradical	C10H14N5O12P3	e`TZCJ@I@diehJAKGOFnamgo`OESpr|CoByqrIQQYIQRJKYZQQYrT\QIUSUUUUMRuMLtuVBBpWD@@	!BneB]^HipIvzsgGBJvW@XSRx@fOss[K`|WeBXkUyWY{DJ|IfpfOq}IGtdWeBXkUyWBo@wLPkpfOrXkUyPWe\
+Dttp	Desoxythymidine triphosphate diradical	C10H15N2O13P3	fgQZ`IQaPUg^BwhygnCqUxY|E~FwGHeEEdeEHhlTiDSISbRuUUUMLuMMMVDKBy@@	!BneB]^HipIvzsgGBJvW@XSRx@fOq[N`RWeBXkUyWapvntJ{Pf@KhDn`RWeBXkUyWkmBX@ibmWeA^Up
+Dutp	Desoxyuridine triphosphate diradical	C9H13N2O13P3	fkoQZ`IQaPUg^CUoQ{NCqUxY|I~BwGHeEEdeEHhl]HlYJ\RVjjjiiffffkBEa\`@	!BneB]^HipIvzsgGBJvW@XSRx@f@I[N`RWeBXkUyWapvntJ{Pf@KhDeyPfJu^Uz{Pf@JXkUyPWe\
+				
+Dade	Desoxyadenosine diradical	C10H11N5O2	fluha@IF]ELJ@|QNJRsN|rntyYpXuUUTBATXPlKd@@	!BneB]^HipIvzsgGBJvW@XSRx@|vrxOF^qBoBYlGtd_RPJ|@kp
+Dcyt	Desoxycytidine diradical	C9H11N3O3	fhiqa@IVCBa`^HgEIYg^Y~gG^jjjiejpaXWH@	!BneB]^HipIvzsgGBJvW@XSRx@JwpX_BnM[aAnDAc|[a@
+Dgua	Desoxyguanosine diradical	C10H11N5O3	fbmia@IF]ELJYAxb\Tef]ye^Z\lxLZjjjeZfkBEa\`@	!BneB]^HipIvzsgGBJvW@XSRx@|vrxOF^qBoBYlOtdRPJ|F^qBo@
+Dthy	Desoxythymidine diradical	C10H12N2O4	fdyPQ@IVaPtP^HgEIYg^YuiqwjjjjYikBEa\`@	!BneB]^HipIvzsgGBJvW@XSRx@JwpX_BnM[aAnDAc|FOqnD@
+Dura	Desoxyuridine diradical	C9H10N2O4	fhiPQ@IVaPpP^HgEIYg^Y~gG^jjjifZpaXWH@	!BneB]^HipIvzsgGBJvW@XSRx@JpXBnM[aAnDAc|[a@
+				
+Amp	Adenosine monophosphate diradical	C10H12N5O6P	fakhs@INBwlJ\TgHOFwaEqrIQQSYQJIRIMLyxMVuUUUPLpEPQDqBId@@	!BneB]^B]nbgB]\}eplyqpbbx@FDws[K`|f@IglPkpf[BXkUyPWe_}IGtdBo@J|@
+Cmp	Cytidine monophosphate diradical	C9H12N3O7P	ff}qs@I^kBgENSdGc[pbxyDhhilheDiLv\BVjjjjYfZbHfHQL`@	!BneB]^B]nbgB]\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmBXkUyPWe_hDj{P
+Gmp	Guanosine monophosphate diradical	C10H12N5O7P	fi{is@INBwlJ\TgHp^MoBKcdRbbfrbTRdR\SN^CUmUUUUKMSMQDSDHfP@	!BneB]^B]nbgB]\}eplyqpbbx@FDws[K`|f@IglPkpf[BXkUyPWe_}IOtdBo@wLPkp
+Tmp	Thymidine monophosphate diradical	C10H13N2O8P	fncPK@I^aSbgIrtGc[pbxyDhhilheDiLjs`RuUUUSLuMDQLPbY@@	!BneB]^B]nbgB]\}eplyqpbbx@FDu[N`RfOrGCZ{PkmBXkUyPWe_hDn`Rkm@
+Ump	Uridine monophosphate diradical	C9H11N2O8P	ff}PK@I^aSbgIsTGc[pbxyDhhilheDiLv\BVjjjjYffbHfHQL`@	!BneB]^B]nbgB]\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmBXkUyPWe_hDj{P
+Rmp	Ribose monophosphate diradical	C5H7O6P		
+				
+Adp	Adenosine diphosphate diradical	C10H13N5O9P2	fcoiH`INCt\J\UENU{Axv|F~DwGHeEEMeDheHd\eHsg`u{UUUU@mAEMPQDqBId@@	!BneB]^B]nbgB]\}eplyqpbbx@FDws[K`|fOqglPkpf[A^TIbmWe]}IGtdf@HJ|@kpfJu^TEyW
+Cdp	Cytidine diphosphate diradical	C9H13N3O10P2	fe{ph`I^[BgENbgHy`|[^E_CkcdRbbfrbTRdqrdYpIZjjjieijZbHfHQL`@	!BneB]^B]nbgB]\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmA^TIbmWe_hDi`BkmBXkUyPWe\
+Gdp	Guanosine diphosphate diradical	C10H13N5O10P2	fkhh`INCt\J\UENY{NCqmxM|EnNQJJJ[JIQJQHzIRLyxM^uUUUTkUSLuQDSDHfP@	!BneB]^B]nbgB]\}eplyqpbbx@FDws[K`|fOqglPkpf[A^TIbmWe]}IGtdfOpJ|C\qBoBXkUyPWe\
+Tdp	Thymidine diphosphate diradical	C10H14N2O11P2	fmgQh`I^aSbgQSglu`|[^C_@[bdls^rruo}LxDmUUUTruTsTQDqBId@@	!BneB]^B]nbgB]\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmA^TIbmWe_hDn`RfOrntIbmWeA^Up
+Udp	Uridine diphosphate diradical	C9H12N2O11P2	fe{Qh`I^aSbgQSehy`|[^E_CkcdRbbfrbTRdqrdYpIZjjjiejfZbHfHQL`@	!BneB]^B]nbgB]\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmA^TIbmWe_hDic|kmBXkUyPWe\
+				
+Atp	Adenosine triphosphate diradical	C10H14N5O12P3	e`TZCJ@IG@nahJNEHdliemgo`OFspZ|CoByqrIQQSYQJIRIGIRWRL\^AU]UUUUPKPQMTuABDpaBX`@	!BneB]^B]nbgB]\}eplyqpbbx@FDws[K`|f@IglPkpf[A^TIbmWe_}IOtdf@HJ|@kpWeBXkUyWf@JXkUyPWe\
+Ctp	Cytidine triphosphate diradical	C9H14N3O13P3	fgqZ`I^[BgENbgOQsO\Gc[pkxK|MnNQJJJ[JIQJSGJPzQg@ejjjjfVffjZbHfHQL`@	!BneB]^B]nbgB]\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmA^TIbmWe_hDic|kmA^TIbmWe^X@ibmWeA^Up
+Gtp	Guanosine triphosphate diradical	C10H14N5O13P3	eh\ZKJ@IG@nahJNEHdliemco`POFspZ|KoAyqrIQQSYQJIRIGQJQzQccpJkjjjjjeZjYZijbDIaBDq@@	!BneB]^B]nbgB]\}eplyqpbbx@FDws[K`|f@IglPkpf[A^TIbmWe]}IOtdfOpJ|C\qBoA^TIbmWe^X@ibmWeA^Up
+Ttp	Thymidine triphosphate diradical	C10H15N2O14P3	eo`TGJ@IOHJNEGHdlnaiekg`OFspZ|Mo@yqrIQQSYQJIRY[ZPzQc`HjjjjjYZjVjZbDIaBDq@@	!BneB]^B]nbgB]\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmA^TIbmWe_hDn`Rf@JntEyPfJu^Uy`BfJu^TEyW
+Utp	Uridine triphosphate diradical	C9H13N2O14P3	fgPz`I^aSbgQSeoQsO\Gc[pkxK|MnNQJJJ[JIQJSGJPzQg@ejjjjfVjVjZbHfHQL`@	!BneB]^B]nbgB]\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmA^TIbmWe_hDic|kmA^TIbmWe^X@ibmWeA^Up
+			d@	
+Ade	Adenosine diradical	C10H11N5O3	fbmia@IV|gLJ\Axj\Tef[vyWV\]zJZjjj`PJ`bIbDSH@	!BneB]^B]nbgB]\}eplyqpbbx@FDws[K`|Y{DJ|Ifp_RS}I@kpBo@
+Cyt	Cytidine diradical	C9H11N3O4	fdypQ@INcBgK@|UNJRsM{\~sg`uUUULmQDSDHfP@	!BneB]^B]nbgB]\}eplyqpbbx@FDtkAc|JxunDFxPF@InD@
+Gua	Guanosine diradical	C10H11N5O4	fj}hQ@IV|gLJ\JCqTxiKLwmroKNN}EMUUUTkTuDQLPbY@@	!BneB]^B]nbgB]\}eplyqpbbx@FDws[K`|Y{DJ|Ifp_RS}I@kpY{DJ|@
+Thy	Thymidine diradical  	C10H12N2O5	fleQQ@INaSed`|UNJRsM{\zlyxMUUUSMMDQLPbY@@	!BneB]^B]nbgB]\}eplyqpbbx@FDtkAc|JxunDFxPFOpXFxP
+Ura	Uridine diradical	C9H10N2O5	fdyQQ@INaSeh`|UNJRsM{\~sg`uUUULsQDSDHfP@	!BneB]^B]nbgB]\}eplyqpbbx@FDtkAc|JxunDFxPFOqnD@
