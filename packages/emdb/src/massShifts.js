@@ -24,7 +24,7 @@ function massShifts(similarities, options = {}) {
 
   if (results.length < minLength) {
     throw new Error(
-      `X rescale can not be applied. We need at least 10 peaks with over ${Math.round(
+      `X rescale can not be applied. We need at least ${minLength} peaks with over ${Math.round(
         minSimilarity * 100
       )}% similarity`
     );
