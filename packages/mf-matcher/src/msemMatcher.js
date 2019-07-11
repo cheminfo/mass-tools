@@ -1,8 +1,7 @@
 'use strict';
 
 const getMsInfo = require('mf-utilities/src/getMsInfo.js');
-
-const closest = require('./closest');
+const closest = require('ml-spectra-processing').arrayFindClosestIndex;
 
 /**
  * @param {object}         [entry={}}]
