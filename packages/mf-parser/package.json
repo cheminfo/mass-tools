@@ -10,12 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/cheminfo-js/mf-parser.git"
   },
-  "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "prepare": "lerna bootstrap",
-    "test-watch": "jest --watch",
-    "test-only": "jest"
-  },
   "keywords": [],
   "author": "Luc Patiny",
   "license": "MIT",
