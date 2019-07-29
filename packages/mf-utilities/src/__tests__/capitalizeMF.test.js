@@ -21,7 +21,7 @@ const tests = [
 ];
 
 describe('capitalizeMF', () => {
-  test.each(tests)('%s', (mf, value) => {
+  it.each(tests)('%s', (mf, value) => {
     expect(capitalizeMF(mf)).toBe(value);
   });
 });

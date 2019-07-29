@@ -3,6 +3,9 @@
 // editor of groups.tsv
 
 const fs = require('fs');
+const { join } = require('path');
+
+const targetDir = join(__dirname, '../../packages/chemical-groups/src/');
 
 const Papa = require('papaparse');
 const { MF, Kind } = require('mf-parser');
@@ -12,8 +15,10 @@ const elementsAndIsotopesObject = require('chemical-elements/src/elementsAndIsot
 const MODULE = "'use strict';\nmodule.exports=";
 
 var groups = Papa.parse(`${fs.readFileSync(`${__dirname}/groups.tsv`)}`, {
-  header: true
+  header: true,
+  delimiter: '\t'
 }).data.filter((line) => line.symbol !== '');
+console.log(groups);
 // we will create an object for the elements
 for (let group of groups) {
   let mf = group.mf;
@@ -65,10 +70,7 @@ for (let group of groups) {
   });
 }
 
-fs.writeFileSync(
-  `${__dirname}/../src/groups.js`,
-  MODULE + JSON.stringify(groups)
-);
+fs.writeFileSync(`${targetDir}/groups.js`, MODULE + JSON.stringify(groups));
 
 var groupsObject = {};
 groups.forEach((e) => {
@@ -76,6 +78,6 @@ groups.forEach((e) => {
   e.symbol = undefined;
 });
 fs.writeFileSync(
-  `${__dirname}/../src/groupsObject.js`,
+  `${targetDir}/groupsObject.js`,
   MODULE + JSON.stringify(groupsObject)
 );

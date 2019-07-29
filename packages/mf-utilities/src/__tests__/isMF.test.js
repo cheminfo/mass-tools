@@ -24,7 +24,7 @@ const tests = [
 ];
 
 describe('isMF', () => {
-  test.each(tests)('%s', (mf, value) => {
+  it.each(tests)('%s', (mf, value) => {
     expect(isMF(mf)).toBe(value);
   });
 });

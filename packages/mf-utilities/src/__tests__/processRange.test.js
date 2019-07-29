@@ -10,7 +10,7 @@ const tests = [
 ];
 
 describe('processRange', () => {
-  test.each(tests)('%s', (mf, value) => {
+  it.each(tests)('%s', (mf, value) => {
     expect(processRange(mf)).toStrictEqual(value);
   });
 });

@@ -3,10 +3,10 @@
 const elements = require('chemical-elements/src/elementsAndStableIsotopesObject.js');
 const groups = require('chemical-groups/src/groupsObject.js');
 const unsaturations = require('chemical-elements/src/unsaturationsObject.js');
+const { ELECTRON_MASS } = require('chemical-elements/src/constants');
 
 const Kind = require('../Kind');
 
-const { ELECTRON_MASS } = require('chemical-elements/src/constants');
 
 const partToMF = require('./partToMF');
 const partToAtoms = require('./partToAtoms');
