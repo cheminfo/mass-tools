@@ -50,6 +50,11 @@ function massShifts(similarities, options = {}) {
   let minX = min(shifts.x);
   let maxX = max(shifts.x);
 
+  let shiftsPPM = { x: shifts.x, y: [] };
+  data.forEach((datum) => {
+    shiftsPPM.y.push(Number((datum.delta / datum.em) * 1e6));
+  });
+
   let regressionChart = { x: [], y: [] };
 
   for (let i = minX; i < maxX; i += (maxX - minX) / 1000) {
@@ -59,6 +64,7 @@ function massShifts(similarities, options = {}) {
 
   return {
     shifts,
+    shiftsPPM,
     fit: regressionChart,
     score: regression.score(shifts.x, shifts.y),
     // eslint-disable-next-line no-new-func
