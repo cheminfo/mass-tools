@@ -58,7 +58,7 @@ test('getMsInfo with targetMass', () => {
     ionization: 'H+',
     em: 120.99945142009094,
     charge: 1,
-    ppm: 4.5337182567354,
-    delta: -0.0005485799090649834
+    ppm: 4.533738811429821,
+    delta: 0.0005485799090649834
   });
 });

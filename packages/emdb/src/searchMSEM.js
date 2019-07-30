@@ -58,11 +58,11 @@ module.exports = function searchMSEM(msem, options = {}) {
         flattenResults.push(entry);
       }
     }
-    flattenResults.sort((a, b) => a.ms.ppm - b.ms.ppm);
+    flattenResults.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
     return flattenResults;
   } else {
     Object.keys(results).forEach((k) =>
-      results[k].sort((a, b) => a.ms.ppm - b.ms.ppm)
+      results[k].sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm))
     );
     return results;
   }

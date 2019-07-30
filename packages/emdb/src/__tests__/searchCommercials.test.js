@@ -34,7 +34,8 @@ describe('test search commercial', () => {
     });
     expect(results).toHaveLength(0);
 
-    results = dbManager.searchMSEM(100, { // we search for an experimental mass !
+    results = dbManager.searchMSEM(100, {
+      // we search for an experimental mass !
       ionizations: 'H+',
       flatten: true,
       filter: {
@@ -42,13 +43,13 @@ describe('test search commercial', () => {
         unsaturation: {
           onlyInteger: true,
           min: 2,
-          max: 3,
+          max: 3
         }
       }
     });
     expect(results[0].ms.charge).toBe(1);
     expect(results[0].ms.em).toBeCloseTo(100, 1);
     expect(results[0].ms.ppm).toBeLessThan(500);
-    expect(results).toHaveLength(56);
+    expect(results).toHaveLength(58);
   });
 });

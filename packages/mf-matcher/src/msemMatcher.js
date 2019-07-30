@@ -65,7 +65,7 @@ module.exports = function msemMatcher(entry, options = {}) {
     if (ms.em < minMSEM || ms.em > maxMSEM) return false;
   }
 
-  if (targetMass && ms.ppm > precision) return false;
+  if (targetMass && Math.abs(ms.ppm) > precision) return false;
 
   if (entry.charge !== undefined) {
     if (ms.charge < minCharge || ms.charge > maxCharge) return false;
@@ -97,7 +97,7 @@ module.exports = function msemMatcher(entry, options = {}) {
       msInfo.ms.target.intensity = targetIntensities[index];
     }
     // need to find the closest targetMasses
-    if (msInfo.ms.ppm > precision) return false;
+    if (Math.abs(msInfo.ms.ppm) > precision) return false;
   }
 
   return msInfo;

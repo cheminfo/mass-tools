@@ -33,8 +33,8 @@ module.exports = function getMsInfo(entry, options = {}) {
     ms.em = entry.em + realIonization.em;
   }
   if (targetMass) {
-    ms.delta = ms.em - targetMass;
-    ms.ppm = Math.abs(((targetMass - ms.em) / targetMass) * 1e6);
+    ms.delta = targetMass - ms.em;
+    ms.ppm = ((targetMass - ms.em) / ms.em) * 1e6;
   }
   return {
     ms,

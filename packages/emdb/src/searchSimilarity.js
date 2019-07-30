@@ -72,8 +72,8 @@ module.exports = function searchSimilarity(options = {}) {
   if (widthFunction && typeof widthFunction === 'string') {
     // eslint-disable-next-line no-new-func
     widthFunction = new Function('mass', widthFunction);
-    let test = widthFunction(123);
-    if (!test.bottom || !test.top) {
+    let checkTopBottom = widthFunction(123);
+    if (!checkTopBottom.bottom || !checkTopBottom.top) {
       throw Error(
         'widthFunction should return an object with bottom and top properties'
       );

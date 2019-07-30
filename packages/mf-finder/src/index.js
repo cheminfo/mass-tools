@@ -169,7 +169,7 @@ module.exports = function (targetMass, options = {}) {
     }
   }
 
-  result.mfs.sort((a, b) => a.ms.ppm - b.ms.ppm);
+  result.mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
   return result;
 };
 

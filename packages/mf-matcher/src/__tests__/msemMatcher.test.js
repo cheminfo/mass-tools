@@ -47,10 +47,10 @@ describe('test msemMatcher', () => {
       ionization: { charge: 1, em: 0 },
       ms: {
         charge: 1,
-        delta: -0.0005485799090649834,
+        delta: 0.0005485799090649834,
         em: 119.99945142009094,
         ionization: undefined,
-        ppm: 4.571499242208195
+        ppm: 4.571520140909056
       }
     });
   });
@@ -80,10 +80,10 @@ describe('test msemMatcher', () => {
       ionization: { charge: 1, em: 0, mf: 'H+' },
       ms: {
         charge: 1,
-        delta: -0.0005485799090649834,
+        delta: 0.0005485799090649834,
         em: 119.99945142009094,
         ionization: 'H+',
-        ppm: 4.571499242208195
+        ppm: 4.571520140909056
       }
     });
   });
@@ -109,10 +109,10 @@ describe('test msemMatcher', () => {
       ionization: { charge: 1, em: 0, mf: 'H+' },
       ms: {
         charge: 1,
-        delta: -0.0005485799090649834,
+        delta: 0.0005485799090649834,
         em: 119.99945142009094,
         ionization: 'H+',
-        ppm: 4.571499242208195,
+        ppm: 4.571520140909056,
         target: { mass: 120 }
       }
     });
@@ -126,10 +126,10 @@ describe('test msemMatcher', () => {
       ionization: { charge: 1, em: 0, mf: 'H+' },
       ms: {
         charge: 1,
-        delta: -0.0005485799090649834,
+        delta: 0.0005485799090649834,
         em: 119.99945142009094,
         ionization: 'H+',
-        ppm: 4.571499242208195,
+        ppm: 4.571520140909056,
         target: { mass: 120, intensity: 10 }
       }
     });
@@ -158,8 +158,8 @@ describe('test msemMatcher', () => {
         ionization: '(H+)2',
         em: 59.99945142009093,
         charge: 2,
-        delta: -0.0005485799090720889,
-        ppm: 9.142998484534814,
+        delta: 0.0005485799090720889,
+        ppm: 9.143082079720413,
         target: {
           mass: 60
         }

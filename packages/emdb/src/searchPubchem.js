@@ -62,6 +62,6 @@ module.exports = async function searchPubchem(mass, options = {}) {
     }
   }
   // because we can combine many ionizations we should resort the data
-  mfs.sort((a, b) => a.ms.ppm - b.ms.ppm);
+  mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
   return mfs;
 };

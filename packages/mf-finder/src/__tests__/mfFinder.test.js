@@ -26,9 +26,9 @@ describe('test mf-finder', () => {
       charge: 0,
       ionization: { charge: 1, em: 1.00782503223, mf: 'H+' },
       ms: {
-        delta: 1.00727645232093,
+        delta: -1.00727645232093,
         em: 25.00727645232093,
-        ppm: 41969.85218003875,
+        ppm: -40279.33446656661,
         charge: 1
       }
     });
@@ -57,9 +57,9 @@ describe('test mf-finder', () => {
       ionization: { mf: 'H++', em: 1.00782503223, charge: 2 },
       ms: {
         em: 6.50336393620593,
-        delta: -17.49663606379407,
+        delta: 17.49663606379407,
         charge: 2,
-        ppm: 729026.5026580864
+        ppm: 2690397.8057241603
       }
     });
 
