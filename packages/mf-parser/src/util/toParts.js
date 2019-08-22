@@ -8,8 +8,8 @@ const Kind = require('../Kind');
 /**
  *
  * @param {*} lines
- * @param {object} options
- * @param {boolean} [true] options.expand - Should we expand the groups
+ * @param {object} [options={}]
+ * @param {boolean} [options.expand=true] - Should we expand the groups
  */
 
 module.exports = function toParts(lines, options = {}) {
