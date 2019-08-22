@@ -86,6 +86,17 @@ class MF {
     return this.cache.mf;
   }
 
+  /**
+   * Get a canonized MF
+   */
+  toNeutralMF() {
+    if (!this.cache.neutralMF) {
+      this.toParts();
+      this.cache.neutralMF = partsToMF(this.cache.parts, { neutral: true });
+    }
+    return this.cache.neutralMF;
+  }
+
   canonize() {
     this.toParts();
     this.cache.displayed = partsToDisplay(this.cache.parts);

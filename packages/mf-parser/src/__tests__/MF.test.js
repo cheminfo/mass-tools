@@ -153,7 +153,7 @@ test('MF of (Me2CH)3N with expand', () => {
   });
 });
 
-test('MF of (+)SO4(+)(-2)2', () => {
+test.only('MF of (+)SO4(+)(-2)2', () => {
   var mf = new MF('(+)SO4(+)(-2)2');
   var parts = mf.toParts();
 
@@ -167,6 +167,9 @@ test('MF of (+)SO4(+)(-2)2', () => {
 
   var newMF = mf.toMF();
   expect(newMF).toBe('O4S(-2)');
+
+  var neutralMF = mf.toNeutralMF();
+  expect(neutralMF).toBe('O4S');
 
   let info = mf.getInfo({ customUnsaturations: { S: 4 } });
   expect(info).toStrictEqual({

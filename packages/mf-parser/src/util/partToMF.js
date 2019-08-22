@@ -2,7 +2,7 @@
 
 const Kind = require('../Kind');
 
-module.exports = function partToMF(part) {
+module.exports = function partToMF(part, options = {}) {
   var mf = [];
   for (let line of part) {
     switch (line.kind) {
@@ -30,7 +30,7 @@ module.exports = function partToMF(part) {
         }
         break;
       case Kind.CHARGE:
-        if (line.value === 0) break;
+        if (line.value === 0 || options.neutral) break;
         mf.push(`(${line.value > 0 ? `+${line.value}` : line.value})`);
         break;
       default:
