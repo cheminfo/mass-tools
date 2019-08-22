@@ -9,6 +9,7 @@
  * @param {object} [options={}]
  * @param {number} [from] - min X value of the window to consider
  * @param {number} [to] - max X value of the window to consider
+ * @param {boolean} [searchMonoisotopicRatio=0] - search previous peaks with at least ratio height
  * @param {number} [limit=20] - max number of peaks
  * @param {number} [threshold=0.01] - minimal intensity compare to base peak
  * @param {number} [numberSlots=10] - define the number of slots and indirectly the slot width
@@ -18,6 +19,7 @@
 
 function getBestPeaks(peaks, options = {}) {
   const {
+    searchMonoisotopicRatio = 0,
     from = peaks.reduce(
       (previous, peak) => Math.min(peak.x, previous),
       Number.MAX_SAFE_INTEGER
@@ -33,10 +35,29 @@ function getBestPeaks(peaks, options = {}) {
   } = options;
   let slot = (to - from) / numberSlots;
   let closeSlot = (to - from) / numberCloseSlots;
-  let selected = peaks
-    .filter((peak) => peak.x >= from && peak.x <= to)
-    .sort((a, b) => b.y - a.y);
+  let selected = peaks.filter((peak) => peak.x >= from && peak.x <= to);
+
+  if (searchMonoisotopicRatio) {
+    selected = selected.sort((a, b) => b.x - a.x);
+    for (let i = 0; i < selected.length; i++) {
+      let peak = selected[i];
+      for (let j = i + 1; j < selected.length; j++) {
+        let nextPeak = selected[j];
+        if (nextPeak.x > peak.x + 1.1) break;
+        if (
+          nextPeak.y < peak.y &&
+          nextPeak.y > peak.y * searchMonoisotopicRatio
+        ) {
+          peak.y = 0;
+          break;
+        }
+      }
+    }
+  }
+
   // we can only take `limit` number of peaks
+  selected = selected.sort((a, b) => b.y - a.y);
+
   let toReturn = [];
   if (selected.length === 0) return [];
   let minY = selected[0].y * threshold;
