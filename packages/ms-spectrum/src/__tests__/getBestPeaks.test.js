@@ -42,7 +42,7 @@ describe('test getBestPeaks', () => {
   });
 });
 
-describe('test getBestPeaks with searchMonoisotopicRatio', () => {
+describe.only('test getBestPeaks with searchMonoisotopicRatio', () => {
   let peaks = [
     { x: 1, y: 5 },
     { x: 1.5, y: 4 },
@@ -51,11 +51,14 @@ describe('test getBestPeaks with searchMonoisotopicRatio', () => {
     { x: 3, y: 3 }
   ];
   it('simple test', () => {
-    let result = getBestPeaks(peaks, { searchMonoisotopicRatio: 0.2 });
+    let result = getBestPeaks(peaks, {
+      searchMonoisotopicRatio: 0.2,
+      limit: 3
+    });
     expect(result).toStrictEqual([
       { x: 1, y: 5, close: false },
       { x: 1.5, y: 4, close: false },
-      { x: 2, y: 2, close: false }
+      { x: 2.5, y: 5, close: false }
     ]);
   });
 });

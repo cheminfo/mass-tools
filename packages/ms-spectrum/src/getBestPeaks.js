@@ -9,7 +9,7 @@
  * @param {object} [options={}]
  * @param {number} [from] - min X value of the window to consider
  * @param {number} [to] - max X value of the window to consider
- * @param {boolean} [searchMonoisotopicRatio=0] - search previous peaks with at least ratio height
+ * @param {number} [searchMonoisotopicRatio=0] - search previous peaks with at least ratio height
  * @param {number} [limit=20] - max number of peaks
  * @param {number} [threshold=0.01] - minimal intensity compare to base peak
  * @param {number} [numberSlots=10] - define the number of slots and indirectly the slot width
@@ -35,44 +35,60 @@ function getBestPeaks(peaks, options = {}) {
   } = options;
   let slot = (to - from) / numberSlots;
   let closeSlot = (to - from) / numberCloseSlots;
-  let selected = peaks.filter((peak) => peak.x >= from && peak.x <= to);
+  let selected = peaks
+    .filter((peak) => peak.x >= from && peak.x <= to)
+    .map((peak) => {
+      return {
+        peak,
+        monoisotopic: false
+      };
+    });
 
   if (searchMonoisotopicRatio) {
-    selected = selected.sort((a, b) => b.x - a.x);
+    selected = selected.sort((a, b) => b.peak.x - a.peak.x);
+
     for (let i = 0; i < selected.length; i++) {
-      let peak = selected[i];
+      let item = selected[i];
       for (let j = i + 1; j < selected.length; j++) {
-        let nextPeak = selected[j];
-        if (nextPeak.x > peak.x + 1.1) break;
-        if (
-          nextPeak.y < peak.y &&
-          nextPeak.y > peak.y * searchMonoisotopicRatio
-        ) {
-          peak.y = 0;
+        let nextItem = selected[j];
+        if (item.peak.x - nextItem.peak.x < 0.09) continue;
+        if (item.peak.x - nextItem.peak.x > 1.1) break;
+        if (nextItem.peak.y > item.peak.y * searchMonoisotopicRatio) {
+          item.monoisotopic = false;
+          nextItem.monoisotopic = true;
           break;
         }
       }
     }
   }
 
-  // we can only take `limit` number of peaks
-  selected = selected.sort((a, b) => b.y - a.y);
+  selected = selected.sort((a, b) => {
+    if (a.monoisotopic && !b.monoisotopic) return -1;
+    if (b.monoisotopic && !a.monoisotopic) return 1;
+    return b.peak.y - a.peak.y;
+  });
 
   let toReturn = [];
   if (selected.length === 0) return [];
-  let minY = selected[0].y * threshold;
-  peakLoop: for (let peak of selected) {
-    if (peak.y < minY) break;
+  let minY = selected[0].peak.y * threshold;
+  peakLoop: for (let item of selected) {
+    if (item.peak.y < minY) {
+      if (item.monoisotopic) {
+        continue;
+      } else {
+        break;
+      }
+    }
     let close = false;
     for (let existing of toReturn) {
-      if (Math.abs(existing.x - peak.x) < closeSlot) {
+      if (Math.abs(existing.x - item.peak.x) < closeSlot) {
         continue peakLoop;
       }
-      if (Math.abs(existing.x - peak.x) < slot) {
+      if (Math.abs(existing.x - item.peak.x) < slot) {
         close = true;
       }
     }
-    let newPeak = JSON.parse(JSON.stringify(peak));
+    let newPeak = JSON.parse(JSON.stringify(item.peak));
     newPeak.close = close;
     toReturn.push(newPeak);
     if (toReturn.length === limit) break;

@@ -31,6 +31,7 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
     ]
   } = options;
   let annotations = [];
+  bestPeaks.sort((a, b) => (a.close ? -1 : b.close ? 1 : 0));
   for (let peak of bestPeaks) {
     let annotation;
     if (peak.close) {
@@ -46,10 +47,28 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
           },
           {
             y: peak.y,
-            dy: '-10px',
+            dy: '-15px',
             x: peak.x
           }
         ]
+      };
+      annotations.push(annotation);
+      annotation = {
+        type: 'ellipse',
+        _highlight: peak._highlight,
+        info: peak,
+        position: [
+          {
+            y: peak.y,
+            dy: '-15px',
+            x: peak.x
+          }
+        ],
+        props: {
+          rx: '3px',
+          ry: '3px',
+          fillOpacity: 0.3
+        }
       };
     } else {
       annotation = {
@@ -80,33 +99,38 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
           }
         ]
       };
+
       if (showMF) {
         // we have 2 cases. Either there is a shift and we deal with differences
         // otherwise it is absolute
         // if there is a shift we consider only a neutral loss and the parameter charge is important
         if (shift) {
           // neutral loss
-          mfPrefs = Object.assign(mfPrefs, {
+          let currentMfPrefs = Object.assign({}, mfPrefs, {
             allowNeutral: true,
             ionizations: ''
           });
+          // we need to deal with the precision and increase it
+          currentMfPrefs.precision =
+            (currentMfPrefs.precision / Math.max(Math.abs(peak.x + shift), 1)) *
+            peak.x;
           emdb.fromMonoisotopicMass(
             Math.abs((peak.x + shift) * charge),
-            mfPrefs
+            currentMfPrefs
           );
         } else {
-          emdb.fromMonoisotopicMass(
-            Math.abs((peak.x + shift) * charge),
-            mfPrefs
-          );
+          emdb.fromMonoisotopicMass(Math.abs(peak.x * charge), mfPrefs);
         }
 
         let mfs = emdb.get('monoisotopic');
 
         if (mfs.length > 0) {
+          let ppm = shift
+            ? (mfs[0].ms.ppm / shift) * mfs[0].ms.em
+            : mfs[0].ms.ppm;
           annotation.labels.push({
             text: mfs[0].mf,
-            color: getColor(mfColors, mfs[0].ms.ppm),
+            color: getColor(mfColors, Math.abs(ppm)),
             position: {
               x: peak.x,
               y: peak.y,
