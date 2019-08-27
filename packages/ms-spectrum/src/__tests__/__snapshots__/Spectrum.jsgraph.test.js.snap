@@ -4,6 +4,48 @@ exports[`test Spectrum JSGraph getAnnotation 1`] = `
 Array [
   Object {
     "_highlight": undefined,
+    "info": Object {
+      "close": true,
+      "x": 2,
+      "y": 3,
+    },
+    "position": Array [
+      Object {
+        "dy": "-5px",
+        "x": 2,
+        "y": 3,
+      },
+      Object {
+        "dy": "-15px",
+        "x": 2,
+        "y": 3,
+      },
+    ],
+    "type": "line",
+  },
+  Object {
+    "_highlight": undefined,
+    "info": Object {
+      "close": true,
+      "x": 2,
+      "y": 3,
+    },
+    "position": Array [
+      Object {
+        "dy": "-15px",
+        "x": 2,
+        "y": 3,
+      },
+    ],
+    "props": Object {
+      "fillOpacity": 0.3,
+      "rx": "3px",
+      "ry": "3px",
+    },
+    "type": "ellipse",
+  },
+  Object {
+    "_highlight": undefined,
     "labels": Array [
       Object {
         "color": "red",
@@ -26,27 +68,6 @@ Array [
         "dy": "-25px",
         "x": 1,
         "y": 2,
-      },
-    ],
-    "type": "line",
-  },
-  Object {
-    "_highlight": undefined,
-    "info": Object {
-      "close": true,
-      "x": 2,
-      "y": 3,
-    },
-    "position": Array [
-      Object {
-        "dy": "-5px",
-        "x": 2,
-        "y": 3,
-      },
-      Object {
-        "dy": "-10px",
-        "x": 2,
-        "y": 3,
       },
     ],
     "type": "line",

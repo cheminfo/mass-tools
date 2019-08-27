@@ -160,16 +160,6 @@ Array [
         },
         "text": "12.00001",
       },
-      Object {
-        "color": "green",
-        "position": Object {
-          "dx": "2px",
-          "dy": "-30px",
-          "x": 24,
-          "y": 2,
-        },
-        "text": "C2",
-      },
     ],
     "position": Array [
       Object {
@@ -198,16 +188,6 @@ Array [
         },
         "text": "24.00001",
       },
-      Object {
-        "color": "green",
-        "position": Object {
-          "dx": "2px",
-          "dy": "-30px",
-          "x": 36,
-          "y": 3,
-        },
-        "text": "C4",
-      },
     ],
     "position": Array [
       Object {
@@ -235,16 +215,6 @@ Array [
           "y": 4,
         },
         "text": "30.00001",
-      },
-      Object {
-        "color": "green",
-        "position": Object {
-          "dx": "2px",
-          "dy": "-30px",
-          "x": 42,
-          "y": 4,
-        },
-        "text": "C5",
       },
     ],
     "position": Array [

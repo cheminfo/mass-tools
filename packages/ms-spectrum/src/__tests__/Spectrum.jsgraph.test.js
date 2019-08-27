@@ -14,7 +14,7 @@ describe('test Spectrum JSGraph', () => {
     ];
     let annotations = Spectrum.JsGraph.getPeaksAnnotation(peaks);
 
-    expect(annotations).toHaveLength(2);
+    expect(annotations).toHaveLength(3);
     expect(annotations).toMatchSnapshot();
   });
 });
