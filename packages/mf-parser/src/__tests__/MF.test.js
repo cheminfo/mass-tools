@@ -153,7 +153,7 @@ test('MF of (Me2CH)3N with expand', () => {
   });
 });
 
-test.only('MF of (+)SO4(+)(-2)2', () => {
+test('MF of (+)SO4(+)(-2)2', () => {
   var mf = new MF('(+)SO4(+)(-2)2');
   var parts = mf.toParts();
 
