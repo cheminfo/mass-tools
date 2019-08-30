@@ -6,6 +6,7 @@
  * @param {object} [options={}]
  * @param {array} [options.mfColors={}]
  * @param {number} [options.numberDigits=5]
+ * @param {number} [options.numberMFs=0]
  * @param {boolean} [options.showMF=false]
  * @param {array} [options.mfColors={}]
  * @param {number} [options.charge=1]
@@ -22,6 +23,7 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
     numberDigits = 5,
     shift = 0,
     showMF = false,
+    numberMFs = 0,
     charge = 1,
     mfPrefs = {},
     mfColors = [
@@ -30,6 +32,7 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
       { limit: 50, color: 'lightorange' }
     ]
   } = options;
+  if (showMF && !numberMFs) numberMFs = 1;
   let annotations = [];
   bestPeaks.sort((a, b) => (a.close ? -1 : b.close ? 1 : 0));
   for (let peak of bestPeaks) {
@@ -100,7 +103,7 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
         ]
       };
 
-      if (showMF) {
+      if (numberMFs) {
         // we have 2 cases. Either there is a shift and we deal with differences
         // otherwise it is absolute
         // if there is a shift we consider only a neutral loss and the parameter charge is important
@@ -123,18 +126,19 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
         }
 
         let mfs = emdb.get('monoisotopic');
+        let numberOfMFS = Math.min(mfs.length, numberMFs);
 
-        if (mfs.length > 0) {
-          let ppm = shift
-            ? (mfs[0].ms.ppm / shift) * mfs[0].ms.em
-            : mfs[0].ms.ppm;
+        for (let i = 0; i < numberOfMFS; i++) {
+          let mf = mfs[i];
+
+          let ppm = shift ? (mf.ms.ppm / shift) * mfs[0].ms.em : mf.ms.ppm;
           annotation.labels.push({
-            text: mfs[0].mf,
+            text: mf.mf,
             color: getColor(mfColors, Math.abs(ppm)),
             position: {
               x: peak.x,
               y: peak.y,
-              dy: '-30px',
+              dy: `${-13 * (numberOfMFS - i) - 17}px`,
               dx: '2px'
             }
           });
