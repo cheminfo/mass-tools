@@ -38,14 +38,14 @@ module.exports = function generateFragments(mf, options) {
   var fiveTerm = '';
   var threeTerm = '';
 
-  for (let i = 1; i < mfparts.length; i++) {
-    fiveTerm += mfparts[i - 1];
-    threeTerm = mfparts[mfparts.length - i] + threeTerm;
+  for (let ter5 = 1; ter5 < mfparts.length; ter5++) {
+    fiveTerm += mfparts[ter5 - 1];
+    threeTerm = mfparts[mfparts.length - ter5] + threeTerm;
 
-    addFiveTerm(mfs, fiveTerm, i, options);
-    addFiveTermBaseLoss(mfs, fiveTerm, i, options);
-    addThreeTerm(mfs, threeTerm, i, options);
-    addThreeTermBaseLoss(mfs, threeTerm, i, options);
+    addFiveTerm(mfs, fiveTerm, ter5, options);
+    addFiveTermBaseLoss(mfs, fiveTerm, ter5, options);
+    addThreeTerm(mfs, threeTerm, ter5, options);
+    addThreeTermBaseLoss(mfs, threeTerm, ter5, options);
   }
 
   for (let i = 1; i < mfparts.length - 1; i++) {
@@ -53,7 +53,7 @@ module.exports = function generateFragments(mf, options) {
     for (var j = i; j < mfparts.length - 1; j++) {
       internal += mfparts[j];
       if (j > i) {
-        addInternalTerm(mfs, internal, i, j, options);
+        addInternalTerm(mfs, internal, mfparts.length - i, j + 1, options);
       }
     }
   }
