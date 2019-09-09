@@ -42,7 +42,7 @@ describe('test getBestPeaks', () => {
   });
 });
 
-describe.only('test getBestPeaks with searchMonoisotopicRatio', () => {
+describe('test getBestPeaks with searchMonoisotopicRatio', () => {
   let peaks = [
     { x: 1, y: 5 },
     { x: 1.5, y: 4 },
