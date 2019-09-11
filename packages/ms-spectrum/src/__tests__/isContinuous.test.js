@@ -1,5 +1,10 @@
 'use strict';
 
+const { readFileSync } = require('fs');
+const { join } = require('path');
+
+const { parseXY } = require('xy-parser');
+
 const isContinuous = require('../isContinuous');
 
 describe('test isContinuous', () => {
@@ -48,6 +53,16 @@ describe('test isContinuous', () => {
     }
     data.x.push(200);
     data.y.push(0);
+    expect(isContinuous({ data })).toBe(true);
+  });
+
+  it('big experimental data', () => {
+    let text = readFileSync(join(__dirname, 'data/continuous.txt'), 'utf8');
+    let parsed = parseXY(text, { arrayType: 'xxyy' });
+    let data = {
+      x: parsed[0],
+      y: parsed[1]
+    };
     expect(isContinuous({ data })).toBe(true);
   });
 });
