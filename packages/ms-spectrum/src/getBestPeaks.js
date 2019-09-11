@@ -7,13 +7,13 @@
  * extra annotation `close` to true
  * @param {array} peaks - array of all the peaks
  * @param {object} [options={}]
- * @param {number} [from] - min X value of the window to consider
- * @param {number} [to] - max X value of the window to consider
- * @param {number} [searchMonoisotopicRatio=0] - search previous peaks with at least ratio height
- * @param {number} [limit=20] - max number of peaks
- * @param {number} [threshold=0.01] - minimal intensity compare to base peak
- * @param {number} [numberSlots=10] - define the number of slots and indirectly the slot width
- * @param {number} [numberCloseSlots=50]
+ * @param {number} [options.from] - min X value of the window to consider
+ * @param {number} [options.to] - max X value of the window to consider
+ * @param {number} [options.searchMonoisotopicRatio=0] - search previous peaks with at least ratio height
+ * @param {number} [options.limit=20] - max number of peaks
+ * @param {number} [options.threshold=0.01] - minimal intensity compare to base peak
+ * @param {number} [options.numberSlots=10] - define the number of slots and indirectly the slot width
+ * @param {number} [options.numberCloseSlots=50]
  * @returns {array} - copy of peaks with 'close' annotation
  */
 
