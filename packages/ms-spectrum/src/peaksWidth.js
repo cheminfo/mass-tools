@@ -10,15 +10,18 @@ function peaksWidth(peaks) {
 
   if (xs.length < 2) {
     throw new Error(
-      `Not enough peaks (less than 2) for automatic width calculation: ${
-        xs.length
-      }`
+      `peaksWidth: not enough peaks (less than 2) for automatic width calculation: ${xs.length}`
     );
   }
   var regression = new Regression(xs, widths, {
     computeQuality: true,
     computeCoefficient: true
   });
+
+  if (regression.A === NaN || regression.B === NaN) {
+    throw new Error('peaksWidth: can not calculate regression');
+  }
+
   var from = min(xs);
   var to = max(xs);
 
