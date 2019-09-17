@@ -47,13 +47,13 @@ describe('test Spectrum', () => {
       data.y.push(i > 3 ? 6 - i : i);
     }
     expect(new Spectrum(data).peakPicking()).toStrictEqual([
-      { width: 0, x: 0, y: 0 },
-      { width: 0, x: 1, y: 1 },
-      { width: 0, x: 2, y: 2 },
-      { width: 0, x: 3, y: 3 },
-      { width: 0, x: 4, y: 2 },
-      { width: 0, x: 5, y: 1 },
-      { width: 0, x: 6, y: 0 }
+      { width: 0, x: 0, y: 0, charge: 1 },
+      { width: 0, x: 1, y: 1, charge: 1 },
+      { width: 0, x: 2, y: 2, charge: 1 },
+      { width: 0, x: 3, y: 3, charge: 1 },
+      { width: 0, x: 4, y: 2, charge: 1 },
+      { width: 0, x: 5, y: 1, charge: 1 },
+      { width: 0, x: 6, y: 0, charge: 1 }
     ]);
   });
 
@@ -66,6 +66,7 @@ describe('test Spectrum', () => {
     expect(new Spectrum(data).peakPicking()).toStrictEqual([
       {
         base: 0,
+        charge: 1,
         index: 100,
         soft: false,
         width: 0.1999999999999993,
@@ -86,6 +87,7 @@ describe('test Spectrum', () => {
     expect(peaks).toStrictEqual([
       {
         base: 0,
+        charge: 1,
         index: 100,
         soft: false,
         width: 0.14999999999999947,

@@ -1,9 +1,9 @@
 'use strict';
 
-const getPeakCharge = require('../getPeakCharge');
+const getPeakChargeBySimilarity = require('../getPeakChargeBySimilarity');
 const Spectrum = require('../Spectrum');
 
-describe('test getPeakCharge', () => {
+describe('test getPeakChargeBySimilarity', () => {
   let data = {
     x: [1, 2, 3, 4, 4.333, 4.666, 7, 8, 9],
     y: [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -11,7 +11,7 @@ describe('test getPeakCharge', () => {
   let spectrum = new Spectrum(data);
 
   it('default options', () => {
-    let charge = getPeakCharge(spectrum, 4, {
+    let charge = getPeakChargeBySimilarity(spectrum, 4, {
       similarity: {
         zone: { low: -0.5, high: 2.5 },
         widthBottom: 0.1,

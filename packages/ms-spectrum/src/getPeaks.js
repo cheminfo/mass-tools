@@ -1,6 +1,5 @@
 'use strict';
 
-
 /**
  * Filter the array of peaks
  * @param {array} peaks - array of all the peaks
@@ -25,6 +24,7 @@ function getPeaks(peaks, options = {}) {
     threshold = 0.01,
     limit
   } = options;
+
   let maxY = Number.MIN_SAFE_INTEGER;
   for (let peak of peaks) {
     if (peak.y > maxY) maxY = peak.y;

@@ -18,7 +18,7 @@ const Similarity = require('peaks-similarity');
 
 const NEUTRON_MASS = 1;
 
-function getPeakCharge(spectrum, targetMass, options = {}) {
+function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
   let { similarity = {}, minCharge = 1, maxCharge = 10 } = options;
   let { zone = {}, widthFunction } = similarity;
   let { low = -0.5, high = 2.5 } = zone;
@@ -93,4 +93,4 @@ function getPeakCharge(spectrum, targetMass, options = {}) {
   return results.sort((a, b) => b.similarity - a.similarity)[0].charge;
 }
 
-module.exports = getPeakCharge;
+module.exports = getPeakChargeBySimilarity;

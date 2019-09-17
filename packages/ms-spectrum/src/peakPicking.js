@@ -2,7 +2,23 @@
 
 const gsd = require('ml-gsd').gsd;
 
-function peakPicking(spectrum) {
+const appendPeaksCharge = require('./appendPeaksCharge');
+
+/**
+ * Filter the array of peaks
+ * @param {Spectrum} spectrum - array of all the peaks
+ * @param {object} [options={}]
+ * @param {object} [options.charge={}]
+ * @param {number} [options.charge.min=1]
+ * @param {number} [options.charge.max=10]
+ * @param {number} [options.charge.low=-1]
+ * @param {number} [options.charge.high=1]
+ * @param {number} [options.charge.precision=30]
+ * @returns {array} - copy of peaks with 'close' annotation
+ */
+
+function peakPicking(spectrum, options = {}) {
+  const { charge: chargeOptions = {} } = options;
   if (!spectrum.peaks) {
     if (spectrum.isContinuous()) {
       spectrum.peaks = gsd(spectrum.data.x, spectrum.data.y, {
@@ -24,6 +40,7 @@ function peakPicking(spectrum) {
         });
       }
     }
+    appendPeaksCharge(spectrum.peaks, chargeOptions);
   }
 
   return spectrum.peaks;
