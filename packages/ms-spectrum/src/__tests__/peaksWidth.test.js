@@ -38,6 +38,16 @@ describe('test test peakWidth', () => {
   it('one peak', () => {
     expect(() => {
       peaksWidth([{ width: 2, x: 1, y: 1 }]);
-    }).toThrow('Not enough peaks');
+    }).toThrow('not enough peaks');
+  });
+
+  it('two peaks zero width', () => {
+    let results = peaksWidth([
+      { width: 0, x: 1, y: 1 },
+      { width: 0, x: 2, y: 1 }
+    ]);
+
+    expect(results.A).toBe(NaN);
+    expect(results.B).toBe(NaN);
   });
 });
