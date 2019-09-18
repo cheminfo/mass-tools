@@ -30,8 +30,10 @@ test('test fromNucleicSequence ds-DNA', () => {
     },
   });
 
-  expect(dbManager.databases.nucleic).toHaveLength(12);
-  expect(dbManager.databases.nucleic).toMatchSnapshot();
+  let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+
+  expect(nucleic).toHaveLength(12);
+  expect(nucleic).toMatchSnapshot();
 });
 
 test('test TACGTGCCAATAC internal fragment', () => {
@@ -45,8 +47,11 @@ test('test TACGTGCCAATAC internal fragment', () => {
       kind: 'dna',
     },
   });
-  expect(dbManager.databases.nucleic).toHaveLength(56);
-  expect(dbManager.databases.nucleic).toMatchSnapshot();
+
+  let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+
+  expect(nucleic).toHaveLength(56);
+  expect(nucleic).toMatchSnapshot();
 });
 
 test('test AGGCAG fragment', () => {
@@ -60,8 +65,9 @@ test('test AGGCAG fragment', () => {
       kind: 'dna',
     },
   });
-  expect(dbManager.databases.nucleic).toHaveLength(6);
-  expect(dbManager.databases.nucleic).toMatchSnapshot();
+  let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+  expect(nucleic).toHaveLength(6);
+  expect(nucleic).toMatchSnapshot();
 });
 
 test('test AGG with d-h2o and base loss', () => {
@@ -77,6 +83,7 @@ test('test AGG with d-h2o and base loss', () => {
       kind: 'dna',
     },
   });
-  expect(dbManager.databases.nucleic).toHaveLength(6);
-  expect(dbManager.databases.nucleic).toMatchSnapshot();
+  let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+  expect(nucleic).toHaveLength(6);
+  expect(nucleic).toMatchSnapshot();
 });
