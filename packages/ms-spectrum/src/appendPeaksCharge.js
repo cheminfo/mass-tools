@@ -86,6 +86,7 @@ function appendPeaksCharge(peaks, options = {}) {
       let currentTheoreticalPosition = 0;
       let theoreticalMaxValue = 1 / numberIsotopes;
       let totalMatch = 0;
+
       for (let index = localFromIndex; index <= localToIndex; index++) {
         let minMass =
           theoreticalPositions.x[currentTheoreticalPosition] -
@@ -110,18 +111,20 @@ function appendPeaksCharge(peaks, options = {}) {
         }
 
         //    console.log({ index, minMass, maxMass, massRange, localHeightSum });
-        while (index < peaks.length && peaks[index].x <= maxMass) {
-          if (peaks[index].x >= minMass && peaks[index].x <= maxMass) {
-            let value = peaks[index].y / localHeightSum;
-            //      console.log({ theoreticalMaxValue, value });
-            value = Math.min(theoreticalMaxValue, value);
+        if (index < peaks.length && peaks[index].x <= maxMass) {
+          while (index < peaks.length && peaks[index].x <= maxMass) {
+            if (peaks[index].x >= minMass && peaks[index].x <= maxMass) {
+              let value = peaks[index].y / localHeightSum;
+              //      console.log({ theoreticalMaxValue, value });
+              value = Math.min(theoreticalMaxValue, value);
 
-            theoreticalMaxValue -= value;
-            totalMatch += value;
+              theoreticalMaxValue -= value;
+              totalMatch += value;
+            }
+            index++;
           }
-          index++;
+          index--;
         }
-        index--;
 
         if (totalMatch > bestChargeMatch) {
           bestCharge = charge;
