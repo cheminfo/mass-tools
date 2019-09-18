@@ -57,6 +57,16 @@ Array [
         },
         "text": "1.00000",
       },
+      Object {
+        "color": "grey",
+        "position": Object {
+          "dx": "2px",
+          "dy": "-4px",
+          "x": 1,
+          "y": 2,
+        },
+        "text": "Z:undefined",
+      },
     ],
     "position": Array [
       Object {

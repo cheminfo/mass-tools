@@ -15,6 +15,16 @@ Array [
         },
         "text": "12.00000",
       },
+      Object {
+        "color": "grey",
+        "position": Object {
+          "dx": "2px",
+          "dy": "-4px",
+          "x": 12,
+          "y": 1,
+        },
+        "text": "Z:undefined",
+      },
     ],
     "position": Array [
       Object {
@@ -42,6 +52,16 @@ Array [
           "y": 2,
         },
         "text": "24.00000",
+      },
+      Object {
+        "color": "grey",
+        "position": Object {
+          "dx": "2px",
+          "dy": "-4px",
+          "x": 24,
+          "y": 2,
+        },
+        "text": "Z:undefined",
       },
     ],
     "position": Array [
@@ -71,6 +91,16 @@ Array [
         },
         "text": "36.00000",
       },
+      Object {
+        "color": "grey",
+        "position": Object {
+          "dx": "2px",
+          "dy": "-4px",
+          "x": 36,
+          "y": 3,
+        },
+        "text": "Z:undefined",
+      },
     ],
     "position": Array [
       Object {
@@ -98,6 +128,16 @@ Array [
           "y": 4,
         },
         "text": "42.00000",
+      },
+      Object {
+        "color": "grey",
+        "position": Object {
+          "dx": "2px",
+          "dy": "-4px",
+          "x": 42,
+          "y": 4,
+        },
+        "text": "Z:undefined",
       },
     ],
     "position": Array [
@@ -132,6 +172,16 @@ Array [
         },
         "text": "0.00001",
       },
+      Object {
+        "color": "grey",
+        "position": Object {
+          "dx": "2px",
+          "dy": "-4px",
+          "x": 12,
+          "y": 1,
+        },
+        "text": "Z:undefined",
+      },
     ],
     "position": Array [
       Object {
@@ -159,6 +209,16 @@ Array [
           "y": 2,
         },
         "text": "12.00001",
+      },
+      Object {
+        "color": "grey",
+        "position": Object {
+          "dx": "2px",
+          "dy": "-4px",
+          "x": 24,
+          "y": 2,
+        },
+        "text": "Z:undefined",
       },
     ],
     "position": Array [
@@ -188,6 +248,16 @@ Array [
         },
         "text": "24.00001",
       },
+      Object {
+        "color": "grey",
+        "position": Object {
+          "dx": "2px",
+          "dy": "-4px",
+          "x": 36,
+          "y": 3,
+        },
+        "text": "Z:undefined",
+      },
     ],
     "position": Array [
       Object {
@@ -215,6 +285,16 @@ Array [
           "y": 4,
         },
         "text": "30.00001",
+      },
+      Object {
+        "color": "grey",
+        "position": Object {
+          "dx": "2px",
+          "dy": "-4px",
+          "x": 42,
+          "y": 4,
+        },
+        "text": "Z:undefined",
       },
     ],
     "position": Array [
