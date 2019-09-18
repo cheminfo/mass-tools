@@ -18,8 +18,8 @@ test('generateMFs from array of string with empty', function() {
 
 test('generateMFs from array of string with comment', function() {
   let mfsArray = ['C.H.O', '+,++', ['Cl', 'Br$XX']];
-  let result = generateMFs(mfsArray).sort((a, b) => a.em - b.em);
-  expect(result[0].mf).toBe('HCl(+1)');
+  let result = generateMFs(mfsArray).sort((a, b) => a.ms.em - b.ms.em);
+  expect(result[0].mf).toBe('HCl(+2)');
   expect(result).toHaveLength(12);
 });
 

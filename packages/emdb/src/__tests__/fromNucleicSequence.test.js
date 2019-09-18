@@ -13,9 +13,9 @@ test('test fromNucleicSequence', () => {
       kind: 'dna',
     },
   });
-
-  expect(dbManager.databases.nucleic).toHaveLength(6);
-  expect(dbManager.databases.nucleic).toMatchSnapshot();
+  let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+  expect(nucleic).toHaveLength(6);
+  expect(nucleic).toMatchSnapshot();
 });
 
 test('test fromNucleicSequence ds-DNA', () => {
