@@ -12,6 +12,8 @@
  * @param {number} [options.charge=1]
  * @param {number} [options.shift=0]
  * @param {object} [options.mfPrefs]
+ * @param {number} [options.displayCharge=true]
+ *
  */
 
 function getPeaksAnnotation(bestPeaks, options = {}) {
@@ -26,6 +28,7 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
     numberMFs = 0,
     charge = 1,
     mfPrefs = {},
+    displayCharge = true,
     mfColors = [
       { limit: 3, color: 'green' },
       { limit: 20, color: 'lightgreen' },
@@ -102,6 +105,19 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
           }
         ]
       };
+
+      if (displayCharge) {
+        annotation.labels.push({
+          text: `Z:${peak.charge}`,
+          color: 'grey',
+          position: {
+            x: peak.x,
+            y: peak.y,
+            dy: '-4px',
+            dx: '2px'
+          }
+        });
+      }
 
       if (numberMFs) {
         // we have 2 cases. Either there is a shift and we deal with differences

@@ -91,7 +91,7 @@ Spectrum.prototype.peaksWidth = function () {
 
 Spectrum.prototype.getBestPeaks = function (options) {
   peakPicking(this);
-  return getBestPeaks(this, options);
+  return getBestPeaks(this.peaks, options);
 };
 
 Spectrum.prototype.getPeakChargeBySimilarity = function (targetMass, options) {
