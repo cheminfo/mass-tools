@@ -28,7 +28,7 @@ module.exports = function generalMatcher(entry, options = {}) {
     minCharge = Number.MIN_SAFE_INTEGER,
     maxCharge = Number.MAX_SAFE_INTEGER,
     unsaturation = {},
-    atoms
+    atoms,
   } = options;
 
   if (entry.mw !== undefined) {

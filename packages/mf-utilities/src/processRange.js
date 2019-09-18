@@ -13,7 +13,7 @@ function processRange(string, comment) {
       mfs[position] = {
         mf: part,
         min: 1,
-        max: 1
+        max: 1,
       };
     } else {
       let min = part.replace(/^(-?[0-9]*)-(-?[0-9]*)/, '$1') >> 0;

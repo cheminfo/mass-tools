@@ -8,10 +8,9 @@ Object.keys(elements).forEach((key) => {
   e.isotopes.forEach((i) => {
     isotopes[i.nominal + key] = {
       abundance: i.abundance,
-      mass: i.mass
+      mass: i.mass,
     };
   });
 });
 
 module.exports = isotopes;
-

@@ -9,7 +9,7 @@ const Kind = require('../Kind');
  */
 
 module.exports = function partToAtoms(part) {
-  var atoms = {};
+  let atoms = {};
   for (let line of part) {
     switch (line.kind) {
       case Kind.ISOTOPE:

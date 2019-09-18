@@ -11,9 +11,7 @@ function getIsotopeRatioInfo(value) {
   let max = Math.max(...ratios);
   if (ratios.length > isotopesArray.length) {
     throw new Error(
-      `the number of specified ratios is bigger that the number of stable isotopes: ${
-        value.atom
-      }`
+      `the number of specified ratios is bigger that the number of stable isotopes: ${value.atom}`,
     );
   }
   for (let i = 0; i < ratios.length; i++) {

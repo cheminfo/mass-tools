@@ -17,12 +17,12 @@ describe('TargetMassCache', () => {
     let possibilities = preprocessRanges([
       { mf: 'C', min: 0, max: 2 },
       { mf: 'H+', min: 0, max: 2 },
-      { mf: 'O', min: 0, max: 0 }
+      { mf: 'O', min: 0, max: 0 },
     ]);
     let cache = new TargetMassCache(100, possibilities);
     expect(cache).toMatchObject({
       minCharge: 0,
-      maxCharge: 2
+      maxCharge: 2,
     });
   });
 
@@ -30,7 +30,7 @@ describe('TargetMassCache', () => {
     let possibilities = preprocessRanges([{ mf: 'C+', min: -10, max: 5 }]);
     let cache = new TargetMassCache(100, possibilities, {
       minCharge: -1,
-      maxCharge: 2
+      maxCharge: 2,
     });
     expect(cache.minCharge).toBe(-1);
     expect(cache.maxCharge).toBe(2);
@@ -42,12 +42,12 @@ describe('TargetMassCache', () => {
       minCharge: -1,
       maxCharge: 2,
       precision: 1000,
-      allowNeutral: true
+      allowNeutral: true,
     });
     expect(cache).toMatchObject({
       minCharge: 0,
       maxCharge: 0,
-      data: [{ charge: 0, minMass: 99.9, maxMass: 100.1 }]
+      data: [{ charge: 0, minMass: 99.9, maxMass: 100.1 }],
     });
   });
 
@@ -56,7 +56,7 @@ describe('TargetMassCache', () => {
     let cache = new TargetMassCache(100, possibilities, {
       minCharge: -1,
       maxCharge: 2,
-      precision: 1000
+      precision: 1000,
     });
     expect(cache).toMatchObject({
       minCharge: 0,
@@ -65,11 +65,11 @@ describe('TargetMassCache', () => {
         {
           charge: 0,
           minMass: Number.MAX_SAFE_INTEGER,
-          maxMass: Number.MIN_SAFE_INTEGER
+          maxMass: Number.MIN_SAFE_INTEGER,
         },
         { charge: 1, minMass: 99.90054857990907, maxMass: 100.10054857990906 },
-        { charge: 2, minMass: 199.80109715981814, maxMass: 200.20109715981812 }
-      ]
+        { charge: 2, minMass: 199.80109715981814, maxMass: 200.20109715981812 },
+      ],
     });
   });
 
@@ -79,7 +79,7 @@ describe('TargetMassCache', () => {
       minCharge: -1,
       maxCharge: 1,
       allowNeutral: false,
-      precision: 1e6
+      precision: 1e6,
     });
     expect(cache).toMatchObject({
       minCharge: -1,
@@ -89,10 +89,10 @@ describe('TargetMassCache', () => {
         {
           charge: 0,
           minMass: Number.MAX_SAFE_INTEGER,
-          maxMass: Number.MIN_SAFE_INTEGER
+          maxMass: Number.MIN_SAFE_INTEGER,
         },
-        { charge: 1, minMass: 0.00054857990907, maxMass: 200.00054857990906 }
-      ]
+        { charge: 1, minMass: 0.00054857990907, maxMass: 200.00054857990906 },
+      ],
     });
   });
 
@@ -103,7 +103,7 @@ describe('TargetMassCache', () => {
       minCharge: -1,
       maxCharge: 1,
       allowNeutral: false,
-      precision: 1e6
+      precision: 1e6,
     });
     expect(cache).toMatchObject({
       minCharge: 0,
@@ -112,10 +112,10 @@ describe('TargetMassCache', () => {
         {
           charge: 0,
           minMass: Number.MAX_SAFE_INTEGER,
-          maxMass: Number.MIN_SAFE_INTEGER
+          maxMass: Number.MIN_SAFE_INTEGER,
         },
-        { charge: 1, minMass: 0.00054857990907, maxMass: 200.00054857990906 }
-      ]
+        { charge: 1, minMass: 0.00054857990907, maxMass: 200.00054857990906 },
+      ],
     });
   });
 });

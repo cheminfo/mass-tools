@@ -49,7 +49,7 @@ module.exports = function fromNucleicSequence(sequencesString, options = {}) {
     fragmentation = {},
     filter = {},
     ionizations = '',
-    info = {}
+    info = {},
   } = options;
 
   let sequences = nucleotide.sequenceToMF(sequencesString, info).split('.');
@@ -58,7 +58,7 @@ module.exports = function fromNucleicSequence(sequencesString, options = {}) {
   // calculate fragmentation
   for (let i = 0; i < sequences.length; i++) {
     let sequence = sequences[i];
-    var fragments = nucleotide.generateFragments(sequence, fragmentation);
+    let fragments = nucleotide.generateFragments(sequence, fragmentation);
     if (i === 1) {
       // complementary sequence
       fragments = fragments.map((fragment) => fragment.replace(/\$/g, '$cmp-'));
@@ -74,7 +74,7 @@ module.exports = function fromNucleicSequence(sequencesString, options = {}) {
   let combined = combineMFs(mfsArray, {
     ionizations,
     filter: filter,
-    uniqueMFs: false
+    uniqueMFs: false,
   });
 
   return combined;

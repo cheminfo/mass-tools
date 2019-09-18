@@ -16,7 +16,7 @@ module.exports = function power(p, options = {}) {
       this.multiply(base, options); // executed <= log2(p) times
     }
     p >>= 1;
-    if (p !== 0) base.square(options);// executed <= log2(p) times
+    if (p !== 0) base.square(options); // executed <= log2(p) times
   }
 
   return this;

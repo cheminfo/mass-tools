@@ -59,7 +59,7 @@ module.exports = function fromPeptidicSequence(sequence, options = {}) {
     protonationPH = 7,
     fragmentation = {},
     filter = {},
-    ionizations = ''
+    ionizations = '',
   } = options;
 
   sequence = peptide.convertAASequence(sequence);
@@ -67,10 +67,10 @@ module.exports = function fromPeptidicSequence(sequence, options = {}) {
   let fragmentsArray = [sequence];
   // do we also have some digest fragments ?
   if (digestion.enzyme) {
-    var digests = peptide.digestPeptide(sequence, digestion);
+    let digests = peptide.digestPeptide(sequence, digestion);
     if (options.protonation) {
       digests = peptide.chargePeptide(digests, {
-        pH: options.protonationPH
+        pH: options.protonationPH,
       });
     }
     fragmentsArray = fragmentsArray.concat(digests);
@@ -87,14 +87,14 @@ module.exports = function fromPeptidicSequence(sequence, options = {}) {
   }
 
   // calculate fragmentation
-  var fragments = peptide.generatePeptideFragments(sequence, fragmentation);
+  let fragments = peptide.generatePeptideFragments(sequence, fragmentation);
   fragmentsArray = fragmentsArray.concat(fragments);
 
   mfsArray.push(fragmentsArray);
 
   let combined = combineMFs(mfsArray, {
     ionizations,
-    filter: filter
+    filter: filter,
   });
 
   return combined;

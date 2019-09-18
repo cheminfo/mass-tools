@@ -7,7 +7,7 @@ test.skip('test peptideSVG', () => {
     width: 1000,
     leftRightBorders: 50,
     spaceBetweenResidues: 20,
-    spaceBetweenInteralLines: 10
+    spaceBetweenInteralLines: 10,
   };
   let sequence = 'MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQ';
   let info = [
@@ -26,9 +26,9 @@ test.skip('test peptideSVG', () => {
     { type: 'c20', similarity: 62.44, charge: 2 },
     { type: 'z20', similarity: 61.64, charge: 2 },
     { type: 'z9', similarity: 57.76, charge: 3 },
-    { type: 'c38', similarity: 50.44, charge: 2 }
+    { type: 'c38', similarity: 50.44, charge: 2 },
   ];
-  var svg = peptideSVG(sequence, info, options);
+  let svg = peptideSVG(sequence, info, options);
   console.log(svg);
 
   expect(true).toBe(true);

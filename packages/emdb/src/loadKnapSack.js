@@ -8,7 +8,7 @@ const loadingPromises = {};
 
 module.exports = async function loadKnapSack(options = {}) {
   const {
-    url = 'https://couch.cheminfo.org/cheminfo-public/d2eb480198c80275a1d05dd3609414f9/upload/ms.zip'
+    url = 'https://couch.cheminfo.org/cheminfo-public/d2eb480198c80275a1d05dd3609414f9/upload/ms.zip',
   } = options;
 
   if (!loadingPromises[url]) {
@@ -17,7 +17,7 @@ module.exports = async function loadKnapSack(options = {}) {
   const buffer = await loadingPromises[url];
 
   const jsZip = new JSZip();
-  var zip = await jsZip.loadAsync(buffer);
+  let zip = await jsZip.loadAsync(buffer);
   let fileData = await zip.files['ms.json'].async('string');
   let data = JSON.parse(fileData);
 
@@ -29,4 +29,3 @@ module.exports = async function loadKnapSack(options = {}) {
 
   return data;
 };
-

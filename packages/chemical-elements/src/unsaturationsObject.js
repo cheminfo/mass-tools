@@ -15,5 +15,5 @@ module.exports = {
   Br: -1,
   I: -1,
   S: 0,
-  P: 1
+  P: 1,
 };

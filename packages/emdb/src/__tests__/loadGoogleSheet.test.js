@@ -2,7 +2,6 @@
 
 const loadGoogleSheet = require('../loadGoogleSheet');
 
-
 test('test load google sheet', async () => {
   let data = await loadGoogleSheet();
   expect(data.length).toBeGreaterThan(1000);

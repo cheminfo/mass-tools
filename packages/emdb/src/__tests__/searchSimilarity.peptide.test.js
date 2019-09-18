@@ -1,6 +1,5 @@
 'use strict';
 
-
 const fs = require('fs');
 const join = require('path').join;
 
@@ -24,9 +23,9 @@ describe('test searchSimilarity for peptide', () => {
         digestion: {},
         fragmentation: {
           c: true,
-          z: true
-        }
-      }
+          z: true,
+        },
+      },
     );
     dbManager.setExperimentalSpectrum(experimental);
 
@@ -40,10 +39,10 @@ describe('test searchSimilarity for peptide', () => {
         },
         zone: {
           low: -0.5,
-          high: 2.5
+          high: 2.5,
         },
-        common: 'second' // 'first', 'second', 'both' (or true) or 'none' (or undefined)
-      }
+        common: 'second', // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
     });
 
     expect(results).toMatchSnapshot();
@@ -62,9 +61,9 @@ describe('test searchSimilarity for peptide', () => {
         digestion: {},
         fragmentation: {
           c: true,
-          z: true
-        }
-      }
+          z: true,
+        },
+      },
     );
     dbManager.setExperimentalSpectrum(experimental);
 
@@ -77,10 +76,10 @@ describe('test searchSimilarity for peptide', () => {
           'return { bottom: 0.01 + mass / 8000, top: 0.01 + mass / 8000 / 2 };',
         zone: {
           low: -0.5,
-          high: 2.5
+          high: 2.5,
         },
-        common: 'second' // 'first', 'second', 'both' (or true) or 'none' (or undefined)
-      }
+        common: 'second', // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
     });
 
     expect(results).toMatchSnapshot();
@@ -93,6 +92,6 @@ function loadUbiquitin() {
   let data = parseXY(text, { arrayType: 'xxyy' });
   return {
     x: data[0],
-    y: data[1]
+    y: data[1],
   };
 }

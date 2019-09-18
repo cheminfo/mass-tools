@@ -8,9 +8,9 @@ describe('test Spectrum JSGraph', () => {
       {
         x: 1,
         y: 2,
-        close: false
+        close: false,
       },
-      { x: 2, y: 3, close: true }
+      { x: 2, y: 3, close: true },
     ];
     let annotations = Spectrum.JsGraph.getPeaksAnnotation(peaks);
 

@@ -25,7 +25,7 @@ test('test fromArray with groups', () => {
     'CH2O',
     'N',
     'NO',
-    'O'
+    'O',
   ]);
 });
 

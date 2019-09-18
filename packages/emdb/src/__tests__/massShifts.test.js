@@ -9,23 +9,23 @@ describe('test massShifts', () => {
         ms: {
           em: 10,
           delta: 0.2,
-          similarity: { value: 0.99 }
-        }
+          similarity: { value: 0.99 },
+        },
       },
       {
         ms: {
           em: 20,
           delta: 0.3,
-          similarity: { value: 0.99 }
-        }
+          similarity: { value: 0.99 },
+        },
       },
       {
         ms: {
           em: 30,
           delta: 0.4,
-          similarity: { value: 0.99 }
-        }
-      }
+          similarity: { value: 0.99 },
+        },
+      },
     ];
 
     let result = massShifts(data, { minLength: 2 });
@@ -33,7 +33,7 @@ describe('test massShifts', () => {
     expect(result.slope).toBe(0.01);
     expect(result.shifts).toStrictEqual({
       x: [10, 20, 30],
-      y: [0.2, 0.3, 0.4]
+      y: [0.2, 0.3, 0.4],
     });
     expect(result.score.r).toBe(1);
     expect(result.fit.x).toHaveLength(1001);

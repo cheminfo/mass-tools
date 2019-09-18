@@ -10,17 +10,18 @@ module.exports = function joinX(threshold = Number.EPSILON) {
   this.sortX();
   let current = {
     x: Number.MIN_SAFE_INTEGER,
-    y: 0
+    y: 0,
   };
   for (let item of this.array) {
-    if ((item.x - current.x) <= threshold) {
+    if (item.x - current.x <= threshold) {
       // weighted sum
-      current.x = item.y / (current.y + item.y) * (item.x - current.x) + current.x;
+      current.x =
+        (item.y / (current.y + item.y)) * (item.x - current.x) + current.x;
       current.y += item.y;
     } else {
       current = {
         x: item.x,
-        y: item.y
+        y: item.y,
       };
       result.push(current);
     }

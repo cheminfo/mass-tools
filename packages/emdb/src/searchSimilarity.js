@@ -38,7 +38,7 @@ module.exports = function searchSimilarity(options = {}) {
 
   let width = {
     bottom: similarity.widthBottom,
-    top: similarity.widthTop
+    top: similarity.widthTop,
   };
 
   if (
@@ -46,7 +46,7 @@ module.exports = function searchSimilarity(options = {}) {
     !this.experimentalSpectrum.data.x.length > 0
   ) {
     throw Error(
-      'You need to add an experimental spectrum first using setMassSpectrum'
+      'You need to add an experimental spectrum first using setMassSpectrum',
     );
   }
 
@@ -75,7 +75,7 @@ module.exports = function searchSimilarity(options = {}) {
     let checkTopBottom = widthFunction(123);
     if (!checkTopBottom.bottom || !checkTopBottom.top) {
       throw Error(
-        'widthFunction should return an object with bottom and top properties'
+        'widthFunction should return an object with bottom and top properties',
       );
     }
   }
@@ -88,7 +88,7 @@ module.exports = function searchSimilarity(options = {}) {
   for (let entry of flatEntries) {
     let isotopicDistribution = new IsotopicDistribution(entry.mf, {
       allowNeutral: false,
-      ionizations: [entry.ionization]
+      ionizations: [entry.ionization],
     });
 
     let distribution = isotopicDistribution.getDistribution();
@@ -116,7 +116,7 @@ module.exports = function searchSimilarity(options = {}) {
         experimentalInfo: result.extractInfo1,
         thereoticalInfo: result.extractInfo2,
         quantity: result.extractInfo1.sum / sumY,
-        width
+        width,
       };
     }
   }

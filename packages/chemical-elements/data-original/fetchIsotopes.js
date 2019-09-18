@@ -6,33 +6,33 @@ const fs = require('fs');
 const fetch = require('node-fetch');
 
 async function retrieve(refresh = false) {
-  var text;
+  let text;
   if (refresh) {
-    var response = await fetch(
-      'http://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=&ascii=ascii2&isotype=all'
+    let response = await fetch(
+      'http://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=&ascii=ascii2&isotype=all',
     );
     text = await response.text();
     fs.writeFileSync(`${__dirname}/isotopes.txt`, text);
   } else {
     text = String(fs.readFileSync(`${__dirname}/isotopes.txt`));
   }
-  var lines = text.split(/[\r\n]+/).filter((a) => a.match(/^[a-zA-Z ]+= /));
+  let lines = text.split(/[\r\n]+/).filter((a) => a.match(/^[a-zA-Z ]+= /));
 
-  var elements = [];
-  var element = {};
-  var fields = {};
-  var isotope;
-  var number;
-  for (var line of lines) {
-    var label = line.replace(/ =.*/, '');
-    var value = line.replace(/.*?= /, '').replace('&nbsp;', '');
+  let elements = [];
+  let element = {};
+  let fields = {};
+  let isotope;
+  let number;
+  for (let line of lines) {
+    let label = line.replace(/ =.*/, '');
+    let value = line.replace(/.*?= /, '').replace('&nbsp;', '');
     switch (label) {
       case 'Atomic Number':
         number = Number(value);
         if (element.number !== number) {
           element = {
             number,
-            isotopes: []
+            isotopes: [],
           };
           elements.push(element);
         }

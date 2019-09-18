@@ -24,4 +24,3 @@ module.exports = function getClosestEntry(key) {
   }
   return bestMatch;
 };
-

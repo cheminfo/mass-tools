@@ -8,5 +8,5 @@ module.exports = {
   MF: require('../packages/mf-parser/src/MF.js'),
   Peptide: require('peptide'),
   Nucleotide: require('../packages/nucleotide'),
-  Spectrum: require('../packages/ms-spectrum').Spectrum
+  Spectrum: require('../packages/ms-spectrum').Spectrum,
 };

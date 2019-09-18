@@ -19,7 +19,7 @@ module.exports = function preprocessIonizations(ionizationsString = '') {
       results.push({
         mf: part,
         em: info.monoisotopicMass,
-        charge: info.charge
+        charge: info.charge,
       });
     }
   }

@@ -17,7 +17,7 @@ const TargetMassCache = require('./TargetMassCache');
 
 let targetMassCache;
 
-module.exports = function (targetMass, options = {}) {
+module.exports = function(targetMass, options = {}) {
   const {
     minCharge = Number.MIN_SAFE_INTEGER,
     maxCharge = Number.MAX_SAFE_INTEGER,
@@ -28,8 +28,8 @@ module.exports = function (targetMass, options = {}) {
       { mf: 'C', min: 0, max: 100 },
       { mf: 'H', min: 0, max: 100 },
       { mf: 'O', min: 0, max: 100 },
-      { mf: 'N', min: 0, max: 100 }
-    ]
+      { mf: 'N', min: 0, max: 100 },
+    ],
   } = options;
 
   let filterUnsaturation = unsaturation ? true : false;
@@ -51,8 +51,8 @@ module.exports = function (targetMass, options = {}) {
     mfs: [],
     info: {
       numberMFEvaluated: 0,
-      numberResults: 0
-    }
+      numberResults: 0,
+    },
   };
   let orderMapping = []; // used to sort the atoms
 
@@ -62,7 +62,7 @@ module.exports = function (targetMass, options = {}) {
     let currentIonization = {
       currentMonoisotopicMass: ionization.em || 0,
       currentCharge: ionization.charge,
-      currentUnsaturation: 0 // we don't take into account the unsaturation of the ionization agent
+      currentUnsaturation: 0, // we don't take into account the unsaturation of the ionization agent
     };
     // if (DEBUG) console.log('new ionization', ionization.mf, ionization.em, ionization.charge);
     // ionization em and charge will be used to set the first atom value
@@ -73,7 +73,7 @@ module.exports = function (targetMass, options = {}) {
     targetMassCache = new TargetMassCache(
       targetMass,
       possibilities,
-      Object.assign({}, options, { charge: ionization.charge })
+      Object.assign({}, options, { charge: ionization.charge }),
     );
 
     let theEnd = false;
@@ -92,7 +92,7 @@ module.exports = function (targetMass, options = {}) {
     while (!theEnd) {
       if (result.info.numberMFEvaluated++ > maxIterations) {
         throw Error(
-          `Iteration number is over the current maximum of: ${maxIterations}`
+          `Iteration number is over the current maximum of: ${maxIterations}`,
         );
       }
       if (filterUnsaturation) {
@@ -132,8 +132,8 @@ module.exports = function (targetMass, options = {}) {
             targetMass,
             allowNeutral,
             ionization,
-            orderMapping
-          )
+            orderMapping,
+          ),
         );
         result.info.numberResults++;
       }
@@ -153,7 +153,7 @@ module.exports = function (targetMass, options = {}) {
             currentPosition++;
             setCurrentMinMax(
               possibilities[currentPosition],
-              possibilities[currentPosition - 1]
+              possibilities[currentPosition - 1],
             );
           } else {
             break;
@@ -189,7 +189,7 @@ function getResult(
   targetMass,
   allowNeutralMolecules,
   ionization,
-  orderMapping
+  orderMapping,
 ) {
   let lastPossibility = possibilities[possibilities.length - 1];
 
@@ -198,7 +198,7 @@ function getResult(
     unsaturation: lastPossibility.currentUnsaturation,
     mf: '',
     charge: lastPossibility.currentCharge - ionization.charge,
-    ionization
+    ionization,
   };
 
   // we check that the first time we meet the ionization group it does not end
@@ -242,18 +242,18 @@ function setCurrentMinMax(currentAtom, previousAtom) {
         (targetMassCache.getMinMass(currentCharge) -
           currentMass -
           currentAtom.maxInnerMass) /
-          currentAtom.em
+          currentAtom.em,
       ),
-      currentAtom.originalMinCount
+      currentAtom.originalMinCount,
     );
     currentAtom.currentMaxCount = Math.min(
       Math.floor(
         (targetMassCache.getMaxMass(currentCharge) -
           currentMass -
           currentAtom.minInnerMass) /
-          currentAtom.em
+          currentAtom.em,
       ),
-      currentAtom.originalMaxCount
+      currentAtom.originalMaxCount,
     );
     currentAtom.currentCount = currentAtom.currentMinCount - 1;
   }
@@ -277,7 +277,7 @@ function possibilitiesToString(possibilities) {
     `current:${a.currentCount}`,
     `min:${a.currentMinCount}`,
     `max:${a.currentMaxCount}`,
-    `charge:${a.currentCharge}`
+    `charge:${a.currentCharge}`,
   ]);
 }
 

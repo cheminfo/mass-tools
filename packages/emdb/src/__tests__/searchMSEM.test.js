@@ -9,8 +9,8 @@ describe('test searchMSEM', () => {
 
     let results = dbManager.searchMSEM(101, {
       filter: {
-        precision: 1000
-      }
+        precision: 1000,
+      },
     });
 
     expect(results.contaminants).toHaveLength(4);
@@ -23,8 +23,8 @@ describe('test searchMSEM', () => {
     let results = dbManager.searchMSEM(101, {
       ionizations: 'H+',
       filter: {
-        precision: 1000
-      }
+        precision: 1000,
+      },
     });
     expect(results.contaminants).toHaveLength(4);
   });
@@ -37,8 +37,8 @@ describe('test searchMSEM', () => {
       ionizations: 'H+',
       filter: {
         precision: 1000,
-        forceIonization: true
-      }
+        forceIonization: true,
+      },
     });
 
     expect(results.contaminants).toHaveLength(3);

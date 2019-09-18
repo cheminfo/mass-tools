@@ -13,7 +13,7 @@ module.exports = function preprocessRanges(ranges) {
     let current = {
       mf: '',
       min: 1,
-      max: 1
+      max: 1,
     };
 
     // example ClBr2(CH2)0-2NO
@@ -45,7 +45,7 @@ module.exports = function preprocessRanges(ranges) {
           newRanges.push({
             mf: currentMF,
             min: item.value.from,
-            max: item.value.to
+            max: item.value.to,
           });
           currentMF = '';
           break;
@@ -70,7 +70,7 @@ module.exports = function preprocessRanges(ranges) {
     ranges = newRanges;
   }
 
-  var possibilities = [];
+  let possibilities = [];
   for (let i = 0; i < ranges.length; i++) {
     let range = ranges[i];
     let min = range.min === undefined ? 0 : range.min;
@@ -94,7 +94,7 @@ module.exports = function preprocessRanges(ranges) {
       maxCharge: 0,
       minMass: 0,
       maxMass: 0,
-      innerCharge: false
+      innerCharge: false,
     };
     possibilities.push(possibility);
     let info = new MF(range.mf).getInfo();
@@ -107,7 +107,7 @@ module.exports = function preprocessRanges(ranges) {
     if (possibility.mf !== info.mf) possibility.isGroup = true;
   }
   possibilities = possibilities.filter(
-    (r) => r.originalMinCount !== 0 || r.originalMaxCount !== 0
+    (r) => r.originalMinCount !== 0 || r.originalMaxCount !== 0,
   );
   // we will sort the way we analyse the data
   // 1. The one possibility parameter

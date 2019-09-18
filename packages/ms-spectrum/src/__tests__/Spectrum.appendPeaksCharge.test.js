@@ -8,7 +8,7 @@ const Spectrum = require('../Spectrum');
 describe('test appendPeakCharge on Spectrum', () => {
   let chargedText = readFileSync(
     join(__dirname, 'data/multicharge.txt'),
-    'utf8'
+    'utf8',
   );
   it('multicharged', () => {
     let spectrum = Spectrum.fromText(chargedText);

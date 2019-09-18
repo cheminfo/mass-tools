@@ -26,7 +26,7 @@ module.exports = async function searchPubchem(mass, options = {}) {
     precision = 1000,
     limit = 1000,
     minPubchemEntries = 5,
-    allowNeutralMolecules = false
+    allowNeutralMolecules = false,
   } = options;
 
   let promises = [];
@@ -35,8 +35,8 @@ module.exports = async function searchPubchem(mass, options = {}) {
     let realMass = mass * ionization.charge - ionization.em;
     promises.push(
       fetch(
-        `${url}?em=${realMass}&precision=${precision}&limit=${limit}&minPubchemEntries=${minPubchemEntries}`
-      )
+        `${url}?em=${realMass}&precision=${precision}&limit=${limit}&minPubchemEntries=${minPubchemEntries}`,
+      ),
     );
   }
 
@@ -51,7 +51,7 @@ module.exports = async function searchPubchem(mass, options = {}) {
         mfInfo.em = mfInfo.monoisotopicMass;
         mfInfo.ms = getMsInfo(mfInfo, {
           targetMass: mass,
-          allowNeutralMolecules
+          allowNeutralMolecules,
         }).ms;
         mfInfo.info = { nbPubchemEntries: mf.total };
         mfs.push(mfInfo);

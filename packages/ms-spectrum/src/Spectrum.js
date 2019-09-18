@@ -21,11 +21,11 @@ function Spectrum(data = { x: [], y: [] }) {
   }
   this.data = {
     x: data.x,
-    y: data.y
+    y: data.y,
   };
   Object.defineProperty(this.data, 'xOriginal', {
     enumerable: false,
-    writable: true
+    writable: true,
   });
   this.cache = {};
 }
@@ -43,7 +43,7 @@ Spectrum.prototype.sumY = function sumY() {
   if (!this.cache.sumY) {
     this.cache.sumY = this.data.y.reduce(
       (previous, current) => previous + current,
-      0
+      0,
     );
   }
   return this.cache.sumY;
@@ -79,31 +79,31 @@ Spectrum.prototype.normedY = function normedY(total = 1) {
   return this;
 };
 
-Spectrum.prototype.peakPicking = function () {
+Spectrum.prototype.peakPicking = function() {
   peakPicking(this);
   return this.peaks;
 };
 
-Spectrum.prototype.peaksWidth = function () {
+Spectrum.prototype.peaksWidth = function() {
   peakPicking(this);
   return peaksWidth(this.peaks);
 };
 
-Spectrum.prototype.getBestPeaks = function (options) {
+Spectrum.prototype.getBestPeaks = function(options) {
   peakPicking(this);
   return getBestPeaks(this.peaks, options);
 };
 
-Spectrum.prototype.getPeakChargeBySimilarity = function (targetMass, options) {
+Spectrum.prototype.getPeakChargeBySimilarity = function(targetMass, options) {
   return getPeakChargeBySimilarity(this, targetMass, options);
 };
 
-Spectrum.prototype.getPeaks = function (options) {
+Spectrum.prototype.getPeaks = function(options) {
   peakPicking(this);
   return getPeaks(this.peaks, options);
 };
 
-Spectrum.prototype.isContinuous = function () {
+Spectrum.prototype.isContinuous = function() {
   return isContinuous(this);
 };
 

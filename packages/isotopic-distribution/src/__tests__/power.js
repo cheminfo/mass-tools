@@ -8,7 +8,11 @@ describe('test distribution power', () => {
     dist.push(1, 2);
     dist.push(2, 3);
     dist.power(2);
-    expect(dist.array).toStrictEqual([{ x: 2, y: 4 }, { x: 3, y: 12 }, { x: 4, y: 9 }]);
+    expect(dist.array).toStrictEqual([
+      { x: 2, y: 4 },
+      { x: 3, y: 12 },
+      { x: 4, y: 9 },
+    ]);
   });
 
   it('power 3 - 1 peak', () => {
@@ -23,7 +27,12 @@ describe('test distribution power', () => {
     dist.push(1, 1);
     dist.push(2, 1);
     dist.power(3);
-    expect(dist.array).toStrictEqual([{ x: 3, y: 1 }, { x: 4, y: 3 }, { x: 5, y: 3 }, { x: 6, y: 1 }]);
+    expect(dist.array).toStrictEqual([
+      { x: 3, y: 1 },
+      { x: 4, y: 3 },
+      { x: 5, y: 3 },
+      { x: 6, y: 1 },
+    ]);
   });
 
   it('power 1000 - 2 peaks', () => {

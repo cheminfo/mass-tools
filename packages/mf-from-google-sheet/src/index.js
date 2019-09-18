@@ -1,21 +1,16 @@
 'use strict';
 
-var Papa = require('papaparse');
-var generateMFs = require('mf-generator');
-var MF = require('mf-parser/src/MF');
+let Papa = require('papaparse');
+let generateMFs = require('mf-generator');
+let MF = require('mf-parser/src/MF');
 
 const fetchText = require('./util/fetchText');
 
 async function mfFromGoogleSheet(url, options = {}) {
-  let {
-    urlReferences
-  } = options;
+  let { urlReferences } = options;
 
   if (urlReferences) {
-    let results = await Promise.all([
-      fetchText(url),
-      fetchText(urlReferences)
-    ]);
+    let results = await Promise.all([fetchText(url), fetchText(urlReferences)]);
     return parse(results[0], results[1]);
   } else {
     let result = await fetchText(url);
@@ -23,88 +18,91 @@ async function mfFromGoogleSheet(url, options = {}) {
   }
 
   function parse(tsv, tsvReferences) {
-    var parsed = Papa.parse(tsv,
-      {
-        delimiter: '\t',
-        header: true
-      }
+    let parsed = Papa.parse(tsv, {
+      delimiter: '\t',
+      header: true,
+    });
+    let fields = parsed.meta.fields;
+    let infoFields = fields.filter(
+      (a) =>
+        !['mf', 'modif', 'ESI', 'MALDI', 'positive', 'negative'].includes(a),
     );
-    var fields = parsed.meta.fields;
-    var infoFields = fields.filter((a) => !['mf', 'modif', 'ESI', 'MALDI', 'positive', 'negative'].includes(a));
-    var formulas = parsed.data;
-
+    let formulas = parsed.data;
 
     if (tsvReferences) {
-      var referencesArray = Papa.parse(tsvReferences,
-        {
-          delimiter: '\t',
-          header: true
-        }
-      ).data;
+      let referencesArray = Papa.parse(tsvReferences, {
+        delimiter: '\t',
+        header: true,
+      }).data;
 
       var references = {};
-      referencesArray.forEach(
-        function (r) {
-          references[r.label] = r;
-        }
-      );
+      referencesArray.forEach(function(r) {
+        references[r.label] = r;
+      });
     }
 
-    var results = [];
-    for (var formula of formulas) {
+    let results = [];
+    for (let formula of formulas) {
       if (tsvReferences) {
         // we add references
-        var refs = formula.references.split(/[ ,]+/);
+        let refs = formula.references.split(/[ ,]+/);
         formula.references = [];
         for (let ref of refs) {
-          formula.references.push(
-            references[ref]
-          );
+          formula.references.push(references[ref]);
         }
       }
       // we need to calculate all the possibilities
       try {
-        var mfs = generateMFs([formula.mf], { ionizations: formula.modif });
-        for (var mf of mfs) {
+        let mfs = generateMFs([formula.mf], { ionizations: formula.modif });
+        for (let mf of mfs) {
           mf.info = {};
           for (let infoField of infoFields) {
             mf.info[infoField] = formula[infoField];
           }
-          if (!formula.ESI && !formula.MALDI && !formula.positive && !formula.negative) {
+          if (
+            !formula.ESI &&
+            !formula.MALDI &&
+            !formula.positive &&
+            !formula.negative
+          ) {
             mf.filter = {
               ESI: true,
               MALDI: true,
               positive: true,
-              negative: true
+              negative: true,
             };
           } else {
             mf.filter = {
               ESI: formula.ESI === 'X' ? true : false,
               MALDI: formula.MALDI === 'X' ? true : false,
               positive: formula.positive === 'X' ? true : false,
-              negative: formula.negative === 'X' ? true : false
+              negative: formula.negative === 'X' ? true : false,
             };
           }
-          mf.mf = (new MF(mf.mf)).toMF();
+          mf.mf = new MF(mf.mf).toMF();
           results.push(mf);
         }
       } catch (e) {
         // eslint-disable-next-line no-console
-        console.warn('Non parsable molecular formula: ', formula.mf, formula.modif, e.toString());
+        console.warn(
+          'Non parsable molecular formula: ',
+          formula.mf,
+          formula.modif,
+          e.toString(),
+        );
       }
     }
 
-    results = results.filter(function (a) {
+    results = results.filter(function(a) {
       return a.ms.em !== 0;
     });
 
-    results.sort(function (a, b) {
+    results.sort(function(a, b) {
       return a.ms.em - b.ms.em;
     });
 
-
-    var uniqueResults = [results[0]];
-    for (var i = 1; i < results.length; i++) {
+    let uniqueResults = [results[0]];
+    for (let i = 1; i < results.length; i++) {
       if (results[i - 1].ms.em !== results[i].ms.em) {
         uniqueResults.push(results[i]);
       }
@@ -115,4 +113,3 @@ async function mfFromGoogleSheet(url, options = {}) {
 }
 
 module.exports = mfFromGoogleSheet;
-

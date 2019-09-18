@@ -14,7 +14,7 @@ const getIsotopeRatioInfo = require('./getIsotopeRatioInfo');
  * @param {*} [options={}]
  */
 module.exports = function getEA(parts) {
-  var results = {};
+  let results = {};
   for (let part of parts) {
     for (let line of part) {
       switch (line.kind) {
@@ -22,7 +22,7 @@ module.exports = function getEA(parts) {
           let isotope = isotopes[line.value.isotope + line.value.atom];
           if (!isotope) {
             throw new Error(
-              `Unknown isotope: ${line.value.isotope}${line.value.atom}`
+              `Unknown isotope: ${line.value.isotope}${line.value.atom}`,
             );
           }
           addMass(results, line.value.atom, isotope.mass * line.multiplier);
@@ -34,7 +34,7 @@ module.exports = function getEA(parts) {
           addMass(
             results,
             line.value.atom,
-            isotopeRatioInfo.mass * line.multiplier
+            isotopeRatioInfo.mass * line.multiplier,
           );
           break;
         }
@@ -64,7 +64,7 @@ module.exports = function getEA(parts) {
     sum += results[key];
     eas.push({
       element: key,
-      mass: results[key]
+      mass: results[key],
     });
   }
 

@@ -13,7 +13,7 @@ function getSVG(sequence, analysisResult, options = {}) {
     strokeWidth = 2,
     labelFontFamily = 'Verdana',
     labelSize = 8,
-    verticalShiftForTerminalAnnotations = 20
+    verticalShiftForTerminalAnnotations = 20,
   } = options;
 
   let residues = [];
@@ -32,7 +32,7 @@ function getSVG(sequence, analysisResult, options = {}) {
     text.attr({
       'font-family': labelFontFamily,
       'font-weight': 'bold',
-      'font-size': 12
+      'font-size': 12,
     });
     let textWidth = text.node.getBoundingClientRect().width;
     xPos += textWidth;
@@ -50,7 +50,7 @@ function getSVG(sequence, analysisResult, options = {}) {
       line,
       usedSlots: [],
       topPosition: 0,
-      bottomPosition: 0
+      bottomPosition: 0,
     });
     xPos += spaceBetweenResidues;
     xOld = xPos;
@@ -135,14 +135,14 @@ function getSVG(sequence, analysisResult, options = {}) {
 
   addScript(paper);
 
-  residues.forEach(function (residue) {
+  residues.forEach(function(residue) {
     residue.y = (residue.line + 1) * rowHeight;
     let text = paper.text(residue.xFrom, residue.y, residue.label);
     text.attr({ id: `residue-${residue.nTer}` });
     text.attr({
       'font-family': labelFontFamily,
       'font-weight': 'bold',
-      'font-size': 12
+      'font-size': 12,
     });
   });
 
@@ -164,7 +164,7 @@ function getSVG(sequence, analysisResult, options = {}) {
     let used = {};
     for (let i = from; i < to; i++) {
       let residue = residues[i];
-      residue.usedSlots.forEach(function (usedSlot, index) {
+      residue.usedSlots.forEach(function(usedSlot, index) {
         used[index] = true;
       });
     }
@@ -197,7 +197,7 @@ function getSVG(sequence, analysisResult, options = {}) {
           residue.xTo + spaceBetweenResidues / 2,
           residue.y,
           residue.xTo + spaceBetweenResidues / 2,
-          residue.y - 8
+          residue.y - 8,
         );
         line.attr({ stroke: result.color, 'stroke-width': strokeWidth });
         if (nTerminal) {
@@ -205,13 +205,13 @@ function getSVG(sequence, analysisResult, options = {}) {
             residue.xTo + spaceBetweenResidues / 2,
             residue.y,
             residue.xTo + spaceBetweenResidues / 2 - 5,
-            residue.y + 5
+            residue.y + 5,
           );
           line.attr({ stroke: result.color, 'stroke-width': strokeWidth });
           drawLabel(
             result,
             residue.xTo + spaceBetweenResidues / 2 - 15,
-            residue.y + 12 + residue.bottomPosition * labelSize
+            residue.y + 12 + residue.bottomPosition * labelSize,
           );
           residue.bottomPosition++;
         } else {
@@ -219,13 +219,13 @@ function getSVG(sequence, analysisResult, options = {}) {
             residue.xTo + spaceBetweenResidues / 2,
             residue.y - 8,
             residue.xTo + spaceBetweenResidues / 2 + 5,
-            residue.y - 13
+            residue.y - 13,
           );
           line.attr({ stroke: result.color, 'stroke-width': strokeWidth });
           drawLabel(
             result,
             residue.xTo + spaceBetweenResidues / 2,
-            residue.y - 15 - residue.topPosition * labelSize
+            residue.y - 15 - residue.topPosition * labelSize,
           );
           residue.topPosition++;
         }
@@ -242,20 +242,20 @@ function getSVG(sequence, analysisResult, options = {}) {
       fill: result.textColor,
       'font-family': labelFontFamily,
       'font-weight': 'bold',
-      'font-size': labelSize
+      'font-size': labelSize,
     });
     let textWidth = text.node.getBoundingClientRect().width + 3;
     text = paper.text(x + textWidth, y - labelSize / 2, charge);
     text.attr({
       fill: result.textColor,
       'font-family': labelFontFamily,
-      'font-size': labelSize / 2
+      'font-size': labelSize / 2,
     });
     text = paper.text(x + textWidth, y, similarity);
     text.attr({
       fill: result.textColor,
       'font-family': labelFontFamily,
-      'font-size': labelSize / 2
+      'font-size': labelSize / 2,
     });
   }
 
@@ -288,11 +288,11 @@ function getSVG(sequence, analysisResult, options = {}) {
           drawLine.attr({
             onmouseover: 'mouseOver(evt)',
             onmouseout: 'mouseOut(evt)',
-            id: `line${fromResidue.nTer}-${toResidue.nTer}`
+            id: `line${fromResidue.nTer}-${toResidue.nTer}`,
           });
           drawLine.attr({
             stroke: result.color,
-            'stroke-width': strokeWidth
+            'stroke-width': strokeWidth,
           });
 
           drawLabel(result, (fromX + toX) / 2 - 10, y - 2);
@@ -330,7 +330,7 @@ function getSVG(sequence, analysisResult, options = {}) {
      // ]]>
     `;
     let scriptElement = paper.el('script', {
-      type: 'application/ecmascript'
+      type: 'application/ecmascript',
     });
     scriptElement.node.textContent = script;
   }

@@ -9,7 +9,7 @@ describe('test test peakWidth', () => {
       { width: 8, x: 2, y: 1 },
       { width: 18, x: 3, y: 1 },
       { width: 32, x: 4, y: 1 },
-      { width: 50, x: 5, y: 1 }
+      { width: 50, x: 5, y: 1 },
     ];
     let result = peaksWidth(peaks);
     expect(result.score).toStrictEqual({ chi2: 0, r: 1, r2: 1, rmsd: 0 });
@@ -19,7 +19,7 @@ describe('test test peakWidth', () => {
     expect(result.fit.y).toHaveLength(1001);
     expect(result.widths).toStrictEqual({
       x: [1, 2, 3, 4, 5],
-      y: [2, 8, 18, 32, 50]
+      y: [2, 8, 18, 32, 50],
     });
   });
 
@@ -31,7 +31,7 @@ describe('test test peakWidth', () => {
     expect(result.fit.y).toHaveLength(1001);
     expect(result.widths).toStrictEqual({
       x: [1, 2],
-      y: [2, 8]
+      y: [2, 8],
     });
   });
 
@@ -44,7 +44,7 @@ describe('test test peakWidth', () => {
   it('two peaks zero width', () => {
     let results = peaksWidth([
       { width: 0, x: 1, y: 1 },
-      { width: 0, x: 2, y: 1 }
+      { width: 0, x: 2, y: 1 },
     ]);
 
     expect(results.A).toBe(NaN);

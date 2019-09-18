@@ -50,7 +50,7 @@ describe('test nucleotide', () => {
   it("nucleotide to sequence of DNA AAA with 5' alcohol", () => {
     let sequence = Nucleotide.sequenceToMF('AAA', {
       fivePrime: 'alcohol',
-      kind: 'DNA'
+      kind: 'DNA',
     });
     expect(sequence).toStrictEqual('HODadeDampDampH');
     let mass = new MF(sequence).getInfo().mass;
@@ -60,7 +60,7 @@ describe('test nucleotide', () => {
   it("nucleotide to sequence of DNA AAA with 5' monophosphate", () => {
     let sequence = Nucleotide.sequenceToMF('AAA', {
       fivePrime: 'monophosphate',
-      kind: 'DNA'
+      kind: 'DNA',
     });
     expect(sequence).toStrictEqual('HODampDampDampH');
     let mass = new MF(sequence).getInfo().mass;
@@ -69,7 +69,7 @@ describe('test nucleotide', () => {
   it("nucleotide to sequence of DNA AAA with 5' diphosphate", () => {
     let sequence = Nucleotide.sequenceToMF('AAA', {
       fivePrime: 'diphosphate',
-      kind: 'DNA'
+      kind: 'DNA',
     });
     expect(sequence).toStrictEqual('HODadpDampDampH');
     let mass = new MF(sequence).getInfo().mass;
@@ -79,7 +79,7 @@ describe('test nucleotide', () => {
   it("nucleotide to sequence of DNA AAA with 5' triphosphate", () => {
     let sequence = Nucleotide.sequenceToMF('AAA', {
       fivePrime: 'triphosphate',
-      kind: 'DNA'
+      kind: 'DNA',
     });
     expect(sequence).toStrictEqual('HODatpDampDampH');
     let mass = new MF(sequence).getInfo().mass;

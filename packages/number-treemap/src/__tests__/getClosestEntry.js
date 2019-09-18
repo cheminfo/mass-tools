@@ -17,4 +17,3 @@ test('test TreeMap get', () => {
   expect(treeMap.getClosestEntry(2.6)).toMatchObject({ key: 2.5, value: 25 });
   expect(treeMap.getClosestEntry(4)).toMatchObject({ key: 3, value: 30 });
 });
-

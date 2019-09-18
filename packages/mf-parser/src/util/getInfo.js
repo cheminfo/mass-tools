@@ -7,7 +7,6 @@ const { ELECTRON_MASS } = require('chemical-elements/src/constants');
 
 const Kind = require('../Kind');
 
-
 const partToMF = require('./partToMF');
 const partToAtoms = require('./partToAtoms');
 const isotopes = require('./getIsotopesObject');
@@ -25,7 +24,7 @@ module.exports = function getInfo(parts, options = {}) {
     return getProcessedPart(parts[0], customUnsaturations);
   }
 
-  var result = { parts: [] };
+  let result = { parts: [] };
   for (let part of parts) {
     result.parts.push(getProcessedPart(part, customUnsaturations));
   }
@@ -48,7 +47,7 @@ function getProcessedPart(part, customUnsaturations) {
     monoisotopicMass: 0,
     charge: 0,
     mf: '',
-    atoms: partToAtoms(part)
+    atoms: partToAtoms(part),
   };
   let unsaturation = 0;
   let validUnsaturation = true;
@@ -81,7 +80,7 @@ function getProcessedPart(part, customUnsaturations) {
         let isotope = isotopes[line.value.isotope + line.value.atom];
         if (!isotope) {
           throw new Error(
-            `Unknown isotope: ${line.value.isotope}${line.value.atom}`
+            `Unknown isotope: ${line.value.isotope}${line.value.atom}`,
           );
         }
         currentPart.monoisotopicMass += isotope.mass * line.multiplier;
@@ -127,4 +126,3 @@ function getProcessedPart(part, customUnsaturations) {
   }
   return currentPart;
 }
-

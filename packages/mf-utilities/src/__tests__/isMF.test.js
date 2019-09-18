@@ -20,7 +20,7 @@ const tests = [
   ['ch3cl', false],
   ['ccl4', false],
   ['chcl3', false],
-  ['co2', false]
+  ['co2', false],
 ];
 
 describe('isMF', () => {

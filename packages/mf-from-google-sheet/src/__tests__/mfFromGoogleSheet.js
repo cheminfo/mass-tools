@@ -1,11 +1,11 @@
 'use strict';
 
-var mfFromGoogleSheet = require('..');
+let mfFromGoogleSheet = require('..');
 
 // The original document is on: https://docs.google.com/spreadsheets/d/15Kuc5MeOhvm4oeTMvEuP1rWdRFiVWosxXhYwAmuf3Uo/edit#gid=0
 test('Test getReferenceList with existing', async () => {
-  var result = await mfFromGoogleSheet(
-    'https://googledocs.cheminfo.org/spreadsheets/d/15Kuc5MeOhvm4oeTMvEuP1rWdRFiVWosxXhYwAmuf3Uo/export?format=tsv'
+  let result = await mfFromGoogleSheet(
+    'https://googledocs.cheminfo.org/spreadsheets/d/15Kuc5MeOhvm4oeTMvEuP1rWdRFiVWosxXhYwAmuf3Uo/export?format=tsv',
   );
   expect(result).toHaveLength(1684);
   expect(result[0].mw).toBeCloseTo(5.963091372400585, 5);
@@ -16,7 +16,7 @@ test('Test getReferenceList with existing', async () => {
 test('Test getReferenceList with non existing document', () => {
   expect(
     mfFromGoogleSheet(
-      'https://googledocs.cheminfo.org/spreadsheets/d/15Kuc5MeOhvm4xxxVWosxXhYwAmuf3Uo/export?format=tsv'
-    )
+      'https://googledocs.cheminfo.org/spreadsheets/d/15Kuc5MeOhvm4xxxVWosxXhYwAmuf3Uo/export?format=tsv',
+    ),
   ).rejects.toThrow('404');
 });

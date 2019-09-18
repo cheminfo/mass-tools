@@ -2,7 +2,7 @@
 
 const getCharge = require('../parseCharge');
 
-test('getCharge', function () {
+test('getCharge', function() {
   expect(getCharge('---')).toBe(-3);
   expect(getCharge('+++')).toBe(3);
   expect(getCharge('---++')).toBe(-1);

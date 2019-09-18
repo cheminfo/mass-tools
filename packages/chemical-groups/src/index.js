@@ -3,7 +3,7 @@
 const groups = require('./groups.js');
 
 function getGroupsObject() {
-  var object = {};
+  let object = {};
   groups.forEach((e) => {
     object[e.symbol] = e;
   });
@@ -12,5 +12,5 @@ function getGroupsObject() {
 
 module.exports = {
   groups,
-  getGroupsObject
+  getGroupsObject,
 };

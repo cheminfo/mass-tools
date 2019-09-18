@@ -15,10 +15,10 @@ describe('test searchSimilarity', () => {
         widthTop: 0.01,
         zone: {
           low: -0.5,
-          high: 2.5
+          high: 2.5,
         },
-        common: undefined // 'first', 'second', 'both' (or true) or 'none' (or undefined)
-      }
+        common: undefined, // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
     });
 
     expect(results.test).toHaveLength(2);
@@ -40,10 +40,10 @@ describe('test searchSimilarity', () => {
         widthTop: 0.01,
         zone: {
           low: -0.5,
-          high: 0.5
+          high: 0.5,
         },
-        common: undefined // 'first', 'second', 'both' (or true) or 'none' (or undefined)
-      }
+        common: undefined, // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
     });
     //   expect(results.test).toMatchSnapshot();
     expect(results.test[0].ms.similarity.value).toBe(1);
@@ -57,17 +57,17 @@ describe('test searchSimilarity', () => {
       ionizations: '+',
       filter: {
         msem: 120,
-        precision: 1000
+        precision: 1000,
       },
       similarity: {
         zone: {
           low: -0.5,
-          high: 0.5
+          high: 0.5,
         },
         widthBottom: 0.1,
         widthTop: 0.1,
-        common: undefined // 'first', 'second', 'both' (or true) or 'none' (or undefined)
-      }
+        common: undefined, // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
     });
 
     expect(results.test[0].ms.similarity.value).toBe(1);
@@ -81,8 +81,8 @@ describe('test searchSimilarity', () => {
       ionizations: '+',
       filter: {
         msem: 120,
-        precision: 1
-      }
+        precision: 1,
+      },
     });
     expect(results.test).toHaveLength(0);
   });
@@ -95,17 +95,17 @@ describe('test searchSimilarity', () => {
       ionizations: '+',
       filter: {
         msem: 120,
-        precision: 1000
+        precision: 1000,
       },
       similarity: {
         zone: {
           low: -0.5,
-          high: 2.5
+          high: 2.5,
         },
         widthBottom: 0.1,
         widthTop: 0.1,
-        common: undefined // 'first', 'second', 'both' (or true) or 'none' (or undefined)
-      }
+        common: undefined, // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
     });
     expect(results.test[0].ms.similarity.value).toBeCloseTo(0.895, 2);
   });
@@ -118,17 +118,17 @@ describe('test searchSimilarity', () => {
       ionizations: '+',
       filter: {
         msem: 120,
-        precision: 1000
+        precision: 1000,
       },
       similarity: {
         zone: {
           low: -0.5,
-          high: 2.5
+          high: 2.5,
         },
         widthBottom: 5,
         widthTop: 5,
-        common: undefined // 'first', 'second', 'both' (or true) or 'none' (or undefined)
-      }
+        common: undefined, // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
     });
     expect(results.test[0].ms.similarity.value).toBe(1);
   });
@@ -141,17 +141,17 @@ describe('test searchSimilarity', () => {
       ionizations: '+',
       filter: {
         msem: 120,
-        precision: 1000
+        precision: 1000,
       },
       similarity: {
         widthBottom: 0.05,
         widthTop: 0.01,
         zone: {
           low: -0.5,
-          high: 2.5
+          high: 2.5,
         },
-        common: 'first' // 'first', 'second', 'both' (or true) or 'none' (or undefined)
-      }
+        common: 'first', // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
     });
     expect(results.test[0].ms.similarity.value).toBe(1);
   });
@@ -164,13 +164,13 @@ describe('test searchSimilarity', () => {
       ionizations: '+',
       filter: {
         msem: 120,
-        precision: 1000
+        precision: 1000,
       },
       similarity: {
         widthBottom: 0.05,
         widthTop: 0.01,
-        common: undefined // 'first', 'second', 'both' (or true) or 'none' (or undefined)
-      }
+        common: undefined, // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
     });
     expect(results.test[0].ms.similarity.value).toBeCloseTo(0.995, 2);
   });

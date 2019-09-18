@@ -16,19 +16,17 @@ function getEutrophicationPotential(mfString) {
   for (let atom of atoms) {
     if (!['C', 'H', 'N', 'O', 'P'].includes(atom)) {
       return {
-        log:
-          `EP can not be calculated because the MF contains the element: ${
-            atom}`
+        log: `EP can not be calculated because the MF contains the element: ${atom}`,
       };
     }
   }
 
-  var vRef = 1;
-  var mwRef = 94.97;
+  let vRef = 1;
+  let mwRef = 94.97;
 
-  var thOD = nC + (nH - 3 * nN) / 4 - nO / 2;
-  var v = nP + nN / 16 + thOD / 138;
-  var ep = v / mw / (vRef / mwRef);
+  let thOD = nC + (nH - 3 * nN) / 4 - nO / 2;
+  let v = nP + nN / 16 + thOD / 138;
+  let ep = v / mw / (vRef / mwRef);
 
   return {
     v,
@@ -36,7 +34,7 @@ function getEutrophicationPotential(mfString) {
     ep,
     mf,
     mw,
-    log: 'Successful calculation'
+    log: 'Successful calculation',
   };
 }
 

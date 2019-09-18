@@ -17,7 +17,7 @@ function appendPeaksCharge(peaks, options = {}) {
     low = -1,
     high = 1,
     min: minCharge = 1,
-    max: maxCharge = 10
+    max: maxCharge = 10,
   } = options;
   let fromCharge =
     minCharge * maxCharge > 0
@@ -42,7 +42,7 @@ function appendPeaksCharge(peaks, options = {}) {
     for (let charge = fromCharge; charge < toCharge + 1; charge++) {
       let theoreticalPositions = {
         x: [],
-        y: new Array(numberIsotopes).fill(isotopeIntensity)
+        y: new Array(numberIsotopes).fill(isotopeIntensity),
       };
 
       let massRange = precision * 1e-6 * targetMass;
@@ -52,7 +52,7 @@ function appendPeaksCharge(peaks, options = {}) {
         isotopePosition++
       ) {
         theoreticalPositions.x.push(
-          targetMass + (isotopePosition * NEUTRON_MASS) / charge
+          targetMass + (isotopePosition * NEUTRON_MASS) / charge,
         );
       }
       let fromMass = targetMass + low / Math.abs(charge) - massRange;

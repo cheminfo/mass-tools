@@ -61,7 +61,7 @@ describe('test isContinuous', () => {
     let parsed = parseXY(text, { arrayType: 'xxyy' });
     let data = {
       x: parsed[0],
-      y: parsed[1]
+      y: parsed[1],
     };
     expect(isContinuous({ data })).toBe(true);
   });

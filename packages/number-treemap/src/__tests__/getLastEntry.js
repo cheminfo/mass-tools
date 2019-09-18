@@ -12,4 +12,3 @@ test('test TreeMap get', () => {
   treeMap.set(0.5, 5);
   expect(treeMap.getLastEntry()).toMatchObject({ key: 2, value: 20 });
 });
-

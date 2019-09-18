@@ -8,7 +8,7 @@ describe('test getBestPeaks', () => {
     { x: 2, y: 4 },
     { x: 3, y: 2 },
     { x: 4, y: 5 },
-    { x: 5, y: 3 }
+    { x: 5, y: 3 },
   ];
   it('default options', () => {
     let result = getBestPeaks(peaks);
@@ -17,7 +17,7 @@ describe('test getBestPeaks', () => {
       { x: 2, y: 4, close: false },
       { x: 3, y: 2, close: false },
       { x: 4, y: 5, close: false },
-      { x: 5, y: 3, close: false }
+      { x: 5, y: 3, close: false },
     ]);
   });
 
@@ -28,7 +28,7 @@ describe('test getBestPeaks', () => {
       { close: false, x: 2, y: 4 },
       { close: true, x: 3, y: 2 },
       { close: false, x: 4, y: 5 },
-      { close: true, x: 5, y: 3 }
+      { close: true, x: 5, y: 3 },
     ]);
   });
 
@@ -37,7 +37,7 @@ describe('test getBestPeaks', () => {
     expect(result).toStrictEqual([
       { close: false, x: 2, y: 4 },
       { close: false, x: 4, y: 5 },
-      { close: false, x: 5, y: 3 }
+      { close: false, x: 5, y: 3 },
     ]);
   });
 });
@@ -48,17 +48,17 @@ describe('test getBestPeaks with searchMonoisotopicRatio', () => {
     { x: 1.5, y: 4 },
     { x: 2, y: 2 },
     { x: 2.5, y: 5 },
-    { x: 3, y: 3 }
+    { x: 3, y: 3 },
   ];
   it('simple test', () => {
     let result = getBestPeaks(peaks, {
       searchMonoisotopicRatio: 0.2,
-      limit: 3
+      limit: 3,
     });
     expect(result).toStrictEqual([
       { x: 1, y: 5, close: false },
       { x: 1.5, y: 4, close: false },
-      { x: 2.5, y: 5, close: false }
+      { x: 2.5, y: 5, close: false },
     ]);
   });
 });

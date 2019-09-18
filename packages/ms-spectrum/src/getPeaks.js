@@ -15,14 +15,14 @@ function getPeaks(peaks, options = {}) {
   const {
     from = peaks.reduce(
       (previous, peak) => Math.min(peak.x, previous),
-      Number.MAX_SAFE_INTEGER
+      Number.MAX_SAFE_INTEGER,
     ),
     to = peaks.reduce(
       (previous, peak) => Math.max(peak.x, previous),
-      Number.MIN_SAFE_INTEGER
+      Number.MIN_SAFE_INTEGER,
     ),
     threshold = 0.01,
-    limit
+    limit,
   } = options;
 
   let maxY = Number.MIN_SAFE_INTEGER;
@@ -32,7 +32,7 @@ function getPeaks(peaks, options = {}) {
   let minY = maxY * threshold;
 
   peaks = peaks.filter(
-    (peak) => peak.x >= from && peak.x <= to && peak.y >= minY
+    (peak) => peak.x >= from && peak.x <= to && peak.y >= minY,
   );
 
   if (limit && peaks.length > limit) {

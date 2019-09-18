@@ -15,7 +15,7 @@ describe('test Spectrum', () => {
 
   it('data to normedY', () => {
     expect(
-      new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 1, 1] }).normedY().data
+      new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 1, 1] }).normedY().data,
     ).toStrictEqual({ x: [1, 2, 3, 4], y: [0.25, 0.25, 0.25, 0.25] });
   });
 
@@ -29,14 +29,14 @@ describe('test Spectrum', () => {
   });
   it('scaleY', () => {
     expect(
-      new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).scaleY(100).data
+      new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).scaleY(100).data,
     ).toStrictEqual({ x: [1, 2, 3, 4], y: [50, 50, 100, 50] });
   });
 
   it('rescaleX', () => {
     expect(
       new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).rescaleX((x) => x ** 2)
-        .data
+        .data,
     ).toStrictEqual({ x: [1, 4, 9, 16], y: [1, 1, 2, 1] });
   });
 
@@ -53,7 +53,7 @@ describe('test Spectrum', () => {
       { width: 0, x: 3, y: 3, charge: 1 },
       { width: 0, x: 4, y: 2, charge: 1 },
       { width: 0, x: 5, y: 1, charge: 1 },
-      { width: 0, x: 6, y: 0, charge: 1 }
+      { width: 0, x: 6, y: 0, charge: 1 },
     ]);
   });
 
@@ -71,8 +71,8 @@ describe('test Spectrum', () => {
         soft: false,
         width: 0.1999999999999993,
         x: 5,
-        y: 10000
-      }
+        y: 10000,
+      },
     ]);
   });
 
@@ -92,8 +92,8 @@ describe('test Spectrum', () => {
         soft: false,
         width: 0.14999999999999947,
         x: 4.975,
-        y: 10049.5
-      }
+        y: 10049.5,
+      },
     ]);
   });
 

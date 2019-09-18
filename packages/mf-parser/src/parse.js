@@ -46,7 +46,7 @@ class MFParser {
             throw new MFError(
               this.mf,
               this.i,
-              'Premultiplier may not contain a -'
+              'Premultiplier may not contain a -',
             );
           }
           this.result.push({ kind: Kind.PRE_MULTIPLIER, value: value.from });
@@ -56,8 +56,8 @@ class MFParser {
               kind: Kind.MULTIPLIER_RANGE,
               value: {
                 from: Math.min(value.from, value.to),
-                to: Math.max(value.from, value.to)
-              }
+                to: Math.max(value.from, value.to),
+              },
             });
           } else {
             this.result.push({ kind: Kind.MULTIPLIER, value: value.from });
@@ -80,7 +80,7 @@ class MFParser {
         throw new MFError(
           this.mf,
           this.i,
-          'found a lowercase not following an uppercase'
+          'found a lowercase not following an uppercase',
         );
       } else if (char === '(') {
         let charge = this.getParenthesisCharge(ascii);
@@ -99,7 +99,7 @@ class MFParser {
         throw new MFError(
           this.mf,
           this.i,
-          'should never meet an closing bracket not in isotopes'
+          'should never meet an closing bracket not in isotopes',
         );
       } else if (char === '{') {
         // can define an exotic isotopic ratio or mixtures of groups
@@ -109,20 +109,20 @@ class MFParser {
           lastResult.kind = Kind.ISOTOPE_RATIO;
           lastResult.value = {
             atom: lastResult.value,
-            ratio: isotopeRatio
+            ratio: isotopeRatio,
           };
         } else {
           throw new MFError(
             this.mf,
             this.i,
-            'isotopic composition has to follow an atom'
+            'isotopic composition has to follow an atom',
           );
         }
       } else if (char === '}') {
         throw new MFError(
           this.mf,
           this.i,
-          'found a unexpected closing curly bracket'
+          'found a unexpected closing curly bracket',
         );
       } else if (char === '+') {
         // charge not in parenthesis
@@ -136,7 +136,7 @@ class MFParser {
         // it is a comment after
         this.result.push({
           kind: Kind.COMMENT,
-          value: this.mf.substring(this.i + 1)
+          value: this.mf.substring(this.i + 1),
         });
         break;
       } else {
@@ -159,7 +159,7 @@ class MFParser {
       throw new MFError(
         this.mf,
         this.i,
-        'number of opening and closing parenthesis not equal'
+        'number of opening and closing parenthesis not equal',
       );
     }
   }
@@ -180,7 +180,7 @@ class MFParser {
     if (indexOfDash > -1) {
       return {
         from: Number(number.substr(0, indexOfDash)),
-        to: Number(number.substr(indexOfDash + 1))
+        to: Number(number.substr(indexOfDash + 1)),
       };
     }
     return { from: Number(number) };
@@ -228,7 +228,7 @@ class MFParser {
     throw new MFError(
       this.mf,
       this.i,
-      'Curly brackets should contain only number and comma'
+      'Curly brackets should contain only number and comma',
     );
   }
 

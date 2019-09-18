@@ -11,14 +11,14 @@ describe('test isotopicDistribution', () => {
 
   it('create distribution of C Ag+', () => {
     let isotopicDistribution = new IsotopicDistribution('C', {
-      ionizations: 'Ag+'
+      ionizations: 'Ag+',
     });
     let distribution = isotopicDistribution.getDistribution();
     expect(distribution.array).toStrictEqual([
       { x: 118.90454302009094, y: 0.512843227 },
       { x: 119.90789785516094, y: 0.005546773 },
       { x: 120.90420672009094, y: 0.47645677299999994 },
-      { x: 121.90756155516094, y: 0.005153227 }
+      { x: 121.90756155516094, y: 0.005153227 },
     ]);
   });
 
@@ -30,7 +30,7 @@ describe('test isotopicDistribution', () => {
       { x: 13.00335483507, y: 0.0214 },
       { x: 24, y: 0.9787144899999999 },
       { x: 25.00335483507, y: 0.02117102 },
-      { x: 26.00670967014, y: 0.00011448999999999998 }
+      { x: 26.00670967014, y: 0.00011448999999999998 },
     ]);
   });
 
@@ -40,13 +40,13 @@ describe('test isotopicDistribution', () => {
         mf: 'C',
         intensity: 2,
         ms: { ionization: '', em: 0, charge: 0 },
-        ionization: { mf: '', em: 0, charge: 0 }
+        ionization: { mf: '', em: 0, charge: 0 },
       },
       {
         mf: 'C2',
         ms: { ionization: '', em: 0, charge: 0 },
-        ionization: { mf: '', em: 0, charge: 0 }
-      }
+        ionization: { mf: '', em: 0, charge: 0 },
+      },
     ];
     let isotopicDistribution = new IsotopicDistribution(parts);
     let distribution = isotopicDistribution.getDistribution();
@@ -55,7 +55,7 @@ describe('test isotopicDistribution', () => {
       { x: 13.00335483507, y: 0.0214 },
       { x: 24, y: 0.9787144899999999 },
       { x: 25.00335483507, y: 0.02117102 },
-      { x: 26.00670967014, y: 0.00011448999999999998 }
+      { x: 26.00670967014, y: 0.00011448999999999998 },
     ]);
   });
 
@@ -85,7 +85,7 @@ describe('test isotopicDistribution', () => {
       { x: 13.00335483507, y: 0.0107 },
       { x: 24, y: 0.9787144899999999 },
       { x: 25.00335483507, y: 0.02117102 },
-      { x: 26.00670967014, y: 0.00011448999999999998 }
+      { x: 26.00670967014, y: 0.00011448999999999998 },
     ]);
   });
   it('create distribution for multiplepart, C.C2.C3', () => {
@@ -93,7 +93,7 @@ describe('test isotopicDistribution', () => {
     let distribution = isotopicDistribution.getDistribution();
     expect(distribution.array.reduce((e, p) => (e += p.y), 0)).toBeCloseTo(
       3,
-      5
+      5,
     );
   });
 
@@ -103,13 +103,13 @@ describe('test isotopicDistribution', () => {
     expect(distribution.array).toMatchObject([
       { x: 11.99945142009093, y: 1.9680144899999998 },
       { x: 12.501128837625929, y: 0.02117102 },
-      { x: 13.00280625516093, y: 0.01081449 }
+      { x: 13.00280625516093, y: 0.01081449 },
     ]);
   });
 
   it('getParts of isotopic distribution', () => {
     let isotopicDistribution = new IsotopicDistribution('C', {
-      ionizations: 'H+'
+      ionizations: 'H+',
     });
     let parts = isotopicDistribution.getParts();
     expect(parts[0].ms.em).toBeCloseTo(13.00727645232093, 5);
@@ -117,27 +117,27 @@ describe('test isotopicDistribution', () => {
 
   it('create distribution for many ionizations, C + (+, ++)', () => {
     let isotopicDistribution = new IsotopicDistribution('C', {
-      ionizations: '+,++'
+      ionizations: '+,++',
     });
     let distribution = isotopicDistribution.getDistribution();
     expect(distribution.array).toMatchObject([
       { x: 5.99945142009093, y: 0.9893 },
       { x: 6.50112883762593, y: 0.0107 },
       { x: 11.99945142009093, y: 0.9893 },
-      { x: 13.00280625516093, y: 0.0107 }
+      { x: 13.00280625516093, y: 0.0107 },
     ]);
     expect(isotopicDistribution.getParts()).toMatchSnapshot();
   });
 
   it('create distribution for many ionizations, C + H+', () => {
     let isotopicDistribution = new IsotopicDistribution('C', {
-      ionizations: 'H+'
+      ionizations: 'H+',
     });
     let distribution = isotopicDistribution.getDistribution();
     expect(distribution.array).toMatchObject([
       { x: 13.00727645232093, y: 0.9891862305 },
       { x: 14.010662031727025, y: 0.010812539 },
-      { x: 15.01690803328093, y: 0.0000012305 }
+      { x: 15.01690803328093, y: 0.0000012305 },
     ]);
   });
 
@@ -166,7 +166,7 @@ describe('test isotopicDistribution', () => {
     distribution.sortY();
     expect(distribution.array[0]).toStrictEqual({
       x: 13017.858890698088,
-      y: 1
+      y: 1,
     });
   });
 
@@ -178,7 +178,7 @@ describe('test isotopicDistribution', () => {
     distribution.sortY();
     expect(distribution.array[0]).toStrictEqual({
       x: 27024.926947823435,
-      y: 1
+      y: 1,
     });
   });
 

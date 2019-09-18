@@ -12,20 +12,20 @@ const isMF = require('./isMF');
 module.exports = function capitalizeMF(mf) {
   if (!mf.match(/^[0-9a-zA-Z ]+/)) return mf;
   if (isMF(mf)) return mf;
-  var oldMF = mf
+  let oldMF = mf
     .replace(/co/, 'C O')
     .replace(/mn/, ' Mn ')
     .replace(/cd/, ' C D ')
     .replace(/([0-9])([a-zA-Z])/, '$1 $2');
-  var newMF = '';
-  var parts = oldMF.split(/ +/);
+  let newMF = '';
+  let parts = oldMF.split(/ +/);
 
-  for (var i = 0; i < parts.length; i++) {
+  for (let i = 0; i < parts.length; i++) {
     if (parts[i] === '') continue;
-    var label = parts[i].replace(/[0-9]*$/, '');
-    var number = parts[i].replace(/^[a-zA-Z]*/, '');
+    let label = parts[i].replace(/[0-9]*$/, '');
+    let number = parts[i].replace(/^[a-zA-Z]*/, '');
 
-    var casedLabel = getCasedLabel(label);
+    let casedLabel = getCasedLabel(label);
 
     if (casedLabel) {
       newMF += casedLabel + number;
@@ -42,13 +42,13 @@ function getCasedLabel(label) {
 
   if (label === '') return label;
 
-  var casedLabel =
+  let casedLabel =
     label.substr(0, 1).toUpperCase() + label.substr(1).toLowerCase();
   if (elements[label]) return casedLabel;
   if (groups[label]) return casedLabel;
 
   // we would like to cover chcl3, ch2o, ch2cl2, ccl4
-  var newLabel = label
+  let newLabel = label
     .toLowerCase()
     .replace(/cl/g, 'Cl')
     .replace(/br/g, 'Br')

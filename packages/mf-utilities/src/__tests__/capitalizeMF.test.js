@@ -17,7 +17,7 @@ const tests = [
   ['ch3cl', 'CH3Cl'],
   ['ccl4', 'CCl4'],
   ['chcl3', 'CHCl3'],
-  ['co2', 'CO2']
+  ['co2', 'CO2'],
 ];
 
 describe('capitalizeMF', () => {

@@ -65,7 +65,7 @@ function createNewPart() {
 function openingParenthesis(currentPart) {
   currentPart.currentMultiplier = {
     value: 1,
-    fromIndex: currentPart.lines.length
+    fromIndex: currentPart.lines.length,
   };
   currentPart.multipliers.push(currentPart.currentMultiplier);
 }
@@ -128,13 +128,13 @@ function expandGroups(parts) {
               part.lines.push({
                 kind: 'isotope',
                 value: { atom: element.symbol, isotope: element.isotope },
-                multiplier: line.multiplier * element.number
+                multiplier: line.multiplier * element.number,
               });
             } else {
               part.lines.push({
                 kind: 'atom',
                 value: element.symbol,
-                multiplier: line.multiplier * element.number
+                multiplier: line.multiplier * element.number,
               });
             }
           }
@@ -159,7 +159,7 @@ function combineAtomsIsotopesCharges(parts) {
         if (currentKey !== key.key) {
           result.push({
             kind: Kind.CHARGE,
-            value: key.value.value * key.value.multiplier
+            value: key.value.value * key.value.multiplier,
           });
         } else {
           result[result.length - 1].value +=
@@ -197,7 +197,7 @@ function combineAtomsIsotopesCharges(parts) {
 
 function calculateAndSortKeys(part) {
   part.keys = [];
-  for (var line of part.lines) {
+  for (let line of part.lines) {
     part.keys.push({ key: getKey(line), value: line });
   }
   part.keys.sort((a, b) => stringComparator(a.key, b.key));

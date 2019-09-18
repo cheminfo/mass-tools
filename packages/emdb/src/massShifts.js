@@ -19,14 +19,14 @@ function massShifts(similarities, options = {}) {
   }
 
   results = results.filter(
-    (result) => result.ms.similarity.value > minSimilarity
+    (result) => result.ms.similarity.value > minSimilarity,
   );
 
   if (results.length < minLength) {
     throw new Error(
       `X rescale can not be applied. We need at least ${minLength} peaks with over ${Math.round(
-        minSimilarity * 100
-      )}% similarity`
+        minSimilarity * 100,
+      )}% similarity`,
     );
   }
 
@@ -34,7 +34,7 @@ function massShifts(similarities, options = {}) {
     .map((result) => {
       return {
         em: result.ms.em,
-        delta: result.ms.delta
+        delta: result.ms.delta,
       };
     })
     .sort((a, b) => a.em - b.em);
@@ -72,7 +72,7 @@ function massShifts(similarities, options = {}) {
     tex: regression.toLaTeX(3),
     slope: regression.slope,
     intercept: regression.intercept,
-    predictFctString: `${regression.slope} * mass + ${regression.intercept}`
+    predictFctString: `${regression.slope} * mass + ${regression.intercept}`,
   };
 }
 

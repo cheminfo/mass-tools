@@ -10,7 +10,7 @@ describe('test base loss', () => {
       'HAlaDrmpDtmpDcmpDcmpOH$-B1',
       'HAlaDampDrmpDcmpDcmpOH$-B2',
       'HAlaDampDtmpDrmpDcmpOH$-B3',
-      'HAlaDampDtmpDcmpDrmpOH$-B4'
+      'HAlaDampDtmpDcmpDrmpOH$-B4',
     ]);
   });
 
@@ -21,7 +21,7 @@ describe('test base loss', () => {
       'HODrmpDtmpDcmpDcmpH$-B1',
       'HODampDrmpDcmpDcmpH$-B2',
       'HODampDtmpDrmpDcmpH$-B3',
-      'HODampDtmpDcmpDrmpH$-B4'
+      'HODampDtmpDcmpDrmpH$-B4',
     ]);
   });
 

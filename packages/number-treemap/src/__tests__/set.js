@@ -17,7 +17,7 @@ test('test TreeMap put', () => {
       key: 0.5,
       value: 5,
       left: null,
-      right: null
+      right: null,
     },
     right: {
       key: 2,
@@ -28,11 +28,11 @@ test('test TreeMap put', () => {
         value: 30,
         left: {
           key: 2.5,
-          value: 25
+          value: 25,
         },
-        right: null
-      }
-    }
+        right: null,
+      },
+    },
   });
 });
 
@@ -51,7 +51,7 @@ test('test TreeMap put existing values', () => {
       key: 2,
       value: 5,
       left: null,
-      right: null
-    }
+      right: null,
+    },
   });
 });

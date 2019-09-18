@@ -19,7 +19,7 @@ module.exports = function convertForDisplay(lines) {
         if (line.value !== 1) {
           result = {
             kind: Format.SUBSCRIPT,
-            value: String(line.value)
+            value: String(line.value),
           };
           results.push(result);
         }
@@ -27,7 +27,7 @@ module.exports = function convertForDisplay(lines) {
       case Kind.MULTIPLIER_RANGE:
         result = {
           kind: Format.SUBSCRIPT,
-          value: `${String(line.value.from)}-${line.value.to}`
+          value: `${String(line.value.from)}-${line.value.to}`,
         };
         results.push(result);
         break;
@@ -40,7 +40,7 @@ module.exports = function convertForDisplay(lines) {
         } else {
           result = {
             kind: Format.SUPERSCRIPT,
-            value: formatCharge(line.value)
+            value: formatCharge(line.value),
           };
           results.push(result);
         }
@@ -50,12 +50,12 @@ module.exports = function convertForDisplay(lines) {
       case Kind.ISOTOPE:
         result = {
           kind: Format.SUPERSCRIPT,
-          value: line.value.isotope
+          value: line.value.isotope,
         };
         results.push(result);
         result = {
           kind: Format.TEXT,
-          value: line.value.atom
+          value: line.value.atom,
         };
         results.push(result);
         break;
@@ -66,13 +66,13 @@ module.exports = function convertForDisplay(lines) {
         } else {
           result = {
             kind: Format.TEXT,
-            value: line.value.atom
+            value: line.value.atom,
           };
           results.push(result);
         }
         result = {
           kind: Format.SUPERSCRIPT,
-          value: `{${line.value.ratio.join(',')}}`
+          value: `{${line.value.ratio.join(',')}}`,
         };
         results.push(result);
         break;
@@ -82,7 +82,7 @@ module.exports = function convertForDisplay(lines) {
         } else {
           result = {
             kind: Format.TEXT,
-            value: ' • '
+            value: ' • ',
           };
           results.push(result);
         }
@@ -93,7 +93,7 @@ module.exports = function convertForDisplay(lines) {
         } else {
           result = {
             kind: Format.TEXT,
-            value: line.value
+            value: line.value,
           };
           results.push(result);
         }

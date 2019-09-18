@@ -25,18 +25,18 @@ module.exports = function generateFragments(mf, options) {
       abw: false,
       aby: false,
       abcdBaseLoss: false,
-      wxyzBaseLoss: false
+      wxyzBaseLoss: false,
     };
   }
 
-  var mfs = [];
+  let mfs = [];
   // need to allow 0-9 to deal with neutral loss
-  var mfparts = mf
+  let mfparts = mf
     .replace(/([a-z)0-9])([A-Z][a-z](?=[a-z]))/g, '$1 $2')
     .split(/ /);
 
-  var fiveTerm = '';
-  var threeTerm = '';
+  let fiveTerm = '';
+  let threeTerm = '';
 
   for (let ter5 = 1; ter5 < mfparts.length; ter5++) {
     fiveTerm += mfparts[ter5 - 1];
@@ -50,7 +50,7 @@ module.exports = function generateFragments(mf, options) {
 
   for (let i = 1; i < mfparts.length - 1; i++) {
     let internal = '';
-    for (var j = i; j < mfparts.length - 1; j++) {
+    for (let j = i; j < mfparts.length - 1; j++) {
       internal += mfparts[j];
       if (j > i) {
         addInternalTerm(mfs, internal, mfparts.length - i, j + 1, options);

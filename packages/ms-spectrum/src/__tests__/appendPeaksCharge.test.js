@@ -10,7 +10,7 @@ describe('test appendPeaksCharge', () => {
       max: 1,
       low: -1,
       high: 1,
-      precision: 30
+      precision: 30,
     });
     expect(peaks[0].charge).toBe(1);
     expect(peaks[1].charge).toBe(1);
@@ -32,7 +32,7 @@ describe('test appendPeaksCharge', () => {
       { x: 2.5, y: 3 },
       { x: 3, y: 4 },
       { x: 3.3333, y: 5 },
-      { x: 3.6666, y: 6 }
+      { x: 3.6666, y: 6 },
     ];
 
     appendPeaksCharge(peaks);

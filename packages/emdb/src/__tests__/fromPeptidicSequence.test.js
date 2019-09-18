@@ -10,14 +10,14 @@ test('test fromPeptidicSequence', () => {
     protonationPH: 7,
     ionizations: 'H+,Na+',
     fragmentation: {
-      a: true
+      a: true,
     },
     filter: {
       minMSEM: 100,
       maxMSEM: 300,
       targetMass: 150, // just to test, this is useless with precision 1e6
-      precision: 1e6
-    }
+      precision: 1e6,
+    },
   });
   expect(dbManager.databases.peptidic).toHaveLength(2);
   expect(dbManager.databases.peptidic).toMatchSnapshot();

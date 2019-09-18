@@ -5,7 +5,7 @@ const DBManager = require('..');
 test('test fromMonoisotopicMass', () => {
   let dbManager = new DBManager();
   dbManager.fromMonoisotopicMass(120, {
-    allowNeutral: true
+    allowNeutral: true,
   });
   expect(dbManager.databases.monoisotopic).toHaveLength(8);
 });

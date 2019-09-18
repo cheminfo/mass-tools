@@ -32,8 +32,8 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
     mfColors = [
       { limit: 3, color: 'green' },
       { limit: 20, color: 'lightgreen' },
-      { limit: 50, color: 'lightorange' }
-    ]
+      { limit: 50, color: 'lightorange' },
+    ],
   } = options;
   if (showMF && !numberMFs) numberMFs = 1;
   let annotations = [];
@@ -49,14 +49,14 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
           {
             y: peak.y,
             dy: '-5px',
-            x: peak.x
+            x: peak.x,
           },
           {
             y: peak.y,
             dy: '-15px',
-            x: peak.x
-          }
-        ]
+            x: peak.x,
+          },
+        ],
       };
       annotations.push(annotation);
       annotation = {
@@ -67,14 +67,14 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
           {
             y: peak.y,
             dy: '-15px',
-            x: peak.x
-          }
+            x: peak.x,
+          },
         ],
         props: {
           rx: '3px',
           ry: '3px',
-          fillOpacity: 0.3
-        }
+          fillOpacity: 0.3,
+        },
       };
     } else {
       annotation = {
@@ -84,13 +84,13 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
           {
             y: peak.y,
             dy: '-5px',
-            x: peak.x
+            x: peak.x,
           },
           {
             y: peak.y,
             dy: '-25px',
-            x: peak.x
-          }
+            x: peak.x,
+          },
         ],
         labels: [
           {
@@ -100,10 +100,10 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
               x: peak.x,
               y: peak.y,
               dy: '-17px',
-              dx: '2px'
-            }
-          }
-        ]
+              dx: '2px',
+            },
+          },
+        ],
       };
 
       if (displayCharge) {
@@ -114,8 +114,8 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
             x: peak.x,
             y: peak.y,
             dy: '-4px',
-            dx: '2px'
-          }
+            dx: '2px',
+          },
         });
       }
 
@@ -127,7 +127,7 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
           // neutral loss
           let currentMfPrefs = Object.assign({}, mfPrefs, {
             allowNeutral: true,
-            ionizations: ''
+            ionizations: '',
           });
           // we need to deal with the precision and increase it
           currentMfPrefs.precision =
@@ -135,7 +135,7 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
             peak.x;
           emdb.fromMonoisotopicMass(
             Math.abs((peak.x + shift) * charge),
-            currentMfPrefs
+            currentMfPrefs,
           );
         } else {
           emdb.fromMonoisotopicMass(Math.abs(peak.x * charge), mfPrefs);
@@ -155,8 +155,8 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
               x: peak.x,
               y: peak.y,
               dy: `${-13 * (numberOfMFS - i) - 17}px`,
-              dx: '2px'
-            }
+              dx: '2px',
+            },
           });
         }
       }

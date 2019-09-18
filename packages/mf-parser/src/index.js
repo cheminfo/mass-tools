@@ -9,8 +9,8 @@ const toHtml = require('./util/toHtml');
  * @param {String} mf String containing the molecular formula
  */
 function parseToHtml(mf) {
-  var parsed = parse(mf);
-  var display = toDisplay(parsed);
+  let parsed = parse(mf);
+  let display = toDisplay(parsed);
   return toHtml(display);
 }
 
@@ -23,5 +23,5 @@ module.exports = {
   toDisplay,
   toHtml,
   parseToHtml,
-  MF: require('./MF')
+  MF: require('./MF'),
 };

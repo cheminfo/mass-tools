@@ -10,7 +10,7 @@ describe('preprocessRanges', () => {
       { mf: 'O', min: 0, max: 0 },
       { mf: 'Cl', min: 0, max: 3 },
       { mf: 'Me', min: 0, max: 1 },
-      { mf: 'Ca++', min: 0, max: 1 }
+      { mf: 'Ca++', min: 0, max: 1 },
     ]);
     expect(Array.isArray(possibilities)).toBe(true);
     expect(possibilities).toHaveLength(5);
@@ -18,7 +18,7 @@ describe('preprocessRanges', () => {
       mf: 'H+',
       isGroup: true,
       charge: 1,
-      unsaturation: -2
+      unsaturation: -2,
     });
   });
 
@@ -27,14 +27,14 @@ describe('preprocessRanges', () => {
       { mf: 'H', min: 0, max: 2 },
       { mf: 'H+', min: -2, max: 2 },
       { mf: 'Cl(-)', min: 0, max: 2 },
-      { mf: '(C-1H)2', min: 0, max: 2 }
+      { mf: '(C-1H)2', min: 0, max: 2 },
     ]);
     expect(Array.isArray(possibilities)).toBe(true);
     expect(possibilities[0]).toMatchObject({
       minCharge: -4,
       maxCharge: 2,
       minInnerCharge: -2,
-      maxInnerCharge: 2
+      maxInnerCharge: 2,
     });
   });
 
@@ -46,7 +46,7 @@ describe('preprocessRanges', () => {
       minCharge: 0,
       maxCharge: 0,
       originalMinCount: 1,
-      originalMaxCount: 1
+      originalMaxCount: 1,
     });
   });
 
@@ -59,7 +59,7 @@ describe('preprocessRanges', () => {
       minCharge: 0,
       maxCharge: 0,
       originalMinCount: 1,
-      originalMaxCount: 1
+      originalMaxCount: 1,
     });
   });
 });

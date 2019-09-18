@@ -10,7 +10,6 @@ test('atom-sorter test', () => {
   expect(atomSorter('Cl', 'Br')).toBe(1);
 });
 
-
 test('sort an array', () => {
   let atoms = ['H', 'Cl', 'C', 'O', 'N', 'Br'];
   atoms.sort((a, b) => atomSorter(a, b));

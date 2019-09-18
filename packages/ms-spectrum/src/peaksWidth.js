@@ -10,22 +10,22 @@ function peaksWidth(peaks) {
 
   if (xs.length < 2) {
     throw new Error(
-      `peaksWidth: not enough peaks (less than 2) for automatic width calculation: ${xs.length}`
+      `peaksWidth: not enough peaks (less than 2) for automatic width calculation: ${xs.length}`,
     );
   }
-  var regression = new Regression(xs, widths, {
+  let regression = new Regression(xs, widths, {
     computeQuality: true,
-    computeCoefficient: true
+    computeCoefficient: true,
   });
 
   if (regression.A === NaN || regression.B === NaN) {
     throw new Error('peaksWidth: can not calculate regression');
   }
 
-  var from = min(xs);
-  var to = max(xs);
+  let from = min(xs);
+  let to = max(xs);
 
-  var regressionChart = { x: [], y: [] };
+  let regressionChart = { x: [], y: [] };
   for (let x = from; x <= to; x += (to - from) / 1000) {
     regressionChart.x.push(x);
     regressionChart.y.push(regression.predict(x));
@@ -33,7 +33,7 @@ function peaksWidth(peaks) {
   return {
     widths: {
       x: xs,
-      y: widths
+      y: widths,
     },
     fit: regressionChart,
     score: regression.score(xs, widths),
@@ -42,7 +42,7 @@ function peaksWidth(peaks) {
     tex: regression.toLaTeX(3),
     A: regression.A,
     B: regression.B,
-    predictFctString: `${regression.A} * mass ** ${regression.B}`
+    predictFctString: `${regression.A} * mass ** ${regression.B}`,
   };
 }
 

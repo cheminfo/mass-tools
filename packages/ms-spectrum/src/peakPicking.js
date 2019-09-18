@@ -27,7 +27,7 @@ function peakPicking(spectrum, options = {}) {
         realTopDetection: true,
         maxCriteria: true, // inverted:false
         smoothY: false,
-        sgOptions: { windowSize: 7, polynomial: 3 }
+        sgOptions: { windowSize: 7, polynomial: 3 },
       });
     } else {
       spectrum.peaks = [];
@@ -36,7 +36,7 @@ function peakPicking(spectrum, options = {}) {
         spectrum.peaks.push({
           x: data.x[i],
           y: data.y[i],
-          width: 0
+          width: 0,
         });
       }
     }

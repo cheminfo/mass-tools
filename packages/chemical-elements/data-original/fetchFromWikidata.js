@@ -1,12 +1,12 @@
 'use strict';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-var Wikidata = require('wikidata-sdk');
+let Wikidata = require('wikidata-sdk');
 // eslint-disable-next-line import/no-extraneous-dependencies
-var fetch = require('node-fetch');
+let fetch = require('node-fetch');
 
 async function compileIsotopes() {
-  var url = Wikidata.sparqlQuery(`
+  let url = Wikidata.sparqlQuery(`
     PREFIX wd: <http://www.wikidata.org/entity/>
     PREFIX wdt: <http://www.wikidata.org/prop/direct/>
     
@@ -38,8 +38,8 @@ async function compileIsotopes() {
     LIMIT 10
        `);
 
-  var result = await fetch(url);
-  var data = await result.text();
+  let result = await fetch(url);
+  let data = await result.text();
 
   // eslint-disable-next-line no-console
   console.log(data);

@@ -1,6 +1,5 @@
 'use strict';
 
-
 const fs = require('fs');
 const join = require('path').join;
 
@@ -20,10 +19,10 @@ describe('test searchSimilarity for ethylbenzene', () => {
       unsaturation: {
         min: 0,
         max: 100,
-        onlyInteger: true
+        onlyInteger: true,
       },
       precision: 1000,
-      allowNeutral: false
+      allowNeutral: false,
     });
 
     dbManager.setExperimentalSpectrum(experimental);
@@ -35,12 +34,12 @@ describe('test searchSimilarity for ethylbenzene', () => {
         widthTop: 0.003,
         zone: {
           low: -0.5,
-          high: 2.5
+          high: 2.5,
         },
         // in case we have a 'pure' product we should take all the peaks of the specified area
-        common: undefined // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+        common: undefined, // 'first', 'second', 'both' (or true) or 'none' (or undefined)
       },
-      flatten: true
+      flatten: true,
     });
 
     expect(results[0].mf).toBe('C8H10');
@@ -54,6 +53,6 @@ function loadEthylbenzene() {
   let data = parseXY(text, { arrayType: 'xxyy' });
   return {
     x: data[0],
-    y: data[1]
+    y: data[1],
   };
 }

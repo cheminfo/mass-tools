@@ -3,7 +3,7 @@
 const Kind = require('../Kind');
 
 module.exports = function partToMF(part, options = {}) {
-  var mf = [];
+  let mf = [];
   for (let line of part) {
     switch (line.kind) {
       case Kind.ISOTOPE:
@@ -11,7 +11,7 @@ module.exports = function partToMF(part, options = {}) {
           mf.push(
             `[${line.value.isotope}${line.value.atom}]${
               line.multiplier !== 1 ? line.multiplier : ''
-            }`
+            }`,
           );
         }
         break;
@@ -20,7 +20,7 @@ module.exports = function partToMF(part, options = {}) {
           mf.push(
             `${line.value.atom}{${line.value.ratio.join(',')}}${
               line.multiplier !== 1 ? line.multiplier : ''
-            }`
+            }`,
           );
         }
         break;

@@ -22,16 +22,16 @@ function getBestPeaks(peaks, options = {}) {
     searchMonoisotopicRatio = 0,
     from = peaks.reduce(
       (previous, peak) => Math.min(peak.x, previous),
-      Number.MAX_SAFE_INTEGER
+      Number.MAX_SAFE_INTEGER,
     ),
     to = peaks.reduce(
       (previous, peak) => Math.max(peak.x, previous),
-      Number.MIN_SAFE_INTEGER
+      Number.MIN_SAFE_INTEGER,
     ),
     limit = 20,
     threshold = 0.01,
     numberCloseSlots = 50,
-    numberSlots = 10
+    numberSlots = 10,
   } = options;
   let slot = (to - from) / numberSlots;
   let closeSlot = (to - from) / numberCloseSlots;
@@ -40,7 +40,7 @@ function getBestPeaks(peaks, options = {}) {
     .map((peak) => {
       return {
         peak,
-        monoisotopic: false
+        monoisotopic: false,
       };
     });
 

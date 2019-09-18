@@ -13,6 +13,11 @@ describe('test distribution append', () => {
 
     dist1.append(dist2);
     dist1.sortX();
-    expect(dist1.array).toStrictEqual([{ x: 1, y: 2 }, { x: 2, y: 3 }, { x: 2, y: 4 }, { x: 3, y: 5 }]);
+    expect(dist1.array).toStrictEqual([
+      { x: 1, y: 2 },
+      { x: 2, y: 3 },
+      { x: 2, y: 4 },
+      { x: 3, y: 5 },
+    ]);
   });
 });

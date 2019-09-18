@@ -7,11 +7,11 @@ test('test fromNucleicSequence', () => {
   dbManager.fromNucleicSequence('AAA', {
     ionizations: 'H+,Na+',
     fragmentation: {
-      a: true
+      a: true,
     },
     info: {
-      kind: 'dna'
-    }
+      kind: 'dna',
+    },
   });
 
   expect(dbManager.databases.nucleic).toHaveLength(6);
@@ -23,11 +23,11 @@ test('test fromNucleicSequence ds-DNA', () => {
   dbManager.fromNucleicSequence('AAA', {
     ionizations: 'H+,Na+',
     fragmentation: {
-      a: true
+      a: true,
     },
     info: {
-      kind: 'dsdna'
-    }
+      kind: 'dsdna',
+    },
   });
 
   expect(dbManager.databases.nucleic).toHaveLength(12);
@@ -39,11 +39,11 @@ test('test TACGTGCCAATAC internal fragment', () => {
   dbManager.fromNucleicSequence('TACGTGCCAATAC', {
     ionizations: '(H+)-5',
     fragmentation: {
-      abw: true
+      abw: true,
     },
     info: {
-      kind: 'dna'
-    }
+      kind: 'dna',
+    },
   });
   expect(dbManager.databases.nucleic).toHaveLength(56);
   expect(dbManager.databases.nucleic).toMatchSnapshot();
@@ -54,11 +54,11 @@ test('test AGGCAG fragment', () => {
   dbManager.fromNucleicSequence('AGGCAG', {
     ionizations: '(H+)-',
     fragmentation: {
-      y: true
+      y: true,
     },
     info: {
-      kind: 'dna'
-    }
+      kind: 'dna',
+    },
   });
   expect(dbManager.databases.nucleic).toHaveLength(6);
   expect(dbManager.databases.nucleic).toMatchSnapshot();
@@ -70,12 +70,12 @@ test('test AGG with d-h2o and base loss', () => {
     ionizations: '(H+)-1',
     fragmentation: {
       dh2o: true,
-      baseLoss: true
+      baseLoss: true,
     },
 
     info: {
-      kind: 'dna'
-    }
+      kind: 'dna',
+    },
   });
   expect(dbManager.databases.nucleic).toHaveLength(6);
   expect(dbManager.databases.nucleic).toMatchSnapshot();

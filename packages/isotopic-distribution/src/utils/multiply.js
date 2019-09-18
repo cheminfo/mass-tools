@@ -1,12 +1,7 @@
 'use strict';
 
-
 module.exports = function multiply(b, options = {}) {
-  const {
-    minY = 1e-8,
-    maxLines = 5000,
-    deltaX = 1e-2,
-  } = options;
+  const { minY = 1e-8, maxLines = 5000, deltaX = 1e-2 } = options;
   const result = new this.constructor();
 
   this.sortY();

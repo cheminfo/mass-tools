@@ -25,13 +25,13 @@ function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
 
   if (!spectrum || !spectrum.data.x.length > 0) {
     throw Error(
-      'You need to add an experimental spectrum first using setMassSpectrum'
+      'You need to add an experimental spectrum first using setMassSpectrum',
     );
   }
 
   let width = {
     bottom: similarity.widthBottom,
-    top: similarity.widthTop
+    top: similarity.widthTop,
   };
 
   similarity = JSON.parse(JSON.stringify(similarity));
@@ -47,7 +47,7 @@ function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
     let checkTopBottom = widthFunction(123);
     if (!checkTopBottom.bottom || !checkTopBottom.top) {
       throw Error(
-        'widthFunction should return an object with bottom and top properties'
+        'widthFunction should return an object with bottom and top properties',
       );
     }
   }
@@ -72,7 +72,7 @@ function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
       isotopePosition++
     ) {
       isotopePositions.x.push(
-        targetMass + (isotopePosition * NEUTRON_MASS) / charge
+        targetMass + (isotopePosition * NEUTRON_MASS) / charge,
       );
       isotopePositions.y.push(isotopeHeight);
     }

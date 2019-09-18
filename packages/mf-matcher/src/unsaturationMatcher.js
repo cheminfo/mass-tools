@@ -15,7 +15,7 @@ module.exports = function unsaturationMatcher(entry, options = {}) {
     min = Number.MIN_SAFE_INTEGER,
     max = Number.MAX_SAFE_INTEGER,
     onlyInteger,
-    onlyNonInteger
+    onlyNonInteger,
   } = options;
 
   if (entry.unsaturation !== undefined) {

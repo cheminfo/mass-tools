@@ -43,8 +43,8 @@ module.exports = function searchMSEM(msem, options = {}) {
           results[database].push(
             Object.assign({}, entry, {
               ms: match.ms,
-              ionization: match.ionization
-            })
+              ionization: match.ionization,
+            }),
           );
         }
       }
@@ -62,7 +62,7 @@ module.exports = function searchMSEM(msem, options = {}) {
     return flattenResults;
   } else {
     Object.keys(results).forEach((k) =>
-      results[k].sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm))
+      results[k].sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm)),
     );
     return results;
   }

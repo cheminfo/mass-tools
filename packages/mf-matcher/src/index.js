@@ -2,5 +2,5 @@
 
 module.exports = {
   general: require('./generalMatcher'),
-  msem: require('./msemMatcher')
+  msem: require('./msemMatcher'),
 };

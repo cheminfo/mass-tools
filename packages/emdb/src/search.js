@@ -32,7 +32,7 @@ module.exports = function search(filter, options = {}) {
   let results = {};
   for (let database of databases) {
     results[database] = this.databases[database].filter((entry) =>
-      matcher(entry, filter)
+      matcher(entry, filter),
     );
   }
 

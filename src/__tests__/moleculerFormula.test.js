@@ -21,6 +21,6 @@ test('test emdbUtil MF', () => {
     charge: 0,
     mf: 'C10',
     atoms: { C: 10 },
-    unsaturation: 11
+    unsaturation: 11,
   });
 });

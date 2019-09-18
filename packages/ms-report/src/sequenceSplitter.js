@@ -5,14 +5,14 @@ Code that allows to split a sequence of aminoacids natural or non natural
 */
 
 module.exports = function sequenceSplitter(sequence) {
-  var parts = [''];
+  let parts = [''];
   if (sequence.match(/^[A-Z ]+$/)) {
     parts = sequence.replace(/ /g, '').split(/(?=[A-Z])/);
   } else {
     // we need to deal with upper and lowercases
     sequence = sequence.replace(/ /g, '');
-    var parenthesisLevel = 0;
-    var begin = true;
+    let parenthesisLevel = 0;
+    let begin = true;
     for (let i = 0; i < sequence.length; i++) {
       let currentChar = sequence.charAt(i);
       parts[parts.length - 1] += currentChar;

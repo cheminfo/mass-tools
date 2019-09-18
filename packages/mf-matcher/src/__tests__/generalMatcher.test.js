@@ -11,8 +11,8 @@ test('test mfFilter', () => {
     charge: 0,
     unsaturation: 11,
     atoms: {
-      C: 10
-    }
+      C: 10,
+    },
   };
 
   expect(matcher(entry, { minCharge: 1 })).toBe(false);
@@ -22,30 +22,30 @@ test('test mfFilter', () => {
   expect(
     matcher(entry, {
       atoms: {
-        C: { min: 10, max: 20 }
-      }
-    })
+        C: { min: 10, max: 20 },
+      },
+    }),
   ).toBe(true);
   expect(
     matcher(entry, {
       atoms: {
-        N: { min: 10, max: 20 }
-      }
-    })
+        N: { min: 10, max: 20 },
+      },
+    }),
   ).toBe(false);
   expect(
     matcher(entry, {
       atoms: {
-        C: { min: 5, max: 9 }
-      }
-    })
+        C: { min: 5, max: 9 },
+      },
+    }),
   ).toBe(false);
   expect(
     matcher(entry, {
       atoms: {
         C: { min: 10, max: 20 },
-        N: { min: 0, max: 10 }
-      }
-    })
+        N: { min: 0, max: 10 },
+      },
+    }),
   ).toBe(true);
 });

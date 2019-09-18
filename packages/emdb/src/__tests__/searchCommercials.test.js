@@ -10,27 +10,27 @@ describe('test search commercial', () => {
     let results = dbManager.search(
       {
         minMW: 100,
-        maxMW: 101
+        maxMW: 101,
       },
       {
-        flatten: true
-      }
+        flatten: true,
+      },
     );
     expect(results).toHaveLength(66);
 
     results = dbManager.search(
       {
         minMW: 100,
-        maxMW: 101
+        maxMW: 101,
       },
       {
-        flatten: false
-      }
+        flatten: false,
+      },
     );
     expect(results.commercials).toHaveLength(66);
 
     results = dbManager.searchMSEM(100, {
-      flatten: true
+      flatten: true,
     });
     expect(results).toHaveLength(0);
 
@@ -43,9 +43,9 @@ describe('test search commercial', () => {
         unsaturation: {
           onlyInteger: true,
           min: 2,
-          max: 3
-        }
-      }
+          max: 3,
+        },
+      },
     });
     expect(results[0].ms.charge).toBe(1);
     expect(results[0].ms.em).toBeCloseTo(100, 1);

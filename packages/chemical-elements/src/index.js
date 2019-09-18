@@ -4,7 +4,7 @@ const elements = require('./elementsAndStableIsotopes.js');
 const { ELECTRON_MASS } = require('./constants');
 
 function getElementsObject() {
-  var object = {};
+  let object = {};
   elements.forEach((e) => {
     object[e.symbol] = e;
   });
@@ -14,5 +14,5 @@ function getElementsObject() {
 module.exports = {
   elements,
   getElementsObject,
-  ELECTRON_MASS
+  ELECTRON_MASS,
 };

@@ -95,13 +95,13 @@ module.exports = function generateMFs(keys, options = {}) {
     }
     if (evolution > limit) {
       throw new Error(
-        `You have reached the limit of ${limit}. You could still change this value using the limit option but it is likely to crash.`
+        `You have reached the limit of ${limit}. You could still change this value using the limit option but it is likely to crash.`,
       );
     }
   }
   appendResult(results, currents, keys, options);
   if (uniqueMFs) {
-    var uniqueMFsObject = {};
+    let uniqueMFsObject = {};
     results.forEach((r) => {
       uniqueMFsObject[r.mf + r.ionization.mf] = r;
     });
@@ -111,7 +111,7 @@ module.exports = function generateMFs(keys, options = {}) {
   return results;
 };
 
-var ems = {};
+let ems = {};
 
 // internal method used as a cache
 function getMonoisotopicMass(mfString) {
@@ -124,19 +124,19 @@ function getMonoisotopicMass(mfString) {
       charge: info.charge,
       mw: info.mass,
       unsaturation: (info.unsaturation - 1) * 2,
-      atoms: info.atoms
+      atoms: info.atoms,
     };
   }
   return ems[mfString];
 }
 
 function getEMFromParts(parts, currents, ionization) {
-  var charge = 0;
-  var em = 0;
-  var mw = 0;
-  var unsaturation = 0;
-  var validUnsaturation = true;
-  var atoms = {};
+  let charge = 0;
+  let em = 0;
+  let mw = 0;
+  let unsaturation = 0;
+  let validUnsaturation = true;
+  let atoms = {};
 
   for (let i = 0; i < parts.length; i++) {
     let part = parts[i][currents[i]];
@@ -158,7 +158,7 @@ function getEMFromParts(parts, currents, ionization) {
     mw,
     ionization: ionization,
     unsaturation: validUnsaturation ? unsaturation / 2 + 1 : undefined,
-    atoms
+    atoms,
   };
 }
 

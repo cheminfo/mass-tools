@@ -1,19 +1,19 @@
 'use strict';
 
-var data = require('..');
+let data = require('..');
 
 test('data size', () => {
   expect(data.groups.length).toBeGreaterThan(50);
 });
 
 test('getGroupsObject', () => {
-  var groupsObject = data.getGroupsObject();
+  let groupsObject = data.getGroupsObject();
   expect(groupsObject.Ala).toStrictEqual({
     elements: [
       { number: 3, symbol: 'C' },
       { number: 5, symbol: 'H' },
       { number: 1, symbol: 'N' },
-      { number: 1, symbol: 'O' }
+      { number: 1, symbol: 'O' },
     ],
     mass: 71.07801959624871,
     monoisotopicMass: 71.03711378515,
@@ -23,7 +23,7 @@ test('getGroupsObject', () => {
     unsaturation: 2,
     ocl: {
       coordinates: '!BJLtni|c|rDvN@Dc|',
-      value: 'gNyDBaxmqR[fZjZ@'
-    }
+      value: 'gNyDBaxmqR[fZjZ@',
+    },
   });
 });

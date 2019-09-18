@@ -1,14 +1,14 @@
 'use strict';
 
-var MF = require('../MF');
+let MF = require('../MF');
 
 test('MF of C', () => {
-  var mf = new MF('C');
-  var parts = mf.toParts();
+  let mf = new MF('C');
+  let parts = mf.toParts();
 
   expect(parts).toStrictEqual([[{ kind: 'atom', value: 'C', multiplier: 1 }]]);
 
-  var newMF = mf.toMF();
+  let newMF = mf.toMF();
   expect(newMF).toBe('C');
 
   mf.canonize();
@@ -24,15 +24,15 @@ test('MF of C', () => {
     charge: 0,
     unsaturation: 2,
     mf: 'C',
-    atoms: { C: 1 }
+    atoms: { C: 1 },
   });
 });
 
 test('MF of D', () => {
-  var mfD = new MF('D');
-  var infoD = mfD.getInfo();
-  var mf2H = new MF('[2H]');
-  var info2H = mf2H.getInfo();
+  let mfD = new MF('D');
+  let infoD = mfD.getInfo();
+  let mf2H = new MF('[2H]');
+  let info2H = mf2H.getInfo();
   expect(infoD).toStrictEqual(info2H);
   expect(infoD).toStrictEqual({
     atoms: { H: 1 },
@@ -40,27 +40,27 @@ test('MF of D', () => {
     mass: 2.01410177812,
     mf: '[2H]',
     monoisotopicMass: 2.01410177812,
-    unsaturation: 0.5
+    unsaturation: 0.5,
   });
 });
 
 test('MF of Et3N.HCl', () => {
-  var mf = new MF('Et3N.HCl');
-  var parts = mf.toParts();
+  let mf = new MF('Et3N.HCl');
+  let parts = mf.toParts();
 
   expect(parts).toStrictEqual([
     [
       { kind: 'atom', value: 'C', multiplier: 6 },
       { kind: 'atom', value: 'H', multiplier: 15 },
-      { kind: 'atom', value: 'N', multiplier: 1 }
+      { kind: 'atom', value: 'N', multiplier: 1 },
     ],
     [
       { kind: 'atom', value: 'H', multiplier: 1 },
-      { kind: 'atom', value: 'Cl', multiplier: 1 }
-    ]
+      { kind: 'atom', value: 'Cl', multiplier: 1 },
+    ],
   ]);
 
-  var newMF = mf.toMF();
+  let newMF = mf.toMF();
   expect(newMF).toBe('C6H15N . HCl');
 
   mf.canonize();
@@ -77,7 +77,7 @@ test('MF of Et3N.HCl', () => {
         charge: 0,
         mf: 'C6H15N',
         unsaturation: 0,
-        atoms: { C: 6, H: 15, N: 1 }
+        atoms: { C: 6, H: 15, N: 1 },
       },
       {
         mass: 36.460878336663775,
@@ -85,35 +85,35 @@ test('MF of Et3N.HCl', () => {
         charge: 0,
         mf: 'HCl',
         unsaturation: 0,
-        atoms: { H: 1, Cl: 1 }
-      }
+        atoms: { H: 1, Cl: 1 },
+      },
     ],
     monoisotopicMass: 137.09712720211002,
     mass: 137.6511082393577,
     charge: 0,
-    mf: 'C6H15N.HCl'
+    mf: 'C6H15N.HCl',
   });
 });
 
 test('MF of (ch3ch2)3n', () => {
-  var mf = new MF('(ch3ch2)3n', { ensureCase: true });
+  let mf = new MF('(ch3ch2)3n', { ensureCase: true });
   expect(mf.toMF()).toBe('C6H15N');
 });
 
 test('MF of (Me2CH)3N no expand', () => {
-  var mf = new MF('(Me2CH)3N');
-  var parts = mf.toParts({ expand: false });
+  let mf = new MF('(Me2CH)3N');
+  let parts = mf.toParts({ expand: false });
 
   expect(parts).toStrictEqual([
     [
       { kind: 'atom', value: 'C', multiplier: 3 },
       { kind: 'atom', value: 'H', multiplier: 3 },
       { kind: 'atom', value: 'Me', multiplier: 6 },
-      { kind: 'atom', value: 'N', multiplier: 1 }
-    ]
+      { kind: 'atom', value: 'N', multiplier: 1 },
+    ],
   ]);
 
-  var newMF = mf.toMF();
+  let newMF = mf.toMF();
   expect(newMF).toBe('C3H3Me6N');
 
   let info = mf.getInfo();
@@ -123,23 +123,23 @@ test('MF of (Me2CH)3N no expand', () => {
     charge: 0,
     mf: 'C3H3Me6N',
     unsaturation: 0,
-    atoms: { C: 3, H: 3, Me: 6, N: 1 }
+    atoms: { C: 3, H: 3, Me: 6, N: 1 },
   });
 });
 
 test('MF of (Me2CH)3N with expand', () => {
-  var mf = new MF('(Me2CH)3N');
-  var parts = mf.toParts({ expand: true });
+  let mf = new MF('(Me2CH)3N');
+  let parts = mf.toParts({ expand: true });
 
   expect(parts).toStrictEqual([
     [
       { kind: 'atom', value: 'C', multiplier: 9 },
       { kind: 'atom', value: 'H', multiplier: 21 },
-      { kind: 'atom', value: 'N', multiplier: 1 }
-    ]
+      { kind: 'atom', value: 'N', multiplier: 1 },
+    ],
   ]);
 
-  var newMF = mf.toMF();
+  let newMF = mf.toMF();
   expect(newMF).toBe('C9H21N');
 
   let info = mf.getInfo();
@@ -149,26 +149,26 @@ test('MF of (Me2CH)3N with expand', () => {
     charge: 0,
     mf: 'C9H21N',
     unsaturation: 0,
-    atoms: { C: 9, H: 21, N: 1 }
+    atoms: { C: 9, H: 21, N: 1 },
   });
 });
 
 test('MF of (+)SO4(+)(-2)2', () => {
-  var mf = new MF('(+)SO4(+)(-2)2');
-  var parts = mf.toParts();
+  let mf = new MF('(+)SO4(+)(-2)2');
+  let parts = mf.toParts();
 
   expect(parts).toStrictEqual([
     [
       { kind: 'atom', value: 'O', multiplier: 4 },
       { kind: 'atom', value: 'S', multiplier: 1 },
-      { kind: 'charge', value: -2 }
-    ]
+      { kind: 'charge', value: -2 },
+    ],
   ]);
 
-  var newMF = mf.toMF();
+  let newMF = mf.toMF();
   expect(newMF).toBe('O4S(-2)');
 
-  var neutralMF = mf.toNeutralMF();
+  let neutralMF = mf.toNeutralMF();
   expect(neutralMF).toBe('O4S');
 
   let info = mf.getInfo({ customUnsaturations: { S: 4 } });
@@ -179,7 +179,7 @@ test('MF of (+)SO4(+)(-2)2', () => {
     observedMonoisotopicMass: 47.97641340624907,
     mf: 'O4S(-2)',
     unsaturation: 4,
-    atoms: { O: 4, S: 1 }
+    atoms: { O: 4, S: 1 },
   });
 });
 
@@ -197,15 +197,15 @@ test('test unsaturation with charges', () => {
 });
 
 test('MF of NC[13C][15N]2NN2', () => {
-  var mf = new MF('NC[13C][15N]2NN2');
-  var parts = mf.toParts();
+  let mf = new MF('NC[13C][15N]2NN2');
+  let parts = mf.toParts();
   expect(parts).toStrictEqual([
     [
       { kind: 'atom', value: 'C', multiplier: 1 },
       { kind: 'isotope', value: { atom: 'C', isotope: 13 }, multiplier: 1 },
       { kind: 'atom', value: 'N', multiplier: 4 },
-      { kind: 'isotope', value: { atom: 'N', isotope: 15 }, multiplier: 2 }
-    ]
+      { kind: 'isotope', value: { atom: 'N', isotope: 15 }, multiplier: 2 },
+    ],
   ]);
 
   let info = mf.getInfo();
@@ -215,55 +215,55 @@ test('MF of NC[13C][15N]2NN2', () => {
     charge: 0,
     mf: 'C[13C]N4[15N]2',
     unsaturation: 6,
-    atoms: { C: 2, N: 6 }
+    atoms: { C: 2, N: 6 },
   });
 
-  var newMF = mf.toMF();
+  let newMF = mf.toMF();
   expect(newMF).toBe('C[13C]N4[15N]2');
 });
 
 test('MF of DNA HODampDtmpDcmpDgmpH  ', () => {
-  var mf = new MF('HODampDtmpDgmpDcmpH');
-  var info = mf.getInfo();
+  let mf = new MF('HODampDtmpDgmpDcmpH');
+  let info = mf.getInfo();
   expect(info).toStrictEqual({
     mass: 1253.8043977028433,
     monoisotopicMass: 1253.21310019311,
     charge: 0,
     mf: 'C39H51N15O25P4',
     atoms: { C: 39, H: 51, N: 15, O: 25, P: 4 },
-    unsaturation: 24
+    unsaturation: 24,
   });
 });
 
 test('MF of RNA HOAmpUmpH  ', () => {
-  var mf = new MF('HOAmpUmpH');
-  var info = mf.getInfo();
+  let mf = new MF('HOAmpUmpH');
+  let info = mf.getInfo();
   expect(info).toStrictEqual({
     mass: 653.388021231099,
     monoisotopicMass: 653.08838712715,
     charge: 0,
     mf: 'C19H25N7O15P2',
     atoms: { C: 19, H: 25, N: 7, O: 15, P: 2 },
-    unsaturation: 12
+    unsaturation: 12,
   });
 });
 
 test('MF of CC{50,50}H', () => {
-  var mf = new MF('HC{50,50}C');
-  var parts = mf.toParts();
+  let mf = new MF('HC{50,50}C');
+  let parts = mf.toParts();
   expect(parts).toStrictEqual([
     [
       { kind: 'atom', value: 'C', multiplier: 1 },
       {
         kind: 'isotopeRatio',
         value: { atom: 'C', ratio: [50, 50] },
-        multiplier: 1
+        multiplier: 1,
       },
-      { kind: 'atom', value: 'H', multiplier: 1 }
-    ]
+      { kind: 'atom', value: 'H', multiplier: 1 },
+    ],
   ]);
 
-  var newMF = mf.toMF();
+  let newMF = mf.toMF();
   expect(newMF).toBe('CC{50,50}H');
 
   let info = mf.getInfo();
@@ -273,14 +273,14 @@ test('MF of CC{50,50}H', () => {
     charge: 0,
     mf: 'CC{50,50}H',
     unsaturation: 2.5,
-    atoms: { C: 2, H: 1 }
+    atoms: { C: 2, H: 1 },
   });
 });
 
 test('MF of H(+)(H+)-1H', () => {
-  var mf = new MF('H(+)(H+)-1H');
+  let mf = new MF('H(+)(H+)-1H');
 
-  var newMF = mf.toMF();
+  let newMF = mf.toMF();
   expect(newMF).toBe('H');
 
   let info = mf.getInfo();
@@ -290,13 +290,13 @@ test('MF of H(+)(H+)-1H', () => {
     mass: 1.0079407540557772,
     mf: 'H',
     monoisotopicMass: 1.00782503223,
-    unsaturation: 0.5
+    unsaturation: 0.5,
   });
 });
 
 test('MF of 2NH3 . 2HCl', () => {
-  var mf = new MF('2NH3 . 2HCl');
+  let mf = new MF('2NH3 . 2HCl');
 
-  var newMF = mf.toMF();
+  let newMF = mf.toMF();
   expect(newMF).toBe('H6N2 . H2Cl2');
 });

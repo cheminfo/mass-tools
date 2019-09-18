@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-  getPeaksAnnotation: require('./getPeaksAnnotation')
+  getPeaksAnnotation: require('./getPeaksAnnotation'),
 };
