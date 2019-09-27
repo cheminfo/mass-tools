@@ -26,15 +26,21 @@ function isContinuous(spectrum, options = {}) {
       spectrum.continuous = true;
 
       for (let i = 0; i < xs.length - 1; i++) {
+        if (ys[i] === 0 || ys[i + 1] === 0) {
+          previousDelta = 0;
+          continue;
+        }
         let delta = xs[i + 1] - xs[i];
-        let ratio = delta / previousDelta;
-        if (
-          (Math.abs(delta) > 0.1 || ratio < minRadio || ratio > maxRatio) &&
-          ys[i] !== 0 &&
-          ys[i + 1] !== 0
-        ) {
-          spectrum.continuous = false;
-          break;
+        if (previousDelta) {
+          let ratio = delta / previousDelta;
+          if (
+            (Math.abs(delta) > 0.1 || ratio < minRadio || ratio > maxRatio) &&
+            ys[i] !== 0 &&
+            ys[i + 1] !== 0
+          ) {
+            spectrum.continuous = false;
+            break;
+          }
         }
         previousDelta = delta;
       }
