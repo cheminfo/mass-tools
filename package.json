@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "molecular-formula",
-  "version": "0.36.0",
+  "version": "0.36.1",
   "main": "src/index.js",
   "files": [
     "src"
@@ -37,7 +37,7 @@
     "chemcalc": "^3.4.1",
     "chemical-elements": "^0.9.1",
     "cheminfo-tools": "^1.23.3",
-    "codecov": "^3.5.0",
+    "codecov": "^3.6.1",
     "documentation": "^12.1.2",
     "eslint": "^6.4.0",
     "eslint-config-cheminfo": "^2.0.3",
