@@ -33,7 +33,7 @@ describe('test isContinuous', () => {
       data.y.push(i + 1);
     }
     data.x.push(200);
-    expect(isContinuous({ data })).toBe(false);
+    expect(isContinuous({ data })).toBe(true);
   });
 
   it('just ok', () => {

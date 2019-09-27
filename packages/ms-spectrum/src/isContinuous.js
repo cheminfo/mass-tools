@@ -24,7 +24,8 @@ function isContinuous(spectrum, options = {}) {
     } else {
       let previousDelta = xs[1] - xs[0];
       spectrum.continuous = true;
-
+      let success = 0;
+      let failed = 0;
       for (let i = 0; i < xs.length - 1; i++) {
         if (ys[i] === 0 || ys[i + 1] === 0) {
           previousDelta = 0;
@@ -38,11 +39,16 @@ function isContinuous(spectrum, options = {}) {
             ys[i] !== 0 &&
             ys[i + 1] !== 0
           ) {
-            spectrum.continuous = false;
+            failed++;
             break;
+          } else {
+            success++;
           }
         }
         previousDelta = delta;
+      }
+      if (success / failed < 10) {
+        spectrum.continuous = false;
       }
     }
   }
