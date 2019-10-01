@@ -172,18 +172,22 @@ class IsotopicDistribution {
    * Returns the isotopic distirubtion
    * @return {XY} an object containing 2 properties: x:[] and y:[]
    */
-  getXY() {
+  getXY(options = {}) {
+    const { maxValue = 100, scale = 1 } = options;
     let points = this.getDistribution().array;
     if (points.length === 0) return [];
-    let maxY = points[0].y;
-    for (let point of points) {
-      if (point.y > maxY) maxY = point.y;
+    let factor = 1;
+    if (maxValue) {
+      let maxY = points[0].y;
+      for (let point of points) {
+        if (point.y > maxY) maxY = point.y;
+      }
+      factor = maxY / maxValue;
     }
-    maxY /= 100;
 
     return {
       x: points.map((a) => a.x),
-      y: points.map((a) => a.y / maxY),
+      y: points.map((a) => (a.y / factor) * scale),
     };
   }
 
