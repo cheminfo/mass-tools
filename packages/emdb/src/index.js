@@ -83,42 +83,40 @@ DBManager.prototype.fromMonoisotopicMass = function fromMonoisotopicMass(
   mass,
   options = {},
 ) {
-  const { databaseName = 'monoisotopic' } = options;
+  const { databaseName = 'monoisotopic', append = false } = options;
   let result = require('./fromMonoisotopicMass')(mass, options);
-  this.databases[databaseName] = result.mfs;
+  replaceOrAppend(this, databaseName, result.mfs, append);
   return result;
 };
 
 DBManager.prototype.fromArray = function fromArray(sequence, options = {}) {
-  const { databaseName = 'generated' } = options;
-  this.databases[databaseName] = require('./fromArray')(sequence, options);
+  const { databaseName = 'generated', append = false } = options;
+  const results = require('./fromArray')(sequence, options);
+  replaceOrAppend(this, databaseName, results, append);
 };
 
 DBManager.prototype.fromRange = function fromRange(sequence, options = {}) {
-  const { databaseName = 'generated' } = options;
-  this.databases[databaseName] = require('./fromRange')(sequence, options);
+  const { databaseName = 'generated', append = false } = options;
+  const results = require('./fromRange')(sequence, options);
+  replaceOrAppend(this, databaseName, results, append);
 };
 
 DBManager.prototype.fromPeptidicSequence = function fromPeptidicSequence(
   sequence,
   options = {},
 ) {
-  const { databaseName = 'peptidic' } = options;
-  this.databases[databaseName] = require('./fromPeptidicSequence')(
-    sequence,
-    options,
-  );
+  const { databaseName = 'peptidic', append = false } = options;
+  const results = require('./fromPeptidicSequence')(sequence, options);
+  replaceOrAppend(this, databaseName, results, append);
 };
 
 DBManager.prototype.fromNucleicSequence = function fromNucleicSequence(
   sequence,
   options = {},
 ) {
-  const { databaseName = 'nucleic' } = options;
-  this.databases[databaseName] = require('./fromNucleicSequence')(
-    sequence,
-    options,
-  );
+  const { databaseName = 'nucleic', append = false } = options;
+  const results = require('./fromNucleicSequence')(sequence, options);
+  replaceOrAppend(this, databaseName, results, append);
 };
 
 DBManager.prototype.listDatabases = function listDatabases() {
@@ -142,3 +140,11 @@ DBManager.prototype.searchPubchem = require('./searchPubchem');
 DBManager.prototype.searchSimilarity = require('./searchSimilarity');
 
 module.exports = DBManager;
+
+function replaceOrAppend(emdb, databaseName, results, append = false) {
+  if (!emdb.databases[databaseName] || !append) {
+    emdb.databases[databaseName] = results;
+    return;
+  }
+  emdb.databases[databaseName] = emdb.databases[databaseName].concat(results);
+}
