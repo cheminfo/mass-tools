@@ -97,5 +97,6 @@ Distribution.prototype.multiply = require('./utils/multiply.js');
 Distribution.prototype.square = require('./utils/square.js');
 Distribution.prototype.power = require('./utils/power.js');
 Distribution.prototype.normalize = require('./utils/normalize.js');
+Distribution.prototype.closestPointX = require('./utils/closestPointX.js');
 
 module.exports = Distribution;

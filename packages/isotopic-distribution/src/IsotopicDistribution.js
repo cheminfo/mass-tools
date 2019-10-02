@@ -33,7 +33,7 @@ class IsotopicDistribution {
       for (let part of this.parts) {
         part.confidence = 0;
         part.isotopesInfo = new MF(
-          `${part.mf}(${part.ionization.mf})`,
+          `${part.mf}(${part.ionization.mf})`
         ).getIsotopesInfo();
       }
     } else {
@@ -48,11 +48,11 @@ class IsotopicDistribution {
           let part = JSON.parse(JSON.stringify(partOriginal));
           part.em = part.monoisotopicMass; // TODO: To remove !!! we change the name !?
           part.isotopesInfo = new MF(
-            `${part.mf}(${ionization.mf})`,
+            `${part.mf}(${ionization.mf})`
           ).getIsotopesInfo();
           part.confidence = 0;
           let msInfo = getMsInfo(part, {
-            ionization,
+            ionization
           });
           part.ionization = msInfo.ionization;
           part.ms = msInfo.ms;
@@ -83,7 +83,7 @@ class IsotopicDistribution {
     let options = {
       maxLines: this.maxLines,
       minY: this.minY,
-      deltaX: this.fwhm,
+      deltaX: this.fwhm
     };
     let finalDistribution = new Distribution();
     this.confidence = 0;
@@ -93,8 +93,8 @@ class IsotopicDistribution {
       let totalDistribution = new Distribution([
         {
           x: 0,
-          y: 1,
-        },
+          y: 1
+        }
       ]);
       let charge = part.ms.charge;
       let absoluteCharge = Math.abs(charge);
@@ -108,7 +108,7 @@ class IsotopicDistribution {
         }
         this.confidence += totalDistribution.array.reduce(
           (sum, value) => sum + value.y,
-          0,
+          0
         );
 
         // we finally deal with the charge
@@ -127,6 +127,10 @@ class IsotopicDistribution {
         }
 
         if (part.intensity && part.intensity !== 1) {
+          // intensity is the value of the monoisotopic mass !
+          // need to find the intensity of the peak corresponding
+          // to the monoisotopic mass
+
           totalDistribution.multiplyY(part.intensity);
         }
 
@@ -162,7 +166,7 @@ class IsotopicDistribution {
     let csv = [];
     for (let point of points) {
       csv.push(
-        `${point.x.toFixed(5)}${delimiter}${(point.y * 100).toFixed(3)}`,
+        `${point.x.toFixed(5)}${delimiter}${(point.y * 100).toFixed(3)}`
       );
     }
     return csv.join('\n');
@@ -187,7 +191,7 @@ class IsotopicDistribution {
 
     return {
       x: points.map((a) => a.x),
-      y: points.map((a) => (a.y / factor) * scale),
+      y: points.map((a) => (a.y / factor) * scale)
     };
   }
 
@@ -201,7 +205,7 @@ class IsotopicDistribution {
     const {
       gaussianWidth = 10,
       peakWidthFct = () => this.fwhm,
-      threshold = 0.0001,
+      threshold = 0.0001
     } = options;
 
     let points = distribution.array;
@@ -212,7 +216,7 @@ class IsotopicDistribution {
       start: Math.floor(options.from || distribution.minX - 2),
       end: Math.ceil(options.to || distribution.maxX + 2),
       pointsPerUnit,
-      peakWidthFct,
+      peakWidthFct
     };
 
     let spectrumGenerator = new SpectrumGenerator(gaussianOptions);
