@@ -126,12 +126,20 @@ class IsotopicDistribution {
             totalDistribution.array[totalDistribution.array.length - 1].x;
         }
 
-        if (part.intensity && part.intensity !== 1) {
+        if (
+          part.ms.target &&
+          part.ms.target.intensity &&
+          part.ms.target.intensity !== 1
+        ) {
           // intensity is the value of the monoisotopic mass !
           // need to find the intensity of the peak corresponding
           // to the monoisotopic mass
-
-          totalDistribution.multiplyY(part.intensity);
+          if (part.ms.target.mass) {
+            let target = totalDistribution.closestPointX(part.ms.target.mass);
+            totalDistribution.multiplyY(part.ms.target.intensity / target.y);
+          } else {
+            totalDistribution.multiplyY(part.ms.target.intensity);
+          }
         }
 
         part.isotopicDistribution = totalDistribution.array;
@@ -177,7 +185,7 @@ class IsotopicDistribution {
    * @return {XY} an object containing 2 properties: x:[] and y:[]
    */
   getXY(options = {}) {
-    const { maxValue = 100, scale = 1 } = options;
+    const { maxValue = 100 } = options;
     let points = this.getDistribution().array;
     if (points.length === 0) return [];
     let factor = 1;
@@ -191,7 +199,7 @@ class IsotopicDistribution {
 
     return {
       x: points.map((a) => a.x),
-      y: points.map((a) => (a.y / factor) * scale)
+      y: points.map((a) => a.y / factor)
     };
   }
 
