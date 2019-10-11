@@ -12,6 +12,11 @@ describe('test nucleotide', () => {
     expect(mass).toBeCloseTo(0, 1);
   });
 
+  it('nucleotide to sequence of A(H-1C-1)TC', () => {
+    let sequence = Nucleotide.sequenceToMF('A(H-1C-1)TC', { kind: 'dna' });
+    expect(sequence).toStrictEqual('HODamp(H-1C-1)DtmpDcmpH');
+  });
+
   it('nucleotide to sequence of ATC', () => {
     let sequence = Nucleotide.sequenceToMF('ATC');
     expect(sequence).toStrictEqual('HODampDtmpDcmpH.HODgmpDampDtmpH');

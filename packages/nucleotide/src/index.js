@@ -14,7 +14,10 @@ function sequenceToMF(sequence, options = {}) {
   let { kind, circular, fivePrime = 'monophosphate' } = options;
   fivePrime = fivePrime.replace(/[^a-zA-Z]/g, '').toLowerCase();
 
-  sequence = sequence.toUpperCase().replace(/[^ATCGU]/g, '');
+  if (!sequence.includes('(')) {
+    sequence = sequence.toUpperCase().replace(/[^ATCGU]/g, '');
+  }
+
   if (!kind) {
     if (sequence.includes('U')) {
       kind = 'rna';
@@ -28,21 +31,44 @@ function sequenceToMF(sequence, options = {}) {
   let results = [[]];
   if (kind === 'dsdna') results.push([]);
 
+  let parenthesisCounter = 0;
+
   for (let i = 0; i < sequence.length; i++) {
-    let nucleotide = sequence[i];
+    let currentSymbol = sequence[i];
+
+    if (
+      currentSymbol === '(' ||
+      currentSymbol === ')' ||
+      parenthesisCounter > 0
+    ) {
+      if (currentSymbol === '(') parenthesisCounter++;
+      if (currentSymbol === ')') parenthesisCounter--;
+      switch (kind) {
+        case 'dna':
+        case 'rna':
+          results[0].push(currentSymbol);
+          break;
+        default:
+          console.warn(
+            `Nucleotide sequenceToMF with modification: unknown kind: ${kind}`,
+          );
+      }
+      continue;
+    }
+
     let nucleotideType = i === 0 ? fivePrime : 'monophosphate';
 
     switch (kind) {
       case 'dna':
-        results[0].push(desoxyNucleotides[nucleotideType][nucleotide]);
+        results[0].push(desoxyNucleotides[nucleotideType][currentSymbol]);
         break;
       case 'rna':
-        results[0].push(oxyNucleotides[nucleotideType][nucleotide]);
+        results[0].push(oxyNucleotides[nucleotideType][currentSymbol]);
         break;
       case 'dsdna':
-        results[0].push(desoxyNucleotides[nucleotideType][nucleotide]);
+        results[0].push(desoxyNucleotides[nucleotideType][currentSymbol]);
         results[1].unshift(
-          desoxyNucleotides[nucleotideType][complementary[nucleotide]],
+          desoxyNucleotides[nucleotideType][complementary[currentSymbol]],
         );
         break;
       default:
