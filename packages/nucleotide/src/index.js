@@ -10,13 +10,13 @@
  */
 
 function sequenceToMF(sequence, options = {}) {
+  let fivePrimeTerminal = 'HO';
+  let threePrimeTerminal = 'H';
+  sequence = sequence.trim();
+
   if (sequence === '') return '';
   let { kind, circular, fivePrime = 'monophosphate' } = options;
   fivePrime = fivePrime.replace(/[^a-zA-Z]/g, '').toLowerCase();
-
-  if (!sequence.includes('(')) {
-    sequence = sequence.toUpperCase().replace(/[^ATCGU]/g, '');
-  }
 
   if (!kind) {
     if (sequence.includes('U')) {
@@ -27,6 +27,12 @@ function sequenceToMF(sequence, options = {}) {
   }
 
   kind = kind.replace(/[^A-Za-z]/g, '').toLowerCase();
+
+  if (sequence.includes('(') && kind === 'dsdna') {
+    throw new Error(
+      'Nucleotide sequenceToMF: modifications not allowed for ds-DNA',
+    );
+  }
 
   let results = [[]];
   if (kind === 'dsdna') results.push([]);
@@ -41,8 +47,14 @@ function sequenceToMF(sequence, options = {}) {
       currentSymbol === ')' ||
       parenthesisCounter > 0
     ) {
-      if (currentSymbol === '(') parenthesisCounter++;
-      if (currentSymbol === ')') parenthesisCounter--;
+      if (currentSymbol === '(') {
+        parenthesisCounter++;
+        if (i === 0) fivePrimeTerminal = '';
+      }
+      if (currentSymbol === ')') {
+        parenthesisCounter--;
+        if (i === sequence.length - 1) threePrimeTerminal = '';
+      }
       switch (kind) {
         case 'dna':
         case 'rna':
@@ -57,6 +69,9 @@ function sequenceToMF(sequence, options = {}) {
     }
 
     let nucleotideType = i === 0 ? fivePrime : 'monophosphate';
+
+    currentSymbol = currentSymbol.toUpperCase().replace(/[^ATCGU]/, '');
+    if (!currentSymbol) continue;
 
     switch (kind) {
       case 'dna':
@@ -78,8 +93,8 @@ function sequenceToMF(sequence, options = {}) {
   }
 
   if (!circular) {
-    results.forEach((result) => result.unshift('HO'));
-    results.forEach((result) => result.push('H'));
+    results.forEach((result) => result.unshift(fivePrimeTerminal));
+    results.forEach((result) => result.push(threePrimeTerminal));
   }
 
   return results.map((result) => result.join('')).join('.');

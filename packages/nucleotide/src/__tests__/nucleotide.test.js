@@ -6,15 +6,17 @@ const MF = require('mf-parser').MF;
 
 describe('test nucleotide', () => {
   it('nucleotide to sequence of emtpy string', () => {
-    let sequence = Nucleotide.sequenceToMF('');
+    let sequence = Nucleotide.sequenceToMF(' ');
     expect(sequence).toStrictEqual('');
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(0, 1);
   });
 
-  it('nucleotide to sequence of A(H-1C-1)TC', () => {
-    let sequence = Nucleotide.sequenceToMF('A(H-1C-1)TC', { kind: 'dna' });
-    expect(sequence).toStrictEqual('HODamp(H-1C-1)DtmpDcmpH');
+  it('nucleotide to sequence of atc', () => {
+    let sequence = Nucleotide.sequenceToMF('atc');
+    expect(sequence).toStrictEqual('HODampDtmpDcmpH.HODgmpDampDtmpH');
+    let mass = new MF(sequence).getInfo().mass;
+    expect(mass).toBeCloseTo(1889.23, 1);
   });
 
   it('nucleotide to sequence of ATC', () => {
@@ -22,6 +24,20 @@ describe('test nucleotide', () => {
     expect(sequence).toStrictEqual('HODampDtmpDcmpH.HODgmpDampDtmpH');
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(1889.23, 1);
+  });
+  it('nucleotide to sequence of A(H-1C-1)TC', () => {
+    let sequence = Nucleotide.sequenceToMF('A(H-1C-1)TC', { kind: 'dna' });
+    expect(sequence).toStrictEqual('HODamp(H-1C-1)DtmpDcmpH');
+  });
+
+  it('nucleotide to sequence of (HO)ATC(NH2)', () => {
+    let sequence = Nucleotide.sequenceToMF('(HO)ATC(NH2)', { kind: 'dna' });
+    expect(sequence).toStrictEqual('(HO)DampDtmpDcmp(NH2)');
+  });
+
+  it('nucleotide to sequence of (HO)atc(NH2)', () => {
+    let sequence = Nucleotide.sequenceToMF('(HO)atc(NH2)', { kind: 'dna' });
+    expect(sequence).toStrictEqual('(HO)DampDtmpDcmp(NH2)');
   });
 
   it('nucleotide to sequence of AAU ', () => {
