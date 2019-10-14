@@ -1,6 +1,6 @@
-/*
-
 'use strict';
+
+/*
 
 const Snap = require('snapsvg');
 
@@ -304,9 +304,9 @@ function getSVG(sequence, analysisResult, options = {}) {
       }
     }
   }
-
-  function addScript(paper) {
-    let script = ` // <![CDATA[
+*/
+function addScript(paper) {
+  let script = ` // <![CDATA[
         function mouseOver(evt) {
             let targetRange=evt.target.id.replace(/^line/,'');
             let from=targetRange.replace(/-.*/,'')*1;
@@ -331,13 +331,11 @@ function getSVG(sequence, analysisResult, options = {}) {
         }
      // ]]>
     `;
-    let scriptElement = paper.el('script', {
-      type: 'application/ecmascript',
-    });
-    scriptElement.node.textContent = script;
-  }
+  let scriptElement = paper.el('script', {
+    type: 'application/ecmascript'
+  });
+  scriptElement.node.textContent = script;
 }
+// }
 
-module.exports = getSVG;
-
-*/
+module.exports = addScript;
