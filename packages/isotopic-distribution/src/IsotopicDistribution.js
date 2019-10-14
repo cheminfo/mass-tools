@@ -140,6 +140,8 @@ class IsotopicDistribution {
           } else {
             totalDistribution.multiplyY(part.ms.target.intensity);
           }
+        } else if (part.intensity && part.intensity !== 1) {
+          totalDistribution.multiplyY(part.intensity);
         }
 
         part.isotopicDistribution = totalDistribution.array;
