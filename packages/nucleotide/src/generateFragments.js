@@ -25,7 +25,7 @@ module.exports = function generateFragments(mf, options) {
       abw: false,
       aby: false,
       abcdBaseLoss: false,
-      wxyzBaseLoss: false,
+      wxyzBaseLoss: false
     };
   }
 
