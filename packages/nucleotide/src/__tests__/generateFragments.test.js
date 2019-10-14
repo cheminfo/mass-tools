@@ -20,7 +20,6 @@ describe('test generate fragments', () => {
     let fragments = generateFragments('HODampDtmpDcmpH', { a: true, ab: true });
     expect(fragments).toStrictEqual([
       'HODampO-1H-1$a1',
-      'HOC5H6O4P$a1 - B',
       'HODampDtmpO-1H-1$a2',
       'HODampC5H6O4P$a2 - B'
     ]);
@@ -47,7 +46,6 @@ describe('test generate fragments', () => {
     });
     expect(fragments).toStrictEqual([
       'HODampO-1H-1$a1',
-      'HOC5H6O4P$a1 - B',
       'HODampH$b1',
       'HODampPO2$c1',
       'HODampPO3H2$d1',
