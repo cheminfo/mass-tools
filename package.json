@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "molecular-formula",
-  "version": "0.40.0",
+  "version": "0.41.0",
   "main": "src/index.js",
   "files": [
     "src"
@@ -42,7 +42,7 @@
     "eslint": "^6.5.1",
     "eslint-config-cheminfo": "^2.0.3",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-jest": "^22.19.0",
     "eslint-plugin-no-only-tests": "^2.3.1",
     "eslint-plugin-prettier": "^3.1.1",
     "jest": "^24.9.0",
