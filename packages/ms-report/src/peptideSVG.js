@@ -1,3 +1,5 @@
+/*
+
 'use strict';
 
 const Snap = require('snapsvg');
@@ -337,3 +339,5 @@ function getSVG(sequence, analysisResult, options = {}) {
 }
 
 module.exports = getSVG;
+
+*/

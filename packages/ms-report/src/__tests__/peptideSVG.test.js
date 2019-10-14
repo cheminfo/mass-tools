@@ -3,6 +3,7 @@
 // const peptideSVG = require('../peptideSVG');
 
 test.skip('test peptideSVG', () => {
+  /*
   let options = {
     width: 1000,
     leftRightBorders: 50,
@@ -31,5 +32,7 @@ test.skip('test peptideSVG', () => {
   let svg = peptideSVG(sequence, info, options);
   console.log(svg);
 
+
+  */
   expect(true).toBe(true);
 });
