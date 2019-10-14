@@ -135,7 +135,7 @@ function getSVG(sequence, analysisResult, options = {}) {
 
   addScript(paper);
 
-  residues.forEach(function(residue) {
+  residues.forEach(function (residue) {
     residue.y = (residue.line + 1) * rowHeight;
     let text = paper.text(residue.xFrom, residue.y, residue.label);
     text.attr({ id: `residue-${residue.nTer}` });
@@ -164,7 +164,7 @@ function getSVG(sequence, analysisResult, options = {}) {
     let used = {};
     for (let i = from; i < to; i++) {
       let residue = residues[i];
-      residue.usedSlots.forEach(function(usedSlot, index) {
+      residue.usedSlots.forEach(function (usedSlot, index) {
         used[index] = true;
       });
     }

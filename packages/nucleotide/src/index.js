@@ -30,7 +30,7 @@ function sequenceToMF(sequence, options = {}) {
 
   if (sequence.includes('(') && kind === 'dsdna') {
     throw new Error(
-      'Nucleotide sequenceToMF: modifications not allowed for ds-DNA',
+      'Nucleotide sequenceToMF: modifications not allowed for ds-DNA'
     );
   }
 
@@ -61,8 +61,9 @@ function sequenceToMF(sequence, options = {}) {
           results[0].push(currentSymbol);
           break;
         default:
+          // eslint-disable-next-line no-console
           console.warn(
-            `Nucleotide sequenceToMF with modification: unknown kind: ${kind}`,
+            `Nucleotide sequenceToMF with modification: unknown kind: ${kind}`
           );
       }
       continue;
@@ -83,7 +84,7 @@ function sequenceToMF(sequence, options = {}) {
       case 'dsdna':
         results[0].push(desoxyNucleotides[nucleotideType][currentSymbol]);
         results[1].unshift(
-          desoxyNucleotides[nucleotideType][complementary[currentSymbol]],
+          desoxyNucleotides[nucleotideType][complementary[currentSymbol]]
         );
         break;
       default:
@@ -104,14 +105,14 @@ module.exports = {
   sequenceToMF,
   generateFragments: require('./generateFragments'),
   furanThreeTerm: require('./furanThreeTerm'),
-  baseLoss: require('./baseLoss'),
+  baseLoss: require('./baseLoss')
 };
 
 const complementary = {
   A: 'T',
   T: 'A',
   C: 'G',
-  G: 'C',
+  G: 'C'
 };
 
 const desoxyNucleotides = {
@@ -120,29 +121,29 @@ const desoxyNucleotides = {
     C: 'Dcyt',
     G: 'Dgua',
     T: 'Dthy',
-    U: 'Dura',
+    U: 'Dura'
   },
   monophosphate: {
     A: 'Damp',
     C: 'Dcmp',
     G: 'Dgmp',
     T: 'Dtmp',
-    U: 'Dump',
+    U: 'Dump'
   },
   diphosphate: {
     A: 'Dadp',
     C: 'Dcdp',
     G: 'Dgdp',
     T: 'Dtdp',
-    U: 'Dudp',
+    U: 'Dudp'
   },
   triphosphate: {
     A: 'Datp',
     C: 'Dctp',
     G: 'Dgtp',
     T: 'Dttp',
-    U: 'Dutp',
-  },
+    U: 'Dutp'
+  }
 };
 
 const oxyNucleotides = {
@@ -151,27 +152,27 @@ const oxyNucleotides = {
     C: 'Cyt',
     G: 'Gua',
     T: 'Thy',
-    U: 'Ura',
+    U: 'Ura'
   },
   monophosphate: {
     A: 'Amp',
     C: 'Cmp',
     G: 'Gmp',
     T: 'Tmp',
-    U: 'Ump',
+    U: 'Ump'
   },
   diphosphate: {
     A: 'Adp',
     C: 'Cdp',
     G: 'Gdp',
     T: 'Tdp',
-    U: 'Udp',
+    U: 'Udp'
   },
   triphosphate: {
     A: 'Atp',
     C: 'Ctp',
     G: 'Gtp',
     T: 'Ttp',
-    U: 'Utp',
-  },
+    U: 'Utp'
+  }
 };

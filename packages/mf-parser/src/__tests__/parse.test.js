@@ -160,12 +160,12 @@ let tests = {
   ],
 };
 
-test.each(Object.keys(tests))('parse molecular formula %s', function(key) {
+test.each(Object.keys(tests))('parse molecular formula %s', function (key) {
   let parsed = parse(key);
   expect(parsed).toMatchObject(tests[key]);
 });
 
-test('not same opening and closing parenthesis', function() {
+test('not same opening and closing parenthesis', function () {
   expect(() => {
     parse('C(');
   }).toThrow(/.*opening and closing.*/);
