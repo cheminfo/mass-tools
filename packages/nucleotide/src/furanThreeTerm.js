@@ -7,13 +7,14 @@ function furanThreeTerm(nucleotide) {
     .replace(/([a-z)0-9])([A-Z][a-z](?=[a-z]))/g, '$1 $2')
     .split(/ /);
   let last = parts.pop();
-  if (!last.match(/^D[atcg]mp/)) {
+  if (!last.match(/D[atcg]mp(.*)$/)) {
     // eslint-disable-next-line no-console
     console.warn(
       `furanThreeTerm can not remove a non monophosphate nucleic acid: ${last}`
     );
+    return parts.join('') + last;
   }
-  return `${parts.join('')}C5H6O4P`;
+  return parts.join('') + last.replace(/D[atcg]mp(.*)$/, 'C5H6O4P');
 }
 
 module.exports = furanThreeTerm;
