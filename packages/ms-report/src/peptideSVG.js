@@ -1,155 +1,70 @@
 'use strict';
 
-/*
+const { writeFileSync } = require('fs');
+const { join } = require('path');
 
-const Snap = require('snapsvg');
+const window = require('svgdom');
 
-const sequenceSplitter = require('./sequenceSplitter');
+const document = window.document;
+const { SVG, registerWindow } = require('@svgdotjs/svg.js');
 
-function getSVG(sequence, analysisResult, options = {}) {
+const getResiduesInfo = require('./getResiduesInfo');
+const improveResults = require('./improveResults');
+const getRowHeight = require('./getRowHeight');
+
+registerWindow(window, document);
+
+function peptideSVG(sequence, analysisResult, options = {}) {
   const {
     width = 600,
     leftRightBorders = 20,
     spaceBetweenResidues = 20,
-    spaceBetweenInteralLines = 10,
+    spaceBetweenInternalLines = 10,
     strokeWidth = 2,
     labelFontFamily = 'Verdana',
     labelSize = 8,
-    verticalShiftForTerminalAnnotations = 20,
+    verticalShiftForTerminalAnnotations = 20
   } = options;
 
-  let residues = [];
-  let mfParts = sequenceSplitter(sequence);
-  let results = JSON.parse(JSON.stringify(analysisResult));
+  let residues = getResiduesInfo(sequence, {
+    leftRightBorders,
+    spaceBetweenResidues,
+    labelFontFamily,
+    width
+  });
 
-  let xPos = leftRightBorders;
-  let xOld = xPos;
+  let results = improveResults(analysisResult, residues);
 
-  let line = 0;
-  // we create a temporary paper in order to get the width of the text blocs
-  let tempPaper = Snap(1000, 40);
-  for (let i = 0; i < mfParts.length; i++) {
-    let part = mfParts[i];
-    let text = tempPaper.text(xPos, 20, part);
-    text.attr({
-      'font-family': labelFontFamily,
-      'font-weight': 'bold',
-      'font-size': 12,
-    });
-    let textWidth = text.node.getBoundingClientRect().width;
-    xPos += textWidth;
-    if (xPos > width - leftRightBorders) {
-      xOld = leftRightBorders;
-      xPos = leftRightBorders + textWidth;
-      line++;
-    }
-    residues.push({
-      nTer: i,
-      cTer: mfParts.length - i,
-      label: part,
-      xFrom: xOld,
-      xTo: xPos,
-      line,
-      usedSlots: [],
-      topPosition: 0,
-      bottomPosition: 0,
-    });
-    xPos += spaceBetweenResidues;
-    xOld = xPos;
-  }
-  tempPaper.clear();
-
-  // we calculate all the lines based on the results
-  for (let result of results) {
-    // internal fragment ?
-    let parts = result.type.split(/(?=[a-z])/);
-    let firstPart = parts[0];
-    let secondPart = parts[1];
-
-    if ('abc'.indexOf(firstPart.charAt(0)) > -1) {
-      // n-terminal fragment
-      result.to = firstPart.substr(1) * 1 - 1;
-      if (secondPart) {
-        result.internal = true;
-      } else {
-        result.fromNTerm = true;
-      }
-    } else {
-      result.to = residues.length - 1;
-      secondPart = firstPart;
-      result.fromCTerm = true;
-    }
-    if (!secondPart) {
-      result.from = 0;
-    } else {
-      result.from = residues.length - secondPart.substr(1) * 1 - 1;
-    }
-    result.length = result.to - result.from + 1;
-
-    if (result.fromCTerm) result.color = 'red';
-    if (result.fromNTerm) result.color = 'blue';
-    if (result.internal) {
-      switch (result.type.substring(0, 1)) {
-        case 'a':
-          result.color = 'green';
-          break;
-        case 'b':
-          result.color = 'orange';
-          break;
-        case 'c':
-          result.color = 'cyan';
-          break;
-        default:
-          result.color = 'green';
-      }
-    }
-    if (result.similarity > 95) {
-      result.textColor = 'black';
-    } else if (result.similarity > 90) {
-      result.textColor = '#333';
-    } else if (result.similariy > 80) {
-      result.textColor = '#666';
-    } else {
-      result.textColor = '#999';
-    }
-  }
-  // sort by residue length
-  results.sort((a, b) => a.length - b.length);
-
-  // for each line (internal fragment) we calculate the vertical position
-  // where it should be drawn as well and the maximal number of lines
-  let maxNumberLines = 0;
-  for (let result of results) {
-    if (result.internal) {
-      result.slot = assignSlot(result.from, result.to);
-      if (result.slot > maxNumberLines) maxNumberLines = result.slot;
-    }
-  }
-
-  let rowHeight =
-    verticalShiftForTerminalAnnotations +
-    spaceBetweenInteralLines * (maxNumberLines + 6);
-  let height =
-    rowHeight * (line + 1) + 50 + verticalShiftForTerminalAnnotations;
+  let rowHeight = getRowHeight(results, residues, {
+    verticalShiftForTerminalAnnotations,
+    spaceBetweenInternalLines
+  });
 
   // We start to create the SVG and create the paper
-  let paper = Snap(width, height);
+  const paper = SVG(document.documentElement);
 
-  addScript(paper);
+  // addScript(paper);
 
   residues.forEach(function (residue) {
     residue.y = (residue.line + 1) * rowHeight;
-    let text = paper.text(residue.xFrom, residue.y, residue.label);
-    text.attr({ id: `residue-${residue.nTer}` });
-    text.attr({
-      'font-family': labelFontFamily,
-      'font-weight': 'bold',
-      'font-size': 12,
+    let text = paper.plain(residue.label);
+    text.font({
+      family: labelFontFamily,
+      size: 12,
+      weight: 'bold',
+      fill: '#888'
     });
+    text.attr({
+      x: residue.xFrom,
+      y: residue.y
+    });
+    text.attr({ id: `residue-${residue.nTer}` });
   });
 
   drawInternals();
   drawTerminals();
+
+  writeFileSync(join(__dirname, 'test.svg'), paper.svg());
 
   let svg = paper
     .toString()
@@ -159,29 +74,6 @@ function getSVG(sequence, analysisResult, options = {}) {
     .replace(/&gt;/g, '>');
   paper.clear();
   return svg;
-
-  // we need to define the height of the line.
-  // we need to find a height that is not yet used.
-  function assignSlot(from, to) {
-    let used = {};
-    for (let i = from; i < to; i++) {
-      let residue = residues[i];
-      residue.usedSlots.forEach(function (usedSlot, index) {
-        used[index] = true;
-      });
-    }
-    let counter = 0;
-    while (true) {
-      if (!used[counter]) {
-        break;
-      }
-      counter++;
-    }
-    for (let i = from; i < to; i++) {
-      residues[i].usedSlots[counter] = true;
-    }
-    return counter;
-  }
 
   function drawTerminals() {
     for (let result of results) {
@@ -199,21 +91,21 @@ function getSVG(sequence, analysisResult, options = {}) {
           residue.xTo + spaceBetweenResidues / 2,
           residue.y,
           residue.xTo + spaceBetweenResidues / 2,
-          residue.y - 8,
+          residue.y - 8
         );
-        line.attr({ stroke: result.color, 'stroke-width': strokeWidth });
+        line.stroke({ color: result.color, width: strokeWidth });
         if (nTerminal) {
           let line = paper.line(
             residue.xTo + spaceBetweenResidues / 2,
             residue.y,
             residue.xTo + spaceBetweenResidues / 2 - 5,
-            residue.y + 5,
+            residue.y + 5
           );
-          line.attr({ stroke: result.color, 'stroke-width': strokeWidth });
+          line.stroke({ color: result.color, width: strokeWidth });
           drawLabel(
             result,
             residue.xTo + spaceBetweenResidues / 2 - 15,
-            residue.y + 12 + residue.bottomPosition * labelSize,
+            residue.y + 12 + residue.bottomPosition * labelSize
           );
           residue.bottomPosition++;
         } else {
@@ -221,13 +113,13 @@ function getSVG(sequence, analysisResult, options = {}) {
             residue.xTo + spaceBetweenResidues / 2,
             residue.y - 8,
             residue.xTo + spaceBetweenResidues / 2 + 5,
-            residue.y - 13,
+            residue.y - 13
           );
           line.attr({ stroke: result.color, 'stroke-width': strokeWidth });
           drawLabel(
             result,
             residue.xTo + spaceBetweenResidues / 2,
-            residue.y - 15 - residue.topPosition * labelSize,
+            residue.y - 15 - residue.topPosition * labelSize
           );
           residue.topPosition++;
         }
@@ -237,28 +129,34 @@ function getSVG(sequence, analysisResult, options = {}) {
 
   function drawLabel(result, x, y) {
     let label = result.type;
-    let similarity = Math.round(result.similarity);
+    let similarity = String(Math.round(result.similarity));
     let charge = result.charge > 0 ? `+${result.charge}` : result.charge;
-    let text = paper.text(x, y, label);
-    text.attr({
+    let text = paper.plain(label);
+    text.font({
       fill: result.textColor,
-      'font-family': labelFontFamily,
-      'font-weight': 'bold',
-      'font-size': labelSize,
+      family: labelFontFamily,
+      weight: 'bold',
+      size: labelSize
     });
-    let textWidth = text.node.getBoundingClientRect().width + 3;
-    text = paper.text(x + textWidth, y - labelSize / 2, charge);
     text.attr({
-      fill: result.textColor,
-      'font-family': labelFontFamily,
-      'font-size': labelSize / 2,
+      x,
+      y
     });
-    text = paper.text(x + textWidth, y, similarity);
-    text.attr({
+    let textWidth = text.length() + 3;
+    text = paper.plain(charge);
+    text.font({
       fill: result.textColor,
-      'font-family': labelFontFamily,
-      'font-size': labelSize / 2,
+      family: labelFontFamily,
+      size: labelSize / 2
     });
+    text.attr({ x: x + textWidth, y: y - labelSize / 2 });
+    text = paper.plain(similarity);
+    text.font({
+      fill: result.textColor,
+      family: labelFontFamily,
+      size: labelSize / 2
+    });
+    text.attr({ x: x + textWidth, y });
   }
 
   function drawInternals() {
@@ -273,7 +171,7 @@ function getSVG(sequence, analysisResult, options = {}) {
         for (let line = fromResidue.line; line <= toResidue.line; line++) {
           y =
             -10 -
-            result.slot * spaceBetweenInteralLines +
+            result.slot * spaceBetweenInternalLines +
             (line + 1) * rowHeight -
             verticalShiftForTerminalAnnotations;
           if (line === fromResidue.line) {
@@ -290,13 +188,13 @@ function getSVG(sequence, analysisResult, options = {}) {
           drawLine.attr({
             onmouseover: 'mouseOver(evt)',
             onmouseout: 'mouseOut(evt)',
-            id: `line${fromResidue.nTer}-${toResidue.nTer}`,
+            id: `line${fromResidue.nTer}-${toResidue.nTer}`
           });
-          drawLine.attr({
-            stroke: result.color,
-            'stroke-width': strokeWidth,
+          drawLine.stroke({
+            color: result.color,
+            width: strokeWidth
           });
-
+          console.log(drawLine);
           drawLabel(result, (fromX + toX) / 2 - 10, y - 2);
 
           // label = result.type + ' (' + Math.round(result.similarity) + '%)';
@@ -304,9 +202,9 @@ function getSVG(sequence, analysisResult, options = {}) {
       }
     }
   }
-*/
-function addScript(paper) {
-  let script = ` // <![CDATA[
+
+  function addScript(paper) {
+    let script = ` // <![CDATA[
         function mouseOver(evt) {
             let targetRange=evt.target.id.replace(/^line/,'');
             let from=targetRange.replace(/-.*/,'')*1;
@@ -331,11 +229,11 @@ function addScript(paper) {
         }
      // ]]>
     `;
-  let scriptElement = paper.el('script', {
-    type: 'application/ecmascript'
-  });
-  scriptElement.node.textContent = script;
+    let scriptElement = paper.el('script', {
+      type: 'application/ecmascript'
+    });
+    scriptElement.node.textContent = script;
+  }
 }
-// }
 
-module.exports = addScript;
+module.exports = peptideSVG;

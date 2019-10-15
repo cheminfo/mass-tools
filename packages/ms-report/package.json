@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/ms-report#readme",
   "dependencies": {
+    "@svgdotjs/svg.js": "^3.0.13",
     "mf-utilities": "^0.11.0",
     "phantom": "^6.2.0",
     "puppeteer": "^1.14.0",
+    "snapsvg": "^0.5.1",
+    "svgdom": "0.0.20",
     "webpage": "^0.3.0"
   }
 }
