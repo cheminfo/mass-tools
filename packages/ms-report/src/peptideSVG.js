@@ -93,32 +93,44 @@ function peptideSVG(sequence, analysisResult, options = {}) {
           residue.xTo + spaceBetweenResidues / 2,
           residue.y - 8
         );
-        line.stroke({ color: result.color, width: strokeWidth });
+        line.stroke({
+          color: result.color,
+          width: strokeWidth,
+          linecap: 'round'
+        });
         if (nTerminal) {
-          let line = paper.line(
+          line = paper.line(
             residue.xTo + spaceBetweenResidues / 2,
             residue.y,
             residue.xTo + spaceBetweenResidues / 2 - 5,
             residue.y + 5
           );
-          line.stroke({ color: result.color, width: strokeWidth });
+          line.stroke({
+            color: result.color,
+            width: strokeWidth,
+            linecap: 'round'
+          });
           drawLabel(
             result,
-            residue.xTo + spaceBetweenResidues / 2 - 15,
+            residue.xTo + spaceBetweenResidues / 2,
             residue.y + 12 + residue.bottomPosition * labelSize
           );
           residue.bottomPosition++;
         } else {
-          let line = paper.line(
+          line = paper.line(
             residue.xTo + spaceBetweenResidues / 2,
             residue.y - 8,
             residue.xTo + spaceBetweenResidues / 2 + 5,
             residue.y - 13
           );
-          line.attr({ stroke: result.color, 'stroke-width': strokeWidth });
+          line.stroke({
+            color: result.color,
+            width: strokeWidth,
+            linecap: 'round'
+          });
           drawLabel(
             result,
-            residue.xTo + spaceBetweenResidues / 2,
+            residue.xTo + spaceBetweenResidues,
             residue.y - 15 - residue.topPosition * labelSize
           );
           residue.topPosition++;
@@ -136,13 +148,14 @@ function peptideSVG(sequence, analysisResult, options = {}) {
       fill: result.textColor,
       family: labelFontFamily,
       weight: 'bold',
-      size: labelSize
+      size: labelSize,
+      anchor: 'end'
     });
     text.attr({
       x,
       y
     });
-    let textWidth = text.length() + 3;
+    let textWidth = 0;
     text = paper.plain(charge);
     text.font({
       fill: result.textColor,
