@@ -43,7 +43,7 @@ function peptideSVG(sequence, analysisResult, options = {}) {
   // We start to create the SVG and create the paper
   const paper = SVG(document.documentElement);
 
-  // addScript(paper);
+  addScript(paper);
 
   residues.forEach(function (residue) {
     residue.y = (residue.line + 1) * rowHeight;
@@ -207,7 +207,6 @@ function peptideSVG(sequence, analysisResult, options = {}) {
             color: result.color,
             width: strokeWidth
           });
-          console.log(drawLine);
           drawLabel(result, (fromX + toX) / 2 - 10, y - 2);
 
           // label = result.type + ' (' + Math.round(result.similarity) + '%)';
@@ -217,7 +216,7 @@ function peptideSVG(sequence, analysisResult, options = {}) {
   }
 
   function addScript(paper) {
-    let script = ` // <![CDATA[
+    let scriptCode = ` // <![CDATA[
         function mouseOver(evt) {
             let targetRange=evt.target.id.replace(/^line/,'');
             let from=targetRange.replace(/-.*/,'')*1;
@@ -242,10 +241,11 @@ function peptideSVG(sequence, analysisResult, options = {}) {
         }
      // ]]>
     `;
-    let scriptElement = paper.el('script', {
+    var script = paper.element('script');
+    script.attr({
       type: 'application/ecmascript'
     });
-    scriptElement.node.textContent = script;
+    script.words(scriptCode);
   }
 }
 

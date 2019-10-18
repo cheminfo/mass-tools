@@ -9,7 +9,7 @@ test('test peptideSVG', () => {
     spaceBetweenResidues: 20,
     spaceBetweenInteralLines: 10
   };
-  let sequence = '(Me)MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQ';
+  let sequence = 'MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQ';
   let info = [
     { type: 'b38y33', similarity: 90.12, charge: 3 },
     { type: 'b30y30', similarity: 86.86, charge: 3 },
