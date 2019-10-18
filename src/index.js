@@ -9,4 +9,5 @@ module.exports = {
   Peptide: require('peptide'),
   Nucleotide: require('../packages/nucleotide'),
   Spectrum: require('../packages/ms-spectrum').Spectrum,
+  Report: require('../packages/ms-report'),
 };
