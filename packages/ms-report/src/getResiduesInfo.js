@@ -7,7 +7,7 @@ const { SVG, registerWindow } = require('@svgdotjs/svg.js');
 
 registerWindow(window, document);
 
-const sequenceSplitter = require('./sequenceSplitter');
+const sequenceSplitter = require('./sequenceParser');
 
 function getResiduesInfo(sequence, options = {}) {
   const {
