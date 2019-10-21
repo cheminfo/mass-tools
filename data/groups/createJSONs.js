@@ -1,5 +1,7 @@
 'use strict';
 
+// original data: https://docs.google.com/spreadsheets/d/1SinZQ7doYeN1GCWWZ-SNhkxj4Z3RR8kGvyde8nT0LA4/edit?usp=sharing
+
 // editor of groups.tsv
 
 const fs = require('fs');
@@ -18,7 +20,7 @@ var groups = Papa.parse(`${fs.readFileSync(`${__dirname}/groups.tsv`)}`, {
   header: true,
   delimiter: '\t'
 }).data.filter((line) => line.symbol !== '');
-console.log(groups);
+
 // we will create an object for the elements
 for (let group of groups) {
   let mf = group.mf;
@@ -32,6 +34,8 @@ for (let group of groups) {
   }
   delete group.oclCoordinates;
   delete group.oclID;
+  if (!group.oneLetter) delete group.oneLetter;
+  if (!group.alternativeOneLetter) delete group.alternativeOneLetter;
   group.mass = 0;
   group.monoisotopicMass = 0;
   group.unsaturation = (mfObject.getInfo().unsaturation - 1) * 2;
