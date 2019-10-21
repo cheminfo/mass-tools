@@ -22,7 +22,7 @@
     "chemical-groups": "^0.11.0",
     "mf-utilities": "^0.11.0",
     "nucleotide": "^0.11.0",
-    "peptide": "^1.9.1",
+    "peptide": "^1.10.0",
     "phantom": "^6.2.0",
     "puppeteer": "^1.14.0",
     "snapsvg": "^0.5.1",

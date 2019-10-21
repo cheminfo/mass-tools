@@ -2,7 +2,12 @@
 
 const Peptide = require('peptide');
 const Nucleotide = require('nucleotide');
-require('nucleotide');
+const groups = require('chemical-groups').getGroupsObject();
+
+const ALTERNATIVES = ['', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'];
+const SYMBOLS = ['Θ', 'Δ', 'Λ', 'Φ', 'Ω', 'Γ', 'Χ'];
+
+let currentSymbol = 0;
 
 /**
  * Code that allows to split a sequence of amino acids or nucleotides natural or non natural
@@ -22,7 +27,7 @@ module.exports = function sequenceParser(sequence, options = {}) {
   } else {
     sequence = Nucleotide.sequenceToMF(sequence, options);
   }
-  console.log(sequence);
+
   const result = {
     begin: '',
     end: '',
@@ -89,5 +94,84 @@ module.exports = function sequenceParser(sequence, options = {}) {
     }
   }
 
+  // we process all the parts
+  let alternatives = {};
+  let replacements = {};
+  for (let i = 0; i < result.parts.length; i++) {
+    let code = result.parts[i];
+    let part = {
+      value: code
+    };
+    if (code.includes('(')) {
+      getModifiedReplacement(code, part, alternatives, replacements);
+    } else {
+      if (groups[code] && groups[code].oneLetter) {
+        part.code = groups[code].oneLetter;
+      } else {
+        getUnknownReplacement(code, part, replacements);
+      }
+    }
+    result.parts[i] = part;
+  }
+  result.alternatives = alternatives;
+  result.replacements = replacements;
+
+  result.begin = removeStartEndParenthesis(result.begin);
+  result.end = removeStartEndParenthesis(result.end);
+
   return result;
 };
+
+function getUnknownReplacement(unknownResidue, part, replacements) {
+  if (!replacements[unknownResidue]) {
+    replacements[unknownResidue] = {
+      code: SYMBOLS[currentSymbol],
+      id: unknownResidue
+    };
+  }
+  currentSymbol++;
+  part.code = replacements[unknownResidue].code;
+}
+
+function getModifiedReplacement(
+  modifiedResidue,
+  part,
+  alternatives,
+  replacements
+) {
+  if (!replacements[modifiedResidue]) {
+    let position = modifiedResidue.indexOf('(');
+    let residue = modifiedResidue.substring(0, position);
+    let modification = removeStartEndParenthesis(
+      modifiedResidue.substring(position)
+    );
+
+    if (groups[residue] && groups[residue].alternativeOneLetter) {
+      let alternativeOneLetter = groups[residue].alternativeOneLetter;
+
+      if (!alternatives[alternativeOneLetter]) {
+        alternatives[alternativeOneLetter] = { count: 1 };
+      } else {
+        alternatives[alternativeOneLetter].count++;
+      }
+      replacements[modifiedResidue] = {
+        code:
+          ALTERNATIVES[alternatives[alternativeOneLetter].count - 1] +
+          alternativeOneLetter,
+        residue,
+        modification
+      };
+    } else {
+      getUnknownReplacement(modifiedResidue, part, replacements);
+    }
+  }
+
+  part.code = replacements[modifiedResidue].code;
+}
+
+function removeStartEndParenthesis(mf) {
+  if (mf[0] === '(' && mf[mf.length - 1] === ')') {
+    return mf.substring(1, mf.length - 1);
+  }
+  return mf;
+}
