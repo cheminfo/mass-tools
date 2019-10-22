@@ -20,21 +20,21 @@ function peptideSVG(sequence, analysisResult, options = {}) {
     strokeWidth = 2,
     labelFontFamily = 'Verdana',
     labelSize = 8,
-    verticalShiftForTerminalAnnotations = 20,
+    verticalShiftForTerminalAnnotations = 20
   } = options;
 
   let residues = getResiduesInfo(sequence, {
     leftRightBorders,
     spaceBetweenResidues,
     labelFontFamily,
-    width,
+    width
   });
 
   let results = improveResults(analysisResult, residues);
 
   let rowHeight = getRowHeight(results, residues, {
     verticalShiftForTerminalAnnotations,
-    spaceBetweenInternalLines,
+    spaceBetweenInternalLines
   });
 
   // We start to create the SVG and create the paper
@@ -42,18 +42,18 @@ function peptideSVG(sequence, analysisResult, options = {}) {
 
   addScript(paper);
 
-  residues.forEach(function(residue) {
+  residues.forEach(function (residue) {
     residue.y = (residue.line + 1) * rowHeight;
     let text = paper.plain(residue.label);
     text.font({
       family: labelFontFamily,
       size: 12,
       weight: 'bold',
-      fill: '#888',
+      fill: '#888'
     });
     text.attr({
       x: residue.xFrom,
-      y: residue.y,
+      y: residue.y
     });
     text.attr({ id: `residue-${residue.nTer}` });
   });
@@ -61,12 +61,8 @@ function peptideSVG(sequence, analysisResult, options = {}) {
   drawInternals();
   drawTerminals();
 
-  let svg = paper
-    .toString()
-    .replace(/>/g, '>\r')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>');
+  let svg = paper.svg();
+
   paper.clear();
   return svg;
 
@@ -86,29 +82,29 @@ function peptideSVG(sequence, analysisResult, options = {}) {
           residue.xTo + spaceBetweenResidues / 2,
           residue.y,
           residue.xTo + spaceBetweenResidues / 2,
-          residue.y - 8,
+          residue.y - 8
         );
         line.stroke({
           color: result.color,
           width: strokeWidth,
-          linecap: 'round',
+          linecap: 'round'
         });
         if (nTerminal) {
           line = paper.line(
             residue.xTo + spaceBetweenResidues / 2,
             residue.y,
             residue.xTo + spaceBetweenResidues / 2 - 5,
-            residue.y + 5,
+            residue.y + 5
           );
           line.stroke({
             color: result.color,
             width: strokeWidth,
-            linecap: 'round',
+            linecap: 'round'
           });
           drawLabel(
             result,
             residue.xTo + spaceBetweenResidues / 2,
-            residue.y + 12 + residue.bottomPosition * labelSize,
+            residue.y + 12 + residue.bottomPosition * labelSize
           );
           residue.bottomPosition++;
         } else {
@@ -116,17 +112,17 @@ function peptideSVG(sequence, analysisResult, options = {}) {
             residue.xTo + spaceBetweenResidues / 2,
             residue.y - 8,
             residue.xTo + spaceBetweenResidues / 2 + 5,
-            residue.y - 13,
+            residue.y - 13
           );
           line.stroke({
             color: result.color,
             width: strokeWidth,
-            linecap: 'round',
+            linecap: 'round'
           });
           drawLabel(
             result,
             residue.xTo + spaceBetweenResidues,
-            residue.y - 15 - residue.topPosition * labelSize,
+            residue.y - 15 - residue.topPosition * labelSize
           );
           residue.topPosition++;
         }
@@ -144,25 +140,25 @@ function peptideSVG(sequence, analysisResult, options = {}) {
       family: labelFontFamily,
       weight: 'bold',
       size: labelSize,
-      anchor: 'end',
+      anchor: 'end'
     });
     text.attr({
       x,
-      y,
+      y
     });
     let textWidth = 0;
     text = paper.plain(charge);
     text.font({
       fill: result.textColor,
       family: labelFontFamily,
-      size: labelSize / 2,
+      size: labelSize / 2
     });
     text.attr({ x: x + textWidth, y: y - labelSize / 2 });
     text = paper.plain(similarity);
     text.font({
       fill: result.textColor,
       family: labelFontFamily,
-      size: labelSize / 2,
+      size: labelSize / 2
     });
     text.attr({ x: x + textWidth, y });
   }
@@ -196,11 +192,11 @@ function peptideSVG(sequence, analysisResult, options = {}) {
           drawLine.attr({
             onmouseover: 'mouseOver(evt)',
             onmouseout: 'mouseOut(evt)',
-            id: `line${fromResidue.nTer}-${toResidue.nTer}`,
+            id: `line${fromResidue.nTer}-${toResidue.nTer}`
           });
           drawLine.stroke({
             color: result.color,
-            width: strokeWidth,
+            width: strokeWidth
           });
           drawLabel(result, (fromX + toX) / 2 - 10, y - 2);
 
@@ -241,7 +237,7 @@ function addScript(paper) {
   `;
   let script = paper.element('script');
   script.attr({
-    type: 'application/ecmascript',
+    type: 'application/ecmascript'
   });
   script.words(scriptCode);
 }

@@ -10,9 +10,9 @@ test('test peptideSVG', () => {
     width: 600,
     leftRightBorders: 50,
     spaceBetweenResidues: 20,
-    spaceBetweenInteralLines: 10,
+    spaceBetweenInteralLines: 10
   };
-  let sequence = 'MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQ';
+  let sequence = '(Me)MQIFVKTLTGKTITLEVEPSD(NH2)TIENVKAKIQDKEGIPPDQQ(OMe)';
   let info = [
     { type: 'b38y33', similarity: 90.12, charge: 3 },
     { type: 'b30y30', similarity: 86.86, charge: 3 },
@@ -31,10 +31,9 @@ test('test peptideSVG', () => {
     { type: 'c20', similarity: 62.44, charge: 2 },
     { type: 'z20', similarity: 61.64, charge: 2 },
     { type: 'z9', similarity: 57.76, charge: 3 },
-    { type: 'c38', similarity: 50.44, charge: 2 },
+    { type: 'c38', similarity: 50.44, charge: 2 }
   ];
   let svg = peptideSVG(sequence, info, options);
-
   writeFileSync(join(__dirname, 'test.svg'), svg);
 
   expect(true).toBe(true);

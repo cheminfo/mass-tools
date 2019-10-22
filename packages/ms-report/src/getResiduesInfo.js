@@ -7,7 +7,7 @@ const { SVG, registerWindow } = require('@svgdotjs/svg.js');
 
 registerWindow(window, document);
 
-const sequenceSplitter = require('./sequenceParser');
+const sequenceParser = require('./sequenceParser');
 
 function getResiduesInfo(sequence, options = {}) {
   const {
@@ -17,8 +17,9 @@ function getResiduesInfo(sequence, options = {}) {
     width = 600
   } = options;
   let residues = [];
-  let mfParts = sequenceSplitter(sequence);
+  let parsed = sequenceParser(sequence);
 
+  let mfParts = [parsed.begin].concat(parsed.parts.map((part) => part.code), [parsed.end]);
   let xPos = leftRightBorders;
   let xOld = xPos;
 
