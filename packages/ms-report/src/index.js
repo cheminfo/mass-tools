@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-  peptideSVG: require('./peptideSVG'),
+  sequenceSVG: require('./sequenceSVG'),
 };

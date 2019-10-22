@@ -12,7 +12,7 @@ describe('test generate fragments', () => {
     let fragments = generateFragments('HODamp(NH2)DtmpDcmpH', { a: true });
     expect(fragments).toStrictEqual([
       'HODamp(NH2)O-1H-1$a1',
-      'HODamp(NH2)DtmpO-1H-1$a2'
+      'HODamp(NH2)DtmpO-1H-1$a2',
     ]);
   });
 
@@ -21,13 +21,13 @@ describe('test generate fragments', () => {
     expect(fragments).toStrictEqual([
       'HODampO-1H-1$a1',
       'HODampDtmpO-1H-1$a2',
-      'HODampC5H6O4P$a2 - B'
+      'HODampC5H6O4P$a2-B',
     ]);
   });
 
   it('nucleotide HODampDtmpDcmpH dh2o (d with loss of water)', () => {
     let fragments = generateFragments('HODampDampH', {
-      dh2o: true
+      dh2o: true,
     });
     expect(fragments).toStrictEqual(['HODampPO2$d-H2O1']);
   });
@@ -42,7 +42,7 @@ describe('test generate fragments', () => {
       w: true,
       x: true,
       y: true,
-      z: true
+      z: true,
     });
     expect(fragments).toStrictEqual([
       'HODampO-1H-1$a1',
@@ -54,14 +54,14 @@ describe('test generate fragments', () => {
       'O-2P-1DcmpH$y1',
       'O-3H-2P-1DcmpH$z1',
       'HODampDtmpO-1H-1$a2',
-      'HODampC5H6O4P$a2 - B',
+      'HODampC5H6O4P$a2-B',
       'HODampDtmpH$b2',
       'HODampDtmpPO2$c2',
       'HODampDtmpPO3H2$d2',
       'HODtmpDcmpH$w2',
       'H-1DtmpDcmpH$x2',
       'O-2P-1DtmpDcmpH$y2',
-      'O-3H-2P-1DtmpDcmpH$z2'
+      'O-3H-2P-1DtmpDcmpH$z2',
     ]);
   });
 });

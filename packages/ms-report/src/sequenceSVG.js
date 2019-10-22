@@ -6,7 +6,7 @@ const improveResults = require('./improveResults');
 const getRowHeight = require('./getRowHeight');
 const getPaper = require('./getPaper');
 
-function peptideSVG(sequence, analysisResult, options = {}) {
+function sequenceSVG(sequence, analysisResult, options = {}) {
   const {
     width = 600,
     leftRightBorders = 20,
@@ -215,17 +215,17 @@ function peptideSVG(sequence, analysisResult, options = {}) {
         fill: 'darkviolet',
         family: labelFontFamily,
         weight: 'bold',
-        size: labelSize,
+        size: 10,
       });
       text.attr({
         x: leftRightBorders,
-        y: y + 50 + i * 25,
+        y: y + 50 + i * 16,
       });
     }
   }
 }
 
-module.exports = peptideSVG;
+module.exports = sequenceSVG;
 
 function addScript(paper) {
   let scriptCode = ` // <![CDATA[
