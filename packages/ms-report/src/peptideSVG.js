@@ -1,16 +1,10 @@
 'use strict';
 
-const window = require('svgdom');
-
-const document = window.document;
-const { SVG, registerWindow } = require('@svgdotjs/svg.js');
-
 const appendResiduesPosition = require('./appendResiduesPosition');
 const sequenceParser = require('./sequenceParser');
 const improveResults = require('./improveResults');
 const getRowHeight = require('./getRowHeight');
-
-registerWindow(window, document);
+const getPaper = require('./getPaper');
 
 function peptideSVG(sequence, analysisResult, options = {}) {
   const {
@@ -42,7 +36,7 @@ function peptideSVG(sequence, analysisResult, options = {}) {
   });
 
   // We start to create the SVG and create the paper
-  const paper = SVG(document.documentElement);
+  const paper = getPaper();
 
   addScript(paper);
 
