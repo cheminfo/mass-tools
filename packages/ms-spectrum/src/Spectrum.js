@@ -31,8 +31,8 @@ function Spectrum(data = { x: [], y: [] }) {
 }
 
 Spectrum.fromText = function fromText(text) {
-  const data = parseXY(text, { arrayType: 'xxyy' });
-  return new Spectrum({ x: data[0], y: data[1] });
+  const data = parseXY(text);
+  return new Spectrum(data);
 };
 
 Spectrum.prototype.maxY = function maxY() {
@@ -79,31 +79,31 @@ Spectrum.prototype.normedY = function normedY(total = 1) {
   return this;
 };
 
-Spectrum.prototype.peakPicking = function () {
+Spectrum.prototype.peakPicking = function() {
   peakPicking(this);
   return this.peaks;
 };
 
-Spectrum.prototype.peaksWidth = function () {
+Spectrum.prototype.peaksWidth = function() {
   peakPicking(this);
   return peaksWidth(this.peaks);
 };
 
-Spectrum.prototype.getBestPeaks = function (options) {
+Spectrum.prototype.getBestPeaks = function(options) {
   peakPicking(this);
   return getBestPeaks(this.peaks, options);
 };
 
-Spectrum.prototype.getPeakChargeBySimilarity = function (targetMass, options) {
+Spectrum.prototype.getPeakChargeBySimilarity = function(targetMass, options) {
   return getPeakChargeBySimilarity(this, targetMass, options);
 };
 
-Spectrum.prototype.getPeaks = function (options) {
+Spectrum.prototype.getPeaks = function(options) {
   peakPicking(this);
   return getPeaks(this.peaks, options);
 };
 
-Spectrum.prototype.isContinuous = function () {
+Spectrum.prototype.isContinuous = function() {
   return isContinuous(this);
 };
 

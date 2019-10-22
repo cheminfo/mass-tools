@@ -25,6 +25,6 @@
     "ml-gsd": "^2.0.5",
     "ml-regression-power": "^1.0.1",
     "peaks-similarity": "^2.3.1",
-    "xy-parser": "^2.2.2"
+    "xy-parser": "^3.0.0"
   }
 }

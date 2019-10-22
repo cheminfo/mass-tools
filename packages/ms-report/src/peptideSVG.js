@@ -53,7 +53,7 @@ function peptideSVG(sequence, analysisResult, options = {}) {
       family: labelFontFamily,
       size: 12,
       weight: 'bold',
-      fill: '#888',
+      fill: residue.replaced ? 'darkviolet' : '#888',
     });
     text.attr({
       x: residue.paper.xFrom,
@@ -213,7 +213,21 @@ function peptideSVG(sequence, analysisResult, options = {}) {
     let replacements = Object.keys(parsedSequence.replacements).map((key) => {
       return { key, ...parsedSequence.replacements[key] };
     });
-    console.log(replacements);
+    let y = (parsedSequence.nbLines + 1) * rowHeight;
+    for (let i = 0; i < replacements.length; i++) {
+      const replacement = replacements[i];
+      let text = paper.plain(`${replacement.label} = ${replacement.key}`);
+      text.font({
+        fill: 'darkviolet',
+        family: labelFontFamily,
+        weight: 'bold',
+        size: labelSize,
+      });
+      text.attr({
+        x: leftRightBorders,
+        y: y + 50 + i * 25,
+      });
+    }
   }
 }
 

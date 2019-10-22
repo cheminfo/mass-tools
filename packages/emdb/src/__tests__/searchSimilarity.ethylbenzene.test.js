@@ -50,9 +50,5 @@ describe('test searchSimilarity for ethylbenzene', () => {
 
 function loadEthylbenzene() {
   let text = fs.readFileSync(join(__dirname, 'data/ethylbenzene.txt'), 'utf8');
-  let data = parseXY(text, { arrayType: 'xxyy' });
-  return {
-    x: data[0],
-    y: data[1],
-  };
+  return parseXY(text, { arrayType: 'xxyy' });
 }

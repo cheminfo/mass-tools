@@ -36,7 +36,7 @@ function appendResiduesPosition(parsed, options = {}) {
     xOld = xPos;
   }
 
-  return parsed;
+  parsed.nbLines = line;
 }
 
 function setPaper(residue, xFrom, xTo, line) {

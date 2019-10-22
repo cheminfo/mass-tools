@@ -20,6 +20,8 @@ test('getGroupsObject', () => {
     mf: 'C3H5NO',
     name: 'Alanine diradical',
     symbol: 'Ala',
+    oneLetter: 'A',
+    alternativeOneLetter: 'α',
     unsaturation: 2,
     ocl: {
       coordinates: '!BJLtni|c|rDvN@Dc|',

@@ -58,21 +58,13 @@ describe('test isContinuous', () => {
 
   it('big experimental data', () => {
     let text = readFileSync(join(__dirname, 'data/continuous.txt'), 'utf8');
-    let parsed = parseXY(text, { arrayType: 'xxyy' });
-    let data = {
-      x: parsed[0],
-      y: parsed[1],
-    };
+    let data = parseXY(text);
     expect(isContinuous({ data })).toBe(true);
   });
 
   it('other big experimental data', () => {
     let text = readFileSync(join(__dirname, 'data/continuous2.txt'), 'utf8');
-    let parsed = parseXY(text, { arrayType: 'xxyy' });
-    let data = {
-      x: parsed[0],
-      y: parsed[1],
-    };
+    let data = parseXY(text);
     expect(isContinuous({ data })).toBe(true);
   });
 });

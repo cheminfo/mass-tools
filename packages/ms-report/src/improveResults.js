@@ -11,7 +11,6 @@ function improveResults(analysisResult, numberResidues) {
       result.to = Number(parts[0].replace(/[^0-9]/g, '') - 1);
       result.from =
         numberResidues - 1 - Number(parts[1].replace(/[^0-9]/g, ''));
-      console.log(result.from, result.to);
     }
     if ('abcd'.match(parts[0][0])) {
       result.fromBegin = true;
