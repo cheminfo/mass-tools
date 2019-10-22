@@ -1,37 +1,30 @@
 'use strict';
 
-function improveResults(analysisResult, residues) {
+function improveResults(analysisResult, numberResidues) {
   let results = JSON.parse(JSON.stringify(analysisResult));
 
   // we calculate all the lines based on the results
   for (let result of results) {
-    // internal fragment ?
     let parts = result.type.split(/(?=[a-z])/);
-    let firstPart = parts[0];
-    let secondPart = parts[1];
-
-    if ('abc'.indexOf(firstPart.charAt(0)) > -1) {
-      // n-terminal fragment
-      result.to = firstPart.substr(1) * 1 - 1;
-      if (secondPart) {
-        result.internal = true;
-      } else {
-        result.fromNTerm = true;
-      }
-    } else {
-      result.to = residues.length - 1;
-      secondPart = firstPart;
-      result.fromCTerm = true;
+    if (parts.length === 2) {
+      result.internal = true;
+      result.to = Number(parts[0].replace(/[^0-9]/g, '') - 1);
+      result.from =
+        numberResidues - 1 - Number(parts[1].replace(/[^0-9]/g, ''));
+      console.log(result.from, result.to);
     }
-    if (!secondPart) {
-      result.from = 0;
-    } else {
-      result.from = residues.length - secondPart.substr(1) * 1 - 1;
+    if ('abcd'.match(parts[0][0])) {
+      result.fromBegin = true;
+      result.position = Number(parts[0].replace(/[^0-9]/g, '') - 1);
     }
-    result.length = result.to - result.from + 1;
+    if ('wxyz'.match(parts[0][0])) {
+      result.fromEnd = true;
+      result.position =
+        numberResidues - 1 - Number(parts[0].replace(/[^0-9]/g, ''));
+    }
 
-    if (result.fromCTerm) result.color = 'red';
-    if (result.fromNTerm) result.color = 'blue';
+    if (result.fromEnd) result.color = 'red';
+    if (result.fromBegin) result.color = 'blue';
     if (result.internal) {
       switch (result.type.substring(0, 1)) {
         case 'a':

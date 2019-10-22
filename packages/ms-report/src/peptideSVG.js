@@ -5,7 +5,8 @@ const window = require('svgdom');
 const document = window.document;
 const { SVG, registerWindow } = require('@svgdotjs/svg.js');
 
-const getResiduesInfo = require('./getResiduesInfo');
+const appendResiduesPosition = require('./appendResiduesPosition');
+const sequenceParser = require('./sequenceParser');
 const improveResults = require('./improveResults');
 const getRowHeight = require('./getRowHeight');
 
@@ -20,21 +21,24 @@ function peptideSVG(sequence, analysisResult, options = {}) {
     strokeWidth = 2,
     labelFontFamily = 'Verdana',
     labelSize = 8,
-    verticalShiftForTerminalAnnotations = 20
+    verticalShiftForTerminalAnnotations = 20,
   } = options;
 
-  let residues = getResiduesInfo(sequence, {
+  let parsedSequence = sequenceParser(sequence);
+
+  appendResiduesPosition(parsedSequence, {
     leftRightBorders,
     spaceBetweenResidues,
     labelFontFamily,
-    width
+    labelSize,
+    width,
   });
 
-  let results = improveResults(analysisResult, residues);
+  let results = improveResults(analysisResult, parsedSequence.residues.length);
 
-  let rowHeight = getRowHeight(results, residues, {
+  let rowHeight = getRowHeight(results, parsedSequence.all, {
     verticalShiftForTerminalAnnotations,
-    spaceBetweenInternalLines
+    spaceBetweenInternalLines,
   });
 
   // We start to create the SVG and create the paper
@@ -42,24 +46,25 @@ function peptideSVG(sequence, analysisResult, options = {}) {
 
   addScript(paper);
 
-  residues.forEach(function (residue) {
-    residue.y = (residue.line + 1) * rowHeight;
+  parsedSequence.all.forEach(function(residue) {
+    residue.paper.y = (residue.paper.line + 1) * rowHeight;
     let text = paper.plain(residue.label);
     text.font({
       family: labelFontFamily,
       size: 12,
       weight: 'bold',
-      fill: '#888'
+      fill: '#888',
     });
     text.attr({
-      x: residue.xFrom,
-      y: residue.y
+      x: residue.paper.xFrom,
+      y: residue.paper.y,
     });
-    text.attr({ id: `residue-${residue.nTer}` });
+    text.attr({ id: `residue-${residue.fromBegin}` });
   });
 
   drawInternals();
   drawTerminals();
+  drawReplacements();
 
   let svg = paper.svg();
 
@@ -68,63 +73,58 @@ function peptideSVG(sequence, analysisResult, options = {}) {
 
   function drawTerminals() {
     for (let result of results) {
-      let residue;
-      let nTerminal = false;
-      if (result.fromNTerm) {
-        residue = residues[result.to];
-        nTerminal = true;
-      }
-      if (result.fromCTerm) {
-        residue = residues[result.from];
-      }
+      if (result.internal) continue;
+
+      let residue = parsedSequence.residues[result.position];
+
       if (residue) {
         let line = paper.line(
-          residue.xTo + spaceBetweenResidues / 2,
-          residue.y,
-          residue.xTo + spaceBetweenResidues / 2,
-          residue.y - 8
+          residue.paper.xTo + spaceBetweenResidues / 2,
+          residue.paper.y,
+          residue.paper.xTo + spaceBetweenResidues / 2,
+          residue.paper.y - 8,
         );
         line.stroke({
           color: result.color,
           width: strokeWidth,
-          linecap: 'round'
+          linecap: 'round',
         });
-        if (nTerminal) {
+        if (result.fromBegin) {
           line = paper.line(
-            residue.xTo + spaceBetweenResidues / 2,
-            residue.y,
-            residue.xTo + spaceBetweenResidues / 2 - 5,
-            residue.y + 5
+            residue.paper.xTo + spaceBetweenResidues / 2,
+            residue.paper.y,
+            residue.paper.xTo + spaceBetweenResidues / 2 - 5,
+            residue.paper.y + 5,
           );
           line.stroke({
             color: result.color,
             width: strokeWidth,
-            linecap: 'round'
+            linecap: 'round',
           });
           drawLabel(
             result,
-            residue.xTo + spaceBetweenResidues / 2,
-            residue.y + 12 + residue.bottomPosition * labelSize
+            residue.paper.xTo + spaceBetweenResidues / 2,
+            residue.paper.y + 12 + residue.paper.bottomPosition * labelSize,
           );
-          residue.bottomPosition++;
+          residue.paper.bottomPosition++;
         } else {
           line = paper.line(
-            residue.xTo + spaceBetweenResidues / 2,
-            residue.y - 8,
-            residue.xTo + spaceBetweenResidues / 2 + 5,
-            residue.y - 13
+            residue.paper.xTo + spaceBetweenResidues / 2,
+            residue.paper.y - 8,
+            residue.paper.xTo + spaceBetweenResidues / 2 + 5,
+            residue.paper.y - 13,
           );
           line.stroke({
             color: result.color,
             width: strokeWidth,
-            linecap: 'round'
+            linecap: 'round',
           });
           drawLabel(
             result,
-            residue.xTo + spaceBetweenResidues,
-            residue.y - 15 - residue.topPosition * labelSize
+            residue.paper.xTo + spaceBetweenResidues,
+            residue.paper.y - 15 - residue.paper.topPosition * labelSize,
           );
-          residue.topPosition++;
+          residue.paper.topPosition++;
         }
       }
     }
@@ -140,70 +140,80 @@ function peptideSVG(sequence, analysisResult, options = {}) {
       family: labelFontFamily,
       weight: 'bold',
       size: labelSize,
-      anchor: 'end'
+      anchor: 'end',
     });
     text.attr({
       x,
-      y
+      y,
     });
     let textWidth = 0;
     text = paper.plain(charge);
     text.font({
       fill: result.textColor,
       family: labelFontFamily,
-      size: labelSize / 2
+      size: labelSize / 2,
     });
     text.attr({ x: x + textWidth, y: y - labelSize / 2 });
     text = paper.plain(similarity);
     text.font({
       fill: result.textColor,
       family: labelFontFamily,
-      size: labelSize / 2
+      size: labelSize / 2,
     });
     text.attr({ x: x + textWidth, y });
   }
 
   function drawInternals() {
     for (let result of results) {
-      if (result.internal) {
-        let fromResidue = residues[result.from + 1];
-        let toResidue = residues[result.to];
-        // let charge = result.charge > 0 ? '+' + result.charge : result.charge;
-        // let label = result.type + ' (' + charge + ', ' + Math.round(result.similarity) + '%)';
-        // we need to check on how many lines we are
-        let fromX, toX, y;
-        for (let line = fromResidue.line; line <= toResidue.line; line++) {
-          y =
-            -10 -
-            result.slot * spaceBetweenInternalLines +
-            (line + 1) * rowHeight -
-            verticalShiftForTerminalAnnotations;
-          if (line === fromResidue.line) {
-            fromX = fromResidue.xFrom - spaceBetweenResidues / 2;
-          } else {
-            fromX = 0;
-          }
-          if (line === toResidue.line) {
-            toX = toResidue.xTo + spaceBetweenResidues / 2;
-          } else {
-            toX = width - 1;
-          }
-          let drawLine = paper.line(fromX, y, toX, y);
-          drawLine.attr({
-            onmouseover: 'mouseOver(evt)',
-            onmouseout: 'mouseOut(evt)',
-            id: `line${fromResidue.nTer}-${toResidue.nTer}`
-          });
-          drawLine.stroke({
-            color: result.color,
-            width: strokeWidth
-          });
-          drawLabel(result, (fromX + toX) / 2 - 10, y - 2);
-
-          // label = result.type + ' (' + Math.round(result.similarity) + '%)';
+      if (!result.internal) continue;
+      let fromResidue = parsedSequence.residues[result.from + 1];
+      let toResidue = parsedSequence.residues[result.to - 1];
+      // let charge = result.charge > 0 ? '+' + result.charge : result.charge;
+      // let label = result.type + ' (' + charge + ', ' + Math.round(result.similarity) + '%)';
+      // we need to check on how many lines we are
+      let fromX, toX, y;
+      for (
+        let line = fromResidue.paper.line;
+        line <= toResidue.paper.line;
+        line++
+      ) {
+        y =
+          -10 -
+          result.slot * spaceBetweenInternalLines +
+          (line + 1) * rowHeight -
+          verticalShiftForTerminalAnnotations;
+        if (line === fromResidue.paper.line) {
+          fromX = fromResidue.paper.xFrom - spaceBetweenResidues / 2;
+        } else {
+          fromX = 0;
         }
+        if (line === toResidue.paper.line) {
+          toX = toResidue.paper.xTo + spaceBetweenResidues / 2;
+        } else {
+          toX = width - 1;
+        }
+        let drawLine = paper.line(fromX, y, toX, y);
+        drawLine.attr({
+          onmouseover: 'mouseOver(evt)',
+          onmouseout: 'mouseOut(evt)',
+          id: `line${fromResidue.fromBegin}-${toResidue.fromBegin}`,
+        });
+        drawLine.stroke({
+          color: result.color,
+          width: strokeWidth,
+        });
+        drawLabel(result, (fromX + toX) / 2 - 10, y - 2);
+
+        // label = result.type + ' (' + Math.round(result.similarity) + '%)';
       }
     }
+  }
+
+  function drawReplacements() {
+    let replacements = Object.keys(parsedSequence.replacements).map((key) => {
+      return { key, ...parsedSequence.replacements[key] };
+    });
+    console.log(replacements);
   }
 }
 
@@ -237,7 +247,7 @@ function addScript(paper) {
   `;
   let script = paper.element('script');
   script.attr({
-    type: 'application/ecmascript'
+    type: 'application/ecmascript',
   });
   script.words(scriptCode);
 }

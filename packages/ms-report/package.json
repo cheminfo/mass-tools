@@ -28,5 +28,8 @@
     "snapsvg": "^0.5.1",
     "svgdom": "0.0.20",
     "webpage": "^0.3.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
   }
 }

@@ -1,18 +1,17 @@
 'use strict';
 
-const getResiduesInfo = require('../getResiduesInfo');
+const appendResiduesPosition = require('../appendResiduesPosition');
 
-test('getResiduesInfo', () => {
+test('appendResiduesPosition', () => {
   let options = {
     width: 600,
     leftRightBorders: 50,
     spaceBetweenResidues: 20,
-    spaceBetweenInteralLines: 10
+    spaceBetweenInteralLines: 10,
   };
   let sequence = 'MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQ';
 
-  let residuesInfo = getResiduesInfo(sequence, options);
-  console.log(residuesInfo);
+  let residuesInfo = appendResiduesPosition(sequence, options);
 
   expect(true).toBe(true);
 });

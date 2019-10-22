@@ -31,7 +31,7 @@ module.exports = function sequenceParser(sequence, options = {}) {
   const result = {
     begin: '',
     end: '',
-    parts: []
+    residues: [],
   };
 
   const STATE_BEGIN = 0;
@@ -69,7 +69,7 @@ module.exports = function sequenceParser(sequence, options = {}) {
         nextNextChar.match(/[a-z]/) &&
         parenthesisLevel === 0
       ) {
-        result.parts.push('');
+        result.residues.push('');
       }
     }
 
@@ -78,8 +78,8 @@ module.exports = function sequenceParser(sequence, options = {}) {
         result.begin = result.begin + currentChar;
         break;
       case STATE_MIDDLE:
-        result.parts[result.parts.length - 1] =
-          result.parts[result.parts.length - 1] + currentChar;
+        result.residues[result.residues.length - 1] =
+          result.residues[result.residues.length - 1] + currentChar;
         break;
       case STATE_END:
         result.end = result.end + currentChar;
@@ -94,60 +94,66 @@ module.exports = function sequenceParser(sequence, options = {}) {
     }
   }
 
-  // we process all the parts
+  // we process all the residues
   let alternatives = {};
   let replacements = {};
-  for (let i = 0; i < result.parts.length; i++) {
-    let code = result.parts[i];
-    let part = {
-      value: code
+  for (let i = 0; i < result.residues.length; i++) {
+    let label = result.residues[i];
+    let residue = {
+      value: label,
     };
-    if (code.includes('(')) {
-      getModifiedReplacement(code, part, alternatives, replacements);
+    residue.fromBegin = i + 1;
+    residue.fromEnd = result.residues.length - i;
+    residue.kind = 'residue';
+    if (label.includes('(')) {
+      getModifiedReplacement(label, residue, alternatives, replacements);
     } else {
-      if (groups[code] && groups[code].oneLetter) {
-        part.code = groups[code].oneLetter;
+      if (groups[label] && groups[label].oneLetter) {
+        residue.label = groups[label].oneLetter;
       } else {
-        getUnknownReplacement(code, part, replacements);
+        getUnknownReplacement(label, residue, replacements);
       }
     }
-    result.parts[i] = part;
+    result.residues[i] = residue;
   }
+  result.begin = removeStartEndParenthesis(result.begin);
+  result.end = removeStartEndParenthesis(result.end);
+  result.begin = { label: result.begin, kind: 'begin' };
+  result.end = { label: result.end, kind: 'end' };
   result.alternatives = alternatives;
   result.replacements = replacements;
 
-  result.begin = removeStartEndParenthesis(result.begin);
-  result.end = removeStartEndParenthesis(result.end);
+  result.all = [result.begin].concat(result.residues, [result.end]);
 
   return result;
 };
 
-function getUnknownReplacement(unknownResidue, part, replacements) {
+function getUnknownReplacement(unknownResidue, residue, replacements) {
   if (!replacements[unknownResidue]) {
     replacements[unknownResidue] = {
-      code: SYMBOLS[currentSymbol],
-      id: unknownResidue
+      label: SYMBOLS[currentSymbol],
+      id: unknownResidue,
     };
   }
   currentSymbol++;
-  part.code = replacements[unknownResidue].code;
+  residue.label = replacements[unknownResidue].label;
 }
 
 function getModifiedReplacement(
   modifiedResidue,
-  part,
+  residue,
   alternatives,
-  replacements
+  replacements,
 ) {
   if (!replacements[modifiedResidue]) {
     let position = modifiedResidue.indexOf('(');
-    let residue = modifiedResidue.substring(0, position);
+    let residueCode = modifiedResidue.substring(0, position);
     let modification = removeStartEndParenthesis(
-      modifiedResidue.substring(position)
+      modifiedResidue.substring(position),
     );
 
-    if (groups[residue] && groups[residue].alternativeOneLetter) {
-      let alternativeOneLetter = groups[residue].alternativeOneLetter;
+    if (groups[residueCode] && groups[residueCode].alternativeOneLetter) {
+      let alternativeOneLetter = groups[residueCode].alternativeOneLetter;
 
       if (!alternatives[alternativeOneLetter]) {
         alternatives[alternativeOneLetter] = { count: 1 };
@@ -155,18 +161,18 @@ function getModifiedReplacement(
         alternatives[alternativeOneLetter].count++;
       }
       replacements[modifiedResidue] = {
-        code:
+        label:
           ALTERNATIVES[alternatives[alternativeOneLetter].count - 1] +
           alternativeOneLetter,
-        residue,
-        modification
+        residue: residueCode,
+        modification,
       };
     } else {
-      getUnknownReplacement(modifiedResidue, part, replacements);
+      getUnknownReplacement(modifiedResidue, residue, replacements);
     }
   }
-
-  part.code = replacements[modifiedResidue].code;
+  residue.replaced = true;
+  residue.label = replacements[modifiedResidue].label;
 }
 
 function removeStartEndParenthesis(mf) {

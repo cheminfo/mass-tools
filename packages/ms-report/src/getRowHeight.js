@@ -3,7 +3,7 @@
 function getRowHeight(results, residues, options = {}) {
   const {
     verticalShiftForTerminalAnnotations,
-    spaceBetweenInternalLines
+    spaceBetweenInternalLines,
   } = options;
   // for each line (internal fragment) we calculate the vertical position
   // where it should be drawn as well and the maximal number of lines
@@ -27,7 +27,7 @@ function assignSlot(from, to, residues) {
   let used = {};
   for (let i = from; i < to; i++) {
     let residue = residues[i];
-    residue.usedSlots.forEach(function (usedSlot, index) {
+    residue.paper.usedSlots.forEach(function(usedSlot, index) {
       used[index] = true;
     });
   }
@@ -39,7 +39,7 @@ function assignSlot(from, to, residues) {
     counter++;
   }
   for (let i = from; i < to; i++) {
-    residues[i].usedSlots[counter] = true;
+    residues[i].paper.usedSlots[counter] = true;
   }
   return counter;
 }
