@@ -21,6 +21,7 @@ let currentSymbol = 0;
 module.exports = function sequenceParser(sequence, options = {}) {
   const { kind = 'peptide' } = options;
 
+  currentSymbol = 0;
   // we normalize the sequence to 3 letter codes
 
   if (kind === 'peptide') {

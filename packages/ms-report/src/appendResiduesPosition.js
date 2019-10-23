@@ -54,7 +54,6 @@ function getTextWidth(paper, label, options = {}) {
     weight: 'bold',
     fill: '#888',
   });
-  console.log(text.bbox());
   let textWidth = text.length() || text.bbox().width;
   text.remove();
   return textWidth;
