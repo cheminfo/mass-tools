@@ -16,9 +16,10 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
     labelFontFamily = 'Verdana',
     labelSize = 8,
     verticalShiftForTerminalAnnotations = 20,
+    parsing,
   } = options;
 
-  let parsedSequence = sequenceParser(sequence);
+  let parsedSequence = sequenceParser(sequence, parsing);
 
   appendResiduesPosition(parsedSequence, {
     leftRightBorders,
@@ -161,7 +162,7 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
     for (let result of results) {
       if (!result.internal) continue;
       let fromResidue = parsedSequence.residues[result.from + 1];
-      let toResidue = parsedSequence.residues[result.to - 1];
+      let toResidue = parsedSequence.residues[result.to];
       // let charge = result.charge > 0 ? '+' + result.charge : result.charge;
       // let label = result.type + ' (' + charge + ', ' + Math.round(result.similarity) + '%)';
       // we need to check on how many lines we are

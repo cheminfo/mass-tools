@@ -3,6 +3,7 @@
 function improveResults(analysisResult, numberResidues) {
   let results = JSON.parse(JSON.stringify(analysisResult));
 
+  results = results.filter((result) => !result.type.match(/^-B[0-9]$/));
   // we calculate all the lines based on the results
   for (let result of results) {
     let parts = result.type.split(/(?=[a-z])/);
@@ -51,7 +52,6 @@ function improveResults(analysisResult, numberResidues) {
   }
   // sort by residue length
   results.sort((a, b) => a.length - b.length);
-
   return results;
 }
 

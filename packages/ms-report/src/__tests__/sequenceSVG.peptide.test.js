@@ -35,7 +35,7 @@ test('sequenceSVG of peptide', () => {
     { type: 'c38', similarity: 50.44, charge: 2 },
   ];
   let svg = sequenceSVG(sequence, info, options);
-  writeFileSync(join(__dirname, 'test.svg'), svg);
+  writeFileSync(join(__dirname, 'testPeptide.svg'), svg);
 
   expect(true).toBe(true);
 });

@@ -22,6 +22,7 @@ module.exports = function sequenceParser(sequence, options = {}) {
   const { kind = 'peptide' } = options;
 
   // we normalize the sequence to 3 letter codes
+
   if (kind === 'peptide') {
     sequence = Peptide.sequenceToMF(sequence);
   } else {
