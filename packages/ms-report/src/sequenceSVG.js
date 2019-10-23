@@ -59,7 +59,9 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
 
   drawInternals();
   drawTerminals();
-  drawReplacements();
+  let height = drawReplacements() + 50;
+
+  paper.size(width, height);
 
   let svg = paper.svg();
 
@@ -223,6 +225,7 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
         y: y + 50 + i * 16,
       });
     }
+    return y;
   }
 }
 
