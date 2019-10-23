@@ -133,7 +133,7 @@ module.exports = function sequenceParser(sequence, options = {}) {
 function getUnknownReplacement(unknownResidue, residue, replacements) {
   if (!replacements[unknownResidue]) {
     replacements[unknownResidue] = {
-      label: SYMBOLS[currentSymbol],
+      label: SYMBOLS[currentSymbol] || '?',
       id: unknownResidue,
     };
   }
