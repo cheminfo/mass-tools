@@ -1,9 +1,6 @@
 'use strict';
 
-const window = require('svgdom');
-
-const document = window.document;
-const { SVG, registerWindow } = require('@svgdotjs/svg.js');
+const getPaper = require('./getPaper');
 
 registerWindow(window, document);
 
@@ -20,7 +17,7 @@ function appendResiduesPosition(parsed, options = {}) {
   let line = 0;
   // we create a temporary paper in order to get the width of the text blocs
 
-  const paper = SVG(document.documentElement);
+  const paper = getPaper();
 
   for (let i = 0; i < parsed.all.length; i++) {
     let residue = parsed.all[i];
