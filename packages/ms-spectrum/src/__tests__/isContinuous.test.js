@@ -67,4 +67,10 @@ describe('test isContinuous', () => {
     let data = parseXY(text);
     expect(isContinuous({ data })).toBe(true);
   });
+
+  it('low experimental data', () => {
+    let text = readFileSync(join(__dirname, 'data/lowres.txt'), 'utf8');
+    let data = parseXY(text);
+    expect(isContinuous({ data })).toBe(true);
+  });
 });
