@@ -146,6 +146,7 @@ Object {
       "fromEnd": 1,
       "kind": "residue",
       "label": "Θ",
+      "replaced": true,
       "value": "Sec",
     },
     Object {
@@ -227,6 +228,7 @@ Object {
       "fromEnd": 1,
       "kind": "residue",
       "label": "Θ",
+      "replaced": true,
       "value": "Sec",
     },
   ],
