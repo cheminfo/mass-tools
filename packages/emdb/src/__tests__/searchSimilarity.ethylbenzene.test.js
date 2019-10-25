@@ -10,7 +10,6 @@ const DBManager = require('..');
 
 describe('test searchSimilarity for ethylbenzene', () => {
   let experimental = loadEthylbenzene();
-
   it('should find one result with bad distribution', () => {
     let dbManager = new DBManager();
     dbManager.fromMonoisotopicMass(106.077, {
@@ -50,5 +49,5 @@ describe('test searchSimilarity for ethylbenzene', () => {
 
 function loadEthylbenzene() {
   let text = fs.readFileSync(join(__dirname, 'data/ethylbenzene.txt'), 'utf8');
-  return parseXY(text, { arrayType: 'xxyy' });
+  return parseXY(text);
 }
