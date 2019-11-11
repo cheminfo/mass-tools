@@ -8,7 +8,7 @@ module.exports = function preprocessRanges(ranges) {
   ranges = JSON.parse(JSON.stringify(ranges));
   if (typeof ranges === 'string') {
     // need to convert to ranges
-    let parsed = parse(ranges.replace(/ /g, ''));
+    let parsed = parse(ranges.replace(/[\r\n\t ]/g, ''));
     let newRanges = [];
     let current = {
       mf: '',
