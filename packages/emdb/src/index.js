@@ -148,3 +148,8 @@ function replaceOrAppend(emdb, databaseName, results, append = false) {
   }
   emdb.databases[databaseName] = emdb.databases[databaseName].concat(results);
 }
+
+DBManager.Peptide = require('peptide');
+DBManager.Nucleotide = require('nucleotide');
+DBManager.MFParser = require('mf-parser');
+DBManager.IsotopicDistribution = require('isotopic-distribution');
