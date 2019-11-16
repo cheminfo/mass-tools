@@ -1,6 +1,6 @@
 {
   "name": "chemical-groups",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "JSON containing information about chemical groups",
   "main": "src/index.js",
   "files": [

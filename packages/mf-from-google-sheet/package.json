@@ -3,7 +3,7 @@
   "browser": {
     "./src/util/fetchText.js": "./src/util/fetchTextBrowser.js"
   },
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "Retrieve and format molecular formula from google sheet",
   "main": "src/index.js",
   "files": [
@@ -21,9 +21,9 @@
   },
   "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/mf-from-google-sheet#readme",
   "dependencies": {
-    "mf-generator": "^0.11.0",
-    "mf-parser": "^0.11.0",
-    "mf-utilities": "^0.11.0",
+    "mf-generator": "^0.12.0",
+    "mf-parser": "^0.12.0",
+    "mf-utilities": "^0.12.0",
     "papaparse": "^4.3.6",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5"
