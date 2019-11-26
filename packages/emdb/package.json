@@ -23,20 +23,20 @@
   "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/emdb#readme",
   "dependencies": {
     "isotopic-distribution": "^0.12.0",
-    "jszip": "^3.1.5",
+    "jszip": "^3.2.2",
     "mf-finder": "^0.12.0",
     "mf-from-google-sheet": "^0.12.0",
     "mf-generator": "^0.12.0",
     "mf-matcher": "^0.12.0",
     "mf-parser": "^0.12.0",
     "mf-utilities": "^0.12.0",
-    "ml-array-max": "^1.1.1",
-    "ml-array-min": "^1.1.1",
+    "ml-array-max": "^1.1.2",
+    "ml-array-min": "^1.1.2",
     "ml-regression-theil-sen": "^2.0.0",
     "ms-spectrum": "^0.12.0",
     "nucleotide": "^0.12.0",
     "peaks-similarity": "^2.3.1",
-    "peptide": "^1.10.0",
-    "request-promise-native": "^1.0.5"
+    "peptide": "^1.10.1",
+    "request-promise-native": "^1.0.8"
   }
 }
