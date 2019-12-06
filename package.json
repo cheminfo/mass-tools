@@ -1,6 +1,5 @@
 {
-  "private": true,
-  "name": "mfjs",
+  "name": "mf-global",
   "version": "0.43.1",
   "main": "src/index.js",
   "files": [
