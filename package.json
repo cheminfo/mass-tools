@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "molecular-formula",
+  "name": "mfjs",
   "version": "0.43.1",
   "main": "src/index.js",
   "files": [
