@@ -1,6 +1,7 @@
 {
-  "name": "mf-global",
-  "version": "0.0.1",
+  "private": true,
+  "name": "molecular-formula",
+  "version": "0.43.1",
   "main": "src/index.js",
   "files": [
     "src"
