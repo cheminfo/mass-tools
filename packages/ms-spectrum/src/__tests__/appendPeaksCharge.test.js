@@ -4,7 +4,11 @@ const appendPeaksCharge = require('../appendPeaksCharge');
 
 describe('test appendPeaksCharge', () => {
   it('custom options', () => {
-    let peaks = [{ x: 1, y: 1 }, { x: 1.5, y: 2 }, { x: 3, y: 3 }];
+    let peaks = [
+      { x: 1, y: 1 },
+      { x: 1.5, y: 2 },
+      { x: 3, y: 3 },
+    ];
     appendPeaksCharge(peaks, {
       min: 1,
       max: 1,
@@ -18,7 +22,11 @@ describe('test appendPeaksCharge', () => {
   });
 
   it('charge 1 or 2', () => {
-    let peaks = [{ x: 1, y: 1 }, { x: 1.5, y: 2 }, { x: 2.5, y: 3 }];
+    let peaks = [
+      { x: 1, y: 1 },
+      { x: 1.5, y: 2 },
+      { x: 2.5, y: 3 },
+    ];
     appendPeaksCharge(peaks);
     expect(peaks[0].charge).toBe(2);
     expect(peaks[1].charge).toBe(1);

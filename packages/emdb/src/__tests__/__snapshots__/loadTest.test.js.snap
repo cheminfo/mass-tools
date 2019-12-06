@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test loadTest 1`] = `
+exports[`loadTest 1`] = `
 Array [
   Object {
     "atoms": Object {

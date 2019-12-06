@@ -2,7 +2,7 @@
 
 const DBManager = require('..');
 
-test('test fromMonoisotopicMass', () => {
+test('fromMonoisotopicMass', () => {
   let dbManager = new DBManager();
   dbManager.fromMonoisotopicMass(120, {
     allowNeutral: true,
@@ -10,7 +10,7 @@ test('test fromMonoisotopicMass', () => {
   expect(dbManager.databases.monoisotopic).toHaveLength(8);
 });
 
-test('test fromMonoisotopicMass with ionizations', () => {
+test('fromMonoisotopicMass with ionizations', () => {
   let dbManager = new DBManager();
   dbManager.fromMonoisotopicMass(120, {
     allowNeutral: false,
@@ -20,7 +20,7 @@ test('test fromMonoisotopicMass with ionizations', () => {
   expect(dbManager.databases.monoisotopic).toHaveLength(9);
 });
 
-test('test fromMonoisotopicMass large database', () => {
+test('fromMonoisotopicMass large database', () => {
   let dbManager = new DBManager();
   dbManager.fromMonoisotopicMass(1000, {
     ranges: 'C0-100 H0-100 N0-100 O0-100',

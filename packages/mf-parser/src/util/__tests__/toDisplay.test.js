@@ -3,13 +3,25 @@
 let tests = [
   {
     mf: 'C10',
-    parsed: [{ kind: 'atom', value: 'C' }, { kind: 'multiplier', value: 10 }],
-    result: [{ kind: 'text', value: 'C' }, { kind: 'subscript', value: '10' }],
+    parsed: [
+      { kind: 'atom', value: 'C' },
+      { kind: 'multiplier', value: 10 },
+    ],
+    result: [
+      { kind: 'text', value: 'C' },
+      { kind: 'subscript', value: '10' },
+    ],
   },
   {
     mf: 'C-1',
-    parsed: [{ kind: 'atom', value: 'C' }, { kind: 'multiplier', value: -1 }],
-    result: [{ kind: 'text', value: 'C' }, { kind: 'subscript', value: '-1' }],
+    parsed: [
+      { kind: 'atom', value: 'C' },
+      { kind: 'multiplier', value: -1 },
+    ],
+    result: [
+      { kind: 'text', value: 'C' },
+      { kind: 'subscript', value: '-1' },
+    ],
   },
   {
     mf: 'C1-10',
@@ -24,17 +36,26 @@ let tests = [
   },
   {
     mf: '2H',
-    parsed: [{ kind: 'preMultiplier', value: 2 }, { kind: 'atom', value: 'H' }],
+    parsed: [
+      { kind: 'preMultiplier', value: 2 },
+      { kind: 'atom', value: 'H' },
+    ],
     result: [{ kind: 'text', value: '2H' }],
   },
   {
     mf: '[13C]',
     parsed: [{ kind: 'isotope', value: { atom: 'C', isotope: 13 } }],
-    result: [{ kind: 'superscript', value: 13 }, { kind: 'text', value: 'C' }],
+    result: [
+      { kind: 'superscript', value: 13 },
+      { kind: 'text', value: 'C' },
+    ],
   },
   {
     mf: 'C++',
-    parsed: [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: 2 }],
+    parsed: [
+      { kind: 'atom', value: 'C' },
+      { kind: 'charge', value: 2 },
+    ],
     result: [
       { kind: 'text', value: 'C' },
       { kind: 'superscript', value: '+2' },

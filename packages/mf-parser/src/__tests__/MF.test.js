@@ -183,7 +183,7 @@ test('MF of (+)SO4(+)(-2)2', () => {
   });
 });
 
-test('test unsaturation with charges', () => {
+test('unsaturation with charges', () => {
   expect(new MF('CH4').getInfo().unsaturation).toBe(0);
   expect(new MF('C10H22O').getInfo().unsaturation).toBe(0);
   expect(new MF('H+').getInfo().unsaturation).toBe(0);
@@ -222,7 +222,7 @@ test('MF of NC[13C][15N]2NN2', () => {
   expect(newMF).toBe('C[13C]N4[15N]2');
 });
 
-test('MF of DNA HODampDtmpDcmpDgmpH  ', () => {
+test('MF of DNA HODampDtmpDcmpDgmpH', () => {
   let mf = new MF('HODampDtmpDgmpDcmpH');
   let info = mf.getInfo();
   expect(info).toStrictEqual({
@@ -235,7 +235,7 @@ test('MF of DNA HODampDtmpDcmpDgmpH  ', () => {
   });
 });
 
-test('MF of RNA HOAmpUmpH  ', () => {
+test('MF of RNA HOAmpUmpH', () => {
   let mf = new MF('HOAmpUmpH');
   let info = mf.getInfo();
   expect(info).toStrictEqual({

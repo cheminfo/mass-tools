@@ -2,7 +2,7 @@
 
 const DBManager = require('..');
 
-test('test fromPeptidicSequence', () => {
+test('fromPeptidicSequence', () => {
   let dbManager = new DBManager();
   dbManager.fromPeptidicSequence('AAKK', {
     allowNeutralLoss: false,

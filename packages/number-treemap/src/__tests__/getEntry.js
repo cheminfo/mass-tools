@@ -2,7 +2,7 @@
 
 const TreeMap = require('../TreeMap');
 
-test('test TreeMap get', () => {
+test('TreeMap get', () => {
   let treeMap = new TreeMap();
   treeMap.set(1, 10);
   treeMap.set(2, 20);

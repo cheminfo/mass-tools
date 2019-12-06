@@ -5,7 +5,7 @@ const { join } = require('path');
 
 const sequenceSVG = require('../sequenceSVG');
 
-test('test sequenceSVG of nucleotide', () => {
+test('sequenceSVG of nucleotide', () => {
   let options = {
     width: 600,
     leftRightBorders: 50,

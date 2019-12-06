@@ -2,7 +2,7 @@
 
 const TreeMap = require('../TreeMap');
 
-test('test TreeMap get', () => {
+test('TreeMap get', () => {
   let treeMap = new TreeMap();
   expect(treeMap.getFirstEntry()).toBeNull();
   treeMap.set(1, 10);

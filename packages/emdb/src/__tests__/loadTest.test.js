@@ -2,7 +2,7 @@
 
 const DBManager = require('..');
 
-test('test loadTest', () => {
+test('loadTest', () => {
   let dbManager = new DBManager();
   dbManager.loadTest();
   expect(dbManager.databases.test).toMatchSnapshot();

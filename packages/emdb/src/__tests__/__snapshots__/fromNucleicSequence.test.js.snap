@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test AGG with d-h2o and base loss 1`] = `
+exports[`AGG with d-h2o and base loss 1`] = `
 Array [
   Object {
     "atoms": Object {
@@ -172,7 +172,7 @@ Array [
 ]
 `;
 
-exports[`test AGGCAG fragment 1`] = `
+exports[`AGGCAG fragment 1`] = `
 Array [
   Object {
     "atoms": Object {
@@ -344,7 +344,7 @@ Array [
 ]
 `;
 
-exports[`test TACGTGCCAATAC internal fragment 1`] = `
+exports[`TACGTGCCAATAC internal fragment 1`] = `
 Array [
   Object {
     "atoms": Object {
@@ -1916,7 +1916,7 @@ Array [
 ]
 `;
 
-exports[`test fromNucleicSequence 1`] = `
+exports[`fromNucleicSequence 1`] = `
 Array [
   Object {
     "atoms": Object {
@@ -2087,7 +2087,7 @@ Array [
 ]
 `;
 
-exports[`test fromNucleicSequence ds-DNA 1`] = `
+exports[`fromNucleicSequence ds-DNA 1`] = `
 Array [
   Object {
     "atoms": Object {

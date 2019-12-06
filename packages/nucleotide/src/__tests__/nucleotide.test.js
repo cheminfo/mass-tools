@@ -40,28 +40,28 @@ describe('test nucleotide', () => {
     expect(sequence).toStrictEqual('(HO)DampDtmpDcmp(NH2)');
   });
 
-  it('nucleotide to sequence of AAU ', () => {
+  it('nucleotide to sequence of AAU', () => {
     let sequence = Nucleotide.sequenceToMF('AAU');
     expect(sequence).toStrictEqual('HOAmpAmpUmpH');
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(982.6, 1);
   });
 
-  it('nucleotide to sequence of circular AAA ', () => {
+  it('nucleotide to sequence of circular AAA', () => {
     let sequence = Nucleotide.sequenceToMF('AAA', { circular: true });
     expect(sequence).toStrictEqual('DampDampDamp.DtmpDtmpDtmp');
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(1852.21, 1);
   });
 
-  it('nucleotide to sequence of DNA AAA ', () => {
+  it('nucleotide to sequence of DNA AAA', () => {
     let sequence = Nucleotide.sequenceToMF('AAA', { kind: 'DNA' });
     expect(sequence).toStrictEqual('HODampDampDampH');
     let mass = new MF(sequence).getInfo().mass;
     expect(mass).toBeCloseTo(957.64, 1);
   });
 
-  it('nucleotide to sequence of ds-DNA AAA ', () => {
+  it('nucleotide to sequence of ds-DNA AAA', () => {
     let sequence = Nucleotide.sequenceToMF('AAA', { kind: 'ds-DNA' });
     expect(sequence).toStrictEqual('HODampDampDampH.HODtmpDtmpDtmpH');
     let mass = new MF(sequence).getInfo().mass;

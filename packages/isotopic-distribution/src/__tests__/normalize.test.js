@@ -9,6 +9,9 @@ describe('test distribution normalize', () => {
     dist.push(2, 3);
     dist.normalize();
 
-    expect(dist.array).toStrictEqual([{ x: 1, y: 0.4 }, { x: 2, y: 0.6 }]);
+    expect(dist.array).toStrictEqual([
+      { x: 1, y: 0.4 },
+      { x: 2, y: 0.6 },
+    ]);
   });
 });

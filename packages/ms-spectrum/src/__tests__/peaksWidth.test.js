@@ -24,7 +24,10 @@ describe('test test peakWidth', () => {
   });
 
   it('two peaks', () => {
-    let peaks = [{ width: 2, x: 1, y: 1 }, { width: 8, x: 2, y: 1 }];
+    let peaks = [
+      { width: 2, x: 1, y: 1 },
+      { width: 8, x: 2, y: 1 },
+    ];
     let result = peaksWidth(peaks);
     expect(result.predictFct(2)).toBeCloseTo(8, 5);
     expect(result.fit.x).toHaveLength(1001);
@@ -43,7 +46,10 @@ describe('test test peakWidth', () => {
 
   it('two peaks zero width', () => {
     expect(() => {
-      peaksWidth([{ width: 0, x: 1, y: 1 }, { width: 0, x: 2, y: 1 }]);
+      peaksWidth([
+        { width: 0, x: 1, y: 1 },
+        { width: 0, x: 2, y: 1 },
+      ]);
     }).toThrow('peaksWidth: can not calculate');
   });
 });

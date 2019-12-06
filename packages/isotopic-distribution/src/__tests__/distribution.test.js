@@ -28,7 +28,10 @@ describe('test Distribution', () => {
     array.push(0, 0);
     array.push(1, 1);
     array.join();
-    expect(array.array).toStrictEqual([{ x: 0, y: 0 }, { x: 1, y: 1 }]);
+    expect(array.array).toStrictEqual([
+      { x: 0, y: 0 },
+      { x: 1, y: 1 },
+    ]);
   });
 
   it('really join array', () => {
@@ -71,6 +74,9 @@ describe('test Distribution', () => {
     array.push(2.25, 1);
     array.push(5, 1);
     array.join(1);
-    expect(array.array).toStrictEqual([{ x: 1.85, y: 5 }, { x: 5, y: 1 }]);
+    expect(array.array).toStrictEqual([
+      { x: 1.85, y: 5 },
+      { x: 5, y: 1 },
+    ]);
   });
 });

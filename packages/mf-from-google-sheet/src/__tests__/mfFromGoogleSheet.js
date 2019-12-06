@@ -3,7 +3,7 @@
 let mfFromGoogleSheet = require('..');
 
 // The original document is on: https://docs.google.com/spreadsheets/d/15Kuc5MeOhvm4oeTMvEuP1rWdRFiVWosxXhYwAmuf3Uo/edit#gid=0
-test('Test getReferenceList with existing', async () => {
+test('getReferenceList with existing', async () => {
   let result = await mfFromGoogleSheet(
     'https://googledocs.cheminfo.org/spreadsheets/d/15Kuc5MeOhvm4oeTMvEuP1rWdRFiVWosxXhYwAmuf3Uo/export?format=tsv',
   );
@@ -13,7 +13,7 @@ test('Test getReferenceList with existing', async () => {
   expect(result[0].ms.em).toBeCloseTo(5.95250122671093, 5);
 });
 
-test('Test getReferenceList with non existing document', () => {
+test('getReferenceList with non existing document', () => {
   // eslint-disable-next-line jest/no-test-return-statement
   return expect(
     mfFromGoogleSheet(

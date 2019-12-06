@@ -110,7 +110,7 @@ describe('test searchSimilarity', () => {
     expect(results.test[0].ms.similarity.value).toBeCloseTo(0.895, 2);
   });
 
-  it('should find one result with bad bad distribution, large window huge width ', () => {
+  it('should find one result with bad bad distribution, large window huge width', () => {
     let dbManager = new DBManager();
     dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120], y: [1] });

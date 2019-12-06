@@ -2,7 +2,7 @@
 
 const matcher = require('../generalMatcher');
 
-test('test mfFilter', () => {
+test('mfFilter', () => {
   let entry = {
     mf: 'C10',
     mw: 120.11,

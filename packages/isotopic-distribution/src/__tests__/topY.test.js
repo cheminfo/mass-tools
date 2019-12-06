@@ -11,6 +11,9 @@ describe('test distribution topY', () => {
     dist.push(2, 4);
     dist.topY(2);
 
-    expect(dist.array).toStrictEqual([{ x: 2, y: 4 }, { x: 2, y: 3 }]);
+    expect(dist.array).toStrictEqual([
+      { x: 2, y: 4 },
+      { x: 2, y: 3 },
+    ]);
   });
 });

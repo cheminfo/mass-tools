@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test fromPeptidicSequence 1`] = `
+exports[`fromPeptidicSequence 1`] = `
 Array [
   Object {
     "atoms": Object {

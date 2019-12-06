@@ -3,7 +3,7 @@
 const loadKnapSack = require('../loadKnapSack');
 
 jest.setTimeout(30000);
-test('test loadKnapSack', async () => {
+test('loadKnapSack', async () => {
   let data = await loadKnapSack();
 
   expect(data.length).toBeGreaterThan(40000);

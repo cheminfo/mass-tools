@@ -2,7 +2,7 @@
 
 const DBManager = require('..');
 
-test('test fromNucleicSequence', () => {
+test('fromNucleicSequence', () => {
   let dbManager = new DBManager();
   dbManager.fromNucleicSequence('AAA', {
     ionizations: 'H+,Na+',
@@ -18,7 +18,7 @@ test('test fromNucleicSequence', () => {
   expect(nucleic).toMatchSnapshot();
 });
 
-test('test fromNucleicSequence ds-DNA', () => {
+test('fromNucleicSequence ds-DNA', () => {
   let dbManager = new DBManager();
   dbManager.fromNucleicSequence('AAA', {
     ionizations: 'H+,Na+',
@@ -36,7 +36,7 @@ test('test fromNucleicSequence ds-DNA', () => {
   expect(nucleic).toMatchSnapshot();
 });
 
-test('test TACGTGCCAATAC internal fragment', () => {
+test('TACGTGCCAATAC internal fragment', () => {
   let dbManager = new DBManager();
   dbManager.fromNucleicSequence('TACGTGCCAATAC', {
     ionizations: '(H+)-5',
@@ -54,7 +54,7 @@ test('test TACGTGCCAATAC internal fragment', () => {
   expect(nucleic).toMatchSnapshot();
 });
 
-test('test AGGCAG fragment', () => {
+test('AGGCAG fragment', () => {
   let dbManager = new DBManager();
   dbManager.fromNucleicSequence('AGGCAG', {
     ionizations: '(H+)-',
@@ -70,7 +70,7 @@ test('test AGGCAG fragment', () => {
   expect(nucleic).toMatchSnapshot();
 });
 
-test('test AGG with d-h2o and base loss', () => {
+test('AGG with d-h2o and base loss', () => {
   let dbManager = new DBManager();
   dbManager.fromNucleicSequence('AGG', {
     ionizations: '(H+)-1',

@@ -3,42 +3,84 @@
 const parse = require('../parse');
 
 let tests = {
-  C10: [{ kind: 'atom', value: 'C' }, { kind: 'multiplier', value: 10 }],
-  'C-1': [{ kind: 'atom', value: 'C' }, { kind: 'multiplier', value: -1 }],
+  C10: [
+    { kind: 'atom', value: 'C' },
+    { kind: 'multiplier', value: 10 },
+  ],
+  'C-1': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'multiplier', value: -1 },
+  ],
   'C1-10': [
     { kind: 'atom', value: 'C' },
     { kind: 'multiplierRange', value: { from: 1, to: 10 } },
   ],
-  '2H': [{ kind: 'preMultiplier', value: 2 }, { kind: 'atom', value: 'H' }],
+  '2H': [
+    { kind: 'preMultiplier', value: 2 },
+    { kind: 'atom', value: 'H' },
+  ],
   '[13C]': [{ kind: 'isotope', value: { atom: 'C', isotope: 13 } }],
   '[2H]': [{ kind: 'isotope', value: { atom: 'H', isotope: 2 } }],
-  'C+': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: 1 }],
-  'C-': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: -1 }],
+  'C+': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'charge', value: 1 },
+  ],
+  'C-': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'charge', value: -1 },
+  ],
   'C-H': [
     { kind: 'atom', value: 'C' },
     { kind: 'charge', value: -1 },
     { kind: 'atom', value: 'H' },
   ],
-  'C++': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: 2 }],
-  'C--': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: -2 }],
+  'C++': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'charge', value: 2 },
+  ],
+  'C--': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'charge', value: -2 },
+  ],
   'C2+': [
     { kind: 'atom', value: 'C' },
     { kind: 'multiplier', value: 2 },
     { kind: 'charge', value: 1 },
   ],
-  'C(2+)': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: 2 }],
-  'C(++)': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: 2 }],
-  'C(+2)': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: 2 }],
-  'C(2-)': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: -2 }],
-  'C(-2)': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: -2 }],
-  'C(--)': [{ kind: 'atom', value: 'C' }, { kind: 'charge', value: -2 }],
+  'C(2+)': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'charge', value: 2 },
+  ],
+  'C(++)': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'charge', value: 2 },
+  ],
+  'C(+2)': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'charge', value: 2 },
+  ],
+  'C(2-)': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'charge', value: -2 },
+  ],
+  'C(-2)': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'charge', value: -2 },
+  ],
+  'C(--)': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'charge', value: -2 },
+  ],
   '(H+)': [
     { kind: 'openingParenthesis', value: '(' },
     { kind: 'atom', value: 'H' },
     { kind: 'charge', value: 1 },
     { kind: 'closingParenthesis', value: ')' },
   ],
-  C$ABC: [{ kind: 'atom', value: 'C' }, { kind: 'comment', value: 'ABC' }],
+  C$ABC: [
+    { kind: 'atom', value: 'C' },
+    { kind: 'comment', value: 'ABC' },
+  ],
   'C(-1)(-3)': [
     { kind: 'atom', value: 'C' },
     { kind: 'charge', value: -1 },

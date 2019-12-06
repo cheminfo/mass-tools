@@ -294,7 +294,10 @@ module.exports = [
     mass: 57.114410373442986,
     monoisotopicMass: 57.07042529007,
     unsaturation: -1,
-    elements: [{ symbol: 'C', number: 4 }, { symbol: 'H', number: 9 }],
+    elements: [
+      { symbol: 'C', number: 4 },
+      { symbol: 'H', number: 9 },
+    ],
   },
   {
     symbol: 'Bum',
@@ -335,7 +338,10 @@ module.exports = [
     mass: 91.13073655553718,
     monoisotopicMass: 91.05477522561,
     unsaturation: 7,
-    elements: [{ symbol: 'C', number: 7 }, { symbol: 'H', number: 7 }],
+    elements: [
+      { symbol: 'C', number: 7 },
+      { symbol: 'H', number: 7 },
+    ],
   },
   {
     symbol: 'Bn',
@@ -345,7 +351,10 @@ module.exports = [
     mass: 91.13073655553718,
     monoisotopicMass: 91.05477522561,
     unsaturation: 7,
-    elements: [{ symbol: 'C', number: 7 }, { symbol: 'H', number: 7 }],
+    elements: [
+      { symbol: 'C', number: 7 },
+      { symbol: 'H', number: 7 },
+    ],
   },
   {
     symbol: 'Bzlo',
@@ -442,7 +451,10 @@ module.exports = [
     mass: 65.09338325395512,
     monoisotopicMass: 65.03912516115,
     unsaturation: 5,
-    elements: [{ symbol: 'C', number: 5 }, { symbol: 'H', number: 5 }],
+    elements: [
+      { symbol: 'C', number: 5 },
+      { symbol: 'H', number: 5 },
+    ],
   },
   {
     symbol: 'Cys',
@@ -522,7 +534,10 @@ module.exports = [
     mass: 29.061175563749384,
     monoisotopicMass: 29.03912516115,
     unsaturation: -1,
-    elements: [{ symbol: 'C', number: 2 }, { symbol: 'H', number: 5 }],
+    elements: [
+      { symbol: 'C', number: 2 },
+      { symbol: 'H', number: 5 },
+    ],
   },
   {
     symbol: 'Fmoc',
@@ -855,7 +870,10 @@ module.exports = [
     mass: 15.03455815890258,
     monoisotopicMass: 15.02347509669,
     unsaturation: -1,
-    elements: [{ symbol: 'C', number: 1 }, { symbol: 'H', number: 3 }],
+    elements: [
+      { symbol: 'C', number: 1 },
+      { symbol: 'H', number: 3 },
+    ],
   },
   {
     symbol: 'Mebzl',
@@ -864,7 +882,10 @@ module.exports = [
     mass: 105.15735396038399,
     monoisotopicMass: 105.07042529007,
     unsaturation: 7,
-    elements: [{ symbol: 'C', number: 8 }, { symbol: 'H', number: 9 }],
+    elements: [
+      { symbol: 'C', number: 8 },
+      { symbol: 'H', number: 9 },
+    ],
   },
   {
     symbol: 'Meobzl',
@@ -958,7 +979,10 @@ module.exports = [
     mass: 257.3497107536532,
     monoisotopicMass: 257.13302554791,
     unsaturation: 23,
-    elements: [{ symbol: 'C', number: 20 }, { symbol: 'H', number: 17 }],
+    elements: [
+      { symbol: 'C', number: 20 },
+      { symbol: 'H', number: 17 },
+    ],
   },
   {
     symbol: 'Nle',
@@ -1106,7 +1130,10 @@ module.exports = [
     mass: 77.10411915069038,
     monoisotopicMass: 77.03912516115,
     unsaturation: 7,
-    elements: [{ symbol: 'C', number: 6 }, { symbol: 'H', number: 5 }],
+    elements: [
+      { symbol: 'C', number: 6 },
+      { symbol: 'H', number: 5 },
+    ],
   },
   {
     symbol: 'Phe',
@@ -1316,7 +1343,10 @@ module.exports = [
     mass: 57.114410373442986,
     monoisotopicMass: 57.07042529007,
     unsaturation: -1,
-    elements: [{ symbol: 'C', number: 4 }, { symbol: 'H', number: 9 }],
+    elements: [
+      { symbol: 'C', number: 4 },
+      { symbol: 'H', number: 9 },
+    ],
   },
   {
     symbol: 'Tbuo',
@@ -1483,7 +1513,10 @@ module.exports = [
     mass: 243.32309334880637,
     monoisotopicMass: 243.11737548345,
     unsaturation: 23,
-    elements: [{ symbol: 'C', number: 19 }, { symbol: 'H', number: 15 }],
+    elements: [
+      { symbol: 'C', number: 19 },
+      { symbol: 'H', number: 15 },
+    ],
   },
   {
     symbol: 'Tyr',
