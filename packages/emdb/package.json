@@ -1,6 +1,6 @@
 {
   "name": "emdb",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Database manager for exact mass query",
   "browser": {
     "./src/util/fetchArrayBuffer.js": "./src/util/fetchArrayBufferBrowser.js",
@@ -28,7 +28,7 @@
     "mf-from-google-sheet": "^0.12.0",
     "mf-generator": "^0.12.0",
     "mf-matcher": "^0.12.0",
-    "mf-parser": "^0.12.0",
+    "mf-parser": "^0.13.0",
     "mf-utilities": "^0.12.0",
     "ml-array-max": "^1.1.2",
     "ml-array-min": "^1.1.2",
