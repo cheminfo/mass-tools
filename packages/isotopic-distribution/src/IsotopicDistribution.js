@@ -24,6 +24,8 @@ class IsotopicDistribution {
    * @param {number} [options.fwhm=0.01] - Amount of Dalton under which 2 peaks are joined
    * @param {number} [options.maxLines=5000] - Maximal number of lines during calculations
    * @param {number} [options.minY=1e-8] - Minimal signal height during calculations
+   * @param {number} [options.ensureCase=false] - Ensure uppercase / lowercase
+   *
    * @param {number} [options.allowNeutral=true] - Should we keep the distribution if the molecule has no charge
    */
 
@@ -37,7 +39,7 @@ class IsotopicDistribution {
         ).getIsotopesInfo();
       }
     } else {
-      let mf = new MF(value);
+      let mf = new MF(value, { ensureCase: options.ensureCase });
       let mfInfo = mf.getInfo();
       let ionizations = preprocessIonizations(options.ionizations);
       let parts = mfInfo.parts || [mfInfo];
