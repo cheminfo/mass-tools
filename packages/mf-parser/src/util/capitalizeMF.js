@@ -3,7 +3,7 @@
 let elements = require('chemical-elements').getElementsObject();
 let groups = require('chemical-groups').getGroupsObject();
 
-const isMF = require('./isMF');
+const isMF = require('../../../mf-utilities/src/isMF');
 
 /**
  * Try to capitalize a molecular formula based on what end users 'would' expect
