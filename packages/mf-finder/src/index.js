@@ -17,7 +17,7 @@ const TargetMassCache = require('./TargetMassCache');
 
 let targetMassCache;
 
-module.exports = function (targetMass, options = {}) {
+module.exports = function(targetMass, options = {}) {
   const {
     minCharge = Number.MIN_SAFE_INTEGER,
     maxCharge = Number.MAX_SAFE_INTEGER,

@@ -2,7 +2,7 @@
 
 const generateMFs = require('..');
 
-test('generateMFs from array of array with comment', function () {
+test('generateMFs from array of array with comment', function() {
   let mfsArray = [['C', 'H$YY'], [], [''], ['Cl', 'Br$XX']];
   let result = generateMFs(mfsArray);
   expect(result[0].mf).toBe('HCl');
@@ -10,20 +10,20 @@ test('generateMFs from array of array with comment', function () {
   expect(result).toHaveLength(4);
 });
 
-test('generateMFs from array of string with empty', function () {
+test('generateMFs from array of string with empty', function() {
   let mfsArray = ['C,H,', 'Cl,Br'];
   let result = generateMFs(mfsArray).map((entry) => entry.mf);
   expect(result).toStrictEqual(['Cl', 'HCl', 'CCl', 'Br', 'HBr', 'CBr']);
 });
 
-test('generateMFs from array of string with comment', function () {
+test('generateMFs from array of string with comment', function() {
   let mfsArray = ['C.H.O', '+,++', ['Cl', 'Br$XX']];
   let result = generateMFs(mfsArray).sort((a, b) => a.ms.em - b.ms.em);
   expect(result[0].mf).toBe('HCl(+2)');
   expect(result).toHaveLength(12);
 });
 
-test('generateMFs from  array of string with some range and non range', function () {
+test('generateMFs from  array of string with some range and non range', function() {
   let mfsArray = ['CN0-2'];
   let result = generateMFs(mfsArray);
   expect(result[0].mf).toBe('C');
@@ -32,7 +32,7 @@ test('generateMFs from  array of string with some range and non range', function
   expect(result).toHaveLength(3);
 });
 
-test('From array of string with some range and non range CN0-2O00-1K', function () {
+test('From array of string with some range and non range CN0-2O00-1K', function() {
   let mfsArray = ['CN0-2O00-1K'];
   let result = generateMFs(mfsArray);
   expect(result[0].mf).toBe('CK');
@@ -44,7 +44,7 @@ test('From array of string with some range and non range CN0-2O00-1K', function 
   expect(result).toHaveLength(6);
 });
 
-test('From array of string with some range and non range NaK0-2', function () {
+test('From array of string with some range and non range NaK0-2', function() {
   let mfsArray = ['NaK0-2'];
   let result = generateMFs(mfsArray);
   expect(result[0].mf).toBe('Na');
@@ -53,7 +53,7 @@ test('From array of string with some range and non range NaK0-2', function () {
   expect(result).toHaveLength(3);
 });
 
-test('From array of string with some range and non range C(Me(N2))0-2(CH3)0-1K', function () {
+test('From array of string with some range and non range C(Me(N2))0-2(CH3)0-1K', function() {
   let mfsArray = ['C(Me(N2))0-2(CH3)0-1K'];
   let result = generateMFs(mfsArray, { canonizeMF: false, uniqueMFs: false });
   expect(result[0].mf).toBe('CK');
@@ -65,14 +65,14 @@ test('From array of string with some range and non range C(Me(N2))0-2(CH3)0-1K',
   expect(result).toHaveLength(6);
 });
 
-test('From array of string with some range', function () {
+test('From array of string with some range', function() {
   let mfsArray = ['C1-3N0-2Cl0-0BrO1-1.C2-3H3-4', ['C', 'O']];
   let result = generateMFs(mfsArray, { canonizeMF: true });
   expect(result[0].mf).toBe('C3H3');
   expect(result).toHaveLength(26);
 });
 
-test('From array of string chem em and msem', function () {
+test('From array of string chem em and msem', function() {
   let mfsArray = ['C0-2.O', ['+', '(-)', '++', '(--)']];
 
   let result = generateMFs(mfsArray);
@@ -81,19 +81,19 @@ test('From array of string chem em and msem', function () {
   expect(result).toHaveLength(16);
 });
 
-test('From array of string to large array', function () {
+test('From array of string to large array', function() {
   let mfsArray = ['C0-100', 'O0-100'];
   let result = generateMFs(mfsArray);
   expect(result).toHaveLength(101 * 101);
 });
 
-test('From array of string to large array and filter', function () {
+test('From array of string to large array and filter', function() {
   let mfsArray = ['C0-100', 'O0-100'];
   let result = generateMFs(mfsArray, { filter: { minEM: 0.1, maxEM: 13 } });
   expect(result).toHaveLength(1);
 });
 
-test('From array of string to large array and filter unsaturation', function () {
+test('From array of string to large array and filter unsaturation', function() {
   let mfsArray = ['C0-100', 'H0-100'];
   let result = generateMFs(mfsArray, {
     filter: { unsaturation: { min: 0, max: 1 } },
@@ -101,7 +101,7 @@ test('From array of string to large array and filter unsaturation', function () 
   expect(result).toHaveLength(151);
 });
 
-test('From array of string to large array and filter unsaturation min/max and integer unsaturation', function () {
+test('From array of string to large array and filter unsaturation min/max and integer unsaturation', function() {
   let mfsArray = ['C0-100', 'H0-100'];
   let result = generateMFs(mfsArray, {
     filter: { unsaturation: { min: 0, max: 1, onlyInteger: true } },
@@ -109,7 +109,7 @@ test('From array of string to large array and filter unsaturation min/max and in
   expect(result).toHaveLength(101);
 });
 
-test('Combine with ionizations', function () {
+test('Combine with ionizations', function() {
   let result = generateMFs(['C1-2'], { ionizations: 'H+,Na+,H++' });
   expect(result.map((a) => a.ms.em).sort((a, b) => a - b)).toStrictEqual([
     6.50336393620593,
@@ -121,14 +121,14 @@ test('Combine with ionizations', function () {
   ]);
 });
 
-test('Strange comments', function () {
+test('Strange comments', function() {
   let mfsArray = ['C$1>10', 'O$D2>20'];
   let result = generateMFs(mfsArray);
   expect(result[0].mf).toBe('CO');
   expect(result[0].comment).toBe('1>10 D2>20');
 });
 
-test('Check info', function () {
+test('Check info', function() {
   let mfsArray = ['C', '', 'C5(C)2'];
   let result = generateMFs(mfsArray, { canonizeMF: true })[0];
   expect(JSON.stringify(result)).toBe(
@@ -136,7 +136,7 @@ test('Check info', function () {
   );
 });
 
-test('generateMFs from array of array with negative ionisation', function () {
+test('generateMFs from array of array with negative ionisation', function() {
   let mfsArray = ['H2', ['Cl', 'Br']];
   let result = generateMFs(mfsArray, { ionizations: '(H+)-2' });
   expect(result[0].ms.em).toBe(17.484974920909067);
@@ -144,7 +144,7 @@ test('generateMFs from array of array with negative ionisation', function () {
   expect(result).toHaveLength(2);
 });
 
-test('generateMFs from array with charge and range', function () {
+test('generateMFs from array with charge and range', function() {
   let mfsArray = ['(H+)2-3'];
   let result = generateMFs(mfsArray, { ionizations: '(H+)-2,Na+' });
   expect(result.map((a) => a.ms.em).sort((a, b) => a - b)).toStrictEqual([
@@ -155,7 +155,7 @@ test('generateMFs from array with charge and range', function () {
   ]);
 });
 
-test('generateMFs from array with target masses', function () {
+test('generateMFs from array with target masses', function() {
   let mfsArray = ['C1-100'];
   let result = generateMFs(mfsArray, {
     ionizations: '+,++',
@@ -170,7 +170,7 @@ test('generateMFs from array with target masses', function () {
   expect(result.sort((a, b) => a.em - b.em)).toMatchSnapshot();
 });
 
-test('generateMFs from array with charge and negative range', function () {
+test('generateMFs from array with charge and negative range', function() {
   let mfsArray = ['(H+)-2--4'];
   let result = generateMFs(mfsArray);
   expect(result.map((a) => a.ms.em).sort((a, b) => a - b)).toStrictEqual([

@@ -9,12 +9,14 @@ test('getIsotopesInfo from C{50,50}[13C]H2', () => {
   expect(info.charge).toBe(4);
   expect(info.isotopes[0].distribution).toStrictEqual([
     { x: 12, y: 0.9893 },
-    { x: 13.00335483507, y: 0.0107 }
+    { x: 13.00335483507, y: 0.0107 },
   ]);
-  expect(info.isotopes[1].distribution).toStrictEqual([{ x: 13.00335483507, y: 1 }]);
+  expect(info.isotopes[1].distribution).toStrictEqual([
+    { x: 13.00335483507, y: 1 },
+  ]);
   expect(info.isotopes[2].distribution).toStrictEqual([
     { x: 12, y: 0.5 },
-    { x: 13.00335483507, y: 0.5 }
+    { x: 13.00335483507, y: 0.5 },
   ]);
 });
 

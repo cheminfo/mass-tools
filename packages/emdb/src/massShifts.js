@@ -19,7 +19,10 @@ function massShifts(similarities, options = {}) {
   }
 
   results = results.filter(
-    (result) => result.ms && result.ms.similarity && result.ms.similarity.value > minSimilarity,
+    (result) =>
+      result.ms &&
+      result.ms.similarity &&
+      result.ms.similarity.value > minSimilarity,
   );
 
   if (results.length < minLength) {

@@ -16,7 +16,7 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
     labelFontFamily = 'Verdana',
     labelSize = 8,
     verticalShiftForTerminalAnnotations = 20,
-    parsing
+    parsing,
   } = options;
 
   let parsedSequence = sequenceParser(sequence, parsing);
@@ -26,14 +26,14 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
     spaceBetweenResidues,
     labelFontFamily,
     labelSize,
-    width
+    width,
   });
 
   let results = improveResults(analysisResult, parsedSequence.residues.length);
 
   let rowHeight = getRowHeight(results, parsedSequence.all, {
     verticalShiftForTerminalAnnotations,
-    spaceBetweenInternalLines
+    spaceBetweenInternalLines,
   });
 
   // We start to create the SVG and create the paper
@@ -48,11 +48,11 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
       family: labelFontFamily,
       size: 12,
       weight: 'bold',
-      fill: residue.replaced ? 'darkviolet' : '#888'
+      fill: residue.replaced ? 'darkviolet' : '#888',
     });
     text.attr({
       x: residue.paper.xFrom,
-      y: residue.paper.y
+      y: residue.paper.y,
     });
     text.attr({ id: `residue-${residue.fromBegin}` });
   });
@@ -79,29 +79,29 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
           residue.paper.xTo + spaceBetweenResidues / 2,
           residue.paper.y,
           residue.paper.xTo + spaceBetweenResidues / 2,
-          residue.paper.y - 8
+          residue.paper.y - 8,
         );
         line.stroke({
           color: result.color,
           width: strokeWidth,
-          linecap: 'round'
+          linecap: 'round',
         });
         if (result.fromBegin) {
           line = paper.line(
             residue.paper.xTo + spaceBetweenResidues / 2,
             residue.paper.y,
             residue.paper.xTo + spaceBetweenResidues / 2 - 5,
-            residue.paper.y + 5
+            residue.paper.y + 5,
           );
           line.stroke({
             color: result.color,
             width: strokeWidth,
-            linecap: 'round'
+            linecap: 'round',
           });
           drawLabel(
             result,
             residue.paper.xTo + spaceBetweenResidues / 2,
-            residue.paper.y + 12 + residue.paper.bottomPosition * labelSize
+            residue.paper.y + 12 + residue.paper.bottomPosition * labelSize,
           );
           residue.paper.bottomPosition++;
         } else {
@@ -109,17 +109,17 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
             residue.paper.xTo + spaceBetweenResidues / 2,
             residue.paper.y - 8,
             residue.paper.xTo + spaceBetweenResidues / 2 + 5,
-            residue.paper.y - 13
+            residue.paper.y - 13,
           );
           line.stroke({
             color: result.color,
             width: strokeWidth,
-            linecap: 'round'
+            linecap: 'round',
           });
           drawLabel(
             result,
             residue.paper.xTo + spaceBetweenResidues,
-            residue.paper.y - 15 - residue.paper.topPosition * labelSize
+            residue.paper.y - 15 - residue.paper.topPosition * labelSize,
           );
           residue.paper.topPosition++;
         }
@@ -137,25 +137,25 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
       family: labelFontFamily,
       weight: 'bold',
       size: labelSize,
-      anchor: 'end'
+      anchor: 'end',
     });
     text.attr({
       x,
-      y
+      y,
     });
     let textWidth = 0;
     text = paper.plain(charge);
     text.font({
       fill: result.textColor,
       family: labelFontFamily,
-      size: labelSize / 2
+      size: labelSize / 2,
     });
     text.attr({ x: x + textWidth, y: y - labelSize / 2 });
     text = paper.plain(similarity);
     text.font({
       fill: result.textColor,
       family: labelFontFamily,
-      size: labelSize / 2
+      size: labelSize / 2,
     });
     text.attr({ x: x + textWidth, y });
   }
@@ -193,11 +193,11 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
         drawLine.attr({
           onmouseover: 'mouseOver(evt)',
           onmouseout: 'mouseOut(evt)',
-          id: `line${fromResidue.fromBegin}-${toResidue.fromBegin}`
+          id: `line${fromResidue.fromBegin}-${toResidue.fromBegin}`,
         });
         drawLine.stroke({
           color: result.color,
-          width: strokeWidth
+          width: strokeWidth,
         });
         drawLabel(result, (fromX + toX) / 2 - 10, y - 2);
 
@@ -207,7 +207,7 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
   }
 
   function drawReplacements() {
-    let replacements = Object.keys(parsedSequence.replacements).map(key => {
+    let replacements = Object.keys(parsedSequence.replacements).map((key) => {
       return { key, ...parsedSequence.replacements[key] };
     });
     let y = (parsedSequence.nbLines + 1) * rowHeight + 50;
@@ -218,11 +218,11 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
         fill: 'darkviolet',
         family: labelFontFamily,
         weight: 'bold',
-        size: 10
+        size: 10,
       });
       text.attr({
         x: leftRightBorders,
-        y
+        y,
       });
       y += 16;
     }
@@ -260,7 +260,7 @@ function addScript(paper) {
   `;
   let script = paper.element('script');
   script.attr({
-    type: 'application/ecmascript'
+    type: 'application/ecmascript',
   });
   script.words(scriptCode);
 }

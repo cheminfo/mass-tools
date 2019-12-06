@@ -10,7 +10,7 @@ function furanThreeTerm(nucleotide) {
   if (!last.match(/D[atcg]mp(.*)$/)) {
     // eslint-disable-next-line no-console
     console.warn(
-      `furanThreeTerm can not remove a non monophosphate nucleic acid: ${last}`
+      `furanThreeTerm can not remove a non monophosphate nucleic acid: ${last}`,
     );
     return parts.join('') + last;
   }

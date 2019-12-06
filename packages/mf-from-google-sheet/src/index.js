@@ -29,14 +29,14 @@ async function mfFromGoogleSheet(url, options = {}) {
     );
     let formulas = parsed.data;
 
+    let references = {};
     if (tsvReferences) {
       let referencesArray = Papa.parse(tsvReferences, {
         delimiter: '\t',
         header: true,
       }).data;
 
-      var references = {};
-      referencesArray.forEach(function (r) {
+      referencesArray.forEach(function(r) {
         references[r.label] = r;
       });
     }
@@ -93,11 +93,11 @@ async function mfFromGoogleSheet(url, options = {}) {
       }
     }
 
-    results = results.filter(function (a) {
+    results = results.filter(function(a) {
       return a.ms.em !== 0;
     });
 
-    results.sort(function (a, b) {
+    results.sort(function(a, b) {
       return a.ms.em - b.ms.em;
     });
 

@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
-const addInternalTerm = require("./addInternalTerm");
-const addFiveTerm = require("./addFiveTerm");
-const addFiveTermBaseLoss = require("./addFiveTermBaseLoss");
-const addThreeTerm = require("./addThreeTerm");
-const addThreeTermBaseLoss = require("./addThreeTermBaseLoss");
+const addInternalTerm = require('./addInternalTerm');
+const addFiveTerm = require('./addFiveTerm');
+const addFiveTermBaseLoss = require('./addFiveTermBaseLoss');
+const addThreeTerm = require('./addThreeTerm');
+const addThreeTermBaseLoss = require('./addThreeTermBaseLoss');
 
 module.exports = function generateFragments(mf, options) {
   if (options === undefined) {
@@ -25,29 +25,29 @@ module.exports = function generateFragments(mf, options) {
       abw: false,
       aby: false,
       abcdBaseLoss: false,
-      wxyzBaseLoss: false
+      wxyzBaseLoss: false,
     };
   }
 
   let mfs = [];
   // need to allow 0-9 to deal with neutral loss
   let mfparts = mf
-    .replace(/([a-z)0-9])([A-Z][a-z](?=[a-z]))/g, "$1 $2")
+    .replace(/([a-z)0-9])([A-Z][a-z](?=[a-z]))/g, '$1 $2')
     .split(/ /);
 
-  let fiveTerm = "";
-  let threeTerm = "";
+  let fiveTerm = '';
+  let threeTerm = '';
 
-  if (mfparts[0].startsWith("(")) {
+  if (mfparts[0].startsWith('(')) {
     fiveTerm += mfparts[0];
     mfparts = mfparts.splice(1);
   }
 
-  if (mfparts[mfparts.length - 1].includes("(")) {
-    threeTerm += mfparts[mfparts.length - 1].replace(/^[^()]*/, "");
+  if (mfparts[mfparts.length - 1].includes('(')) {
+    threeTerm += mfparts[mfparts.length - 1].replace(/^[^()]*/, '');
     mfparts[mfparts.length - 1] = mfparts[mfparts.length - 1].replace(
       /\(.*/,
-      ""
+      '',
     );
   }
 
@@ -62,7 +62,7 @@ module.exports = function generateFragments(mf, options) {
   }
 
   for (let i = 1; i < mfparts.length - 1; i++) {
-    let internal = "";
+    let internal = '';
     for (let j = i; j < mfparts.length - 1; j++) {
       internal += mfparts[j];
       if (j > i) {

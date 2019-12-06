@@ -47,13 +47,13 @@ module.exports = function msemMatcher(entry, options = {}) {
     maxEM = +Infinity,
     minMSEM = -Infinity,
     maxMSEM = +Infinity,
-    atoms
+    atoms,
   } = options;
 
   let msInfo = getMsInfo(entry, {
     ionization,
     forceIonization,
-    targetMass
+    targetMass,
   });
   let ms = msInfo.ms;
 
@@ -90,7 +90,7 @@ module.exports = function msemMatcher(entry, options = {}) {
     msInfo = getMsInfo(entry, {
       ionization,
       forceIonization,
-      targetMass: closestMass
+      targetMass: closestMass,
     });
     msInfo.ms.target = { mass: closestMass };
     if (targetIntensities) {

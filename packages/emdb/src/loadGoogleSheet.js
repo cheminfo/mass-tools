@@ -10,7 +10,7 @@ module.exports = async function loadGoogleSheet(options = {}) {
   if (options.uuid && !options.refUUID) refUUID = '';
 
   let url = `https://googledocs.cheminfo.org/spreadsheets/d/${uuid}/export?format=tsv`;
-  var refURL = refUUID
+  let refURL = refUUID
     ? (refURL = `https://googledocs.cheminfo.org/spreadsheets/d/${refUUID}/export?format=tsv`)
     : '';
   let data = await mfFromGoogleSheet(url, refURL);
