@@ -25,6 +25,7 @@ function getRowHeight(results, residues, options = {}) {
 // we need to find a height that is not yet used.
 function assignSlot(from, to, residues) {
   let used = {};
+  if (from > 0) from--; // we ensure that we don't put on the same line to sequences that are consecutive
   for (let i = from; i < to; i++) {
     let residue = residues[i];
     residue.paper.usedSlots.forEach(function(usedSlot, index) {
