@@ -2,7 +2,8 @@
 
 const getPaper = require('./getPaper');
 
-function appendResiduesPosition(parsed, options = {}) {
+function appendResiduesPosition(data, options = {}) {
+  const residues = data.residues;
   const {
     leftRightBorders = 20,
     spaceBetweenResidues = 20,
@@ -17,8 +18,8 @@ function appendResiduesPosition(parsed, options = {}) {
 
   const paper = getPaper();
 
-  for (let i = 0; i < parsed.all.length; i++) {
-    let residue = parsed.all[i];
+  for (let i = 0; i < residues.all.length; i++) {
+    let residue = residues.all[i];
     let textWidth = getTextWidth(paper, residue.label, options);
     xPos += textWidth;
     if (xPos > width - leftRightBorders) {
@@ -31,7 +32,7 @@ function appendResiduesPosition(parsed, options = {}) {
     xOld = xPos;
   }
 
-  parsed.nbLines = line;
+  residues.nbLines = line;
 }
 
 function setPaper(residue, xFrom, xTo, line) {

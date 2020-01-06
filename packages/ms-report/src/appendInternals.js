@@ -1,24 +1,18 @@
 'use strict';
 
-function getRowHeight(results, residues, options = {}) {
-  const {
-    verticalShiftForTerminalAnnotations,
-    spaceBetweenInternalLines,
-  } = options;
+function appendInternals(data) {
   // for each line (internal fragment) we calculate the vertical position
   // where it should be drawn as well and the maximal number of lines
   let maxNumberLines = 0;
-  for (let result of results) {
+  for (let result of data.results) {
     if (result.internal) {
-      result.slot = assignSlot(result.from, result.to, residues);
+      result.slot = assignSlot(result.from, result.to, data.residues.residues);
       if (result.slot > maxNumberLines) maxNumberLines = result.slot;
     }
   }
-
-  return (
-    verticalShiftForTerminalAnnotations +
-    spaceBetweenInternalLines * (maxNumberLines + 6)
-  );
+  for (let row of data.rows) {
+    row.info.internals = maxNumberLines;
+  }
 }
 
 // we need to define the height of the line.
@@ -45,4 +39,4 @@ function assignSlot(from, to, residues) {
   return counter;
 }
 
-module.exports = getRowHeight;
+module.exports = appendInternals;
