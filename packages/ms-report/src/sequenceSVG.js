@@ -8,13 +8,14 @@ const appendRows = require('./appendRows');
 const appendInternals = require('./appendInternals');
 const addScript = require('./draw/addScript');
 const drawSequence = require('./draw/drawSequence');
+const drawReplacements = require('./draw/drawReplacements');
 const getPaper = require('./getPaper');
 
 function sequenceSVG(sequence, analysisResult, options = {}) {
   const {
     width = 600,
     leftRightBorders = 20,
-    spaceBetweenResidues = 20,
+    spaceBetweenResidues = 30,
     spaceBetweenInternalLines = 12,
     strokeWidth = 2,
     labelFontFamily = 'Verdana',
@@ -57,11 +58,9 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
 
   for (let row of data.rows) {
     //  drawInternals(paper, row, drawOptions);
-    //  drawOver(paper, row, drawOptions);
     drawSequence(paper, row, drawOptions);
-    //  drawUnder(paper, row, drawOptions);
   }
-  // drawReplacements(paper, row, drawOptions);
+  drawReplacements(paper, data, drawOptions);
 
   paper.size(width, drawOptions.verticalPosition);
 

@@ -1,26 +1,27 @@
+'use strict';
 
-  function drawReplacements() {
-    let replacements = Object.keys(parsedSequence.replacements).map((key) => {
-      return { key, ...parsedSequence.replacements[key] };
+function drawReplacements(paper, data, options) {
+  let replacements = data.residues.replacements;
+
+  replacements = Object.keys(replacements).map((key) => {
+    return { key, ...replacements[key] };
+  });
+
+  for (let replacement of replacements) {
+    options.verticalPosition += options.spaceBetweenInternalLines;
+    let text = paper.plain(`${replacement.label} = ${replacement.key}`);
+    text.font({
+      fill: 'darkviolet',
+      family: options.labelFontFamily,
+      weight: 'bold',
+      size: 10,
     });
-    let y = (parsedSequence.nbLines + 1) * rowHeight + 50;
-    for (let i = 0; i < replacements.length; i++) {
-      const replacement = replacements[i];
-      let text = paper.plain(`${replacement.label} = ${replacement.key}`);
-      text.font({
-        fill: 'darkviolet',
-        family: labelFontFamily,
-        weight: 'bold',
-        size: 10,
-      });
-      text.attr({
-        x: leftRightBorders,
-        y,
-      });
-      y += 16;
-    }
-    return y;
+    text.attr({
+      x: options.leftRightBorders,
+      y: options.verticalPosition,
+    });
   }
+  options.verticalPosition += options.spaceBetweenInternalLines;
 }
 
-module.exports=drawReplacements
+module.exports = drawReplacements;

@@ -7,9 +7,12 @@ const sequenceSVG = require('../sequenceSVG');
 
 let info = require('./data/ACGGCTT(C8H14N2O)AGG');
 
+info = info.filter((entry) => !entry.type.includes('B'));
+
 test('sequenceSVG of big nucleotide', () => {
   let options = {
     width: 250,
+    labelSize: 8,
     parsing: {
       kind: 'dna',
     },

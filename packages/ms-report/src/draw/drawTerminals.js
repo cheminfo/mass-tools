@@ -32,7 +32,10 @@ function drawTerminals(paper, row, options) {
         paper,
         result,
         residue.paper.xTo + options.spaceBetweenResidues / 2,
-        residue.paper.y + 12 + residue.paper.bottomPosition * options.labelSize,
+        residue.paper.y +
+          options.labelSize +
+          6 +
+          residue.paper.bottomPosition * options.labelSize,
         options,
       );
       residue.paper.bottomPosition++;
@@ -73,7 +76,7 @@ function drawTerminals(paper, row, options) {
         paper,
         result,
         residue.paper.xTo + options.spaceBetweenResidues,
-        residue.paper.y - 15 - residue.paper.topPosition * options.labelSize,
+        residue.paper.y - 17 - residue.paper.topPosition * options.labelSize,
         options,
       );
       residue.paper.topPosition++;
