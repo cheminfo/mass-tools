@@ -5,7 +5,7 @@ const drawLabel = require('./drawLabel');
 function drawInternals(paper, row, options) {
   let fromX = 0;
   let toX = 0;
-  for (const internal of row.internals.slice(0, 1)) {
+  for (const internal of row.internals) {
     options.verticalPosition += options.spaceBetweenInternalLines;
     if (internal.firstIndex === true) {
       fromX = 0;
