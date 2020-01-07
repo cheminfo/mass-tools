@@ -1,9 +1,5 @@
 'use strict';
 
-test('empty', () => {
-  expect(true).toBe(true);
-});
-
 module.exports = [
   {
     type: 'y8-B1',

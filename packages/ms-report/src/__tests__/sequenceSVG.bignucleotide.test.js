@@ -4,8 +4,7 @@ const { writeFileSync } = require('fs');
 const { join } = require('path');
 
 const sequenceSVG = require('../sequenceSVG');
-
-let info = require('./data/ACGGCTT(C8H14N2O)AGG');
+let info = require('../../data/ACGGCTT(C8H14N2O)AGG');
 
 info = info.filter((entry) => !entry.type.includes('B'));
 
