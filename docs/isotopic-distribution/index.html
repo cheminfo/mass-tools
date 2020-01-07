@@ -1,20 +1,21 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset='utf-8' />
-  <title>isotopic-distribution 0.11.0 | Documentation</title>
+  <meta charset='utf-8'>
+  <title>isotopic-distribution 0.12.0 | Documentation</title>
+  <meta name='description' content='Calculate the isotopic distribution of a molecular formula'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
-  <link href='assets/style.css' type='text/css' rel='stylesheet' />
-  <link href='assets/github.css' type='text/css' rel='stylesheet' />
-  <link href='assets/split.css' type='text/css' rel='stylesheet' />
+  <link href='assets/bass.css' rel='stylesheet'>
+  <link href='assets/style.css' rel='stylesheet'>
+  <link href='assets/github.css' rel='stylesheet'>
+  <link href='assets/split.css' rel='stylesheet'>
 </head>
 <body class='documentation m0'>
     <div class='flex'>
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>isotopic-distribution</h3>
-          <div class='mb1'><code>0.11.0</code></div>
+          <div class='mb1'><code>0.12.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -106,14 +107,14 @@
             </ul>
           </div>
           <div class='mt1 h6 quiet'>
-            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+            <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
           </div>
         </div>
       </div>
       <div id='split-right' class='relative overflow-auto height-viewport-100'>
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
@@ -128,8 +129,7 @@
 
   <p>An object containing two arrays</p>
 
-
-  <div class='pre p1 fill-light mt0'>XY</div>
+    <div class='pre p1 fill-light mt0'>XY</div>
   
     <p>
       Type:
@@ -179,12 +179,14 @@
   
 
   
+
+  
 </section>
 
           
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
@@ -198,8 +200,7 @@
   
 
   
-
-  <div class='pre p1 fill-light mt0'>getDistribution(): Distribution</div>
+    <div class='pre p1 fill-light mt0'>getDistribution(): Distribution</div>
   
   
 
@@ -233,12 +234,14 @@
   
 
   
+
+  
 </section>
 
           
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
@@ -253,8 +256,7 @@
 
   <p>Returns the isotopic distirubtion</p>
 
-
-  <div class='pre p1 fill-light mt0'>getXY(): <a href="#xy">XY</a></div>
+    <div class='pre p1 fill-light mt0'>getXY(options: any): <a href="#xy">XY</a></div>
   
   
 
@@ -265,6 +267,20 @@
   
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(any
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
   
 
   
@@ -288,12 +304,14 @@
   
 
   
+
+  
 </section>
 
           
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
@@ -308,8 +326,7 @@
 
   <p>Returns the isotopic distribution as the sum of gaussian</p>
 
-
-  <div class='pre p1 fill-light mt0'>getGaussian(options: any): <a href="#xy">XY</a></div>
+    <div class='pre p1 fill-light mt0'>getGaussian(options: any): <a href="#xy">XY</a></div>
   
   
 
@@ -357,12 +374,14 @@
   
 
   
+
+  
 </section>
 
           
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
@@ -377,8 +396,7 @@
 
   <p>Appen another distribution to the current distribution</p>
 
-
-  <div class='pre p1 fill-light mt0'>append(distribution: any)</div>
+    <div class='pre p1 fill-light mt0'>append(distribution: any)</div>
   
   
 
@@ -417,12 +435,14 @@
   
 
   
+
+  
 </section>
 
           
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
@@ -437,8 +457,7 @@
 
   <p>Join x values if there are similar</p>
 
-
-  <div class='pre p1 fill-light mt0'>join(threshold: any)</div>
+    <div class='pre p1 fill-light mt0'>join(threshold: any)</div>
   
   
 
@@ -478,12 +497,14 @@
   
 
   
+
+  
 </section>
 
           
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
@@ -498,8 +519,7 @@
 
   <p>Sum of Y to 1</p>
 
-
-  <div class='pre p1 fill-light mt0'>maxToOne()</div>
+    <div class='pre p1 fill-light mt0'>maxToOne()</div>
   
   
 
@@ -508,6 +528,8 @@
   
   
   
+  
+
   
 
   
@@ -530,7 +552,7 @@
           
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
@@ -545,8 +567,7 @@
 
   <p>Sum of Y to 1</p>
 
-
-  <div class='pre p1 fill-light mt0'>normalize()</div>
+    <div class='pre p1 fill-light mt0'>normalize()</div>
   
   
 
@@ -555,6 +576,8 @@
   
   
   
+  
+
   
 
   
