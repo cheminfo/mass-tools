@@ -7,7 +7,7 @@
     "src"
   ],
   "scripts": {
-    "build": "cheminfo build -r MolecularFormula && npm run build-docs",
+    "build": "cheminfo-build -r MolecularFormula && npm run build-docs",
     "build-docs": "ls packages | xargs -I % sh -c 'cd packages/%; documentation build src/index.js -f html -o ../../docs/%; cd ../..'",
     "eslint": "eslint packages --cache",
     "eslint-fix": "npm run eslint -- --fix",
@@ -36,7 +36,7 @@
     "benchmark": "^2.1.4",
     "chemcalc": "^3.4.1",
     "chemical-elements": "^0.12.0",
-    "cheminfo-tools": "^1.23.3",
+    "cheminfo-build": "^1.0.5",
     "codecov": "^3.6.1",
     "documentation": "^12.1.4",
     "eslint": "^6.8.0",

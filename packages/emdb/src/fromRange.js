@@ -5,7 +5,8 @@ const combineMFs = require('mf-generator');
 /**
  * Generates a database 'generated' from an array of molecular formula
  * @param {string} range - a string representing the range to search
- * @param {*} options
+ * @param {object} [options={}]
+ * @param {boolean} [options.estimate=false] - estimate the number of MF without filters
  * @param {string} [options.databaseName='generated']
  * @param {number} [options.limit=10000000] - Maximum number of results
  * @param {boolean} [canonizeMF=true] - Canonize molecular formula
