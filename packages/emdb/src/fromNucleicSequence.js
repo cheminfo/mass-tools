@@ -8,6 +8,7 @@ const combineMFs = require('mf-generator');
  *
  * @param {string} [sequence] Sequence as a string of 1 letter or 3 letters code. Could also be a correct molecular formula respecting uppercase, lowercase
  * @param {object} [options={}]
+ * @param {boolean}       [options.estimate=false] - estimate the number of MF without filters
  * @param {string} [options.ionizations='']
  * @param {object} [options.info={}]
  * @param {string} [options.info.kind] - rna, ds-dna or dna. Default if contains U: rna, otherwise ds-dna
@@ -50,6 +51,7 @@ module.exports = function fromNucleicSequence(sequencesString, options = {}) {
     filter = {},
     ionizations = '',
     info = {},
+    estimate = false,
   } = options;
 
   let sequences = nucleotide.sequenceToMF(sequencesString, info).split('.');
@@ -73,8 +75,9 @@ module.exports = function fromNucleicSequence(sequencesString, options = {}) {
 
   let combined = combineMFs(mfsArray, {
     ionizations,
-    filter: filter,
+    filter,
     uniqueMFs: false,
+    estimate,
   });
 
   return combined;

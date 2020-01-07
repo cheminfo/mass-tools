@@ -8,6 +8,7 @@ const combineMFs = require('mf-generator');
  *
  * @param {string} [sequence] Sequence as a string of 1 letter or 3 letters code. Could also be a correct molecular formula respecting uppercase, lowercase
  * @param {object} [options={}]
+ * @param {boolean}  [options.estimate=false] - estimate the number of MF without filters
  * @param {string} [options.ionizations='']
  * @param {array} [options.mfsArray=[]]
  *  * @param {boolean} [options.protonation=false]
@@ -60,6 +61,7 @@ module.exports = function fromPeptidicSequence(sequence, options = {}) {
     fragmentation = {},
     filter = {},
     ionizations = '',
+    estimate = false,
   } = options;
 
   sequence = peptide.convertAASequence(sequence);
@@ -94,7 +96,8 @@ module.exports = function fromPeptidicSequence(sequence, options = {}) {
 
   let combined = combineMFs(mfsArray, {
     ionizations,
-    filter: filter,
+    filter,
+    estimate,
   });
 
   return combined;

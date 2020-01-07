@@ -36,8 +36,8 @@ const processRange = require('mf-utilities/src/processRange');
  */
 
 module.exports = function generateMFs(keys, options = {}) {
-  let { limit = 10000000, uniqueMFs, estimate = false } = options;
-  if (uniqueMFs === undefined) uniqueMFs = true;
+  let { limit = 10000000, uniqueMFs = true, estimate = false } = options;
+
   if (uniqueMFs === true) options.canonizeMF = true;
   if (options.canonizeMF === undefined) options.canonizeMF = true;
   options.ionizations = preprocessIonizations(options.ionizations);
