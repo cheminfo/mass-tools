@@ -102,7 +102,8 @@ class IsotopicDistribution {
       let absoluteCharge = Math.abs(charge);
       if (charge || this.allowNeutral) {
         for (let isotope of part.isotopesInfo.isotopes) {
-          if (isotope.number) {
+          if (isotope.number < 0) return [];
+          if (isotope.number > 0) {
             let isotopeDistribution = new Distribution(isotope.distribution);
             isotopeDistribution.power(isotope.number, options);
             totalDistribution.multiply(isotopeDistribution, options);
