@@ -5,6 +5,10 @@ function addCSS(paper) {
     .highlight {
         stroke: yellow;
         stroke-width: 5px;
+        fill: red;
+    }
+    .highlightText {
+        fill: red;
     }
     `;
   let style = paper.element('style');

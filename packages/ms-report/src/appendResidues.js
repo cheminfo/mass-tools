@@ -124,6 +124,21 @@ module.exports = function appendResidues(data, sequence, options = {}) {
   }
   result.begin = removeStartEndParenthesis(result.begin);
   result.end = removeStartEndParenthesis(result.end);
+  if (result.begin.length > 2) {
+    let label = options.kind === 'peptide' ? 'Nter' : "5'";
+    replacements[result.begin] = {
+      label,
+    };
+    result.begin = label;
+  }
+  if (result.end.length > 2) {
+    let label = options.kind === 'peptide' ? 'Cter' : "3'";
+    replacements[result.begin] = {
+      label,
+    };
+    result.end = label;
+  }
+
   result.begin = { label: result.begin, kind: 'begin' };
   result.end = { label: result.end, kind: 'end' };
   result.alternatives = alternatives;

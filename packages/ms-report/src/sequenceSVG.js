@@ -16,13 +16,12 @@ const getPaper = require('./getPaper');
 function sequenceSVG(sequence, analysisResult, options = {}) {
   const {
     width = 600,
-    leftRightBorders = 20,
+    leftRightBorders = 50,
     spaceBetweenResidues = 30,
     spaceBetweenInternalLines = 12,
     strokeWidth = 2,
     labelFontFamily = 'Verdana',
     labelSize = 8,
-    verticalShiftForTerminalAnnotations = 20,
     parsing,
     merge,
   } = options;
@@ -52,12 +51,10 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
   });
   appendRows(data);
   appendInternals(data);
-
   appendRowsInformation(data);
 
   // We start to create the SVG and create the paper
   const paper = getPaper();
-
   addCSS(paper);
   addScript(paper);
 

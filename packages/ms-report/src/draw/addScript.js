@@ -15,7 +15,7 @@ function addScript(paper) {
                 if (child.nodeName === 'text' && child.id.startsWith("residue")) {
                     let residueNumber=child.id.replace(/residue-/,'')*1;
                     if (residueNumber>=from && residueNumber<=to) {
-                        child.setAttribute('fill','red');
+                        child.setAttribute('class','highlightText');
                     }
                 }
             }
@@ -27,7 +27,7 @@ function addScript(paper) {
                     child.setAttribute('class','');
                 }
                 if (child.nodeName === 'text' && child.id.startsWith("residue")) {
-                    child.setAttribute('fill','black');
+                    child.setAttribute('class','');
                 }
             }
         }
