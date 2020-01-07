@@ -11,7 +11,7 @@ function appendResults(data, analysisResult, options = {}) {
     if (parts.length === 2) {
       result.internal = true;
       result.to = getNumber(parts[0]) - 1;
-      result.from = numberResidues - 1 - getNumber(parts[1]);
+      result.from = numberResidues - getNumber(parts[1]);
     } else {
       if (parts[0].match(/^[abcd][1-9]/)) {
         result.fromBegin = true;

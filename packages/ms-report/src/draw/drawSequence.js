@@ -14,8 +14,8 @@ function drawSequence(paper, row, options) {
     let textColor = residue.replaced
       ? 'darkviolet'
       : residue.kind === 'residue'
-      ? '#888'
-      : '#AAA';
+      ? '#555'
+      : '#CCC';
 
     text.font({
       family: options.labelFontFamily,
