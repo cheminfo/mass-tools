@@ -13,6 +13,7 @@ const processRange = require('mf-utilities/src/processRange');
  * @param keys
  * @param {object}        [options={}]
  * @param {number}        [options.limit=10000000] - Maximum number of results
+ * @param {boolean}       [options.estimate=false] - estimate the number of MF without filters
  * @param {boolean}       [canonizeMF=true] - Canonize molecular formula
  * @param {boolean}       [uniqueMFs=true] - Force canonization and make MF unique
  * @param {string}        [ionizations=''] - Comma separated list of ionizations (to charge the molecule)
@@ -35,7 +36,7 @@ const processRange = require('mf-utilities/src/processRange');
  */
 
 module.exports = function generateMFs(keys, options = {}) {
-  let { limit = 10000000, uniqueMFs } = options;
+  let { limit = 10000000, uniqueMFs, estimate = false } = options;
   if (uniqueMFs === undefined) uniqueMFs = true;
   if (uniqueMFs === true) options.canonizeMF = true;
   if (options.canonizeMF === undefined) options.canonizeMF = true;
@@ -70,6 +71,14 @@ module.exports = function generateMFs(keys, options = {}) {
       }
     }
     keys[i] = newParts;
+  }
+
+  if (estimate) {
+    let total = keys.reduce(
+      (previous, current) => previous * current.length,
+      1,
+    );
+    return total * options.ionizations.length;
   }
 
   let results = [];
