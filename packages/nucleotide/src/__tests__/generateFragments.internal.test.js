@@ -8,9 +8,9 @@ describe('test generate internal fragments', () => {
       abw: true,
     });
     expect(fragments).toStrictEqual([
-      'HODtmpC5H6O4P$w4:a-B3',
-      'HODtmpDcmpC5H6O4P$w4:a-B4',
-      'HODcmpC5H6O4P$w3:a-B4',
+      'HODtmpC5H6O4P$w4:a3-B',
+      'HODtmpDcmpC5H6O4P$w4:a4-B',
+      'HODcmpC5H6O4P$w3:a4-B',
     ]);
   });
 
@@ -19,12 +19,12 @@ describe('test generate internal fragments', () => {
       aby: true,
     });
     expect(fragments).toStrictEqual([
-      'O-2P-1DcmpC5H6O4P$y5:a-B3',
-      'O-2P-1DcmpDcmpC5H6O4P$y5:a-B4',
-      'O-2P-1DcmpDcmpDgmpC5H6O4P$y5:a-B5',
-      'O-2P-1DcmpC5H6O4P$y4:a-B4',
-      'O-2P-1DcmpDgmpC5H6O4P$y4:a-B5',
-      'O-2P-1DgmpC5H6O4P$y3:a-B5',
+      'O-2P-1DcmpC5H6O4P$y5:a3-B',
+      'O-2P-1DcmpDcmpC5H6O4P$y5:a4-B',
+      'O-2P-1DcmpDcmpDgmpC5H6O4P$y5:a5-B',
+      'O-2P-1DcmpC5H6O4P$y4:a4-B',
+      'O-2P-1DcmpDgmpC5H6O4P$y4:a5-B',
+      'O-2P-1DgmpC5H6O4P$y3:a5-B',
     ]);
   });
 
@@ -64,6 +64,6 @@ describe('test generate internal fragments', () => {
     let fragments = generateFragments('HODampDampDtmp(NH2)DampH', {
       abw: true,
     });
-    expect(fragments).toStrictEqual(['HODampC5H6O4P$w3:a-B3']);
+    expect(fragments).toStrictEqual(['HODampC5H6O4P$w3:a3-B']);
   });
 });

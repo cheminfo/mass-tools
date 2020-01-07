@@ -355,7 +355,7 @@ Array [
       "P": 2,
     },
     "charge": 0,
-    "comment": "w11:a-B4",
+    "comment": "w11:a4-B",
     "em": 467.04948243777,
     "ionization": Object {
       "charge": -5,
@@ -383,7 +383,7 @@ Array [
       "P": 2,
     },
     "charge": 0,
-    "comment": "w7:a-B8",
+    "comment": "w7:a8-B",
     "em": 467.04948243777,
     "ionization": Object {
       "charge": -5,
@@ -411,7 +411,7 @@ Array [
       "P": 2,
     },
     "charge": 0,
-    "comment": "w6:a-B9",
+    "comment": "w6:a9-B",
     "em": 467.04948243777,
     "ionization": Object {
       "charge": -5,
@@ -439,7 +439,7 @@ Array [
       "P": 2,
     },
     "charge": 0,
-    "comment": "w9:a-B6",
+    "comment": "w9:a6-B",
     "em": 482.04914808514,
     "ionization": Object {
       "charge": -5,
@@ -467,7 +467,7 @@ Array [
       "P": 2,
     },
     "charge": 0,
-    "comment": "w3:a-B12",
+    "comment": "w3:a1-B2",
     "em": 482.04914808514,
     "ionization": Object {
       "charge": -5,
@@ -495,7 +495,7 @@ Array [
       "P": 2,
     },
     "charge": 0,
-    "comment": "w12:a-B3",
+    "comment": "w12:a3-B",
     "em": 491.06071582706,
     "ionization": Object {
       "charge": -5,
@@ -523,7 +523,7 @@ Array [
       "P": 2,
     },
     "charge": 0,
-    "comment": "w5:a-B10",
+    "comment": "w5:a1-B0",
     "em": 491.06071582706,
     "ionization": Object {
       "charge": -5,
@@ -551,7 +551,7 @@ Array [
       "P": 2,
     },
     "charge": 0,
-    "comment": "w4:a-B11",
+    "comment": "w4:a1-B1",
     "em": 491.06071582706,
     "ionization": Object {
       "charge": -5,
@@ -579,7 +579,7 @@ Array [
       "P": 2,
     },
     "charge": 0,
-    "comment": "w10:a-B5",
+    "comment": "w10:a5-B",
     "em": 507.05563044663,
     "ionization": Object {
       "charge": -5,
@@ -607,7 +607,7 @@ Array [
       "P": 2,
     },
     "charge": 0,
-    "comment": "w8:a-B7",
+    "comment": "w8:a7-B",
     "em": 507.05563044663,
     "ionization": Object {
       "charge": -5,
@@ -635,7 +635,7 @@ Array [
       "P": 3,
     },
     "charge": 0,
-    "comment": "w7:a-B9",
+    "comment": "w7:a9-B",
     "em": 756.0958545536599,
     "ionization": Object {
       "charge": -5,
@@ -663,7 +663,7 @@ Array [
       "P": 3,
     },
     "charge": 0,
-    "comment": "w12:a-B4",
+    "comment": "w12:a4-B",
     "em": 780.1070879429499,
     "ionization": Object {
       "charge": -5,
@@ -691,7 +691,7 @@ Array [
       "P": 3,
     },
     "charge": 0,
-    "comment": "w6:a-B10",
+    "comment": "w6:a1-B0",
     "em": 780.1070879429499,
     "ionization": Object {
       "charge": -5,
@@ -719,7 +719,7 @@ Array [
       "P": 3,
     },
     "charge": 0,
-    "comment": "w4:a-B12",
+    "comment": "w4:a1-B2",
     "em": 795.10675359032,
     "ionization": Object {
       "charge": -5,
@@ -747,7 +747,7 @@ Array [
       "P": 3,
     },
     "charge": 0,
-    "comment": "w11:a-B5",
+    "comment": "w11:a5-B",
     "em": 796.1020025625199,
     "ionization": Object {
       "charge": -5,
@@ -775,7 +775,7 @@ Array [
       "P": 3,
     },
     "charge": 0,
-    "comment": "w8:a-B8",
+    "comment": "w8:a8-B",
     "em": 796.1020025625199,
     "ionization": Object {
       "charge": -5,
@@ -803,7 +803,7 @@ Array [
       "P": 3,
     },
     "charge": 0,
-    "comment": "w5:a-B11",
+    "comment": "w5:a1-B1",
     "em": 804.1183213322399,
     "ionization": Object {
       "charge": -5,
@@ -831,7 +831,7 @@ Array [
       "P": 3,
     },
     "charge": 0,
-    "comment": "w10:a-B6",
+    "comment": "w10:a6-B",
     "em": 811.10166820989,
     "ionization": Object {
       "charge": -5,
@@ -859,7 +859,7 @@ Array [
       "P": 3,
     },
     "charge": 0,
-    "comment": "w9:a-B7",
+    "comment": "w9:a7-B",
     "em": 811.10166820989,
     "ionization": Object {
       "charge": -5,
@@ -887,7 +887,7 @@ Array [
       "P": 4,
     },
     "charge": 0,
-    "comment": "w7:a-B10",
+    "comment": "w7:a1-B0",
     "em": 1069.15346005884,
     "ionization": Object {
       "charge": -5,
@@ -915,7 +915,7 @@ Array [
       "P": 4,
     },
     "charge": 0,
-    "comment": "w8:a-B9",
+    "comment": "w8:a9-B",
     "em": 1085.1483746784102,
     "ionization": Object {
       "charge": -5,
@@ -943,7 +943,7 @@ Array [
       "P": 4,
     },
     "charge": 0,
-    "comment": "w6:a-B11",
+    "comment": "w6:a1-B1",
     "em": 1093.16469344813,
     "ionization": Object {
       "charge": -5,
@@ -971,7 +971,7 @@ Array [
       "P": 4,
     },
     "charge": 0,
-    "comment": "w11:a-B6",
+    "comment": "w11:a6-B",
     "em": 1100.14804032578,
     "ionization": Object {
       "charge": -5,
@@ -999,7 +999,7 @@ Array [
       "P": 4,
     },
     "charge": 0,
-    "comment": "w9:a-B8",
+    "comment": "w9:a8-B",
     "em": 1100.14804032578,
     "ionization": Object {
       "charge": -5,
@@ -1027,7 +1027,7 @@ Array [
       "P": 4,
     },
     "charge": 0,
-    "comment": "w5:a-B12",
+    "comment": "w5:a1-B2",
     "em": 1108.1643590955,
     "ionization": Object {
       "charge": -5,
@@ -1055,7 +1055,7 @@ Array [
       "P": 4,
     },
     "charge": 0,
-    "comment": "w12:a-B5",
+    "comment": "w12:a5-B",
     "em": 1109.1596080677,
     "ionization": Object {
       "charge": -5,
@@ -1083,7 +1083,7 @@ Array [
       "P": 4,
     },
     "charge": 0,
-    "comment": "w10:a-B7",
+    "comment": "w10:a7-B",
     "em": 1140.15418833464,
     "ionization": Object {
       "charge": -5,
@@ -1111,7 +1111,7 @@ Array [
       "P": 5,
     },
     "charge": 0,
-    "comment": "w7:a-B11",
+    "comment": "w7:a1-B1",
     "em": 1382.21106556402,
     "ionization": Object {
       "charge": -5,
@@ -1139,7 +1139,7 @@ Array [
       "P": 5,
     },
     "charge": 0,
-    "comment": "w9:a-B9",
+    "comment": "w9:a9-B",
     "em": 1389.19441244167,
     "ionization": Object {
       "charge": -5,
@@ -1167,7 +1167,7 @@ Array [
       "P": 5,
     },
     "charge": 0,
-    "comment": "w6:a-B12",
+    "comment": "w6:a1-B2",
     "em": 1397.21073121139,
     "ionization": Object {
       "charge": -5,
@@ -1195,7 +1195,7 @@ Array [
       "P": 5,
     },
     "charge": 0,
-    "comment": "w8:a-B10",
+    "comment": "w8:a1-B0",
     "em": 1398.20598018359,
     "ionization": Object {
       "charge": -5,
@@ -1223,7 +1223,7 @@ Array [
       "P": 5,
     },
     "charge": 0,
-    "comment": "w12:a-B6",
+    "comment": "w12:a6-B",
     "em": 1413.20564583096,
     "ionization": Object {
       "charge": -5,
@@ -1251,7 +1251,7 @@ Array [
       "P": 5,
     },
     "charge": 0,
-    "comment": "w11:a-B7",
+    "comment": "w11:a7-B",
     "em": 1429.20056045053,
     "ionization": Object {
       "charge": -5,
@@ -1279,7 +1279,7 @@ Array [
       "P": 5,
     },
     "charge": 0,
-    "comment": "w10:a-B8",
+    "comment": "w10:a8-B",
     "em": 1429.20056045053,
     "ionization": Object {
       "charge": -5,
@@ -1307,7 +1307,7 @@ Array [
       "P": 6,
     },
     "charge": 0,
-    "comment": "w7:a-B12",
+    "comment": "w7:a1-B2",
     "em": 1686.2571033272798,
     "ionization": Object {
       "charge": -5,
@@ -1335,7 +1335,7 @@ Array [
       "P": 6,
     },
     "charge": 0,
-    "comment": "w9:a-B10",
+    "comment": "w9:a1-B0",
     "em": 1702.2520179468497,
     "ionization": Object {
       "charge": -5,
@@ -1363,7 +1363,7 @@ Array [
       "P": 6,
     },
     "charge": 0,
-    "comment": "w8:a-B11",
+    "comment": "w8:a1-B1",
     "em": 1711.2635856887698,
     "ionization": Object {
       "charge": -5,
@@ -1391,7 +1391,7 @@ Array [
       "P": 6,
     },
     "charge": 0,
-    "comment": "w11:a-B8",
+    "comment": "w11:a8-B",
     "em": 1718.24693256642,
     "ionization": Object {
       "charge": -5,
@@ -1419,7 +1419,7 @@ Array [
       "P": 6,
     },
     "charge": 0,
-    "comment": "w10:a-B9",
+    "comment": "w10:a9-B",
     "em": 1718.24693256642,
     "ionization": Object {
       "charge": -5,
@@ -1447,7 +1447,7 @@ Array [
       "P": 6,
     },
     "charge": 0,
-    "comment": "w12:a-B7",
+    "comment": "w12:a7-B",
     "em": 1742.25816595571,
     "ionization": Object {
       "charge": -5,
@@ -1475,7 +1475,7 @@ Array [
       "P": 7,
     },
     "charge": 0,
-    "comment": "w11:a-B9",
+    "comment": "w11:a9-B",
     "em": 2007.2933046823098,
     "ionization": Object {
       "charge": -5,
@@ -1503,7 +1503,7 @@ Array [
       "P": 7,
     },
     "charge": 0,
-    "comment": "w9:a-B11",
+    "comment": "w9:a1-B1",
     "em": 2015.3096234520299,
     "ionization": Object {
       "charge": -5,
@@ -1531,7 +1531,7 @@ Array [
       "P": 7,
     },
     "charge": 0,
-    "comment": "w8:a-B12",
+    "comment": "w8:a1-B2",
     "em": 2015.3096234520299,
     "ionization": Object {
       "charge": -5,
@@ -1559,7 +1559,7 @@ Array [
       "P": 7,
     },
     "charge": 0,
-    "comment": "w12:a-B8",
+    "comment": "w12:a8-B",
     "em": 2031.3045380716,
     "ionization": Object {
       "charge": -5,
@@ -1587,7 +1587,7 @@ Array [
       "P": 7,
     },
     "charge": 0,
-    "comment": "w10:a-B10",
+    "comment": "w10:a1-B0",
     "em": 2031.3045380716,
     "ionization": Object {
       "charge": -5,
@@ -1615,7 +1615,7 @@ Array [
       "P": 8,
     },
     "charge": 0,
-    "comment": "w9:a-B12",
+    "comment": "w9:a1-B2",
     "em": 2319.35566121529,
     "ionization": Object {
       "charge": -5,
@@ -1643,7 +1643,7 @@ Array [
       "P": 8,
     },
     "charge": 0,
-    "comment": "w12:a-B9",
+    "comment": "w12:a9-B",
     "em": 2320.35091018749,
     "ionization": Object {
       "charge": -5,
@@ -1671,7 +1671,7 @@ Array [
       "P": 8,
     },
     "charge": 0,
-    "comment": "w11:a-B10",
+    "comment": "w11:a1-B0",
     "em": 2320.35091018749,
     "ionization": Object {
       "charge": -5,
@@ -1699,7 +1699,7 @@ Array [
       "P": 8,
     },
     "charge": 0,
-    "comment": "w10:a-B11",
+    "comment": "w10:a1-B1",
     "em": 2344.36214357678,
     "ionization": Object {
       "charge": -5,
@@ -1727,7 +1727,7 @@ Array [
       "P": 9,
     },
     "charge": 0,
-    "comment": "w12:a-B10",
+    "comment": "w12:a1-B0",
     "em": 2633.40851569267,
     "ionization": Object {
       "charge": -5,
@@ -1755,7 +1755,7 @@ Array [
       "P": 9,
     },
     "charge": 0,
-    "comment": "w11:a-B11",
+    "comment": "w11:a1-B1",
     "em": 2633.40851569267,
     "ionization": Object {
       "charge": -5,
@@ -1783,7 +1783,7 @@ Array [
       "P": 9,
     },
     "charge": 0,
-    "comment": "w10:a-B12",
+    "comment": "w10:a1-B2",
     "em": 2648.40818134004,
     "ionization": Object {
       "charge": -5,
@@ -1811,7 +1811,7 @@ Array [
       "P": 10,
     },
     "charge": 0,
-    "comment": "w11:a-B12",
+    "comment": "w11:a1-B2",
     "em": 2937.45455345593,
     "ionization": Object {
       "charge": -5,
@@ -1839,7 +1839,7 @@ Array [
       "P": 10,
     },
     "charge": 0,
-    "comment": "w12:a-B11",
+    "comment": "w12:a1-B1",
     "em": 2946.46612119785,
     "ionization": Object {
       "charge": -5,
@@ -1867,7 +1867,7 @@ Array [
       "P": 11,
     },
     "charge": 0,
-    "comment": "w12:a-B12",
+    "comment": "w12:a1-B2",
     "em": 3250.51215896111,
     "ionization": Object {
       "charge": -5,
