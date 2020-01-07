@@ -18,7 +18,7 @@ let currentSymbol = 0;
  * @param {string} [options.circular=false]
  */
 
-module.exports = function sequenceParser(sequence, options = {}) {
+module.exports = function appendResidues(data, sequence, options = {}) {
   const { kind = 'peptide' } = options;
 
   currentSymbol = 0;
@@ -103,6 +103,10 @@ module.exports = function sequenceParser(sequence, options = {}) {
     let label = result.residues[i];
     let residue = {
       value: label,
+      results: {
+        begin: [],
+        end: [],
+      },
     };
     residue.fromBegin = i + 1;
     residue.fromEnd = result.residues.length - i;
@@ -120,6 +124,21 @@ module.exports = function sequenceParser(sequence, options = {}) {
   }
   result.begin = removeStartEndParenthesis(result.begin);
   result.end = removeStartEndParenthesis(result.end);
+  if (result.begin.length > 2) {
+    let label = options.kind === 'peptide' ? 'Nter' : "5'";
+    replacements[result.begin] = {
+      label,
+    };
+    result.begin = label;
+  }
+  if (result.end.length > 2) {
+    let label = options.kind === 'peptide' ? 'Cter' : "3'";
+    replacements[result.begin] = {
+      label,
+    };
+    result.end = label;
+  }
+
   result.begin = { label: result.begin, kind: 'begin' };
   result.end = { label: result.end, kind: 'end' };
   result.alternatives = alternatives;
@@ -127,7 +146,14 @@ module.exports = function sequenceParser(sequence, options = {}) {
 
   result.all = [result.begin].concat(result.residues, [result.end]);
 
-  return result;
+  result.all.forEach((entry) => {
+    entry.info = {
+      nbOver: 0,
+      nbUnder: 0,
+    };
+  });
+
+  data.residues = result;
 };
 
 function getUnknownReplacement(unknownResidue, residue, replacements) {

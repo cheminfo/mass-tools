@@ -45,8 +45,8 @@ test('sequenceSVG of nucleotide', () => {
     { type: 'a3-B1', similarity: 83, charge: -1 },
     { type: 'a3-B2', similarity: 83, charge: -1 },
     { type: 'b2-B1', similarity: 83, charge: -1 },
-    { type: 'y5:a-B3', similarity: 83, charge: -1 },
-    { type: 'y4:a-B4', similarity: 83, charge: -1 },
+    { type: 'y5:a3-B', similarity: 83, charge: -1 },
+    { type: 'y4:a4-B', similarity: 83, charge: -1 },
     { type: 'd4', similarity: 82, charge: -1 },
     { type: 'w4', similarity: 82, charge: -1 },
     { type: 'w5:b5', similarity: 82, charge: -1 },
@@ -60,10 +60,10 @@ test('sequenceSVG of nucleotide', () => {
     { type: 'w4', similarity: 75, charge: -2 },
     { type: 'w5:b5', similarity: 75, charge: -2 },
     { type: 'x4-B3', similarity: 73, charge: -2 },
-    { type: 'w5:a-B5', similarity: 73, charge: -2 },
+    { type: 'w5:a5-B', similarity: 73, charge: -2 },
   ];
   let svg = sequenceSVG(sequence, info, options);
   writeFileSync(join(__dirname, 'testNucleotide.svg'), svg);
 
-  expect(true).toBe(true);
+  expect(svg).toHaveLength(27014);
 });

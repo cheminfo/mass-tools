@@ -1,0 +1,1017 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`appendResidues (MeO)AA(H-1NH2)AA rna 1`] = `
+Object {
+  "residues": Object {
+    "all": Array [
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "begin",
+        "label": "5'",
+      },
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 4,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Amp",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Amp(H-1NH2)",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Amp",
+      },
+      Object {
+        "fromBegin": 4,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Amp",
+      },
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "end",
+        "label": "H",
+      },
+    ],
+    "alternatives": Object {
+      "α": Object {
+        "count": 1,
+      },
+    },
+    "begin": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "begin",
+      "label": "5'",
+    },
+    "end": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "end",
+      "label": "H",
+    },
+    "replacements": Object {
+      "Amp(H-1NH2)": Object {
+        "label": "α",
+        "modification": "H-1NH2",
+        "residue": "Amp",
+      },
+      "MeO": Object {
+        "label": "5'",
+      },
+    },
+    "residues": Array [
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 4,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Amp",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Amp(H-1NH2)",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Amp",
+      },
+      Object {
+        "fromBegin": 4,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Amp",
+      },
+    ],
+  },
+}
+`;
+
+exports[`appendResidues AA(Ph)A(Ph)A(Ts)A(Ph)U 1`] = `
+Object {
+  "residues": Object {
+    "all": Array [
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "begin",
+        "label": "H",
+      },
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 6,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 5,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(Ph)",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 4,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(Ph)",
+      },
+      Object {
+        "fromBegin": 4,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "¹α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(Ts)",
+      },
+      Object {
+        "fromBegin": 5,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(Ph)",
+      },
+      Object {
+        "fromBegin": 6,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "Θ",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Sec",
+      },
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "end",
+        "label": "OH",
+      },
+    ],
+    "alternatives": Object {
+      "α": Object {
+        "count": 2,
+      },
+    },
+    "begin": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "begin",
+      "label": "H",
+    },
+    "end": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "end",
+      "label": "OH",
+    },
+    "replacements": Object {
+      "Ala(Ph)": Object {
+        "label": "α",
+        "modification": "Ph",
+        "residue": "Ala",
+      },
+      "Ala(Ts)": Object {
+        "label": "¹α",
+        "modification": "Ts",
+        "residue": "Ala",
+      },
+      "Sec": Object {
+        "id": "Sec",
+        "label": "Θ",
+      },
+    },
+    "residues": Array [
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 6,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 5,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(Ph)",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 4,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(Ph)",
+      },
+      Object {
+        "fromBegin": 4,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "¹α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(Ts)",
+      },
+      Object {
+        "fromBegin": 5,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(Ph)",
+      },
+      Object {
+        "fromBegin": 6,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "Θ",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Sec",
+      },
+    ],
+  },
+}
+`;
+
+exports[`appendResidues ForAlaAla(H-1OH)AlaOH 1`] = `
+Object {
+  "residues": Object {
+    "all": Array [
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "begin",
+        "label": "5'",
+      },
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(H-1OH)",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "end",
+        "label": "OH",
+      },
+    ],
+    "alternatives": Object {
+      "α": Object {
+        "count": 1,
+      },
+    },
+    "begin": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "begin",
+      "label": "5'",
+    },
+    "end": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "end",
+      "label": "OH",
+    },
+    "replacements": Object {
+      "Ala(H-1OH)": Object {
+        "label": "α",
+        "modification": "H-1OH",
+        "residue": "Ala",
+      },
+      "For": Object {
+        "label": "5'",
+      },
+    },
+    "residues": Array [
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(H-1OH)",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+    ],
+  },
+}
+`;
+
+exports[`appendResidues H(+)AlaAla(H-1OH)AlaOH 1`] = `
+Object {
+  "residues": Object {
+    "all": Array [
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "begin",
+        "label": "5'",
+      },
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(H-1OH)",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "end",
+        "label": "OH",
+      },
+    ],
+    "alternatives": Object {
+      "α": Object {
+        "count": 1,
+      },
+    },
+    "begin": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "begin",
+      "label": "5'",
+    },
+    "end": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "end",
+      "label": "OH",
+    },
+    "replacements": Object {
+      "Ala(H-1OH)": Object {
+        "label": "α",
+        "modification": "H-1OH",
+        "residue": "Ala",
+      },
+      "H(+)": Object {
+        "label": "5'",
+      },
+    },
+    "residues": Array [
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(H-1OH)",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+    ],
+  },
+}
+`;
+
+exports[`appendResidues HAlaAla(H-1OH)AlaOH 1`] = `
+Object {
+  "residues": Object {
+    "all": Array [
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "begin",
+        "label": "H",
+      },
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(H-1OH)",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "end",
+        "label": "OH",
+      },
+    ],
+    "alternatives": Object {
+      "α": Object {
+        "count": 1,
+      },
+    },
+    "begin": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "begin",
+      "label": "H",
+    },
+    "end": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "end",
+      "label": "OH",
+    },
+    "replacements": Object {
+      "Ala(H-1OH)": Object {
+        "label": "α",
+        "modification": "H-1OH",
+        "residue": "Ala",
+      },
+    },
+    "residues": Array [
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "α",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala(H-1OH)",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+    ],
+  },
+}
+`;
+
+exports[`appendResidues HAlaAlaAlaOH 1`] = `
+Object {
+  "residues": Object {
+    "all": Array [
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "begin",
+        "label": "H",
+      },
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "end",
+        "label": "OH",
+      },
+    ],
+    "alternatives": Object {},
+    "begin": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "begin",
+      "label": "H",
+    },
+    "end": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "end",
+      "label": "OH",
+    },
+    "replacements": Object {},
+    "residues": Array [
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+    ],
+  },
+}
+`;
