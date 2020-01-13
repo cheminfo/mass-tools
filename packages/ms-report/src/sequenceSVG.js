@@ -13,6 +13,20 @@ const drawSequence = require('./draw/drawSequence');
 const drawReplacements = require('./draw/drawReplacements');
 const getPaper = require('./getPaper');
 
+/**
+ *
+ * @param {string} sequence
+ * @param {array} analysisResult
+ * @param {object} [options={}]
+ * @param {number} [options.leftRightBorders=50]
+ * @param {number} [options.spaceBetweenResidues=30]
+ * @param {number} [options.spaceBetweenInternalLines=12]
+ * @param {number} [options.strokeWidth=2]
+ * @param {string} [options.labelFontFamily='Verdana']
+ * @param {number} [options.labelSize=8]
+ * @param {object} [options.merge={}]
+ * @param {object} [options.merge.charge] Merge results if only differs by charge
+ */
 function sequenceSVG(sequence, analysisResult, options = {}) {
   const {
     width = 600,
