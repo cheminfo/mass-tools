@@ -52,7 +52,7 @@ module.exports = [
     charge: -3,
   },
   {
-    type: 'w8:b8',
+    type: 'w8:b4',
     similarity: 99,
     charge: -3,
   },
@@ -122,7 +122,7 @@ module.exports = [
     charge: -2,
   },
   {
-    type: 'w8:b8',
+    type: 'w8:b4',
     similarity: 98,
     charge: -2,
   },

@@ -10,6 +10,9 @@ function appendResults(data, analysisResult, options = {}) {
     let parts = result.type.split(/:/);
     if (parts.length === 2) {
       result.internal = true;
+      if (parts[1].match(/^[abcd][1-9]/)) {
+        [parts[0], parts[1]] = [parts[1], parts[0]];
+      }
       result.to = getNumber(parts[0]) - 1;
       result.from = numberResidues - getNumber(parts[1]);
     } else {
