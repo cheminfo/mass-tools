@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "molecular-formula",
-  "version": "0.44.2",
+  "version": "0.44.3",
   "main": "src/index.js",
   "files": [
     "src"
