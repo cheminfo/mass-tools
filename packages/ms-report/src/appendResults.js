@@ -7,7 +7,7 @@ function appendResults(data, analysisResult, options = {}) {
   results = results.filter((result) => !result.type.match(/^-B[0-9]$/));
   // we calculate all the lines based on the results
   for (let result of results) {
-    let parts = result.type.split(/:/);
+    let parts = result.type.split(/:|(?=[a-z])/); // we may have ':' but not mandatory
     if (parts.length === 2) {
       result.internal = true;
       if (parts[1].match(/^[abcd][1-9]/)) {
