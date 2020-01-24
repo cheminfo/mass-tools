@@ -12,6 +12,6 @@ describe('appendResults', () => {
   it('merge charge', () => {
     let data = { residues: { residues: new Array(10) } };
     appendResults(data, info, { merge: { charge: true } });
-    expect(data.results).toHaveLength(223);
+    expect(data.results).toHaveLength(222);
   });
 });

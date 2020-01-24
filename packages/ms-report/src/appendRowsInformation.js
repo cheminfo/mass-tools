@@ -22,7 +22,7 @@ function appendRowsInformation(data) {
       let toResidue = data.residues.residues[result.to];
       let to = toResidue.fromBegin;
       for (let row of data.rows) {
-        if (from <= row.info.lastResidue && to > row.info.firstResidue) {
+        if (from <= row.info.lastResidue && to >= row.info.firstResidue) {
           result = JSON.parse(JSON.stringify(result));
           result.fromResidue = fromResidue;
           if (from < row.info.firstResidue) {

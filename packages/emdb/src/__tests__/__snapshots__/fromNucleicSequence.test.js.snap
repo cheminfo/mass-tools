@@ -11,7 +11,7 @@ Array [
       "P": 2,
     },
     "charge": 0,
-    "comment": "d-H2O1",
+    "comment": "d1-H2O",
     "em": 393.02393639454,
     "ionization": Object {
       "charge": -1,
@@ -39,7 +39,7 @@ Array [
       "P": 3,
     },
     "charge": 0,
-    "comment": "d-H2O2",
+    "comment": "d2-H2O",
     "em": 722.07645651929,
     "ionization": Object {
       "charge": -1,

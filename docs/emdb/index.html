@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>emdb 0.13.0 | Documentation</title>
+  <title>emdb 0.13.1 | Documentation</title>
   <meta name='description' content='Database manager for exact mass query'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>emdb</h3>
-          <div class='mb1'><code>0.13.0</code></div>
+          <div class='mb1'><code>0.13.1</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -1016,7 +1016,7 @@ emdb.fromArray(array); <span class="hljs-comment">// create a database 'generate
 
   <p>Generates a database 'generated' from an array of molecular formula</p>
 
-    <div class='pre p1 fill-light mt0'>fromRange(rangesString: any, options: any, range: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, canonizeMF: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, uniqueMFs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, ionizations: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></div>
+    <div class='pre p1 fill-light mt0'>fromRange(rangesString: any, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>, range: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, canonizeMF: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, uniqueMFs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, ionizations: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></div>
   
   
 
@@ -1041,7 +1041,7 @@ emdb.fromArray(array); <span class="hljs-comment">// create a database 'generate
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>options</span> <code class='quiet'>(any
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
             = <code>{}</code>)</code>
 	    
           </div>
@@ -1058,6 +1058,17 @@ emdb.fromArray(array); <span class="hljs-comment">// create a database 'generate
               </tr>
             </thead>
             <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.estimate</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>estimate the number of MF without filters
+</span></td>
+</tr>
+
+
               
                 <tr>
   <td class='break-word'><span class='code bold'>options.databaseName</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
@@ -1415,10 +1426,17 @@ emdb.fromRange(<span class="hljs-string">'C1-10, H1-10; Cl0-1 Br0-1'</span>); <s
   
     (default <code>[]</code>)
   </td>
-  <td class='break-word'><span><ul>
-<li>@param {boolean} [options.protonation=false]</li>
-</ul>
-</span></td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.protonation</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span></span></td>
 </tr>
 
 
@@ -1665,22 +1683,38 @@ emdb.fromRange(<span class="hljs-string">'C1-10, H1-10; Cl0-1 Br0-1'</span>); <s
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.filter.minMass</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  <td class='break-word'><span class='code bold'>options.filter.precision</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
-    (default <code>0</code>)
+    (default <code>1000</code>)
   </td>
-  <td class='break-word'><span>Minimal monoisotopic mass
+  <td class='break-word'><span>The precision on the experimental mass
 </span></td>
 </tr>
 
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.filter.maxMass</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-  
-    (default <code>+Infinity</code>)
+  <td class='break-word'><span class='code bold'>options.filter.targetMass</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
   </td>
-  <td class='break-word'><span>Maximal monoisotopic mass
+  <td class='break-word'><span>Target mass, allows to calculate error and filter results
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.targetMasses</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>?</code>
+  </td>
+  <td class='break-word'><span>Target masses: SORTED array of numbers
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.targetIntensities</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>?</code>
+  </td>
+  <td class='break-word'><span>Target intensities: SORTED array of numbers
 </span></td>
 </tr>
 
@@ -2642,22 +2676,71 @@ of the mass of the electron</p>
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.filter.forceIonization</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
-  
-    (default <code>false</code>)
+  <td class='break-word'><span class='code bold'>options.filter.targetMass</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
   </td>
-  <td class='break-word'><span>If true ignore existing ionizations
+  <td class='break-word'><span>Target mass, allows to calculate error and filter results
 </span></td>
 </tr>
 
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.filter.precision</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-  
-    (default <code>1000</code>)
+  <td class='break-word'><span class='code bold'>options.filter.targetMasses</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>?</code>
   </td>
-  <td class='break-word'><span>The precision on the experimental mass
+  <td class='break-word'><span>Target masses: SORTED array of numbers
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.targetIntensities</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>?</code>
+  </td>
+  <td class='break-word'><span>Target intensities: SORTED array of numbers
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.minEM</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0</code>)
+  </td>
+  <td class='break-word'><span>Minimal monoisotopic mass
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.maxEM</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>+Infinity</code>)
+  </td>
+  <td class='break-word'><span>Maximal monoisotopic mass
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.minMSEM</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0</code>)
+  </td>
+  <td class='break-word'><span>Minimal monoisotopic mass observed by mass
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.filter.maxMSEM</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>+Infinity</code>)
+  </td>
+  <td class='break-word'><span>Maximal monoisotopic mass observed by mass
 </span></td>
 </tr>
 

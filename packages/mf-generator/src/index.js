@@ -35,7 +35,7 @@ const processRange = require('mf-utilities/src/processRange');
  * @returns {Array}
  */
 
-module.exports = function generateMFs(keys, options = {}) {
+module.exports = function combineMFs(keys, options = {}) {
   let { limit = 10000000, uniqueMFs = true, estimate = false } = options;
 
   if (uniqueMFs === true) options.canonizeMF = true;
