@@ -24,7 +24,7 @@ test('getGroupsObject', () => {
     alternativeOneLetter: 'α',
     unsaturation: 2,
     ocl: {
-      coordinates: '!BJLtni|c|rDvN@Dc|',
+      coordinates: expect.anything(),
       value: 'gNyDBaxmqR[fZjZ@',
     },
   });
