@@ -1,10 +1,11 @@
 'use strict';
 
-// original data: https://docs.google.com/spreadsheets/d/1SinZQ7doYeN1GCWWZ-SNhkxj4Z3RR8kGvyde8nT0LA4/edit?usp=sharing
+// the tool that allows to edit the data is available at:
+//my.cheminfo.org/?viewURL=https%3A%2F%2Fmydb.cheminfo.org%2Fdb%2Fvisualizer%2Fentry%2F2b7d0688e43300da6a97de7cde0342b7%2Fview.json
 
 // editor of groups.tsv
 
-const fs = require('fs');
+https: const fs = require('fs');
 const { join } = require('path');
 
 const targetDir = join(__dirname, '../../packages/chemical-groups/src/');
@@ -18,7 +19,7 @@ const MODULE = "'use strict';\nmodule.exports=";
 
 var groups = Papa.parse(`${fs.readFileSync(`${__dirname}/groups.tsv`)}`, {
   header: true,
-  delimiter: '\t'
+  delimiter: '\t',
 }).data.filter((line) => line.symbol !== '');
 
 // we will create an object for the elements
@@ -28,8 +29,8 @@ for (let group of groups) {
   let parts = mfObject.toParts()[0];
   if (group.oclID) {
     group.ocl = {
-      value: group.oclID,
-      coordinates: group.oclCoordinates
+      value: unescape(group.oclID),
+      coordinates: unescape(group.oclCoordinates),
     };
   }
   delete group.oclCoordinates;
@@ -59,7 +60,7 @@ for (let group of groups) {
           throw new Error(`element unknown: ${part.value.atom} - ${part}`);
         }
         let isotope = element.isotopes.filter(
-          (a) => a.nominal === part.value.isotope
+          (a) => a.nominal === part.value.isotope,
         )[0];
         if (!isotope) {
           throw new Error(`isotope unknown: ${part.value.isotope} - ${part}`);
@@ -83,5 +84,5 @@ groups.forEach((e) => {
 });
 fs.writeFileSync(
   `${targetDir}/groupsObject.js`,
-  MODULE + JSON.stringify(groupsObject)
+  MODULE + JSON.stringify(groupsObject),
 );
