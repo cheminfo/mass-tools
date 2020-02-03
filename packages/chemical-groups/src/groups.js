@@ -5,7 +5,7 @@ module.exports = [
     symbol: 'Abu',
     name: '2-Aminobutyric acid diradical',
     mf: 'C4H7NO',
-    ocl: { value: 'dazHPBPOEgEInVZjcH@', coordinates: '!BJLtni|c|rDvN@Dc|rOp' },
+    ocl: { value: 'dazHPBPOEgEInVZjcH@', coordinates: '!BbIu^Kxc|bIu^@Hc|b@H' },
     mass: 85.10463700109551,
     monoisotopicMass: 85.05276384961,
     unsaturation: 2,
@@ -20,7 +20,7 @@ module.exports = [
     symbol: 'Acet',
     name: 'Acetyl',
     mf: 'C2H3O',
-    ocl: { value: 'gCaHDEeIi`@', coordinates: '!BbOrN@HbM' },
+    ocl: { value: 'gCaHDEeIi`@', coordinates: '!BbOr^@Hb]' },
     mass: 43.04469897995611,
     monoisotopicMass: 43.01838971626,
     unsaturation: 1,
@@ -34,7 +34,7 @@ module.exports = [
     symbol: 'Acm',
     name: 'Acetamidomethyl',
     mf: 'C3H6NO',
-    ocl: { value: 'd@', coordinates: '' },
+    ocl: { value: 'gGYHDPliJuS@@', coordinates: '!BbOrHWXc|W`BHWP' },
     mass: 72.08596035030448,
     monoisotopicMass: 72.04493881738,
     unsaturation: 1,
@@ -49,6 +49,10 @@ module.exports = [
     symbol: 'Adao',
     name: 'Adamantyloxy',
     mf: 'C10H15O',
+    ocl: {
+      value: 'dc\\H`HAYRVeV^dUGZjjjj@@',
+      coordinates: '!B~GND{arJOl^@AsEGHi|pos{WgBaT@',
+    },
     mass: 151.2258752025074,
     monoisotopicMass: 151.11229010302,
     unsaturation: 5,
@@ -62,7 +66,7 @@ module.exports = [
     symbol: 'Aib',
     name: 'alpha-Aminoisobutyric acid diradical',
     mf: 'C4H7NO',
-    ocl: { value: 'dazHPBPOGgEInfZj@@', coordinates: '!BJLtni|c|rDvN@Ao|RGp' },
+    ocl: { value: 'dazHPBPOGgEInfZj@@', coordinates: '!BbOw~_xc|bOw~@K\\BbOp' },
     mass: 85.10463700109551,
     monoisotopicMass: 85.05276384961,
     unsaturation: 2,
@@ -79,7 +83,7 @@ module.exports = [
     mf: 'C3H5NO',
     oneLetter: 'A',
     alternativeOneLetter: 'α',
-    ocl: { value: 'gNyDBaxmqR[fZjZ@', coordinates: '!BJLtni|c|rDvN@Dc|' },
+    ocl: { value: 'gNyDBaxmqR[fZjZ@', coordinates: '!BbOw~_x`BbOw~@H`B' },
     mass: 71.07801959624871,
     monoisotopicMass: 71.03711378515,
     unsaturation: 2,
@@ -98,7 +102,7 @@ module.exports = [
     alternativeOneLetter: 'ρ',
     ocl: {
       value: 'dkLhPBgSPOEgEInWUijjihr@@',
-      coordinates: '!BJLtni|c|rDvN@Dc|rOqnpLc|[lB[Lc|',
+      coordinates: '!BbIu^Kxc|bIu^@Hc|b@I~PD`B_dAW@d`B',
     },
     mass: 156.18592219918227,
     monoisotopicMass: 156.10111102405,
@@ -116,7 +120,7 @@ module.exports = [
     mf: 'C6H11N4O',
     ocl: {
       value: 'dglhpHpil@gWDEI[UYZfjji`T@',
-      coordinates: '!BuSWK]^L[mWKV{_urw^_xAMu~t@mE]LKn|',
+      coordinates: '!BvS[M]nL]m_[MW[WvsWN]xAUvT@mEmLMn\\',
     },
     mass: 155.1779814451265,
     monoisotopicMass: 155.09328599182,
@@ -136,7 +140,7 @@ module.exports = [
     alternativeOneLetter: 'η',
     ocl: {
       value: 'deeDPBeACqYqR[ezZjZL`@',
-      coordinates: '!BJLtni|c|rDvN@Dc|ROpnPDcM',
+      coordinates: '!BbEu^Kxc|bEu^@Hc|R@I~PDb}',
     },
     mass: 114.10280438280381,
     monoisotopicMass: 114.04292744137999,
@@ -154,7 +158,7 @@ module.exports = [
     mf: 'C4H5N2O2',
     ocl: {
       value: 'dmUDpH[E@IEqgqRVvVijjXi@@',
-      coordinates: '!Bvrt{Bx@N~w^]xaMv~tHoEo|Kn\\',
+      coordinates: '!Buwtw`gy@Mwta_xa]mvHK\\bWb|',
     },
     mass: 113.09486362874803,
     monoisotopicMass: 113.03510240915,
@@ -174,7 +178,7 @@ module.exports = [
     alternativeOneLetter: 'δ',
     ocl: {
       value: 'defLPBPYCqYqR[ezZjZL`@',
-      coordinates: '!BJLtni|c|rDvN@Dc|ROpnPDcM',
+      coordinates: '!BbEu^Kxc|bEu^@Hc|R@I~PDb}',
     },
     mass: 115.08756534162052,
     monoisotopicMass: 115.02694302429,
@@ -192,7 +196,7 @@ module.exports = [
     mf: 'C4H4NO3',
     ocl: {
       value: 'dmVLpFcE@IEqgqRVvVijjXi@@',
-      coordinates: '!Bfru[Bx@Vzv^MxaMfztHoAm|Kn\\',
+      coordinates: '!Buwtw`gy@Mwta_xa]mvHK\\bWb|',
     },
     mass: 114.07962458756472,
     monoisotopicMass: 114.01911799206,
@@ -210,7 +214,7 @@ module.exports = [
     mf: 'C8H13NO3',
     ocl: {
       value: 'dgnLPBP{CqYqR[euVfjjihr@@',
-      coordinates: '!BJJtny|c|bDwN@@b|ROqn`Dc|[hAHFz@RJt',
+      coordinates: '!BbEu^Kxc|bEu^@Hc|rOq~PDC|_dA@@d`C_d@',
     },
     mass: 171.19403496100773,
     monoisotopicMass: 171.08954328213002,
@@ -228,7 +232,7 @@ module.exports = [
     mf: 'C8H12NO3',
     ocl: {
       value: 'do^LpEcG@IMqoqRVuUejZjjibT@',
-      coordinates: '!Bvzw[Fx@vzunM}nm[c_[[YzwBDu[k_@|fpnEp',
+      coordinates: '!Bmtw_Gy@OtAOs}@SWREbEvwXc|mrI^Kp',
     },
     mass: 170.18609420695194,
     monoisotopicMass: 170.0817182499,
@@ -244,7 +248,7 @@ module.exports = [
     symbol: 'Boc',
     name: 't-Butoxycarbonyl',
     mf: 'C5H9O2',
-    ocl: { value: 'daxD`DpEeImjZj@@', coordinates: '!BbOqn@HambOrH[Vx@bOp' },
+    ocl: { value: 'daxD`DpEeImjZj@@', coordinates: '!BtGt~_}A\\tKw}m}A}WM@' },
     mass: 101.12395611881479,
     monoisotopicMass: 101.06025452921,
     unsaturation: 1,
@@ -260,7 +264,7 @@ module.exports = [
     mf: 'C8H9O',
     ocl: {
       value: 'deTH`DAYRUYTYj`@@@',
-      coordinates: '!B@OP@[PCt@Et@}Fz@Ft@[Vz',
+      coordinates: '!BtEsPO]A\\tOwPWCytCwPOSy',
     },
     mass: 121.15675888470227,
     monoisotopicMass: 121.06533990964,
@@ -275,7 +279,10 @@ module.exports = [
     symbol: 'Brz',
     name: '2-Bromobenzyloxycarbonyl',
     mf: 'C8H6BrO2',
-    ocl: { value: 'd@', coordinates: '' },
+    ocl: {
+      value: 'dcLDPDpEd\\QImYgWYjB@@@',
+      coordinates: '!BbOp~@Hc]bOrHOXc|Oa|~@Hc]bCt~Gp',
+    },
     mass: 214.03586932736317,
     monoisotopicMass: 212.95511703252,
     unsaturation: 9,
@@ -290,7 +297,7 @@ module.exports = [
     symbol: 'Bu',
     name: 'Butyl',
     mf: 'C4H9',
-    ocl: { value: 'd@', coordinates: '' },
+    ocl: { value: 'gJPH@liJuP@', coordinates: '!B@Fp@DpAl@AL' },
     mass: 57.114410373442986,
     monoisotopicMass: 57.07042529007,
     unsaturation: -1,
@@ -303,7 +310,7 @@ module.exports = [
     symbol: 'Bum',
     name: 't-Butoxymethyl',
     mf: 'C5H11O',
-    ocl: { value: 'gNqHDEeIVjj`@', coordinates: '!BbOrH[Xa|bFun@Mo|' },
+    ocl: { value: 'gNqHDEeIVjj`@', coordinates: '!B@DL@[@ACPq|@Pvp@' },
     mass: 87.14043270260808,
     monoisotopicMass: 87.08098997409999,
     unsaturation: -1,
@@ -319,7 +326,7 @@ module.exports = [
     mf: 'C7H5O',
     ocl: {
       value: 'didH`DAYR[e^FX@@@@',
-      coordinates: '!BbOrn@HbmbOrnUxbmbJvnUp',
+      coordinates: '!BbOp~@H`}b@H~Gx`}bCt~Gp',
     },
     mass: 105.1142599717439,
     monoisotopicMass: 105.03403978072,
@@ -334,7 +341,7 @@ module.exports = [
     symbol: 'Bzl',
     name: 'Benzyl',
     mf: 'C7H7',
-    ocl: { value: 'daD@`@VTeeVz`@@@', coordinates: '!B@OP@[PCtkm|@[PBmkm|' },
+    ocl: { value: 'daD@`@VTeeVz`@@@', coordinates: '!BtEsPo]A\\OgPo]@}Og|' },
     mass: 91.13073655553718,
     monoisotopicMass: 91.05477522561,
     unsaturation: 7,
@@ -347,7 +354,7 @@ module.exports = [
     symbol: 'Bn',
     name: 'Benzyl',
     mf: 'C7H7',
-    ocl: { value: 'daD@`@VTeeVz`@@@', coordinates: '!B@OP@[PCtkm|@[PBmkm|' },
+    ocl: { value: 'daD@`@VTeeVz`@@@', coordinates: '!BdArPOY@\\wg~POYC]wg|' },
     mass: 91.13073655553718,
     monoisotopicMass: 91.05477522561,
     unsaturation: 7,
@@ -362,7 +369,7 @@ module.exports = [
     mf: 'C7H7O',
     ocl: {
       value: 'didH`HAYRUe^Fh@@@@',
-      coordinates: '!B@Jt@}@Am@ORnwpBm@Jvnwp',
+      coordinates: '!BdMvPGI@}dAs^_yC]dMw^_p',
     },
     mass: 107.13014147985547,
     monoisotopicMass: 107.04968984518,
@@ -377,6 +384,10 @@ module.exports = [
     symbol: 'Cha',
     name: 'beta-Cyclohexylalanine diradical',
     mf: 'C9H15NO',
+    ocl: {
+      value: 'dknHPBPOEgEInWe]NZjjjcH@',
+      coordinates: '!BbEu^Kxc|bEu^@Hc|Uwpww[y@UwqW_Ky@',
+    },
     mass: 153.22184251721796,
     monoisotopicMass: 153.11536410745,
     unsaturation: 4,
@@ -391,7 +402,7 @@ module.exports = [
     symbol: 'Chxo',
     name: 'Cyclohexyloxy',
     mf: 'C6H11O',
-    ocl: { value: 'daDH`HAYRVU[jjj@@', coordinates: '!B@OP@[PCtkm|@[PBmkm|' },
+    ocl: { value: 'daDH`HAYRVU[jjj@@', coordinates: '!BdArPOY@\\wg~POYC]wg|' },
     mass: 99.15116859934332,
     monoisotopicMass: 99.08098997409999,
     unsaturation: 1,
@@ -405,7 +416,10 @@ module.exports = [
     symbol: 'Cit',
     name: 'Citrulline diradical',
     mf: 'C6H11N3O2',
-    ocl: { value: 'd@', coordinates: '' },
+    ocl: {
+      value: 'dkODPBdttOEgEInWUijjihr@@',
+      coordinates: '!BbEu^Kxc|bEu^@Hc|rHK~PLbBrKw~O|bB',
+    },
     mass: 157.170683157999,
     monoisotopicMass: 157.08512660696,
     unsaturation: 4,
@@ -420,6 +434,10 @@ module.exports = [
     symbol: 'Citp',
     name: 'Citrulline triradical',
     mf: 'C6H10N3O2',
+    ocl: {
+      value: 'dgoDpHJ\\l@gWDEI[UYZfjji`T@',
+      coordinates: '!BuxKWo_xuxKWo_xu{ta_xa]mvHK\\bWb|',
+    },
     mass: 156.16274240394318,
     monoisotopicMass: 156.07730157473,
     unsaturation: 5,
@@ -434,6 +452,10 @@ module.exports = [
     symbol: 'Clz',
     name: '2-Chlorobenzyloxycarbonyl',
     mf: 'C8H6ClO2',
+    ocl: {
+      value: 'dcLDPDpEdXaImYgWYjB@@@',
+      coordinates: '!BbOq^@Hb]bOrHgXc|Wb}^@Hb]bEu^Kp',
+    },
     mass: 169.58527912946118,
     monoisotopicMass: 169.00563211451998,
     unsaturation: 9,
@@ -448,6 +470,7 @@ module.exports = [
     symbol: 'Cp',
     name: 'Cyclopentadienyl',
     mf: 'C5H5',
+    ocl: { value: 'gFpH@liLimRp@', coordinates: '!B@IxlVrpXXDi`AP' },
     mass: 65.09338325395512,
     monoisotopicMass: 65.03912516115,
     unsaturation: 5,
@@ -462,7 +485,10 @@ module.exports = [
     mf: 'C3H5NOS',
     oneLetter: 'C',
     alternativeOneLetter: 'ς',
-    ocl: { value: 'd@', coordinates: '' },
+    ocl: {
+      value: 'dazHpBPOEgG`aInVZjcH@',
+      coordinates: '!BbIu^Kxc|bIu^@Hc|b@H',
+    },
     mass: 103.14280700237578,
     monoisotopicMass: 103.00918495955,
     unsaturation: 2,
@@ -478,6 +504,10 @@ module.exports = [
     symbol: 'Cysp',
     name: 'Cysteine triradical',
     mf: 'C3H4NOS',
+    ocl: {
+      value: 'diFHHBD@f@agGoEIVVjjfLP@',
+      coordinates: '!BMsrw_PElIvw_[C\\mxI^Gp',
+    },
     mass: 102.13486624831998,
     monoisotopicMass: 102.00135992732,
     unsaturation: 3,
@@ -493,7 +523,7 @@ module.exports = [
     symbol: 'D',
     name: 'Deuterium',
     mf: '[2H]',
-    ocl: { value: 'eFAAYhBLCEH@', coordinates: '!B@Mt' },
+    ocl: { value: 'eFAAYhBLCEH@', coordinates: '!B@Lt' },
     mass: 2.01410177812,
     monoisotopicMass: 2.01410177812,
     unsaturation: -1,
@@ -503,6 +533,10 @@ module.exports = [
     symbol: 'Dde',
     name: 'Dde',
     mf: 'C10H13O2',
+    ocl: {
+      value: 'dklD`FDEgHhihicIVZfZj@@',
+      coordinates: '!B`BH@k\\BbOw~@Oyb@Jw@h`B`BH@ox@',
+    },
     mass: 165.20939861871415,
     monoisotopicMass: 165.09155465812998,
     unsaturation: 7,
@@ -516,6 +550,10 @@ module.exports = [
     symbol: 'Dnp',
     name: '2,4-Dinitrophenyl',
     mf: 'C6H3N2O4',
+    ocl: {
+      value: 'dkmB`bWatpVRd^VS{HhheEUFfBAbX@@',
+      coordinates: '!BbOr~@Hb}erHHc|o`BWoXb}bOrHo[x@',
+    },
     mass: 167.09926376274353,
     monoisotopicMass: 167.00928158383,
     unsaturation: 11,
@@ -530,7 +568,7 @@ module.exports = [
     symbol: 'Et',
     name: 'Ethyl',
     mf: 'C2H5',
-    ocl: { value: 'eMBAYRZ@', coordinates: '!B@Fp@wP' },
+    ocl: { value: 'eMBAYRZ@', coordinates: '!B@Fp@sP' },
     mass: 29.061175563749384,
     monoisotopicMass: 29.03912516115,
     unsaturation: -1,
@@ -543,7 +581,10 @@ module.exports = [
     symbol: 'Fmoc',
     name: 'Fluorenylmethoxycarbonyl',
     mf: 'C15H11O2',
-    ocl: { value: 'd@', coordinates: '' },
+    ocl: {
+      value: 'fde@b@DX@liMkLrjxeVCzLuT@@@P@@@',
+      coordinates: '!Bb@K~@Hc}b@JHTztMK@fRn{UKlZXAh_Fa@ilBfJ{lZX@',
+    },
     mass: 223.24719659427882,
     monoisotopicMass: 223.07590459367,
     unsaturation: 19,
@@ -557,6 +598,7 @@ module.exports = [
     symbol: 'For',
     name: 'Formyl',
     mf: 'CHO',
+    ocl: { value: 'eMJDVTfP@', coordinates: '!BbOp^@@' },
     mass: 29.018081575109303,
     monoisotopicMass: 29.0027396518,
     unsaturation: 1,
@@ -572,6 +614,10 @@ module.exports = [
     mf: 'C5H8N2O2',
     oneLetter: 'Q',
     alternativeOneLetter: 'ξ',
+    ocl: {
+      value: 'dmUDPBUICqYqR[evfjihr@@',
+      coordinates: '!BbKu^Gx`BlIu~@KC\\b@K~@H`BmpH',
+    },
     mass: 128.12942178765059,
     monoisotopicMass: 128.05857750584,
     unsaturation: 4,
@@ -586,6 +632,10 @@ module.exports = [
     symbol: 'Glnp',
     name: 'Glutamine triradical',
     mf: 'C5H7N2O2',
+    ocl: {
+      value: 'dcuDpH{MAYeqWqRVuejZjiad@',
+      coordinates: '!Bb@JH_X`Bg~w_PElIvw_[C\\mxI^Gp',
+    },
     mass: 127.12148103359483,
     monoisotopicMass: 127.05075247361,
     unsaturation: 5,
@@ -600,6 +650,10 @@ module.exports = [
     symbol: 'Glp',
     name: 'Pyroglutamine',
     mf: 'C5H5NO2',
+    ocl: {
+      value: 'deVDPBRP|V\\TfygxYjjZL`@',
+      coordinates: '!BBEu^kpa|BEtFPKXoAIP@mjAY',
+    },
     mass: 111.09889631403748,
     monoisotopicMass: 111.03202840472,
     unsaturation: 6,
@@ -618,7 +672,7 @@ module.exports = [
     alternativeOneLetter: 'ε',
     ocl: {
       value: 'dmVLPBRUCqYqR[evfjihr@@',
-      coordinates: '!BJLtni|a|rDvN@Dc|RGpnPLa|zwp',
+      coordinates: '!BbEu^Kxc|bEu^@Hc|R@I~PI\\|POp',
     },
     mass: 129.11418274646732,
     monoisotopicMass: 129.04259308875,
@@ -634,6 +688,10 @@ module.exports = [
     symbol: 'Glup',
     name: 'Glutamic acid triradical',
     mf: 'C5H6NO3',
+    ocl: {
+      value: 'dcvLpNcM@IeqWqRVuejZjiad@',
+      coordinates: '!BmpH_Y\\|@S|w_REbEvwXc|mrI^Kp',
+    },
     mass: 128.10624199241153,
     monoisotopicMass: 128.03476805652002,
     unsaturation: 5,
@@ -650,7 +708,7 @@ module.exports = [
     mf: 'C2H3NO',
     oneLetter: 'G',
     alternativeOneLetter: 'γ',
-    ocl: { value: 'gGYDBaxuqR[Yj@@', coordinates: '!BPLtn{xCt`Dt@}@' },
+    ocl: { value: 'gGYDBaxuqR[Yj@@', coordinates: '!BxEu^_~AlxMw`[@' },
     mass: 57.051402191401905,
     monoisotopicMass: 57.021463720689994,
     unsaturation: 2,
@@ -665,6 +723,10 @@ module.exports = [
     symbol: 'Hci',
     name: 'Homocitrulline diradical',
     mf: 'C7H13N3O2',
+    ocl: {
+      value: 'dgoDPBVtLOEgEInWUZZjjfcH@',
+      coordinates: '!BbEu^Kxc|bEu^@Hc|R@I~PD@BO`BH@ha}`@',
+    },
     mass: 171.19730056284578,
     monoisotopicMass: 171.10077667142,
     unsaturation: 4,
@@ -679,6 +741,10 @@ module.exports = [
     symbol: 'Hcip',
     name: 'Homocitrulline triradical',
     mf: 'C7H12N3O2',
+    ocl: {
+      value: 'do_DpHI\\\\EdwFEI[UVVijjjfIP@',
+      coordinates: '!Bmww~_xa}mwuA_s}}@S|w_REbEvwXc|mrI^Kp',
+    },
     mass: 170.18935980879002,
     monoisotopicMass: 170.09295163918998,
     unsaturation: 5,
@@ -695,6 +761,10 @@ module.exports = [
     mf: 'C6H7N3O',
     oneLetter: 'H',
     alternativeOneLetter: 'ζ',
+    ocl: {
+      value: 'dcOHPBGTCqYqR[eyUvZjejL`@',
+      coordinates: '!BbEu^Kxc|bEu^@Hc|R@INpKBMhJXtQ@',
+    },
     mass: 137.13951521745759,
     monoisotopicMass: 137.05891185847,
     unsaturation: 8,
@@ -709,6 +779,10 @@ module.exports = [
     symbol: 'Hisp',
     name: 'Histidine triradical',
     mf: 'C6H6N3O',
+    ocl: {
+      value: 'dkoHpHHSAYUqwqRY]YXjjVjihy@@',
+      coordinates: '!Bwty}rDl{gyfOlc]}HW~HW[_}bOrwHexo',
+    },
     mass: 136.13157446340182,
     monoisotopicMass: 136.05108682624,
     unsaturation: 9,
@@ -723,6 +797,10 @@ module.exports = [
     symbol: 'Hser',
     name: 'Homoserine diradical',
     mf: 'C4H7NO2',
+    ocl: {
+      value: 'diFDPBPP|V\\Tfy^Zjhr@@',
+      coordinates: '!BbEu^Kxc|bEu^@Hc|R@K~P@',
+    },
     mass: 101.10404192541378,
     monoisotopicMass: 101.04767846918,
     unsaturation: 2,
@@ -737,6 +815,10 @@ module.exports = [
     symbol: 'Hserp',
     name: 'Homoserine triradical',
     mf: 'C4H6NO2',
+    ocl: {
+      value: 'defDpJbPV^\\Q|TeVVjji`d@',
+      coordinates: '!Buww~Os]}HW~HW[_}bOrwHexo',
+    },
     mass: 100.09610117135801,
     monoisotopicMass: 100.03985343695001,
     unsaturation: 3,
@@ -751,6 +833,10 @@ module.exports = [
     symbol: 'Hyp',
     name: 'Hydroxyproline diradical',
     mf: 'C5H7NO2',
+    ocl: {
+      value: 'deVDPBRP|V\\\\bfbbOCMUUIdE@@',
+      coordinates: '!BBEu^kpa|BEtFPKXoAIP@m`IH',
+    },
     mass: 113.11477782214904,
     monoisotopicMass: 113.04767846918,
     unsaturation: 4,
@@ -765,6 +851,10 @@ module.exports = [
     symbol: 'Hypp',
     name: 'Hydroxyproline triradical',
     mf: 'C5H6NO2',
+    ocl: {
+      value: 'dmvDpJaPB^\\Y|TeeWjZjjidRL`@',
+      coordinates: '!BM{t}MsIO_E{jsdmf}w@w]BWn|',
+    },
     mass: 112.10683706809326,
     monoisotopicMass: 112.03985343695001,
     unsaturation: 5,
@@ -781,6 +871,10 @@ module.exports = [
     mf: 'C6H11NO',
     oneLetter: 'I',
     alternativeOneLetter: 'ι',
+    ocl: {
+      value: 'defHPBPOEgEInVyjjdrT`@',
+      coordinates: '!BbIu^Kxc|bIu^@H`BqpJH@ex@',
+    },
     mass: 113.15787181078912,
     monoisotopicMass: 113.08406397853,
     unsaturation: 2,
@@ -794,13 +888,17 @@ module.exports = [
   {
     symbol: 'Ivdde',
     name: '1-[4,4-dimethyl-2,6-dioxocyclohexylidene)-3-methylbutyl',
-    mf: 'C14H21O2',
-    mass: 221.31586823810136,
-    monoisotopicMass: 221.15415491597,
+    mf: 'C13H19O2',
+    ocl: {
+      value: 'f`a@b@NR@lyEEDhhigEVfjYjj`@@',
+      coordinates: '!BH~hcy_x@H~k~\\rOj`pcyUseH~Tcy_xLgOeHwO~',
+    },
+    mass: 207.28925083325453,
+    monoisotopicMass: 207.13850485151,
     unsaturation: 7,
     elements: [
-      { symbol: 'C', number: 14 },
-      { symbol: 'H', number: 21 },
+      { symbol: 'C', number: 13 },
+      { symbol: 'H', number: 19 },
       { symbol: 'O', number: 2 },
     ],
   },
@@ -810,6 +908,10 @@ module.exports = [
     mf: 'C6H11NO',
     oneLetter: 'L',
     alternativeOneLetter: 'λ',
+    ocl: {
+      value: 'defHPBPOEgEInWijjhr@@',
+      coordinates: '!BbIu^Kxc|bIu^@Hc|bOrHgUx@',
+    },
     mass: 113.15787181078912,
     monoisotopicMass: 113.08406397853,
     unsaturation: 2,
@@ -826,6 +928,10 @@ module.exports = [
     mf: 'C6H12N2O',
     oneLetter: 'K',
     alternativeOneLetter: 'κ',
+    ocl: {
+      value: 'dmUHPBU@|V\\Tfy]YjjjL`@',
+      coordinates: '!BbIu^Kxc|bIu^@Hc|bOq^@Hc|bIt',
+    },
     mass: 128.17251577629068,
     monoisotopicMass: 128.09496301519,
     unsaturation: 2,
@@ -840,6 +946,10 @@ module.exports = [
     symbol: 'Lysp',
     name: 'Lysine triradical',
     mf: 'C6H11N2O',
+    ocl: {
+      value: 'dcuHpH{PVY\\U|TeUYZjjjXY@@',
+      coordinates: '!BMwvwhk_}HW~wREbIvwXc|mzI^Kp',
+    },
     mass: 127.16457502223491,
     monoisotopicMass: 127.08713798295999,
     unsaturation: 3,
@@ -854,6 +964,10 @@ module.exports = [
     symbol: 'Mbh',
     name: "4,4'-Dimethoxybenzhydryl",
     mf: 'C15H15O2',
+    ocl: {
+      value: 'fdy@b@G^@liLsJkzlcZmT@@@UP@@@',
+      coordinates: '!Bg~wXc}g~w@h`Bg~w[_}bOvH[\\Bg~wXc}mpJH@`',
+    },
     mass: 227.27895961050194,
     monoisotopicMass: 227.10720472258998,
     unsaturation: 15,
@@ -867,6 +981,7 @@ module.exports = [
     symbol: 'Me',
     name: 'Methyl',
     mf: 'CH3',
+    ocl: { value: 'eFBAYc@@', coordinates: '!B@AL' },
     mass: 15.03455815890258,
     monoisotopicMass: 15.02347509669,
     unsaturation: -1,
@@ -879,6 +994,10 @@ module.exports = [
     symbol: 'Mebzl',
     name: '4-Methylbenzyl',
     mf: 'C8H9',
+    ocl: {
+      value: 'did@`@VTee]nh@H@@',
+      coordinates: '!BxFs`W^AlWg`w^A}Wg`WP',
+    },
     mass: 105.15735396038399,
     monoisotopicMass: 105.07042529007,
     unsaturation: 7,
@@ -891,6 +1010,10 @@ module.exports = [
     symbol: 'Meobzl',
     name: '4-Methoxybenzyl',
     mf: 'C8H9O',
+    ocl: {
+      value: 'deTH`AAYRVUunh@J@@',
+      coordinates: '!BxFs`WUyxFs`O^@}xFs`W^Al',
+    },
     mass: 121.15675888470227,
     monoisotopicMass: 121.06533990964,
     unsaturation: 7,
@@ -906,6 +1029,10 @@ module.exports = [
     mf: 'C5H9NOS',
     oneLetter: 'M',
     alternativeOneLetter: 'μ',
+    ocl: {
+      value: 'defHpBPOEgDPaInWYjjhr@@',
+      coordinates: '!BbIu^Kxc|bIu^@Hc|bGrHgXc|',
+    },
     mass: 131.19604181206938,
     monoisotopicMass: 131.04048508847,
     unsaturation: 2,
@@ -921,6 +1048,11 @@ module.exports = [
     symbol: 'Mmt',
     name: '4-Methoxytrityl',
     mf: 'C20H17O',
+    ocl: {
+      value: 'ffcAB@B`V\\bdTTTRRRVvIhnRGMT@@@@AP@@@',
+      coordinates:
+        '!BmpJH@k\\Bg~@Hc}mw~@Hc}mvH@h`BmpJw@oyg~H__x@mvH@ha}',
+    },
     mass: 273.3491156779715,
     monoisotopicMass: 273.12794016748,
     unsaturation: 23,
@@ -934,6 +1066,10 @@ module.exports = [
     symbol: 'Mtc',
     name: '2,2,5,7,8-pentamethylchroman-6-sulphonyl',
     mf: 'C14H19O3S',
+    ocl: {
+      value: 'fleAa@DX\\AY`DYEHXhhilmiKW`rpDQUUD@@',
+      coordinates: '!BmtBmvHmwvw@oymww~@K_}bOw~_x\\g~Opt|CSwqgvw',
+    },
     mass: 267.36417906043516,
     monoisotopicMass: 267.10549064548,
     unsaturation: 9,
@@ -948,6 +1084,10 @@ module.exports = [
     symbol: 'Mtr',
     name: '4-Methoxy-2,3,6-trimethylbenzenesulphonyl',
     mf: 'C10H13O3S',
+    ocl: {
+      value: 'do|LPDrpVXBLbdLTTTngYXBHj@@',
+      coordinates: '!Bmvw@ox@g~wXc}g~w@oyb@JH[_}g~HP',
+    },
     mass: 213.27359094915948,
     monoisotopicMass: 213.05854045209998,
     unsaturation: 7,
@@ -990,7 +1130,7 @@ module.exports = [
     mf: 'C6H11NO',
     ocl: {
       value: 'defHPBPOEgEInWYjjhr@@',
-      coordinates: '!BJLtni|a|rDvN@Dc|ROpnPLc|',
+      coordinates: '!BbIu^Kxc|bIu^@Hc|bOq^@Hc|',
     },
     mass: 113.15787181078912,
     monoisotopicMass: 113.08406397853,
@@ -1024,7 +1164,7 @@ module.exports = [
     mf: 'C5H9NO',
     ocl: {
       value: 'diFHPBPOEgEInWfjjL`@',
-      coordinates: '!BJLtni|c|rDvN@Dc|ROpnP@',
+      coordinates: '!BbIu^Kxc|bIu^@Hc|bOq^@@',
     },
     mass: 99.13125440594231,
     monoisotopicMass: 99.06841391407,
@@ -1040,6 +1180,7 @@ module.exports = [
     symbol: 'Odmab',
     name: 'Odmab',
     mf: 'C20H26NO3',
+    ocl: { value: 'd@', coordinates: '' },
     mass: 328.4260955245558,
     monoisotopicMass: 328.19126870111995,
     unsaturation: 15,
@@ -1054,6 +1195,10 @@ module.exports = [
     symbol: 'Orn',
     name: 'Ornithine diradical',
     mf: 'C5H10N2O',
+    ocl: {
+      value: 'deeHPBe@|V\\Tfy]fjjcH@',
+      coordinates: '!BbIu^Kxc|bIu^@Hc|b@I^@Hc|',
+    },
     mass: 114.14589837144388,
     monoisotopicMass: 114.07931295072999,
     unsaturation: 2,
@@ -1068,6 +1213,10 @@ module.exports = [
     symbol: 'Ornp',
     name: 'Ornithine triradical',
     mf: 'C5H9N2O',
+    ocl: {
+      value: 'dmUHpHYPBQ\\Y|TeUejjjfJP@',
+      coordinates: '!BMpJwREmwta_xb]mvHK^bWb|',
+    },
     mass: 113.13795761738811,
     monoisotopicMass: 113.0714879185,
     unsaturation: 3,
@@ -1082,6 +1231,7 @@ module.exports = [
     symbol: 'Pbf',
     name: '2,2,4,6,7-pentamethyldihydrobenzofurane-5-sulfonyl',
     mf: 'C13H17O3S',
+    ocl: { value: 'd@', coordinates: '' },
     mass: 253.33756165558833,
     monoisotopicMass: 253.08984058101998,
     unsaturation: 9,
@@ -1127,6 +1277,7 @@ module.exports = [
     symbol: 'Ph',
     name: 'Phenyl',
     mf: 'C6H5',
+    ocl: { value: 'gOpH@liLkW@@@@', coordinates: '!BxMw`[EyxMw`wUy' },
     mass: 77.10411915069038,
     monoisotopicMass: 77.03912516115,
     unsaturation: 7,
@@ -1141,6 +1292,10 @@ module.exports = [
     mf: 'C9H9NO',
     oneLetter: 'F',
     alternativeOneLetter: 'φ',
+    ocl: {
+      value: 'dknHPBPOEgEInWe]NZj@@cH@',
+      coordinates: '!BbIu^Kxc|bIu^@Hc|bOs~PLa}rHKH`la}',
+    },
     mass: 147.1741979928833,
     monoisotopicMass: 147.06841391407002,
     unsaturation: 10,
@@ -1155,6 +1310,10 @@ module.exports = [
     symbol: 'Phepcl',
     name: '4-Chlorophenylalanine diradical',
     mf: 'C9H8ClNO',
+    ocl: {
+      value: 'dg^HpBPOEgFxaInWe_Sfj`@bL`@',
+      coordinates: '!BbIv^Sxc|bIv^@Hc|b@J^@Hb]bOrHH`]bOp',
+    },
     mass: 181.6191948214355,
     monoisotopicMass: 181.02944156384,
     unsaturation: 10,
@@ -1172,7 +1331,7 @@ module.exports = [
     mf: 'C8H7NO',
     ocl: {
       value: 'dcNHPBPOEgEInVuWYj`@Hr@@',
-      coordinates: '!BJBvny|c|rLuN@Dc|jwrHDy@SdBH@',
+      coordinates: '!BJCVvz|a|rMUV@Dc|hwrH_EY@UdBH@',
     },
     mass: 133.1475805880365,
     monoisotopicMass: 133.05276384961002,
@@ -1204,6 +1363,10 @@ module.exports = [
     mf: 'C5H7NO',
     oneLetter: 'P',
     alternativeOneLetter: 'π',
+    ocl: {
+      value: 'difHPBPOEgEInYxYjjhr@@',
+      coordinates: '!BBEu^kpa|BEtFPKXoAIP@m`',
+    },
     mass: 97.11537289783075,
     monoisotopicMass: 97.05276384961,
     unsaturation: 4,
@@ -1218,7 +1381,10 @@ module.exports = [
     symbol: 'Pyr',
     name: 'Pyroglutamine',
     mf: 'C5H5NO2',
-    ocl: { value: 'd@', coordinates: '' },
+    ocl: {
+      value: 'deVDPBRP|V\\TfygxYjjZL`@',
+      coordinates: '!BBEu^kpa|BEtFPKXoAIP@mjAY',
+    },
     mass: 111.09889631403748,
     monoisotopicMass: 111.03202840472,
     unsaturation: 6,
@@ -1233,6 +1399,7 @@ module.exports = [
     symbol: 'Sar',
     name: 'Sarcosine diradical',
     mf: 'C3H5NO',
+    ocl: { value: 'd@', coordinates: '' },
     mass: 71.07801959624871,
     monoisotopicMass: 71.03711378515,
     unsaturation: 2,
@@ -1251,7 +1418,7 @@ module.exports = [
     alternativeOneLetter: 'σ',
     ocl: {
       value: 'dazDPBS`|V\\TfyYjjL`@',
-      coordinates: '!BJBvny|a|rLuN@Dc|jwp',
+      coordinates: '!BJCVvz|a|rMUV@Da|hwp',
     },
     mass: 87.07742452056698,
     monoisotopicMass: 87.03202840472,
@@ -1269,7 +1436,7 @@ module.exports = [
     mf: 'C3H4NO2',
     ocl: {
       value: 'diFDpB`PBV\\^|TeYZjjXq@@',
-      coordinates: '!B`OR`gUy`LwW[PBtUprngp',
+      coordinates: '!B`OR`cTyw`MW[]PBtVprvep',
     },
     mass: 86.06948376651121,
     monoisotopicMass: 86.02420337249,
@@ -1436,6 +1603,10 @@ module.exports = [
     symbol: 'Tips',
     name: 'Triisopropylsilyl',
     mf: 'C9H21Si',
+    ocl: {
+      value: 'dmT@P@VX\\DffYjjjh@@',
+      coordinates: '!Bgd~GHc|gd~GgYx@bIv^@Hb]ayt',
+    },
     mass: 157.34887761149452,
     monoisotopicMass: 157.14125221148,
     unsaturation: 1,
@@ -1449,6 +1620,7 @@ module.exports = [
     symbol: 'Tms',
     name: 'Trimethylsilyl',
     mf: 'C3H9Si',
+    ocl: { value: 'gJPD@lqpRZj`@', coordinates: '!BbOrHgYx@gd|' },
     mass: 73.1891731824137,
     monoisotopicMass: 73.04735182472,
     unsaturation: 1,
@@ -1462,6 +1634,10 @@ module.exports = [
     symbol: 'Tos',
     name: 'Tosyl',
     mf: 'C7H7O2S',
+    ocl: {
+      value: 'dmtDPDpEf@cHiCDeafV@B@@',
+      coordinates: '!BapJGgYyOg`BHH_|g`B^@H_|g`@',
+    },
     mass: 155.1943338103008,
     monoisotopicMass: 155.01667563914998,
     unsaturation: 7,
@@ -1478,6 +1654,10 @@ module.exports = [
     mf: 'C11H10N2O',
     oneLetter: 'W',
     alternativeOneLetter: 'ω',
+    ocl: {
+      value: 'f`qQA@BFPCqXxiMr|rnhsoSUTa@QCD@@',
+      coordinates: '!BbIv^Sxc|bIv^@Hc|bOpv`MBupOhSaERDRfAJXAND',
+    },
     mass: 186.21031375185538,
     monoisotopicMass: 186.07931295073,
     unsaturation: 14,
@@ -1492,6 +1672,10 @@ module.exports = [
     symbol: 'Trpp',
     name: 'Tryptophan triradical',
     mf: 'C11H9N2O',
+    ocl: {
+      value: 'fhiQC@HFB@I\\x~|TfYU_ebLDjhDHjibFd@',
+      coordinates: '!B{sZ]tGOkk|eJ@K^b\\}asvN^]R`B^G}B]yywPgN^\\ga|',
+    },
     mass: 185.20237299779959,
     monoisotopicMass: 185.07148791850003,
     unsaturation: 15,
@@ -1508,7 +1692,7 @@ module.exports = [
     mf: 'C19H15',
     ocl: {
       value: 'fbm@B@@KJSSLrjkyhnRGMT@@@@@@@@',
-      coordinates: '!Bvzun@Hamvvw[_Ha|bGqnMvxwvwqn@Fx@bFvH[]mmvvvH_Fxwvwp',
+      coordinates: '!Bt{Uv@HautwWS_Ha|bGqvNwX{twqv@GX@bGVH]]MutwVH_GX{twp',
     },
     mass: 243.32309334880637,
     monoisotopicMass: 243.11737548345,
@@ -1524,6 +1708,10 @@ module.exports = [
     mf: 'C9H9NO2',
     oneLetter: 'Y',
     alternativeOneLetter: 'ψ',
+    ocl: {
+      value: 'dg^DPBRp|V\\Tfy^U}NZj@BHr@@',
+      coordinates: '!BbIv^Sxa|bIv^@Hc|bGr^@Hb]bGrHHb]bOp',
+    },
     mass: 163.1736029172016,
     monoisotopicMass: 163.06332853364,
     unsaturation: 10,
@@ -1538,6 +1726,10 @@ module.exports = [
     symbol: 'Tyrp',
     name: 'Tyrosine triradical',
     mf: 'C9H8NO2',
+    ocl: {
+      value: 'do~DpEapBS\\[|Tee]YYnh@JjdbT@',
+      coordinates: '!Bmrrwg[\\lgg~wo[^}gg~wwYyhKvwoZ@lm|r^_p',
+    },
     mass: 162.16566216314578,
     monoisotopicMass: 162.05550350141,
     unsaturation: 11,
@@ -1554,6 +1746,10 @@ module.exports = [
     mf: 'C5H9NO',
     oneLetter: 'V',
     alternativeOneLetter: 'ν',
+    ocl: {
+      value: 'diFHPBPOEgEInVfjjL`@',
+      coordinates: '!BbIv^Sxc|bIv^@Hc|bOrG@',
+    },
     mass: 99.13125440594231,
     monoisotopicMass: 99.06841391407,
     unsaturation: 2,
@@ -1568,6 +1764,10 @@ module.exports = [
     symbol: 'Valoh',
     name: 'beta-Hydroxyvaline diradical',
     mf: 'C5H9NO2',
+    ocl: {
+      value: 'defDPBS`|V\\TfyZfjjcH@',
+      coordinates: '!BbIv^Sxc|bIv^@Hc|g`BHH_|',
+    },
     mass: 115.13065933026058,
     monoisotopicMass: 115.06332853364,
     unsaturation: 2,
@@ -1582,6 +1782,10 @@ module.exports = [
     symbol: 'Valohp',
     name: 'beta-Hydroxyvaline triradical',
     mf: 'C5H8NO2',
+    ocl: {
+      value: 'dmVDpFaPBQ\\Y|\\bTbaTjjjXq@@',
+      coordinates: '!BhIv^_yyhBrwKJB]myv`KK_Lgg|',
+    },
     mass: 114.1227185762048,
     monoisotopicMass: 114.05550350141002,
     unsaturation: 3,
@@ -1596,6 +1800,7 @@ module.exports = [
     symbol: 'Xan',
     name: 'Xanthyl',
     mf: 'C13H9O',
+    ocl: { value: 'd@', coordinates: '' },
     mass: 181.21043836837848,
     monoisotopicMass: 181.06533990964002,
     unsaturation: 17,
@@ -1609,6 +1814,10 @@ module.exports = [
     symbol: 'Z',
     name: 'Benzyloxycarbonyl',
     mf: 'C8H7O2',
+    ocl: {
+      value: 'dmtD`DpEeImYVUfh@@@@',
+      coordinates: '!BbOq^@Ha]bOrHWXc|Wb~HWXb]Wb|',
+    },
     mass: 135.14028230090898,
     monoisotopicMass: 135.04460446475,
     unsaturation: 9,
@@ -1627,7 +1836,7 @@ module.exports = [
     ocl: {
       value: 'fnsiS@IASUlJB]xGbkplxyDhhldhiEEUeSdTekUUUULBATXPlKd@@',
       coordinates:
-        '!BneB]^HipIvzsgGBJvW@XSRx@f@Ks[K`|fJu^TEyWY{DJ|Ifp_RS}I@kpBo@',
+        '!BjeBM^IIpJwY}gGBRrW@XUSX@fOs}[K`|fKUNTDy[ZzDR|Hfp[RSmIAKpDo@',
     },
     mass: 313.2069506932622,
     monoisotopicMass: 313.05760550518,
@@ -1648,7 +1857,7 @@ module.exports = [
     alternativeOneLetter: 'ς',
     ocl: {
       value: 'fjmps@IQKB`g^BCqUxV\\\\bTTVRTTbb^iqNZjjjifVkBEa\\`@',
-      coordinates: '!BneB]^HipIvzsgGBJvW@XSRx@f@I[N`RfJu^TEyWapvntJ{PzAJnt@',
+      coordinates: '!BjeBM^IIpJwY}gGBRrW@XUSX@fOqSN`BfKUNTDy[bqVvtK[Pz@Jvt@',
     },
     mass: 289.18221329795364,
     monoisotopicMass: 289.04637211589,
@@ -1670,7 +1879,7 @@ module.exports = [
     ocl: {
       value: 'fakhs@IASUlJB]{hOEWaYqrIQQYIQRJJkQTyEIZuUUUSRtsUaBpnP@',
       coordinates:
-        '!BneB]^HipIvzsgGBJvW@XSRx@fOss[K`|fJu^TEyWY{DJ|Ifp_RQ}I@kpMsDJ|@',
+        '!BjeBM^IIpJwY}gGBRrW@XUSX@fOs}[K`|fKUNTDy[ZzDR|Hfp[RQmIAKpNrDR|@',
     },
     mass: 329.20635561758047,
     monoisotopicMass: 329.05252012475,
@@ -1691,7 +1900,7 @@ module.exports = [
     alternativeOneLetter: 'τ',
     ocl: {
       value: 'ff}Qs@IQaPSoAjCqUxV\\\\bTTVRTTbbZUNIsUUUULsSVDKBy@@',
-      coordinates: '!BneB]^HipIvzsgGBJvW@XSRx@fOq[N`RfJu^TEyWapvntJ{PzAKhDj{P',
+      coordinates: '!BjeBM^IIpJwY}gGBRrW@XUSX@fOqSN`BfKUNTDy[bqVvtK[Pz@Kh@k[P',
     },
     mass: 304.1935916616171,
     monoisotopicMass: 304.04603776326,
@@ -1712,7 +1921,7 @@ module.exports = [
     alternativeOneLetter: 'υ',
     ocl: {
       value: 'fjmQs@IQaPSoAJCqUxV\\\\bTTVRTTbb^iqNZjjjifYkBEa\\`@',
-      coordinates: '!BneB]^HipIvzsgGBJvW@XSRx@f@I[N`RfJu^TEyWapvntJ{PzAJnt@',
+      coordinates: '!BjeBM^IIpJwY}gGBRrW@XUSX@fOqSN`BfKUNTDy[bqVvtK[Pz@Jvt@',
     },
     mass: 290.1669742567703,
     monoisotopicMass: 290.0303876988,
@@ -1746,7 +1955,7 @@ module.exports = [
     ocl: {
       value: 'fmwhH`IASM\\JBl{wQ`|U^F_AkbdlsjsSOoRtyEMYuUUUM@pSEQaBpnP@',
       coordinates:
-        '!BneB]^HipIvzsgGBJvW@XSRx@f@Ks[K`|WeBXkUyWY{DJ|Ifpf@K}IOtdfJu^TEyWBo@J|@',
+        '!BjeBM^IIpJwY}gGBRrW@XUSX@fOs}[K`|SeBXmTy[ZzDR|HfpfOsmINtdfKUNTDy[Do@R|@',
     },
     mass: 393.1868682186928,
     monoisotopicMass: 393.02393639454,
@@ -1766,7 +1975,7 @@ module.exports = [
     ocl: {
       value: 'fikqH`IQGB`kN|EoP^JoCOaUqrIQQYIQRJKGRJgDejjjjZYfZkBEa\\`@',
       coordinates:
-        '!BneB]^HipIvzsgGBJvW@XSRx@fOq[N`RWeBXkUyWapvntJ{Pf@KhDibmWeA^Uz{P',
+        '!BjeBM^IIpJwY}gGBRrW@XUSX@fOqSN`BSeBXmTy[bqVvtK[PfOsh@ibuSeANV{[P',
     },
     mass: 369.16213082338425,
     monoisotopicMass: 369.01270300525005,
@@ -1786,7 +1995,7 @@ module.exports = [
     ocl: {
       value: 'fcoiH`IASM\\JBl{wQ{Axj|L~CWEIYgUff_^fZ\\bflzjjjfiZifZlHVEr@@',
       coordinates:
-        '!BneB]^HipIvzsgGBJvW@XSRx@fOss[K`|WeBXkUyWY{DJ|IfpfOs}IOtdfJu^TEyWBo@wLPkp',
+        '!BjeBM^IIpJwY}gGBRrW@XUSX@fOs}[K`|SeBXmTy[ZzDR|HfpfOsmINtdfKUNTDy[Do@{HQKp',
     },
     mass: 409.186273143011,
     monoisotopicMass: 409.01885101411,
@@ -1806,7 +2015,7 @@ module.exports = [
     ocl: {
       value: 'fe{Ph`IQaPUg^Ct\\p^JoCO`uqrIQQYIQRJKEJQTxdmUUUSSMTsVDKBy@@',
       coordinates:
-        '!BneB]^HipIvzsgGBJvW@XSRx@f@I[N`RWeBXkUyWapvntJ{Pf@KhDn`RfJu^TEyWkm@',
+        '!BjeBM^IIpJwY}gGBRrW@XUSX@fOqSN`BSeBXmTy[bqVvtK[PfOsh@n`BfKUNTDy[mm@',
     },
     mass: 384.1735091870477,
     monoisotopicMass: 384.01236865262,
@@ -1826,7 +2035,7 @@ module.exports = [
     ocl: {
       value: 'fikPh`IQaPUg^Bwhp^JoCOaUqrIQQYIQRJKGRJgDejjjjZYjYkBEa\\`@',
       coordinates:
-        '!BneB]^HipIvzsgGBJvW@XSRx@fOq[N`RWeBXkUyWapvntJ{Pf@KhDibmWeA^Uz{P',
+        '!BjeBM^IIpJwY}gGBRrW@XUSX@fOqSN`BSeBXmTy[bqVvtK[PfOsh@ibuSeANV{[P',
     },
     mass: 370.1468917822009,
     monoisotopicMass: 369.99671858816,
@@ -1847,7 +2056,7 @@ module.exports = [
       value:
         'eohZMJ@I@diehJAKGOFnakg`OESpr|Mo@yqrIQQYIQRJKYZQKVRcbIJjZjjjihFAhjZcAAXKb@@',
       coordinates:
-        '!BneB]^HipIvzsgGBJvW@XSRx@f@Ks[K`|WeBXkUyWY{DJ|IfpfOs}IOtdWeBXkUyWBo@J|I`BfJu^TEyW',
+        '!BjeBM^IIpJwY}gGBRrW@XUSX@fOs}[K`|SeBXmTy[ZzDR|HfpfOsmINtdSeBXmTy[Do@R|Ic|fKUNTDy[',
     },
     mass: 473.16678574412344,
     monoisotopicMass: 472.9902672839,
@@ -1868,7 +2077,7 @@ module.exports = [
       value:
         'fkopZ`IQGB`kN|Fk^{NCqUxY|I~BwGHeEEdeEHhl]HlYJ\\RVjjjiifVjfkBEa\\`@',
       coordinates:
-        '!BneB]^HipIvzsgGBJvW@XSRx@f@I[_N`RWeBXkUyWapvntJ{Pf@KhDeyPfJu^Uz{Pf@JXkUyPWe\\',
+        '!BjeBM^IIpJwY}gGBRrW@XUSX@fOqS_N`BSeBXmTy[bqVvtK[PfOsh@dyPfKUNV{[PfOrXmTyPSel',
     },
     mass: 449.14204834881485,
     monoisotopicMass: 448.97903389461004,
@@ -1889,7 +2098,7 @@ module.exports = [
       value:
         'e`TZCJ@I@diehJAKGOFnamgo`OESpr|CoByqrIQQYIQRJKYZQQYrT\\QIUSUUUUMRuMLtuVBBpWD@@',
       coordinates:
-        '!BneB]^HipIvzsgGBJvW@XSRx@fOss[K`|WeBXkUyWY{DJ|IfpfOq}IGtdWeBXkUyWBo@wLPkpfOrXkUyPWe\\',
+        '!BjeBM^IIpJwY}gGBRrW@XUSX@fOs}[K`|SeBXmTy[ZzDR|HfpfOqmIFtdSeBXmTy[Do@{HQKpfOrXmTyPSel',
     },
     mass: 489.16619066844174,
     monoisotopicMass: 488.98518190347005,
@@ -1910,7 +2119,7 @@ module.exports = [
       value:
         'fgQZ`IQaPUg^BwhygnCqUxY|E~FwGHeEEdeEHhlTiDSISbRuUUUMLuMMMVDKBy@@',
       coordinates:
-        '!BneB]^HipIvzsgGBJvW@XSRx@fOq[N`RWeBXkUyWapvntJ{Pf@KhDn`RWeBXkUyWkmBX@ibmWeA^Up',
+        '!BjeBM^IIpJwY}gGBRrW@XUSX@fOqSN`BSeBXmTy[bqVvtK[PfOsh@n`BSeBXmTy[mmBXIbuSeANVp',
     },
     mass: 464.15342671247834,
     monoisotopicMass: 463.97869954198,
@@ -1931,7 +2140,7 @@ module.exports = [
       value:
         'fkoQZ`IQaPUg^CUoQ{NCqUxY|I~BwGHeEEdeEHhl]HlYJ\\RVjjjiiffffkBEa\\`@',
       coordinates:
-        '!BneB]^HipIvzsgGBJvW@XSRx@f@I[N`RWeBXkUyWapvntJ{Pf@KhDeyPfJu^Uz{Pf@JXkUyPWe\\',
+        '!BjeBM^IIpJwY}gGBRrW@XUSX@fOqSN`BSeBXmTy[bqVvtK[PfOsh@dyPfKUNV{[PfOrXmTyPSel',
     },
     mass: 450.1268093076315,
     monoisotopicMass: 449.96304947752,
@@ -1950,7 +2159,7 @@ module.exports = [
     mf: 'C10H11N5O2',
     ocl: {
       value: 'fluha@IF]ELJ@|QNJRsN|rntyYpXuUUTBATXPlKd@@',
-      coordinates: '!BneB]^HipIvzsgGBJvW@XSRx@|vrxOF^qBoBYlGtd_RPJ|@kp',
+      coordinates: '!BjeBM^IIpJwY}gGBRrW@XUSX@VrxOFnaDoBIlFtd[RPR|AKp',
     },
     mass: 233.22703316783156,
     monoisotopicMass: 233.09127461582,
@@ -1968,7 +2177,7 @@ module.exports = [
     mf: 'C9H11N3O3',
     ocl: {
       value: 'fhiqa@IVCBa`^HgEIYg^Y~gG^jjjiejpaXWH@',
-      coordinates: '!BneB]^HipIvzsgGBJvW@XSRx@JwpX_BnM[aAnDAc|[a@',
+      coordinates: '!BjeBM^IIpJwY}gGBRrW@XUSX@HwpX_BNU]aAvDAc|]a@',
     },
     mass: 209.202295772523,
     monoisotopicMass: 209.08004122653,
@@ -1986,7 +2195,7 @@ module.exports = [
     mf: 'C10H11N5O3',
     ocl: {
       value: 'fbmia@IF]ELJYAxb\\Tef]ye^Z\\lxLZjjjeZfkBEa\\`@',
-      coordinates: '!BneB]^HipIvzsgGBJvW@XSRx@|vrxOF^qBoBYlOtdRPJ|F^qBo@',
+      coordinates: '!BjeBM^IIpJwY}gGBRrW@XUSX@VrxOFnaDoBIlNtd{RPR|FnaDo@',
     },
     mass: 249.22643809214986,
     monoisotopicMass: 249.08618923539,
@@ -2004,7 +2213,7 @@ module.exports = [
     mf: 'C10H12N2O4',
     ocl: {
       value: 'fdyPQ@IVaPtP^HgEIYg^YuiqwjjjjYikBEa\\`@',
-      coordinates: '!BneB]^HipIvzsgGBJvW@XSRx@JwpX_BnM[aAnDAc|FOqnD@',
+      coordinates: '!BjeBM^IIpJwY}gGBRrW@XUSX@HwpX_BNU]aAvDAc|FOqvD@',
     },
     mass: 224.2136741361865,
     monoisotopicMass: 224.07970687390002,
@@ -2022,7 +2231,7 @@ module.exports = [
     mf: 'C9H10N2O4',
     ocl: {
       value: 'fhiPQ@IVaPpP^HgEIYg^Y~gG^jjjifZpaXWH@',
-      coordinates: '!BneB]^HipIvzsgGBJvW@XSRx@JpXBnM[aAnDAc|[a@',
+      coordinates: '!BjeBM^IIpJwY}gGBRrW@XUSX@HpXBNU]aAvDAc|]a@',
     },
     mass: 210.1870567313397,
     monoisotopicMass: 210.06405680944,
@@ -2043,7 +2252,7 @@ module.exports = [
     ocl: {
       value: 'fakhs@INBwlJ\\TgHOFwaEqrIQQSYQJIRIMLyxMVuUUUPLpEPQDqBId@@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDws[K`|f@IglPkpf[BXkUyPWe_}IGtdBo@J|@',
+        '!BjeBM^BmvdgBM\\ep_YqpdcX@FEW}[K`|fOqkhQKpb[BXmTyPSeomIFtdDo@R|@',
     },
     mass: 329.20635561758047,
     monoisotopicMass: 329.05252012475,
@@ -2065,7 +2274,7 @@ module.exports = [
     ocl: {
       value: 'ff}qs@I^kBgENSdGc[pbxyDhhilheDiLv\\BVjjjjYfZbHfHQL`@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmBXkUyPWe_hDj{P',
+        '!BjeBM^BmvdgBM\\ep_YqpdcX@FEUSN`BfOrKE[[PmmBXmTyPSeoh@k[P',
     },
     mass: 305.1816182222719,
     monoisotopicMass: 305.04128673546,
@@ -2087,7 +2296,7 @@ module.exports = [
     ocl: {
       value: 'fi{is@INBwlJ\\TgHp^MoBKcdRbbfrbTRdR\\SN^CUmUUUUKMSMQDSDHfP@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDws[K`|f@IglPkpf[BXkUyPWe_}IOtdBo@wLPkp',
+        '!BjeBM^BmvdgBM_\\ep_YqpdcX@FEW}[K`|fOqkhQKpb[BXmTyPSeomINtdDo@{HQKp',
     },
     mass: 345.20576054189877,
     monoisotopicMass: 345.04743474432,
@@ -2109,7 +2318,7 @@ module.exports = [
     ocl: {
       value: 'fncPK@I^aSbgIrtGc[pbxyDhhilheDiLjs`RuUUUSLuMDQLPbY@@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDu[N`RfOrGCZ{PkmBXkUyPWe_hDn`Rkm@',
+        '!BjeBM^BmvdgBM\\ep_YqpdcX@FEUSN`BfOrKE[[PmmBXmTyPSeoh@n`Bmm@',
     },
     mass: 320.1929965859354,
     monoisotopicMass: 320.04095238282997,
@@ -2131,7 +2340,7 @@ module.exports = [
     ocl: {
       value: 'ff}PK@I^aSbgIsTGc[pbxyDhhilheDiLv\\BVjjjjYffbHfHQL`@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmBXkUyPWe_hDj{P',
+        '!BjeBM^BmvdgBM\\ep_YqpdcX@FEUSN`BfOrKE[[PmmBXmTyPSeoh@k[P',
     },
     mass: 306.1663791810886,
     monoisotopicMass: 306.02530231837,
@@ -2166,7 +2375,7 @@ module.exports = [
       value:
         'fcoiH`INCt\\J\\UENU{Axv|F~DwGHeEEMeDheHd\\eHsg`u{UUUU@mAEMPQDqBId@@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDws[K`|fOqglPkpf[A^TIbmWe]}IGtdf@HJ|@kpfJu^TEyW',
+        '!BjeBM^BmvdgBM\\ep_YqpdcX@FEW}[K`|fOqkhQKpb[ANTIbuSemmIFtdfOpR|AKpfKUNTDy[',
     },
     mass: 409.186273143011,
     monoisotopicMass: 409.01885101411,
@@ -2186,7 +2395,7 @@ module.exports = [
     ocl: {
       value: 'fe{ph`I^[BgENbgHy`|[^E_CkcdRbbfrbTRdqrdYpIZjjjieijZbHfHQL`@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmA^TIbmWe_hDi`BkmBXkUyPWe\\',
+        '!BjeBM^BmvdgBM_\\ep_YqpdcX@FEUSN`BfOrKE[[PmmANTIbuSeoh@ic|mmBXmTyPSel',
     },
     mass: 385.1615357477025,
     monoisotopicMass: 385.00761762482,
@@ -2207,7 +2416,7 @@ module.exports = [
       value:
         'fkhh`INCt\\J\\UENY{NCqmxM|EnNQJJJ[JIQJQHzIRLyxM^uUUUTkUSLuQDSDHfP@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDws[K`|fOqglPkpf[A^TIbmWe]}IGtdfOpJ|C\\qBoBXkUyPWe\\',
+        '!BjeBM^BmvdgBM_\\ep_YqpdcX@FEW}[K`|fOqkhQKpb[ANTIbuSemmIFtdfOpR|ClaDoBXmTyPSel',
     },
     mass: 425.1856780673293,
     monoisotopicMass: 425.01376563368,
@@ -2227,7 +2436,7 @@ module.exports = [
     ocl: {
       value: 'fmgQh`I^aSbgQSglu`|[^C_@[bdls^rruo}LxDmUUUTruTsTQDqBId@@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmA^TIbmWe_hDn`RfOrntIbmWeA^Up',
+        '!BjeBM^BmvdgBM\\ep_YqpdcX@FEUS_N`BfOrKE[[PmmANTIbuSeoh@n`BfOrvtIbuSeANVp',
     },
     mass: 400.172914111366,
     monoisotopicMass: 400.00728327219,
@@ -2247,7 +2456,7 @@ module.exports = [
     ocl: {
       value: 'fe{Qh`I^aSbgQSehy`|[^E_CkcdRbbfrbTRdqrdYpIZjjjiejfZbHfHQL`@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmA^TIbmWe_hDic|kmBXkUyPWe\\',
+        '!BjeBM^BmvdgBM_\\ep_YqpdcX@FEUSN`BfOrKE[[PmmANTIbuSeoh@ic|mmBXmTyPSel',
     },
     mass: 386.14629670651925,
     monoisotopicMass: 385.99163320773005,
@@ -2268,7 +2477,7 @@ module.exports = [
       value:
         'e`TZCJ@IG@nahJNEHdliemgo`OFspZ|CoByqrIQQSYQJIRIGIRWRL\\^AU]UUUUPKPQMTuABDpaBX`@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDws[K`|f@IglPkpf[A^TIbmWe_}IOtdf@HJ|@kpWeBXkUyWf@JXkUyPWe\\',
+        '!BjeBM^BmvdgBM_\\ep_YqpdcX@FEW}[K`|fOqkhQKpb[ANTIbuSeomINtdfOpR|AKpSeBXmTy[fOrXmTyPSel',
     },
     mass: 489.16619066844174,
     monoisotopicMass: 488.98518190347005,
@@ -2289,7 +2498,7 @@ module.exports = [
       value:
         'fgqZ`I^[BgENbgOQsO\\Gc[pkxK|MnNQJJJ[JIQJSGJPzQg@ejjjjfVffjZbHfHQL`@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmA^TIbmWe_hDic|kmA^TIbmWe^X@ibmWeA^Up',
+        '!BjeBM^BmvdgBM\\ep_YqpdcX@FEUS_N`BfOrKE[[PmmANTIbuSeoh@ic|mmANTIbuSenX_IbuSeANVp',
     },
     mass: 465.1414532731331,
     monoisotopicMass: 464.97394851418,
@@ -2310,7 +2519,7 @@ module.exports = [
       value:
         'eh\\ZKJ@IG@nahJNEHdliemco`POFspZ|KoAyqrIQQSYQJIRIGQJQzQccpJkjjjjjeZjYZijbDIaBDq@@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDws[K`|f@IglPkpf[A^TIbmWe]}IOtdfOpJ|C\\qBoA^TIbmWe^X@ibmWeA^Up',
+        '!BjeBM^BmvdgBM_\\ep_YqpdcX@FEW}[K`|fOqkhQKpb[ANTIbuSemmINtdfOpR|ClaDoANTIbuSenXIbuSeANVp',
     },
     mass: 505.16559559276,
     monoisotopicMass: 504.98009652304,
@@ -2331,7 +2540,7 @@ module.exports = [
       value:
         'eo`TGJ@IOHJNEGHdlnaiekg`OFspZ|Mo@yqrIQQSYQJIRY[ZPzQc`HjjjjjYZjVjZbDIaBDq@@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmA^TIbmWe_hDn`Rf@JntEyPfJu^Uy`BfJu^TEyW',
+        '!BjeBM^BmvdgBM\\ep_YqpdcX@FEUS_N`BfOrKE[[PmmANTIbuSeoh@n`BfOrvtDyPfKUNVyc|fKUNTDy[',
     },
     mass: 480.15283163679663,
     monoisotopicMass: 479.97361416155,
@@ -2352,7 +2561,7 @@ module.exports = [
       value:
         'fgPz`I^aSbgQSeoQsO\\Gc[pkxK|MnNQJJJ[JIQJSGJPzQg@ejjjjfVjVjZbHfHQL`@',
       coordinates:
-        '!BneB]^B]nbgB]\\}eplyqpbbx@FDu[N`Rf@JGCZ{PkmA^TIbmWe_hDic|kmA^TIbmWe^X@ibmWeA^Up',
+        '!BjeBM^BmvdgBM\\ep_YqpdcX@FEUS_N`BfOrKE[[PmmANTIbuSeoh@ic|mmANTIbuSenX_IbuSeANVp',
     },
     mass: 466.12621423194986,
     monoisotopicMass: 465.95796409709004,
@@ -2371,7 +2580,7 @@ module.exports = [
     mf: 'C10H11N5O3',
     ocl: {
       value: 'fbmia@IV|gLJ\\Axj\\Tef[vyWV\\]zJZjjj`PJ`bIbDSH@',
-      coordinates: '!BneB]^B]nbgB]\\}eplyqpbbx@FDws[K`|Y{DJ|Ifp_RS}I@kpBo@',
+      coordinates: '!BjeBM^BmvdgBM\\ep_YqpdcX@FEW}[K`|ZzDR|Hfp[RSmIAKpDo@',
     },
     mass: 249.22643809214986,
     monoisotopicMass: 249.08618923539,
@@ -2389,7 +2598,7 @@ module.exports = [
     mf: 'C9H11N3O4',
     ocl: {
       value: 'fdypQ@INcBgK@|UNJRsM{\\~sg`uUUULmQDSDHfP@',
-      coordinates: '!BneB]^B]nbgB]\\}eplyqpbbx@FDtkAc|JxunDFxPF@InD@',
+      coordinates: '!BjeBM^BmvdgBM\\ep_YqpdcX@FETcAc|HyUvDGXPFOqvD@',
     },
     mass: 225.20170069684127,
     monoisotopicMass: 225.0749558461,
@@ -2407,7 +2616,7 @@ module.exports = [
     mf: 'C10H11N5O4',
     ocl: {
       value: 'fj}hQ@IV|gLJ\\JCqTxiKLwmroKNN}EMUUUTkTuDQLPbY@@',
-      coordinates: '!BneB]^B]nbgB]\\}eplyqpbbx@FDws[K`|Y{DJ|Ifp_RS}I@kpY{DJ|@',
+      coordinates: '!BjeBM^BmvdgBM\\ep_YqpdcX@FEW}[K`|ZzDR|Hfp[RSmIAKpZzDR|@',
     },
     mass: 265.22584301646816,
     monoisotopicMass: 265.08110385496,
@@ -2425,7 +2634,7 @@ module.exports = [
     mf: 'C10H12N2O5',
     ocl: {
       value: 'fleQQ@INaSed`|UNJRsM{\\zlyxMUUUSMMDQLPbY@@',
-      coordinates: '!BneB]^B]nbgB]\\}eplyqpbbx@FDtkAc|JxunDFxPFOpXFxP',
+      coordinates: '!BjeBM^BmvdgBM\\ep_YqpdcX@FETcAc|HyUvDGXPFOpXGXP',
     },
     mass: 240.21307906050478,
     monoisotopicMass: 240.07462149347,
@@ -2443,7 +2652,7 @@ module.exports = [
     mf: 'C9H10N2O5',
     ocl: {
       value: 'fdyQQ@INaSeh`|UNJRsM{\\~sg`uUUULsQDSDHfP@',
-      coordinates: '!BneB]^B]nbgB]\\}eplyqpbbx@FDtkAc|JxunDFxPFOqnD@',
+      coordinates: '!BjeBM^BmvdgBM\\ep_YqpdcX@FETcAc|HyUvDGXPFOqvD@',
     },
     mass: 226.18646165565798,
     monoisotopicMass: 226.05897142901,
