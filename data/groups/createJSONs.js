@@ -5,7 +5,7 @@
 
 // editor of groups.tsv
 
-https: const fs = require('fs');
+const fs = require('fs');
 const { join } = require('path');
 
 const targetDir = join(__dirname, '../../packages/chemical-groups/src/');
@@ -77,7 +77,7 @@ for (let group of groups) {
 
 fs.writeFileSync(`${targetDir}/groups.js`, MODULE + JSON.stringify(groups));
 
-var groupsObject = {};
+const groupsObject = {};
 groups.forEach((e) => {
   groupsObject[e.symbol] = e;
   e.symbol = undefined;
