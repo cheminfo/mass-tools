@@ -1,6 +1,6 @@
 'use strict';
 
-let elements = require('chemical-elements').getElementsObject();
+let elements = require('chemical-elements').elementsObject;
 let groups = require('chemical-groups').getGroupsObject();
 
 function isMF(mf) {

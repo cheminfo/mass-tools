@@ -1,6 +1,7 @@
 'use strict';
 
 const fs = require('fs');
+const { join } = require('path');
 
 const Papa = require('papaparse');
 
@@ -34,69 +35,8 @@ for (let i = 0; i < elementsAndIsotopes.length; i++) {
 }
 
 fs.writeFileSync(
-  `${__dirname}/../src/elementsAndIsotopes.js`,
-  MODULE + JSON.stringify(elementsAndIsotopes),
-);
-
-let elementsAndStableIsotopes = JSON.parse(JSON.stringify(elementsAndIsotopes));
-// we remove all the unstable isotopes
-let stableIsotopesObject = {};
-elementsAndStableIsotopes.forEach((e) => {
-  e.isotopes = e.isotopes.filter((i) => i.abundance > 0);
-  e.isotopes.forEach((i) => {
-    stableIsotopesObject[i.nominal + e.symbol] = {
-      abundance: i.abundance,
-      mass: i.mass,
-    };
-  });
-  e.monoisotopicMass = getMonoisotopicMass(e);
-});
-fs.writeFileSync(
-  `${__dirname}/../src/elementsAndStableIsotopes.js`,
-  MODULE + JSON.stringify(elementsAndStableIsotopes),
-);
-fs.writeFileSync(
-  `${__dirname}/../src/stableIsotopesObject.js`,
-  MODULE + JSON.stringify(stableIsotopesObject),
-);
-
-let elements = JSON.parse(JSON.stringify(elementsAndStableIsotopes));
-elements.forEach((e) => {
-  e.isotopes = undefined;
-});
-fs.writeFileSync(
-  `${__dirname}/../src/elements.js`,
-  MODULE + JSON.stringify(elements),
-);
-
-let elementsObject = {};
-elements.forEach((e) => {
-  elementsObject[e.symbol] = e;
-  e.symbol = undefined;
-});
-fs.writeFileSync(
-  `${__dirname}/../src/elementsObject.js`,
-  MODULE + JSON.stringify(elementsObject),
-);
-
-let elementsAndIsotopesObject = {};
-elementsAndIsotopes.forEach((e) => {
-  elementsAndIsotopesObject[e.symbol] = e;
-  e.symbol = undefined;
-});
-fs.writeFileSync(
-  `${__dirname}/../src/elementsAndIsotopesObject.js`,
-  MODULE + JSON.stringify(elementsAndIsotopesObject),
-);
-
-let elementsAndStableIsotopesObject = {};
-elementsAndStableIsotopes.forEach((e) => {
-  elementsAndStableIsotopesObject[e.symbol] = e;
-  e.symbol = undefined;
-});
-fs.writeFileSync(
-  `${__dirname}/../src/elementsAndStableIsotopesObject.js`,
-  MODULE + JSON.stringify(elementsAndStableIsotopesObject),
+  join(__dirname, '../src/elements.json'),
+  JSON.stringify(elementsAndIsotopes, undefined, 2),
 );
 
 function getMass(element) {

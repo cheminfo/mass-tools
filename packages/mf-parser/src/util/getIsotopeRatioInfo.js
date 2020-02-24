@@ -1,6 +1,6 @@
 'use strict';
 
-const elements = require('chemical-elements/src/elementsAndStableIsotopesObject.js');
+const elements = require('chemical-elements').elementsAndStableIsotopesObject;
 
 function getIsotopeRatioInfo(value) {
   let result = { mass: 0, monoisotopicMass: 0 };

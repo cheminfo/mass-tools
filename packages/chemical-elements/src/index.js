@@ -1,18 +1,20 @@
 'use strict';
 
-const elements = require('./elementsAndStableIsotopes.js');
-const { ELECTRON_MASS } = require('./constants');
+const elements = require('./elements.js');
+const elementsObject = require('./elementsObject.js');
+const elementsAndIsotopes = require('./elementsAndIsotopes.js');
+const elementsAndIsotopesObject = require('./elementsAndIsotopesObject.js');
+const elementsAndStableIsotopes = require('./elementsAndStableIsotopes.js');
+const elementsAndStableIsotopesObject = require('./elementsAndStableIsotopesObject.js');
 
-function getElementsObject() {
-  let object = {};
-  elements.forEach((e) => {
-    object[e.symbol] = e;
-  });
-  return object;
-}
+const { ELECTRON_MASS } = require('./constants');
 
 module.exports = {
   elements,
-  getElementsObject,
+  elementsObject,
+  elementsAndIsotopes,
+  elementsAndIsotopesObject,
+  elementsAndStableIsotopes,
+  elementsAndStableIsotopesObject,
   ELECTRON_MASS,
 };

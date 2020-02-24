@@ -1,6 +1,6 @@
 'use strict';
 
-const elements = require('chemical-elements/src/elementsAndStableIsotopesObject.js');
+const elements = require('chemical-elements').elementsObject;
 const groups = require('chemical-groups/src/groupsObject.js');
 
 const Kind = require('../Kind');

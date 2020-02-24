@@ -2,11 +2,12 @@
 
 let data = require('..');
 
-test('data size', () => {
-  expect(data.elements).toHaveLength(118);
-});
+describe('chemical-lements', () => {
+  it('data size', () => {
+    expect(data.elements).toHaveLength(118);
+  });
 
-test('getElementsObject', () => {
-  let elementsObject = data.getElementsObject();
-  expect(Object.keys(elementsObject)).toHaveLength(118);
+  it('elementsObject', () => {
+    expect(Object.keys(data.elementsObject)).toHaveLength(118);
+  });
 });

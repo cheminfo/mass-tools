@@ -1,7 +1,8 @@
 'use strict';
 
-let elements = require('chemical-elements').getElementsObject();
-let groups = require('chemical-groups').getGroupsObject();
+const elements = require('chemical-elements').elementsObject;
+
+const groups = require('chemical-groups').getGroupsObject();
 
 const isMF = require('../../../mf-utilities/src/isMF');
 
