@@ -1,6 +1,6 @@
 {
   "name": "number-treemap",
-  "version": "0.13.0",
+  "version": "1.0.0",
   "description": "Manage a sorted tree of numbers",
   "main": "src/TreeMap.js",
   "files": [
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/number-treemap#readme",
   "dependencies": {
-    "mf-utilities": "^0.13.0"
+    "mf-utilities": "^1.0.0"
   },
   "gitHead": "34bef860b075f422110d43c300453286177bbba3"
 }

@@ -20,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/cheminfo/molecular-formula.git"
   },
-  "version": "0.13.0",
+  "version": "1.0.0",
   "devDependencies": {
     "mf-parser": "^0.12.0"
   },
