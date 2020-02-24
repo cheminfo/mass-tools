@@ -5,8 +5,6 @@ const { join } = require('path');
 
 const Papa = require('papaparse');
 
-const MODULE = "'use strict';\nmodule.exports=";
-
 let names = Papa.parse(`${fs.readFileSync(`${__dirname}/names.tsv`)}`, {
   header: true,
   delimiter: '\t',
@@ -36,7 +34,7 @@ for (let i = 0; i < elementsAndIsotopes.length; i++) {
 
 fs.writeFileSync(
   join(__dirname, '../src/elements.json'),
-  JSON.stringify(elementsAndIsotopes, undefined, 2),
+  JSON.stringify(elementsAndIsotopes),
 );
 
 function getMass(element) {
