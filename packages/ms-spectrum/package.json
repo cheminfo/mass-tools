@@ -1,6 +1,6 @@
 {
   "name": "ms-spectrum",
-  "version": "0.12.1",
+  "version": "0.13.0",
   "description": "A mass spectrum",
   "main": "src/index.js",
   "files": [
