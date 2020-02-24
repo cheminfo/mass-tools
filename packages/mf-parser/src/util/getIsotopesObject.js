@@ -1,6 +1,6 @@
 'use strict';
 
-const elements = require('chemical-elements/src/elementsAndStableIsotopesObject.js');
+const elements = require('chemical-elements/src/elementsAndIsotopesObject.js');
 
 const isotopes = {};
 Object.keys(elements).forEach((key) => {
