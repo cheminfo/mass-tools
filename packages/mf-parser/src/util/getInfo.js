@@ -1,6 +1,6 @@
 'use strict';
 
-const elements = require('chemical-elements/src/elementsAndStableIsotopesObject.js');
+const elements = require('chemical-elements/src/elementsAndIsotopesObject.js');
 const groups = require('chemical-groups/src/groupsObject.js');
 const unsaturations = require('chemical-elements/src/unsaturationsObject.js');
 const { ELECTRON_MASS } = require('chemical-elements/src/constants');
@@ -68,7 +68,6 @@ function getProcessedPart(part, customUnsaturations) {
             customUnsaturations[line.value] = element.unsaturation;
           }
         }
-
         if (!element) throw new Error(`Unknown element: ${line.value}`);
         currentPart.monoisotopicMass +=
           element.monoisotopicMass * line.multiplier;
