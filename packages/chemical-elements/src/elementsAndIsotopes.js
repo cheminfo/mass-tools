@@ -1,5 +1,4 @@
 'use strict';
-
 module.exports = [
   {
     number: 1,
@@ -15,6 +14,7 @@ module.exports = [
     symbol: 'H',
     mass: 1.0079407540557772,
     name: 'Hydrogen',
+    monoisotopicMass: 1.00782503223,
   },
   {
     number: 2,
@@ -31,6 +31,7 @@ module.exports = [
     symbol: 'He',
     mass: 4.002601932120929,
     name: 'Helium',
+    monoisotopicMass: 4.00260325413,
   },
   {
     number: 3,
@@ -50,6 +51,7 @@ module.exports = [
     symbol: 'Li',
     mass: 6.94003660291572,
     name: 'Lithium',
+    monoisotopicMass: 7.0160034366,
   },
   {
     number: 4,
@@ -70,6 +72,7 @@ module.exports = [
     symbol: 'Be',
     mass: 9.012183065,
     name: 'Beryllium',
+    monoisotopicMass: 9.012183065,
   },
   {
     number: 5,
@@ -94,6 +97,7 @@ module.exports = [
     symbol: 'B',
     mass: 10.811028046410001,
     name: 'Boron',
+    monoisotopicMass: 11.00930536,
   },
   {
     number: 6,
@@ -118,6 +122,7 @@ module.exports = [
     symbol: 'C',
     mass: 12.010735896735248,
     name: 'Carbon',
+    monoisotopicMass: 12,
   },
   {
     number: 7,
@@ -142,6 +147,7 @@ module.exports = [
     symbol: 'N',
     mass: 14.006703211445798,
     name: 'Nitrogen',
+    monoisotopicMass: 14.00307400443,
   },
   {
     number: 8,
@@ -167,6 +173,7 @@ module.exports = [
     symbol: 'O',
     mass: 15.999404924318277,
     name: 'Oxygen',
+    monoisotopicMass: 15.99491461957,
   },
   {
     number: 9,
@@ -193,6 +200,7 @@ module.exports = [
     symbol: 'F',
     mass: 18.99840316273,
     name: 'Fluorine',
+    monoisotopicMass: 18.99840316273,
   },
   {
     number: 10,
@@ -220,6 +228,7 @@ module.exports = [
     symbol: 'Ne',
     mass: 20.18004638052026,
     name: 'Neon',
+    monoisotopicMass: 19.9924401762,
   },
   {
     number: 11,
@@ -248,6 +257,7 @@ module.exports = [
     symbol: 'Na',
     mass: 22.989769282,
     name: 'Sodium',
+    monoisotopicMass: 22.989769282,
   },
   {
     number: 12,
@@ -278,6 +288,7 @@ module.exports = [
     symbol: 'Mg',
     mass: 24.3050516198371,
     name: 'Magnesium',
+    monoisotopicMass: 23.985041697,
   },
   {
     number: 13,
@@ -309,6 +320,7 @@ module.exports = [
     symbol: 'Al',
     mass: 26.98153853,
     name: 'Aluminium',
+    monoisotopicMass: 26.98153853,
   },
   {
     number: 14,
@@ -341,6 +353,7 @@ module.exports = [
     symbol: 'Si',
     mass: 28.085498705705955,
     name: 'Silicon',
+    monoisotopicMass: 27.97692653465,
   },
   {
     number: 15,
@@ -373,6 +386,7 @@ module.exports = [
     symbol: 'P',
     mass: 30.97376199842,
     name: 'Phosphorus',
+    monoisotopicMass: 30.97376199842,
   },
   {
     number: 16,
@@ -405,6 +419,7 @@ module.exports = [
     symbol: 'S',
     mass: 32.06478740612706,
     name: 'Sulfur',
+    monoisotopicMass: 31.9720711744,
   },
   {
     number: 17,
@@ -437,6 +452,7 @@ module.exports = [
     symbol: 'Cl',
     mass: 35.452937582608,
     name: 'Chlorine',
+    monoisotopicMass: 34.968852682,
   },
   {
     number: 18,
@@ -469,6 +485,7 @@ module.exports = [
     symbol: 'Ar',
     mass: 39.947798563582005,
     name: 'Argon',
+    monoisotopicMass: 39.9623831237,
   },
   {
     number: 19,
@@ -502,6 +519,7 @@ module.exports = [
     symbol: 'K',
     mass: 39.098300910086,
     name: 'Potassium',
+    monoisotopicMass: 38.9637064864,
   },
   {
     number: 20,
@@ -535,6 +553,7 @@ module.exports = [
     symbol: 'Ca',
     mass: 40.078022511017735,
     name: 'Calcium',
+    monoisotopicMass: 39.962590863,
   },
   {
     number: 21,
@@ -569,6 +588,7 @@ module.exports = [
     symbol: 'Sc',
     mass: 44.95590828,
     name: 'Scandium',
+    monoisotopicMass: 44.95590828,
   },
   {
     number: 22,
@@ -603,6 +623,7 @@ module.exports = [
     symbol: 'Ti',
     mass: 47.866744962721995,
     name: 'Titanium',
+    monoisotopicMass: 47.94794198,
   },
   {
     number: 23,
@@ -638,6 +659,7 @@ module.exports = [
     symbol: 'V',
     mass: 50.941465037425004,
     name: 'Vanadium',
+    monoisotopicMass: 50.94395704,
   },
   {
     number: 24,
@@ -673,6 +695,7 @@ module.exports = [
     symbol: 'Cr',
     mass: 51.9961317554337,
     name: 'Chromium',
+    monoisotopicMass: 51.94050623,
   },
   {
     number: 25,
@@ -709,6 +732,7 @@ module.exports = [
     symbol: 'Mn',
     mass: 54.93804391,
     name: 'Manganese',
+    monoisotopicMass: 54.93804391,
   },
   {
     number: 26,
@@ -747,6 +771,7 @@ module.exports = [
     symbol: 'Fe',
     mass: 55.845144433865904,
     name: 'Iron',
+    monoisotopicMass: 55.93493633,
   },
   {
     number: 27,
@@ -785,6 +810,7 @@ module.exports = [
     symbol: 'Co',
     mass: 58.93319429,
     name: 'Cobalt',
+    monoisotopicMass: 58.93319429,
   },
   {
     number: 28,
@@ -825,6 +851,7 @@ module.exports = [
     symbol: 'Ni',
     mass: 58.69334710994765,
     name: 'Nickel',
+    monoisotopicMass: 57.93534241,
   },
   {
     number: 29,
@@ -864,6 +891,7 @@ module.exports = [
     symbol: 'Cu',
     mass: 63.54603994583,
     name: 'Copper',
+    monoisotopicMass: 62.92959772,
   },
   {
     number: 30,
@@ -904,6 +932,7 @@ module.exports = [
     symbol: 'Zn',
     mass: 65.37778252952499,
     name: 'Zinc',
+    monoisotopicMass: 63.92914201,
   },
   {
     number: 31,
@@ -944,6 +973,7 @@ module.exports = [
     symbol: 'Ga',
     mass: 69.7230660725936,
     name: 'Gallium',
+    monoisotopicMass: 68.9255735,
   },
   {
     number: 32,
@@ -985,6 +1015,7 @@ module.exports = [
     symbol: 'Ge',
     mass: 72.6275501646868,
     name: 'Germanium',
+    monoisotopicMass: 73.921177761,
   },
   {
     number: 33,
@@ -1026,6 +1057,7 @@ module.exports = [
     symbol: 'As',
     mass: 74.92159457,
     name: 'Arsenic',
+    monoisotopicMass: 74.92159457,
   },
   {
     number: 34,
@@ -1066,6 +1098,7 @@ module.exports = [
     symbol: 'Se',
     mass: 78.95938855701361,
     name: 'Selenium',
+    monoisotopicMass: 79.9165218,
   },
   {
     number: 35,
@@ -1106,6 +1139,7 @@ module.exports = [
     symbol: 'Br',
     mass: 79.90352778050999,
     name: 'Bromine',
+    monoisotopicMass: 78.9183376,
   },
   {
     number: 36,
@@ -1147,6 +1181,7 @@ module.exports = [
     symbol: 'Kr',
     mass: 83.7979999953261,
     name: 'Krypton',
+    monoisotopicMass: 83.9114977282,
   },
   {
     number: 37,
@@ -1188,6 +1223,7 @@ module.exports = [
     symbol: 'Rb',
     mass: 85.46766359561973,
     name: 'Rubidium',
+    monoisotopicMass: 84.9117897379,
   },
   {
     number: 38,
@@ -1231,6 +1267,7 @@ module.exports = [
     symbol: 'Sr',
     mass: 87.61664446962,
     name: 'Strontium',
+    monoisotopicMass: 87.9056125,
   },
   {
     number: 39,
@@ -1273,6 +1310,7 @@ module.exports = [
     symbol: 'Y',
     mass: 88.9058403,
     name: 'Yttrium',
+    monoisotopicMass: 88.9058403,
   },
   {
     number: 40,
@@ -1316,6 +1354,7 @@ module.exports = [
     symbol: 'Zr',
     mass: 91.22364159706,
     name: 'Zirconium',
+    monoisotopicMass: 89.9046977,
   },
   {
     number: 41,
@@ -1359,6 +1398,7 @@ module.exports = [
     symbol: 'Nb',
     mass: 92.906373,
     name: 'Niobium',
+    monoisotopicMass: 92.906373,
   },
   {
     number: 42,
@@ -1402,6 +1442,7 @@ module.exports = [
     symbol: 'Mo',
     mass: 95.959788541188,
     name: 'Molybdenum',
+    monoisotopicMass: 97.90540482,
   },
   {
     number: 43,
@@ -1492,6 +1533,7 @@ module.exports = [
     symbol: 'Ru',
     mass: 101.06494013916,
     name: 'Ruthenium',
+    monoisotopicMass: 101.9043441,
   },
   {
     number: 45,
@@ -1538,6 +1580,7 @@ module.exports = [
     symbol: 'Rh',
     mass: 102.905498,
     name: 'Rhodium',
+    monoisotopicMass: 102.905498,
   },
   {
     number: 46,
@@ -1584,6 +1627,7 @@ module.exports = [
     symbol: 'Pd',
     mass: 106.41532750734,
     name: 'Palladium',
+    monoisotopicMass: 105.9034804,
   },
   {
     number: 47,
@@ -1630,6 +1674,7 @@ module.exports = [
     symbol: 'Ag',
     mass: 107.868149634557,
     name: 'Silver',
+    monoisotopicMass: 106.9050916,
   },
   {
     number: 48,
@@ -1677,6 +1722,7 @@ module.exports = [
     symbol: 'Cd',
     mass: 112.411557818268,
     name: 'Cadmium',
+    monoisotopicMass: 113.90336509,
   },
   {
     number: 49,
@@ -1724,6 +1770,7 @@ module.exports = [
     symbol: 'In',
     mass: 114.81808662944559,
     name: 'Indium',
+    monoisotopicMass: 114.903878776,
   },
   {
     number: 50,
@@ -1772,6 +1819,7 @@ module.exports = [
     symbol: 'Sn',
     mass: 118.71011259301059,
     name: 'Tin',
+    monoisotopicMass: 119.90220163,
   },
   {
     number: 51,
@@ -1818,6 +1866,7 @@ module.exports = [
     symbol: 'Sb',
     mass: 121.75978367348,
     name: 'Antimony',
+    monoisotopicMass: 120.903812,
   },
   {
     number: 52,
@@ -1865,6 +1914,7 @@ module.exports = [
     symbol: 'Te',
     mass: 127.6031264846604,
     name: 'Tellurium',
+    monoisotopicMass: 129.906222748,
   },
   {
     number: 53,
@@ -1912,6 +1962,7 @@ module.exports = [
     symbol: 'I',
     mass: 126.9044719,
     name: 'Iodine',
+    monoisotopicMass: 126.9044719,
   },
   {
     number: 54,
@@ -1960,6 +2011,7 @@ module.exports = [
     symbol: 'Xe',
     mass: 131.29276144779053,
     name: 'Xenon',
+    monoisotopicMass: 131.9041550856,
   },
   {
     number: 55,
@@ -2008,6 +2060,7 @@ module.exports = [
     symbol: 'Cs',
     mass: 132.905451961,
     name: 'Caesium',
+    monoisotopicMass: 132.905451961,
   },
   {
     number: 56,
@@ -2056,6 +2109,7 @@ module.exports = [
     symbol: 'Ba',
     mass: 137.3268916286322,
     name: 'Barium',
+    monoisotopicMass: 137.905247,
   },
   {
     number: 57,
@@ -2104,6 +2158,7 @@ module.exports = [
     symbol: 'La',
     mass: 138.90546887371266,
     name: 'Lanthanum',
+    monoisotopicMass: 138.9063563,
   },
   {
     number: 58,
@@ -2151,6 +2206,7 @@ module.exports = [
     symbol: 'Ce',
     mass: 140.1157307378545,
     name: 'Cerium',
+    monoisotopicMass: 139.9054431,
   },
   {
     number: 59,
@@ -2198,6 +2254,7 @@ module.exports = [
     symbol: 'Pr',
     mass: 140.9076576,
     name: 'Praseodymium',
+    monoisotopicMass: 140.9076576,
   },
   {
     number: 60,
@@ -2244,6 +2301,7 @@ module.exports = [
     symbol: 'Nd',
     mass: 144.241596031827,
     name: 'Neodymium',
+    monoisotopicMass: 141.907729,
   },
   {
     number: 61,
@@ -2336,6 +2394,7 @@ module.exports = [
     symbol: 'Sm',
     mass: 150.36635571193,
     name: 'Samarium',
+    monoisotopicMass: 151.9197397,
   },
   {
     number: 63,
@@ -2382,6 +2441,7 @@ module.exports = [
     symbol: 'Eu',
     mass: 151.96437812637998,
     name: 'Europium',
+    monoisotopicMass: 152.921238,
   },
   {
     number: 64,
@@ -2427,6 +2487,7 @@ module.exports = [
     symbol: 'Gd',
     mass: 157.25213064687998,
     name: 'Gadolinium',
+    monoisotopicMass: 157.9241123,
   },
   {
     number: 65,
@@ -2472,6 +2533,7 @@ module.exports = [
     symbol: 'Tb',
     mass: 158.9253547,
     name: 'Terbium',
+    monoisotopicMass: 158.9253547,
   },
   {
     number: 66,
@@ -2516,6 +2578,7 @@ module.exports = [
     symbol: 'Dy',
     mass: 162.499472819424,
     name: 'Dysprosium',
+    monoisotopicMass: 163.9291819,
   },
   {
     number: 67,
@@ -2560,6 +2623,7 @@ module.exports = [
     symbol: 'Ho',
     mass: 164.9303288,
     name: 'Holmium',
+    monoisotopicMass: 164.9303288,
   },
   {
     number: 68,
@@ -2604,6 +2668,7 @@ module.exports = [
     symbol: 'Er',
     mass: 167.259082649669,
     name: 'Erbium',
+    monoisotopicMass: 165.9302995,
   },
   {
     number: 69,
@@ -2648,6 +2713,7 @@ module.exports = [
     symbol: 'Tm',
     mass: 168.9342179,
     name: 'Thulium',
+    monoisotopicMass: 168.9342179,
   },
   {
     number: 70,
@@ -2690,6 +2756,7 @@ module.exports = [
     symbol: 'Yb',
     mass: 173.05415016631702,
     name: 'Ytterbium',
+    monoisotopicMass: 173.9388664,
   },
   {
     number: 71,
@@ -2734,6 +2801,7 @@ module.exports = [
     symbol: 'Lu',
     mass: 174.96681495785498,
     name: 'Lutetium',
+    monoisotopicMass: 174.9407752,
   },
   {
     number: 72,
@@ -2779,6 +2847,7 @@ module.exports = [
     symbol: 'Hf',
     mass: 178.4849787234,
     name: 'Hafnium',
+    monoisotopicMass: 179.946557,
   },
   {
     number: 73,
@@ -2825,6 +2894,7 @@ module.exports = [
     symbol: 'Ta',
     mass: 180.9478756362269,
     name: 'Tantalum',
+    monoisotopicMass: 180.9479958,
   },
   {
     number: 74,
@@ -2871,6 +2941,7 @@ module.exports = [
     symbol: 'W',
     mass: 183.841777550513,
     name: 'Tungsten',
+    monoisotopicMass: 183.95093092,
   },
   {
     number: 75,
@@ -2919,6 +2990,7 @@ module.exports = [
     symbol: 'Re',
     mass: 186.20670454560002,
     name: 'Rhenium',
+    monoisotopicMass: 186.9557501,
   },
   {
     number: 76,
@@ -2969,6 +3041,7 @@ module.exports = [
     symbol: 'Os',
     mass: 190.22485962823998,
     name: 'Osmium',
+    monoisotopicMass: 191.961477,
   },
   {
     number: 77,
@@ -3018,6 +3091,7 @@ module.exports = [
     symbol: 'Ir',
     mass: 192.2160516521,
     name: 'Iridium',
+    monoisotopicMass: 192.9629216,
   },
   {
     number: 78,
@@ -3067,6 +3141,7 @@ module.exports = [
     symbol: 'Pt',
     mass: 195.084456864931,
     name: 'Platinum',
+    monoisotopicMass: 194.9647917,
   },
   {
     number: 79,
@@ -3117,6 +3192,7 @@ module.exports = [
     symbol: 'Au',
     mass: 196.96656879,
     name: 'Gold',
+    monoisotopicMass: 196.96656879,
   },
   {
     number: 80,
@@ -3171,6 +3247,7 @@ module.exports = [
     symbol: 'Hg',
     mass: 200.59916703455602,
     name: 'Mercury',
+    monoisotopicMass: 201.9706434,
   },
   {
     number: 81,
@@ -3222,6 +3299,7 @@ module.exports = [
     symbol: 'Tl',
     mass: 204.38341283936,
     name: 'Thallium',
+    monoisotopicMass: 204.9744278,
   },
   {
     number: 82,
@@ -3273,6 +3351,7 @@ module.exports = [
     symbol: 'Pb',
     mass: 207.216908063,
     name: 'Lead',
+    monoisotopicMass: 207.9766525,
   },
   {
     number: 83,
@@ -3322,6 +3401,7 @@ module.exports = [
     symbol: 'Bi',
     mass: 208.9803991,
     name: 'Bismuth',
+    monoisotopicMass: 208.9803991,
   },
   {
     number: 84,
@@ -3632,6 +3712,7 @@ module.exports = [
     symbol: 'Th',
     mass: 232.0380558,
     name: 'Thorium',
+    monoisotopicMass: 232.0380558,
   },
   {
     number: 91,
@@ -3670,6 +3751,7 @@ module.exports = [
     symbol: 'Pa',
     mass: 231.0358842,
     name: 'Protactinium',
+    monoisotopicMass: 231.0358842,
   },
   {
     number: 92,
@@ -3705,6 +3787,7 @@ module.exports = [
     symbol: 'U',
     mass: 238.0289104616574,
     name: 'Uranium',
+    monoisotopicMass: 238.0507884,
   },
   {
     number: 93,

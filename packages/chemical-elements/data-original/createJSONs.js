@@ -26,6 +26,9 @@ for (let i = 0; i < elementsAndIsotopes.length; i++) {
   element.name = name.name;
 
   let massFromIsotopes = getMass(element);
+
+  element.monoisotopicMass = getMonoisotopicMass(element);
+
   // need to decide which element mass to give, we calculate it ourself
   element.mass = massFromIsotopes ? massFromIsotopes : null;
 }
