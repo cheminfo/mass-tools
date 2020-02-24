@@ -27,5 +27,6 @@
     "ms-spectrum": "^0.13.0",
     "nucleotide": "^0.13.0",
     "peptide": "^1.10.1"
-  }
+  },
+  "gitHead": "34bef860b075f422110d43c300453286177bbba3"
 }

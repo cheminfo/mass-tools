@@ -23,5 +23,6 @@
   "version": "0.13.0",
   "devDependencies": {
     "mf-parser": "^0.12.0"
-  }
+  },
+  "gitHead": "34bef860b075f422110d43c300453286177bbba3"
 }

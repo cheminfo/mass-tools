@@ -20,5 +20,6 @@
   "dependencies": {
     "mf-utilities": "^0.13.0",
     "ml-spectra-processing": "0.6.1"
-  }
+  },
+  "gitHead": "34bef860b075f422110d43c300453286177bbba3"
 }

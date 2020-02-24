@@ -24,5 +24,6 @@
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^1.3.0"
-  }
+  },
+  "gitHead": "34bef860b075f422110d43c300453286177bbba3"
 }
