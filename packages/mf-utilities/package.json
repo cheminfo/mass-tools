@@ -20,7 +20,7 @@
   "dependencies": {
     "chemical-elements": "^1.0.0",
     "chemical-groups": "^1.0.0",
-    "mf-parser": "^0.12.0"
+    "mf-parser": "^1.0.0"
   },
   "gitHead": "0b6279ad7d0e416799cb58a1b1ba5a41d71acc9d"
 }
