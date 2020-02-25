@@ -6,7 +6,6 @@ const elementsAndIsotopes = require('./elementsAndIsotopes.js');
 const elementsAndIsotopesObject = require('./elementsAndIsotopesObject.js');
 const elementsAndStableIsotopes = require('./elementsAndStableIsotopes.js');
 const elementsAndStableIsotopesObject = require('./elementsAndStableIsotopesObject.js');
-
 const { ELECTRON_MASS } = require('./constants');
 
 module.exports = {
