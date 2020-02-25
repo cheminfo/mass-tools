@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/cheminfo-js/mf-parser/issues"
   },
-  "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/atom-sorter#readme"
+  "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/atom-sorter#readme",
+  "gitHead": "6c89283e1182579f90a0020b3411968e6c49562f"
 }
