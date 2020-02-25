@@ -1,6 +1,6 @@
 {
   "name": "mf-global",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Small utilities dealing with molecular formula",
   "main": "src/index.js",
   "files": [
@@ -20,12 +20,12 @@
   "dependencies": {
     "chemical-elements": "^1.0.0",
     "chemical-groups": "^1.0.0",
-    "emdb": "^1.0.0",
-    "isotopic-distribution": "^1.0.0",
-    "mf-parser": "^1.0.0",
-    "ms-report": "^1.0.0",
-    "ms-spectrum": "^1.0.0",
-    "nucleotide": "^1.0.0",
+    "emdb": "^1.0.1",
+    "isotopic-distribution": "^1.0.1",
+    "mf-parser": "^1.0.1",
+    "ms-report": "^1.0.1",
+    "ms-spectrum": "^1.0.1",
+    "nucleotide": "^1.0.1",
     "peptide": "^1.10.1"
   },
   "gitHead": "0b6279ad7d0e416799cb58a1b1ba5a41d71acc9d"

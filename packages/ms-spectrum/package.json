@@ -1,6 +1,6 @@
 {
   "name": "ms-spectrum",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A mass spectrum",
   "main": "src/index.js",
   "files": [
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/emdb#readme",
   "dependencies": {
-    "emdb": "^1.0.0",
+    "emdb": "^1.0.1",
     "ml-array-max": "^1.1.2",
     "ml-array-min": "^1.1.2",
     "ml-array-normed": "^1.0.3",
