@@ -62,4 +62,17 @@ describe('preprocessRanges', () => {
       originalMaxCount: 1,
     });
   });
+
+  it('isotopes [13C]0-10 [12C]0-10', () => {
+    let possibilities = preprocessRanges('[13C]0-10 [12C]0-10');
+    expect(Array.isArray(possibilities)).toBe(true);
+    expect(possibilities).toHaveLength(2);
+    expect(possibilities[0]).toMatchObject({
+      mf: '[13C]',
+      minCharge: 0,
+      maxCharge: 0,
+      originalMinCount: 0,
+      originalMaxCount: 10,
+    });
+  });
 });
