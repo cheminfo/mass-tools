@@ -35,7 +35,7 @@ module.exports = function preprocessRanges(ranges) {
             current.mf += currentMF;
             currentMF = '';
           }
-          currentMF += '[' + item.value.isotope + item.value.atom + ']';
+          currentMF += `[${item.value.isotope}${item.value.atom}]`;
           break;
         case Kind.MULTIPLIER:
           if (parenthesisLevel === 0 && currentMF) {
