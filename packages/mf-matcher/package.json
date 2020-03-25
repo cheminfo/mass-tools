@@ -1,6 +1,6 @@
 {
   "name": "mf-matcher",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Returns true / false for an object using mw, em, msem, unsaturation and atoms",
   "main": "src/index.js",
   "files": [
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/mf-matcher#readme",
   "dependencies": {
-    "mf-utilities": "^1.1.0",
+    "mf-utilities": "^1.1.1",
     "ml-spectra-processing": "0.6.1"
   },
   "gitHead": "9a9a9ebe1355675cd87e524d4f16d57ce984cce6"
