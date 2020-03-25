@@ -1,6 +1,6 @@
 'use strict';
 
-const elements = require('./elements.json');
+const elements = JSON.parse(JSON.stringify(require('./elements.json')));
 
 elements.forEach((element) => {
   element.isotopes = element.isotopes.filter((i) => i.abundance > 0);
