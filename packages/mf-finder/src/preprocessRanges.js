@@ -1,8 +1,8 @@
 'use strict';
 
+const Kind = require('mf-parser/src/Kind');
 const MF = require('mf-parser/src/MF');
 const parse = require('mf-parser/src/parse');
-const Kind = require('mf-parser/src/Kind');
 
 module.exports = function preprocessRanges(ranges) {
   ranges = JSON.parse(JSON.stringify(ranges));

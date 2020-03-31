@@ -2,9 +2,9 @@
 
 const MF = require('mf-parser').MF;
 const matcher = require('mf-matcher').msem;
-const sum = require('sum-object-keys');
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 const processRange = require('mf-utilities/src/processRange');
+const sum = require('sum-object-keys');
 /**
  * Generate all the possible combinations of molecular formula and calculate
  * for each of them the monoisotopic mass and observed moniisotopic mass (m/z)

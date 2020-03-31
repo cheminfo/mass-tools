@@ -1,7 +1,7 @@
 'use strict';
 
-const getPeakChargeBySimilarity = require('../getPeakChargeBySimilarity');
 const Spectrum = require('../Spectrum');
+const getPeakChargeBySimilarity = require('../getPeakChargeBySimilarity');
 
 describe('test getPeakChargeBySimilarity', () => {
   let data = {

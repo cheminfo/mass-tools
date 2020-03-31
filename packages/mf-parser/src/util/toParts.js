@@ -1,7 +1,7 @@
 'use strict';
 
-const groups = require('chemical-groups/src/groupsObject.js');
 const atomSorter = require('atom-sorter');
+const groups = require('chemical-groups/src/groupsObject.js');
 
 const Kind = require('../Kind');
 

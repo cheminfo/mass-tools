@@ -1,16 +1,16 @@
 'use strict';
 
-const elements = require('chemical-elements/src/elementsAndIsotopesObject.js');
-const groups = require('chemical-groups/src/groupsObject.js');
-const unsaturations = require('chemical-elements/src/unsaturationsObject.js');
 const { ELECTRON_MASS } = require('chemical-elements/src/constants');
+const elements = require('chemical-elements/src/elementsAndIsotopesObject.js');
+const unsaturations = require('chemical-elements/src/unsaturationsObject.js');
+const groups = require('chemical-groups/src/groupsObject.js');
 
 const Kind = require('../Kind');
 
-const partToMF = require('./partToMF');
-const partToAtoms = require('./partToAtoms');
-const isotopes = require('./getIsotopesObject');
 const getIsotopeRatioInfo = require('./getIsotopeRatioInfo');
+const isotopes = require('./getIsotopesObject');
+const partToAtoms = require('./partToAtoms');
+const partToMF = require('./partToMF');
 
 /**
  *

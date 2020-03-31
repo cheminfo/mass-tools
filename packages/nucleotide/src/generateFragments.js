@@ -1,8 +1,8 @@
 'use strict';
 
-const addInternalTerm = require('./addInternalTerm');
 const addFiveTerm = require('./addFiveTerm');
 const addFiveTermBaseLoss = require('./addFiveTermBaseLoss');
+const addInternalTerm = require('./addInternalTerm');
 const addThreeTerm = require('./addThreeTerm');
 const addThreeTermBaseLoss = require('./addThreeTermBaseLoss');
 

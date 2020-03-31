@@ -1,11 +1,11 @@
 'use strict';
 
 const atomSorter = require('atom-sorter');
-const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 const getMsInfo = require('mf-utilities/src/getMsInfo');
+const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 
-const preprocessRanges = require('./preprocessRanges');
 const TargetMassCache = require('./TargetMassCache');
+const preprocessRanges = require('./preprocessRanges');
 
 /**
  * Returns possible combinations
@@ -17,7 +17,7 @@ const TargetMassCache = require('./TargetMassCache');
 
 let targetMassCache;
 
-module.exports = function(targetMass, options = {}) {
+module.exports = function (targetMass, options = {}) {
   const {
     minCharge = Number.MIN_SAFE_INTEGER,
     maxCharge = Number.MAX_SAFE_INTEGER,

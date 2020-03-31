@@ -5,8 +5,8 @@ const groups = require('chemical-groups/src/groupsObject.js');
 
 const Kind = require('../Kind');
 
-const isotopes = require('./getIsotopesObject');
 const getIsotopeRatioInfo = require('./getIsotopeRatioInfo');
+const isotopes = require('./getIsotopesObject');
 
 /**
  *

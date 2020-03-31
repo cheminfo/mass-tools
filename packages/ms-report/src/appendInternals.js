@@ -22,7 +22,7 @@ function assignSlot(from, to, residues) {
   if (from > 0) from--; // we ensure that we don't put on the same line to sequences that are consecutive
   for (let i = from; i < to; i++) {
     let residue = residues[i];
-    residue.paper.usedSlots.forEach(function(usedSlot, index) {
+    residue.paper.usedSlots.forEach(function (usedSlot, index) {
       used[index] = true;
     });
   }

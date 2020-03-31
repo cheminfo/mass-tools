@@ -1,8 +1,8 @@
 'use strict';
 
-let Papa = require('papaparse');
 let generateMFs = require('mf-generator');
 let MF = require('mf-parser/src/MF');
+let Papa = require('papaparse');
 
 const fetchText = require('./util/fetchText');
 
@@ -36,7 +36,7 @@ async function mfFromGoogleSheet(url, options = {}) {
         header: true,
       }).data;
 
-      referencesArray.forEach(function(r) {
+      referencesArray.forEach(function (r) {
         references[r.label] = r;
       });
     }
@@ -93,11 +93,11 @@ async function mfFromGoogleSheet(url, options = {}) {
       }
     }
 
-    results = results.filter(function(a) {
+    results = results.filter(function (a) {
       return a.ms.em !== 0;
     });
 
-    results.sort(function(a, b) {
+    results.sort(function (a, b) {
       return a.ms.em - b.ms.em;
     });
 

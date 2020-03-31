@@ -1,8 +1,8 @@
 'use strict';
 
-const Regression = require('ml-regression-power/lib/index.js');
-const min = require('ml-array-min/lib/index');
 const max = require('ml-array-max/lib/index');
+const min = require('ml-array-min/lib/index');
+const Regression = require('ml-regression-power/lib/index.js');
 
 function peaksWidth(peaks) {
   let xs = peaks.map((peak) => peak.x);

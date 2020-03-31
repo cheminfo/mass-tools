@@ -1,8 +1,8 @@
 'use strict';
 
-const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 const mfParser = require('mf-parser');
 const getMsInfo = require('mf-utilities/src/getMsInfo');
+const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 
 const fetch = require('./util/fetchJSON.js');
 

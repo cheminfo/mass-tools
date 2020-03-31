@@ -1,7 +1,7 @@
 'use strict';
 
-const nucleotide = require('nucleotide');
 const combineMFs = require('mf-generator');
+const nucleotide = require('nucleotide');
 
 /**
  * Add a database starting from a peptidic sequence

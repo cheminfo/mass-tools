@@ -1,8 +1,8 @@
 'use strict';
 
-const Regression = require('ml-regression-theil-sen/lib/index');
-const min = require('ml-array-min/lib/index');
 const max = require('ml-array-max/lib/index');
+const min = require('ml-array-min/lib/index');
+const Regression = require('ml-regression-theil-sen/lib/index');
 
 function massShifts(similarities, options = {}) {
   const { minSimilarity = 0.95, minLength = 10 } = options;

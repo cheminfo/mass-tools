@@ -1,7 +1,7 @@
 'use strict';
 
-const Kind = require('../Kind');
 const Format = require('../Format');
+const Kind = require('../Kind');
 
 const formatCharge = require('./formatCharge');
 

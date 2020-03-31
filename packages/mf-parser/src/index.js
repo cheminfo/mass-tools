@@ -1,7 +1,7 @@
 'use strict';
 
-const toDisplay = require('./util/toDisplay');
 const parse = require('./parse');
+const toDisplay = require('./util/toDisplay');
 const toHtml = require('./util/toHtml');
 
 /**

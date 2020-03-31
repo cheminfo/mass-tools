@@ -1,9 +1,9 @@
 'use strict';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-let Wikidata = require('wikidata-sdk');
-// eslint-disable-next-line import/no-extraneous-dependencies
 let fetch = require('node-fetch');
+// eslint-disable-next-line import/no-extraneous-dependencies
+let Wikidata = require('wikidata-sdk');
 
 async function compileIsotopes() {
   let url = Wikidata.sparqlQuery(`

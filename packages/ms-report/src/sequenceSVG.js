@@ -1,16 +1,16 @@
 'use strict';
 
-const appendResiduesPosition = require('./appendResiduesPosition');
-const appendResidues = require('./appendResidues');
-const appendResults = require('./appendResults');
-const appendRowsInformation = require('./appendRowsInformation');
-const appendRows = require('./appendRows');
 const appendInternals = require('./appendInternals');
-const addScript = require('./draw/addScript');
+const appendResidues = require('./appendResidues');
+const appendResiduesPosition = require('./appendResiduesPosition');
+const appendResults = require('./appendResults');
+const appendRows = require('./appendRows');
+const appendRowsInformation = require('./appendRowsInformation');
 const addCSS = require('./draw/addCSS');
+const addScript = require('./draw/addScript');
 const drawInternals = require('./draw/drawInternals');
-const drawSequence = require('./draw/drawSequence');
 const drawReplacements = require('./draw/drawReplacements');
+const drawSequence = require('./draw/drawSequence');
 const getPaper = require('./getPaper');
 
 /**

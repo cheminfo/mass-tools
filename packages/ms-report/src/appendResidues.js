@@ -1,7 +1,7 @@
 'use strict';
 
-const Peptide = require('peptide');
 const Nucleotide = require('nucleotide');
+const Peptide = require('peptide');
 const groups = require('chemical-groups').getGroupsObject();
 
 const ALTERNATIVES = ['', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'];

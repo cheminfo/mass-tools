@@ -1,7 +1,7 @@
 'use strict';
 
-const peptide = require('peptide');
 const combineMFs = require('mf-generator');
+const peptide = require('peptide');
 
 /**
  * Add a database starting from a peptidic sequence
