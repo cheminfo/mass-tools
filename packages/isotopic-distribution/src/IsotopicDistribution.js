@@ -163,26 +163,49 @@ class IsotopicDistribution {
   }
 
   getCSV() {
-    return this.getText(',');
+    return this.getText({ delimiter: ', ' });
   }
 
   getTSV() {
-    return this.getText('\t');
+    return this.getText({ delimiter: '\t' });
   }
 
-  getTable() {
-    return this.getDistribution().array;
+  getTable(options = {}) {
+    const { maxValue, xLabel = 'x', yLabel = 'y' } = options;
+    let points = this.getDistribution().array;
+    let factor = 1;
+    if (maxValue) {
+      let maxY = this.getMaxY(points);
+      factor = maxValue / maxY;
+    }
+    return points.map((point) => {
+      let newPoint = {};
+      newPoint[xLabel] = point.x;
+      newPoint[yLabel] = point.y * factor;
+      return newPoint;
+    });
   }
 
-  getText(delimiter = '\t') {
+  getText(options = {}) {
+    const { delimiter = '\t', numberDecimals = 3 } = options;
     let points = this.getDistribution().array;
     let csv = [];
     for (let point of points) {
       csv.push(
-        `${point.x.toFixed(5)}${delimiter}${(point.y * 100).toFixed(3)}`,
+        `${point.x.toFixed(5)}${delimiter}${(point.y * 100).toFixed(
+          numberDecimals,
+        )}`,
       );
     }
     return csv.join('\n');
+  }
+
+  getMaxY(points) {
+    let maxY = points[0].y;
+    for (let point of points) {
+      if (point.y > maxY) maxY = point.y;
+    }
+    return maxY;
   }
 
   /**
@@ -195,10 +218,7 @@ class IsotopicDistribution {
     if (points.length === 0) return [];
     let factor = 1;
     if (maxValue) {
-      let maxY = points[0].y;
-      for (let point of points) {
-        if (point.y > maxY) maxY = point.y;
-      }
+      let maxY = this.getMaxY(points);
       factor = maxY / maxValue;
     }
 

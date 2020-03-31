@@ -4,7 +4,21 @@ const IsotopicDistribution = require('../IsotopicDistribution.js');
 
 describe('test isotopicDistribution', () => {
   it('create distribution of CH0', () => {
-    let isotopicDistribution = new IsotopicDistribution('CH0');
+    let isotopicDistribution = new IsotopicDistribution('CH00');
+    expect(isotopicDistribution.getTable()).toStrictEqual([
+      { x: 12, y: 0.9893 },
+      { x: 13.00335483507, y: 0.0107 },
+    ]);
+    expect(
+      isotopicDistribution.getTable({ xLabel: 'mz', yLabel: 'intensity' }),
+    ).toStrictEqual([
+      { mz: 12, intensity: 0.9893 },
+      { mz: 13.00335483507, intensity: 0.0107 },
+    ]);
+    expect(isotopicDistribution.getTable({ maxValue: 100 })).toStrictEqual([
+      { x: 12, y: 100 },
+      { x: 13.00335483507, y: 1.0815728292732234 },
+    ]);
     let distribution = isotopicDistribution.getDistribution();
     expect(distribution.array[0].x).toBe(12);
   });
