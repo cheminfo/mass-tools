@@ -24,6 +24,5 @@
     "mf-parser": "^1.1.3",
     "mf-utilities": "^1.1.3",
     "sum-object-keys": "^1.0.2"
-  },
-  "gitHead": "03f4aca58a117f78aaceffce4b968507cd964b74"
+  }
 }

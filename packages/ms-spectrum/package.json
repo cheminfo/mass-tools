@@ -26,6 +26,5 @@
     "ml-regression-power": "^2.0.0",
     "peaks-similarity": "^2.3.1",
     "xy-parser": "^3.0.0"
-  },
-  "gitHead": "03f4aca58a117f78aaceffce4b968507cd964b74"
+  }
 }

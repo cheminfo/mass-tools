@@ -27,6 +27,5 @@
     "papaparse": "^5.1.1",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.8"
-  },
-  "gitHead": "03f4aca58a117f78aaceffce4b968507cd964b74"
+  }
 }

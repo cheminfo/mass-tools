@@ -19,6 +19,5 @@
   "homepage": "https://github.com/cheminfo-js/mf-parser/tree/master/packages/chemical-elements#readme",
   "dependencies": {
     "papaparse": "^5.1.1"
-  },
-  "gitHead": "03f4aca58a117f78aaceffce4b968507cd964b74"
+  }
 }

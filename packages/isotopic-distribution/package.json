@@ -22,6 +22,5 @@
     "mf-parser": "^1.1.3",
     "mf-utilities": "^1.1.3",
     "spectrum-generator": "^4.0.0"
-  },
-  "gitHead": "03f4aca58a117f78aaceffce4b968507cd964b74"
+  }
 }
