@@ -19,7 +19,7 @@
   "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/mf-matcher#readme",
   "dependencies": {
     "mf-utilities": "^1.1.2",
-    "ml-spectra-processing": "0.6.1"
+    "ml-spectra-processing": "2.0.2"
   },
-  "gitHead": "6b2d07885895d1eb6ffdbb51bbccdf15cc8d0aec"
+  "gitHead": "03f4aca58a117f78aaceffce4b968507cd964b74"
 }
