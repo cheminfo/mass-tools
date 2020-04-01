@@ -230,25 +230,30 @@ class IsotopicDistribution {
 
   /**
    * Returns the isotopic distribution as the sum of gaussian
-   *  @return {XY} isotopic distribution as an object containing 2 properties: x:[] and y:[]
+   * @param {object} [options={}]
+   * @param {number} [guassianWidth=10]
+   * @param {number} [threshold=0.00001] // minimal height to return point
+   * @param {number} [maxValue] // rescale Y to reach maxValue
+   * @param {function} [peakWidthFct=(mz)=>(this.fwhm)]
+   * @return {XY} isotopic distribution as an object containing 2 properties: x:[] and y:[]
    */
 
   getGaussian(options = {}) {
-    let distribution = this.getDistribution();
     const {
-      gaussianWidth = 10,
       peakWidthFct = () => this.fwhm,
-      threshold = 0.0001,
+      threshold = 0.00001,
+      maxValue,
     } = options;
 
-    let points = distribution.array;
-
-    let pointsPerUnit = Math.round(gaussianWidth / this.fwhm);
+    let points = this.getTable({ maxValue });
     if (points.length === 0) return [];
+    const from = Math.floor(options.from || points[0].x - 2);
+    const to = Math.ceil(options.to || points[points.length - 1].x + 2);
+    const nbPoints = ((to - from) * 10) / this.fwhm + 1;
     let gaussianOptions = {
-      start: Math.floor(options.from || distribution.minX - 2),
-      end: Math.ceil(options.to || distribution.maxX + 2),
-      pointsPerUnit,
+      from,
+      to,
+      nbPoints,
       peakWidthFct,
     };
 

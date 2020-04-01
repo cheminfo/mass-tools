@@ -68,6 +68,14 @@ describe('test Spectrum', () => {
         base: 0,
         charge: 1,
         index: 100,
+        left: {
+          index: 98,
+          x: 4.9,
+        },
+        right: {
+          index: 102,
+          x: 5.1,
+        },
         soft: false,
         width: 0.1999999999999993,
         x: 5,
@@ -89,6 +97,14 @@ describe('test Spectrum', () => {
         base: 0,
         charge: 1,
         index: 100,
+        left: {
+          index: 98,
+          x: 4.9,
+        },
+        right: {
+          index: 101,
+          x: 5.05,
+        },
         soft: false,
         width: 0.14999999999999947,
         x: 4.975,
