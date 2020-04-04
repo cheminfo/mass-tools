@@ -249,7 +249,7 @@ class IsotopicDistribution {
     if (points.length === 0) return [];
     const from = Math.floor(options.from || points[0].x - 2);
     const to = Math.ceil(options.to || points[points.length - 1].x + 2);
-    const nbPoints = ((to - from) * 10) / this.fwhm + 1;
+    const nbPoints = Math.round(((to - from) * 10) / this.fwhm + 1);
     let gaussianOptions = {
       from,
       to,
