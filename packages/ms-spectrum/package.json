@@ -8,15 +8,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cheminfo-js/molecular-formula.git"
+    "url": "git+https://github.com/cheminfo/molecular-formula.git"
   },
   "keywords": [],
   "author": "Luc Patiny",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cheminfo-js/molecular-formula/issues"
+    "url": "https://github.com/cheminfo/molecular-formula/issues"
   },
-  "homepage": "https://github.com/cheminfo-js/molecular-formula/tree/master/packages/emdb#readme",
+  "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/emdb#readme",
   "dependencies": {
     "emdb": "^1.1.4",
     "ml-array-max": "^1.1.2",

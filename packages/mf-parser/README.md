@@ -1,16 +1,15 @@
 # mf-parser
 
-  [![NPM version][npm-image]][npm-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
 
 .
-
 
 ## Installation
 
 `$ npm install mf-parser`
 
-## [API Documentation](https://cheminfo-js.github.io/mf-parser/)
+## [API Documentation](https://cheminfo.github.io/mf-parser/)
 
 ## Example
 
@@ -20,6 +19,7 @@ let html = parseToHtml('Et3N . 2HCl);
 ```
 
 You may also be interested to parse first the MF and then retrieve display representation
+
 ```js
 const MFParser = require('mf-parser');
 let parsed = MFParser.parse('Et3N . 2HCl');
@@ -34,10 +34,9 @@ Unsaturation is based on Pretsch
 
 http://pubs.acs.org/doi/pdf/10.1021/ci000135o
 
-
 ## License
 
-  [MIT](./LICENSE)
+[MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/mf-parser.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/mf-parser
