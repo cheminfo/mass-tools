@@ -95,7 +95,7 @@ let tests = [
       { kind: 'salt', value: '.' },
       { kind: 'atom', value: 'Cl' },
     ],
-    result: [{ kind: 'text', value: 'H•Cl' }],
+    result: [{ kind: 'text', value: 'H • Cl' }],
   },
   {
     mf: 'H{1,1}',

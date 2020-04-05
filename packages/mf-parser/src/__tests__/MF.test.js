@@ -105,7 +105,7 @@ describe('MF', () => {
     mf.canonize();
     let html = mf.toHtml();
 
-    expect(html).toBe('C<sub>6</sub>H<sub>15</sub>N•HCl');
+    expect(html).toBe('C<sub>6</sub>H<sub>15</sub>N • HCl');
 
     let info = mf.getInfo();
     expect(info).toStrictEqual({

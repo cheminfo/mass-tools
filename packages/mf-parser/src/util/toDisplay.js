@@ -78,7 +78,7 @@ module.exports = function convertForDisplay(lines) {
         break;
       case Kind.SALT:
         if (result.kind === Format.TEXT) {
-          result.value += '•';
+          result.value += ' • ';
         } else {
           result = {
             kind: Format.TEXT,
