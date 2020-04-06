@@ -25,7 +25,6 @@ class IsotopicDistribution {
    * @param {number} [options.maxLines=5000] - Maximal number of lines during calculations
    * @param {number} [options.minY=1e-8] - Minimal signal height during calculations
    * @param {number} [options.ensureCase=false] - Ensure uppercase / lowercase
-   *
    * @param {number} [options.allowNeutral=true] - Should we keep the distribution if the molecule has no charge
    */
 

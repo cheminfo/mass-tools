@@ -43,15 +43,6 @@ function appendResults(data, analysisResult, options = {}) {
           result.color = 'green';
       }
     }
-    if (result.similarity > 95) {
-      result.textColor = 'black';
-    } else if (result.similarity > 90) {
-      result.textColor = '#333';
-    } else if (result.similariy > 80) {
-      result.textColor = '#666';
-    } else {
-      result.textColor = '#999';
-    }
   }
 
   if (merge.charge) {
@@ -72,6 +63,18 @@ function appendResults(data, analysisResult, options = {}) {
       current.similarity = Math.round(current.similarity / unique[key].length);
       results.push(current);
       current.charge = '';
+    }
+  }
+
+  for (let result of results) {
+    if (result.similarity > 95) {
+      result.textColor = 'black';
+    } else if (result.similarity > 90) {
+      result.textColor = '#333';
+    } else if (result.similariy > 80) {
+      result.textColor = '#666';
+    } else {
+      result.textColor = '#999';
     }
   }
 
