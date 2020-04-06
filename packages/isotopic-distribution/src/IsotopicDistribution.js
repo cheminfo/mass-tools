@@ -254,7 +254,7 @@ class IsotopicDistribution {
     const nbPoints = Math.round(((to - from) * gaussianWidth) / this.fwhm + 1);
     if (nbPoints > maxLength) {
       throw Error(
-        'Number of points is over the maxLength: ' + nbPoints + '>' + maxLength,
+        `Number of points is over the maxLength: ${nbPoints}>${maxLength}`,
       );
     }
     let gaussianOptions = {

@@ -42,7 +42,7 @@ describe('test isotopicDistribution', () => {
     expect(Math.max(...gaussian.y)).toBe(100);
   });
 
-  it.only('create distribution of C10000 and getGaussian with maxValue', () => {
+  it('create distribution of C10000 and getGaussian with maxValue', () => {
     let isotopicDistribution = new IsotopicDistribution('C10000', {
       fwhm: 0.001,
     });
