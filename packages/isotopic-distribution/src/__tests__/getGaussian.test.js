@@ -41,4 +41,26 @@ describe('test isotopicDistribution', () => {
     expect(Math.min(...gaussian.y)).toBeCloseTo(0, 2);
     expect(Math.max(...gaussian.y)).toBe(100);
   });
+
+  it.only('create distribution of C10000 and getGaussian with maxValue', () => {
+    let isotopicDistribution = new IsotopicDistribution('C10000', {
+      fwhm: 0.001,
+    });
+    let gaussian = isotopicDistribution.getGaussian({
+      maxValue: 100,
+      maxLength: 1e7,
+    });
+
+    expect(Math.max(...gaussian.x)).toBeCloseTo(120159.5334, 1);
+    expect(Math.max(...gaussian.y)).toBeCloseTo(100, 0);
+  });
+
+  it('create distribution of C10000 and getGaussian too big', () => {
+    let isotopicDistribution = new IsotopicDistribution('C10000', {
+      fwhm: 0.001,
+    });
+    expect(() => {
+      isotopicDistribution.getGaussian({});
+    }).toThrow('Number of points is over the maxLength');
+  });
 });

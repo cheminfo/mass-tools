@@ -230,10 +230,11 @@ class IsotopicDistribution {
   /**
    * Returns the isotopic distribution as the sum of gaussian
    * @param {object} [options={}]
-   * @param {number} [guassianWidth=10]
-   * @param {number} [threshold=0.00001] // minimal height to return point
-   * @param {number} [maxValue] // rescale Y to reach maxValue
-   * @param {function} [peakWidthFct=(mz)=>(this.fwhm)]
+   * @param {number} [options.gaussianWidth=10]
+   * @param {number} [options.threshold=0.00001] // minimal height to return point
+   * @param {number} [options.maxLength=1e6] // minimal height to return point
+   * @param {number} [options.maxValue] // rescale Y to reach maxValue
+   * @param {function} [options.peakWidthFct=(mz)=>(this.fwhm)]
    * @return {XY} isotopic distribution as an object containing 2 properties: x:[] and y:[]
    */
 
@@ -241,14 +242,21 @@ class IsotopicDistribution {
     const {
       peakWidthFct = () => this.fwhm,
       threshold = 0.00001,
+      gaussianWidth = 10,
       maxValue,
+      maxLength = 1e6,
     } = options;
 
     let points = this.getTable({ maxValue });
-    if (points.length === 0) return [];
+    if (points.length === 0) return { x: [], y: [] };
     const from = Math.floor(options.from || points[0].x - 2);
     const to = Math.ceil(options.to || points[points.length - 1].x + 2);
-    const nbPoints = Math.round(((to - from) * 10) / this.fwhm + 1);
+    const nbPoints = Math.round(((to - from) * gaussianWidth) / this.fwhm + 1);
+    if (nbPoints > maxLength) {
+      throw Error(
+        'Number of points is over the maxLength: ' + nbPoints + '>' + maxLength,
+      );
+    }
     let gaussianOptions = {
       from,
       to,
