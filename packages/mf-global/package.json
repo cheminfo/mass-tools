@@ -1,6 +1,6 @@
 {
   "name": "mf-global",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Various libraries to deal with molecular formula and mass spectra",
   "main": "src/index.js",
   "files": [
