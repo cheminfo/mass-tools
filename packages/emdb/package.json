@@ -1,6 +1,6 @@
 {
   "name": "emdb",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "description": "Database manager for exact mass query",
   "browser": {
     "./src/util/fetchArrayBuffer.js": "./src/util/fetchArrayBufferBrowser.js",
@@ -33,7 +33,7 @@
     "ml-array-max": "^1.1.2",
     "ml-array-min": "^1.1.2",
     "ml-regression-theil-sen": "^2.0.0",
-    "ms-spectrum": "^1.1.6",
+    "ms-spectrum": "^1.2.0",
     "nucleotide": "^1.1.5",
     "peaks-similarity": "^2.3.1",
     "peptide": "^1.10.1",
