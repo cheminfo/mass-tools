@@ -8,6 +8,9 @@ module.exports = {
   MF: require('../packages/mf-parser/src/MF.js'),
   Peptide: require('peptide'),
   Nucleotide: require('../packages/nucleotide'),
-  Spectrum: require('../packages/ms-spectrum').Spectrum,
+  Spectrum: require('../packages/ms-spectrum/src/Spectrum'),
+  getPeaks: require('../packages/ms-spectrum/src//getPeaks'),
+  getBestPeaks: require('../packages/ms-spectrum/src//getBestPeaks'),
+  generateMFs: require('../packages/mf-generator'),
   Report: require('../packages/ms-report'),
 };
