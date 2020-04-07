@@ -35,7 +35,7 @@ const sum = require('sum-object-keys');
  * @returns {Array}
  */
 
-module.exports = function combineMFs(keys, options = {}) {
+module.exports = function generateMFs(keys, options = {}) {
   let { limit = 10000000, uniqueMFs = true, estimate = false } = options;
 
   if (uniqueMFs === true) options.canonizeMF = true;

@@ -11,5 +11,6 @@ module.exports = {
   Spectrum: require('ms-spectrum/src/Spectrum'),
   getPeaks: require('ms-spectrum/src//getPeaks'),
   getBestPeaks: require('ms-spectrum/src//getBestPeaks'),
+  generateMFs: require('mf-generator'),
   Report: require('ms-report'),
 };

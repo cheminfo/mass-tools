@@ -22,6 +22,7 @@
     "chemical-groups": "^1.0.2",
     "emdb": "^1.2.0",
     "isotopic-distribution": "^1.1.6",
+    "mf-generator": "^1.1.5",
     "mf-parser": "^1.1.5",
     "ms-report": "^1.1.6",
     "ms-spectrum": "^1.2.0",
