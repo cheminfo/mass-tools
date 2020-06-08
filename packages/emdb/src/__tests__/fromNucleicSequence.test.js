@@ -62,8 +62,13 @@ test('TACGTGCCAATAC internal fragment', () => {
     },
   });
 
-  let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+  let nucleic = dbManager.databases.nucleic.sort((a, b) => {
+    if (a.ms.em !== b.ms.em) return a.ms.em - b.ms.em;
+    if (a.ms.comment < b.ms.comment) return 1;
+    return -1;
+  });
   expect(nucleic).toHaveLength(56);
+
   expect(nucleic[0]).toBeDeepCloseTo({
     charge: 0,
     em: 467.04948243777,
