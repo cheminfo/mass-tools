@@ -1,29 +1,31 @@
 'use strict';
 
+const mfDiff = require('mf-utilities/src/mfDiff');
+
+const mfLosses = {};
+['Amp', 'Tmp', 'Cmp', 'Gmp', 'Ump'].forEach((nucleotide) => {
+  mfLosses[nucleotide] = {
+    code: nucleotide.charAt(0),
+    diff: mfDiff('Rmp', nucleotide),
+  };
+});
+
+['Damp', 'Dtmp', 'Dcmp', 'Dgmp', 'Dump'].forEach((nucleotide) => {
+  mfLosses[nucleotide] = {
+    code: nucleotide.charAt(1).toUpperCase(),
+    diff: mfDiff('Drmp', nucleotide),
+  };
+});
+
 function baseLoss(nucleotide) {
   // any residue can loose a base
   let results = [];
-  let parts = nucleotide
-    .replace(/ /g, '')
-    .replace(/([a-zA-Z0-9)])(?=[A-Z])/g, '$1 ')
-    .split(/ /);
-  let counter = 0;
-  for (let i = 0; i < parts.length; i++) {
-    let part = parts[i];
-    let middle = '';
-    if (part.match(/^D[atcgu]mp$/)) {
-      middle = 'Drmp';
-      counter++;
-    } else if (part.match(/^[ATCGU]mp$/)) {
-      middle = 'Rmp';
-      counter++;
-    } else {
-      continue;
-    }
-    let begin = parts.slice(0, i);
-    let end = parts.slice(i + 1);
 
-    results.push(`${begin.join('') + middle + end.join('')}$-B${counter}`);
+  for (let key in mfLosses) {
+    const base = mfLosses[key];
+    if (nucleotide.includes(key)) {
+      results.push(nucleotide + '(' + base.diff + ')$ ' + base.code + '*');
+    }
   }
 
   return results;

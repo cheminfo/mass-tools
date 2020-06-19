@@ -5,10 +5,11 @@ const generateFragments = require('../generateFragments');
 describe('addFiveTermBaseLoss', () => {
   it('nucleotide to sequence of HODampDtmpDcmpH', () => {
     let fragments = generateFragments('HODampDtmpDcmpH', {
-      a: true,
-      ab: true,
+      a: true, // a fragment
+      ab: true, // a fragment with base loss
       abcdBaseLoss: true,
     });
+
     expect(fragments).toStrictEqual([
       'HODampO-1H-1$a1',
       'HODrmpO-1H-1$a1-B1',
