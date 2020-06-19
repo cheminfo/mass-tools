@@ -14,6 +14,7 @@ const peptide = require('peptide');
  * @param {boolean}        [options.protonation=false]
  * @param {number}         [options.protonationPH=7]
  * @param {boolean}        [options.allowNeutralLoss=false]
+ * @param {number}         [options.limit=100000]
  *
  * @param {object}         [options.digestion={}] Object defining options for digestion
  * @param {number}         [options.digestion.minMissed=0] Minimal number of allowed missed cleavage
@@ -64,6 +65,7 @@ module.exports = function fromPeptidicSequence(sequence, options = {}) {
     fragmentation = {},
     filter = {},
     ionizations = '',
+    limit = 100000,
     estimate = false,
   } = options;
 
@@ -101,6 +103,7 @@ module.exports = function fromPeptidicSequence(sequence, options = {}) {
     ionizations,
     filter,
     estimate,
+    limit,
   });
 
   return combined;

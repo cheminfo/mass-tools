@@ -9,13 +9,14 @@ const nucleotide = require('nucleotide');
  * @param {string} [sequence] Sequence as a string of 1 letter or 3 letters code. Could also be a correct molecular formula respecting uppercase, lowercase
  * @param {object} [options={}]
  * @param {boolean}       [options.estimate=false] - estimate the number of MF without filters
+ * @param {number}         [options.limit=100000]
  * @param {string} [options.ionizations='']
  * @param {object} [options.info={}]
  * @param {string} [options.info.kind] - rna, ds-dna or dna. Default if contains U: rna, otherwise ds-dna
  * @param {string} [options.info.fivePrime=monophosphate] - alcohol, monophosphate, diphosphate, triphosphate
  * @param {string} [options.info.circular=false]
- * @param {array} [options.mfsArray=[]]
- * @param {object} [options.fragmentation={}] Object defining options for fragmentation
+ * @param {array}   [options.mfsArray=[]]
+ * @param {object}  [options.fragmentation={}] Object defining options for fragmentation
  * @param {boolean} [options.fragmentation.a=false] If true allow fragments of type 'a'
  * @param {boolean} [options.fragmentation.ab=false] If true allow fragments of type 'a' minus base
  * @param {boolean} [options.fragmentation.b=false] If true allow fragments of type 'b'
@@ -52,6 +53,7 @@ module.exports = function fromNucleicSequence(sequencesString, options = {}) {
     ionizations = '',
     info = {},
     estimate = false,
+    limit = 100000,
   } = options;
 
   let sequences = nucleotide.sequenceToMF(sequencesString, info).split('.');
@@ -78,6 +80,7 @@ module.exports = function fromNucleicSequence(sequencesString, options = {}) {
     filter,
     uniqueMFs: false,
     estimate,
+    limit,
   });
 
   return combined;
