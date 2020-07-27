@@ -3,7 +3,7 @@
 let data = require('..');
 
 test('data size', () => {
-  expect(data.groups.length).toBeGreaterThan(50);
+  expect(data.groups.length).toBeGreaterThan(200);
 });
 
 test('getGroupsObject', () => {
@@ -18,6 +18,7 @@ test('getGroupsObject', () => {
     mass: 71.07801959624871,
     monoisotopicMass: 71.03711378515,
     mf: 'C3H5NO',
+    kind: 'aa',
     name: 'Alanine diradical',
     symbol: 'Ala',
     oneLetter: 'A',

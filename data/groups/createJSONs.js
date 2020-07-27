@@ -10,17 +10,28 @@ const { join } = require('path');
 
 const targetDir = join(__dirname, '../../packages/chemical-groups/src/');
 
-const Papa = require('papaparse');
 const { MF, Kind } = require('mf-parser');
 const elementsObject = require('chemical-elements/src/elementsObject');
 const elementsAndIsotopesObject = require('chemical-elements/src/elementsAndIsotopesObject');
 
 const MODULE = "'use strict';\nmodule.exports=";
 
-var groups = Papa.parse(`${fs.readFileSync(`${__dirname}/groups.tsv`)}`, {
-  header: true,
-  delimiter: '\t',
-}).data.filter((line) => line.symbol !== '');
+const dataTsv = fs.readFileSync(join(__dirname, 'groups.tsv'), 'utf8');
+
+const lines = dataTsv.split(/\r?\n/);
+const headers = lines[0].split('\t');
+lines.splice(0, 1);
+
+const groups = [];
+for (let line of lines) {
+  let fields = line.split('\t');
+  let datum = {};
+  for (let i = 0; i < headers.length; i++) {
+    datum[headers[i]] = fields[i];
+  }
+  if (!datum.symbol) continue;
+  groups.push(datum);
+}
 
 // we will create an object for the elements
 for (let group of groups) {
