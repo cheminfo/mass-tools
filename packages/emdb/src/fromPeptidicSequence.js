@@ -1,8 +1,8 @@
 'use strict';
 
+const { groupsToSequence } = require('chemical-groups');
 const combineMFs = require('mf-generator');
 const peptide = require('peptide');
-const { groupsToSequence } = require('chemical-groups');
 
 /**
  * Add a database starting from a peptidic sequence
