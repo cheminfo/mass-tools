@@ -113,6 +113,6 @@ test('AGG with d-h2o and base loss', () => {
     },
   });
   let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
-  expect(nucleic).toHaveLength(6);
+  expect(nucleic).toHaveLength(5);
   expect(nucleic).toMatchSnapshot();
 });
