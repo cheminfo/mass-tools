@@ -97,35 +97,6 @@ Array [
   Object {
     "atoms": Object {
       "C": 11,
-      "H": 20,
-      "N": 3,
-      "O": 2,
-    },
-    "charge": 1,
-    "comment": "a3",
-    "em": 226.15555189703,
-    "ionization": Object {
-      "charge": 1,
-      "em": 22.989769282,
-      "mf": "Na+",
-    },
-    "mf": "C11H20N3O2(+1)",
-    "ms": Object {
-      "charge": 2,
-      "delta": 25.42788799039407,
-      "em": 124.57211200960593,
-      "ionization": "Na+",
-      "ppm": 204121.83417451644,
-    },
-    "mw": 226.29582942817723,
-    "parts": Array [
-      "HAlaAlaLys(N-1H-3)C-1O-1(+1)",
-    ],
-    "unsaturation": 3,
-  },
-  Object {
-    "atoms": Object {
-      "C": 11,
       "H": 23,
       "N": 4,
       "O": 2,
@@ -151,6 +122,35 @@ Array [
       "HAlaAlaLysC-1O-1(+1)",
     ],
     "unsaturation": 2,
+  },
+  Object {
+    "atoms": Object {
+      "C": 11,
+      "H": 20,
+      "N": 3,
+      "O": 2,
+    },
+    "charge": 1,
+    "comment": "a3",
+    "em": 226.15555189703,
+    "ionization": Object {
+      "charge": 1,
+      "em": 22.989769282,
+      "mf": "Na+",
+    },
+    "mf": "C11H20N3O2(+1)",
+    "ms": Object {
+      "charge": 2,
+      "delta": 25.42788799039407,
+      "em": 124.57211200960593,
+      "ionization": "Na+",
+      "ppm": 204121.83417451644,
+    },
+    "mw": 226.29582942817723,
+    "parts": Array [
+      "HAlaAlaLys(N-1H-3)C-1O-1(+1)",
+    ],
+    "unsaturation": 3,
   },
   Object {
     "atoms": Object {
@@ -213,35 +213,6 @@ Array [
   Object {
     "atoms": Object {
       "C": 17,
-      "H": 29,
-      "N": 4,
-      "O": 3,
-    },
-    "charge": 1,
-    "comment": "a4",
-    "em": 337.2239658111,
-    "ionization": Object {
-      "charge": 1,
-      "em": 22.989769282,
-      "mf": "Na+",
-    },
-    "mf": "C17H29N4O3(+1)",
-    "ms": Object {
-      "charge": 2,
-      "delta": -30.10631896664094,
-      "em": 180.10631896664094,
-      "ionization": "Na+",
-      "ppm": -167158.59354283506,
-    },
-    "mw": 337.4378197308548,
-    "parts": Array [
-      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
-    ],
-    "unsaturation": 5,
-  },
-  Object {
-    "atoms": Object {
-      "C": 17,
       "H": 32,
       "N": 5,
       "O": 3,
@@ -271,31 +242,31 @@ Array [
   Object {
     "atoms": Object {
       "C": 17,
-      "H": 32,
-      "N": 5,
+      "H": 29,
+      "N": 4,
       "O": 3,
     },
     "charge": 1,
     "comment": "a4",
-    "em": 354.25051491221996,
+    "em": 337.2239658111,
     "ionization": Object {
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
     },
-    "mf": "C17H32N5O3(+1)",
+    "mf": "C17H29N4O3(+1)",
     "ms": Object {
       "charge": 2,
-      "delta": -38.61959351720091,
-      "em": 188.6195935172009,
+      "delta": -30.10631896664094,
+      "em": 180.10631896664094,
       "ionization": "Na+",
-      "ppm": -204748.5777965005,
+      "ppm": -167158.59354283506,
     },
-    "mw": 354.46834520446794,
+    "mw": 337.4378197308548,
     "parts": Array [
-      "HAlaAlaLysLys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
-    "unsaturation": 4,
+    "unsaturation": 5,
   },
   Object {
     "atoms": Object {
@@ -325,6 +296,35 @@ Array [
       "HAlaAlaLysLysC-1O-1(+1)",
     ],
     "unsaturation": 3,
+  },
+  Object {
+    "atoms": Object {
+      "C": 17,
+      "H": 32,
+      "N": 5,
+      "O": 3,
+    },
+    "charge": 1,
+    "comment": "a4",
+    "em": 354.25051491221996,
+    "ionization": Object {
+      "charge": 1,
+      "em": 22.989769282,
+      "mf": "Na+",
+    },
+    "mf": "C17H32N5O3(+1)",
+    "ms": Object {
+      "charge": 2,
+      "delta": -38.61959351720091,
+      "em": 188.6195935172009,
+      "ionization": "Na+",
+      "ppm": -204748.5777965005,
+    },
+    "mw": 354.46834520446794,
+    "parts": Array [
+      "HAlaAlaLysLys(N-1H-3)C-1O-1(+1)",
+    ],
+    "unsaturation": 4,
   },
   Object {
     "atoms": Object {
@@ -387,35 +387,6 @@ Array [
   Object {
     "atoms": Object {
       "C": 23,
-      "H": 38,
-      "N": 5,
-      "O": 4,
-    },
-    "charge": 1,
-    "comment": "a5",
-    "em": 448.29237972516995,
-    "ionization": Object {
-      "charge": 1,
-      "em": 22.989769282,
-      "mf": "Na+",
-    },
-    "mf": "C23H38N5O4(+1)",
-    "ms": Object {
-      "charge": 2,
-      "delta": -85.64052592367591,
-      "em": 235.6405259236759,
-      "ionization": "Na+",
-      "ppm": -363437.1701895408,
-    },
-    "mw": 448.57981003353234,
-    "parts": Array [
-      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
-    ],
-    "unsaturation": 7,
-  },
-  Object {
-    "atoms": Object {
-      "C": 23,
       "H": 41,
       "N": 6,
       "O": 4,
@@ -445,31 +416,31 @@ Array [
   Object {
     "atoms": Object {
       "C": 23,
-      "H": 41,
-      "N": 6,
+      "H": 38,
+      "N": 5,
       "O": 4,
     },
     "charge": 1,
     "comment": "a5",
-    "em": 465.31892882629,
+    "em": 448.29237972516995,
     "ionization": Object {
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
     },
-    "mf": "C23H41N6O4(+1)",
+    "mf": "C23H38N5O4(+1)",
     "ms": Object {
       "charge": 2,
-      "delta": -94.15380047423594,
-      "em": 244.15380047423594,
+      "delta": -85.64052592367591,
+      "em": 235.6405259236759,
       "ionization": "Na+",
-      "ppm": -385633.1553772861,
+      "ppm": -363437.1701895408,
     },
-    "mw": 465.61033550714546,
+    "mw": 448.57981003353234,
     "parts": Array [
-      "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
-    "unsaturation": 6,
+    "unsaturation": 7,
   },
   Object {
     "atoms": Object {
@@ -503,31 +474,31 @@ Array [
   Object {
     "atoms": Object {
       "C": 23,
-      "H": 44,
-      "N": 7,
+      "H": 41,
+      "N": 6,
       "O": 4,
     },
     "charge": 1,
     "comment": "a5",
-    "em": 482.34547792740995,
+    "em": 465.31892882629,
     "ionization": Object {
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
     },
-    "mf": "C23H44N7O4(+1)",
+    "mf": "C23H41N6O4(+1)",
     "ms": Object {
       "charge": 2,
-      "delta": -102.6670750247959,
-      "em": 252.6670750247959,
+      "delta": -94.15380047423594,
+      "em": 244.15380047423594,
       "ionization": "Na+",
-      "ppm": -406333.41330571263,
+      "ppm": -385633.1553772861,
     },
-    "mw": 482.6408609807586,
+    "mw": 465.61033550714546,
     "parts": Array [
-      "HAlaAlaLysLysLys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
-    "unsaturation": 5,
+    "unsaturation": 6,
   },
   Object {
     "atoms": Object {
@@ -557,6 +528,35 @@ Array [
       "HAlaAlaLysLysLysC-1O-1(+1)",
     ],
     "unsaturation": 4,
+  },
+  Object {
+    "atoms": Object {
+      "C": 23,
+      "H": 44,
+      "N": 7,
+      "O": 4,
+    },
+    "charge": 1,
+    "comment": "a5",
+    "em": 482.34547792740995,
+    "ionization": Object {
+      "charge": 1,
+      "em": 22.989769282,
+      "mf": "Na+",
+    },
+    "mf": "C23H44N7O4(+1)",
+    "ms": Object {
+      "charge": 2,
+      "delta": -102.6670750247959,
+      "em": 252.6670750247959,
+      "ionization": "Na+",
+      "ppm": -406333.41330571263,
+    },
+    "mw": 482.6408609807586,
+    "parts": Array [
+      "HAlaAlaLysLysLys(N-1H-3)C-1O-1(+1)",
+    ],
+    "unsaturation": 5,
   },
   Object {
     "atoms": Object {
@@ -619,35 +619,6 @@ Array [
   Object {
     "atoms": Object {
       "C": 29,
-      "H": 47,
-      "N": 6,
-      "O": 5,
-    },
-    "charge": 1,
-    "comment": "a6",
-    "em": 559.36079363924,
-    "ionization": Object {
-      "charge": 1,
-      "em": 22.989769282,
-      "mf": "Na+",
-    },
-    "mf": "C29H47N6O5(+1)",
-    "ms": Object {
-      "charge": 2,
-      "delta": -141.1747328807109,
-      "em": 291.1747328807109,
-      "ionization": "Na+",
-      "ppm": -484845.4104654324,
-    },
-    "mw": 559.72180033621,
-    "parts": Array [
-      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
-    ],
-    "unsaturation": 9,
-  },
-  Object {
-    "atoms": Object {
-      "C": 29,
       "H": 50,
       "N": 7,
       "O": 5,
@@ -677,31 +648,31 @@ Array [
   Object {
     "atoms": Object {
       "C": 29,
-      "H": 50,
-      "N": 7,
+      "H": 47,
+      "N": 6,
       "O": 5,
     },
     "charge": 1,
     "comment": "a6",
-    "em": 576.38734274036,
+    "em": 559.36079363924,
     "ionization": Object {
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
     },
-    "mf": "C29H50N7O5(+1)",
+    "mf": "C29H47N6O5(+1)",
     "ms": Object {
       "charge": 2,
-      "delta": -149.68800743127093,
-      "em": 299.68800743127093,
+      "delta": -141.1747328807109,
+      "em": 291.1747328807109,
       "ionization": "Na+",
-      "ppm": -499479.4710482357,
+      "ppm": -484845.4104654324,
     },
-    "mw": 576.7523258098231,
+    "mw": 559.72180033621,
     "parts": Array [
-      "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
-    "unsaturation": 8,
+    "unsaturation": 9,
   },
   Object {
     "atoms": Object {
@@ -731,6 +702,35 @@ Array [
       "HAlaAlaLysLysLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
     "unsaturation": 7,
+  },
+  Object {
+    "atoms": Object {
+      "C": 29,
+      "H": 50,
+      "N": 7,
+      "O": 5,
+    },
+    "charge": 1,
+    "comment": "a6",
+    "em": 576.38734274036,
+    "ionization": Object {
+      "charge": 1,
+      "em": 22.989769282,
+      "mf": "Na+",
+    },
+    "mf": "C29H50N7O5(+1)",
+    "ms": Object {
+      "charge": 2,
+      "delta": -149.68800743127093,
+      "em": 299.68800743127093,
+      "ionization": "Na+",
+      "ppm": -499479.4710482357,
+    },
+    "mw": 576.7523258098231,
+    "parts": Array [
+      "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+    ],
+    "unsaturation": 8,
   },
 ]
 `;

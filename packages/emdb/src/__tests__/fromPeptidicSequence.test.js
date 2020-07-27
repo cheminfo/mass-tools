@@ -3,7 +3,7 @@
 const DBManager = require('..');
 
 describe('fromPeptidicSequence', () => {
-  test('AAKK', () => {
+  it('AAKK', () => {
     let dbManager = new DBManager();
     dbManager.fromPeptidicSequence('AAKK', {
       allowNeutralLoss: false,
@@ -21,11 +21,15 @@ describe('fromPeptidicSequence', () => {
       },
     });
 
-    expect(dbManager.databases.peptidic).toHaveLength(2);
-    expect(dbManager.databases.peptidic).toMatchSnapshot();
+    const peptidic = dbManager.databases.peptidic.sort(
+      (a, b) => a.ms.em - b.ms.em,
+    );
+
+    expect(peptidic).toHaveLength(2);
+    expect(peptidic).toMatchSnapshot();
   });
 
-  test('AAKKKKKKKKKKKKKKKKKK allowNeutralLoss', () => {
+  it('AAKKKKKKKKKKKKKKKKKK allowNeutralLoss', () => {
     let dbManager = new DBManager();
     dbManager.fromPeptidicSequence('AAKKKKKKKKKKKKKKKKKK', {
       allowNeutralLoss: true,
@@ -43,11 +47,16 @@ describe('fromPeptidicSequence', () => {
         precision: 1e6,
       },
     });
-    expect(dbManager.databases.peptidic).toHaveLength(23);
-    expect(dbManager.databases.peptidic).toMatchSnapshot();
+
+    const peptidic = dbManager.databases.peptidic.sort(
+      (a, b) => a.ms.em - b.ms.em,
+    );
+
+    expect(peptidic).toHaveLength(23);
+    expect(peptidic).toMatchSnapshot();
   });
 
-  test('AAKKKKKK allowNeutralLoss limit: 1000', () => {
+  it('AAKKKKKK allowNeutralLoss limit: 1000', () => {
     let dbManager = new DBManager();
     expect(() => {
       dbManager.fromPeptidicSequence('AAKKKKKKKKK', {
