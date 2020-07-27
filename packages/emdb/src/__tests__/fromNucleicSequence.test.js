@@ -1,4 +1,5 @@
 'use strict';
+
 const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
 
 expect.extend({ toBeDeepCloseTo });
@@ -28,6 +29,7 @@ test('fromNucleicSequence', () => {
     ms: { ionization: 'H+', em: 314.0648819575009, charge: 1 },
     parts: ['HODampO-1H-1'],
     mf: 'C10H12N5O5P',
+    sequence: 'A',
     comment: 'a1',
   });
 });
@@ -79,6 +81,7 @@ test('TACGTGCCAATAC internal fragment', () => {
     ms: { ionization: '(H+)-5', em: 92.40262003523306, charge: -5 },
     parts: ['HODcmpC5H6O4P'],
     mf: 'C14H19N3O11P2',
+    sequence: 'C',
     comment: 'w6:a9-B',
   });
 });

@@ -2,6 +2,7 @@
 
 const combineMFs = require('mf-generator');
 const peptide = require('peptide');
+const { groupsToSequence } = require('chemical-groups');
 
 /**
  * Add a database starting from a peptidic sequence
@@ -104,6 +105,12 @@ module.exports = function fromPeptidicSequence(sequence, options = {}) {
     filter,
     estimate,
     limit,
+  });
+
+  combined.forEach((result) => {
+    result.sequence = groupsToSequence(
+      result.parts.filter((part) => part).join(' '),
+    );
   });
 
   return combined;

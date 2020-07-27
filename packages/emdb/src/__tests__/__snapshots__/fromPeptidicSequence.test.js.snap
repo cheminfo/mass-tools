@@ -29,6 +29,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysC-1O-1(+1)",
     ],
+    "sequence": "AAK",
     "unsaturation": 2,
   },
   Object {
@@ -58,6 +59,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysC-1O-1(+1)",
     ],
+    "sequence": "AAK",
     "unsaturation": 2,
   },
 ]
@@ -92,6 +94,7 @@ Array [
     "parts": Array [
       "HAlaAlaLys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAK",
     "unsaturation": 3,
   },
   Object {
@@ -121,6 +124,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysC-1O-1(+1)",
     ],
+    "sequence": "AAK",
     "unsaturation": 2,
   },
   Object {
@@ -150,6 +154,7 @@ Array [
     "parts": Array [
       "HAlaAlaLys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAK",
     "unsaturation": 3,
   },
   Object {
@@ -179,6 +184,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysC-1O-1(+1)",
     ],
+    "sequence": "AAK",
     "unsaturation": 2,
   },
   Object {
@@ -208,6 +214,7 @@ Array [
     "parts": Array [
       "HAlaAlaLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKK",
     "unsaturation": 5,
   },
   Object {
@@ -237,6 +244,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysLys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKK",
     "unsaturation": 4,
   },
   Object {
@@ -266,6 +274,7 @@ Array [
     "parts": Array [
       "HAlaAlaLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKK",
     "unsaturation": 5,
   },
   Object {
@@ -295,6 +304,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysLysC-1O-1(+1)",
     ],
+    "sequence": "AAKK",
     "unsaturation": 3,
   },
   Object {
@@ -324,6 +334,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysLys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKK",
     "unsaturation": 4,
   },
   Object {
@@ -353,6 +364,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysLysC-1O-1(+1)",
     ],
+    "sequence": "AAKK",
     "unsaturation": 3,
   },
   Object {
@@ -382,6 +394,7 @@ Array [
     "parts": Array [
       "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKKK",
     "unsaturation": 7,
   },
   Object {
@@ -411,6 +424,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKKK",
     "unsaturation": 6,
   },
   Object {
@@ -440,6 +454,7 @@ Array [
     "parts": Array [
       "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKKK",
     "unsaturation": 7,
   },
   Object {
@@ -469,6 +484,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysLysLys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKKK",
     "unsaturation": 5,
   },
   Object {
@@ -498,6 +514,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKKK",
     "unsaturation": 6,
   },
   Object {
@@ -527,6 +544,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysLysLysC-1O-1(+1)",
     ],
+    "sequence": "AAKKK",
     "unsaturation": 4,
   },
   Object {
@@ -556,6 +574,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysLysLys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKKK",
     "unsaturation": 5,
   },
   Object {
@@ -585,6 +604,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysLysLysC-1O-1(+1)",
     ],
+    "sequence": "AAKKK",
     "unsaturation": 4,
   },
   Object {
@@ -614,6 +634,7 @@ Array [
     "parts": Array [
       "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKKKK",
     "unsaturation": 9,
   },
   Object {
@@ -643,6 +664,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKKKK",
     "unsaturation": 8,
   },
   Object {
@@ -672,6 +694,7 @@ Array [
     "parts": Array [
       "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKKKK",
     "unsaturation": 9,
   },
   Object {
@@ -701,6 +724,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysLysLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKKKK",
     "unsaturation": 7,
   },
   Object {
@@ -730,6 +754,7 @@ Array [
     "parts": Array [
       "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
+    "sequence": "AAKKKK",
     "unsaturation": 8,
   },
 ]

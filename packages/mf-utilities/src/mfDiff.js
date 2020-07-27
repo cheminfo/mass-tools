@@ -6,7 +6,7 @@ function mfDiff(mfString1, mfString2) {
   let mf1 = new MF(mfString1).getInfo().atoms;
   let mf2 = new MF(mfString2).getInfo().atoms;
   let atoms = Object.keys(mf1);
-  Object.keys(mf2).map((atom) => {
+  Object.keys(mf2).forEach((atom) => {
     if (!atoms.includes(atom)) atoms.push(atom);
   });
   let mf = '';

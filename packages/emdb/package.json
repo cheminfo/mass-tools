@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/emdb#readme",
   "dependencies": {
+    "chemical-groups": "^1.0.2",
     "isotopic-distribution": "^1.1.8",
     "jszip": "^3.2.2",
     "mf-finder": "^1.1.5",

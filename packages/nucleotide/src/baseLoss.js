@@ -24,7 +24,7 @@ function baseLoss(nucleotide) {
   for (let key in mfLosses) {
     const base = mfLosses[key];
     if (nucleotide.includes(key)) {
-      results.push(nucleotide + '(' + base.diff + ')$' + base.code + '*');
+      results.push(`${nucleotide}(${base.diff})$${base.code}*`);
     }
   }
 

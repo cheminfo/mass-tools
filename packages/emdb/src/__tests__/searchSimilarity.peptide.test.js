@@ -89,6 +89,7 @@ describe('test searchSimilarity for peptide', () => {
       parts: [
         'HMetGlnIlePheValLysThrLeuThrGlyLysThrIleThrLeuGluValGluProSerAspThrIleGluAsnValLysAlaLysIleGlnAspLysGluGlyIleProProNH3(+1)',
       ],
+      sequence: 'MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPP',
       mf: 'C188H318N47O59S(+1)',
       comment: 'c38',
     });
@@ -97,7 +98,6 @@ describe('test searchSimilarity for peptide', () => {
   it('should find one result with bad distribution and string fucntion', () => {
     let dbManager = new DBManager();
     dbManager.fromPeptidicSequence(
-      //    'KKK',
       'MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQ',
       {
         ionizations: 'H1(1+).H2(2+).H3(3+)',

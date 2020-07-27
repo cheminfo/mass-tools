@@ -28,6 +28,7 @@ Array [
     "parts": Array [
       "HODampPO2",
     ],
+    "sequence": "A",
     "unsaturation": 8,
   },
   Object {
@@ -56,6 +57,7 @@ Array [
     "parts": Array [
       "HODampDgmpPO2",
     ],
+    "sequence": "AG",
     "unsaturation": 15,
   },
   Object {
@@ -84,6 +86,7 @@ Array [
     "parts": Array [
       "HODampDgmpDgmpH(C-5H-5N-5O-1)",
     ],
+    "sequence": "AGG",
     "unsaturation": 16,
   },
   Object {
@@ -112,6 +115,7 @@ Array [
     "parts": Array [
       "HODampDgmpDgmpH(C-5H-5N-5)",
     ],
+    "sequence": "AGG",
     "unsaturation": 16,
   },
   Object {
@@ -139,6 +143,7 @@ Array [
     "parts": Array [
       "HODampDgmpDgmpH",
     ],
+    "sequence": "AGG",
     "unsaturation": 21,
   },
 ]
@@ -172,6 +177,7 @@ Array [
     "parts": Array [
       "O-2P-1DgmpH",
     ],
+    "sequence": "G",
     "unsaturation": 7,
   },
   Object {
@@ -200,6 +206,7 @@ Array [
     "parts": Array [
       "O-2P-1DampDgmpH",
     ],
+    "sequence": "AG",
     "unsaturation": 14,
   },
   Object {
@@ -228,6 +235,7 @@ Array [
     "parts": Array [
       "O-2P-1DcmpDampDgmpH",
     ],
+    "sequence": "CAG",
     "unsaturation": 19,
   },
   Object {
@@ -256,6 +264,7 @@ Array [
     "parts": Array [
       "O-2P-1DgmpDcmpDampDgmpH",
     ],
+    "sequence": "GCAG",
     "unsaturation": 26,
   },
   Object {
@@ -284,6 +293,7 @@ Array [
     "parts": Array [
       "O-2P-1DgmpDgmpDcmpDampDgmpH",
     ],
+    "sequence": "GGCAG",
     "unsaturation": 33,
   },
   Object {
@@ -311,6 +321,7 @@ Array [
     "parts": Array [
       "HODampDgmpDgmpDcmpDampDgmpH",
     ],
+    "sequence": "AGGCAG",
     "unsaturation": 40,
   },
 ]
@@ -344,6 +355,7 @@ Array [
     "parts": Array [
       "HODtmpO-1H-1",
     ],
+    "sequence": "T",
     "unsaturation": 6,
   },
   Object {
@@ -372,6 +384,7 @@ Array [
     "parts": Array [
       "HODampO-1H-1",
     ],
+    "sequence": "A",
     "unsaturation": 8,
   },
   Object {
@@ -400,6 +413,7 @@ Array [
     "parts": Array [
       "HODtmpO-1H-1",
     ],
+    "sequence": "T",
     "unsaturation": 6,
   },
   Object {
@@ -428,6 +442,7 @@ Array [
     "parts": Array [
       "HODampO-1H-1",
     ],
+    "sequence": "A",
     "unsaturation": 8,
   },
   Object {
@@ -456,6 +471,7 @@ Array [
     "parts": Array [
       "HODtmpDtmpO-1H-1",
     ],
+    "sequence": "TT",
     "unsaturation": 11,
   },
   Object {
@@ -484,6 +500,7 @@ Array [
     "parts": Array [
       "HODampDampO-1H-1",
     ],
+    "sequence": "AA",
     "unsaturation": 15,
   },
   Object {
@@ -512,6 +529,7 @@ Array [
     "parts": Array [
       "HODtmpDtmpO-1H-1",
     ],
+    "sequence": "TT",
     "unsaturation": 11,
   },
   Object {
@@ -540,6 +558,7 @@ Array [
     "parts": Array [
       "HODampDampO-1H-1",
     ],
+    "sequence": "AA",
     "unsaturation": 15,
   },
   Object {
@@ -567,6 +586,7 @@ Array [
     "parts": Array [
       "HODtmpDtmpDtmpH",
     ],
+    "sequence": "TTT",
     "unsaturation": 15,
   },
   Object {
@@ -594,6 +614,7 @@ Array [
     "parts": Array [
       "HODtmpDtmpDtmpH",
     ],
+    "sequence": "TTT",
     "unsaturation": 15,
   },
   Object {
@@ -621,6 +642,7 @@ Array [
     "parts": Array [
       "HODampDampDampH",
     ],
+    "sequence": "AAA",
     "unsaturation": 21,
   },
   Object {
@@ -648,6 +670,7 @@ Array [
     "parts": Array [
       "HODampDampDampH",
     ],
+    "sequence": "AAA",
     "unsaturation": 21,
   },
 ]

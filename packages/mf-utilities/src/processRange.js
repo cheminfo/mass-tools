@@ -42,9 +42,7 @@ function processRange(string, comment, options = {}) {
       position++;
     }
     if (results.length > limit) {
-      throw Error(
-        'processRange generates to many fragments (over ' + limit + ')',
-      );
+      throw Error(`processRange generates to many fragments (over ${limit})`);
     }
   }
 
