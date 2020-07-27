@@ -111,8 +111,8 @@ module.exports = function generateMFs(keys, options = {}) {
   appendResult(results, currents, keys, options);
   if (uniqueMFs) {
     let uniqueMFsObject = {};
-    results.forEach((r) => {
-      uniqueMFsObject[r.mf + r.ionization.mf] = r;
+    results.forEach((result) => {
+      uniqueMFsObject[result.mf + result.ionization.mf] = result;
     });
     results = Object.keys(uniqueMFsObject).map((k) => uniqueMFsObject[k]);
   }

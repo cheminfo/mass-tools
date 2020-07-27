@@ -83,5 +83,7 @@ module.exports = function fromNucleicSequence(sequencesString, options = {}) {
     limit,
   });
 
+  console.log(combined);
+
   return combined;
 };

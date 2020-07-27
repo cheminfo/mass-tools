@@ -1,6 +1,7 @@
 'use strict';
 
 const groups = require('./groups.js');
+const groupsToSequence = require('./groupsToSequence');
 
 function getGroupsObject() {
   let object = {};
@@ -13,4 +14,5 @@ function getGroupsObject() {
 module.exports = {
   groups,
   getGroupsObject,
+  groupsToSequence,
 };
