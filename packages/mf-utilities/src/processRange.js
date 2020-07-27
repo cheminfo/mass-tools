@@ -1,6 +1,7 @@
 'use strict';
 
-function processRange(string, comment) {
+function processRange(string, comment, options = {}) {
+  const { limit } = options;
   let results = [];
   let parts = string.split(/(-?[0-9]+--?[0-9]+)/).filter((v) => v); // remove empty parts
 
@@ -39,6 +40,11 @@ function processRange(string, comment) {
       position = 0;
     } else {
       position++;
+    }
+    if (results.length > limit) {
+      throw Error(
+        'processRange generates to many fragments (over ' + limit + ')',
+      );
     }
   }
 

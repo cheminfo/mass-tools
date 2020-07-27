@@ -36,8 +36,7 @@ const sum = require('sum-object-keys');
  */
 
 module.exports = function generateMFs(keys, options = {}) {
-  let { limit = 10000000, uniqueMFs = true, estimate = false } = options;
-
+  let { limit = 100000, uniqueMFs = true, estimate = false } = options;
   if (uniqueMFs === true) options.canonizeMF = true;
   if (options.canonizeMF === undefined) options.canonizeMF = true;
   options.ionizations = preprocessIonizations(options.ionizations);
@@ -65,7 +64,7 @@ module.exports = function generateMFs(keys, options = {}) {
       if (part.match(/[0-9]-[0-9-]/)) {
         // deal with negative numbers
         // there are ranges ... we are in trouble !
-        newParts = newParts.concat(processRange(part, comment));
+        newParts = newParts.concat(processRange(part, comment, { limit }));
       } else {
         newParts.push(parts[j]); // the part with the comments !
       }
@@ -108,6 +107,7 @@ module.exports = function generateMFs(keys, options = {}) {
       );
     }
   }
+
   appendResult(results, currents, keys, options);
   if (uniqueMFs) {
     let uniqueMFsObject = {};
