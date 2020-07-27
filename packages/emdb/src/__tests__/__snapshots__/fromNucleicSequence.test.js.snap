@@ -67,7 +67,7 @@ Array [
       "P": 3,
     },
     "charge": 0,
-    "comment": "-B2",
+    "comment": "G*",
     "em": 838.1238006358399,
     "ionization": Object {
       "charge": -1,
@@ -82,35 +82,7 @@ Array [
     },
     "mw": 838.5086441253504,
     "parts": Array [
-      "HODampDrmpDgmpH",
-    ],
-    "unsaturation": 16,
-  },
-  Object {
-    "atoms": Object {
-      "C": 25,
-      "H": 33,
-      "N": 10,
-      "O": 17,
-      "P": 3,
-    },
-    "charge": 0,
-    "comment": "-B3",
-    "em": 838.1238006358399,
-    "ionization": Object {
-      "charge": -1,
-      "em": -1.00782503223,
-      "mf": "(H+)-1",
-    },
-    "mf": "C25H33N10O17P3",
-    "ms": Object {
-      "charge": -1,
-      "em": 837.1165241835189,
-      "ionization": "(H+)-1",
-    },
-    "mw": 838.5086441253504,
-    "parts": Array [
-      "HODampDgmpDrmpH",
+      "HODampDgmpDgmpH(C-5H-5N-5O-1)",
     ],
     "unsaturation": 16,
   },
@@ -123,7 +95,7 @@ Array [
       "P": 3,
     },
     "charge": 0,
-    "comment": "-B1",
+    "comment": "A*",
     "em": 854.1187152554099,
     "ionization": Object {
       "charge": -1,
@@ -138,7 +110,7 @@ Array [
     },
     "mw": 854.5080490496687,
     "parts": Array [
-      "HODrmpDgmpDgmpH",
+      "HODampDgmpDgmpH(C-5H-5N-5)",
     ],
     "unsaturation": 16,
   },

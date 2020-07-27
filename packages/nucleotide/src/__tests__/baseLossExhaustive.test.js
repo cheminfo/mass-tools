@@ -1,6 +1,6 @@
 'use strict';
 
-const { baseLossExhaustive } = require('..');
+const baseLossExhaustive = require('../baseLossExhaustive');
 
 describe('test base loss', () => {
   it('Base loss of HAlaDampDtmpDcmpDcmpOH', () => {

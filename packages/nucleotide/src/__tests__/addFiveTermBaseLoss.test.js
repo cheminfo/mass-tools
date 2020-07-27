@@ -12,11 +12,11 @@ describe('addFiveTermBaseLoss', () => {
 
     expect(fragments).toStrictEqual([
       'HODampO-1H-1$a1',
-      'HODrmpO-1H-1$a1-B1',
+      'HODamp(C-5H-5N-5)O-1H-1$a1 A*',
       'HODampDtmpO-1H-1$a2',
       'HODampC5H6O4P$a2-B',
-      'HODrmpDtmpO-1H-1$a2-B1',
-      'HODampDrmpO-1H-1$a2-B2',
+      'HODampDtmp(C-5H-5N-5)O-1H-1$a2 A*',
+      'HODampDtmp(C-5H-6N-2O-2)O-1H-1$a2 T*',
     ]);
   });
 });
