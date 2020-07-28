@@ -5,3 +5,5 @@ packages/*/example
 packages/*/lib
 packages/*/lib-module
 packages/*/node_modules
+packages/chemical-groups/src/groups.js
+packages/chemical-groups/src/groupsObject.js
