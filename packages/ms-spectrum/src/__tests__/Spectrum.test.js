@@ -1,3 +1,4 @@
+/* eslint-disable jest/no-if */
 'use strict';
 
 const Spectrum = require('../Spectrum');
