@@ -7,116 +7,134 @@ expect.extend({ toBeDeepCloseTo });
 
 const DBManager = require('..');
 
-test('fromNucleicSequence', () => {
-  let dbManager = new DBManager();
-  dbManager.fromNucleicSequence('AAA', {
-    ionizations: 'H+,Na+',
-    fragmentation: {
-      a: true,
-    },
-    info: {
-      kind: 'dna',
-    },
-  });
-  let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
-  expect(nucleic).toHaveLength(6);
-  expect(nucleic[0]).toBeDeepCloseTo({
-    charge: 0,
-    em: 313.05760550518,
-    mw: 313.2069506932622,
-    ionization: { mf: 'H+', em: 1.00782503223, charge: 1 },
-    unsaturation: 8,
-    atoms: { C: 10, H: 12, N: 5, O: 5, P: 1 },
-    ms: { ionization: 'H+', em: 314.0648819575009, charge: 1 },
-    parts: ['HODampO-1H-1'],
-    mf: 'C10H12N5O5P',
-    sequence: 'A',
-    comment: 'a1',
-  });
-});
-
-test('fromNucleicSequence ds-DNA', () => {
-  let dbManager = new DBManager();
-  dbManager.fromNucleicSequence('AAA', {
-    ionizations: 'H+,Na+',
-    fragmentation: {
-      a: true,
-    },
-    info: {
-      kind: 'dsdna',
-    },
+describe('fromNucleicSequence', () => {
+  it('fromNucleicSequence', () => {
+    let dbManager = new DBManager();
+    dbManager.fromNucleicSequence('AAA', {
+      ionizations: 'H+,Na+',
+      fragmentation: {
+        a: true,
+      },
+      info: {
+        kind: 'dna',
+      },
+    });
+    let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    expect(nucleic).toHaveLength(6);
+    expect(nucleic[0]).toBeDeepCloseTo({
+      charge: 0,
+      em: 313.05760550518,
+      mw: 313.2069506932622,
+      ionization: { mf: 'H+', em: 1.00782503223, charge: 1 },
+      unsaturation: 8,
+      atoms: { C: 10, H: 12, N: 5, O: 5, P: 1 },
+      ms: { ionization: 'H+', em: 314.0648819575009, charge: 1 },
+      parts: ['HODampO-1H-1'],
+      mf: 'C10H12N5O5P',
+      sequence: 'A',
+      comment: 'a1',
+    });
   });
 
-  let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+  it('fromNucleicSequence ds-DNA', () => {
+    let dbManager = new DBManager();
+    dbManager.fromNucleicSequence('AAA', {
+      ionizations: 'H+,Na+',
+      fragmentation: {
+        a: true,
+      },
+      info: {
+        kind: 'dsdna',
+      },
+    });
 
-  expect(nucleic).toHaveLength(12);
-  expect(nucleic).toMatchSnapshot();
-});
+    let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
 
-test('TACGTGCCAATAC internal fragment', () => {
-  let dbManager = new DBManager();
-  dbManager.fromNucleicSequence('TACGTGCCAATAC', {
-    ionizations: '(H+)-5',
-    fragmentation: {
-      abw: true,
-    },
-    info: {
-      kind: 'dna',
-    },
+    expect(nucleic).toHaveLength(12);
+    expect(nucleic).toMatchSnapshot();
   });
 
-  let nucleic = dbManager.databases.nucleic.sort((a, b) => {
-    if (a.ms.em !== b.ms.em) return a.ms.em - b.ms.em;
-    if (a.ms.comment < b.ms.comment) return 1;
-    return -1;
-  });
-  expect(nucleic).toHaveLength(56);
+  it('TACGTGCCAATAC internal fragment', () => {
+    let dbManager = new DBManager();
+    dbManager.fromNucleicSequence('TACGTGCCAATAC', {
+      ionizations: '(H+)-5',
+      fragmentation: {
+        abw: true,
+      },
+      info: {
+        kind: 'dna',
+      },
+    });
 
-  expect(nucleic[0]).toBeDeepCloseTo({
-    charge: 0,
-    em: 467.04948243777,
-    mw: 467.2622646800317,
-    ionization: { mf: '(H+)-5', em: -5.03912516115, charge: -5 },
-    unsaturation: 8,
-    atoms: { C: 14, H: 19, N: 3, O: 11, P: 2 },
-    ms: { ionization: '(H+)-5', em: 92.40262003523306, charge: -5 },
-    parts: ['HODcmpC5H6O4P'],
-    mf: 'C14H19N3O11P2',
-    sequence: 'C',
-    comment: 'w6:a9-B',
-  });
-});
+    let nucleic = dbManager.databases.nucleic.sort((a, b) => {
+      if (a.ms.em !== b.ms.em) return a.ms.em - b.ms.em;
+      if (a.ms.comment < b.ms.comment) return 1;
+      return -1;
+    });
+    expect(nucleic).toHaveLength(56);
 
-test('AGGCAG fragment', () => {
-  let dbManager = new DBManager();
-  dbManager.fromNucleicSequence('AGGCAG', {
-    ionizations: '(H+)-',
-    fragmentation: {
-      y: true,
-    },
-    info: {
-      kind: 'dna',
-    },
+    expect(nucleic[0]).toBeDeepCloseTo({
+      charge: 0,
+      em: 467.04948243777,
+      mw: 467.2622646800317,
+      ionization: { mf: '(H+)-5', em: -5.03912516115, charge: -5 },
+      unsaturation: 8,
+      atoms: { C: 14, H: 19, N: 3, O: 11, P: 2 },
+      ms: { ionization: '(H+)-5', em: 92.40262003523306, charge: -5 },
+      parts: ['HODcmpC5H6O4P'],
+      mf: 'C14H19N3O11P2',
+      sequence: 'C',
+      comment: 'w6:a9-B',
+    });
   });
-  let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
-  expect(nucleic).toHaveLength(6);
-  expect(nucleic).toMatchSnapshot();
-});
 
-test('AGG with d-h2o and base loss', () => {
-  let dbManager = new DBManager();
-  dbManager.fromNucleicSequence('AGG', {
-    ionizations: '(H+)-1',
-    fragmentation: {
-      dh2o: true,
-      baseLoss: true,
-    },
-
-    info: {
-      kind: 'dna',
-    },
+  it('AGGCAG fragment', () => {
+    let dbManager = new DBManager();
+    dbManager.fromNucleicSequence('AGGCAG', {
+      ionizations: '(H+)-',
+      fragmentation: {
+        y: true,
+      },
+      info: {
+        kind: 'dna',
+      },
+    });
+    let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    expect(nucleic).toHaveLength(6);
+    expect(nucleic).toMatchSnapshot();
   });
-  let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
-  expect(nucleic).toHaveLength(5);
-  expect(nucleic).toMatchSnapshot();
+
+  it('AGG with d-h2o and base loss', () => {
+    let dbManager = new DBManager();
+    dbManager.fromNucleicSequence('AGG', {
+      ionizations: '(H+)-1',
+      fragmentation: {
+        dh2o: true,
+        baseLoss: true,
+      },
+
+      info: {
+        kind: 'dna',
+      },
+    });
+    let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    expect(nucleic).toHaveLength(5);
+    expect(nucleic).toMatchSnapshot();
+  });
+
+  it('HODamDamDamDamDamH', () => {
+    let dbManager = new DBManager();
+    dbManager.fromNucleicSequence('HODamDamDamDamDamH', {
+      ionizations: '(H+)-',
+      fragmentation: {
+        y: true,
+      },
+      info: {
+        kind: 'dna',
+      },
+    });
+    let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    expect(nucleic).toHaveLength(5);
+    expect(nucleic).toMatchSnapshot();
+  });
 });
