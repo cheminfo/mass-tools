@@ -25,6 +25,7 @@
     "mf-parser": "^1.1.5"
   },
   "dependencies": {
+    "chemical-groups": "^1.0.2",
     "mf-utilities": "^1.1.5"
   }
 }

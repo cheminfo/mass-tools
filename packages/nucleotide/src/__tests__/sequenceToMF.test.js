@@ -54,6 +54,20 @@ describe('test sequenceToMF', () => {
     expect(mass).toBeCloseTo(1852.21, 1);
   });
 
+  it('to sequence of RNA AAA', () => {
+    let sequence = sequenceToMF('AAA', { kind: 'RNA' });
+    expect(sequence).toStrictEqual('HOAmpAmpAmpH');
+    let mass = new MF(sequence).getInfo().mass;
+    expect(mass).toBeCloseTo(1005.63, 1);
+  });
+
+  it('to sequence of oligonucleotide œεξ£', () => {
+    let sequence = sequenceToMF('œεξ£', { kind: 'RNA' });
+    expect(sequence).toStrictEqual('HODamDgmDimTiaH');
+    let mass = new MF(sequence).getInfo().mass;
+    expect(mass).toBeCloseTo(1596.28, 1);
+  });
+
   it('to sequence of DNA AAA', () => {
     let sequence = sequenceToMF('AAA', { kind: 'DNA' });
     expect(sequence).toStrictEqual('HODampDampDampH');

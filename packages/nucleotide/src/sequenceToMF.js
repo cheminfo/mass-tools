@@ -1,5 +1,7 @@
 'use strict';
 
+const { groups } = require('chemical-groups');
+
 /**
  * Convert a nucleic sequence to a MF
  * @param {String} sequence
@@ -71,8 +73,11 @@ function sequenceToMF(sequence, options = {}) {
 
     let nucleotideType = i === 0 ? fivePrime : 'monophosphate';
 
-    currentSymbol = currentSymbol.toUpperCase().replace(/[^ATCGU]/, '');
+    currentSymbol = currentSymbol.replace(/[ \t\r\n]/, '');
     if (!currentSymbol) continue;
+    if (currentSymbol.match(/[atcgu]/i)) {
+      currentSymbol = currentSymbol.toUpperCase();
+    }
 
     switch (kind) {
       case 'dna':
@@ -111,63 +116,95 @@ const complementary = {
 };
 
 const desoxyNucleotides = {
-  alcohol: {
-    A: 'Dade',
-    C: 'Dcyt',
-    G: 'Dgua',
-    T: 'Dthy',
-    U: 'Dura',
-  },
-  monophosphate: {
-    A: 'Damp',
-    C: 'Dcmp',
-    G: 'Dgmp',
-    T: 'Dtmp',
-    U: 'Dump',
-  },
-  diphosphate: {
-    A: 'Dadp',
-    C: 'Dcdp',
-    G: 'Dgdp',
-    T: 'Dtdp',
-    U: 'Dudp',
-  },
-  triphosphate: {
-    A: 'Datp',
-    C: 'Dctp',
-    G: 'Dgtp',
-    T: 'Dttp',
-    U: 'Dutp',
-  },
+  alcohol: {},
+  monophosphate: {},
+  diphosphate: {},
+  triphosphate: {},
 };
 
+groups
+  .filter((group) => group.kind === 'DNA')
+  .forEach((group) => {
+    if (group.oneLetter) {
+      desoxyNucleotides.alcohol[group.oneLetter] = group.symbol;
+    }
+  });
+
+groups
+  .filter((group) => group.kind === 'DNAp')
+  .forEach((group) => {
+    if (group.oneLetter) {
+      desoxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
+    }
+  });
+
+groups
+  .filter((group) => group.kind === 'NucleotideP')
+  .forEach((group) => {
+    if (group.oneLetter) {
+      desoxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
+    }
+  });
+
+groups
+  .filter((group) => group.kind === 'DNApp')
+  .forEach((group) => {
+    if (group.oneLetter) {
+      desoxyNucleotides.diphosphate[group.oneLetter] = group.symbol;
+    }
+  });
+
+groups
+  .filter((group) => group.kind === 'DNAppp')
+  .forEach((group) => {
+    if (group.oneLetter) {
+      desoxyNucleotides.triphosphate[group.oneLetter] = group.symbol;
+    }
+  });
+
 const oxyNucleotides = {
-  alcohol: {
-    A: 'Ade',
-    C: 'Cyt',
-    G: 'Gua',
-    T: 'Thy',
-    U: 'Ura',
-  },
-  monophosphate: {
-    A: 'Amp',
-    C: 'Cmp',
-    G: 'Gmp',
-    T: 'Tmp',
-    U: 'Ump',
-  },
-  diphosphate: {
-    A: 'Adp',
-    C: 'Cdp',
-    G: 'Gdp',
-    T: 'Tdp',
-    U: 'Udp',
-  },
-  triphosphate: {
-    A: 'Atp',
-    C: 'Ctp',
-    G: 'Gtp',
-    T: 'Ttp',
-    U: 'Utp',
-  },
+  alcohol: {},
+  monophosphate: {},
+  diphosphate: {},
+  triphosphate: {},
 };
+
+groups
+  .filter((group) => group.kind === 'RNA')
+  .forEach((group) => {
+    if (group.oneLetter) {
+      oxyNucleotides.alcohol[group.oneLetter] = group.symbol;
+    }
+  });
+
+groups
+  .filter((group) => group.kind === 'RNAp')
+  .forEach((group) => {
+    if (group.oneLetter) {
+      oxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
+    }
+  });
+
+groups
+  .filter((group) => group.kind === 'NucleotideP')
+  .forEach((group) => {
+    if (group.oneLetter) {
+      oxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
+    }
+  });
+
+groups
+  .filter((group) => group.kind === 'RNApp')
+  .forEach((group) => {
+    if (group.oneLetter) {
+      oxyNucleotides.diphosphate[group.oneLetter] = group.symbol;
+    }
+  });
+
+groups
+  .filter((group) => group.kind === 'RNAppp')
+  .forEach((group) => {
+    if (group.oneLetter) {
+      oxyNucleotides.triphosphate[group.oneLetter] = group.symbol;
+    }
+  });
