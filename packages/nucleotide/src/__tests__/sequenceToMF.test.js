@@ -30,6 +30,21 @@ describe('test sequenceToMF', () => {
     expect(sequence).toStrictEqual('HODamp(H-1C-1)DtmpDcmpH');
   });
 
+  it('to sequence of HODampDtmpDcmpH', () => {
+    let sequence = sequenceToMF('HODampDtmpDcmpH', { kind: 'dna' });
+    expect(sequence).toStrictEqual('HODampDtmpDcmpH');
+  });
+
+  it('to sequence of HODamp(H-1C-1)DtmpDcmpH', () => {
+    let sequence = sequenceToMF('HODamp(H-1C-1)DtmpDcmpH', { kind: 'dna' });
+    expect(sequence).toStrictEqual('HODamp(H-1C-1)DtmpDcmpH');
+  });
+
+  it('to sequence of atc', () => {
+    let sequence = sequenceToMF('atc', { kind: 'dna' });
+    expect(sequence).toStrictEqual('HODampDtmpDcmpH');
+  });
+
   it('to sequence of (HO)ATC(NH2)', () => {
     let sequence = sequenceToMF('(HO)ATC(NH2)', { kind: 'dna' });
     expect(sequence).toStrictEqual('(HO)DampDtmpDcmp(NH2)');

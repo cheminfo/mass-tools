@@ -1,6 +1,7 @@
 'use strict';
 
 const { groups } = require('chemical-groups');
+const ensureUppercaseSequence = require('./ensureUppercaseSequence');
 
 /**
  * Convert a nucleic sequence to a MF
@@ -14,9 +15,20 @@ const { groups } = require('chemical-groups');
 function sequenceToMF(sequence, options = {}) {
   let fivePrimeTerminal = 'HO';
   let threePrimeTerminal = 'H';
+  sequence = sequence.replace(/^HO/, '');
+  sequence = sequence.replace(/H$/, '');
   sequence = sequence.trim();
 
   if (sequence === '') return '';
+
+  sequence = ensureUppercaseSequence(sequence);
+
+  // if the sequence is in lowercase but the parenthesis we should convert it to uppercase
+
+  if (sequence.match(/^[a-z]+$/)) {
+    sequence = sequence.toUpperCase();
+  }
+
   let { kind, circular, fivePrime = 'monophosphate' } = options;
   fivePrime = fivePrime.replace(/[^a-zA-Z]/g, '').toLowerCase();
 
@@ -43,6 +55,15 @@ function sequenceToMF(sequence, options = {}) {
 
   for (let i = 0; i < sequence.length; i++) {
     let currentSymbol = sequence[i];
+    while (sequence[i + 1] && sequence[i + 1].match(/[a-z]/)) {
+      i++;
+      currentSymbol += sequence[i];
+    }
+
+    if (currentSymbol.length > 1) {
+      results[0].push(currentSymbol);
+      continue;
+    }
 
     if (
       currentSymbol === '(' ||
@@ -75,9 +96,6 @@ function sequenceToMF(sequence, options = {}) {
 
     currentSymbol = currentSymbol.replace(/[ \t\r\n]/, '');
     if (!currentSymbol) continue;
-    if (currentSymbol.match(/[atcgu]/i)) {
-      currentSymbol = currentSymbol.toUpperCase();
-    }
 
     switch (kind) {
       case 'dna':
