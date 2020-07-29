@@ -1,25 +1,34 @@
 'use strict';
 
 const { furanThreeTerm } = require('..');
+const { MF } = require('mf-parser');
 
 describe('test nucleotide', () => {
   it('remove base of three terminal of HDampDtmpDcmp', () => {
     let modified = furanThreeTerm('HDampDtmpDcmp');
-    expect(modified).toBe('HDampDtmpC5H6O4P');
+    expect(modified).toBe('HDampDtmpFurp');
+    let mass = new MF(modified).getInfo().monoisotopicMass;
+    expect(mass).toBeCloseTo(779.11, 2);
   });
 
   it('remove base of three terminal of HDamp', () => {
     let modified = furanThreeTerm('HDamp');
-    expect(modified).toBe('HC5H6O4P');
+    expect(modified).toBe('HFurp');
+    let mass = new MF(modified).getInfo().monoisotopicMass;
+    expect(mass).toBeCloseTo(162.01, 2);
   });
 
   it('remove base of three terminal of (C5H3)DampDtmp', () => {
     let modified = furanThreeTerm('(C5H3)DampDtmp');
-    expect(modified).toBe('(C5H3)DampC5H6O4P');
+    expect(modified).toBe('(C5H3)DampFurp');
+    let mass = new MF(modified).getInfo().monoisotopicMass;
+    expect(mass).toBeCloseTo(537.08, 2);
   });
 
   it('remove base of three terminal of HODamp', () => {
     let modified = furanThreeTerm('HODamp');
-    expect(modified).toBe('HOC5H6O4P');
+    expect(modified).toBe('HOFurp');
+    let mass = new MF(modified).getInfo().monoisotopicMass;
+    expect(mass).toBeCloseTo(178.0, 2);
   });
 });
