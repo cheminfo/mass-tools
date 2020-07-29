@@ -85,11 +85,14 @@ module.exports = function fromNucleicSequence(sequencesString, options = {}) {
     limit,
   });
 
-  combined.forEach((result) => {
-    result.sequence = groupsToSequence(
-      result.parts.filter((part) => part).join(' '),
-    );
-  });
+  if (Array.isArray(combined)) {
+    // not an estimation
+    combined.forEach((result) => {
+      result.sequence = groupsToSequence(
+        result.parts.filter((part) => part).join(' '),
+      );
+    });
+  }
 
   return combined;
 };
