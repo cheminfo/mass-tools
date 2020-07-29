@@ -47,7 +47,7 @@ describe('test generate fragments', () => {
     expect(fragments).toStrictEqual([
       'HODampO-1H-1$a1',
       'HODampDtmpO-1H-1$a2',
-      'HODampC5H6O4P$a2-B',
+      'HODampFurp$a2-B',
     ]);
   });
 
@@ -80,7 +80,7 @@ describe('test generate fragments', () => {
       'O-2P-1DcmpH$y1',
       'O-3H-2P-1DcmpH$z1',
       'HODampDtmpO-1H-1$a2',
-      'HODampC5H6O4P$a2-B',
+      'HODampFurp$a2-B',
       'HODampDtmpH$b2',
       'HODampDtmpPO2$c2',
       'HODampDtmpPO3H2$d2',
