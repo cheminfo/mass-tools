@@ -14,7 +14,7 @@ function furanThreeTerm(nucleotide) {
     );
     return parts.join('') + last;
   }
-  return parts.join('') + last.replace(/D[atcg]mp(.*)$/, 'C5H6O4P');
+  return parts.join('') + last.replace(/D[atcg]mp(.*)$/, 'Furp');
 }
 
 module.exports = furanThreeTerm;
