@@ -83,7 +83,7 @@ describe('fromNucleicSequence', () => {
       ms: { ionization: '(H+)-5', em: 92.40262003523306, charge: -5 },
       parts: ['HODcmpFurp'],
       mf: 'C14H19N3O11P2',
-      sequence: 'C⬟',
+      sequence: 'C⬠',
       comment: 'w6:a9-B',
     });
   });
