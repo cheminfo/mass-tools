@@ -10,8 +10,10 @@ function appendRowsInformation(data) {
     let filtered = row.residues.filter(
       (entry) => entry.fromBegin !== undefined,
     );
-    row.info.firstResidue = filtered[0].fromBegin;
-    row.info.lastResidue = filtered[filtered.length - 1].fromBegin;
+    if (filtered.length > 0) {
+      row.info.firstResidue = filtered[0].fromBegin;
+      row.info.lastResidue = filtered[filtered.length - 1].fromBegin;
+    }
     row.internals = [];
   }
 

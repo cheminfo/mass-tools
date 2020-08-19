@@ -37,5 +37,5 @@ test('sequenceSVG of peptide', () => {
   let svg = sequenceSVG(sequence, info, options);
   writeFileSync(join(__dirname, 'testPeptide.svg'), svg);
 
-  expect(true).toBe(true);
+  expect(svg).toHaveLength(24051);
 });

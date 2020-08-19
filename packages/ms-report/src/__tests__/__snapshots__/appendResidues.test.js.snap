@@ -1,5 +1,545 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`appendResidues (C5H5O)IleLeuAspAspLeuCys(C26H30N2OSi)AlaAsnGlnLeuGlnProLeuLeuLeuLysOH 1`] = `
+Object {
+  "residues": Object {
+    "all": Array [
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "begin",
+        "label": "Nter",
+      },
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 16,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "I",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ile",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 15,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "L",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Leu",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 14,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "D",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Asp",
+      },
+      Object {
+        "fromBegin": 4,
+        "fromEnd": 13,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "D",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Asp",
+      },
+      Object {
+        "fromBegin": 5,
+        "fromEnd": 12,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "L",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Leu",
+      },
+      Object {
+        "fromBegin": 6,
+        "fromEnd": 11,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "ς",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Cys(C26H30N2OSi)",
+      },
+      Object {
+        "fromBegin": 7,
+        "fromEnd": 10,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 8,
+        "fromEnd": 9,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "N",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Asn",
+      },
+      Object {
+        "fromBegin": 9,
+        "fromEnd": 8,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "Q",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Gln",
+      },
+      Object {
+        "fromBegin": 10,
+        "fromEnd": 7,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "L",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Leu",
+      },
+      Object {
+        "fromBegin": 11,
+        "fromEnd": 6,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "Q",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Gln",
+      },
+      Object {
+        "fromBegin": 12,
+        "fromEnd": 5,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "P",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Pro",
+      },
+      Object {
+        "fromBegin": 13,
+        "fromEnd": 4,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "L",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Leu",
+      },
+      Object {
+        "fromBegin": 14,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "L",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Leu",
+      },
+      Object {
+        "fromBegin": 15,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "L",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Leu",
+      },
+      Object {
+        "fromBegin": 16,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "K",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Lys",
+      },
+      Object {
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "end",
+        "label": "OH",
+      },
+    ],
+    "alternatives": Object {
+      "ς": Object {
+        "count": 1,
+      },
+    },
+    "begin": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "begin",
+      "label": "Nter",
+    },
+    "end": Object {
+      "info": Object {
+        "nbOver": 0,
+        "nbUnder": 0,
+      },
+      "kind": "end",
+      "label": "OH",
+    },
+    "replacements": Object {
+      "C5H5O": Object {
+        "label": "Nter",
+      },
+      "Cys(C26H30N2OSi)": Object {
+        "label": "ς",
+        "modification": "C26H30N2OSi",
+        "residue": "Cys",
+      },
+    },
+    "residues": Array [
+      Object {
+        "fromBegin": 1,
+        "fromEnd": 16,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "I",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ile",
+      },
+      Object {
+        "fromBegin": 2,
+        "fromEnd": 15,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "L",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Leu",
+      },
+      Object {
+        "fromBegin": 3,
+        "fromEnd": 14,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "D",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Asp",
+      },
+      Object {
+        "fromBegin": 4,
+        "fromEnd": 13,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "D",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Asp",
+      },
+      Object {
+        "fromBegin": 5,
+        "fromEnd": 12,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "L",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Leu",
+      },
+      Object {
+        "fromBegin": 6,
+        "fromEnd": 11,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "ς",
+        "replaced": true,
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Cys(C26H30N2OSi)",
+      },
+      Object {
+        "fromBegin": 7,
+        "fromEnd": 10,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "A",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Ala",
+      },
+      Object {
+        "fromBegin": 8,
+        "fromEnd": 9,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "N",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Asn",
+      },
+      Object {
+        "fromBegin": 9,
+        "fromEnd": 8,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "Q",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Gln",
+      },
+      Object {
+        "fromBegin": 10,
+        "fromEnd": 7,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "L",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Leu",
+      },
+      Object {
+        "fromBegin": 11,
+        "fromEnd": 6,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "Q",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Gln",
+      },
+      Object {
+        "fromBegin": 12,
+        "fromEnd": 5,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "P",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Pro",
+      },
+      Object {
+        "fromBegin": 13,
+        "fromEnd": 4,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "L",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Leu",
+      },
+      Object {
+        "fromBegin": 14,
+        "fromEnd": 3,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "L",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Leu",
+      },
+      Object {
+        "fromBegin": 15,
+        "fromEnd": 2,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "L",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Leu",
+      },
+      Object {
+        "fromBegin": 16,
+        "fromEnd": 1,
+        "info": Object {
+          "nbOver": 0,
+          "nbUnder": 0,
+        },
+        "kind": "residue",
+        "label": "K",
+        "results": Object {
+          "begin": Array [],
+          "end": Array [],
+        },
+        "value": "Lys",
+      },
+    ],
+  },
+}
+`;
+
 exports[`appendResidues (MeO)AA(H-1NH2)AA rna 1`] = `
 Object {
   "residues": Object {

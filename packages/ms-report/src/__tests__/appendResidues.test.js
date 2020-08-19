@@ -38,4 +38,14 @@ describe('appendResidues', () => {
     appendResidues(data, '(MeO)AA(H-1NH2)AA', { kind: 'rna' });
     expect(data).toMatchSnapshot();
   });
+
+  it('(C5H5O)IleLeuAspAspLeuCys(C26H30N2OSi)AlaAsnGlnLeuGlnProLeuLeuLeuLysOH', () => {
+    let data = {};
+    appendResidues(
+      data,
+      '(C5H5O)IleLeuAspAspLeuCys(C26H30N2OSi)AlaAsnGlnLeuGlnProLeuLeuLeuLysOH',
+      { kind: 'peptide' },
+    );
+    expect(data).toMatchSnapshot();
+  });
 });
