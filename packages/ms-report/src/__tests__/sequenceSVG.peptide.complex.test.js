@@ -1,8 +1,5 @@
 'use strict';
 
-const { writeFileSync } = require('fs');
-const { join } = require('path');
-
 const sequenceSVG = require('../sequenceSVG');
 
 test('sequenceSVG of peptide', () => {
