@@ -20,12 +20,12 @@
     "type": "git",
     "url": "git+https://github.com/cheminfo/molecular-formula.git"
   },
-  "version": "1.1.5",
+  "version": "1.2.0",
   "devDependencies": {
-    "mf-parser": "^1.1.5"
+    "mf-parser": "^1.1.6"
   },
   "dependencies": {
-    "chemical-groups": "^1.0.2",
-    "mf-utilities": "^1.1.5"
+    "chemical-groups": "^1.1.0",
+    "mf-utilities": "^1.2.0"
   }
 }
