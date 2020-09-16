@@ -107,11 +107,13 @@ module.exports = function fromPeptidicSequence(sequence, options = {}) {
     limit,
   });
 
-  combined.forEach((result) => {
-    result.sequence = groupsToSequence(
-      result.parts.filter((part) => part).join(' '),
-    );
-  });
+  if (!estimate) {
+    combined.forEach((result) => {
+      result.sequence = groupsToSequence(
+        result.parts.filter((part) => part).join(' '),
+      );
+    });
+  }
 
   return combined;
 };
