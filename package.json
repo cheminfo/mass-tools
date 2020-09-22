@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "molecular-formula",
-  "version": "0.52.3",
+  "version": "0.53.0",
   "main": "src/index.js",
   "files": [
     "src"
@@ -31,13 +31,13 @@
     "testEnvironment": "node"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.13",
+    "@types/jest": "^26.0.14",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "benchmark": "^2.1.4",
     "chemcalc": "^3.4.1",
     "chemical-elements": "^1.1.5",
-    "cheminfo-build": "^1.1.4",
+    "cheminfo-build": "^1.1.5",
     "codecov": "^3.7.2",
     "documentation": "^13.0.2",
     "eslint": "^7.9.0",
@@ -55,7 +55,7 @@
     "papaparse": "^5.3.0",
     "prettier": "^2.1.2",
     "rollup-plugin-node-builtins": "^2.1.2",
-    "wikidata-sdk": "^7.7.0",
+    "wikidata-sdk": "^7.7.1",
     "xy-parser": "^3.0.0"
   },
   "dependencies": {
