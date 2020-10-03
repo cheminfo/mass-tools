@@ -94,6 +94,15 @@ describe('generateMFs', () => {
     expect(result).toHaveLength(1);
   });
 
+  it('filterFct', function () {
+    let mfsArray = ['C0-5', 'O0-5'];
+    let result = generateMFs(mfsArray, {
+      ionizations: '++',
+      filterFct: 'A<B && (A+B)===3',
+    });
+    expect(result).toHaveLength(2);
+  });
+
   it('From array of string to large array and filter unsaturation', function () {
     let mfsArray = ['C0-100', 'H0-100'];
     let result = generateMFs(mfsArray, {

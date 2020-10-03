@@ -1,5 +1,6 @@
 'use strict';
 
+const { ELECTRON_MASS } = require('chemical-elements/src/constants');
 const MF = require('mf-parser').MF;
 const matcher = require('mf-matcher').msem;
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
@@ -31,12 +32,28 @@ const sum = require('sum-object-keys');
  * @param {number}        [options.filter.maxUnsaturation=+Infinity] - Maximal unsaturation
  * @param {number}        [options.filter.onlyIntegerUnsaturation=false] - Integer unsaturation
  * @param {number}        [options.filter.onlyNonIntegerUnsaturation=false] - Non integer unsaturation
+ * @param {Function}      [options.filterFct] - Non integer unsaturation
  * @param {object}        [options.filter.atoms] - object of atom:{min, max}
  * @returns {Array}
  */
 
 module.exports = function generateMFs(keys, options = {}) {
+  options = JSON.parse(JSON.stringify(options));
+
   let { limit = 100000, uniqueMFs = true, estimate = false } = options;
+
+  if (options.filterFct) {
+    // we create a real javascript function
+    let variables = new Array(keys.length)
+      .fill(0)
+      .map((key, index) => String.fromCharCode(index + 65));
+    variables.push('em', 'mz');
+    options.filterFct = new Function(
+      ...variables,
+      'return ' + options.filterFct,
+    );
+  }
+
   if (uniqueMFs === true) options.canonizeMF = true;
   if (options.canonizeMF === undefined) options.canonizeMF = true;
   options.ionizations = preprocessIonizations(options.ionizations);
@@ -179,6 +196,15 @@ function appendResult(results, currents, keys, options = {}) {
 
   for (let ionization of ionizations) {
     let result = getEMFromParts(keys, currents, ionization);
+    if (options.filterFct) {
+      let variables = currents.slice();
+      variables.push(
+        result.em,
+        (result.em + ionization.em - ionization.charge * ELECTRON_MASS) /
+          Math.abs(ionization.charge),
+      );
+      if (!options.filterFct.apply(null, variables)) continue;
+    }
 
     let match = matcher(result, filter);
     if (!match) continue;
