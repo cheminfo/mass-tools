@@ -95,10 +95,13 @@ describe('generateMFs', () => {
   });
 
   it('filterFct', function () {
-    let mfsArray = ['C0-5', 'O0-5'];
+    let mfsArray = [
+      { name: 'C', value: 'C0-5' },
+      { name: 'D', value: 'O0-5' },
+    ];
     let result = generateMFs(mfsArray, {
       ionizations: '++',
-      filterFct: 'A<B && (A+B)===3',
+      filterFct: 'C<D && (C+D)===3 && atoms.O>=2',
     });
     expect(result).toHaveLength(2);
   });

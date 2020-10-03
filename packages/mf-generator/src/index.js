@@ -42,12 +42,19 @@ module.exports = function generateMFs(keys, options = {}) {
 
   let { limit = 100000, uniqueMFs = true, estimate = false } = options;
 
+  options.filterFctVariables = {};
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
+    if (typeof key === 'object' && key.name) {
+      options.filterFctVariables[key.name] = i;
+      keys[i] = key.value;
+    }
+  }
+
   if (options.filterFct) {
     // we create a real javascript function
-    let variables = new Array(keys.length)
-      .fill(0)
-      .map((key, index) => String.fromCharCode(index + 65));
-    variables.push('em', 'mz');
+    let variables = Object.keys(options.filterFctVariables);
+    variables.push('mm', 'mz', 'charge', 'unsaturation', 'atoms');
     // eslint-disable-next-line no-new-func
     options.filterFct = new Function(
       ...variables,
@@ -198,11 +205,18 @@ function appendResult(results, currents, keys, options = {}) {
   for (let ionization of ionizations) {
     let result = getEMFromParts(keys, currents, ionization);
     if (options.filterFct) {
-      let variables = currents.slice();
+      let variables = [];
+      for (let key in options.filterFctVariables) {
+        variables.push(currents[options.filterFctVariables[key]]);
+      }
+
       variables.push(
         result.em,
         (result.em + ionization.em - ionization.charge * ELECTRON_MASS) /
           Math.abs(ionization.charge),
+        result.charge + result.ionization.charge,
+        result.unsaturation,
+        result.atoms,
       );
       if (!options.filterFct.apply(null, variables)) continue;
     }
