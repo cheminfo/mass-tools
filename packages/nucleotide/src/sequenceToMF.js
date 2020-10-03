@@ -1,6 +1,7 @@
 'use strict';
 
 const { groups } = require('chemical-groups');
+
 const ensureUppercaseSequence = require('./ensureUppercaseSequence');
 
 /**

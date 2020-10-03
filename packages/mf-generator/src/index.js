@@ -48,9 +48,10 @@ module.exports = function generateMFs(keys, options = {}) {
       .fill(0)
       .map((key, index) => String.fromCharCode(index + 65));
     variables.push('em', 'mz');
+    // eslint-disable-next-line no-new-func
     options.filterFct = new Function(
       ...variables,
-      'return ' + options.filterFct,
+      `return ${options.filterFct}`,
     );
   }
 
