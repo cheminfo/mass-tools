@@ -29,6 +29,8 @@ const combineMFs = require('mf-generator');
  * @param {number} [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {object} [options.filter.atoms] - object of atom:{min, max}
  *
+ * @param {Function}  [options.filterFct] - Non integer unsaturation
+ *
  * @example
  *
  * const EMDB = require('emdb');
