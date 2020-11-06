@@ -1,7 +1,7 @@
 'use strict';
 
 const getMsInfo = require('mf-utilities/src/getMsInfo.js');
-const findClosestIndex = require('ml-spectra-processing').X.findClosestIndex;
+const xFindClosestIndex = require('ml-spectra-processing').xFindClosestIndex;
 
 /**
  * @param {object}         [entry={}}]
@@ -85,7 +85,7 @@ module.exports = function msemMatcher(entry, options = {}) {
   }
 
   if (targetMasses && targetMasses.length > 0) {
-    let index = findClosestIndex(targetMasses, ms.em);
+    let index = xFindClosestIndex(targetMasses, ms.em);
     let closestMass = targetMasses[index];
     msInfo = getMsInfo(entry, {
       ionization,

@@ -24,20 +24,20 @@
   "dependencies": {
     "chemical-groups": "^1.1.0",
     "isotopic-distribution": "^1.1.9",
-    "jszip": "^3.2.2",
+    "jszip": "^3.5.0",
     "mf-finder": "^1.1.6",
     "mf-from-google-sheet": "^1.1.7",
     "mf-generator": "^1.2.0",
     "mf-matcher": "^1.1.6",
     "mf-parser": "^1.1.6",
     "mf-utilities": "^1.2.0",
-    "ml-array-max": "^1.1.2",
-    "ml-array-min": "^1.1.2",
+    "ml-array-max": "^1.2.0",
+    "ml-array-min": "^1.2.0",
     "ml-regression-theil-sen": "^2.0.0",
     "ms-spectrum": "^1.2.3",
     "nucleotide": "^1.2.0",
     "peaks-similarity": "^2.3.1",
     "peptide": "^1.10.1",
-    "request-promise-native": "^1.0.8"
+    "request-promise-native": "^1.0.9"
   }
 }
