@@ -7,6 +7,9 @@ describe('test isotopicDistribution', () => {
     let isotopicDistribution = new IsotopicDistribution('C', { fwhm: 0.1 });
     let gaussian = isotopicDistribution.getGaussian();
 
+    expect(gaussian.y[15]).toBeCloseTo(gaussian.y[25], 5);
+    expect(gaussian.y[15]).toBeCloseTo(gaussian.y[20] / 2, 5);
+
     expect(gaussian.x).toHaveLength(73);
     expect(Math.min(...gaussian.x)).toBeCloseTo(11.82, 1);
     expect(Math.max(...gaussian.x)).toBeCloseTo(13.13, 1);
