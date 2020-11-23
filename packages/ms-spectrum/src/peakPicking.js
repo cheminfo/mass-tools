@@ -21,7 +21,7 @@ function peakPicking(spectrum, options = {}) {
   const { charge: chargeOptions = {} } = options;
   if (!spectrum.peaks) {
     if (spectrum.isContinuous()) {
-      spectrum.peaks = gsd(spectrum.data.x, spectrum.data.y, {
+      spectrum.peaks = gsd(spectrum.data, {
         noiseLevel: 0,
         minMaxRatio: 0.00025, // Threshold to determine if a given peak should be considered as a noise
         realTopDetection: true,

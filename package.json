@@ -12,9 +12,8 @@
     "eslint-fix": "npm run eslint -- --fix",
     "prepare": "lerna bootstrap --no-ci",
     "publish": "git pull --rebase && npm run test && lerna publish",
-    "test": "npm run testonly && npm run eslint",
-    "test-travis": "eslint src && jest --coverage && codecov",
-    "testonly": "jest"
+    "test": "jest && npm run eslint",
+    "upgrade": "find packages -type f -name 'package.json' -maxdepth 2 -execdir ncu --upgrade \\;"
   },
   "repository": {
     "type": "git",
