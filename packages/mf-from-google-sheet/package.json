@@ -11,15 +11,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cheminfo/mass-js.git"
+    "url": "git+https://github.com/cheminfo/mass-tools.git"
   },
   "keywords": [],
   "author": "Luc Patiny",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cheminfo/mass-js/issues"
+    "url": "https://github.com/cheminfo/mass-tools/issues"
   },
-  "homepage": "https://github.com/cheminfo/mass-js/tree/master/packages/mf-from-google-sheet#readme",
+  "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/mf-from-google-sheet#readme",
   "dependencies": {
     "mf-generator": "^1.2.0",
     "mf-parser": "^1.1.6",

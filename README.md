@@ -1,4 +1,4 @@
-# mass-js
+# mass-tools
 
 Various tools allowing to manipulate molecular formula and analyse mass spectra.
 

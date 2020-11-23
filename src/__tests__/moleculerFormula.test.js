@@ -2,7 +2,7 @@
 
 const { MF, IsotopicDistribution } = require('..');
 
-describe('mass-js', () => {
+describe('mass-tools', () => {
   it('isotopicDistrbution', () => {
     let isotopicDistribution = new IsotopicDistribution('C10');
     let xy = isotopicDistribution.getXY();
