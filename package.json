@@ -13,6 +13,7 @@
     "prepare": "lerna bootstrap --no-ci",
     "publish": "git pull --rebase && npm run test && lerna publish",
     "test": "jest && npm run eslint",
+    "test-coverage": "jest --coverage",
     "upgrade": "find packages -type f -name 'package.json' -maxdepth 2 -execdir ncu --upgrade \\;"
   },
   "repository": {
