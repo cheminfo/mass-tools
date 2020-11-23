@@ -1,6 +1,6 @@
 {
   "name": "mass-tools",
-  "version": "0.55.0",
+  "version": "0.55.1",
   "main": "src/index.js",
   "files": [
     "src"
