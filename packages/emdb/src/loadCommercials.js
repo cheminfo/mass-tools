@@ -1,6 +1,6 @@
 'use strict';
 
-const JSZip = require('jszip');
+const JSZip = require('jszip/dist/jszip');
 
 const fetch = require('./util/fetchArrayBuffer');
 
