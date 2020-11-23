@@ -1,6 +1,5 @@
 {
-  "private": true,
-  "name": "molecular-formula",
+  "name": "mass-js",
   "version": "0.54.2",
   "main": "src/index.js",
   "files": [

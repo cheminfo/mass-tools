@@ -12,15 +12,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cheminfo/molecular-formula.git"
+    "url": "git+https://github.com/cheminfo/mass-js.git"
   },
   "keywords": [],
   "author": "Luc Patiny",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cheminfo/molecular-formula/issues"
+    "url": "https://github.com/cheminfo/mass-js/issues"
   },
-  "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/emdb#readme",
+  "homepage": "https://github.com/cheminfo/mass-js/tree/master/packages/emdb#readme",
   "dependencies": {
     "chemical-groups": "^1.1.0",
     "isotopic-distribution": "^1.1.9",

@@ -55,7 +55,7 @@ const combineMFs = require('mf-generator');
  * console.log(emdb.get('generated').length); // 80
  *
  * @example
- * <script src="https://www.lactame.com/lib/molecular-formula/HEAD/molecular-formula.js" />
+ * <script src="https://www.lactame.com/lib/mass-js/HEAD/mass-js.js" />
  * <script>
  *   let emdb = new MolecularFormula.EMDB();
  *   let array = ['C1-10', 'H1-10'];

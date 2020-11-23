@@ -13,4 +13,5 @@ module.exports = {
   getBestPeaks: require('../packages/ms-spectrum/src//getBestPeaks'),
   generateMFs: require('../packages/mf-generator'),
   Report: require('../packages/ms-report'),
+  atomSorter: require('../packages/atom-sorter'),
 };

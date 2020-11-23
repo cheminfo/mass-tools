@@ -8,15 +8,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cheminfo/molecular-formula.git"
+    "url": "git+https://github.com/cheminfo/mass-js.git"
   },
   "keywords": [],
   "author": "Luc Patiny",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cheminfo/molecular-formula/issues"
+    "url": "https://github.com/cheminfo/mass-js/issues"
   },
-  "homepage": "https://github.com/cheminfo/molecular-formula/tree/master/packages/number-treemap#readme",
+  "homepage": "https://github.com/cheminfo/mass-js/tree/master/packages/number-treemap#readme",
   "dependencies": {
     "mf-utilities": "^1.2.0"
   }

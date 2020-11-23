@@ -3,26 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.3.0](https://github.com/cheminfo/molecular-formula/compare/mf-global@1.2.3...mf-global@1.3.0) (2020-08-19)
-
+# [1.3.0](https://github.com/cheminfo/mass-js/compare/mf-global@1.2.3...mf-global@1.3.0) (2020-08-19)
 
 ### Features
 
-* add more groups ([1e81ac4](https://github.com/cheminfo/molecular-formula/commit/1e81ac460b447d730cac7b8d65fea4a6ec69e7f2))
-* working on non exaustive baseloss for nucleotide ([0e8d2fa](https://github.com/cheminfo/molecular-formula/commit/0e8d2fa67ee33096091b1a245d21c213f3f4456b))
+- add more groups ([1e81ac4](https://github.com/cheminfo/mass-js/commit/1e81ac460b447d730cac7b8d65fea4a6ec69e7f2))
+- working on non exaustive baseloss for nucleotide ([0e8d2fa](https://github.com/cheminfo/mass-js/commit/0e8d2fa67ee33096091b1a245d21c213f3f4456b))
 
-
-
-
-
-## [1.2.3](https://github.com/cheminfo/molecular-formula/compare/mf-global@1.2.2...mf-global@1.2.3) (2020-04-18)
+## [1.2.3](https://github.com/cheminfo/mass-js/compare/mf-global@1.2.2...mf-global@1.2.3) (2020-04-18)
 
 **Note:** Version bump only for package mf-global
 
-
-
-
-
-## [1.2.2](https://github.com/cheminfo/molecular-formula/compare/mf-global@1.2.1...mf-global@1.2.2) (2020-04-18)
+## [1.2.2](https://github.com/cheminfo/mass-js/compare/mf-global@1.2.1...mf-global@1.2.2) (2020-04-18)
 
 **Note:** Version bump only for package mf-global
