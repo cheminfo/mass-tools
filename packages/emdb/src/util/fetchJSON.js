@@ -1,11 +1,8 @@
 'use strict';
 
-const request = require('request-promise-native');
+const fetch = require('node-fetch');
 
-module.exports = async function fetchJSON(url) {
-  let response = await request({
-    uri: url,
-    encoding: 'utf8',
-  });
-  return JSON.parse(response);
+module.exports = async function fetchJSONBrowser(url) {
+  const result = await fetch(url);
+  return result.json();
 };
