@@ -1,19 +1,23 @@
 'use strict';
 
 const atomSorter = require('atom-sorter');
-const getMsInfo = require('mf-utilities/src/getMsInfo');
 
 const preprocessEARanges = require('./preprocessEARanges');
 
 /**
  * Returns possible combinations
- * {object} [targetEA]
- * {object} [options={}]
- * {number} [maxElementError=0.003]
- * {number} [maxTotalError=0.01]
- * {number} [minMW=0]
- * {number} [maxMW=Number.MAX_VALUE]
- * @return {}
+ * @param {object} [targetEA]
+ * @param {object} [options={}]
+ * @param {number} [options.maxElementError=0.003]
+ * @param {number} [options.maxTotalError=0.01]
+ * @param {number} [options.minMW=0] minimal molecular weight
+ * @param {number} [options.maxMW=+Infinity] maximal molecular weight
+ * @param {number} [options.unsaturation={}]
+ * @param {number} [options.unsaturation.min=-Infinity] Minimal unsaturation
+ * @param {number} [options.unsaturation.max=+Infinity] Maximal unsaturation
+ * @param {number} [options.unsaturation.onlyInteger=false] Integer unsaturation
+ * @param {number} [options.unsaturation.onlyNonInteger=false] Non integer unsaturation
+ * @return {Array<object>}
  */
 
 module.exports = function mfFromEA(targetEA, options = {}) {
@@ -21,7 +25,7 @@ module.exports = function mfFromEA(targetEA, options = {}) {
     unsaturation = {},
     maxIterations = 1e8,
     minMW = 0,
-    maxMW = Number.MAX_VALUE,
+    maxMW = +Infinity,
     ranges = [
       { mf: 'C', min: 0, max: 100 },
       { mf: 'H', min: 0, max: 100 },
@@ -57,7 +61,6 @@ module.exports = function mfFromEA(targetEA, options = {}) {
 
   if (possibilities.length === 0) return { mfs: [] };
 
-  let theEnd = false;
   let currentPosition = 0;
   let currentAtom;
 
@@ -87,8 +90,13 @@ module.exports = function mfFromEA(targetEA, options = {}) {
         `Iteration number is over the current maximum of: ${maxIterations}`,
       );
     }
-    if (false && filterUnsaturation) {
-      let unsaturationValue = lastPossibility.currentUnsaturation;
+    if (filterUnsaturation) {
+      let unsaturationValue = 0;
+      for (const possibility of possibilities) {
+        unsaturationValue +=
+          possibility.unsaturation * possibility.currentCount;
+      }
+
       let isOdd = Math.abs(unsaturationValue % 2);
       if (
         (unsaturation.onlyInteger && isOdd === 1) ||
@@ -96,7 +104,7 @@ module.exports = function mfFromEA(targetEA, options = {}) {
         fakeMinUnsaturation > unsaturationValue ||
         fakeMaxUnsaturation < unsaturationValue
       ) {
-        isValid = false;
+        continue;
       }
     }
 

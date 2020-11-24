@@ -1,7 +1,9 @@
 'use strict';
 
-const mfFromEA = require('..');
 const { toMatchCloseTo } = require('jest-matcher-deep-close-to');
+
+const mfFromEA = require('..');
+
 expect.extend({ toMatchCloseTo });
 
 describe('test mf-from-ea', () => {
@@ -85,5 +87,61 @@ describe('test mf-from-ea', () => {
       },
     );
     expect(result.mfs).toHaveLength(1);
+  });
+
+  it('big problem', () => {
+    let result = mfFromEA(
+      { C: 0.8, H: 0.2 },
+      {
+        ranges: [
+          { mf: 'C', min: 0, max: 100 },
+          { mf: 'H', min: 0, max: 100 },
+          { mf: 'O', min: 0, max: 10 },
+          { mf: 'N', min: 0, max: 10 },
+        ],
+        maxElementError: 0.01,
+        maxTotalError: 0.01,
+      },
+    );
+    expect(result.mfs).toHaveLength(108);
+  });
+
+  it('unsaturation', () => {
+    let result = mfFromEA(
+      { C: 0.8, H: 0.2 },
+      {
+        ranges: [
+          { mf: 'C', min: 0, max: 1 },
+          { mf: 'H', min: 3, max: 4 },
+        ],
+        maxElementError: 1,
+        maxTotalError: 10,
+        unsaturation: {
+          min: 0,
+          max: 1,
+          onlyInteger: true,
+        },
+      },
+    );
+    expect(result.mfs).toHaveLength(1);
+  });
+
+  it('unsaturation no integer filter', () => {
+    let result = mfFromEA(
+      { C: 0.8, H: 0.2 },
+      {
+        ranges: [
+          { mf: 'C', min: 0, max: 1 },
+          { mf: 'H', min: 3, max: 4 },
+        ],
+        maxElementError: 1,
+        maxTotalError: 10,
+        unsaturation: {
+          min: 0,
+          max: 1,
+        },
+      },
+    );
+    expect(result.mfs).toHaveLength(2);
   });
 });

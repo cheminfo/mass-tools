@@ -1,67 +1,63 @@
 'use strict';
 
+const { toMatchCloseTo } = require('jest-matcher-deep-close-to');
+
 const preprocessEARanges = require('../preprocessEARanges');
 
+expect.extend({ toMatchCloseTo });
+
 describe('preprocessEARanges', () => {
-  it.only('check the result and the order', () => {
-    let possibilities = preprocessEARanges([
-      { mf: 'C', min: 0, max: 2 },
-      { mf: 'H', min: 0, max: 2 },
-      { mf: 'O', min: 0, max: 0 },
-      { mf: 'Cl', min: 0, max: 3 },
-      { mf: 'Me', min: 0, max: 1 },
-      { mf: 'Ca', min: 0, max: 1 },
-    ]);
+  it('check the result and the order', () => {
+    let possibilities = preprocessEARanges(
+      [
+        { mf: 'C', min: 0, max: 2 },
+        { mf: 'H', min: 0, max: 2 },
+        { mf: 'O', min: 0, max: 0 },
+        { mf: 'Cl', min: 0, max: 3 },
+        { mf: 'Me', min: 0, max: 1 },
+        { mf: 'Ca', min: 0, max: 1 },
+      ],
+      { C: 0.8, H: 0.2 },
+    );
     expect(Array.isArray(possibilities)).toBe(true);
     expect(possibilities).toHaveLength(5);
-    expect(possibilities[1]).toMatchObject({
-      mf: 'Me',
-      minCount: 0,
-      maxCount: 1,
-      currentCount: 0,
-      currentUnsaturation: 0,
-      initialOrder: 4,
-      em: 15.02347509669,
-      unsaturation: -1,
-      isGroup: true,
-    });
+    expect(possibilities[1]).toMatchCloseTo(
+      {
+        mf: 'Me',
+        minCount: 0,
+        maxCount: 1,
+        currentCount: -1,
+        currentUnsaturation: 0,
+        initialOrder: 4,
+        mass: 15.0345,
+        unsaturation: -1,
+        isGroup: true,
+      },
+      4,
+    );
   });
 
   it('check a string', () => {
-    let possibilities = preprocessEARanges('C1-10H1-10ClBr2N0');
+    let possibilities = preprocessEARanges('C1-10H1-10Cl0-10', {
+      C: 0.8,
+      H: 0.2,
+    });
     expect(Array.isArray(possibilities)).toBe(true);
     expect(possibilities).toHaveLength(3);
-    expect(possibilities[0]).toMatchObject({
-      minCharge: 0,
-      maxCharge: 0,
-      originalMinCount: 1,
-      originalMaxCount: 1,
-    });
-  });
-
-  it('check a string polymer kind', () => {
-    let possibilities = preprocessEARanges('ClBr2(CH2)0-2NO');
-    expect(Array.isArray(possibilities)).toBe(true);
-    expect(possibilities).toHaveLength(2);
-    expect(possibilities[0]).toMatchObject({
-      mf: 'ClBr2NO',
-      minCharge: 0,
-      maxCharge: 0,
-      originalMinCount: 1,
-      originalMaxCount: 1,
-    });
-  });
-
-  it('isotopes [13C]0-10 [12C]0-10', () => {
-    let possibilities = preprocessEARanges('[13C]0-10 [12C]0-10');
-    expect(Array.isArray(possibilities)).toBe(true);
-    expect(possibilities).toHaveLength(2);
-    expect(possibilities[0]).toMatchObject({
-      mf: '[13C]',
-      minCharge: 0,
-      maxCharge: 0,
-      originalMinCount: 0,
-      originalMaxCount: 10,
-    });
+    expect(possibilities[0]).toMatchCloseTo(
+      {
+        mf: 'Cl',
+        minCount: 0,
+        maxCount: 10,
+        targetEA: 0,
+        currentValue: 0,
+        currentCount: -1,
+        currentUnsaturation: 0,
+        initialOrder: 2,
+        mass: 35.4529,
+        unsaturation: -1,
+      },
+      4,
+    );
   });
 });
