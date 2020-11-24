@@ -68,9 +68,23 @@ module.exports = function mfFromEA(targetEA, options = {}) {
 
   mfWhile: while (true) {
     while (currentPosition < possibilities.length && currentPosition >= 0) {
+      let previousAtom =
+        currentPosition === 0 ? { mw: 0 } : possibilities[currentPosition - 1];
       currentAtom = possibilities[currentPosition];
       if (currentAtom.currentCount < currentAtom.maxCount) {
         currentAtom.currentCount++;
+        currentAtom.aw = currentAtom.mass * currentAtom.currentCount;
+        currentAtom.mw = currentAtom.aw + previousAtom.mw;
+        currentAtom.maxRatio = currentAtom.aw / currentAtom.mw;
+        // we should check if we can reach the target
+        if (
+          currentAtom.aw / currentAtom.mw - currentAtom.targetEA <
+          -maxElementError
+        ) {
+          // we already don't have enough quantity of this element and it can only become worse
+          continue;
+        }
+
         if (currentPosition < possibilities.length - 1) {
           currentPosition++;
         } else {
@@ -108,15 +122,12 @@ module.exports = function mfFromEA(targetEA, options = {}) {
       }
     }
 
-    let mw = 0;
-    for (const possibility of possibilities) {
-      mw += possibility.mass * possibility.currentCount;
-    }
-
+    let mw = currentAtom.mw;
     if (mw < minMW || mw > maxMW) continue;
 
     let totalError = 0;
-    for (const possibility of possibilities) {
+    for (let i = 0; i < possibilities.length; i++) {
+      const possibility = possibilities[i];
       let ratio = (possibility.mass * possibility.currentCount) / mw;
       let error = Math.abs(possibility.targetEA - ratio);
       if (error > maxElementError) {
@@ -138,7 +149,6 @@ function getResult(possibilities, totalError, orderMapping) {
   const result = { mf: '', totalError };
   // we check that the first time we meet the ionization group it does not end
   // in the final result
-
   for (let i = 0; i < possibilities.length; i++) {
     let possibility = possibilities[orderMapping[i]];
     if (possibility.currentCount !== 0) {

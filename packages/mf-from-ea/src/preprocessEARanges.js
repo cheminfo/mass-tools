@@ -87,6 +87,9 @@ module.exports = function preprocessRanges(ranges, targetEA) {
       minCount: min, // value defined by the user
       maxCount: max, // value defined by the user
       targetEA: targetEA[range.mf] === undefined ? 0 : targetEA[range.mf],
+      mw: 0, // mw till this level
+      aw: 0, // atomic weight (mass * currentCount)
+      maxRatio: 0, // maximum ratio possible if all next elements are 0
       currentValue: 0,
       currentCount: min - 1,
       currentUnsaturation: 0,
@@ -104,14 +107,9 @@ module.exports = function preprocessRanges(ranges, targetEA) {
   possibilities = possibilities.filter(
     (r) => r.minCount !== 0 || r.maxCount !== 0,
   );
-  // we will sort the way we analyse the data
-  // 1. The one possibility parameter
-  // 2. The charged part
-  // 3. Decreasing em
+
   possibilities.sort((a, b) => {
-    if (a.originalMinCount === a.originalMaxCount) return -1; // should be in front, they are 'static'
-    if (b.originalMinCount === b.originalMaxCount) return 1;
-    return b.em - a.em;
+    return b.targetEA - a.targetEA;
   });
 
   return possibilities;

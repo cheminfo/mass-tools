@@ -19,16 +19,33 @@ describe('test mf-from-ea', () => {
         maxTotalError: 10,
       },
     );
-
     expect(result.mfs).toHaveLength(5);
+
     expect(result.mfs[2]).toMatchCloseTo({
       mf: 'C',
       totalError: 0.4,
       ea: [
-        { mf: 'H', value: 0, expected: 0.2, error: 0.2 },
         { mf: 'C', value: 1, expected: 0.8, error: 0.2 },
+        { mf: 'H', value: 0, expected: 0.2, error: 0.2 },
       ],
     });
+  });
+
+  it('check optimization', () => {
+    let result = mfFromEA(
+      { C: 0.923, H: 0.077 },
+      {
+        ranges: [
+          { mf: 'C', min: 0, max: 1 },
+          { mf: 'H', min: 0, max: 1 },
+          { mf: 'O', min: 0, max: 1 },
+        ],
+        maxElementError: 0.01,
+        maxTotalError: 0.01,
+      },
+    );
+
+    expect(result.info.numberMFEvaluated).toBe(6);
   });
 
   it('basic case with mf', () => {
@@ -45,8 +62,8 @@ describe('test mf-from-ea', () => {
       mf: 'C',
       totalError: 0.4,
       ea: [
-        { mf: 'H', value: 0, expected: 0.2, error: 0.2 },
         { mf: 'C', value: 1, expected: 0.8, error: 0.2 },
+        { mf: 'H', value: 0, expected: 0.2, error: 0.2 },
       ],
     });
   });
@@ -106,6 +123,7 @@ describe('test mf-from-ea', () => {
         maxTotalError: 10,
       },
     );
+
     expect(result.mfs).toHaveLength(1);
   });
 
