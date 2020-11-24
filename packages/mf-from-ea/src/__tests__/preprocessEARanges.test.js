@@ -50,7 +50,6 @@ describe('preprocessEARanges', () => {
         mf: 'Cl',
         minCount: 0,
         maxCount: 10,
-        targetEA: 0,
         currentValue: 0,
         currentCount: -1,
         currentUnsaturation: 0,
