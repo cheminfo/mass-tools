@@ -47,7 +47,7 @@ module.exports = function mfFromEA(targetEA, options = {}) {
       ? Number.MAX_SAFE_INTEGER
       : (unsaturation.max - 1) * 2;
 
-  let result = {
+  let results = {
     mfs: [],
     info: {
       numberMFEvaluated: 0,
@@ -85,7 +85,7 @@ module.exports = function mfFromEA(targetEA, options = {}) {
       break;
     }
 
-    if (result.info.numberMFEvaluated++ > maxIterations) {
+    if (results.info.numberMFEvaluated++ > maxIterations) {
       throw Error(
         `Iteration number is over the current maximum of: ${maxIterations}`,
       );
@@ -126,12 +126,12 @@ module.exports = function mfFromEA(targetEA, options = {}) {
       possibility.currentValue = ratio;
     }
     if (isNaN(totalError) || totalError > maxTotalError) continue;
-    result.mfs.push(getResult(possibilities, totalError, orderMapping));
-    result.info.numberResults++;
+    results.mfs.push(getResult(possibilities, totalError, orderMapping));
+    results.info.numberResults++;
   }
 
-  //result.mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
-  return result;
+  results.mfs.sort((a, b) => Math.abs(a.totalError) - Math.abs(b.totalError));
+  return results;
 };
 
 function getResult(possibilities, totalError, orderMapping) {
