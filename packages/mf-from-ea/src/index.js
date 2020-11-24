@@ -1,0 +1,166 @@
+'use strict';
+
+const atomSorter = require('atom-sorter');
+const getMsInfo = require('mf-utilities/src/getMsInfo');
+
+const preprocessEARanges = require('./preprocessEARanges');
+
+/**
+ * Returns possible combinations
+ * {object} [targetEA]
+ * {object} [options={}]
+ * {number} [maxElementError=0.003]
+ * {number} [maxTotalError=0.01]
+ * {number} [minMW=0]
+ * {number} [maxMW=Number.MAX_VALUE]
+ * @return {}
+ */
+
+module.exports = function mfFromEA(targetEA, options = {}) {
+  const {
+    unsaturation = {},
+    maxIterations = 1e8,
+    minMW = 0,
+    maxMW = Number.MAX_VALUE,
+    ranges = [
+      { mf: 'C', min: 0, max: 100 },
+      { mf: 'H', min: 0, max: 100 },
+      { mf: 'O', min: 0, max: 100 },
+      { mf: 'N', min: 0, max: 100 },
+    ],
+    maxElementError = 0.003,
+    maxTotalError = 0.01,
+  } = options;
+
+  let filterUnsaturation = unsaturation ? true : false;
+  // we calculate not the real unsaturation but the one before dividing by 2 + 1
+  let fakeMinUnsaturation =
+    unsaturation.min === undefined
+      ? Number.MIN_SAFE_INTEGER
+      : (unsaturation.min - 1) * 2;
+  let fakeMaxUnsaturation =
+    unsaturation.max === undefined
+      ? Number.MAX_SAFE_INTEGER
+      : (unsaturation.max - 1) * 2;
+
+  let result = {
+    mfs: [],
+    info: {
+      numberMFEvaluated: 0,
+      numberResults: 0,
+    },
+  };
+  let orderMapping = []; // used to sort the atoms
+
+  let possibilities = preprocessEARanges(ranges, targetEA, maxElementError);
+  orderMapping = getOrderMapping(possibilities);
+
+  if (possibilities.length === 0) return { mfs: [] };
+
+  let theEnd = false;
+  let currentPosition = 0;
+  let currentAtom;
+
+  //  if (DEBUG) console.log('possibilities', possibilities.map((a) => `${a.mf + a.originalMinCount}-${a.originalMaxCount}`));
+
+  mfWhile: while (true) {
+    while (currentPosition < possibilities.length && currentPosition >= 0) {
+      currentAtom = possibilities[currentPosition];
+      if (currentAtom.currentCount < currentAtom.maxCount) {
+        currentAtom.currentCount++;
+        if (currentPosition < possibilities.length - 1) {
+          currentPosition++;
+        } else {
+          break;
+        }
+      } else {
+        currentAtom.currentCount = currentAtom.minCount - 1;
+        currentPosition--;
+      }
+    }
+    if (currentPosition < 0) {
+      break;
+    }
+
+    if (result.info.numberMFEvaluated++ > maxIterations) {
+      throw Error(
+        `Iteration number is over the current maximum of: ${maxIterations}`,
+      );
+    }
+    if (false && filterUnsaturation) {
+      let unsaturationValue = lastPossibility.currentUnsaturation;
+      let isOdd = Math.abs(unsaturationValue % 2);
+      if (
+        (unsaturation.onlyInteger && isOdd === 1) ||
+        (unsaturation.onlyNonInteger && isOdd === 0) ||
+        fakeMinUnsaturation > unsaturationValue ||
+        fakeMaxUnsaturation < unsaturationValue
+      ) {
+        isValid = false;
+      }
+    }
+
+    let mw = 0;
+    for (const possibility of possibilities) {
+      mw += possibility.mass * possibility.currentCount;
+    }
+
+    if (mw < minMW || mw > maxMW) continue;
+
+    let totalError = 0;
+    for (const possibility of possibilities) {
+      let ratio = (possibility.mass * possibility.currentCount) / mw;
+      let error = Math.abs(possibility.targetEA - ratio);
+      if (error > maxElementError) {
+        continue mfWhile;
+      }
+      totalError += error;
+      possibility.currentValue = ratio;
+    }
+    if (isNaN(totalError) || totalError > maxTotalError) continue;
+    result.mfs.push(getResult(possibilities, totalError, orderMapping));
+    result.info.numberResults++;
+  }
+
+  //result.mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
+  return result;
+};
+
+function getResult(possibilities, totalError, orderMapping) {
+  const result = { mf: '', totalError };
+  // we check that the first time we meet the ionization group it does not end
+  // in the final result
+
+  for (let i = 0; i < possibilities.length; i++) {
+    let possibility = possibilities[orderMapping[i]];
+    if (possibility.currentCount !== 0) {
+      if (possibility.isGroup) {
+        result.mf += `(${possibility.mf})`;
+        if (possibility.currentCount !== 1) {
+          result.mf += possibility.currentCount;
+        }
+      } else {
+        result.mf += possibility.mf;
+        if (possibility.currentCount !== 1) {
+          result.mf += possibility.currentCount;
+        }
+      }
+    }
+
+    result.ea = possibilities.map((current) => ({
+      mf: current.mf,
+      value: current.currentValue,
+      expected: current.targetEA,
+      error: Math.abs(current.targetEA - current.currentValue),
+    }));
+  }
+  return result;
+}
+
+function getOrderMapping(possibilities) {
+  let mapping = possibilities.map((p, i) => ({ atom: p.mf, index: i }));
+  mapping.sort((a, b) => {
+    return atomSorter(a.atom, b.atom);
+  });
+  return mapping.map((a) => a.index);
+}

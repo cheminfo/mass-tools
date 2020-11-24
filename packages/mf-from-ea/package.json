@@ -1,0 +1,26 @@
+{
+  "name": "mf-from-ea",
+  "version": "1.1.6",
+  "description": "Find a molecular formula from a monoisotopic mass",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo/mass-tools.git"
+  },
+  "keywords": [],
+  "author": "Luc Patiny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo/mass-tools/issues"
+  },
+  "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/mf-from-ea#readme",
+  "dependencies": {
+    "atom-sorter": "^1.1.5",
+    "chemical-elements": "^1.1.5",
+    "mf-parser": "^1.1.6",
+    "mf-utilities": "^1.2.0"
+  }
+}
