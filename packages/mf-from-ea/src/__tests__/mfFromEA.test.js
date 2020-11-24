@@ -19,9 +19,9 @@ describe('test mf-from-ea', () => {
         maxTotalError: 10,
       },
     );
-    expect(result.mfs).toHaveLength(5);
 
-    expect(result.mfs[0]).toMatchCloseTo({
+    expect(result.mfs).toHaveLength(5);
+    expect(result.mfs[2]).toMatchCloseTo({
       mf: 'C',
       totalError: 0.4,
       ea: [
@@ -41,8 +41,7 @@ describe('test mf-from-ea', () => {
       },
     );
     expect(result.mfs).toHaveLength(5);
-
-    expect(result.mfs[0]).toMatchCloseTo({
+    expect(result.mfs[2]).toMatchCloseTo({
       mf: 'C',
       totalError: 0.4,
       ea: [
