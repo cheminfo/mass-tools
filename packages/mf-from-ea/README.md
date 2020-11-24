@@ -9,6 +9,8 @@ Find a molecular formula from the result of an element analysis.
 
 `$ npm install --save mf-from-ea`
 
+## Usage
+
 ```js
 
 let result = mfFromEA(
@@ -34,15 +36,6 @@ console.log(result);
   info: { numberMFEvaluated: 231, numberResults: 6 }
 }
 */
-```
-
-## Usage
-
-```js
-import library from 'mf-from-ea';
-
-const result = library(args);
-// result is ...
 ```
 
 ## License
