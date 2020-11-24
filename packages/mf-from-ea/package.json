@@ -1,6 +1,6 @@
 {
   "name": "mf-from-ea",
-  "version": "1.1.6",
+  "version": "0.0.1",
   "description": "Find a molecular formula from a monoisotopic mass",
   "main": "src/index.js",
   "files": [

@@ -31,6 +31,27 @@ describe('test mf-from-ea', () => {
     });
   });
 
+  it('basic case with mf', () => {
+    let result = mfFromEA(
+      { C: 0.8, H: 0.2 },
+      {
+        ranges: 'C0-1 H0-2',
+        maxElementError: 1,
+        maxTotalError: 10,
+      },
+    );
+    expect(result.mfs).toHaveLength(5);
+
+    expect(result.mfs[0]).toMatchCloseTo({
+      mf: 'C',
+      totalError: 0.4,
+      ea: [
+        { mf: 'H', value: 0, expected: 0.2, error: 0.2 },
+        { mf: 'C', value: 1, expected: 0.8, error: 0.2 },
+      ],
+    });
+  });
+
   it('filter mw', () => {
     let result = mfFromEA(
       { C: 0.8, H: 0.2 },
