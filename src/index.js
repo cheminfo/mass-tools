@@ -14,4 +14,5 @@ module.exports = {
   generateMFs: require('../packages/mf-generator'),
   Report: require('../packages/ms-report'),
   atomSorter: require('../packages/atom-sorter'),
+  mfFromEA: require('../packages/mf-from-ea'),
 };
