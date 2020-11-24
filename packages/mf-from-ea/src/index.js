@@ -79,8 +79,9 @@ module.exports = function mfFromEA(targetEA, options = {}) {
         currentAtom.maxRatio = currentAtom.aw / currentAtom.mw;
         // we should check if we can reach the target
         if (
+          currentAtom.targetEA &&
           currentAtom.aw / currentAtom.mw - currentAtom.targetEA <
-          -maxElementError
+            -maxElementError
         ) {
           // we already don't have enough quantity of this element and it can only become worse
           continue;
@@ -130,11 +131,14 @@ module.exports = function mfFromEA(targetEA, options = {}) {
     for (let i = 0; i < possibilities.length; i++) {
       const possibility = possibilities[i];
       let ratio = (possibility.mass * possibility.currentCount) / mw;
-      let error = Math.abs(possibility.targetEA - ratio);
-      if (error > maxElementError) {
-        continue mfWhile;
+      if (possibility.targetEA !== undefined) {
+        let error = Math.abs(possibility.targetEA - ratio);
+        if (error > maxElementError) {
+          continue mfWhile;
+        }
+        totalError += error;
       }
-      totalError += error;
+
       possibility.currentValue = ratio;
     }
     if (isNaN(totalError) || totalError > maxTotalError) continue;
@@ -170,7 +174,10 @@ function getResult(possibilities, totalError, orderMapping) {
       mf: current.mf,
       value: current.currentValue,
       expected: current.targetEA,
-      error: Math.abs(current.targetEA - current.currentValue),
+      error:
+        current.targetEA === undefined
+          ? undefined
+          : Math.abs(current.targetEA - current.currentValue),
     }));
   }
   return result;

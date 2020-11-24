@@ -86,7 +86,7 @@ module.exports = function preprocessRanges(ranges, targetEA) {
       mf: range.mf,
       minCount: min, // value defined by the user
       maxCount: max, // value defined by the user
-      targetEA: targetEA[range.mf] === undefined ? 0 : targetEA[range.mf],
+      targetEA: targetEA[range.mf],
       mw: 0, // mw till this level
       aw: 0, // atomic weight (mass * currentCount)
       maxRatio: 0, // maximum ratio possible if all next elements are 0

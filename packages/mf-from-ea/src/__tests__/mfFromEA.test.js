@@ -31,6 +31,22 @@ describe('test mf-from-ea', () => {
     });
   });
 
+  it('real case with sum not 100%', () => {
+    let result = mfFromEA(
+      { C: 0.8, H: 0.1 },
+      {
+        ranges: [
+          { mf: 'C', min: 0, max: 100 },
+          { mf: 'H', min: 0, max: 200 },
+          { mf: 'O', min: 0, max: 100 },
+        ],
+        maxElementError: 0.001,
+        maxTotalError: 0.002,
+      },
+    );
+    expect(result.mfs).toHaveLength(23);
+  });
+
   it('check optimization', () => {
     let result = mfFromEA(
       { C: 0.923, H: 0.077 },
