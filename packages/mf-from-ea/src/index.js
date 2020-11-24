@@ -8,6 +8,7 @@ const preprocessEARanges = require('./preprocessEARanges');
  * Returns possible combinations
  * @param {object} [targetEA]
  * @param {object} [options={}]
+ * @param {string} [options.ranges='C0-100 H0-100 O0-100 N0-100'] - range of mfs to search
  * @param {number} [options.maxElementError=0.003]
  * @param {number} [options.maxTotalError=0.01]
  * @param {number} [options.minMW=0] minimal molecular weight
