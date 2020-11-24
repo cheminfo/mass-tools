@@ -17,6 +17,7 @@ The library contains the following tools:
 - generateMFs: Generate all possible molecular formula
 - Report: Generate fragmentation reports
 - atomSorter: Sort symbol of atoms
+- mfFromEA: Determine molecular formula from elemental analysis
 
 This package should not be installed as we provide many specific packages with the different tools.
 
