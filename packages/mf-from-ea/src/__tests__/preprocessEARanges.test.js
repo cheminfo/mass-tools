@@ -21,7 +21,8 @@ describe('preprocessEARanges', () => {
     );
     expect(Array.isArray(possibilities)).toBe(true);
     expect(possibilities).toHaveLength(5);
-    expect(possibilities[1]).toMatchCloseTo(
+
+    expect(possibilities[3]).toMatchCloseTo(
       {
         mf: 'Me',
         minCount: 0,
@@ -44,7 +45,7 @@ describe('preprocessEARanges', () => {
     });
     expect(Array.isArray(possibilities)).toBe(true);
     expect(possibilities).toHaveLength(3);
-    expect(possibilities[0]).toMatchCloseTo(
+    expect(possibilities[2]).toMatchCloseTo(
       {
         mf: 'Cl',
         minCount: 0,
