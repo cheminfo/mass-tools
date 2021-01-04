@@ -24,12 +24,12 @@ const xFindClosestIndex = require('ml-spectra-processing').xFindClosestIndex;
  * @param {number}         [options.unsaturation.onlyInteger=false] - Integer unsaturation
  * @param {number}         [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {object}         [options.atoms] - object of atom:{min, max}
+ * @param {Function}       [options.callback] - a function that contains information about the current MF
  * @return {boolean}
  */
 
 /**
  * We always recalculate msem
- *
  */
 
 module.exports = function msemMatcher(entry, options = {}) {
@@ -48,6 +48,7 @@ module.exports = function msemMatcher(entry, options = {}) {
     minMSEM = -Infinity,
     maxMSEM = +Infinity,
     atoms,
+    callback,
   } = options;
 
   let msInfo = getMsInfo(entry, {
@@ -98,6 +99,10 @@ module.exports = function msemMatcher(entry, options = {}) {
     }
     // need to find the closest targetMasses
     if (Math.abs(msInfo.ms.ppm) > precision) return false;
+  }
+
+  if (callback) {
+    if (!callback(entry)) return false;
   }
 
   return msInfo;

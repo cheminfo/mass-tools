@@ -53,6 +53,16 @@ describe('test msemMatcher', () => {
         ppm: 4.571520140909056,
       },
     });
+    expect(
+      matcher(entry, {
+        callback: (item) => item.atoms.C > 15,
+      }),
+    ).toBe(false);
+    expect(
+      matcher(entry, {
+        callback: (item) => item.atoms.C > 5,
+      }),
+    ).toBeInstanceOf(Object);
   });
 
   it('forced ionization', () => {
