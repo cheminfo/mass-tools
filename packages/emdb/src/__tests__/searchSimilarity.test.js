@@ -28,6 +28,34 @@ describe('test searchSimilarity', () => {
     expect(results.test[1].ms.similarity.value).toBeCloseTo(0.886, 3);
   });
 
+  it('should find one result with callback', () => {
+    let dbManager = new DBManager();
+    dbManager.loadNeutralTest({ maxC: 10 });
+    dbManager.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
+    let results = dbManager.searchSimilarity({
+      ionizations: 'H+,(H+)2,(H+)3', // useless because the test database has already ionizations
+      filter: {
+        callback: (entry) => entry.atoms.C === 10,
+      },
+    });
+
+    expect(results.test).toHaveLength(2);
+  });
+
+  it('should find one result with wrong callback', () => {
+    let dbManager = new DBManager();
+    dbManager.loadNeutralTest({ maxC: 10 });
+    dbManager.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
+    let results = dbManager.searchSimilarity({
+      ionizations: 'H+,(H+)2,(H+)3', // useless because the test database has already ionizations
+      filter: {
+        callback: (entry) => entry.atoms.C === 9,
+      },
+    });
+
+    expect(results.test).toHaveLength(0);
+  });
+
   it('should find one result with perfect match (small zone)', () => {
     let dbManager = new DBManager();
     dbManager.loadTest();

@@ -22,7 +22,7 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @param {number}   [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
 * @param {number}   [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
 * @param {object}   [options.filter.atoms] - object of atom:{min, max}
-
+* @param {object}   [options.filter.callback] - a function to filter the MF
 * @param {object}   [options.similarity={}]
 * @param {object}   [options.similarity.widthBottom]
 * @param {object}   [options.similarity.widthTop]
