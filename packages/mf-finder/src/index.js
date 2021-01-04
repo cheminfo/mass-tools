@@ -7,6 +7,8 @@ const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 const TargetMassCache = require('./TargetMassCache');
 const preprocessRanges = require('./preprocessRanges');
 
+let targetMassCache;
+
 /**
  * Returns possible combinations
  * {number} [targetMass]
@@ -14,8 +16,6 @@ const preprocessRanges = require('./preprocessRanges');
  * {string} [options.ionizations=''] - comma separated list of ionizations
  * @return {}
  */
-
-let targetMassCache;
 
 module.exports = function (targetMass, options = {}) {
   const {

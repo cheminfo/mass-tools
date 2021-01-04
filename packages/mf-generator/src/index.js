@@ -32,7 +32,7 @@ const sum = require('sum-object-keys');
  * @param {number}        [options.filter.maxUnsaturation=+Infinity] - Maximal unsaturation
  * @param {number}        [options.filter.onlyIntegerUnsaturation=false] - Integer unsaturation
  * @param {number}        [options.filter.onlyNonIntegerUnsaturation=false] - Non integer unsaturation
- * @param {Function}      [options.filterFct] - Non integer unsaturation
+ * @param {Function}      [options.filterFct]
  * @param {object}        [options.filter.atoms] - object of atom:{min, max}
  * @returns {Array}
  */
@@ -213,7 +213,7 @@ function appendResult(results, currents, keys, options = {}) {
       variables.push(
         result.em,
         (result.em + ionization.em - ionization.charge * ELECTRON_MASS) /
-          Math.abs(ionization.charge),
+        Math.abs(ionization.charge),
         result.charge + result.ionization.charge,
         result.unsaturation,
         result.atoms,
