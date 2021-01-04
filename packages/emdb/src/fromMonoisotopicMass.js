@@ -16,8 +16,6 @@ const findMFs = require('mf-finder');
  * @param {number} [options.minCharge=-Infinity] - Minimal charge
  * @param {number} [options.maxCharge=+Infinity] - Maximal charge
  * @param {number} [options.precision=100] - Allowed mass range based on precision
- *
- *
  * @param {number} [options.unsaturation={}]
  * @param {number} [options.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number} [options.unsaturation.max=+Infinity] - Maximal unsaturation
