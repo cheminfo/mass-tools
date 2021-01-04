@@ -12,7 +12,7 @@
     "eslint-fix": "npm run eslint -- --fix",
     "prepare": "lerna bootstrap --no-ci",
     "publish": "git pull --rebase && npm run test && npm publish",
-    "publish-all": "git pull --rebase && npm run test && npm publish && lerna publish -y",
+    "publish-all": "git pull --rebase && npm run test && lerna publish -y",
     "test": "jest && npm run eslint",
     "test-coverage": "jest --coverage",
     "upgrade": "find packages -type f -name 'package.json' -maxdepth 2 -execdir ncu --upgrade \\;"
