@@ -213,7 +213,7 @@ function appendResult(results, currents, keys, options = {}) {
       variables.push(
         result.em,
         (result.em + ionization.em - ionization.charge * ELECTRON_MASS) /
-        Math.abs(ionization.charge),
+          Math.abs(ionization.charge),
         result.charge + result.ionization.charge,
         result.unsaturation,
         result.atoms,
