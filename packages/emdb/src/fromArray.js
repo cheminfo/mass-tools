@@ -28,8 +28,8 @@ const combineMFs = require('mf-generator');
  * @param {number} [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
  * @param {number} [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {object} [options.filter.atoms] - object of atom:{min, max}
- *
- * @param {Function}  [options.filterFct] - Non integer unsaturation
+ * @param {function} [options.filter.callback] - a function to filter the MF
+ * @param {string}  [options.filterFct] - A string representing a function
  *
  * @example
  *
