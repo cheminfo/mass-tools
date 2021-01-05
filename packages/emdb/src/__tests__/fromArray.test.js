@@ -30,7 +30,7 @@ describe('fromArray', () => {
     ]);
   });
 
-  it.only('with callback filter', () => {
+  it('with callback filter', () => {
     let dbManager = new DBManager();
     dbManager.fromArray(['C0-100', 'H0-100'], {
       filter: {
