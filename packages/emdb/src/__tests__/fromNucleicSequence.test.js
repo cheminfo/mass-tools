@@ -88,6 +88,27 @@ describe('fromNucleicSequence', () => {
     });
   });
 
+  it('TACGTGCCAATAC callback', () => {
+    let dbManager = new DBManager();
+    dbManager.fromNucleicSequence('TACGTGCCAATAC', {
+      ionizations: '(H+)-5',
+      fragmentation: {
+        abw: true,
+      },
+      info: {
+        kind: 'dna',
+      },
+      filter: { callback: (entry) => entry.unsaturation % 2 === 0 },
+    });
+
+    let nucleic = dbManager.databases.nucleic.sort((a, b) => {
+      if (a.ms.em !== b.ms.em) return a.ms.em - b.ms.em;
+      if (a.ms.comment < b.ms.comment) return 1;
+      return -1;
+    });
+    expect(nucleic).toHaveLength(30);
+  });
+
   it('AGGCAG fragment', () => {
     let dbManager = new DBManager();
     dbManager.fromNucleicSequence('AGGCAG', {

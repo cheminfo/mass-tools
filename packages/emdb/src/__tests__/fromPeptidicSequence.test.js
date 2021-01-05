@@ -56,7 +56,7 @@ describe('fromPeptidicSequence', () => {
     expect(peptidic).toMatchSnapshot();
   });
 
-  it.only('AAKKKKKKKKKKKKKKKKKK filter callback', () => {
+  it('AAKKKKKKKKKKKKKKKKKK filter callback', () => {
     let dbManager = new DBManager();
     dbManager.fromPeptidicSequence('AAKKKKKKKKKKKKKKKKKK', {
       ionizations: 'H+,Na+',
