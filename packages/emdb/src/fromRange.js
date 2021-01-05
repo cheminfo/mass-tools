@@ -27,7 +27,9 @@ const combineMFs = require('mf-generator');
  * @param {number} [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
  * @param {number} [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
  * @param {number} [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ * @param {function} [options.filter.callback] - a function to filter the MF
  * @param {object} [options.filter.atoms] - object of atom:{min, max}
+ *
  *
  * @returns {array} - list of possible molecular formula
  *
@@ -39,7 +41,7 @@ const combineMFs = require('mf-generator');
  * console.log(emdb.get('generated').length); // 80
  */
 
-module.exports = function fromArray(rangesString, options = {}) {
+module.exports = function fromRange(rangesString, options = {}) {
   let ranges = rangesString.split(/ *[;\r\n] */);
   for (let i = 0; i < ranges.length; i++) {
     let range = ranges[i];
