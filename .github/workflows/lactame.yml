@@ -20,5 +20,5 @@ jobs:
         uses: zakodium/lactame-action@v1
         with:
           token: ${{ secrets.LACTAME_TOKEN }}
-          name: 'molecular-formula'
+          name: 'mass-tools'
           folder: dist
