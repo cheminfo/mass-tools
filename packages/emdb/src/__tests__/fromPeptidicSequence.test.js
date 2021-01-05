@@ -56,6 +56,21 @@ describe('fromPeptidicSequence', () => {
     expect(peptidic).toMatchSnapshot();
   });
 
+  it.only('AAKKKKKKKKKKKKKKKKKK filter callback', () => {
+    let dbManager = new DBManager();
+    dbManager.fromPeptidicSequence('AAKKKKKKKKKKKKKKKKKK', {
+      ionizations: 'H+,Na+',
+      fragmentation: {
+        a: true,
+      },
+      filter: {
+        callback: (entry) => entry.atoms.C * 2 === entry.atoms.H,
+      },
+    });
+
+    expect(dbManager.databases.peptidic).toHaveLength(2);
+  });
+
   it('AAKKKKKK allowNeutralLoss limit: 1000', () => {
     let dbManager = new DBManager();
     expect(() => {

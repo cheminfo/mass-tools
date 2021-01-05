@@ -54,6 +54,7 @@ const peptide = require('peptide');
  * @param {number}         [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
  * @param {number}         [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
  * @param {number}         [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ * @param {function}       [options.filter.callback] - a function to filter the MF
  */
 
 module.exports = function fromPeptidicSequence(sequence, options = {}) {
