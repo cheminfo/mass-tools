@@ -114,6 +114,19 @@ describe('generateMFs', () => {
     expect(result).toHaveLength(151);
   });
 
+  it('Filter callback', function () {
+    let mfsArray = ['C0-4', 'H0-4'];
+    let result = generateMFs(mfsArray, {
+      filter: {
+        callback: (entry) => {
+          if (entry.atoms.C - entry.atoms.H === 0) return true;
+          return false;
+        },
+      },
+    });
+    expect(result).toHaveLength(4);
+  });
+
   it('From array of string to large array and filter unsaturation min/max and integer unsaturation', function () {
     let mfsArray = ['C0-100', 'H0-100'];
     let result = generateMFs(mfsArray, {

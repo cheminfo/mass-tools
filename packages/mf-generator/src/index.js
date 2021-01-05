@@ -32,13 +32,14 @@ const sum = require('sum-object-keys');
  * @param {number}        [options.filter.maxUnsaturation=+Infinity] - Maximal unsaturation
  * @param {number}        [options.filter.onlyIntegerUnsaturation=false] - Integer unsaturation
  * @param {number}        [options.filter.onlyNonIntegerUnsaturation=false] - Non integer unsaturation
- * @param {Function}      [options.filterFct]
  * @param {object}        [options.filter.atoms] - object of atom:{min, max}
+ * @param {function}      [options.filter.callback] - a function to filter the MF
+ * @param {string}        [options.filterFct]
  * @returns {Array}
  */
 
 module.exports = function generateMFs(keys, options = {}) {
-  options = JSON.parse(JSON.stringify(options));
+  options = { ...options };
 
   let { limit = 100000, uniqueMFs = true, estimate = false } = options;
 
