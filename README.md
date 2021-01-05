@@ -2,6 +2,10 @@
 
 Various tools allowing to manipulate molecular formula and analyse mass spectra.
 
+The library is published as a full package on npm as `mass-tools`.
+
+It is also published for the browser on the CDN https://www.lactame.com.
+
 The library contains the following tools:
 
 - EMDB: database of molecular formula
