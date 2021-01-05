@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.57.1](https://www.github.com/cheminfo/mass-tools/compare/v0.57.0...v0.57.1) (2021-01-05)
+
+
+### Bug Fixes
+
+* fix folder name on lactame ([79df00d](https://www.github.com/cheminfo/mass-tools/commit/79df00de3120cc274a3d99bc51f368e56286797c))
+
 ## [0.57.0](https://www.github.com/cheminfo/mass-tools/compare/v0.56.1...v0.57.0) (2021-01-05)
 
 
