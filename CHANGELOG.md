@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.58.1](https://www.github.com/cheminfo/mass-tools/compare/v0.58.0...v0.58.1) (2021-01-06)
+
+
+### Bug Fixes
+
+* **mf-finder:** wrong calculation of atoms ([c750a76](https://www.github.com/cheminfo/mass-tools/commit/c750a76fa9a34bd1fd09f0b161a30476d51cb828))
+
 ## [0.58.0](https://www.github.com/cheminfo/mass-tools/compare/v0.57.0...v0.58.0) (2021-01-06)
 
 
