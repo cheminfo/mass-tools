@@ -13,10 +13,7 @@ describe('fromRange', () => {
     let dbManager = new DBManager();
     dbManager.fromRange('C0-4 H0-4', {
       filter: {
-        callback: (entry) => {
-          if (entry.atoms.C - entry.atoms.H === 0) return true;
-          return false;
-        },
+        callback: (entry) => entry.atoms.C - entry.atoms.H === 0,
       },
     });
     expect(dbManager.databases.generated).toHaveLength(4);
