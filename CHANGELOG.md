@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.58.2](https://www.github.com/cheminfo/mass-tools/compare/v0.58.1...v0.58.2) (2021-01-06)
+
+
+### Bug Fixes
+
+* **emdb:** search pubchem was not taking into account the mass of electron ([8d09531](https://www.github.com/cheminfo/mass-tools/commit/8d0953143fdb5740b5d7b3b23fee41e60e043e69))
+
 ### [0.58.1](https://www.github.com/cheminfo/mass-tools/compare/v0.58.0...v0.58.1) (2021-01-06)
 
 
