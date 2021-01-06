@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`searchPubchem 1`] = `
+exports[`searchPubchem simple case 1`] = `
 Array [
   Object {
     "atoms": Object {
@@ -59,63 +59,6 @@ Array [
       "ppm": 3.958021817087773,
     },
     "unsaturation": 2,
-  },
-  Object {
-    "atoms": Object {
-      "C": 3,
-      "Ge": 1,
-      "H": 8,
-    },
-    "charge": 0,
-    "em": 117.98377801884,
-    "info": Object {
-      "nbPubchemEntries": 7,
-    },
-    "ionization": Object {
-      "charge": 2,
-      "em": 2.01565006446,
-      "mf": "(H+)2",
-    },
-    "mass": 116.72328388733877,
-    "mf": "C3H8Ge",
-    "monoisotopicMass": 117.98377801884,
-    "ms": Object {
-      "charge": 2,
-      "delta": 0.0008345382590704276,
-      "em": 59.99916546174093,
-      "ionization": "(H+)2",
-      "ppm": 13.909164446671834,
-    },
-  },
-  Object {
-    "atoms": Object {
-      "C": 2,
-      "H": 2,
-      "N": 2,
-      "O": 2,
-      "S": 1,
-    },
-    "charge": 0,
-    "em": 117.98369848686,
-    "info": Object {
-      "nbPubchemEntries": 27,
-    },
-    "ionization": Object {
-      "charge": 2,
-      "em": 2.01565006446,
-      "mf": "(H+)2",
-    },
-    "mass": 118.11435697923727,
-    "mf": "C2H2N2O2S",
-    "monoisotopicMass": 117.98369848686,
-    "ms": Object {
-      "charge": 2,
-      "delta": 0.0008743042490664266,
-      "em": 59.999125695750934,
-      "ionization": "(H+)2",
-      "ppm": 14.5719498230679,
-    },
-    "unsaturation": 3,
   },
 ]
 `;

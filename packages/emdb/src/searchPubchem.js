@@ -1,5 +1,6 @@
 'use strict';
 
+const { ELECTRON_MASS } = require('chemical-elements/src/constants');
 const mfParser = require('mf-parser');
 const getMsInfo = require('mf-utilities/src/getMsInfo');
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
@@ -32,7 +33,7 @@ module.exports = async function searchPubchem(mass, options = {}) {
   let promises = [];
   let ionizations = preprocessIonizations(options.ionizations);
   for (let ionization of ionizations) {
-    let realMass = mass * ionization.charge - ionization.em;
+    let realMass = mass * ionization.charge - ionization.em + ELECTRON_MASS * ionization.charge;
     promises.push(
       fetch(
         `${url}?em=${realMass}&precision=${precision}&limit=${limit}&minPubchemEntries=${minPubchemEntries}`,
