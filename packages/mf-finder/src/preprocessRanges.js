@@ -111,7 +111,10 @@ module.exports = function preprocessRanges(ranges) {
       range.unsaturation === undefined
         ? (info.unsaturation - 1) * 2
         : range.unsaturation;
-    if (possibility.mf !== info.mf) possibility.isGroup = true;
+    possibility.atoms = info.atoms;
+    if (possibility.mf !== info.mf) {
+      possibility.isGroup = true;
+    }
   }
   possibilities = possibilities.filter(
     (r) => r.originalMinCount !== 0 || r.originalMaxCount !== 0,
