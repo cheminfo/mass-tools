@@ -1,14 +1,23 @@
 'use strict';
 
-let Benchmark = require('benchmark');
-
 let mfFinder = require('../packages/mf-finder/src/index');
+
+let ccFinder = require('chemcalc').mfFromMonoisotopicMass;
+let Benchmark = require('benchmark');
 
 let suite = new Benchmark.Suite();
 
 let targetMass = 1200;
 let precision = 1;
-
+function chemcalc() {
+    let resultCC = ccFinder(targetMass, {
+        mfRange: 'C0-100 H0-100 N0-100 O0-100 S0-100 Cl0-100',
+        massRange: (targetMass * precision) / 1e6,
+        maxNumberRows: 1000000,
+    });
+    return resultCC.results.length;
+}
+let nbCC = chemcalc();
 function mf() {
     let resultMF = mfFinder(targetMass, {
         ranges: [
@@ -20,7 +29,6 @@ function mf() {
             { mf: 'Cl', min: 0, max: 100 },
         ],
         precision,
-        limit: 10000,
         allowNeutral: true,
     });
     return resultMF.mfs.length;
@@ -28,10 +36,12 @@ function mf() {
 let nbMF = mf();
 // add tests
 
+console.log('Number found using chemcalc', nbCC);
 console.log('Number found using MF', nbMF);
 
 suite
-    .add('mf finder from monoisotopic mass', mf)
+    .add('chemcalc find mf from monoisotopic mass', chemcalc)
+    .add('new chemcalc mf finder from monoisotopic mass', mf)
 
     // add listeners
     .on('cycle', function (event) {
