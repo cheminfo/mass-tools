@@ -12,7 +12,6 @@ describe('searchPubchem', () => {
     expect(data).toMatchSnapshot();
   });
 
-
   it('highly precise', async () => {
     let data = await searchPubchem(81.06987671016094, {
       ionizations: 'H+',
@@ -20,6 +19,4 @@ describe('searchPubchem', () => {
     });
     expect(data).toHaveLength(1);
   });
-
 });
-

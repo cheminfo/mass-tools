@@ -33,7 +33,10 @@ module.exports = async function searchPubchem(mass, options = {}) {
   let promises = [];
   let ionizations = preprocessIonizations(options.ionizations);
   for (let ionization of ionizations) {
-    let realMass = mass * ionization.charge - ionization.em + ELECTRON_MASS * ionization.charge;
+    let realMass =
+      mass * ionization.charge -
+      ionization.em +
+      ELECTRON_MASS * ionization.charge;
     promises.push(
       fetch(
         `${url}?em=${realMass}&precision=${precision}&limit=${limit}&minPubchemEntries=${minPubchemEntries}`,

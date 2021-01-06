@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/emdb#readme",
   "dependencies": {
+    "chemical-elements": "^1.1.5",
     "chemical-groups": "^1.1.0",
     "isotopic-distribution": "^1.1.9",
     "jszip": "^3.5.0",
