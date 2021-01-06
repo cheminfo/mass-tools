@@ -43,6 +43,18 @@ describe('test mf-finder', () => {
     expect(result.mfs).toHaveLength(2);
   });
 
+  it.only('basic case with limit', () => {
+    let result = findMFs(24, {
+      ranges: [{ mf: 'C', min: 1, max: 2 }],
+      precision: 1e6,
+      allowNeutral: true,
+      ionizations: ',H+',
+      limit: 1,
+    });
+    expect(result.mfs).toHaveLength(1);
+    expect(result.mfs[0].ms.ppm).toBe(0);
+  });
+
   it('basic case with double charge and extreme error', () => {
     let result = findMFs(24, {
       ranges: [{ mf: 'C', min: 1, max: 2 }],
@@ -278,8 +290,6 @@ describe('test mf-finder', () => {
       precision: 1e5,
     });
     expect(result.mfs).toHaveLength(2);
-
-    //      expect(result.mfs).toHaveLength(0);
   });
 
   it('check when all are charged', () => {

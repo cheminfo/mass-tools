@@ -10,11 +10,35 @@ const preprocessRanges = require('./preprocessRanges');
 let targetMassCache;
 
 /**
- * Returns possible combinations
- * {number} [targetMass]
- * {object} [options={}]
- * {string} [options.ionizations=''] - comma separated list of ionizations
- * @return {}
+ * @param {number} mass - Monoisotopic mass
+ * @param {object} [options={}]
+ * @param {number} [options.maxIterations=10000000] - Maximum number of iterations
+ * @param {number} [options.limit=1000] - Maximum number of results
+ * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
+ * @param {string} [options.ranges='C0-100 H0-100 O0-100 N0-100'] - range of mfs to search
+ * @param {number} [options.minCharge=-Infinity] - Minimal charge
+ * @param {number} [options.maxCharge=+Infinity] - Maximal charge
+ * @param {number} [options.precision=100] - Allowed mass range based on precision
+ * @param {number} [options.unsaturation={}]
+ * @param {number} [options.unsaturation.min=-Infinity] - Minimal unsaturation
+ * @param {number} [options.unsaturation.max=+Infinity] - Maximal unsaturation
+ * @param {number} [options.unsaturation.onlyInteger=false] - Integer unsaturation
+ * @param {number} [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ *
+ * @param {number}        [options.filter.minEM=0] - Minimal neutral monoisotopic mass
+ * @param {number}        [options.filter.maxEM=+Infinity] - Maximal neutral monoisotopic mass
+ * @param {number}        [options.filter.precision=1000] - The precision on the experimental mass
+ * @param {number}        [options.filter.targetMass] - Target mass, allows to calculate error and filter results
+ * @param {Array<number>} [options.filter.targetMasses] - Target masses: SORTED array of numbers
+ * @param {number}        [options.filter.precision=1000] - Precision
+ * @param {number}        [options.filter.minCharge=-Infinity] - Minimal charge
+ * @param {number}        [options.filter.maxCharge=+Infinity] - Maximal charge
+ * @param {number}        [options.filter.minUnsaturation=-Infinity] - Minimal unsaturation
+ * @param {number}        [options.filter.maxUnsaturation=+Infinity] - Maximal unsaturation
+ * @param {number}        [options.filter.onlyIntegerUnsaturation=false] - Integer unsaturation
+ * @param {number}        [options.filter.onlyNonIntegerUnsaturation=false] - Non integer unsaturation
+ * @param {object}        [options.filter.atoms] - object of atom:{min, max}
+ * @param {function}      [options.filter.callback] - a function to filter the MF
  */
 
 module.exports = function (targetMass, options = {}) {
@@ -23,6 +47,7 @@ module.exports = function (targetMass, options = {}) {
     maxCharge = Number.MAX_SAFE_INTEGER,
     unsaturation = {},
     maxIterations = 1e8,
+    limit = 1000,
     allowNeutral = true, // if there is no msem we use em !
     ranges = [
       { mf: 'C', min: 0, max: 100 },
@@ -135,7 +160,10 @@ module.exports = function (targetMass, options = {}) {
             orderMapping,
           ),
         );
-        result.info.numberResults++;
+        if (result.mfs.length > 2 * limit) {
+          result.mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
+          result.mfs.length = limit;
+        }
       }
 
       isValid = true;
@@ -170,6 +198,9 @@ module.exports = function (targetMass, options = {}) {
   }
 
   result.mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
+  if (result.mfs.length > limit) {
+    result.mfs.length = limit;
+  }
   return result;
 };
 
@@ -242,7 +273,7 @@ function setCurrentMinMax(currentAtom, previousAtom) {
         (targetMassCache.getMinMass(currentCharge) -
           currentMass -
           currentAtom.maxInnerMass) /
-          currentAtom.em,
+        currentAtom.em,
       ),
       currentAtom.originalMinCount,
     );
@@ -251,7 +282,7 @@ function setCurrentMinMax(currentAtom, previousAtom) {
         (targetMassCache.getMaxMass(currentCharge) -
           currentMass -
           currentAtom.minInnerMass) /
-          currentAtom.em,
+        currentAtom.em,
       ),
       currentAtom.originalMaxCount,
     );
