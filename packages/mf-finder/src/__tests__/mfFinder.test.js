@@ -157,6 +157,17 @@ describe('test mf-finder', () => {
     expect(result.mfs[1].mf).toBe('C2H');
   });
 
+  it.only('groups and atoms', () => {
+    let result = findMFs(92.99814, {
+      ranges: '(CH2)0-1C0-1',
+      precision: 1e10,
+      allowNeutral: true,
+    });
+    console.log(result.mfs);
+    return;
+    expect(result.mfs).toHaveLength(1);
+    expect(result.mfs[0].mf).toBe('((CH2))2(NOCl)');
+  });
   it('simple combinations for polymers', () => {
     let result = findMFs(92.99814, {
       ranges: '(CH2)0-10NOCl',

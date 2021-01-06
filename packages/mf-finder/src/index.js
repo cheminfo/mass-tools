@@ -223,6 +223,8 @@ function getResult(
     mf: '',
     charge: lastPossibility.currentCharge - ionization.charge,
     ionization,
+    atoms: {},
+    groups: {},
   };
 
   // we check that the first time we meet the ionization group it does not end
@@ -236,10 +238,22 @@ function getResult(
         if (possibility.currentCount !== 1) {
           result.mf += possibility.currentCount;
         }
+        if (result.groups[possibility.mf]) {
+          result.groups[possibility.mf] += possibility.currentCount;
+        } else {
+          result.groups[possibility.mf] = possibility.currentCount;
+        }
       } else {
         result.mf += possibility.mf;
         if (possibility.currentCount !== 1) {
           result.mf += possibility.currentCount;
+        }
+      }
+      for (let atom in possibility.atoms) {
+        if (result.atoms[atom]) {
+          result.atoms[atom] += possibility.atoms[atom];
+        } else {
+          result.atoms[atom] = possibility.atoms[atom];
         }
       }
     }
