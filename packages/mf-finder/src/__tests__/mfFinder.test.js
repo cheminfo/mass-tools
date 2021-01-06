@@ -43,6 +43,21 @@ describe('test mf-finder', () => {
     expect(result.mfs).toHaveLength(2);
   });
 
+  it('basic case with advanced filtering (callback)', () => {
+    let result = findMFs(12, {
+      ranges: [
+        { mf: 'C', min: 1, max: 10 },
+        { mf: 'H', min: 1, max: 10 },
+      ],
+      precision: 1e6,
+      ionizations: 'H+',
+      filter: {
+        callback: (entry) => entry.atoms.H === entry.atoms.C,
+      },
+    });
+    expect(result.mfs).toHaveLength(10);
+  });
+
   it('basic case with limit', () => {
     let result = findMFs(24, {
       ranges: [{ mf: 'C', min: 1, max: 2 }],

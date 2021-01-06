@@ -1,5 +1,6 @@
 'use strict';
 
+const matcher = require('mf-matcher').msem;
 const atomSorter = require('atom-sorter');
 const getMsInfo = require('mf-utilities/src/getMsInfo');
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
@@ -17,7 +18,6 @@ let targetMassCache;
  * @param {string}        [options.ionizations=''] - string containing a comma separated list of modifications
  * @param {string}        [options.ranges='C0-100 H0-100 O0-100 N0-100'] - range of mfs to search
  * @param {number}        [options.precision=100] - Allowed mass range based on precision
-
  * @param {number}        [options.filter.minCharge=-Infinity] - Minimal charge
  * @param {number}        [options.filter.maxCharge=+Infinity] - Maximal charge
  * @param {number}        [options.filter.unsaturation={}]
@@ -63,6 +63,14 @@ module.exports = function (targetMass, options = {}) {
   let filterCharge =
     minCharge !== Number.MIN_SAFE_INTEGER ||
     maxCharge !== Number.MAX_SAFE_INTEGER;
+
+  let advancedFilter;
+  if (filter.atoms || filter.callback) {
+    advancedFilter = {
+      atoms: filter.atoms,
+      callback: filter.callback,
+    };
+  }
 
   let result = {
     mfs: [],
@@ -142,20 +150,25 @@ module.exports = function (targetMass, options = {}) {
           isValid = false;
         }
       }
+
       if (isValid) {
         result.info.numberResults++;
-        result.mfs.push(
-          getResult(
-            possibilities,
-            targetMass,
-            allowNeutral,
-            ionization,
-            orderMapping,
-          ),
+        let newResult = getResult(
+          possibilities,
+          targetMass,
+          allowNeutral,
+          ionization,
+          orderMapping,
         );
-        if (result.mfs.length > 2 * limit) {
-          result.mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
-          result.mfs.length = limit;
+        if (advancedFilter) {
+          isValid = matcher(newResult, advancedFilter) !== false;
+        }
+        if (isValid) {
+          result.mfs.push(newResult);
+          if (result.mfs.length > 2 * limit) {
+            result.mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
+            result.mfs.length = limit;
+          }
         }
       }
 
