@@ -49,7 +49,7 @@ describe('test mf-finder', () => {
         { mf: 'C', min: 1, max: 10 },
         { mf: 'H', min: 1, max: 10 },
       ],
-      precision: 1e6,
+      precision: 1e8,
       ionizations: 'H+',
       filter: {
         callback: (entry) => entry.atoms.H === entry.atoms.C,

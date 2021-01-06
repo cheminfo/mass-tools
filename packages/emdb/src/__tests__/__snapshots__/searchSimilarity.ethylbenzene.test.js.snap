@@ -4,8 +4,8 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
 Array [
   Object {
     "atoms": Object {
-      "C": 1,
-      "H": 1,
+      "C": 8,
+      "H": 10,
     },
     "charge": 0,
     "database": "monoisotopic",
@@ -897,8 +897,8 @@ Array [
   Object {
     "atoms": Object {
       "C": 1,
-      "H": 1,
-      "N": 1,
+      "H": 14,
+      "N": 12,
       "O": 1,
     },
     "charge": 0,
@@ -1534,10 +1534,10 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 1,
-      "H": 1,
-      "N": 1,
-      "O": 1,
+      "C": 5,
+      "H": 18,
+      "N": 6,
+      "O": 3,
     },
     "charge": 0,
     "database": "monoisotopic",
@@ -2172,10 +2172,10 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 1,
-      "H": 1,
-      "N": 1,
-      "O": 1,
+      "C": 2,
+      "H": 21,
+      "N": 17,
+      "O": 2,
     },
     "charge": 0,
     "database": "monoisotopic",
@@ -2524,10 +2524,10 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 1,
-      "H": 1,
-      "N": 1,
-      "O": 1,
+      "C": 6,
+      "H": 25,
+      "N": 11,
+      "O": 4,
     },
     "charge": 0,
     "database": "monoisotopic",
@@ -2877,8 +2877,8 @@ Array [
   Object {
     "atoms": Object {
       "C": 1,
-      "H": 1,
-      "N": 1,
+      "H": 21,
+      "N": 19,
       "O": 1,
     },
     "charge": 0,
@@ -3228,10 +3228,10 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 1,
-      "H": 1,
-      "N": 1,
-      "O": 1,
+      "C": 11,
+      "H": 18,
+      "N": 2,
+      "O": 2,
     },
     "charge": 0,
     "database": "monoisotopic",
@@ -3866,9 +3866,9 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 1,
-      "H": 1,
-      "N": 1,
+      "C": 7,
+      "H": 21,
+      "N": 15,
     },
     "charge": 0,
     "database": "monoisotopic",
@@ -4217,10 +4217,10 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 1,
-      "H": 1,
-      "N": 1,
-      "O": 1,
+      "C": 11,
+      "H": 25,
+      "N": 9,
+      "O": 2,
     },
     "charge": 0,
     "database": "monoisotopic",
@@ -4569,8 +4569,8 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 1,
-      "H": 1,
+      "C": 16,
+      "H": 18,
     },
     "charge": 0,
     "database": "monoisotopic",
@@ -5205,10 +5205,10 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 1,
-      "H": 1,
-      "N": 1,
-      "O": 1,
+      "C": 15,
+      "H": 29,
+      "N": 3,
+      "O": 4,
     },
     "charge": 0,
     "database": "monoisotopic",
@@ -5557,10 +5557,10 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 1,
-      "H": 1,
+      "C": 16,
+      "H": 29,
       "N": 1,
-      "O": 1,
+      "O": 5,
     },
     "charge": 0,
     "database": "monoisotopic",
@@ -5909,9 +5909,9 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 1,
-      "H": 1,
-      "N": 1,
+      "C": 16,
+      "H": 25,
+      "N": 7,
     },
     "charge": 0,
     "database": "monoisotopic",
@@ -6260,9 +6260,9 @@ Array [
   },
   Object {
     "atoms": Object {
-      "C": 1,
-      "H": 1,
-      "N": 1,
+      "C": 17,
+      "H": 25,
+      "N": 5,
       "O": 1,
     },
     "charge": 0,

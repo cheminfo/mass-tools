@@ -264,9 +264,9 @@ function getResult(
       }
       for (let atom in possibility.atoms) {
         if (result.atoms[atom]) {
-          result.atoms[atom] += possibility.atoms[atom];
+          result.atoms[atom] += possibility.atoms[atom] * possibility.currentCount;
         } else {
-          result.atoms[atom] = possibility.atoms[atom];
+          result.atoms[atom] = possibility.atoms[atom] * possibility.currentCount;
         }
       }
     }
@@ -293,7 +293,7 @@ function setCurrentMinMax(currentAtom, previousAtom) {
         (targetMassCache.getMinMass(currentCharge) -
           currentMass -
           currentAtom.maxInnerMass) /
-          currentAtom.em,
+        currentAtom.em,
       ),
       currentAtom.originalMinCount,
     );
@@ -302,7 +302,7 @@ function setCurrentMinMax(currentAtom, previousAtom) {
         (targetMassCache.getMaxMass(currentCharge) -
           currentMass -
           currentAtom.minInnerMass) /
-          currentAtom.em,
+        currentAtom.em,
       ),
       currentAtom.originalMaxCount,
     );
