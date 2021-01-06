@@ -43,7 +43,7 @@ describe('test mf-finder', () => {
     expect(result.mfs).toHaveLength(2);
   });
 
-  it.only('basic case with limit', () => {
+  it('basic case with limit', () => {
     let result = findMFs(24, {
       ranges: [{ mf: 'C', min: 1, max: 2 }],
       precision: 1e6,
@@ -100,9 +100,11 @@ describe('test mf-finder', () => {
       ],
       precision: 1e5,
       allowNeutral: true,
-      unsaturation: {
-        min: 0,
-        max: 1,
+      filter: {
+        unsaturation: {
+          min: 0,
+          max: 1,
+        },
       },
     });
     expect(result.mfs).toHaveLength(2);
@@ -117,10 +119,12 @@ describe('test mf-finder', () => {
       ],
       precision: 1e5,
       allowNeutral: true,
-      unsaturation: {
-        min: 0,
-        max: 1,
-        onlyInteger: true,
+      filter: {
+        unsaturation: {
+          min: 0,
+          max: 1,
+          onlyInteger: true,
+        },
       },
     });
     expect(result.mfs).toHaveLength(1);
@@ -313,8 +317,10 @@ describe('test mf-finder', () => {
         { mf: 'S+', min: 0, max: 2 },
       ],
       precision: 1e5,
-      maxCharge: 1,
-      minCharge: 1,
+      filter: {
+        maxCharge: 1,
+        minCharge: 1,
+      },
     });
     expect(result.mfs).toHaveLength(1);
     expect(result.mfs[0].mf).toBe('(C+)');
