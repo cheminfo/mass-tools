@@ -24,13 +24,16 @@ test('fromMonoisotopicMass large database', () => {
   let dbManager = new DBManager();
   dbManager.fromMonoisotopicMass(1000, {
     ranges: 'C0-100 H0-100 N0-100 O0-100',
-    unsaturation: {
-      min: 0,
-      max: 100,
-      onlyInteger: true,
+    filter: {
+      unsaturation: {
+        min: 0,
+        max: 100,
+        onlyInteger: true,
+      },
     },
     precision: 100,
     allowNeutral: true,
+    limit: 10000,
   });
   expect(dbManager.databases.monoisotopic).toHaveLength(1407);
 });

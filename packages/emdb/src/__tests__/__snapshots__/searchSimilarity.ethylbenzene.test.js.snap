@@ -3,9 +3,14 @@
 exports[`test searchSimilarity for ethylbenzene should find one result with bad distribution 1`] = `
 Array [
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 106.0782503223,
+    "groups": Object {},
     "ionization": Object {
       "charge": 1,
       "em": 0,
@@ -890,9 +895,16 @@ Array [
     "unsaturation": 4,
   },
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+      "N": 1,
+      "O": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 210.14135312394998,
+    "groups": Object {},
     "ionization": Object {
       "charge": 2,
       "em": 2.01565006446,
@@ -1521,9 +1533,16 @@ Array [
     "unsaturation": 1,
   },
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+      "N": 1,
+      "O": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 210.14403846543001,
+    "groups": Object {},
     "ionization": Object {
       "charge": 2,
       "em": 2.01565006446,
@@ -2152,9 +2171,16 @@ Array [
     "unsaturation": 0,
   },
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+      "N": 1,
+      "O": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.20641299128,
+    "groups": Object {},
     "ionization": Object {
       "charge": 3,
       "em": 3.02347509669,
@@ -2497,9 +2523,16 @@ Array [
     "unsaturation": 1,
   },
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+      "N": 1,
+      "O": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.20909833276005,
+    "groups": Object {},
     "ionization": Object {
       "charge": 3,
       "em": 3.02347509669,
@@ -2842,9 +2875,16 @@ Array [
     "unsaturation": 0,
   },
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+      "N": 1,
+      "O": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.21764638057,
+    "groups": Object {},
     "ionization": Object {
       "charge": 3,
       "em": 3.02347509669,
@@ -3187,9 +3227,16 @@ Array [
     "unsaturation": 1,
   },
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+      "N": 1,
+      "O": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 210.13682782814,
+    "groups": Object {},
     "ionization": Object {
       "charge": 2,
       "em": 2.01565006446,
@@ -3818,9 +3865,15 @@ Array [
     "unsaturation": 4,
   },
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+      "N": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.21043574328,
+    "groups": Object {},
     "ionization": Object {
       "charge": 3,
       "em": 3.02347509669,
@@ -4163,9 +4216,16 @@ Array [
     "unsaturation": 5,
   },
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+      "N": 1,
+      "O": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.21312108476,
+    "groups": Object {},
     "ionization": Object {
       "charge": 3,
       "em": 3.02347509669,
@@ -4508,9 +4568,14 @@ Array [
     "unsaturation": 4,
   },
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 210.14085058014,
+    "groups": Object {},
     "ionization": Object {
       "charge": 2,
       "em": 2.01565006446,
@@ -5139,9 +5204,16 @@ Array [
     "unsaturation": 8,
   },
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+      "N": 1,
+      "O": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.21580642624,
+    "groups": Object {},
     "ionization": Object {
       "charge": 3,
       "em": 3.02347509669,
@@ -5484,9 +5556,16 @@ Array [
     "unsaturation": 3,
   },
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+      "N": 1,
+      "O": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.20457303695,
+    "groups": Object {},
     "ionization": Object {
       "charge": 3,
       "em": 3.02347509669,
@@ -5829,9 +5908,15 @@ Array [
     "unsaturation": 3,
   },
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+      "N": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.21714383676,
+    "groups": Object {},
     "ionization": Object {
       "charge": 3,
       "em": 3.02347509669,
@@ -6174,9 +6259,16 @@ Array [
     "unsaturation": 8,
   },
   Object {
+    "atoms": Object {
+      "C": 1,
+      "H": 1,
+      "N": 1,
+      "O": 1,
+    },
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.20591044747005,
+    "groups": Object {},
     "ionization": Object {
       "charge": 3,
       "em": 3.02347509669,

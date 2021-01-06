@@ -15,10 +15,12 @@ describe('test searchSimilarity for ethylbenzene', () => {
     dbManager.fromMonoisotopicMass(106.077, {
       ionizations: 'Na+,K+,(H+),(H+)2,(H+)3,+',
       ranges: 'C0-100 H0-100 N0-100 O0-100',
-      unsaturation: {
-        min: 0,
-        max: 100,
-        onlyInteger: true,
+      filter: {
+        unsaturation: {
+          min: 0,
+          max: 100,
+          onlyInteger: true,
+        },
       },
       precision: 1000,
       allowNeutral: false,
