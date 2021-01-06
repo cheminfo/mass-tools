@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.58.0](https://www.github.com/cheminfo/mass-tools/compare/v0.57.0...v0.58.0) (2021-01-06)
+
+
+### Features
+
+* **mf-finder:** add advanced filtering (callbac) ([4d1c3b2](https://www.github.com/cheminfo/mass-tools/commit/4d1c3b232f6bc5a503e4d63ef93d2a4557801e72))
+* **mf-finder:** add atoms and groups in results ([831d4ce](https://www.github.com/cheminfo/mass-tools/commit/831d4ceb0d82fcad61a5ff1b63467edcbb642b16))
+* **mf-finder:** add limit options ([e6f3212](https://www.github.com/cheminfo/mass-tools/commit/e6f321287736e808705cdb7d803fe3b775b1d0e9))
+* **mf-finder:** filter options object ([6cd7f2b](https://www.github.com/cheminfo/mass-tools/commit/6cd7f2ba64cac14eddc1337fcfdf5b53ea4f8267))
+* add callback filter in fromArray ([4a29055](https://www.github.com/cheminfo/mass-tools/commit/4a29055d9b927b59faa06395e471181aebc478aa))
+* add callback filter in fromNucleicSequence ([23ca491](https://www.github.com/cheminfo/mass-tools/commit/23ca4917298e5f08a1c742f94e32bb1f3037aa71))
+* add callback filter in fromPeptidicSequence ([cec7558](https://www.github.com/cheminfo/mass-tools/commit/cec7558ca04f8e44aa6c957cbdbd729d5f84a6e9))
+* add testcase and callback in generateMFs ([26322d7](https://www.github.com/cheminfo/mass-tools/commit/26322d77fb8e6eb9d4eee8667280fe807a82b3ff))
+* fromRange allows a callback filter ([ddea80c](https://www.github.com/cheminfo/mass-tools/commit/ddea80c17d4c03af66b6de368e0ee4fa2bd62ad4))
+
+
+### Bug Fixes
+
+* update dependencies ([44a9baf](https://www.github.com/cheminfo/mass-tools/commit/44a9bafebc6319cb4ef61842dde61ac140b0636d))
+* **mf-generator:** documentation for unsaturation filters ([ee5a391](https://www.github.com/cheminfo/mass-tools/commit/ee5a391241c7a7a3d91768498ed4542f1d6ea3f9))
+* fix folder name on lactame ([79df00d](https://www.github.com/cheminfo/mass-tools/commit/79df00de3120cc274a3d99bc51f368e56286797c))
+
 ## [0.57.0](https://www.github.com/cheminfo/mass-tools/compare/v0.56.1...v0.57.0) (2021-01-05)
 
 
