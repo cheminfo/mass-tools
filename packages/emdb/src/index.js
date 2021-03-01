@@ -11,10 +11,22 @@ function DBManager() {
   this.experimentalSpectrum = undefined;
 }
 
+/**
+ *
+ * @param {*} data
+ * @param {object} [options={}]
+ * @param {number} [options.normed=true] Should we normed (sum Y to 1) the experimental spectrum ?
+ */
 DBManager.prototype.setExperimentalSpectrum = function setExperimentalSpectrum(
   data,
+  options = {},
 ) {
-  this.experimentalSpectrum = new Spectrum(data).normedY();
+  const { normed = true } = options;
+  if (normed) {
+    this.experimentalSpectrum = new Spectrum(data).normedY();
+  } else {
+    this.experimentalSpectrum = new Spectrum(data);
+  }
   return this.experimentalSpectrum;
 };
 
