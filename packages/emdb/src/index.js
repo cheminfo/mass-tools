@@ -15,6 +15,7 @@ DBManager.prototype.setExperimentalSpectrum = function setExperimentalSpectrum(
   data,
 ) {
   this.experimentalSpectrum = new Spectrum(data).normedY();
+  return this.experimentalSpectrum;
 };
 
 /**
