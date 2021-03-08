@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.59.0](https://www.github.com/cheminfo/mass-tools/compare/v0.58.2...v0.59.0) (2021-03-01)
+
+
+### Features
+
+* **emdb:** setExperimentalSpectrum has an option not to norm the result ([b63e575](https://www.github.com/cheminfo/mass-tools/commit/b63e5750b4568d37026cb8d9c48b209d566791cc))
+* **emdb:** setExperimentalSpectrum returns the Spectrum ([25f9e49](https://www.github.com/cheminfo/mass-tools/commit/25f9e49d6b650dfb9ea0247428a2e155bcba096a))
+
 ### [0.58.2](https://www.github.com/cheminfo/mass-tools/compare/v0.58.1...v0.58.2) (2021-01-06)
 
 
