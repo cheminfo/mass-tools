@@ -18,7 +18,7 @@ describe('preprocessRanges', () => {
       mf: 'H+',
       isGroup: true,
       charge: 1,
-      unsaturation: -2,
+      unsaturation: undefined,
     });
   });
 

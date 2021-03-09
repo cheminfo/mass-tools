@@ -20,7 +20,7 @@ let targetMassCache;
  * @param {number}        [options.precision=100] - Allowed mass range based on precision
  * @param {number}        [options.filter.minCharge=-Infinity] - Minimal charge
  * @param {number}        [options.filter.maxCharge=+Infinity] - Maximal charge
- * @param {number}        [options.filter.unsaturation={}]
+ * @param {number}        [options.filter.unsaturation={}] - Can only filter neutral molecular formula
  * @param {number}        [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number}        [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
  * @param {number}        [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
@@ -110,7 +110,6 @@ module.exports = function (targetMass, options = {}) {
     let lastPossibility = possibilities[lastPosition];
 
     initializePossibilities(possibilities, currentIonization);
-
     //  if (DEBUG) console.log('possibilities', possibilities.map((a) => `${a.mf + a.originalMinCount}-${a.originalMaxCount}`));
 
     let isValid = false; // designed so that the first time it is not a valid solution
@@ -120,7 +119,10 @@ module.exports = function (targetMass, options = {}) {
           `Iteration number is over the current maximum of: ${maxIterations}`,
         );
       }
-      if (filterUnsaturation) {
+      if (
+        filterUnsaturation &&
+        lastPossibility.currentCharge === ionization.charge
+      ) {
         let unsaturationValue = lastPossibility.currentUnsaturation;
         let isOdd = Math.abs(unsaturationValue % 2);
         if (
@@ -229,7 +231,6 @@ function getResult(
   orderMapping,
 ) {
   let lastPossibility = possibilities[possibilities.length - 1];
-
   let result = {
     em: lastPossibility.currentMonoisotopicMass - ionization.em,
     unsaturation: lastPossibility.currentUnsaturation,
@@ -273,7 +274,11 @@ function getResult(
       }
     }
   }
-  result.unsaturation = (result.unsaturation + Math.abs(result.charge)) / 2 + 1;
+  if (result.charge === 0) {
+    result.unsaturation = result.unsaturation / 2 + 1;
+  } else {
+    result.unsaturation = undefined;
+  }
   result.ms = getMsInfo(result, { targetMass, allowNeutralMolecules }).ms;
   return result;
 }
@@ -295,7 +300,7 @@ function setCurrentMinMax(currentAtom, previousAtom) {
         (targetMassCache.getMinMass(currentCharge) -
           currentMass -
           currentAtom.maxInnerMass) /
-          currentAtom.em,
+        currentAtom.em,
       ),
       currentAtom.originalMinCount,
     );
@@ -304,7 +309,7 @@ function setCurrentMinMax(currentAtom, previousAtom) {
         (targetMassCache.getMaxMass(currentCharge) -
           currentMass -
           currentAtom.minInnerMass) /
-          currentAtom.em,
+        currentAtom.em,
       ),
       currentAtom.originalMaxCount,
     );

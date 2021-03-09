@@ -159,7 +159,7 @@ function getMonoisotopicMass(mfString) {
       em: info.monoisotopicMass,
       charge: info.charge,
       mw: info.mass,
-      unsaturation: (info.unsaturation - 1) * 2,
+      unsaturation: info.charge === 0 ? (info.unsaturation - 1) * 2 : undefined,
       atoms: info.atoms,
     };
   }
@@ -171,7 +171,6 @@ function getEMFromParts(parts, currents, ionization) {
   let em = 0;
   let mw = 0;
   let unsaturation = 0;
-  let validUnsaturation = true;
   let atoms = {};
 
   for (let i = 0; i < parts.length; i++) {
@@ -182,18 +181,19 @@ function getEMFromParts(parts, currents, ionization) {
       em += info.em;
       mw += info.mw;
       sum(atoms, info.atoms);
-      if (info.unsaturation && validUnsaturation) {
+      if (unsaturation && info.unsaturation !== undefined) {
         unsaturation += info.unsaturation;
+      } else {
+        unsaturation = undefined;
       }
     }
   }
-
   return {
     charge,
     em,
     mw,
     ionization: ionization,
-    unsaturation: validUnsaturation ? unsaturation / 2 + 1 : undefined,
+    unsaturation: unsaturation !== undefined ? unsaturation / 2 + 1 : undefined,
     atoms,
   };
 }
@@ -215,7 +215,7 @@ function appendResult(results, currents, keys, options = {}) {
       variables.push(
         result.em,
         (result.em + ionization.em - ionization.charge * ELECTRON_MASS) /
-          Math.abs(ionization.charge),
+        Math.abs(ionization.charge),
         result.charge + result.ionization.charge,
         result.unsaturation,
         result.atoms,

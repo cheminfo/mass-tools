@@ -64,6 +64,9 @@ module.exports = function preprocessRanges(ranges) {
           parenthesisLevel--;
           currentMF += ')';
           break;
+        case Kind.CHARGE:
+          currentMF += `(${item.value})`;
+          break;
         default:
           throw Error(`can not preprocess ${ranges}`);
       }
@@ -108,9 +111,11 @@ module.exports = function preprocessRanges(ranges) {
     possibility.em = range.em || info.monoisotopicMass;
     possibility.charge = range.charge || info.charge;
     possibility.unsaturation =
-      range.unsaturation === undefined
-        ? (info.unsaturation - 1) * 2
-        : range.unsaturation;
+      possibility.charge === 0
+        ? range.unsaturation === undefined
+          ? (info.unsaturation - 1) * 2
+          : range.unsaturation
+        : undefined;
     possibility.atoms = info.atoms;
     if (possibility.mf !== info.mf) {
       possibility.isGroup = true;

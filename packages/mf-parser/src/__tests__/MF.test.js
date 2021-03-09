@@ -217,20 +217,26 @@ describe('MF', () => {
       charge: -2,
       observedMonoisotopicMass: 47.97641340624907,
       mf: 'O4S(-2)',
-      unsaturation: 4,
       atoms: { O: 4, S: 1 },
     });
   });
 
+  /*
+  There is unfortunately no way to deal with unsaturation with charged molecules
+  Check for example (H+) and (NH4+) I would expect that both have an unsaturation of
+  0 but for this (+) should once count as +1 and the other time -1.
+  */
   it('unsaturation with charges', () => {
     expect(new MF('CH4').getInfo().unsaturation).toBe(0);
     expect(new MF('C10H22O').getInfo().unsaturation).toBe(0);
-    expect(new MF('H+').getInfo().unsaturation).toBe(0);
-    expect(new MF('CO3(--)').getInfo().unsaturation).toBe(3);
-    expect(new MF('HO(-)').getInfo().unsaturation).toBe(1);
-    expect(new MF('F(-)').getInfo().unsaturation).toBe(1);
-    expect(new MF('Na+').getInfo().unsaturation).toBe(0);
-    expect(new MF('NH4+').getInfo().unsaturation).toBe(-1);
+    expect(new MF('H+').getInfo().unsaturation).toBeUndefined();
+    expect(new MF('CO3(--)').getInfo().unsaturation).toBeUndefined();
+    expect(new MF('CO3(--)H(+)H(+)').getInfo().unsaturation).toBe(1);
+    expect(new MF('HO(-)').getInfo().unsaturation).toBeUndefined();
+    expect(new MF('F(-)').getInfo().unsaturation).toBeUndefined();
+    expect(new MF('Na+').getInfo().unsaturation).toBeUndefined();
+    expect(new MF('HCOO(-)').getInfo().unsaturation).toBeUndefined();
+    expect(new MF('NH4+').getInfo().unsaturation).toBeUndefined();
 
     expect(new MF('H(+)').toHtml()).toBe('H<sup>+</sup>');
   });

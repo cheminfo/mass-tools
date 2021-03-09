@@ -1,6 +1,6 @@
 'use strict';
 
-const findMFs = require('mf-finder');
+const mfFinder = require('mf-finder');
 
 /**
  * Generates a database 'monoisotopic' from a monoisotopic mass and various options
@@ -23,5 +23,5 @@ const findMFs = require('mf-finder');
  */
 
 module.exports = function fromMonoisotopicMass(mass, options = {}) {
-  return findMFs(mass, options);
+  return mfFinder(mass, options);
 };

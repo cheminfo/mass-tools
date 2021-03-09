@@ -37,3 +37,45 @@ test('fromMonoisotopicMass large database', () => {
   });
   expect(dbManager.databases.monoisotopic).toHaveLength(1407);
 });
+
+test('fromMonoisotopicMass with charge', () => {
+  let dbManager = new DBManager();
+  dbManager.fromMonoisotopicMass(12, {
+    ranges: 'C0-100 H0-10 (+)1-2 (+)0-3',
+    filter: {
+      unsaturation: {
+        min: 0,
+        max: 100,
+        onlyInteger: false,
+      },
+    },
+    precision: 100,
+    allowNeutral: false,
+    limit: 10000,
+  });
+  let mfs = dbManager.databases.monoisotopic;
+  for (let mf of mfs) {
+    expect(mf.atoms.C).toEqual(mf.charge);
+  }
+  expect(mfs).toHaveLength(8);
+});
+
+test('fromMonoisotopicMass C0-10 H-10 F0-10 Cl0-10 (-) 55 .', () => {
+  let dbManager = new DBManager();
+  dbManager.fromMonoisotopicMass(55, {
+    ranges: 'H F Cl (-1)0-8',
+    filter: {
+      unsaturation: {
+        min: 0,
+        max: 100,
+        onlyInteger: false,
+      },
+    },
+    precision: 1000,
+    allowNeutral: false,
+    limit: 10000,
+  });
+  let mfs = dbManager.databases.monoisotopic;
+  expect(mfs).toHaveLength(1);
+  expect(mfs[0].mf).toBe('Cl(-1)HF');
+});

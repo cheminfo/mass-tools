@@ -96,9 +96,6 @@ function getProcessedPart(part, customUnsaturations) {
       }
       case Kind.CHARGE:
         currentPart.charge = line.value;
-        if (validUnsaturation) {
-          unsaturation -= line.value;
-        }
         break;
       default:
         throw new Error('Unimplemented Kind in getInfo', line.kind);
@@ -120,7 +117,7 @@ function getProcessedPart(part, customUnsaturations) {
       (currentPart.monoisotopicMass - currentPart.charge * ELECTRON_MASS) /
       Math.abs(currentPart.charge);
   }
-  if (validUnsaturation) {
+  if (validUnsaturation && currentPart.charge === 0) {
     currentPart.unsaturation = unsaturation / 2 + 1;
   }
   return currentPart;

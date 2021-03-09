@@ -32,6 +32,9 @@ describe('test searchSimilarity for peptide', () => {
         },
       },
     );
+
+    console.log(dbManager.databases.peptidic[0]);
+
     dbManager.setExperimentalSpectrum(experimental);
 
     let results = dbManager.searchSimilarity({
@@ -50,6 +53,7 @@ describe('test searchSimilarity for peptide', () => {
       },
     });
     delete results.peptidic[0].ms.similarity.experimental;
+    console.log(results.peptidic[0].unsaturation);
     expect(results.peptidic[0]).toBeDeepCloseTo({
       charge: 1,
       em: 4210.304872186381,
