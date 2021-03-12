@@ -1,5 +1,5 @@
 {
   "conventionalCommits": true,
   "version": "independent",
-  "packages": ["packages/*"]
+  "packages": ["packages/*", "."]
 }
