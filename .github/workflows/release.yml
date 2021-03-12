@@ -28,6 +28,10 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: npm run bootstrap
         if: ${{ steps.release.outputs.release_created }}
+      - run: git config --global user.name "cheminfo-bot"
+        if: ${{ steps.release.outputs.release_created }}
+      - run: git config --global user.email "10880445+cheminfo-bot@users.noreply.github.com"
+        if: ${{ steps.release.outputs.release_created }}
       - run: npm run publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_BOT_TOKEN }}
