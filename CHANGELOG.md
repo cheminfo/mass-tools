@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.59.2](https://www.github.com/cheminfo/mass-tools/compare/v0.59.1...v0.59.2) (2021-03-12)
+
+
+### Bug Fixes
+
+* specify git user.email and user.name in release ([a1cfc91](https://www.github.com/cheminfo/mass-tools/commit/a1cfc918fa0454a58da64d5c75c1fffa1f697af5))
+
 ### [0.59.1](https://www.github.com/cheminfo/mass-tools/compare/v0.59.0...v0.59.1) (2021-03-12)
 
 
