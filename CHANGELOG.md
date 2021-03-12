@@ -1,5 +1,18 @@
 # Changelog
 
+### [0.59.1](https://www.github.com/cheminfo/mass-tools/compare/v0.59.0...v0.59.1) (2021-03-12)
+
+
+### Bug Fixes
+
+* add --no-ci in lerna bootstrap ([bb600fe](https://www.github.com/cheminfo/mass-tools/commit/bb600fec54b19e63025e29161f1040801e45dfbf))
+* build after moving files ([7d00d75](https://www.github.com/cheminfo/mass-tools/commit/7d00d75a60cedd47c80e2fbc7d8e41a38d1fcf8b))
+* fix installation of dependencies for eslint check ([09af03f](https://www.github.com/cheminfo/mass-tools/commit/09af03f13343acea99eec11cb61c6f3958a79218))
+* missing dependencies ([989220e](https://www.github.com/cheminfo/mass-tools/commit/989220e357ceeeb76181dde823338b53d7cc298f))
+* move mass-tools as a normal package for lerna ([301e01b](https://www.github.com/cheminfo/mass-tools/commit/301e01bf731dd592d67e7cf7bee4f10012c1cccd))
+* release correctly npm package ([1b286f3](https://www.github.com/cheminfo/mass-tools/commit/1b286f31d7c3442d075f343fd63257fc78dbd5e7))
+* test action ([a949379](https://www.github.com/cheminfo/mass-tools/commit/a949379b9fb5e20b704e7bb7e190792acff2814d))
+
 ## [0.59.0](https://www.github.com/cheminfo/mass-tools/compare/v0.58.2...v0.59.0) (2021-03-01)
 
 
