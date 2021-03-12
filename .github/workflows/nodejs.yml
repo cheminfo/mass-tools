@@ -30,6 +30,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm install
+      - name: Bootstrap using lerna
+        run: npm run bootstrap
       - name: Run tests
         run: npm run test-coverage
       - name: Send coverage report to Codecov
