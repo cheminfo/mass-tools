@@ -172,18 +172,23 @@ class MFParser {
       number += String.fromCharCode(ascii);
       this.i++;
       ascii = this.mf.charCodeAt(this.i);
-    } while ((ascii > 47 && ascii < 58) || ascii === 46 || ascii === 45); // number, . or -
+    } while (
+      (ascii > 47 && ascii < 58) ||
+      ascii === 46 ||
+      ascii === 45 ||
+      ascii === 47
+    ); // number . - /
     // we need to deal with the case there is a from / to
     if (previous === 46) this.i--;
     let indexOfDash = number.indexOf('-', 1);
 
     if (indexOfDash > -1) {
       return {
-        from: Number(number.substr(0, indexOfDash)),
-        to: Number(number.substr(indexOfDash + 1)),
+        from: parseNumberWithDivision(number.substr(0, indexOfDash)),
+        to: parseNumberWithDivision(number.substr(indexOfDash + 1)),
       };
     }
-    return { from: Number(number) };
+    return { from: parseNumberWithDivision(number) };
   }
 
   getAtom(ascii) {
@@ -263,5 +268,17 @@ class MFError extends SyntaxError {
   constructor(mf, i, message) {
     let text = `${message}\n\n${mf}\n${' '.repeat(i)}^`;
     super(text);
+  }
+}
+
+function parseNumberWithDivision(string) {
+  if (string.includes('/')) {
+    let parts = string.split('/');
+    if (parts.length !== 2) {
+      throw new TypeError('Can not parse MF with number like: ', string);
+    }
+    return Number(parts[0]) / Number(parts[1]);
+  } else {
+    return Number(string);
   }
 }

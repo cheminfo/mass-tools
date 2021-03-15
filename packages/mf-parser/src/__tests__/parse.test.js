@@ -200,6 +200,19 @@ let tests = {
     { kind: 'atom', value: 'C' },
     { kind: 'multiplierRange', value: { from: -2, to: -1 } },
   ],
+  'CaCO3 . 3/2H2O': [
+    { kind: 'atom', value: 'Ca' },
+    { kind: 'atom', value: 'C' },
+    { kind: 'atom', value: 'O' },
+    { kind: 'multiplier', value: 3 },
+    { kind: 'text', value: ' ' },
+    { kind: 'salt', value: '.' },
+    { kind: 'text', value: ' ' },
+    { kind: 'preMultiplier', value: 1.5 },
+    { kind: 'atom', value: 'H' },
+    { kind: 'multiplier', value: 2 },
+    { kind: 'atom', value: 'O' },
+  ],
 };
 
 test.each(Object.keys(tests))('parse molecular formula %s', function (key) {
