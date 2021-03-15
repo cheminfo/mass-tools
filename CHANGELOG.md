@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.60.0](https://www.github.com/cheminfo/mass-tools/compare/v0.59.2...v0.60.0) (2021-03-15)
+
+
+### Features
+
+* **mf-parser:** allow to define fractional multiplier ([e999df0](https://www.github.com/cheminfo/mass-tools/commit/e999df00e40f0611d4d0b22f59db40b4e57170c4))
+
+
+### Bug Fixes
+
+* add --no-verify-access flag to lerna publish ([185234c](https://www.github.com/cheminfo/mass-tools/commit/185234c0c9a88d297f0fec999b32ae5a5d87dd61))
+
 ### [0.59.2](https://www.github.com/cheminfo/mass-tools/compare/v0.59.1...v0.59.2) (2021-03-12)
 
 
