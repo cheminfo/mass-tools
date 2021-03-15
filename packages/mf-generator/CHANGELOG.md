@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.2 (2021-03-15)
+
+
+
+# 0.60.0 (2021-03-15)
+
+**Note:** Version bump only for package mf-generator
+
+
+
+
+
 ## 1.2.1 (2021-03-12)
 
 
