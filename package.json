@@ -12,7 +12,7 @@
     "build-docs": "ls packages | xargs -I % sh -c 'cd packages/%; documentation build src/index.js -f html -o ../../docs/%; cd ../..'",
     "eslint": "eslint packages --cache",
     "eslint-fix": "npm run eslint -- --fix",
-    "publish": "lerna publish -y",
+    "publish": "lerna publish -y --no-verify-access",
     "test": "jest && npm run eslint",
     "test-coverage": "jest --coverage",
     "upgrade": "find packages -type f -name 'package.json' -maxdepth 2 -execdir ncu --upgrade \\;"
