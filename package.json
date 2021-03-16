@@ -36,7 +36,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "benchmark": "^2.1.4",
     "chemcalc": "^3.4.1",
-    "chemical-elements": "^1.1.6",
+    "chemical-elements": "^1.1.7",
     "cheminfo-build": "^1.1.10",
     "codecov": "^3.8.1",
     "documentation": "^13.2.0",
