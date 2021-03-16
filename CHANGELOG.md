@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.60.2](https://www.github.com/cheminfo/mass-tools/compare/v0.60.1...v0.60.2) (2021-03-16)
+
+
+### Bug Fixes
+
+* wrong links in some packages.json ([3c5829a](https://www.github.com/cheminfo/mass-tools/commit/3c5829a153dd198d56e7d54c065bf7e241ea0423))
+
 ### [0.60.1](https://www.github.com/cheminfo/mass-tools/compare/v0.60.0...v0.60.1) (2021-03-16)
 
 

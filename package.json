@@ -1,7 +1,7 @@
 {
   "name": "dummy-package",
   "private": true,
-  "version": "0.60.1",
+  "version": "0.60.2",
   "main": "src/index.js",
   "files": [
     "src"
