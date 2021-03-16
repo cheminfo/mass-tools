@@ -8,13 +8,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cheminfo/mf-parser.git"
+    "url": "git+https://github.com/cheminfo/mass-tools.git"
   },
   "keywords": [],
   "author": "Luc Patiny",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cheminfo/mf-parser/issues"
+    "url": "https://github.com/cheminfo/mass-tools/issues"
   },
-  "homepage": "https://github.com/cheminfo/mf-parser/tree/master/packages/atom-sorter#readme"
+  "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/atom-sorter#readme"
 }

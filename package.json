@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cheminfo/mf-parser.git"
+    "url": "https://github.com/cheminfo/mass-tools.git"
   },
   "author": "Luc Patiny <luc@patiny.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cheminfo/mf-parser/issues"
+    "url": "https://github.com/cheminfo/mass-tools/issues"
   },
-  "homepage": "https://github.com/cheminfo/mf-parser#readme",
+  "homepage": "https://github.com/cheminfo/mass-tools#readme",
   "jest": {
     "testEnvironment": "node"
   },
