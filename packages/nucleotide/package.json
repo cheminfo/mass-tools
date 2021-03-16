@@ -20,12 +20,12 @@
     "type": "git",
     "url": "git+https://github.com/cheminfo/mass-tools.git"
   },
-  "version": "1.2.2",
+  "version": "1.2.3",
   "devDependencies": {
-    "mf-parser": "^1.1.8"
+    "mf-parser": "^1.1.9"
   },
   "dependencies": {
-    "chemical-groups": "^1.1.2",
-    "mf-utilities": "^1.2.2"
+    "chemical-groups": "^1.1.3",
+    "mf-utilities": "^1.2.3"
   }
 }

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.12 (2021-03-16)
+
+
+
+## 0.60.1 (2021-03-16)
+
+**Note:** Version bump only for package isotopic-distribution
+
+
+
+
+
 ## 1.1.11 (2021-03-15)
 
 
