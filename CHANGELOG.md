@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.60.1](https://www.github.com/cheminfo/mass-tools/compare/v0.60.0...v0.60.1) (2021-03-16)
+
+
+### Bug Fixes
+
+* lactame deployment script ([20b5ee1](https://www.github.com/cheminfo/mass-tools/commit/20b5ee1db7e14a09019bf568f719e191c65fcbcd))
+
 ## [0.60.0](https://www.github.com/cheminfo/mass-tools/compare/v0.59.2...v0.60.0) (2021-03-15)
 
 
