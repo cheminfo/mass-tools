@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.6](https://github.com/cheminfo/mass-tools/compare/mf-from-ea@0.0.5...mf-from-ea@0.0.6) (2021-03-24)
+
+
+### Bug Fixes
+
+* **mf-from-ea:** Improve README ([88c32ed](https://github.com/cheminfo/mass-tools/commit/88c32ed82151288c377975e0977f3b63aa5deafe))
+
+
+
+
+
 ## [0.0.5](https://github.com/cheminfo/mass-tools/compare/mf-from-ea@0.0.4...mf-from-ea@0.0.5) (2021-03-24)
 
 
