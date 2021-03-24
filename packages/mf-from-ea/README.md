@@ -1,9 +1,9 @@
 # mf-from-ea
 
-  [![NPM version][npm-image]][npm-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
 
-Find a molecular formula from the result of an element analysis.
+Find a molecular formula from the result of an elemental analysis.
 
 ## Installation
 
@@ -12,13 +12,12 @@ Find a molecular formula from the result of an element analysis.
 ## Usage
 
 ```js
-
 let result = mfFromEA(
   { C: 0.8, H: 0.2 }, // elemental analysis result: 80% C, 20% H
   {
     ranges: 'C0-10 H0-20', // range of molecular formula to explore
     maxElementError: 0.003, // 0.3% Allowed error for each element
-    maxTotalError: 0.01,    // 1% total error (absolute sum of element errors)
+    maxTotalError: 0.01, // 1% total error (absolute sum of element errors)
   },
 );
 
@@ -40,7 +39,7 @@ console.log(result);
 
 ## License
 
-  [MIT](./LICENSE)
+[MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/mf-from-ea.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/mf-from-ea
