@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.60.4](https://www.github.com/cheminfo/mass-tools/compare/v0.60.3...v0.60.4) (2021-03-24)
+
+
+### Bug Fixes
+
+* **mf-from-ea:** Improve README ([88c32ed](https://www.github.com/cheminfo/mass-tools/commit/88c32ed82151288c377975e0977f3b63aa5deafe))
+* package.json name ([4d6fbca](https://www.github.com/cheminfo/mass-tools/commit/4d6fbca999e04a0b288d99fa07d9d34d62551fc3))
+
 ### [0.60.3](https://www.github.com/cheminfo/mass-tools/compare/v0.60.2...v0.60.3) (2021-03-24)
 
 
