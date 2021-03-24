@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.60.3](https://www.github.com/cheminfo/mass-tools/compare/v0.60.2...v0.60.3) (2021-03-24)
+
+
+### Bug Fixes
+
+* **mf-from-ea:** update spelling mistake in README ([3de19c5](https://www.github.com/cheminfo/mass-tools/commit/3de19c542071df2a7975ba2e53b9e34f8dc42e22))
+
 ### [0.60.2](https://www.github.com/cheminfo/mass-tools/compare/v0.60.1...v0.60.2) (2021-03-16)
 
 
