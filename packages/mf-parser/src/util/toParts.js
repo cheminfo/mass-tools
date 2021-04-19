@@ -43,6 +43,8 @@ module.exports = function toParts(lines, options = {}) {
         currentPart = createNewPart();
         parts.push(currentPart);
         break;
+      case Kind.ANCHOR: // we ignore anchors to create the parts and canonized MF
+        break;
       case Kind.COMMENT: // we ignore comments to create the parts and canonized MF
         break;
       case Kind.TEXT:

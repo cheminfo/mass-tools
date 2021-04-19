@@ -333,6 +333,23 @@ describe('MF', () => {
     });
   });
 
+  it('C10#1H20', () => {
+    let mf = new MF('C10#1H20');
+
+    let newMF = mf.toMF();
+    expect(newMF).toBe('C10H20');
+
+    let info = mf.getInfo();
+    expect(info).toStrictEqual({
+      mass: 140.26617404846803,
+      monoisotopicMass: 140.1565006446,
+      charge: 0,
+      mf: 'C10H20',
+      atoms: { C: 10, H: 20 },
+      unsaturation: 1,
+    });
+  });
+
   it('2NH3 . 2HCl', () => {
     let mf = new MF('2NH3 . 2HCl');
 

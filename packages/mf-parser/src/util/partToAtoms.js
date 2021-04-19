@@ -26,6 +26,8 @@ module.exports = function partToAtoms(part) {
         break;
       case Kind.CHARGE:
         break;
+      case Kind.ANCHOR:
+        break;
       default:
         throw new Error('partToMF unhandled Kind: ', line.kind);
     }
