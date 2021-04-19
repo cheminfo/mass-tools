@@ -5,7 +5,7 @@ const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
 
 expect.extend({ toBeDeepCloseTo });
 
-const DBManager = require('..');
+const DBManager = require('../..');
 
 describe('fromNucleicSequence', () => {
   it('fromNucleicSequence', () => {

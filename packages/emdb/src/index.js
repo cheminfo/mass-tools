@@ -97,21 +97,21 @@ DBManager.prototype.fromMonoisotopicMass = function fromMonoisotopicMass(
   options = {},
 ) {
   const { databaseName = 'monoisotopic', append = false } = options;
-  let result = require('./fromMonoisotopicMass')(mass, options);
+  let result = require('./from/fromMonoisotopicMass')(mass, options);
   replaceOrAppend(this, databaseName, result.mfs, append);
   return result;
 };
 
 DBManager.prototype.fromArray = function fromArray(sequence, options = {}) {
   const { databaseName = 'generated', append = false, estimate } = options;
-  const results = require('./fromArray')(sequence, options);
+  const results = require('./from/fromArray')(sequence, options);
   if (estimate) return results;
   replaceOrAppend(this, databaseName, results, append);
 };
 
 DBManager.prototype.fromRange = function fromRange(sequence, options = {}) {
   const { databaseName = 'generated', append = false, estimate } = options;
-  const results = require('./fromRange')(sequence, options);
+  const results = require('./from/fromRange')(sequence, options);
   if (estimate) return results;
   replaceOrAppend(this, databaseName, results, append);
 };
@@ -121,7 +121,7 @@ DBManager.prototype.fromPeptidicSequence = function fromPeptidicSequence(
   options = {},
 ) {
   const { databaseName = 'peptidic', append = false, estimate } = options;
-  const results = require('./fromPeptidicSequence')(sequence, options);
+  const results = require('./from/fromPeptidicSequence')(sequence, options);
   if (estimate) return results;
   replaceOrAppend(this, databaseName, results, append);
 };
@@ -131,7 +131,7 @@ DBManager.prototype.fromNucleicSequence = function fromNucleicSequence(
   options = {},
 ) {
   const { databaseName = 'nucleic', append = false, estimate } = options;
-  const results = require('./fromNucleicSequence')(sequence, options);
+  const results = require('./from/fromNucleicSequence')(sequence, options);
   if (estimate) return results;
   replaceOrAppend(this, databaseName, results, append);
 };

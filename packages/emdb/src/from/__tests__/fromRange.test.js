@@ -1,6 +1,6 @@
 'use strict';
 
-const DBManager = require('..');
+const DBManager = require('../..');
 
 describe('fromRange', () => {
   it('no filter', () => {

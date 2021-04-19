@@ -1,6 +1,6 @@
 'use strict';
 
-const DBManager = require('..');
+const DBManager = require('../..');
 
 test('fromMonoisotopicMass', () => {
   let dbManager = new DBManager();
