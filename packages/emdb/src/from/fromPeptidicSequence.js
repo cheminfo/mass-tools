@@ -2,7 +2,8 @@
 
 const { groupsToSequence } = require('chemical-groups');
 const combineMFs = require('mf-generator');
-const peptide = require('peptide');
+
+const fragmentPeptide = require('./util/fragmentPeptide');
 
 /**
  * Add a database starting from a peptidic sequence
@@ -71,33 +72,13 @@ module.exports = function fromPeptidicSequence(sequence, options = {}) {
     estimate = false,
   } = options;
 
-  sequence = peptide.convertAASequence(sequence);
-
-  let fragmentsArray = [sequence];
-  // do we also have some digest fragments ?
-  if (digestion.enzyme) {
-    let digests = peptide.digestPeptide(sequence, digestion);
-    if (options.protonation) {
-      digests = peptide.chargePeptide(digests, {
-        pH: options.protonationPH,
-      });
-    }
-    fragmentsArray = fragmentsArray.concat(digests);
-  }
-
-  // allow neutral loss
-  if (allowNeutralLoss) {
-    sequence = peptide.allowNeutralLoss(sequence);
-  }
-
-  // apply protonation
-  if (protonation) {
-    sequence = peptide.chargePeptide(sequence, { pH: protonationPH });
-  }
-
-  // calculate fragmentation
-  let fragments = peptide.generatePeptideFragments(sequence, fragmentation);
-  fragmentsArray = fragmentsArray.concat(fragments);
+  let fragmentsArray = fragmentPeptide(sequence, {
+    digestion,
+    protonation,
+    fragmentation,
+    protonationPH,
+    allowNeutralLoss,
+  });
 
   mfsArray.push(fragmentsArray);
 
