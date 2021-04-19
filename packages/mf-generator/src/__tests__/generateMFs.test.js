@@ -217,4 +217,21 @@ describe('generateMFs', () => {
       -1.0072764523209299,
     ]);
   });
+
+  it('with links', function () {
+    const mfsArray = [
+      ['C#1', 'C#1C', 'C#2C'],
+      ['H#1', 'H#1H', 'H#2'],
+    ];
+
+    let result = generateMFs(mfsArray, { links: { filter: true } }).map(
+      (item) => item.mf,
+    );
+    expect(result).toStrictEqual(['CH', 'CH2', 'C2H', 'C2H2']);
+    result = generateMFs(mfsArray, {
+      uniqueMFs: false,
+      links: { filter: true },
+    }).map((item) => item.mf);
+    expect(result).toStrictEqual(['CH', 'CH2', 'C2H', 'C2H', 'C2H2']);
+  });
 });

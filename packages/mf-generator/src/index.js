@@ -36,6 +36,8 @@ const sum = require('sum-object-keys');
  * @param {object}        [options.filter.atoms] - object of atom:{min, max}
  * @param {function}      [options.filter.callback] - a function to filter the MF
  * @param {string}        [options.filterFct]
+ * @param {object}        [options.links]
+ * @param {boolean}       [options.links.filter] We filter all the MF that do not match the '*X'
  * @returns {Array}
  */
 
@@ -199,10 +201,23 @@ function getEMFromParts(parts, currents, ionization) {
 }
 
 function appendResult(results, currents, keys, options = {}) {
-  const { canonizeMF, filter, ionizations } = options;
+  const { canonizeMF, filter, ionizations, links = {} } = options;
   // this script is designed to combine molecular formula
   // that may contain comments after a "$" sign
   // therefore we should put all the comments at the ned
+
+  if (links.filter) {
+    let stars = [];
+    for (let i = 0; i < keys.length; i++) {
+      let anchors = keys[i][currents[i]].match(/#[0-9]+/);
+      if (anchors) stars.push(...anchors);
+    }
+    if (stars.length % 2 === 1) return;
+    stars = stars.sort();
+    for (let i = 0; i < stars.length; i += 2) {
+      if (stars[i] !== stars[i + 1]) return;
+    }
+  }
 
   for (let ionization of ionizations) {
     let result = getEMFromParts(keys, currents, ionization);
