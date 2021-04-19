@@ -21,8 +21,8 @@ let allowed = [
   'LysLeuArgCysSerThrTyr$y7',
 ];
 
-describe('Check fragmentation', () => {
-  it('Check KA', () => {
+describe('generatePeptideFragments', () => {
+  it('Check KAA', () => {
     let sequence = PEP.convertAASequence('KAA');
     let result = PEP.generatePeptideFragments(sequence, {
       a: false,
@@ -193,6 +193,31 @@ describe('Check fragmentation', () => {
     ]);
     expect(result1).toStrictEqual(result3);
     expect(result2).toStrictEqual(result4);
+  });
+
+  it('AK(*1)T(H-1*2)Y', () => {
+    let sequence = PEP.convertAASequence('AK(*1)T(H-1*2)Y');
+    let result = PEP.generatePeptideFragments(sequence);
+    expect(result).toStrictEqual([
+      'HAla(+1)$b1',
+      'H2(+1)TyrOH$y1',
+      'HAlaLys(*1)(+1)$b2',
+      'H2(+1)Thr(H-1*2)TyrOH$y2',
+      'HAlaLys(*1)Thr(H-1*2)(+1)$b3',
+      'H2(+1)Lys(*1)Thr(H-1*2)TyrOH$y3',
+    ]);
+  });
+  it('HAlaLys(*1)Thr(H-1*2)TyrOH', () => {
+    let sequence = PEP.convertAASequence('HAlaLys(*1)Thr(H-1*2)TyrOH');
+    let result = PEP.generatePeptideFragments(sequence);
+    expect(result).toStrictEqual([
+      'HAla(+1)$b1',
+      'H2(+1)TyrOH$y1',
+      'HAlaLys(*1)(+1)$b2',
+      'H2(+1)Thr(H-1*2)TyrOH$y2',
+      'HAlaLys(*1)Thr(H-1*2)(+1)$b3',
+      'H2(+1)Lys(*1)Thr(H-1*2)TyrOH$y3',
+    ]);
   });
 });
 
