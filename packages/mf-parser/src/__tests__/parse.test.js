@@ -213,6 +213,11 @@ let tests = {
     { kind: 'multiplier', value: 2 },
     { kind: 'atom', value: 'O' },
   ],
+  'C#2H': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'anchor', value: 2 },
+    { kind: 'atom', value: 'H' },
+  ],
 };
 
 test.each(Object.keys(tests))('parse molecular formula %s', function (key) {

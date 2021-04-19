@@ -50,6 +50,11 @@ class MFParser {
             );
           }
           this.result.push({ kind: Kind.PRE_MULTIPLIER, value: value.from });
+        } else if (lastKind === Kind.ANCHOR) {
+          if (value.to) {
+            throw new MFError(this.mf, this.i, 'Anchor ID may not contain -');
+          }
+          this.result[this.result.length - 1].value = value.from;
         } else {
           if (value.to) {
             this.result.push({
@@ -63,11 +68,15 @@ class MFParser {
             this.result.push({ kind: Kind.MULTIPLIER, value: value.from });
           }
         }
-
         continue;
       } else if (char === '.') {
         // a point
         this.result.push({ kind: Kind.SALT, value: char });
+        // it is not in a number otherwise it would have been taken before
+        // it must be in a salt
+      } else if (char === '#') {
+        // an anchor
+        this.result.push({ kind: Kind.ANCHOR, value: 0 });
         // it is not in a number otherwise it would have been taken before
         // it must be in a salt
       } else if (ascii > 64 && ascii < 91) {
