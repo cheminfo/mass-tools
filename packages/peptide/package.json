@@ -1,0 +1,23 @@
+{
+  "name": "peptide",
+  "version": "1.10.1",
+  "description": "Peptide",
+  "keywords": [
+    "peptide",
+    "amino",
+    "acid"
+  ],
+  "author": "Luc Patiny",
+  "contributors": [
+    "Michaël Zasso"
+  ],
+  "repository": "cheminfo/mass-tools",
+  "bugs": {
+    "url": "https://github.com/cheminfo/mass-tools/issues"
+  },
+  "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/peptide#readme",
+  "license": "MIT",
+  "main": "./src/index.js",
+  "files": ["src"],
+  "dependencies": {}
+}
