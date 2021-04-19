@@ -4,7 +4,7 @@ let PEP = require('..');
 
 // http://www.matrixscience.com/help/fragmentation_help.html
 
-['HLysNH3(+1)$c2y3', 'HLysAspNH3(+1)$c3y3', 'HAspNH3(+1)$c3y2'];
+// ['HLysNH3(+1)$c2y3', 'HLysAspNH3(+1)$c3y3', 'HAspNH3(+1)$c3y2'];
 
 let allowed = [
   'Lys$b2y3',
@@ -162,8 +162,7 @@ describe('Check internal fragmentation', () => {
 
 function clean(mfs) {
   for (let i = 0; i < mfs.length; i++) {
-    let mf = mfs[i];
-    mfs[i] = mfs[i].replace(/\([^\(]*\)[0-9-]*/g, '');
+    mfs[i] = mfs[i].replace(/\([^(]*\)[0-9-]*/g, '');
     mfs[i] = mfs[i].replace(/^[H\d+]*(?=[A-Z])/, '');
     mfs[i] = mfs[i].replace(/^N-1/, '');
     mfs[i] = mfs[i].replace(/O[H-]\$/, '$');

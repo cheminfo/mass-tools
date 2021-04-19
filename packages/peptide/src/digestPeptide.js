@@ -23,19 +23,21 @@ function digestSequence(sequence, options = {}) {
     .split(/ /)
     .filter((entry) => entry);
 
-  let from = 0;
-  for (let i = 0; i < fragments.length; i++) {
-    let nbResidue = fragments[i]
-      .replace(/([A-Z][a-z][a-z])/g, ' $1')
-      .split(/ /)
-      .filter((entry) => entry).length;
-    fragments[i] = {
-      sequence: fragments[i],
-      nbResidue: nbResidue,
-      from: from,
-      to: from + nbResidue - 1,
-    };
-    from += nbResidue;
+  {
+    let from = 0;
+    for (let i = 0; i < fragments.length; i++) {
+      let nbResidue = fragments[i]
+        .replace(/([A-Z][a-z][a-z])/g, ' $1')
+        .split(/ /)
+        .filter((entry) => entry).length;
+      fragments[i] = {
+        sequence: fragments[i],
+        nbResidue: nbResidue,
+        from: from,
+        to: from + nbResidue - 1,
+      };
+      from += nbResidue;
+    }
   }
 
   let results = [];

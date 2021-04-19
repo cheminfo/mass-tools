@@ -17,7 +17,7 @@ describe('Generate internal fragments', () => {
       ya: false,
     });
     expect(result).toHaveLength(6);
-    expect(result).toEqual([
+    expect(result).toStrictEqual([
       'HGly(+1)$b2y4',
       'HGlySer(+1)$b3y4',
       'HGlySerPro(+1)$b4y4',
@@ -39,7 +39,7 @@ describe('Generate internal fragments', () => {
       ya: true,
     });
     expect(result).toHaveLength(6);
-    expect(result).toEqual([
+    expect(result).toStrictEqual([
       'HGlyC-1O-1(+1)$a2y4',
       'HGlySerC-1O-1(+1)$a3y4',
       'HGlySerProC-1O-1(+1)$a4y4',
@@ -62,7 +62,7 @@ describe('Generate internal fragments', () => {
       maxInternal: 2,
     });
     expect(result).toHaveLength(5);
-    expect(result).toEqual([
+    expect(result).toStrictEqual([
       'HGlyC-1O-1(+1)$a2y4',
       'HGlySerC-1O-1(+1)$a3y4',
       'HSerC-1O-1(+1)$a3y3',
@@ -85,7 +85,7 @@ describe('Generate internal fragments', () => {
       maxInternal: 2,
     });
     expect(result).toHaveLength(2);
-    expect(result).toEqual([
+    expect(result).toStrictEqual([
       'HGlySerC-1O-1(+1)$a3y4',
       'HSerProC-1O-1(+1)$a4y3',
     ]);

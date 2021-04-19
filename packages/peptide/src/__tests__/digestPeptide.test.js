@@ -9,7 +9,11 @@ describe('Checking digest sequence', () => {
       minMissed: 0,
       maxMissed: 0,
     });
-    expect(result).toEqual(['HLysOH$D1>1', 'HLysOH$D2>2', 'HAlaAlaLysOH$D3>5']);
+    expect(result).toStrictEqual([
+      'HLysOH$D1>1',
+      'HLysOH$D2>2',
+      'HAlaAlaLysOH$D3>5',
+    ]);
   });
 
   it('Normal sequence digest, minMissed:0, maxMissed:1', () => {
@@ -18,7 +22,7 @@ describe('Checking digest sequence', () => {
       minMissed: 0,
       maxMissed: 1,
     });
-    expect(result).toEqual([
+    expect(result).toStrictEqual([
       'HLysOH$D1>1',
       'HLysLysOH$D1>2',
       'HLysOH$D2>2',
@@ -33,12 +37,12 @@ describe('Checking digest sequence', () => {
       minMissed: 1,
       maxMissed: 1,
     });
-    expect(result).toEqual(['HLysLysOH$D1>2', 'HLysAlaAlaLysOH$D2>5']);
+    expect(result).toStrictEqual(['HLysLysOH$D1>2', 'HLysAlaAlaLysOH$D2>5']);
   });
 
   it('Normal small sequence digest, default value', () => {
     let result = PEP.digestPeptide('HLysAlaOH');
-    expect(result).toEqual(['HLysOH$D1>1', 'HAlaOH$D2>2']);
+    expect(result).toStrictEqual(['HLysOH$D1>1', 'HAlaOH$D2>2']);
   });
 
   //  Leu, Phe, Val, Ile, Ala, Met
@@ -48,7 +52,11 @@ describe('Checking digest sequence', () => {
       minMissed: 0,
       maxMissed: 0,
     });
-    expect(result).toEqual(['HLysOH$D1>1', 'HLeuProOH$D2>3', 'HValOH$D4>4']);
+    expect(result).toStrictEqual([
+      'HLysOH$D1>1',
+      'HLeuProOH$D2>3',
+      'HValOH$D4>4',
+    ]);
   });
 
   it('HLysLeu(H-1OH)ValOH digest at all amide bonds', () => {
@@ -58,6 +66,9 @@ describe('Checking digest sequence', () => {
       maxMissed: 1,
     });
 
-    expect(result).toEqual(['HLysLeu(H-1OH)OH$D1>2', 'HLeu(H-1OH)ValOH$D2>3']);
+    expect(result).toStrictEqual([
+      'HLysLeu(H-1OH)OH$D1>2',
+      'HLeu(H-1OH)ValOH$D2>3',
+    ]);
   });
 });

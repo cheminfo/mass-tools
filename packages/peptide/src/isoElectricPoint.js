@@ -91,19 +91,19 @@ function combine(aas) {
   combined.basic = {};
   combined.acid = {};
   for (let i = 0; i < aas.length; i++) {
-    let aa = aas[i];
-    if (!aaObject[aa]) return;
-    if (aaObject[aa].sc && aaObject[aa].sc.type) {
-      if (aaObject[aa].sc.type === 'positive') {
-        if (!combined.basic[aa]) {
-          combined.basic[aa] = 0;
+    let currentAA = aas[i];
+    if (!aaObject[currentAA]) return;
+    if (aaObject[currentAA].sc && aaObject[currentAA].sc.type) {
+      if (aaObject[currentAA].sc.type === 'positive') {
+        if (!combined.basic[currentAA]) {
+          combined.basic[currentAA] = 0;
         }
-        combined.basic[aa]++;
-      } else if (aaObject[aa].sc.type === 'negative') {
-        if (!combined.acid[aa]) {
-          combined.acid[aa] = 0;
+        combined.basic[currentAA]++;
+      } else if (aaObject[currentAA].sc.type === 'negative') {
+        if (!combined.acid[currentAA]) {
+          combined.acid[currentAA] = 0;
         }
-        combined.acid[aa]++;
+        combined.acid[currentAA]++;
       }
     }
   }

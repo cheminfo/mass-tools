@@ -170,7 +170,7 @@ describe('Check fragmentation', () => {
     checkAllowed(result);
   });
 
-  it.only('ALP versus (H)ALP(OH) versus HAlaLeuProOH versus (H)AlaLeuPro(OH)', () => {
+  it('ALP versus (H)ALP(OH) versus HAlaLeuProOH versus (H)AlaLeuPro(OH)', () => {
     let sequence1 = PEP.convertAASequence('ALP');
     let sequence2 = PEP.convertAASequence('(H)ALP(OH)');
     let sequence3 = PEP.convertAASequence('HAlaLeuProOH');
