@@ -16,5 +16,6 @@ module.exports = {
   PRE_MULTIPLIER: 'preMultiplier',
   MULTIPLIER: 'multiplier',
   TEXT: 'text',
+  ANCHOR: 'anchor',
   COMMENT: 'comment',
 };
