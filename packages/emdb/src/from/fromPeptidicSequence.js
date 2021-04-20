@@ -1,14 +1,14 @@
 'use strict';
 
 const { groupsToSequence } = require('chemical-groups');
-const combineMFs = require('mf-generator');
+const generateMFs = require('mf-generator');
 
 const fragmentPeptide = require('./util/fragmentPeptide');
 
 /**
  * Add a database starting from a peptidic sequence
  *
- * @param {string}         [sequence] Sequence as a string of 1 letter or 3 letters code. Could also be a correct molecular formula respecting uppercase, lowercase
+ * @param {string}         [sequences] Sequence as a string of 1 letter or 3 letters code. Could also be a correct molecular formula respecting uppercase, lowercase. It can be comma separated if you have many peptide sequences
  * @param {object}         [options={}]
  * @param {boolean}        [options.estimate=false] - estimate the number of MF without filters
  * @param {string}         [options.ionizations='']
@@ -58,7 +58,7 @@ const fragmentPeptide = require('./util/fragmentPeptide');
  * @param {function}       [options.filter.callback] - a function to filter the MF
  */
 
-module.exports = function fromPeptidicSequence(sequence, options = {}) {
+module.exports = function fromPeptidicSequence(sequences, options = {}) {
   const {
     digestion = {},
     mfsArray = [],
@@ -70,23 +70,26 @@ module.exports = function fromPeptidicSequence(sequence, options = {}) {
     ionizations = '',
     limit = 100000,
     estimate = false,
+    links = {},
   } = options;
 
-  let fragmentsArray = fragmentPeptide(sequence, {
-    digestion,
-    protonation,
-    fragmentation,
-    protonationPH,
-    allowNeutralLoss,
-  });
+  for (const sequence of sequences.split(/[,:]/)) {
+    let fragmentsArray = fragmentPeptide(sequence, {
+      digestion,
+      protonation,
+      fragmentation,
+      protonationPH,
+      allowNeutralLoss,
+    });
+    mfsArray.push(fragmentsArray);
+  }
 
-  mfsArray.push(fragmentsArray);
-
-  let combined = combineMFs(mfsArray, {
+  let combined = generateMFs(mfsArray, {
     ionizations,
     filter,
     estimate,
     limit,
+    links,
   });
 
   if (!estimate) {

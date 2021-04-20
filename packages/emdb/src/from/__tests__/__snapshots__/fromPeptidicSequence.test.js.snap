@@ -759,3 +759,53 @@ Array [
   },
 ]
 `;
+
+exports[`fromPeptidicSequence Linked AA(H-1#1)AA,GG(H-1#1)GG 1`] = `
+Array [
+  Array [
+    "#1C6H4#2",
+    "HAlaAla(H-1#1)AlaAlaOH",
+    "HGlyGly(H-1#2)GlyGlyOH",
+  ],
+  Array [
+    "#1C6H4#2",
+    "HAlaAla(H-1#1)C-1O-1(+1)",
+    "HGlyGly(H-1#2)C-1O-1(+1)",
+  ],
+  Array [
+    "#1C6H4#2",
+    "HAlaAla(H-1#1)C-1O-1(+1)",
+    "HGlyGly(H-1#2)GlyC-1O-1(+1)",
+  ],
+  Array [
+    "#1C6H4#2",
+    "HAlaAla(H-1#1)AlaC-1O-1(+1)",
+    "HGlyGly(H-1#2)C-1O-1(+1)",
+  ],
+  Array [
+    "#1C6H4#2",
+    "HAlaAla(H-1#1)AlaC-1O-1(+1)",
+    "HGlyGly(H-1#2)GlyC-1O-1(+1)",
+  ],
+  Array [
+    "#1C6H4#2",
+    "HAlaAla(H-1#1)C-1O-1(+1)",
+    "HGlyGly(H-1#2)GlyGlyOH",
+  ],
+  Array [
+    "#1C6H4#2",
+    "HAlaAla(H-1#1)AlaAlaOH",
+    "HGlyGly(H-1#2)C-1O-1(+1)",
+  ],
+  Array [
+    "#1C6H4#2",
+    "HAlaAla(H-1#1)AlaC-1O-1(+1)",
+    "HGlyGly(H-1#2)GlyGlyOH",
+  ],
+  Array [
+    "#1C6H4#2",
+    "HAlaAla(H-1#1)AlaAlaOH",
+    "HGlyGly(H-1#2)GlyC-1O-1(+1)",
+  ],
+]
+`;

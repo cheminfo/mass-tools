@@ -66,6 +66,7 @@ module.exports = function (mf, options) {
     }
   }
 
+  // todo does this make sense ??? I think we should remote those 3 lines
   if (mfs.length === 0) {
     mfs = mfs.concat([mf]);
   }

@@ -36,6 +36,7 @@ function fragmentArray(sequence, options = {}) {
 
   // calculate fragmentation
   let fragments = peptide.generatePeptideFragments(sequence, fragmentation);
+
   fragmentsArray = fragmentsArray.concat(fragments);
   return fragmentsArray;
 }

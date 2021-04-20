@@ -92,4 +92,22 @@ describe('fromPeptidicSequence', () => {
       });
     }).toThrow('processRange generates to many fragments (over 100)');
   });
+
+  it('Linked AA(H-1#1)AA,GG(H-1#1)GG', () => {
+    let dbManager = new DBManager();
+    dbManager.fromPeptidicSequence('AA(H-1#1)AA,GG(H-1#2)GG', {
+      links: { filter: true },
+      mfsArray: ['#1C6H4#2'],
+      fragmentation: {
+        a: true,
+      },
+    });
+
+    const peptidic = dbManager.databases.peptidic
+      .sort((a, b) => a.ms.em - b.ms.em)
+      .map((item) => item.parts);
+
+    expect(peptidic).toHaveLength(9);
+    expect(peptidic).toMatchSnapshot();
+  });
 });
