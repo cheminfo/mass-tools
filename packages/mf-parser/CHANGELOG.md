@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/cheminfo/mass-tools/compare/mf-parser@1.1.10...mf-parser@1.2.0) (2021-04-20)
+
+
+### Features
+
+* allow to have anchors # in MF ([4c920ff](https://github.com/cheminfo/mass-tools/commit/4c920ffea6c4020471ef6d7c1df8985e48bb4395))
+* format MF containing anchors ([dc8d469](https://github.com/cheminfo/mass-tools/commit/dc8d46986144dead0d92e607160c1746ca9c3fb0))
+
+
+
+
+
 ## [1.1.10](https://github.com/cheminfo/mass-tools/compare/mf-parser@1.1.9...mf-parser@1.1.10) (2021-03-24)
 
 

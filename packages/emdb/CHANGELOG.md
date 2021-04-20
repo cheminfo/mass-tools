@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.3.4...emdb@1.4.0) (2021-04-20)
+
+
+### Features
+
+* **emdb:** fromPeptidicSequence allows many sequences separated by a comma ([8f2495f](https://github.com/cheminfo/mass-tools/commit/8f2495f384f3efb33e8e8611f5e61dfd805b1a2e))
+
+
+
+
+
 ## [1.3.4](https://github.com/cheminfo/mass-tools/compare/emdb@1.3.3...emdb@1.3.4) (2021-03-24)
 
 **Note:** Version bump only for package emdb
