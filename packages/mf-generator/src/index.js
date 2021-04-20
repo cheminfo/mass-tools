@@ -209,7 +209,7 @@ function appendResult(results, currents, keys, options = {}) {
   if (links.filter) {
     let stars = [];
     for (let i = 0; i < keys.length; i++) {
-      let anchors = keys[i][currents[i]].match(/#[0-9]+/);
+      let anchors = keys[i][currents[i]].match(/#[0-9]+/g);
       if (anchors) stars.push(...anchors);
     }
     if (stars.length % 2 === 1) return;
