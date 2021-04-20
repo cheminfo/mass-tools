@@ -1,6 +1,6 @@
 'use strict';
 
-const combineMFs = require('mf-generator');
+const generateMFs = require('mf-generator');
 
 /**
  * Generates a database 'generated' from an array of molecular formula
@@ -59,7 +59,7 @@ const combineMFs = require('mf-generator');
  * <script>
  *   let emdb = new MolecularFormula.EMDB();
  *   let array = ['C1-10', 'H1-10'];
- *   emdb.fromArray(array); // create a database 'generated' combining all possibilies
+ *   emdb.fromArray(array); // create a database 'generated' combining all possibilities
  *   console.log(emdb.get('generated').length); // 100
  * </script>
  *
@@ -67,5 +67,5 @@ const combineMFs = require('mf-generator');
  */
 
 module.exports = function fromArray(mfsArray, options = {}) {
-  return combineMFs(mfsArray, options);
+  return generateMFs(mfsArray, options);
 };
