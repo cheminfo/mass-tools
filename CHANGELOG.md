@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.61.0](https://www.github.com/cheminfo/mass-tools/compare/v0.60.4...v0.61.0) (2021-04-20)
+
+
+### Features
+
+* allow to have anchors # in MF ([4c920ff](https://www.github.com/cheminfo/mass-tools/commit/4c920ffea6c4020471ef6d7c1df8985e48bb4395))
+* **emdb:** fromPeptidicSequence allows many sequences separated by a comma ([8f2495f](https://www.github.com/cheminfo/mass-tools/commit/8f2495f384f3efb33e8e8611f5e61dfd805b1a2e))
+* format MF containing anchors ([dc8d469](https://www.github.com/cheminfo/mass-tools/commit/dc8d46986144dead0d92e607160c1746ca9c3fb0))
+* **generate-mf:** allows to filter by matching # ([d32388a](https://www.github.com/cheminfo/mass-tools/commit/d32388acd9135f4315ead101c25312de4628f35c))
+* migrate peptide project to mass-tools ([4c94d3f](https://www.github.com/cheminfo/mass-tools/commit/4c94d3f13fbe79a1abd833243cb2a8b6a0bf9a90))
+
+
+### Bug Fixes
+
+* **mf-generator:** anchors were not working correctly ([c75da9c](https://www.github.com/cheminfo/mass-tools/commit/c75da9c5dc3d66d665f5fa98780173dd44c57ede))
+
 ### [0.60.4](https://www.github.com/cheminfo/mass-tools/compare/v0.60.3...v0.60.4) (2021-03-24)
 
 
