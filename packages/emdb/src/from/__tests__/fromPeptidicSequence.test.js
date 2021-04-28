@@ -106,8 +106,24 @@ describe('fromPeptidicSequence', () => {
     const peptidic = dbManager.databases.peptidic
       .sort((a, b) => a.ms.em - b.ms.em)
       .map((item) => item.parts);
-
     expect(peptidic).toHaveLength(9);
+    expect(peptidic).toMatchSnapshot();
+  });
+
+  it('Optional linked AA(H-1#1)A,GG(H-1#1)G', () => {
+    let dbManager = new DBManager();
+    dbManager.fromPeptidicSequence('AA(H-1#1)A,GG(H-1#2)G', {
+      links: { filter: true },
+      mfsArray: ['#1C6H4#2,'],
+      fragmentation: {
+        a: true,
+      },
+    });
+
+    const peptidic = dbManager.databases.peptidic
+      .sort((a, b) => a.ms.em - b.ms.em)
+      .map((item) => item.parts);
+    expect(peptidic).toHaveLength(6);
     expect(peptidic).toMatchSnapshot();
   });
 });

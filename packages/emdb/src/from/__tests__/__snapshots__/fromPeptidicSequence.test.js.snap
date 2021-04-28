@@ -809,3 +809,36 @@ Array [
   ],
 ]
 `;
+
+exports[`fromPeptidicSequence Optional linked AA(H-1#1)A,GG(H-1#1)G 1`] = `
+Array [
+  Array [
+    "#1C6H4#2",
+    "HAlaAla(H-1#1)AlaOH",
+    "HGlyGly(H-1#2)GlyOH",
+  ],
+  Array [
+    undefined,
+    "HGlyC-1O-1(+1)",
+  ],
+  Array [
+    undefined,
+    "HAlaC-1O-1(+1)",
+  ],
+  Array [
+    "#1C6H4#2",
+    "HAlaAla(H-1#1)C-1O-1(+1)",
+    "HGlyGly(H-1#2)C-1O-1(+1)",
+  ],
+  Array [
+    "#1C6H4#2",
+    "HAlaAla(H-1#1)C-1O-1(+1)",
+    "HGlyGly(H-1#2)GlyOH",
+  ],
+  Array [
+    "#1C6H4#2",
+    "HAlaAla(H-1#1)AlaOH",
+    "HGlyGly(H-1#2)C-1O-1(+1)",
+  ],
+]
+`;

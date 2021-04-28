@@ -61,7 +61,7 @@ const fragmentPeptide = require('./util/fragmentPeptide');
 module.exports = function fromPeptidicSequence(sequences, options = {}) {
   const {
     digestion = {},
-    mfsArray = [],
+    mfsArray: originalMFsArray = [],
     allowNeutralLoss = false,
     protonation = false,
     protonationPH = 7,
@@ -73,6 +73,12 @@ module.exports = function fromPeptidicSequence(sequences, options = {}) {
     links = {},
   } = options;
 
+  const hasLinked = sequences.includes('#');
+  const mfsArrayLinked = JSON.parse(JSON.stringify(originalMFsArray));
+  const mfsArrayUnlinked = JSON.parse(JSON.stringify(originalMFsArray));
+  const unlinked = [];
+  mfsArrayUnlinked.push(unlinked);
+
   for (const sequence of sequences.split(/[,:]/)) {
     let fragmentsArray = fragmentPeptide(sequence, {
       digestion,
@@ -81,16 +87,33 @@ module.exports = function fromPeptidicSequence(sequences, options = {}) {
       protonationPH,
       allowNeutralLoss,
     });
-    mfsArray.push(fragmentsArray);
+    mfsArrayLinked.push(
+      fragmentsArray.filter((fragment) => fragment.includes('#')),
+    );
+    unlinked.push(
+      ...fragmentsArray.filter((fragment) => !fragment.includes('#')),
+    );
   }
 
-  let combined = generateMFs(mfsArray, {
+  let combined = generateMFs(mfsArrayUnlinked, {
     ionizations,
     filter,
     estimate,
     limit,
     links,
   });
+
+  if (hasLinked) {
+    combined.push(
+      ...generateMFs(mfsArrayLinked, {
+        ionizations,
+        filter,
+        estimate,
+        limit,
+        links,
+      }),
+    );
+  }
 
   if (!estimate) {
     combined.forEach((result) => {
