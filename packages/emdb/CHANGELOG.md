@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/cheminfo/mass-tools/compare/emdb@1.4.0...emdb@1.4.1) (2021-04-28)
+
+
+### Bug Fixes
+
+* allow isolated peptides fragments even with links ([a3fbd2f](https://github.com/cheminfo/mass-tools/commit/a3fbd2f85c3fa72738e21124243e74fa41e837ee))
+
+
+
+
+
 # [1.4.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.3.4...emdb@1.4.0) (2021-04-20)
 
 
