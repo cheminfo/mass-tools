@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.61.1](https://www.github.com/cheminfo/mass-tools/compare/v0.61.0...v0.61.1) (2021-04-28)
+
+
+### Bug Fixes
+
+* allow isolated peptides fragments even with links ([a3fbd2f](https://www.github.com/cheminfo/mass-tools/commit/a3fbd2f85c3fa72738e21124243e74fa41e837ee))
+
 ## [0.61.0](https://www.github.com/cheminfo/mass-tools/compare/v0.60.4...v0.61.0) (2021-04-20)
 
 
