@@ -235,4 +235,10 @@ describe('test isotopicDistribution', () => {
     let distribution = isotopicDistribution.getDistribution();
     expect(distribution.array[0].x).toBe(24);
   });
+
+  it('CH-1', () => {
+    let isotopicDistribution = new IsotopicDistribution('CH-1');
+    let distribution = isotopicDistribution.getDistribution();
+    expect(distribution).toStrictEqual([]);
+  });
 });
