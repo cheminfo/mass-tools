@@ -10,7 +10,7 @@ module.exports = {
   Ca: -2,
   C: 2,
   F: -1,
-  Si: 4,
+  Si: 2,
   Cl: -1,
   Br: -1,
   I: -1,
