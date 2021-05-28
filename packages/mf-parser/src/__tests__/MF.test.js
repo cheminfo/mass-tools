@@ -83,6 +83,19 @@ describe('MF', () => {
       unsaturation: 0.5,
     });
   });
+
+  it('H2Si(OH)2', () => {
+    let mf = new MF('H2Si(OH)2');
+    expect(mf.getInfo()).toStrictEqual({
+      mass: 64.11607157056562,
+      monoisotopicMass: 63.99805590271001,
+      charge: 0,
+      mf: 'H4O2Si',
+      atoms: { H: 4, O: 2, Si: 1 },
+      unsaturation: 0,
+    });
+  });
+
   it('Et3N.HCl', () => {
     let mf = new MF('Et3N.HCl');
     let parts = mf.toParts();
