@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.61.2](https://www.github.com/cheminfo/mass-tools/compare/v0.61.1...v0.61.2) (2021-05-28)
+
+
+### Bug Fixes
+
+* valence of Si ([08f5d43](https://www.github.com/cheminfo/mass-tools/commit/08f5d43de22720a07a8474f350a877900ea93c37))
+
 ### [0.61.1](https://www.github.com/cheminfo/mass-tools/compare/v0.61.0...v0.61.1) (2021-04-28)
 
 
