@@ -3,6 +3,7 @@
 const ensureCase = require('./ensureCase');
 const parse = require('./parse');
 const getEA = require('./util/getEA');
+const getElements = require('./util/getElements');
 const getInfo = require('./util/getInfo');
 const getIsotopesInfo = require('./util/getIsotopesInfo');
 const partsToDisplay = require('./util/partsToDisplay');
@@ -62,6 +63,18 @@ class MF {
       this.cache.ea = getEA(this.cache.parts, options);
     }
     return this.cache.ea;
+  }
+
+  /**
+   * Get the different elements for each part
+   * @returns an array
+   */
+  getElements() {
+    if (!this.cache.elements) {
+      this.toParts();
+      this.cache.elements = getElements(this.cache.parts);
+    }
+    return this.cache.elements;
   }
 
   /**
