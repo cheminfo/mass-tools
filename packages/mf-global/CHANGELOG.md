@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/cheminfo/mass-tools/compare/mf-global@1.3.8...mf-global@1.4.0) (2021-06-09)
+
+
+### Features
+
+* add Phg, Hpg, Dpg abbreviation groups ([e8f7067](https://github.com/cheminfo/mass-tools/commit/e8f7067b7f226725e7b3c43eb0181b2268d64f5f))
+
+
+
+
+
 ## [1.3.8](https://github.com/cheminfo/mass-tools/compare/mf-global@1.3.7...mf-global@1.3.8) (2021-06-09)
 
 **Note:** Version bump only for package mf-global

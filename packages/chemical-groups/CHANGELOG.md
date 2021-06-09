@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/cheminfo/mass-tools/compare/chemical-groups@1.1.5...chemical-groups@1.2.0) (2021-06-09)
+
+
+### Features
+
+* add Phg, Hpg, Dpg abbreviation groups ([e8f7067](https://github.com/cheminfo/mass-tools/commit/e8f7067b7f226725e7b3c43eb0181b2268d64f5f))
+
+
+
+
+
 ## [1.1.5](https://github.com/cheminfo/mass-tools/compare/chemical-groups@1.1.4...chemical-groups@1.1.5) (2021-06-09)
 
 **Note:** Version bump only for package chemical-groups
