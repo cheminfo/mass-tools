@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.63.0](https://www.github.com/cheminfo/mass-tools/compare/v0.62.0...v0.63.0) (2021-06-09)
+
+
+### Features
+
+* add Phg, Hpg, Dpg abbreviation groups ([e8f7067](https://www.github.com/cheminfo/mass-tools/commit/e8f7067b7f226725e7b3c43eb0181b2268d64f5f))
+
 ## [0.62.0](https://www.github.com/cheminfo/mass-tools/compare/v0.61.2...v0.62.0) (2021-06-09)
 
 
