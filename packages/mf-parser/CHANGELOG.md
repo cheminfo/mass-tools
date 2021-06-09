@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/cheminfo/mass-tools/compare/mf-parser@1.2.1...mf-parser@1.3.0) (2021-06-09)
+
+
+### Features
+
+* add MF.getElements ([f1822bf](https://github.com/cheminfo/mass-tools/commit/f1822bf491536b73c0bac709784f03fb5fb7357b))
+
+
+
+
+
 ## [1.2.1](https://github.com/cheminfo/mass-tools/compare/mf-parser@1.2.0...mf-parser@1.2.1) (2021-05-28)
 
 **Note:** Version bump only for package mf-parser

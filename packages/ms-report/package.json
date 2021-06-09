@@ -3,7 +3,7 @@
   "browser": {
     "./src/getPaper.js": "./src/getPaper.browser.js"
   },
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Generate report for mass analysis",
   "main": "src/index.js",
   "files": [
@@ -22,9 +22,9 @@
   "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/ms-report#readme",
   "dependencies": {
     "@svgdotjs/svg.js": "^3.0.16",
-    "chemical-groups": "^1.1.4",
-    "mf-utilities": "^1.2.6",
-    "nucleotide": "^1.2.6",
+    "chemical-groups": "^1.1.5",
+    "mf-utilities": "^1.2.7",
+    "nucleotide": "^1.2.7",
     "peptide": "^1.11.0",
     "svgdom": "0.0.21"
   }
