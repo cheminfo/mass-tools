@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.62.0](https://www.github.com/cheminfo/mass-tools/compare/v0.61.2...v0.62.0) (2021-06-09)
+
+
+### Features
+
+* add MF.getElements ([f1822bf](https://www.github.com/cheminfo/mass-tools/commit/f1822bf491536b73c0bac709784f03fb5fb7357b))
+
 ### [0.61.2](https://www.github.com/cheminfo/mass-tools/compare/v0.61.1...v0.61.2) (2021-05-28)
 
 
