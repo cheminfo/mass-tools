@@ -207,16 +207,30 @@ class IsotopicDistribution {
     return maxY;
   }
 
+  getSumY(points) {
+    let sumY = 0;
+    for (let point of points) {
+      sumY += point.y;
+    }
+    return sumY;
+  }
+
   /**
    * Returns the isotopic distirubtion
+   * @param {object} [options={}]
+   * @param {number} [options.maxValue=100]
+   * @param {number} [options.sumValue] // if sumValue is defined, maxValue is ignored
    * @return {XY} an object containing 2 properties: x:[] and y:[]
    */
   getXY(options = {}) {
-    const { maxValue = 100 } = options;
+    const { maxValue = 100, sumValue } = options;
     let points = this.getDistribution().array;
     if (points.length === 0) return [];
     let factor = 1;
-    if (maxValue) {
+    if (sumValue) {
+      let sumY = this.getSumY(points);
+      factor = sumY / sumValue;
+    } else if (maxValue) {
       let maxY = this.getMaxY(points);
       factor = maxY / maxValue;
     }

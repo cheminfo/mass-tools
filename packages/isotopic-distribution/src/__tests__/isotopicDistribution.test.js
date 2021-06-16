@@ -163,6 +163,16 @@ describe('test isotopicDistribution', () => {
     expect(xy.y[0]).toStrictEqual(100);
   });
 
+  it('create distribution of C10 and getXY with sumValue to 1', () => {
+    let isotopicDistribution = new IsotopicDistribution('C10');
+    let xy = isotopicDistribution.getXY({ sumValue: 100 });
+    expect(isotopicDistribution.confidence).toBeGreaterThan(0.99999);
+    expect(xy.x[0]).toStrictEqual(120);
+    expect(
+      xy.y.reduce((previous, current) => previous + current, 0),
+    ).toStrictEqual(100);
+  });
+
   it('create distribution of Ru5 and getXY', () => {
     let isotopicDistribution = new IsotopicDistribution('Ru5');
     let distribution = isotopicDistribution.getDistribution();
