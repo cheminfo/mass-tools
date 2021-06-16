@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.0](https://www.github.com/cheminfo/mass-tools/compare/v0.63.0...v1.0.0) (2021-06-16)
+
+
+### Features
+
+* **isotopic-distribution:** add options sumValue in getXY ([fd883f2](https://www.github.com/cheminfo/mass-tools/commit/fd883f2d3d8d8a8bc7086bbe58c02ed8c749395e))
+
+
+### Bug Fixes
+
+* fix name of glycine derivatives ([45ca580](https://www.github.com/cheminfo/mass-tools/commit/45ca580d1258df091e7ab51877b9d0470d7ab6f9))
+
 ## [0.63.0](https://www.github.com/cheminfo/mass-tools/compare/v0.62.0...v0.63.0) (2021-06-09)
 
 
