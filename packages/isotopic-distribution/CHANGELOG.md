@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@1.1.17...isotopic-distribution@1.2.0) (2021-06-16)
+
+
+### Features
+
+* **isotopic-distribution:** add options sumValue in getXY ([fd883f2](https://github.com/cheminfo/mass-tools/commit/fd883f2d3d8d8a8bc7086bbe58c02ed8c749395e))
+
+
+
+
+
 ## [1.1.17](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@1.1.16...isotopic-distribution@1.1.17) (2021-06-09)
 
 **Note:** Version bump only for package isotopic-distribution

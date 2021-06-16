@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/cheminfo/mass-tools/compare/chemical-groups@1.2.0...chemical-groups@1.2.1) (2021-06-16)
+
+
+### Bug Fixes
+
+* fix name of glycine derivatives ([45ca580](https://github.com/cheminfo/mass-tools/commit/45ca580d1258df091e7ab51877b9d0470d7ab6f9))
+
+
+
+
+
 # [1.2.0](https://github.com/cheminfo/mass-tools/compare/chemical-groups@1.1.5...chemical-groups@1.2.0) (2021-06-09)
 
 
