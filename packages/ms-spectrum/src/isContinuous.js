@@ -20,7 +20,7 @@ function isContinuous(spectrum, options = {}) {
     maxDeltaRatio = 3,
     ignoreRelativeHeight = 0.001,
   } = options;
-  const minHeight = max(spectrum.data.y) * 0.001;
+  const minHeight = max(spectrum.data.y) * ignoreRelativeHeight;
   const minRadio = 1 / maxDeltaRatio;
   const maxRatio = 1 * maxDeltaRatio;
   if (spectrum.continuous === undefined) {
