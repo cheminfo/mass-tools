@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.7](https://github.com/cheminfo/mass-tools/compare/emdb@1.4.6...emdb@1.4.7) (2021-07-05)
+
+**Note:** Version bump only for package emdb
+
+
+
+
+
 ## [1.4.6](https://github.com/cheminfo/mass-tools/compare/emdb@1.4.5...emdb@1.4.6) (2021-07-05)
 
 **Note:** Version bump only for package emdb

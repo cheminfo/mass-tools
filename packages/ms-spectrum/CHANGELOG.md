@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.15](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.2.14...ms-spectrum@1.2.15) (2021-07-05)
+
+
+### Bug Fixes
+
+* isContinuous method in the browser ([9220a31](https://github.com/cheminfo/mass-tools/commit/9220a319036af24140a2c83af5e433972c707c55))
+
+
+
+
+
 ## [1.2.14](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.2.13...ms-spectrum@1.2.14) (2021-07-05)
 
 
