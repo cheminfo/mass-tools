@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://www.github.com/cheminfo/mass-tools/compare/v1.0.1...v1.0.2) (2021-07-05)
+
+
+### Bug Fixes
+
+* isContinuous method in the browser ([9220a31](https://www.github.com/cheminfo/mass-tools/commit/9220a319036af24140a2c83af5e433972c707c55))
+
 ### [1.0.1](https://www.github.com/cheminfo/mass-tools/compare/v1.0.0...v1.0.1) (2021-07-05)
 
 
