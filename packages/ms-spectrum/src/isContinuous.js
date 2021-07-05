@@ -1,6 +1,6 @@
 'use strict';
 
-const max = require('ml-array-max');
+const max = require('ml-array-max/lib/index');
 /**
  * When a spectrum is continous ?
  * - has more than 100 points
