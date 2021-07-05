@@ -10,7 +10,7 @@ const max = require('ml-array-max');
  * @param {object} spectrum
  * @param {object} [options={}]
  * @param {number} [options.minLength=100]
- * @param {number} [options.ignoreRelativeHeight=0.001]
+ * @param {number} [options.relativeHeightThreshold=0.001] // Under this value the
  * @param {number} [options.maxDeltaRatio=3]
  */
 
@@ -18,9 +18,9 @@ function isContinuous(spectrum, options = {}) {
   const {
     minLength = 100,
     maxDeltaRatio = 3,
-    ignoreRelativeHeight = 0.001,
+    relativeHeightThreshold = 0.001,
   } = options;
-  const minHeight = max(spectrum.data.y) * ignoreRelativeHeight;
+  const minHeight = max(spectrum.data.y) * relativeHeightThreshold;
   const minRadio = 1 / maxDeltaRatio;
   const maxRatio = 1 * maxDeltaRatio;
   if (spectrum.continuous === undefined) {
