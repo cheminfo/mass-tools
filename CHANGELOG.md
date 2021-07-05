@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://www.github.com/cheminfo/mass-tools/compare/v1.0.0...v1.0.1) (2021-07-05)
+
+
+### Bug Fixes
+
+* ignore small peaks in isContinous ([183c5c5](https://www.github.com/cheminfo/mass-tools/commit/183c5c58a82cff828ab47b516dfbb6d7f88b198a))
+
 ## [1.0.0](https://www.github.com/cheminfo/mass-tools/compare/v0.63.0...v1.0.0) (2021-06-16)
 
 
