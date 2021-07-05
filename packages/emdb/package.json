@@ -1,6 +1,6 @@
 {
   "name": "emdb",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Database manager for exact mass query",
   "main": "src/index.js",
   "files": [
@@ -31,7 +31,7 @@
     "ml-array-max": "^1.2.0",
     "ml-array-min": "^1.2.0",
     "ml-regression-theil-sen": "^2.0.0",
-    "ms-spectrum": "^1.2.13",
+    "ms-spectrum": "^1.2.14",
     "node-fetch": "^2.6.1",
     "nucleotide": "^1.2.9",
     "peaks-similarity": "^2.3.1",
