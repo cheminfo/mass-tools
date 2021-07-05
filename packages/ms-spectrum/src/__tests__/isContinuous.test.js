@@ -73,4 +73,10 @@ describe('test isContinuous', () => {
     let data = parseXY(text);
     expect(isContinuous({ data })).toBe(true);
   });
+
+  it('check joined spectrum', () => {
+    let text = readFileSync(join(__dirname, 'data/joinedHPLC.txt'), 'utf8');
+    let data = parseXY(text);
+    expect(isContinuous({ data })).toBe(true);
+  });
 });

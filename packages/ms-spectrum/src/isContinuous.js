@@ -1,5 +1,6 @@
 'use strict';
 
+const max = require('ml-array-max');
 /**
  * When a spectrum is continous ?
  * - has more than 100 points
@@ -9,11 +10,17 @@
  * @param {object} spectrum
  * @param {object} [options={}]
  * @param {number} [options.minLength=100]
+ * @param {number} [options.ignoreRelativeHeight=0.001]
  * @param {number} [options.maxDeltaRatio=3]
  */
 
 function isContinuous(spectrum, options = {}) {
-  const { minLength = 100, maxDeltaRatio = 3 } = options;
+  const {
+    minLength = 100,
+    maxDeltaRatio = 3,
+    ignoreRelativeHeight = 0.001,
+  } = options;
+  const minHeight = max(spectrum.data.y) * 0.001;
   const minRadio = 1 / maxDeltaRatio;
   const maxRatio = 1 * maxDeltaRatio;
   if (spectrum.continuous === undefined) {
@@ -27,7 +34,7 @@ function isContinuous(spectrum, options = {}) {
       let success = 0;
       let failed = 0;
       for (let i = 0; i < xs.length - 1; i++) {
-        if (ys[i] === 0 || ys[i + 1] === 0) {
+        if (ys[i] < minHeight || ys[i + 1] < minHeight) {
           previousDelta = 0;
           continue;
         }
