@@ -1,5 +1,10 @@
 # mass-tools
 
+[![NPM version][npm-image]][npm-url]
+[![build status][ci-image]][ci-url]
+[![Test coverage][codecov-image]][codecov-url]
+[![npm download][download-image]][download-url]
+
 Various tools allowing to manipulate molecular formula and analyse mass spectra.
 
 The library is published as a full package on npm as `mass-tools`.
@@ -39,10 +44,3 @@ This package should not be installed as we provide many specific packages with t
 ## License
 
 [MIT](./LICENSE)
-
-[npm-image]: https://img.shields.io/npm/v/mf-parser.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/mf-parser
-[[david-image]: https://img.shields.io/david/cheminfo/mf-parser.svg?style=flat-square
-[david-url]: https://david-dm.org/cheminfo/mf-parser
-[download-image]: https://img.shields.io/npm/dm/mf-parser.svg?style=flat-square
-[download-url]: https://www.npmjs.com/package/mf-parser
