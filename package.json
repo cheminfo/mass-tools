@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap --no-ci",
+    "postinstall": "cp README.md packages/mass-tools/README.md",
     "build": "cheminfo-build --out-name mass-tools --entry packages/mass-tools/src/index.js -r MassTools",
     "build-docs": "ls packages | xargs -I % sh -c 'cd packages/%; documentation build src/index.js -f html -o ../../docs/%; cd ../..'",
     "eslint": "eslint packages --cache",

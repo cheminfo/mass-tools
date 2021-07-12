@@ -7,3 +7,4 @@ coverage
 .eslintcache
 dist
 .DS_Store
+packages/mass-tools/README.md
