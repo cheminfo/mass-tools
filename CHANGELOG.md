@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://www.github.com/cheminfo/mass-tools/compare/v1.0.2...v1.1.0) (2021-07-12)
+
+
+### Features
+
+* copy README to mass-tools npm package ([34c57f8](https://www.github.com/cheminfo/mass-tools/commit/34c57f8dbfce3929b6dbe79f6721112e0396eca9))
+
 ### [1.0.2](https://www.github.com/cheminfo/mass-tools/compare/v1.0.1...v1.0.2) (2021-07-05)
 
 
