@@ -1,9 +1,6 @@
 # mass-tools
 
-[![NPM version][npm-image]][npm-url]
-[![build status][ci-image]][ci-url]
-[![Test coverage][codecov-image]][codecov-url]
-[![npm download][download-image]][download-url]
+[![DOI](https://www.zenodo.org/badge/111557358.svg)](https://www.zenodo.org/badge/latestdoi/111557358)
 
 Various tools allowing to manipulate molecular formula and analyse mass spectra.
 
