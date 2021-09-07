@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/cheminfo/mass-tools/compare/v1.1.0...v1.1.1) (2021-08-29)
+
+
+### Bug Fixes
+
+* add missing mf-parser descriiption ([c0faa0d](https://www.github.com/cheminfo/mass-tools/commit/c0faa0d33bb9ad69e1766a31eee2ce1fe7a2e13d))
+
 ## [1.1.0](https://www.github.com/cheminfo/mass-tools/compare/v1.0.2...v1.1.0) (2021-07-12)
 
 
