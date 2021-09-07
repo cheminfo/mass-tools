@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/cheminfo/mass-tools/compare/mf-parser@1.3.3...mf-parser@1.3.4) (2021-09-07)
+
+
+### Bug Fixes
+
+* add missing mf-parser descriiption ([c0faa0d](https://github.com/cheminfo/mass-tools/commit/c0faa0d33bb9ad69e1766a31eee2ce1fe7a2e13d))
+
+
+
+
+
 ## [1.3.3](https://github.com/cheminfo/mass-tools/compare/mf-parser@1.3.2...mf-parser@1.3.3) (2021-07-12)
 
 **Note:** Version bump only for package mf-parser

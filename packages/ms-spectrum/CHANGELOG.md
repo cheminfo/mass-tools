@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.17](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.2.16...ms-spectrum@1.2.17) (2021-09-07)
+
+**Note:** Version bump only for package ms-spectrum
+
+
+
+
+
 ## [1.2.16](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.2.15...ms-spectrum@1.2.16) (2021-07-12)
 
 **Note:** Version bump only for package ms-spectrum

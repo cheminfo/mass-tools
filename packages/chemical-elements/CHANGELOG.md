@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.12](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.1.11...chemical-elements@1.1.12) (2021-09-07)
+
+**Note:** Version bump only for package chemical-elements
+
+
+
+
+
 ## [1.1.11](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.1.10...chemical-elements@1.1.11) (2021-07-12)
 
 **Note:** Version bump only for package chemical-elements
