@@ -12,10 +12,12 @@
 ## Usage
 
 ```js
-import library from 'mf-generator';
+import generateMFs from 'mf-generator';
 
-const result = library(args);
-// result is ...
+const mfsArray = ['C,H,', 'Cl,Br'];
+const result = generateMFs(mfsArray).map((entry) => entry.mf);
+// result = 'Cl', 'HCl', 'CCl', 'Br', 'HBr', 'CBr'
+
 ```
 
 ## License
