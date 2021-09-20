@@ -24,6 +24,7 @@
     "ml-array-normed": "^1.3.6",
     "ml-gsd": "^6.6.3",
     "ml-regression-power": "^2.0.0",
+    "ml-spectra-processing": "^6.8.0",
     "peaks-similarity": "^2.3.1",
     "xy-parser": "^3.1.1"
   }

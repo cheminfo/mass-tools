@@ -5,6 +5,7 @@ const normed = require('ml-array-normed/lib/index.js');
 const { parseXY } = require('xy-parser');
 
 const getBestPeaks = require('./getBestPeaks');
+const getMassRemainder = require('./getMassRemainder');
 const getPeakChargeBySimilarity = require('./getPeakChargeBySimilarity');
 const getPeaks = require('./getPeaks');
 const isContinuous = require('./isContinuous');
@@ -105,6 +106,14 @@ Spectrum.prototype.getPeaks = function (options) {
 
 Spectrum.prototype.isContinuous = function () {
   return isContinuous(this);
+};
+
+/**
+ * Remove an integer number of time the specifiedd monoisotopic mass
+ * Mass remainder analysis (MARA): https://doi.org/10.1021/acs.analchem.7b04730
+ */
+Spectrum.prototype.massRemainder = function (mass, options = {}) {
+  return getMassRemainder(this.data, mass, options);
 };
 
 Spectrum.JsGraph = Spectrum.prototype.JsGraph = require('./jsgraph/index');
