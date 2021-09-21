@@ -3,7 +3,7 @@
 const fs = require('fs');
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-const fetch = require('node-fetch');
+const fetch = require('cross-fetch');
 
 async function retrieve(refresh = false) {
   let text;

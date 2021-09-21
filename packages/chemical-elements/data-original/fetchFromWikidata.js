@@ -1,7 +1,7 @@
 'use strict';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-let fetch = require('node-fetch');
+let fetch = require('cross-fetch');
 // eslint-disable-next-line import/no-extraneous-dependencies
 let Wikidata = require('wikidata-sdk');
 
