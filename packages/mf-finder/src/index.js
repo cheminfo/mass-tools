@@ -29,7 +29,7 @@ let targetMassCache;
  * @param {function}      [options.filter.callback] - a function to filter the MF
  */
 
-module.exports = function (targetMass, options = {}) {
+module.exports = function mfFinder(targetMass, options = {}) {
   const {
     filter = {},
     maxIterations = 1e8,

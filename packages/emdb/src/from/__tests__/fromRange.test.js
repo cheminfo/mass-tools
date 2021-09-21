@@ -15,7 +15,7 @@ describe('fromRange', () => {
     expect(dbManager.databases.generated[0].charge).toBe(-1);
   });
 
-  it('Filter callback', function () {
+  it('Filter callback', () => {
     let dbManager = new DBManager();
     dbManager.fromRange('C0-4 H0-4', {
       filter: {

@@ -9,7 +9,7 @@ const generatePeptideFragments = require('./generatePeptideFragments');
 const IEP = require('./isoElectricPoint');
 const splitPeptide = require('./splitPeptide');
 
-exports.getInfo = function () {
+exports.getInfo = () => {
   return aa;
 };
 
@@ -18,23 +18,23 @@ exports.getInfo = function () {
 exports.splitPeptide = splitPeptide;
 exports.digestPeptide = digestPeptide;
 
-exports.calculateIEP = function (sequence) {
+exports.calculateIEP = function calculateIEP(sequence) {
   let aas = splitPeptide(sequence);
   let result = IEP.calculateIEP(aas);
   return result;
 };
 
-exports.calculateIEPChart = function (sequence) {
+exports.calculateIEPChart = function calculateIEPChart(sequence) {
   let aas = splitPeptide(sequence);
   let result = IEP.calculateChart(aas);
   return result;
 };
 
-exports.getColorForIEP = function (iep) {
+exports.getColorForIEP = function getColorForIEP(iep) {
   return IEP.getColor(iep);
 };
 
-exports.calculateCharge = function (sequence, ph) {
+exports.calculateCharge = function calculateCharge(sequence, ph) {
   let aas = splitPeptide(sequence);
   return IEP.calculateCharge(aas, ph);
 };

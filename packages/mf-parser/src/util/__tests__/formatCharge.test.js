@@ -2,7 +2,7 @@
 
 const formatCharge = require('../formatCharge');
 
-test('formatCharge', function () {
+test('formatCharge', () => {
   expect(formatCharge(-2)).toBe('-2');
   expect(formatCharge(-1)).toBe('-1');
   expect(formatCharge(0)).toBe('');

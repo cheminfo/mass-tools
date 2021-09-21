@@ -52,7 +52,7 @@ let tests = [
 
 const toParts = require('../toParts');
 
-test.each(tests)('toParts %p', function (aTest) {
+test.each(tests)('toParts %p', (aTest) => {
   let parsed = parse(aTest.mf);
   let parts = toParts(parsed);
   expect(parts).toMatchObject(aTest.result);

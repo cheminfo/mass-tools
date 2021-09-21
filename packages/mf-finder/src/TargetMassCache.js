@@ -67,13 +67,13 @@ let TargetMassCache = function TargetMassCache(
 
 module.exports = TargetMassCache;
 
-TargetMassCache.prototype.getMinMass = function (charge) {
+TargetMassCache.prototype.getMinMass = function getMinMass(charge) {
   return this.data[charge - this.minCharge]
     ? this.data[charge - this.minCharge].minMass
     : Number.MAX_SAFE_INTEGER;
 };
 
-TargetMassCache.prototype.getMaxMass = function (charge) {
+TargetMassCache.prototype.getMaxMass = function getMaxMass(charge) {
   return this.data[charge - this.minCharge]
     ? this.data[charge - this.minCharge].maxMass
     : Number.MIN_SAFE_INTEGER;

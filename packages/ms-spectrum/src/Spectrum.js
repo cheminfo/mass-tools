@@ -80,31 +80,31 @@ Spectrum.prototype.normedY = function normedY(total = 1) {
   return this;
 };
 
-Spectrum.prototype.peakPicking = function () {
+Spectrum.prototype.peakPicking = function peakPickingFct() {
   peakPicking(this);
   return this.peaks;
 };
 
-Spectrum.prototype.peaksWidth = function () {
+Spectrum.prototype.peaksWidth = function peaksWidthFct() {
   peakPicking(this);
   return peaksWidth(this.peaks);
 };
 
-Spectrum.prototype.getBestPeaks = function (options) {
+Spectrum.prototype.getBestPeaks = (options) => {
   peakPicking(this);
   return getBestPeaks(this.peaks, options);
 };
 
-Spectrum.prototype.getPeakChargeBySimilarity = function (targetMass, options) {
+Spectrum.prototype.getPeakChargeBySimilarity = (targetMass, options) => {
   return getPeakChargeBySimilarity(this, targetMass, options);
 };
 
-Spectrum.prototype.getPeaks = function (options) {
+Spectrum.prototype.getPeaks = function getPeaksFct(options) {
   peakPicking(this);
   return getPeaks(this.peaks, options);
 };
 
-Spectrum.prototype.isContinuous = function () {
+Spectrum.prototype.isContinuous = function isContinuousFct() {
   return isContinuous(this);
 };
 
@@ -112,7 +112,10 @@ Spectrum.prototype.isContinuous = function () {
  * Remove an integer number of time the specifiedd monoisotopic mass
  * Mass remainder analysis (MARA): https://doi.org/10.1021/acs.analchem.7b04730
  */
-Spectrum.prototype.getMassRemainder = function (mass, options = {}) {
+Spectrum.prototype.getMassRemainder = function getMassRemainderFct(
+  mass,
+  options = {},
+) {
   return getMassRemainder(this.data, mass, options);
 };
 

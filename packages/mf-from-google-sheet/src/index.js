@@ -36,7 +36,7 @@ async function mfFromGoogleSheet(url, options = {}) {
         header: true,
       }).data;
 
-      referencesArray.forEach(function (r) {
+      referencesArray.forEach((r) => {
         references[r.label] = r;
       });
     }
@@ -93,11 +93,11 @@ async function mfFromGoogleSheet(url, options = {}) {
       }
     }
 
-    results = results.filter(function (a) {
+    results = results.filter((a) => {
       return a.ms.em !== 0;
     });
 
-    results.sort(function (a, b) {
+    results.sort((a, b) => {
       return a.ms.em - b.ms.em;
     });
 

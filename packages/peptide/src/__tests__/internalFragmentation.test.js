@@ -140,7 +140,7 @@ describe('Check internal fragmentation', () => {
     checkAllowed(result);
   });
 
-  it('Check AKDR internal fragment zc', function () {
+  it('Check AKDR internal fragment zc', () => {
     let sequence = PEP.convertAASequence('AKDR');
     sequence = PEP.allowNeutralLoss(sequence);
     let result = PEP.generatePeptideFragments(sequence, {
