@@ -112,7 +112,7 @@ Spectrum.prototype.isContinuous = function () {
  * Remove an integer number of time the specifiedd monoisotopic mass
  * Mass remainder analysis (MARA): https://doi.org/10.1021/acs.analchem.7b04730
  */
-Spectrum.prototype.massRemainder = function (mass, options = {}) {
+Spectrum.prototype.getMassRemainder = function (mass, options = {}) {
   return getMassRemainder(this.data, mass, options);
 };
 

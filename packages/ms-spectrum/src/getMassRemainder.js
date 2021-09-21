@@ -12,7 +12,8 @@ const { xySortX, xyJoinX } = require('ml-spectra-processing');
  */
 function getMassRemainder(spectrum, mass, options = {}) {
   const { delta = 0.001 } = options;
-  const { x, y } = spectrum;
+  const x = spectrum.x.slice();
+  const y = spectrum.y;
   for (let i = 0; i < x.length; i++) {
     const factor = Math.floor(x[i] / mass);
     x[i] = x[i] - factor * mass;
