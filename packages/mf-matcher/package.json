@@ -19,6 +19,6 @@
   "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/mf-matcher#readme",
   "dependencies": {
     "mf-utilities": "^1.2.11",
-    "ml-spectra-processing": "6.7.1"
+    "ml-spectra-processing": "6.8.0"
   }
 }
