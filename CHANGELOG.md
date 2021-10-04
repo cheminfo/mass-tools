@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0](https://www.github.com/cheminfo/mass-tools/compare/v1.1.1...v2.0.0) (2021-10-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* mf-global exports groups and elements (and not Groups and Elements)
+
+### Features
+
+* add getMassRemainder ([e5be1ab](https://www.github.com/cheminfo/mass-tools/commit/e5be1abf725c5b8965c293bdd0d7212e8fcb2d98))
+
+
+### Bug Fixes
+
+* getMassRemainder should make a copy of the data ([58ee959](https://www.github.com/cheminfo/mass-tools/commit/58ee9597d7a44e62a00d7e44428bfb8035448757))
+* mf-global exports groups and elements (and not Groups and Elements) ([8fc0281](https://www.github.com/cheminfo/mass-tools/commit/8fc02813da21ccfd9b66bd66633f821c6d160739))
+
 ### [1.1.1](https://www.github.com/cheminfo/mass-tools/compare/v1.1.0...v1.1.1) (2021-08-29)
 
 
