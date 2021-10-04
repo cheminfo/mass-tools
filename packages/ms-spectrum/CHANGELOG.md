@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.2.17...ms-spectrum@1.3.0) (2021-10-04)
+
+
+### Bug Fixes
+
+* getMassRemainder should make a copy of the data ([58ee959](https://github.com/cheminfo/mass-tools/commit/58ee9597d7a44e62a00d7e44428bfb8035448757))
+
+
+### Features
+
+* add getMassRemainder ([e5be1ab](https://github.com/cheminfo/mass-tools/commit/e5be1abf725c5b8965c293bdd0d7212e8fcb2d98))
+
+
+
+
+
 ## [1.2.17](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.2.16...ms-spectrum@1.2.17) (2021-09-07)
 
 **Note:** Version bump only for package ms-spectrum
