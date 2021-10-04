@@ -2,8 +2,10 @@
 
 module.exports = {
   EMDB: require('emdb'),
-  Groups: require('chemical-groups/src/groups'),
-  Elements: require('chemical-elements/src/elementsAndIsotopes'),
+  groups: require('chemical-groups/src/groups'),
+  groupsObject: require('chemical-groups/src/groupsObject'),
+  elements: require('chemical-elements/src/elementsAndIsotopes'),
+  elementsObject: require('chemical-elements/src/elementsAndIsotopesObject'),
   IsotopicDistribution: require('isotopic-distribution'),
   MF: require('mf-parser/src/MF.js'),
   Peptide: require('peptide'),
