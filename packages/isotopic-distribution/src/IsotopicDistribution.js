@@ -168,6 +168,17 @@ class IsotopicDistribution {
       }
     }
     if (finalDistribution) finalDistribution.joinX(this.fwhm);
+
+    for (let entry of finalDistribution.array) {
+      if (!entry.composition) continue;
+      entry.composition = Object.entries(entry.composition)
+        .map(
+          (composition) =>
+            `[${composition[0]}]${composition[1] === 1 ? '' : composition[1]}`,
+        )
+        .join('');
+    }
+
     this.confidence /= this.parts.length;
     this.cachedDistribution = finalDistribution;
     return finalDistribution;
