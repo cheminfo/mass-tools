@@ -10,7 +10,14 @@ module.exports = function multiply(b, options = {}) {
   for (let entryA of this.array) {
     for (let entryB of b.array) {
       let y = entryA.y * entryB.y;
-      if (y > minY) result.push(entryA.x + entryB.x, y);
+      if (y > minY) {
+        const composition = calculateComposition(entryA, entryB);
+        if (composition) {
+          result.push({ x: entryA.x + entryB.x, y, composition });
+        } else {
+          result.push({ x: entryA.x + entryB.x, y });
+        }
+      }
       if (result.length > maxLines) {
         result.joinX(deltaX);
         result.topY(maxLines / 2);
@@ -22,3 +29,8 @@ module.exports = function multiply(b, options = {}) {
   this.move(result);
   return this;
 };
+
+function calculateComposition(entryA, entryB) {
+  if (!entryA.composition || !entryB.composition) return;
+  console.log(entryA, entryB);
+}

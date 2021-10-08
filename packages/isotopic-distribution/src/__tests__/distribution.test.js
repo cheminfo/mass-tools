@@ -4,77 +4,77 @@ const Distribution = require('../Distribution.js');
 
 describe('test Distribution', () => {
   it('create array', () => {
-    let array = new Distribution();
-    array.push(1, 2);
-    array.push(2, 3);
-    expect(array).toHaveLength(2);
+    let dist = new Distribution();
+    dist.push({ x: 1, y: 2 });
+    dist.push({ x: 2, y: 3 });
+    expect(dist).toHaveLength(2);
   });
 
   it('joinX array 0', () => {
-    let array = new Distribution();
-    array.joinX();
-    expect(array.array).toStrictEqual([]);
+    let dist = new Distribution();
+    dist.joinX();
+    expect(dist.array).toStrictEqual([]);
   });
 
   it('joinX array 1', () => {
-    let array = new Distribution();
-    array.push(1, 1);
-    array.joinX();
-    expect(array.array).toStrictEqual([{ x: 1, y: 1 }]);
+    let dist = new Distribution();
+    dist.push({ x: 1, y: 1 });
+    dist.joinX();
+    expect(dist.array).toStrictEqual([{ x: 1, y: 1 }]);
   });
 
   it('joinX array', () => {
-    let array = new Distribution();
-    array.push(0, 0);
-    array.push(1, 1);
-    array.joinX();
-    expect(array.array).toStrictEqual([
+    let dist = new Distribution();
+    dist.push({ x: 0, y: 0 });
+    dist.push({ x: 1, y: 1 });
+    dist.joinX();
+    expect(dist.array).toStrictEqual([
       { x: 0, y: 0 },
       { x: 1, y: 1 },
     ]);
   });
 
   it('really joinX array', () => {
-    let array = new Distribution();
-    array.push(0, 0);
-    array.push(1, 1);
-    array.joinX(1);
-    expect(array.array).toStrictEqual([{ x: 1, y: 1 }]);
+    let dist = new Distribution();
+    dist.push({ x: 0, y: 0 });
+    dist.push({ x: 1, y: 1 });
+    dist.joinX(1);
+    expect(dist.array).toStrictEqual([{ x: 1, y: 1 }]);
   });
 
   it('really joinX array shifted', () => {
-    let array = new Distribution();
-    array.push(1, 0);
-    array.push(2, 1);
-    array.joinX(1);
-    expect(array.array).toStrictEqual([{ x: 2, y: 1 }]);
+    let dist = new Distribution();
+    dist.push({ x: 1, y: 0 });
+    dist.push({ x: 2, y: 1 });
+    dist.joinX(1);
+    expect(dist.array).toStrictEqual([{ x: 2, y: 1 }]);
   });
 
   it('really joinX array shifted weighted', () => {
-    let array = new Distribution();
-    array.push(1, 1);
-    array.push(2, 3);
-    array.joinX(1);
-    expect(array.array).toStrictEqual([{ x: 1.75, y: 4 }]);
+    let dist = new Distribution();
+    dist.push({ x: 1, y: 1 });
+    dist.push({ x: 2, y: 3 });
+    dist.joinX(1);
+    expect(dist.array).toStrictEqual([{ x: 1.75, y: 4 }]);
   });
 
   it('really joinX array shifted weighted 3', () => {
-    let array = new Distribution();
-    array.push(1, 1);
-    array.push(2, 3);
-    array.push(2.25, 1);
-    array.joinX(1);
-    expect(array.array).toStrictEqual([{ x: 1.85, y: 5 }]);
+    let dist = new Distribution();
+    dist.push({ x: 1, y: 1 });
+    dist.push({ x: 2, y: 3 });
+    dist.push({ x: 2.25, y: 1 });
+    dist.joinX(1);
+    expect(dist.array).toStrictEqual([{ x: 1.85, y: 5 }]);
   });
 
   it('really joinX array shifted weighted 4', () => {
-    let array = new Distribution();
-    array.push(1, 1);
-    array.push(2, 3);
-    array.push(2.25, 1);
-    array.push(5, 1);
-    array.joinX(1);
-    expect(array.array).toStrictEqual([
+    let dist = new Distribution();
+    dist.push({ x: 1, y: 1 });
+    dist.push({ x: 2, y: 3 });
+    dist.push({ x: 2.25, y: 1 });
+    dist.push({ x: 5, y: 1 });
+    dist.joinX(1);
+    expect(dist.array).toStrictEqual([
       { x: 1.85, y: 5 },
       { x: 5, y: 1 },
     ]);

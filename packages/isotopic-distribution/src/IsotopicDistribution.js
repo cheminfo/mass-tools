@@ -103,7 +103,15 @@ class IsotopicDistribution {
         for (let isotope of part.isotopesInfo.isotopes) {
           if (isotope.number < 0) return [];
           if (isotope.number > 0) {
-            let isotopeDistribution = new Distribution(isotope.distribution);
+            const newDistribution = JSON.parse(
+              JSON.stringify(isotope.distribution),
+            );
+            if (this.fwhm === 1e-8) {
+              for (const entry of newDistribution) {
+                entry.composition = { [Math.round(entry.x) + isotope.atom]: 1 };
+              }
+            }
+            let isotopeDistribution = new Distribution(newDistribution);
             isotopeDistribution.power(isotope.number, options);
             totalDistribution.multiply(isotopeDistribution, options);
           }

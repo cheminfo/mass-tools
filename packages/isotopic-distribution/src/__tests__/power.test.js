@@ -5,8 +5,8 @@ const Distribution = require('../Distribution.js');
 describe('test distribution power', () => {
   it('power 2', () => {
     let dist = new Distribution();
-    dist.push(1, 2);
-    dist.push(2, 3);
+    dist.push({ x: 1, y: 2 });
+    dist.push({ x: 2, y: 3 });
     dist.power(2);
     expect(dist.array).toStrictEqual([
       { x: 2, y: 4 },
@@ -17,15 +17,15 @@ describe('test distribution power', () => {
 
   it('power 3 - 1 peak', () => {
     let dist = new Distribution();
-    dist.push(1, 1);
+    dist.push({ x: 1, y: 1 });
     dist.power(3);
     expect(dist.array).toStrictEqual([{ x: 3, y: 1 }]);
   });
 
   it('power 3 - 2 peaks', () => {
     let dist = new Distribution();
-    dist.push(1, 1);
-    dist.push(2, 1);
+    dist.push({ x: 1, y: 1 });
+    dist.push({ x: 2, y: 1 });
     dist.power(3);
     expect(dist.array).toStrictEqual([
       { x: 3, y: 1 },
@@ -37,8 +37,8 @@ describe('test distribution power', () => {
 
   it('power 1000 - 2 peaks', () => {
     let dist = new Distribution();
-    dist.push(1, 1);
-    dist.push(2, 1);
+    dist.push({ x: 1, y: 1 });
+    dist.push({ x: 2, y: 1 });
     dist.power(1000);
     expect(dist.array).toHaveLength(1001);
     expect(dist.array[1]).toStrictEqual({ x: 1001, y: 1000 });
@@ -46,8 +46,8 @@ describe('test distribution power', () => {
 
   it('power 100000 - 10 peaks', () => {
     let dist = new Distribution();
-    dist.push(1, 0.5);
-    dist.push(2, 0.5);
+    dist.push({ x: 1, y: 0.5 });
+    dist.push({ x: 2, y: 0.5 });
     dist.power(100000);
     let sum = dist.array.reduce((s, a) => s + a.y, 0);
     expect(sum).toBeGreaterThan(0.99);

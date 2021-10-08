@@ -70,8 +70,10 @@ Distribution.prototype.copy = function copy() {
   return distCopy;
 };
 
-Distribution.prototype.push = function push(x, y) {
-  this.array.push({ x, y });
+Distribution.prototype.push = function push(point, notUsed) {
+  if (notUsed) new Error('should update code');
+  this.array.push(point);
+
   this.xSorted = false;
   this.ySorted = false;
 };
