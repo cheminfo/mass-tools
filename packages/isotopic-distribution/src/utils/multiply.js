@@ -12,12 +12,12 @@ module.exports = function multiply(b, options = {}) {
       let y = entryA.y * entryB.y;
       if (y > minY) result.push(entryA.x + entryB.x, y);
       if (result.length > maxLines) {
-        result.join(deltaX);
+        result.joinX(deltaX);
         result.topY(maxLines / 2);
       }
     }
   }
-  result.join(deltaX);
+  result.joinX(deltaX);
   result.topY(maxLines / 2);
   this.move(result);
   return this;

@@ -90,7 +90,7 @@ Distribution.prototype.append = function append(distribution) {
 
 Distribution.prototype.sortX = require('./utils/sortX.js');
 Distribution.prototype.sortY = require('./utils/sortY.js');
-Distribution.prototype.join = require('./utils/join.js');
+Distribution.prototype.joinX = require('./utils/joinX.js');
 Distribution.prototype.topY = require('./utils/topY.js');
 Distribution.prototype.maxToOne = require('./utils/maxToOne.js');
 Distribution.prototype.multiply = require('./utils/multiply.js');

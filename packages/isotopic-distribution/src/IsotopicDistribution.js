@@ -155,7 +155,7 @@ class IsotopicDistribution {
         }
       }
     }
-    if (finalDistribution) finalDistribution.join(this.fwhm);
+    if (finalDistribution) finalDistribution.joinX(this.fwhm);
     this.confidence /= this.parts.length;
     this.cachedDistribution = finalDistribution;
     return finalDistribution;
