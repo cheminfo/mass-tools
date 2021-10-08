@@ -6,13 +6,12 @@
 
 module.exports = function joinX(threshold = Number.EPSILON) {
   // when we join we will use the center of mass
-  let result = [];
+  if (this.array.length === 0) return [];
   this.sortX();
-  let current = {
-    x: Number.MIN_SAFE_INTEGER,
-    y: 0,
-  };
-  for (let item of this.array) {
+  let current = this.array[0];
+  let result = [current];
+  for (let i = 1; i < this.array.length; i++) {
+    const item = this.array[i];
     if (item.x - current.x <= threshold) {
       // weighted sum
       current.x =
@@ -23,6 +22,7 @@ module.exports = function joinX(threshold = Number.EPSILON) {
         x: item.x,
         y: item.y,
       };
+      if (item.composition) current.composition = item.composition;
       result.push(current);
     }
   }

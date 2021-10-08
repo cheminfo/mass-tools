@@ -8,6 +8,8 @@ const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 
 const Distribution = require('./Distribution');
 
+const MINIMAL_FWHM = 1e-8;
+
 /**
  * An object containing two arrays
  * @typedef {object} XY
@@ -65,8 +67,8 @@ class IsotopicDistribution {
     this.cachedDistribution = undefined;
     this.fwhm = options.fwhm === undefined ? 0.01 : options.fwhm;
     // if fwhm is under 1e-8 there are some artifacts in the spectra
-    if (this.fwhm < 1e-8) this.fwhm = 1e-8;
-    this.minY = options.minY === undefined ? 1e-8 : options.minY;
+    if (this.fwhm < MINIMAL_FWHM) this.fwhm = MINIMAL_FWHM;
+    this.minY = options.minY === undefined ? MINIMAL_FWHM : options.minY;
     this.maxLines = options.maxLines || 5000;
     this.allowNeutral =
       options.allowNeutral === undefined ? true : options.allowNeutral;
@@ -95,6 +97,7 @@ class IsotopicDistribution {
         {
           x: 0,
           y: 1,
+          composition: this.fwhm === MINIMAL_FWHM ? {} : undefined,
         },
       ]);
       let charge = part.ms.charge;
@@ -106,14 +109,15 @@ class IsotopicDistribution {
             const newDistribution = JSON.parse(
               JSON.stringify(isotope.distribution),
             );
-            if (this.fwhm === 1e-8) {
+            if (this.fwhm === MINIMAL_FWHM) {
+              // add composition
               for (const entry of newDistribution) {
                 entry.composition = { [Math.round(entry.x) + isotope.atom]: 1 };
               }
             }
-            let isotopeDistribution = new Distribution(newDistribution);
-            isotopeDistribution.power(isotope.number, options);
-            totalDistribution.multiply(isotopeDistribution, options);
+            let distribution = new Distribution(newDistribution);
+            distribution.power(isotope.number, options);
+            totalDistribution.multiply(distribution, options);
           }
         }
         this.confidence += totalDistribution.array.reduce(

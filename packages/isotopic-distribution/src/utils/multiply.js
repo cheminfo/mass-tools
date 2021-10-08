@@ -18,19 +18,29 @@ module.exports = function multiply(b, options = {}) {
           result.push({ x: entryA.x + entryB.x, y });
         }
       }
-      if (result.length > maxLines) {
+      if (result.length > maxLines * 2) {
         result.joinX(deltaX);
-        result.topY(maxLines / 2);
+        result.topY(maxLines);
       }
     }
   }
   result.joinX(deltaX);
-  result.topY(maxLines / 2);
+  result.topY(maxLines);
   this.move(result);
   return this;
 };
 
 function calculateComposition(entryA, entryB) {
   if (!entryA.composition || !entryB.composition) return;
-  console.log(entryA, entryB);
+  let toReturn = {};
+  const keys = [
+    ...new Set(
+      Object.keys(entryA.composition).concat(Object.keys(entryB.composition)),
+    ),
+  ];
+  for (let key of keys) {
+    toReturn[key] =
+      (entryA.composition[key] || 0) + (entryB.composition[key] || 0);
+  }
+  return toReturn;
 }
