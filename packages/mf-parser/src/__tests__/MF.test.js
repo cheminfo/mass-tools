@@ -217,8 +217,9 @@ describe('MF', () => {
       ],
     ]);
 
-    let newMF = mf.toMF();
-    expect(newMF).toBe('O4S(-2)');
+    expect(mf.toMF()).toBe('O4S(-2)');
+    expect(mf.toText()).toBe('⁺SO₄⁺⁻²₂');
+    expect(mf.toCanonicText()).toBe('O₄S⁻²');
 
     let neutralMF = mf.toNeutralMF();
     expect(neutralMF).toBe('O4S');
@@ -270,8 +271,9 @@ describe('MF', () => {
       atoms: { C: 2, N: 6 },
     });
 
-    let newMF = mf.toMF();
-    expect(newMF).toBe('C[13C]N4[15N]2');
+    expect(mf.toMF()).toBe('C[13C]N4[15N]2');
+    expect(mf.toText()).toBe('NC¹³C¹⁵N₂NN₂');
+    expect(mf.toCanonicText()).toBe('C¹³CN₄¹⁵N₂');
   });
 
   it('DNA HODampDtmpDcmpDgmpH', () => {
@@ -315,8 +317,8 @@ describe('MF', () => {
       ],
     ]);
 
-    let newMF = mf.toMF();
-    expect(newMF).toBe('CC{50,50}H');
+    expect(mf.toMF()).toBe('CC{50,50}H');
+    expect(mf.toText()).toBe('HC⁽⁵⁰˙⁵⁰⁾C');
 
     let info = mf.getInfo();
     expect(info).toStrictEqual({
@@ -332,8 +334,7 @@ describe('MF', () => {
   it('H(+)(H+)-1H', () => {
     let mf = new MF('H(+)(H+)-1H');
 
-    let newMF = mf.toMF();
-    expect(newMF).toBe('H');
+    expect(mf.toMF()).toBe('H');
 
     let info = mf.getInfo();
     expect(info).toStrictEqual({
@@ -349,8 +350,7 @@ describe('MF', () => {
   it('C10#1H20', () => {
     let mf = new MF('C10#1H20');
 
-    let newMF = mf.toMF();
-    expect(newMF).toBe('C10H20');
+    expect(mf.toMF()).toBe('C10H20');
 
     let info = mf.getInfo();
     expect(info).toStrictEqual({
@@ -366,7 +366,7 @@ describe('MF', () => {
   it('2NH3 . 2HCl', () => {
     let mf = new MF('2NH3 . 2HCl');
 
-    let newMF = mf.toMF();
-    expect(newMF).toBe('H6N2 . H2Cl2');
+    expect(mf.toMF()).toBe('H6N2 . H2Cl2');
+    expect(mf.toText()).toBe('2NH₃  •  2HCl');
   });
 });

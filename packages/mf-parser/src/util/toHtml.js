@@ -3,7 +3,7 @@
 const Format = require('../Format');
 const Style = require('../Style');
 
-module.exports = function getHtml(lines) {
+module.exports = function toHtml(lines) {
   let html = [];
   for (let line of lines) {
     switch (line.kind) {

@@ -1,5 +1,7 @@
 'use strict';
 
+const toDisplay = require('../toDisplay');
+
 let tests = [
   {
     mf: 'C10',
@@ -106,8 +108,6 @@ let tests = [
     ],
   },
 ];
-
-const toDisplay = require('../toDisplay');
 
 test.each(tests)('toDisplay', (aTest) => {
   let display = toDisplay(aTest.parsed);

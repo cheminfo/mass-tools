@@ -11,6 +11,7 @@ const partsToMF = require('./util/partsToMF');
 const toDisplay = require('./util/toDisplay');
 const toHtml = require('./util/toHtml');
 const toParts = require('./util/toParts');
+const toText = require('./util/toText');
 
 class MF {
   constructor(mf, options = {}) {
@@ -32,6 +33,21 @@ class MF {
       this.cache.html = toHtml(this.cache.displayed);
     }
     return this.cache.html;
+  }
+
+  toText() {
+    if (!this.cache.text) {
+      this.toDisplay();
+      this.cache.text = toText(this.cache.displayed);
+    }
+    return this.cache.text;
+  }
+
+  toCanonicText() {
+    if (!this.cache.canonicText) {
+      this.cache.canonicText = new MF(this.toMF()).toText(this.cache.displayed);
+    }
+    return this.cache.canonicText;
   }
 
   toParts(options) {
