@@ -20,16 +20,25 @@ function Spectrum(data = { x: [], y: [] }) {
   ) {
     throw new TypeError('Spectrum data must be an object with x:[], y:[]');
   }
-  this.data = {
-    x: data.x,
-    y: data.y,
-  };
+  this.data = {}; // we make a copy so that we can add new properties
+  for (let key in data) {
+    this.data[key] = data[key];
+  }
   Object.defineProperty(this.data, 'xOriginal', {
     enumerable: false,
     writable: true,
   });
   this.cache = {};
 }
+
+Spectrum.fromPeaks = function fromPeaks(peaks) {
+  if (peaks.length === 0) return new Spectrum();
+  const data = {};
+  for (let key of Object.keys(peaks[0])) {
+    data[key] = peaks.map((peak) => peak[key]);
+  }
+  return new Spectrum(data);
+};
 
 Spectrum.fromText = function fromText(text) {
   const data = parseXY(text);
