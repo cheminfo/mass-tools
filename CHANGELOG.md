@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.1.0](https://www.github.com/cheminfo/mass-tools/compare/v2.0.0...v2.1.0) (2021-10-09)
+
+
+### Features
+
+* add MF toText and toCanonicText ([112f3da](https://www.github.com/cheminfo/mass-tools/commit/112f3da633534a9b4fe6a155e16c6d2324b29123))
+* **isotopic-distribution:** add composition in isotopes ([3ab41ba](https://www.github.com/cheminfo/mass-tools/commit/3ab41baa11e9bdf8836cab3a5d404a817ee29807))
+* **isotopic-distribution:** change composition to a string ([4606329](https://www.github.com/cheminfo/mass-tools/commit/460632960b3179573eeb828dd4ae66f6f1d0f176))
+* **ms-spectrum:** add Spectrum.fromPeaks ([b2dc1db](https://www.github.com/cheminfo/mass-tools/commit/b2dc1db517fda6e04248c0bbfc4bd1954bc0867b))
+
 ## [2.0.0](https://www.github.com/cheminfo/mass-tools/compare/v1.1.1...v2.0.0) (2021-10-04)
 
 
