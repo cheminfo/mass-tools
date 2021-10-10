@@ -16,9 +16,11 @@ function getDerivedCompositionInfo(composition) {
         isotopeLabel += key[i];
       }
     }
-    const number = String(composition[key]);
-    for (let i = 0; i < number.length; i++) {
-      isotopeLabel += subscript[number[i]];
+    if (composition[key] > 1) {
+      const number = String(composition[key]);
+      for (let i = 0; i < number.length; i++) {
+        isotopeLabel += subscript[number[i]];
+      }
     }
     label += isotopeLabel;
     if (stableIsotopesObject[key].mostAbundant) continue;

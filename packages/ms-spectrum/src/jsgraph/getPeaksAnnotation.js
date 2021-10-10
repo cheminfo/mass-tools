@@ -168,7 +168,7 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
       if (displayProperties.length > 0) {
         for (let property of displayProperties) {
           annotation.labels.push({
-            text: 'abcd',
+            text: peak[property],
             color: 'red',
             position: {
               x: peak.x,

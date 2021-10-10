@@ -239,12 +239,12 @@ class IsotopicDistribution {
    * @param {object} [options={}]
    * @param {number} [options.maxValue=100]
    * @param {number} [options.sumValue] // if sumValue is defined, maxValue is ignored
-   * @return {XY} an object containing 2 properties: x:[] and y:[]
+   * @return {XY} an object containing at least the 2 properties: x:[] and y:[]
    */
   getXY(options = {}) {
     const { maxValue = 100, sumValue } = options;
     let points = this.getDistribution().array;
-    if (points.length === 0) return [];
+    if (points.length === 0) return { x: [], y: [] };
     let factor = 1;
     if (sumValue) {
       let sumY = this.getSumY(points);
@@ -254,10 +254,17 @@ class IsotopicDistribution {
       factor = maxY / maxValue;
     }
 
-    return {
+    const result = {
       x: points.map((a) => a.x),
       y: points.map((a) => a.y / factor),
     };
+    for (let key of Object.keys(points[0]).filter(
+      (k) => k !== 'x' && k !== 'y',
+    )) {
+      result[key] = points.map((a) => a[key]);
+    }
+
+    return result;
   }
 
   /**
