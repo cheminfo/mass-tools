@@ -1,7 +1,11 @@
 /* eslint-disable jest/no-if */
 'use strict';
 
+const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
+
 const Spectrum = require('../Spectrum');
+
+expect.extend({ toBeDeepCloseTo });
 
 describe('test Spectrum', () => {
   it('constructor', () => {
@@ -59,28 +63,21 @@ describe('test Spectrum', () => {
   });
 
   it('gsd', () => {
-    let data = { x: [], y: [] };
+    let data = { x: [], y: [], info: [] };
     for (let i = 0; i <= 200; i++) {
       data.x.push(i / 20);
       data.y.push(i > 100 ? (200 - i) ** 2 : i * i);
+      data.info.push({ abc: i });
     }
-    expect(new Spectrum(data).peakPicking()).toStrictEqual([
+
+    const result = new Spectrum(data).peakPicking();
+    expect(result).toBeDeepCloseTo([
       {
-        base: 0,
-        charge: 1,
-        index: 100,
-        left: {
-          index: 98,
-          x: 4.9,
-        },
-        right: {
-          index: 102,
-          x: 5.1,
-        },
-        soft: false,
-        width: 0.1999999999999993,
         x: 5,
         y: 10000,
+        width: 0.2,
+        charge: 1,
+        info: { abc: 100 },
       },
     ]);
   });
@@ -93,24 +90,8 @@ describe('test Spectrum', () => {
     }
     data.y[99] = data.y[100];
     let peaks = new Spectrum(data).peakPicking();
-    expect(peaks).toStrictEqual([
-      {
-        base: 0,
-        charge: 1,
-        index: 100,
-        left: {
-          index: 98,
-          x: 4.9,
-        },
-        right: {
-          index: 101,
-          x: 5.05,
-        },
-        soft: false,
-        width: 0.14999999999999947,
-        x: 4.975,
-        y: 10049.5,
-      },
+    expect(peaks).toBeDeepCloseTo([
+      { x: 4.975, y: 10049.5, width: 0.15, charge: 1 },
     ]);
   });
 
