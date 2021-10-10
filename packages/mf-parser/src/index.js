@@ -14,6 +14,8 @@ function parseToHtml(mf) {
   return toHtml(display);
 }
 
+const { subscript, superscript } = require('./util/subSuperscript');
+
 module.exports = {
   Kind: require('./Kind'),
   Format: require('./Format'),
@@ -23,5 +25,7 @@ module.exports = {
   toDisplay,
   toHtml,
   parseToHtml,
+  subscript,
+  superscript,
   MF: require('./MF'),
 };
