@@ -27,5 +27,8 @@
     "ml-spectra-processing": "^6.8.0",
     "peaks-similarity": "^2.3.1",
     "xy-parser": "^3.2.0"
+  },
+  "devDependencies": {
+    "jest-matcher-deep-close-to": "^3.0.2"
   }
 }
