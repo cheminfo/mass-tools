@@ -1,5 +1,30 @@
 # Changelog
 
+## [3.0.0](https://www.github.com/cheminfo/mass-tools/compare/v2.0.0...v3.0.0) (2021-10-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* peakPicking returns all the properties from data
+
+### Features
+
+* add MF toText and toCanonicText ([112f3da](https://www.github.com/cheminfo/mass-tools/commit/112f3da633534a9b4fe6a155e16c6d2324b29123))
+* **chemical-elements:** add stableIsotopesObject ([1dfead4](https://www.github.com/cheminfo/mass-tools/commit/1dfead4899b501adfc27e8f4a94e13c394b47402))
+* **isotopic-distribution:** add composition in isotopes ([3ab41ba](https://www.github.com/cheminfo/mass-tools/commit/3ab41baa11e9bdf8836cab3a5d404a817ee29807))
+* **isotopic-distribution:** add label, shortComposition, shortLabel, composition as peak properties ([ef4dbbc](https://www.github.com/cheminfo/mass-tools/commit/ef4dbbcf74235ec9d15c154d1cc674684bac7bb3))
+* **isotopic-distribution:** change composition to a string ([4606329](https://www.github.com/cheminfo/mass-tools/commit/460632960b3179573eeb828dd4ae66f6f1d0f176))
+* **isotopic-distribution:** getXY returns also other existing arrays ([f6714b1](https://www.github.com/cheminfo/mass-tools/commit/f6714b1b8ec937fc8b1afe828e9ff72adb7346b3))
+* **mf-parser:** expose subscript / superscript UTF8 mapping ([cf009c9](https://www.github.com/cheminfo/mass-tools/commit/cf009c929c1b38cb80425b8ad46e325bbc9be754))
+* **ms-spectrum:** add Spectrum.fromPeaks ([b2dc1db](https://www.github.com/cheminfo/mass-tools/commit/b2dc1db517fda6e04248c0bbfc4bd1954bc0867b))
+* peakPicking returns all the properties from data ([52df8a0](https://www.github.com/cheminfo/mass-tools/commit/52df8a046b22304821a53367c91479817fc095e7))
+
+
+### Bug Fixes
+
+* **chemical-elements:** correct name stableIsotopesObject ([ca0aa26](https://www.github.com/cheminfo/mass-tools/commit/ca0aa26fb8dbb826ad0d2fc96ab9aed03db92757))
+* incorrectly replace unnamed function by arrow function ([2e1082e](https://www.github.com/cheminfo/mass-tools/commit/2e1082e5315602ce7f67d115b8627e329273804f))
+
 ## [2.0.0](https://www.github.com/cheminfo/mass-tools/compare/v1.1.1...v2.0.0) (2021-10-04)
 
 
