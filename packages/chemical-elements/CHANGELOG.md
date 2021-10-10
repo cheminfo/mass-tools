@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.1.13...chemical-elements@1.2.0) (2021-10-10)
+
+
+### Bug Fixes
+
+* **chemical-elements:** correct name stableIsotopesObject ([ca0aa26](https://github.com/cheminfo/mass-tools/commit/ca0aa26fb8dbb826ad0d2fc96ab9aed03db92757))
+
+
+### Features
+
+* **chemical-elements:** add stableIsotopesObject ([1dfead4](https://github.com/cheminfo/mass-tools/commit/1dfead4899b501adfc27e8f4a94e13c394b47402))
+
+
+
+
+
 ## [1.1.13](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.1.12...chemical-elements@1.1.13) (2021-10-04)
 
 **Note:** Version bump only for package chemical-elements

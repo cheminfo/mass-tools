@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/cheminfo/mass-tools/compare/mf-parser@1.3.5...mf-parser@1.4.0) (2021-10-10)
+
+
+### Features
+
+* add MF toText and toCanonicText ([112f3da](https://github.com/cheminfo/mass-tools/commit/112f3da633534a9b4fe6a155e16c6d2324b29123))
+* **mf-parser:** expose subscript / superscript UTF8 mapping ([cf009c9](https://github.com/cheminfo/mass-tools/commit/cf009c929c1b38cb80425b8ad46e325bbc9be754))
+
+
+
+
+
 ## [1.3.5](https://github.com/cheminfo/mass-tools/compare/mf-parser@1.3.4...mf-parser@1.3.5) (2021-10-04)
 
 **Note:** Version bump only for package mf-parser

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@1.2.3...isotopic-distribution@1.3.0) (2021-10-10)
+
+
+### Features
+
+* **isotopic-distribution:** add composition in isotopes ([3ab41ba](https://github.com/cheminfo/mass-tools/commit/3ab41baa11e9bdf8836cab3a5d404a817ee29807))
+* **isotopic-distribution:** add label, shortComposition, shortLabel, composition as peak properties ([ef4dbbc](https://github.com/cheminfo/mass-tools/commit/ef4dbbcf74235ec9d15c154d1cc674684bac7bb3))
+* **isotopic-distribution:** change composition to a string ([4606329](https://github.com/cheminfo/mass-tools/commit/460632960b3179573eeb828dd4ae66f6f1d0f176))
+* **isotopic-distribution:** getXY returns also other existing arrays ([f6714b1](https://github.com/cheminfo/mass-tools/commit/f6714b1b8ec937fc8b1afe828e9ff72adb7346b3))
+
+
+
+
+
 ## [1.2.3](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@1.2.2...isotopic-distribution@1.2.3) (2021-10-04)
 
 **Note:** Version bump only for package isotopic-distribution

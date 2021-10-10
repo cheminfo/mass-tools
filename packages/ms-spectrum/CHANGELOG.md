@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.3.0...ms-spectrum@1.4.0) (2021-10-10)
+
+
+### Bug Fixes
+
+* incorrectly replace unnamed function by arrow function ([2e1082e](https://github.com/cheminfo/mass-tools/commit/2e1082e5315602ce7f67d115b8627e329273804f))
+
+
+### Features
+
+* **isotopic-distribution:** add label, shortComposition, shortLabel, composition as peak properties ([ef4dbbc](https://github.com/cheminfo/mass-tools/commit/ef4dbbcf74235ec9d15c154d1cc674684bac7bb3))
+* **isotopic-distribution:** getXY returns also other existing arrays ([f6714b1](https://github.com/cheminfo/mass-tools/commit/f6714b1b8ec937fc8b1afe828e9ff72adb7346b3))
+* **ms-spectrum:** add Spectrum.fromPeaks ([b2dc1db](https://github.com/cheminfo/mass-tools/commit/b2dc1db517fda6e04248c0bbfc4bd1954bc0867b))
+
+
+
+
+
 # [1.3.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.2.17...ms-spectrum@1.3.0) (2021-10-04)
 
 

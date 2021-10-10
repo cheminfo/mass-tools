@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.20](https://github.com/cheminfo/mass-tools/compare/ms-report@1.1.19...ms-report@1.1.20) (2021-10-10)
+
+**Note:** Version bump only for package ms-report
+
+
+
+
+
 ## [1.1.19](https://github.com/cheminfo/mass-tools/compare/ms-report@1.1.18...ms-report@1.1.19) (2021-10-04)
 
 **Note:** Version bump only for package ms-report
