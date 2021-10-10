@@ -99,14 +99,15 @@ Spectrum.prototype.peaksWidth = function peaksWidthFct() {
   return peaksWidth(this.peaks);
 };
 
-Spectrum.prototype.getBestPeaks = (options) => {
+Spectrum.prototype.getBestPeaks = function getBestPeaksFct(options) {
   peakPicking(this);
   return getBestPeaks(this.peaks, options);
 };
 
-Spectrum.prototype.getPeakChargeBySimilarity = (targetMass, options) => {
-  return getPeakChargeBySimilarity(this, targetMass, options);
-};
+Spectrum.prototype.getPeakChargeBySimilarity =
+  function getPeakChargeBySimilarityFct(targetMass, options) {
+    return getPeakChargeBySimilarity(this, targetMass, options);
+  };
 
 Spectrum.prototype.getPeaks = function getPeaksFct(options) {
   peakPicking(this);
