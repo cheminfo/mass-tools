@@ -1,9 +1,9 @@
 'use strict';
 
-const stableIsotopeObject = require('../stableIsotopeObject');
+const stableIsotopesObject = require('../stableIsotopesObject');
 
-test('stableIsotopeObject', () => {
-  const data = stableIsotopeObject;
+test('stableIsotopesObject', () => {
+  const data = stableIsotopesObject;
 
   expect(data['12C']).toStrictEqual({
     name: 'Carbon',
