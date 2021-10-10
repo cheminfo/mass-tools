@@ -7,6 +7,7 @@ const getMsInfo = require('mf-utilities/src/getMsInfo');
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 
 const Distribution = require('./Distribution');
+const getDerivedCompositionInfo = require('./utils/getDerivedCompositionInfo');
 
 const MINIMAL_FWHM = 1e-8;
 
@@ -171,12 +172,7 @@ class IsotopicDistribution {
 
     for (let entry of finalDistribution.array) {
       if (!entry.composition) continue;
-      entry.composition = Object.entries(entry.composition)
-        .map(
-          (composition) =>
-            `[${composition[0]}]${composition[1] === 1 ? '' : composition[1]}`,
-        )
-        .join('');
+      Object.assign(entry, getDerivedCompositionInfo(entry.composition));
     }
 
     this.confidence /= this.parts.length;

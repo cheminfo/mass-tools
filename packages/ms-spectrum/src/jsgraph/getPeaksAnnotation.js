@@ -13,6 +13,7 @@
  * @param {number} [options.shift=0]
  * @param {object} [options.mfPrefs]
  * @param {number} [options.displayCharge=true]
+ * @param {number} [options.displayProperties=[]] Array of properties name to display
  *
  */
 
@@ -29,6 +30,7 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
     charge = 1,
     mfPrefs = {},
     displayCharge = true,
+    displayProperties = [],
     mfColors = [
       { limit: 3, color: 'green' },
       { limit: 20, color: 'lightgreen' },
@@ -38,7 +40,9 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
   if (showMF && !numberMFs) numberMFs = 1;
   let annotations = [];
   bestPeaks.sort((a, b) => (a.close ? -1 : b.close ? 1 : 0));
+
   for (let peak of bestPeaks) {
+    let textLine = 0;
     let annotation;
     if (peak.close) {
       annotation = {
@@ -99,7 +103,7 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
             position: {
               x: peak.x,
               y: peak.y,
-              dy: '-17px',
+              dy: `${textLine++ * -13 - 17}px`,
               dx: '2px',
             },
           },
@@ -154,7 +158,22 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
             position: {
               x: peak.x,
               y: peak.y,
-              dy: `${-13 * (numberOfMFS - i) - 17}px`,
+              dy: `${textLine++ * -13 - 17}px`,
+              dx: '2px',
+            },
+          });
+        }
+      }
+
+      if (displayProperties.length > 0) {
+        for (let property of displayProperties) {
+          annotation.labels.push({
+            text: 'abcd',
+            color: 'red',
+            position: {
+              x: peak.x,
+              y: peak.y,
+              dy: `${textLine++ * -13 - 17}px`,
               dx: '2px',
             },
           });
