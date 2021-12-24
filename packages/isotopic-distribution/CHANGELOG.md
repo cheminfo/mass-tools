@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@1.3.0...isotopic-distribution@1.4.0) (2021-12-24)
+
+
+### Features
+
+* add getPeaks in isotopicDistribution ([588ba2d](https://github.com/cheminfo/mass-tools/commit/588ba2d1f49d9ae9b25162ee4468b370a069ca0f))
+
+
+
+
+
 # [1.3.0](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@1.2.3...isotopic-distribution@1.3.0) (2021-10-10)
 
 
