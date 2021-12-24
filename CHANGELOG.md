@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://www.github.com/cheminfo/mass-tools/compare/v3.0.0...v3.1.0) (2021-12-24)
+
+
+### Features
+
+* add getPeaks in isotopicDistribution ([588ba2d](https://www.github.com/cheminfo/mass-tools/commit/588ba2d1f49d9ae9b25162ee4468b370a069ca0f))
+
 ## [3.0.0](https://www.github.com/cheminfo/mass-tools/compare/v2.0.0...v3.0.0) (2021-10-10)
 
 
