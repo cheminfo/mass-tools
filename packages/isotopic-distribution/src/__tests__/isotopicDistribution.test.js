@@ -163,6 +163,21 @@ describe('test isotopicDistribution', () => {
     expect(xy.y[0]).toStrictEqual(100);
   });
 
+  it('create distribution of C10 and getPeaks', () => {
+    let isotopicDistribution = new IsotopicDistribution('C10', {
+      fwhm: 0,
+    });
+    let peaks = isotopicDistribution.getPeaks({ maxValue: 1 });
+    expect(peaks[0]).toStrictEqual({
+      x: 120,
+      y: 1,
+      composition: { '12C': 10 },
+      label: '¹²C₁₀',
+      shortComposition: {},
+      shortLabel: '',
+    });
+  });
+
   it('create distribution of C10 and getXY with sumValue to 1', () => {
     let isotopicDistribution = new IsotopicDistribution('C10');
     let xy = isotopicDistribution.getXY({ sumValue: 100 });

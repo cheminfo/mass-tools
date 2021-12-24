@@ -235,6 +235,35 @@ class IsotopicDistribution {
   }
 
   /**
+   * Returns the isotopic distribution as an array of peaks
+   * @param {object} [options={}]
+   * @param {number} [options.maxValue=100]
+   * @param {number} [options.sumValue] // if sumValue is defined, maxValue is ignored
+   * @return {Array<any>} an object containing at least the 2 properties: x:[] and y:[]
+   */
+  getPeaks(options = {}) {
+    const { maxValue = 100, sumValue } = options;
+    let peaks = this.getDistribution().array;
+    if (peaks.length === 0) return [];
+    let factor = 1;
+    if (sumValue) {
+      let sumY = this.getSumY(peaks);
+      factor = sumY / sumValue;
+    } else if (maxValue) {
+      let maxY = this.getMaxY(peaks);
+      factor = maxY / maxValue;
+    }
+    if (factor !== 1) {
+      // we need to copy the array because we prefer no side effects
+      peaks = JSON.parse(JSON.stringify(peaks));
+      for (const peak of peaks) {
+        peak.y = peak.y / factor;
+      }
+    }
+    return peaks;
+  }
+
+  /**
    * Returns the isotopic distirubtion
    * @param {object} [options={}]
    * @param {number} [options.maxValue=100]
@@ -242,26 +271,16 @@ class IsotopicDistribution {
    * @return {XY} an object containing at least the 2 properties: x:[] and y:[]
    */
   getXY(options = {}) {
-    const { maxValue = 100, sumValue } = options;
-    let points = this.getDistribution().array;
-    if (points.length === 0) return { x: [], y: [] };
-    let factor = 1;
-    if (sumValue) {
-      let sumY = this.getSumY(points);
-      factor = sumY / sumValue;
-    } else if (maxValue) {
-      let maxY = this.getMaxY(points);
-      factor = maxY / maxValue;
-    }
+    let peaks = this.getPeaks(options);
 
     const result = {
-      x: points.map((a) => a.x),
-      y: points.map((a) => a.y / factor),
+      x: peaks.map((a) => a.x),
+      y: peaks.map((a) => a.y),
     };
-    for (let key of Object.keys(points[0]).filter(
+    for (let key of Object.keys(peaks[0]).filter(
       (k) => k !== 'x' && k !== 'y',
     )) {
-      result[key] = points.map((a) => a[key]);
+      result[key] = peaks.map((a) => a[key]);
     }
 
     return result;
