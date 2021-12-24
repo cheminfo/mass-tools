@@ -159,8 +159,8 @@ describe('test isotopicDistribution', () => {
     let isotopicDistribution = new IsotopicDistribution('C10');
     let xy = isotopicDistribution.getXY();
     expect(isotopicDistribution.confidence).toBeGreaterThan(0.99999);
-    expect(xy.x[0]).toStrictEqual(120);
-    expect(xy.y[0]).toStrictEqual(100);
+    expect(xy.x[0]).toBe(120);
+    expect(xy.y[0]).toBe(100);
   });
 
   it('create distribution of C10 and getPeaks', () => {
@@ -182,10 +182,10 @@ describe('test isotopicDistribution', () => {
     let isotopicDistribution = new IsotopicDistribution('C10');
     let xy = isotopicDistribution.getXY({ sumValue: 100 });
     expect(isotopicDistribution.confidence).toBeGreaterThan(0.99999);
-    expect(xy.x[0]).toStrictEqual(120);
+    expect(xy.x[0]).toBe(120);
     expect(
       xy.y.reduce((previous, current) => previous + current, 0),
-    ).toStrictEqual(100);
+    ).toBe(100);
   });
 
   it('create distribution of Ru5 and getXY', () => {
