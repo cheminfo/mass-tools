@@ -16,18 +16,24 @@ const getPaper = require('./getPaper');
 /**
  *
  * @param {string} sequence
- * @param {array} analysisResult
+ * @param {array} analysisResults
  * @param {object} [options={}]
  * @param {number} [options.leftRightBorders=50]
+ * @param {number} [options.width=600]
  * @param {number} [options.spaceBetweenResidues=30]
  * @param {number} [options.spaceBetweenInternalLines=12]
  * @param {number} [options.strokeWidth=2]
  * @param {string} [options.labelFontFamily='Verdana']
  * @param {number} [options.labelSize=8]
+ * @param {number} [options.parsing] Sequence parsing options
  * @param {object} [options.merge={}]
- * @param {object} [options.merge.charge] Merge results if only differs by charge
+ * @param {boolean} [options.merge.charge] Merge results if only differs by charge
+ * @param {object} [options.filter={}] define some filters
+ * @param {number} [options.filter.minSimilarity=0]  minimal similarity
+ * @param {boolean} [options.filter.showInternals=true] show the internal fragments
+ *
  */
-function sequenceSVG(sequence, analysisResult, options = {}) {
+function sequenceSVG(sequence, analysisResults, options = {}) {
   const {
     width = 600,
     leftRightBorders = 50,
@@ -38,6 +44,7 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
     labelSize = 8,
     parsing,
     merge,
+    filter,
   } = options;
 
   const drawOptions = {
@@ -53,8 +60,9 @@ function sequenceSVG(sequence, analysisResult, options = {}) {
 
   let data = {};
   appendResidues(data, sequence, parsing);
-  appendResults(data, analysisResult, {
+  appendResults(data, analysisResults, {
     merge,
+    filter,
   });
   appendResiduesPosition(data, {
     leftRightBorders,

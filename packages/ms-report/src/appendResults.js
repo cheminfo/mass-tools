@@ -2,7 +2,8 @@
 
 function appendResults(data, analysisResult, options = {}) {
   const numberResidues = data.residues.residues.length;
-  const { merge = {} } = options;
+  const { merge = {}, filter = {} } = options;
+
   let results = JSON.parse(JSON.stringify(analysisResult));
   results = results.filter((result) => !result.type.match(/^-B[0-9]$/));
   // we calculate all the lines based on the results
@@ -78,6 +79,8 @@ function appendResults(data, analysisResult, options = {}) {
     }
   }
 
+  results = filterResults(results, filter);
+
   // sort by residue length
   results.sort((a, b) => a.length - b.length);
   data.results = results;
@@ -85,6 +88,19 @@ function appendResults(data, analysisResult, options = {}) {
 
 function getNumber(text) {
   return Number(text.replace(/^.([0-9]+).*$/, '$1'));
+}
+
+function filterResults(results, filter) {
+  if (!filter) return;
+  const { minSimilarity = 0, showInternals = true } = filter;
+
+  if (minSimilarity) {
+    results = results.filter((result) => result.similarity >= minSimilarity);
+  }
+  if (!showInternals) {
+    results = results.filter((result) => !result.internal);
+  }
+  return results;
 }
 
 module.exports = appendResults;
