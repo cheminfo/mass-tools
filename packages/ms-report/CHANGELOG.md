@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/cheminfo/mass-tools/compare/ms-report@1.1.21...ms-report@1.2.0) (2022-01-17)
+
+
+### Features
+
+* add filter for SVG ([cf5d74a](https://github.com/cheminfo/mass-tools/commit/cf5d74a1aa4db727ad4cb0aeab0670bf2ecae63a))
+
+
+
+
+
 ## [1.1.21](https://github.com/cheminfo/mass-tools/compare/ms-report@1.1.20...ms-report@1.1.21) (2021-12-24)
 
 **Note:** Version bump only for package ms-report

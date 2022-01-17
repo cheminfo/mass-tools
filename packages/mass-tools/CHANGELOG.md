@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.60.18](https://github.com/cheminfo/mass-tools/compare/mass-tools@0.60.17...mass-tools@0.60.18) (2022-01-17)
+
+**Note:** Version bump only for package mass-tools
+
+
+
+
+
 ## [0.60.17](https://github.com/cheminfo/mass-tools/compare/mass-tools@0.60.16...mass-tools@0.60.17) (2021-12-24)
 
 **Note:** Version bump only for package mass-tools
