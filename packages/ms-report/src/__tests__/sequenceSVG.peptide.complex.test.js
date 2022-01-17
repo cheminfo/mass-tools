@@ -23,37 +23,37 @@ test('sequenceSVG of peptide', () => {
   let info = [
     {
       type: 'z15',
-      similarity: 98,
+      similarity: 0.98,
       charge: 3,
     },
     {
       type: 'z14',
-      similarity: 98,
+      similarity: 0.98,
       charge: 3,
     },
     {
       type: 'y15',
-      similarity: 97,
+      similarity: 0.97,
       charge: 3,
     },
     {
       type: 'y9',
-      similarity: 97,
+      similarity: 0.97,
       charge: 2,
     },
     {
       type: 'y14',
-      similarity: 96,
+      similarity: 0.96,
       charge: 3,
     },
     {
       type: 'y10',
-      similarity: 95,
+      similarity: 0.95,
       charge: 2,
     },
     {
       type: 'y8',
-      similarity: 90,
+      similarity: 0.9,
       charge: 2,
     },
   ];

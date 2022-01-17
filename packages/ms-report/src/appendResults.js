@@ -61,18 +61,18 @@ function appendResults(data, analysisResult, options = {}) {
         (previous, item) => previous + item.similarity,
         0,
       );
-      current.similarity = Math.round(current.similarity / unique[key].length);
+      current.similarity = current.similarity / unique[key].length;
       results.push(current);
       current.charge = '';
     }
   }
 
   for (let result of results) {
-    if (result.similarity > 95) {
+    if (result.similarity > 0.95) {
       result.textColor = 'black';
-    } else if (result.similarity > 90) {
+    } else if (result.similarity > 0.9) {
       result.textColor = '#333';
-    } else if (result.similariy > 80) {
+    } else if (result.similariy > 0.8) {
       result.textColor = '#666';
     } else {
       result.textColor = '#999';

@@ -2,7 +2,7 @@
 
 function drawLabel(paper, result, x, y, options) {
   let label = result.type;
-  let similarity = String(Math.round(result.similarity));
+  let similarity = String(Math.round(result.similarity * 100));
   let charge = result.charge > 0 ? `+${result.charge}` : result.charge;
   let text = paper.plain(label);
   text.font({

@@ -85,7 +85,6 @@ function sequenceSVG(sequence, analysisResults, options = {}) {
     drawSequence(paper, row, drawOptions);
   }
   drawReplacements(paper, data, drawOptions);
-
   paper.size(width, drawOptions.verticalPosition);
 
   let svg = paper.svg();
