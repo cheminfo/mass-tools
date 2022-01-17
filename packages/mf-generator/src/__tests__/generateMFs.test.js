@@ -153,9 +153,33 @@ describe('generateMFs', () => {
   it('Check info', () => {
     let mfsArray = ['C', '', 'C5(C)2'];
     let result = generateMFs(mfsArray, { canonizeMF: true })[0];
-    expect(JSON.stringify(result)).toBe(
-      '{"charge":0,"em":96,"mw":96.08588717388199,"ionization":{"mf":"","em":0,"charge":0},"unsaturation":9,"atoms":{"C":8},"ms":{"ionization":"","em":0,"charge":0},"parts":["C",null,"C5(C)2"],"mf":"C8"}',
-    );
+    expect(result).toMatchInlineSnapshot(`
+      Object {
+        "atoms": Object {
+          "C": 8,
+        },
+        "charge": 0,
+        "em": 96,
+        "ionization": Object {
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C8",
+        "ms": Object {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 96.08588717388199,
+        "parts": Array [
+          "C",
+          ,
+          "C5(C)2",
+        ],
+        "unsaturation": 9,
+      }
+    `);
   });
 
   it('from array of array with negative ionisation', () => {

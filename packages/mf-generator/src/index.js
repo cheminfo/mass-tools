@@ -238,10 +238,6 @@ function appendResult(results, currents, keys, options = {}) {
       if (!options.filterFct.apply(null, variables)) continue;
     }
 
-    let match = matcher(result, filter);
-    if (!match) continue;
-    result.ms = match.ms;
-    result.ionization = match.ionization;
     result.parts = [];
     result.mf = '';
 
@@ -257,12 +253,20 @@ function appendResult(results, currents, keys, options = {}) {
         result.mf += key;
       }
     }
-    if (canonizeMF) {
-      result.mf = new MF(result.mf).toMF();
-    }
+
     if (comments.length > 0) {
       result.comment = comments.join(' ');
     }
+
+    let match = matcher(result, filter);
+    if (!match) continue;
+    result.ms = match.ms;
+    result.ionization = match.ionization;
+
+    if (canonizeMF) {
+      result.mf = new MF(result.mf).toMF();
+    }
+
     results.push(result);
   }
 }

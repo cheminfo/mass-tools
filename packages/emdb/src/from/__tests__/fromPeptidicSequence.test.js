@@ -29,6 +29,31 @@ describe('fromPeptidicSequence', () => {
     expect(peptidic).toMatchSnapshot();
   });
 
+  it('AAKK with callback', () => {
+    let dbManager = new DBManager();
+    dbManager.fromPeptidicSequence('AAKK', {
+      allowNeutralLoss: false,
+      protonation: false,
+      protonationPH: 7,
+      ionizations: 'H+,Na+',
+      fragmentation: {
+        a: true,
+      },
+      filter: {
+        callback: (value) => {
+          return value.parts[0].includes('AlaAlaLys');
+        },
+      },
+    });
+
+    const peptidic = dbManager.databases.peptidic.sort(
+      (a, b) => a.ms.em - b.ms.em,
+    );
+
+    expect(peptidic).toHaveLength(4);
+    expect(peptidic).toMatchSnapshot();
+  });
+
   it('AAKKKKKKKKKKKKKKKKKK allowNeutralLoss', () => {
     let dbManager = new DBManager();
     dbManager.fromPeptidicSequence('AAKKKKKKKKKKKKKKKKKK', {
