@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.0.0](https://www.github.com/cheminfo/mass-tools/compare/v3.1.0...v4.0.0) (2022-01-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* **ms-report:** similarity should be given as a number between 0 and 1
+
+### Features
+
+* add filter for SVG ([cf5d74a](https://www.github.com/cheminfo/mass-tools/commit/cf5d74a1aa4db727ad4cb0aeab0670bf2ecae63a))
+* **ms-report:** similarity should be given as a number between 0 and 1 ([c1f8735](https://www.github.com/cheminfo/mass-tools/commit/c1f8735ee681c858fbc426b542a1635e41fdcee7))
+
 ## [3.1.0](https://www.github.com/cheminfo/mass-tools/compare/v3.0.0...v3.1.0) (2021-12-24)
 
 
