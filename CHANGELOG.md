@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://www.github.com/cheminfo/mass-tools/compare/v4.0.0...v4.1.0) (2022-01-17)
+
+
+### Features
+
+* allow peptidic sequence to filter on parts using filter.callback ([bd6d84b](https://www.github.com/cheminfo/mass-tools/commit/bd6d84b7ea94c09c10f6b0cdd7e28cdd6a3fc532))
+
 ## [4.0.0](https://www.github.com/cheminfo/mass-tools/compare/v3.1.0...v4.0.0) (2022-01-17)
 
 
