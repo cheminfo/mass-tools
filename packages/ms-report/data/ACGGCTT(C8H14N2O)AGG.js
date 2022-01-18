@@ -2,21 +2,25 @@
 
 module.exports = [
   {
+    quantity: 0.05,
     type: 'y8-B1',
     similarity: 1,
     charge: -3,
   },
   {
+    quantity: 0.15,
     type: 'y8-B2',
     similarity: 1,
     charge: -3,
   },
   {
+    quantity: 0.01,
     type: 'y8-B6',
     similarity: 1,
     charge: -3,
   },
   {
+    quantity: 0.02,
     type: 'y8-B7',
     similarity: 1,
     charge: -3,

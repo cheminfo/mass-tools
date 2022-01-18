@@ -16,8 +16,17 @@ describe('appendResults', () => {
   });
   it('filter minSimilarity', () => {
     let data = { residues: { residues: new Array(10) } };
-    appendResults(data, info, { filter: { minSimilarity: 0.99 } });
+    appendResults(data, info, {
+      filter: { minSimilarity: 0.99, minQuantity: 0.0001 },
+    });
     expect(data.results).toHaveLength(15);
+  });
+  it('filter minQuantity', () => {
+    let data = { residues: { residues: new Array(10) } };
+    appendResults(data, info, {
+      filter: { minQuantity: 0.2 },
+    });
+    expect(data.results).toHaveLength(280);
   });
   it('filter showInternals', () => {
     let data = { residues: { residues: new Array(10) } };

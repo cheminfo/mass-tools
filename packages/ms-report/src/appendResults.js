@@ -92,10 +92,17 @@ function getNumber(text) {
 
 function filterResults(results, filter) {
   if (!filter) return;
-  const { minSimilarity = 0, showInternals = true } = filter;
+  const { minSimilarity = 0, minQuantity = 0, showInternals = true } = filter;
 
   if (minSimilarity) {
-    results = results.filter((result) => result.similarity >= minSimilarity);
+    results = results.filter(
+      (result) => !result.similarity || result.similarity >= minSimilarity,
+    );
+  }
+  if (minQuantity) {
+    results = results.filter(
+      (result) => !result.quantity || result.quantity >= minQuantity,
+    );
   }
   if (!showInternals) {
     results = results.filter((result) => !result.internal);

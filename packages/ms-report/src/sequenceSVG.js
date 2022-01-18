@@ -30,6 +30,7 @@ const getPaper = require('./getPaper');
  * @param {boolean} [options.merge.charge] Merge results if only differs by charge
  * @param {object} [options.filter={}] define some filters
  * @param {number} [options.filter.minSimilarity=0]  minimal similarity
+ * @param {number} [options.filter.minQuantity=0]  minimal quantity
  * @param {boolean} [options.filter.showInternals=true] show the internal fragments
  *
  */
