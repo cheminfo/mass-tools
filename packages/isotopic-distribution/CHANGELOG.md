@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@1.4.0...isotopic-distribution@1.4.1) (2022-01-18)
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** getXY with no peaks ([8f8b9e5](https://github.com/cheminfo/mass-tools/commit/8f8b9e59378ce13c885088089ddfcd43eb8d7df6))
+
+
+
+
+
 # [1.4.0](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@1.3.0...isotopic-distribution@1.4.0) (2021-12-24)
 
 
