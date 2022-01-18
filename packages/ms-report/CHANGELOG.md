@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/cheminfo/mass-tools/compare/ms-report@1.2.2...ms-report@1.3.0) (2022-01-18)
+
+
+### Features
+
+* **ms-report:** allow to specify minimum quantity ([4df34c0](https://github.com/cheminfo/mass-tools/commit/4df34c0112d782198ed1ffdf732b920f74e1d1aa))
+
+
+
+
+
 ## [1.2.2](https://github.com/cheminfo/mass-tools/compare/ms-report@1.2.1...ms-report@1.2.2) (2022-01-18)
 
 **Note:** Version bump only for package ms-report
