@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.0](https://www.github.com/cheminfo/mass-tools/compare/v4.1.1...v4.2.0) (2022-01-18)
+
+
+### Features
+
+* **ms-report:** allow to specify minimum quantity ([4df34c0](https://www.github.com/cheminfo/mass-tools/commit/4df34c0112d782198ed1ffdf732b920f74e1d1aa))
+
 ### [4.1.1](https://www.github.com/cheminfo/mass-tools/compare/v4.1.0...v4.1.1) (2022-01-18)
 
 
