@@ -1,5 +1,12 @@
 # Changelog
 
+### [4.1.1](https://www.github.com/cheminfo/mass-tools/compare/v4.1.0...v4.1.1) (2022-01-18)
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** getXY with no peaks ([8f8b9e5](https://www.github.com/cheminfo/mass-tools/commit/8f8b9e59378ce13c885088089ddfcd43eb8d7df6))
+
 ## [4.1.0](https://www.github.com/cheminfo/mass-tools/compare/v4.0.0...v4.1.0) (2022-01-17)
 
 
