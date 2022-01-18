@@ -183,9 +183,7 @@ describe('test isotopicDistribution', () => {
     let xy = isotopicDistribution.getXY({ sumValue: 100 });
     expect(isotopicDistribution.confidence).toBeGreaterThan(0.99999);
     expect(xy.x[0]).toBe(120);
-    expect(
-      xy.y.reduce((previous, current) => previous + current, 0),
-    ).toBe(100);
+    expect(xy.y.reduce((previous, current) => previous + current, 0)).toBe(100);
   });
 
   it('create distribution of Ru5 and getXY', () => {
@@ -195,6 +193,17 @@ describe('test isotopicDistribution', () => {
     distribution.maxToOne();
     let element = distribution.array[25];
     expect(element).toStrictEqual({ x: 505.52516825500203, y: 1 });
+  });
+
+  it('create distribution of empty array and getXY', () => {
+    let isotopicDistribution = new IsotopicDistribution([]);
+    let distribution = isotopicDistribution.getDistribution();
+    expect(isotopicDistribution.confidence).toBeNaN();
+    distribution.maxToOne();
+    expect(isotopicDistribution.getXY()).toStrictEqual({ x: [], y: [] });
+    expect(isotopicDistribution.getCSV()).toBe('');
+    expect(isotopicDistribution.getTable()).toStrictEqual([]);
+    expect(isotopicDistribution.getGaussian()).toStrictEqual({ x: [], y: [] });
   });
 
   it('create distribution of C1000H1000', () => {

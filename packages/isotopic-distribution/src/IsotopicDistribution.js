@@ -273,10 +273,15 @@ class IsotopicDistribution {
   getXY(options = {}) {
     let peaks = this.getPeaks(options);
 
+    if (peaks.length === 0) {
+      return { x: [], y: [] };
+    }
+
     const result = {
       x: peaks.map((a) => a.x),
       y: peaks.map((a) => a.y),
     };
+
     for (let key of Object.keys(peaks[0]).filter(
       (k) => k !== 'x' && k !== 'y',
     )) {
