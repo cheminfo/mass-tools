@@ -62,3 +62,94 @@ Array [
   },
 ]
 `;
+
+exports[`searchPubchem simple case negative ionization 1`] = `
+Array [
+  Object {
+    "atoms": Object {
+      "C": 2,
+      "H": 6,
+      "N": 2,
+      "O": 2,
+      "S": 1,
+    },
+    "charge": 0,
+    "em": 122.01499861577999,
+    "info": Object {
+      "nbPubchemEntries": 49,
+    },
+    "ionization": Object {
+      "charge": -2,
+      "em": -2.01565006446,
+      "mf": "(H+)-2",
+    },
+    "mass": 122.14611999546037,
+    "mf": "C2H6N2O2S",
+    "monoisotopicMass": 122.01499861577999,
+    "ms": Object {
+      "charge": -2,
+      "delta": -0.00022285556906354032,
+      "em": 60.00022285556906,
+      "ionization": "(H+)-2",
+      "ppm": -3.714245688720062,
+    },
+    "unsaturation": 1,
+  },
+  Object {
+    "atoms": Object {
+      "C": 4,
+      "Cl": 1,
+      "H": 7,
+      "O": 2,
+    },
+    "charge": 0,
+    "em": 122.01345714675,
+    "info": Object {
+      "nbPubchemEntries": 133,
+    },
+    "ionization": Object {
+      "charge": -2,
+      "em": -2.01565006446,
+      "mf": "(H+)-2",
+    },
+    "mass": 122.55027629657599,
+    "mf": "C4H7ClO2",
+    "monoisotopicMass": 122.01345714675,
+    "ms": Object {
+      "charge": -2,
+      "delta": 0.0005478789459303357,
+      "em": 59.99945212105407,
+      "ionization": "(H+)-2",
+      "ppm": 9.131399147194589,
+    },
+    "unsaturation": 1,
+  },
+  Object {
+    "atoms": Object {
+      "C": 5,
+      "H": 1,
+    },
+    "charge": 0,
+    "em": 61.00782503223,
+    "info": Object {
+      "nbPubchemEntries": 9,
+    },
+    "ionization": Object {
+      "charge": -1,
+      "em": -1.00782503223,
+      "mf": "(H+)-1",
+    },
+    "mass": 61.061620237732015,
+    "mf": "C5H",
+    "monoisotopicMass": 61.00782503223,
+    "ms": Object {
+      "charge": -1,
+      "delta": -0.0005485799090720889,
+      "em": 60.00054857990907,
+      "ionization": "(H+)-1",
+      "ppm": -9.142914890877822,
+    },
+    "unsaturation": 5.5,
+  },
+]
+`;

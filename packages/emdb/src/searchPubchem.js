@@ -34,7 +34,7 @@ module.exports = async function searchPubchem(mass, options = {}) {
   let ionizations = preprocessIonizations(options.ionizations);
   for (let ionization of ionizations) {
     let realMass =
-      mass * ionization.charge -
+      mass * Math.abs(ionization.charge) -
       ionization.em +
       ELECTRON_MASS * ionization.charge;
     promises.push(
