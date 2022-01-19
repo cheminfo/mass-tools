@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.16](https://github.com/cheminfo/mass-tools/compare/emdb@1.4.15...emdb@1.4.16) (2022-01-19)
+
+
+### Bug Fixes
+
+* correct search pubchem with negative charges ([d27332a](https://github.com/cheminfo/mass-tools/commit/d27332a5e10c54708f7c8e9b22c382d149d2c461))
+
+
+
+
+
 ## [1.4.15](https://github.com/cheminfo/mass-tools/compare/emdb@1.4.14...emdb@1.4.15) (2022-01-18)
 
 **Note:** Version bump only for package emdb
