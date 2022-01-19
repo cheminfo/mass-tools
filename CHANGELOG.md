@@ -1,5 +1,12 @@
 # Changelog
 
+### [4.2.1](https://www.github.com/cheminfo/mass-tools/compare/v4.2.0...v4.2.1) (2022-01-19)
+
+
+### Bug Fixes
+
+* correct search pubchem with negative charges ([d27332a](https://www.github.com/cheminfo/mass-tools/commit/d27332a5e10c54708f7c8e9b22c382d149d2c461))
+
 ## [4.2.0](https://www.github.com/cheminfo/mass-tools/compare/v4.1.1...v4.2.0) (2022-01-18)
 
 
