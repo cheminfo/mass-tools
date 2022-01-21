@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/cheminfo/mass-tools/compare/mf-finder@1.1.19...mf-finder@1.2.0) (2022-01-21)
+
+
+### Features
+
+* **emdb:** allow to find MF from a list of monoisotopic masses ([f301b43](https://github.com/cheminfo/mass-tools/commit/f301b43c0b942f6d28fcd976ca0f8f9c29a3dff4))
+
+
+
+
+
 ## [1.1.19](https://github.com/cheminfo/mass-tools/compare/mf-finder@1.1.18...mf-finder@1.1.19) (2021-10-10)
 
 **Note:** Version bump only for package mf-finder
