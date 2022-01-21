@@ -10,6 +10,22 @@ test('fromMonoisotopicMass', () => {
   expect(dbManager.databases.monoisotopic).toHaveLength(8);
 });
 
+test('fromMonoisotopicMass string', () => {
+  let dbManager = new DBManager();
+  dbManager.fromMonoisotopicMass('120,60', {
+    allowNeutral: true,
+  });
+  expect(dbManager.databases.monoisotopic).toHaveLength(10);
+});
+
+test('fromMonoisotopicMass array', () => {
+  let dbManager = new DBManager();
+  dbManager.fromMonoisotopicMass([60, 120], {
+    allowNeutral: true,
+  });
+  expect(dbManager.databases.monoisotopic).toHaveLength(10);
+});
+
 test('fromMonoisotopicMass with ionizations', () => {
   let dbManager = new DBManager();
   dbManager.fromMonoisotopicMass(120, {
