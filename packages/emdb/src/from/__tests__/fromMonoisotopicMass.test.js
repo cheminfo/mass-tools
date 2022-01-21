@@ -2,7 +2,7 @@
 
 const DBManager = require('../..');
 
-test('fromMonoisotopicMass', () => {
+test.only('fromMonoisotopicMass', () => {
   let dbManager = new DBManager();
   dbManager.fromMonoisotopicMass(120, {
     allowNeutral: true,
