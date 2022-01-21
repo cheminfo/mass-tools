@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.3.0](https://www.github.com/cheminfo/mass-tools/compare/v4.2.1...v4.3.0) (2022-01-21)
+
+
+### Features
+
+* **emdb:** allow to find MF from a list of monoisotopic masses ([f301b43](https://www.github.com/cheminfo/mass-tools/commit/f301b43c0b942f6d28fcd976ca0f8f9c29a3dff4))
+* remove compatibility with node 10 ([67a770a](https://www.github.com/cheminfo/mass-tools/commit/67a770a9e2c0188689948a2b01fa9f27d1b68c44))
+
 ### [4.2.1](https://www.github.com/cheminfo/mass-tools/compare/v4.2.0...v4.2.1) (2022-01-19)
 
 
