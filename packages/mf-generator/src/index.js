@@ -15,9 +15,11 @@ const sum = require('sum-object-keys');
  * @param {object}        [options={}]
  * @param {number}        [options.limit=10000000] - Maximum number of results
  * @param {boolean}       [options.estimate=false] - estimate the number of MF without filters
- * @param {boolean}       [canonizeMF=true] - Canonize molecular formula
- * @param {boolean}       [uniqueMFs=true] - Force canonization and make MF unique
- * @param {string}        [ionizations=''] - Comma separated list of ionizations (to charge the molecule)
+ * @param {boolean}       [options.canonizeMF=true] - Canonize molecular formula
+ * @param {boolean}       [options.uniqueMFs=true] - Force canonization and make MF unique
+ * @param {string}        [options.ionizations=''] - Comma separated list of ionizations (to charge the molecule)
+ * @param {function}      [options.onStep] - Callback to do after each step
+ * @param {object}        [options.filter={}] - Minimal monoisotopic mass
  * @param {number}        [options.filter.minMass=0] - Minimal monoisotopic mass
  * @param {number}        [options.filter.maxMass=+Infinity] - Maximal monoisotopic mass
  * @param {number}        [options.filter.minEM=0] - Minimal neutral monoisotopic mass
@@ -31,8 +33,8 @@ const sum = require('sum-object-keys');
  * @param {object}        [options.filter.unsaturation={}}]
  * @param {number}        [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number}        [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {number}        [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
- * @param {number}        [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ * @param {boolean}        [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
+ * @param {boolean}        [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {object}        [options.filter.atoms] - object of atom:{min, max}
  * @param {function}      [options.filter.callback] - a function to filter the MF
  * @param {string}        [options.filterFct]
@@ -41,10 +43,10 @@ const sum = require('sum-object-keys');
  * @returns {Array}
  */
 
-module.exports = function generateMFs(keys, options = {}) {
+module.exports = async function generateMFs(keys, options = {}) {
   options = { ...options };
 
-  let { limit = 100000, uniqueMFs = true, estimate = false } = options;
+  let { limit = 100000, uniqueMFs = true, estimate = false, onStep } = options;
 
   options.filterFctVariables = {};
   for (let i = 0; i < keys.length; i++) {
@@ -120,6 +122,7 @@ module.exports = function generateMFs(keys, options = {}) {
   let evolution = 0;
   while (position < currents.length) {
     if (currents[position] < sizes[position]) {
+      if (onStep) await onStep(evolution);
       evolution++;
       appendResult(results, currents, keys, options);
       currents[position]++;
