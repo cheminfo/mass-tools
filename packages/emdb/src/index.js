@@ -126,6 +126,27 @@ DBManager.prototype.fromPeptidicSequence = function fromPeptidicSequence(
   replaceOrAppend(this, databaseName, results, append);
 };
 
+/**
+ *
+ * @param {string} databaseName
+ * @param {object} [options={}]
+ * @param {number} [options.precision=100]
+ * @param {string} [options.ionizations='']
+ * @returns
+ */
+DBManager.prototype.appendFragmentsInfo = function appendFragmentsInfo(
+  databaseName,
+  options = {},
+) {
+  const database = this.databases[databaseName];
+  require('./append/appendFragmentsInfo')(
+    this.experimentalSpectrum,
+    database,
+    options,
+  );
+  return database;
+};
+
 DBManager.prototype.fromNucleicSequence = function fromNucleicSequence(
   sequence,
   options = {},
