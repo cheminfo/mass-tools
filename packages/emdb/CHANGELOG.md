@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.4.16...emdb@1.5.0) (2022-01-21)
+
+
+### Features
+
+* **emdb:** allow to find MF from a list of monoisotopic masses ([f301b43](https://github.com/cheminfo/mass-tools/commit/f301b43c0b942f6d28fcd976ca0f8f9c29a3dff4))
+
+
+
+
+
 ## [1.4.16](https://github.com/cheminfo/mass-tools/compare/emdb@1.4.15...emdb@1.4.16) (2022-01-19)
 
 
