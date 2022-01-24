@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.0](https://www.github.com/cheminfo/mass-tools/compare/v4.3.0...v4.4.0) (2022-01-24)
+
+
+### Features
+
+* **emdb:** add method to appendFragmentsInfo ([4d54959](https://www.github.com/cheminfo/mass-tools/commit/4d5495936c2d3e9d1ebeb2a3d44381fc428b9501))
+
 ## [4.3.0](https://www.github.com/cheminfo/mass-tools/compare/v4.2.1...v4.3.0) (2022-01-21)
 
 
