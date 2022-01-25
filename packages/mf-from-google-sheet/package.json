@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/mf-from-google-sheet#readme",
   "dependencies": {
-    "mf-generator": "^1.3.12",
+    "mf-generator": "^1.3.13",
     "mf-parser": "^1.4.0",
     "mf-utilities": "^1.2.13",
     "papaparse": "^5.3.1",

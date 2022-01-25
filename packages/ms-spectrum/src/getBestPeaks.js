@@ -1,5 +1,10 @@
 'use strict';
 
+const {
+  xyObjectMaxXPoint,
+  xyObjectMinXPoint,
+} = require('ml-spectra-processing');
+
 /**
  * Filter the array by taking the higher peaks and only
  * keep one per slot.
@@ -20,14 +25,8 @@
 function getBestPeaks(peaks, options = {}) {
   const {
     searchMonoisotopicRatio = 0,
-    from = peaks.reduce(
-      (previous, peak) => Math.min(peak.x, previous),
-      Number.MAX_SAFE_INTEGER,
-    ),
-    to = peaks.reduce(
-      (previous, peak) => Math.max(peak.x, previous),
-      Number.MIN_SAFE_INTEGER,
-    ),
+    from = xyObjectMinXPoint(peaks).x,
+    to = xyObjectMaxXPoint(peaks).x,
     limit = 20,
     threshold = 0.01,
     numberCloseSlots = 50,

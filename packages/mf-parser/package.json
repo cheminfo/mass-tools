@@ -23,6 +23,6 @@
     "chemical-groups": "^1.2.1"
   },
   "devDependencies": {
-    "jest-matcher-deep-close-to": "^2.0.1"
+    "jest-matcher-deep-close-to": "^3.0.2"
   }
 }

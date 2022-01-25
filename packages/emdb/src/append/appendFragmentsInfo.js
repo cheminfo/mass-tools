@@ -35,7 +35,6 @@ module.exports = async function appendFragmentsInfo(
       intensityFound: 0,
       assignments: [],
     };
-
     for (let i = 0; i < peaks.length; i++) {
       if (onStep) await onStep(i);
       const peak = peaks[i];

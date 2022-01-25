@@ -22,17 +22,18 @@ describe('test appendFragmentsInfo for ethylbenzene', () => {
           onlyInteger: true,
         },
       },
-      precision: 1000,
+      precision: 20,
       allowNeutral: false,
     });
 
     dbManager.setExperimentalSpectrum(experimental);
 
     const results = await dbManager.appendFragmentsInfo('monoisotopic', {
-      precision: 10,
-      ionizations: 'H+',
+      precision: 5,
+      ionizations: '+',
     });
-    expect(results).toHaveLength(42);
+    //    console.log(results);
+    expect(results).toHaveLength(2);
     expect(results[0].fragments.nbFound).toBe(5);
     expect(results[0].fragments.intensityFound).toBeCloseTo(
       0.14515571864420396,

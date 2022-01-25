@@ -30,7 +30,7 @@ describe('preprocessEARanges', () => {
         currentCount: -1,
         currentUnsaturation: 0,
         initialOrder: 4,
-        mass: 15.0345,
+        mass: 15.034558,
         unsaturation: -1,
         isGroup: true,
       },

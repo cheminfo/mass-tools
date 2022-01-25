@@ -8,7 +8,7 @@ let MF = require('../MF');
 
 test('getEA', () => {
   expect(new MF('C').getEA()).toMatchCloseTo(
-    [{ element: 'C', mass: 12.01, ratio: 1 }],
+    [{ element: 'C', mass: 12.011, ratio: 1 }],
     3,
   );
 
@@ -26,7 +26,7 @@ test('getEA', () => {
   );
 
   expect(new MF('C{50,50}10').getEA()).toMatchCloseTo(
-    [{ element: 'C', mass: 125.016, ratio: 1 }],
+    [{ element: 'C', mass: 125.01677, ratio: 1 }],
     3,
   );
 

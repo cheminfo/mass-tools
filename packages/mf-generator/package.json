@@ -19,7 +19,7 @@
   "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/mf-generator#readme",
   "dependencies": {
     "chemical-elements": "^1.2.0",
-    "mf-finder": "^1.2.0",
+    "mf-finder": "^1.2.1",
     "mf-matcher": "^1.1.19",
     "mf-parser": "^1.4.0",
     "mf-utilities": "^1.2.13",

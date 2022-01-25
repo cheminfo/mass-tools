@@ -1,6 +1,7 @@
 'use strict';
 
 const gsd = require('ml-gsd').gsd;
+const { xFindClosestIndex } = require('ml-spectra-processing');
 
 const appendPeaksCharge = require('./appendPeaksCharge');
 
@@ -35,8 +36,9 @@ function peakPicking(spectrum, options = {}) {
       });
       for (let gsdPeak of gsdPeaks) {
         const peak = { x: gsdPeak.x, y: gsdPeak.y, width: gsdPeak.width };
+        const index = xFindClosestIndex(spectrum.data.x, gsdPeak.x);
         for (let key of keys) {
-          peak[key] = spectrum.data[key][gsdPeak.index];
+          peak[key] = spectrum.data[key][index];
         }
         spectrum.peaks.push(peak);
       }
