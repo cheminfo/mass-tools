@@ -60,6 +60,7 @@ module.exports = async function fromNucleicSequence(
     info = {},
     estimate = false,
     limit = 100000,
+    onStep,
   } = options;
 
   let sequences = nucleotide.sequenceToMF(sequencesString, info).split('.');
@@ -86,6 +87,7 @@ module.exports = async function fromNucleicSequence(
     filter,
     uniqueMFs: false,
     estimate,
+    onStep,
     limit,
   });
 

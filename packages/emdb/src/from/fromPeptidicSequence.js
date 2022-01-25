@@ -12,7 +12,7 @@ const fragmentPeptide = require('./util/fragmentPeptide');
  * @param {object}         [options={}]
  * @param {boolean}        [options.estimate=false] - estimate the number of MF without filters
  * @param {string}         [options.ionizations='']
- * @param {function} [options.onStep] - Callback to do after each step
+ * @param {function} 	   [options.onStep] - Callback to do after each step
  * @param {array}          [options.mfsArray=[]]
  * @param {boolean}        [options.protonation=false]
  * @param {number}         [options.protonationPH=7]
@@ -72,6 +72,7 @@ module.exports = async function fromPeptidicSequence(sequences, options = {}) {
     ionizations = '',
     limit = 100000,
     estimate = false,
+    onStep,
     links = {},
   } = options;
 
@@ -102,6 +103,7 @@ module.exports = async function fromPeptidicSequence(sequences, options = {}) {
     filter,
     estimate,
     limit,
+    onStep,
     links,
   });
 
@@ -112,6 +114,7 @@ module.exports = async function fromPeptidicSequence(sequences, options = {}) {
         filter,
         estimate,
         limit,
+        onStep,
         links,
       })),
     );
