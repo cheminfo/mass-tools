@@ -1,5 +1,21 @@
 # Changelog
 
+## [5.0.0](https://www.github.com/cheminfo/mass-tools/compare/v4.3.0...v5.0.0) (2022-01-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* searchSimilarity is now async
+* emdb.fromXYZ are async
+* mf-generator is now async and allow an onStep callback
+
+### Features
+
+* emdb.fromXYZ are async ([ff39358](https://www.github.com/cheminfo/mass-tools/commit/ff39358a8e5d3d9f5f10d5444f59cf6cc198a60f))
+* **emdb:** add method to appendFragmentsInfo ([4d54959](https://www.github.com/cheminfo/mass-tools/commit/4d5495936c2d3e9d1ebeb2a3d44381fc428b9501))
+* mf-generator is now async and allow an onStep callback ([a9dbc39](https://www.github.com/cheminfo/mass-tools/commit/a9dbc396cd5e5f441490a19cc1912e5d1ee4c5c6))
+* searchSimilarity is now async ([8e5ec53](https://www.github.com/cheminfo/mass-tools/commit/8e5ec5300362ca74bb76a44dbf25ad19233d4fb2))
+
 ## [4.3.0](https://www.github.com/cheminfo/mass-tools/compare/v4.2.1...v4.3.0) (2022-01-21)
 
 
