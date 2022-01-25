@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.1.0](https://www.github.com/cheminfo/mass-tools/compare/v5.0.0...v5.1.0) (2022-01-25)
+
+
+### Features
+
+* **ms-spectrum:** add sumValue option in getPeaks ([bf2209d](https://www.github.com/cheminfo/mass-tools/commit/bf2209dfef341b91e5ced101c87572d9d4e0a7fe))
+
+
+### Bug Fixes
+
+* **emdb:** appendFragmentsInfo will first normalize peaks ([c88a07f](https://www.github.com/cheminfo/mass-tools/commit/c88a07ff1e48d989e73dbaa9e8af0217c978f18a))
+
 ## [5.0.0](https://www.github.com/cheminfo/mass-tools/compare/v4.3.0...v5.0.0) (2022-01-25)
 
 
