@@ -12,7 +12,7 @@ const fragmentPeptide = require('./util/fragmentPeptide');
  * @param {object}         [options={}]
  * @param {boolean}        [options.estimate=false] - estimate the number of MF without filters
  * @param {string}         [options.ionizations='']
- * @param {function} 	   [options.onStep] - Callback to do after each step
+ * @param {function}       [options.onStep] - Callback to do after each step
  * @param {array}          [options.mfsArray=[]]
  * @param {boolean}        [options.protonation=false]
  * @param {number}         [options.protonationPH=7]
