@@ -1,5 +1,12 @@
 # Changelog
 
+### [5.1.1](https://www.github.com/cheminfo/mass-tools/compare/v5.1.0...v5.1.1) (2022-01-25)
+
+
+### Bug Fixes
+
+* **emdb:** onStep option was not forwarded ([7e1674e](https://www.github.com/cheminfo/mass-tools/commit/7e1674e61858a48f64ced159d0899e6f5ec11a6d))
+
 ## [5.1.0](https://www.github.com/cheminfo/mass-tools/compare/v5.0.0...v5.1.0) (2022-01-25)
 
 
