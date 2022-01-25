@@ -3,6 +3,7 @@
 const {
   xyObjectMaxXPoint,
   xyObjectMinXPoint,
+  xyObjectSumY,
 } = require('ml-spectra-processing');
 
 /**
@@ -43,6 +44,9 @@ function getPeaks(peaks, options = {}) {
 
   if (sumValue) {
     peaks = JSON.parse(JSON.stringify(peaks));
+    const currentSum = xyObjectSumY(peaks);
+    const ratio = sumValue / currentSum;
+    peaks.forEach((peak) => (peak.y *= ratio));
   }
 
   return peaks.sort((a, b) => a.x - b.x);

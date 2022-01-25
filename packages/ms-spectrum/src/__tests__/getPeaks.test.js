@@ -49,4 +49,15 @@ describe('test getPeaks', () => {
       { x: 5, y: 3 },
     ]);
   });
+
+  it('custom options sumValue', () => {
+    let result = getPeaks(peaks, { sumValue: 75 });
+    expect(result).toStrictEqual([
+      { x: 1, y: 5 },
+      { x: 2, y: 20 },
+      { x: 3, y: 10 },
+      { x: 4, y: 25 },
+      { x: 5, y: 15 },
+    ]);
+  });
 });
