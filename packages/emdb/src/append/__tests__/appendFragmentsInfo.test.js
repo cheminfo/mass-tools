@@ -35,9 +35,7 @@ describe('test appendFragmentsInfo for ethylbenzene', () => {
     //    console.log(results);
     expect(results).toHaveLength(2);
     expect(results[0].fragments.nbFound).toBe(5);
-    expect(results[0].fragments.intensityFound).toBeCloseTo(
-      0.14515571864420396,
-    );
+    expect(results[0].fragments.intensityFound).toBeCloseTo(0.9708522002544118);
     expect(results[0].fragments.assignments).toHaveLength(5);
   });
 });

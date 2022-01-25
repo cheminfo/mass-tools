@@ -41,7 +41,6 @@ function getPeaks(peaks, options = {}) {
     peaks.sort((a, b) => b.y - a.y);
     peaks = peaks.slice(0, limit);
   }
-
   if (sumValue) {
     peaks = JSON.parse(JSON.stringify(peaks));
     const currentSum = xyObjectSumY(peaks);

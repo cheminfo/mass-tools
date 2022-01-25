@@ -24,7 +24,7 @@ module.exports = async function appendFragmentsInfo(
     throw new Error('Database is not defined');
   }
 
-  const peaks = experimentalSpectrum.getPeaks();
+  const peaks = experimentalSpectrum.getPeaks({ sumValue: 1 });
   for (let entry of database) {
     const ranges = Object.keys(entry.atoms)
       .map((atom) => `${atom}0-${entry.atoms[atom]}`)
