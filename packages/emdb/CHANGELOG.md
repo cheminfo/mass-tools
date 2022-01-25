@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/cheminfo/mass-tools/compare/emdb@1.6.0...emdb@1.6.1) (2022-01-25)
+
+
+### Bug Fixes
+
+* **emdb:** appendFragmentsInfo will first normalize peaks ([c88a07f](https://github.com/cheminfo/mass-tools/commit/c88a07ff1e48d989e73dbaa9e8af0217c978f18a))
+
+
+
+
+
 # [1.6.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.5.0...emdb@1.6.0) (2022-01-25)
 
 
