@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.5.0...emdb@1.6.0) (2022-01-25)
+
+
+### Features
+
+* **emdb:** add method to appendFragmentsInfo ([4d54959](https://github.com/cheminfo/mass-tools/commit/4d5495936c2d3e9d1ebeb2a3d44381fc428b9501))
+
+
+
+
+
 # [1.5.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.4.16...emdb@1.5.0) (2022-01-21)
 
 
