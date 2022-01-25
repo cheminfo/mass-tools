@@ -40,7 +40,7 @@ const sum = require('sum-object-keys');
  * @param {string}        [options.filterFct]
  * @param {object}        [options.links]
  * @param {boolean}       [options.links.filter] We filter all the MF that do not match the '*X'
- * @returns {Array}
+ * @returns {Promise}
  */
 
 module.exports = async function generateMFs(keys, options = {}) {

@@ -3,9 +3,9 @@
 const DBManager = require('../..');
 
 describe('fromPeptidicSequence', () => {
-  it('AAKK', () => {
+  it('AAKK', async () => {
     let dbManager = new DBManager();
-    dbManager.fromPeptidicSequence('AAKK', {
+    await dbManager.fromPeptidicSequence('AAKK', {
       allowNeutralLoss: false,
       protonation: false,
       protonationPH: 7,
@@ -29,9 +29,9 @@ describe('fromPeptidicSequence', () => {
     expect(peptidic).toMatchSnapshot();
   });
 
-  it('AAKK with callback', () => {
+  it('AAKK with callback', async () => {
     let dbManager = new DBManager();
-    dbManager.fromPeptidicSequence('AAKK', {
+    await dbManager.fromPeptidicSequence('AAKK', {
       allowNeutralLoss: false,
       protonation: false,
       protonationPH: 7,
@@ -54,9 +54,9 @@ describe('fromPeptidicSequence', () => {
     expect(peptidic).toMatchSnapshot();
   });
 
-  it('AAKKKKKKKKKKKKKKKKKK allowNeutralLoss', () => {
+  it('AAKKKKKKKKKKKKKKKKKK allowNeutralLoss', async () => {
     let dbManager = new DBManager();
-    dbManager.fromPeptidicSequence('AAKKKKKKKKKKKKKKKKKK', {
+    await dbManager.fromPeptidicSequence('AAKKKKKKKKKKKKKKKKKK', {
       allowNeutralLoss: true,
       protonation: false,
       protonationPH: 7,
@@ -81,9 +81,9 @@ describe('fromPeptidicSequence', () => {
     expect(peptidic).toMatchSnapshot();
   });
 
-  it('AAKKKKKKKKKKKKKKKKKK filter callback', () => {
+  it('AAKKKKKKKKKKKKKKKKKK filter callback', async () => {
     let dbManager = new DBManager();
-    dbManager.fromPeptidicSequence('AAKKKKKKKKKKKKKKKKKK', {
+    await dbManager.fromPeptidicSequence('AAKKKKKKKKKKKKKKKKKK', {
       ionizations: 'H+,Na+',
       fragmentation: {
         a: true,
@@ -96,9 +96,9 @@ describe('fromPeptidicSequence', () => {
     expect(dbManager.databases.peptidic).toHaveLength(2);
   });
 
-  it('AAKKKKKK allowNeutralLoss limit: 1000', () => {
+  it('AAKKKKKK allowNeutralLoss limit: 1000', async () => {
     let dbManager = new DBManager();
-    expect(() => {
+    await expect(
       dbManager.fromPeptidicSequence('AAKKKKKKKKK', {
         allowNeutralLoss: true,
         protonation: false,
@@ -108,19 +108,22 @@ describe('fromPeptidicSequence', () => {
         fragmentation: {
           a: true,
         },
+
         filter: {
           minMSEM: 100,
           maxMSEM: 300,
           targetMass: 150, // just to test, this is useless with precision 1e6
           precision: 1e6,
         },
-      });
-    }).toThrow('processRange generates to many fragments (over 100)');
+      }),
+    ).rejects.toMatchInlineSnapshot(
+      `[Error: processRange generates to many fragments (over 100)]`,
+    );
   });
 
-  it('Linked AA(H-1#1)AA,GG(H-1#1)GG', () => {
+  it('Linked AA(H-1#1)AA,GG(H-1#1)GG', async () => {
     let dbManager = new DBManager();
-    dbManager.fromPeptidicSequence('AA(H-1#1)AA,GG(H-1#2)GG', {
+    await dbManager.fromPeptidicSequence('AA(H-1#1)AA,GG(H-1#2)GG', {
       links: { filter: true },
       mfsArray: ['#1C6H4#2'],
       fragmentation: {
@@ -135,9 +138,9 @@ describe('fromPeptidicSequence', () => {
     expect(peptidic).toMatchSnapshot();
   });
 
-  it('Optional linked AA(H-1#1)A,GG(H-1#1)G', () => {
+  it('Optional linked AA(H-1#1)A,GG(H-1#1)G', async () => {
     let dbManager = new DBManager();
-    dbManager.fromPeptidicSequence('AA(H-1#1)A,GG(H-1#2)G', {
+    await dbManager.fromPeptidicSequence('AA(H-1#1)A,GG(H-1#2)G', {
       links: { filter: true },
       mfsArray: ['#1C6H4#2,'],
       fragmentation: {

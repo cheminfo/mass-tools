@@ -3,15 +3,15 @@
 const DBManager = require('../..');
 
 describe('fromArray', () => {
-  it('using an array of string', () => {
+  it('using an array of string', async () => {
     let dbManager = new DBManager();
-    dbManager.fromArray(['C.N', 'N.O']);
+    await dbManager.fromArray(['C.N', 'N.O']);
     expect(dbManager.databases.generated).toHaveLength(4);
   });
 
-  it('with ranges and group', () => {
+  it('with ranges and group', async () => {
     let dbManager = new DBManager();
-    dbManager.fromArray(['(CH2)0-2N0-1', 'O0-1']);
+    await dbManager.fromArray(['(CH2)0-2N0-1', 'O0-1']);
     expect(dbManager.databases.generated).toHaveLength(12);
     let mfs = dbManager.databases.generated.map((entry) => entry.mf).sort();
     expect(mfs).toStrictEqual([
@@ -30,9 +30,9 @@ describe('fromArray', () => {
     ]);
   });
 
-  it('with callback filter', () => {
+  it('with callback filter', async () => {
     let dbManager = new DBManager();
-    dbManager.fromArray(['C0-100', 'H0-100'], {
+    await dbManager.fromArray(['C0-100', 'H0-100'], {
       filter: {
         callback: (entry) => entry.atoms.C === entry.atoms.H,
       },
@@ -40,9 +40,9 @@ describe('fromArray', () => {
     expect(dbManager.databases.generated).toHaveLength(101);
   });
 
-  it('using an array or array', () => {
+  it('using an array or array', async () => {
     let dbManager = new DBManager();
-    dbManager.fromArray(['C.N', ['Cl0-1', 'Br0-1']]);
+    await dbManager.fromArray(['C.N', ['Cl0-1', 'Br0-1']]);
     let result = dbManager
       .get('generated')
       .map((entry) => entry.mf)

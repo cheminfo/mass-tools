@@ -5,14 +5,15 @@ const generateMFs = require('mf-generator');
 /**
  * Generates a database 'generated' from an array of molecular formula
  * @param {array} mfsArray - Array of string or Array of array containing the parts to combine
- * @param {obejct} [options={}]
+ * @param {object} [options={}]
  * @param {boolean} [options.estimate=false] - estimate the number of MF without filters
  * @param {string} [options.databaseName='generated']
+ * @param {function} [options.onStep] - Callback to do after each step
  * @param {number} [options.limit=10000000] - Maximum number of results
- * @param {boolean} [canonizeMF=true] - Canonize molecular formula
- * @param {boolean} [uniqueMFs=true] - Force canonization and make MF unique
- * @param {string} [ionizations=''] - Comma separated list of ionizations (to charge the molecule)
- * @param {number} [options.filter={}]
+ * @param {boolean} [options.canonizeMF=true] - Canonize molecular formula
+ * @param {boolean} [options.uniqueMFs=true] - Force canonization and make MF unique
+ * @param {string} [options.ionizations=''] - Comma separated list of ionizations (to charge the molecule)
+ * @param {object} [options.filter={}]
  * @param {number} [options.filter.minMass=0] - Minimal monoisotopic mass
  * @param {number} [options.filter.maxMass=+Infinity] - Maximal monoisotopic mass
  * @param {number} [options.filter.minEM=0] - Minimal neutral monoisotopic mass
@@ -22,11 +23,11 @@ const generateMFs = require('mf-generator');
  * @param {number} [options.filter.minCharge=-Infinity] - Minimal charge
  * @param {number} [options.filter.maxCharge=+Infinity] - Maximal charge
  *
- * @param {number} [options.filter.unsaturation={}]
+ * @param {object} [options.filter.unsaturation={}]
  * @param {number} [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number} [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {number} [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
- * @param {number} [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ * @param {boolean} [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
+ * @param {boolean} [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {object} [options.filter.atoms] - object of atom:{min, max}
  * @param {function} [options.filter.callback] - a function to filter the MF
  * @param {string}  [options.filterFct] - A string representing a function
@@ -66,6 +67,6 @@ const generateMFs = require('mf-generator');
  * // from the browser
  */
 
-module.exports = function fromArray(mfsArray, options = {}) {
+module.exports = async function fromArray(mfsArray, options = {}) {
   return generateMFs(mfsArray, options);
 };

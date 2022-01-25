@@ -2,8 +2,8 @@
 
 const DBManager = require('..');
 
-test('loadTest', () => {
+test('loadTest', async () => {
   let dbManager = new DBManager();
-  dbManager.loadTest();
+  await dbManager.loadTest();
   expect(dbManager.databases.test).toMatchSnapshot();
 });

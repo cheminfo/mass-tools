@@ -3,9 +3,9 @@
 const DBManager = require('..');
 
 describe('test searchSimilarity', () => {
-  it('should find one result with bad distribution', () => {
+  it('should find one result with bad distribution', async () => {
     let dbManager = new DBManager();
-    dbManager.loadNeutralTest({ maxC: 10 });
+    await dbManager.loadNeutralTest({ maxC: 10 });
     dbManager.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
     let results = dbManager.searchSimilarity({
       ionizations: 'H+,(H+)2,(H+)3', // useless because the test database has already ionizations
@@ -28,9 +28,9 @@ describe('test searchSimilarity', () => {
     expect(results.test[1].ms.similarity.value).toBeCloseTo(0.886, 3);
   });
 
-  it('should find one result with callback', () => {
+  it('should find one result with callback', async () => {
     let dbManager = new DBManager();
-    dbManager.loadNeutralTest({ maxC: 10 });
+    await dbManager.loadNeutralTest({ maxC: 10 });
     dbManager.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
     let results = dbManager.searchSimilarity({
       ionizations: 'H+,(H+)2,(H+)3', // useless because the test database has already ionizations
@@ -42,9 +42,9 @@ describe('test searchSimilarity', () => {
     expect(results.test).toHaveLength(2);
   });
 
-  it('should find one result with wrong callback', () => {
+  it('should find one result with wrong callback', async () => {
     let dbManager = new DBManager();
-    dbManager.loadNeutralTest({ maxC: 10 });
+    await dbManager.loadNeutralTest({ maxC: 10 });
     dbManager.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
     let results = dbManager.searchSimilarity({
       ionizations: 'H+,(H+)2,(H+)3', // useless because the test database has already ionizations
@@ -56,9 +56,9 @@ describe('test searchSimilarity', () => {
     expect(results.test).toHaveLength(0);
   });
 
-  it('should find one result with perfect match (small zone)', () => {
+  it('should find one result with perfect match (small zone)', async () => {
     let dbManager = new DBManager();
-    dbManager.loadTest();
+    await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
     let results = dbManager.searchSimilarity({
       ionizations: '+',
@@ -77,9 +77,9 @@ describe('test searchSimilarity', () => {
     expect(results.test[0].ms.similarity.value).toBe(1);
   });
 
-  it('should find one result with bad distribution, small zone, small width', () => {
+  it('should find one result with bad distribution, small zone, small width', async () => {
     let dbManager = new DBManager();
-    dbManager.loadTest();
+    await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120, 121], y: [1, 1] });
     let results = dbManager.searchSimilarity({
       ionizations: '+',
@@ -101,9 +101,9 @@ describe('test searchSimilarity', () => {
     expect(results.test[0].ms.similarity.value).toBe(1);
   });
 
-  it('should find no result because of filter', () => {
+  it('should find no result because of filter', async () => {
     let dbManager = new DBManager();
-    dbManager.loadTest();
+    await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120, 121], y: [1, 1] });
     let results = dbManager.searchSimilarity({
       ionizations: '+',
@@ -115,9 +115,9 @@ describe('test searchSimilarity', () => {
     expect(results.test).toHaveLength(0);
   });
 
-  it('should find one result with bad bad distribution, large window', () => {
+  it('should find one result with bad bad distribution, large window', async () => {
     let dbManager = new DBManager();
-    dbManager.loadTest();
+    await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
     let results = dbManager.searchSimilarity({
       ionizations: '+',
@@ -138,9 +138,9 @@ describe('test searchSimilarity', () => {
     expect(results.test[0].ms.similarity.value).toBeCloseTo(0.895, 2);
   });
 
-  it('should find one result with bad bad distribution, large window huge width', () => {
+  it('should find one result with bad bad distribution, large window huge width', async () => {
     let dbManager = new DBManager();
-    dbManager.loadTest();
+    await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
     let results = dbManager.searchSimilarity({
       ionizations: '+',
@@ -161,9 +161,9 @@ describe('test searchSimilarity', () => {
     expect(results.test[0].ms.similarity.value).toBe(1);
   });
 
-  it('should find one result with overlap', () => {
+  it('should find one result with overlap', async () => {
     let dbManager = new DBManager();
-    dbManager.loadTest();
+    await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
     let results = dbManager.searchSimilarity({
       ionizations: '+',
@@ -184,9 +184,9 @@ describe('test searchSimilarity', () => {
     expect(results.test[0].ms.similarity.value).toBe(1);
   });
 
-  it('should find one result with good distribution', () => {
+  it('should find one result with good distribution', async () => {
     let dbManager = new DBManager();
-    dbManager.loadTest();
+    await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120, 121], y: [1, 0.11] });
     let results = dbManager.searchSimilarity({
       ionizations: '+',

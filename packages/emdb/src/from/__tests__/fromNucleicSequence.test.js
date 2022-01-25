@@ -8,9 +8,9 @@ expect.extend({ toBeDeepCloseTo });
 const DBManager = require('../..');
 
 describe('fromNucleicSequence', () => {
-  it('fromNucleicSequence', () => {
+  it('fromNucleicSequence', async () => {
     let dbManager = new DBManager();
-    dbManager.fromNucleicSequence('AAA', {
+    await dbManager.fromNucleicSequence('AAA', {
       ionizations: 'H+,Na+',
       fragmentation: {
         a: true,
@@ -36,9 +36,9 @@ describe('fromNucleicSequence', () => {
     });
   });
 
-  it('fromNucleicSequence ds-DNA', () => {
+  it('fromNucleicSequence ds-DNA', async () => {
     let dbManager = new DBManager();
-    dbManager.fromNucleicSequence('AAA', {
+    await dbManager.fromNucleicSequence('AAA', {
       ionizations: 'H+,Na+',
       fragmentation: {
         a: true,
@@ -54,9 +54,9 @@ describe('fromNucleicSequence', () => {
     expect(nucleic).toMatchSnapshot();
   });
 
-  it('TACGTGCCAATAC internal fragment', () => {
+  it('TACGTGCCAATAC internal fragment', async () => {
     let dbManager = new DBManager();
-    dbManager.fromNucleicSequence('TACGTGCCAATAC', {
+    await dbManager.fromNucleicSequence('TACGTGCCAATAC', {
       ionizations: '(H+)-5',
       fragmentation: {
         abw: true,
@@ -88,9 +88,9 @@ describe('fromNucleicSequence', () => {
     });
   });
 
-  it('TACGTGCCAATAC callback', () => {
+  it('TACGTGCCAATAC callback', async () => {
     let dbManager = new DBManager();
-    dbManager.fromNucleicSequence('TACGTGCCAATAC', {
+    await dbManager.fromNucleicSequence('TACGTGCCAATAC', {
       ionizations: '(H+)-5',
       fragmentation: {
         abw: true,
@@ -109,9 +109,9 @@ describe('fromNucleicSequence', () => {
     expect(nucleic).toHaveLength(30);
   });
 
-  it('AGGCAG fragment', () => {
+  it('AGGCAG fragment', async () => {
     let dbManager = new DBManager();
-    dbManager.fromNucleicSequence('AGGCAG', {
+    await dbManager.fromNucleicSequence('AGGCAG', {
       ionizations: '(H+)-',
       fragmentation: {
         y: true,
@@ -125,9 +125,9 @@ describe('fromNucleicSequence', () => {
     expect(nucleic).toMatchSnapshot();
   });
 
-  it('AGG with d-h2o and base loss', () => {
+  it('AGG with d-h2o and base loss', async () => {
     let dbManager = new DBManager();
-    dbManager.fromNucleicSequence('AGG', {
+    await dbManager.fromNucleicSequence('AGG', {
       ionizations: '(H+)-1',
       fragmentation: {
         dh2o: true,
@@ -143,9 +143,9 @@ describe('fromNucleicSequence', () => {
     expect(nucleic).toMatchSnapshot();
   });
 
-  it('HODamDamDamDamDamH', () => {
+  it('HODamDamDamDamDamH', async () => {
     let dbManager = new DBManager();
-    dbManager.fromNucleicSequence('HODamDamDamDamDamH', {
+    await dbManager.fromNucleicSequence('HODamDamDamDamDamH', {
       ionizations: '(H+)-',
       fragmentation: {
         y: true,

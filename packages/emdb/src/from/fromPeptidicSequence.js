@@ -12,6 +12,7 @@ const fragmentPeptide = require('./util/fragmentPeptide');
  * @param {object}         [options={}]
  * @param {boolean}        [options.estimate=false] - estimate the number of MF without filters
  * @param {string}         [options.ionizations='']
+ * @param {function} [options.onStep] - Callback to do after each step
  * @param {array}          [options.mfsArray=[]]
  * @param {boolean}        [options.protonation=false]
  * @param {number}         [options.protonationPH=7]
@@ -50,15 +51,16 @@ const fragmentPeptide = require('./util/fragmentPeptide');
  * @param {number}         [options.filter.maxMSEM=+Infinity] - Maximal observed monoisotopic mass
  * @param {number}         [options.filter.minCharge=-Infinity] - Minimal charge
  * @param {number}         [options.filter.maxCharge=+Infinity] - Maximal charge
- * @param {number}         [options.filter.unsaturation={}]
+ * @param {object}         [options.filter.unsaturation={}]
  * @param {number}         [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number}         [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {number}         [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
- * @param {number}         [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ * @param {boolean}         [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
+ * @param {boolean}         [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {function}       [options.filter.callback] - a function to filter the MF
+ * @returns {Promise}
  */
 
-module.exports = function fromPeptidicSequence(sequences, options = {}) {
+module.exports = async function fromPeptidicSequence(sequences, options = {}) {
   const {
     digestion = {},
     mfsArray: originalMFsArray = [],
@@ -95,7 +97,7 @@ module.exports = function fromPeptidicSequence(sequences, options = {}) {
     );
   }
 
-  let combined = generateMFs(mfsArrayUnlinked, {
+  let combined = await generateMFs(mfsArrayUnlinked, {
     ionizations,
     filter,
     estimate,
@@ -105,13 +107,13 @@ module.exports = function fromPeptidicSequence(sequences, options = {}) {
 
   if (hasLinked) {
     combined.push(
-      ...generateMFs(mfsArrayLinked, {
+      ...(await generateMFs(mfsArrayLinked, {
         ionizations,
         filter,
         estimate,
         limit,
         links,
-      }),
+      })),
     );
   }
 

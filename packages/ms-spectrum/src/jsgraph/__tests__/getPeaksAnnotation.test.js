@@ -9,13 +9,13 @@ describe('test getPeaksAnnotation', () => {
     { x: 36, y: 3 },
     { x: 42, y: 4 },
   ];
-  it('default options', () => {
-    let result = getPeaksAnnotation(peaks);
+  it('default options', async () => {
+    let result = await getPeaksAnnotation(peaks);
     expect(result).toMatchSnapshot();
   });
 
-  it('shift -12', () => {
-    let result = getPeaksAnnotation(peaks, {
+  it('shift -12', async () => {
+    let result = await getPeaksAnnotation(peaks, {
       shift: -11.99999,
       showMF: true,
       charge: 2,

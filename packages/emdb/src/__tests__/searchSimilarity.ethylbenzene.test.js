@@ -10,9 +10,9 @@ const DBManager = require('..');
 
 describe('test searchSimilarity for ethylbenzene', () => {
   let experimental = loadEthylbenzene();
-  it('should find one result with bad distribution', () => {
+  it('should find one result with bad distribution', async () => {
     let dbManager = new DBManager();
-    dbManager.fromMonoisotopicMass(106.077, {
+    await dbManager.fromMonoisotopicMass(106.077, {
       ionizations: 'Na+,K+,(H+),(H+)2,(H+)3,+',
       ranges: 'C0-100 H0-100 N0-100 O0-100',
       filter: {

@@ -7,6 +7,7 @@ const findMFs = require('mf-finder');
  * @param {number|string|array}    masses - Monoisotopic mass
  * @param {object}    [options={}]
  * @param {number}    [options.maxIterations=10000000] - Maximum number of iterations
+ * @param {function} [options.onStep] - Callback to do after each step
  * @param {number}    [options.limit=1000] - Maximum number of results
  * @param {string}    [options.ionizations=''] - string containing a comma separated list of modifications
  * @param {string}    [options.ranges='C0-100 H0-100 O0-100 N0-100'] - range of mfs to search
@@ -21,16 +22,20 @@ const findMFs = require('mf-finder');
  * @param {number}    [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {object}    [options.filter.atoms] - object of atom:{min, max}
  * @param {function}  [options.filter.callback] - a function to filter the MF
+ * @returns {Promise}
  */
 
-module.exports = function fromMonoisotopicMass(masses, options = {}) {
+module.exports = async function fromMonoisotopicMass(masses, options = {}) {
   if (typeof masses === 'string') {
     masses = masses.split(/[ ,;\r\n\t]/).map(Number);
   }
   if (typeof masses === 'number') {
     masses = [masses];
   }
-  let results = masses.map((mass) => findMFs(mass, options));
+  let results = [];
+  for (let mass of masses) {
+    results.push(await findMFs(mass, options));
+  }
   return {
     mfs: results.map((entry) => entry.mfs).flat(),
     info: {

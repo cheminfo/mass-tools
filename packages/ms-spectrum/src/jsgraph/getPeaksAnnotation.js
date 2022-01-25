@@ -14,10 +14,10 @@
  * @param {object} [options.mfPrefs]
  * @param {number} [options.displayCharge=true]
  * @param {number} [options.displayProperties=[]] Array of properties name to display
- *
+ * @returns {Promise}
  */
 
-function getPeaksAnnotation(bestPeaks, options = {}) {
+async function getPeaksAnnotation(bestPeaks, options = {}) {
   const emdb = new (require('emdb'))();
 
   options = Object.assign({ limit: 5, precision: 100 }, options);
@@ -137,12 +137,12 @@ function getPeaksAnnotation(bestPeaks, options = {}) {
           currentMfPrefs.precision =
             (currentMfPrefs.precision / Math.max(Math.abs(peak.x + shift), 1)) *
             peak.x;
-          emdb.fromMonoisotopicMass(
+          await emdb.fromMonoisotopicMass(
             Math.abs((peak.x + shift) * charge),
             currentMfPrefs,
           );
         } else {
-          emdb.fromMonoisotopicMass(Math.abs(peak.x * charge), mfPrefs);
+          await emdb.fromMonoisotopicMass(Math.abs(peak.x * charge), mfPrefs);
         }
 
         let mfs = emdb.get('monoisotopic');

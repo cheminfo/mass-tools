@@ -10,9 +10,9 @@ const DBManager = require('../..');
 
 describe('test appendFragmentsInfo for ethylbenzene', () => {
   let experimental = loadEthylbenzene();
-  it('should find one result with bad distribution', () => {
+  it('should find one result with bad distribution', async () => {
     let dbManager = new DBManager();
-    dbManager.fromMonoisotopicMass(106.077, {
+    await dbManager.fromMonoisotopicMass(106.077, {
       ionizations: '+',
       ranges: 'C0-100 H0-100 N0-100 O0-100 F0-10 Cl0-10',
       filter: {
@@ -28,7 +28,7 @@ describe('test appendFragmentsInfo for ethylbenzene', () => {
 
     dbManager.setExperimentalSpectrum(experimental);
 
-    const results = dbManager.appendFragmentsInfo('monoisotopic', {
+    const results = await dbManager.appendFragmentsInfo('monoisotopic', {
       precision: 10,
       ionizations: 'H+',
     });

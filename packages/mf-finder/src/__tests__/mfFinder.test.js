@@ -3,8 +3,8 @@
 const findMFs = require('..');
 
 describe('test mf-finder', () => {
-  it('basic case', () => {
-    let result = findMFs(24, {
+  it('basic case', async () => {
+    let result = await findMFs(24, {
       ranges: [{ mf: 'C', min: 0, max: 2 }],
       precision: 1e5,
       allowNeutral: true,
@@ -12,8 +12,8 @@ describe('test mf-finder', () => {
     expect(result.mfs).toHaveLength(1);
   });
 
-  it('basic case with charge', () => {
-    let result = findMFs(24, {
+  it('basic case with charge', async () => {
+    let result = await findMFs(24, {
       ranges: [{ mf: 'C', min: 1, max: 2 }],
       precision: 1e5,
       ionizations: 'H+',
@@ -34,8 +34,8 @@ describe('test mf-finder', () => {
     });
   });
 
-  it('basic case with charge and extreme error', () => {
-    let result = findMFs(24, {
+  it('basic case with charge and extreme error', async () => {
+    let result = await findMFs(24, {
       ranges: [{ mf: 'C', min: 1, max: 2 }],
       precision: 1e6,
       ionizations: 'H+',
@@ -43,8 +43,8 @@ describe('test mf-finder', () => {
     expect(result.mfs).toHaveLength(2);
   });
 
-  it('basic case with advanced filtering (callback)', () => {
-    let result = findMFs(12, {
+  it('basic case with advanced filtering (callback)', async () => {
+    let result = await findMFs(12, {
       ranges: [
         { mf: 'C', min: 1, max: 10 },
         { mf: 'H', min: 1, max: 10 },
@@ -58,8 +58,8 @@ describe('test mf-finder', () => {
     expect(result.mfs).toHaveLength(10);
   });
 
-  it('basic case with limit', () => {
-    let result = findMFs(24, {
+  it('basic case with limit', async () => {
+    let result = await findMFs(24, {
       ranges: [{ mf: 'C', min: 1, max: 2 }],
       precision: 1e6,
       allowNeutral: true,
@@ -70,8 +70,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].ms.ppm).toBe(0);
   });
 
-  it('basic case with double charge and extreme error', () => {
-    let result = findMFs(24, {
+  it('basic case with double charge and extreme error', async () => {
+    let result = await findMFs(24, {
       ranges: [{ mf: 'C', min: 1, max: 2 }],
       precision: 1e6,
       ionizations: 'H++',
@@ -93,8 +93,8 @@ describe('test mf-finder', () => {
     expect(result.mfs).toHaveLength(2);
   });
 
-  it('simple combinations', () => {
-    let result = findMFs(24, {
+  it('simple combinations', async () => {
+    let result = await findMFs(24, {
       ranges: [
         { mf: 'C', min: 0, max: 2 },
         { mf: 'H', min: 0, max: 1 },
@@ -107,8 +107,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[1].mf).toBe('C2H');
   });
 
-  it('simple combinations with unsaturation', () => {
-    let result = findMFs(16, {
+  it('simple combinations with unsaturation', async () => {
+    let result = await findMFs(16, {
       ranges: [
         { mf: 'C', min: 0, max: 100 },
         { mf: 'H', min: 0, max: 100 },
@@ -126,8 +126,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('CH4');
   });
 
-  it('simple combinations with integer unsaturation', () => {
-    let result = findMFs(16, {
+  it('simple combinations with integer unsaturation', async () => {
+    let result = await findMFs(16, {
       ranges: [
         { mf: 'C', min: 0, max: 100 },
         { mf: 'H', min: 0, max: 100 },
@@ -146,8 +146,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('CH4');
   });
 
-  it('simple combinations with impossible', () => {
-    let result = findMFs(24, {
+  it('simple combinations with impossible', async () => {
+    let result = await findMFs(24, {
       ranges: [
         { mf: 'C', min: 0, max: 2 },
         { mf: 'H', min: 0, max: 1 },
@@ -161,8 +161,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[1].mf).toBe('C2H');
   });
 
-  it('simple combinations from string ranges', () => {
-    let result = findMFs(24, {
+  it('simple combinations from string ranges', async () => {
+    let result = await findMFs(24, {
       ranges: 'C0-2H0-1S0-100',
       precision: 1e5,
       allowNeutral: true,
@@ -172,8 +172,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[1].mf).toBe('C2H');
   });
 
-  it('groups and atoms', () => {
-    let result = findMFs(92.99814, {
+  it('groups and atoms', async () => {
+    let result = await findMFs(92.99814, {
       ranges: '(CH2)0-1C0-1',
       precision: 1e10,
       allowNeutral: true,
@@ -183,8 +183,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[2].atoms).toStrictEqual({ C: 1 });
     expect(result.mfs[2].groups).toStrictEqual({});
   });
-  it('simple combinations for polymers', () => {
-    let result = findMFs(92.99814, {
+  it('simple combinations for polymers', async () => {
+    let result = await findMFs(92.99814, {
       ranges: '(CH2)0-10NOCl',
       precision: 1e4,
       allowNeutral: true,
@@ -193,8 +193,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('((CH2))2(NOCl)');
   });
 
-  it('simple combinations from string ranges with ionizations', () => {
-    let result = findMFs(12, {
+  it('simple combinations from string ranges with ionizations', async () => {
+    let result = await findMFs(12, {
       ranges: [
         { mf: 'C', min: 0, max: 2 },
         { mf: 'H', min: 0, max: 1 },
@@ -207,8 +207,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('C2');
   });
 
-  it('combinations with no answer', () => {
-    let result = findMFs(5, {
+  it('combinations with no answer', async () => {
+    let result = await findMFs(5, {
       ranges: [
         { mf: 'C', min: 0, max: 100 },
         { mf: 'N', min: 0, max: 100 },
@@ -220,8 +220,8 @@ describe('test mf-finder', () => {
     expect(result.mfs).toHaveLength(0);
   });
 
-  it('simple combinations with optimisation for large values', () => {
-    let result = findMFs(24.001, {
+  it('simple combinations with optimisation for large values', async () => {
+    let result = await findMFs(24.001, {
       ranges: [
         { mf: 'C', min: 0, max: 100 },
         { mf: 'H', min: 0, max: 100 },
@@ -235,8 +235,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('C2');
   });
 
-  it('simple combinations with 2 possibilities', () => {
-    let result = findMFs(24, {
+  it('simple combinations with 2 possibilities', async () => {
+    let result = await findMFs(24, {
       ranges: [
         { mf: 'C', min: 0, max: 100 },
         { mf: 'H', min: 0, max: 100 },
@@ -252,8 +252,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[2].mf).toBe('H24');
   });
 
-  it('simple combinations with edge case', () => {
-    let result = findMFs(1200.0001, {
+  it('simple combinations with edge case', async () => {
+    let result = await findMFs(1200.0001, {
       ranges: [
         { mf: 'C', min: 0, max: 100 },
         { mf: 'H', min: 0, max: 100 },
@@ -267,8 +267,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('C100');
   });
 
-  it('large combination', () => {
-    let result = findMFs(1200.0000000001, {
+  it('large combination', async () => {
+    let result = await findMFs(1200.0000000001, {
       ranges: [
         { mf: 'C', min: 0, max: 100 },
         { mf: 'H', min: 0, max: 100 },
@@ -285,8 +285,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('C100');
   });
 
-  it('check order in molecular formula', () => {
-    let result = findMFs(1199, {
+  it('check order in molecular formula', async () => {
+    let result = await findMFs(1199, {
       ranges: [
         { mf: 'C', min: 0, max: 100 },
         { mf: 'H', min: 0, max: 100 },
@@ -300,8 +300,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('C88H5N3O4S');
   });
 
-  it('check impossible charge', () => {
-    let result = findMFs(24, {
+  it('check impossible charge', async () => {
+    let result = await findMFs(24, {
       ranges: [
         { mf: 'C', min: 0, max: 2 },
         { mf: 'H+', min: 0, max: 2 },
@@ -311,8 +311,8 @@ describe('test mf-finder', () => {
     expect(result.mfs).toHaveLength(0);
   });
 
-  it('check charge', () => {
-    let result = findMFs(12, {
+  it('check charge', async () => {
+    let result = await findMFs(12, {
       ranges: [
         { mf: 'C', min: 0, max: 2 },
         { mf: 'C+', min: 0, max: 2 },
@@ -322,8 +322,8 @@ describe('test mf-finder', () => {
     expect(result.mfs).toHaveLength(2);
   });
 
-  it('check when all are charged', () => {
-    let result = findMFs(12, {
+  it('check when all are charged', async () => {
+    let result = await findMFs(12, {
       ranges: [
         { mf: 'H+', min: 0, max: 2 },
         { mf: 'C+', min: 0, max: 2 },
@@ -335,8 +335,8 @@ describe('test mf-finder', () => {
     expect(result.mfs).toHaveLength(5);
   });
 
-  it('check when all are charged and filter by charge', () => {
-    let result = findMFs(12, {
+  it('check when all are charged and filter by charge', async () => {
+    let result = await findMFs(12, {
       ranges: [
         { mf: 'H+', min: 0, max: 2 },
         { mf: 'C+', min: 0, max: 2 },
@@ -352,8 +352,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('(C+)');
   });
 
-  it('check one possibility 12', () => {
-    let result = findMFs(12, {
+  it('check one possibility 12', async () => {
+    let result = await findMFs(12, {
       ranges: [{ mf: 'C', min: 1, max: 1 }],
       allowNeutral: true,
     });
@@ -361,8 +361,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('C');
   });
 
-  it('check one possibility 24', () => {
-    let result = findMFs(24, {
+  it('check one possibility 24', async () => {
+    let result = await findMFs(24, {
       ranges: [
         { mf: 'C', min: 0, max: 100 },
         { mf: 'H', min: 0, max: 100 },
@@ -373,8 +373,8 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('C2');
   });
 
-  it('should yield to 3 results', () => {
-    let result = findMFs(24, {
+  it('should yield to 3 results', async () => {
+    let result = await findMFs(24, {
       ranges: [
         { mf: 'C', min: 0, max: 3 },
         { mf: 'H', min: 0, max: 40 },
@@ -385,8 +385,8 @@ describe('test mf-finder', () => {
     expect(result.mfs).toHaveLength(3);
   });
 
-  it('check one possibility 12 with charge', () => {
-    let result = findMFs(12, {
+  it('check one possibility 12 with charge', async () => {
+    let result = await findMFs(12, {
       ranges: [{ mf: 'C+', min: 1, max: 2 }],
       allowNeutral: true,
     });

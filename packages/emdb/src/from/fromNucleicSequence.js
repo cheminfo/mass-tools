@@ -7,10 +7,11 @@ const nucleotide = require('nucleotide');
 /**
  * Add a database starting from a peptidic sequence
  *
- * @param {string} [sequence] Sequence as a string of 1 letter or 3 letters code. Could also be a correct molecular formula respecting uppercase, lowercase
+ * @param {string} [sequencesString] Sequence as a string of 1 letter or 3 letters code. Could also be a correct molecular formula respecting uppercase, lowercase
  * @param {object} [options={}]
- * @param {boolean}       [options.estimate=false] - estimate the number of MF without filters
- * @param {number}         [options.limit=100000]
+ * @param {boolean} [options.estimate=false] - estimate the number of MF without filters
+ * @param {function} [options.onStep] - Callback to do after each step
+ * @param {number} [options.limit=100000]
  * @param {string} [options.ionizations='']
  * @param {object} [options.info={}]
  * @param {string} [options.info.kind] - rna, ds-dna or dna. Default if contains U: rna, otherwise ds-dna
@@ -39,14 +40,18 @@ const nucleotide = require('nucleotide');
  * @param {number} [options.filter.maxMSEM=+Infinity] - Maximal observed monoisotopic mass
  * @param {number} [options.filter.minCharge=-Infinity] - Minimal charge
  * @param {number} [options.filter.maxCharge=+Infinity] - Maximal charge
- * @param {number} [options.filter.unsaturation={}]
+ * @param {object} [options.filter.unsaturation={}]
  * @param {number} [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number} [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {number} [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
- * @param {number} [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ * @param {boolean} [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
+ * @param {boolean} [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ * @returns {Promise}
  */
 
-module.exports = function fromNucleicSequence(sequencesString, options = {}) {
+module.exports = async function fromNucleicSequence(
+  sequencesString,
+  options = {},
+) {
   const {
     mfsArray = [],
     fragmentation = {},
@@ -58,7 +63,6 @@ module.exports = function fromNucleicSequence(sequencesString, options = {}) {
   } = options;
 
   let sequences = nucleotide.sequenceToMF(sequencesString, info).split('.');
-
   let fragmentsArray = sequences.slice();
 
   // calculate fragmentation
@@ -77,7 +81,7 @@ module.exports = function fromNucleicSequence(sequencesString, options = {}) {
 
   mfsArray.push(fragmentsArray);
 
-  let combined = combineMFs(mfsArray, {
+  let combined = await combineMFs(mfsArray, {
     ionizations,
     filter,
     uniqueMFs: false,

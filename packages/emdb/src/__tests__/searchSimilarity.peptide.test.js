@@ -16,9 +16,9 @@ const DBManager = require('..');
 describe('test searchSimilarity for peptide', () => {
   let experimental = loadUbiquitin();
 
-  it('should find one result with bad distribution', () => {
+  it('should find one result with bad distribution', async () => {
     let dbManager = new DBManager();
-    dbManager.fromPeptidicSequence(
+    await dbManager.fromPeptidicSequence(
       //    'KKK',
       'MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQ',
       {
@@ -96,9 +96,9 @@ describe('test searchSimilarity for peptide', () => {
     });
   });
 
-  it('should find one result with bad distribution and string fucntion', () => {
+  it('should find one result with bad distribution and string fucntion', async () => {
     let dbManager = new DBManager();
-    dbManager.fromPeptidicSequence(
+    await dbManager.fromPeptidicSequence(
       'MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQ',
       {
         ionizations: 'H1(1+).H2(2+).H3(3+)',

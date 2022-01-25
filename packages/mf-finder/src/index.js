@@ -14,6 +14,7 @@ let targetMassCache;
  * @param {number}        targetMass - Monoisotopic mass
  * @param {object}        [options={}]
  * @param {number}        [options.maxIterations=10000000] - Maximum number of iterations
+ * @param {boolean}       [options.allowNeutral=true]
  * @param {number}        [options.limit=1000] - Maximum number of results
  * @param {string}        [options.ionizations=''] - string containing a comma separated list of modifications
  * @param {string}        [options.ranges='C0-100 H0-100 O0-100 N0-100'] - range of mfs to search
@@ -28,9 +29,10 @@ let targetMassCache;
  * @param {number}        [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {object}        [options.filter.atoms] - object of atom:{min, max}
  * @param {function}      [options.filter.callback] - a function to filter the MF
+ * @returns {Promise}
  */
 
-module.exports = function mfFinder(targetMass, options = {}) {
+module.exports = async function mfFinder(targetMass, options = {}) {
   const {
     filter = {},
     maxIterations = 1e8,

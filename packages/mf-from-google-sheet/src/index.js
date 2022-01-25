@@ -17,7 +17,7 @@ async function mfFromGoogleSheet(url, options = {}) {
     return parse(result);
   }
 
-  function parse(tsv, tsvReferences) {
+  async function parse(tsv, tsvReferences) {
     let parsed = Papa.parse(tsv, {
       delimiter: '\t',
       header: true,
@@ -53,7 +53,9 @@ async function mfFromGoogleSheet(url, options = {}) {
       }
       // we need to calculate all the possibilities
       try {
-        let mfs = generateMFs([formula.mf], { ionizations: formula.modif });
+        let mfs = await generateMFs([formula.mf], {
+          ionizations: formula.modif,
+        });
         for (let mf of mfs) {
           mf.info = {};
           for (let infoField of infoFields) {

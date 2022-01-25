@@ -83,45 +83,56 @@ DBManager.prototype.loadGoogleSheet = async function loadGoogleSheet(
   this.databases[databaseName] = await loadGoogleSheetPromise();
 };
 
-DBManager.prototype.loadTest = function loadTest() {
-  this.fromArray(['C1-100'], { databaseName: 'test', ionizations: '+' });
+DBManager.prototype.loadTest = async function loadTest() {
+  await this.fromArray(['C1-100'], { databaseName: 'test', ionizations: '+' });
 };
 
-DBManager.prototype.loadNeutralTest = function loadNeutralTest(options = {}) {
+DBManager.prototype.loadNeutralTest = async function loadNeutralTest(
+  options = {},
+) {
   const { maxC = 100 } = options;
-  this.fromArray([`C1-${maxC}`], { databaseName: 'test' });
+  await this.fromArray([`C1-${maxC}`], { databaseName: 'test' });
 };
 
-DBManager.prototype.fromMonoisotopicMass = function fromMonoisotopicMass(
+DBManager.prototype.fromMonoisotopicMass = async function fromMonoisotopicMass(
   mass,
   options = {},
 ) {
   const { databaseName = 'monoisotopic', append = false } = options;
-  let result = require('./from/fromMonoisotopicMass')(mass, options);
+  let result = await require('./from/fromMonoisotopicMass')(mass, options);
   replaceOrAppend(this, databaseName, result.mfs, append);
   return result;
 };
 
-DBManager.prototype.fromArray = function fromArray(sequence, options = {}) {
+DBManager.prototype.fromArray = async function fromArray(
+  sequence,
+  options = {},
+) {
   const { databaseName = 'generated', append = false, estimate } = options;
-  const results = require('./from/fromArray')(sequence, options);
+  const results = await require('./from/fromArray')(sequence, options);
   if (estimate) return results;
   replaceOrAppend(this, databaseName, results, append);
 };
 
-DBManager.prototype.fromRange = function fromRange(sequence, options = {}) {
+DBManager.prototype.fromRange = async function fromRange(
+  sequence,
+  options = {},
+) {
   const { databaseName = 'generated', append = false, estimate } = options;
-  const results = require('./from/fromRange')(sequence, options);
+  const results = await require('./from/fromRange')(sequence, options);
   if (estimate) return results;
   replaceOrAppend(this, databaseName, results, append);
 };
 
-DBManager.prototype.fromPeptidicSequence = function fromPeptidicSequence(
+DBManager.prototype.fromPeptidicSequence = async function fromPeptidicSequence(
   sequence,
   options = {},
 ) {
   const { databaseName = 'peptidic', append = false, estimate } = options;
-  const results = require('./from/fromPeptidicSequence')(sequence, options);
+  const results = await require('./from/fromPeptidicSequence')(
+    sequence,
+    options,
+  );
   if (estimate) return results;
   replaceOrAppend(this, databaseName, results, append);
 };
@@ -134,12 +145,12 @@ DBManager.prototype.fromPeptidicSequence = function fromPeptidicSequence(
  * @param {string} [options.ionizations='']
  * @returns
  */
-DBManager.prototype.appendFragmentsInfo = function appendFragmentsInfo(
+DBManager.prototype.appendFragmentsInfo = async function appendFragmentsInfo(
   databaseName,
   options = {},
 ) {
   const database = this.databases[databaseName];
-  require('./append/appendFragmentsInfo')(
+  await require('./append/appendFragmentsInfo')(
     this.experimentalSpectrum,
     database,
     options,
@@ -147,12 +158,15 @@ DBManager.prototype.appendFragmentsInfo = function appendFragmentsInfo(
   return database;
 };
 
-DBManager.prototype.fromNucleicSequence = function fromNucleicSequence(
+DBManager.prototype.fromNucleicSequence = async function fromNucleicSequence(
   sequence,
   options = {},
 ) {
   const { databaseName = 'nucleic', append = false, estimate } = options;
-  const results = require('./from/fromNucleicSequence')(sequence, options);
+  const results = await require('./from/fromNucleicSequence')(
+    sequence,
+    options,
+  );
   if (estimate) return results;
   replaceOrAppend(this, databaseName, results, append);
 };

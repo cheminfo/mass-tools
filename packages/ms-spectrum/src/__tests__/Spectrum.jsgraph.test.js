@@ -3,7 +3,7 @@
 const Spectrum = require('../Spectrum');
 
 describe('test Spectrum JSGraph', () => {
-  it('getAnnotation', () => {
+  it('getAnnotation', async () => {
     let peaks = [
       {
         x: 1,
@@ -12,7 +12,7 @@ describe('test Spectrum JSGraph', () => {
       },
       { x: 2, y: 3, close: true },
     ];
-    let annotations = Spectrum.JsGraph.getPeaksAnnotation(peaks);
+    let annotations = await Spectrum.JsGraph.getPeaksAnnotation(peaks);
 
     expect(annotations).toHaveLength(3);
     expect(annotations).toMatchSnapshot();

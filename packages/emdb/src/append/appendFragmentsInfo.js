@@ -2,11 +2,21 @@
 
 const findMFs = require('mf-finder');
 
-module.exports = function appendFragmentsInfo(
+/**
+ *
+ * @param {object}   experimentalSpectrum
+ * @param {object}   database
+ * @param {object}   [options={}]
+ * @param {function} [options.onStep] - Callback to do after each step
+ * @param {string}   [options.ionizations=''] - string containing a comma separated list of modifications
+ * @param {number}   [options.precision=100] - Allowed mass range based on precision
+ */
+module.exports = async function appendFragmentsInfo(
   experimentalSpectrum,
   database,
   options = {},
 ) {
+  const { ionizations, onStep, precision } = options;
   if (!experimentalSpectrum) {
     throw new Error('Experimental spectrum is not defined');
   }
@@ -26,10 +36,12 @@ module.exports = function appendFragmentsInfo(
       assignments: [],
     };
 
-    for (let peak of peaks) {
-      const possibleMFs = findMFs(peak.x, {
-        ionizations: options.ionizations,
-        precision: options.precision,
+    for (let i = 0; i < peaks.length; i++) {
+      if (onStep) await onStep(i);
+      const peak = peaks[i];
+      const possibleMFs = await findMFs(peak.x, {
+        ionizations,
+        precision,
         ranges,
       });
       if (possibleMFs.mfs.length > 0) {
