@@ -28,7 +28,7 @@ describe('test searchSimilarity for ethylbenzene', () => {
 
     dbManager.setExperimentalSpectrum(experimental);
 
-    let results = dbManager.searchSimilarity({
+    let results = await dbManager.searchSimilarity({
       filter: {},
       similarity: {
         widthBottom: 0.006,

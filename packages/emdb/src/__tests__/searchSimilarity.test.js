@@ -7,7 +7,7 @@ describe('test searchSimilarity', () => {
     let dbManager = new DBManager();
     await dbManager.loadNeutralTest({ maxC: 10 });
     dbManager.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
-    let results = dbManager.searchSimilarity({
+    let results = await dbManager.searchSimilarity({
       ionizations: 'H+,(H+)2,(H+)3', // useless because the test database has already ionizations
       filter: {},
       similarity: {
@@ -32,7 +32,7 @@ describe('test searchSimilarity', () => {
     let dbManager = new DBManager();
     await dbManager.loadNeutralTest({ maxC: 10 });
     dbManager.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
-    let results = dbManager.searchSimilarity({
+    let results = await dbManager.searchSimilarity({
       ionizations: 'H+,(H+)2,(H+)3', // useless because the test database has already ionizations
       filter: {
         callback: (entry) => entry.atoms.C === 10,
@@ -46,7 +46,7 @@ describe('test searchSimilarity', () => {
     let dbManager = new DBManager();
     await dbManager.loadNeutralTest({ maxC: 10 });
     dbManager.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
-    let results = dbManager.searchSimilarity({
+    let results = await dbManager.searchSimilarity({
       ionizations: 'H+,(H+)2,(H+)3', // useless because the test database has already ionizations
       filter: {
         callback: (entry) => entry.atoms.C === 9,
@@ -60,7 +60,7 @@ describe('test searchSimilarity', () => {
     let dbManager = new DBManager();
     await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
-    let results = dbManager.searchSimilarity({
+    let results = await dbManager.searchSimilarity({
       ionizations: '+',
       filter: {},
       similarity: {
@@ -81,7 +81,7 @@ describe('test searchSimilarity', () => {
     let dbManager = new DBManager();
     await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120, 121], y: [1, 1] });
-    let results = dbManager.searchSimilarity({
+    let results = await dbManager.searchSimilarity({
       ionizations: '+',
       filter: {
         msem: 120,
@@ -105,7 +105,7 @@ describe('test searchSimilarity', () => {
     let dbManager = new DBManager();
     await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120, 121], y: [1, 1] });
-    let results = dbManager.searchSimilarity({
+    let results = await dbManager.searchSimilarity({
       ionizations: '+',
       filter: {
         msem: 120,
@@ -119,7 +119,7 @@ describe('test searchSimilarity', () => {
     let dbManager = new DBManager();
     await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
-    let results = dbManager.searchSimilarity({
+    let results = await dbManager.searchSimilarity({
       ionizations: '+',
       filter: {
         msem: 120,
@@ -142,7 +142,7 @@ describe('test searchSimilarity', () => {
     let dbManager = new DBManager();
     await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
-    let results = dbManager.searchSimilarity({
+    let results = await dbManager.searchSimilarity({
       ionizations: '+',
       filter: {
         msem: 120,
@@ -165,7 +165,7 @@ describe('test searchSimilarity', () => {
     let dbManager = new DBManager();
     await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
-    let results = dbManager.searchSimilarity({
+    let results = await dbManager.searchSimilarity({
       ionizations: '+',
       filter: {
         msem: 120,
@@ -188,7 +188,7 @@ describe('test searchSimilarity', () => {
     let dbManager = new DBManager();
     await dbManager.loadTest();
     dbManager.setExperimentalSpectrum({ x: [120, 121], y: [1, 0.11] });
-    let results = dbManager.searchSimilarity({
+    let results = await dbManager.searchSimilarity({
       ionizations: '+',
       filter: {
         msem: 120,

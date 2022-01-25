@@ -7,6 +7,7 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @param {object}   [options={}]
 * @param {array}    [options.databases] - an array containing the name of the databases so search, by default all
 * @param {boolean}  [options.flatten] - should we return the array as a flat result
+* @param {function} [options.onStep] - Callback to do after each step
 * @param {string}   [options.ionizations=''] - Comma separated list of ionizations (to charge the molecule)
 * @param {object}   [options.minSimilarity=0.5] - min similarity value
 
@@ -16,11 +17,11 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @param {number}   [options.filter.precision=1000] - The precision on the experimental mass
 * @param {number}   [options.filter.minCharge=-Infinity] - Minimal charge
 * @param {number}   [options.filter.maxCharge=+Infinity] - Maximal charge
-* @param {object}   [options.filter.unsaturation={}}]
+* @param {object}   [options.filter.unsaturation={}]
 * @param {number}   [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
 * @param {number}   [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
-* @param {number}   [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
-* @param {number}   [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+* @param {boolean}   [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
+* @param {boolean}   [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
 * @param {object}   [options.filter.atoms] - object of atom:{min, max}
 * @param {object}   [options.filter.callback] - a function to filter the MF
 * @param {object}   [options.similarity={}]
@@ -31,10 +32,11 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @param {object}   [options.similarity.zone.low=-0.5] - window shift based on observed monoisotopic mass
 * @param {object}   [options.similarity.zone.high=2.5] - to value for the comparison window
 * @param {object}   [options.similarity.common]
+* @returns {Promise}
 */
 
-module.exports = function searchSimilarity(options = {}) {
-  const { similarity = {}, minSimilarity = 0.5, filter = {} } = options;
+module.exports = async function searchSimilarity(options = {}) {
+  const { similarity = {}, minSimilarity = 0.5, filter = {}, onStep } = options;
 
   let width = {
     bottom: similarity.widthBottom,
@@ -85,7 +87,9 @@ module.exports = function searchSimilarity(options = {}) {
   let similarityProcessor = new Similarity(similarity);
   similarityProcessor.setPeaks1([experimentalData.x, experimentalData.y]);
 
-  for (let entry of flatEntries) {
+  for (let i = 0; i < flatEntries.length; i++) {
+    const entry = flatEntries[i];
+    if (onStep) await onStep(i);
     let isotopicDistribution = new IsotopicDistribution(entry.mf, {
       allowNeutral: false,
       ionizations: [entry.ionization],

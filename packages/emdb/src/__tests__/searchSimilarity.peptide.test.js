@@ -34,7 +34,7 @@ describe('test searchSimilarity for peptide', () => {
     );
     dbManager.setExperimentalSpectrum(experimental);
 
-    let results = dbManager.searchSimilarity({
+    let results = await dbManager.searchSimilarity({
       filter: {},
       similarity: {
         widthBottom: 0.02,
@@ -113,7 +113,7 @@ describe('test searchSimilarity for peptide', () => {
     );
     dbManager.setExperimentalSpectrum(experimental);
 
-    let results = dbManager.searchSimilarity({
+    let results = await dbManager.searchSimilarity({
       filter: {},
       similarity: {
         widthBottom: 0.02,
