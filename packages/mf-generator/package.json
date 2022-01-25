@@ -1,6 +1,6 @@
 {
   "name": "mf-generator",
-  "version": "1.3.13",
+  "version": "1.3.14",
   "description": "",
   "main": "src/index.js",
   "files": [
@@ -19,10 +19,10 @@
   "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/mf-generator#readme",
   "dependencies": {
     "chemical-elements": "^1.2.0",
-    "mf-finder": "^1.2.1",
-    "mf-matcher": "^1.1.19",
-    "mf-parser": "^1.4.0",
-    "mf-utilities": "^1.2.13",
+    "mf-finder": "^1.2.2",
+    "mf-matcher": "^1.1.20",
+    "mf-parser": "^1.4.1",
+    "mf-utilities": "^1.2.14",
     "sum-object-keys": "^1.0.2"
   }
 }

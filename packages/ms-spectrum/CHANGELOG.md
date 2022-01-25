@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.4.7...ms-spectrum@1.5.0) (2022-01-25)
+
+
+### Bug Fixes
+
+* **emdb:** appendFragmentsInfo will first normalize peaks ([c88a07f](https://github.com/cheminfo/mass-tools/commit/c88a07ff1e48d989e73dbaa9e8af0217c978f18a))
+
+
+### Features
+
+* **ms-spectrum:** add sumValue option in getPeaks ([bf2209d](https://github.com/cheminfo/mass-tools/commit/bf2209dfef341b91e5ced101c87572d9d4e0a7fe))
+
+
+
+
+
 ## [1.4.7](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.4.6...ms-spectrum@1.4.7) (2022-01-25)
 
 **Note:** Version bump only for package ms-spectrum
