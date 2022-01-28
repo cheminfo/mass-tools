@@ -153,3 +153,78 @@ Array [
   },
 ]
 `;
+
+exports[`searchPubchem string containing more than 1 monoisotopic mass 1`] = `
+Array [
+  Object {
+    "atoms": Object {
+      "C": 1,
+    },
+    "charge": 0,
+    "em": 12,
+    "info": Object {
+      "nbPubchemEntries": 1,
+    },
+    "ionization": Object {
+      "charge": 0,
+      "em": 0,
+      "mf": "",
+    },
+    "mass": 12.010735896735248,
+    "mf": "C",
+    "monoisotopicMass": 12,
+    "ms": Object {
+      "charge": 0,
+      "delta": NaN,
+      "em": 0,
+      "ionization": "",
+      "ppm": NaN,
+    },
+    "unsaturation": 2,
+  },
+  Object {
+    "atoms": Object {
+      "C": 2,
+    },
+    "charge": 0,
+    "em": 24,
+    "info": Object {
+      "nbPubchemEntries": 1,
+    },
+    "ionization": undefined,
+    "mass": 24.021471793470496,
+    "mf": "C2",
+    "monoisotopicMass": 24,
+    "ms": Object {
+      "charge": 0,
+      "delta": NaN,
+      "em": 0,
+      "ionization": "",
+      "ppm": NaN,
+    },
+    "unsaturation": 3,
+  },
+  Object {
+    "atoms": Object {
+      "C": 3,
+    },
+    "charge": 0,
+    "em": 36,
+    "info": Object {
+      "nbPubchemEntries": 2,
+    },
+    "ionization": undefined,
+    "mass": 36.032207690205745,
+    "mf": "C3",
+    "monoisotopicMass": 36,
+    "ms": Object {
+      "charge": 0,
+      "delta": NaN,
+      "em": 0,
+      "ionization": "",
+      "ppm": NaN,
+    },
+    "unsaturation": 4,
+  },
+]
+`;

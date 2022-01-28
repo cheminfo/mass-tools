@@ -12,6 +12,16 @@ describe('searchPubchem', () => {
     expect(data).toMatchSnapshot();
   });
 
+  it('string containing more than 1 monoisotopic mass', async () => {
+    let data = await searchPubchem('12,24,36', {
+      ionizations: '',
+      precision: 10,
+      minPubchemEntries: 0,
+    });
+    expect(data).toHaveLength(3);
+    expect(data).toMatchSnapshot();
+  });
+
   it('simple case negative ionization', async () => {
     let data = await searchPubchem(60, {
       ionizations: '(H+)-2, (H+)-1',

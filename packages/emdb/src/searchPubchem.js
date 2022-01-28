@@ -10,38 +10,41 @@ const fetch = require('./util/fetchJSON.js');
 /**
  * Generates a database 'pubchem' based on all molecular formula available
  * in the database and a monoisotopic mass.
- * @param {number} mass - Observed monoisotopic mass
+ * @param {number|string|number[]} masses - Observed monoisotopic mass
  * @param {object} [options={}]
  * @param {string} [options.databaseName='pubchem']
  * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
  * @param {number} [options.precision=1000] - Precision of the monoisotopic mass in ppm
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {number} [options.minPubchemEntries=5] - Minimal number of molecules having a specific MF
- * @param {number} [options.allowNeutralMolecules=false] - Should we display uncharged molecules (non observable by mass)
  * @param {number} [options.url='https://pubchem.cheminfo.org/mfs/em'] - URL of the webservice
  */
 
-module.exports = async function searchPubchem(mass, options = {}) {
+module.exports = async function searchPubchem(masses, options = {}) {
   const {
     url = 'https://pubchem.cheminfo.org/mfs/em',
     precision = 1000,
     limit = 1000,
     minPubchemEntries = 5,
-    allowNeutralMolecules = false,
   } = options;
 
+  if (typeof masses === 'number') {
+    masses = [masses];
+  }
+  if (typeof masses === 'string') {
+    masses = masses.split(/[\r\n\t,; ]+/).map(Number);
+  }
   let promises = [];
   let ionizations = preprocessIonizations(options.ionizations);
-  for (let ionization of ionizations) {
-    let realMass =
-      mass * Math.abs(ionization.charge) -
-      ionization.em +
-      ELECTRON_MASS * ionization.charge;
-    promises.push(
-      fetch(
-        `${url}?em=${realMass}&precision=${precision}&limit=${limit}&minPubchemEntries=${minPubchemEntries}`,
-      ),
-    );
+  for (let mass of masses) {
+    for (let ionization of ionizations) {
+      let realMass =
+        mass * Math.abs(ionization.charge || 1) -
+        ionization.em +
+        ELECTRON_MASS * ionization.charge;
+      const pubchemURL = `${url}?em=${realMass}&precision=${precision}&limit=${limit}&minPubchemEntries=${minPubchemEntries}`;
+      promises.push(fetch(pubchemURL));
+    }
   }
 
   let results = await Promise.all(promises);
@@ -54,8 +57,7 @@ module.exports = async function searchPubchem(mass, options = {}) {
         mfInfo.ionization = ionizations[i];
         mfInfo.em = mfInfo.monoisotopicMass;
         mfInfo.ms = getMsInfo(mfInfo, {
-          targetMass: mass,
-          allowNeutralMolecules,
+          targetMass: masses,
         }).ms;
         mfInfo.info = { nbPubchemEntries: mf.total };
         mfs.push(mfInfo);
