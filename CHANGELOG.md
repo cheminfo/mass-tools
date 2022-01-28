@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.2.0](https://www.github.com/cheminfo/mass-tools/compare/v5.1.1...v5.2.0) (2022-01-28)
+
+
+### Features
+
+* **emdb:** allow many monoisotopic mass in searchPubchem ([76346ab](https://www.github.com/cheminfo/mass-tools/commit/76346abf6ff5c2d8df57b8a2d77949da2f974e2f))
+
 ### [5.1.1](https://www.github.com/cheminfo/mass-tools/compare/v5.1.0...v5.1.1) (2022-01-25)
 
 
