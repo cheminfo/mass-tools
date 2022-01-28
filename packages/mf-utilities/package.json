@@ -1,6 +1,6 @@
 {
   "name": "mf-utilities",
-  "version": "1.2.14",
+  "version": "1.2.15",
   "description": "Small utilities dealing with molecular formula",
   "main": "src/index.js",
   "files": [
@@ -20,6 +20,6 @@
   "dependencies": {
     "chemical-elements": "^1.2.0",
     "chemical-groups": "^1.2.1",
-    "mf-parser": "^1.4.1"
+    "mf-parser": "^1.4.2"
   }
 }
