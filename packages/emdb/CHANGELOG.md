@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.6.1...emdb@1.7.0) (2022-01-28)
+
+
+### Bug Fixes
+
+* **emdb:** onStep option was not forwarded ([7e1674e](https://github.com/cheminfo/mass-tools/commit/7e1674e61858a48f64ced159d0899e6f5ec11a6d))
+
+
+### Features
+
+* **emdb:** allow many monoisotopic mass in searchPubchem ([76346ab](https://github.com/cheminfo/mass-tools/commit/76346abf6ff5c2d8df57b8a2d77949da2f974e2f))
+
+
+
+
+
 ## [1.6.1](https://github.com/cheminfo/mass-tools/compare/emdb@1.6.0...emdb@1.6.1) (2022-01-25)
 
 
