@@ -1,5 +1,12 @@
 # Changelog
 
+### [5.2.1](https://www.github.com/cheminfo/mass-tools/compare/v5.2.0...v5.2.1) (2022-02-01)
+
+
+### Bug Fixes
+
+* better deal with non possible isotopic distribution (negative number of atoms) ([7bb9d6b](https://www.github.com/cheminfo/mass-tools/commit/7bb9d6bc590e0ef5e8f106b232b884024a461bde))
+
 ## [5.2.0](https://www.github.com/cheminfo/mass-tools/compare/v5.1.1...v5.2.0) (2022-01-28)
 
 
