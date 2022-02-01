@@ -11,6 +11,7 @@ Array [
     "em": 12,
     "fromX": 11.99945142009093,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -72,6 +73,7 @@ Array [
     "em": 12,
     "fromX": 5.99945142009093,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 2,
       "em": 0,
       "mf": "++",

@@ -54,7 +54,12 @@ describe('test searchSimilarity for peptide', () => {
       charge: 1,
       em: 4210.304872186381,
       mw: 4212.888237254821,
-      ionization: { mf: 'H2(2+)', em: 2.01565006446, charge: 2 },
+      ionization: {
+        mf: 'H2(2+)',
+        em: 2.01565006446,
+        charge: 2,
+        atoms: { H: 2 },
+      },
       unsaturation: 53,
       atoms: { C: 188, H: 318, N: 47, O: 59, S: 1 },
       ms: {

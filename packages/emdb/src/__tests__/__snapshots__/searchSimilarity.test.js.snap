@@ -9,6 +9,9 @@ Array [
     "charge": 0,
     "em": 120,
     "ionization": Object {
+      "atoms": Object {
+        "H": 3,
+      },
       "charge": 3,
       "em": 3.02347509669,
       "mf": "(H+)3",
@@ -84,6 +87,9 @@ Array [
     "charge": 0,
     "em": 120,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",

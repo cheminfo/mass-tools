@@ -14,6 +14,9 @@ Array [
     "comment": "d1-H2O",
     "em": 393.02393639454,
     "ionization": Object {
+      "atoms": Object {
+        "H": -1,
+      },
       "charge": -1,
       "em": -1.00782503223,
       "mf": "(H+)-1",
@@ -43,6 +46,9 @@ Array [
     "comment": "d2-H2O",
     "em": 722.07645651929,
     "ionization": Object {
+      "atoms": Object {
+        "H": -1,
+      },
       "charge": -1,
       "em": -1.00782503223,
       "mf": "(H+)-1",
@@ -72,6 +78,9 @@ Array [
     "comment": "G*",
     "em": 838.1238006358399,
     "ionization": Object {
+      "atoms": Object {
+        "H": -1,
+      },
       "charge": -1,
       "em": -1.00782503223,
       "mf": "(H+)-1",
@@ -101,6 +110,9 @@ Array [
     "comment": "A*",
     "em": 854.1187152554099,
     "ionization": Object {
+      "atoms": Object {
+        "H": -1,
+      },
       "charge": -1,
       "em": -1.00782503223,
       "mf": "(H+)-1",
@@ -129,6 +141,9 @@ Array [
     "charge": 0,
     "em": 989.1732104387099,
     "ionization": Object {
+      "atoms": Object {
+        "H": -1,
+      },
       "charge": -1,
       "em": -1.00782503223,
       "mf": "(H+)-1",
@@ -163,6 +178,9 @@ Array [
     "comment": "y1",
     "em": 267.09675391942,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 0,
       "em": 1.00782503223,
       "mf": "(H+)-",
@@ -192,6 +210,9 @@ Array [
     "comment": "y2",
     "em": 580.1543594246,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 0,
       "em": 1.00782503223,
       "mf": "(H+)-",
@@ -221,6 +242,9 @@ Array [
     "comment": "y3",
     "em": 869.20073154049,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 0,
       "em": 1.00782503223,
       "mf": "(H+)-",
@@ -250,6 +274,9 @@ Array [
     "comment": "y4",
     "em": 1198.25325166524,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 0,
       "em": 1.00782503223,
       "mf": "(H+)-",
@@ -279,6 +306,9 @@ Array [
     "comment": "y5",
     "em": 1527.3057717899899,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 0,
       "em": 1.00782503223,
       "mf": "(H+)-",
@@ -307,6 +337,9 @@ Array [
     "charge": 0,
     "em": 1920.3297081845299,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 0,
       "em": 1.00782503223,
       "mf": "(H+)-",
@@ -341,6 +374,9 @@ Array [
     "comment": "y1",
     "em": 295.12805404834,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 0,
       "em": 1.00782503223,
       "mf": "(H+)-",
@@ -370,6 +406,9 @@ Array [
     "comment": "y2",
     "em": 652.21187430201,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 0,
       "em": 1.00782503223,
       "mf": "(H+)-",
@@ -399,6 +438,9 @@ Array [
     "comment": "y3",
     "em": 1009.2956945556799,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 0,
       "em": 1.00782503223,
       "mf": "(H+)-",
@@ -428,6 +470,9 @@ Array [
     "comment": "y4",
     "em": 1366.37951480935,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 0,
       "em": 1.00782503223,
       "mf": "(H+)-",
@@ -456,6 +501,9 @@ Array [
     "charge": 0,
     "em": 1803.42966595238,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 0,
       "em": 1.00782503223,
       "mf": "(H+)-",
@@ -490,6 +538,9 @@ Array [
     "comment": "cmp-a1",
     "em": 304.04603776326,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -519,6 +570,9 @@ Array [
     "comment": "a1",
     "em": 313.05760550518,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -548,6 +602,9 @@ Array [
     "comment": "cmp-a1",
     "em": 304.04603776326,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -577,6 +634,9 @@ Array [
     "comment": "a1",
     "em": 313.05760550518,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -606,6 +666,9 @@ Array [
     "comment": "cmp-a2",
     "em": 608.09207552652,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -635,6 +698,9 @@ Array [
     "comment": "a2",
     "em": 626.11521101036,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -664,6 +730,9 @@ Array [
     "comment": "cmp-a2",
     "em": 608.09207552652,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -693,6 +762,9 @@ Array [
     "comment": "a2",
     "em": 626.11521101036,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -721,6 +793,9 @@ Array [
     "charge": 0,
     "em": 930.14867797381,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -749,6 +824,9 @@ Array [
     "charge": 0,
     "em": 930.14867797381,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -777,6 +855,9 @@ Array [
     "charge": 0,
     "em": 957.18338119957,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -805,6 +886,9 @@ Array [
     "charge": 0,
     "em": 957.18338119957,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",

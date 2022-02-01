@@ -13,6 +13,9 @@ Array [
     "comment": "a3",
     "em": 243.18210099815,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -43,6 +46,9 @@ Array [
     "comment": "a3",
     "em": 243.18210099815,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -78,6 +84,9 @@ Array [
     "comment": "a3",
     "em": 243.18210099815,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -106,6 +115,9 @@ Array [
     "comment": "a3",
     "em": 243.18210099815,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -133,6 +145,9 @@ Array [
     "charge": 0,
     "em": 416.27471828471,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -160,6 +175,9 @@ Array [
     "charge": 0,
     "em": 416.27471828471,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -193,6 +211,9 @@ Array [
     "comment": "a3",
     "em": 226.15555189703,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -223,6 +244,9 @@ Array [
     "comment": "a3",
     "em": 243.18210099815,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -253,6 +277,9 @@ Array [
     "comment": "a3",
     "em": 226.15555189703,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -283,6 +310,9 @@ Array [
     "comment": "a3",
     "em": 243.18210099815,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -313,6 +343,9 @@ Array [
     "comment": "a4",
     "em": 337.2239658111,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -343,6 +376,9 @@ Array [
     "comment": "a4",
     "em": 354.25051491221996,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -373,6 +409,9 @@ Array [
     "comment": "a4",
     "em": 337.2239658111,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -403,6 +442,9 @@ Array [
     "comment": "a4",
     "em": 371.27706401334,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -433,6 +475,9 @@ Array [
     "comment": "a4",
     "em": 354.25051491221996,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -463,6 +508,9 @@ Array [
     "comment": "a4",
     "em": 371.27706401334,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -493,6 +541,9 @@ Array [
     "comment": "a5",
     "em": 448.29237972516995,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -523,6 +574,9 @@ Array [
     "comment": "a5",
     "em": 465.31892882629,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -553,6 +607,9 @@ Array [
     "comment": "a5",
     "em": 448.29237972516995,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -583,6 +640,9 @@ Array [
     "comment": "a5",
     "em": 482.34547792740995,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -613,6 +673,9 @@ Array [
     "comment": "a5",
     "em": 465.31892882629,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -643,6 +706,9 @@ Array [
     "comment": "a5",
     "em": 499.37202702852994,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -673,6 +739,9 @@ Array [
     "comment": "a5",
     "em": 482.34547792740995,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -703,6 +772,9 @@ Array [
     "comment": "a5",
     "em": 499.37202702852994,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -733,6 +805,9 @@ Array [
     "comment": "a6",
     "em": 559.36079363924,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -763,6 +838,9 @@ Array [
     "comment": "a6",
     "em": 576.38734274036,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -793,6 +871,9 @@ Array [
     "comment": "a6",
     "em": 559.36079363924,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",
@@ -823,6 +904,9 @@ Array [
     "comment": "a6",
     "em": 593.41389184148,
     "ionization": Object {
+      "atoms": Object {
+        "H": 1,
+      },
       "charge": 1,
       "em": 1.00782503223,
       "mf": "H+",
@@ -853,6 +937,9 @@ Array [
     "comment": "a6",
     "em": 576.38734274036,
     "ionization": Object {
+      "atoms": Object {
+        "Na": 1,
+      },
       "charge": 1,
       "em": 22.989769282,
       "mf": "Na+",

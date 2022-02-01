@@ -9,6 +9,7 @@ Array [
     "charge": 0,
     "em": 12,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -32,6 +33,7 @@ Array [
     "charge": 0,
     "em": 24,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -55,6 +57,7 @@ Array [
     "charge": 0,
     "em": 36,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -78,6 +81,7 @@ Array [
     "charge": 0,
     "em": 48,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -101,6 +105,7 @@ Array [
     "charge": 0,
     "em": 60,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -124,6 +129,7 @@ Array [
     "charge": 0,
     "em": 72,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -147,6 +153,7 @@ Array [
     "charge": 0,
     "em": 84,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -170,6 +177,7 @@ Array [
     "charge": 0,
     "em": 96,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -193,6 +201,7 @@ Array [
     "charge": 0,
     "em": 108,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -216,6 +225,7 @@ Array [
     "charge": 0,
     "em": 120,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -239,6 +249,7 @@ Array [
     "charge": 0,
     "em": 132,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -262,6 +273,7 @@ Array [
     "charge": 0,
     "em": 144,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -285,6 +297,7 @@ Array [
     "charge": 0,
     "em": 156,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -308,6 +321,7 @@ Array [
     "charge": 0,
     "em": 168,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -331,6 +345,7 @@ Array [
     "charge": 0,
     "em": 180,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -354,6 +369,7 @@ Array [
     "charge": 0,
     "em": 192,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -377,6 +393,7 @@ Array [
     "charge": 0,
     "em": 204,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -400,6 +417,7 @@ Array [
     "charge": 0,
     "em": 216,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -423,6 +441,7 @@ Array [
     "charge": 0,
     "em": 228,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -446,6 +465,7 @@ Array [
     "charge": 0,
     "em": 240,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -469,6 +489,7 @@ Array [
     "charge": 0,
     "em": 252,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -492,6 +513,7 @@ Array [
     "charge": 0,
     "em": 264,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -515,6 +537,7 @@ Array [
     "charge": 0,
     "em": 276,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -538,6 +561,7 @@ Array [
     "charge": 0,
     "em": 288,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -561,6 +585,7 @@ Array [
     "charge": 0,
     "em": 300,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -584,6 +609,7 @@ Array [
     "charge": 0,
     "em": 312,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -607,6 +633,7 @@ Array [
     "charge": 0,
     "em": 324,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -630,6 +657,7 @@ Array [
     "charge": 0,
     "em": 336,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -653,6 +681,7 @@ Array [
     "charge": 0,
     "em": 348,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -676,6 +705,7 @@ Array [
     "charge": 0,
     "em": 360,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -699,6 +729,7 @@ Array [
     "charge": 0,
     "em": 372,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -722,6 +753,7 @@ Array [
     "charge": 0,
     "em": 384,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -745,6 +777,7 @@ Array [
     "charge": 0,
     "em": 396,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -768,6 +801,7 @@ Array [
     "charge": 0,
     "em": 408,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -791,6 +825,7 @@ Array [
     "charge": 0,
     "em": 420,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -814,6 +849,7 @@ Array [
     "charge": 0,
     "em": 432,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -837,6 +873,7 @@ Array [
     "charge": 0,
     "em": 444,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -860,6 +897,7 @@ Array [
     "charge": 0,
     "em": 456,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -883,6 +921,7 @@ Array [
     "charge": 0,
     "em": 468,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -906,6 +945,7 @@ Array [
     "charge": 0,
     "em": 480,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -929,6 +969,7 @@ Array [
     "charge": 0,
     "em": 492,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -952,6 +993,7 @@ Array [
     "charge": 0,
     "em": 504,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -975,6 +1017,7 @@ Array [
     "charge": 0,
     "em": 516,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -998,6 +1041,7 @@ Array [
     "charge": 0,
     "em": 528,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1021,6 +1065,7 @@ Array [
     "charge": 0,
     "em": 540,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1044,6 +1089,7 @@ Array [
     "charge": 0,
     "em": 552,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1067,6 +1113,7 @@ Array [
     "charge": 0,
     "em": 564,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1090,6 +1137,7 @@ Array [
     "charge": 0,
     "em": 576,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1113,6 +1161,7 @@ Array [
     "charge": 0,
     "em": 588,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1136,6 +1185,7 @@ Array [
     "charge": 0,
     "em": 600,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1159,6 +1209,7 @@ Array [
     "charge": 0,
     "em": 612,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1182,6 +1233,7 @@ Array [
     "charge": 0,
     "em": 624,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1205,6 +1257,7 @@ Array [
     "charge": 0,
     "em": 636,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1228,6 +1281,7 @@ Array [
     "charge": 0,
     "em": 648,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1251,6 +1305,7 @@ Array [
     "charge": 0,
     "em": 660,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1274,6 +1329,7 @@ Array [
     "charge": 0,
     "em": 672,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1297,6 +1353,7 @@ Array [
     "charge": 0,
     "em": 684,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1320,6 +1377,7 @@ Array [
     "charge": 0,
     "em": 696,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1343,6 +1401,7 @@ Array [
     "charge": 0,
     "em": 708,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1366,6 +1425,7 @@ Array [
     "charge": 0,
     "em": 720,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1389,6 +1449,7 @@ Array [
     "charge": 0,
     "em": 732,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1412,6 +1473,7 @@ Array [
     "charge": 0,
     "em": 744,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1435,6 +1497,7 @@ Array [
     "charge": 0,
     "em": 756,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1458,6 +1521,7 @@ Array [
     "charge": 0,
     "em": 768,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1481,6 +1545,7 @@ Array [
     "charge": 0,
     "em": 780,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1504,6 +1569,7 @@ Array [
     "charge": 0,
     "em": 792,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1527,6 +1593,7 @@ Array [
     "charge": 0,
     "em": 804,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1550,6 +1617,7 @@ Array [
     "charge": 0,
     "em": 816,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1573,6 +1641,7 @@ Array [
     "charge": 0,
     "em": 828,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1596,6 +1665,7 @@ Array [
     "charge": 0,
     "em": 840,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1619,6 +1689,7 @@ Array [
     "charge": 0,
     "em": 852,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1642,6 +1713,7 @@ Array [
     "charge": 0,
     "em": 864,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1665,6 +1737,7 @@ Array [
     "charge": 0,
     "em": 876,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1688,6 +1761,7 @@ Array [
     "charge": 0,
     "em": 888,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1711,6 +1785,7 @@ Array [
     "charge": 0,
     "em": 900,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1734,6 +1809,7 @@ Array [
     "charge": 0,
     "em": 912,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1757,6 +1833,7 @@ Array [
     "charge": 0,
     "em": 924,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1780,6 +1857,7 @@ Array [
     "charge": 0,
     "em": 936,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1803,6 +1881,7 @@ Array [
     "charge": 0,
     "em": 948,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1826,6 +1905,7 @@ Array [
     "charge": 0,
     "em": 960,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1849,6 +1929,7 @@ Array [
     "charge": 0,
     "em": 972,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1872,6 +1953,7 @@ Array [
     "charge": 0,
     "em": 984,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1895,6 +1977,7 @@ Array [
     "charge": 0,
     "em": 996,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1918,6 +2001,7 @@ Array [
     "charge": 0,
     "em": 1008,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1941,6 +2025,7 @@ Array [
     "charge": 0,
     "em": 1020,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1964,6 +2049,7 @@ Array [
     "charge": 0,
     "em": 1032,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -1987,6 +2073,7 @@ Array [
     "charge": 0,
     "em": 1044,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -2010,6 +2097,7 @@ Array [
     "charge": 0,
     "em": 1056,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -2033,6 +2121,7 @@ Array [
     "charge": 0,
     "em": 1068,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -2056,6 +2145,7 @@ Array [
     "charge": 0,
     "em": 1080,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -2079,6 +2169,7 @@ Array [
     "charge": 0,
     "em": 1092,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -2102,6 +2193,7 @@ Array [
     "charge": 0,
     "em": 1104,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -2125,6 +2217,7 @@ Array [
     "charge": 0,
     "em": 1116,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -2148,6 +2241,7 @@ Array [
     "charge": 0,
     "em": 1128,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -2171,6 +2265,7 @@ Array [
     "charge": 0,
     "em": 1140,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -2194,6 +2289,7 @@ Array [
     "charge": 0,
     "em": 1152,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -2217,6 +2313,7 @@ Array [
     "charge": 0,
     "em": 1164,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -2240,6 +2337,7 @@ Array [
     "charge": 0,
     "em": 1176,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -2263,6 +2361,7 @@ Array [
     "charge": 0,
     "em": 1188,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
@@ -2286,6 +2385,7 @@ Array [
     "charge": 0,
     "em": 1200,
     "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
