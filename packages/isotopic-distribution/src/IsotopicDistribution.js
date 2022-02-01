@@ -105,7 +105,7 @@ class IsotopicDistribution {
       let absoluteCharge = Math.abs(charge);
       if (charge || this.allowNeutral) {
         for (let isotope of part.isotopesInfo.isotopes) {
-          if (isotope.number < 0) return [];
+          if (isotope.number < 0) return { array: [] };
           if (isotope.number > 0) {
             const newDistribution = JSON.parse(
               JSON.stringify(isotope.distribution),

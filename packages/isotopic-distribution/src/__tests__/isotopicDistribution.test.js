@@ -270,9 +270,15 @@ describe('test isotopicDistribution', () => {
     expect(distribution.array[0].x).toBe(24);
   });
 
-  it('CH-1', () => {
+  it('distribution of CH-1', () => {
     let isotopicDistribution = new IsotopicDistribution('CH-1');
     let distribution = isotopicDistribution.getDistribution();
-    expect(distribution).toStrictEqual([]);
+    expect(distribution).toStrictEqual({ array: [] });
+  });
+
+  it('gaussian of N(H-1)', () => {
+    let isotopicDistribution = new IsotopicDistribution('NH-1');
+    let distribution = isotopicDistribution.getGaussian();
+    expect(distribution).toStrictEqual({ x: [], y: [] });
   });
 });
