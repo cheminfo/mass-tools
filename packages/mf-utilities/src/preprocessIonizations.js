@@ -20,6 +20,7 @@ module.exports = function preprocessIonizations(ionizationsString = '') {
         mf: part,
         em: info.monoisotopicMass,
         charge: info.charge,
+        atoms: info.atoms,
       });
     }
   }
