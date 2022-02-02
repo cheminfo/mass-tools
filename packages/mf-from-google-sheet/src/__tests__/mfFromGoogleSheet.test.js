@@ -3,7 +3,7 @@
 let mfFromGoogleSheet = require('..');
 
 // The original document is on: https://docs.google.com/spreadsheets/d/15Kuc5MeOhvm4oeTMvEuP1rWdRFiVWosxXhYwAmuf3Uo/edit#gid=0
-test.only('getReferenceList with existing', async () => {
+test('getReferenceList with existing', async () => {
   let result = await mfFromGoogleSheet(
     'https://googledocs.cheminfo.org/spreadsheets/d/15Kuc5MeOhvm4oeTMvEuP1rWdRFiVWosxXhYwAmuf3Uo/export?format=tsv',
   );
