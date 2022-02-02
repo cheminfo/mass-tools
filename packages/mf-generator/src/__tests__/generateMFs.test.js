@@ -168,6 +168,7 @@ describe('generateMFs', () => {
         "charge": 0,
         "em": 96,
         "ionization": Object {
+          "atoms": Object {},
           "charge": 0,
           "em": 0,
           "mf": "",
@@ -234,7 +235,9 @@ describe('generateMFs', () => {
 
   it('from array with charge and negative range', async () => {
     let mfsArray = ['(H+)-2--4'];
-    let result = await generateMFs(mfsArray);
+    let result = await generateMFs(mfsArray, {
+      filter: { allowNegativeAtoms: true },
+    });
     expect(result.map((a) => a.ms.em).sort((a, b) => a - b)).toStrictEqual([
       -1.0072764523209299, -1.0072764523209299, -1.0072764523209299,
     ]);

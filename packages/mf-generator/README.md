@@ -1,7 +1,7 @@
 # mf-generator
 
-  [![NPM version][npm-image]][npm-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
 
 .
 
@@ -12,17 +12,20 @@
 ## Usage
 
 ```js
-import generateMFs from 'mf-generator';
+const generateMFs = require('mf-generator');
 
 const mfsArray = ['C,H,', 'Cl,Br'];
-const result = generateMFs(mfsArray).map((entry) => entry.mf);
-// result = 'Cl', 'HCl', 'CCl', 'Br', 'HBr', 'CBr'
+generateMFs(mfsArray).then((entries) => {
+  const results = entries.map((entry) => entry.mf);
+  console.log(results);
+});
 
+// result = 'Cl', 'HCl', 'CCl', 'Br', 'HBr', 'CBr'
 ```
 
 ## License
 
-  [MIT](./LICENSE)
+[MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/mf-generator.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/mf-generator

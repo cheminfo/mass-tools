@@ -20,5 +20,8 @@
   "dependencies": {
     "mf-utilities": "^1.2.16",
     "ml-spectra-processing": "8.3.1"
+  },
+  "devDependencies": {
+    "jest-matcher-deep-close-to": "^3.0.2"
   }
 }

@@ -20,7 +20,6 @@ module.exports = function getMsInfo(entry, options = {}) {
   if (!forceIonization && entry.ionization && entry.ionization.mf !== '') {
     realIonization = entry.ionization;
   }
-
   let ms = {
     ionization: realIonization.mf,
     em: 0,

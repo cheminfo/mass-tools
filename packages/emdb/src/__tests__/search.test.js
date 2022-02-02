@@ -11,7 +11,7 @@ describe('test search', () => {
       minEM: 100.123,
       maxEM: 140,
     });
-    expect(results.contaminants).toHaveLength(31);
+    expect(results.contaminants).toHaveLength(30);
   });
 
   it('should yield a flatten database', async () => {
@@ -27,7 +27,7 @@ describe('test search', () => {
         flatten: true,
       },
     );
-    expect(results).toHaveLength(31);
+    expect(results).toHaveLength(30);
     expect(results[0].database).toBe('contaminants');
   });
 });

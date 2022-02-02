@@ -24,5 +24,8 @@
     "mf-parser": "^1.4.3",
     "mf-utilities": "^1.2.16",
     "sum-object-keys": "^1.0.2"
+  },
+  "devDependencies": {
+    "jest-matcher-deep-close-to": "^3.0.2"
   }
 }
