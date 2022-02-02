@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.3.0](https://www.github.com/cheminfo/mass-tools/compare/v5.2.1...v5.3.0) (2022-02-02)
+
+
+### Features
+
+* **mf-matcher:** add property allowNegativeAtoms ([58cc28c](https://www.github.com/cheminfo/mass-tools/commit/58cc28c81a34ae8910e60610ba416ecfb082fb48))
+* **mf-utilities:** preprocessIonizations add atoms property ([85fdcb1](https://www.github.com/cheminfo/mass-tools/commit/85fdcb1f592ed7f9d3909f547264d8ed5a780f3f))
+
 ### [5.2.1](https://www.github.com/cheminfo/mass-tools/compare/v5.2.0...v5.2.1) (2022-02-01)
 
 
