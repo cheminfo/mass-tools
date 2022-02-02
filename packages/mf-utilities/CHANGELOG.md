@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/cheminfo/mass-tools/compare/mf-utilities@1.2.16...mf-utilities@1.3.0) (2022-02-02)
+
+
+### Features
+
+* **mf-utilities:** preprocessIonizations add atoms property ([85fdcb1](https://github.com/cheminfo/mass-tools/commit/85fdcb1f592ed7f9d3909f547264d8ed5a780f3f))
+
+
+
+
+
 ## [1.2.16](https://github.com/cheminfo/mass-tools/compare/mf-utilities@1.2.15...mf-utilities@1.2.16) (2022-02-01)
 
 **Note:** Version bump only for package mf-utilities

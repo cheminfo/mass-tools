@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/cheminfo/mass-tools/compare/mf-matcher@1.1.22...mf-matcher@1.2.0) (2022-02-02)
+
+
+### Features
+
+* **mf-matcher:** add property allowNegativeAtoms ([58cc28c](https://github.com/cheminfo/mass-tools/commit/58cc28c81a34ae8910e60610ba416ecfb082fb48))
+
+
+
+
+
 ## [1.1.22](https://github.com/cheminfo/mass-tools/compare/mf-matcher@1.1.21...mf-matcher@1.1.22) (2022-02-01)
 
 **Note:** Version bump only for package mf-matcher
