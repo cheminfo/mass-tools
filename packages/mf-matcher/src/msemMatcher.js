@@ -4,8 +4,8 @@ const getMsInfo = require('mf-utilities/src/getMsInfo.js');
 const xFindClosestIndex = require('ml-spectra-processing').xFindClosestIndex;
 
 /**
- * @param {object}         [entry={}}]
- * @param {object}         [options={}}]
+ * @param {object}         [entry={}]
+ * @param {object}         [options={}]
  * @param {object}         [options.ionization={ mf: '', em: 0, charge: 0 }] - ionization method
  * @param {boolean}        [options.forceIonization=false] - If true ignore existing ionizations
  * @param {number}         [options.precision=1000] - The precision on the experimental mass
@@ -18,7 +18,8 @@ const xFindClosestIndex = require('ml-spectra-processing').xFindClosestIndex;
  * @param {number}         [options.maxMSEM=+Infinity] - Maximal monoisotopic mass observed by mass
  * @param {number}         [options.minCharge=-Infinity] - Minimal charge
  * @param {number}         [options.maxCharge=+Infinity] - Maximal charge
- * @param {object}         [options.unsaturation={}}]
+ * @param {boolean}        [options.allowNegativeAtoms=false] - Allow to have negative number of atoms
+ * @param {object}         [options.unsaturation={}]
  * @param {number}         [options.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number}         [options.unsaturation.max=+Infinity] - Maximal unsaturation
  * @param {number}         [options.unsaturation.onlyInteger=false] - Integer unsaturation
@@ -34,7 +35,7 @@ const xFindClosestIndex = require('ml-spectra-processing').xFindClosestIndex;
 
 module.exports = function msemMatcher(entry, options = {}) {
   const {
-    ionization = { mf: '', em: 0, charge: 0 },
+    ionization = { mf: '', em: 0, charge: 0, atoms: {} },
     forceIonization = false,
     precision = 1000,
     minCharge = Number.MIN_SAFE_INTEGER,
@@ -47,6 +48,7 @@ module.exports = function msemMatcher(entry, options = {}) {
     maxEM = +Infinity,
     minMSEM = -Infinity,
     maxMSEM = +Infinity,
+    allowNegativeAtoms = false,
     atoms,
     callback,
   } = options;
@@ -78,10 +80,23 @@ module.exports = function msemMatcher(entry, options = {}) {
   }
   if (entry.atoms !== undefined && atoms) {
     // all the atoms of the entry must fit in the range
-    for (let atom of Object.keys(entry.atoms)) {
+    for (let atom in entry.atoms) {
       if (!atoms[atom]) return false;
       if (entry.atoms[atom] < atoms[atom].min) return false;
       if (entry.atoms[atom] > atoms[atom].max) return false;
+    }
+  }
+
+  if (entry.atoms !== undefined && !allowNegativeAtoms) {
+    const ionizationAtoms =
+      (msInfo.ionization && msInfo.ionization.atoms) || {};
+    const atomKeys = new Set(
+      Object.keys(ionizationAtoms).concat(Object.keys(entry.atoms)),
+    );
+    for (let atom of atomKeys) {
+      if ((entry.atoms[atom] || 0) + (ionizationAtoms[atom] || 0) < 0) {
+        return false;
+      }
     }
   }
 

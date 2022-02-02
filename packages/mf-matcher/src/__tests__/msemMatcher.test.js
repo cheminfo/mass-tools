@@ -1,8 +1,12 @@
 'use strict';
 
+const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
+
+expect.extend({ toBeDeepCloseTo });
+
 const matcher = require('../msemMatcher');
 
-describe('test msemMatcher', () => {
+describe('msemMatcher', () => {
   it('various parameters', () => {
     let entry = {
       mf: 'C10',
@@ -175,6 +179,72 @@ describe('test msemMatcher', () => {
         },
       },
       ionization: { mf: '(H+)2', charge: 2, em: 0 },
+    });
+  });
+
+  it('negative atoms', () => {
+    let entry = {
+      mf: 'C-10',
+      charge: 0,
+      atoms: {
+        C: -10,
+      },
+    };
+    expect(matcher(entry, { allowNegativeAtoms: true })).toStrictEqual({
+      ionization: { atoms: {}, charge: 0, em: 0, mf: '' },
+      ms: { charge: 0, em: 0, ionization: '' },
+    });
+    expect(matcher(entry)).toBe(false);
+    expect(
+      matcher(entry, {
+        ionization: { mf: '(H+)2', charge: 2, em: 0, atoms: { H: 2 } },
+      }),
+    ).toBe(false);
+  });
+
+  it('negative ionizations', () => {
+    let entry = {
+      mf: 'C10',
+      em: 120,
+      charge: 0,
+      atoms: {
+        C: 10,
+      },
+    };
+    expect(
+      matcher(entry, {
+        allowNegativeAtoms: true,
+        ionization: { mf: '(H+)-2', charge: -2, em: 0, atoms: { H: -2 } },
+      }),
+    ).toBeDeepCloseTo({
+      ms: { ionization: '(H+)-2', em: 60.00054857990907, charge: -2 },
+      ionization: { mf: '(H+)-2', charge: -2, em: 0, atoms: { H: -2 } },
+    });
+    expect(
+      matcher(entry, {
+        ionization: { mf: 'C-2(+)', charge: 1, em: -24, atoms: { C: -2 } },
+      }),
+    ).toBeDeepCloseTo({
+      ms: { ionization: 'C-2(+)', em: 95.99945142009094, charge: 1 },
+      ionization: { mf: 'C-2(+)', charge: 1, em: -24, atoms: { C: -2 } },
+    });
+    expect(
+      matcher(entry, {
+        ionization: { mf: '(H+)-2', charge: -2, em: 0, atoms: { H: -2 } },
+      }),
+    ).toBe(false);
+    expect(
+      matcher(entry, {
+        ionization: { mf: 'C-20', charge: 0, em: 0, atoms: { C: -20 } },
+      }),
+    ).toBe(false);
+    expect(
+      matcher(entry, {
+        ionization: { mf: 'C-10', charge: 0, em: 0, atoms: { C: -10 } },
+      }),
+    ).toStrictEqual({
+      ionization: { atoms: { C: -10 }, charge: 0, em: 0, mf: 'C-10' },
+      ms: { charge: 0, em: 0, ionization: 'C-10' },
     });
   });
 });
