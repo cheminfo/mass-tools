@@ -31,6 +31,7 @@ const getPaper = require('./getPaper');
  * @param {object} [options.filter={}] define some filters
  * @param {number} [options.filter.minSimilarity=0]  minimal similarity
  * @param {number} [options.filter.minQuantity=0]  minimal quantity
+ * @param {number} [options.filter.minRelativeQuantity=0]  minimal relative quantity. This value should be between 0 and 1 and supersede minQuantity.
  * @param {boolean} [options.filter.showInternals=true] show the internal fragments
  *
  */

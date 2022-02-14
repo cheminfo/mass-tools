@@ -92,7 +92,17 @@ function getNumber(text) {
 
 function filterResults(results, filter) {
   if (!filter) return;
-  const { minSimilarity = 0, minQuantity = 0, showInternals = true } = filter;
+  let {
+    minRelativeQuantity = 0,
+    minSimilarity = 0,
+    minQuantity = 0,
+    showInternals = true,
+  } = filter;
+
+  if (minRelativeQuantity) {
+    minQuantity =
+      Math.max(...results.map((entry) => entry.quantity)) * minRelativeQuantity;
+  }
 
   if (minSimilarity) {
     results = results.filter(
@@ -104,6 +114,7 @@ function filterResults(results, filter) {
       (result) => !result.quantity || result.quantity >= minQuantity,
     );
   }
+
   if (!showInternals) {
     results = results.filter((result) => !result.internal);
   }

@@ -28,6 +28,13 @@ describe('appendResults', () => {
     });
     expect(data.results).toHaveLength(280);
   });
+  it('filter minRelativeQuantity', () => {
+    let data = { residues: { residues: new Array(10) } };
+    appendResults(data, info, {
+      filter: { minRelativeQuantity: 0.2 },
+    });
+    expect(data.results).toHaveLength(284);
+  });
   it('filter showInternals', () => {
     let data = { residues: { residues: new Array(10) } };
     appendResults(data, info, { filter: { showInternals: false } });
