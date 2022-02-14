@@ -1,7 +1,7 @@
 'use strict';
 
 const gsd = require('ml-gsd').gsd;
-const { xFindClosestIndex } = require('ml-spectra-processing');
+const { xyEnsureGrowingX } = require('ml-spectra-processing');
 
 const appendPeaksCharge = require('./appendPeaksCharge');
 
@@ -26,19 +26,18 @@ function peakPicking(spectrum, options = {}) {
       (key) => key !== 'x' && key !== 'y',
     );
     if (spectrum.isContinuous()) {
-      const gsdPeaks = gsd(spectrum.data, {
-        noiseLevel: 0,
+      // some experimental data are really problematic and we need to add this line
+      const data = xyEnsureGrowingX(spectrum.data);
+      const gsdPeaks = gsd(data, {
         minMaxRatio: 0.00025, // Threshold to determine if a given peak should be considered as a noise
         realTopDetection: true,
-        maxCriteria: true, // inverted:false
         smoothY: false,
         sgOptions: { windowSize: 7, polynomial: 3 },
       });
       for (let gsdPeak of gsdPeaks) {
         const peak = { x: gsdPeak.x, y: gsdPeak.y, width: gsdPeak.width };
-        const index = xFindClosestIndex(spectrum.data.x, gsdPeak.x);
         for (let key of keys) {
-          peak[key] = spectrum.data[key][index];
+          peak[key] = spectrum.data[key][gsdPeak.index];
         }
         spectrum.peaks.push(peak);
       }
