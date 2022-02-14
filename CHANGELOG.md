@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.4.0](https://www.github.com/cheminfo/mass-tools/compare/v5.3.0...v5.4.0) (2022-02-14)
+
+
+### Features
+
+* **ms-report:** add minRelativeQuantity ([86bfaea](https://www.github.com/cheminfo/mass-tools/commit/86bfaea28732442344dbc0b5cc0189e568aa26eb))
+
 ## [5.3.0](https://www.github.com/cheminfo/mass-tools/compare/v5.2.1...v5.3.0) (2022-02-02)
 
 
