@@ -3,7 +3,7 @@
   "browser": {
     "./src/getPaper.js": "./src/getPaper.browser.js"
   },
-  "version": "1.3.4",
+  "version": "1.4.0",
   "description": "Generate report for mass analysis",
   "main": "src/index.js",
   "files": [

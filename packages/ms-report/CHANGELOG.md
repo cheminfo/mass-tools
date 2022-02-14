@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/cheminfo/mass-tools/compare/ms-report@1.3.4...ms-report@1.4.0) (2022-02-14)
+
+
+### Features
+
+* **ms-report:** add minRelativeQuantity ([86bfaea](https://github.com/cheminfo/mass-tools/commit/86bfaea28732442344dbc0b5cc0189e568aa26eb))
+
+
+
+
+
 ## [1.3.4](https://github.com/cheminfo/mass-tools/compare/ms-report@1.3.3...ms-report@1.3.4) (2022-02-02)
 
 **Note:** Version bump only for package ms-report
