@@ -1,5 +1,12 @@
 # Changelog
 
+### [5.4.1](https://www.github.com/cheminfo/mass-tools/compare/v5.4.0...v5.4.1) (2022-02-14)
+
+
+### Bug Fixes
+
+* update gsd dependency ([3253310](https://www.github.com/cheminfo/mass-tools/commit/3253310c49e0b9b4915605a1356ac7620430ca69))
+
 ## [5.4.0](https://www.github.com/cheminfo/mass-tools/compare/v5.3.0...v5.4.0) (2022-02-14)
 
 
