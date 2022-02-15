@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.7](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@1.4.6...isotopic-distribution@1.4.7) (2022-02-15)
+
+
+### Bug Fixes
+
+* update gsd dependency ([3253310](https://github.com/cheminfo/mass-tools/commit/3253310c49e0b9b4915605a1356ac7620430ca69))
+
+
+
+
+
 ## [1.4.6](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@1.4.5...isotopic-distribution@1.4.6) (2022-02-02)
 
 **Note:** Version bump only for package isotopic-distribution
