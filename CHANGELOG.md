@@ -1,5 +1,12 @@
 # Changelog
 
+### [5.5.1](https://www.github.com/cheminfo/mass-tools/compare/v5.5.0...v5.5.1) (2022-02-15)
+
+
+### Bug Fixes
+
+* import emdb in getFragmentPeaks ([986ad0b](https://www.github.com/cheminfo/mass-tools/commit/986ad0bddfc5798ec0c9f369f5a178aaf18019f2))
+
 ## [5.5.0](https://www.github.com/cheminfo/mass-tools/compare/v5.4.0...v5.5.0) (2022-02-15)
 
 
