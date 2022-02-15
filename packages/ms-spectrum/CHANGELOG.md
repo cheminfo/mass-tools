@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.5.3...ms-spectrum@1.6.0) (2022-02-15)
+
+
+### Bug Fixes
+
+* update gsd dependency ([3253310](https://github.com/cheminfo/mass-tools/commit/3253310c49e0b9b4915605a1356ac7620430ca69))
+
+
+### Features
+
+* **ms-spectrum:** add getFragmentPeaks ([1e68a66](https://github.com/cheminfo/mass-tools/commit/1e68a666f81565d61ced7e1d53b831c424199dd0))
+
+
+
+
+
 ## [1.5.3](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.5.2...ms-spectrum@1.5.3) (2022-02-02)
 
 **Note:** Version bump only for package ms-spectrum

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/cheminfo/mass-tools/compare/mf-matcher@1.2.0...mf-matcher@1.2.1) (2022-02-15)
+
+
+### Bug Fixes
+
+* update gsd dependency ([3253310](https://github.com/cheminfo/mass-tools/commit/3253310c49e0b9b4915605a1356ac7620430ca69))
+
+
+
+
+
 # [1.2.0](https://github.com/cheminfo/mass-tools/compare/mf-matcher@1.1.22...mf-matcher@1.2.0) (2022-02-02)
 
 
