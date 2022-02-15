@@ -1,6 +1,5 @@
 'use strict';
 
-const EMDB = require('emdb');
 const { MF } = require('mf-parser');
 
 const getPeaks = require('./getPeaks.js');
@@ -20,13 +19,14 @@ const getPeaks = require('./getPeaks.js');
  */
 
 async function getFragmentPeaks(peaks, mf, options = {}) {
+  const emdb = new (require('emdb'))();
+
   const { ionizations = '', precision } = options;
 
   const mfInfo = new MF(mf).getInfo();
   const ranges = Object.keys(mfInfo.atoms)
     .map((key) => `${key}0-${mfInfo.atoms[key]}`)
     .join(' ');
-  const emdb = new EMDB();
   peaks = getPeaks(peaks, options);
   for (let peak of peaks) {
     peak.mfs = (
