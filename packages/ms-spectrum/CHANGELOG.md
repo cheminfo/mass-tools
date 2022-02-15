@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.6.0...ms-spectrum@1.6.1) (2022-02-15)
+
+
+### Bug Fixes
+
+* import emdb in getFragmentPeaks ([986ad0b](https://github.com/cheminfo/mass-tools/commit/986ad0bddfc5798ec0c9f369f5a178aaf18019f2))
+
+
+
+
+
 # [1.6.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.5.3...ms-spectrum@1.6.0) (2022-02-15)
 
 
