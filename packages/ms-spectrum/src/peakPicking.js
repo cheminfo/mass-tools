@@ -20,7 +20,7 @@ const appendPeaksCharge = require('./appendPeaksCharge');
 
 function peakPicking(spectrum, options = {}) {
   const { charge: chargeOptions = {} } = options;
-  if (!spectrum.peaks) {
+  if (!spectrum.peaks || spectrum.peaks.length === 0) {
     spectrum.peaks = [];
     const keys = Object.keys(spectrum.data).filter(
       (key) => key !== 'x' && key !== 'y',

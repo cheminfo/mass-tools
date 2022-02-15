@@ -5,6 +5,7 @@ const normed = require('ml-array-normed/lib/index.js');
 const { parseXY } = require('xy-parser');
 
 const getBestPeaks = require('./getBestPeaks');
+const getFragmentPeaks = require('./getFragmentPeaks');
 const getMassRemainder = require('./getMassRemainder');
 const getPeakChargeBySimilarity = require('./getPeakChargeBySimilarity');
 const getPeaks = require('./getPeaks');
@@ -29,6 +30,7 @@ function Spectrum(data = { x: [], y: [] }) {
     writable: true,
   });
   this.cache = {};
+  this.peaks = [];
 }
 
 Spectrum.fromPeaks = function fromPeaks(peaks) {
@@ -112,6 +114,23 @@ Spectrum.prototype.getPeakChargeBySimilarity =
 Spectrum.prototype.getPeaks = function getPeaksFct(options) {
   peakPicking(this);
   return getPeaks(this.peaks, options);
+};
+
+/**
+ * Returns also peaks possible for a specific molecular formula
+ * @example
+ *  const spectrum = new Spectrum({x:[], y:[]})
+ *  await spectrum.getFragmentPeaks();
+ * @param {string} mf
+ * @param {object} options
+ * @returns
+ */
+Spectrum.prototype.getFragmentPeaks = function getFragmentPeaksFct(
+  mf,
+  options,
+) {
+  peakPicking(this);
+  return getFragmentPeaks(this.peaks, mf, options);
 };
 
 Spectrum.prototype.isContinuous = function isContinuousFct() {
