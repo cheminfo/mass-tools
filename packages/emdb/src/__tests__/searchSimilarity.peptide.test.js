@@ -1,17 +1,14 @@
-/* eslint-disable import/no-extraneous-dependencies */
 'use strict';
-
-const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
-
-expect.extend({ toBeDeepCloseTo });
 
 const fs = require('fs');
 const join = require('path').join;
 
-// eslint-disable-next-line import/no-extraneous-dependencies
+const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
 const parseXY = require('xy-parser').parseXY;
 
 const DBManager = require('..');
+
+expect.extend({ toBeDeepCloseTo });
 
 describe('test searchSimilarity for peptide', () => {
   let experimental = loadUbiquitin();

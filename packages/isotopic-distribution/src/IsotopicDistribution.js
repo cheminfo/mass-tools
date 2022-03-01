@@ -1,10 +1,10 @@
 'use strict';
 
 const ELECTRON_MASS = require('chemical-elements').ELECTRON_MASS;
-const SpectrumGenerator = require('spectrum-generator').SpectrumGenerator;
 const MF = require('mf-parser').MF;
 const getMsInfo = require('mf-utilities/src/getMsInfo');
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
+const SpectrumGenerator = require('spectrum-generator').SpectrumGenerator;
 
 const Distribution = require('./Distribution');
 const getDerivedCompositionInfo = require('./utils/getDerivedCompositionInfo');

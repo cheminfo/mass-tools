@@ -1,6 +1,7 @@
 'use strict';
 
 const parse = require('../../parse');
+const toParts = require('../toParts');
 
 let tests = [
   { mf: 'C', result: [[{ kind: 'atom', value: 'C', multiplier: 1 }]] },
@@ -49,8 +50,6 @@ let tests = [
     ],
   },
 ];
-
-const toParts = require('../toParts');
 
 test.each(tests)('toParts %p', (aTest) => {
   let parsed = parse(aTest.mf);

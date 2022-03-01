@@ -70,7 +70,7 @@ function massShifts(similarities, options = {}) {
     shiftsPPM,
     fit: regressionChart,
     score: regression.score(shifts.x, shifts.y),
-    // eslint-disable-next-line no-new-func
+
     predictFct: regression.predict.bind(regression),
     tex: regression.toLaTeX(3),
     slope: regression.slope,

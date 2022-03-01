@@ -1,6 +1,7 @@
 'use strict';
 
 const parse = require('./parse');
+const { subscript, superscript } = require('./util/subSuperscript');
 const toDisplay = require('./util/toDisplay');
 const toHtml = require('./util/toHtml');
 
@@ -13,8 +14,6 @@ function parseToHtml(mf) {
   let display = toDisplay(parsed);
   return toHtml(display);
 }
-
-const { subscript, superscript } = require('./util/subSuperscript');
 
 module.exports = {
   Kind: require('./Kind'),
