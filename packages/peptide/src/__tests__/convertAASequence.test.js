@@ -16,9 +16,7 @@ describe('Checking convert AA sequence', () => {
     const result = convertAASequence(
       '(C33H37O6N3Si) GluTyrGluLys(C16H30O)GluTyrGluOH',
     );
-    expect(result).toBe(
-      '(C33H37O6N3Si) GluTyrGluLys(C16H30O)GluTyrGluOH',
-    );
+    expect(result).toBe('(C33H37O6N3Si) GluTyrGluLys(C16H30O)GluTyrGluOH');
   });
 
   it('(Me)AAAAAAA(NH2)', () => {

@@ -13,6 +13,8 @@
     "build-docs": "ls packages | xargs -I % sh -c 'cd packages/%; documentation build src/index.js -f html -o ../../docs/%; cd ../..'",
     "eslint": "eslint packages --cache",
     "eslint-fix": "npm run eslint -- --fix",
+    "prettier": "prettier --check .",
+    "prettier-write": "prettier --write .",
     "publish": "lerna publish -y --no-verify-access",
     "test": "npm run test-only && npm run eslint",
     "test-only": "jest --coverage"

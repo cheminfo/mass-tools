@@ -17,9 +17,9 @@ let results = fromPeptidicSequence(
       c: true,
       z: true,
       ya: true,
-      yb: true
-    }
-  }
+      yb: true,
+    },
+  },
 );
 console.timeEnd('parsing');
 console.time('distribution');

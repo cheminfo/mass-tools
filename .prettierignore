@@ -1,1 +1,7 @@
 packages/chemical-groups/src/groups.js
+packages/chemical-elements/src/elements.json
+coverage
+dist
+docs
+node_modules
+CHANGELOG.md

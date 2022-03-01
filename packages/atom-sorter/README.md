@@ -1,7 +1,7 @@
 # atom-sorter
 
-  [![NPM version][npm-image]][npm-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
 
 .
 
@@ -14,13 +14,13 @@
 ```js
 import atomSorter from 'atom-sorter';
 
-['C','O','N','H'].osrt(atomSorter);
+['C', 'O', 'N', 'H'].osrt(atomSorter);
 // result is ...
 ```
 
 ## License
 
-  [MIT](./LICENSE)
+[MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/atom-sorter.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/atom-sorter
