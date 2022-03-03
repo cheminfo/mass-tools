@@ -1,3 +1,4 @@
 {
-  "deep": true
+  "deep": true,
+  "reject": ["@svgdotjs/svg.js", "svgdom"]
 }
