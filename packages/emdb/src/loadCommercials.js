@@ -15,7 +15,6 @@ module.exports = async function loadCommercials(options = {}) {
     loadingPromises[url] = fetch(url);
   }
   const buffer = await loadingPromises[url];
-
   const jsZip = new JSZip();
   let zip = await jsZip.loadAsync(buffer);
   let fileData = await zip.files['commercials.json'].async('string');

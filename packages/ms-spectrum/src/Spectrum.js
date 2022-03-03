@@ -1,5 +1,6 @@
 'use strict';
 
+const { isAnyArray } = require('is-any-array');
 const max = require('ml-array-max/lib/index.js');
 const normed = require('ml-array-normed/lib/index.js');
 const { parseXY } = require('xy-parser');
@@ -14,11 +15,7 @@ const peakPicking = require('./peakPicking');
 const peaksWidth = require('./peaksWidth');
 
 function Spectrum(data = { x: [], y: [] }) {
-  if (
-    typeof data !== 'object' ||
-    !Array.isArray(data.x) ||
-    !Array.isArray(data.y)
-  ) {
+  if (typeof data !== 'object' || !isAnyArray(data.x) || !isAnyArray(data.y)) {
     throw new TypeError('Spectrum data must be an object with x:[], y:[]');
   }
   this.data = {}; // we make a copy so that we can add new properties

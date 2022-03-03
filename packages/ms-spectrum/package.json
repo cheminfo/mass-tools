@@ -19,6 +19,7 @@
   "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/emdb#readme",
   "dependencies": {
     "emdb": "^1.7.4",
+    "is-any-array": "^2.0.0",
     "mf-parser": "^1.4.4",
     "ml-array-max": "^1.2.4",
     "ml-array-min": "^1.2.3",
@@ -30,6 +31,7 @@
     "xy-parser": "^5.0.1"
   },
   "devDependencies": {
-    "jest-matcher-deep-close-to": "^3.0.2"
+    "jest-matcher-deep-close-to": "^3.0.2",
+    "spectrum-generator": "^8.0.0"
   }
 }
