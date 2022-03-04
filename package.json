@@ -33,7 +33,7 @@
     "@types/jest": "^27.4.1",
     "benchmark": "^2.1.4",
     "chemcalc": "^3.4.1",
-    "chemical-elements": "^1.2.0",
+    "chemical-elements": "^1.2.1",
     "cheminfo-build": "^1.1.11",
     "documentation": "^13.2.5",
     "eslint": "^8.10.0",
