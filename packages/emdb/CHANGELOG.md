@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.5](https://github.com/cheminfo/mass-tools/compare/emdb@1.7.4...emdb@1.7.5) (2022-03-04)
+
+
+### Bug Fixes
+
+* update dependencies ([#71](https://github.com/cheminfo/mass-tools/issues/71)) ([9ea23b6](https://github.com/cheminfo/mass-tools/commit/9ea23b6683d32489b26b0f9abda97dc69fffaca3))
+
+
+
+
+
 ## [1.7.4](https://github.com/cheminfo/mass-tools/compare/emdb@1.7.3...emdb@1.7.4) (2022-02-15)
 
 **Note:** Version bump only for package emdb
