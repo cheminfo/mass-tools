@@ -1,7 +1,7 @@
 # mf-utilities
 
-  [![NPM version][npm-image]][npm-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
 
 Small utilities dealing with molecular formula.
 
@@ -20,7 +20,7 @@ const result = library(args);
 
 ## License
 
-  [MIT](./LICENSE)
+[MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/mf-utilities.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/mf-utilities

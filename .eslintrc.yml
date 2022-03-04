@@ -1,4 +1,6 @@
 extends: cheminfo
+parserOptions:
+  sourceType: script
 rules:
   no-shadow:
     - error
@@ -7,3 +9,4 @@ rules:
       allow: []
 env:
   jest: true
+  node: true

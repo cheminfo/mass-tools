@@ -1,10 +1,9 @@
 'use strict';
 
+const { SVG, registerWindow } = require('@svgdotjs/svg.js');
 const window = require('svgdom');
 
 const document = window.document;
-const { SVG, registerWindow } = require('@svgdotjs/svg.js');
-
 registerWindow(window, document);
 
 function getPaper() {

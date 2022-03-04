@@ -1,7 +1,7 @@
 # isotopic-distribution
 
-  [![NPM version][npm-image]][npm-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
 
 Calculate the isotopic distribution of a molecular formula.
 
@@ -20,7 +20,7 @@ const result = library(args);
 
 ## License
 
-  [MIT](./LICENSE)
+[MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/isotopic-distribution.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/isotopic-distribution

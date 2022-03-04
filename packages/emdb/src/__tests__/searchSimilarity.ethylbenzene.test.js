@@ -3,7 +3,6 @@
 const fs = require('fs');
 const join = require('path').join;
 
-// eslint-disable-next-line import/no-extraneous-dependencies
 const parseXY = require('xy-parser').parseXY;
 
 const DBManager = require('..');

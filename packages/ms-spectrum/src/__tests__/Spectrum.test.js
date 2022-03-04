@@ -2,6 +2,7 @@
 'use strict';
 
 const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
+const generateSpectrum = require('spectrum-generator').generateSpectrum;
 
 const Spectrum = require('../Spectrum');
 
@@ -63,13 +64,15 @@ describe('test Spectrum', () => {
   });
 
   it('gsd', () => {
-    let data = { x: [], y: [], info: [] };
-    for (let i = 0; i <= 200; i++) {
-      data.x.push(i / 20);
-      data.y.push(i > 100 ? (200 - i) ** 2 : i * i);
-      data.info.push({ abc: i });
-    }
+    const peaks = [{ x: 5, y: 10000, width: 0.2 }];
 
+    const data = generateSpectrum(peaks, {
+      generator: {
+        from: 0,
+        to: 10,
+        nbPoints: 10001,
+      },
+    });
     const result = new Spectrum(data).peakPicking();
     expect(result).toBeDeepCloseTo([
       {
@@ -77,21 +80,25 @@ describe('test Spectrum', () => {
         y: 10000,
         width: 0.2,
         charge: 1,
-        info: { abc: 100 },
       },
     ]);
   });
 
   it('gsd realtop', () => {
-    let data = { x: [], y: [] };
-    for (let i = 0; i <= 200; i++) {
-      data.x.push(i / 20);
-      data.y.push(i > 100 ? (200 - i) ** 2 : i * i);
-    }
+    const peaks = [{ x: 5, y: 10000, width: 0.2 }];
+
+    const data = generateSpectrum(peaks, {
+      generator: {
+        from: 0,
+        to: 10,
+        nbPoints: 201,
+      },
+    });
+
     data.y[99] = data.y[100];
-    let peaks = new Spectrum(data).peakPicking();
-    expect(peaks).toBeDeepCloseTo([
-      { x: 4.975, y: 10049.5, width: 0.15, charge: 1 },
+    let result = new Spectrum(data).peakPicking();
+    expect(result).toBeDeepCloseTo([
+      { x: 4.975, y: 10491.836675359205, width: 0.2, charge: 1 },
     ]);
   });
 
