@@ -1,5 +1,13 @@
 # Changelog
 
+### [5.5.3](https://github.com/cheminfo/mass-tools/compare/v5.5.2...v5.5.3) (2022-03-25)
+
+
+### Bug Fixes
+
+* update dependencies ([cc52abb](https://github.com/cheminfo/mass-tools/commit/cc52abb8cf7dd65920b190983b2458e141e425d8))
+* update more dependencies ([51dd258](https://github.com/cheminfo/mass-tools/commit/51dd25847065f6981fba583ad656d7432d7803c8))
+
 ### [5.5.2](https://github.com/cheminfo/mass-tools/compare/v5.5.1...v5.5.2) (2022-03-04)
 
 
