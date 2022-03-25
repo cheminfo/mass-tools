@@ -39,6 +39,6 @@
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2",
-    "xy-parser": "^5.0.1"
+    "xy-parser": "^5.0.2"
   }
 }

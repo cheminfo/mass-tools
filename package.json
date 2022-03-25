@@ -36,11 +36,11 @@
     "chemical-elements": "^1.2.1",
     "cheminfo-build": "^1.1.11",
     "documentation": "^13.2.5",
-    "eslint": "^8.10.0",
-    "eslint-config-cheminfo": "^7.2.2",
+    "eslint": "^8.11.0",
+    "eslint-config-cheminfo": "^7.3.0",
     "jest": "^27.5.1",
     "jest-matcher-deep-close-to": "^3.0.2",
     "lerna": "^4.0.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.6.1"
   }
 }
