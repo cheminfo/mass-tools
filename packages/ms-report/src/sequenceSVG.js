@@ -48,7 +48,6 @@ function sequenceSVG(sequence, analysisResults, options = {}) {
     merge,
     filter,
   } = options;
-
   const drawOptions = {
     spaceBetweenResidues,
     leftRightBorders,

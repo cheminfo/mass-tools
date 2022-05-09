@@ -11,6 +11,9 @@ test('sequenceSVG of peptide', () => {
     leftRightBorders: 50,
     spaceBetweenResidues: 20,
     spaceBetweenInternalLines: 10,
+    parsing: {
+      kind: 'peptide',
+    },
   };
   let sequence =
     '(Me)MQIFVKTLTGKT(OEt)IT(OMe)LEVEPSD(NH2)TIENVKAKIQD(NH2)KEGIPPDQQ(OMe)';

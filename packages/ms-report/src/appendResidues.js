@@ -133,7 +133,7 @@ module.exports = function appendResidues(data, sequence, options = {}) {
   }
   if (result.end.length > 2) {
     let label = options.kind === 'peptide' ? 'Cter' : "3'";
-    replacements[result.begin] = {
+    replacements[result.end] = {
       label,
     };
     result.end = label;
