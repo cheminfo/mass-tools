@@ -1,5 +1,13 @@
 # Changelog
 
+### [5.5.4](https://github.com/cheminfo/mass-tools/compare/v5.5.3...v5.5.4) (2022-05-09)
+
+
+### Bug Fixes
+
+* **ms-report:** correct end group terminal replacement ([7a1c937](https://github.com/cheminfo/mass-tools/commit/7a1c9373666b0d38762a8e03b005c24ff6ddee57))
+* rename fetch to avoid conflict with new native fetch function ([aff7aa8](https://github.com/cheminfo/mass-tools/commit/aff7aa859f81e3d10192566bc04f7a8bb90bdcf9))
+
 ### [5.5.3](https://github.com/cheminfo/mass-tools/compare/v5.5.2...v5.5.3) (2022-03-25)
 
 
