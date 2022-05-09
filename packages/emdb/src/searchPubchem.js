@@ -5,7 +5,7 @@ const mfParser = require('mf-parser');
 const getMsInfo = require('mf-utilities/src/getMsInfo');
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 
-const fetch = require('./util/fetchJSON.js');
+const fetchJSON = require('./util/fetchJSON.js');
 
 /**
  * Generates a database 'pubchem' based on all molecular formula available
@@ -43,7 +43,7 @@ module.exports = async function searchPubchem(masses, options = {}) {
         ionization.em +
         ELECTRON_MASS * ionization.charge;
       const pubchemURL = `${url}?em=${realMass}&precision=${precision}&limit=${limit}&minPubchemEntries=${minPubchemEntries}`;
-      promises.push(fetch(pubchemURL));
+      promises.push(fetchJSON(pubchemURL));
     }
   }
 

@@ -2,7 +2,7 @@
 
 const JSZip = require('jszip/dist/jszip');
 
-const fetch = require('./util/fetchArrayBuffer');
+const fetchArrayBuffer = require('./util/fetchArrayBuffer');
 
 const loadingPromises = {};
 
@@ -12,7 +12,7 @@ module.exports = async function loadCommercials(options = {}) {
   } = options;
 
   if (!loadingPromises[url]) {
-    loadingPromises[url] = fetch(url);
+    loadingPromises[url] = fetchArrayBuffer(url);
   }
   const buffer = await loadingPromises[url];
   const jsZip = new JSZip();

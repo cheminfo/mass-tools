@@ -1,8 +1,8 @@
 'use strict';
 
-const fetch = require('cross-fetch');
+const crossFetch = require('cross-fetch');
 
 module.exports = async function fetchJSONBrowser(url) {
-  const result = await fetch(url);
+  const result = await crossFetch(url);
   return result.json();
 };

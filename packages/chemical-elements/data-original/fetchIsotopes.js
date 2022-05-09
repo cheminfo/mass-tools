@@ -2,12 +2,12 @@
 
 const fs = require('fs');
 
-const fetch = require('cross-fetch');
+const crossFetch = require('cross-fetch');
 
 async function retrieve(refresh = false) {
   let text;
   if (refresh) {
-    let response = await fetch(
+    let response = await crossFetch(
       'http://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=&ascii=ascii2&isotype=all',
     );
     text = await response.text();
