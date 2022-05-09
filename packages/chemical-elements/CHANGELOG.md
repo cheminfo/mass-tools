@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.2.2...chemical-elements@1.2.3) (2022-05-09)
+
+
+### Bug Fixes
+
+* rename fetch to avoid conflict with new native fetch function ([aff7aa8](https://github.com/cheminfo/mass-tools/commit/aff7aa859f81e3d10192566bc04f7a8bb90bdcf9))
+
+
+
+
+
 ## [1.2.2](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.2.1...chemical-elements@1.2.2) (2022-03-25)
 
 

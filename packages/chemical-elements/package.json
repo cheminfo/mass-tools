@@ -1,6 +1,6 @@
 {
   "name": "chemical-elements",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "JSON containing information about chemical elements and isotopes",
   "main": "src/index.js",
   "files": [

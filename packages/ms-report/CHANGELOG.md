@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.3](https://github.com/cheminfo/mass-tools/compare/ms-report@1.4.2...ms-report@1.4.3) (2022-05-09)
+
+
+### Bug Fixes
+
+* **ms-report:** correct end group terminal replacement ([7a1c937](https://github.com/cheminfo/mass-tools/commit/7a1c9373666b0d38762a8e03b005c24ff6ddee57))
+
+
+
+
+
 ## [1.4.2](https://github.com/cheminfo/mass-tools/compare/ms-report@1.4.1...ms-report@1.4.2) (2022-03-25)
 
 **Note:** Version bump only for package ms-report
