@@ -134,7 +134,7 @@ class IsotopicDistribution {
           });
         }
 
-        if (totalDistribution.array) {
+        if (totalDistribution.array && totalDistribution.array.length > 0) {
           totalDistribution.sortX();
           part.fromX = totalDistribution.array[0].x;
           part.toX =

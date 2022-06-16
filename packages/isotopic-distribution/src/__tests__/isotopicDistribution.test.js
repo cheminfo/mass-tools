@@ -48,6 +48,18 @@ describe('test isotopicDistribution', () => {
     ]);
   });
 
+  it('create distribution with minY', () => {
+    let isotopicDistribution = new IsotopicDistribution('C', { minY: 0.1 });
+    let distribution = isotopicDistribution.getDistribution();
+    expect(distribution.array).toMatchObject([{ x: 12, y: 0.9893 }]);
+  });
+
+  it('create distribution with impossible minY', () => {
+    let isotopicDistribution = new IsotopicDistribution('C', { minY: 1 });
+    let distribution = isotopicDistribution.getDistribution();
+    expect(distribution.array).toMatchObject([]);
+  });
+
   it('create distribution from parts', () => {
     let parts = [
       {
