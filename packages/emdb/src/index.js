@@ -189,6 +189,7 @@ DBManager.prototype.massShifts = require('./massShifts');
 DBManager.prototype.search = require('./search');
 DBManager.prototype.searchMSEM = require('./searchMSEM');
 DBManager.prototype.searchPubchem = require('./searchPubchem');
+DBManager.prototype.searchActivesOrNaturals = require('./searchActivesOrNaturals');
 DBManager.prototype.searchSimilarity = require('./searchSimilarity');
 
 module.exports = DBManager;
