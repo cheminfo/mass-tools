@@ -16,12 +16,12 @@ const fetchJSON = require('./util/fetchJSON.js');
  * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
  * @param {number} [options.precision=1000] - Precision of the monoisotopic mass in ppm
  * @param {number} [options.limit=1000] - Maximal number of entries to return
- * @param {number} [options.url='https://pubchem.cheminfo.org/mfs/em'] - URL of the webservice
+ * @param {number} [options.url='https://pubchem.cheminfo.org/activesOrNaturals/v1/fromEM'] - URL of the webservice
  */
 
 module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
   const {
-    url = 'https://pubchem-beta.cheminfo.org/activesOrNaturals/v1/fromEM',
+    url = 'https://pubchem.cheminfo.org/activesOrNaturals/v1/fromEM',
     precision = 1000,
     limit = 1000,
   } = options;
