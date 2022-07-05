@@ -1,6 +1,6 @@
 {
   "name": "emdb",
-  "version": "1.7.7",
+  "version": "1.8.0",
   "description": "Database manager for exact mass query",
   "main": "src/index.js",
   "files": [
@@ -21,7 +21,7 @@
     "chemical-elements": "^1.2.3",
     "chemical-groups": "^1.2.1",
     "cross-fetch": "^3.1.5",
-    "isotopic-distribution": "^1.4.11",
+    "isotopic-distribution": "^1.4.12",
     "jszip": "^3.7.1",
     "mf-finder": "^1.2.10",
     "mf-from-google-sheet": "^1.1.34",
@@ -32,7 +32,7 @@
     "ml-array-max": "^1.2.4",
     "ml-array-min": "^1.2.3",
     "ml-regression-theil-sen": "^2.0.0",
-    "ms-spectrum": "^1.6.4",
+    "ms-spectrum": "^1.6.5",
     "nucleotide": "^1.2.21",
     "peaks-similarity": "^2.3.1",
     "peptide": "^1.11.4"

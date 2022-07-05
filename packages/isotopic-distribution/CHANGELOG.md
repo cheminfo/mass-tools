@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.12](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@1.4.11...isotopic-distribution@1.4.12) (2022-07-05)
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** in case minY is too big and no peaks are found ([a0fdc29](https://github.com/cheminfo/mass-tools/commit/a0fdc2947fa807d78a41cbea8fbe2ca8c2fab2a8))
+
+
+
+
+
 ## [1.4.11](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@1.4.10...isotopic-distribution@1.4.11) (2022-05-09)
 
 **Note:** Version bump only for package isotopic-distribution
