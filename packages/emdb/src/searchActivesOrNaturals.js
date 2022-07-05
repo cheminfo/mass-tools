@@ -48,7 +48,7 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
   let results = await Promise.all(promises);
   let mfs = [];
   for (let i = 0; i < results.length; i++) {
-    for (let mf of results[i]) {
+    for (let mf of results[i].data) {
       try {
         let mfInfo = new mfParser.MF(mf.data.mf).getInfo();
         mfInfo.ionization = ionizations[i];
@@ -85,12 +85,16 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
         molecules: [],
         nbNatural: 0,
         nbBioactive: 0,
+        nbPubmed: 0,
       };
     }
     grouped[mf.mf].molecules.push(mf);
 
     if (mf.info.naturalProduct) grouped[mf.mf].nbNatural++;
     if (mf.info.bioActive) grouped[mf.mf].nbBioactive++;
+    if (mf.info.pubmeds && mf.info.pubmeds.length > 0) {
+      grouped[mf.mf].nbPubmed++;
+    }
   }
 
   const groupedArray = Object.keys(grouped).map((key) => grouped[key]);
