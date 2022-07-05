@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.6.0](https://github.com/cheminfo/mass-tools/compare/v5.5.4...v5.6.0) (2022-07-05)
+
+
+### Features
+
+* add searchActivesOrNaturals ([515b4e0](https://github.com/cheminfo/mass-tools/commit/515b4e0ccd45c79cfcf740fc9187048fc03e547b))
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** in case minY is too big and no peaks are found ([a0fdc29](https://github.com/cheminfo/mass-tools/commit/a0fdc2947fa807d78a41cbea8fbe2ca8c2fab2a8))
+
 ### [5.5.4](https://github.com/cheminfo/mass-tools/compare/v5.5.3...v5.5.4) (2022-05-09)
 
 
