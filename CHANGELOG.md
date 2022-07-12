@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.7.0](https://github.com/cheminfo/mass-tools/compare/v5.6.0...v5.7.0) (2022-07-12)
+
+
+### Features
+
+* allow to searchActivesOrNaturals with range filter ([8179e41](https://github.com/cheminfo/mass-tools/commit/8179e414f59df7c97b29776439b62ed1fc5fe396))
+
 ## [5.6.0](https://github.com/cheminfo/mass-tools/compare/v5.5.4...v5.6.0) (2022-07-05)
 
 
