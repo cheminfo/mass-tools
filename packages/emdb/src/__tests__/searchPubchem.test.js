@@ -38,4 +38,13 @@ describe('searchPubchem', () => {
     });
     expect(data).toHaveLength(1);
   });
+
+  it('simple case with range filter', async () => {
+    let data = await searchPubchem(60, {
+      ionizations: '(H+)2, H+',
+      precision: 100,
+      ranges: 'C0-10H0-10N0-10O0-10',
+    });
+    expect(data).toHaveLength(1);
+  });
 });

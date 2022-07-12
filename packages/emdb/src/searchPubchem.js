@@ -1,6 +1,7 @@
 'use strict';
 
 const { ELECTRON_MASS } = require('chemical-elements/src/constants');
+const mfFinder = require('mf-finder');
 const mfParser = require('mf-parser');
 const getMsInfo = require('mf-utilities/src/getMsInfo');
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
@@ -15,6 +16,7 @@ const fetchJSON = require('./util/fetchJSON.js');
  * @param {string} [options.databaseName='pubchem']
  * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
  * @param {number} [options.precision=1000] - Precision of the monoisotopic mass in ppm
+ * @param {string} [options.ranges=''] -
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {number} [options.minPubchemEntries=5] - Minimal number of molecules having a specific MF
  * @param {number} [options.url='https://pubchem.cheminfo.org/mfs/em'] - URL of the webservice
@@ -25,6 +27,7 @@ module.exports = async function searchPubchem(masses, options = {}) {
     url = 'https://pubchem.cheminfo.org/mfs/em',
     precision = 1000,
     limit = 1000,
+    ranges = '',
     minPubchemEntries = 5,
   } = options;
 
@@ -34,6 +37,22 @@ module.exports = async function searchPubchem(masses, options = {}) {
   if (typeof masses === 'string') {
     masses = masses.split(/[\r\n\t,; ]+/).map(Number);
   }
+
+  let allowMFs;
+  if (ranges) {
+    allowMFs = [];
+    for (let mass of masses) {
+      (
+        await mfFinder(mass, {
+          ionizations: options.ionizations,
+          precision,
+          ranges,
+          limit: 100000,
+        })
+      ).mfs.forEach((mf) => allowMFs.push(mf.mf));
+    }
+  }
+
   let promises = [];
   let ionizations = preprocessIonizations(options.ionizations);
   for (let mass of masses) {
@@ -52,6 +71,9 @@ module.exports = async function searchPubchem(masses, options = {}) {
   let mfs = [];
   for (let i = 0; i < results.length; i++) {
     for (let mf of results[i].result) {
+      if (allowMFs && !allowMFs.includes(mf.mf)) {
+        continue;
+      }
       try {
         let mfInfo = new mfParser.MF(mf.mf).getInfo();
         mfInfo.ionization = ionizations[i];

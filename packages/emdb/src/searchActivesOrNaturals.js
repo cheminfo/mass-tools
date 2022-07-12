@@ -52,6 +52,7 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
       ).mfs.forEach((mf) => allowMFs.push(mf.mf));
     }
   }
+
   for (let mass of masses) {
     for (let ionization of ionizations) {
       let realMass =
