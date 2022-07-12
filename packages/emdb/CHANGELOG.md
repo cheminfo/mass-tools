@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.9.0...emdb@1.10.0) (2022-07-12)
+
+
+### Features
+
+* allow range filtering in searchPubchem ([f9dbdf1](https://github.com/cheminfo/mass-tools/commit/f9dbdf1cfa3c5d014023fc29b69eaad7f4da5bd7))
+
+
+
+
+
 # [1.9.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.8.0...emdb@1.9.0) (2022-07-12)
 
 
