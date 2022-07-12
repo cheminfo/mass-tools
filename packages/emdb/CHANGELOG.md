@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.8.0...emdb@1.9.0) (2022-07-12)
+
+
+### Features
+
+* allow to searchActivesOrNaturals with range filter ([8179e41](https://github.com/cheminfo/mass-tools/commit/8179e414f59df7c97b29776439b62ed1fc5fe396))
+
+
+
+
+
 # [1.8.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.7.7...emdb@1.8.0) (2022-07-05)
 
 
