@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.8.0](https://github.com/cheminfo/mass-tools/compare/v5.7.0...v5.8.0) (2022-07-12)
+
+
+### Features
+
+* allow range filtering in searchPubchem ([f9dbdf1](https://github.com/cheminfo/mass-tools/commit/f9dbdf1cfa3c5d014023fc29b69eaad7f4da5bd7))
+
 ## [5.7.0](https://github.com/cheminfo/mass-tools/compare/v5.6.0...v5.7.0) (2022-07-12)
 
 
