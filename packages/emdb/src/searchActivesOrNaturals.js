@@ -1,6 +1,7 @@
 'use strict';
 
 const { ELECTRON_MASS } = require('chemical-elements/src/constants');
+const mfFinder = require('mf-finder');
 const mfParser = require('mf-parser');
 const getMsInfo = require('mf-utilities/src/getMsInfo');
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
@@ -14,9 +15,10 @@ const fetchJSON = require('./util/fetchJSON.js');
  * @param {object} [options={}]
  * @param {string} [options.databaseName='pubchem']
  * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
+ * @param {string} [options.ranges=''] -
  * @param {number} [options.precision=1000] - Precision of the monoisotopic mass in ppm
  * @param {number} [options.limit=1000] - Maximal number of entries to return
- * @param {number} [options.url='https://pubchem.cheminfo.org/activesOrNaturals/v1/fromEM'] - URL of the webservice
+ * @param {string} [options.url='https://pubchem.cheminfo.org/activesOrNaturals/v1/fromEM'] - URL of the webservice
  */
 
 module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
@@ -24,6 +26,7 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
     url = 'https://pubchem.cheminfo.org/activesOrNaturals/v1/fromEM',
     precision = 1000,
     limit = 1000,
+    ranges = '',
   } = options;
 
   if (typeof masses === 'number') {
@@ -34,12 +37,28 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
   }
   let promises = [];
   let ionizations = preprocessIonizations(options.ionizations);
+
+  let allowMFs;
+  if (ranges) {
+    allowMFs = [];
+    for (let mass of masses) {
+      (
+        await mfFinder(mass, {
+          ionizations: options.ionizations,
+          precision,
+          ranges,
+          limit: 100000,
+        })
+      ).mfs.forEach((mf) => allowMFs.push(mf.mf));
+    }
+  }
   for (let mass of masses) {
     for (let ionization of ionizations) {
       let realMass =
         mass * Math.abs(ionization.charge || 1) -
         ionization.em +
         ELECTRON_MASS * ionization.charge;
+
       const pubchemURL = `${url}?em=${realMass}&precision=${precision}&limit=${limit}`;
       promises.push(fetchJSON(pubchemURL));
     }
@@ -50,6 +69,10 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
   for (let i = 0; i < results.length; i++) {
     for (let mf of results[i].data) {
       try {
+        // would it be more efficient to filter later ???
+        if (allowMFs && !allowMFs.includes(mf.data.mf)) {
+          continue;
+        }
         let mfInfo = new mfParser.MF(mf.data.mf).getInfo();
         mfInfo.ionization = ionizations[i];
         mfInfo.em = mfInfo.monoisotopicMass;
