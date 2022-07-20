@@ -17,7 +17,7 @@ describe('searchActivesOrNaturals', () => {
     let data = await searchActivesOrNaturals(300.123, {
       ionizations: '(H+)2, H+',
       precision: 1000,
-      ranges: 'C0-100 H0-100 O0-100 N0-100 Br0-100 S0',
+      ranges: 'C0-100 H0-100 O0-100 N0-100 Br0-100 S0 P0',
       limit: 100,
       url: 'https://pubchem-beta.cheminfo.org/activesOrNaturals/v1/fromEM',
     });

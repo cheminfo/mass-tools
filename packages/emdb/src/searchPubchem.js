@@ -38,9 +38,9 @@ module.exports = async function searchPubchem(masses, options = {}) {
     masses = masses.split(/[\r\n\t,; ]+/).map(Number);
   }
 
-  let allowMFs;
+  let allowedEMs;
   if (ranges) {
-    allowMFs = [];
+    const allowedEMsArray = [];
     for (let mass of masses) {
       (
         await mfFinder(mass, {
@@ -49,10 +49,10 @@ module.exports = async function searchPubchem(masses, options = {}) {
           ranges,
           limit: 100000,
         })
-      ).mfs.forEach((mf) => allowMFs.push(mf.mf));
+      ).mfs.forEach((mf) => allowedEMsArray.push(mf.em));
     }
+    allowedEMs = Float64Array.from(allowedEMsArray).sort();
   }
-
   let promises = [];
   let ionizations = preprocessIonizations(options.ionizations);
   for (let mass of masses) {
@@ -71,7 +71,10 @@ module.exports = async function searchPubchem(masses, options = {}) {
   let mfs = [];
   for (let i = 0; i < results.length; i++) {
     for (let mf of results[i].result) {
-      if (allowMFs && !allowMFs.includes(mf.mf)) {
+      if (
+        allowedEMs &&
+        !allowedEMs.find((em) => Math.abs(em - mf.em) < 0.0000001)
+      ) {
         continue;
       }
       try {

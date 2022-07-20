@@ -40,7 +40,7 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
 
   let allowedEMs; // we prefer to use the exact mass rather than MF
   if (ranges) {
-    allowedEMs = [];
+    const allowedEMsArray = [];
     for (let mass of masses) {
       (
         await mfFinder(mass, {
@@ -49,8 +49,9 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
           ranges,
           limit: 100000,
         })
-      ).mfs.forEach((mf) => allowedEMs.push(mf.em));
+      ).mfs.forEach((mf) => allowedEMsArray.push(mf.em));
     }
+    allowedEMs = Float64Array.from(allowedEMsArray).sort();
   }
 
   for (let mass of masses) {
@@ -71,9 +72,13 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
     for (let mf of results[i].data) {
       try {
         // would it be more efficient to filter later ???
-        if (allowedEMs && !allowedEMs.includes(mf.data.em)) {
+        if (
+          allowedEMs &&
+          !allowedEMs.find((em) => Math.abs(em - mf.data.em) < 0.0000001)
+        ) {
           continue;
         }
+
         let mfInfo = new mfParser.MF(mf.data.mf).getInfo();
         mfInfo.ionization = ionizations[i];
         mfInfo.em = mfInfo.monoisotopicMass;
@@ -97,6 +102,8 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
       }
     }
   }
+
+  console.log({ mfs });
 
   // we will now group the data per mf
   const grouped = {};
