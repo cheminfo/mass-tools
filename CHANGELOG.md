@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.8.2](https://github.com/cheminfo/mass-tools/compare/v5.8.1...v5.8.2) (2022-07-20)
+
+
+### Bug Fixes
+
+* use em to check if searchPubchem and searchActives are in the range ([3130ac8](https://github.com/cheminfo/mass-tools/commit/3130ac8867d79427a546a73d914d86c03e4fa183))
+
 ## [5.8.1](https://github.com/cheminfo/mass-tools/compare/v5.8.0...v5.8.1) (2022-07-20)
 
 
