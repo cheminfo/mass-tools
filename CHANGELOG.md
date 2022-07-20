@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.8.1](https://github.com/cheminfo/mass-tools/compare/v5.8.0...v5.8.1) (2022-07-20)
+
+
+### Bug Fixes
+
+* searchActivesOrNaturals and problem of S0 ([96fbf7e](https://github.com/cheminfo/mass-tools/commit/96fbf7e0d9d18b22a2661291239690e95bd3c092))
+
 ## [5.8.0](https://github.com/cheminfo/mass-tools/compare/v5.7.0...v5.8.0) (2022-07-12)
 
 
