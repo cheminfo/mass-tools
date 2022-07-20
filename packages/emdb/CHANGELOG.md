@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.2](https://github.com/cheminfo/mass-tools/compare/emdb@1.10.1...emdb@1.10.2) (2022-07-20)
+
+
+### Bug Fixes
+
+* use em to check if searchPubchem and searchActives are in the range ([3130ac8](https://github.com/cheminfo/mass-tools/commit/3130ac8867d79427a546a73d914d86c03e4fa183))
+
+
+
+
+
 ## [1.10.1](https://github.com/cheminfo/mass-tools/compare/emdb@1.10.0...emdb@1.10.1) (2022-07-20)
 
 
