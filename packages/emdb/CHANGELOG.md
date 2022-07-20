@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.1](https://github.com/cheminfo/mass-tools/compare/emdb@1.10.0...emdb@1.10.1) (2022-07-20)
+
+
+### Bug Fixes
+
+* searchActivesOrNaturals and problem of S0 ([96fbf7e](https://github.com/cheminfo/mass-tools/commit/96fbf7e0d9d18b22a2661291239690e95bd3c092))
+
+
+
+
+
 # [1.10.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.9.0...emdb@1.10.0) (2022-07-12)
 
 
