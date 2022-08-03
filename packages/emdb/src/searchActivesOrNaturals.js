@@ -103,8 +103,6 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
     }
   }
 
-  console.log({ mfs });
-
   // we will now group the data per mf
   const grouped = {};
   for (const mf of mfs) {
@@ -117,12 +115,14 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
         nbNatural: 0,
         nbBioactive: 0,
         nbPubmed: 0,
+        nbWithMassSpectra: 0,
       };
     }
     grouped[mf.mf].molecules.push(mf);
 
     if (mf.info.naturalProduct) grouped[mf.mf].nbNatural++;
     if (mf.info.bioActive) grouped[mf.mf].nbBioactive++;
+    if (mf.info.nbMassSpectra) grouped[mf.mf].nbWithMassSpectra++;
     if (mf.info.pubmeds && mf.info.pubmeds.length > 0) {
       grouped[mf.mf].nbPubmed++;
     }
