@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.9.0](https://github.com/cheminfo/mass-tools/compare/v5.8.2...v5.9.0) (2022-08-03)
+
+
+### Features
+
+* add nbWithMassSpectra in searchActivesOrNaturals ([97f6f53](https://github.com/cheminfo/mass-tools/commit/97f6f5395f772a6b4aeeda5dc9fa9ea1292377e4))
+
 ## [5.8.2](https://github.com/cheminfo/mass-tools/compare/v5.8.1...v5.8.2) (2022-07-20)
 
 
