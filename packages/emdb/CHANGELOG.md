@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.10.2...emdb@1.11.0) (2022-08-03)
+
+
+### Features
+
+* add nbWithMassSpectra in searchActivesOrNaturals ([97f6f53](https://github.com/cheminfo/mass-tools/commit/97f6f5395f772a6b4aeeda5dc9fa9ea1292377e4))
+
+
+
+
+
 ## [1.10.2](https://github.com/cheminfo/mass-tools/compare/emdb@1.10.1...emdb@1.10.2) (2022-07-20)
 
 
