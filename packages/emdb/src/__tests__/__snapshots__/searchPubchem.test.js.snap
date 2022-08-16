@@ -82,7 +82,7 @@ Array [
     "charge": 0,
     "em": 122.01499861577999,
     "info": Object {
-      "nbPubchemEntries": 49,
+      "nbPubchemEntries": 69,
     },
     "ionization": Object {
       "atoms": Object {
@@ -114,7 +114,7 @@ Array [
     "charge": 0,
     "em": 122.01345714675,
     "info": Object {
-      "nbPubchemEntries": 133,
+      "nbPubchemEntries": 155,
     },
     "ionization": Object {
       "atoms": Object {

@@ -19,12 +19,12 @@ const fetchJSON = require('./util/fetchJSON.js');
  * @param {string} [options.ranges=''] -
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {number} [options.minPubchemEntries=5] - Minimal number of molecules having a specific MF
- * @param {number} [options.url='https://pubchem.cheminfo.org/mfs/em'] - URL of the webservice
+ * @param {string} [options.url='https://pubchem.cheminfo.org/mfs/v1/fromEM'] - URL of the webservice
  */
 
 module.exports = async function searchPubchem(masses, options = {}) {
   const {
-    url = 'https://pubchem.cheminfo.org/mfs/em',
+    url = 'https://pubchem.cheminfo.org/mfs/v1/fromEM',
     precision = 1000,
     limit = 1000,
     ranges = '',
@@ -67,10 +67,9 @@ module.exports = async function searchPubchem(masses, options = {}) {
   }
 
   let results = await Promise.all(promises);
-
   let mfs = [];
   for (let i = 0; i < results.length; i++) {
-    for (let mf of results[i].result) {
+    for (let mf of results[i].data) {
       if (
         allowedEMs &&
         !allowedEMs.find((em) => Math.abs(em - mf.em) < 0.0000001)
@@ -78,13 +77,13 @@ module.exports = async function searchPubchem(masses, options = {}) {
         continue;
       }
       try {
-        let mfInfo = new mfParser.MF(mf.mf).getInfo();
+        let mfInfo = new mfParser.MF(mf._id).getInfo();
         mfInfo.ionization = ionizations[i];
         mfInfo.em = mfInfo.monoisotopicMass;
         mfInfo.ms = getMsInfo(mfInfo, {
           targetMass: masses,
         }).ms;
-        mfInfo.info = { nbPubchemEntries: mf.total };
+        mfInfo.info = { nbPubchemEntries: mf.count };
         mfs.push(mfInfo);
       } catch (e) {
         // eslint-disable-next-line no-console
