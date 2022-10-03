@@ -1,7 +1,7 @@
 'use strict';
 
 const searchPubchem = require('../searchPubchem.js');
-
+//
 jest.setTimeout(50000);
 describe('searchPubchem', () => {
   it('simple case', async () => {
