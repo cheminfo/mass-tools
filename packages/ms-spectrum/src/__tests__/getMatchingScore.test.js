@@ -16,15 +16,15 @@ describe('test getMatchingScore', () => {
       fragmentsContribution,
       options,
     );
-    expect(result).toBe(446.76604692483096);
+    expect(result).toBeCloseTo(446.76604692483096);
   });
   it('default options', () => {
     let result = getMatchingScore(matchedExpFragments, fragmentsContribution);
-    expect(result).toBe(2028.039654693095);
+    expect(result).toBeCloseTo(2028.039654693095);
   });
   it('missing fragmentsContribution and options', () => {
     let result = getMatchingScore(matchedExpFragments);
-    expect(result).toBe(2013.039654693095);
+    expect(result).toBeCloseTo(2013.039654693095);
   });
 
   it('all zeros', () => {
@@ -33,6 +33,6 @@ describe('test getMatchingScore', () => {
       y: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     };
     let result = getMatchingScore(matchedExpFragmentsAllZeros);
-    expect(result).toBe(0);
+    expect(result).toBeCloseTo(0);
   });
 });
