@@ -7,8 +7,8 @@ const { xSum } = require('ml-spectra-processing');
  * @param {object} [matchedExpFragments={}] - object of all the experimental fragments matched
  * @param {Array} [fragmentsContribution=[]] - array of all the bond contributions for of matching fragments
  * @param {object} [options={}] - object containing the scale factor for mass and intensity
- * @param {number} [massCoefficient=3]
- * @param {number} [intensityCoefficient=3]
+ * @param {number} [options.massCoefficient=3]
+ * @param {number} [options.intensityCoefficient=0.6]
  * @returns {number} - returns the matching score
  */
 
