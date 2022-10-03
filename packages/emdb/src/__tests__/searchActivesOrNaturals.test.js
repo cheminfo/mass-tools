@@ -2,6 +2,7 @@
 
 const searchActivesOrNaturals = require('../searchActivesOrNaturals.js');
 
+jest.setTimeout(11000);
 describe('searchActivesOrNaturals', () => {
   it('simple case', async () => {
     let data = await searchActivesOrNaturals(300.123, {

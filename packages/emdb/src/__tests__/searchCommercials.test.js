@@ -2,6 +2,7 @@
 
 const DBManager = require('..');
 
+jest.setTimeout(11000);
 describe('test search commercial', () => {
   it('should filter the commercial database', async () => {
     let dbManager = new DBManager();
