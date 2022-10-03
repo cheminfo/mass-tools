@@ -1,12 +1,14 @@
 'use strict';
 
-const sum = require('ml-array-sum/lib/index');
+const { xSum } = require('ml-spectra-processing');
 
 /**
  * Filter the array of peaks
  * @param {object} [matchedExpFragments={}] - object of all the experimental fragments matched
  * @param {Array} [fragmentsContribution=[]] - array of all the bond contributions for of matching fragments
- * @param {object} [options={}] - object containing the scale factor for mass and intensity (m and i)
+ * @param {object} [options={}] - object containing the scale factor for mass and intensity
+ * @param {number} [massCoefficient=3]
+ * @param {number} [intensityCoefficient=3]
  * @returns {number} - returns the matching score
  */
 
@@ -15,23 +17,23 @@ const sum = require('ml-array-sum/lib/index');
 function getMatchingScore(
   matchedExpFragments = { x: [], y: [] },
   fragmentsContribution = [0],
-  options = { m: 3, i: 0.6 },
+  options = {},
 ) {
+  const { massCoefficient = 3, intensityCoefficient = 0.6 } = options;
   // sum all bonds contribution of matched fragments
-  let sumContribution = sum(fragmentsContribution);
+  let sumContribution = xSum(fragmentsContribution);
 
   // Scale the mass and intensity
   let weightFactor = 0;
   for (let i = 0; i < matchedExpFragments.x.length; i++) {
     weightFactor +=
-      Math.pow(matchedExpFragments.y[i], options.i) *
-      Math.pow(matchedExpFragments.x[i], options.m);
+      matchedExpFragments.y[i] ** intensityCoefficient *
+      matchedExpFragments.x[i] ** massCoefficient;
   }
 
   // final score
   let finalScore = weightFactor + sumContribution;
-  // round to 3 decimals
-  return Math.round(finalScore * 1000) / 1000;
+  return finalScore;
 }
 
 module.exports = getMatchingScore;
