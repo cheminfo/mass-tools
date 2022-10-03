@@ -1,6 +1,6 @@
 'use strict';
 
-const getMatchingScore = require('../getMatchingScore');
+const getFragmentedCandidateScore = require('../getFragmentedCandidateScore.js');
 
 describe('test getMatchingScore', () => {
   let matchedExpFragments = {
@@ -11,7 +11,7 @@ describe('test getMatchingScore', () => {
   let options = { massCoefficient: 2, intensityCoefficient: 0.8 };
 
   it('custom options', () => {
-    let result = getMatchingScore(
+    let result = getFragmentedCandidateScore(
       matchedExpFragments,
       fragmentsContribution,
       options,
@@ -19,11 +19,14 @@ describe('test getMatchingScore', () => {
     expect(result).toBeCloseTo(446.76604692483096);
   });
   it('default options', () => {
-    let result = getMatchingScore(matchedExpFragments, fragmentsContribution);
+    let result = getFragmentedCandidateScore(
+      matchedExpFragments,
+      fragmentsContribution,
+    );
     expect(result).toBeCloseTo(2028.039654693095);
   });
   it('missing fragmentsContribution and options', () => {
-    let result = getMatchingScore(matchedExpFragments);
+    let result = getFragmentedCandidateScore(matchedExpFragments);
     expect(result).toBeCloseTo(2013.039654693095);
   });
 
@@ -32,7 +35,7 @@ describe('test getMatchingScore', () => {
       x: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       y: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     };
-    let result = getMatchingScore(matchedExpFragmentsAllZeros);
+    let result = getFragmentedCandidateScore(matchedExpFragmentsAllZeros);
     expect(result).toBeCloseTo(0);
   });
 });

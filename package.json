@@ -42,5 +42,15 @@
     "jest-matcher-deep-close-to": "^3.0.2",
     "lerna": "^4.0.0",
     "prettier": "^2.6.1"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**"
+    ]
   }
 }
