@@ -3,12 +3,12 @@
 const { xSum } = require('ml-spectra-processing');
 
 /**
- * Filter the array of peaks
+ * @description Get the matching score of a molecule with a spectrum
  * @param {object} [matchedExpFragments={}] - object of all the experimental fragments matched
  * @param {Array} [fragmentsContribution=[]] - array of all the bond contributions for of matching fragments
  * @param {object} [options={}] - object containing the scale factor for mass and intensity
- * @param {number} [options.massCoefficient=3]
- * @param {number} [options.intensityCoefficient=0.6]
+ * @param {number} [options.massCoefficient=3] - scale factor for mass
+ * @param {number} [options.intensityCoefficient=0.6] - scale factor for intensity
  * @returns {number} - returns the matching score
  */
 
