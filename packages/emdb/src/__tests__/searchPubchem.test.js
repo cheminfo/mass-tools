@@ -2,7 +2,7 @@
 
 const searchPubchem = require('../searchPubchem.js');
 
-jest.setTimeout(11000);
+jest.setTimeout(50000);
 describe('searchPubchem', () => {
   it('simple case', async () => {
     let data = await searchPubchem(60, {
