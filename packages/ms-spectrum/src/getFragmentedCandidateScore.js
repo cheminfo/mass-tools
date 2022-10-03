@@ -27,7 +27,7 @@ function getFragmentedCandidateScore(
 
   // Scale the mass and intensity
   let weightFactor = 0;
-  for (let i = 0; i < matchedExpFragments.x.length; i++) {
+  for (let i = 0; i < matchedExpFragments.masses.length; i++) {
     weightFactor +=
       matchedExpFragments.intensities[i] ** intensityCoefficient *
       matchedExpFragments.masses[i] ** massCoefficient;
