@@ -1,5 +1,7 @@
 'use strict';
 
+jest.setTimeout(50000);
+
 let mfFromGoogleSheet = require('..');
 
 // The original document is on: https://docs.google.com/spreadsheets/d/15Kuc5MeOhvm4oeTMvEuP1rWdRFiVWosxXhYwAmuf3Uo/edit#gid=0
