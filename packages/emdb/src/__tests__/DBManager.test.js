@@ -10,7 +10,7 @@ test('DBManager contaminants and knapSack', async () => {
 
   expect(dbManager.listDatabases()).toStrictEqual(['contaminants', 'knapSack']);
   expect(dbManager.get('contaminants').length).toBeGreaterThan(1000);
-}, 30000);
+}, 50000);
 
 test('DBManager fromMonoisotopicMass', async () => {
   let dbManager = new DBManager();

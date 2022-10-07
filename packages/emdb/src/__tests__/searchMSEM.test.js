@@ -1,5 +1,7 @@
 'use strict';
 
+jest.setTimeout(50000);
+
 const DBManager = require('..');
 
 describe('test searchMSEM', () => {

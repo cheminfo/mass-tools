@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateMFs Check info 1`] = `
+{
+  "atoms": {
+    "C": 8,
+  },
+  "charge": 0,
+  "em": 96,
+  "ionization": {
+    "atoms": {},
+    "charge": 0,
+    "em": 0,
+    "mf": "",
+  },
+  "mf": "C8",
+  "ms": {
+    "charge": 0,
+    "em": 0,
+    "ionization": "",
+  },
+  "mw": 96.08588717388199,
+  "parts": [
+    "C",
+    ,
+    "C5(C)2",
+  ],
+  "unsaturation": 9,
+}
+`;

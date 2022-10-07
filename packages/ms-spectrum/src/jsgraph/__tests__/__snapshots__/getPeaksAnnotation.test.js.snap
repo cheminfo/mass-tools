@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test getPeaksAnnotation default options 1`] = `
-Array [
-  Object {
+[
+  {
     "_highlight": undefined,
-    "labels": Array [
-      Object {
+    "labels": [
+      {
         "color": "red",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-17px",
           "x": 12,
@@ -15,9 +15,9 @@ Array [
         },
         "text": "12.00000",
       },
-      Object {
+      {
         "color": "grey",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-4px",
           "x": 12,
@@ -26,13 +26,13 @@ Array [
         "text": "Z:undefined",
       },
     ],
-    "position": Array [
-      Object {
+    "position": [
+      {
         "dy": "-5px",
         "x": 12,
         "y": 1,
       },
-      Object {
+      {
         "dy": "-25px",
         "x": 12,
         "y": 1,
@@ -40,12 +40,12 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "_highlight": undefined,
-    "labels": Array [
-      Object {
+    "labels": [
+      {
         "color": "red",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-17px",
           "x": 24,
@@ -53,9 +53,9 @@ Array [
         },
         "text": "24.00000",
       },
-      Object {
+      {
         "color": "grey",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-4px",
           "x": 24,
@@ -64,13 +64,13 @@ Array [
         "text": "Z:undefined",
       },
     ],
-    "position": Array [
-      Object {
+    "position": [
+      {
         "dy": "-5px",
         "x": 24,
         "y": 2,
       },
-      Object {
+      {
         "dy": "-25px",
         "x": 24,
         "y": 2,
@@ -78,12 +78,12 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "_highlight": undefined,
-    "labels": Array [
-      Object {
+    "labels": [
+      {
         "color": "red",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-17px",
           "x": 36,
@@ -91,9 +91,9 @@ Array [
         },
         "text": "36.00000",
       },
-      Object {
+      {
         "color": "grey",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-4px",
           "x": 36,
@@ -102,13 +102,13 @@ Array [
         "text": "Z:undefined",
       },
     ],
-    "position": Array [
-      Object {
+    "position": [
+      {
         "dy": "-5px",
         "x": 36,
         "y": 3,
       },
-      Object {
+      {
         "dy": "-25px",
         "x": 36,
         "y": 3,
@@ -116,12 +116,12 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "_highlight": undefined,
-    "labels": Array [
-      Object {
+    "labels": [
+      {
         "color": "red",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-17px",
           "x": 42,
@@ -129,9 +129,9 @@ Array [
         },
         "text": "42.00000",
       },
-      Object {
+      {
         "color": "grey",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-4px",
           "x": 42,
@@ -140,13 +140,13 @@ Array [
         "text": "Z:undefined",
       },
     ],
-    "position": Array [
-      Object {
+    "position": [
+      {
         "dy": "-5px",
         "x": 42,
         "y": 4,
       },
-      Object {
+      {
         "dy": "-25px",
         "x": 42,
         "y": 4,
@@ -158,13 +158,13 @@ Array [
 `;
 
 exports[`test getPeaksAnnotation shift -12 1`] = `
-Array [
-  Object {
+[
+  {
     "_highlight": undefined,
-    "labels": Array [
-      Object {
+    "labels": [
+      {
         "color": "red",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-17px",
           "x": 12,
@@ -172,9 +172,9 @@ Array [
         },
         "text": "0.00001",
       },
-      Object {
+      {
         "color": "grey",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-4px",
           "x": 12,
@@ -183,13 +183,13 @@ Array [
         "text": "Z:undefined",
       },
     ],
-    "position": Array [
-      Object {
+    "position": [
+      {
         "dy": "-5px",
         "x": 12,
         "y": 1,
       },
-      Object {
+      {
         "dy": "-25px",
         "x": 12,
         "y": 1,
@@ -197,12 +197,12 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "_highlight": undefined,
-    "labels": Array [
-      Object {
+    "labels": [
+      {
         "color": "red",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-17px",
           "x": 24,
@@ -210,9 +210,9 @@ Array [
         },
         "text": "12.00001",
       },
-      Object {
+      {
         "color": "grey",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-4px",
           "x": 24,
@@ -221,13 +221,13 @@ Array [
         "text": "Z:undefined",
       },
     ],
-    "position": Array [
-      Object {
+    "position": [
+      {
         "dy": "-5px",
         "x": 24,
         "y": 2,
       },
-      Object {
+      {
         "dy": "-25px",
         "x": 24,
         "y": 2,
@@ -235,12 +235,12 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "_highlight": undefined,
-    "labels": Array [
-      Object {
+    "labels": [
+      {
         "color": "red",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-17px",
           "x": 36,
@@ -248,9 +248,9 @@ Array [
         },
         "text": "24.00001",
       },
-      Object {
+      {
         "color": "grey",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-4px",
           "x": 36,
@@ -259,13 +259,13 @@ Array [
         "text": "Z:undefined",
       },
     ],
-    "position": Array [
-      Object {
+    "position": [
+      {
         "dy": "-5px",
         "x": 36,
         "y": 3,
       },
-      Object {
+      {
         "dy": "-25px",
         "x": 36,
         "y": 3,
@@ -273,12 +273,12 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "_highlight": undefined,
-    "labels": Array [
-      Object {
+    "labels": [
+      {
         "color": "red",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-17px",
           "x": 42,
@@ -286,9 +286,9 @@ Array [
         },
         "text": "30.00001",
       },
-      Object {
+      {
         "color": "grey",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-4px",
           "x": 42,
@@ -297,13 +297,13 @@ Array [
         "text": "Z:undefined",
       },
     ],
-    "position": Array [
-      Object {
+    "position": [
+      {
         "dy": "-5px",
         "x": 42,
         "y": 4,
       },
-      Object {
+      {
         "dy": "-25px",
         "x": 42,
         "y": 4,

@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test Spectrum JSGraph getAnnotation 1`] = `
-Array [
-  Object {
+[
+  {
     "_highlight": undefined,
-    "info": Object {
+    "info": {
       "close": true,
       "x": 2,
       "y": 3,
     },
-    "position": Array [
-      Object {
+    "position": [
+      {
         "dy": "-5px",
         "x": 2,
         "y": 3,
       },
-      Object {
+      {
         "dy": "-15px",
         "x": 2,
         "y": 3,
@@ -23,33 +23,33 @@ Array [
     ],
     "type": "line",
   },
-  Object {
+  {
     "_highlight": undefined,
-    "info": Object {
+    "info": {
       "close": true,
       "x": 2,
       "y": 3,
     },
-    "position": Array [
-      Object {
+    "position": [
+      {
         "dy": "-15px",
         "x": 2,
         "y": 3,
       },
     ],
-    "props": Object {
+    "props": {
       "fillOpacity": 0.3,
       "rx": "3px",
       "ry": "3px",
     },
     "type": "ellipse",
   },
-  Object {
+  {
     "_highlight": undefined,
-    "labels": Array [
-      Object {
+    "labels": [
+      {
         "color": "red",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-17px",
           "x": 1,
@@ -57,9 +57,9 @@ Array [
         },
         "text": "1.00000",
       },
-      Object {
+      {
         "color": "grey",
-        "position": Object {
+        "position": {
           "dx": "2px",
           "dy": "-4px",
           "x": 1,
@@ -68,13 +68,13 @@ Array [
         "text": "Z:undefined",
       },
     ],
-    "position": Array [
-      Object {
+    "position": [
+      {
         "dy": "-5px",
         "x": 1,
         "y": 2,
       },
-      Object {
+      {
         "dy": "-25px",
         "x": 1,
         "y": 2,

@@ -2,7 +2,7 @@
 
 const loadKnapSack = require('../loadKnapSack');
 
-jest.setTimeout(30000);
+jest.setTimeout(50000);
 test('loadKnapSack', async () => {
   let data = await loadKnapSack();
 
