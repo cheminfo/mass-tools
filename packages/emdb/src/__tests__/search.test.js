@@ -2,6 +2,7 @@
 
 const DBManager = require('..');
 
+jest.setTimeout(50000);
 describe('test search', () => {
   it('should filter one database', async () => {
     let dbManager = new DBManager();
