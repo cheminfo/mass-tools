@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`fromPeptidicSequence AAKK 1`] = `
-[
-  {
-    "atoms": {
+Array [
+  Object {
+    "atoms": Object {
       "C": 11,
       "H": 23,
       "N": 4,
@@ -12,8 +12,8 @@ exports[`fromPeptidicSequence AAKK 1`] = `
     "charge": 1,
     "comment": "a3",
     "em": 243.18210099815,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -21,7 +21,7 @@ exports[`fromPeptidicSequence AAKK 1`] = `
       "mf": "H+",
     },
     "mf": "C11H23N4O2(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": 27.905585564719075,
       "em": 122.09441443528092,
@@ -29,14 +29,14 @@ exports[`fromPeptidicSequence AAKK 1`] = `
       "ppm": 228557.42986925173,
     },
     "mw": 243.32635490179035,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysC-1O-1(+1)",
     ],
     "sequence": "AAK",
     "unsaturation": 2,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 11,
       "H": 23,
       "N": 4,
@@ -45,8 +45,8 @@ exports[`fromPeptidicSequence AAKK 1`] = `
     "charge": 1,
     "comment": "a3",
     "em": 243.18210099815,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -54,7 +54,7 @@ exports[`fromPeptidicSequence AAKK 1`] = `
       "mf": "Na+",
     },
     "mf": "C11H23N4O2(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": 16.914613439834056,
       "em": 133.08538656016594,
@@ -62,7 +62,7 @@ exports[`fromPeptidicSequence AAKK 1`] = `
       "ppm": 127095.94852615324,
     },
     "mw": 243.32635490179035,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysC-1O-1(+1)",
     ],
     "sequence": "AAK",
@@ -72,9 +72,9 @@ exports[`fromPeptidicSequence AAKK 1`] = `
 `;
 
 exports[`fromPeptidicSequence AAKK with callback 1`] = `
-[
-  {
-    "atoms": {
+Array [
+  Object {
+    "atoms": Object {
       "C": 11,
       "H": 23,
       "N": 4,
@@ -83,8 +83,8 @@ exports[`fromPeptidicSequence AAKK with callback 1`] = `
     "charge": 1,
     "comment": "a3",
     "em": 243.18210099815,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -92,20 +92,20 @@ exports[`fromPeptidicSequence AAKK with callback 1`] = `
       "mf": "H+",
     },
     "mf": "C11H23N4O2(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "em": 122.09441443528092,
       "ionization": "H+",
     },
     "mw": 243.32635490179035,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysC-1O-1(+1)",
     ],
     "sequence": "AAK",
     "unsaturation": 2,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 11,
       "H": 23,
       "N": 4,
@@ -114,8 +114,8 @@ exports[`fromPeptidicSequence AAKK with callback 1`] = `
     "charge": 1,
     "comment": "a3",
     "em": 243.18210099815,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -123,20 +123,20 @@ exports[`fromPeptidicSequence AAKK with callback 1`] = `
       "mf": "Na+",
     },
     "mf": "C11H23N4O2(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "em": 133.08538656016594,
       "ionization": "Na+",
     },
     "mw": 243.32635490179035,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysC-1O-1(+1)",
     ],
     "sequence": "AAK",
     "unsaturation": 2,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 18,
       "H": 36,
       "N": 6,
@@ -144,8 +144,8 @@ exports[`fromPeptidicSequence AAKK with callback 1`] = `
     },
     "charge": 0,
     "em": 416.27471828471,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -153,20 +153,20 @@ exports[`fromPeptidicSequence AAKK with callback 1`] = `
       "mf": "H+",
     },
     "mf": "C18H36N6O5",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 417.2819947370309,
       "ionization": "H+",
     },
     "mw": 416.5163571775086,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLysOH",
     ],
     "sequence": "AAKK",
     "unsaturation": 4,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 18,
       "H": 36,
       "N": 6,
@@ -174,8 +174,8 @@ exports[`fromPeptidicSequence AAKK with callback 1`] = `
     },
     "charge": 0,
     "em": 416.27471828471,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -183,13 +183,13 @@ exports[`fromPeptidicSequence AAKK with callback 1`] = `
       "mf": "Na+",
     },
     "mf": "C18H36N6O5",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 439.2639389868009,
       "ionization": "Na+",
     },
     "mw": 416.5163571775086,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLysOH",
     ],
     "sequence": "AAKK",
@@ -199,9 +199,9 @@ exports[`fromPeptidicSequence AAKK with callback 1`] = `
 `;
 
 exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
-[
-  {
-    "atoms": {
+Array [
+  Object {
+    "atoms": Object {
       "C": 11,
       "H": 20,
       "N": 3,
@@ -210,8 +210,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a3",
     "em": 226.15555189703,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -219,7 +219,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "H+",
     },
     "mf": "C11H20N3O2(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": 36.418860115279074,
       "em": 113.58113988472093,
@@ -227,14 +227,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": 320641.7909896164,
     },
     "mw": 226.29582942817723,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAK",
     "unsaturation": 3,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 11,
       "H": 23,
       "N": 4,
@@ -243,8 +243,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a3",
     "em": 243.18210099815,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -252,7 +252,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "H+",
     },
     "mf": "C11H23N4O2(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": 27.905585564719075,
       "em": 122.09441443528092,
@@ -260,14 +260,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": 228557.42986925173,
     },
     "mw": 243.32635490179035,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysC-1O-1(+1)",
     ],
     "sequence": "AAK",
     "unsaturation": 2,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 11,
       "H": 20,
       "N": 3,
@@ -276,8 +276,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a3",
     "em": 226.15555189703,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -285,7 +285,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "Na+",
     },
     "mf": "C11H20N3O2(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": 25.42788799039407,
       "em": 124.57211200960593,
@@ -293,14 +293,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": 204121.83417451644,
     },
     "mw": 226.29582942817723,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAK",
     "unsaturation": 3,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 11,
       "H": 23,
       "N": 4,
@@ -309,8 +309,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a3",
     "em": 243.18210099815,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -318,7 +318,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "Na+",
     },
     "mf": "C11H23N4O2(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": 16.914613439834056,
       "em": 133.08538656016594,
@@ -326,14 +326,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": 127095.94852615324,
     },
     "mw": 243.32635490179035,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysC-1O-1(+1)",
     ],
     "sequence": "AAK",
     "unsaturation": 2,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 17,
       "H": 29,
       "N": 4,
@@ -342,8 +342,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a4",
     "em": 337.2239658111,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -351,7 +351,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "H+",
     },
     "mf": "C17H29N4O3(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -19.11534684175595,
       "em": 169.11534684175595,
@@ -359,14 +359,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -113031.4143496539,
     },
     "mw": 337.4378197308548,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKK",
     "unsaturation": 5,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 17,
       "H": 32,
       "N": 5,
@@ -375,8 +375,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a4",
     "em": 354.25051491221996,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -384,7 +384,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "H+",
     },
     "mf": "C17H32N5O3(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -27.62862139231592,
       "em": 177.62862139231592,
@@ -392,14 +392,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -155541.49537249695,
     },
     "mw": 354.46834520446794,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKK",
     "unsaturation": 4,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 17,
       "H": 29,
       "N": 4,
@@ -408,8 +408,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a4",
     "em": 337.2239658111,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -417,7 +417,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "Na+",
     },
     "mf": "C17H29N4O3(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -30.10631896664094,
       "em": 180.10631896664094,
@@ -425,14 +425,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -167158.59354283506,
     },
     "mw": 337.4378197308548,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKK",
     "unsaturation": 5,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 17,
       "H": 35,
       "N": 6,
@@ -441,8 +441,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a4",
     "em": 371.27706401334,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -450,7 +450,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "H+",
     },
     "mf": "C17H35N6O3(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -36.14189594287595,
       "em": 186.14189594287595,
@@ -458,14 +458,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -194163.14505557274,
     },
     "mw": 371.49887067808106,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLysC-1O-1(+1)",
     ],
     "sequence": "AAKK",
     "unsaturation": 3,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 17,
       "H": 32,
       "N": 5,
@@ -474,8 +474,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a4",
     "em": 354.25051491221996,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -483,7 +483,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "Na+",
     },
     "mf": "C17H32N5O3(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -38.61959351720091,
       "em": 188.6195935172009,
@@ -491,14 +491,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -204748.5777965005,
     },
     "mw": 354.46834520446794,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKK",
     "unsaturation": 4,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 17,
       "H": 35,
       "N": 6,
@@ -507,8 +507,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a4",
     "em": 371.27706401334,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -516,7 +516,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "Na+",
     },
     "mf": "C17H35N6O3(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -47.13286806776094,
       "em": 197.13286806776094,
@@ -524,14 +524,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -239091.8801605415,
     },
     "mw": 371.49887067808106,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLysC-1O-1(+1)",
     ],
     "sequence": "AAKK",
     "unsaturation": 3,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 23,
       "H": 38,
       "N": 5,
@@ -540,8 +540,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a5",
     "em": 448.29237972516995,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -549,7 +549,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "H+",
     },
     "mf": "C23H38N5O4(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -74.64955379879092,
       "em": 224.64955379879092,
@@ -557,14 +557,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -332293.3544112505,
     },
     "mw": 448.57981003353234,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKKK",
     "unsaturation": 7,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 23,
       "H": 41,
       "N": 6,
@@ -573,8 +573,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a5",
     "em": 465.31892882629,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -582,7 +582,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "H+",
     },
     "mf": "C23H41N6O4(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -83.16282834935095,
       "em": 233.16282834935095,
@@ -590,14 +590,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -356672.75499312003,
     },
     "mw": 465.61033550714546,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKKK",
     "unsaturation": 6,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 23,
       "H": 38,
       "N": 5,
@@ -606,8 +606,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a5",
     "em": 448.29237972516995,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -615,7 +615,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "Na+",
     },
     "mf": "C23H38N5O4(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -85.64052592367591,
       "em": 235.6405259236759,
@@ -623,14 +623,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -363437.1701895408,
     },
     "mw": 448.57981003353234,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKKK",
     "unsaturation": 7,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 23,
       "H": 44,
       "N": 7,
@@ -639,8 +639,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a5",
     "em": 482.34547792740995,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -648,7 +648,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "H+",
     },
     "mf": "C23H44N7O4(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -91.67610289991092,
       "em": 241.67610289991092,
@@ -656,14 +656,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -379334.5796289928,
     },
     "mw": 482.6408609807586,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLysLys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKKK",
     "unsaturation": 5,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 23,
       "H": 41,
       "N": 6,
@@ -672,8 +672,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a5",
     "em": 465.31892882629,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -681,7 +681,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "Na+",
     },
     "mf": "C23H41N6O4(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -94.15380047423594,
       "em": 244.15380047423594,
@@ -689,14 +689,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -385633.1553772861,
     },
     "mw": 465.61033550714546,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKKK",
     "unsaturation": 6,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 23,
       "H": 47,
       "N": 8,
@@ -705,8 +705,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a5",
     "em": 499.37202702852994,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -714,7 +714,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "H+",
     },
     "mf": "C23H47N8O4(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -100.18937745047091,
       "em": 250.18937745047091,
@@ -722,14 +722,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -400454.1618490779,
     },
     "mw": 499.6713864543717,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLysLysC-1O-1(+1)",
     ],
     "sequence": "AAKKK",
     "unsaturation": 4,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 23,
       "H": 44,
       "N": 7,
@@ -738,8 +738,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a5",
     "em": 482.34547792740995,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -747,7 +747,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "Na+",
     },
     "mf": "C23H44N7O4(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -102.6670750247959,
       "em": 252.6670750247959,
@@ -755,14 +755,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -406333.41330571263,
     },
     "mw": 482.6408609807586,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLysLys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKKK",
     "unsaturation": 5,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 23,
       "H": 47,
       "N": 8,
@@ -771,8 +771,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a5",
     "em": 499.37202702852994,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -780,7 +780,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "Na+",
     },
     "mf": "C23H47N8O4(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -111.18034957535588,
       "em": 261.1803495753559,
@@ -788,14 +788,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -425684.20540105784,
     },
     "mw": 499.6713864543717,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLysLysC-1O-1(+1)",
     ],
     "sequence": "AAKKK",
     "unsaturation": 4,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 29,
       "H": 47,
       "N": 6,
@@ -804,8 +804,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a6",
     "em": 559.36079363924,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -813,7 +813,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "H+",
     },
     "mf": "C29H47N6O5(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -130.18376075582592,
       "em": 280.1837607558259,
@@ -821,14 +821,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -464637.06677589443,
     },
     "mw": 559.72180033621,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKKKK",
     "unsaturation": 9,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 29,
       "H": 50,
       "N": 7,
@@ -837,8 +837,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a6",
     "em": 576.38734274036,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -846,7 +846,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "H+",
     },
     "mf": "C29H50N7O5(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -138.69703530638594,
       "em": 288.69703530638594,
@@ -854,14 +854,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -480424.17601964885,
     },
     "mw": 576.7523258098231,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKKKK",
     "unsaturation": 8,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 29,
       "H": 47,
       "N": 6,
@@ -870,8 +870,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a6",
     "em": 559.36079363924,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -879,7 +879,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "Na+",
     },
     "mf": "C29H47N6O5(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -141.1747328807109,
       "em": 291.1747328807109,
@@ -887,14 +887,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -484845.4104654324,
     },
     "mw": 559.72180033621,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKKKK",
     "unsaturation": 9,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 29,
       "H": 53,
       "N": 8,
@@ -903,8 +903,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a6",
     "em": 593.41389184148,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -912,7 +912,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "H+",
     },
     "mf": "C29H53N8O5(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -147.2103098569459,
       "em": 297.2103098569459,
@@ -920,14 +920,14 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -495306.87521506764,
     },
     "mw": 593.7828512834362,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLysLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKKKK",
     "unsaturation": 7,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 29,
       "H": 50,
       "N": 7,
@@ -936,8 +936,8 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     "charge": 1,
     "comment": "a6",
     "em": 576.38734274036,
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "Na": 1,
       },
       "charge": 1,
@@ -945,7 +945,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "mf": "Na+",
     },
     "mf": "C29H50N7O5(+1)",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": -149.68800743127093,
       "em": 299.68800743127093,
@@ -953,7 +953,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
       "ppm": -499479.4710482357,
     },
     "mw": 576.7523258098231,
-    "parts": [
+    "parts": Array [
       "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
     ],
     "sequence": "AAKKKK",
@@ -963,48 +963,48 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
 `;
 
 exports[`fromPeptidicSequence Linked AA(H-1#1)AA,GG(H-1#1)GG 1`] = `
-[
-  [
+Array [
+  Array [
     "#1C6H4#2",
     "HAlaAla(H-1#1)AlaAlaOH",
     "HGlyGly(H-1#2)GlyGlyOH",
   ],
-  [
+  Array [
     "#1C6H4#2",
     "HAlaAla(H-1#1)C-1O-1(+1)",
     "HGlyGly(H-1#2)C-1O-1(+1)",
   ],
-  [
+  Array [
     "#1C6H4#2",
     "HAlaAla(H-1#1)C-1O-1(+1)",
     "HGlyGly(H-1#2)GlyC-1O-1(+1)",
   ],
-  [
+  Array [
     "#1C6H4#2",
     "HAlaAla(H-1#1)AlaC-1O-1(+1)",
     "HGlyGly(H-1#2)C-1O-1(+1)",
   ],
-  [
+  Array [
     "#1C6H4#2",
     "HAlaAla(H-1#1)AlaC-1O-1(+1)",
     "HGlyGly(H-1#2)GlyC-1O-1(+1)",
   ],
-  [
+  Array [
     "#1C6H4#2",
     "HAlaAla(H-1#1)C-1O-1(+1)",
     "HGlyGly(H-1#2)GlyGlyOH",
   ],
-  [
+  Array [
     "#1C6H4#2",
     "HAlaAla(H-1#1)AlaAlaOH",
     "HGlyGly(H-1#2)C-1O-1(+1)",
   ],
-  [
+  Array [
     "#1C6H4#2",
     "HAlaAla(H-1#1)AlaC-1O-1(+1)",
     "HGlyGly(H-1#2)GlyGlyOH",
   ],
-  [
+  Array [
     "#1C6H4#2",
     "HAlaAla(H-1#1)AlaAlaOH",
     "HGlyGly(H-1#2)GlyC-1O-1(+1)",
@@ -1013,31 +1013,31 @@ exports[`fromPeptidicSequence Linked AA(H-1#1)AA,GG(H-1#1)GG 1`] = `
 `;
 
 exports[`fromPeptidicSequence Optional linked AA(H-1#1)A,GG(H-1#1)G 1`] = `
-[
-  [
+Array [
+  Array [
     "#1C6H4#2",
     "HAlaAla(H-1#1)AlaOH",
     "HGlyGly(H-1#2)GlyOH",
   ],
-  [
+  Array [
     ,
     "HGlyC-1O-1(+1)",
   ],
-  [
+  Array [
     ,
     "HAlaC-1O-1(+1)",
   ],
-  [
+  Array [
     "#1C6H4#2",
     "HAlaAla(H-1#1)C-1O-1(+1)",
     "HGlyGly(H-1#2)C-1O-1(+1)",
   ],
-  [
+  Array [
     "#1C6H4#2",
     "HAlaAla(H-1#1)C-1O-1(+1)",
     "HGlyGly(H-1#2)GlyOH",
   ],
-  [
+  Array [
     "#1C6H4#2",
     "HAlaAla(H-1#1)AlaOH",
     "HGlyGly(H-1#2)C-1O-1(+1)",

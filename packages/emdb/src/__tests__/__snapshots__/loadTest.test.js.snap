@@ -1,2403 +1,2403 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`loadTest 1`] = `
-[
-  {
-    "atoms": {
+Array [
+  Object {
+    "atoms": Object {
       "C": 1,
     },
     "charge": 0,
     "em": 12,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 11.99945142009093,
       "ionization": "+",
     },
     "mw": 12.010735896735248,
-    "parts": [
+    "parts": Array [
       "C",
     ],
     "unsaturation": 2,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 2,
     },
     "charge": 0,
     "em": 24,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C2",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 23.99945142009093,
       "ionization": "+",
     },
     "mw": 24.021471793470496,
-    "parts": [
+    "parts": Array [
       "C2",
     ],
     "unsaturation": 3,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 3,
     },
     "charge": 0,
     "em": 36,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C3",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 35.99945142009093,
       "ionization": "+",
     },
     "mw": 36.032207690205745,
-    "parts": [
+    "parts": Array [
       "C3",
     ],
     "unsaturation": 4,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 4,
     },
     "charge": 0,
     "em": 48,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C4",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 47.99945142009093,
       "ionization": "+",
     },
     "mw": 48.04294358694099,
-    "parts": [
+    "parts": Array [
       "C4",
     ],
     "unsaturation": 5,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 5,
     },
     "charge": 0,
     "em": 60,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C5",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 59.99945142009093,
       "ionization": "+",
     },
     "mw": 60.05367948367624,
-    "parts": [
+    "parts": Array [
       "C5",
     ],
     "unsaturation": 6,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 6,
     },
     "charge": 0,
     "em": 72,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C6",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 71.99945142009094,
       "ionization": "+",
     },
     "mw": 72.06441538041149,
-    "parts": [
+    "parts": Array [
       "C6",
     ],
     "unsaturation": 7,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 7,
     },
     "charge": 0,
     "em": 84,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C7",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 83.99945142009094,
       "ionization": "+",
     },
     "mw": 84.07515127714674,
-    "parts": [
+    "parts": Array [
       "C7",
     ],
     "unsaturation": 8,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 8,
     },
     "charge": 0,
     "em": 96,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C8",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 95.99945142009094,
       "ionization": "+",
     },
     "mw": 96.08588717388199,
-    "parts": [
+    "parts": Array [
       "C8",
     ],
     "unsaturation": 9,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 9,
     },
     "charge": 0,
     "em": 108,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C9",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 107.99945142009094,
       "ionization": "+",
     },
     "mw": 108.09662307061723,
-    "parts": [
+    "parts": Array [
       "C9",
     ],
     "unsaturation": 10,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 10,
     },
     "charge": 0,
     "em": 120,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C10",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 119.99945142009094,
       "ionization": "+",
     },
     "mw": 120.10735896735248,
-    "parts": [
+    "parts": Array [
       "C10",
     ],
     "unsaturation": 11,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 11,
     },
     "charge": 0,
     "em": 132,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C11",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 131.99945142009094,
       "ionization": "+",
     },
     "mw": 132.11809486408774,
-    "parts": [
+    "parts": Array [
       "C11",
     ],
     "unsaturation": 12,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 12,
     },
     "charge": 0,
     "em": 144,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C12",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 143.99945142009094,
       "ionization": "+",
     },
     "mw": 144.12883076082298,
-    "parts": [
+    "parts": Array [
       "C12",
     ],
     "unsaturation": 13,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 13,
     },
     "charge": 0,
     "em": 156,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C13",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 155.99945142009094,
       "ionization": "+",
     },
     "mw": 156.13956665755822,
-    "parts": [
+    "parts": Array [
       "C13",
     ],
     "unsaturation": 14,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 14,
     },
     "charge": 0,
     "em": 168,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C14",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 167.99945142009094,
       "ionization": "+",
     },
     "mw": 168.1503025542935,
-    "parts": [
+    "parts": Array [
       "C14",
     ],
     "unsaturation": 15,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 15,
     },
     "charge": 0,
     "em": 180,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C15",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 179.99945142009094,
       "ionization": "+",
     },
     "mw": 180.16103845102873,
-    "parts": [
+    "parts": Array [
       "C15",
     ],
     "unsaturation": 16,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 16,
     },
     "charge": 0,
     "em": 192,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C16",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 191.99945142009094,
       "ionization": "+",
     },
     "mw": 192.17177434776397,
-    "parts": [
+    "parts": Array [
       "C16",
     ],
     "unsaturation": 17,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 17,
     },
     "charge": 0,
     "em": 204,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C17",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 203.99945142009094,
       "ionization": "+",
     },
     "mw": 204.1825102444992,
-    "parts": [
+    "parts": Array [
       "C17",
     ],
     "unsaturation": 18,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 18,
     },
     "charge": 0,
     "em": 216,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C18",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 215.99945142009094,
       "ionization": "+",
     },
     "mw": 216.19324614123445,
-    "parts": [
+    "parts": Array [
       "C18",
     ],
     "unsaturation": 19,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 19,
     },
     "charge": 0,
     "em": 228,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C19",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 227.99945142009094,
       "ionization": "+",
     },
     "mw": 228.20398203796972,
-    "parts": [
+    "parts": Array [
       "C19",
     ],
     "unsaturation": 20,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 20,
     },
     "charge": 0,
     "em": 240,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C20",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 239.99945142009094,
       "ionization": "+",
     },
     "mw": 240.21471793470496,
-    "parts": [
+    "parts": Array [
       "C20",
     ],
     "unsaturation": 21,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 21,
     },
     "charge": 0,
     "em": 252,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C21",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 251.99945142009094,
       "ionization": "+",
     },
     "mw": 252.2254538314402,
-    "parts": [
+    "parts": Array [
       "C21",
     ],
     "unsaturation": 22,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 22,
     },
     "charge": 0,
     "em": 264,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C22",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 263.9994514200909,
       "ionization": "+",
     },
     "mw": 264.2361897281755,
-    "parts": [
+    "parts": Array [
       "C22",
     ],
     "unsaturation": 23,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 23,
     },
     "charge": 0,
     "em": 276,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C23",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 275.9994514200909,
       "ionization": "+",
     },
     "mw": 276.2469256249107,
-    "parts": [
+    "parts": Array [
       "C23",
     ],
     "unsaturation": 24,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 24,
     },
     "charge": 0,
     "em": 288,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C24",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 287.9994514200909,
       "ionization": "+",
     },
     "mw": 288.25766152164596,
-    "parts": [
+    "parts": Array [
       "C24",
     ],
     "unsaturation": 25,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 25,
     },
     "charge": 0,
     "em": 300,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C25",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 299.9994514200909,
       "ionization": "+",
     },
     "mw": 300.2683974183812,
-    "parts": [
+    "parts": Array [
       "C25",
     ],
     "unsaturation": 26,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 26,
     },
     "charge": 0,
     "em": 312,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C26",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 311.9994514200909,
       "ionization": "+",
     },
     "mw": 312.27913331511644,
-    "parts": [
+    "parts": Array [
       "C26",
     ],
     "unsaturation": 27,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 27,
     },
     "charge": 0,
     "em": 324,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C27",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 323.9994514200909,
       "ionization": "+",
     },
     "mw": 324.2898692118517,
-    "parts": [
+    "parts": Array [
       "C27",
     ],
     "unsaturation": 28,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 28,
     },
     "charge": 0,
     "em": 336,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C28",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 335.9994514200909,
       "ionization": "+",
     },
     "mw": 336.300605108587,
-    "parts": [
+    "parts": Array [
       "C28",
     ],
     "unsaturation": 29,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 29,
     },
     "charge": 0,
     "em": 348,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C29",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 347.9994514200909,
       "ionization": "+",
     },
     "mw": 348.3113410053222,
-    "parts": [
+    "parts": Array [
       "C29",
     ],
     "unsaturation": 30,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 30,
     },
     "charge": 0,
     "em": 360,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C30",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 359.9994514200909,
       "ionization": "+",
     },
     "mw": 360.32207690205746,
-    "parts": [
+    "parts": Array [
       "C30",
     ],
     "unsaturation": 31,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 31,
     },
     "charge": 0,
     "em": 372,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C31",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 371.9994514200909,
       "ionization": "+",
     },
     "mw": 372.3328127987927,
-    "parts": [
+    "parts": Array [
       "C31",
     ],
     "unsaturation": 32,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 32,
     },
     "charge": 0,
     "em": 384,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C32",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 383.9994514200909,
       "ionization": "+",
     },
     "mw": 384.34354869552794,
-    "parts": [
+    "parts": Array [
       "C32",
     ],
     "unsaturation": 33,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 33,
     },
     "charge": 0,
     "em": 396,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C33",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 395.9994514200909,
       "ionization": "+",
     },
     "mw": 396.3542845922632,
-    "parts": [
+    "parts": Array [
       "C33",
     ],
     "unsaturation": 34,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 34,
     },
     "charge": 0,
     "em": 408,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C34",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 407.9994514200909,
       "ionization": "+",
     },
     "mw": 408.3650204889984,
-    "parts": [
+    "parts": Array [
       "C34",
     ],
     "unsaturation": 35,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 35,
     },
     "charge": 0,
     "em": 420,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C35",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 419.9994514200909,
       "ionization": "+",
     },
     "mw": 420.37575638573367,
-    "parts": [
+    "parts": Array [
       "C35",
     ],
     "unsaturation": 36,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 36,
     },
     "charge": 0,
     "em": 432,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C36",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 431.9994514200909,
       "ionization": "+",
     },
     "mw": 432.3864922824689,
-    "parts": [
+    "parts": Array [
       "C36",
     ],
     "unsaturation": 37,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 37,
     },
     "charge": 0,
     "em": 444,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C37",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 443.9994514200909,
       "ionization": "+",
     },
     "mw": 444.3972281792042,
-    "parts": [
+    "parts": Array [
       "C37",
     ],
     "unsaturation": 38,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 38,
     },
     "charge": 0,
     "em": 456,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C38",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 455.9994514200909,
       "ionization": "+",
     },
     "mw": 456.40796407593945,
-    "parts": [
+    "parts": Array [
       "C38",
     ],
     "unsaturation": 39,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 39,
     },
     "charge": 0,
     "em": 468,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C39",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 467.9994514200909,
       "ionization": "+",
     },
     "mw": 468.4186999726747,
-    "parts": [
+    "parts": Array [
       "C39",
     ],
     "unsaturation": 40,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 40,
     },
     "charge": 0,
     "em": 480,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C40",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 479.9994514200909,
       "ionization": "+",
     },
     "mw": 480.42943586940993,
-    "parts": [
+    "parts": Array [
       "C40",
     ],
     "unsaturation": 41,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 41,
     },
     "charge": 0,
     "em": 492,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C41",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 491.9994514200909,
       "ionization": "+",
     },
     "mw": 492.44017176614517,
-    "parts": [
+    "parts": Array [
       "C41",
     ],
     "unsaturation": 42,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 42,
     },
     "charge": 0,
     "em": 504,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C42",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 503.9994514200909,
       "ionization": "+",
     },
     "mw": 504.4509076628804,
-    "parts": [
+    "parts": Array [
       "C42",
     ],
     "unsaturation": 43,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 43,
     },
     "charge": 0,
     "em": 516,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C43",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 515.999451420091,
       "ionization": "+",
     },
     "mw": 516.4616435596157,
-    "parts": [
+    "parts": Array [
       "C43",
     ],
     "unsaturation": 44,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 44,
     },
     "charge": 0,
     "em": 528,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C44",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 527.999451420091,
       "ionization": "+",
     },
     "mw": 528.472379456351,
-    "parts": [
+    "parts": Array [
       "C44",
     ],
     "unsaturation": 45,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 45,
     },
     "charge": 0,
     "em": 540,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C45",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 539.999451420091,
       "ionization": "+",
     },
     "mw": 540.4831153530862,
-    "parts": [
+    "parts": Array [
       "C45",
     ],
     "unsaturation": 46,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 46,
     },
     "charge": 0,
     "em": 552,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C46",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 551.999451420091,
       "ionization": "+",
     },
     "mw": 552.4938512498214,
-    "parts": [
+    "parts": Array [
       "C46",
     ],
     "unsaturation": 47,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 47,
     },
     "charge": 0,
     "em": 564,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C47",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 563.999451420091,
       "ionization": "+",
     },
     "mw": 564.5045871465567,
-    "parts": [
+    "parts": Array [
       "C47",
     ],
     "unsaturation": 48,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 48,
     },
     "charge": 0,
     "em": 576,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C48",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 575.999451420091,
       "ionization": "+",
     },
     "mw": 576.5153230432919,
-    "parts": [
+    "parts": Array [
       "C48",
     ],
     "unsaturation": 49,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 49,
     },
     "charge": 0,
     "em": 588,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C49",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 587.999451420091,
       "ionization": "+",
     },
     "mw": 588.5260589400272,
-    "parts": [
+    "parts": Array [
       "C49",
     ],
     "unsaturation": 50,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 50,
     },
     "charge": 0,
     "em": 600,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C50",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 599.999451420091,
       "ionization": "+",
     },
     "mw": 600.5367948367624,
-    "parts": [
+    "parts": Array [
       "C50",
     ],
     "unsaturation": 51,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 51,
     },
     "charge": 0,
     "em": 612,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C51",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 611.999451420091,
       "ionization": "+",
     },
     "mw": 612.5475307334976,
-    "parts": [
+    "parts": Array [
       "C51",
     ],
     "unsaturation": 52,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 52,
     },
     "charge": 0,
     "em": 624,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C52",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 623.999451420091,
       "ionization": "+",
     },
     "mw": 624.5582666302329,
-    "parts": [
+    "parts": Array [
       "C52",
     ],
     "unsaturation": 53,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 53,
     },
     "charge": 0,
     "em": 636,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C53",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 635.999451420091,
       "ionization": "+",
     },
     "mw": 636.5690025269681,
-    "parts": [
+    "parts": Array [
       "C53",
     ],
     "unsaturation": 54,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 54,
     },
     "charge": 0,
     "em": 648,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C54",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 647.999451420091,
       "ionization": "+",
     },
     "mw": 648.5797384237034,
-    "parts": [
+    "parts": Array [
       "C54",
     ],
     "unsaturation": 55,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 55,
     },
     "charge": 0,
     "em": 660,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C55",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 659.999451420091,
       "ionization": "+",
     },
     "mw": 660.5904743204386,
-    "parts": [
+    "parts": Array [
       "C55",
     ],
     "unsaturation": 56,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 56,
     },
     "charge": 0,
     "em": 672,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C56",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 671.999451420091,
       "ionization": "+",
     },
     "mw": 672.601210217174,
-    "parts": [
+    "parts": Array [
       "C56",
     ],
     "unsaturation": 57,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 57,
     },
     "charge": 0,
     "em": 684,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C57",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 683.999451420091,
       "ionization": "+",
     },
     "mw": 684.6119461139092,
-    "parts": [
+    "parts": Array [
       "C57",
     ],
     "unsaturation": 58,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 58,
     },
     "charge": 0,
     "em": 696,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C58",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 695.999451420091,
       "ionization": "+",
     },
     "mw": 696.6226820106444,
-    "parts": [
+    "parts": Array [
       "C58",
     ],
     "unsaturation": 59,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 59,
     },
     "charge": 0,
     "em": 708,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C59",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 707.999451420091,
       "ionization": "+",
     },
     "mw": 708.6334179073797,
-    "parts": [
+    "parts": Array [
       "C59",
     ],
     "unsaturation": 60,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 60,
     },
     "charge": 0,
     "em": 720,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C60",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 719.999451420091,
       "ionization": "+",
     },
     "mw": 720.6441538041149,
-    "parts": [
+    "parts": Array [
       "C60",
     ],
     "unsaturation": 61,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 61,
     },
     "charge": 0,
     "em": 732,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C61",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 731.999451420091,
       "ionization": "+",
     },
     "mw": 732.6548897008502,
-    "parts": [
+    "parts": Array [
       "C61",
     ],
     "unsaturation": 62,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 62,
     },
     "charge": 0,
     "em": 744,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C62",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 743.999451420091,
       "ionization": "+",
     },
     "mw": 744.6656255975854,
-    "parts": [
+    "parts": Array [
       "C62",
     ],
     "unsaturation": 63,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 63,
     },
     "charge": 0,
     "em": 756,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C63",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 755.999451420091,
       "ionization": "+",
     },
     "mw": 756.6763614943206,
-    "parts": [
+    "parts": Array [
       "C63",
     ],
     "unsaturation": 64,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 64,
     },
     "charge": 0,
     "em": 768,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C64",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 767.999451420091,
       "ionization": "+",
     },
     "mw": 768.6870973910559,
-    "parts": [
+    "parts": Array [
       "C64",
     ],
     "unsaturation": 65,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 65,
     },
     "charge": 0,
     "em": 780,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C65",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 779.999451420091,
       "ionization": "+",
     },
     "mw": 780.6978332877911,
-    "parts": [
+    "parts": Array [
       "C65",
     ],
     "unsaturation": 66,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 66,
     },
     "charge": 0,
     "em": 792,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C66",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 791.999451420091,
       "ionization": "+",
     },
     "mw": 792.7085691845264,
-    "parts": [
+    "parts": Array [
       "C66",
     ],
     "unsaturation": 67,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 67,
     },
     "charge": 0,
     "em": 804,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C67",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 803.999451420091,
       "ionization": "+",
     },
     "mw": 804.7193050812616,
-    "parts": [
+    "parts": Array [
       "C67",
     ],
     "unsaturation": 68,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 68,
     },
     "charge": 0,
     "em": 816,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C68",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 815.999451420091,
       "ionization": "+",
     },
     "mw": 816.7300409779969,
-    "parts": [
+    "parts": Array [
       "C68",
     ],
     "unsaturation": 69,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 69,
     },
     "charge": 0,
     "em": 828,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C69",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 827.999451420091,
       "ionization": "+",
     },
     "mw": 828.7407768747321,
-    "parts": [
+    "parts": Array [
       "C69",
     ],
     "unsaturation": 70,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 70,
     },
     "charge": 0,
     "em": 840,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C70",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 839.999451420091,
       "ionization": "+",
     },
     "mw": 840.7515127714673,
-    "parts": [
+    "parts": Array [
       "C70",
     ],
     "unsaturation": 71,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 71,
     },
     "charge": 0,
     "em": 852,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C71",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 851.999451420091,
       "ionization": "+",
     },
     "mw": 852.7622486682026,
-    "parts": [
+    "parts": Array [
       "C71",
     ],
     "unsaturation": 72,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 72,
     },
     "charge": 0,
     "em": 864,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C72",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 863.999451420091,
       "ionization": "+",
     },
     "mw": 864.7729845649378,
-    "parts": [
+    "parts": Array [
       "C72",
     ],
     "unsaturation": 73,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 73,
     },
     "charge": 0,
     "em": 876,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C73",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 875.999451420091,
       "ionization": "+",
     },
     "mw": 876.7837204616732,
-    "parts": [
+    "parts": Array [
       "C73",
     ],
     "unsaturation": 74,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 74,
     },
     "charge": 0,
     "em": 888,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C74",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 887.999451420091,
       "ionization": "+",
     },
     "mw": 888.7944563584084,
-    "parts": [
+    "parts": Array [
       "C74",
     ],
     "unsaturation": 75,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 75,
     },
     "charge": 0,
     "em": 900,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C75",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 899.999451420091,
       "ionization": "+",
     },
     "mw": 900.8051922551437,
-    "parts": [
+    "parts": Array [
       "C75",
     ],
     "unsaturation": 76,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 76,
     },
     "charge": 0,
     "em": 912,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C76",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 911.999451420091,
       "ionization": "+",
     },
     "mw": 912.8159281518789,
-    "parts": [
+    "parts": Array [
       "C76",
     ],
     "unsaturation": 77,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 77,
     },
     "charge": 0,
     "em": 924,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C77",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 923.999451420091,
       "ionization": "+",
     },
     "mw": 924.8266640486141,
-    "parts": [
+    "parts": Array [
       "C77",
     ],
     "unsaturation": 78,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 78,
     },
     "charge": 0,
     "em": 936,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C78",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 935.999451420091,
       "ionization": "+",
     },
     "mw": 936.8373999453494,
-    "parts": [
+    "parts": Array [
       "C78",
     ],
     "unsaturation": 79,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 79,
     },
     "charge": 0,
     "em": 948,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C79",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 947.999451420091,
       "ionization": "+",
     },
     "mw": 948.8481358420846,
-    "parts": [
+    "parts": Array [
       "C79",
     ],
     "unsaturation": 80,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 80,
     },
     "charge": 0,
     "em": 960,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C80",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 959.999451420091,
       "ionization": "+",
     },
     "mw": 960.8588717388199,
-    "parts": [
+    "parts": Array [
       "C80",
     ],
     "unsaturation": 81,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 81,
     },
     "charge": 0,
     "em": 972,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C81",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 971.999451420091,
       "ionization": "+",
     },
     "mw": 972.8696076355551,
-    "parts": [
+    "parts": Array [
       "C81",
     ],
     "unsaturation": 82,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 82,
     },
     "charge": 0,
     "em": 984,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C82",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 983.999451420091,
       "ionization": "+",
     },
     "mw": 984.8803435322903,
-    "parts": [
+    "parts": Array [
       "C82",
     ],
     "unsaturation": 83,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 83,
     },
     "charge": 0,
     "em": 996,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C83",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 995.999451420091,
       "ionization": "+",
     },
     "mw": 996.8910794290256,
-    "parts": [
+    "parts": Array [
       "C83",
     ],
     "unsaturation": 84,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 84,
     },
     "charge": 0,
     "em": 1008,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C84",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1007.999451420091,
       "ionization": "+",
     },
     "mw": 1008.9018153257608,
-    "parts": [
+    "parts": Array [
       "C84",
     ],
     "unsaturation": 85,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 85,
     },
     "charge": 0,
     "em": 1020,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C85",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1019.999451420091,
       "ionization": "+",
     },
     "mw": 1020.9125512224961,
-    "parts": [
+    "parts": Array [
       "C85",
     ],
     "unsaturation": 86,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 86,
     },
     "charge": 0,
     "em": 1032,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C86",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1031.999451420091,
       "ionization": "+",
     },
     "mw": 1032.9232871192314,
-    "parts": [
+    "parts": Array [
       "C86",
     ],
     "unsaturation": 87,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 87,
     },
     "charge": 0,
     "em": 1044,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C87",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1043.999451420091,
       "ionization": "+",
     },
     "mw": 1044.9340230159667,
-    "parts": [
+    "parts": Array [
       "C87",
     ],
     "unsaturation": 88,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 88,
     },
     "charge": 0,
     "em": 1056,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C88",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1055.999451420091,
       "ionization": "+",
     },
     "mw": 1056.944758912702,
-    "parts": [
+    "parts": Array [
       "C88",
     ],
     "unsaturation": 89,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 89,
     },
     "charge": 0,
     "em": 1068,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C89",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1067.999451420091,
       "ionization": "+",
     },
     "mw": 1068.9554948094371,
-    "parts": [
+    "parts": Array [
       "C89",
     ],
     "unsaturation": 90,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 90,
     },
     "charge": 0,
     "em": 1080,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C90",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1079.999451420091,
       "ionization": "+",
     },
     "mw": 1080.9662307061724,
-    "parts": [
+    "parts": Array [
       "C90",
     ],
     "unsaturation": 91,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 91,
     },
     "charge": 0,
     "em": 1092,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C91",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1091.999451420091,
       "ionization": "+",
     },
     "mw": 1092.9769666029076,
-    "parts": [
+    "parts": Array [
       "C91",
     ],
     "unsaturation": 92,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 92,
     },
     "charge": 0,
     "em": 1104,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C92",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1103.999451420091,
       "ionization": "+",
     },
     "mw": 1104.9877024996429,
-    "parts": [
+    "parts": Array [
       "C92",
     ],
     "unsaturation": 93,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 93,
     },
     "charge": 0,
     "em": 1116,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C93",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1115.999451420091,
       "ionization": "+",
     },
     "mw": 1116.998438396378,
-    "parts": [
+    "parts": Array [
       "C93",
     ],
     "unsaturation": 94,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 94,
     },
     "charge": 0,
     "em": 1128,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C94",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1127.999451420091,
       "ionization": "+",
     },
     "mw": 1129.0091742931133,
-    "parts": [
+    "parts": Array [
       "C94",
     ],
     "unsaturation": 95,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 95,
     },
     "charge": 0,
     "em": 1140,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C95",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1139.999451420091,
       "ionization": "+",
     },
     "mw": 1141.0199101898486,
-    "parts": [
+    "parts": Array [
       "C95",
     ],
     "unsaturation": 96,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 96,
     },
     "charge": 0,
     "em": 1152,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C96",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1151.999451420091,
       "ionization": "+",
     },
     "mw": 1153.0306460865838,
-    "parts": [
+    "parts": Array [
       "C96",
     ],
     "unsaturation": 97,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 97,
     },
     "charge": 0,
     "em": 1164,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C97",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1163.999451420091,
       "ionization": "+",
     },
     "mw": 1165.041381983319,
-    "parts": [
+    "parts": Array [
       "C97",
     ],
     "unsaturation": 98,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 98,
     },
     "charge": 0,
     "em": 1176,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C98",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1175.999451420091,
       "ionization": "+",
     },
     "mw": 1177.0521178800543,
-    "parts": [
+    "parts": Array [
       "C98",
     ],
     "unsaturation": 99,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 99,
     },
     "charge": 0,
     "em": 1188,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C99",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1187.999451420091,
       "ionization": "+",
     },
     "mw": 1189.0628537767896,
-    "parts": [
+    "parts": Array [
       "C99",
     ],
     "unsaturation": 100,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 100,
     },
     "charge": 0,
     "em": 1200,
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C100",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 1199.999451420091,
       "ionization": "+",
     },
     "mw": 1201.0735896735248,
-    "parts": [
+    "parts": Array [
       "C100",
     ],
     "unsaturation": 101,

@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`searchPubchem simple case 1`] = `
-[
-  {
-    "atoms": {
+Array [
+  Object {
+    "atoms": Object {
       "C": 2,
       "H": 4,
       "N": 2,
@@ -11,11 +11,11 @@ exports[`searchPubchem simple case 1`] = `
     },
     "charge": 0,
     "em": 117.98497213462,
-    "info": {
+    "info": Object {
       "nbPubchemEntries": 7,
     },
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 2,
       },
       "charge": 2,
@@ -25,7 +25,7 @@ exports[`searchPubchem simple case 1`] = `
     "mass": 118.0141652294252,
     "mf": "C2H4N2P2",
     "monoisotopicMass": 117.98497213462,
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "delta": 0.00023748036907278447,
       "em": 59.99976251963093,
@@ -34,8 +34,8 @@ exports[`searchPubchem simple case 1`] = `
     },
     "unsaturation": 3,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 1,
       "H": 2,
       "N": 1,
@@ -43,11 +43,11 @@ exports[`searchPubchem simple case 1`] = `
     },
     "charge": 0,
     "em": 58.99248606731,
-    "info": {
+    "info": Object {
       "nbPubchemEntries": 9,
     },
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": 1,
       },
       "charge": 1,
@@ -57,7 +57,7 @@ exports[`searchPubchem simple case 1`] = `
     "mass": 59.0070826147126,
     "mf": "CH2NP",
     "monoisotopicMass": 58.99248606731,
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "delta": 0.00023748036907278447,
       "em": 59.99976251963093,
@@ -70,9 +70,9 @@ exports[`searchPubchem simple case 1`] = `
 `;
 
 exports[`searchPubchem simple case negative ionization 1`] = `
-[
-  {
-    "atoms": {
+Array [
+  Object {
+    "atoms": Object {
       "C": 2,
       "H": 6,
       "N": 2,
@@ -81,11 +81,11 @@ exports[`searchPubchem simple case negative ionization 1`] = `
     },
     "charge": 0,
     "em": 122.01499861577999,
-    "info": {
+    "info": Object {
       "nbPubchemEntries": 69,
     },
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": -2,
       },
       "charge": -2,
@@ -95,7 +95,7 @@ exports[`searchPubchem simple case negative ionization 1`] = `
     "mass": 122.14611999546037,
     "mf": "C2H6N2O2S",
     "monoisotopicMass": 122.01499861577999,
-    "ms": {
+    "ms": Object {
       "charge": -2,
       "delta": -0.00022285556906354032,
       "em": 60.00022285556906,
@@ -104,8 +104,8 @@ exports[`searchPubchem simple case negative ionization 1`] = `
     },
     "unsaturation": 1,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 4,
       "Cl": 1,
       "H": 7,
@@ -113,11 +113,11 @@ exports[`searchPubchem simple case negative ionization 1`] = `
     },
     "charge": 0,
     "em": 122.01345714675,
-    "info": {
+    "info": Object {
       "nbPubchemEntries": 155,
     },
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": -2,
       },
       "charge": -2,
@@ -127,7 +127,7 @@ exports[`searchPubchem simple case negative ionization 1`] = `
     "mass": 122.55027629657599,
     "mf": "C4H7ClO2",
     "monoisotopicMass": 122.01345714675,
-    "ms": {
+    "ms": Object {
       "charge": -2,
       "delta": 0.0005478789459303357,
       "em": 59.99945212105407,
@@ -136,18 +136,18 @@ exports[`searchPubchem simple case negative ionization 1`] = `
     },
     "unsaturation": 1,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 5,
       "H": 1,
     },
     "charge": 0,
     "em": 61.00782503223,
-    "info": {
+    "info": Object {
       "nbPubchemEntries": 9,
     },
-    "ionization": {
-      "atoms": {
+    "ionization": Object {
+      "atoms": Object {
         "H": -1,
       },
       "charge": -1,
@@ -157,7 +157,7 @@ exports[`searchPubchem simple case negative ionization 1`] = `
     "mass": 61.061620237732015,
     "mf": "C5H",
     "monoisotopicMass": 61.00782503223,
-    "ms": {
+    "ms": Object {
       "charge": -1,
       "delta": -0.0005485799090720889,
       "em": 60.00054857990907,
@@ -170,18 +170,18 @@ exports[`searchPubchem simple case negative ionization 1`] = `
 `;
 
 exports[`searchPubchem string containing more than 1 monoisotopic mass 1`] = `
-[
-  {
-    "atoms": {
+Array [
+  Object {
+    "atoms": Object {
       "C": 1,
     },
     "charge": 0,
     "em": 12,
-    "info": {
+    "info": Object {
       "nbPubchemEntries": 1,
     },
-    "ionization": {
-      "atoms": {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 0,
       "em": 0,
       "mf": "",
@@ -189,7 +189,7 @@ exports[`searchPubchem string containing more than 1 monoisotopic mass 1`] = `
     "mass": 12.010735896735248,
     "mf": "C",
     "monoisotopicMass": 12,
-    "ms": {
+    "ms": Object {
       "charge": 0,
       "delta": NaN,
       "em": 0,
@@ -198,20 +198,20 @@ exports[`searchPubchem string containing more than 1 monoisotopic mass 1`] = `
     },
     "unsaturation": 2,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 2,
     },
     "charge": 0,
     "em": 24,
-    "info": {
+    "info": Object {
       "nbPubchemEntries": 1,
     },
     "ionization": undefined,
     "mass": 24.021471793470496,
     "mf": "C2",
     "monoisotopicMass": 24,
-    "ms": {
+    "ms": Object {
       "charge": 0,
       "delta": NaN,
       "em": 0,
@@ -220,20 +220,20 @@ exports[`searchPubchem string containing more than 1 monoisotopic mass 1`] = `
     },
     "unsaturation": 3,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 3,
     },
     "charge": 0,
     "em": 36,
-    "info": {
+    "info": Object {
       "nbPubchemEntries": 2,
     },
     "ionization": undefined,
     "mass": 36.032207690205745,
     "mf": "C3",
     "monoisotopicMass": 36,
-    "ms": {
+    "ms": Object {
       "charge": 0,
       "delta": NaN,
       "em": 0,

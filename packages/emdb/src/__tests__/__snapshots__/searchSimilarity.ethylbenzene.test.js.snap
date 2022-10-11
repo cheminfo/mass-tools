@@ -1,42 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test searchSimilarity for ethylbenzene should find one result with bad distribution 1`] = `
-[
-  {
-    "atoms": {
+Array [
+  Object {
+    "atoms": Object {
       "C": 8,
       "H": 10,
     },
     "charge": 0,
     "database": "monoisotopic",
     "em": 106.0782503223,
-    "groups": {},
-    "ionization": {
-      "atoms": {},
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
     "mf": "C8H10",
-    "ms": {
+    "ms": Object {
       "charge": 1,
       "em": 106.07770174239093,
       "ionization": "+",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.07770174239093,
             107.08109490705509,
             108.0844985852388,
           ],
-          [
+          Array [
             0,
             0.04964182416146528,
             0.003093851001071566,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.604919,
             105.604977,
             105.605035,
@@ -448,7 +448,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             108.249607,
             108.249667,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -861,7 +861,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.57770174239093,
           "max": 0.05147972157088913,
           "min": 0,
@@ -869,25 +869,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 108.57770174239093,
         },
         "quantity": 0.23619255965517313,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.07770174239093,
             107.08109490705509,
             108.0844985852388,
           ],
-          [
+          Array [
             0.916547011184853,
             0.0803591378140754,
             0.003093851001071566,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.9164834044877688,
           "min": 0.0030936362934340443,
           "sum": 0.9999306018171376,
         },
         "value": 0.9472643248374631,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
@@ -895,8 +895,8 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     },
     "unsaturation": 4,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 1,
       "H": 14,
       "N": 12,
@@ -905,9 +905,9 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     "charge": 0,
     "database": "monoisotopic",
     "em": 210.14135312394998,
-    "groups": {},
-    "ionization": {
-      "atoms": {
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {
         "H": 2,
       },
       "charge": 2,
@@ -915,25 +915,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
       "mf": "(H+)2",
     },
     "mf": "CH14N12O",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "em": 106.07795301429593,
       "ionization": "(H+)2",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.07795301429594,
             106.57724492649174,
             107.07855050314403,
           ],
-          [
+          Array [
             0.006814431120656906,
             0.0536362665958229,
             0,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.86584,
             105.865898,
             105.865957,
@@ -1217,7 +1217,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             107.085528,
             107.085587,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -1502,7 +1502,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.82795301429593,
           "max": 0.05147972157088913,
           "min": 0,
@@ -1510,25 +1510,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 107.32795301429593,
         },
         "quantity": 0.2332694864568825,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.07795301429594,
             106.57724492649174,
             107.07855050314403,
           ],
-          [
+          Array [
             0.9430313336251902,
             0.0536362665958229,
             0.003332399778986872,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.9429043710732905,
           "min": 0.003331951130076911,
           "sum": 0.9998653676210189,
         },
         "value": 0.9395493022835202,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
@@ -1536,8 +1536,8 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     },
     "unsaturation": 1,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 5,
       "H": 18,
       "N": 6,
@@ -1546,9 +1546,9 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     "charge": 0,
     "database": "monoisotopic",
     "em": 210.14403846543001,
-    "groups": {},
-    "ionization": {
-      "atoms": {
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {
         "H": 2,
       },
       "charge": 2,
@@ -1556,25 +1556,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
       "mf": "(H+)2",
     },
     "mf": "C5H18N6O3",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "em": 106.07929568503594,
       "ionization": "(H+)2",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.07929568503594,
             106.58014969654235,
             107.08125511761786,
           ],
-          [
+          Array [
             0,
             0.07298727312653082,
             0,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.86584,
             105.865898,
             105.865957,
@@ -1858,7 +1858,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             107.085528,
             107.085587,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -2143,7 +2143,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.82929568503594,
           "max": 0.05147972157088913,
           "min": 0,
@@ -2151,25 +2151,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 107.32929568503594,
         },
         "quantity": 0.2332694864568825,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.07929568503594,
             106.58014969654235,
             107.08125511761786,
           ],
-          [
+          Array [
             0.9187553079630663,
             0.07298727312653082,
             0.00825741891040295,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.9182669524390747,
           "min": 0.008253029759011,
           "sum": 0.9994684596434341,
         },
         "value": 0.9270127268734691,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
@@ -2177,8 +2177,8 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     },
     "unsaturation": 0,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 2,
       "H": 21,
       "N": 17,
@@ -2187,9 +2187,9 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.20641299128,
-    "groups": {},
-    "ionization": {
-      "atoms": {
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {
         "H": 3,
       },
       "charge": 3,
@@ -2197,25 +2197,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
       "mf": "(H+)3",
     },
     "mf": "C2H21N17O2",
-    "ms": {
+    "ms": Object {
       "charge": 3,
       "em": 106.0760807827476,
       "ionization": "(H+)3",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.07608078274761,
             106.40906633263047,
             106.74315454064917,
           ],
-          [
+          Array [
             0,
             0.07969314045193598,
             0.007019874775643618,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.957907,
             105.957965,
             105.958024,
@@ -2356,7 +2356,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             106.901938,
             106.901997,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -2498,7 +2498,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.90941411608092,
           "max": 0.05147972157088913,
           "min": 0,
@@ -2506,25 +2506,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 106.90941411608092,
         },
         "quantity": 0.22109791342079094,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.07608078274761,
             106.40906633263047,
             106.74315454064917,
           ],
-          [
+          Array [
             0.9132869847724204,
             0.07969314045193598,
             0.007019874775643618,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.9128951171540192,
           "min": 0.00701686273051906,
           "sum": 0.9995709260890224,
         },
         "value": 0.9132869847724204,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
@@ -2532,8 +2532,8 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     },
     "unsaturation": 1,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 6,
       "H": 25,
       "N": 11,
@@ -2542,9 +2542,9 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.20909833276005,
-    "groups": {},
-    "ionization": {
-      "atoms": {
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {
         "H": 3,
       },
       "charge": 3,
@@ -2552,25 +2552,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
       "mf": "(H+)3",
     },
     "mf": "C6H25N11O4",
-    "ms": {
+    "ms": Object {
       "charge": 3,
       "em": 106.07697589657428,
       "ionization": "(H+)3",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.07697589657425,
             106.41068920647196,
             106.74476892406284,
           ],
-          [
+          Array [
             0,
             0.0977392081937648,
             0.012304436554722107,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.957907,
             105.957965,
             105.958024,
@@ -2711,7 +2711,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             106.901938,
             106.901997,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -2853,7 +2853,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.91030922990761,
           "max": 0.05147972157088913,
           "min": 0,
@@ -2861,25 +2861,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 106.91030922990761,
         },
         "quantity": 0.22109791342079094,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.07697589657425,
             106.41068920647196,
             106.74476892406284,
           ],
-          [
+          Array [
             0.8899563552515131,
             0.0977392081937648,
             0.012304436554722107,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.8890418189188508,
           "min": 0.012291792278161993,
           "sum": 0.9989723806934288,
         },
         "value": 0.8899563552515131,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
@@ -2887,8 +2887,8 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     },
     "unsaturation": 0,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 1,
       "H": 21,
       "N": 19,
@@ -2897,9 +2897,9 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.21764638057,
-    "groups": {},
-    "ionization": {
-      "atoms": {
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {
         "H": 3,
       },
       "charge": 3,
@@ -2907,25 +2907,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
       "mf": "(H+)3",
     },
     "mf": "CH21N19O",
-    "ms": {
+    "ms": Object {
       "charge": 3,
       "em": 106.07982524584426,
       "ionization": "(H+)3",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.07982524584425,
             106.41255644683434,
             106.74627518383855,
           ],
-          [
+          Array [
             0.0312768629924647,
             0.07657622278509994,
             0.004909210229713879,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.957907,
             105.957965,
             105.958024,
@@ -3066,7 +3066,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             106.901938,
             106.901997,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -3208,7 +3208,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.91315857917759,
           "max": 0.05147972157088913,
           "min": 0,
@@ -3216,25 +3216,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 106.91315857917759,
         },
         "quantity": 0.22109791342079094,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.07982524584425,
             106.41255644683434,
             106.74627518383855,
           ],
-          [
+          Array [
             0.9185145669851862,
             0.07657622278509994,
             0.004909210229713879,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.9182946686155257,
           "min": 0.004908034932810991,
           "sum": 0.9997605934869577,
         },
         "value": 0.8872377039927215,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
@@ -3242,8 +3242,8 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     },
     "unsaturation": 1,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 11,
       "H": 18,
       "N": 2,
@@ -3252,9 +3252,9 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     "charge": 0,
     "database": "monoisotopic",
     "em": 210.13682782814,
-    "groups": {},
-    "ionization": {
-      "atoms": {
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {
         "H": 2,
       },
       "charge": 2,
@@ -3262,25 +3262,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
       "mf": "(H+)2",
     },
     "mf": "C11H18N2O2",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "em": 106.07569036639094,
       "ionization": "(H+)2",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.07569036639093,
             106.57721779698288,
             107.07841138223516,
           ],
-          [
+          Array [
             0,
             0.11334238685996138,
             0,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.86584,
             105.865898,
             105.865957,
@@ -3564,7 +3564,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             107.085528,
             107.085587,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -3849,7 +3849,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.82569036639094,
           "max": 0.05147972157088913,
           "min": 0,
@@ -3857,25 +3857,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 107.32569036639094,
         },
         "quantity": 0.2332694864568825,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.07569036639093,
             106.57721779698288,
             107.07841138223516,
           ],
-          [
+          Array [
             0.8763018164572077,
             0.11334238685996138,
             0.010355796682830824,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.8756458489883525,
           "min": 0.010348044712436104,
           "sum": 0.9992514365980579,
         },
         "value": 0.8866576131400387,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
@@ -3883,8 +3883,8 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     },
     "unsaturation": 4,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 7,
       "H": 21,
       "N": 15,
@@ -3892,9 +3892,9 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.21043574328,
-    "groups": {},
-    "ionization": {
-      "atoms": {
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {
         "H": 3,
       },
       "charge": 3,
@@ -3902,25 +3902,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
       "mf": "(H+)3",
     },
     "mf": "C7H21N15",
-    "ms": {
+    "ms": Object {
       "charge": 3,
       "em": 106.07742170008093,
       "ionization": "(H+)3",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.07742170008093,
             106.41102724917631,
             106.74458011274072,
           ],
-          [
+          Array [
             0,
             0.11673540885531113,
             0.007332205011926888,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.957907,
             105.957965,
             105.958024,
@@ -4061,7 +4061,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             106.901938,
             106.901997,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -4203,7 +4203,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.91075503341426,
           "max": 0.05147972157088913,
           "min": 0,
@@ -4211,25 +4211,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 106.91075503341426,
         },
         "quantity": 0.22109791342079094,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.07742170008093,
             106.41102724917631,
             106.74458011274072,
           ],
-          [
+          Array [
             0.8759323861327619,
             0.11673540885531113,
             0.007332205011926888,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.875672278726235,
           "min": 0.0073300277196381575,
           "sum": 0.999703050816884,
         },
         "value": 0.875932386132762,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
@@ -4237,8 +4237,8 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     },
     "unsaturation": 5,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 11,
       "H": 25,
       "N": 9,
@@ -4247,9 +4247,9 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.21312108476,
-    "groups": {},
-    "ionization": {
-      "atoms": {
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {
         "H": 3,
       },
       "charge": 3,
@@ -4257,25 +4257,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
       "mf": "(H+)3",
     },
     "mf": "C11H25N9O2",
-    "ms": {
+    "ms": Object {
       "charge": 3,
       "em": 106.0783168139076,
       "ionization": "(H+)3",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.07831681390759,
             106.41234547575675,
             106.74635852949005,
           ],
-          [
+          Array [
             0,
             0.1330349373266243,
             0.013273594309984873,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.957907,
             105.957965,
             105.958024,
@@ -4416,7 +4416,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             106.901938,
             106.901997,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -4558,7 +4558,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.91165014724093,
           "max": 0.05147972157088913,
           "min": 0,
@@ -4566,25 +4566,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 106.91165014724093,
         },
         "quantity": 0.22109791342079094,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.07831681390759,
             106.41234547575675,
             106.74635852949005,
           ],
-          [
+          Array [
             0.8536914683633909,
             0.1330349373266243,
             0.013273594309984873,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.8527915867078084,
           "min": 0.013259602529036072,
           "sum": 0.9989458935822474,
         },
         "value": 0.8536914683633908,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
@@ -4592,17 +4592,17 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     },
     "unsaturation": 4,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 16,
       "H": 18,
     },
     "charge": 0,
     "database": "monoisotopic",
     "em": 210.14085058014,
-    "groups": {},
-    "ionization": {
-      "atoms": {
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {
         "H": 2,
       },
       "charge": 2,
@@ -4610,25 +4610,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
       "mf": "(H+)2",
     },
     "mf": "C16H18",
-    "ms": {
+    "ms": Object {
       "charge": 2,
       "em": 106.07770174239094,
       "ionization": "(H+)2",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.07770174239093,
             106.57939832472302,
             107.0810973650471,
           ],
-          [
+          Array [
             0,
             0.14738054915185744,
             0,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.86584,
             105.865898,
             105.865957,
@@ -4912,7 +4912,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             107.085528,
             107.085587,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -5197,7 +5197,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.82770174239094,
           "max": 0.05147972157088913,
           "min": 0,
@@ -5205,25 +5205,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 107.32770174239094,
         },
         "quantity": 0.2332694864568825,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.07770174239093,
             106.57939832472302,
             107.0810973650471,
           ],
-          [
+          Array [
             0.840484389867713,
             0.14738054915185744,
             0.012135060980429522,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.8399418307014912,
           "min": 0.012127227416062397,
           "sum": 0.999354468479412,
         },
         "value": 0.8526194508481426,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
@@ -5231,8 +5231,8 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     },
     "unsaturation": 8,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 15,
       "H": 29,
       "N": 3,
@@ -5241,9 +5241,9 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.21580642624,
-    "groups": {},
-    "ionization": {
-      "atoms": {
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {
         "H": 3,
       },
       "charge": 3,
@@ -5251,25 +5251,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
       "mf": "(H+)3",
     },
     "mf": "C15H29N3O4",
-    "ms": {
+    "ms": Object {
       "charge": 3,
       "em": 106.07921192773428,
       "ionization": "(H+)3",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.07921192773426,
             106.41355666697069,
             106.74768172559743,
           ],
-          [
+          Array [
             0,
             0.1484642983503252,
             0.01933645980858331,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.957907,
             105.957965,
             105.958024,
@@ -5410,7 +5410,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             106.901938,
             106.901997,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -5552,7 +5552,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.9125452610676,
           "max": 0.05147972157088913,
           "min": 0,
@@ -5560,25 +5560,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 106.9125452610676,
         },
         "quantity": 0.22109791342079094,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.07921192773426,
             106.41355666697069,
             106.74768172559743,
           ],
-          [
+          Array [
             0.8321992418410914,
             0.1484642983503252,
             0.01933645980858331,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.8305087508508261,
           "min": 0.01929718061984274,
           "sum": 0.9979686463225736,
         },
         "value": 0.8321992418410915,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
@@ -5586,8 +5586,8 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     },
     "unsaturation": 3,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 16,
       "H": 29,
       "N": 1,
@@ -5596,9 +5596,9 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.20457303695,
-    "groups": {},
-    "ionization": {
-      "atoms": {
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {
         "H": 3,
       },
       "charge": 3,
@@ -5606,25 +5606,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
       "mf": "(H+)3",
     },
     "mf": "C16H29NO5",
-    "ms": {
+    "ms": Object {
       "charge": 3,
       "em": 106.07546746463761,
       "ionization": "(H+)3",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.0754674646376,
             106.40989952434387,
             106.74402136803724,
           ],
-          [
+          Array [
             0,
             0.1508727564624518,
             0.021474850893669337,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.957907,
             105.957965,
             105.958024,
@@ -5765,7 +5765,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             106.901938,
             106.901997,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -5907,7 +5907,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.90880079797094,
           "max": 0.05147972157088913,
           "min": 0,
@@ -5915,25 +5915,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 106.90880079797094,
         },
         "quantity": 0.22109791342079094,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.0754674646376,
             106.40989952434387,
             106.74402136803724,
           ],
-          [
+          Array [
             0.8276523926438789,
             0.1508727564624518,
             0.021474850893669337,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.825625378560087,
           "min": 0.021422256561077914,
           "sum": 0.9975508871818557,
         },
         "value": 0.8276523926438788,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
@@ -5941,8 +5941,8 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     },
     "unsaturation": 3,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 16,
       "H": 25,
       "N": 7,
@@ -5950,9 +5950,9 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.21714383676,
-    "groups": {},
-    "ionization": {
-      "atoms": {
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {
         "H": 3,
       },
       "charge": 3,
@@ -5960,25 +5960,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
       "mf": "(H+)3",
     },
     "mf": "C16H25N7",
-    "ms": {
+    "ms": Object {
       "charge": 3,
       "em": 106.07965773124093,
       "ionization": "(H+)3",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.07965773124094,
             106.41385797733189,
             106.74804287381289,
           ],
-          [
+          Array [
             0,
             0.16527975689802255,
             0.015875745614900665,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.957907,
             105.957965,
             105.958024,
@@ -6119,7 +6119,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             106.901938,
             106.901997,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -6261,7 +6261,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.91299106457426,
           "max": 0.05147972157088913,
           "min": 0,
@@ -6269,25 +6269,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 106.91299106457426,
         },
         "quantity": 0.22109791342079094,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.07965773124094,
             106.41385797733189,
             106.74804287381289,
           ],
-          [
+          Array [
             0.8188444974870768,
             0.16527975689802255,
             0.015875745614900665,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.8180194394500169,
           "min": 0.015859749401267807,
           "sum": 0.9989924118198364,
         },
         "value": 0.8188444974870768,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
@@ -6295,8 +6295,8 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     },
     "unsaturation": 8,
   },
-  {
-    "atoms": {
+  Object {
+    "atoms": Object {
       "C": 17,
       "H": 25,
       "N": 5,
@@ -6305,9 +6305,9 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
     "charge": 0,
     "database": "monoisotopic",
     "em": 315.20591044747005,
-    "groups": {},
-    "ionization": {
-      "atoms": {
+    "groups": Object {},
+    "ionization": Object {
+      "atoms": Object {
         "H": 3,
       },
       "charge": 3,
@@ -6315,25 +6315,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
       "mf": "(H+)3",
     },
     "mf": "C17H25N5O",
-    "ms": {
+    "ms": Object {
       "charge": 3,
       "em": 106.07591326814428,
       "ionization": "(H+)3",
-      "similarity": {
-        "difference": [
-          [
+      "similarity": Object {
+        "difference": Array [
+          Array [
             106.07591326814428,
             106.41019361592902,
             106.7444200520179,
           ],
-          [
+          Array [
             0,
             0.16754692024640983,
             0.018071548895120484,
           ],
         ],
-        "experimental": [
-          [
+        "experimental": Array [
+          Array [
             105.957907,
             105.957965,
             105.958024,
@@ -6474,7 +6474,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             106.901938,
             106.901997,
           ],
-          [
+          Array [
             0,
             0,
             0,
@@ -6616,7 +6616,7 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
             0,
           ],
         ],
-        "experimentalInfo": {
+        "experimentalInfo": Object {
           "from": 105.9092466014776,
           "max": 0.05147972157088913,
           "min": 0,
@@ -6624,25 +6624,25 @@ exports[`test searchSimilarity for ethylbenzene should find one result with bad 
           "to": 106.9092466014776,
         },
         "quantity": 0.22109791342079094,
-        "theoretical": [
-          [
+        "theoretical": Array [
+          Array [
             106.07591326814428,
             106.41019361592902,
             106.7444200520179,
           ],
-          [
+          Array [
             0.8143815308584696,
             0.16754692024640983,
             0.018071548895120484,
           ],
         ],
-        "thereoticalInfo": {
+        "thereoticalInfo": Object {
           "max": 0.8132095040221197,
           "min": 0.018045541011251647,
           "sum": 0.9985608381428855,
         },
         "value": 0.8143815308584696,
-        "width": {
+        "width": Object {
           "bottom": 0.006,
           "top": 0.003,
         },
