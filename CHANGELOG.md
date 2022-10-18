@@ -1,5 +1,14 @@
 # Changelog
 
+## [5.10.0](https://github.com/cheminfo/mass-tools/compare/v5.9.0...v5.10.0) (2022-10-18)
+
+
+### Features
+
+* add getRangeForFragment ([6f34dbc](https://github.com/cheminfo/mass-tools/commit/6f34dbcfc283f09dd76f8d47859f5f0ad3a82af4))
+* expose preprocessRanges in mf-utilities ([c6ba497](https://github.com/cheminfo/mass-tools/commit/c6ba4977c1d84f5d3da218819b392c470f4f4b74))
+* use new pubchem.cheminfo api ([700b4de](https://github.com/cheminfo/mass-tools/commit/700b4de8f2b277c845116925d70adae4a0fa0ce9))
+
 ## [5.9.0](https://github.com/cheminfo/mass-tools/compare/v5.8.2...v5.9.0) (2022-08-03)
 
 
