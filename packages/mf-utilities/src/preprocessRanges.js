@@ -76,7 +76,6 @@ module.exports = function preprocessRanges(ranges) {
     }
     ranges = newRanges;
   }
-
   let possibilities = [];
   for (let i = 0; i < ranges.length; i++) {
     let range = ranges[i];
@@ -119,6 +118,7 @@ module.exports = function preprocessRanges(ranges) {
   possibilities = possibilities.filter(
     (r) => r.originalMinCount !== 0 || r.originalMaxCount !== 0,
   );
+
   // we will sort the way we analyse the data
   // 1. The one possibility parameter
   // 2. The charged part

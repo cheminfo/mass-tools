@@ -12,6 +12,7 @@ module.exports = {
   Nucleotide: require('nucleotide'),
   Spectrum: require('ms-spectrum/src/Spectrum'),
   preprocessRanges: require('mf-utilities/src/preprocessRanges'),
+  getRangeForFragment: require('mf-utilities/src/getRangeForFragment'),
   getPeaks: require('ms-spectrum/src//getPeaks'),
   getBestPeaks: require('ms-spectrum/src/getBestPeaks'),
   generateMFs: require('mf-generator'),

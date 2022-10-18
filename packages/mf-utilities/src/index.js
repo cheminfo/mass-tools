@@ -8,5 +8,6 @@ module.exports = {
   isMF: require('./isMF.js'),
   preprocessIonizations: require('./preprocessIonizations.js'),
   preprocessRanges: require('./preprocessRanges.js'),
+  getRangeForFragment: require('./getRangeForFragment.js'),
   processRange: require('./processRange.js'),
 };
