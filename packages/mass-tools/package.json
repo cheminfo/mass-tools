@@ -24,6 +24,7 @@
     "mf-from-ea": "^0.0.22",
     "mf-generator": "^1.3.22",
     "mf-parser": "^1.4.7",
+    "mf-utilities": "^1.3.3",
     "ms-report": "^1.4.3",
     "ms-spectrum": "^1.6.10",
     "nucleotide": "^1.2.21",

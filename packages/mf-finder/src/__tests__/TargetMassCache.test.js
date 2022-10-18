@@ -1,7 +1,8 @@
 'use strict';
 
+const preprocessRanges = require('mf-utilities/src/preprocessRanges');
+
 const TargetMassCache = require('../TargetMassCache');
-const preprocessRanges = require('../preprocessRanges');
 
 describe('TargetMassCache', () => {
   it('the result with one atom', () => {

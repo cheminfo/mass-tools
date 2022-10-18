@@ -4,9 +4,9 @@ const matcher = require('mf-matcher').msem;
 const atomSorter = require('atom-sorter');
 const getMsInfo = require('mf-utilities/src/getMsInfo');
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
+const preprocessRanges = require('mf-utilities/src/preprocessRanges');
 
 const TargetMassCache = require('./TargetMassCache');
-const preprocessRanges = require('./preprocessRanges');
 
 let targetMassCache;
 
