@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.11.0...emdb@1.12.0) (2022-10-18)
+
+
+### Features
+
+* use new pubchem.cheminfo api ([700b4de](https://github.com/cheminfo/mass-tools/commit/700b4de8f2b277c845116925d70adae4a0fa0ce9))
+
+
+
+
+
 # [1.11.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.10.2...emdb@1.11.0) (2022-08-03)
 
 

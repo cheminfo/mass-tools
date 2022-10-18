@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/cheminfo/mass-tools/compare/mf-finder@1.2.10...mf-finder@1.3.0) (2022-10-18)
+
+
+### Features
+
+* expose preprocessRanges in mf-utilities ([c6ba497](https://github.com/cheminfo/mass-tools/commit/c6ba4977c1d84f5d3da218819b392c470f4f4b74))
+
+
+
+
+
 ## [1.2.10](https://github.com/cheminfo/mass-tools/compare/mf-finder@1.2.9...mf-finder@1.2.10) (2022-05-09)
 
 **Note:** Version bump only for package mf-finder

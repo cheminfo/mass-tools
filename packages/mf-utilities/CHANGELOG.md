@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/cheminfo/mass-tools/compare/mf-utilities@1.3.3...mf-utilities@1.4.0) (2022-10-18)
+
+
+### Features
+
+* add getRangeForFragment ([6f34dbc](https://github.com/cheminfo/mass-tools/commit/6f34dbcfc283f09dd76f8d47859f5f0ad3a82af4))
+* expose preprocessRanges in mf-utilities ([c6ba497](https://github.com/cheminfo/mass-tools/commit/c6ba4977c1d84f5d3da218819b392c470f4f4b74))
+
+
+
+
+
 ## [1.3.3](https://github.com/cheminfo/mass-tools/compare/mf-utilities@1.3.2...mf-utilities@1.3.3) (2022-05-09)
 
 **Note:** Version bump only for package mf-utilities
