@@ -134,7 +134,7 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('(Me)2');
   });
 
-  it('ethane with groups and uniqueMF', async () => {
+  it('ethylbenzene with advanced groups and uniqueMF', async () => {
     let result = await findMFs(106.07825, {
       ranges: 'Ph0-1 C0-10 H0-10 Me0-3',
       allowNeutral: true,
