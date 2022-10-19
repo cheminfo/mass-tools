@@ -8,7 +8,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* add getRangeForFragment ([6f34dbc](https://github.com/cheminfo/mass-tools/commit/6f34dbcfc283f09dd76f8d47859f5f0ad3a82af4))
+* add getRangesForFragment ([6f34dbc](https://github.com/cheminfo/mass-tools/commit/6f34dbcfc283f09dd76f8d47859f5f0ad3a82af4))
 * expose preprocessRanges in mf-utilities ([c6ba497](https://github.com/cheminfo/mass-tools/commit/c6ba4977c1d84f5d3da218819b392c470f4f4b74))
 
 

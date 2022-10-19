@@ -67,23 +67,24 @@ module.exports = async function searchPubchem(masses, options = {}) {
   }
 
   let results = await Promise.all(promises);
+
   let mfs = [];
   for (let i = 0; i < results.length; i++) {
-    for (let mf of results[i].data) {
+    for (const entry of results[i].data) {
       if (
         allowedEMs &&
-        !allowedEMs.find((em) => Math.abs(em - mf.em) < 0.0000001)
+        !allowedEMs.find((em) => Math.abs(em - entry.em) < 0.0000001)
       ) {
         continue;
       }
       try {
-        let mfInfo = new mfParser.MF(mf._id).getInfo();
+        let mfInfo = new mfParser.MF(entry._id).getInfo();
         mfInfo.ionization = ionizations[i];
         mfInfo.em = mfInfo.monoisotopicMass;
         mfInfo.ms = getMsInfo(mfInfo, {
           targetMass: masses,
         }).ms;
-        mfInfo.info = { nbPubchemEntries: mf.count };
+        mfInfo.info = { nbPubchemEntries: entry.count };
         mfs.push(mfInfo);
       } catch (e) {
         // eslint-disable-next-line no-console

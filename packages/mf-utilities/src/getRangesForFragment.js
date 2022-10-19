@@ -3,7 +3,7 @@
 const Kind = require('mf-parser/src/Kind');
 const parse = require('mf-parser/src/parse');
 
-function getRangeForFragment(ranges) {
+function getRangesForFragment(ranges) {
   ranges = JSON.parse(JSON.stringify(ranges));
   if (typeof ranges === 'string') {
     // need to convert to ranges
@@ -90,4 +90,4 @@ function getRangeForFragment(ranges) {
   return possibilities.join(' ');
 }
 
-module.exports = getRangeForFragment;
+module.exports = getRangesForFragment;
