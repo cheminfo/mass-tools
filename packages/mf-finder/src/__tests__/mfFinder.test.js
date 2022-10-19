@@ -107,6 +107,53 @@ describe('test mf-finder', () => {
     expect(result.mfs[1].mf).toBe('C2H');
   });
 
+  it('twice same range', async () => {
+    let result = await findMFs(24, {
+      ranges: 'C0-2 C0-2',
+      allowNeutral: true,
+    });
+    expect(result.mfs).toHaveLength(3);
+  });
+
+  it('twice same range with uniqueMF', async () => {
+    let result = await findMFs(24, {
+      ranges: 'C0-2 C0-2',
+      allowNeutral: true,
+      uniqueMFs: true,
+    });
+    expect(result.mfs).toHaveLength(1);
+  });
+
+  it('ethane with groups and uniqueMF', async () => {
+    let result = await findMFs(30.04695, {
+      ranges: 'C0-2 H0-5 Me0-2',
+      allowNeutral: true,
+      uniqueMFs: true,
+    });
+    expect(result.mfs).toHaveLength(1);
+    expect(result.mfs[0].mf).toBe('(Me)2');
+  });
+
+  it('ethane with groups in parenthesis and uniqueMF', async () => {
+    let result = await findMFs(30.04695, {
+      ranges: 'C0-2 H0-5 (CH3)0-2',
+      allowNeutral: true,
+      uniqueMFs: true,
+    });
+    expect(result.mfs).toHaveLength(1);
+    expect(result.mfs[0].mf).toBe('(CH3)2');
+  });
+
+  it('ethanewith many groups and uniqueMF', async () => {
+    let result = await findMFs(30.04695, {
+      ranges: 'C0-2 H0-5 Et0-2 Me0-2',
+      allowNeutral: true,
+      uniqueMFs: true,
+    });
+    expect(result.mfs).toHaveLength(1);
+    expect(result.mfs[0].mf).toBe('HEt');
+  });
+
   it('simple combinations with unsaturation', async () => {
     let result = await findMFs(16, {
       ranges: [
@@ -190,7 +237,7 @@ describe('test mf-finder', () => {
       allowNeutral: true,
     });
     expect(result.mfs).toHaveLength(1);
-    expect(result.mfs[0].mf).toBe('((CH2))2(NOCl)');
+    expect(result.mfs[0].mf).toBe('(CH2)2NOCl');
   });
 
   it('simple combinations from string ranges with ionizations', async () => {
@@ -349,7 +396,7 @@ describe('test mf-finder', () => {
       },
     });
     expect(result.mfs).toHaveLength(1);
-    expect(result.mfs[0].mf).toBe('(C+)');
+    expect(result.mfs[0].mf).toBe('C+');
   });
 
   it('check one possibility 12', async () => {
@@ -391,7 +438,7 @@ describe('test mf-finder', () => {
       allowNeutral: true,
     });
     expect(result.mfs).toHaveLength(2);
-    expect(result.mfs[0].mf).toBe('(C+)');
+    expect(result.mfs[0].mf).toBe('C+');
     expect(result.mfs[1].mf).toBe('(C+)2');
   });
 });

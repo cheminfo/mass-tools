@@ -7,7 +7,9 @@ const findMFs = require('mf-finder');
  * @param {number|string|array}    masses - Monoisotopic mass
  * @param {object}    [options={}]
  * @param {number}    [options.maxIterations=10000000] - Maximum number of iterations
- * @param {function} [options.onStep] - Callback to do after each step
+ * @param {function}  [options.onStep] - Callback to do after each step
+ * @param {boolean}   [options.allowNeutral=true]
+ * @param {boolean}   [options.uniqueMFs=true]
  * @param {number}    [options.limit=1000] - Maximum number of results
  * @param {string}    [options.ionizations=''] - string containing a comma separated list of modifications
  * @param {string}    [options.ranges='C0-100 H0-100 O0-100 N0-100'] - range of mfs to search

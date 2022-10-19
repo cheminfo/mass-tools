@@ -15,6 +15,7 @@ let targetMassCache;
  * @param {object}        [options={}]
  * @param {number}        [options.maxIterations=10000000] - Maximum number of iterations
  * @param {boolean}       [options.allowNeutral=true]
+ * @param {boolean}       [options.uniqueMFs=true]
  * @param {number}        [options.limit=1000] - Maximum number of results
  * @param {string}        [options.ionizations=''] - string containing a comma separated list of modifications
  * @param {string}        [options.ranges='C0-100 H0-100 O0-100 N0-100'] - range of mfs to search
@@ -38,6 +39,7 @@ module.exports = async function mfFinder(targetMass, options = {}) {
     maxIterations = 1e8,
     limit = 1000,
     allowNeutral = true, // if there is no msem we use em !
+    uniqueMFs = false, // if there is no msem we use em !
     ranges = [
       { mf: 'C', min: 0, max: 100 },
       { mf: 'H', min: 0, max: 100 },
@@ -170,6 +172,7 @@ module.exports = async function mfFinder(targetMass, options = {}) {
           result.mfs.push(newResult);
           if (result.mfs.length > 2 * limit) {
             result.mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
+            if (uniqueMFs) ensureUniqueMF(result);
             result.mfs.length = limit;
           }
         }
@@ -207,11 +210,47 @@ module.exports = async function mfFinder(targetMass, options = {}) {
   }
 
   result.mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
+  if (uniqueMFs) ensureUniqueMF(result);
   if (result.mfs.length > limit) {
     result.mfs.length = limit;
   }
+  result.mfs.forEach((mf) => delete mf.currentCounts);
   return result;
 };
+
+/**
+ * Ensure that we have only once the same MF
+ * In order to improve the speed we just consider the em
+ * @param {object} result
+ */
+function ensureUniqueMF(result) {
+  let previousEM = 0;
+  let bestCounts = [];
+  const mfs = [];
+  for (let current of result.mfs) {
+    if (current.em - previousEM > 1e-8) {
+      previousEM = current.em;
+      bestCounts = current.currentCounts;
+      mfs.push(current);
+    } else {
+      for (let i = 0; i < current.currentCounts.length; i++) {
+        if (current.currentCounts[i] > bestCounts[i]) {
+          mfs.pop();
+          mfs.push(current);
+          bestCounts = current.currentCounts;
+          continue;
+        } else {
+          if (current.currentCounts[i] > bestCounts[i]) {
+            continue;
+          }
+        }
+      }
+
+      // better priority ???
+    }
+  }
+  result.mfs = mfs;
+}
 
 function updateCurrentAtom(currentAtom, previousAtom) {
   currentAtom.currentMonoisotopicMass =
@@ -241,6 +280,7 @@ function getResult(
     ionization,
     atoms: {},
     groups: {},
+    currentCounts: possibilities.map((possibility) => possibility.currentCount),
   };
 
   // we check that the first time we meet the ionization group it does not end
@@ -250,9 +290,14 @@ function getResult(
     let possibility = possibilities[orderMapping[i]];
     if (possibility.currentCount !== 0) {
       if (possibility.isGroup) {
-        result.mf += `(${possibility.mf})`;
-        if (possibility.currentCount !== 1) {
-          result.mf += possibility.currentCount;
+        if (possibility.currentCount === 1) {
+          result.mf += `${possibility.mf}`;
+        } else {
+          if (possibility.mf.match(/^\([^()]*\)$/)) {
+            result.mf += `${possibility.mf}${possibility.currentCount}`;
+          } else {
+            result.mf += `(${possibility.mf})${possibility.currentCount}`;
+          }
         }
         if (result.groups[possibility.mf]) {
           result.groups[possibility.mf] += possibility.currentCount;
