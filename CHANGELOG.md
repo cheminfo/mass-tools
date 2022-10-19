@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.11.0](https://github.com/cheminfo/mass-tools/compare/v5.10.1...v5.11.0) (2022-10-19)
+
+
+### Features
+
+* add option 'uniqueMFs' in fromMonoisotopicMass ([7f294ed](https://github.com/cheminfo/mass-tools/commit/7f294edd9acc44b6527ff974d99d3974b9d7bc2d))
+
 ## [5.10.1](https://github.com/cheminfo/mass-tools/compare/v5.10.0...v5.10.1) (2022-10-19)
 
 
