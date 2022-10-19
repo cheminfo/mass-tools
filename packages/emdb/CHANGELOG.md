@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.12.1...emdb@1.13.0) (2022-10-19)
+
+
+### Features
+
+* add option 'uniqueMFs' in fromMonoisotopicMass ([7f294ed](https://github.com/cheminfo/mass-tools/commit/7f294edd9acc44b6527ff974d99d3974b9d7bc2d))
+
+
+
+
+
 ## [1.12.1](https://github.com/cheminfo/mass-tools/compare/emdb@1.12.0...emdb@1.12.1) (2022-10-19)
 
 
