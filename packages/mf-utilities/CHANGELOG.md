@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/cheminfo/mass-tools/compare/mf-utilities@1.4.0...mf-utilities@1.4.1) (2022-10-19)
+
+
+### Bug Fixes
+
+* rename getRangeForFragment to getRangesForFragment ([c415157](https://github.com/cheminfo/mass-tools/commit/c4151579a9c54f6ef0261d4ff38a90d7d36791fd))
+
+
+
+
+
 # [1.4.0](https://github.com/cheminfo/mass-tools/compare/mf-utilities@1.3.3...mf-utilities@1.4.0) (2022-10-18)
 
 

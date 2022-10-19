@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.36](https://github.com/cheminfo/mass-tools/compare/mf-from-google-sheet@1.1.35...mf-from-google-sheet@1.1.36) (2022-10-19)
+
+**Note:** Version bump only for package mf-from-google-sheet
+
+
+
+
+
 ## [1.1.35](https://github.com/cheminfo/mass-tools/compare/mf-from-google-sheet@1.1.34...mf-from-google-sheet@1.1.35) (2022-10-18)
 
 **Note:** Version bump only for package mf-from-google-sheet
