@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.10.1](https://github.com/cheminfo/mass-tools/compare/v5.10.0...v5.10.1) (2022-10-19)
+
+
+### Bug Fixes
+
+* rename getRangeForFragment to getRangesForFragment ([c415157](https://github.com/cheminfo/mass-tools/commit/c4151579a9c54f6ef0261d4ff38a90d7d36791fd))
+
 ## [5.10.0](https://github.com/cheminfo/mass-tools/compare/v5.9.0...v5.10.0) (2022-10-18)
 
 
