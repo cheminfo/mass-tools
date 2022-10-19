@@ -227,7 +227,7 @@ function ensureUniqueMF(result) {
   let previousEM = 0;
   let bestCounts = [];
   const mfs = [];
-  for (let current of result.mfs) {
+  next: for (let current of result.mfs) {
     if (current.em - previousEM > 1e-8) {
       previousEM = current.em;
       bestCounts = current.currentCounts;
@@ -240,8 +240,8 @@ function ensureUniqueMF(result) {
           bestCounts = current.currentCounts;
           continue;
         } else {
-          if (current.currentCounts[i] > bestCounts[i]) {
-            continue;
+          if (current.currentCounts[i] < bestCounts[i]) {
+            continue next;
           }
         }
       }

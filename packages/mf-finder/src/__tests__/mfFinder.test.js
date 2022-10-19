@@ -134,6 +134,16 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('(Me)2');
   });
 
+  it('ethane with groups and uniqueMF', async () => {
+    let result = await findMFs(106.07825, {
+      ranges: 'Ph0-1 C0-10 H0-10 Me0-3',
+      allowNeutral: true,
+      uniqueMFs: true,
+    });
+    expect(result.mfs).toHaveLength(1);
+    expect(result.mfs[0].mf).toBe('CH2MePh');
+  });
+
   it('ethane with groups in parenthesis and uniqueMF', async () => {
     let result = await findMFs(30.04695, {
       ranges: 'C0-2 H0-5 (CH3)0-2',
