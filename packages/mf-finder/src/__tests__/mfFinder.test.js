@@ -144,7 +144,7 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('CH2MePh');
   });
 
-  it('ethylbenzene with advanced groups and uniqueMF', async () => {
+  it('ethylbenzene with uniqueMF', async () => {
     let result1 = await findMFs(519.127524, {
       ranges: 'C0-100 H0-200 N0-20 O0-20 F0-3',
       allowNeutral: true,
