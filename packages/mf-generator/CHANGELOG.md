@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.26](https://github.com/cheminfo/mass-tools/compare/mf-generator@1.3.25...mf-generator@1.3.26) (2022-10-24)
+
+**Note:** Version bump only for package mf-generator
+
+
+
+
+
 ## [1.3.25](https://github.com/cheminfo/mass-tools/compare/mf-generator@1.3.24...mf-generator@1.3.25) (2022-10-19)
 
 **Note:** Version bump only for package mf-generator
