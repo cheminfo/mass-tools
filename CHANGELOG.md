@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.11.1](https://github.com/cheminfo/mass-tools/compare/v5.11.0...v5.11.1) (2022-10-24)
+
+
+### Bug Fixes
+
+* ensureUniqueMF bug because not sorted ([e6790e7](https://github.com/cheminfo/mass-tools/commit/e6790e790335f6122566cdad86b79d42a7d44927))
+
 ## [5.11.0](https://github.com/cheminfo/mass-tools/compare/v5.10.1...v5.11.0) (2022-10-19)
 
 
