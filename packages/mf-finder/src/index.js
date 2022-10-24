@@ -171,8 +171,8 @@ module.exports = async function mfFinder(targetMass, options = {}) {
         if (isValid) {
           result.mfs.push(newResult);
           if (result.mfs.length > 2 * limit) {
-            result.mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
             if (uniqueMFs) ensureUniqueMF(result);
+            result.mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
             result.mfs.length = limit;
           }
         }
@@ -209,8 +209,8 @@ module.exports = async function mfFinder(targetMass, options = {}) {
     }
   }
 
-  result.mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
   if (uniqueMFs) ensureUniqueMF(result);
+  result.mfs.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
   if (result.mfs.length > limit) {
     result.mfs.length = limit;
   }
@@ -224,6 +224,7 @@ module.exports = async function mfFinder(targetMass, options = {}) {
  * @param {object} result
  */
 function ensureUniqueMF(result) {
+  result.mfs.sort((a, b) => a.em - b.em);
   let previousEM = 0;
   let bestCounts = [];
   const mfs = [];
@@ -234,6 +235,7 @@ function ensureUniqueMF(result) {
       mfs.push(current);
     } else {
       for (let i = 0; i < current.currentCounts.length; i++) {
+        // better priority ???
         if (current.currentCounts[i] > bestCounts[i]) {
           mfs.pop();
           mfs.push(current);
@@ -245,8 +247,6 @@ function ensureUniqueMF(result) {
           }
         }
       }
-
-      // better priority ???
     }
   }
   result.mfs = mfs;

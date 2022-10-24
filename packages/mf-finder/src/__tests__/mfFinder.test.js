@@ -144,6 +144,20 @@ describe('test mf-finder', () => {
     expect(result.mfs[0].mf).toBe('CH2MePh');
   });
 
+  it('ethylbenzene with advanced groups and uniqueMF', async () => {
+    let result1 = await findMFs(519.127524, {
+      ranges: 'C0-100 H0-200 N0-20 O0-20 F0-3',
+      allowNeutral: true,
+      uniqueMFs: false,
+    });
+    let result2 = await findMFs(519.127524, {
+      ranges: 'C0-100 H0-200 N0-20 O0-20 F0-3',
+      allowNeutral: true,
+      uniqueMFs: true,
+    });
+    expect(result1.mfs).toHaveLength(result2.mfs.length);
+  });
+
   it('ethane with groups in parenthesis and uniqueMF', async () => {
     let result = await findMFs(30.04695, {
       ranges: 'C0-2 H0-5 (CH3)0-2',
