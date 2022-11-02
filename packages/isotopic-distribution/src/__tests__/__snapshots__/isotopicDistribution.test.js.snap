@@ -1,32 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test isotopicDistribution create distribution for many ionizations, C + (+, ++) 1`] = `
-Array [
-  Object {
-    "atoms": Object {
+[
+  {
+    "atoms": {
       "C": 1,
     },
     "charge": 0,
     "confidence": 0,
     "em": 12,
     "fromX": 11.99945142009093,
-    "ionization": Object {
-      "atoms": Object {},
+    "ionization": {
+      "atoms": {},
       "charge": 1,
       "em": 0,
       "mf": "+",
     },
-    "isotopesInfo": Object {
+    "isotopesInfo": {
       "charge": 1,
-      "isotopes": Array [
-        Object {
+      "isotopes": [
+        {
           "atom": "C",
-          "distribution": Array [
-            Object {
+          "distribution": [
+            {
               "x": 12,
               "y": 0.9893,
             },
-            Object {
+            {
               "x": 13.00335483507,
               "y": 0.0107,
             },
@@ -35,20 +35,20 @@ Array [
         },
       ],
     },
-    "isotopicDistribution": Array [
-      Object {
+    "isotopicDistribution": [
+      {
         "x": 5.99945142009093,
         "y": 0.9893,
       },
-      Object {
+      {
         "x": 6.50112883762593,
         "y": 0.0107,
       },
-      Object {
+      {
         "x": 11.99945142009093,
         "y": 0.9893,
       },
-      Object {
+      {
         "x": 13.00280625516093,
         "y": 0.0107,
       },
@@ -56,7 +56,7 @@ Array [
     "mass": 12.010735896735248,
     "mf": "C",
     "monoisotopicMass": 12,
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 11.99945142009093,
       "ionization": "+",
@@ -64,31 +64,31 @@ Array [
     "toX": 13.00280625516093,
     "unsaturation": 2,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 1,
     },
     "charge": 0,
     "confidence": 0,
     "em": 12,
     "fromX": 5.99945142009093,
-    "ionization": Object {
-      "atoms": Object {},
+    "ionization": {
+      "atoms": {},
       "charge": 2,
       "em": 0,
       "mf": "++",
     },
-    "isotopesInfo": Object {
+    "isotopesInfo": {
       "charge": 2,
-      "isotopes": Array [
-        Object {
+      "isotopes": [
+        {
           "atom": "C",
-          "distribution": Array [
-            Object {
+          "distribution": [
+            {
               "x": 12,
               "y": 0.9893,
             },
-            Object {
+            {
               "x": 13.00335483507,
               "y": 0.0107,
             },
@@ -97,12 +97,12 @@ Array [
         },
       ],
     },
-    "isotopicDistribution": Array [
-      Object {
+    "isotopicDistribution": [
+      {
         "x": 5.99945142009093,
         "y": 0.9893,
       },
-      Object {
+      {
         "x": 6.50112883762593,
         "y": 0.0107,
       },
@@ -110,7 +110,7 @@ Array [
     "mass": 12.010735896735248,
     "mf": "C",
     "monoisotopicMass": 12,
-    "ms": Object {
+    "ms": {
       "charge": 2,
       "em": 5.99945142009093,
       "ionization": "++",

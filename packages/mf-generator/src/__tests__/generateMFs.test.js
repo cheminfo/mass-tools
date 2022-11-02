@@ -161,26 +161,26 @@ describe('generateMFs', () => {
     let mfsArray = ['C', '', 'C5(C)2'];
     let result = (await generateMFs(mfsArray, { canonizeMF: true }))[0];
     expect(result).toMatchInlineSnapshot(`
-      Object {
-        "atoms": Object {
+      {
+        "atoms": {
           "C": 8,
         },
         "charge": 0,
         "em": 96,
-        "ionization": Object {
-          "atoms": Object {},
+        "ionization": {
+          "atoms": {},
           "charge": 0,
           "em": 0,
           "mf": "",
         },
         "mf": "C8",
-        "ms": Object {
+        "ms": {
           "charge": 0,
           "em": 0,
           "ionization": "",
         },
         "mw": 96.08588717388199,
-        "parts": Array [
+        "parts": [
           "C",
           ,
           "C5(C)2",
