@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`fromNucleicSequence AGG with d-h2o and base loss 1`] = `
-Array [
-  Object {
-    "atoms": Object {
+[
+  {
+    "atoms": {
       "C": 10,
       "H": 13,
       "N": 5,
@@ -13,8 +13,8 @@ Array [
     "charge": 0,
     "comment": "d1-H2O",
     "em": 393.02393639454,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": -1,
       },
       "charge": -1,
@@ -22,20 +22,20 @@ Array [
       "mf": "(H+)-1",
     },
     "mf": "C10H13N5O8P2",
-    "ms": Object {
+    "ms": {
       "charge": -1,
       "em": 392.01665994221906,
       "ionization": "(H+)-1",
     },
     "mw": 393.1868682186928,
-    "parts": Array [
+    "parts": [
       "HODampPO2",
     ],
     "sequence": "A",
     "unsaturation": 8,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 20,
       "H": 25,
       "N": 10,
@@ -45,8 +45,8 @@ Array [
     "charge": 0,
     "comment": "d2-H2O",
     "em": 722.07645651929,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": -1,
       },
       "charge": -1,
@@ -54,20 +54,20 @@ Array [
       "mf": "(H+)-1",
     },
     "mf": "C20H25N10O14P3",
-    "ms": Object {
+    "ms": {
       "charge": -1,
       "em": 721.069180066969,
       "ionization": "(H+)-1",
     },
     "mw": 722.3932238362731,
-    "parts": Array [
+    "parts": [
       "HODampDgmpPO2",
     ],
     "sequence": "AG",
     "unsaturation": 15,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 25,
       "H": 33,
       "N": 10,
@@ -77,8 +77,8 @@ Array [
     "charge": 0,
     "comment": "G*",
     "em": 838.1238006358399,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": -1,
       },
       "charge": -1,
@@ -86,20 +86,20 @@ Array [
       "mf": "(H+)-1",
     },
     "mf": "C25H33N10O17P3",
-    "ms": Object {
+    "ms": {
       "charge": -1,
       "em": 837.1165241835189,
       "ionization": "(H+)-1",
     },
     "mw": 838.5086441253504,
-    "parts": Array [
+    "parts": [
       "HODampDgmpDgmpH(C-5H-5N-5O-1)",
     ],
     "sequence": "AGG",
     "unsaturation": 16,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 25,
       "H": 33,
       "N": 10,
@@ -109,8 +109,8 @@ Array [
     "charge": 0,
     "comment": "A*",
     "em": 854.1187152554099,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": -1,
       },
       "charge": -1,
@@ -118,20 +118,20 @@ Array [
       "mf": "(H+)-1",
     },
     "mf": "C25H33N10O18P3",
-    "ms": Object {
+    "ms": {
       "charge": -1,
       "em": 853.111438803089,
       "ionization": "(H+)-1",
     },
     "mw": 854.5080490496687,
-    "parts": Array [
+    "parts": [
       "HODampDgmpDgmpH(C-5H-5N-5)",
     ],
     "sequence": "AGG",
     "unsaturation": 16,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 30,
       "H": 38,
       "N": 15,
@@ -140,8 +140,8 @@ Array [
     },
     "charge": 0,
     "em": 989.1732104387099,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": -1,
       },
       "charge": -1,
@@ -149,13 +149,13 @@ Array [
       "mf": "(H+)-1",
     },
     "mf": "C30H38N15O18P3",
-    "ms": Object {
+    "ms": {
       "charge": -1,
       "em": 988.165933986389,
       "ionization": "(H+)-1",
     },
     "mw": 989.6349483608528,
-    "parts": Array [
+    "parts": [
       "HODampDgmpDgmpH",
     ],
     "sequence": "AGG",
@@ -165,9 +165,9 @@ Array [
 `;
 
 exports[`fromNucleicSequence AGGCAG fragment 1`] = `
-Array [
-  Object {
-    "atoms": Object {
+[
+  {
+    "atoms": {
       "C": 10,
       "H": 13,
       "N": 5,
@@ -177,8 +177,8 @@ Array [
     "charge": 0,
     "comment": "y1",
     "em": 267.09675391942,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 0,
@@ -186,20 +186,20 @@ Array [
       "mf": "(H+)-",
     },
     "mf": "C10H13N5O4",
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "em": 0,
       "ionization": "(H+)-",
     },
     "mw": 267.2417245245797,
-    "parts": Array [
+    "parts": [
       "O-2P-1DgmpH",
     ],
     "sequence": "G",
     "unsaturation": 7,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 20,
       "H": 25,
       "N": 10,
@@ -209,8 +209,8 @@ Array [
     "charge": 0,
     "comment": "y2",
     "em": 580.1543594246,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 0,
@@ -218,20 +218,20 @@ Array [
       "mf": "(H+)-",
     },
     "mf": "C20H25N10O9P",
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "em": 0,
       "ionization": "(H+)-",
     },
     "mw": 580.4486752178418,
-    "parts": Array [
+    "parts": [
       "O-2P-1DampDgmpH",
     ],
     "sequence": "AG",
     "unsaturation": 14,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 29,
       "H": 37,
       "N": 13,
@@ -241,8 +241,8 @@ Array [
     "charge": 0,
     "comment": "y3",
     "em": 869.20073154049,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 0,
@@ -250,20 +250,20 @@ Array [
       "mf": "(H+)-",
     },
     "mf": "C29H37N13O15P2",
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "em": 0,
       "ionization": "(H+)-",
     },
     "mw": 869.6308885157955,
-    "parts": Array [
+    "parts": [
       "O-2P-1DcmpDampDgmpH",
     ],
     "sequence": "CAG",
     "unsaturation": 19,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 39,
       "H": 49,
       "N": 18,
@@ -273,8 +273,8 @@ Array [
     "charge": 0,
     "comment": "y4",
     "em": 1198.25325166524,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 0,
@@ -282,20 +282,20 @@ Array [
       "mf": "(H+)-",
     },
     "mf": "C39H49N18O21P3",
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "em": 0,
       "ionization": "(H+)-",
     },
     "mw": 1198.8372441333759,
-    "parts": Array [
+    "parts": [
       "O-2P-1DgmpDcmpDampDgmpH",
     ],
     "sequence": "GCAG",
     "unsaturation": 26,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 49,
       "H": 61,
       "N": 23,
@@ -305,8 +305,8 @@ Array [
     "charge": 0,
     "comment": "y5",
     "em": 1527.3057717899899,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 0,
@@ -314,20 +314,20 @@ Array [
       "mf": "(H+)-",
     },
     "mf": "C49H61N23O27P4",
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "em": 0,
       "ionization": "(H+)-",
     },
     "mw": 1528.0435997509564,
-    "parts": Array [
+    "parts": [
       "O-2P-1DgmpDgmpDcmpDampDgmpH",
     ],
     "sequence": "GGCAG",
     "unsaturation": 33,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 59,
       "H": 74,
       "N": 28,
@@ -336,8 +336,8 @@ Array [
     },
     "charge": 0,
     "em": 1920.3297081845299,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 0,
@@ -345,13 +345,13 @@ Array [
       "mf": "(H+)-",
     },
     "mf": "C59H74N28O35P6",
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "em": 0,
       "ionization": "(H+)-",
     },
     "mw": 1921.230467969649,
-    "parts": Array [
+    "parts": [
       "HODampDgmpDgmpDcmpDampDgmpH",
     ],
     "sequence": "AGGCAG",
@@ -361,9 +361,9 @@ Array [
 `;
 
 exports[`fromNucleicSequence HODamDamDamDamDamH 1`] = `
-Array [
-  Object {
-    "atoms": Object {
+[
+  {
+    "atoms": {
       "C": 12,
       "H": 17,
       "N": 5,
@@ -373,8 +373,8 @@ Array [
     "charge": 0,
     "comment": "y1",
     "em": 295.12805404834,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 0,
@@ -382,20 +382,20 @@ Array [
       "mf": "(H+)-",
     },
     "mf": "C12H17N5O4",
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "em": 0,
       "ionization": "(H+)-",
     },
     "mw": 295.29495933427324,
-    "parts": Array [
+    "parts": [
       "O-2P-1DamH",
     ],
     "sequence": "œ",
     "unsaturation": 7,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 24,
       "H": 33,
       "N": 10,
@@ -405,8 +405,8 @@ Array [
     "charge": 0,
     "comment": "y2",
     "em": 652.21187430201,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 0,
@@ -414,20 +414,20 @@ Array [
       "mf": "(H+)-",
     },
     "mf": "C24H33N10O10P",
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "em": 0,
       "ionization": "(H+)-",
     },
     "mw": 652.5545497615473,
-    "parts": Array [
+    "parts": [
       "O-2P-1DamDamH",
     ],
     "sequence": "œœ",
     "unsaturation": 14,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 36,
       "H": 49,
       "N": 15,
@@ -437,8 +437,8 @@ Array [
     "charge": 0,
     "comment": "y3",
     "em": 1009.2956945556799,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 0,
@@ -446,20 +446,20 @@ Array [
       "mf": "(H+)-",
     },
     "mf": "C36H49N15O16P2",
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "em": 0,
       "ionization": "(H+)-",
     },
     "mw": 1009.8141401888214,
-    "parts": Array [
+    "parts": [
       "O-2P-1DamDamDamH",
     ],
     "sequence": "œœœ",
     "unsaturation": 21,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 48,
       "H": 65,
       "N": 20,
@@ -469,8 +469,8 @@ Array [
     "charge": 0,
     "comment": "y4",
     "em": 1366.37951480935,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 0,
@@ -478,20 +478,20 @@ Array [
       "mf": "(H+)-",
     },
     "mf": "C48H65N20O22P3",
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "em": 0,
       "ionization": "(H+)-",
     },
     "mw": 1367.0737306160954,
-    "parts": Array [
+    "parts": [
       "O-2P-1DamDamDamDamH",
     ],
     "sequence": "œœœœ",
     "unsaturation": 28,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 60,
       "H": 82,
       "N": 25,
@@ -500,8 +500,8 @@ Array [
     },
     "charge": 0,
     "em": 1803.42966595238,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 0,
@@ -509,13 +509,13 @@ Array [
       "mf": "(H+)-",
     },
     "mf": "C60H82N25O31P5",
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "em": 0,
       "ionization": "(H+)-",
     },
     "mw": 1804.3132385688002,
-    "parts": Array [
+    "parts": [
       "HODamDamDamDamDamH",
     ],
     "sequence": "œœœœœ",
@@ -525,9 +525,9 @@ Array [
 `;
 
 exports[`fromNucleicSequence fromNucleicSequence ds-DNA 1`] = `
-Array [
-  Object {
-    "atoms": Object {
+[
+  {
+    "atoms": {
       "C": 10,
       "H": 13,
       "N": 2,
@@ -537,8 +537,8 @@ Array [
     "charge": 0,
     "comment": "cmp-a1",
     "em": 304.04603776326,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 1,
@@ -546,20 +546,20 @@ Array [
       "mf": "H+",
     },
     "mf": "C10H13N2O7P",
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 305.05331421558094,
       "ionization": "H+",
     },
     "mw": 304.1935916616171,
-    "parts": Array [
+    "parts": [
       "HODtmpO-1H-1",
     ],
     "sequence": "T",
     "unsaturation": 6,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 10,
       "H": 12,
       "N": 5,
@@ -569,8 +569,8 @@ Array [
     "charge": 0,
     "comment": "a1",
     "em": 313.05760550518,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 1,
@@ -578,20 +578,20 @@ Array [
       "mf": "H+",
     },
     "mf": "C10H12N5O5P",
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 314.0648819575009,
       "ionization": "H+",
     },
     "mw": 313.2069506932622,
-    "parts": Array [
+    "parts": [
       "HODampO-1H-1",
     ],
     "sequence": "A",
     "unsaturation": 8,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 10,
       "H": 13,
       "N": 2,
@@ -601,8 +601,8 @@ Array [
     "charge": 0,
     "comment": "cmp-a1",
     "em": 304.04603776326,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "Na": 1,
       },
       "charge": 1,
@@ -610,20 +610,20 @@ Array [
       "mf": "Na+",
     },
     "mf": "C10H13N2O7P",
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 327.0352584653509,
       "ionization": "Na+",
     },
     "mw": 304.1935916616171,
-    "parts": Array [
+    "parts": [
       "HODtmpO-1H-1",
     ],
     "sequence": "T",
     "unsaturation": 6,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 10,
       "H": 12,
       "N": 5,
@@ -633,8 +633,8 @@ Array [
     "charge": 0,
     "comment": "a1",
     "em": 313.05760550518,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "Na": 1,
       },
       "charge": 1,
@@ -642,20 +642,20 @@ Array [
       "mf": "Na+",
     },
     "mf": "C10H12N5O5P",
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 336.0468262072709,
       "ionization": "Na+",
     },
     "mw": 313.2069506932622,
-    "parts": Array [
+    "parts": [
       "HODampO-1H-1",
     ],
     "sequence": "A",
     "unsaturation": 8,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 20,
       "H": 26,
       "N": 4,
@@ -665,8 +665,8 @@ Array [
     "charge": 0,
     "comment": "cmp-a2",
     "em": 608.09207552652,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 1,
@@ -674,20 +674,20 @@ Array [
       "mf": "H+",
     },
     "mf": "C20H26N4O14P2",
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 609.099351978841,
       "ionization": "H+",
     },
     "mw": 608.3871833232342,
-    "parts": Array [
+    "parts": [
       "HODtmpDtmpO-1H-1",
     ],
     "sequence": "TT",
     "unsaturation": 11,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 20,
       "H": 24,
       "N": 10,
@@ -697,8 +697,8 @@ Array [
     "charge": 0,
     "comment": "a2",
     "em": 626.11521101036,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 1,
@@ -706,20 +706,20 @@ Array [
       "mf": "H+",
     },
     "mf": "C20H24N10O10P2",
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 627.122487462681,
       "ionization": "H+",
     },
     "mw": 626.4139013865243,
-    "parts": Array [
+    "parts": [
       "HODampDampO-1H-1",
     ],
     "sequence": "AA",
     "unsaturation": 15,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 20,
       "H": 26,
       "N": 4,
@@ -729,8 +729,8 @@ Array [
     "charge": 0,
     "comment": "cmp-a2",
     "em": 608.09207552652,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "Na": 1,
       },
       "charge": 1,
@@ -738,20 +738,20 @@ Array [
       "mf": "Na+",
     },
     "mf": "C20H26N4O14P2",
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 631.081296228611,
       "ionization": "Na+",
     },
     "mw": 608.3871833232342,
-    "parts": Array [
+    "parts": [
       "HODtmpDtmpO-1H-1",
     ],
     "sequence": "TT",
     "unsaturation": 11,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 20,
       "H": 24,
       "N": 10,
@@ -761,8 +761,8 @@ Array [
     "charge": 0,
     "comment": "a2",
     "em": 626.11521101036,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "Na": 1,
       },
       "charge": 1,
@@ -770,20 +770,20 @@ Array [
       "mf": "Na+",
     },
     "mf": "C20H24N10O10P2",
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 649.104431712451,
       "ionization": "Na+",
     },
     "mw": 626.4139013865243,
-    "parts": Array [
+    "parts": [
       "HODampDampO-1H-1",
     ],
     "sequence": "AA",
     "unsaturation": 15,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 30,
       "H": 41,
       "N": 6,
@@ -792,8 +792,8 @@ Array [
     },
     "charge": 0,
     "em": 930.14867797381,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 1,
@@ -801,20 +801,20 @@ Array [
       "mf": "H+",
     },
     "mf": "C30H41N6O22P3",
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 931.155954426131,
       "ionization": "H+",
     },
     "mw": 930.5960614172811,
-    "parts": Array [
+    "parts": [
       "HODtmpDtmpDtmpH",
     ],
     "sequence": "TTT",
     "unsaturation": 15,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 30,
       "H": 41,
       "N": 6,
@@ -823,8 +823,8 @@ Array [
     },
     "charge": 0,
     "em": 930.14867797381,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "Na": 1,
       },
       "charge": 1,
@@ -832,20 +832,20 @@ Array [
       "mf": "Na+",
     },
     "mf": "C30H41N6O22P3",
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 953.1378986759009,
       "ionization": "Na+",
     },
     "mw": 930.5960614172811,
-    "parts": Array [
+    "parts": [
       "HODtmpDtmpDtmpH",
     ],
     "sequence": "TTT",
     "unsaturation": 15,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 30,
       "H": 38,
       "N": 15,
@@ -854,8 +854,8 @@ Array [
     },
     "charge": 0,
     "em": 957.18338119957,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 1,
@@ -863,20 +863,20 @@ Array [
       "mf": "H+",
     },
     "mf": "C30H38N15O16P3",
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 958.190657651891,
       "ionization": "H+",
     },
     "mw": 957.6361385122163,
-    "parts": Array [
+    "parts": [
       "HODampDampDampH",
     ],
     "sequence": "AAA",
     "unsaturation": 21,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 30,
       "H": 38,
       "N": 15,
@@ -885,8 +885,8 @@ Array [
     },
     "charge": 0,
     "em": 957.18338119957,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "Na": 1,
       },
       "charge": 1,
@@ -894,13 +894,13 @@ Array [
       "mf": "Na+",
     },
     "mf": "C30H38N15O16P3",
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 980.172601901661,
       "ionization": "Na+",
     },
     "mw": 957.6361385122163,
-    "parts": Array [
+    "parts": [
       "HODampDampDampH",
     ],
     "sequence": "AAA",
