@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.11.2](https://github.com/cheminfo/mass-tools/compare/v5.11.1...v5.11.2) (2022-11-02)
+
+
+### Bug Fixes
+
+* **mf-from-google-sheet:** remove request library ([b2ceec4](https://github.com/cheminfo/mass-tools/commit/b2ceec4a5826a5ec86af42631ed3680eb6efcc45))
+
 ## [5.11.1](https://github.com/cheminfo/mass-tools/compare/v5.11.0...v5.11.1) (2022-10-24)
 
 
