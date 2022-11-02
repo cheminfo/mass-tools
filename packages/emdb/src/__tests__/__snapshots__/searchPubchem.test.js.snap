@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`searchPubchem simple case 1`] = `
-Array [
-  Object {
-    "atoms": Object {
+[
+  {
+    "atoms": {
       "C": 2,
       "H": 4,
       "N": 2,
@@ -11,11 +11,11 @@ Array [
     },
     "charge": 0,
     "em": 117.98497213462,
-    "info": Object {
+    "info": {
       "nbPubchemEntries": 7,
     },
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 2,
       },
       "charge": 2,
@@ -25,7 +25,7 @@ Array [
     "mass": 118.0141652294252,
     "mf": "C2H4N2P2",
     "monoisotopicMass": 117.98497213462,
-    "ms": Object {
+    "ms": {
       "charge": 2,
       "delta": 0.00023748036907278447,
       "em": 59.99976251963093,
@@ -34,8 +34,8 @@ Array [
     },
     "unsaturation": 3,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 1,
       "H": 2,
       "N": 1,
@@ -43,11 +43,11 @@ Array [
     },
     "charge": 0,
     "em": 58.99248606731,
-    "info": Object {
+    "info": {
       "nbPubchemEntries": 9,
     },
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 1,
@@ -57,7 +57,7 @@ Array [
     "mass": 59.0070826147126,
     "mf": "CH2NP",
     "monoisotopicMass": 58.99248606731,
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "delta": 0.00023748036907278447,
       "em": 59.99976251963093,
@@ -70,9 +70,9 @@ Array [
 `;
 
 exports[`searchPubchem simple case negative ionization 1`] = `
-Array [
-  Object {
-    "atoms": Object {
+[
+  {
+    "atoms": {
       "C": 2,
       "H": 6,
       "N": 2,
@@ -81,11 +81,11 @@ Array [
     },
     "charge": 0,
     "em": 122.01499861577999,
-    "info": Object {
+    "info": {
       "nbPubchemEntries": 69,
     },
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": -2,
       },
       "charge": -2,
@@ -95,7 +95,7 @@ Array [
     "mass": 122.14611999546037,
     "mf": "C2H6N2O2S",
     "monoisotopicMass": 122.01499861577999,
-    "ms": Object {
+    "ms": {
       "charge": -2,
       "delta": -0.00022285556906354032,
       "em": 60.00022285556906,
@@ -104,8 +104,8 @@ Array [
     },
     "unsaturation": 1,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 4,
       "Cl": 1,
       "H": 7,
@@ -113,11 +113,11 @@ Array [
     },
     "charge": 0,
     "em": 122.01345714675,
-    "info": Object {
+    "info": {
       "nbPubchemEntries": 155,
     },
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": -2,
       },
       "charge": -2,
@@ -127,7 +127,7 @@ Array [
     "mass": 122.55027629657599,
     "mf": "C4H7ClO2",
     "monoisotopicMass": 122.01345714675,
-    "ms": Object {
+    "ms": {
       "charge": -2,
       "delta": 0.0005478789459303357,
       "em": 59.99945212105407,
@@ -136,18 +136,18 @@ Array [
     },
     "unsaturation": 1,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 5,
       "H": 1,
     },
     "charge": 0,
     "em": 61.00782503223,
-    "info": Object {
+    "info": {
       "nbPubchemEntries": 9,
     },
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": -1,
       },
       "charge": -1,
@@ -157,7 +157,7 @@ Array [
     "mass": 61.061620237732015,
     "mf": "C5H",
     "monoisotopicMass": 61.00782503223,
-    "ms": Object {
+    "ms": {
       "charge": -1,
       "delta": -0.0005485799090720889,
       "em": 60.00054857990907,
@@ -170,18 +170,18 @@ Array [
 `;
 
 exports[`searchPubchem string containing more than 1 monoisotopic mass 1`] = `
-Array [
-  Object {
-    "atoms": Object {
+[
+  {
+    "atoms": {
       "C": 1,
     },
     "charge": 0,
     "em": 12,
-    "info": Object {
+    "info": {
       "nbPubchemEntries": 1,
     },
-    "ionization": Object {
-      "atoms": Object {},
+    "ionization": {
+      "atoms": {},
       "charge": 0,
       "em": 0,
       "mf": "",
@@ -189,7 +189,7 @@ Array [
     "mass": 12.010735896735248,
     "mf": "C",
     "monoisotopicMass": 12,
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "delta": NaN,
       "em": 0,
@@ -198,20 +198,20 @@ Array [
     },
     "unsaturation": 2,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 2,
     },
     "charge": 0,
     "em": 24,
-    "info": Object {
+    "info": {
       "nbPubchemEntries": 1,
     },
     "ionization": undefined,
     "mass": 24.021471793470496,
     "mf": "C2",
     "monoisotopicMass": 24,
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "delta": NaN,
       "em": 0,
@@ -220,20 +220,20 @@ Array [
     },
     "unsaturation": 3,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 3,
     },
     "charge": 0,
     "em": 36,
-    "info": Object {
+    "info": {
       "nbPubchemEntries": 2,
     },
     "ionization": undefined,
     "mass": 36.032207690205745,
     "mf": "C3",
     "monoisotopicMass": 36,
-    "ms": Object {
+    "ms": {
       "charge": 0,
       "delta": NaN,
       "em": 0,

@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools#readme",
   "devDependencies": {
-    "@types/jest": "^27.4.1",
+    "@types/jest": "^29.2.1",
     "benchmark": "^2.1.4",
     "chemcalc": "^3.4.1",
     "chemical-elements": "^1.2.1",
@@ -38,7 +38,7 @@
     "documentation": "^13.2.5",
     "eslint": "^8.11.0",
     "eslint-config-cheminfo": "^7.3.0",
-    "jest": "^27.5.1",
+    "jest": "^29.2.2",
     "jest-matcher-deep-close-to": "^3.0.2",
     "lerna": "^4.0.0",
     "prettier": "^2.6.1"

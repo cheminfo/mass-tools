@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test searchSimilarity should find one result with bad distribution 1`] = `
-Array [
-  Object {
-    "atoms": Object {
+[
+  {
+    "atoms": {
       "C": 10,
     },
     "charge": 0,
     "em": 120,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 3,
       },
       "charge": 3,
@@ -17,32 +17,32 @@ Array [
       "mf": "(H+)3",
     },
     "mf": "C10",
-    "ms": Object {
+    "ms": {
       "charge": 3,
       "em": 41.00727645232093,
       "ionization": "(H+)3",
-      "similarity": Object {
-        "difference": Array [
-          Array [
+      "similarity": {
+        "difference": [
+          [
             41.00727645232093,
             41.341731161256995,
             41.676186546352326,
           ],
-          Array [
+          [
             0.011646827156351125,
             0.09741601219811298,
             0.004759776692041084,
           ],
         ],
-        "experimental": Array [
-          Array [
+        "experimental": [
+          [
             41,
           ],
-          Array [
+          [
             1,
           ],
         ],
-        "experimentalInfo": Object {
+        "experimentalInfo": {
           "from": 40.840609785654266,
           "max": 0.5,
           "min": 0.5,
@@ -50,44 +50,44 @@ Array [
           "to": 41.840609785654266,
         },
         "quantity": 0.5,
-        "theoretical": Array [
-          Array [
+        "theoretical": [
+          [
             41.00727645232093,
             41.341731161256995,
             41.676186546352326,
           ],
-          Array [
+          [
             0.8978242111098459,
             0.09741601219811298,
             0.004759776692041084,
           ],
         ],
-        "thereoticalInfo": Object {
+        "thereoticalInfo": {
           "max": 0.8976979854295873,
           "min": 0.004759107511990694,
           "sum": 0.9998594093602103,
         },
         "value": 0.8861773839534948,
-        "width": Object {
+        "width": {
           "bottom": 0.05,
           "top": 0.01,
         },
       },
     },
     "mw": 120.10735896735248,
-    "parts": Array [
+    "parts": [
       "C10",
     ],
     "unsaturation": 11,
   },
-  Object {
-    "atoms": Object {
+  {
+    "atoms": {
       "C": 10,
     },
     "charge": 0,
     "em": 120,
-    "ionization": Object {
-      "atoms": Object {
+    "ionization": {
+      "atoms": {
         "H": 1,
       },
       "charge": 1,
@@ -95,32 +95,32 @@ Array [
       "mf": "H+",
     },
     "mf": "C10",
-    "ms": Object {
+    "ms": {
       "charge": 1,
       "em": 121.00727645232094,
       "ionization": "H+",
-      "similarity": Object {
-        "difference": Array [
-          Array [
+      "similarity": {
+        "difference": [
+          [
             121.00727645232094,
             122.01063439121715,
             123.01399301090913,
           ],
-          Array [
+          [
             0.01185238253244636,
             0.09723174483189419,
             0.004738488682519898,
           ],
         ],
-        "experimental": Array [
-          Array [
+        "experimental": [
+          [
             121,
           ],
-          Array [
+          [
             1,
           ],
         ],
-        "experimentalInfo": Object {
+        "experimentalInfo": {
           "from": 120.50727645232094,
           "max": 0.5,
           "min": 0.5,
@@ -128,32 +128,32 @@ Array [
           "to": 123.50727645232094,
         },
         "quantity": 0.5,
-        "theoretical": Array [
-          Array [
+        "theoretical": [
+          [
             121.00727645232094,
             122.01063439121715,
             123.01399301090913,
           ],
-          Array [
+          [
             0.8980297664855859,
             0.09723174483189419,
             0.004738488682519898,
           ],
         ],
-        "thereoticalInfo": Object {
+        "thereoticalInfo": {
           "max": 0.8979044915878657,
           "min": 0.004737827664692645,
           "sum": 0.9998605002836259,
         },
         "value": 0.8861773839531395,
-        "width": Object {
+        "width": {
           "bottom": 0.05,
           "top": 0.01,
         },
       },
     },
     "mw": 120.10735896735248,
-    "parts": Array [
+    "parts": [
       "C10",
     ],
     "unsaturation": 11,
