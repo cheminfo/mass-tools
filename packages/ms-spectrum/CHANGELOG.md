@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.15](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.6.14...ms-spectrum@1.6.15) (2022-11-02)
+
+
+### Bug Fixes
+
+* **mf-from-google-sheet:** remove request library ([b2ceec4](https://github.com/cheminfo/mass-tools/commit/b2ceec4a5826a5ec86af42631ed3680eb6efcc45))
+
+
+
+
+
 ## [1.6.14](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@1.6.13...ms-spectrum@1.6.14) (2022-10-24)
 
 **Note:** Version bump only for package ms-spectrum

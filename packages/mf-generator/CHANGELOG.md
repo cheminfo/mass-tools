@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.27](https://github.com/cheminfo/mass-tools/compare/mf-generator@1.3.26...mf-generator@1.3.27) (2022-11-02)
+
+
+### Bug Fixes
+
+* **mf-from-google-sheet:** remove request library ([b2ceec4](https://github.com/cheminfo/mass-tools/commit/b2ceec4a5826a5ec86af42631ed3680eb6efcc45))
+
+
+
+
+
 ## [1.3.26](https://github.com/cheminfo/mass-tools/compare/mf-generator@1.3.25...mf-generator@1.3.26) (2022-10-24)
 
 **Note:** Version bump only for package mf-generator

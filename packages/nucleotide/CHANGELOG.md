@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.24](https://github.com/cheminfo/mass-tools/compare/nucleotide@1.2.23...nucleotide@1.2.24) (2022-11-02)
+
+
+### Bug Fixes
+
+* **mf-from-google-sheet:** remove request library ([b2ceec4](https://github.com/cheminfo/mass-tools/commit/b2ceec4a5826a5ec86af42631ed3680eb6efcc45))
+
+
+
+
+
 ## [1.2.23](https://github.com/cheminfo/mass-tools/compare/nucleotide@1.2.22...nucleotide@1.2.23) (2022-10-19)
 
 **Note:** Version bump only for package nucleotide
