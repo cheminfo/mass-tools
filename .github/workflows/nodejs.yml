@@ -14,3 +14,4 @@ jobs:
       npm-setup-command: |
         npm install
         npm run bootstrap
+      node-version-matrix: '[16, 18]'

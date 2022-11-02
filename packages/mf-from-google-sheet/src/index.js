@@ -3,8 +3,7 @@
 let generateMFs = require('mf-generator');
 let MF = require('mf-parser/src/MF');
 let Papa = require('papaparse');
-
-const fetchText = require('./util/fetchText');
+const fetchText = require('./util/fetchText.js');
 
 async function mfFromGoogleSheet(url, options = {}) {
   let { urlReferences } = options;
