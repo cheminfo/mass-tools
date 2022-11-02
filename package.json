@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools#readme",
   "devDependencies": {
-    "@types/jest": "^27.4.1",
+    "@types/jest": "^29.2.1",
     "benchmark": "^2.1.4",
     "chemcalc": "^3.4.1",
     "chemical-elements": "^1.2.1",
