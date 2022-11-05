@@ -2,9 +2,11 @@
   "name": "emdb",
   "version": "1.13.2",
   "description": "Database manager for exact mass query",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "module": "src/index.js",
   "files": [
-    "src"
+    "src",
+    "lib"
   ],
   "repository": {
     "type": "git",

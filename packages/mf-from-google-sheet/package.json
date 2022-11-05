@@ -2,9 +2,11 @@
   "name": "mf-from-google-sheet",
   "version": "1.1.39",
   "description": "Retrieve and format molecular formula from google sheet",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "module": "src/index.js",
   "files": [
-    "src"
+    "src",
+    "lib"
   ],
   "repository": {
     "type": "git",

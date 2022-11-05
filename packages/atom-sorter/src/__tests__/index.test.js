@@ -1,6 +1,4 @@
-'use strict';
-
-const atomSorter = require('..');
+import atomSorter from '..';
 
 test('atom-sorter test', () => {
   expect(atomSorter('C', 'C')).toBe(0);

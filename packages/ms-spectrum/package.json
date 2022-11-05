@@ -2,9 +2,11 @@
   "name": "ms-spectrum",
   "version": "1.6.15",
   "description": "A mass spectrum",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "module": "src/index.js",
   "files": [
-    "src"
+    "src",
+    "lib"
   ],
   "repository": {
     "type": "git",

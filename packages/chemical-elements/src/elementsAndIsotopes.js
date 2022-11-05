@@ -1,3 +1,3 @@
-'use strict';
+import originalElements from './elements.json';
 
-module.exports = require('./elements.json');
+export const elementsAndIsotopes = originalElements;

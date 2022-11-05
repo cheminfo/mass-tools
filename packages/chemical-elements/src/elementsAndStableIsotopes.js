@@ -1,9 +1,9 @@
-'use strict';
+import originalElements from './elements.json';
 
-const elements = JSON.parse(JSON.stringify(require('./elements.json')));
+export const elementsAndStableIsotopes = JSON.parse(
+  JSON.stringify(originalElements),
+);
 
-elements.forEach((element) => {
+elementsAndStableIsotopes.forEach((element) => {
   element.isotopes = element.isotopes.filter((i) => i.abundance > 0);
 });
-
-module.exports = elements;

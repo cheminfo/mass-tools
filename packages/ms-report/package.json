@@ -5,9 +5,11 @@
   },
   "version": "1.4.6",
   "description": "Generate report for mass analysis",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "module": "src/index.js",
   "files": [
-    "src"
+    "src",
+    "lib"
   ],
   "repository": {
     "type": "git",

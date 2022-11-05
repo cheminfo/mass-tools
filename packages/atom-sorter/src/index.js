@@ -1,6 +1,4 @@
-'use strict';
-
-function atomSorter(a, b) {
+export default function atomSorter(a, b) {
   if (a === b) return 0;
   if (a === 'C') return -1;
   if (b === 'C') return 1;
@@ -9,5 +7,3 @@ function atomSorter(a, b) {
   if (a < b) return -1;
   return 1;
 }
-
-module.exports = atomSorter;

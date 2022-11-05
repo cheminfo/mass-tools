@@ -2,20 +2,24 @@
   "name": "mass-tools",
   "private": true,
   "version": "5.11.2",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "module": "src/index.js",
   "files": [
-    "src"
+    "src",
+    "lib"
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap --no-ci",
-    "postinstall": "cp README.md packages/mass-tools/README.md",
     "build": "cheminfo-build --out-name mass-tools --entry packages/mass-tools/src/index.js -r MassTools",
     "build-docs": "ls packages | xargs -I % sh -c 'cd packages/%; documentation build src/index.js -f html -o ../../docs/%; cd ../..'",
+    "build-lerna": "npm run build-lerna-clean && lerna exec -- rollup -c ../../rollup.config.js",
+    "build-lerna-clean": "rimraf ./packages/*/lib/",
     "eslint": "eslint packages --cache",
     "eslint-fix": "npm run eslint -- --fix",
+    "postinstall": "cp README.md packages/mass-tools/README.md",
     "prettier": "prettier --check .",
     "prettier-write": "prettier --write .",
-    "publish": "lerna publish -y --no-verify-access",
+    "publish": "run build-lerna && npm run test && lerna publish -y --no-verify-access",
     "test": "npm run test-only && npm run eslint",
     "test-only": "jest --coverage"
   },
@@ -30,6 +34,7 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.19.6",
     "@types/jest": "^29.2.1",
     "benchmark": "^2.1.4",
     "chemcalc": "^3.4.1",

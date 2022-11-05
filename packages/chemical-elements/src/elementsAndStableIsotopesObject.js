@@ -1,10 +1,6 @@
-'use strict';
+import { elementsAndStableIsotopes } from './elementsAndStableIsotopes.js';
 
-const elementsAndStableIsotopes = require('./elementsAndStableIsotopes.js');
-
-let elementsAndStableIsotopesObject = {};
+export const elementsAndStableIsotopesObject = {};
 elementsAndStableIsotopes.forEach((element) => {
   elementsAndStableIsotopesObject[element.symbol] = element;
 });
-
-module.exports = elementsAndStableIsotopesObject;

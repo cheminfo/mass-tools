@@ -1,6 +1,4 @@
-'use strict';
-
-const stableIsotopesObject = require('../stableIsotopesObject');
+const { stableIsotopesObject } = require('../stableIsotopesObject');
 
 test('stableIsotopesObject', () => {
   const data = stableIsotopesObject;

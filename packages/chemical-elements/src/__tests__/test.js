@@ -1,5 +1,3 @@
-'use strict';
-
 let data = require('..');
 
 describe('chemical-lements', () => {
