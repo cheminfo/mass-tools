@@ -1,19 +1,17 @@
-'use strict';
+import {atomSorter} from 'atom-sorter'
+import {groupsObject} from 'chemical-groups'
 
-const atomSorter = require('atom-sorter');
-const groups = require('chemical-groups/src/groupsObject.js');
-
-const Kind = require('../Kind');
+import {Kind} from '../Kind'
 
 /**
  *
  * @param {*} lines
  * @param {object} [options={}]
- * @param {boolean} [options.expand=true] - Should we expand the groups
+ * @param {boolean} [options.expand=true] - Should we expand the groupsObject
  */
 
-module.exports = function toParts(lines, options = {}) {
-  const { expand: shouldExpandGroups = true } = options;
+export function toParts(lines, options = {}) {
+  const { expand: shouldExpandgroupsObject = true } = options;
   let parts = [];
   let currentPart = createNewPart();
   let previousKind = Kind.BEGIN;
@@ -55,7 +53,7 @@ module.exports = function toParts(lines, options = {}) {
     previousKind = line.kind;
   }
   globalPartMultiplier(currentPart);
-  if (shouldExpandGroups) expandGroups(parts);
+  if (shouldExpandgroupsObject) expandgroupsObject(parts);
   return combineAtomsIsotopesCharges(parts);
 };
 
@@ -115,13 +113,13 @@ function postMultiplier(currentPart, value, previousKind) {
   }
 }
 
-function expandGroups(parts) {
+function expandgroupsObject(parts) {
   for (let part of parts) {
     let expanded = false;
     for (let i = 0; i < part.lines.length; i++) {
       let line = part.lines[i];
       if (line.kind === Kind.ATOM) {
-        let group = groups[line.value];
+        let group = groupsObject[line.value];
 
         if (group) {
           expanded = true;
@@ -228,3 +226,4 @@ function stringComparator(a, b) {
   if (a > b) return 1;
   return 0;
 }
+module.exports =

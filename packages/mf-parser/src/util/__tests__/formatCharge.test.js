@@ -1,6 +1,4 @@
-'use strict';
-
-const formatCharge = require('../formatCharge');
+import { formatCharge } from '../formatCharge';
 
 test('formatCharge', () => {
   expect(formatCharge(-2)).toBe('-2');

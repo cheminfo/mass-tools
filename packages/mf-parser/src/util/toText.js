@@ -1,8 +1,6 @@
-'use strict';
+import { Format } from '../Format';
 
-const Format = require('../Format');
-
-const { superscript, subscript } = require('./subSuperscript');
+import { superscript, subscript } from './subSuperscript';
 
 module.exports = function toText(lines) {
   let text = [];

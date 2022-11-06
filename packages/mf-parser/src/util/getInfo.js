@@ -1,5 +1,3 @@
-'use strict';
-
 const { ELECTRON_MASS } = require('chemical-elements/src/constants');
 const elements = require('chemical-elements/src/elementsAndIsotopesObject.js');
 const unsaturations = require('chemical-elements/src/unsaturationsObject.js');

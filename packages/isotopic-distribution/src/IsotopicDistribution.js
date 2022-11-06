@@ -1,7 +1,6 @@
-'use strict';
+import { ELECTRON_MASS } from 'chemical-elements';
+import { MF } from 'mf-parser';
 
-const ELECTRON_MASS = require('chemical-elements').ELECTRON_MASS;
-const MF = require('mf-parser').MF;
 const getMsInfo = require('mf-utilities/src/getMsInfo');
 const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
 const SpectrumGenerator = require('spectrum-generator').SpectrumGenerator;
@@ -18,7 +17,7 @@ const MINIMAL_FWHM = 1e-8;
  * @property {Array<number>} y - The y array
  */
 
-class IsotopicDistribution {
+export class IsotopicDistribution {
   /**
    * Class that manage isotopic distribution
    * @param {string|array} value - Molecular formula or an array of parts
@@ -336,5 +335,3 @@ class IsotopicDistribution {
     return spectrum;
   }
 }
-
-module.exports = IsotopicDistribution;

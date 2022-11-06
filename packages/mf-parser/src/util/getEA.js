@@ -1,9 +1,7 @@
-'use strict';
-
 const elements = require('chemical-elements').elementsObject;
 const groups = require('chemical-groups/src/groupsObject.js');
 
-const Kind = require('../Kind');
+import Kind from '../Kind')
 
 const getIsotopeRatioInfo = require('./getIsotopeRatioInfo');
 const isotopes = require('./getIsotopesObject');

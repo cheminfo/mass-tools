@@ -1,13 +1,11 @@
-'use strict';
-
-module.exports = function multiply(b, options = {}) {
+export function multiply(a, b, options = {}) {
   const { minY = 1e-8, maxLines = 5000, deltaX = 1e-2 } = options;
-  const result = new this.constructor();
+  const result = new a.constructor();
 
-  this.sortY();
+  a.sortY();
   b.sortY();
 
-  for (let entryA of this.array) {
+  for (let entryA of a.array) {
     for (let entryB of b.array) {
       let y = entryA.y * entryB.y;
       if (y > minY) {
@@ -26,9 +24,9 @@ module.exports = function multiply(b, options = {}) {
   }
   result.joinX(deltaX);
   result.topY(maxLines);
-  this.move(result);
-  return this;
-};
+  a.move(result);
+  return a;
+}
 
 function calculateComposition(entryA, entryB) {
   if (!entryA.composition || !entryB.composition) return;

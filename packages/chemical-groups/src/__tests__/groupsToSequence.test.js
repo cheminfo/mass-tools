@@ -1,6 +1,4 @@
-'use strict';
-
-let groupsToSequence = require('../groupsToSequence');
+import { groupsToSequence } from '../groupsToSequence';
 
 test('groupsToSequence', () => {
   expect(groupsToSequence('HOAlaGlyOH')).toBe('AG');

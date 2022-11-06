@@ -1,13 +1,11 @@
-'use strict';
-
-const groupsObject = require('./groupsObject.js');
+import { groupsObject } from './groupsObject.js';
 
 /**
  * Recreate a one letter sequence
- * @param {} mf
+ * @param {object} mf
  */
 
-function groupsToSequence(mf) {
+export function groupsToSequence(mf) {
   mf = mf.replace(/\([^(]*\)/g, '');
   let parts = mf.split(/(?=[A-Z ])/);
   let usefulParts = [];
@@ -25,5 +23,3 @@ function groupsToSequence(mf) {
   }
   return usefulParts.join('').replace(/ +/g, ' ').trim();
 }
-
-module.exports = groupsToSequence;

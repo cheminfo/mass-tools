@@ -1,5 +1,3 @@
-'use strict';
-
 let MF = require('../MF');
 
 test('getIsotopesInfo from C{50,50}[13C]H2', () => {

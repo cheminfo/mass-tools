@@ -1,7 +1,5 @@
-'use strict';
-
-const Kind = require('./Kind');
-const parseCharge = require('./util/parseCharge');
+import Kind from './Kind';
+import parseCharge from './util/parseCharge';
 
 /**
  * Parse a mf to an array of kind / value

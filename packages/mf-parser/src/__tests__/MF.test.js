@@ -1,5 +1,3 @@
-'use strict';
-
 const MF = require('../MF');
 
 describe('MF', () => {

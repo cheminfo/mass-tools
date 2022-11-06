@@ -1,6 +1,4 @@
-'use strict';
-
-const ensureCase = require('../ensureCase');
+import ensureCase from '../ensureCase';
 
 test('ensureCase', () => {
   expect(ensureCase('ch3cooh')).toBe('CH3COOH');

@@ -1,6 +1,4 @@
-'use strict';
-
-const Kind = require('../Kind');
+import { Kind } from '../Kind';
 
 const toDisplay = require('./toDisplay');
 /**

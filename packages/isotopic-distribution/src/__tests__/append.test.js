@@ -1,5 +1,3 @@
-'use strict';
-
 const Distribution = require('../Distribution.js');
 
 describe('test distribution append', () => {

@@ -1,16 +1,14 @@
-'use strict';
-
-const Format = require('../Format');
-const Kind = require('../Kind');
+import { Format } from '../Format';
+import { Kind } from '../Kind';
 
 const formatCharge = require('./formatCharge');
 
 /**
  * Converts an array of mf elements to an array of formatting information
- * @param {Array<Object>} result of the parse method
+ * @param {object[]} lines of the parse method
  */
 
-module.exports = function convertForDisplay(lines) {
+export function convertForDisplay(lines) {
   let results = [];
   let result = {};
   for (let line of lines) {
@@ -101,3 +99,4 @@ module.exports = function convertForDisplay(lines) {
   }
   return results;
 };
+module.exports =

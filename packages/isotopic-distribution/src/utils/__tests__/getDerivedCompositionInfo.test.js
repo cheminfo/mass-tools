@@ -1,5 +1,3 @@
-'use strict';
-
 const getDerivedCompositionInfo = require('../getDerivedCompositionInfo');
 
 test('getDerivedCompositionInfo', () => {

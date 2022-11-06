@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function closestPointX(target) {
+export function closestPointX(target) {
   this.sortX();
 
   let low = 0;
@@ -29,4 +27,4 @@ module.exports = function closestPointX(target) {
   } else {
     return this.array[low];
   }
-};
+}

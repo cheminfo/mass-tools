@@ -1,7 +1,7 @@
-'use strict';
+import { elementsObject } from 'chemical-elements';
+import { getGroupsObject } from 'chemical-groups';
 
-const elements = require('chemical-elements').elementsObject;
-const groups = require('chemical-groups').getGroupsObject();
+const groups = getGroupsObject();
 
 const isMF = require('../../../mf-utilities/src/isMF');
 
@@ -9,7 +9,7 @@ const isMF = require('../../../mf-utilities/src/isMF');
  * Try to capitalize a molecular formula based on what end users 'would' expect
  */
 
-module.exports = function capitalizeMF(mf) {
+export function capitalizeMF(mf) {
   if (!mf.match(/^[0-9a-zA-Z ]+/)) return mf;
   if (isMF(mf)) return mf;
   let oldMF = mf
@@ -34,17 +34,17 @@ module.exports = function capitalizeMF(mf) {
     }
   }
   return newMF;
-};
+}
 
 function getCasedLabel(label) {
-  if (elements[label]) return label;
+  if (elementsObject[label]) return label;
   if (groups[label]) return label;
 
   if (label === '') return label;
 
   let casedLabel =
     label.substr(0, 1).toUpperCase() + label.substr(1).toLowerCase();
-  if (elements[label]) return casedLabel;
+  if (elementsObject[label]) return casedLabel;
   if (groups[label]) return casedLabel;
 
   // we would like to cover chcl3, ch2o, ch2cl2, ccl4

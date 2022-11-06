@@ -1,13 +1,11 @@
-'use strict';
+import { parseCharge } from '../parseCharge';
 
-const getCharge = require('../parseCharge');
-
-test('getCharge', () => {
-  expect(getCharge('---')).toBe(-3);
-  expect(getCharge('+++')).toBe(3);
-  expect(getCharge('---++')).toBe(-1);
-  expect(getCharge('(-3)')).toBe(-3);
-  expect(getCharge('(+1)')).toBe(1);
-  expect(getCharge('(---)')).toBe(-3);
-  expect(getCharge('(++)')).toBe(2);
+test('parseCharge', () => {
+  expect(parseCharge('---')).toBe(-3);
+  expect(parseCharge('+++')).toBe(3);
+  expect(parseCharge('---++')).toBe(-1);
+  expect(parseCharge('(-3)')).toBe(-3);
+  expect(parseCharge('(+1)')).toBe(1);
+  expect(parseCharge('(---)')).toBe(-3);
+  expect(parseCharge('(++)')).toBe(2);
 });

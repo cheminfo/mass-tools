@@ -1,18 +1,13 @@
-'use strict';
+import { groups } from './groups.js';
 
-const groups = require('./groups.js');
-const groupsToSequence = require('./groupsToSequence');
+export * from './groups.js';
 
-function getGroupsObject() {
+export { groupsToSequence } from './groupsToSequence';
+
+export function getGroupsObject() {
   let object = {};
   groups.forEach((e) => {
     object[e.symbol] = e;
   });
   return object;
 }
-
-module.exports = {
-  groups,
-  getGroupsObject,
-  groupsToSequence,
-};

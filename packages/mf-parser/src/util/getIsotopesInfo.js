@@ -1,5 +1,3 @@
-'use strict';
-
 const elements = require('chemical-elements/src/elementsAndStableIsotopesObject.js');
 
 const Kind = require('../Kind');

@@ -1,5 +1,3 @@
-'use strict';
-
 const parse = require('./parse');
 const { subscript, superscript } = require('./util/subSuperscript');
 const toDisplay = require('./util/toDisplay');

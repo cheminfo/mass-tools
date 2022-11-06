@@ -1,5 +1,3 @@
-'use strict';
-
 const toDisplay = require('../toDisplay');
 
 let tests = [

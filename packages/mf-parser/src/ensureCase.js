@@ -1,5 +1,3 @@
-'use strict';
-
 const elements = Object.keys(
   require('chemical-elements/src/elementsAndStableIsotopesObject.js'),
 ).sort((a, b) => b.length - a.length);

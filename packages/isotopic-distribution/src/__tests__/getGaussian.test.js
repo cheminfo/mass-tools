@@ -1,5 +1,3 @@
-'use strict';
-
 const IsotopicDistribution = require('../IsotopicDistribution.js');
 
 describe('test isotopicDistribution', () => {

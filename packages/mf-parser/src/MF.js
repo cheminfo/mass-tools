@@ -1,5 +1,3 @@
-'use strict';
-
 const ensureCase = require('./ensureCase');
 const parse = require('./parse');
 const getEA = require('./util/getEA');
@@ -13,7 +11,7 @@ const toHtml = require('./util/toHtml');
 const toParts = require('./util/toParts');
 const toText = require('./util/toText');
 
-class MF {
+export class MF {
   constructor(mf, options = {}) {
     if (options.ensureCase) {
       mf = ensureCase(mf);
@@ -132,5 +130,3 @@ class MF {
     this.cache.html = undefined;
   }
 }
-
-module.exports = MF;

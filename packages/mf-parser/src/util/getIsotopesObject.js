@@ -1,5 +1,3 @@
-'use strict';
-
 const elements = require('chemical-elements/src/elementsAndIsotopesObject.js');
 
 const isotopes = {};

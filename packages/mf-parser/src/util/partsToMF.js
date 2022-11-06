@@ -1,6 +1,4 @@
-'use strict';
-
-const partToMF = require('./partToMF');
+import { partToMF } from './partToMF';
 
 module.exports = function partsToMF(parts, options) {
   let mf = [];

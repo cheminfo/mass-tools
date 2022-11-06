@@ -1,5 +1,3 @@
-'use strict';
-
 const elements = require('chemical-elements').elementsAndStableIsotopesObject;
 
 function getIsotopeRatioInfo(value) {

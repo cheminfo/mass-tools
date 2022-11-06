@@ -1,6 +1,4 @@
-'use strict';
-
-const superscript = {
+export const superscript = {
   0: '⁰',
   1: '¹',
   2: '²',
@@ -21,7 +19,7 @@ const superscript = {
   ',': '˙',
 };
 
-const subscript = {
+export const subscript = {
   0: '₀',
   1: '₁',
   2: '₂',
@@ -38,9 +36,4 @@ const subscript = {
   '}': '₎',
   '.': ' ',
   ',': ' ',
-};
-
-module.exports = {
-  superscript,
-  subscript,
 };

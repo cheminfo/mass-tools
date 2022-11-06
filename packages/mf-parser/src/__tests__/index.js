@@ -1,5 +1,3 @@
-'use strict';
-
 let MFParser = require('../index');
 
 test('parseToHtml', () => {

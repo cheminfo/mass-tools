@@ -1,12 +1,10 @@
-'use strict';
-
 /**
  * Parse a string to extract the charge
  * The charge may be in the form --, +++, +3, -2, 4+, 2-
  * @param {*} charge
  */
 
-module.exports = function parseCharge(charge) {
+export function parseCharge(charge) {
   charge = charge.replace(/[()]/g, '');
   let chargeNumber = 0;
   if (charge.match(/^[+-]+$/)) {
@@ -22,4 +20,4 @@ module.exports = function parseCharge(charge) {
     chargeNumber = Number(charge);
   }
   return chargeNumber;
-};
+}
