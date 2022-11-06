@@ -1,5 +1,5 @@
-const parse = require('../../parse');
-const toParts = require('../toParts');
+import { parse } from '../../parse';
+import { toParts } from '../toParts';
 
 let tests = [
   { mf: 'C', result: [[{ kind: 'atom', value: 'C', multiplier: 1 }]] },

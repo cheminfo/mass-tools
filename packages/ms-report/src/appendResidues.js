@@ -1,8 +1,6 @@
-'use strict';
-
-const Nucleotide = require('nucleotide');
-const Peptide = require('peptide');
-const groups = require('chemical-groups').getGroupsObject();
+import { groupsObject } from 'chemical-groups';
+import Nucleotide from 'nucleotide';
+import Peptide from 'peptide';
 
 const ALTERNATIVES = ['', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'];
 const SYMBOLS = ['Θ', 'Δ', 'Λ', 'Φ', 'Ω', 'Γ', 'Χ'];
@@ -114,8 +112,8 @@ module.exports = function appendResidues(data, sequence, options = {}) {
     if (label.includes('(')) {
       getModifiedReplacement(label, residue, alternatives, replacements);
     } else {
-      if (groups[label] && groups[label].oneLetter) {
-        residue.label = groups[label].oneLetter;
+      if (groupsObject[label] && groupsObject[label].oneLetter) {
+        residue.label = groupsObject[label].oneLetter;
       } else {
         getUnknownReplacement(label, residue, replacements);
       }
@@ -181,8 +179,11 @@ function getModifiedReplacement(
       modifiedResidue.substring(position),
     );
 
-    if (groups[residueCode] && groups[residueCode].alternativeOneLetter) {
-      let alternativeOneLetter = groups[residueCode].alternativeOneLetter;
+    if (
+      groupsObject[residueCode] &&
+      groupsObject[residueCode].alternativeOneLetter
+    ) {
+      let alternativeOneLetter = groupsObject[residueCode].alternativeOneLetter;
 
       if (!alternatives[alternativeOneLetter]) {
         alternatives[alternativeOneLetter] = { count: 1 };

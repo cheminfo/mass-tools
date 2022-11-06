@@ -1,7 +1,7 @@
-import originalElements from './elements.json';
+import { elementsAndIsotopes } from './elementsAndIsotopes.js';
 
 export const elementsAndStableIsotopes = JSON.parse(
-  JSON.stringify(originalElements),
+  JSON.stringify(elementsAndIsotopes),
 );
 
 elementsAndStableIsotopes.forEach((element) => {

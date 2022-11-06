@@ -2,7 +2,7 @@ import { Format } from '../Format';
 
 import { superscript, subscript } from './subSuperscript';
 
-module.exports = function toText(lines) {
+export function toText(lines) {
   let text = [];
   for (let line of lines) {
     switch (line.kind) {
@@ -57,4 +57,4 @@ module.exports = function toText(lines) {
     }
   }
   return text.join('');
-};
+}

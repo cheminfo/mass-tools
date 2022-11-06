@@ -1,6 +1,4 @@
-'use strict';
-
-const getMsem = require('./getMsem');
+import { getMsem } from './getMsem';
 
 /**
  * Returns an object containing:
@@ -8,7 +6,7 @@ const getMsem = require('./getMsem');
  * We return the ionization in order to know which one has been selected
  */
 
-module.exports = function getMsInfo(entry, options = {}) {
+export function getMsInfo(entry, options = {}) {
   const {
     allowNeutralMolecules,
     ionization = { mf: '', em: 0, charge: 0 },
@@ -39,4 +37,4 @@ module.exports = function getMsInfo(entry, options = {}) {
     ms,
     ionization: realIonization,
   };
-};
+}

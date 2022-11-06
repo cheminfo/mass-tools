@@ -1,7 +1,7 @@
-import elements from './elements.json';
+import { elementsAndIsotopes } from './elementsAndIsotopes.js';
 
 export const stableIsotopesObject = {};
-for (const element of elements) {
+for (const element of elementsAndIsotopes) {
   let abundance = 0;
   let mostAbundant = 0;
   for (const isotope of element.isotopes) {

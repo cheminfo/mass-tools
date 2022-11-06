@@ -1,14 +1,14 @@
 import { Format } from '../Format';
 import { Kind } from '../Kind';
 
-const formatCharge = require('./formatCharge');
+import { formatCharge } from './formatCharge.js';
 
 /**
  * Converts an array of mf elements to an array of formatting information
  * @param {object[]} lines of the parse method
  */
 
-export function convertForDisplay(lines) {
+export function toDisplay(lines) {
   let results = [];
   let result = {};
   for (let line of lines) {
@@ -98,5 +98,4 @@ export function convertForDisplay(lines) {
     }
   }
   return results;
-};
-module.exports =
+}

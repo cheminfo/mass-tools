@@ -1,6 +1,6 @@
-import elements from './elements.json';
+import { elementsAndIsotopes } from './elementsAndIsotopes.js';
 
 export const elementsAndIsotopesObject = {};
-elements.forEach((element) => {
+elementsAndIsotopes.forEach((element) => {
   elementsAndIsotopesObject[element.symbol] = element;
 });

@@ -1,6 +1,6 @@
-import originalElements from './elements.json';
+import { elementsAndIsotopes } from './elementsAndIsotopes.js';
 
-export const elements = originalElements.map((element) => ({
+export const elements = elementsAndIsotopes.map((element) => ({
   number: element.number,
   symbol: element.symbol,
   mass: element.mass,

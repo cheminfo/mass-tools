@@ -1,11 +1,10 @@
-import { getGroupsObject, groups } from '..';
+import { groupsObject, groups } from '..';
 
 test('data size', () => {
   expect(groups.length).toBeGreaterThan(200);
 });
 
-test('getGroupsObject', () => {
-  let groupsObject = getGroupsObject();
+test('groupsObject', () => {
   expect(groupsObject.Ala).toStrictEqual({
     elements: [
       { number: 3, symbol: 'C' },

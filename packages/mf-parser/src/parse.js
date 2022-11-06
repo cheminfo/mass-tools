@@ -1,14 +1,14 @@
-import Kind from './Kind';
-import parseCharge from './util/parseCharge';
+import { Kind } from './Kind';
+import { parseCharge } from './util/parseCharge';
 
 /**
  * Parse a mf to an array of kind / value
  * @param {String} mf
  */
 
-module.exports = function parse(mf) {
+export function parse(mf) {
   return new MFParser().parse(mf);
-};
+}
 
 class MFParser {
   parse(mf = '') {

@@ -1,6 +1,4 @@
-'use strict';
-
-const processRange = require('../processRange');
+import { processRange } from '../processRange';
 
 const tests = [
   ['C1-3', ['C', 'C2', 'C3']],

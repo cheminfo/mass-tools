@@ -1,6 +1,4 @@
-'use strict';
-
-function processRange(string, comment, options = {}) {
+export function processRange(string, comment, options = {}) {
   const { limit } = options;
   let results = [];
   let parts = string.split(/(-?[0-9]+--?[0-9]+)/).filter((v) => v); // remove empty parts
@@ -105,5 +103,3 @@ function removeMFLastPart(mf) {
   }
   return '';
 }
-
-module.exports = processRange;

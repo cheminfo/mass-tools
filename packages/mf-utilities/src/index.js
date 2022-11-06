@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   getEutrophicationPotential: require('./getEutrophicationPotential.js'),
   getMsem: require('./getMsem.js'),

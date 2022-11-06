@@ -1,10 +1,8 @@
-'use strict';
+import { MF } from 'mf-parser';
 
-const MF = require('mf-parser/src/MF');
+import processRange from './processRange';
 
-const processRange = require('./processRange');
-
-module.exports = function preprocessIonizations(ionizationsString = '') {
+export function preprocessIonizations(ionizationsString = '') {
   if (Array.isArray(ionizationsString)) return ionizationsString;
   let ionizations = ionizationsString.split(/ *[.,;\t\r\n]+ */);
 
@@ -26,4 +24,4 @@ module.exports = function preprocessIonizations(ionizationsString = '') {
   }
 
   return results;
-};
+}

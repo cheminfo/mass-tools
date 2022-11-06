@@ -1,17 +1,18 @@
-'use strict';
+import { readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
 
-const fs = require('fs');
-const { join } = require('path');
+import Papa from 'papaparse';
 
-const Papa = require('papaparse');
-
-let names = Papa.parse(`${fs.readFileSync(`${__dirname}/names.tsv`)}`, {
-  header: true,
-  delimiter: '\t',
-}).data;
+let names = Papa.parse(
+  readFileSync(new URL('names.tsv', import.meta.url), 'utf8'),
+  {
+    header: true,
+    delimiter: '\t',
+  },
+).data;
 
 let elementsAndIsotopes = JSON.parse(
-  fs.readFileSync(`${__dirname}/isotopes.json`),
+  readFileSync(new URL('isotopes.json', import.meta.url), 'utf-8'),
 );
 
 for (let i = 0; i < elementsAndIsotopes.length; i++) {
@@ -32,9 +33,10 @@ for (let i = 0; i < elementsAndIsotopes.length; i++) {
   element.mass = massFromIsotopes ? massFromIsotopes : null;
 }
 
-fs.writeFileSync(
-  join(__dirname, '../src/elements.json'),
-  JSON.stringify(elementsAndIsotopes),
+writeFileSync(
+  new URL('../src/elementsAndIsotopes.js', import.meta.url),
+  `export const elementsAndIsotopes=${JSON.stringify(elementsAndIsotopes)}`,
+  'utf8',
 );
 
 function getMass(element) {

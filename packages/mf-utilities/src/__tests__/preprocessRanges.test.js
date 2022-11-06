@@ -1,6 +1,4 @@
-'use strict';
-
-const preprocessRanges = require('../preprocessRanges');
+import { preprocessRanges } from '../preprocessRanges';
 
 describe('preprocessRanges', () => {
   it('check the result and the order', () => {

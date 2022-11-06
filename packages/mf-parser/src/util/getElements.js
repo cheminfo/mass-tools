@@ -1,16 +1,13 @@
-const {
-  elementsObject,
-  elementsAndIsotopesObject,
-} = require('chemical-elements');
+import { elementsObject, elementsAndIsotopesObject } from 'chemical-elements';
 
-const Kind = require('../Kind');
+import { Kind } from '../Kind';
 
 /**
  *
  * @param {*} parts
  * @param {*} [options={}]
  */
-module.exports = function getElements(parts) {
+export function getElements(parts) {
   const elements = [];
   for (const part of parts) {
     for (const line of part) {
@@ -49,7 +46,7 @@ module.exports = function getElements(parts) {
     }
   }
   return elements;
-};
+}
 
 function addElement(elements, newElement) {
   for (let element of elements) {

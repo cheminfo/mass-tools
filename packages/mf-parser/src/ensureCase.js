@@ -1,6 +1,8 @@
-const elements = Object.keys(
-  require('chemical-elements/src/elementsAndStableIsotopesObject.js'),
-).sort((a, b) => b.length - a.length);
+import { elementsAndStableIsotopesObject } from 'chemical-groups';
+
+const elements = elementsAndStableIsotopesObject.sort(
+  (a, b) => b.length - a.length,
+);
 
 /**
  * Ensure that the mf has been entered with capital letters and not only lowercase
@@ -8,7 +10,7 @@ const elements = Object.keys(
  * @param {string} mf
  */
 
-function capitalize(mf) {
+export function capitalize(mf) {
   for (let i = 0; i < mf.length; i++) {
     if (mf.charCodeAt(i) > 64 && mf.charCodeAt(i) < 91) {
       return mf;
@@ -48,5 +50,3 @@ function capitalize(mf) {
   }
   return parts.join('');
 }
-
-module.exports = capitalize;

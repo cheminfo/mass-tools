@@ -1,9 +1,7 @@
-'use strict';
+import { Kind } from 'mf-parser/src/Kind';
+import { parse } from 'mf-parser/src/parse';
 
-const Kind = require('mf-parser/src/Kind');
-const parse = require('mf-parser/src/parse');
-
-function getRangesForFragment(ranges) {
+export function getRangesForFragment(ranges) {
   ranges = JSON.parse(JSON.stringify(ranges));
   if (typeof ranges === 'string') {
     // need to convert to ranges
@@ -89,5 +87,3 @@ function getRangesForFragment(ranges) {
 
   return possibilities.join(' ');
 }
-
-module.exports = getRangesForFragment;

@@ -1,5 +1,3 @@
-'use strict';
-
 const atomSorter = require('atom-sorter');
 
 const preprocessEARanges = require('./preprocessEARanges');

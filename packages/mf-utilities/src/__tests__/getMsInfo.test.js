@@ -1,6 +1,4 @@
-'use strict';
-
-const getMsInfo = require('../getMsInfo');
+import { getMsInfo } from '../getMsInfo';
 
 test('getMsInfo', () => {
   let mf = {

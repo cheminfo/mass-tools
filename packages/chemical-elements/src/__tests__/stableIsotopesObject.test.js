@@ -1,4 +1,4 @@
-const { stableIsotopesObject } = require('../stableIsotopesObject');
+import { stableIsotopesObject } from '../stableIsotopesObject';
 
 test('stableIsotopesObject', () => {
   const data = stableIsotopesObject;

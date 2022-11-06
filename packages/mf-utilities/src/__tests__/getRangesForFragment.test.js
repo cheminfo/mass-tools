@@ -1,6 +1,4 @@
-'use strict';
-
-const getRangesForFragment = require('../getRangesForFragment');
+import { getRangesForFragment } from '../getRangesForFragment';
 
 describe('getRangesForFragment', () => {
   it('Phe (CH2) C0-2 H0-2', () => {

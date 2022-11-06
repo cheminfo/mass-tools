@@ -1,17 +1,16 @@
-const elements = require('chemical-elements').elementsObject;
-const groups = require('chemical-groups/src/groupsObject.js');
+import { isotopesObject as isotopes } from 'chemical-elements';
+import { groupsObject as groups } from 'chemical-groups';
 
-import Kind from '../Kind')
+import { Kind } from '../Kind';
 
-const getIsotopeRatioInfo = require('./getIsotopeRatioInfo');
-const isotopes = require('./getIsotopesObject');
+import { getIsotopeRatioInfo } from './getIsotopeRatioInfo';
 
 /**
  *
  * @param {*} parts
  * @param {*} [options={}]
  */
-module.exports = function getEA(parts) {
+export function getEA(parts) {
   let results = {};
   for (let part of parts) {
     for (let line of part) {
@@ -70,7 +69,7 @@ module.exports = function getEA(parts) {
     ea.ratio = ea.mass / sum;
   });
   return eas;
-};
+}
 
 function addMass(results, atom, mass) {
   if (!results[atom]) results[atom] = 0;

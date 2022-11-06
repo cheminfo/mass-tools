@@ -1,8 +1,6 @@
-'use strict';
+import { MF } from 'mf-parser';
 
-const MF = require('mf-parser').MF;
-
-function mfDiff(mfString1, mfString2) {
+export function mfDiff(mfString1, mfString2) {
   let mf1 = new MF(mfString1).getInfo().atoms;
   let mf2 = new MF(mfString2).getInfo().atoms;
   let atoms = Object.keys(mf1);
@@ -16,5 +14,3 @@ function mfDiff(mfString1, mfString2) {
   }
   return new MF(mf).toMF();
 }
-
-module.exports = mfDiff;

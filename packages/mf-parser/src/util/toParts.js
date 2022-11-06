@@ -1,7 +1,7 @@
-import {atomSorter} from 'atom-sorter'
-import {groupsObject} from 'chemical-groups'
+import atomSorter from 'atom-sorter';
+import { groupsObject } from 'chemical-groups';
 
-import {Kind} from '../Kind'
+import { Kind } from '../Kind';
 
 /**
  *
@@ -55,7 +55,7 @@ export function toParts(lines, options = {}) {
   globalPartMultiplier(currentPart);
   if (shouldExpandgroupsObject) expandgroupsObject(parts);
   return combineAtomsIsotopesCharges(parts);
-};
+}
 
 function createNewPart() {
   let currentMultiplier = { value: 1, fromIndex: 0 };
@@ -226,4 +226,3 @@ function stringComparator(a, b) {
   if (a > b) return 1;
   return 0;
 }
-module.exports =

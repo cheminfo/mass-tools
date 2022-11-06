@@ -1,6 +1,4 @@
-'use strict';
-
-const preprocessIonizations = require('../preprocessIonizations');
+import { preprocessIonizations } from '../preprocessIonizations';
 
 describe('preprocessIonizations', () => {
   it('check ionizations', () => {

@@ -1,7 +1,5 @@
 import { elementsObject } from 'chemical-elements';
-import { getGroupsObject } from 'chemical-groups';
-
-const groups = getGroupsObject();
+import { groupsObject } from 'chemical-groups';
 
 const isMF = require('../../../mf-utilities/src/isMF');
 
@@ -38,14 +36,14 @@ export function capitalizeMF(mf) {
 
 function getCasedLabel(label) {
   if (elementsObject[label]) return label;
-  if (groups[label]) return label;
+  if (groupsObject[label]) return label;
 
   if (label === '') return label;
 
   let casedLabel =
     label.substr(0, 1).toUpperCase() + label.substr(1).toLowerCase();
   if (elementsObject[label]) return casedLabel;
-  if (groups[label]) return casedLabel;
+  if (groupsObject[label]) return casedLabel;
 
   // we would like to cover chcl3, ch2o, ch2cl2, ccl4
   let newLabel = label
