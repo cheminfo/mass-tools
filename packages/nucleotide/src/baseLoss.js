@@ -1,6 +1,4 @@
-'use strict';
-
-const mfDiff = require('mf-utilities/src/mfDiff');
+import { mfDiff } from 'mf-utilities/src/mfDiff';
 
 const mfLosses = {};
 ['Amp', 'Tmp', 'Cmp', 'Gmp', 'Ump'].forEach((nucleotide) => {
@@ -17,7 +15,7 @@ const mfLosses = {};
   };
 });
 
-function baseLoss(nucleotide) {
+export function baseLoss(nucleotide) {
   // any residue can loose a base
   let results = [];
 
@@ -30,5 +28,3 @@ function baseLoss(nucleotide) {
 
   return results;
 }
-
-module.exports = baseLoss;

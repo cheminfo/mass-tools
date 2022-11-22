@@ -1,6 +1,4 @@
-'use strict';
-
-const generateFragments = require('../generateFragments');
+import { generateFragments } from '../generateFragments';
 
 describe('addFiveTermBaseLoss', () => {
   it('nucleotide to sequence of HODampDtmpDcmpH', () => {

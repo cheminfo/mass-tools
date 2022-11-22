@@ -1,6 +1,4 @@
-'use strict';
-
-function baseLossExhaustive(nucleotide) {
+export function baseLossExhaustive(nucleotide) {
   // any residue can loose a base
   let results = [];
   let parts = nucleotide
@@ -28,5 +26,3 @@ function baseLossExhaustive(nucleotide) {
 
   return results;
 }
-
-module.exports = baseLossExhaustive;

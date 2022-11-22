@@ -1,8 +1,6 @@
-'use strict';
+import { MF } from 'mf-parser';
 
-const { MF } = require('mf-parser');
-
-const { furanThreeTerm } = require('..');
+import { furanThreeTerm } from '..';
 
 describe('test nucleotide', () => {
   it('remove base of three terminal of HDampDtmpDcmp', () => {

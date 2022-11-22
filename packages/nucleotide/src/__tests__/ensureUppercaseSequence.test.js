@@ -1,6 +1,4 @@
-'use strict';
-
-const ensureUppercaseSequence = require('../ensureUppercaseSequence');
+import { ensureUppercaseSequence } from '../ensureUppercaseSequence';
 
 describe('ensureUppercaseSequence', () => {
   it('aattccgg', () => {

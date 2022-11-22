@@ -1,8 +1,6 @@
-'use strict';
+import { MF } from 'mf-parser';
 
-const MF = require('mf-parser').MF;
-
-const sequenceToMF = require('../sequenceToMF');
+import { sequenceToMF } from '../sequenceToMF.js';
 
 describe('sequenceToMF', () => {
   it('emtpy string', () => {

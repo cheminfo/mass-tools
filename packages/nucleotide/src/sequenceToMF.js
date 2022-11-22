@@ -1,8 +1,6 @@
-'use strict';
+import { groups } from 'chemical-groups';
 
-const { groups } = require('chemical-groups');
-
-const ensureUppercaseSequence = require('./ensureUppercaseSequence');
+import { ensureUppercaseSequence } from './ensureUppercaseSequence';
 
 /**
  * Convert a nucleic sequence to a MF
@@ -13,7 +11,7 @@ const ensureUppercaseSequence = require('./ensureUppercaseSequence');
  * @param {string} [options.circular=false]
  */
 
-function sequenceToMF(sequence, options = {}) {
+export function sequenceToMF(sequence, options = {}) {
   let fivePrimeTerminal = 'HO';
   let threePrimeTerminal = 'H';
   sequence = sequence.replace(/^HO/, '');
@@ -124,8 +122,6 @@ function sequenceToMF(sequence, options = {}) {
 
   return results.map((result) => result.join('')).join('.');
 }
-
-module.exports = sequenceToMF;
 
 const complementary = {
   A: 'T',

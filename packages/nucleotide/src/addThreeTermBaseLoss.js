@@ -1,8 +1,6 @@
-'use strict';
+import { baseLoss } from '.';
 
-const baseLoss = require('./baseLoss');
-
-function addThreeTermBaseLoss(mfs, threeTerm, i, options) {
+export function addThreeTermBaseLoss(mfs, threeTerm, i, options) {
   if (!options.wxyzBaseLoss) return;
   let loss = baseLoss(threeTerm);
 
@@ -21,5 +19,3 @@ function addThreeTermBaseLoss(mfs, threeTerm, i, options) {
     }
   });
 }
-
-module.exports = addThreeTermBaseLoss;

@@ -1,6 +1,4 @@
-'use strict';
-
-function furanThreeTerm(nucleotide) {
+export function furanThreeTerm(nucleotide) {
   // last residue should become a furan
   let parts = nucleotide
     .replace(/ /g, '')
@@ -16,5 +14,3 @@ function furanThreeTerm(nucleotide) {
   }
   return parts.join('') + last.replace(/D[atcg]mp(.*)$/, 'Furp');
 }
-
-module.exports = furanThreeTerm;
