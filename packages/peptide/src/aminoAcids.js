@@ -1,8 +1,6 @@
-'use strict';
-
 // SOURCE: https://en.wikipedia.org/wiki/Amino_acid
 // Link for UTF8 code for modified: https://codepoints.net/search?sc=Grek
-module.exports = [
+export const aminoAcids = [
   // Standard amino acids
   {
     name: 'Alanine',

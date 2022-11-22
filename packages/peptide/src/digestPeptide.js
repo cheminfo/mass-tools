@@ -1,5 +1,3 @@
-'use strict';
-
 /*
 Iotuibs:
 * minMissed (default: 0)
@@ -9,7 +7,7 @@ Iotuibs:
 * enzyme: chymotrypsin, trypsin, glucph4, glucph8, thermolysin, cyanogenbromide : Mandatory, no default value !
  */
 
-function digestSequence(sequence, options = {}) {
+export function digestPeptide(sequence, options = {}) {
   sequence = sequence.replace(/^H([^a-z])/, '$1').replace(/OH$/, '');
 
   options.enzyme = options.enzyme || 'trypsin';
@@ -91,5 +89,3 @@ function getRegexp(enzyme) {
       throw new Error(`Digestion enzyme: ${enzyme} is unknown`);
   }
 }
-
-module.exports = digestSequence;

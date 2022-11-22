@@ -1,13 +1,16 @@
-'use strict';
-
-function allowNeutralLoss(mf, options) {
+/**
+ * Add neutral loss on natural amino acids
+ * @param {*} mf
+ * @returns
+ */
+export function allowNeutralLoss(mf) {
   if (Array.isArray(mf)) {
     for (let i = 0; i < mf.length; i++) {
-      mf[i] = allowOneNeutralLoss(mf[i], options);
+      mf[i] = allowOneNeutralLoss(mf[i]);
     }
     return mf;
   } else {
-    return allowOneNeutralLoss(mf, options);
+    return allowOneNeutralLoss(mf);
   }
 }
 
@@ -17,5 +20,3 @@ function allowOneNeutralLoss(mf) {
 
   return mf;
 }
-
-module.exports = allowNeutralLoss;

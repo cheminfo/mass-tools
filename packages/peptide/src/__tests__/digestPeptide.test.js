@@ -1,10 +1,8 @@
-'use strict';
-
-let PEP = require('..');
+import { digestPeptide } from '..';
 
 describe('Checking digest sequence', () => {
   it('Normal sequence digest', () => {
-    let result = PEP.digestPeptide('HLysLysAlaAlaLysOH', {
+    let result = digestPeptide('HLysLysAlaAlaLysOH', {
       enzyme: 'trypsin',
       minMissed: 0,
       maxMissed: 0,
@@ -17,7 +15,7 @@ describe('Checking digest sequence', () => {
   });
 
   it('Normal sequence digest, minMissed:0, maxMissed:1', () => {
-    let result = PEP.digestPeptide('HLysLysAlaAlaLysOH', {
+    let result = digestPeptide('HLysLysAlaAlaLysOH', {
       enzyme: 'trypsin',
       minMissed: 0,
       maxMissed: 1,
@@ -32,7 +30,7 @@ describe('Checking digest sequence', () => {
   });
 
   it('Normal sequence digest, minMissed:1, maxMissed:1', () => {
-    let result = PEP.digestPeptide('HLysLysAlaAlaLysOH', {
+    let result = digestPeptide('HLysLysAlaAlaLysOH', {
       enzyme: 'trypsin',
       minMissed: 1,
       maxMissed: 1,
@@ -41,13 +39,13 @@ describe('Checking digest sequence', () => {
   });
 
   it('Normal small sequence digest, default value', () => {
-    let result = PEP.digestPeptide('HLysAlaOH');
+    let result = digestPeptide('HLysAlaOH');
     expect(result).toStrictEqual(['HLysOH$D1>1', 'HAlaOH$D2>2']);
   });
 
   //  Leu, Phe, Val, Ile, Ala, Met
   it('HLysLeuValOH digest by thermolysin', () => {
-    let result = PEP.digestPeptide('HLysLeuProValOH', {
+    let result = digestPeptide('HLysLeuProValOH', {
       enzyme: 'thermolysin',
       minMissed: 0,
       maxMissed: 0,
@@ -60,7 +58,7 @@ describe('Checking digest sequence', () => {
   });
 
   it('HLysLeu(H-1OH)ValOH digest at all amide bonds', () => {
-    let result = PEP.digestPeptide('HLysLeu(H-1OH)ValOH', {
+    let result = digestPeptide('HLysLeu(H-1OH)ValOH', {
       enzyme: 'any',
       minMissed: 1,
       maxMissed: 1,

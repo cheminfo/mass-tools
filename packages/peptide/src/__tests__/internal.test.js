@@ -1,12 +1,10 @@
-'use strict';
-
-let PEP = require('..');
+import { generatePeptideFragments } from '..';
 
 // http://www.matrixscience.com/help/fragmentation_help.html
 
 describe('Generate internal fragments', () => {
   it('Check internal fragments for yb', () => {
-    let result = PEP.generatePeptideFragments('HAlaGlySerProPheOH', {
+    let result = generatePeptideFragments('HAlaGlySerProPheOH', {
       a: false,
       b: false,
       c: false,
@@ -28,7 +26,7 @@ describe('Generate internal fragments', () => {
   });
 
   it('Check internal fragments for ya', () => {
-    let result = PEP.generatePeptideFragments('HAlaGlySerProPheOH', {
+    let result = generatePeptideFragments('HAlaGlySerProPheOH', {
       a: false,
       b: false,
       c: false,
@@ -50,7 +48,7 @@ describe('Generate internal fragments', () => {
   });
 
   it('Check internal fragments for ya with maxInternal=2', () => {
-    let result = PEP.generatePeptideFragments('HAlaGlySerProPheOH', {
+    let result = generatePeptideFragments('HAlaGlySerProPheOH', {
       a: false,
       b: false,
       c: false,
@@ -72,7 +70,7 @@ describe('Generate internal fragments', () => {
   });
 
   it('Check internal fragments for ya with maxInternal=2 and minInternal=2', () => {
-    let result = PEP.generatePeptideFragments('HAlaGlySerProPheOH', {
+    let result = generatePeptideFragments('HAlaGlySerProPheOH', {
       a: false,
       b: false,
       c: false,

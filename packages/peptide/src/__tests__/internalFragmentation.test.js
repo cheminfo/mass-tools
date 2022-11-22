@@ -1,6 +1,9 @@
-'use strict';
-
-let PEP = require('..');
+import {
+  generatePeptideFragments,
+  sequenceToMF,
+  chargePeptide,
+  allowNeutralLoss,
+} from '..';
 
 // http://www.matrixscience.com/help/fragmentation_help.html
 
@@ -20,8 +23,8 @@ let allowed = [
 
 describe('Check internal fragmentation', () => {
   it('Check AKDR', () => {
-    let sequence = PEP.convertAASequence('AKDR');
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKDR');
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: false,
       c: false,
@@ -36,9 +39,9 @@ describe('Check internal fragmentation', () => {
   });
 
   it('Check AKDR ph=1', () => {
-    let sequence = PEP.convertAASequence('AKDR');
-    sequence = PEP.chargePeptide(sequence, { pH: 1 });
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKDR');
+    sequence = chargePeptide(sequence, { pH: 1 });
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: false,
       c: false,
@@ -53,9 +56,9 @@ describe('Check internal fragmentation', () => {
   });
 
   it('Check AKLRCSTY ph=13', () => {
-    let sequence = PEP.convertAASequence('AKDR');
-    sequence = PEP.chargePeptide(sequence, { pH: 13 });
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKDR');
+    sequence = chargePeptide(sequence, { pH: 13 });
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: false,
       c: false,
@@ -70,10 +73,10 @@ describe('Check internal fragmentation', () => {
   });
 
   it('Check AKDR neutral loss ph=1', () => {
-    let sequence = PEP.convertAASequence('AKDR');
-    sequence = PEP.allowNeutralLoss(sequence);
-    sequence = PEP.chargePeptide(sequence, { pH: 1 });
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKDR');
+    sequence = allowNeutralLoss(sequence);
+    sequence = chargePeptide(sequence, { pH: 1 });
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: false,
       c: false,
@@ -88,10 +91,10 @@ describe('Check internal fragmentation', () => {
   });
 
   it('Check AKDR neutral loss ph=13', () => {
-    let sequence = PEP.convertAASequence('AKDR');
-    sequence = PEP.allowNeutralLoss(sequence);
-    sequence = PEP.chargePeptide(sequence, { pH: 13 });
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKDR');
+    sequence = allowNeutralLoss(sequence);
+    sequence = chargePeptide(sequence, { pH: 13 });
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: false,
       c: false,
@@ -106,9 +109,9 @@ describe('Check internal fragmentation', () => {
   });
 
   it('Check AKDR neutral loss  internal fragment yb', () => {
-    let sequence = PEP.convertAASequence('AKDR');
-    sequence = PEP.allowNeutralLoss(sequence);
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKDR');
+    sequence = allowNeutralLoss(sequence);
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: false,
       c: false,
@@ -123,8 +126,8 @@ describe('Check internal fragmentation', () => {
   });
 
   it('Check AKDR internal fragment yc', () => {
-    let sequence = PEP.convertAASequence('AKDR');
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKDR');
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: false,
       c: false,
@@ -141,9 +144,9 @@ describe('Check internal fragmentation', () => {
   });
 
   it('Check AKDR internal fragment zc', () => {
-    let sequence = PEP.convertAASequence('AKDR');
-    sequence = PEP.allowNeutralLoss(sequence);
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKDR');
+    sequence = allowNeutralLoss(sequence);
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: false,
       c: false,

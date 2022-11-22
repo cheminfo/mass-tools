@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function generatePeptideFragments(mf, options) {
+export function generatePeptideFragments(mf, options) {
   if (options === undefined) {
     options = {
       a: false,
@@ -72,7 +70,7 @@ module.exports = function generatePeptideFragments(mf, options) {
   }
 
   return mfs;
-};
+}
 
 function addNTerm(mfs, nTerm, i, options) {
   if (options.a) mfs.push(`${nTerm}C-1O-1(+1)$a${i}`);

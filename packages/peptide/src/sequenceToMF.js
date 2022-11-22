@@ -1,8 +1,6 @@
-'use strict';
+import { aminoAcids } from './aminoAcids';
 
-const aa = require('./aminoAcids');
-
-function convertAASequence(mf) {
+export function sequenceToMF(mf) {
   // this function will check if it is a sequence of aa in 1 letter or 3 letters and convert them if it is the case
   // it could be a multiline mf !
   // if it is a multiline we could make some "tricks" ...
@@ -77,15 +75,13 @@ function convertAA1To3(mf) {
 }
 
 function aa1To3(code) {
-  for (let i = 0; i < aa.length; i++) {
-    if (aa[i].aa1 === code) {
-      return aa[i].aa3;
+  for (let i = 0; i < aminoAcids.length; i++) {
+    if (aminoAcids[i].aa1 === code) {
+      return aminoAcids[i].aa3;
     }
   }
   throw new Error(`Invalid 1 letter code: ${code}`);
 }
-
-module.exports = convertAASequence;
 
 // mf can contain as well parenthesis. We need to check if it is not yet a correct molecular formula
 function isOneLetterCode(mf) {

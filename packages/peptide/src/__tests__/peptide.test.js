@@ -1,11 +1,9 @@
-'use strict';
-
 let {
-  generatePeptideFragments,
   calculateIEP,
   calculateIEPChart,
   getColorForIEP,
   calculateCharge,
+  generatePeptideFragments,
 } = require('..');
 
 describe('generatePeptideFragments', () => {
