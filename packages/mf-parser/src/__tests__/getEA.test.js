@@ -1,6 +1,6 @@
 import { toMatchCloseTo } from 'jest-matcher-deep-close-to';
 
-import MF from '../MF';
+import { MF } from '../MF';
 
 expect.extend({ toMatchCloseTo });
 

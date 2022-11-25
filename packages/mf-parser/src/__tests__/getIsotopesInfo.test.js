@@ -1,4 +1,4 @@
-let MF = require('../MF');
+import { MF } from "../MF";
 
 test('getIsotopesInfo from C{50,50}[13C]H2', () => {
   let mf = new MF('[13C]3CC{50,50}((2+))2');

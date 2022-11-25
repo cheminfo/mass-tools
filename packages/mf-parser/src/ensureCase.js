@@ -1,6 +1,6 @@
-import { elementsAndStableIsotopesObject } from 'chemical-groups';
+import { elementsObject } from 'chemical-elements';
 
-const elements = elementsAndStableIsotopesObject.sort(
+const elements = Object.keys(elementsObject).sort(
   (a, b) => b.length - a.length,
 );
 
@@ -10,7 +10,7 @@ const elements = elementsAndStableIsotopesObject.sort(
  * @param {string} mf
  */
 
-export function capitalize(mf) {
+export function ensureCase(mf) {
   for (let i = 0; i < mf.length; i++) {
     if (mf.charCodeAt(i) > 64 && mf.charCodeAt(i) < 91) {
       return mf;

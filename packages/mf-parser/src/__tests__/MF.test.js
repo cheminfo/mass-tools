@@ -1,4 +1,4 @@
-const MF = require('../MF');
+const { MF } = require('../MF');
 
 describe('MF', () => {
   it('C', () => {

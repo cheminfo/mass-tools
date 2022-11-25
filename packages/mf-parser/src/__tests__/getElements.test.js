@@ -2,7 +2,7 @@ import { toMatchCloseTo } from 'jest-matcher-deep-close-to';
 
 expect.extend({ toMatchCloseTo });
 
-let MF = require('../MF');
+let { MF } = require('../MF');
 
 test('getElements', () => {
   expect(new MF('C2').getElements()).toStrictEqual([

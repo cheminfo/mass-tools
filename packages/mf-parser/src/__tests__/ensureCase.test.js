@@ -1,4 +1,5 @@
-import ensureCase from '../ensureCase';
+// import { capitalizeMF as ensureCase } from '../util/capitalizeMF.js';
+import { ensureCase } from '../ensureCase.js';
 
 test('ensureCase', () => {
   expect(ensureCase('ch3cooh')).toBe('CH3COOH');

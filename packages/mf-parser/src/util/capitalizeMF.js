@@ -1,7 +1,6 @@
 import { elementsObject } from 'chemical-elements';
 import { groupsObject } from 'chemical-groups';
-
-const isMF = require('../../../mf-utilities/src/isMF');
+import { isMF } from 'mf-utilities';
 
 /**
  * Try to capitalize a molecular formula based on what end users 'would' expect

@@ -22,7 +22,8 @@
   "dependencies": {
     "atom-sorter": "^1.1.10",
     "chemical-elements": "^1.2.3",
-    "chemical-groups": "^1.2.1"
+    "chemical-groups": "^1.2.1",
+    "mf-utilities": "^1.4.1"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2"

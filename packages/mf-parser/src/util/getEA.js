@@ -1,4 +1,7 @@
-import { isotopesObject as isotopes } from 'chemical-elements';
+import {
+  isotopesObject as isotopes,
+  elementsObject as elements,
+} from 'chemical-elements';
 import { groupsObject as groups } from 'chemical-groups';
 
 import { Kind } from '../Kind';

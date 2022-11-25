@@ -1,15 +1,15 @@
-const ensureCase = require('./ensureCase');
-const parse = require('./parse');
-const getEA = require('./util/getEA');
-const getElements = require('./util/getElements');
-const getInfo = require('./util/getInfo');
-const getIsotopesInfo = require('./util/getIsotopesInfo');
-const partsToDisplay = require('./util/partsToDisplay');
-const partsToMF = require('./util/partsToMF');
-const toDisplay = require('./util/toDisplay');
-const toHtml = require('./util/toHtml');
-const toParts = require('./util/toParts');
-const toText = require('./util/toText');
+import { ensureCase } from './ensureCase';
+import { parse } from './parse';
+import { getEA } from './util/getEA';
+import { getElements } from './util/getElements';
+import { getInfo } from './util/getInfo';
+import { getIsotopesInfo } from './util/getIsotopesInfo';
+import { partsToDisplay } from './util/partsToDisplay';
+import { partsToMF } from './util/partsToMF';
+import { toDisplay } from './util/toDisplay';
+import { toHtml } from './util/toHtml';
+import { toParts } from './util/toParts';
+import { toText } from './util/toText';
 
 export class MF {
   constructor(mf, options = {}) {
