@@ -1,14 +1,9 @@
-'use strict';
+import { atomSorter } from 'atom-sorter';
+import { msemMatcher } from 'mf-msemMatcher';
+import { preprocessIonizations, preprocessRanges } from 'mf-utilities';
+import { getMsInfo } from 'mf-utilities/src/getMsInfo';
 
-const matcher = require('mf-matcher').msem;
-const atomSorter = require('atom-sorter');
-const getMsInfo = require('mf-utilities/src/getMsInfo');
-const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
-const preprocessRanges = require('mf-utilities/src/preprocessRanges');
-
-const TargetMassCache = require('./TargetMassCache');
-
-let targetMassCache;
+import { TargetMassCache } from './TargetMassCache';
 
 /**
  * @param {number}        targetMass - Monoisotopic mass
@@ -33,7 +28,7 @@ let targetMassCache;
  * @returns {Promise}
  */
 
-module.exports = async function mfFinder(targetMass, options = {}) {
+export async function mfFinder(targetMass, options = {}) {
   const {
     filter = {},
     maxIterations = 1e8,
@@ -47,7 +42,7 @@ module.exports = async function mfFinder(targetMass, options = {}) {
       { mf: 'N', min: 0, max: 100 },
     ],
   } = options;
-
+  let targetMassCache;
   const {
     minCharge = Number.MIN_SAFE_INTEGER,
     maxCharge = Number.MAX_SAFE_INTEGER,
@@ -100,11 +95,10 @@ module.exports = async function mfFinder(targetMass, options = {}) {
     orderMapping = getOrderMapping(possibilities);
 
     if (possibilities.length === 0) return { mfs: [] };
-    targetMassCache = new TargetMassCache(
-      targetMass,
-      possibilities,
-      Object.assign({}, options, { charge: ionization.charge }),
-    );
+    targetMassCache = new TargetMassCache(targetMass, possibilities, {
+      ...options,
+      ...{ charge: ionization.charge },
+    });
 
     let theEnd = false;
     let maxPosition = possibilities.length;
@@ -166,7 +160,7 @@ module.exports = async function mfFinder(targetMass, options = {}) {
           orderMapping,
         );
         if (advancedFilter) {
-          isValid = matcher(newResult, advancedFilter) !== false;
+          isValid = msemMatcher(newResult, advancedFilter) !== false;
         }
         if (isValid) {
           result.mfs.push(newResult);
@@ -216,7 +210,7 @@ module.exports = async function mfFinder(targetMass, options = {}) {
   }
   result.mfs.forEach((mf) => delete mf.currentCounts);
   return result;
-};
+}
 
 /**
  * Ensure that we have only once the same MF
@@ -326,7 +320,7 @@ function getResult(
   return result;
 }
 
-function setCurrentMinMax(currentAtom, previousAtom) {
+function setCurrentMinMax(currentAtom, previousAtom, targetMassCache) {
   // the current min max can only be optimize if the charge will not change anymore
   if (currentAtom.innerCharge === true || currentAtom.charge !== 0) {
     currentAtom.currentMinCount = currentAtom.originalMinCount;
@@ -360,11 +354,15 @@ function setCurrentMinMax(currentAtom, previousAtom) {
   }
 }
 
-function initializePossibilities(possibilities, currentIonization) {
+function initializePossibilities(
+  possibilities,
+  currentIonization,
+  targetMassCache,
+) {
   for (let i = 0; i < possibilities.length; i++) {
     if (i === 0) {
       updateCurrentAtom(possibilities[i], currentIonization);
-      setCurrentMinMax(possibilities[i], currentIonization);
+      setCurrentMinMax(possibilities[i], currentIonization, targetMassCache);
     } else {
       updateCurrentAtom(possibilities[i], possibilities[i - 1]);
     }

@@ -1,16 +1,10 @@
-'use strict';
-
-const ELECTRON_MASS = require('chemical-elements/src/constants').ELECTRON_MASS;
+import { ELECTRON_MASS } from 'chemical-elements';
 
 /**
  * returns all the possible neutral mass for a defined experimental (targetMass) mass
  */
 
-let TargetMassCache = function TargetMassCache(
-  targetMass,
-  possibilities,
-  options = {},
-) {
+export function TargetMassCache(targetMass, possibilities, options = {}) {
   const {
     allowNeutral = false, // msem because em in this case !
     minCharge = Number.MIN_SAFE_INTEGER,
@@ -63,7 +57,7 @@ let TargetMassCache = function TargetMassCache(
       maxMass,
     });
   }
-};
+}
 
 module.exports = TargetMassCache;
 
