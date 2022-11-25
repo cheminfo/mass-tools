@@ -1,6 +1,4 @@
-'use strict';
-
-const matcher = require('../generalMatcher');
+import { generalMatcher } from '..';
 
 test('mfFilter', () => {
   let entry = {
@@ -15,33 +13,33 @@ test('mfFilter', () => {
     },
   };
 
-  expect(matcher(entry, { minCharge: 1 })).toBe(false);
-  expect(matcher(entry, { maxCharge: -1 })).toBe(false);
-  expect(matcher(entry, { maxCharge: 0 })).toBe(true);
-  expect(matcher(entry, { minCharge: -1 })).toBe(true);
+  expect(generalMatcher(entry, { minCharge: 1 })).toBe(false);
+  expect(generalMatcher(entry, { maxCharge: -1 })).toBe(false);
+  expect(generalMatcher(entry, { maxCharge: 0 })).toBe(true);
+  expect(generalMatcher(entry, { minCharge: -1 })).toBe(true);
   expect(
-    matcher(entry, {
+    generalMatcher(entry, {
       atoms: {
         C: { min: 10, max: 20 },
       },
     }),
   ).toBe(true);
   expect(
-    matcher(entry, {
+    generalMatcher(entry, {
       atoms: {
         N: { min: 10, max: 20 },
       },
     }),
   ).toBe(false);
   expect(
-    matcher(entry, {
+    generalMatcher(entry, {
       atoms: {
         C: { min: 5, max: 9 },
       },
     }),
   ).toBe(false);
   expect(
-    matcher(entry, {
+    generalMatcher(entry, {
       atoms: {
         C: { min: 10, max: 20 },
         N: { min: 0, max: 10 },

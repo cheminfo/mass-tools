@@ -1,8 +1,6 @@
-'use strict';
-
 /**
- * @param {object}   [entry={}}]
- * @param {object}   [options={}}]
+ * @param {object}   [entry={}]
+ * @param {object}   [options={}]
  * @param {number}   [options.min=-Infinity] - Minimal unsaturation
  * @param {number}   [options.max=+Infinity] - Maximal unsaturation
  * @param {number}   [options.onlyInteger=false] - Integer unsaturation
@@ -10,7 +8,7 @@
  * @return {boolean}
  */
 
-module.exports = function unsaturationMatcher(entry, options = {}) {
+export function unsaturationMatcher(entry, options = {}) {
   const {
     min = Number.MIN_SAFE_INTEGER,
     max = Number.MAX_SAFE_INTEGER,
@@ -24,4 +22,4 @@ module.exports = function unsaturationMatcher(entry, options = {}) {
     if (onlyNonInteger && Number.isInteger(entry.unsaturation)) return false;
   }
   return true;
-};
+}

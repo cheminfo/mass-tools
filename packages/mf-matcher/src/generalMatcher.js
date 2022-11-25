@@ -1,16 +1,16 @@
-'use strict';
+import { unsaturationMatcher } from './unsaturationMatcher.js';
 
 /**
  * Returns true if the entry containing MF information match
- * @param {object}   [entry={}}] - object containing mw, ...
- * @param {object}   [options={}}]
+ * @param {object}   [entry={}] - object containing mw, ...
+ * @param {object}   [options={}]
  * @param {number}   [options.minMW=0] - Minimal molecular weight
  * @param {number}   [options.maxMW=+Infinity] - Maximal molecular weight
  * @param {number}   [options.minEM=0] - Minimal monoisotopic mass
  * @param {number}   [options.maxEM=+Infinity] - Maximal monoisotopic mass
  * @param {number}   [options.minCharge=-Infinity] - Minimal charge
  * @param {number}   [options.maxCharge=+Infinity] - Maximal charge
- * @param {object}   [options.unsaturation={}}]
+ * @param {object}   [options.unsaturation={}]
  * @param {number}   [options.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number}   [options.unsaturation.max=+Infinity] - Maximal unsaturation
  * @param {number}   [options.unsaturation.onlyInteger=false] - Integer unsaturation
@@ -19,7 +19,7 @@
  * @return {boolean}
  */
 
-module.exports = function generalMatcher(entry, options = {}) {
+export function generalMatcher(entry, options = {}) {
   const {
     minMW = 0,
     maxMW = +Infinity,
@@ -44,7 +44,7 @@ module.exports = function generalMatcher(entry, options = {}) {
   }
 
   if (unsaturation !== undefined && entry.unsaturation !== undefined) {
-    if (!require('./unsaturationMatcher')(entry, unsaturation)) return false;
+    if (!unsaturationMatcher(entry, unsaturation)) return false;
   }
 
   if (entry.atoms !== undefined && atoms) {
@@ -56,4 +56,4 @@ module.exports = function generalMatcher(entry, options = {}) {
     }
   }
   return true;
-};
+}
