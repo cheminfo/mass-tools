@@ -1,6 +1,6 @@
-const atomSorter = require('atom-sorter');
+import { atomSorter } from 'atom-sorter';
 
-const preprocessEARanges = require('./preprocessEARanges');
+import { preprocessEARanges } from './preprocessEARanges';
 
 /**
  * Returns possible combinations
@@ -19,7 +19,7 @@ const preprocessEARanges = require('./preprocessEARanges');
  * @return {Array<object>}
  */
 
-module.exports = function mfFromEA(targetEA, options = {}) {
+export function mfFromEA(targetEA, options = {}) {
   const {
     unsaturation = {},
     maxIterations = 1e8,
@@ -146,7 +146,7 @@ module.exports = function mfFromEA(targetEA, options = {}) {
 
   results.mfs.sort((a, b) => Math.abs(a.totalError) - Math.abs(b.totalError));
   return results;
-};
+}
 
 function getResult(possibilities, totalError, orderMapping) {
   const result = { mf: '', totalError };
