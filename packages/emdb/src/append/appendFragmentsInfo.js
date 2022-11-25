@@ -1,5 +1,3 @@
-'use strict';
-
 const findMFs = require('mf-finder');
 
 /**

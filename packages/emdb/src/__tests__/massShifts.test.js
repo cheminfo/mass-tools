@@ -1,5 +1,3 @@
-'use strict';
-
 const massShifts = require('../massShifts');
 
 describe('test massShifts', () => {

@@ -1,5 +1,3 @@
-'use strict';
-
 const DBManager = require('..');
 
 describe('test searchSimilarity', () => {

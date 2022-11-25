@@ -1,6 +1,4 @@
-'use strict';
-
-const generateMFs = require('mf-generator');
+import generateMFs from "mf-generator";
 
 /**
  * Generates a database 'generated' from an array of molecular formula

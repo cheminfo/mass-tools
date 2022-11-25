@@ -1,5 +1,3 @@
-'use strict';
-
 const searchActivesOrNaturals = require('../searchActivesOrNaturals.js');
 
 describe('searchActivesOrNaturals', () => {

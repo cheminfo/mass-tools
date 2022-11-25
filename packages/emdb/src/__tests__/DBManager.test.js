@@ -1,5 +1,3 @@
-'use strict';
-
 const DBManager = require('..');
 
 test('DBManager contaminants and knapSack', async () => {

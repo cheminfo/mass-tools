@@ -1,6 +1,4 @@
-'use strict';
-
-const matcher = require('mf-matcher').general;
+import { general as matcher } from "mf-matcher";
 
 /**
     Searching by various criteria. This mass will not take into account the mass

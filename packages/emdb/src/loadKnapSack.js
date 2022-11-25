@@ -1,8 +1,6 @@
-'use strict';
+import JSZip from "jszip/dist/jszip";
 
-const JSZip = require('jszip/dist/jszip');
-
-const fetchArrayBuffer = require('./util/fetchArrayBuffer');
+import fetchArrayBuffer from "./util/fetchArrayBuffer";
 
 const loadingPromises = {};
 

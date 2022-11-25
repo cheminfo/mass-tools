@@ -1,6 +1,4 @@
-'use strict';
-
-const mfFromGoogleSheet = require('mf-from-google-sheet');
+import mfFromGoogleSheet from "mf-from-google-sheet";
 
 module.exports = async function loadGoogleSheet(options = {}) {
   let {

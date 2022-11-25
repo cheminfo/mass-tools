@@ -1,7 +1,5 @@
-'use strict';
-
-const IsotopicDistribution = require('isotopic-distribution');
-const Similarity = require('peaks-similarity');
+import { IsotopicDistribution } from 'isotopic-distribution';
+import Similarity from 'peaks-similarity';
 /**
 Search for an experimental monoisotopic mass and calculate the similarity
 * @param {object}   [options={}]

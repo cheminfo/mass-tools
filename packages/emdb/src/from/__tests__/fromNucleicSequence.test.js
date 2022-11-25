@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-'use strict';
 
 const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
 

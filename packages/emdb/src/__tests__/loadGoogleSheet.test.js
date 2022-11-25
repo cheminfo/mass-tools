@@ -1,5 +1,3 @@
-'use strict';
-
 const loadGoogleSheet = require('../loadGoogleSheet');
 
 test('load google sheet', async () => {

@@ -1,5 +1,3 @@
-'use strict';
-
 const loadCommercials = require('../loadCommercials');
 
 test('loadCommercials', async () => {

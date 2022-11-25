@@ -1,9 +1,7 @@
-'use strict';
+import { groupsToSequence } from "chemical-groups";
+import generateMFs from "mf-generator";
 
-const { groupsToSequence } = require('chemical-groups');
-const generateMFs = require('mf-generator');
-
-const fragmentPeptide = require('./util/fragmentPeptide');
+import fragmentPeptide from "./util/fragmentPeptide";
 
 /**
  * Add a database starting from a peptidic sequence

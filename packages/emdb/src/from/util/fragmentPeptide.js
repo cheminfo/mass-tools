@@ -1,6 +1,4 @@
-'use strict';
-
-const peptide = require('peptide');
+import peptide from "peptide";
 
 function fragmentArray(sequence, options = {}) {
   const {

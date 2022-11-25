@@ -1,5 +1,3 @@
-'use strict';
-
 const searchPubchem = require('../searchPubchem.js');
 
 describe('searchPubchem', () => {

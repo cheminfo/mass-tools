@@ -1,6 +1,4 @@
-'use strict';
-
-const findMFs = require('mf-finder');
+import findMFs from "mf-finder";
 
 /**
  * Generates a database 'monoisotopic' from a monoisotopic mass and various options

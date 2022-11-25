@@ -1,10 +1,8 @@
-'use strict';
+import { Spectrum } from "ms-spectrum";
 
-const { Spectrum } = require('ms-spectrum');
-
-const loadCommercialsPromise = require('./loadCommercials.js');
-const loadGoogleSheetPromise = require('./loadGoogleSheet.js');
-const loadKnapSackPromise = require('./loadKnapSack.js');
+import loadCommercialsPromise from "./loadCommercials.js";
+import loadGoogleSheetPromise from "./loadGoogleSheet.js";
+import loadKnapSackPromise from "./loadKnapSack.js";
 
 function DBManager() {
   this.databases = {};

@@ -1,12 +1,10 @@
-'use strict';
+import { ELECTRON_MASS } from "chemical-elements/src/constants";
+import mfFinder from "mf-finder";
+import mfParser from "mf-parser";
+import getMsInfo from "mf-utilities/src/getMsInfo";
+import preprocessIonizations from "mf-utilities/src/preprocessIonizations";
 
-const { ELECTRON_MASS } = require('chemical-elements/src/constants');
-const mfFinder = require('mf-finder');
-const mfParser = require('mf-parser');
-const getMsInfo = require('mf-utilities/src/getMsInfo');
-const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
-
-const fetchJSON = require('./util/fetchJSON.js');
+import fetchJSON from "./util/fetchJSON.js";
 
 /**
  * Generates a database 'pubchem' based on all molecular formula available

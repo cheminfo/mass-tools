@@ -1,5 +1,3 @@
-'use strict';
-
 const loadKnapSack = require('../loadKnapSack');
 
 jest.setTimeout(30000);
