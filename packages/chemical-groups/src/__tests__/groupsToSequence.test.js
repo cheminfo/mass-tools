@@ -1,4 +1,4 @@
-import { groupsToSequence } from '../groupsToSequence';
+import { groupsToSequence } from '..';
 
 test('groupsToSequence', () => {
   expect(groupsToSequence('HOAlaGlyOH')).toBe('AG');
