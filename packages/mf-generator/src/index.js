@@ -1,5 +1,3 @@
-'use strict';
-
 const { ELECTRON_MASS } = require('chemical-elements/src/constants');
 const MF = require('mf-parser').MF;
 const matcher = require('mf-matcher').msem;

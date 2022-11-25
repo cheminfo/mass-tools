@@ -1,5 +1,3 @@
-'use strict';
-
 const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
 
 expect.extend({ toBeDeepCloseTo });

@@ -1,5 +1,3 @@
-'use strict';
-
 const generateMFs = require('..');
 
 describe('generateMFs', () => {
