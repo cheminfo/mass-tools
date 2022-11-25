@@ -1,5 +1,3 @@
-'use strict';
-
 const MFGlobal = require('..');
 
 test('mf-global', () => {

@@ -7,7 +7,7 @@
 
 // https://github.com/umdjs/umd/blob/master/templates/returnExports.js
 (function(root, factory) {
-  'use strict';
+  
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define([], factory);
@@ -22,7 +22,7 @@
     root.anchors = new root.AnchorJS();
   }
 })(this, function() {
-  'use strict';
+  
   function AnchorJS(options) {
     this.options = options || {};
     this.elements = [];

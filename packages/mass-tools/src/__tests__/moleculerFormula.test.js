@@ -1,5 +1,3 @@
-'use strict';
-
 const { MF, IsotopicDistribution } = require('..');
 
 describe('mass-tools', () => {

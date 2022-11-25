@@ -49,7 +49,7 @@ export function generalMatcher(entry, options = {}) {
 
   if (entry.atoms !== undefined && atoms) {
     // all the atoms of the entry must fit in the range
-    for (let atom of Object.keys(entry.atoms)) {
+    for (let atom in entry.atoms) {
       if (!atoms[atom]) return false;
       if (entry.atoms[atom] < atoms[atom].min) return false;
       if (entry.atoms[atom] > atoms[atom].max) return false;

@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   EMDB: require('emdb'),
   groups: require('chemical-groups/src/groups'),

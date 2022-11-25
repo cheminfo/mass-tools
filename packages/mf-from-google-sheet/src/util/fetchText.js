@@ -1,5 +1,3 @@
-'use strict';
-
 // eslint-disable-next-line no-shadow
 const fetch = require('cross-fetch');
 

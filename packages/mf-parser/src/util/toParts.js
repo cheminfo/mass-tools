@@ -1,4 +1,4 @@
-import atomSorter from 'atom-sorter';
+import { atomSorter } from 'atom-sorter';
 import { groupsObject } from 'chemical-groups';
 
 import { Kind } from '../Kind';

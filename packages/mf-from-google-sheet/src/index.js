@@ -1,5 +1,3 @@
-'use strict';
-
 let generateMFs = require('mf-generator');
 let MF = require('mf-parser/src/MF');
 let Papa = require('papaparse');
