@@ -1,5 +1,5 @@
 import { atomSorter } from 'atom-sorter';
-import { msemMatcher } from 'mf-msemMatcher';
+import { msemMatcher } from 'mf-matcher';
 import { preprocessIonizations, preprocessRanges } from 'mf-utilities';
 import { getMsInfo } from 'mf-utilities/src/getMsInfo';
 
@@ -28,7 +28,7 @@ import { TargetMassCache } from './TargetMassCache';
  * @returns {Promise}
  */
 
-export async function mfFinder(targetMass, options = {}) {
+export async function findMFs(targetMass, options = {}) {
   const {
     filter = {},
     maxIterations = 1e8,
@@ -108,7 +108,7 @@ export async function mfFinder(targetMass, options = {}) {
     let previousAtom;
     let lastPossibility = possibilities[lastPosition];
 
-    initializePossibilities(possibilities, currentIonization);
+    initializePossibilities(possibilities, currentIonization, targetMassCache);
 
     //  if (DEBUG) console.log('possibilities', possibilities.map((a) => `${a.mf + a.originalMinCount}-${a.originalMaxCount}`));
 
@@ -188,6 +188,7 @@ export async function mfFinder(targetMass, options = {}) {
             setCurrentMinMax(
               possibilities[currentPosition],
               possibilities[currentPosition - 1],
+              targetMassCache,
             );
           } else {
             break;

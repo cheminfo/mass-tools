@@ -1,4 +1,4 @@
-import findMFs from "..";
+import { findMFs } from '..';
 
 describe('test mf-finder', () => {
   it('basic case', async () => {
