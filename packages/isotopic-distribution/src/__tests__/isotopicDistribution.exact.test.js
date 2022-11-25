@@ -1,8 +1,8 @@
+import { IsotopicDistribution } from '..';
+
 const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
 
 expect.extend({ toBeDeepCloseTo });
-
-const IsotopicDistribution = require('../IsotopicDistribution.js');
 
 describe('isotopicDistribution with composition', () => {
   it('CN', () => {

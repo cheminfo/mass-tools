@@ -1,4 +1,4 @@
-const IsotopicDistribution = require('../IsotopicDistribution.js');
+import { IsotopicDistribution } from '..';
 
 describe('test isotopicDistribution', () => {
   it('create distribution of CH0', () => {

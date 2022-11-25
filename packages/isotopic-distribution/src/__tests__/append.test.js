@@ -1,4 +1,4 @@
-const Distribution = require('../Distribution.js');
+import { Distribution } from '../Distribution.js';
 
 describe('test distribution append', () => {
   it('should append one distribution to another', () => {

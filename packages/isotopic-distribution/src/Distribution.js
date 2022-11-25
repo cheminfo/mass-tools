@@ -1,3 +1,4 @@
+import { closestPointX } from './utils/closestPointX.js';
 import { joinX } from './utils/joinX.js';
 import { multiply } from './utils/multiply.js';
 import { power } from './utils/power.js';
@@ -118,7 +119,7 @@ export class Distribution {
   }
 
   copy() {
-    let distCopy = new this.constructor();
+    let distCopy = new Distribution();
     distCopy.xSorted = this.xSorted;
     distCopy.ySorted = this.ySorted;
     distCopy.array = JSON.parse(JSON.stringify(this.array));
@@ -140,20 +141,17 @@ export class Distribution {
   joinX(threshold) {
     return joinX(this, threshold);
   }
-}
 
-/**
- * Append another distribution to the current distribution
- * @param {*} distribution
- */
-Distribution.prototype.Distribution.prototype.append = function append(
-  distribution,
-) {
-  for (let item of distribution.array) {
-    this.array.push(item);
+  append(distribution) {
+    for (let item of distribution.array) {
+      this.array.push(item);
+    }
+    this.xSorted = false;
+    this.ySorted = false;
   }
-  this.xSorted = false;
-  this.ySorted = false;
-};
 
-Distribution.prototype.closestPointX = require('./utils/closestPointX.js');
+  closestPointX(target) {
+    this.sortX();
+    return closestPointX(this.array, target);
+  }
+}
