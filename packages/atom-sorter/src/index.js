@@ -1,4 +1,4 @@
-export default function atomSorter(a, b) {
+export function atomSorter(a, b) {
   if (a === b) return 0;
   if (a === 'C') return -1;
   if (b === 'C') return 1;
