@@ -1,5 +1,3 @@
-'use strict';
-
 const drawTerminals = require('./drawTerminals');
 
 function drawSequence(paper, row, options) {

@@ -1,5 +1,3 @@
-'use strict';
-
 function drawReplacements(paper, data, options) {
   let replacements = data.residues.replacements;
   replacements = Object.keys(replacements).map((key) => {

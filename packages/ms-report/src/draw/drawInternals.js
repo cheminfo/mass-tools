@@ -1,5 +1,3 @@
-'use strict';
-
 const drawLabel = require('./drawLabel');
 
 function drawInternals(paper, row, options) {

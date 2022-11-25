@@ -1,5 +1,3 @@
-'use strict';
-
 const appendResidues = require('../appendResidues');
 
 describe('appendResidues', () => {

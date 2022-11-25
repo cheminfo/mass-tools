@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = [
   {
     quantity: 0.05,

@@ -1,5 +1,3 @@
-'use strict';
-
 const sequenceSVG = require('../sequenceSVG');
 
 test('sequenceSVG of peptide', () => {

@@ -1,5 +1,3 @@
-'use strict';
-
 const appendInternals = require('./appendInternals');
 const appendResidues = require('./appendResidues');
 const appendResiduesPosition = require('./appendResiduesPosition');

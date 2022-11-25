@@ -1,5 +1,4 @@
 /* eslint-disable no-loop-func */
-'use strict';
 
 /**
  * For each row we calculate internals, label over and label under

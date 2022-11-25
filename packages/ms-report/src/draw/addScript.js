@@ -1,5 +1,3 @@
-'use strict';
-
 function addScript(paper) {
   let scriptCode = ` // <![CDATA[
         function mouseOver(evt) {

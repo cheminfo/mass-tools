@@ -1,5 +1,3 @@
-'use strict';
-
 function appendRows(data) {
   let allResidues = data.residues.all.sort((a, b) => a.line - b.line);
   data.rows = [];

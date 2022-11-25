@@ -1,5 +1,3 @@
-'use strict';
-
 function drawLabel(paper, result, x, y, options) {
   let label = result.type;
   let similarity = String(Math.round(result.similarity * 100));

@@ -1,5 +1,3 @@
-'use strict';
-
 const appendResults = require('../appendResults');
 
 describe('appendResults', () => {

@@ -1,5 +1,3 @@
-'use strict';
-
 const getPaper = require('./getPaper');
 
 function appendResiduesPosition(data, options = {}) {

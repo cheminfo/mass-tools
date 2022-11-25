@@ -1,5 +1,3 @@
-'use strict';
-
 function appendInternals(data) {
   // for each line (internal fragment) we calculate the vertical position
   // where it should be drawn as well and the maximal number of lines

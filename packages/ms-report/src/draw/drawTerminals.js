@@ -1,5 +1,3 @@
-'use strict';
-
 const drawLabel = require('./drawLabel');
 
 function drawTerminals(paper, row, options) {

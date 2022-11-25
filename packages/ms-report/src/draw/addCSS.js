@@ -1,5 +1,3 @@
-'use strict';
-
 function addCSS(paper) {
   let cssCode = `
     .highlight {

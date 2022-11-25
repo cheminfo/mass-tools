@@ -1,5 +1,3 @@
-'use strict';
-
 function appendResults(data, analysisResult, options = {}) {
   const numberResidues = data.residues.residues.length;
   const { merge = {}, filter = {} } = options;

@@ -1,5 +1,3 @@
-'use strict';
-
 const { SVG, registerWindow } = require('@svgdotjs/svg.js');
 const window = require('svgdom');
 
