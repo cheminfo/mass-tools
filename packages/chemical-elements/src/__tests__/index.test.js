@@ -1,4 +1,4 @@
-let { elements, elementsObject } = require('..');
+import { elements, elementsObject } from '..';
 
 describe('chemical-lements', () => {
   it('data size', () => {
@@ -6,6 +6,7 @@ describe('chemical-lements', () => {
   });
 
   it('elementsObject', () => {
-    expect(Object.keys(elementsObject)).toHaveLength(118);
+    const keys = Object.keys(elementsObject);
+    expect(keys).toHaveLength(118);
   });
 });

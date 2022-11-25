@@ -10,5 +10,3 @@ Object.keys(elements).forEach((key) => {
     };
   });
 });
-
-module.exports = isotopesObject;

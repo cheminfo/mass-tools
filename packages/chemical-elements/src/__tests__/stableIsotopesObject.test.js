@@ -1,4 +1,4 @@
-import { stableIsotopesObject } from '../stableIsotopesObject';
+import { stableIsotopesObject } from '..';
 
 test('stableIsotopesObject', () => {
   const data = stableIsotopesObject;
