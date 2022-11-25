@@ -1,6 +1,6 @@
 import { MF } from 'mf-parser';
 
-import processRange from './processRange';
+import { processRange } from './processRange';
 
 export function preprocessIonizations(ionizationsString = '') {
   if (Array.isArray(ionizationsString)) return ionizationsString;

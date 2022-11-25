@@ -1,11 +1,9 @@
-module.exports = {
-  getEutrophicationPotential: require('./getEutrophicationPotential.js'),
-  getMsem: require('./getMsem.js'),
-  getMsInfo: require('./getMsInfo.js'),
-  mfDiff: require('./mfDiff.js'),
-  isMF: require('./isMF.js'),
-  preprocessIonizations: require('./preprocessIonizations.js'),
-  preprocessRanges: require('./preprocessRanges.js'),
-  getRangesForFragment: require('./getRangesForFragment.js'),
-  processRange: require('./processRange.js'),
-};
+export * from './getEutrophicationPotential.js';
+export * from './getMsem.js';
+export * from './getMsInfo.js';
+export * from './mfDiff.js';
+export * from './isMF.js';
+export * from './preprocessIonizations.js';
+export * from './preprocessRanges.js';
+export * from './getRangesForFragment.js';
+export * from './processRange.js';

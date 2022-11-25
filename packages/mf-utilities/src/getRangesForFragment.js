@@ -1,5 +1,4 @@
-import { Kind } from 'mf-parser/src/Kind';
-import { parse } from 'mf-parser/src/parse';
+import { Kind, parse } from 'mf-parser';
 
 export function getRangesForFragment(ranges) {
   ranges = JSON.parse(JSON.stringify(ranges));

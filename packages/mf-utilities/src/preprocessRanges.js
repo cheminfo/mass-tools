@@ -1,6 +1,4 @@
-import { Kind } from 'mf-parser/src/Kind';
-import { MF } from 'mf-parser/src/MF';
-import { parse } from 'mf-parser/src/parse';
+import { Kind, MF, parse } from 'mf-parser';
 
 export function preprocessRanges(ranges) {
   ranges = JSON.parse(JSON.stringify(ranges));
