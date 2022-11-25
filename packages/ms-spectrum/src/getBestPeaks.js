@@ -1,9 +1,4 @@
-'use strict';
-
-const {
-  xyObjectMaxXPoint,
-  xyObjectMinXPoint,
-} = require('ml-spectra-processing');
+import { xyObjectMaxXPoint, xyObjectMinXPoint } from 'ml-spectra-processing';
 
 /**
  * Filter the array by taking the higher peaks and only
@@ -22,7 +17,7 @@ const {
  * @returns {array} - copy of peaks with 'close' annotation
  */
 
-function getBestPeaks(peaks, options = {}) {
+export function getBestPeaks(peaks, options = {}) {
   const {
     searchMonoisotopicRatio = 0,
     from = xyObjectMinXPoint(peaks).x,
@@ -94,5 +89,3 @@ function getBestPeaks(peaks, options = {}) {
   }
   return toReturn.sort((a, b) => a.x - b.x);
 }
-
-module.exports = getBestPeaks;

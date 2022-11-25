@@ -1,6 +1,4 @@
-'use strict';
-
-const getMassRemainder = require('../getMassRemainder');
+import { getMassRemainder } from '../getMassRemainder';
 
 describe('test getMassRemainder', () => {
   let spectrum = {

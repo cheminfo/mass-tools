@@ -1,9 +1,7 @@
-'use strict';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
-const { readFileSync } = require('fs');
-const { join } = require('path');
-
-const Spectrum = require('../Spectrum');
+import { Spectrum } from '../Spectrum';
 
 describe('test appendPeakCharge on Spectrum', () => {
   let chargedText = readFileSync(

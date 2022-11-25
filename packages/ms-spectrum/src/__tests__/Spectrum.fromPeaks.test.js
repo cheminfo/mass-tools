@@ -1,6 +1,4 @@
-'use strict';
-
-const Spectrum = require('../Spectrum');
+import { Spectrum } from '../Spectrum';
 
 test('Spectrum fromPeaks', () => {
   const peaks = [

@@ -1,20 +1,18 @@
-'use strict';
+import { isAnyArray } from 'is-any-array';
+import max from 'ml-array-max/lib/index.js';
+import normed from 'ml-array-normed/lib/index.js';
+import { parseXY } from 'xy-parser';
 
-const { isAnyArray } = require('is-any-array');
-const max = require('ml-array-max/lib/index.js');
-const normed = require('ml-array-normed/lib/index.js');
-const { parseXY } = require('xy-parser');
+import { getBestPeaks } from './getBestPeaks';
+import { getFragmentPeaks } from './getFragmentPeaks';
+import { getMassRemainder } from './getMassRemainder';
+import { getPeakChargeBySimilarity } from './getPeakChargeBySimilarity';
+import { getPeaks } from './getPeaks';
+import { isContinuous } from './isContinuous';
+import { peakPicking } from './peakPicking';
+import { peaksWidth } from './peaksWidth';
 
-const getBestPeaks = require('./getBestPeaks');
-const getFragmentPeaks = require('./getFragmentPeaks');
-const getMassRemainder = require('./getMassRemainder');
-const getPeakChargeBySimilarity = require('./getPeakChargeBySimilarity');
-const getPeaks = require('./getPeaks');
-const isContinuous = require('./isContinuous');
-const peakPicking = require('./peakPicking');
-const peaksWidth = require('./peaksWidth');
-
-function Spectrum(data = { x: [], y: [] }) {
+export function Spectrum(data = { x: [], y: [] }) {
   if (typeof data !== 'object' || !isAnyArray(data.x) || !isAnyArray(data.y)) {
     throw new TypeError('Spectrum data must be an object with x:[], y:[]');
   }
@@ -146,5 +144,3 @@ Spectrum.prototype.getMassRemainder = function getMassRemainderFct(
 };
 
 Spectrum.JsGraph = Spectrum.prototype.JsGraph = require('./jsgraph/index');
-
-module.exports = Spectrum;

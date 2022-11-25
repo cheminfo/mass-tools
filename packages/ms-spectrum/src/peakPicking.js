@@ -1,9 +1,7 @@
-'use strict';
+import { gsd } from 'ml-gsd';
+import { xyEnsureGrowingX } from 'ml-spectra-processing';
 
-const gsd = require('ml-gsd').gsd;
-const { xyEnsureGrowingX } = require('ml-spectra-processing');
-
-const appendPeaksCharge = require('./appendPeaksCharge');
+import { appendPeaksCharge } from './appendPeaksCharge';
 
 /**
  * Filter the array of peaks
@@ -18,7 +16,7 @@ const appendPeaksCharge = require('./appendPeaksCharge');
  * @returns {array} - copy of peaks with 'close' annotation
  */
 
-function peakPicking(spectrum, options = {}) {
+export function peakPicking(spectrum, options = {}) {
   const { charge: chargeOptions = {} } = options;
   if (!spectrum.peaks || spectrum.peaks.length === 0) {
     spectrum.peaks = [];
@@ -65,5 +63,3 @@ function peakPicking(spectrum, options = {}) {
 
   return spectrum.peaks;
 }
-
-module.exports = peakPicking;

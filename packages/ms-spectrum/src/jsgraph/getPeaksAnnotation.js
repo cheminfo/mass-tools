@@ -1,4 +1,4 @@
-'use strict';
+import { EMDB } from 'emdb';
 
 /**
  *
@@ -17,8 +17,8 @@
  * @returns {Promise}
  */
 
-async function getPeaksAnnotation(bestPeaks, options = {}) {
-  const emdb = new (require('emdb'))();
+export async function getPeaksAnnotation(bestPeaks, options = {}) {
+  const emdb = new EMDB();
 
   options = Object.assign({ limit: 5, precision: 100 }, options);
 
@@ -191,5 +191,3 @@ function getColor(colors, value) {
   }
   return 'lightgrey';
 }
-
-module.exports = getPeaksAnnotation;

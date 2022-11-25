@@ -1,6 +1,4 @@
-'use strict';
-
-const appendPeaksCharge = require('../appendPeaksCharge');
+import { appendPeaksCharge } from '../appendPeaksCharge';
 
 describe('test appendPeaksCharge', () => {
   it('custom options', () => {

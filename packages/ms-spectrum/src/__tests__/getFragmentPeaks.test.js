@@ -1,6 +1,4 @@
-'use strict';
-
-const getFragmentPeaks = require('../getFragmentPeaks');
+import { getFragmentPeaks } from '../getFragmentPeaks';
 
 describe('test getFragmentPeaks', () => {
   let peaks = [

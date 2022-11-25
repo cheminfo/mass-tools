@@ -1,7 +1,5 @@
-'use strict';
-
-const Spectrum = require('../Spectrum');
-const getPeakChargeBySimilarity = require('../getPeakChargeBySimilarity');
+import { Spectrum } from '../Spectrum';
+import { getPeakChargeBySimilarity } from '../getPeakChargeBySimilarity';
 
 describe('test getPeakChargeBySimilarity', () => {
   let data = {

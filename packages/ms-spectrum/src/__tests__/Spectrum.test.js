@@ -1,10 +1,9 @@
 /* eslint-disable jest/no-if */
-'use strict';
 
-const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
-const generateSpectrum = require('spectrum-generator').generateSpectrum;
+import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
+import { generateSpectrum } from 'spectrum-generator';
 
-const Spectrum = require('../Spectrum');
+import { Spectrum } from '../Spectrum';
 
 expect.extend({ toBeDeepCloseTo });
 

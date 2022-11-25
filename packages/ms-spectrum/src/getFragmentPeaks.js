@@ -1,8 +1,7 @@
-'use strict';
+import { EMDB } from 'emdb';
+import { MF } from 'mf-parser';
 
-const { MF } = require('mf-parser');
-
-const getPeaks = require('./getPeaks.js');
+import { getPeaks } from './getPeaks.js';
 
 /**
  * Filter the array of peaks
@@ -18,8 +17,8 @@ const getPeaks = require('./getPeaks.js');
  * @returns {array} - copy of peaks with 'close' annotation
  */
 
-async function getFragmentPeaks(peaks, mf, options = {}) {
-  const emdb = new (require('emdb'))();
+export async function getFragmentPeaks(peaks, mf, options = {}) {
+  const emdb = new EMDB();
 
   const { ionizations = '', precision } = options;
 
@@ -40,5 +39,3 @@ async function getFragmentPeaks(peaks, mf, options = {}) {
   peaks = peaks.filter((peak) => peak.mfs.length > 0);
   return peaks;
 }
-
-module.exports = getFragmentPeaks;

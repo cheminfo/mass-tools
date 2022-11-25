@@ -1,5 +1,1 @@
-'use strict';
-
-module.exports = {
-  getPeaksAnnotation: require('./getPeaksAnnotation'),
-};
+export * from './getPeaksAnnotation.js';
