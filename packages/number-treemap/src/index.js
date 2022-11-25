@@ -1,17 +1,109 @@
-'use strict';
+import { Node } from './Node.js';
 
-class TreeMap {
+export class TreeMap {
   constructor() {
     this.root = null;
     this.size = 0;
   }
+
+  get(key) {
+    let currentNode = this.root;
+    while (currentNode != null) {
+      if (key < currentNode.key) {
+        currentNode = currentNode.left;
+      } else if (key > currentNode.key) {
+        currentNode = currentNode.right;
+      } else {
+        return currentNode.value;
+      }
+    }
+    return null;
+  }
+
+  getEntry(key) {
+    let currentNode = this.root;
+    while (currentNode != null) {
+      if (key < currentNode.key) {
+        currentNode = currentNode.left;
+      } else if (key > currentNode.key) {
+        currentNode = currentNode.right;
+      } else {
+        return currentNode;
+      }
+    }
+    return null;
+  }
+
+  set(key, value) {
+    if (this.root === null) {
+      this.root = new Node(key, value);
+      this.size = 1;
+      return;
+    }
+    let currentNode = this.root;
+    let parent;
+    do {
+      parent = currentNode;
+      if (key < currentNode.key) {
+        currentNode = currentNode.left;
+      } else if (key > currentNode.key) {
+        currentNode = currentNode.right;
+      } else {
+        currentNode.value = value;
+        return;
+      }
+    } while (currentNode !== null);
+    let node = new Node(key, value, parent);
+    if (key < parent.key) {
+      parent.left = node;
+    } else {
+      parent.right = node;
+    }
+    this.size++;
+  }
+
+  getLastEntry() {
+    let currentNode = this.root;
+    if (currentNode !== null) {
+      while (currentNode.right !== null) {
+        currentNode = currentNode.right;
+      }
+    }
+    return currentNode;
+  }
+
+  getFirstEntry() {
+    let currentNode = this.root;
+    if (currentNode !== null) {
+      while (currentNode.left !== null) {
+        currentNode = currentNode.left;
+      }
+    }
+    return currentNode;
+  }
+
+  getClosestEntry(key) {
+    let currentNode = this.root;
+    let bestMatch = currentNode;
+    let bestDistance = Number.POSITIVE_INFINITY;
+    while (currentNode != null) {
+      let distance = Math.abs(currentNode.key - key);
+      if (key < currentNode.key) {
+        if (distance < bestDistance) {
+          bestMatch = currentNode;
+          bestDistance = distance;
+        }
+        currentNode = currentNode.left;
+      } else if (key > currentNode.key) {
+        if (distance < bestDistance) {
+          bestMatch = currentNode;
+          bestDistance = distance;
+        }
+        currentNode = currentNode.right;
+      } else {
+        return currentNode;
+      }
+    }
+    return bestMatch;
+  }
 }
-
-TreeMap.prototype.get = require('./get.js');
-TreeMap.prototype.getEntry = require('./getEntry.js');
-TreeMap.prototype.set = require('./set.js');
-TreeMap.prototype.getClosestEntry = require('./getClosestEntry.js');
-TreeMap.prototype.getFirstEntry = require('./getFirstEntry.js');
-TreeMap.prototype.getLastEntry = require('./getLastEntry.js');
-
-module.exports = TreeMap;

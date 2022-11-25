@@ -1,6 +1,4 @@
-'use strict';
-
-const TreeMap = require('../index');
+import { TreeMap } from '..';
 
 test('TreeMap put', () => {
   let treeMap = new TreeMap();
