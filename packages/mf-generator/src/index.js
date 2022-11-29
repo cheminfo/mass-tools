@@ -1,9 +1,9 @@
-const { ELECTRON_MASS } = require('chemical-elements/src/constants');
-const MF = require('mf-parser').MF;
-const matcher = require('mf-matcher').msem;
-const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
-const processRange = require('mf-utilities/src/processRange');
-const sum = require('sum-object-keys');
+import { ELECTRON_MASS } from 'chemical-elements/src/constants';
+import { msemMatcher } from 'mf-matcher';
+import { MF } from 'mf-parser';
+import { preprocessIonizations } from 'mf-utilities/src/preprocessIonizations';
+import { processRange } from 'mf-utilities/src/processRange';
+import sum from 'sum-object-keys';
 /**
  * Generate all the possible combinations of molecular formula and calculate
  * for each of them the monoisotopic mass and observed moniisotopic mass (m/z)
@@ -42,7 +42,7 @@ const sum = require('sum-object-keys');
  * @returns {Promise}
  */
 
-module.exports = async function generateMFs(keys, options = {}) {
+export async function generateMFs(keys, options = {}) {
   options = { ...options };
 
   let { limit = 100000, uniqueMFs = true, estimate = false, onStep } = options;
@@ -149,7 +149,7 @@ module.exports = async function generateMFs(keys, options = {}) {
   }
   results.sort((a, b) => a.em - b.em);
   return results;
-};
+}
 
 let ems = {};
 
@@ -260,7 +260,7 @@ function appendResult(results, currents, keys, options = {}) {
       result.comment = comments.join(' ');
     }
 
-    let match = matcher(result, filter);
+    let match = msemMatcher(result, filter);
     if (!match) continue;
     result.ms = match.ms;
     result.ionization = match.ionization;
