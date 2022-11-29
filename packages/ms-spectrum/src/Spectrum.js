@@ -12,135 +12,132 @@ import { isContinuous } from './isContinuous';
 import { peakPicking } from './peakPicking';
 import { peaksWidth } from './peaksWidth';
 
-export function Spectrum(data = { x: [], y: [] }) {
-  if (typeof data !== 'object' || !isAnyArray(data.x) || !isAnyArray(data.y)) {
-    throw new TypeError('Spectrum data must be an object with x:[], y:[]');
+export class Spectrum {
+  constructor(data = { x: [], y: [] }) {
+    if (
+      typeof data !== 'object' ||
+      !isAnyArray(data.x) ||
+      !isAnyArray(data.y)
+    ) {
+      throw new TypeError('Spectrum data must be an object with x:[], y:[]');
+    }
+    this.data = {}; // we make a copy so that we can add new properties
+    for (let key in data) {
+      this.data[key] = data[key];
+    }
+    Object.defineProperty(this.data, 'xOriginal', {
+      enumerable: false,
+      writable: true,
+    });
+    this.cache = {};
+    this.peaks = [];
   }
-  this.data = {}; // we make a copy so that we can add new properties
-  for (let key in data) {
-    this.data[key] = data[key];
+
+  maxY() {
+    return max(this.data.y);
   }
-  Object.defineProperty(this.data, 'xOriginal', {
-    enumerable: false,
-    writable: true,
-  });
-  this.cache = {};
-  this.peaks = [];
+
+  sumY() {
+    if (!this.cache.sumY) {
+      this.cache.sumY = this.data.y.reduce(
+        (previous, current) => previous + current,
+        0,
+      );
+    }
+    return this.cache.sumY;
+  }
+
+  scaleY(intensity = 1) {
+    let basePeak = this.maxY() / intensity;
+    this.data.y = this.data.y.map((y) => y / basePeak);
+    return this;
+  }
+
+  rescaleX(callback) {
+    this.ensureOriginalX();
+
+    for (let i = 0; i < this.data.x.length; i++) {
+      this.data.x[i] = callback(this.data.xOriginal[i]);
+    }
+
+    return this;
+  }
+
+  ensureOriginalX() {
+    if (!this.data.xOriginal) {
+      this.data.xOriginal = this.data.x.slice(0);
+    }
+  }
+
+  normedY(total = 1) {
+    this.data.y = normed(this.data.y);
+    if (total !== 1) {
+      this.data.y = this.data.y.map((y) => y * total);
+    }
+    return this;
+  }
+
+  peakPicking() {
+    peakPicking(this);
+    return this.peaks;
+  }
+
+  peaksWidth() {
+    peakPicking(this);
+    return peaksWidth(this.peaks);
+  }
+
+  getBestPeaks(options) {
+    peakPicking(this);
+    return getBestPeaks(this.peaks, options);
+  }
+
+  getPeakChargeBySimilarity(targetMass, options) {
+    return getPeakChargeBySimilarity(this, targetMass, options);
+  }
+
+  getPeaks(options) {
+    peakPicking(this);
+    return getPeaks(this.peaks, options);
+  }
+
+  /**
+   * Returns also peaks possible for a specific molecular formula
+   * @example
+   *  const spectrum = new Spectrum({x:[], y:[]})
+   *  await spectrum.getFragmentPeaks();
+   * @param {string} mf
+   * @param {object} options
+   * @returns
+   */
+  getFragmentPeaksFct(mf, options) {
+    peakPicking(this);
+    return getFragmentPeaks(this.peaks, mf, options);
+  }
+
+  isContinuous() {
+    return isContinuous(this);
+  }
+
+  /**
+   * Remove an integer number of time the specifiedd monoisotopic mass
+   * Mass remainder analysis (MARA): https://doi.org/10.1021/acs.analchem.7b04730
+   */
+  getMassRemainderFct(mass, options = {}) {
+    return getMassRemainder(this.data, mass, options);
+  }
 }
 
-Spectrum.fromPeaks = function fromPeaks(peaks) {
+export function fromPeaks(peaks) {
   if (peaks.length === 0) return new Spectrum();
   const data = {};
   for (let key of Object.keys(peaks[0])) {
     data[key] = peaks.map((peak) => peak[key]);
   }
   return new Spectrum(data);
-};
+}
 
-Spectrum.fromText = function fromText(text) {
+export function fromText(text) {
   const data = parseXY(text);
   return new Spectrum(data);
-};
-
-Spectrum.prototype.maxY = function maxY() {
-  return max(this.data.y);
-};
-
-Spectrum.prototype.sumY = function sumY() {
-  if (!this.cache.sumY) {
-    this.cache.sumY = this.data.y.reduce(
-      (previous, current) => previous + current,
-      0,
-    );
-  }
-  return this.cache.sumY;
-};
-
-Spectrum.prototype.scaleY = function scaleY(intensity = 1) {
-  let basePeak = this.maxY() / intensity;
-  this.data.y = this.data.y.map((y) => y / basePeak);
-  return this;
-};
-
-Spectrum.prototype.rescaleX = function rescaleX(callback) {
-  this.ensureOriginalX();
-
-  for (let i = 0; i < this.data.x.length; i++) {
-    this.data.x[i] = callback(this.data.xOriginal[i]);
-  }
-
-  return this;
-};
-
-Spectrum.prototype.ensureOriginalX = function ensureOriginalX() {
-  if (!this.data.xOriginal) {
-    this.data.xOriginal = this.data.x.slice(0);
-  }
-};
-
-Spectrum.prototype.normedY = function normedY(total = 1) {
-  this.data.y = normed(this.data.y);
-  if (total !== 1) {
-    this.data.y = this.data.y.map((y) => y * total);
-  }
-  return this;
-};
-
-Spectrum.prototype.peakPicking = function peakPickingFct() {
-  peakPicking(this);
-  return this.peaks;
-};
-
-Spectrum.prototype.peaksWidth = function peaksWidthFct() {
-  peakPicking(this);
-  return peaksWidth(this.peaks);
-};
-
-Spectrum.prototype.getBestPeaks = function getBestPeaksFct(options) {
-  peakPicking(this);
-  return getBestPeaks(this.peaks, options);
-};
-
-Spectrum.prototype.getPeakChargeBySimilarity =
-  function getPeakChargeBySimilarityFct(targetMass, options) {
-    return getPeakChargeBySimilarity(this, targetMass, options);
-  };
-
-Spectrum.prototype.getPeaks = function getPeaksFct(options) {
-  peakPicking(this);
-  return getPeaks(this.peaks, options);
-};
-
-/**
- * Returns also peaks possible for a specific molecular formula
- * @example
- *  const spectrum = new Spectrum({x:[], y:[]})
- *  await spectrum.getFragmentPeaks();
- * @param {string} mf
- * @param {object} options
- * @returns
- */
-Spectrum.prototype.getFragmentPeaks = function getFragmentPeaksFct(
-  mf,
-  options,
-) {
-  peakPicking(this);
-  return getFragmentPeaks(this.peaks, mf, options);
-};
-
-Spectrum.prototype.isContinuous = function isContinuousFct() {
-  return isContinuous(this);
-};
-
-/**
- * Remove an integer number of time the specifiedd monoisotopic mass
- * Mass remainder analysis (MARA): https://doi.org/10.1021/acs.analchem.7b04730
- */
-Spectrum.prototype.getMassRemainder = function getMassRemainderFct(
-  mass,
-  options = {},
-) {
-  return getMassRemainder(this.data, mass, options);
-};
-
-Spectrum.JsGraph = Spectrum.prototype.JsGraph = require('./jsgraph/index');
+}

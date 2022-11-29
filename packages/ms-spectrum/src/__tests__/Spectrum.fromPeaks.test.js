@@ -1,4 +1,4 @@
-import { Spectrum } from '../Spectrum';
+import { fromPeaks } from '../Spectrum';
 
 test('Spectrum fromPeaks', () => {
   const peaks = [
@@ -34,7 +34,7 @@ test('Spectrum fromPeaks', () => {
     },
   ];
 
-  const spectrum = Spectrum.fromPeaks(peaks);
+  const spectrum = fromPeaks(peaks);
 
   expect(Object.keys(spectrum.data)).toStrictEqual(['x', 'y', 'composition']);
 });

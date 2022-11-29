@@ -3,14 +3,14 @@
 import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
 import { generateSpectrum } from 'spectrum-generator';
 
-import { Spectrum } from '../Spectrum';
+import { Spectrum, fromText } from '../Spectrum';
 
 expect.extend({ toBeDeepCloseTo });
 
 describe('test Spectrum', () => {
   it('constructor', () => {
     expect(() => {
-      Spectrum(1);
+      new Spectrum(1);
     }).toThrow('Spectrum data must be an object');
   });
 
@@ -83,29 +83,27 @@ describe('test Spectrum', () => {
     ]);
   });
 
-  it('gsd realtop', () => {
-    const peaks = [{ x: 5, y: 10000, width: 0.2 }];
+  const peaks = [{ x: 5, y: 10000, width: 0.2 }];
 
-    const data = generateSpectrum(peaks, {
-      generator: {
-        from: 0,
-        to: 10,
-        nbPoints: 201,
-      },
-    });
-
-    data.y[99] = data.y[100];
-    let result = new Spectrum(data).peakPicking();
-    expect(result).toBeDeepCloseTo([
-      { x: 4.975, y: 10491.836675359205, width: 0.2, charge: 1 },
-    ]);
+  const data = generateSpectrum(peaks, {
+    generator: {
+      from: 0,
+      to: 10,
+      nbPoints: 201,
+    },
   });
 
-  it('fromText', () => {
-    let spectrum = Spectrum.fromText(`Title of spectrum
+  data.y[99] = data.y[100];
+  let result = new Spectrum(data).peakPicking();
+  expect(result).toBeDeepCloseTo([
+    { x: 4.975, y: 10491.836675359205, width: 0.2, charge: 1 },
+  ]);
+});
+
+test('fromText', () => {
+  let spectrum = fromText(`Title of spectrum
     1 2
     2 3
     3 4`);
-    expect(spectrum.data).toStrictEqual({ x: [1, 2, 3], y: [2, 3, 4] });
-  });
+  expect(spectrum.data).toStrictEqual({ x: [1, 2, 3], y: [2, 3, 4] });
 });

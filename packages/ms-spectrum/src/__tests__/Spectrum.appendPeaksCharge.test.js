@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-import { Spectrum } from '../Spectrum';
+import { fromText } from '../Spectrum';
 
 describe('test appendPeakCharge on Spectrum', () => {
   let chargedText = readFileSync(
@@ -9,7 +9,7 @@ describe('test appendPeakCharge on Spectrum', () => {
     'utf8',
   );
   it('multicharged', () => {
-    let spectrum = Spectrum.fromText(chargedText);
+    let spectrum = fromText(chargedText);
     let peaks = spectrum.peakPicking();
     peaks = peaks.filter((peak) => peak.y > 1000);
     let stats = new Array(10).fill(0);
