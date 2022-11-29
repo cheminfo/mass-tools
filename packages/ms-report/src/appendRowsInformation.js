@@ -4,7 +4,7 @@
  * For each row we calculate internals, label over and label under
  * @param {*} data
  */
-function appendRowsInformation(data) {
+export function appendRowsInformation(data) {
   for (let row of data.rows) {
     let filtered = row.residues.filter(
       (entry) => entry.fromBegin !== undefined,
@@ -77,5 +77,3 @@ function appendRowsInformation(data) {
     row.info.nbUnder = maxNbUnder;
   }
 }
-
-module.exports = appendRowsInformation;

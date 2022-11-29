@@ -1,3 +1,1 @@
-module.exports = {
-  sequenceSVG: require('./sequenceSVG'),
-};
+export * from './sequenceSVG.js';

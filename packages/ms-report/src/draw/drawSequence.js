@@ -1,6 +1,6 @@
-const drawTerminals = require('./drawTerminals');
+import { drawTerminals } from './drawTerminals';
 
-function drawSequence(paper, row, options) {
+export function drawSequence(paper, row, options) {
   // need to plan some space for the OVER
   options.verticalPosition += row.info.nbOver * (options.labelSize + 1);
 
@@ -35,5 +35,3 @@ function drawSequence(paper, row, options) {
 
   options.verticalPosition += options.spaceBetweenInternalLines * 2;
 }
-
-module.exports = drawSequence;

@@ -1,6 +1,6 @@
 import { groupsObject } from 'chemical-groups';
-import Nucleotide from 'nucleotide';
-import Peptide from 'peptide';
+import * as Nucleotide from 'nucleotide';
+import * as Peptide from 'peptide';
 
 const ALTERNATIVES = ['', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'];
 const SYMBOLS = ['Θ', 'Δ', 'Λ', 'Φ', 'Ω', 'Γ', 'Χ'];
@@ -16,7 +16,7 @@ let currentSymbol = 0;
  * @param {string} [options.circular=false]
  */
 
-module.exports = function appendResidues(data, sequence, options = {}) {
+export function appendResidues(data, sequence, options = {}) {
   const { kind = 'peptide' } = options;
 
   currentSymbol = 0;
@@ -152,7 +152,7 @@ module.exports = function appendResidues(data, sequence, options = {}) {
   });
 
   data.residues = result;
-};
+}
 
 function getUnknownReplacement(unknownResidue, residue, replacements) {
   if (!replacements[unknownResidue]) {

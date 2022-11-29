@@ -1,4 +1,4 @@
-function appendRows(data) {
+export function appendRows(data) {
   let allResidues = data.residues.all.sort((a, b) => a.line - b.line);
   data.rows = [];
   for (let residue of allResidues) {
@@ -14,5 +14,3 @@ function appendRows(data) {
     row.info = {};
   }
 }
-
-module.exports = appendRows;

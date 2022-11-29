@@ -1,4 +1,4 @@
-function appendInternals(data) {
+export function appendInternals(data) {
   // for each line (internal fragment) we calculate the vertical position
   // where it should be drawn as well and the maximal number of lines
   let maxNumberLines = 0;
@@ -36,5 +36,3 @@ function assignSlot(from, to, residues) {
   }
   return counter;
 }
-
-module.exports = appendInternals;

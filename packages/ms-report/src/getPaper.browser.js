@@ -1,7 +1,5 @@
 const { SVG } = require('@svgdotjs/svg.js');
 
-function getPaper() {
+export function getPaper() {
   return SVG();
 }
-
-module.exports = getPaper;

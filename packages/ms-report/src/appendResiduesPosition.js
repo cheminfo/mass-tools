@@ -1,6 +1,6 @@
-const getPaper = require('./getPaper');
+import { getPaper } from './getPaper';
 
-function appendResiduesPosition(data, options = {}) {
+export function appendResiduesPosition(data, options = {}) {
   const residues = data.residues;
   const {
     leftRightBorders = 20,
@@ -57,5 +57,3 @@ function getTextWidth(paper, label, options = {}) {
   text.remove();
   return textWidth;
 }
-
-module.exports = appendResiduesPosition;

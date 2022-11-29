@@ -1,6 +1,6 @@
-const drawLabel = require('./drawLabel');
+import { drawLabel } from './drawLabel';
 
-function drawInternals(paper, row, options) {
+export function drawInternals(paper, row, options) {
   let fromX = 0;
   let toX = 0;
   for (const internal of row.internals) {
@@ -36,5 +36,3 @@ function drawInternals(paper, row, options) {
   }
   options.verticalPosition += options.spaceBetweenInternalLines * 2;
 }
-
-module.exports = drawInternals;

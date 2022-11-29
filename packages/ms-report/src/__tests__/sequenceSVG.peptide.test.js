@@ -1,7 +1,7 @@
-const { writeFileSync } = require('fs');
-const { join } = require('path');
+import { writeFileSync } from 'fs';
+import { join } from 'path';
 
-const sequenceSVG = require('../sequenceSVG');
+import { sequenceSVG } from '../sequenceSVG';
 
 test('sequenceSVG of peptide', () => {
   let options = {

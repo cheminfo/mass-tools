@@ -1,6 +1,6 @@
-const drawLabel = require('./drawLabel');
+import { drawLabel } from './drawLabel';
 
-function drawTerminals(paper, row, options) {
+export function drawTerminals(paper, row, options) {
   for (let residue of row.residues) {
     if (!residue.results) continue;
     for (let result of residue.results.begin) {
@@ -81,5 +81,3 @@ function drawTerminals(paper, row, options) {
     }
   }
 }
-
-module.exports = drawTerminals;
