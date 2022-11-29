@@ -1,7 +1,13 @@
-import max from 'ml-array-max/lib/index';
-import min from 'ml-array-min/lib/index';
-import Regression from 'ml-regression-theil-sen/lib/index';
+import max from 'ml-array-max';
+import min from 'ml-array-min';
+import Regression from 'ml-regression-theil-sen';
 
+/**
+ * Calculates a function that allows post-calibration on mass spectra based on the error in assignment
+ * @param {*} similarities
+ * @param {object} [options={}]
+ * @returns
+ */
 export function massShifts(similarities, options = {}) {
   const { minSimilarity = 0.95, minLength = 10 } = options;
 

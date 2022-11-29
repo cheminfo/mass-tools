@@ -9,6 +9,9 @@ import {fromMonoisotopicMass} from './from/fromMonoisotopicMass.js'
 import {fromNucleicSequence} from './from/fromNucleicSequence.js'
 import {fromPeptidicSequence} from './from/fromPeptidicSequence.js'
 import {fromRange} from './from/fromRange.js'
+import {appendFragmentsInfo} from './append/appendFragmentsInfo.js'
+
+export * from './massShifts.js'
 
 export class EMDB {
   constructor() {
@@ -59,9 +62,10 @@ export class EMDB {
 };
 
 /**
- * Load the contaminants databvase from a google sheet document
- * @param {*} options
- * @param {string} ['contaminants'] databaseName
+ * Load the contaminants database from a google sheet document
+ * @param {object} [options={}]
+ * @param {string} [options.databaseName='contaminants'] 
+ * @param {string} [options.forceReload=false] 
  */
  async  loadContaminants(
   options = {},
@@ -72,9 +76,10 @@ export class EMDB {
 };
 
 /**
- * Load a google sheet containin
- * @param {*} options
- * @param {string} ['sheet'] databaseName
+ * Load a google sheet containing MF information
+ * @param {object} [options={}]
+ * @param {string} [options.databaseName='sheet'] 
+ * @param {string} [options.forceReload=false] 
  */
 
  async  loadGoogleSheet(
@@ -101,7 +106,7 @@ async  loadTest() {
   options = {},
 ) {
   const { databaseName = 'monoisotopic', append = false } = options;
-  let result = await require('./from/fromMonoisotopicMass')(mass, options);
+  let result = await fromMonoisotopicMass(mass, options);
   replaceOrAppend(this, databaseName, result.mfs, append);
   return result;
 };
@@ -152,7 +157,7 @@ async  appendFragmentsInfo(
   options = {},
 ) {
   const database = this.databases[databaseName];
-  await require('./append/appendFragmentsInfo')(
+  await appendFragmentsInfo(
     this.experimentalSpectrum,
     database,
     options,
@@ -187,7 +192,6 @@ async  fromNucleicSequence(
   };
 };
 
-EMDB.prototype.massShifts = require('./massShifts');
 EMDB.prototype.search = require('./search');
 EMDB.prototype.searchMSEM = require('./searchMSEM');
 EMDB.prototype.searchPubchem = require('./searchPubchem');
@@ -204,7 +208,3 @@ function replaceOrAppend(emdb, databaseName, results, append = false) {
   emdb.databases[databaseName] = emdb.databases[databaseName].concat(results);
 }
 
-EMDB.Peptide = require('peptide');
-EMDB.Nucleotide = require('nucleotide');
-EMDB.MFParser = require('mf-parser');
-EMDB.IsotopicDistribution = require('isotopic-distribution');

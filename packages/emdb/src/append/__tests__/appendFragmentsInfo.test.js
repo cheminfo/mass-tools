@@ -1,9 +1,9 @@
-const fs = require('fs');
-const join = require('path').join;
+import fs from 'fs';
+import { join } from 'path';
 
-const parseXY = require('xy-parser').parseXY;
+import { parseXY } from 'xy-parser';
 
-const EMDB = require('../..');
+import { EMDB } from '../..';
 
 describe('test appendFragmentsInfo for ethylbenzene', () => {
   let experimental = loadEthylbenzene();

@@ -9,7 +9,7 @@ import { findMFs } from 'mf-finder';
  * @param {string}   [options.ionizations=''] - string containing a comma separated list of modifications
  * @param {number}   [options.precision=100] - Allowed mass range based on precision
  */
-module.exports = async function appendFragmentsInfo(
+export async function appendFragmentsInfo(
   experimentalSpectrum,
   database,
   options = {},
@@ -51,4 +51,4 @@ module.exports = async function appendFragmentsInfo(
       }
     }
   }
-};
+}

@@ -24,7 +24,7 @@ import { generalMatcher } from 'mf-matcher';
  *
 */
 
-module.exports = function search(filter, options = {}) {
+export function search(filter, options = {}) {
   let { databases = Object.keys(this.databases), flatten = false } = options;
 
   let results = {};
@@ -46,4 +46,4 @@ module.exports = function search(filter, options = {}) {
   } else {
     return results;
   }
-};
+}

@@ -27,7 +27,7 @@ Search for an experimental monoisotopic mass
 * @param {object}         [options.filter.atoms] - object of atom:{min, max}
 */
 
-module.exports = function searchMSEM(msem, options = {}) {
+export function searchMSEM(msem, options = {}) {
   let filter = Object.assign({}, options.filter || {}, { targetMass: msem });
   let { databases = Object.keys(this.databases), flatten = false } = options;
 
@@ -68,4 +68,4 @@ module.exports = function searchMSEM(msem, options = {}) {
     );
     return results;
   }
-};
+}

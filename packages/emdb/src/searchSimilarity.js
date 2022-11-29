@@ -33,7 +33,7 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @returns {Promise}
 */
 
-module.exports = async function searchSimilarity(options = {}) {
+export async function searchSimilarity(options = {}) {
   const { similarity = {}, minSimilarity = 0.5, filter = {}, onStep } = options;
 
   let width = {
@@ -139,4 +139,4 @@ module.exports = async function searchSimilarity(options = {}) {
   }
 
   return results;
-};
+}

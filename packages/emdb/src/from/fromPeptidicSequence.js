@@ -1,7 +1,7 @@
-import { groupsToSequence } from "chemical-groups";
-import generateMFs from "mf-generator";
+import { groupsToSequence } from 'chemical-groups';
+import { generateMFs } from 'mf-generator';
 
-import fragmentPeptide from "./util/fragmentPeptide";
+import { fragmentPeptide } from './util/fragmentPeptide';
 
 /**
  * Add a database starting from a peptidic sequence
@@ -58,7 +58,7 @@ import fragmentPeptide from "./util/fragmentPeptide";
  * @returns {Promise}
  */
 
-module.exports = async function fromPeptidicSequence(sequences, options = {}) {
+export async function fromPeptidicSequence(sequences, options = {}) {
   const {
     digestion = {},
     mfsArray: originalMFsArray = [],
@@ -127,4 +127,4 @@ module.exports = async function fromPeptidicSequence(sequences, options = {}) {
   }
 
   return combined;
-};
+}

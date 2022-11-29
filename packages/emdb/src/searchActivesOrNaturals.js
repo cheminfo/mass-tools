@@ -19,7 +19,7 @@ import { fetchJSON } from './util/fetchJSON.js';
  * @param {string} [options.url='https://pubchem.cheminfo.org/activesOrNaturals/v1/fromEM'] - URL of the webservice
  */
 
-module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
+export async function searchNaturalOrBioactive(masses, options = {}) {
   const {
     url = 'https://pubchem.cheminfo.org/activesOrNaturals/v1/fromEM',
     precision = 1000,
@@ -131,4 +131,4 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
   groupedArray.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
 
   return groupedArray;
-};
+}

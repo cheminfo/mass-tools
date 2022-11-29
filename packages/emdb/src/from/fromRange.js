@@ -1,4 +1,4 @@
-import combineMFs from "mf-generator";
+import { generateMFs } from 'mf-generator';
 
 /**
  * Generates a database 'generated' from an array of molecular formula
@@ -39,7 +39,7 @@ import combineMFs from "mf-generator";
  * console.log(emdb.get('generated').length); // 80
  */
 
-module.exports = async function fromRange(rangesString, options = {}) {
+export async function fromRange(rangesString, options = {}) {
   let ranges = rangesString.split(/ *[;\r\n] */);
   for (let i = 0; i < ranges.length; i++) {
     let range = ranges[i];
@@ -48,5 +48,5 @@ module.exports = async function fromRange(rangesString, options = {}) {
     }
   }
 
-  return combineMFs(ranges, options);
-};
+  return generateMFs(ranges, options);
+}
