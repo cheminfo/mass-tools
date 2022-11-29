@@ -1,10 +1,10 @@
-let generateMFs = require('mf-generator');
-let MF = require('mf-parser/src/MF');
-let Papa = require('papaparse');
+import { generateMFs } from 'mf-generator';
+import { MF } from 'mf-parser';
+import Papa from 'papaparse';
 
-const fetchText = require('./util/fetchText.js');
+import { fetchText } from './util/fetchText.js';
 
-async function mfFromGoogleSheet(url, options = {}) {
+export async function mfFromGoogleSheet(url, options = {}) {
   let { urlReferences } = options;
 
   if (urlReferences) {
@@ -26,7 +26,6 @@ async function mfFromGoogleSheet(url, options = {}) {
         !['mf', 'modif', 'ESI', 'MALDI', 'positive', 'negative'].includes(a),
     );
     let formulas = parsed.data;
-
     let references = {};
     if (tsvReferences) {
       let referencesArray = Papa.parse(tsvReferences, {
@@ -111,5 +110,3 @@ async function mfFromGoogleSheet(url, options = {}) {
     return uniqueResults;
   }
 }
-
-module.exports = mfFromGoogleSheet;
