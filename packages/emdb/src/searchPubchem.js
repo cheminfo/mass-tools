@@ -1,10 +1,9 @@
-import { ELECTRON_MASS } from "chemical-elements/src/constants";
-import mfFinder from "mf-finder";
-import mfParser from "mf-parser";
-import getMsInfo from "mf-utilities/src/getMsInfo";
-import preprocessIonizations from "mf-utilities/src/preprocessIonizations";
+import { ELECTRON_MASS } from 'chemical-elements/src/constants';
+import { findMFs } from 'mf-finder';
+import { MF } from 'mf-parser';
+import { getMsInfo, preprocessIonizations } from 'mf-utilities';
 
-import fetchJSON from "./util/fetchJSON.js";
+import { fetchJSON } from './util/fetchJSON.js';
 
 /**
  * Generates a database 'pubchem' based on all molecular formula available
@@ -41,7 +40,7 @@ module.exports = async function searchPubchem(masses, options = {}) {
     const allowedEMsArray = [];
     for (let mass of masses) {
       (
-        await mfFinder(mass, {
+        await findMFs(mass, {
           ionizations: options.ionizations,
           precision,
           ranges,
@@ -76,7 +75,7 @@ module.exports = async function searchPubchem(masses, options = {}) {
         continue;
       }
       try {
-        let mfInfo = new mfParser.MF(entry._id).getInfo();
+        let mfInfo = new MF(entry._id).getInfo();
         mfInfo.ionization = ionizations[i];
         mfInfo.em = mfInfo.monoisotopicMass;
         mfInfo.ms = getMsInfo(mfInfo, {

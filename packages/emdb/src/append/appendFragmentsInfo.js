@@ -1,4 +1,4 @@
-const findMFs = require('mf-finder');
+import { findMFs } from 'mf-finder';
 
 /**
  *

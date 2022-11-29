@@ -1,11 +1,11 @@
-const DBManager = require('..');
+import { EMDB } from '..';
 
 describe('test searchSimilarity', () => {
   it('should find one result with bad distribution', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadNeutralTest({ maxC: 10 });
-    dbManager.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
-    let results = await dbManager.searchSimilarity({
+    let emdb = new EMDB();
+    await emdb.loadNeutralTest({ maxC: 10 });
+    emdb.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
+    let results = await emdb.searchSimilarity({
       ionizations: 'H+,(H+)2,(H+)3', // useless because the test database has already ionizations
       filter: {},
       similarity: {
@@ -27,10 +27,10 @@ describe('test searchSimilarity', () => {
   });
 
   it('should find one result with callback', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadNeutralTest({ maxC: 10 });
-    dbManager.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
-    let results = await dbManager.searchSimilarity({
+    let emdb = new EMDB();
+    await emdb.loadNeutralTest({ maxC: 10 });
+    emdb.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
+    let results = await emdb.searchSimilarity({
       ionizations: 'H+,(H+)2,(H+)3', // useless because the test database has already ionizations
       filter: {
         callback: (entry) => entry.atoms.C === 10,
@@ -41,10 +41,10 @@ describe('test searchSimilarity', () => {
   });
 
   it('should find one result with wrong callback', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadNeutralTest({ maxC: 10 });
-    dbManager.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
-    let results = await dbManager.searchSimilarity({
+    let emdb = new EMDB();
+    await emdb.loadNeutralTest({ maxC: 10 });
+    emdb.setExperimentalSpectrum({ x: [41, 121], y: [1, 1] });
+    let results = await emdb.searchSimilarity({
       ionizations: 'H+,(H+)2,(H+)3', // useless because the test database has already ionizations
       filter: {
         callback: (entry) => entry.atoms.C === 9,
@@ -55,10 +55,10 @@ describe('test searchSimilarity', () => {
   });
 
   it('should find one result with perfect match (small zone)', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadTest();
-    dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
-    let results = await dbManager.searchSimilarity({
+    let emdb = new EMDB();
+    await emdb.loadTest();
+    emdb.setExperimentalSpectrum({ x: [120], y: [1] });
+    let results = await emdb.searchSimilarity({
       ionizations: '+',
       filter: {},
       similarity: {
@@ -76,10 +76,10 @@ describe('test searchSimilarity', () => {
   });
 
   it('should find one result with bad distribution, small zone, small width', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadTest();
-    dbManager.setExperimentalSpectrum({ x: [120, 121], y: [1, 1] });
-    let results = await dbManager.searchSimilarity({
+    let emdb = new EMDB();
+    await emdb.loadTest();
+    emdb.setExperimentalSpectrum({ x: [120, 121], y: [1, 1] });
+    let results = await emdb.searchSimilarity({
       ionizations: '+',
       filter: {
         msem: 120,
@@ -100,10 +100,10 @@ describe('test searchSimilarity', () => {
   });
 
   it('should find no result because of filter', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadTest();
-    dbManager.setExperimentalSpectrum({ x: [120, 121], y: [1, 1] });
-    let results = await dbManager.searchSimilarity({
+    let emdb = new EMDB();
+    await emdb.loadTest();
+    emdb.setExperimentalSpectrum({ x: [120, 121], y: [1, 1] });
+    let results = await emdb.searchSimilarity({
       ionizations: '+',
       filter: {
         msem: 120,
@@ -114,10 +114,10 @@ describe('test searchSimilarity', () => {
   });
 
   it('should find one result with bad bad distribution, large window', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadTest();
-    dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
-    let results = await dbManager.searchSimilarity({
+    let emdb = new EMDB();
+    await emdb.loadTest();
+    emdb.setExperimentalSpectrum({ x: [120], y: [1] });
+    let results = await emdb.searchSimilarity({
       ionizations: '+',
       filter: {
         msem: 120,
@@ -137,10 +137,10 @@ describe('test searchSimilarity', () => {
   });
 
   it('should find one result with bad bad distribution, large window huge width', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadTest();
-    dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
-    let results = await dbManager.searchSimilarity({
+    let emdb = new EMDB();
+    await emdb.loadTest();
+    emdb.setExperimentalSpectrum({ x: [120], y: [1] });
+    let results = await emdb.searchSimilarity({
       ionizations: '+',
       filter: {
         msem: 120,
@@ -160,10 +160,10 @@ describe('test searchSimilarity', () => {
   });
 
   it('should find one result with overlap', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadTest();
-    dbManager.setExperimentalSpectrum({ x: [120], y: [1] });
-    let results = await dbManager.searchSimilarity({
+    let emdb = new EMDB();
+    await emdb.loadTest();
+    emdb.setExperimentalSpectrum({ x: [120], y: [1] });
+    let results = await emdb.searchSimilarity({
       ionizations: '+',
       filter: {
         msem: 120,
@@ -183,10 +183,10 @@ describe('test searchSimilarity', () => {
   });
 
   it('should find one result with good distribution', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadTest();
-    dbManager.setExperimentalSpectrum({ x: [120, 121], y: [1, 0.11] });
-    let results = await dbManager.searchSimilarity({
+    let emdb = new EMDB();
+    await emdb.loadTest();
+    emdb.setExperimentalSpectrum({ x: [120, 121], y: [1, 0.11] });
+    let results = await emdb.searchSimilarity({
       ionizations: '+',
       filter: {
         msem: 120,

@@ -1,16 +1,16 @@
-import { general as matcher } from "mf-matcher";
+import { generalMatcher } from 'mf-matcher';
 
 /**
     Searching by various criteria. This mass will not take into account the mass
     of the mass of the electron
-* @param {object}   [filter={}}]
+* @param {object}   [filter={}]
 * @param {number}   [filter.minMW=0] - Minimal molecular weight
 * @param {number}   [filter.maxMW=+Infinity] - Maximal molecular weight
 * @param {number}   [filter.minEM=0] - Minimal monoisotopic mass
 * @param {number}   [filter.maxEM=+Infinity] - Maximal monoisotopic mass
 * @param {number}   [filter.minCharge=-Infinity] - Minimal charge
 * @param {number}   [filter.maxCharge=+Infinity] - Maximal charge
-* @param {object}   [filter.unsaturation={}}]
+* @param {object}   [filter.unsaturation={}]
 * @param {number}   [filter.unsaturation.min=-Infinity] - Minimal unsaturation
 * @param {number}   [filter.unsaturation.max=+Infinity] - Maximal unsaturation
 * @param {number}   [filter.unsaturation.onlyInteger=false] - Integer unsaturation
@@ -30,7 +30,7 @@ module.exports = function search(filter, options = {}) {
   let results = {};
   for (let database of databases) {
     results[database] = this.databases[database].filter((entry) =>
-      matcher(entry, filter),
+      generalMatcher(entry, filter),
     );
   }
 

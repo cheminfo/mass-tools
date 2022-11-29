@@ -1,6 +1,6 @@
-import mfFromGoogleSheet from "mf-from-google-sheet";
+import { mfFromGoogleSheet } from 'mf-from-google-sheet';
 
-module.exports = async function loadGoogleSheet(options = {}) {
+export async function loadGoogleSheet(options = {}) {
   let {
     refUUID = '1C_H9aiJyu9M9in7sHMOaz-d3Sv758rE72oLxEKH9ioA',
     uuid = '1LrJCl9-xSZKhGA9Y8nKVkYwB-mEOHBkTXg5qYXeFpZY',
@@ -14,4 +14,4 @@ module.exports = async function loadGoogleSheet(options = {}) {
   let data = await mfFromGoogleSheet(url, refURL);
   data.sort((a, b) => a.em - b.em);
   return data;
-};
+}

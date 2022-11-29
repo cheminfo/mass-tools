@@ -1,11 +1,11 @@
-const DBManager = require('..');
+import { EMDB } from '..';
 
 describe('test search', () => {
   it('should filter one database', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadContaminants();
+    let emdb = new EMDB();
+    await emdb.loadContaminants();
 
-    let results = dbManager.search({
+    let results = emdb.search({
       minEM: 100.123,
       maxEM: 140,
     });
@@ -13,10 +13,10 @@ describe('test search', () => {
   });
 
   it('should yield a flatten database', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadContaminants();
+    let emdb = new EMDB();
+    await emdb.loadContaminants();
 
-    let results = dbManager.search(
+    let results = emdb.search(
       {
         minEM: 100.123,
         maxEM: 140,

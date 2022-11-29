@@ -1,6 +1,6 @@
-import crossFetch from "cross-fetch";
+import crossFetch from 'cross-fetch';
 
-module.exports = async function fetchJSONBrowser(url) {
+export async function fetchJSON(url) {
   const result = await crossFetch(url);
   return result.json();
-};
+}

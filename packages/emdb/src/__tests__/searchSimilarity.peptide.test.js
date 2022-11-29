@@ -1,10 +1,10 @@
-const fs = require('fs');
-const join = require('path').join;
+import fs from 'fs';
+import { join } from 'path';
 
-const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
-const parseXY = require('xy-parser').parseXY;
+import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
+import { parseXY } from 'xy-parser';
 
-const DBManager = require('..');
+import EMDB from '..';
 
 expect.extend({ toBeDeepCloseTo });
 
@@ -12,8 +12,8 @@ describe('test searchSimilarity for peptide', () => {
   let experimental = loadUbiquitin();
 
   it('should find one result with bad distribution', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromPeptidicSequence(
+    let emdb = new EMDB();
+    await emdb.fromPeptidicSequence(
       //    'KKK',
       'MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQ',
       {
@@ -27,9 +27,9 @@ describe('test searchSimilarity for peptide', () => {
         },
       },
     );
-    dbManager.setExperimentalSpectrum(experimental);
+    emdb.setExperimentalSpectrum(experimental);
 
-    let results = await dbManager.searchSimilarity({
+    let results = await emdb.searchSimilarity({
       filter: {},
       similarity: {
         widthBottom: 0.02,
@@ -97,8 +97,8 @@ describe('test searchSimilarity for peptide', () => {
   });
 
   it('should find one result with bad distribution and string fucntion', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromPeptidicSequence(
+    let emdb = new EMDB();
+    await emdb.fromPeptidicSequence(
       'MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQ',
       {
         ionizations: 'H1(1+).H2(2+).H3(3+)',
@@ -111,9 +111,9 @@ describe('test searchSimilarity for peptide', () => {
         },
       },
     );
-    dbManager.setExperimentalSpectrum(experimental);
+    emdb.setExperimentalSpectrum(experimental);
 
-    let results = await dbManager.searchSimilarity({
+    let results = await emdb.searchSimilarity({
       filter: {},
       similarity: {
         widthBottom: 0.02,

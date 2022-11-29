@@ -1,4 +1,4 @@
-const loadCommercials = require('../loadCommercials');
+import { loadCommercials } from '../loadCommercials';
 
 test('loadCommercials', async () => {
   let data = await loadCommercials();

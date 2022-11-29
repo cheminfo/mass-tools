@@ -1,8 +1,8 @@
-import max from "ml-array-max/lib/index";
-import min from "ml-array-min/lib/index";
-import Regression from "ml-regression-theil-sen/lib/index";
+import max from 'ml-array-max/lib/index';
+import min from 'ml-array-min/lib/index';
+import Regression from 'ml-regression-theil-sen/lib/index';
 
-function massShifts(similarities, options = {}) {
+export function massShifts(similarities, options = {}) {
   const { minSimilarity = 0.95, minLength = 10 } = options;
 
   let results = [];
@@ -76,5 +76,3 @@ function massShifts(similarities, options = {}) {
     predictFctString: `${regression.slope} * mass + ${regression.intercept}`,
   };
 }
-
-module.exports = massShifts;

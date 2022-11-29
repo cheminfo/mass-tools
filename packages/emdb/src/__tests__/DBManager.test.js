@@ -1,26 +1,26 @@
-const DBManager = require('..');
+import { EMDB } from '..';
 
-test('DBManager contaminants and knapSack', async () => {
-  let dbManager = new DBManager();
+test('EMDB contaminants and knapSack', async () => {
+  let emdb = new EMDB();
 
-  await dbManager.loadContaminants();
-  await dbManager.loadKnapSack();
+  await emdb.loadContaminants();
+  await emdb.loadKnapSack();
 
-  expect(dbManager.listDatabases()).toStrictEqual(['contaminants', 'knapSack']);
-  expect(dbManager.get('contaminants').length).toBeGreaterThan(1000);
+  expect(emdb.listDatabases()).toStrictEqual(['contaminants', 'knapSack']);
+  expect(emdb.get('contaminants').length).toBeGreaterThan(1000);
 }, 30000);
 
-test('DBManager fromMonoisotopicMass', async () => {
-  let dbManager = new DBManager();
+test('EMDB fromMonoisotopicMass', async () => {
+  let emdb = new EMDB();
 
-  await dbManager.fromMonoisotopicMass(300, { ionizations: 'H+,Na+' });
+  await emdb.fromMonoisotopicMass(300, { ionizations: 'H+,Na+' });
 
-  expect(dbManager.listDatabases()).toStrictEqual(['monoisotopic']);
-  expect(dbManager.get('monoisotopic').length).toBeGreaterThan(100);
+  expect(emdb.listDatabases()).toStrictEqual(['monoisotopic']);
+  expect(emdb.get('monoisotopic').length).toBeGreaterThan(100);
 });
 
-test('DBManager MFParser', () => {
-  let MFParser = DBManager.MFParser;
+test('EMDB MFParser', () => {
+  let MFParser = EMDB.MFParser;
 
   let mf = new MFParser.MF('C10H20');
   expect(mf.getInfo()).toStrictEqual({
@@ -33,8 +33,8 @@ test('DBManager MFParser', () => {
   });
 });
 
-test('DBManager IsotopicDistribution', () => {
-  let IsotopicDistribution = DBManager.IsotopicDistribution;
+test('EMDB IsotopicDistribution', () => {
+  let IsotopicDistribution = EMDB.IsotopicDistribution;
 
   let distribution = new IsotopicDistribution('C10');
   let result = distribution.getXY();

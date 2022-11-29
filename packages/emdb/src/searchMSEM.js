@@ -1,5 +1,5 @@
-import matcher from "mf-matcher/src/msemMatcher";
-import preprocessIonizations from "mf-utilities/src/preprocessIonizations";
+import { msemMatcher } from 'mf-matcher';
+import { preprocessIonizations } from 'mf-utilities';
 
 /**
 Search for an experimental monoisotopic mass
@@ -40,7 +40,7 @@ module.exports = function searchMSEM(msem, options = {}) {
     filter.ionization = ionization;
     for (let database of databases) {
       for (let entry of this.databases[database]) {
-        let match = matcher(entry, filter);
+        let match = msemMatcher(entry, filter);
         if (match) {
           results[database].push(
             Object.assign({}, entry, {

@@ -1,11 +1,11 @@
-const DBManager = require('..');
+import { EMDB } from '..';
 
 describe('test search commercial', () => {
   it('should filter the commercial database', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadCommercials();
+    let emdb = new EMDB();
+    await emdb.loadCommercials();
 
-    let results = dbManager.search(
+    let results = emdb.search(
       {
         minMW: 100,
         maxMW: 101,
@@ -16,7 +16,7 @@ describe('test search commercial', () => {
     );
     expect(results).toHaveLength(66);
 
-    results = dbManager.search(
+    results = emdb.search(
       {
         minMW: 100,
         maxMW: 101,
@@ -27,12 +27,12 @@ describe('test search commercial', () => {
     );
     expect(results.commercials).toHaveLength(66);
 
-    results = dbManager.searchMSEM(100, {
+    results = emdb.searchMSEM(100, {
       flatten: true,
     });
     expect(results).toHaveLength(0);
 
-    results = dbManager.searchMSEM(100, {
+    results = emdb.searchMSEM(100, {
       // we search for an experimental mass !
       ionizations: 'H+',
       flatten: true,

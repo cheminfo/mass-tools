@@ -1,15 +1,15 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
-const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
+import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
 
 expect.extend({ toBeDeepCloseTo });
 
-const DBManager = require('../..');
+import { EMDB } from '../..';
 
 describe('fromNucleicSequence', () => {
   it('fromNucleicSequence', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromNucleicSequence('AAA', {
+    let emdb = new EMDB();
+    await emdb.fromNucleicSequence('AAA', {
       ionizations: 'H+,Na+',
       fragmentation: {
         a: true,
@@ -18,7 +18,7 @@ describe('fromNucleicSequence', () => {
         kind: 'dna',
       },
     });
-    let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
     expect(nucleic).toHaveLength(6);
     expect(nucleic[0]).toBeDeepCloseTo({
       charge: 0,
@@ -36,8 +36,8 @@ describe('fromNucleicSequence', () => {
   });
 
   it('fromNucleicSequence ds-DNA', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromNucleicSequence('AAA', {
+    let emdb = new EMDB();
+    await emdb.fromNucleicSequence('AAA', {
       ionizations: 'H+,Na+',
       fragmentation: {
         a: true,
@@ -47,15 +47,15 @@ describe('fromNucleicSequence', () => {
       },
     });
 
-    let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
 
     expect(nucleic).toHaveLength(12);
     expect(nucleic).toMatchSnapshot();
   });
 
   it('TACGTGCCAATAC internal fragment', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromNucleicSequence('TACGTGCCAATAC', {
+    let emdb = new EMDB();
+    await emdb.fromNucleicSequence('TACGTGCCAATAC', {
       ionizations: '(H+)-5',
       fragmentation: {
         abw: true,
@@ -65,7 +65,7 @@ describe('fromNucleicSequence', () => {
       },
     });
 
-    let nucleic = dbManager.databases.nucleic.sort((a, b) => {
+    let nucleic = emdb.databases.nucleic.sort((a, b) => {
       if (a.ms.em !== b.ms.em) return a.ms.em - b.ms.em;
       if (a.ms.comment < b.ms.comment) return 1;
       return -1;
@@ -93,8 +93,8 @@ describe('fromNucleicSequence', () => {
   });
 
   it('TACGTGCCAATAC callback', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromNucleicSequence('TACGTGCCAATAC', {
+    let emdb = new EMDB();
+    await emdb.fromNucleicSequence('TACGTGCCAATAC', {
       ionizations: '(H+)-5',
       fragmentation: {
         abw: true,
@@ -105,7 +105,7 @@ describe('fromNucleicSequence', () => {
       filter: { callback: (entry) => entry.unsaturation % 2 === 0 },
     });
 
-    let nucleic = dbManager.databases.nucleic.sort((a, b) => {
+    let nucleic = emdb.databases.nucleic.sort((a, b) => {
       if (a.ms.em !== b.ms.em) return a.ms.em - b.ms.em;
       if (a.ms.comment < b.ms.comment) return 1;
       return -1;
@@ -114,8 +114,8 @@ describe('fromNucleicSequence', () => {
   });
 
   it('AGGCAG fragment', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromNucleicSequence('AGGCAG', {
+    let emdb = new EMDB();
+    await emdb.fromNucleicSequence('AGGCAG', {
       ionizations: '(H+)-',
       fragmentation: {
         y: true,
@@ -124,14 +124,14 @@ describe('fromNucleicSequence', () => {
         kind: 'dna',
       },
     });
-    let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
     expect(nucleic).toHaveLength(6);
     expect(nucleic).toMatchSnapshot();
   });
 
   it('AGG with d-h2o and base loss', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromNucleicSequence('AGG', {
+    let emdb = new EMDB();
+    await emdb.fromNucleicSequence('AGG', {
       ionizations: '(H+)-1',
       fragmentation: {
         dh2o: true,
@@ -142,14 +142,14 @@ describe('fromNucleicSequence', () => {
         kind: 'dna',
       },
     });
-    let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
     expect(nucleic).toHaveLength(5);
     expect(nucleic).toMatchSnapshot();
   });
 
   it('HODamDamDamDamDamH', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromNucleicSequence('HODamDamDamDamDamH', {
+    let emdb = new EMDB();
+    await emdb.fromNucleicSequence('HODamDamDamDamDamH', {
       ionizations: '(H+)-',
       fragmentation: {
         y: true,
@@ -158,7 +158,7 @@ describe('fromNucleicSequence', () => {
         kind: 'dna',
       },
     });
-    let nucleic = dbManager.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
     expect(nucleic).toHaveLength(5);
     expect(nucleic).toMatchSnapshot();
   });

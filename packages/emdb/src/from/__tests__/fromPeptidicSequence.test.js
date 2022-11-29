@@ -1,9 +1,9 @@
-const DBManager = require('../..');
+import { EMDB } from '../..';
 
 describe('fromPeptidicSequence', () => {
   it('AAKK', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromPeptidicSequence('AAKK', {
+    let emdb = new EMDB();
+    await emdb.fromPeptidicSequence('AAKK', {
       allowNeutralLoss: false,
       protonation: false,
       protonationPH: 7,
@@ -19,17 +19,15 @@ describe('fromPeptidicSequence', () => {
       },
     });
 
-    const peptidic = dbManager.databases.peptidic.sort(
-      (a, b) => a.ms.em - b.ms.em,
-    );
+    const peptidic = emdb.databases.peptidic.sort((a, b) => a.ms.em - b.ms.em);
 
     expect(peptidic).toHaveLength(2);
     expect(peptidic).toMatchSnapshot();
   });
 
   it('AAKK with callback', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromPeptidicSequence('AAKK', {
+    let emdb = new EMDB();
+    await emdb.fromPeptidicSequence('AAKK', {
       allowNeutralLoss: false,
       protonation: false,
       protonationPH: 7,
@@ -44,17 +42,15 @@ describe('fromPeptidicSequence', () => {
       },
     });
 
-    const peptidic = dbManager.databases.peptidic.sort(
-      (a, b) => a.ms.em - b.ms.em,
-    );
+    const peptidic = emdb.databases.peptidic.sort((a, b) => a.ms.em - b.ms.em);
 
     expect(peptidic).toHaveLength(4);
     expect(peptidic).toMatchSnapshot();
   });
 
   it('AAKKKKKKKKKKKKKKKKKK allowNeutralLoss', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromPeptidicSequence('AAKKKKKKKKKKKKKKKKKK', {
+    let emdb = new EMDB();
+    await emdb.fromPeptidicSequence('AAKKKKKKKKKKKKKKKKKK', {
       allowNeutralLoss: true,
       protonation: false,
       protonationPH: 7,
@@ -71,17 +67,15 @@ describe('fromPeptidicSequence', () => {
       },
     });
 
-    const peptidic = dbManager.databases.peptidic.sort(
-      (a, b) => a.ms.em - b.ms.em,
-    );
+    const peptidic = emdb.databases.peptidic.sort((a, b) => a.ms.em - b.ms.em);
 
     expect(peptidic).toHaveLength(23);
     expect(peptidic).toMatchSnapshot();
   });
 
   it('AAKKKKKKKKKKKKKKKKKK filter callback', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromPeptidicSequence('AAKKKKKKKKKKKKKKKKKK', {
+    let emdb = new EMDB();
+    await emdb.fromPeptidicSequence('AAKKKKKKKKKKKKKKKKKK', {
       ionizations: 'H+,Na+',
       fragmentation: {
         a: true,
@@ -91,13 +85,13 @@ describe('fromPeptidicSequence', () => {
       },
     });
 
-    expect(dbManager.databases.peptidic).toHaveLength(2);
+    expect(emdb.databases.peptidic).toHaveLength(2);
   });
 
   it('AAKKKKKK allowNeutralLoss limit: 1000', async () => {
-    let dbManager = new DBManager();
+    let emdb = new EMDB();
     await expect(
-      dbManager.fromPeptidicSequence('AAKKKKKKKKK', {
+      emdb.fromPeptidicSequence('AAKKKKKKKKK', {
         allowNeutralLoss: true,
         protonation: false,
         protonationPH: 7,
@@ -120,8 +114,8 @@ describe('fromPeptidicSequence', () => {
   });
 
   it('Linked AA(H-1#1)AA,GG(H-1#1)GG', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromPeptidicSequence('AA(H-1#1)AA,GG(H-1#2)GG', {
+    let emdb = new EMDB();
+    await emdb.fromPeptidicSequence('AA(H-1#1)AA,GG(H-1#2)GG', {
       links: { filter: true },
       mfsArray: ['#1C6H4#2'],
       fragmentation: {
@@ -129,7 +123,7 @@ describe('fromPeptidicSequence', () => {
       },
     });
 
-    const peptidic = dbManager.databases.peptidic
+    const peptidic = emdb.databases.peptidic
       .sort((a, b) => a.ms.em - b.ms.em)
       .map((item) => item.parts);
     expect(peptidic).toHaveLength(9);
@@ -137,8 +131,8 @@ describe('fromPeptidicSequence', () => {
   });
 
   it('Optional linked AA(H-1#1)A,GG(H-1#1)G', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromPeptidicSequence('AA(H-1#1)A,GG(H-1#2)G', {
+    let emdb = new EMDB();
+    await emdb.fromPeptidicSequence('AA(H-1#1)A,GG(H-1#2)G', {
       links: { filter: true },
       mfsArray: ['#1C6H4#2,'],
       fragmentation: {
@@ -146,7 +140,7 @@ describe('fromPeptidicSequence', () => {
       },
     });
 
-    const peptidic = dbManager.databases.peptidic
+    const peptidic = emdb.databases.peptidic
       .sort((a, b) => a.ms.em - b.ms.em)
       .map((item) => item.parts);
     expect(peptidic).toHaveLength(6);

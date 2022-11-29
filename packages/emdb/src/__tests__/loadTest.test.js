@@ -1,7 +1,7 @@
-const DBManager = require('..');
+import { EMDB } from '..';
 
 test('loadTest', async () => {
-  let dbManager = new DBManager();
-  await dbManager.loadTest();
-  expect(dbManager.databases.test).toMatchSnapshot();
+  let emdb = new EMDB();
+  await emdb.loadTest();
+  expect(emdb.databases.test).toMatchSnapshot();
 });

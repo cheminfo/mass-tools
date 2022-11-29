@@ -1,56 +1,60 @@
-import { Spectrum } from "ms-spectrum";
+import { Spectrum } from 'ms-spectrum';
 
-import loadCommercialsPromise from "./loadCommercials.js";
-import loadGoogleSheetPromise from "./loadGoogleSheet.js";
-import loadKnapSackPromise from "./loadKnapSack.js";
+import { loadCommercials } from './loadCommercials.js';
+import { loadGoogleSheet } from './loadGoogleSheet.js';
+import { loadKnapSack } from './loadKnapSack.js';
 
-function DBManager() {
-  this.databases = {};
-  this.experimentalSpectrum = undefined;
-}
+import {fromArray} from './from/fromArray.js'
+import {fromMonoisotopicMass} from './from/fromMonoisotopicMass.js'
+import {fromNucleicSequence} from './from/fromNucleicSequence.js'
+import {fromPeptidicSequence} from './from/fromPeptidicSequence.js'
+import {fromRange} from './from/fromRange.js'
 
-/**
- *
- * @param {*} data
- * @param {object} [options={}]
- * @param {number} [options.normed=true] Should we normed (sum Y to 1) the experimental spectrum ?
- */
-DBManager.prototype.setExperimentalSpectrum = function setExperimentalSpectrum(
-  data,
-  options = {},
-) {
-  const { normed = true } = options;
-  if (normed) {
-    this.experimentalSpectrum = new Spectrum(data).normedY();
-  } else {
-    this.experimentalSpectrum = new Spectrum(data);
+export class EMDB {
+  constructor() {
+    this.databases = {};
+    this.experimentalSpectrum = undefined;
   }
-  return this.experimentalSpectrum;
-};
+
+  /**
+   *
+   * @param {*} data
+   * @param {object} [options={}]
+   * @param {number} [options.normed=true] Should we normed (sum Y to 1) the experimental spectrum ?
+   */
+  setExperimentalSpectrum(data, options = {}) {
+    const { normed = true } = options;
+    if (normed) {
+      this.experimentalSpectrum = new Spectrum(data).normedY();
+    } else {
+      this.experimentalSpectrum = new Spectrum(data);
+    }
+    return this.experimentalSpectrum;
+  }
 
 /**
  * Add a new database using the KnapSack content
  * @param {*} options
  */
-DBManager.prototype.loadKnapSack = async function loadKnapSack(options = {}) {
+ async  loadKnapSack(options = {}) {
   const { databaseName = 'knapSack', forceReload = false } = options;
   if (this.databases[databaseName] && !forceReload) return;
-  this.databases[databaseName] = await loadKnapSackPromise();
+  this.databases[databaseName] = await loadKnapSack();
 };
 
 /**
  * Add a new database of 12000 commercial products
  * @param {*} options
  */
-DBManager.prototype.loadCommercials = async function loadCommercials(
+ async  loadCommercials(
   options = {},
 ) {
   const { databaseName = 'commercials', forceReload = false } = options;
   if (this.databases[databaseName] && !forceReload) return;
-  this.databases[databaseName] = await loadCommercialsPromise();
+  this.databases[databaseName] = await loadCommercials();
 };
 
-DBManager.prototype.get = function get(databaseName) {
+ get(databaseName) {
   return this.databases[databaseName];
 };
 
@@ -59,12 +63,12 @@ DBManager.prototype.get = function get(databaseName) {
  * @param {*} options
  * @param {string} ['contaminants'] databaseName
  */
-DBManager.prototype.loadContaminants = async function loadContaminants(
+ async  loadContaminants(
   options = {},
 ) {
   const { databaseName = 'contaminants', forceReload = false } = options;
   if (this.databases[databaseName] && !forceReload) return;
-  this.databases[databaseName] = await loadGoogleSheetPromise();
+  this.databases[databaseName] = await loadGoogleSheet();
 };
 
 /**
@@ -73,26 +77,26 @@ DBManager.prototype.loadContaminants = async function loadContaminants(
  * @param {string} ['sheet'] databaseName
  */
 
-DBManager.prototype.loadGoogleSheet = async function loadGoogleSheet(
+ async  loadGoogleSheet(
   options = {},
 ) {
   const { databaseName = 'sheet', forceReload = false } = options;
   if (this.databases[databaseName] && !forceReload) return;
-  this.databases[databaseName] = await loadGoogleSheetPromise();
+  this.databases[databaseName] = await loadGoogleSheet();
 };
 
-DBManager.prototype.loadTest = async function loadTest() {
+async  loadTest() {
   await this.fromArray(['C1-100'], { databaseName: 'test', ionizations: '+' });
 };
 
-DBManager.prototype.loadNeutralTest = async function loadNeutralTest(
+ async  loadNeutralTest(
   options = {},
 ) {
   const { maxC = 100 } = options;
   await this.fromArray([`C1-${maxC}`], { databaseName: 'test' });
 };
 
-DBManager.prototype.fromMonoisotopicMass = async function fromMonoisotopicMass(
+ async  fromMonoisotopicMass(
   mass,
   options = {},
 ) {
@@ -102,32 +106,32 @@ DBManager.prototype.fromMonoisotopicMass = async function fromMonoisotopicMass(
   return result;
 };
 
-DBManager.prototype.fromArray = async function fromArray(
+async  fromArray(
   sequence,
   options = {},
 ) {
   const { databaseName = 'generated', append = false, estimate } = options;
-  const results = await require('./from/fromArray')(sequence, options);
+  const results = await fromArray(sequence, options);
   if (estimate) return results;
   replaceOrAppend(this, databaseName, results, append);
 };
 
-DBManager.prototype.fromRange = async function fromRange(
+async  fromRange(
   sequence,
   options = {},
 ) {
   const { databaseName = 'generated', append = false, estimate } = options;
-  const results = await require('./from/fromRange')(sequence, options);
+  const results = await fromRange(sequence, options);
   if (estimate) return results;
   replaceOrAppend(this, databaseName, results, append);
 };
 
-DBManager.prototype.fromPeptidicSequence = async function fromPeptidicSequence(
+ async  fromPeptidicSequence(
   sequence,
   options = {},
 ) {
   const { databaseName = 'peptidic', append = false, estimate } = options;
-  const results = await require('./from/fromPeptidicSequence')(
+  const results = await fromPeptidicSequence(
     sequence,
     options,
   );
@@ -143,7 +147,7 @@ DBManager.prototype.fromPeptidicSequence = async function fromPeptidicSequence(
  * @param {string} [options.ionizations='']
  * @returns
  */
-DBManager.prototype.appendFragmentsInfo = async function appendFragmentsInfo(
+async  appendFragmentsInfo(
   databaseName,
   options = {},
 ) {
@@ -156,12 +160,12 @@ DBManager.prototype.appendFragmentsInfo = async function appendFragmentsInfo(
   return database;
 };
 
-DBManager.prototype.fromNucleicSequence = async function fromNucleicSequence(
+async  fromNucleicSequence(
   sequence,
   options = {},
 ) {
   const { databaseName = 'nucleic', append = false, estimate } = options;
-  const results = await require('./from/fromNucleicSequence')(
+  const results = await fromNucleicSequence(
     sequence,
     options,
   );
@@ -169,11 +173,11 @@ DBManager.prototype.fromNucleicSequence = async function fromNucleicSequence(
   replaceOrAppend(this, databaseName, results, append);
 };
 
-DBManager.prototype.listDatabases = function listDatabases() {
+ listDatabases() {
   return Object.keys(this.databases).sort();
 };
 
-DBManager.prototype.getInfo = function getInfo() {
+ getInfo() {
   return {
     databases: Object.keys(this.databases)
       .sort()
@@ -183,14 +187,14 @@ DBManager.prototype.getInfo = function getInfo() {
   };
 };
 
-DBManager.prototype.massShifts = require('./massShifts');
-DBManager.prototype.search = require('./search');
-DBManager.prototype.searchMSEM = require('./searchMSEM');
-DBManager.prototype.searchPubchem = require('./searchPubchem');
-DBManager.prototype.searchActivesOrNaturals = require('./searchActivesOrNaturals');
-DBManager.prototype.searchSimilarity = require('./searchSimilarity');
+EMDB.prototype.massShifts = require('./massShifts');
+EMDB.prototype.search = require('./search');
+EMDB.prototype.searchMSEM = require('./searchMSEM');
+EMDB.prototype.searchPubchem = require('./searchPubchem');
+EMDB.prototype.searchActivesOrNaturals = require('./searchActivesOrNaturals');
+EMDB.prototype.searchSimilarity = require('./searchSimilarity');
+}
 
-module.exports = DBManager;
 
 function replaceOrAppend(emdb, databaseName, results, append = false) {
   if (!emdb.databases[databaseName] || !append) {
@@ -200,7 +204,7 @@ function replaceOrAppend(emdb, databaseName, results, append = false) {
   emdb.databases[databaseName] = emdb.databases[databaseName].concat(results);
 }
 
-DBManager.Peptide = require('peptide');
-DBManager.Nucleotide = require('nucleotide');
-DBManager.MFParser = require('mf-parser');
-DBManager.IsotopicDistribution = require('isotopic-distribution');
+EMDB.Peptide = require('peptide');
+EMDB.Nucleotide = require('nucleotide');
+EMDB.MFParser = require('mf-parser');
+EMDB.IsotopicDistribution = require('isotopic-distribution');

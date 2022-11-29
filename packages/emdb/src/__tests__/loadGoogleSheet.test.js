@@ -1,4 +1,4 @@
-const loadGoogleSheet = require('../loadGoogleSheet');
+import { loadGoogleSheet } from '../loadGoogleSheet';
 
 test('load google sheet', async () => {
   let data = await loadGoogleSheet();

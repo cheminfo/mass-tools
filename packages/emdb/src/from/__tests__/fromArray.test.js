@@ -1,17 +1,17 @@
-const DBManager = require('../..');
+import { EMDB } from '../..';
 
 describe('fromArray', () => {
   it('using an array of string', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromArray(['C.N', 'N.O']);
-    expect(dbManager.databases.generated).toHaveLength(4);
+    let emdb = new EMDB();
+    await emdb.fromArray(['C.N', 'N.O']);
+    expect(emdb.databases.generated).toHaveLength(4);
   });
 
   it('with ranges and group', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromArray(['(CH2)0-2N0-1', 'O0-1']);
-    expect(dbManager.databases.generated).toHaveLength(12);
-    let mfs = dbManager.databases.generated.map((entry) => entry.mf).sort();
+    let emdb = new EMDB();
+    await emdb.fromArray(['(CH2)0-2N0-1', 'O0-1']);
+    expect(emdb.databases.generated).toHaveLength(12);
+    let mfs = emdb.databases.generated.map((entry) => entry.mf).sort();
     expect(mfs).toStrictEqual([
       '',
       'C2H4',
@@ -29,19 +29,19 @@ describe('fromArray', () => {
   });
 
   it('with callback filter', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromArray(['C0-100', 'H0-100'], {
+    let emdb = new EMDB();
+    await emdb.fromArray(['C0-100', 'H0-100'], {
       filter: {
         callback: (entry) => entry.atoms.C === entry.atoms.H,
       },
     });
-    expect(dbManager.databases.generated).toHaveLength(101);
+    expect(emdb.databases.generated).toHaveLength(101);
   });
 
   it('using an array or array', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromArray(['C.N', ['Cl0-1', 'Br0-1']]);
-    let result = dbManager
+    let emdb = new EMDB();
+    await emdb.fromArray(['C.N', ['Cl0-1', 'Br0-1']]);
+    let result = emdb
       .get('generated')
       .map((entry) => entry.mf)
       .sort()
