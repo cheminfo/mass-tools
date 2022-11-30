@@ -30,7 +30,7 @@
     "ms-report": "^1.4.6",
     "ms-spectrum": "^1.6.15",
     "nucleotide": "^1.2.24",
-    "peaks-similarity": "^2.3.1",
+    "peaks-similarity": "^3.1.1",
     "peptide": "^1.11.4",
     "sum-object-keys": "^1.0.2"
   }

@@ -21,7 +21,7 @@
   "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/mf-matcher#readme",
   "dependencies": {
     "mf-utilities": "^1.4.1",
-    "ml-spectra-processing": "^11.1.0"
+    "ml-spectra-processing": "^11.14.0"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2"

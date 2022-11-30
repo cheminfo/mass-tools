@@ -1,5 +1,5 @@
 import { IsotopicDistribution } from 'isotopic-distribution';
-import Similarity from 'peaks-similarity';
+import { Comparator } from 'peaks-similarity';
 /**
 Search for an experimental monoisotopic mass and calculate the similarity
 * @param {object}   [options={}]
@@ -82,7 +82,7 @@ export async function searchSimilarity(emdb, options = {}) {
   const { low = -0.5, high = 2.5 } = zone;
 
   // we need to calculate the similarity of the isotopic distribution
-  let similarityProcessor = new Similarity(similarity);
+  let similarityProcessor = new Comparator(similarity);
   similarityProcessor.setPeaks1([experimentalData.x, experimentalData.y]);
 
   for (let i = 0; i < flatEntries.length; i++) {

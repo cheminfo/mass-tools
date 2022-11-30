@@ -1,6 +1,6 @@
-import { IsotopicDistribution } from '..';
+import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
 
-import { toBeDeepCloseTo } from "jest-matcher-deep-close-to";
+import { IsotopicDistribution } from '..';
 
 expect.extend({ toBeDeepCloseTo });
 

@@ -1,4 +1,4 @@
-import Similarity from 'peaks-similarity';
+import { Comparator } from 'peaks-similarity';
 
 /**
  * @param {object}   [options={}]
@@ -36,7 +36,7 @@ export function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
   similarity.common = 'second';
 
   let experimentalData = spectrum.data;
-  let similarityProcessor = new Similarity(similarity);
+  let similarityProcessor = new Comparator(similarity);
   similarityProcessor.setPeaks1([experimentalData.x, experimentalData.y]);
 
   if (widthFunction && typeof widthFunction === 'string') {
