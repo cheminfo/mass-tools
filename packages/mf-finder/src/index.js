@@ -52,7 +52,7 @@ export async function findMFs(targetMass, options = {}) {
     unsaturation = {},
   } = filter;
 
-  let filterUnsaturation = unsaturation ? true : false;
+  let filterUnsaturation = !!unsaturation;
   // we calculate not the real unsaturation but the one before dividing by 2 + 1
   let fakeMinUnsaturation =
     unsaturation.min === undefined
@@ -239,10 +239,8 @@ function ensureUniqueMF(result) {
           mfs.push(current);
           bestCounts = current.currentCounts;
           continue;
-        } else {
-          if (current.currentCounts[i] < bestCounts[i]) {
-            continue next;
-          }
+        } else if (current.currentCounts[i] < bestCounts[i]) {
+          continue next;
         }
       }
     }
@@ -290,12 +288,10 @@ function getResult(
       if (possibility.isGroup) {
         if (possibility.currentCount === 1) {
           result.mf += `${possibility.mf}`;
+        } else if (possibility.mf.match(/^\([^()]*\)$/)) {
+          result.mf += `${possibility.mf}${possibility.currentCount}`;
         } else {
-          if (possibility.mf.match(/^\([^()]*\)$/)) {
-            result.mf += `${possibility.mf}${possibility.currentCount}`;
-          } else {
-            result.mf += `(${possibility.mf})${possibility.currentCount}`;
-          }
+          result.mf += `(${possibility.mf})${possibility.currentCount}`;
         }
         if (result.groups[possibility.mf]) {
           result.groups[possibility.mf] += possibility.currentCount;

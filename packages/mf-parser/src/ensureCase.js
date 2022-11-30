@@ -36,12 +36,10 @@ export function ensureCase(mf) {
           if (elements.includes(two)) {
             newPart += two;
             j++;
+          } else if (elements.includes(one)) {
+            newPart += one;
           } else {
-            if (elements.includes(one)) {
-              newPart += one;
-            } else {
-              return mf;
-            }
+            return mf;
           }
         }
       }

@@ -62,15 +62,13 @@ export function appendResidues(data, sequence, options = {}) {
       parenthesisLevel === 0
     ) {
       state = STATE_END;
-    } else {
-      if (
-        currentChar.match(/[A-Z]/) &&
-        nextChar.match(/[a-z]/) &&
-        nextNextChar.match(/[a-z]/) &&
-        parenthesisLevel === 0
-      ) {
-        result.residues.push('');
-      }
+    } else if (
+      currentChar.match(/[A-Z]/) &&
+      nextChar.match(/[a-z]/) &&
+      nextNextChar.match(/[a-z]/) &&
+      parenthesisLevel === 0
+    ) {
+      result.residues.push('');
     }
 
     switch (state) {
@@ -111,12 +109,10 @@ export function appendResidues(data, sequence, options = {}) {
     residue.kind = 'residue';
     if (label.includes('(')) {
       getModifiedReplacement(label, residue, alternatives, replacements);
+    } else if (groupsObject[label] && groupsObject[label].oneLetter) {
+      residue.label = groupsObject[label].oneLetter;
     } else {
-      if (groupsObject[label] && groupsObject[label].oneLetter) {
-        residue.label = groupsObject[label].oneLetter;
-      } else {
-        getUnknownReplacement(label, residue, replacements);
-      }
+      getUnknownReplacement(label, residue, replacements);
     }
     result.residues[i] = residue;
   }

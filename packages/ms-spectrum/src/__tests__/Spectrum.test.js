@@ -1,5 +1,3 @@
-/* eslint-disable jest/no-if */
-
 import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
 import { generateSpectrum } from 'spectrum-generator';
 

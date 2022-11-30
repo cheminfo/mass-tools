@@ -72,10 +72,10 @@ export async function mfFromGoogleSheet(url, options = {}) {
             };
           } else {
             mf.filter = {
-              ESI: formula.ESI === 'X' ? true : false,
-              MALDI: formula.MALDI === 'X' ? true : false,
-              positive: formula.positive === 'X' ? true : false,
-              negative: formula.negative === 'X' ? true : false,
+              ESI: formula.ESI === 'X',
+              MALDI: formula.MALDI === 'X',
+              positive: formula.positive === 'X',
+              negative: formula.negative === 'X',
             };
           }
           mf.mf = new MF(mf.mf).toMF();

@@ -35,7 +35,7 @@ export function mfFromEA(targetEA, options = {}) {
     maxTotalError = 0.01,
   } = options;
 
-  let filterUnsaturation = unsaturation ? true : false;
+  let filterUnsaturation = !!unsaturation;
   // we calculate not the real unsaturation but the one before dividing by 2 + 1
   let fakeMinUnsaturation =
     unsaturation.min === undefined

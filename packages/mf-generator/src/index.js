@@ -195,7 +195,7 @@ function getEMFromParts(parts, currents, ionization) {
     charge,
     em,
     mw,
-    ionization: ionization,
+    ionization,
     unsaturation: validUnsaturation ? unsaturation / 2 + 1 : undefined,
     atoms,
   };

@@ -30,8 +30,8 @@ export function digestPeptide(sequence, options = {}) {
         .filter((entry) => entry).length;
       fragments[i] = {
         sequence: fragments[i],
-        nbResidue: nbResidue,
-        from: from,
+        nbResidue,
+        from,
         to: from + nbResidue - 1,
       };
       from += nbResidue;

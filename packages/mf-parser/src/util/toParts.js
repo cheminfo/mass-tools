@@ -22,7 +22,7 @@ export function toParts(lines, options = {}) {
       case Kind.ISOTOPE_RATIO:
       case Kind.ISOTOPE:
       case Kind.CHARGE:
-        currentPart.lines.push(Object.assign({}, line, { multiplier: 1 }));
+        currentPart.lines.push({ ...line, multiplier: 1 });
         break;
       case Kind.OPENING_PARENTHESIS:
         openingParenthesis(currentPart);
@@ -165,12 +165,10 @@ function combineAtomsIsotopesCharges(parts) {
           result[result.length - 1].value +=
             key.value.value * key.value.multiplier;
         }
+      } else if (currentKey !== key.key) {
+        result.push(key.value);
       } else {
-        if (currentKey !== key.key) {
-          result.push(key.value);
-        } else {
-          result[result.length - 1].multiplier += key.value.multiplier;
-        }
+        result[result.length - 1].multiplier += key.value.multiplier;
       }
       currentKey = key.key;
     }

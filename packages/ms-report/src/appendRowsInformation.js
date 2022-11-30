@@ -48,20 +48,18 @@ export function appendRowsInformation(data) {
           row.internals.push(result);
         }
       }
-    } else {
-      if (
-        result.position !== undefined &&
-        data.residues.residues[result.position]
-      ) {
-        let residue = data.residues.residues[result.position];
-        if (result.fromEnd) {
-          residue.info.nbOver++;
-          residue.results.end.push(result);
-        }
-        if (result.fromBegin) {
-          residue.info.nbUnder++;
-          residue.results.begin.push(result);
-        }
+    } else if (
+      result.position !== undefined &&
+      data.residues.residues[result.position]
+    ) {
+      let residue = data.residues.residues[result.position];
+      if (result.fromEnd) {
+        residue.info.nbOver++;
+        residue.results.end.push(result);
+      }
+      if (result.fromBegin) {
+        residue.info.nbUnder++;
+        residue.results.begin.push(result);
       }
     }
   }
