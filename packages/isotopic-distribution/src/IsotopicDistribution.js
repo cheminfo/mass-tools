@@ -15,6 +15,9 @@ const MINIMAL_FWHM = 1e-8;
  * @property {Array<number>} y - The y array
  */
 
+/**
+ * A class that allows to manage isotopic distribution
+ */
 export class IsotopicDistribution {
   /**
    * Class that manage isotopic distribution

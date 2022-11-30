@@ -12,6 +12,9 @@ import { isContinuous } from './isContinuous';
 import { peakPicking } from './peakPicking';
 import { peaksWidth } from './peaksWidth';
 
+/**
+ * Class dealing with mass spectra and peak picking
+ */
 export class Spectrum {
   constructor(data = { x: [], y: [] }) {
     if (

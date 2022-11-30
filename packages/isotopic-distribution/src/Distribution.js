@@ -3,6 +3,9 @@ import { joinX } from './utils/joinX.js';
 import { multiply } from './utils/multiply.js';
 import { power } from './utils/power.js';
 
+/**
+ * Internal class to deal with isotopic distribution calculations
+ */
 export class Distribution {
   constructor(array) {
     if (Array.isArray(array)) {

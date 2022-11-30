@@ -11,6 +11,9 @@ import { toHtml } from './util/toHtml';
 import { toParts } from './util/toParts';
 import { toText } from './util/toText';
 
+/**
+ * Class allowing to deal with molecular formula and derived information
+ */
 export class MF {
   constructor(mf, options = {}) {
     if (options.ensureCase) {

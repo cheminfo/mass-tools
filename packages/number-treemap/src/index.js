@@ -1,5 +1,6 @@
 import { Node } from './Node.js';
 
+/** javascript TreeMap implementation */
 export class TreeMap {
   constructor() {
     this.root = null;
