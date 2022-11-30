@@ -1,6 +1,5 @@
 import { isAnyArray } from 'is-any-array';
-import max from 'ml-array-max/lib/index.js';
-import normed from 'ml-array-normed/lib/index.js';
+import { xMaxValue, xNormed } from 'ml-spectra-processing';
 import { parseXY } from 'xy-parser';
 
 import { getBestPeaks } from './getBestPeaks';
@@ -37,7 +36,7 @@ export class Spectrum {
   }
 
   maxY() {
-    return max(this.data.y);
+    return xMaxValue(this.data.y);
   }
 
   sumY() {
@@ -73,7 +72,7 @@ export class Spectrum {
   }
 
   normedY(total = 1) {
-    this.data.y = normed(this.data.y);
+    this.data.y = xNormed(this.data.y);
     if (total !== 1) {
       this.data.y = this.data.y.map((y) => y * total);
     }

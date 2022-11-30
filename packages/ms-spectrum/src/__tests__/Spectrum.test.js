@@ -21,7 +21,10 @@ describe('test Spectrum', () => {
   it('data to normedY', () => {
     expect(
       new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 1, 1] }).normedY().data,
-    ).toStrictEqual({ x: [1, 2, 3, 4], y: [0.25, 0.25, 0.25, 0.25] });
+    ).toStrictEqual({
+      x: [1, 2, 3, 4],
+      y: Float64Array.from([0.25, 0.25, 0.25, 0.25]),
+    });
   });
 
   it('maxY', () => {

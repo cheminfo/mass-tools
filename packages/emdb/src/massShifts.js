@@ -1,6 +1,5 @@
-import max from 'ml-array-max';
-import min from 'ml-array-min';
 import Regression from 'ml-regression-theil-sen';
+import { xMinValue, xMaxValue } from 'ml-spectra-processing';
 
 /**
  * Calculates a function that allows post-calibration on mass spectra based on the error in assignment
@@ -54,8 +53,8 @@ export function massShifts(similarities, options = {}) {
 
   const regression = new Regression(shifts.x, shifts.y);
 
-  let minX = min(shifts.x);
-  let maxX = max(shifts.x);
+  let minX = xMinValue(shifts.x);
+  let maxX = xMaxValue(shifts.x);
 
   let shiftsPPM = { x: shifts.x, y: [] };
   data.forEach((datum) => {
