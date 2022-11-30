@@ -1,6 +1,6 @@
 import { IsotopicDistribution } from '..';
 
-const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
+import { toBeDeepCloseTo } from "jest-matcher-deep-close-to";
 
 expect.extend({ toBeDeepCloseTo });
 

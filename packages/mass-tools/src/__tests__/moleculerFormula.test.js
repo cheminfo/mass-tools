@@ -1,4 +1,4 @@
-const { MF, IsotopicDistribution } = require('..');
+import { MF, IsotopicDistribution } from '..';
 
 describe('mass-tools', () => {
   it('isotopicDistrbution', () => {

@@ -1,8 +1,8 @@
-import { ELECTRON_MASS } from 'chemical-elements/src/constants';
+import { ELECTRON_MASS } from 'chemical-elements';
 import { msemMatcher } from 'mf-matcher';
 import { MF } from 'mf-parser';
+import { processRange } from 'mf-utilities';
 import { preprocessIonizations } from 'mf-utilities/src/preprocessIonizations';
-import { processRange } from 'mf-utilities/src/processRange';
 import sum from 'sum-object-keys';
 /**
  * Generate all the possible combinations of molecular formula and calculate

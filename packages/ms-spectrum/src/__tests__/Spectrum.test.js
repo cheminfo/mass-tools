@@ -83,21 +83,23 @@ describe('test Spectrum', () => {
     ]);
   });
 
-  const peaks = [{ x: 5, y: 10000, width: 0.2 }];
+  it('peak picking and same y value', () => {
+    const peaks = [{ x: 5, y: 10000, width: 0.2 }];
 
-  const data = generateSpectrum(peaks, {
-    generator: {
-      from: 0,
-      to: 10,
-      nbPoints: 201,
-    },
+    const data = generateSpectrum(peaks, {
+      generator: {
+        from: 0,
+        to: 10,
+        nbPoints: 201,
+      },
+    });
+
+    data.y[99] = data.y[100];
+    let result = new Spectrum(data).peakPicking();
+    expect(result).toBeDeepCloseTo([
+      { x: 4.975, y: 10491.836675359205, width: 0.2, charge: 1 },
+    ]);
   });
-
-  data.y[99] = data.y[100];
-  let result = new Spectrum(data).peakPicking();
-  expect(result).toBeDeepCloseTo([
-    { x: 4.975, y: 10491.836675359205, width: 0.2, charge: 1 },
-  ]);
 });
 
 test('fromText', () => {

@@ -1,5 +1,4 @@
 import { readFileSync, writeFileSync } from 'fs';
-import { join } from 'path';
 
 import Papa from 'papaparse';
 
