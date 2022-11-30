@@ -1,4 +1,4 @@
-import JSZip from 'jszip/dist/jszip';
+import JSZip from 'jszip';
 
 import { fetchArrayBuffer } from './util/fetchArrayBuffer';
 

@@ -1,7 +1,7 @@
 import fs from 'fs';
-import { join as join } from 'path';
+import { join } from 'path';
 
-import { parseXY as parseXY } from 'xy-parser';
+import { parseXY } from 'xy-parser';
 
 import { EMDB } from '..';
 

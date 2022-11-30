@@ -1,10 +1,8 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
 import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
 
-expect.extend({ toBeDeepCloseTo });
-
 import { EMDB } from '../..';
+
+expect.extend({ toBeDeepCloseTo });
 
 describe('fromNucleicSequence', () => {
   it('fromNucleicSequence', async () => {
