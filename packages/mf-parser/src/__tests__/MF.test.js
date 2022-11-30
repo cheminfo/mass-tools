@@ -1,4 +1,4 @@
-const { MF } = require('../MF');
+import { MF } from '..';
 
 describe('MF', () => {
   it('C', () => {

@@ -1,8 +1,8 @@
 import { toMatchCloseTo } from 'jest-matcher-deep-close-to';
 
-expect.extend({ toMatchCloseTo });
+import { MF } from '..';
 
-let { MF } = require('../MF');
+expect.extend({ toMatchCloseTo });
 
 test('getElements', () => {
   expect(new MF('C2').getElements()).toStrictEqual([
