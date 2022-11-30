@@ -32,7 +32,7 @@ import { generateMFs } from 'mf-generator';
  * @returns {Promise} - list of possible molecular formula
  *
  * @example
- * const EMDB = require('emdb');
+ * const {EMDB} = require('emdb');
  * let emdb = new EMDB();
  * // semi-columns separated for combination, comma for 'or'
  * emdb.fromRange('C1-10, H1-10; Cl0-1 Br0-1'); // create a database 'generated' combining all possibilies

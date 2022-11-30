@@ -4,7 +4,7 @@ import { join } from 'path';
 import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
 import { parseXY } from 'xy-parser';
 
-import EMDB from '..';
+import { EMDB } from '..';
 
 expect.extend({ toBeDeepCloseTo });
 

@@ -20,16 +20,14 @@ import { generalMatcher } from 'mf-matcher';
 * @param {object}   [options={}]
 * @param {array}    [options.databases] - an array containing the name of the databases so search, by default all
 * @param {boolean}  [options.flatten=false] - should we return the array as a flat result
-
- *
 */
 
-export function search(filter, options = {}) {
-  let { databases = Object.keys(this.databases), flatten = false } = options;
+export function search(emdb, filter, options = {}) {
+  let { databases = Object.keys(emdb.databases), flatten = false } = options;
 
   let results = {};
   for (let database of databases) {
-    results[database] = this.databases[database].filter((entry) =>
+    results[database] = emdb.databases[database].filter((entry) =>
       generalMatcher(entry, filter),
     );
   }

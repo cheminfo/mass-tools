@@ -1,17 +1,21 @@
 import { Spectrum } from 'ms-spectrum';
 
+import { appendFragmentsInfo } from './append/appendFragmentsInfo.js';
+import { fromArray } from './from/fromArray.js';
+import { fromMonoisotopicMass } from './from/fromMonoisotopicMass.js';
+import { fromNucleicSequence } from './from/fromNucleicSequence.js';
+import { fromPeptidicSequence } from './from/fromPeptidicSequence.js';
+import { fromRange } from './from/fromRange.js';
 import { loadCommercials } from './loadCommercials.js';
 import { loadGoogleSheet } from './loadGoogleSheet.js';
 import { loadKnapSack } from './loadKnapSack.js';
+import { search } from './search.js';
+import { searchMSEM } from './searchMSEM.js';
+import { searchSimilarity } from './searchSimilarity.js';
 
-import {fromArray} from './from/fromArray.js'
-import {fromMonoisotopicMass} from './from/fromMonoisotopicMass.js'
-import {fromNucleicSequence} from './from/fromNucleicSequence.js'
-import {fromPeptidicSequence} from './from/fromPeptidicSequence.js'
-import {fromRange} from './from/fromRange.js'
-import {appendFragmentsInfo} from './append/appendFragmentsInfo.js'
-
-export * from './massShifts.js'
+export * from './searchPubchem.js';
+export * from './searchActivesOrNaturals.js';
+export * from './massShifts.js';
 
 export class EMDB {
   constructor() {
@@ -35,170 +39,142 @@ export class EMDB {
     return this.experimentalSpectrum;
   }
 
-/**
- * Add a new database using the KnapSack content
- * @param {*} options
- */
- async  loadKnapSack(options = {}) {
-  const { databaseName = 'knapSack', forceReload = false } = options;
-  if (this.databases[databaseName] && !forceReload) return;
-  this.databases[databaseName] = await loadKnapSack();
-};
+  /**
+   * Add a new database using the KnapSack content
+   * @param {*} options
+   */
+  async loadKnapSack(options = {}) {
+    const { databaseName = 'knapSack', forceReload = false } = options;
+    if (this.databases[databaseName] && !forceReload) return;
+    this.databases[databaseName] = await loadKnapSack();
+  }
 
-/**
- * Add a new database of 12000 commercial products
- * @param {*} options
- */
- async  loadCommercials(
-  options = {},
-) {
-  const { databaseName = 'commercials', forceReload = false } = options;
-  if (this.databases[databaseName] && !forceReload) return;
-  this.databases[databaseName] = await loadCommercials();
-};
+  /**
+   * Add a new database of 12000 commercial products
+   * @param {*} options
+   */
+  async loadCommercials(options = {}) {
+    const { databaseName = 'commercials', forceReload = false } = options;
+    if (this.databases[databaseName] && !forceReload) return;
+    this.databases[databaseName] = await loadCommercials();
+  }
 
- get(databaseName) {
-  return this.databases[databaseName];
-};
+  get(databaseName) {
+    return this.databases[databaseName];
+  }
 
-/**
- * Load the contaminants database from a google sheet document
- * @param {object} [options={}]
- * @param {string} [options.databaseName='contaminants'] 
- * @param {string} [options.forceReload=false] 
- */
- async  loadContaminants(
-  options = {},
-) {
-  const { databaseName = 'contaminants', forceReload = false } = options;
-  if (this.databases[databaseName] && !forceReload) return;
-  this.databases[databaseName] = await loadGoogleSheet();
-};
+  /**
+   * Load the contaminants database from a google sheet document
+   * @param {object} [options={}]
+   * @param {string} [options.databaseName='contaminants']
+   * @param {string} [options.forceReload=false]
+   */
+  async loadContaminants(options = {}) {
+    const { databaseName = 'contaminants', forceReload = false } = options;
+    if (this.databases[databaseName] && !forceReload) return;
+    this.databases[databaseName] = await loadGoogleSheet();
+  }
 
-/**
- * Load a google sheet containing MF information
- * @param {object} [options={}]
- * @param {string} [options.databaseName='sheet'] 
- * @param {string} [options.forceReload=false] 
- */
+  /**
+   * Load a google sheet containing MF information
+   * @param {object} [options={}]
+   * @param {string} [options.databaseName='sheet']
+   * @param {string} [options.forceReload=false]
+   */
 
- async  loadGoogleSheet(
-  options = {},
-) {
-  const { databaseName = 'sheet', forceReload = false } = options;
-  if (this.databases[databaseName] && !forceReload) return;
-  this.databases[databaseName] = await loadGoogleSheet();
-};
+  async loadGoogleSheet(options = {}) {
+    const { databaseName = 'sheet', forceReload = false } = options;
+    if (this.databases[databaseName] && !forceReload) return;
+    this.databases[databaseName] = await loadGoogleSheet();
+  }
 
-async  loadTest() {
-  await this.fromArray(['C1-100'], { databaseName: 'test', ionizations: '+' });
-};
+  async loadTest() {
+    await this.fromArray(['C1-100'], {
+      databaseName: 'test',
+      ionizations: '+',
+    });
+  }
 
- async  loadNeutralTest(
-  options = {},
-) {
-  const { maxC = 100 } = options;
-  await this.fromArray([`C1-${maxC}`], { databaseName: 'test' });
-};
+  async loadNeutralTest(options = {}) {
+    const { maxC = 100 } = options;
+    await this.fromArray([`C1-${maxC}`], { databaseName: 'test' });
+  }
 
- async  fromMonoisotopicMass(
-  mass,
-  options = {},
-) {
-  const { databaseName = 'monoisotopic', append = false } = options;
-  let result = await fromMonoisotopicMass(mass, options);
-  replaceOrAppend(this, databaseName, result.mfs, append);
-  return result;
-};
+  async fromMonoisotopicMass(mass, options = {}) {
+    const { databaseName = 'monoisotopic', append = false } = options;
+    let result = await fromMonoisotopicMass(mass, options);
+    replaceOrAppend(this, databaseName, result.mfs, append);
+    return result;
+  }
 
-async  fromArray(
-  sequence,
-  options = {},
-) {
-  const { databaseName = 'generated', append = false, estimate } = options;
-  const results = await fromArray(sequence, options);
-  if (estimate) return results;
-  replaceOrAppend(this, databaseName, results, append);
-};
+  async fromArray(sequence, options = {}) {
+    const { databaseName = 'generated', append = false, estimate } = options;
+    const results = await fromArray(sequence, options);
+    if (estimate) return results;
+    replaceOrAppend(this, databaseName, results, append);
+  }
 
-async  fromRange(
-  sequence,
-  options = {},
-) {
-  const { databaseName = 'generated', append = false, estimate } = options;
-  const results = await fromRange(sequence, options);
-  if (estimate) return results;
-  replaceOrAppend(this, databaseName, results, append);
-};
+  async fromRange(sequence, options = {}) {
+    const { databaseName = 'generated', append = false, estimate } = options;
+    const results = await fromRange(sequence, options);
+    if (estimate) return results;
+    replaceOrAppend(this, databaseName, results, append);
+  }
 
- async  fromPeptidicSequence(
-  sequence,
-  options = {},
-) {
-  const { databaseName = 'peptidic', append = false, estimate } = options;
-  const results = await fromPeptidicSequence(
-    sequence,
-    options,
-  );
-  if (estimate) return results;
-  replaceOrAppend(this, databaseName, results, append);
-};
+  async fromPeptidicSequence(sequence, options = {}) {
+    const { databaseName = 'peptidic', append = false, estimate } = options;
+    const results = await fromPeptidicSequence(sequence, options);
+    if (estimate) return results;
+    replaceOrAppend(this, databaseName, results, append);
+  }
 
-/**
- *
- * @param {string} databaseName
- * @param {object} [options={}]
- * @param {number} [options.precision=100]
- * @param {string} [options.ionizations='']
- * @returns
- */
-async  appendFragmentsInfo(
-  databaseName,
-  options = {},
-) {
-  const database = this.databases[databaseName];
-  await appendFragmentsInfo(
-    this.experimentalSpectrum,
-    database,
-    options,
-  );
-  return database;
-};
+  /**
+   *
+   * @param {string} databaseName
+   * @param {object} [options={}]
+   * @param {number} [options.precision=100]
+   * @param {string} [options.ionizations='']
+   * @returns
+   */
+  async appendFragmentsInfo(databaseName, options = {}) {
+    const database = this.databases[databaseName];
+    await appendFragmentsInfo(this.experimentalSpectrum, database, options);
+    return database;
+  }
 
-async  fromNucleicSequence(
-  sequence,
-  options = {},
-) {
-  const { databaseName = 'nucleic', append = false, estimate } = options;
-  const results = await fromNucleicSequence(
-    sequence,
-    options,
-  );
-  if (estimate) return results;
-  replaceOrAppend(this, databaseName, results, append);
-};
+  async fromNucleicSequence(sequence, options = {}) {
+    const { databaseName = 'nucleic', append = false, estimate } = options;
+    const results = await fromNucleicSequence(sequence, options);
+    if (estimate) return results;
+    replaceOrAppend(this, databaseName, results, append);
+  }
 
- listDatabases() {
-  return Object.keys(this.databases).sort();
-};
+  listDatabases() {
+    return Object.keys(this.databases).sort();
+  }
 
- getInfo() {
-  return {
-    databases: Object.keys(this.databases)
-      .sort()
-      .map((key) => {
-        return { name: key, nbEntries: this.databases[key].length };
-      }),
-  };
-};
+  getInfo() {
+    return {
+      databases: Object.keys(this.databases)
+        .sort()
+        .map((key) => {
+          return { name: key, nbEntries: this.databases[key].length };
+        }),
+    };
+  }
 
-EMDB.prototype.search = require('./search');
-EMDB.prototype.searchMSEM = require('./searchMSEM');
-EMDB.prototype.searchPubchem = require('./searchPubchem');
-EMDB.prototype.searchActivesOrNaturals = require('./searchActivesOrNaturals');
-EMDB.prototype.searchSimilarity = require('./searchSimilarity');
+  search(filter, options = {}) {
+    return search(this, filter, options);
+  }
+
+  searchMSEM(filter, options = {}) {
+    return searchMSEM(this, filter, options);
+  }
+
+  searchSimilarity(options = {}) {
+    return searchSimilarity(this, options);
+  }
 }
-
 
 function replaceOrAppend(emdb, databaseName, results, append = false) {
   if (!emdb.databases[databaseName] || !append) {
@@ -207,4 +183,3 @@ function replaceOrAppend(emdb, databaseName, results, append = false) {
   }
   emdb.databases[databaseName] = emdb.databases[databaseName].concat(results);
 }
-

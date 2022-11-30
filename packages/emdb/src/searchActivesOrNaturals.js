@@ -1,8 +1,7 @@
-import { ELECTRON_MASS } from 'chemical-elements/src/constants';
+import { ELECTRON_MASS } from 'chemical-elements';
 import { findMFs } from 'mf-finder';
 import { MF } from 'mf-parser';
-import { getMsInfo } from 'mf-utilities/src/getMsInfo';
-import { preprocessIonizations } from 'mf-utilities/src/preprocessIonizations';
+import { getMsInfo, preprocessIonizations } from 'mf-utilities';
 
 import { fetchJSON } from './util/fetchJSON.js';
 
@@ -19,7 +18,7 @@ import { fetchJSON } from './util/fetchJSON.js';
  * @param {string} [options.url='https://pubchem.cheminfo.org/activesOrNaturals/v1/fromEM'] - URL of the webservice
  */
 
-export async function searchNaturalOrBioactive(masses, options = {}) {
+export async function searchActivesOrNaturals(masses, options = {}) {
   const {
     url = 'https://pubchem.cheminfo.org/activesOrNaturals/v1/fromEM',
     precision = 1000,

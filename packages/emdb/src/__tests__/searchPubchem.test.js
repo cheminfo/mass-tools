@@ -1,4 +1,4 @@
-import searchPubchem from "../searchPubchem.js";
+import { searchPubchem } from '../searchPubchem.js';
 
 describe('searchPubchem', () => {
   it('simple case', async () => {

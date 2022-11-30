@@ -1,4 +1,4 @@
-import massShifts from "../massShifts";
+import { massShifts } from '../massShifts';
 
 describe('test massShifts', () => {
   it('should give the right function', async () => {

@@ -1,4 +1,4 @@
-import searchActivesOrNaturals from "../searchActivesOrNaturals.js";
+import { searchActivesOrNaturals } from '../searchActivesOrNaturals.js';
 
 describe('searchActivesOrNaturals', () => {
   it('simple case', async () => {

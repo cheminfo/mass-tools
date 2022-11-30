@@ -1,4 +1,4 @@
-import { ELECTRON_MASS } from 'chemical-elements/src/constants';
+import { ELECTRON_MASS } from 'chemical-elements';
 import { findMFs } from 'mf-finder';
 import { MF } from 'mf-parser';
 import { getMsInfo, preprocessIonizations } from 'mf-utilities';
