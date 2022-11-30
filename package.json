@@ -20,8 +20,8 @@
     "prettier": "prettier --check .",
     "prettier-write": "prettier --write .",
     "publish": "run build-lerna && npm run test && lerna publish -y --no-verify-access",
-    "test": "npm run build-lerna && npm run test-only && npm run eslint",
-    "test-only": "jest --coverage"
+    "test": "npm run test-only && npm run eslint",
+    "test-only": "npm run build-lerna && jest --coverage"
   },
   "repository": {
     "type": "git",
