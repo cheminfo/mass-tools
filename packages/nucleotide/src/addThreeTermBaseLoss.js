@@ -1,4 +1,4 @@
-import { baseLoss } from '.';
+import { baseLoss } from './baseLoss.js';
 
 export function addThreeTermBaseLoss(mfs, threeTerm, i, options) {
   if (!options.wxyzBaseLoss) return;

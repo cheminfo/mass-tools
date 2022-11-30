@@ -1,4 +1,4 @@
-import { furanThreeTerm } from '.';
+import { furanThreeTerm } from './furanThreeTerm.js';
 
 export function addFiveTerm(mfs, fiveTerm, i, options) {
   if (options.a) mfs.push(`${fiveTerm}O-1H-1$a${i}`); // neutral ok

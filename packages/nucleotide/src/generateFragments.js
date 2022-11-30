@@ -1,8 +1,8 @@
-const addFiveTerm = require('./addFiveTerm');
-const addFiveTermBaseLoss = require('./addFiveTermBaseLoss');
-const addInternalTerm = require('./addInternalTerm');
-const addThreeTerm = require('./addThreeTerm');
-const addThreeTermBaseLoss = require('./addThreeTermBaseLoss');
+import { addFiveTerm } from './addFiveTerm';
+import { addFiveTermBaseLoss } from './addFiveTermBaseLoss';
+import { addInternalTerm } from './addInternalTerm';
+import { addThreeTerm } from './addThreeTerm';
+import { addThreeTermBaseLoss } from './addThreeTermBaseLoss';
 
 export function generateFragments(mf, options) {
   if (options === undefined) {

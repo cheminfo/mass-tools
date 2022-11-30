@@ -1,4 +1,4 @@
-import { baseLoss } from '.';
+import { baseLoss } from './baseLoss.js';
 
 export function addFiveTermBaseLoss(mfs, fiveTerm, i, options) {
   if (!options.abcdBaseLoss) return;

@@ -1,4 +1,4 @@
-import { mfDiff } from 'mf-utilities/src/mfDiff';
+import { mfDiff } from 'mf-utilities';
 
 const mfLosses = {};
 ['Amp', 'Tmp', 'Cmp', 'Gmp', 'Ump'].forEach((nucleotide) => {
