@@ -1,7 +1,10 @@
 import { atomSorter } from 'atom-sorter';
 import { msemMatcher } from 'mf-matcher';
-import { preprocessIonizations, preprocessRanges } from 'mf-utilities';
-import { getMsInfo } from 'mf-utilities/src/getMsInfo';
+import {
+  preprocessIonizations,
+  preprocessRanges,
+  getMsInfo,
+} from 'mf-utilities';
 
 import { TargetMassCache } from './TargetMassCache';
 

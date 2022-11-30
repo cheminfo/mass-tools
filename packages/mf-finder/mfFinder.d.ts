@@ -100,7 +100,7 @@ type MFResult = {
   };
 };
 
-export function mfFinder(
+export function findMFs(
   targetMass: number,
   options?: MFFinderOptions,
 ): MFResult[];
