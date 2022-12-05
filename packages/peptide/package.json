@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/cheminfo/mass-tools/issues"
   },
-  "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/peptide#readme",
+  "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/peptide#readme",
   "license": "MIT",
   "main": "lib/index.js",
   "module": "src/index.js",

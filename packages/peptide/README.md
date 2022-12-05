@@ -141,7 +141,7 @@ Returns a color based on the isoelectric point :
 
 [npm-image]: https://img.shields.io/npm/v/peptide.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/peptide
-[travis-image]: https://img.shields.io/travis/cheminfo-js/peptide/master.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/cheminfo-js/peptide/main.svg?style=flat-square
 [travis-url]: https://travis-ci.org/cheminfo-js/peptide
 [david-image]: https://img.shields.io/david/cheminfo-js/peptide.svg?style=flat-square
 [david-url]: https://david-dm.org/cheminfo-js/peptide

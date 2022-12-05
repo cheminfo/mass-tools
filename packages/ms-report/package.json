@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/cheminfo/mass-tools/issues"
   },
-  "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/ms-report#readme",
+  "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/ms-report#readme",
   "dependencies": {
     "@svgdotjs/svg.js": "3.1.1",
     "chemical-groups": "^1.2.1",

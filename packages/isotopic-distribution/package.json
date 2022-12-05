@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/cheminfo/mass-tools/issues"
   },
-  "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/isotopic-distribution#readme",
+  "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/isotopic-distribution#readme",
   "dependencies": {
     "chemical-elements": "^1.2.3",
     "mf-parser": "^1.4.7",

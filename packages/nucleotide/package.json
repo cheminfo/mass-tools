@@ -14,7 +14,7 @@
     "src",
     "lib"
   ],
-  "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/nucleotide#readme",
+  "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/nucleotide#readme",
   "keywords": [],
   "license": "MIT",
   "name": "nucleotide",

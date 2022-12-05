@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/cheminfo/mass-tools/issues"
   },
-  "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/emdb#readme",
+  "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/emdb#readme",
   "dependencies": {
     "chemical-elements": "^1.2.3",
     "chemical-groups": "^1.2.1",

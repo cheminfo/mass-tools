@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/cheminfo/mass-tools/issues"
   },
-  "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/mf-finder#readme",
+  "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/mf-finder#readme",
   "dependencies": {
     "atom-sorter": "^1.1.10",
     "chemical-elements": "^1.2.3",
