@@ -1,6 +1,6 @@
 {
   "name": "mf-from-ea",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "Find a molecular formula from a monoisotopic mass",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -20,10 +20,10 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/mf-from-ea#readme",
   "dependencies": {
-    "atom-sorter": "^1.1.10",
-    "chemical-elements": "^1.2.3",
-    "mf-parser": "^1.4.7",
-    "mf-utilities": "^1.4.1"
+    "atom-sorter": "^1.1.11",
+    "chemical-elements": "^1.2.4",
+    "mf-parser": "^1.4.8",
+    "mf-utilities": "^1.4.2"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2"

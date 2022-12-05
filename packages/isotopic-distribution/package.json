@@ -1,6 +1,6 @@
 {
   "name": "isotopic-distribution",
-  "version": "1.4.15",
+  "version": "1.4.16",
   "description": "Calculate the isotopic distribution of a molecular formula",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/isotopic-distribution#readme",
   "dependencies": {
-    "chemical-elements": "^1.2.3",
-    "mf-parser": "^1.4.7",
-    "mf-utilities": "^1.4.1",
+    "chemical-elements": "^1.2.4",
+    "mf-parser": "^1.4.8",
+    "mf-utilities": "^1.4.2",
     "spectrum-generator": "^8.0.6"
   },
   "devDependencies": {
