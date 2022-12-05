@@ -1,0 +1,22 @@
+name: Deploy documentation.js on GitHub pages
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+        run: npm run build-docs
+      - name: Deploy to GitHub pages
+        uses: JamesIves/github-pages-deploy-action@releases/v4
+        with:
+          token: ${{ secrets.BOT_TOKEN }}
+          branch: gh-pages
+          folder: docs
+          clean: true
