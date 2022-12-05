@@ -1,6 +1,6 @@
 {
   "name": "atom-sorter",
-  "version": "1.1.10",
+  "version": "1.2.0",
   "description": "Callback allowing to sort chemical elements (atoms) in Hill order",
   "main": "src/index.js",
   "files": [

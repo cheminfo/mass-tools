@@ -3,125 +3,73 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.2.3](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.2.2...chemical-elements@1.2.3) (2022-05-09)
+# [1.3.0](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.2.3...chemical-elements@1.3.0) (2022-12-05)
 
+**Note:** Version bump only for package chemical-elements
+
+## [1.2.3](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.2.2...chemical-elements@1.2.3) (2022-05-09)
 
 ### Bug Fixes
 
-* rename fetch to avoid conflict with new native fetch function ([aff7aa8](https://github.com/cheminfo/mass-tools/commit/aff7aa859f81e3d10192566bc04f7a8bb90bdcf9))
-
-
-
-
+- rename fetch to avoid conflict with new native fetch function ([aff7aa8](https://github.com/cheminfo/mass-tools/commit/aff7aa859f81e3d10192566bc04f7a8bb90bdcf9))
 
 ## [1.2.2](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.2.1...chemical-elements@1.2.2) (2022-03-25)
 
-
 ### Bug Fixes
 
-* update dependencies ([cc52abb](https://github.com/cheminfo/mass-tools/commit/cc52abb8cf7dd65920b190983b2458e141e425d8))
-
-
-
-
+- update dependencies ([cc52abb](https://github.com/cheminfo/mass-tools/commit/cc52abb8cf7dd65920b190983b2458e141e425d8))
 
 ## [1.2.1](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.2.0...chemical-elements@1.2.1) (2022-03-04)
 
-
 ### Bug Fixes
 
-* update dependencies ([#71](https://github.com/cheminfo/mass-tools/issues/71)) ([9ea23b6](https://github.com/cheminfo/mass-tools/commit/9ea23b6683d32489b26b0f9abda97dc69fffaca3))
-
-
-
-
+- update dependencies ([#71](https://github.com/cheminfo/mass-tools/issues/71)) ([9ea23b6](https://github.com/cheminfo/mass-tools/commit/9ea23b6683d32489b26b0f9abda97dc69fffaca3))
 
 # [1.2.0](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.1.13...chemical-elements@1.2.0) (2021-10-10)
 
-
 ### Bug Fixes
 
-* **chemical-elements:** correct name stableIsotopesObject ([ca0aa26](https://github.com/cheminfo/mass-tools/commit/ca0aa26fb8dbb826ad0d2fc96ab9aed03db92757))
-
+- **chemical-elements:** correct name stableIsotopesObject ([ca0aa26](https://github.com/cheminfo/mass-tools/commit/ca0aa26fb8dbb826ad0d2fc96ab9aed03db92757))
 
 ### Features
 
-* **chemical-elements:** add stableIsotopesObject ([1dfead4](https://github.com/cheminfo/mass-tools/commit/1dfead4899b501adfc27e8f4a94e13c394b47402))
-
-
-
-
+- **chemical-elements:** add stableIsotopesObject ([1dfead4](https://github.com/cheminfo/mass-tools/commit/1dfead4899b501adfc27e8f4a94e13c394b47402))
 
 ## [1.1.13](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.1.12...chemical-elements@1.1.13) (2021-10-04)
 
 **Note:** Version bump only for package chemical-elements
 
-
-
-
-
 ## [1.1.12](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.1.11...chemical-elements@1.1.12) (2021-09-07)
 
 **Note:** Version bump only for package chemical-elements
-
-
-
-
 
 ## [1.1.11](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.1.10...chemical-elements@1.1.11) (2021-07-12)
 
 **Note:** Version bump only for package chemical-elements
 
-
-
-
-
 ## [1.1.10](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.1.9...chemical-elements@1.1.10) (2021-05-28)
 
 **Note:** Version bump only for package chemical-elements
 
-
-
-
-
 ## [1.1.9](https://github.com/cheminfo/mass-tools/compare/chemical-elements@1.1.8...chemical-elements@1.1.9) (2021-03-24)
-
 
 ### Bug Fixes
 
-* wrong links in some packages.json ([3c5829a](https://github.com/cheminfo/mass-tools/commit/3c5829a153dd198d56e7d54c065bf7e241ea0423))
-
-
-
-
+- wrong links in some packages.json ([3c5829a](https://github.com/cheminfo/mass-tools/commit/3c5829a153dd198d56e7d54c065bf7e241ea0423))
 
 ## 1.1.8 (2021-03-16)
-
-
 
 ## 0.60.1 (2021-03-16)
 
 **Note:** Version bump only for package chemical-elements
 
-
-
-
-
 ## 1.1.7 (2021-03-15)
-
-
 
 # 0.60.0 (2021-03-15)
 
 **Note:** Version bump only for package chemical-elements
 
-
-
-
-
 ## 1.1.6 (2021-03-12)
-
-
 
 ## 0.59.2 (2021-03-12)
 
