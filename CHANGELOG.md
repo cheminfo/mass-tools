@@ -1,5 +1,20 @@
 # Changelog
 
+## [6.0.0](https://github.com/cheminfo/mass-tools/compare/v5.11.2...v6.0.0) (2022-12-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove default export from all the packages
+* **emdb:** rename DBManager to EMDB
+* **emdb:** remove IsotopicDistribution and MFParser. You should use mass-tools to have those 2 librairies
+
+### Miscellaneous Chores
+
+* **emdb:** remove IsotopicDistribution and MFParser. You should use mass-tools to have those 2 librairies ([e6a3cc1](https://github.com/cheminfo/mass-tools/commit/e6a3cc1c0bee0fa8c483da572ab9e56cd409b34d))
+* **emdb:** rename DBManager to EMDB ([e6a3cc1](https://github.com/cheminfo/mass-tools/commit/e6a3cc1c0bee0fa8c483da572ab9e56cd409b34d))
+* remove default export from all the packages ([e6a3cc1](https://github.com/cheminfo/mass-tools/commit/e6a3cc1c0bee0fa8c483da572ab9e56cd409b34d))
+
 ## [5.11.2](https://github.com/cheminfo/mass-tools/compare/v5.11.1...v5.11.2) (2022-11-02)
 
 

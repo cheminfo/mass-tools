@@ -1,7 +1,7 @@
 {
   "name": "mass-tools",
   "private": true,
-  "version": "5.11.2",
+  "version": "6.0.0",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
