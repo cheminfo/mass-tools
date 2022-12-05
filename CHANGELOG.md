@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.0.1](https://github.com/cheminfo/mass-tools/compare/v6.0.0...v6.0.1) (2022-12-05)
+
+
+### Bug Fixes
+
+* build script for lerna publish ([cfca9a8](https://github.com/cheminfo/mass-tools/commit/cfca9a82790ee5e7470cfb3f0009162a4b1acda6))
+
 ## [6.0.0](https://github.com/cheminfo/mass-tools/compare/v5.11.2...v6.0.0) (2022-12-05)
 
 
