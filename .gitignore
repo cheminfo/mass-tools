@@ -5,10 +5,10 @@ logs
 npm-debug.log*
 coverage
 .eslintcache
-dist
+/dist
 .DS_Store
 packages/mass-tools/README.md
 
 packages/**/lib
 
-docs
+/docs
