@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>isotopic-distribution 1.1.6 | Documentation</title>
+  <title>isotopic-distribution 1.4.15 | Documentation</title>
   <meta name='description' content='Calculate the isotopic distribution of a molecular formula'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>isotopic-distribution</h3>
-          <div class='mb1'><code>1.1.6</code></div>
+          <div class='mb1'><code>1.4.15</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -39,9 +39,55 @@
               
                 
                 <li><a
-                  href='#getdistribution'
+                  href='#isotopicdistribution'
+                  class=" toggle-sibling">
+                  IsotopicDistribution
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#isotopicdistributiongetdistribution'
+                        class='regular pre-open'>
+                        #getDistribution
+                      </a></li>
+                      
+                      <li><a
+                        href='#isotopicdistributiongetpeaks'
+                        class='regular pre-open'>
+                        #getPeaks
+                      </a></li>
+                      
+                      <li><a
+                        href='#isotopicdistributiongetxy'
+                        class='regular pre-open'>
+                        #getXY
+                      </a></li>
+                      
+                      <li><a
+                        href='#isotopicdistributiongetgaussian'
+                        class='regular pre-open'>
+                        #getGaussian
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#distribution'
                   class="">
-                  getDistribution
+                  Distribution
                   
                 </a>
                 
@@ -49,59 +95,9 @@
               
                 
                 <li><a
-                  href='#getxy'
+                  href='#joinx'
                   class="">
-                  getXY
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#getgaussian'
-                  class="">
-                  getGaussian
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#append'
-                  class="">
-                  append
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#join'
-                  class="">
-                  join
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#maxtoone'
-                  class="">
-                  maxToOne
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#normalize'
-                  class="">
-                  normalize
+                  joinX
                   
                 </a>
                 
@@ -196,16 +192,82 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='getdistribution'>
-      getDistribution
+    <h3 class='fl m0' id='isotopicdistribution'>
+      IsotopicDistribution
     </h3>
     
     
   </div>
   
 
+  <p>A class that allows to manage isotopic distribution</p>
+
+    <div class='pre p1 fill-light mt0'>new IsotopicDistribution(value: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>), options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
   
-    <div class='pre p1 fill-light mt0'>getDistribution(): Distribution</div>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>))</code>
+	    Molecular formula or an array of parts
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='isotopicdistributiongetdistribution'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getDistribution()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  
+    <div class='pre p1 fill-light mt0'>getDistribution(): <a href="#distribution">Distribution</a></div>
   
   
 
@@ -223,7 +285,7 @@
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>Distribution</code>:
+      <code><a href="#distribution">Distribution</a></code>:
         returns the total distribution (for all parts)
 
       
@@ -245,25 +307,24 @@
   
 </section>
 
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='isotopicdistributiongetpeaks'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getPeaks(options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='getxy'>
-      getXY
-    </h3>
-    
-    
-  </div>
-  
 
-  <p>Returns the isotopic distirubtion</p>
+  <p>Returns the isotopic distribution as an array of peaks</p>
 
-    <div class='pre p1 fill-light mt0'>getXY(options: any): <a href="#xy">XY</a></div>
+    <div class='pre p1 fill-light mt0'>getPeaks(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any></div>
   
   
 
@@ -280,10 +341,45 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>options</span> <code class='quiet'>(any
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
             = <code>{}</code>)</code>
 	    
           </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.maxValue</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>100</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.sumValue</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  </td>
+  <td class='break-word'><span>// if sumValue is defined, maxValue is ignored
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
           
         </div>
       
@@ -295,8 +391,8 @@
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="#xy">XY</a></code>:
-        an object containing 2 properties: x:[] and y:[]
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any></code>:
+        an object containing at least the 2 properties: x:[] and y:[]
 
       
     
@@ -317,20 +413,125 @@
   
 </section>
 
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='isotopicdistributiongetxy'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getXY(options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
-  <div class='clearfix'>
+
+  <p>Returns the isotopic distirubtion</p>
+
+    <div class='pre p1 fill-light mt0'>getXY(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="#xy">XY</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.maxValue</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>100</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.sumValue</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  </td>
+  <td class='break-word'><span>// if sumValue is defined, maxValue is ignored
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
     
-    <h3 class='fl m0' id='getgaussian'>
-      getGaussian
-    </h3>
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#xy">XY</a></code>:
+        an object containing at least the 2 properties: x:[] and y:[]
+
+      
     
-    
-  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='isotopicdistributiongetgaussian'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getGaussian(options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
   
 
   <p>Returns the isotopic distribution as the sum of gaussian</p>
@@ -456,6 +657,18 @@
   
 </section>
 
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+</section>
+
           
         
           
@@ -464,17 +677,17 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='append'>
-      append
+    <h3 class='fl m0' id='distribution'>
+      Distribution
     </h3>
     
     
   </div>
   
 
-  <p>Appen another distribution to the current distribution</p>
+  <p>Internal class to deal with isotopic distribution calculations</p>
 
-    <div class='pre p1 fill-light mt0'>append(distribution: any)</div>
+    <div class='pre p1 fill-light mt0'>new Distribution(array: any)</div>
   
   
 
@@ -491,7 +704,7 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>distribution</span> <code class='quiet'>(any)</code>
+            <span class='code bold'>array</span> <code class='quiet'>(any)</code>
 	    
           </div>
           
@@ -527,8 +740,8 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='join'>
-      join
+    <h3 class='fl m0' id='joinx'>
+      joinX
     </h3>
     
     
@@ -537,7 +750,7 @@
 
   <p>Join x values if there are similar</p>
 
-    <div class='pre p1 fill-light mt0'>join(threshold: any)</div>
+    <div class='pre p1 fill-light mt0'>joinX(self: any, threshold: any)</div>
   
   
 
@@ -551,6 +764,14 @@
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
     <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>self</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
       
         <div class='space-bottom0'>
           <div>
@@ -562,106 +783,6 @@
         </div>
       
     </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='maxtoone'>
-      maxToOne
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Sum of Y to 1</p>
-
-    <div class='pre p1 fill-light mt0'>maxToOne()</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='normalize'>
-      normalize
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Sum of Y to 1</p>
-
-    <div class='pre p1 fill-light mt0'>normalize()</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
   
 
   
