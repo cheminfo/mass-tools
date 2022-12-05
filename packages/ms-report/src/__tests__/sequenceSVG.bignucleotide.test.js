@@ -1,14 +1,11 @@
-'use strict';
+import { writeFileSync } from 'fs';
+import { join } from 'path';
 
-const { writeFileSync } = require('fs');
-const { join } = require('path');
-
-let info = require('../../data/ACGGCTT(C8H14N2O)AGG');
-const sequenceSVG = require('../sequenceSVG');
-
-info = info.filter((entry) => !entry.type.includes('B'));
+import { info } from '../../data/ACGGCTT(C8H14N2O)AGG';
+import { sequenceSVG } from '../sequenceSVG';
 
 test('sequenceSVG of big nucleotide', () => {
+  const filteredInfo = info.filter((entry) => !entry.type.includes('B'));
   let options = {
     width: 250,
     labelSize: 8,
@@ -20,7 +17,7 @@ test('sequenceSVG of big nucleotide', () => {
     },
   };
   let sequence = 'ACGGCTT(C8H14N2O)AGG';
-  let svg = sequenceSVG(sequence, info, options);
+  let svg = sequenceSVG(sequence, filteredInfo, options);
 
   writeFileSync(join(__dirname, 'testBigNucleotide.svg'), svg);
 

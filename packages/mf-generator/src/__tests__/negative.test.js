@@ -1,10 +1,8 @@
-'use strict';
+import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
 
-const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
+import { generateMFs } from '..';
 
 expect.extend({ toBeDeepCloseTo });
-
-const generateMFs = require('..');
 
 describe('generateMFs advanced', () => {
   it('negative', async () => {

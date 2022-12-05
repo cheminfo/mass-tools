@@ -12,10 +12,9 @@ JSON containing information about chemical elements and isotopes.
 ## Usage
 
 ```js
-import library from 'chemical-elements';
+import { elements } from 'chemical-elements';
 
-const result = library(args);
-// result is ...
+console.log(elements);
 ```
 
 ## License

@@ -1,10 +1,6 @@
-'use strict';
+import { elementsAndIsotopes } from './elementsAndIsotopes.js';
 
-const elements = require('./elements.json');
-
-let elementsAndIsotopesObject = {};
-elements.forEach((element) => {
+export const elementsAndIsotopesObject = {};
+elementsAndIsotopes.forEach((element) => {
   elementsAndIsotopesObject[element.symbol] = element;
 });
-
-module.exports = elementsAndIsotopesObject;

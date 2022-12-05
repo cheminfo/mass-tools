@@ -1,8 +1,6 @@
-'use strict';
+import { MF } from 'mf-parser';
 
-const MF = require('mf-parser').MF;
-
-function getEutrophicationPotential(mfString) {
+export function getEutrophicationPotential(mfString) {
   let parsed = new MF(mfString);
   let info = parsed.getInfo();
   let mf = info.mf;
@@ -37,5 +35,3 @@ function getEutrophicationPotential(mfString) {
     log: 'Successful calculation',
   };
 }
-
-module.exports = getEutrophicationPotential;

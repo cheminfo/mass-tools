@@ -1,15 +1,12 @@
-'use strict';
-
-let aa = require('./aminoAcids');
+import { aminoAcids } from './aminoAcids';
 
 // we will convert the data to an object to be much faster
 let aaObject = {};
-for (let i = 0; i < aa.length; i++) {
-  aaObject[aa[i].aa3] = aa[i];
+for (let i = 0; i < aminoAcids.length; i++) {
+  aaObject[aminoAcids[i].aa3] = aminoAcids[i];
 }
 
-function calculateCharge(aas, pH) {
-  if (!pH) pH = 7.0;
+export function calculateCharge(aas, pH = 7.0) {
   let combined = combine(aas);
   if (!combined) return;
   let charge = calculateForPh(combined, pH);
@@ -18,7 +15,7 @@ function calculateCharge(aas, pH) {
 
 // this methods required an array of aas
 
-function calculateIEP(aas) {
+export function calculateIEP(aas) {
   let combined = combine(aas);
   if (!combined) return;
   let first = 0;
@@ -41,7 +38,7 @@ function calculateIEP(aas) {
   return Math.round(current * 1000) / 1000;
 }
 
-function calculateChart(aas) {
+export function calculateChart(aas) {
   let combined = combine(aas);
   if (!combined) return;
   let y = [];
@@ -62,15 +59,13 @@ function calculateChart(aas) {
 
 function calculateForPh(combined, pH) {
   let total = 0;
-  total += 1 / (1 + Math.pow(10, pH - combined.first));
-  total += -1 / (1 + Math.pow(10, combined.last - pH));
+  total += 1 / (1 + 10 ** (pH - combined.first));
+  total += -1 / (1 + 10 ** (combined.last - pH));
   for (let key in combined.acid) {
-    total +=
-      -combined.acid[key] / (1 + Math.pow(10, aaObject[key].sc.pKa - pH));
+    total += -combined.acid[key] / (1 + 10 ** (aaObject[key].sc.pKa - pH));
   }
   for (let key in combined.basic) {
-    total +=
-      combined.basic[key] / (1 + Math.pow(10, pH - aaObject[key].sc.pKa));
+    total += combined.basic[key] / (1 + 10 ** (pH - aaObject[key].sc.pKa));
   }
   return total;
 }
@@ -115,7 +110,7 @@ function combine(aas) {
  0 -> 7 means that at pH 7 it is charged negatively (blue)
  7 -> 14 means that at pH7 it is charged positively (red)
  */
-function getColor(iep) {
+export function getColor(iep) {
   if (iep < 7) {
     if (iep < 3) iep = 3;
     let white = Math.round(255 - (7 - iep) * (200 / 4));
@@ -127,10 +122,3 @@ function getColor(iep) {
   }
   return 'rgb(255,255,255)';
 }
-
-module.exports = {
-  calculateIEP: calculateIEP,
-  calculateCharge: calculateCharge,
-  calculateChart: calculateChart,
-  getColor: getColor,
-};

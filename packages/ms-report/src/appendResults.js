@@ -1,6 +1,4 @@
-'use strict';
-
-function appendResults(data, analysisResult, options = {}) {
+export function appendResults(data, analysisResult, options = {}) {
   const numberResidues = data.residues.residues.length;
   const { merge = {}, filter = {} } = options;
 
@@ -120,5 +118,3 @@ function filterResults(results, filter) {
   }
   return results;
 }
-
-module.exports = appendResults;

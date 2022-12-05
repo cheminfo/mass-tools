@@ -1,6 +1,4 @@
-'use strict';
-
-const massShifts = require('../massShifts');
+import { massShifts } from '../massShifts';
 
 describe('test massShifts', () => {
   it('should give the right function', async () => {

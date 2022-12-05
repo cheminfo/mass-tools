@@ -1,12 +1,10 @@
-'use strict';
+import JSZip from 'jszip';
 
-const JSZip = require('jszip/dist/jszip');
-
-const fetchArrayBuffer = require('./util/fetchArrayBuffer');
+import { fetchArrayBuffer } from './util/fetchArrayBuffer';
 
 const loadingPromises = {};
 
-module.exports = async function loadKnapSack(options = {}) {
+export async function loadKnapSack(options = {}) {
   const {
     url = 'https://couch.cheminfo.org/cheminfo-public/d2eb480198c80275a1d05dd3609414f9/upload/ms.zip',
   } = options;
@@ -28,4 +26,4 @@ module.exports = async function loadKnapSack(options = {}) {
   data.sort((a, b) => a.em - b.em);
 
   return data;
-};
+}

@@ -1,6 +1,4 @@
-'use strict';
-
-const { generateFragments } = require('..');
+import { generateFragments } from '..';
 
 describe('test generate fragments', () => {
   it('nucleotide to sequence of HODampDtmpDcmpH', () => {

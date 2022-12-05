@@ -1,6 +1,9 @@
-'use strict';
-
-let PEP = require('..');
+import {
+  generatePeptideFragments,
+  sequenceToMF,
+  chargePeptide,
+  allowNeutralLoss,
+} from '..';
 
 // http://www.matrixscience.com/help/fragmentation_help.html
 
@@ -23,8 +26,8 @@ let allowed = [
 
 describe('generatePeptideFragments', () => {
   it('Check KAA', () => {
-    let sequence = PEP.convertAASequence('KAA');
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('KAA');
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: true,
       c: false,
@@ -38,8 +41,8 @@ describe('generatePeptideFragments', () => {
   });
 
   it('Check AKLRCSTY', () => {
-    let sequence = PEP.convertAASequence('AKLRCSTY');
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKLRCSTY');
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: true,
       c: false,
@@ -54,7 +57,7 @@ describe('generatePeptideFragments', () => {
   });
 
   it('Check HLysAlaOH', () => {
-    let result = PEP.generatePeptideFragments('HLysAlaOH', {
+    let result = generatePeptideFragments('HLysAlaOH', {
       a: false,
       b: true,
       c: false,
@@ -69,7 +72,7 @@ describe('generatePeptideFragments', () => {
   });
 
   it('Check HLys(COH)AlaOH side chain modified', () => {
-    let result = PEP.generatePeptideFragments('HLys(COH)AlaOH', {
+    let result = generatePeptideFragments('HLys(COH)AlaOH', {
       a: false,
       b: true,
       c: false,
@@ -84,9 +87,9 @@ describe('generatePeptideFragments', () => {
   });
 
   it('Check AKLRCSTY ph=1', () => {
-    let sequence = PEP.convertAASequence('AKLRCSTY');
-    sequence = PEP.chargePeptide(sequence, { pH: 1 });
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKLRCSTY');
+    sequence = chargePeptide(sequence, { pH: 1 });
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: true,
       c: false,
@@ -101,9 +104,9 @@ describe('generatePeptideFragments', () => {
   });
 
   it('Check AKLRCSTY ph=13', () => {
-    let sequence = PEP.convertAASequence('AKLRCSTY');
-    sequence = PEP.chargePeptide(sequence, { pH: 13 });
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKLRCSTY');
+    sequence = chargePeptide(sequence, { pH: 13 });
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: true,
       c: false,
@@ -118,10 +121,10 @@ describe('generatePeptideFragments', () => {
   });
 
   it('Check AKLRCSTY neutral loss ph=1', () => {
-    let sequence = PEP.convertAASequence('AKLRCSTY');
-    sequence = PEP.allowNeutralLoss(sequence);
-    sequence = PEP.chargePeptide(sequence, { pH: 1 });
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKLRCSTY');
+    sequence = allowNeutralLoss(sequence);
+    sequence = chargePeptide(sequence, { pH: 1 });
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: true,
       c: false,
@@ -136,10 +139,10 @@ describe('generatePeptideFragments', () => {
   });
 
   it('Check AKLRCSTY neutral loss ph=13', () => {
-    let sequence = PEP.convertAASequence('AKLRCSTY');
-    sequence = PEP.allowNeutralLoss(sequence);
-    sequence = PEP.chargePeptide(sequence, { pH: 13 });
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKLRCSTY');
+    sequence = allowNeutralLoss(sequence);
+    sequence = chargePeptide(sequence, { pH: 13 });
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: true,
       c: false,
@@ -154,9 +157,9 @@ describe('generatePeptideFragments', () => {
   });
 
   it('Check AKLRCSTY neutral loss', () => {
-    let sequence = PEP.convertAASequence('AKLRCSTY');
-    sequence = PEP.allowNeutralLoss(sequence);
-    let result = PEP.generatePeptideFragments(sequence, {
+    let sequence = sequenceToMF('AKLRCSTY');
+    sequence = allowNeutralLoss(sequence);
+    let result = generatePeptideFragments(sequence, {
       a: false,
       b: true,
       c: false,
@@ -171,14 +174,14 @@ describe('generatePeptideFragments', () => {
   });
 
   it('ALP versus (H)ALP(OH) versus HAlaLeuProOH versus (H)AlaLeuPro(OH)', () => {
-    let sequence1 = PEP.convertAASequence('ALP');
-    let sequence2 = PEP.convertAASequence('(H)ALP(OH)');
-    let sequence3 = PEP.convertAASequence('HAlaLeuProOH');
-    let sequence4 = PEP.convertAASequence('(H)AlaLeuPro(OH)');
-    let result1 = PEP.generatePeptideFragments(sequence1);
-    let result2 = PEP.generatePeptideFragments(sequence2);
-    let result3 = PEP.generatePeptideFragments(sequence3);
-    let result4 = PEP.generatePeptideFragments(sequence4);
+    let sequence1 = sequenceToMF('ALP');
+    let sequence2 = sequenceToMF('(H)ALP(OH)');
+    let sequence3 = sequenceToMF('HAlaLeuProOH');
+    let sequence4 = sequenceToMF('(H)AlaLeuPro(OH)');
+    let result1 = generatePeptideFragments(sequence1);
+    let result2 = generatePeptideFragments(sequence2);
+    let result3 = generatePeptideFragments(sequence3);
+    let result4 = generatePeptideFragments(sequence4);
     expect(result1).toStrictEqual([
       'HAla(+1)$b1',
       'H2(+1)ProOH$y1',
@@ -196,8 +199,8 @@ describe('generatePeptideFragments', () => {
   });
 
   it('AK(*1)T(H-1*2)Y', () => {
-    let sequence = PEP.convertAASequence('AK(*1)T(H-1*2)Y');
-    let result = PEP.generatePeptideFragments(sequence);
+    let sequence = sequenceToMF('AK(*1)T(H-1*2)Y');
+    let result = generatePeptideFragments(sequence);
     expect(result).toStrictEqual([
       'HAla(+1)$b1',
       'H2(+1)TyrOH$y1',
@@ -208,8 +211,8 @@ describe('generatePeptideFragments', () => {
     ]);
   });
   it('HAlaLys(*1)Thr(H-1*2)TyrOH', () => {
-    let sequence = PEP.convertAASequence('HAlaLys(*1)Thr(H-1*2)TyrOH');
-    let result = PEP.generatePeptideFragments(sequence);
+    let sequence = sequenceToMF('HAlaLys(*1)Thr(H-1*2)TyrOH');
+    let result = generatePeptideFragments(sequence);
     expect(result).toStrictEqual([
       'HAla(+1)$b1',
       'H2(+1)TyrOH$y1',

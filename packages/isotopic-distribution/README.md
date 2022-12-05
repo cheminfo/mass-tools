@@ -12,9 +12,9 @@ Calculate the isotopic distribution of a molecular formula.
 ## Usage
 
 ```js
-import library from 'isotopic-distribution';
+const { IsotopicDistribution } = require('isotopic-distribution');
 
-const result = library(args);
+const isotopicDistribution = new IsotopicDistribution('C10H20');
 // result is ...
 ```
 

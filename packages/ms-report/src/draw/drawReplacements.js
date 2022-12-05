@@ -1,6 +1,4 @@
-'use strict';
-
-function drawReplacements(paper, data, options) {
+export function drawReplacements(paper, data, options) {
   let replacements = data.residues.replacements;
   replacements = Object.keys(replacements).map((key) => {
     return { key, ...replacements[key] };
@@ -22,5 +20,3 @@ function drawReplacements(paper, data, options) {
   }
   options.verticalPosition += options.spaceBetweenInternalLines;
 }
-
-module.exports = drawReplacements;

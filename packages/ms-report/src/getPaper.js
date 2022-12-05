@@ -1,13 +1,10 @@
-'use strict';
-
-const { SVG, registerWindow } = require('@svgdotjs/svg.js');
-const window = require('svgdom');
+import { SVG, registerWindow } from '@svgdotjs/svg.js';
+import window from 'svgdom';
 
 const document = window.document;
 registerWindow(window, document);
 
-function getPaper() {
+export function getPaper() {
+  // eslint-disable-next-line new-cap
   return SVG(document.documentElement);
 }
-
-module.exports = getPaper;

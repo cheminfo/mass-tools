@@ -1,17 +1,15 @@
-'use strict';
+import fs from 'fs';
+import { join } from 'path';
 
-const fs = require('fs');
-const join = require('path').join;
+import { parseXY } from 'xy-parser';
 
-const parseXY = require('xy-parser').parseXY;
-
-const DBManager = require('..');
+import { EMDB } from '..';
 
 describe('test searchSimilarity for ethylbenzene', () => {
   let experimental = loadEthylbenzene();
   it('should find one result with bad distribution', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromMonoisotopicMass(106.077, {
+    let emdb = new EMDB();
+    await emdb.fromMonoisotopicMass(106.077, {
       ionizations: 'Na+,K+,(H+),(H+)2,(H+)3,+',
       ranges: 'C0-100 H0-100 N0-100 O0-100',
       filter: {
@@ -25,9 +23,9 @@ describe('test searchSimilarity for ethylbenzene', () => {
       allowNeutral: false,
     });
 
-    dbManager.setExperimentalSpectrum(experimental);
+    emdb.setExperimentalSpectrum(experimental);
 
-    let results = await dbManager.searchSimilarity({
+    let results = await emdb.searchSimilarity({
       filter: {},
       similarity: {
         widthBottom: 0.006,

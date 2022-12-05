@@ -1,7 +1,5 @@
-'use strict';
-
-const matcher = require('mf-matcher/src/msemMatcher');
-const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
+import { msemMatcher } from 'mf-matcher';
+import { preprocessIonizations } from 'mf-utilities';
 
 /**
 Search for an experimental monoisotopic mass
@@ -29,9 +27,9 @@ Search for an experimental monoisotopic mass
 * @param {object}         [options.filter.atoms] - object of atom:{min, max}
 */
 
-module.exports = function searchMSEM(msem, options = {}) {
-  let filter = Object.assign({}, options.filter || {}, { targetMass: msem });
-  let { databases = Object.keys(this.databases), flatten = false } = options;
+export function searchMSEM(emdb, msem, options = {}) {
+  let filter = { ...(options.filter || {}), targetMass: msem };
+  let { databases = Object.keys(emdb.databases), flatten = false } = options;
 
   let ionizations = preprocessIonizations(options.ionizations);
   let results = {};
@@ -41,15 +39,14 @@ module.exports = function searchMSEM(msem, options = {}) {
   for (let ionization of ionizations) {
     filter.ionization = ionization;
     for (let database of databases) {
-      for (let entry of this.databases[database]) {
-        let match = matcher(entry, filter);
+      for (let entry of emdb.databases[database]) {
+        let match = msemMatcher(entry, filter);
         if (match) {
-          results[database].push(
-            Object.assign({}, entry, {
-              ms: match.ms,
-              ionization: match.ionization,
-            }),
-          );
+          results[database].push({
+            ...entry,
+            ms: match.ms,
+            ionization: match.ionization,
+          });
         }
       }
     }
@@ -70,4 +67,4 @@ module.exports = function searchMSEM(msem, options = {}) {
     );
     return results;
   }
-};
+}

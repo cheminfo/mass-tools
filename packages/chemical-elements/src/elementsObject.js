@@ -1,10 +1,6 @@
-'use strict';
+import { elements } from './elements.js';
 
-const elements = require('./elements.js');
-
-let elementsObject = {};
+export const elementsObject = {};
 elements.forEach((element) => {
   elementsObject[element.symbol] = element;
 });
-
-module.exports = elementsObject;

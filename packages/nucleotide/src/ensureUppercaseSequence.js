@@ -1,11 +1,9 @@
-'use strict';
-
 /**
  * Ensure that the sequence is in uppercase taking into account possible modifications
  * @param {string} [options.circular=false]
  */
 
-function ensureUppercaseSequence(sequence) {
+export function ensureUppercaseSequence(sequence) {
   let parenthesisCounter = 0;
   let parts = [];
   let part = '';
@@ -31,5 +29,3 @@ function ensureUppercaseSequence(sequence) {
   }
   return parts.join('');
 }
-
-module.exports = ensureUppercaseSequence;

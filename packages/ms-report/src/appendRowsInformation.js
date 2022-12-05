@@ -1,11 +1,10 @@
 /* eslint-disable no-loop-func */
-'use strict';
 
 /**
  * For each row we calculate internals, label over and label under
  * @param {*} data
  */
-function appendRowsInformation(data) {
+export function appendRowsInformation(data) {
   for (let row of data.rows) {
     let filtered = row.residues.filter(
       (entry) => entry.fromBegin !== undefined,
@@ -49,20 +48,18 @@ function appendRowsInformation(data) {
           row.internals.push(result);
         }
       }
-    } else {
-      if (
-        result.position !== undefined &&
-        data.residues.residues[result.position]
-      ) {
-        let residue = data.residues.residues[result.position];
-        if (result.fromEnd) {
-          residue.info.nbOver++;
-          residue.results.end.push(result);
-        }
-        if (result.fromBegin) {
-          residue.info.nbUnder++;
-          residue.results.begin.push(result);
-        }
+    } else if (
+      result.position !== undefined &&
+      data.residues.residues[result.position]
+    ) {
+      let residue = data.residues.residues[result.position];
+      if (result.fromEnd) {
+        residue.info.nbOver++;
+        residue.results.end.push(result);
+      }
+      if (result.fromBegin) {
+        residue.info.nbUnder++;
+        residue.results.begin.push(result);
       }
     }
   }
@@ -78,5 +75,3 @@ function appendRowsInformation(data) {
     row.info.nbUnder = maxNbUnder;
   }
 }
-
-module.exports = appendRowsInformation;

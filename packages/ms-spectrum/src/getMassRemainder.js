@@ -1,6 +1,4 @@
-'use strict';
-
-const { xySortX, xyJoinX } = require('ml-spectra-processing');
+import { xySortX, xyJoinX } from 'ml-spectra-processing';
 
 /**
  * Remove an integer number of time the specifiedd monoisotopic mass
@@ -10,7 +8,7 @@ const { xySortX, xyJoinX } = require('ml-spectra-processing');
  * @param {object} [options={}
  * @param {number} [options.delta=0.001]
  */
-function getMassRemainder(spectrum, mass, options = {}) {
+export function getMassRemainder(spectrum, mass, options = {}) {
   const { delta = 0.001 } = options;
   const x = spectrum.x.slice();
   const y = spectrum.y;
@@ -21,5 +19,3 @@ function getMassRemainder(spectrum, mass, options = {}) {
   // we sort and join
   return xyJoinX(xySortX({ x, y }), { delta });
 }
-
-module.exports = getMassRemainder;

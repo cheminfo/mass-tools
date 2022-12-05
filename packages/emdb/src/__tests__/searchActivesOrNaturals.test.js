@@ -1,6 +1,4 @@
-'use strict';
-
-const searchActivesOrNaturals = require('../searchActivesOrNaturals.js');
+import { searchActivesOrNaturals } from '../searchActivesOrNaturals.js';
 
 describe('searchActivesOrNaturals', () => {
   it('simple case', async () => {

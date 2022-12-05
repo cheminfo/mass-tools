@@ -1,6 +1,4 @@
-'use strict';
-
-const parse = require('../parse');
+import { parse } from '../parse';
 
 let tests = {
   C10: [

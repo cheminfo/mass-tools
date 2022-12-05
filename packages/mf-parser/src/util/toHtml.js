@@ -1,9 +1,7 @@
-'use strict';
+import { Format } from '../Format';
+import { Style } from '../Style';
 
-const Format = require('../Format');
-const Style = require('../Style');
-
-module.exports = function toHtml(lines) {
+export function toHtml(lines) {
   let html = [];
   for (let line of lines) {
     switch (line.kind) {
@@ -28,4 +26,4 @@ module.exports = function toHtml(lines) {
     }
   }
   return html.join('');
-};
+}

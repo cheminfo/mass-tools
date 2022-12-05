@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @param {object}   [options={}]
  * @param {object}   [options.min=1]
@@ -11,7 +9,7 @@
 
 const NEUTRON_MASS = 1;
 
-function appendPeaksCharge(peaks, options = {}) {
+export function appendPeaksCharge(peaks, options = {}) {
   let {
     precision = 100,
     low = -1,
@@ -136,5 +134,3 @@ function appendPeaksCharge(peaks, options = {}) {
   }
   return peaks;
 }
-
-module.exports = appendPeaksCharge;

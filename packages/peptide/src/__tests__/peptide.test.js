@@ -1,12 +1,10 @@
-'use strict';
-
-let {
-  generatePeptideFragments,
+import {
   calculateIEP,
   calculateIEPChart,
   getColorForIEP,
   calculateCharge,
-} = require('..');
+  generatePeptideFragments,
+} from '..';
 
 describe('generatePeptideFragments', () => {
   it('Natural peptide, default options', () => {

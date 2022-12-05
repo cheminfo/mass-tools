@@ -1,8 +1,6 @@
-'use strict';
-
-const MFGlobal = require('..');
+import { groups, elements } from '..';
 
 test('mf-global', () => {
-  expect(MFGlobal.Groups).toHaveLength(303);
-  expect(MFGlobal.Elements).toHaveLength(118);
+  expect(groups).toHaveLength(303);
+  expect(elements).toHaveLength(118);
 });

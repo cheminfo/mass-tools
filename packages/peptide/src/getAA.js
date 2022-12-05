@@ -1,22 +1,18 @@
-'use strict';
+import { aminoAcids } from './aminoAcids';
 
-let aa = require('./aminoAcids');
-
-function getAA(code) {
+export function getAA(code) {
   if (code.length === 1) {
-    for (let i = 0; i < aa.length; i++) {
-      if (aa[i].aa1 === code) {
-        return aa[i];
+    for (let i = 0; i < aminoAcids.length; i++) {
+      if (aminoAcids[i].aa1 === code) {
+        return aminoAcids[i];
       }
     }
   }
   if (code.length === 3) {
-    for (let i = 0; i < aa.length; i++) {
-      if (aa[i].aa3 === code) {
-        return aa[i];
+    for (let i = 0; i < aminoAcids.length; i++) {
+      if (aminoAcids[i].aa3 === code) {
+        return aminoAcids[i];
       }
     }
   }
 }
-
-module.exports = getAA;

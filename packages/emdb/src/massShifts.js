@@ -1,10 +1,13 @@
-'use strict';
+import Regression from 'ml-regression-theil-sen';
+import { xMinValue, xMaxValue } from 'ml-spectra-processing';
 
-const max = require('ml-array-max/lib/index');
-const min = require('ml-array-min/lib/index');
-const Regression = require('ml-regression-theil-sen/lib/index');
-
-function massShifts(similarities, options = {}) {
+/**
+ * Calculates a function that allows post-calibration on mass spectra based on the error in assignment
+ * @param {*} similarities
+ * @param {object} [options={}]
+ * @returns
+ */
+export function massShifts(similarities, options = {}) {
   const { minSimilarity = 0.95, minLength = 10 } = options;
 
   let results = [];
@@ -50,8 +53,8 @@ function massShifts(similarities, options = {}) {
 
   const regression = new Regression(shifts.x, shifts.y);
 
-  let minX = min(shifts.x);
-  let maxX = max(shifts.x);
+  let minX = xMinValue(shifts.x);
+  let maxX = xMaxValue(shifts.x);
 
   let shiftsPPM = { x: shifts.x, y: [] };
   data.forEach((datum) => {
@@ -78,5 +81,3 @@ function massShifts(similarities, options = {}) {
     predictFctString: `${regression.slope} * mass + ${regression.intercept}`,
   };
 }
-
-module.exports = massShifts;

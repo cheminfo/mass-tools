@@ -1,8 +1,6 @@
-'use strict';
+import { baseLoss } from './baseLoss.js';
 
-const baseLoss = require('./baseLoss');
-
-function addFiveTermBaseLoss(mfs, fiveTerm, i, options) {
+export function addFiveTermBaseLoss(mfs, fiveTerm, i, options) {
   if (!options.abcdBaseLoss) return;
   let loss = baseLoss(fiveTerm);
 
@@ -21,5 +19,3 @@ function addFiveTermBaseLoss(mfs, fiveTerm, i, options) {
     }
   });
 }
-
-module.exports = addFiveTermBaseLoss;

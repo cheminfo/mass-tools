@@ -4,7 +4,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
     (global.Split = factory());
-}(this, (function () { 'use strict';
+}(this, (function () { 
 
     // The programming goals of Split.js are to deliver readable, understandable and
     // maintainable code, while at the same time manually optimizing for tiny minified file size,

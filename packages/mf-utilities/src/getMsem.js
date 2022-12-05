@@ -1,8 +1,6 @@
-'use strict';
+import { ELECTRON_MASS } from 'chemical-elements';
 
-const { ELECTRON_MASS } = require('chemical-elements/src/constants');
-
-module.exports = function getMsem(em, charge) {
+export function getMsem(em, charge) {
   if (charge > 0) {
     return em / charge - ELECTRON_MASS;
   } else if (charge < 0) {
@@ -10,4 +8,4 @@ module.exports = function getMsem(em, charge) {
   } else {
     return 0;
   }
-};
+}

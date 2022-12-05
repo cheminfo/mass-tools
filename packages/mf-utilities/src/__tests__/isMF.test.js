@@ -1,6 +1,4 @@
-'use strict';
-
-const isMF = require('../isMF');
+import { isMF } from '../isMF';
 
 const tests = [
   ['triethylamine', false],

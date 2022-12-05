@@ -8,9 +8,11 @@
   "bundleDependencies": false,
   "deprecated": false,
   "description": "Deal with nucleotides and molecular formula",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "module": "src/index.js",
   "files": [
-    "src"
+    "src",
+    "lib"
   ],
   "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/nucleotide#readme",
   "keywords": [],

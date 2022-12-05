@@ -1,8 +1,8 @@
-'use strict';
+import { elementsObject } from 'chemical-elements';
 
-const elements = Object.keys(
-  require('chemical-elements/src/elementsAndStableIsotopesObject.js'),
-).sort((a, b) => b.length - a.length);
+const elements = Object.keys(elementsObject).sort(
+  (a, b) => b.length - a.length,
+);
 
 /**
  * Ensure that the mf has been entered with capital letters and not only lowercase
@@ -10,7 +10,7 @@ const elements = Object.keys(
  * @param {string} mf
  */
 
-function capitalize(mf) {
+export function ensureCase(mf) {
   for (let i = 0; i < mf.length; i++) {
     if (mf.charCodeAt(i) > 64 && mf.charCodeAt(i) < 91) {
       return mf;
@@ -36,12 +36,10 @@ function capitalize(mf) {
           if (elements.includes(two)) {
             newPart += two;
             j++;
+          } else if (elements.includes(one)) {
+            newPart += one;
           } else {
-            if (elements.includes(one)) {
-              newPart += one;
-            } else {
-              return mf;
-            }
+            return mf;
           }
         }
       }
@@ -50,5 +48,3 @@ function capitalize(mf) {
   }
   return parts.join('');
 }
-
-module.exports = capitalize;

@@ -1,6 +1,4 @@
-'use strict';
-
-const mfDiff = require('../mfDiff');
+import { mfDiff } from '../mfDiff';
 
 const tests = [
   ['C10', 'C5', 'C5'],

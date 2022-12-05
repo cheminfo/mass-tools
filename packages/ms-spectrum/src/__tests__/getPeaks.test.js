@@ -1,6 +1,4 @@
-'use strict';
-
-const getPeaks = require('../getPeaks');
+import { getPeaks } from '../getPeaks';
 
 describe('test getPeaks', () => {
   let peaks = [

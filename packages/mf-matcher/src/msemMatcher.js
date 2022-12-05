@@ -1,8 +1,7 @@
-'use strict';
+import { getMsInfo } from 'mf-utilities';
+import { xFindClosestIndex } from 'ml-spectra-processing';
 
-const getMsInfo = require('mf-utilities/src/getMsInfo.js');
-const xFindClosestIndex = require('ml-spectra-processing').xFindClosestIndex;
-
+import { unsaturationMatcher } from './unsaturationMatcher.js';
 /**
  * @param {object}         [entry={}]
  * @param {object}         [options={}]
@@ -33,7 +32,7 @@ const xFindClosestIndex = require('ml-spectra-processing').xFindClosestIndex;
  * We always recalculate msem
  */
 
-module.exports = function msemMatcher(entry, options = {}) {
+export function msemMatcher(entry, options = {}) {
   const {
     ionization = { mf: '', em: 0, charge: 0, atoms: {} },
     forceIonization = false,
@@ -74,7 +73,7 @@ module.exports = function msemMatcher(entry, options = {}) {
     if (ms.charge < minCharge || ms.charge > maxCharge) return false;
   }
   if (unsaturation !== undefined && entry.unsaturation !== undefined) {
-    if (!require('./unsaturationMatcher')(entry, unsaturation)) {
+    if (!unsaturationMatcher(entry, unsaturation)) {
       return false;
     }
   }
@@ -121,4 +120,4 @@ module.exports = function msemMatcher(entry, options = {}) {
   }
 
   return msInfo;
-};
+}

@@ -1,6 +1,4 @@
-'use strict';
-
-const Distribution = require('../Distribution.js');
+import { Distribution } from '../Distribution.js';
 
 describe('test distribution multiply', () => {
   it('should yield the product', () => {

@@ -1,10 +1,8 @@
-'use strict';
+import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
 
-const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
+import { msemMatcher } from '..';
 
 expect.extend({ toBeDeepCloseTo });
-
-const matcher = require('../msemMatcher');
 
 describe('msemMatcher', () => {
   it('various parameters', () => {
@@ -19,10 +17,10 @@ describe('msemMatcher', () => {
       },
     };
 
-    expect(matcher(entry, { targetMass: 120, minCharge: 1 })).toBe(false);
-    expect(matcher(entry, { targetMass: 120, maxCharge: -1 })).toBe(false);
+    expect(msemMatcher(entry, { targetMass: 120, minCharge: 1 })).toBe(false);
+    expect(msemMatcher(entry, { targetMass: 120, maxCharge: -1 })).toBe(false);
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         targetMass: 120,
         ionization: { charge: 1, em: 0 },
         atoms: {
@@ -31,7 +29,7 @@ describe('msemMatcher', () => {
       }),
     ).toBe(false);
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         targetMass: 120,
         atoms: {
           C: { min: 5, max: 9 },
@@ -39,7 +37,7 @@ describe('msemMatcher', () => {
       }),
     ).toBe(false);
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         targetMass: 120,
         ionization: { charge: 1, em: 0 },
         atoms: {
@@ -58,12 +56,12 @@ describe('msemMatcher', () => {
       },
     });
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         callback: (item) => item.atoms.C > 15,
       }),
     ).toBe(false);
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         callback: (item) => item.atoms.C > 5,
       }),
     ).toBeInstanceOf(Object);
@@ -83,7 +81,7 @@ describe('msemMatcher', () => {
     };
 
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         targetMass: 120,
         maxCharge: 1,
         minCharge: 1,
@@ -116,7 +114,7 @@ describe('msemMatcher', () => {
     };
 
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         targetMasses: [119, 120, 121, 122, 123],
       }),
     ).toStrictEqual({
@@ -132,7 +130,7 @@ describe('msemMatcher', () => {
     });
 
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         targetMasses: [119, 120, 121, 122, 123],
         targetIntensities: [5, 10, 15, 10, 5],
       }),
@@ -162,7 +160,7 @@ describe('msemMatcher', () => {
     };
 
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         targetMasses: [50, 60, 70],
         precision: 100,
         ionization: { mf: '(H+)2', charge: 2, em: 0 },
@@ -190,13 +188,13 @@ describe('msemMatcher', () => {
         C: -10,
       },
     };
-    expect(matcher(entry, { allowNegativeAtoms: true })).toStrictEqual({
+    expect(msemMatcher(entry, { allowNegativeAtoms: true })).toStrictEqual({
       ionization: { atoms: {}, charge: 0, em: 0, mf: '' },
       ms: { charge: 0, em: 0, ionization: '' },
     });
-    expect(matcher(entry)).toBe(false);
+    expect(msemMatcher(entry)).toBe(false);
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         ionization: { mf: '(H+)2', charge: 2, em: 0, atoms: { H: 2 } },
       }),
     ).toBe(false);
@@ -212,7 +210,7 @@ describe('msemMatcher', () => {
       },
     };
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         allowNegativeAtoms: true,
         ionization: { mf: '(H+)-2', charge: -2, em: 0, atoms: { H: -2 } },
       }),
@@ -221,7 +219,7 @@ describe('msemMatcher', () => {
       ionization: { mf: '(H+)-2', charge: -2, em: 0, atoms: { H: -2 } },
     });
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         ionization: { mf: 'C-2(+)', charge: 1, em: -24, atoms: { C: -2 } },
       }),
     ).toBeDeepCloseTo({
@@ -229,17 +227,17 @@ describe('msemMatcher', () => {
       ionization: { mf: 'C-2(+)', charge: 1, em: -24, atoms: { C: -2 } },
     });
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         ionization: { mf: '(H+)-2', charge: -2, em: 0, atoms: { H: -2 } },
       }),
     ).toBe(false);
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         ionization: { mf: 'C-20', charge: 0, em: 0, atoms: { C: -20 } },
       }),
     ).toBe(false);
     expect(
-      matcher(entry, {
+      msemMatcher(entry, {
         ionization: { mf: 'C-10', charge: 0, em: 0, atoms: { C: -10 } },
       }),
     ).toStrictEqual({

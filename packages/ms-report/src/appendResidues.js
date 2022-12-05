@@ -1,8 +1,6 @@
-'use strict';
-
-const Nucleotide = require('nucleotide');
-const Peptide = require('peptide');
-const groups = require('chemical-groups').getGroupsObject();
+import { groupsObject } from 'chemical-groups';
+import * as Nucleotide from 'nucleotide';
+import * as Peptide from 'peptide';
 
 const ALTERNATIVES = ['', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'];
 const SYMBOLS = ['Θ', 'Δ', 'Λ', 'Φ', 'Ω', 'Γ', 'Χ'];
@@ -18,7 +16,7 @@ let currentSymbol = 0;
  * @param {string} [options.circular=false]
  */
 
-module.exports = function appendResidues(data, sequence, options = {}) {
+export function appendResidues(data, sequence, options = {}) {
   const { kind = 'peptide' } = options;
 
   currentSymbol = 0;
@@ -64,15 +62,13 @@ module.exports = function appendResidues(data, sequence, options = {}) {
       parenthesisLevel === 0
     ) {
       state = STATE_END;
-    } else {
-      if (
-        currentChar.match(/[A-Z]/) &&
-        nextChar.match(/[a-z]/) &&
-        nextNextChar.match(/[a-z]/) &&
-        parenthesisLevel === 0
-      ) {
-        result.residues.push('');
-      }
+    } else if (
+      currentChar.match(/[A-Z]/) &&
+      nextChar.match(/[a-z]/) &&
+      nextNextChar.match(/[a-z]/) &&
+      parenthesisLevel === 0
+    ) {
+      result.residues.push('');
     }
 
     switch (state) {
@@ -113,12 +109,10 @@ module.exports = function appendResidues(data, sequence, options = {}) {
     residue.kind = 'residue';
     if (label.includes('(')) {
       getModifiedReplacement(label, residue, alternatives, replacements);
+    } else if (groupsObject[label] && groupsObject[label].oneLetter) {
+      residue.label = groupsObject[label].oneLetter;
     } else {
-      if (groups[label] && groups[label].oneLetter) {
-        residue.label = groups[label].oneLetter;
-      } else {
-        getUnknownReplacement(label, residue, replacements);
-      }
+      getUnknownReplacement(label, residue, replacements);
     }
     result.residues[i] = residue;
   }
@@ -154,7 +148,7 @@ module.exports = function appendResidues(data, sequence, options = {}) {
   });
 
   data.residues = result;
-};
+}
 
 function getUnknownReplacement(unknownResidue, residue, replacements) {
   if (!replacements[unknownResidue]) {
@@ -181,8 +175,11 @@ function getModifiedReplacement(
       modifiedResidue.substring(position),
     );
 
-    if (groups[residueCode] && groups[residueCode].alternativeOneLetter) {
-      let alternativeOneLetter = groups[residueCode].alternativeOneLetter;
+    if (
+      groupsObject[residueCode] &&
+      groupsObject[residueCode].alternativeOneLetter
+    ) {
+      let alternativeOneLetter = groupsObject[residueCode].alternativeOneLetter;
 
       if (!alternatives[alternativeOneLetter]) {
         alternatives[alternativeOneLetter] = { count: 1 };

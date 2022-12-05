@@ -1,6 +1,4 @@
-'use strict';
-
-function addScript(paper) {
+export function addScript(paper) {
   let scriptCode = ` // <![CDATA[
         function mouseOver(evt) {
            
@@ -39,5 +37,3 @@ function addScript(paper) {
   });
   script.words(scriptCode);
 }
-
-module.exports = addScript;

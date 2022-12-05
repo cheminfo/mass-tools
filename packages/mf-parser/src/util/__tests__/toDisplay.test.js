@@ -1,6 +1,4 @@
-'use strict';
-
-const toDisplay = require('../toDisplay');
+import { toDisplay } from '../toDisplay';
 
 let tests = [
   {

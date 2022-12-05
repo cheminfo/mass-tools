@@ -1,9 +1,7 @@
-'use strict';
+import { elementsAndIsotopes } from './elementsAndIsotopes.js';
 
-const elements = require('./elements.json');
-
-let isotopeObject = {};
-for (const element of elements) {
+export const stableIsotopesObject = {};
+for (const element of elementsAndIsotopes) {
   let abundance = 0;
   let mostAbundant = 0;
   for (const isotope of element.isotopes) {
@@ -24,8 +22,6 @@ for (const element of elements) {
     if (isotope.nominal === mostAbundant) {
       entry.mostAbundant = true;
     }
-    isotopeObject[isotope.nominal + element.symbol] = entry;
+    stableIsotopesObject[isotope.nominal + element.symbol] = entry;
   }
 }
-
-module.exports = isotopeObject;

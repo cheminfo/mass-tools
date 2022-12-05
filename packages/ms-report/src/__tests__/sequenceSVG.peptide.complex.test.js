@@ -1,6 +1,4 @@
-'use strict';
-
-const sequenceSVG = require('../sequenceSVG');
+import { sequenceSVG } from '../sequenceSVG';
 
 test('sequenceSVG of peptide', () => {
   let options = {

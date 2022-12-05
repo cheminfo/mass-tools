@@ -1,4 +1,4 @@
-'use strict';
+import { EMDB } from 'emdb';
 
 /**
  *
@@ -17,10 +17,10 @@
  * @returns {Promise}
  */
 
-async function getPeaksAnnotation(bestPeaks, options = {}) {
-  const emdb = new (require('emdb'))();
+export async function getPeaksAnnotation(bestPeaks, options = {}) {
+  const emdb = new EMDB();
 
-  options = Object.assign({ limit: 5, precision: 100 }, options);
+  options = { limit: 5, precision: 100, ...options };
 
   let {
     numberDigits = 5,
@@ -129,10 +129,11 @@ async function getPeaksAnnotation(bestPeaks, options = {}) {
         // if there is a shift we consider only a neutral loss and the parameter charge is important
         if (shift) {
           // neutral loss
-          let currentMfPrefs = Object.assign({}, mfPrefs, {
+          let currentMfPrefs = {
+            ...mfPrefs,
             allowNeutral: true,
             ionizations: '',
-          });
+          };
           // we need to deal with the precision and increase it
           currentMfPrefs.precision =
             (currentMfPrefs.precision / Math.max(Math.abs(peak.x + shift), 1)) *
@@ -191,5 +192,3 @@ function getColor(colors, value) {
   }
   return 'lightgrey';
 }
-
-module.exports = getPeaksAnnotation;

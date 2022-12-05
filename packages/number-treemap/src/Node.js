@@ -1,6 +1,4 @@
-'use strict';
-
-class Node {
+export class Node {
   constructor(key = null, value = null, parent = null) {
     this.key = key;
     this.value = value;
@@ -9,5 +7,3 @@ class Node {
     this.right = null;
   }
 }
-
-module.exports = Node;

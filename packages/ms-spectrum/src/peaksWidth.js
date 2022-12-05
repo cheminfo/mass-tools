@@ -1,10 +1,7 @@
-'use strict';
+import Regression from 'ml-regression-power';
+import { xMaxValue, xMinValue } from 'ml-spectra-processing';
 
-const max = require('ml-array-max/lib/index');
-const min = require('ml-array-min/lib/index');
-const Regression = require('ml-regression-power/lib/index.js');
-
-function peaksWidth(peaks) {
+export function peaksWidth(peaks) {
   let xs = peaks.map((peak) => peak.x);
   let widths = peaks.map((peak) => peak.width);
 
@@ -22,8 +19,8 @@ function peaksWidth(peaks) {
     throw new Error('peaksWidth: can not calculate regression');
   }
 
-  let from = min(xs);
-  let to = max(xs);
+  let from = xMinValue(xs);
+  let to = xMaxValue(xs);
 
   let regressionChart = { x: [], y: [] };
   for (let x = from; x <= to; x += (to - from) / 1000) {
@@ -45,5 +42,3 @@ function peaksWidth(peaks) {
     predictFctString: `${regression.A} * mass ** ${regression.B}`,
   };
 }
-
-module.exports = peaksWidth;

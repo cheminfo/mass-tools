@@ -1,8 +1,6 @@
-'use strict';
+import { Kind } from '../Kind';
 
-const Kind = require('../Kind');
-
-module.exports = function partToMF(part, options = {}) {
+export function partToMF(part, options = {}) {
   let mf = [];
   for (let line of part) {
     switch (line.kind) {
@@ -37,4 +35,4 @@ module.exports = function partToMF(part, options = {}) {
     }
   }
   return mf.join('');
-};
+}

@@ -1,6 +1,4 @@
-'use strict';
-
-const capitalizeMF = require('../capitalizeMF');
+import { capitalizeMF } from '../capitalizeMF';
 
 const tests = [
   ['triethylamine', 'triethylamine'],

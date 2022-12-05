@@ -1,6 +1,4 @@
-'use strict';
-
-let mfFromGoogleSheet = require('..');
+import { mfFromGoogleSheet } from '..';
 
 // The original document is on: https://docs.google.com/spreadsheets/d/15Kuc5MeOhvm4oeTMvEuP1rWdRFiVWosxXhYwAmuf3Uo/edit#gid=0
 test('getReferenceList with existing', async () => {
@@ -14,7 +12,6 @@ test('getReferenceList with existing', async () => {
 });
 
 test('getReferenceList with non existing document', () => {
-  // eslint-disable-next-line jest/no-test-return-statement
   return expect(
     mfFromGoogleSheet(
       'https://googledocs.cheminfo.org/spreadsheets/d/15Kuc5MeOhvm4xxxVWosxXhYwAmuf3Uo/export?format=tsv',

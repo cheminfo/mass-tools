@@ -1,6 +1,4 @@
-'use strict';
-
-const generateMFs = require('mf-generator');
+import { generateMFs } from 'mf-generator';
 
 /**
  * Generates a database 'generated' from an array of molecular formula
@@ -34,21 +32,21 @@ const generateMFs = require('mf-generator');
  *
  * @example
  *
- * const EMDB = require('emdb');
+ * const {EMDB} = require('emdb');
  * let emdb = new EMDB();
  * let array = ['C1-10', 'H1-10'];
  * emdb.fromArray(array); // create a database 'generated' combining all possibilies
  * console.log(emdb.get('generated').length); // 100
  *
  * @example
- * const EMDB = require('emdb');
+ * const {EMDB} = require('emdb');
  * let emdb = new EMDB();
  * let array = ['C1-10 H1-10'];
  * emdb.fromArray(array); // create a database 'generated' combining all possibilies
  * console.log(emdb.get('generated').length); // 100
  *
  * @example
- * const EMDB = require('emdb');
+ * const {EMDB} = require('emdb');
  * let emdb = new EMDB();
  * // in case of an array of array, one of the group is allwed
  * let array = [['C1-10','H1-10'],'Cl0-1 Br0-1'];
@@ -58,7 +56,7 @@ const generateMFs = require('mf-generator');
  * @example
  * <script src="https://www.lactame.com/lib/mass-tools/HEAD/mass-tools.js" />
  * <script>
- *   let emdb = new MolecularFormula.EMDB();
+ *   let emdb = new MassTools.EMDB();
  *   let array = ['C1-10', 'H1-10'];
  *   emdb.fromArray(array); // create a database 'generated' combining all possibilities
  *   console.log(emdb.get('generated').length); // 100
@@ -67,6 +65,6 @@ const generateMFs = require('mf-generator');
  * // from the browser
  */
 
-module.exports = async function fromArray(mfsArray, options = {}) {
+export async function fromArray(mfsArray, options = {}) {
   return generateMFs(mfsArray, options);
-};
+}

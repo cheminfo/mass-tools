@@ -1,13 +1,10 @@
-'use strict';
-
-let data = require('..');
+import { groupsObject, groups } from '..';
 
 test('data size', () => {
-  expect(data.groups.length).toBeGreaterThan(200);
+  expect(groups.length).toBeGreaterThan(200);
 });
 
-test('getGroupsObject', () => {
-  let groupsObject = data.getGroupsObject();
+test('groupsObject', () => {
   expect(groupsObject.Ala).toStrictEqual({
     elements: [
       { number: 3, symbol: 'C' },

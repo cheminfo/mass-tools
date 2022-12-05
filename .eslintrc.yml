@@ -1,6 +1,6 @@
 extends: cheminfo
 parserOptions:
-  sourceType: script
+  sourceType: module
 rules:
   no-shadow:
     - error

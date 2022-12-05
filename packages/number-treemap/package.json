@@ -2,9 +2,11 @@
   "name": "number-treemap",
   "version": "1.1.28",
   "description": "Manage a sorted tree of numbers",
-  "main": "src/TreeMap.js",
+  "main": "lib/index.js",
+  "module": "src/index.js",
   "files": [
-    "src"
+    "src",
+    "lib"
   ],
   "repository": {
     "type": "git",

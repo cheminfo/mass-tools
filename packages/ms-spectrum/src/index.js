@@ -1,6 +1,5 @@
-'use strict';
+export * from './Spectrum.js';
+export * from './getPeaks.js';
+export * from './getBestPeaks.js';
 
-module.exports.Spectrum = require('./Spectrum');
-
-module.exports.getPeaks = require('./getPeaks');
-module.exports.getBestPeaks = require('./getBestPeaks');
+export * from './jsgraph/index.js';

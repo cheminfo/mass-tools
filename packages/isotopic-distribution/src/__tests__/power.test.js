@@ -1,14 +1,12 @@
-'use strict';
-
-const Distribution = require('../Distribution.js');
+import { Distribution } from '../Distribution.js';
 
 describe('test distribution power', () => {
   it('power 2', () => {
-    let dist = new Distribution();
-    dist.push({ x: 1, y: 2 });
-    dist.push({ x: 2, y: 3 });
-    dist.power(2);
-    expect(dist.array).toStrictEqual([
+    let distribution = new Distribution();
+    distribution.push({ x: 1, y: 2 });
+    distribution.push({ x: 2, y: 3 });
+    distribution.power(2);
+    expect(distribution.array).toStrictEqual([
       { x: 2, y: 4 },
       { x: 3, y: 12 },
       { x: 4, y: 9 },
@@ -16,18 +14,18 @@ describe('test distribution power', () => {
   });
 
   it('power 3 - 1 peak', () => {
-    let dist = new Distribution();
-    dist.push({ x: 1, y: 1 });
-    dist.power(3);
-    expect(dist.array).toStrictEqual([{ x: 3, y: 1 }]);
+    let distribution = new Distribution();
+    distribution.push({ x: 1, y: 1 });
+    distribution.power(3);
+    expect(distribution.array).toStrictEqual([{ x: 3, y: 1 }]);
   });
 
   it('power 3 - 2 peaks', () => {
-    let dist = new Distribution();
-    dist.push({ x: 1, y: 1 });
-    dist.push({ x: 2, y: 1 });
-    dist.power(3);
-    expect(dist.array).toStrictEqual([
+    let distribution = new Distribution();
+    distribution.push({ x: 1, y: 1 });
+    distribution.push({ x: 2, y: 1 });
+    distribution.power(3);
+    expect(distribution.array).toStrictEqual([
       { x: 3, y: 1 },
       { x: 4, y: 3 },
       { x: 5, y: 3 },
@@ -36,20 +34,20 @@ describe('test distribution power', () => {
   });
 
   it('power 1000 - 2 peaks', () => {
-    let dist = new Distribution();
-    dist.push({ x: 1, y: 1 });
-    dist.push({ x: 2, y: 1 });
-    dist.power(1000);
-    expect(dist.array).toHaveLength(1001);
-    expect(dist.array[1]).toStrictEqual({ x: 1001, y: 1000 });
+    let distribution = new Distribution();
+    distribution.push({ x: 1, y: 1 });
+    distribution.push({ x: 2, y: 1 });
+    distribution.power(1000);
+    expect(distribution.array).toHaveLength(1001);
+    expect(distribution.array[1]).toStrictEqual({ x: 1001, y: 1000 });
   });
 
   it('power 100000 - 10 peaks', () => {
-    let dist = new Distribution();
-    dist.push({ x: 1, y: 0.5 });
-    dist.push({ x: 2, y: 0.5 });
-    dist.power(100000);
-    let sum = dist.array.reduce((s, a) => s + a.y, 0);
+    let distribution = new Distribution();
+    distribution.push({ x: 1, y: 0.5 });
+    distribution.push({ x: 2, y: 0.5 });
+    distribution.power(100000);
+    let sum = distribution.array.reduce((s, a) => s + a.y, 0);
     expect(sum).toBeGreaterThan(0.99);
     expect(sum).toBeLessThan(1);
   });

@@ -1,17 +1,15 @@
-'use strict';
+import fs from 'fs';
+import { join } from 'path';
 
-const fs = require('fs');
-const join = require('path').join;
+import { parseXY } from 'xy-parser';
 
-const parseXY = require('xy-parser').parseXY;
-
-const DBManager = require('../..');
+import { EMDB } from '../..';
 
 describe('test appendFragmentsInfo for ethylbenzene', () => {
   let experimental = loadEthylbenzene();
   it('should find one result with bad distribution', async () => {
-    let dbManager = new DBManager();
-    await dbManager.fromMonoisotopicMass(106.077, {
+    let emdb = new EMDB();
+    await emdb.fromMonoisotopicMass(106.077, {
       ionizations: '+',
       ranges: 'C0-100 H0-100 N0-100 O0-100 F0-10 Cl0-10',
       filter: {
@@ -25,9 +23,9 @@ describe('test appendFragmentsInfo for ethylbenzene', () => {
       allowNeutral: false,
     });
 
-    dbManager.setExperimentalSpectrum(experimental);
+    emdb.setExperimentalSpectrum(experimental);
 
-    const results = await dbManager.appendFragmentsInfo('monoisotopic', {
+    const results = await emdb.appendFragmentsInfo('monoisotopic', {
       precision: 5,
       ionizations: '+',
     });

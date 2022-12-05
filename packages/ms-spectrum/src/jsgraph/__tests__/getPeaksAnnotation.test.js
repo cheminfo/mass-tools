@@ -1,6 +1,4 @@
-'use strict';
-
-const getPeaksAnnotation = require('../getPeaksAnnotation');
+import { getPeaksAnnotation } from '../getPeaksAnnotation';
 
 describe('test getPeaksAnnotation', () => {
   let peaks = [

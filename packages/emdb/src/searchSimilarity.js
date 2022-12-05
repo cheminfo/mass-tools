@@ -1,7 +1,5 @@
-'use strict';
-
-const IsotopicDistribution = require('isotopic-distribution');
-const Similarity = require('peaks-similarity');
+import { IsotopicDistribution } from 'isotopic-distribution';
+import { Comparator } from 'peaks-similarity';
 /**
 Search for an experimental monoisotopic mass and calculate the similarity
 * @param {object}   [options={}]
@@ -35,7 +33,7 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @returns {Promise}
 */
 
-module.exports = async function searchSimilarity(options = {}) {
+export async function searchSimilarity(emdb, options = {}) {
   const { similarity = {}, minSimilarity = 0.5, filter = {}, onStep } = options;
 
   let width = {
@@ -44,20 +42,20 @@ module.exports = async function searchSimilarity(options = {}) {
   };
 
   if (
-    !this.experimentalSpectrum ||
-    !this.experimentalSpectrum.data.x.length > 0
+    !emdb.experimentalSpectrum ||
+    !emdb.experimentalSpectrum.data.x.length > 0
   ) {
     throw Error(
       'You need to add an experimental spectrum first using setMassSpectrum',
     );
   }
 
-  let experimentalData = this.experimentalSpectrum.data;
-  let sumY = this.experimentalSpectrum.sumY();
+  let experimentalData = emdb.experimentalSpectrum.data;
+  let sumY = emdb.experimentalSpectrum.sumY();
 
-  // the result of this query will be stored in a property 'ms'
+  // the result of emdb query will be stored in a property 'ms'
 
-  let results = this.searchMSEM(filter.msem, options);
+  let results = emdb.searchMSEM(filter.msem, options);
   let flatEntries = [];
   if (!options.flatten) {
     for (let database of Object.keys(results)) {
@@ -84,7 +82,7 @@ module.exports = async function searchSimilarity(options = {}) {
   const { low = -0.5, high = 2.5 } = zone;
 
   // we need to calculate the similarity of the isotopic distribution
-  let similarityProcessor = new Similarity(similarity);
+  let similarityProcessor = new Comparator(similarity);
   similarityProcessor.setPeaks1([experimentalData.x, experimentalData.y]);
 
   for (let i = 0; i < flatEntries.length; i++) {
@@ -141,4 +139,4 @@ module.exports = async function searchSimilarity(options = {}) {
   }
 
   return results;
-};
+}

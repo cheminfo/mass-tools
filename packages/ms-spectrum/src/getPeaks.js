@@ -1,10 +1,8 @@
-'use strict';
-
-const {
+import {
   xyObjectMaxXPoint,
   xyObjectMinXPoint,
   xyObjectSumY,
-} = require('ml-spectra-processing');
+} from 'ml-spectra-processing';
 
 /**
  * Filter the array of peaks
@@ -18,7 +16,7 @@ const {
  * @returns {array} - copy of peaks with 'close' annotation
  */
 
-function getPeaks(peaks, options = {}) {
+export function getPeaks(peaks, options = {}) {
   const {
     from = xyObjectMinXPoint(peaks).x,
     to = xyObjectMaxXPoint(peaks).x,
@@ -50,5 +48,3 @@ function getPeaks(peaks, options = {}) {
 
   return peaks.sort((a, b) => a.x - b.x);
 }
-
-module.exports = getPeaks;

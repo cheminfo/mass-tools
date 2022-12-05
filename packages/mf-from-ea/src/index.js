@@ -1,8 +1,6 @@
-'use strict';
+import { atomSorter } from 'atom-sorter';
 
-const atomSorter = require('atom-sorter');
-
-const preprocessEARanges = require('./preprocessEARanges');
+import { preprocessEARanges } from './preprocessEARanges';
 
 /**
  * Returns possible combinations
@@ -21,7 +19,7 @@ const preprocessEARanges = require('./preprocessEARanges');
  * @return {Array<object>}
  */
 
-module.exports = function mfFromEA(targetEA, options = {}) {
+export function mfFromEA(targetEA, options = {}) {
   const {
     unsaturation = {},
     maxIterations = 1e8,
@@ -37,7 +35,7 @@ module.exports = function mfFromEA(targetEA, options = {}) {
     maxTotalError = 0.01,
   } = options;
 
-  let filterUnsaturation = unsaturation ? true : false;
+  let filterUnsaturation = !!unsaturation;
   // we calculate not the real unsaturation but the one before dividing by 2 + 1
   let fakeMinUnsaturation =
     unsaturation.min === undefined
@@ -148,7 +146,7 @@ module.exports = function mfFromEA(targetEA, options = {}) {
 
   results.mfs.sort((a, b) => Math.abs(a.totalError) - Math.abs(b.totalError));
   return results;
-};
+}
 
 function getResult(possibilities, totalError, orderMapping) {
   const result = { mf: '', totalError };

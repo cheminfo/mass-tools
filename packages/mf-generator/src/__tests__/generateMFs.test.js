@@ -1,6 +1,4 @@
-'use strict';
-
-const generateMFs = require('..');
+import { generateMFs } from '..';
 
 describe('generateMFs', () => {
   it('from array of array with comment', async () => {

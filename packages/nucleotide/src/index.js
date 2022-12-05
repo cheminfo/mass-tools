@@ -1,8 +1,4 @@
-'use strict';
-
-module.exports = {
-  sequenceToMF: require('./sequenceToMF'),
-  generateFragments: require('./generateFragments'),
-  furanThreeTerm: require('./furanThreeTerm'),
-  baseLoss: require('./baseLoss'),
-};
+export * from './sequenceToMF.js';
+export * from './generateFragments.js';
+export * from './furanThreeTerm.js';
+export * from './baseLoss.js';

@@ -1,6 +1,4 @@
-'use strict';
-
-const { baseLoss } = require('..');
+import { baseLoss } from '..';
 
 describe('baseLoss', () => {
   it('Base loss of HAlaDampDtmpDcmpDcmpOH', () => {

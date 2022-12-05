@@ -1,17 +1,15 @@
-'use strict';
-
 /**
  * Join x values if there are similar
  */
 
-module.exports = function joinX(threshold = Number.EPSILON) {
+export function joinX(self, threshold = Number.EPSILON) {
   // when we join we will use the center of mass
-  if (this.array.length === 0) return [];
-  this.sortX();
-  let current = this.array[0];
+  if (self.array.length === 0) return [];
+  self.sortX();
+  let current = self.array[0];
   let result = [current];
-  for (let i = 1; i < this.array.length; i++) {
-    const item = this.array[i];
+  for (let i = 1; i < self.array.length; i++) {
+    const item = self.array[i];
     if (item.x - current.x <= threshold) {
       // weighted sum
       current.x =
@@ -26,7 +24,7 @@ module.exports = function joinX(threshold = Number.EPSILON) {
       result.push(current);
     }
   }
-  this.array = result;
-  this.ySorted = false;
-  return this;
-};
+  self.array = result;
+  self.ySorted = false;
+  return self;
+}

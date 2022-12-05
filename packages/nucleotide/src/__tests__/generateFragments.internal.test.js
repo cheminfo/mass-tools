@@ -1,6 +1,4 @@
-'use strict';
-
-const { generateFragments } = require('..');
+import { generateFragments } from '..';
 
 describe('test generate internal fragments', () => {
   it('nucleotide HODampDtmpDcmpDgmpDampH internal abw fragments', () => {

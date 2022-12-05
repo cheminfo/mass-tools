@@ -1,6 +1,4 @@
-'use strict';
-
-const appendResidues = require('../appendResidues');
+import { appendResidues } from '../appendResidues';
 
 describe('appendResidues', () => {
   it('AA(Ph)A(Ph)A(Ts)A(Ph)U', () => {

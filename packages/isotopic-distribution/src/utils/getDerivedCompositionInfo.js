@@ -1,9 +1,7 @@
-'use strict';
+import { stableIsotopesObject } from 'chemical-elements';
+import { subscript, superscript } from 'mf-parser';
 
-const { stableIsotopesObject } = require('chemical-elements');
-const { subscript, superscript } = require('mf-parser');
-
-function getDerivedCompositionInfo(composition) {
+export function getDerivedCompositionInfo(composition) {
   const shortComposition = {};
   let label = '';
   let shortLabel = '';
@@ -30,5 +28,3 @@ function getDerivedCompositionInfo(composition) {
 
   return { label, shortComposition, shortLabel };
 }
-
-module.exports = getDerivedCompositionInfo;

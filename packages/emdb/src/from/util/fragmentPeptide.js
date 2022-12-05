@@ -1,23 +1,21 @@
-'use strict';
+import {
+  digestPeptide,
+  chargePeptide,
+  allowNeutralLoss,
+  sequenceToMF,
+  generatePeptideFragments,
+} from 'peptide';
 
-const peptide = require('peptide');
-
-function fragmentArray(sequence, options = {}) {
-  const {
-    digestion = {},
-    protonation,
-    fragmentation,
-    protonationPH,
-    allowNeutralLoss,
-  } = options;
-  sequence = peptide.convertAASequence(sequence);
+export function fragmentPeptide(sequence, options = {}) {
+  const { digestion = {}, protonation, fragmentation, protonationPH } = options;
+  sequence = sequenceToMF(sequence);
 
   let fragmentsArray = [sequence];
   // do we also have some digest fragments ?
   if (digestion.enzyme) {
-    let digests = peptide.digestPeptide(sequence, digestion);
+    let digests = digestPeptide(sequence, digestion);
     if (options.protonation) {
-      digests = peptide.chargePeptide(digests, {
+      digests = chargePeptide(digests, {
         pH: options.protonationPH,
       });
     }
@@ -25,20 +23,18 @@ function fragmentArray(sequence, options = {}) {
   }
 
   // allow neutral loss
-  if (allowNeutralLoss) {
-    sequence = peptide.allowNeutralLoss(sequence);
+  if (options.allowNeutralLoss) {
+    sequence = allowNeutralLoss(sequence);
   }
 
   // apply protonation
   if (protonation) {
-    sequence = peptide.chargePeptide(sequence, { pH: protonationPH });
+    sequence = chargePeptide(sequence, { pH: protonationPH });
   }
 
   // calculate fragmentation
-  let fragments = peptide.generatePeptideFragments(sequence, fragmentation);
+  let fragments = generatePeptideFragments(sequence, fragmentation);
 
   fragmentsArray = fragmentsArray.concat(fragments);
   return fragmentsArray;
 }
-
-module.exports = fragmentArray;

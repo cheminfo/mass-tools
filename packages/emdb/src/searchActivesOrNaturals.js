@@ -1,12 +1,9 @@
-'use strict';
+import { ELECTRON_MASS } from 'chemical-elements';
+import { findMFs } from 'mf-finder';
+import { MF } from 'mf-parser';
+import { getMsInfo, preprocessIonizations } from 'mf-utilities';
 
-const { ELECTRON_MASS } = require('chemical-elements/src/constants');
-const mfFinder = require('mf-finder');
-const mfParser = require('mf-parser');
-const getMsInfo = require('mf-utilities/src/getMsInfo');
-const preprocessIonizations = require('mf-utilities/src/preprocessIonizations');
-
-const fetchJSON = require('./util/fetchJSON.js');
+import { fetchJSON } from './util/fetchJSON.js';
 
 /**
  * Generates a database 'pubchem' based on all molecular formula available
@@ -21,7 +18,7 @@ const fetchJSON = require('./util/fetchJSON.js');
  * @param {string} [options.url='https://pubchem.cheminfo.org/activesOrNaturals/v1/fromEM'] - URL of the webservice
  */
 
-module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
+export async function searchActivesOrNaturals(masses, options = {}) {
   const {
     url = 'https://pubchem.cheminfo.org/activesOrNaturals/v1/fromEM',
     precision = 1000,
@@ -43,7 +40,7 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
     const allowedEMsArray = [];
     for (let mass of masses) {
       (
-        await mfFinder(mass, {
+        await findMFs(mass, {
           ionizations: options.ionizations,
           precision,
           ranges,
@@ -79,7 +76,7 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
           continue;
         }
 
-        let mfInfo = new mfParser.MF(mf.data.mf).getInfo();
+        let mfInfo = new MF(mf.data.mf).getInfo();
         mfInfo.ionization = ionizations[i];
         mfInfo.em = mfInfo.monoisotopicMass;
         mfInfo.ms = getMsInfo(mfInfo, {
@@ -133,4 +130,4 @@ module.exports = async function searchNaturalOrBioactive(masses, options = {}) {
   groupedArray.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
 
   return groupedArray;
-};
+}

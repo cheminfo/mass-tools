@@ -1,6 +1,4 @@
-'use strict';
-
-const peaksWidth = require('../peaksWidth');
+import { peaksWidth } from '../peaksWidth';
 
 describe('test test peakWidth', () => {
   it('five peaks', () => {

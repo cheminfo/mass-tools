@@ -12,7 +12,7 @@
 ## Usage
 
 ```js
-const generateMFs = require('mf-generator');
+const { generateMFs } = require('mf-generator');
 
 const mfsArray = ['C,H,', 'Cl,Br'];
 generateMFs(mfsArray).then((entries) => {

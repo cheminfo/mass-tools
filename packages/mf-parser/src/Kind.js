@@ -1,9 +1,8 @@
-'use strict';
 /**
  * Define static variable corresponding to the various Kinds of a molecular formula part.
  */
 
-module.exports = {
+export const Kind = {
   BEGIN: 'begin',
   ATOM: 'atom',
   MULTIPLIER_RANGE: 'multiplierRange',

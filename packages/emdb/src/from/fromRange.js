@@ -1,6 +1,4 @@
-'use strict';
-
-const combineMFs = require('mf-generator');
+import { generateMFs } from 'mf-generator';
 
 /**
  * Generates a database 'generated' from an array of molecular formula
@@ -34,14 +32,14 @@ const combineMFs = require('mf-generator');
  * @returns {Promise} - list of possible molecular formula
  *
  * @example
- * const EMDB = require('emdb');
+ * const {EMDB} = require('emdb');
  * let emdb = new EMDB();
  * // semi-columns separated for combination, comma for 'or'
  * emdb.fromRange('C1-10, H1-10; Cl0-1 Br0-1'); // create a database 'generated' combining all possibilies
  * console.log(emdb.get('generated').length); // 80
  */
 
-module.exports = async function fromRange(rangesString, options = {}) {
+export async function fromRange(rangesString, options = {}) {
   let ranges = rangesString.split(/ *[;\r\n] */);
   for (let i = 0; i < ranges.length; i++) {
     let range = ranges[i];
@@ -50,5 +48,5 @@ module.exports = async function fromRange(rangesString, options = {}) {
     }
   }
 
-  return combineMFs(ranges, options);
-};
+  return generateMFs(ranges, options);
+}

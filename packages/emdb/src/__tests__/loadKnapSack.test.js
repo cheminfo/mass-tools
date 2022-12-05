@@ -1,6 +1,4 @@
-'use strict';
-
-const loadKnapSack = require('../loadKnapSack');
+import { loadKnapSack } from '../loadKnapSack';
 
 jest.setTimeout(30000);
 test('loadKnapSack', async () => {

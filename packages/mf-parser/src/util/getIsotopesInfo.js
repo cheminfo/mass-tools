@@ -1,24 +1,23 @@
-'use strict';
+import {
+  elementsAndStableIsotopesObject as elements,
+  isotopesObject as isotopes,
+} from 'chemical-elements';
 
-const elements = require('chemical-elements/src/elementsAndStableIsotopesObject.js');
-
-const Kind = require('../Kind');
-
-const isotopes = require('./getIsotopesObject');
+import { Kind } from '../Kind';
 
 /**
  *
  * @param {*} parts
  * @param {*} options
  */
-module.exports = function getIsotopesInfo(parts) {
+export function getIsotopesInfo(parts) {
   if (parts.length === 0) return [];
   if (parts.length > 1) {
     throw new Error('getIsotopesInfo can not be applied on multipart MF');
   }
 
   return getProcessedPart(parts[0]);
-};
+}
 
 function getProcessedPart(part) {
   let result = {

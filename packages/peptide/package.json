@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/master/packages/peptide#readme",
   "license": "MIT",
-  "main": "./src/index.js",
+  "main": "lib/index.js",
+  "module": "src/index.js",
   "files": [
-    "src"
+    "src",
+    "lib"
   ]
 }

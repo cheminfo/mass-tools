@@ -1,8 +1,6 @@
-'use strict';
+import crossFetch from 'cross-fetch';
 
-const crossFetch = require('cross-fetch');
-
-module.exports = async function fetchArrayBufferBrowser(url) {
+export async function fetchArrayBuffer(url) {
   const result = await crossFetch(url);
   return result.arrayBuffer();
-};
+}

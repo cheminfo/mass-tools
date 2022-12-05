@@ -1,17 +1,15 @@
-'use strict';
-
-const appendInternals = require('./appendInternals');
-const appendResidues = require('./appendResidues');
-const appendResiduesPosition = require('./appendResiduesPosition');
-const appendResults = require('./appendResults');
-const appendRows = require('./appendRows');
-const appendRowsInformation = require('./appendRowsInformation');
-const addCSS = require('./draw/addCSS');
-const addScript = require('./draw/addScript');
-const drawInternals = require('./draw/drawInternals');
-const drawReplacements = require('./draw/drawReplacements');
-const drawSequence = require('./draw/drawSequence');
-const getPaper = require('./getPaper');
+import { appendInternals } from './appendInternals';
+import { appendResidues } from './appendResidues';
+import { appendResiduesPosition } from './appendResiduesPosition';
+import { appendResults } from './appendResults';
+import { appendRows } from './appendRows';
+import { appendRowsInformation } from './appendRowsInformation';
+import { addCSS } from './draw/addCSS';
+import { addScript } from './draw/addScript';
+import { drawInternals } from './draw/drawInternals';
+import { drawReplacements } from './draw/drawReplacements';
+import { drawSequence } from './draw/drawSequence';
+import { getPaper } from './getPaper';
 
 /**
  *
@@ -35,7 +33,7 @@ const getPaper = require('./getPaper');
  * @param {boolean} [options.filter.showInternals=true] show the internal fragments
  *
  */
-function sequenceSVG(sequence, analysisResults, options = {}) {
+export function sequenceSVG(sequence, analysisResults, options = {}) {
   const {
     width = 600,
     leftRightBorders = 50,
@@ -92,5 +90,3 @@ function sequenceSVG(sequence, analysisResults, options = {}) {
   paper.clear();
   return svg;
 }
-
-module.exports = sequenceSVG;

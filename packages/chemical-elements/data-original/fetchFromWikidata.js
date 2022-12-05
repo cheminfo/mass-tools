@@ -1,7 +1,4 @@
-'use strict';
-
 let crossFetch = require('cross-fetch');
-// eslint-disable-next-line import/no-extraneous-dependencies
 let Wikidata = require('wikidata-sdk');
 
 async function compileIsotopes() {

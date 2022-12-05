@@ -1,6 +1,4 @@
-'use strict';
-
-const Similarity = require('peaks-similarity');
+import { Comparator } from 'peaks-similarity';
 
 /**
  * @param {object}   [options={}]
@@ -18,7 +16,7 @@ const Similarity = require('peaks-similarity');
 
 const NEUTRON_MASS = 1;
 
-function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
+export function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
   let { similarity = {}, minCharge = 1, maxCharge = 10 } = options;
   let { zone = {}, widthFunction } = similarity;
   let { low = -0.5, high = 2.5 } = zone;
@@ -38,7 +36,7 @@ function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
   similarity.common = 'second';
 
   let experimentalData = spectrum.data;
-  let similarityProcessor = new Similarity(similarity);
+  let similarityProcessor = new Comparator(similarity);
   similarityProcessor.setPeaks1([experimentalData.x, experimentalData.y]);
 
   if (widthFunction && typeof widthFunction === 'string') {
@@ -92,5 +90,3 @@ function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
 
   return results.sort((a, b) => b.similarity - a.similarity)[0].charge;
 }
-
-module.exports = getPeakChargeBySimilarity;

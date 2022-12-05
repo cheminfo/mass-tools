@@ -1,8 +1,6 @@
-'use strict';
-
-const { groupsToSequence } = require('chemical-groups');
-const combineMFs = require('mf-generator');
-const nucleotide = require('nucleotide');
+import { groupsToSequence } from 'chemical-groups';
+import { generateMFs } from 'mf-generator';
+import { sequenceToMF, generateFragments, baseLoss } from 'nucleotide';
 
 /**
  * Add a database starting from a peptidic sequence
@@ -48,10 +46,7 @@ const nucleotide = require('nucleotide');
  * @returns {Promise}
  */
 
-module.exports = async function fromNucleicSequence(
-  sequencesString,
-  options = {},
-) {
+export async function fromNucleicSequence(sequencesString, options = {}) {
   const {
     mfsArray = [],
     fragmentation = {},
@@ -63,26 +58,26 @@ module.exports = async function fromNucleicSequence(
     onStep,
   } = options;
 
-  let sequences = nucleotide.sequenceToMF(sequencesString, info).split('.');
+  let sequences = sequenceToMF(sequencesString, info).split('.');
   let fragmentsArray = sequences.slice();
 
   // calculate fragmentation
   for (let i = 0; i < sequences.length; i++) {
     let sequence = sequences[i];
-    let fragments = nucleotide.generateFragments(sequence, fragmentation);
+    let fragments = generateFragments(sequence, fragmentation);
     if (i === 1) {
       // complementary sequence
       fragments = fragments.map((fragment) => fragment.replace(/\$/g, '$cmp-'));
     }
     fragmentsArray = fragmentsArray.concat(fragments);
     if (fragmentation.baseLoss) {
-      fragmentsArray = fragmentsArray.concat(nucleotide.baseLoss(sequence));
+      fragmentsArray = fragmentsArray.concat(baseLoss(sequence));
     }
   }
 
   mfsArray.push(fragmentsArray);
 
-  let combined = await combineMFs(mfsArray, {
+  let combined = await generateMFs(mfsArray, {
     ionizations,
     filter,
     uniqueMFs: false,
@@ -101,4 +96,4 @@ module.exports = async function fromNucleicSequence(
   }
 
   return combined;
-};
+}

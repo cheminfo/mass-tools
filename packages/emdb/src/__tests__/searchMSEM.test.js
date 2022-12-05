@@ -1,13 +1,11 @@
-'use strict';
-
-const DBManager = require('..');
+import { EMDB } from '..';
 
 describe('test searchMSEM', () => {
   it('should filter one database with existing ionization', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadContaminants();
+    let emdb = new EMDB();
+    await emdb.loadContaminants();
 
-    let results = dbManager.searchMSEM(101, {
+    let results = emdb.searchMSEM(101, {
       filter: {
         precision: 1000,
       },
@@ -17,10 +15,10 @@ describe('test searchMSEM', () => {
   });
 
   it('should filter one database with proposed ionization', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadContaminants();
+    let emdb = new EMDB();
+    await emdb.loadContaminants();
 
-    let results = dbManager.searchMSEM(101, {
+    let results = emdb.searchMSEM(101, {
       ionizations: 'H+',
       filter: {
         precision: 1000,
@@ -30,10 +28,10 @@ describe('test searchMSEM', () => {
   });
 
   it('should filter one database with forced ionization', async () => {
-    let dbManager = new DBManager();
-    await dbManager.loadContaminants();
+    let emdb = new EMDB();
+    await emdb.loadContaminants();
 
-    let results = dbManager.searchMSEM(101, {
+    let results = emdb.searchMSEM(101, {
       ionizations: 'H+',
       filter: {
         precision: 1000,

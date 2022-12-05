@@ -1,6 +1,4 @@
-'use strict';
-
-function splitSequence(sequence) {
+export function splitPeptide(sequence) {
   let aas = sequence.replace(/([A-Z])/g, ' $1').split(/ /);
   let begin = 0;
   while (aas[begin] === '' || aas[begin] === 'H') {
@@ -13,5 +11,3 @@ function splitSequence(sequence) {
   aas = aas.slice(begin, end + 1);
   return aas;
 }
-
-module.exports = splitSequence;

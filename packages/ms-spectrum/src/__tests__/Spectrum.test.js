@@ -1,17 +1,14 @@
-/* eslint-disable jest/no-if */
-'use strict';
+import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
+import { generateSpectrum } from 'spectrum-generator';
 
-const { toBeDeepCloseTo } = require('jest-matcher-deep-close-to');
-const generateSpectrum = require('spectrum-generator').generateSpectrum;
-
-const Spectrum = require('../Spectrum');
+import { Spectrum, fromText } from '../Spectrum';
 
 expect.extend({ toBeDeepCloseTo });
 
 describe('test Spectrum', () => {
   it('constructor', () => {
     expect(() => {
-      Spectrum(1);
+      new Spectrum(1);
     }).toThrow('Spectrum data must be an object');
   });
 
@@ -22,7 +19,10 @@ describe('test Spectrum', () => {
   it('data to normedY', () => {
     expect(
       new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 1, 1] }).normedY().data,
-    ).toStrictEqual({ x: [1, 2, 3, 4], y: [0.25, 0.25, 0.25, 0.25] });
+    ).toStrictEqual({
+      x: [1, 2, 3, 4],
+      y: Float64Array.from([0.25, 0.25, 0.25, 0.25]),
+    });
   });
 
   it('maxY', () => {
@@ -84,7 +84,7 @@ describe('test Spectrum', () => {
     ]);
   });
 
-  it('gsd realtop', () => {
+  it('peak picking and same y value', () => {
     const peaks = [{ x: 5, y: 10000, width: 0.2 }];
 
     const data = generateSpectrum(peaks, {
@@ -101,12 +101,12 @@ describe('test Spectrum', () => {
       { x: 4.975, y: 10491.836675359205, width: 0.2, charge: 1 },
     ]);
   });
+});
 
-  it('fromText', () => {
-    let spectrum = Spectrum.fromText(`Title of spectrum
+test('fromText', () => {
+  let spectrum = fromText(`Title of spectrum
     1 2
     2 3
     3 4`);
-    expect(spectrum.data).toStrictEqual({ x: [1, 2, 3], y: [2, 3, 4] });
-  });
+  expect(spectrum.data).toStrictEqual({ x: [1, 2, 3], y: [2, 3, 4] });
 });

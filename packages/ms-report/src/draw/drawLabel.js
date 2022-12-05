@@ -1,6 +1,4 @@
-'use strict';
-
-function drawLabel(paper, result, x, y, options) {
+export function drawLabel(paper, result, x, y, options) {
   let label = result.type;
   let similarity = String(Math.round(result.similarity * 100));
   let charge = result.charge > 0 ? `+${result.charge}` : result.charge;
@@ -32,5 +30,3 @@ function drawLabel(paper, result, x, y, options) {
   });
   text.attr({ x: x + textWidth, y });
 }
-
-module.exports = drawLabel;

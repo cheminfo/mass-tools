@@ -1,10 +1,6 @@
-'use strict';
+import { Kind, MF, parse } from 'mf-parser';
 
-const Kind = require('mf-parser/src/Kind');
-const MF = require('mf-parser/src/MF');
-const parse = require('mf-parser/src/parse');
-
-module.exports = function preprocessRanges(ranges, targetEA) {
+export function preprocessEARanges(ranges, targetEA) {
   ranges = JSON.parse(JSON.stringify(ranges));
   if (typeof ranges === 'string') {
     // need to convert to ranges
@@ -113,4 +109,4 @@ module.exports = function preprocessRanges(ranges, targetEA) {
   });
 
   return possibilities;
-};
+}

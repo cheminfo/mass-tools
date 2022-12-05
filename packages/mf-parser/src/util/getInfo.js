@@ -1,23 +1,23 @@
-'use strict';
+import {
+  ELECTRON_MASS,
+  unsaturationsObject as unsaturations,
+  elementsAndIsotopesObject as elements,
+  isotopesObject as isotopes,
+} from 'chemical-elements';
+import { groupsObject as groups } from 'chemical-groups';
 
-const { ELECTRON_MASS } = require('chemical-elements/src/constants');
-const elements = require('chemical-elements/src/elementsAndIsotopesObject.js');
-const unsaturations = require('chemical-elements/src/unsaturationsObject.js');
-const groups = require('chemical-groups/src/groupsObject.js');
+import { Kind } from '../Kind';
 
-const Kind = require('../Kind');
-
-const getIsotopeRatioInfo = require('./getIsotopeRatioInfo');
-const isotopes = require('./getIsotopesObject');
-const partToAtoms = require('./partToAtoms');
-const partToMF = require('./partToMF');
+import { getIsotopeRatioInfo } from './getIsotopeRatioInfo';
+import { partToAtoms } from './partToAtoms';
+import { partToMF } from './partToMF';
 
 /**
  *
  * @param {*} parts
  * @param {*} [options={}]
  */
-module.exports = function getInfo(parts, options = {}) {
+export function getInfo(parts, options = {}) {
   let { customUnsaturations = {} } = options;
   if (parts.length === 0) return {};
   if (parts.length === 1) {
@@ -39,7 +39,7 @@ module.exports = function getInfo(parts, options = {}) {
     result.charge += a.charge;
   });
   return result;
-};
+}
 
 function getProcessedPart(part, customUnsaturations) {
   let currentPart = {

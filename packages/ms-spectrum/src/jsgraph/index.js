@@ -1,5 +1,5 @@
-'use strict';
+import { getPeaksAnnotation } from './getPeaksAnnotation.js';
 
-module.exports = {
-  getPeaksAnnotation: require('./getPeaksAnnotation'),
+export const JsGraph = {
+  getPeaksAnnotation,
 };

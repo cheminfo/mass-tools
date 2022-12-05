@@ -1,198 +1,183 @@
-'use strict';
+import { Spectrum } from 'ms-spectrum';
 
-const { Spectrum } = require('ms-spectrum');
+import { appendFragmentsInfo } from './append/appendFragmentsInfo.js';
+import { fromArray } from './from/fromArray.js';
+import { fromMonoisotopicMass } from './from/fromMonoisotopicMass.js';
+import { fromNucleicSequence } from './from/fromNucleicSequence.js';
+import { fromPeptidicSequence } from './from/fromPeptidicSequence.js';
+import { fromRange } from './from/fromRange.js';
+import { loadCommercials } from './loadCommercials.js';
+import { loadGoogleSheet } from './loadGoogleSheet.js';
+import { loadKnapSack } from './loadKnapSack.js';
+import { search } from './search.js';
+import { searchMSEM } from './searchMSEM.js';
+import { searchSimilarity } from './searchSimilarity.js';
 
-const loadCommercialsPromise = require('./loadCommercials.js');
-const loadGoogleSheetPromise = require('./loadGoogleSheet.js');
-const loadKnapSackPromise = require('./loadKnapSack.js');
-
-function DBManager() {
-  this.databases = {};
-  this.experimentalSpectrum = undefined;
-}
+export * from './searchPubchem.js';
+export * from './searchActivesOrNaturals.js';
+export * from './massShifts.js';
 
 /**
- *
- * @param {*} data
- * @param {object} [options={}]
- * @param {number} [options.normed=true] Should we normed (sum Y to 1) the experimental spectrum ?
+ * A class that deals with database of monoisotopic mass and molecular formula
  */
-DBManager.prototype.setExperimentalSpectrum = function setExperimentalSpectrum(
-  data,
-  options = {},
-) {
-  const { normed = true } = options;
-  if (normed) {
-    this.experimentalSpectrum = new Spectrum(data).normedY();
-  } else {
-    this.experimentalSpectrum = new Spectrum(data);
+export class EMDB {
+  constructor() {
+    this.databases = {};
+    this.experimentalSpectrum = undefined;
   }
-  return this.experimentalSpectrum;
-};
 
-/**
- * Add a new database using the KnapSack content
- * @param {*} options
- */
-DBManager.prototype.loadKnapSack = async function loadKnapSack(options = {}) {
-  const { databaseName = 'knapSack', forceReload = false } = options;
-  if (this.databases[databaseName] && !forceReload) return;
-  this.databases[databaseName] = await loadKnapSackPromise();
-};
+  /**
+   *
+   * @param {*} data
+   * @param {object} [options={}]
+   * @param {number} [options.normed=true] Should we normed (sum Y to 1) the experimental spectrum ?
+   */
+  setExperimentalSpectrum(data, options = {}) {
+    const { normed = true } = options;
+    if (normed) {
+      this.experimentalSpectrum = new Spectrum(data).normedY();
+    } else {
+      this.experimentalSpectrum = new Spectrum(data);
+    }
+    return this.experimentalSpectrum;
+  }
 
-/**
- * Add a new database of 12000 commercial products
- * @param {*} options
- */
-DBManager.prototype.loadCommercials = async function loadCommercials(
-  options = {},
-) {
-  const { databaseName = 'commercials', forceReload = false } = options;
-  if (this.databases[databaseName] && !forceReload) return;
-  this.databases[databaseName] = await loadCommercialsPromise();
-};
+  /**
+   * Add a new database using the KnapSack content
+   * @param {*} options
+   */
+  async loadKnapSack(options = {}) {
+    const { databaseName = 'knapSack', forceReload = false } = options;
+    if (this.databases[databaseName] && !forceReload) return;
+    this.databases[databaseName] = await loadKnapSack();
+  }
 
-DBManager.prototype.get = function get(databaseName) {
-  return this.databases[databaseName];
-};
+  /**
+   * Add a new database of 12000 commercial products
+   * @param {*} options
+   */
+  async loadCommercials(options = {}) {
+    const { databaseName = 'commercials', forceReload = false } = options;
+    if (this.databases[databaseName] && !forceReload) return;
+    this.databases[databaseName] = await loadCommercials();
+  }
 
-/**
- * Load the contaminants databvase from a google sheet document
- * @param {*} options
- * @param {string} ['contaminants'] databaseName
- */
-DBManager.prototype.loadContaminants = async function loadContaminants(
-  options = {},
-) {
-  const { databaseName = 'contaminants', forceReload = false } = options;
-  if (this.databases[databaseName] && !forceReload) return;
-  this.databases[databaseName] = await loadGoogleSheetPromise();
-};
+  get(databaseName) {
+    return this.databases[databaseName];
+  }
 
-/**
- * Load a google sheet containin
- * @param {*} options
- * @param {string} ['sheet'] databaseName
- */
+  /**
+   * Load the contaminants database from a google sheet document
+   * @param {object} [options={}]
+   * @param {string} [options.databaseName='contaminants']
+   * @param {string} [options.forceReload=false]
+   */
+  async loadContaminants(options = {}) {
+    const { databaseName = 'contaminants', forceReload = false } = options;
+    if (this.databases[databaseName] && !forceReload) return;
+    this.databases[databaseName] = await loadGoogleSheet();
+  }
 
-DBManager.prototype.loadGoogleSheet = async function loadGoogleSheet(
-  options = {},
-) {
-  const { databaseName = 'sheet', forceReload = false } = options;
-  if (this.databases[databaseName] && !forceReload) return;
-  this.databases[databaseName] = await loadGoogleSheetPromise();
-};
+  /**
+   * Load a google sheet containing MF information
+   * @param {object} [options={}]
+   * @param {string} [options.databaseName='sheet']
+   * @param {string} [options.forceReload=false]
+   */
 
-DBManager.prototype.loadTest = async function loadTest() {
-  await this.fromArray(['C1-100'], { databaseName: 'test', ionizations: '+' });
-};
+  async loadGoogleSheet(options = {}) {
+    const { databaseName = 'sheet', forceReload = false } = options;
+    if (this.databases[databaseName] && !forceReload) return;
+    this.databases[databaseName] = await loadGoogleSheet();
+  }
 
-DBManager.prototype.loadNeutralTest = async function loadNeutralTest(
-  options = {},
-) {
-  const { maxC = 100 } = options;
-  await this.fromArray([`C1-${maxC}`], { databaseName: 'test' });
-};
+  async loadTest() {
+    await this.fromArray(['C1-100'], {
+      databaseName: 'test',
+      ionizations: '+',
+    });
+  }
 
-DBManager.prototype.fromMonoisotopicMass = async function fromMonoisotopicMass(
-  mass,
-  options = {},
-) {
-  const { databaseName = 'monoisotopic', append = false } = options;
-  let result = await require('./from/fromMonoisotopicMass')(mass, options);
-  replaceOrAppend(this, databaseName, result.mfs, append);
-  return result;
-};
+  async loadNeutralTest(options = {}) {
+    const { maxC = 100 } = options;
+    await this.fromArray([`C1-${maxC}`], { databaseName: 'test' });
+  }
 
-DBManager.prototype.fromArray = async function fromArray(
-  sequence,
-  options = {},
-) {
-  const { databaseName = 'generated', append = false, estimate } = options;
-  const results = await require('./from/fromArray')(sequence, options);
-  if (estimate) return results;
-  replaceOrAppend(this, databaseName, results, append);
-};
+  async fromMonoisotopicMass(mass, options = {}) {
+    const { databaseName = 'monoisotopic', append = false } = options;
+    let result = await fromMonoisotopicMass(mass, options);
+    replaceOrAppend(this, databaseName, result.mfs, append);
+    return result;
+  }
 
-DBManager.prototype.fromRange = async function fromRange(
-  sequence,
-  options = {},
-) {
-  const { databaseName = 'generated', append = false, estimate } = options;
-  const results = await require('./from/fromRange')(sequence, options);
-  if (estimate) return results;
-  replaceOrAppend(this, databaseName, results, append);
-};
+  async fromArray(sequence, options = {}) {
+    const { databaseName = 'generated', append = false, estimate } = options;
+    const results = await fromArray(sequence, options);
+    if (estimate) return results;
+    replaceOrAppend(this, databaseName, results, append);
+  }
 
-DBManager.prototype.fromPeptidicSequence = async function fromPeptidicSequence(
-  sequence,
-  options = {},
-) {
-  const { databaseName = 'peptidic', append = false, estimate } = options;
-  const results = await require('./from/fromPeptidicSequence')(
-    sequence,
-    options,
-  );
-  if (estimate) return results;
-  replaceOrAppend(this, databaseName, results, append);
-};
+  async fromRange(sequence, options = {}) {
+    const { databaseName = 'generated', append = false, estimate } = options;
+    const results = await fromRange(sequence, options);
+    if (estimate) return results;
+    replaceOrAppend(this, databaseName, results, append);
+  }
 
-/**
- *
- * @param {string} databaseName
- * @param {object} [options={}]
- * @param {number} [options.precision=100]
- * @param {string} [options.ionizations='']
- * @returns
- */
-DBManager.prototype.appendFragmentsInfo = async function appendFragmentsInfo(
-  databaseName,
-  options = {},
-) {
-  const database = this.databases[databaseName];
-  await require('./append/appendFragmentsInfo')(
-    this.experimentalSpectrum,
-    database,
-    options,
-  );
-  return database;
-};
+  async fromPeptidicSequence(sequence, options = {}) {
+    const { databaseName = 'peptidic', append = false, estimate } = options;
+    const results = await fromPeptidicSequence(sequence, options);
+    if (estimate) return results;
+    replaceOrAppend(this, databaseName, results, append);
+  }
 
-DBManager.prototype.fromNucleicSequence = async function fromNucleicSequence(
-  sequence,
-  options = {},
-) {
-  const { databaseName = 'nucleic', append = false, estimate } = options;
-  const results = await require('./from/fromNucleicSequence')(
-    sequence,
-    options,
-  );
-  if (estimate) return results;
-  replaceOrAppend(this, databaseName, results, append);
-};
+  /**
+   *
+   * @param {string} databaseName
+   * @param {object} [options={}]
+   * @param {number} [options.precision=100]
+   * @param {string} [options.ionizations='']
+   * @returns
+   */
+  async appendFragmentsInfo(databaseName, options = {}) {
+    const database = this.databases[databaseName];
+    await appendFragmentsInfo(this.experimentalSpectrum, database, options);
+    return database;
+  }
 
-DBManager.prototype.listDatabases = function listDatabases() {
-  return Object.keys(this.databases).sort();
-};
+  async fromNucleicSequence(sequence, options = {}) {
+    const { databaseName = 'nucleic', append = false, estimate } = options;
+    const results = await fromNucleicSequence(sequence, options);
+    if (estimate) return results;
+    replaceOrAppend(this, databaseName, results, append);
+  }
 
-DBManager.prototype.getInfo = function getInfo() {
-  return {
-    databases: Object.keys(this.databases)
-      .sort()
-      .map((key) => {
-        return { name: key, nbEntries: this.databases[key].length };
-      }),
-  };
-};
+  listDatabases() {
+    return Object.keys(this.databases).sort();
+  }
 
-DBManager.prototype.massShifts = require('./massShifts');
-DBManager.prototype.search = require('./search');
-DBManager.prototype.searchMSEM = require('./searchMSEM');
-DBManager.prototype.searchPubchem = require('./searchPubchem');
-DBManager.prototype.searchActivesOrNaturals = require('./searchActivesOrNaturals');
-DBManager.prototype.searchSimilarity = require('./searchSimilarity');
+  getInfo() {
+    return {
+      databases: Object.keys(this.databases)
+        .sort()
+        .map((key) => {
+          return { name: key, nbEntries: this.databases[key].length };
+        }),
+    };
+  }
 
-module.exports = DBManager;
+  search(filter, options = {}) {
+    return search(this, filter, options);
+  }
+
+  searchMSEM(filter, options = {}) {
+    return searchMSEM(this, filter, options);
+  }
+
+  searchSimilarity(options = {}) {
+    return searchSimilarity(this, options);
+  }
+}
 
 function replaceOrAppend(emdb, databaseName, results, append = false) {
   if (!emdb.databases[databaseName] || !append) {
@@ -201,8 +186,3 @@ function replaceOrAppend(emdb, databaseName, results, append = false) {
   }
   emdb.databases[databaseName] = emdb.databases[databaseName].concat(results);
 }
-
-DBManager.Peptide = require('peptide');
-DBManager.Nucleotide = require('nucleotide');
-DBManager.MFParser = require('mf-parser');
-DBManager.IsotopicDistribution = require('isotopic-distribution');

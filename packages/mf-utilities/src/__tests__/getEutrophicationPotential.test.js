@@ -1,6 +1,4 @@
-'use strict';
-
-const getEutrophicationPotential = require('../getEutrophicationPotential');
+import { getEutrophicationPotential } from '../getEutrophicationPotential';
 
 describe('getEutrophicationPotential', () => {
   it('result for C5 H10 O2 P N3', () => {

@@ -1,19 +1,17 @@
-'use strict';
+import { atomSorter } from 'atom-sorter';
+import { groupsObject } from 'chemical-groups';
 
-const atomSorter = require('atom-sorter');
-const groups = require('chemical-groups/src/groupsObject.js');
-
-const Kind = require('../Kind');
+import { Kind } from '../Kind';
 
 /**
  *
  * @param {*} lines
  * @param {object} [options={}]
- * @param {boolean} [options.expand=true] - Should we expand the groups
+ * @param {boolean} [options.expand=true] - Should we expand the groupsObject
  */
 
-module.exports = function toParts(lines, options = {}) {
-  const { expand: shouldExpandGroups = true } = options;
+export function toParts(lines, options = {}) {
+  const { expand: shouldExpandgroupsObject = true } = options;
   let parts = [];
   let currentPart = createNewPart();
   let previousKind = Kind.BEGIN;
@@ -24,7 +22,7 @@ module.exports = function toParts(lines, options = {}) {
       case Kind.ISOTOPE_RATIO:
       case Kind.ISOTOPE:
       case Kind.CHARGE:
-        currentPart.lines.push(Object.assign({}, line, { multiplier: 1 }));
+        currentPart.lines.push({ ...line, multiplier: 1 });
         break;
       case Kind.OPENING_PARENTHESIS:
         openingParenthesis(currentPart);
@@ -55,9 +53,9 @@ module.exports = function toParts(lines, options = {}) {
     previousKind = line.kind;
   }
   globalPartMultiplier(currentPart);
-  if (shouldExpandGroups) expandGroups(parts);
+  if (shouldExpandgroupsObject) expandgroupsObject(parts);
   return combineAtomsIsotopesCharges(parts);
-};
+}
 
 function createNewPart() {
   let currentMultiplier = { value: 1, fromIndex: 0 };
@@ -115,13 +113,13 @@ function postMultiplier(currentPart, value, previousKind) {
   }
 }
 
-function expandGroups(parts) {
+function expandgroupsObject(parts) {
   for (let part of parts) {
     let expanded = false;
     for (let i = 0; i < part.lines.length; i++) {
       let line = part.lines[i];
       if (line.kind === Kind.ATOM) {
-        let group = groups[line.value];
+        let group = groupsObject[line.value];
 
         if (group) {
           expanded = true;
@@ -167,12 +165,10 @@ function combineAtomsIsotopesCharges(parts) {
           result[result.length - 1].value +=
             key.value.value * key.value.multiplier;
         }
+      } else if (currentKey !== key.key) {
+        result.push(key.value);
       } else {
-        if (currentKey !== key.key) {
-          result.push(key.value);
-        } else {
-          result[result.length - 1].multiplier += key.value.multiplier;
-        }
+        result[result.length - 1].multiplier += key.value.multiplier;
       }
       currentKey = key.key;
     }

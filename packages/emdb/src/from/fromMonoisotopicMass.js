@@ -1,6 +1,4 @@
-'use strict';
-
-const findMFs = require('mf-finder');
+import { findMFs } from 'mf-finder';
 
 /**
  * Generates a database 'monoisotopic' from a monoisotopic mass and various options
@@ -27,7 +25,7 @@ const findMFs = require('mf-finder');
  * @returns {Promise}
  */
 
-module.exports = async function fromMonoisotopicMass(masses, options = {}) {
+export async function fromMonoisotopicMass(masses, options = {}) {
   if (typeof masses === 'string') {
     masses = masses.split(/[ ,;\r\n\t]/).map(Number);
   }
@@ -51,4 +49,4 @@ module.exports = async function fromMonoisotopicMass(masses, options = {}) {
       ),
     },
   };
-};
+}

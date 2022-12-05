@@ -1,6 +1,12 @@
-'use strict';
+import { closestPointX } from './utils/closestPointX.js';
+import { joinX } from './utils/joinX.js';
+import { multiply } from './utils/multiply.js';
+import { power } from './utils/power.js';
 
-class Distribution {
+/**
+ * Internal class to deal with isotopic distribution calculations
+ */
+export class Distribution {
   constructor(array) {
     if (Array.isArray(array)) {
       this.array = array;
@@ -44,60 +50,111 @@ class Distribution {
     if (!this.ySorted) this.sortY();
     return this.array[this.array.length - 1];
   }
-}
 
-Distribution.prototype.multiplyY = function multiplyY(value) {
-  this.array.forEach((item) => (item.y *= value));
-};
-
-Distribution.prototype.setArray = function setArray(array) {
-  this.array = array;
-  this.xSorted = false;
-  this.ySorted = false;
-};
-
-Distribution.prototype.move = function move(other) {
-  this.xSorted = other.xSorted;
-  this.ySorted = other.ySorted;
-  this.array = other.array;
-};
-
-Distribution.prototype.copy = function copy() {
-  let distCopy = new this.constructor();
-  distCopy.xSorted = this.xSorted;
-  distCopy.ySorted = this.ySorted;
-  distCopy.array = JSON.parse(JSON.stringify(this.array));
-  return distCopy;
-};
-
-Distribution.prototype.push = function push(point) {
-  this.array.push(point);
-
-  this.xSorted = false;
-  this.ySorted = false;
-};
-
-/**
- * Appen another distribution to the current distribution
- * @param {*} distribution
- */
-Distribution.prototype.append = function append(distribution) {
-  for (let item of distribution.array) {
-    this.array.push(item);
+  multiplyY(value) {
+    this.array.forEach((item) => (item.y *= value));
   }
-  this.xSorted = false;
-  this.ySorted = false;
-};
 
-Distribution.prototype.sortX = require('./utils/sortX.js');
-Distribution.prototype.sortY = require('./utils/sortY.js');
-Distribution.prototype.joinX = require('./utils/joinX.js');
-Distribution.prototype.topY = require('./utils/topY.js');
-Distribution.prototype.maxToOne = require('./utils/maxToOne.js');
-Distribution.prototype.multiply = require('./utils/multiply.js');
-Distribution.prototype.square = require('./utils/square.js');
-Distribution.prototype.power = require('./utils/power.js');
-Distribution.prototype.normalize = require('./utils/normalize.js');
-Distribution.prototype.closestPointX = require('./utils/closestPointX.js');
+  setArray(array) {
+    this.array = array;
+    this.xSorted = false;
+    this.ySorted = false;
+  }
 
-module.exports = Distribution;
+  move(other) {
+    this.xSorted = other.xSorted;
+    this.ySorted = other.ySorted;
+    this.array = other.array;
+  }
+
+  push(point) {
+    this.array.push(point);
+
+    this.xSorted = false;
+    this.ySorted = false;
+  }
+
+  sortX() {
+    this.ySorted = false;
+    if (this.xSorted) return this;
+    this.array.sort((a, b) => a.x - b.x);
+    this.xSorted = true;
+    return this;
+  }
+
+  sortY() {
+    this.xSorted = false;
+    if (this.ySorted) return this;
+    this.array.sort((a, b) => b.y - a.y);
+    this.ySorted = true;
+    return this;
+  }
+
+  normalize() {
+    let sum = 0;
+    for (let item of this.array) {
+      sum += item.y;
+    }
+    for (let item of this.array) {
+      item.y /= sum;
+    }
+    return this;
+  }
+
+  topY(limit) {
+    if (!limit) return this;
+    if (this.array.length <= limit) return this;
+    this.sortY();
+    this.array.splice(limit);
+    return this;
+  }
+
+  square(options = {}) {
+    return this.multiply(this, options);
+  }
+
+  multiply(b, options) {
+    return multiply(this, b, options);
+  }
+
+  power(p, options) {
+    return power(this, p, options);
+  }
+
+  copy() {
+    let distCopy = new Distribution();
+    distCopy.xSorted = this.xSorted;
+    distCopy.ySorted = this.ySorted;
+    distCopy.array = JSON.parse(JSON.stringify(this.array));
+    return distCopy;
+  }
+
+  maxToOne() {
+    if (this.array.length === 0) return this;
+    let currentMax = this.array[0].y;
+    for (let item of this.array) {
+      if (item.y > currentMax) currentMax = item.y;
+    }
+    for (let item of this.array) {
+      item.y /= currentMax;
+    }
+    return this;
+  }
+
+  joinX(threshold) {
+    return joinX(this, threshold);
+  }
+
+  append(distribution) {
+    for (let item of distribution.array) {
+      this.array.push(item);
+    }
+    this.xSorted = false;
+    this.ySorted = false;
+  }
+
+  closestPointX(target) {
+    this.sortX();
+    return closestPointX(this.array, target);
+  }
+}

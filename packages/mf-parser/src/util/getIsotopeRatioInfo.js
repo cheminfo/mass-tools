@@ -1,8 +1,6 @@
-'use strict';
+import { elementsAndStableIsotopesObject as elements } from 'chemical-elements';
 
-const elements = require('chemical-elements').elementsAndStableIsotopesObject;
-
-function getIsotopeRatioInfo(value) {
+export function getIsotopeRatioInfo(value) {
   let result = { mass: 0, monoisotopicMass: 0 };
   let element = elements[value.atom];
   if (!element) throw new Error(`Element not found: ${value.atom}`);
@@ -27,5 +25,3 @@ function normalize(array) {
   let sum = array.reduce((prev, current) => prev + current, 0);
   return array.map((a) => a / sum);
 }
-
-module.exports = getIsotopeRatioInfo;

@@ -1,49 +1,37 @@
-'use strict';
+import { aminoAcids } from './aminoAcids';
+import * as IEP from './isoElectricPoint';
+import { splitPeptide } from './splitPeptide.js';
 
-const allowNeutralLoss = require('./allowNeutralLoss');
-const aa = require('./aminoAcids');
-const chargePeptide = require('./chargePeptide');
-const convertAASequence = require('./convertAASequence');
-const digestPeptide = require('./digestPeptide');
-const generatePeptideFragments = require('./generatePeptideFragments');
-const IEP = require('./isoElectricPoint');
-const splitPeptide = require('./splitPeptide');
+export * from './allowNeutralLoss';
+export * from './chargePeptide.js';
+export * from './sequenceToMF.js';
+export * from './generatePeptideFragments.js';
+export * from './digestPeptide.js';
+export * from './splitPeptide.js';
 
-exports.getInfo = () => {
-  return aa;
-};
+export function getInfo() {
+  return aminoAcids;
+}
 
 // sequence should be in the "right" format like HAlaGlyProOH
 
-exports.splitPeptide = splitPeptide;
-exports.digestPeptide = digestPeptide;
-
-exports.calculateIEP = function calculateIEP(sequence) {
+export function calculateIEP(sequence) {
   let aas = splitPeptide(sequence);
   let result = IEP.calculateIEP(aas);
   return result;
-};
+}
 
-exports.calculateIEPChart = function calculateIEPChart(sequence) {
+export function calculateIEPChart(sequence) {
   let aas = splitPeptide(sequence);
   let result = IEP.calculateChart(aas);
   return result;
-};
+}
 
-exports.getColorForIEP = function getColorForIEP(iep) {
+export function getColorForIEP(iep) {
   return IEP.getColor(iep);
-};
+}
 
-exports.calculateCharge = function calculateCharge(sequence, ph) {
+export function calculateCharge(sequence, ph) {
   let aas = splitPeptide(sequence);
   return IEP.calculateCharge(aas, ph);
-};
-
-exports.generatePeptideFragments = generatePeptideFragments;
-
-exports.chargePeptide = chargePeptide;
-exports.allowNeutralLoss = allowNeutralLoss;
-
-exports.convertAASequence = convertAASequence;
-
-exports.sequenceToMF = convertAASequence;
+}

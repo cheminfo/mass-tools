@@ -1,10 +1,8 @@
-'use strict';
-
 /**
  * Sum of Y to 1
  */
 
-module.exports = function maxToOne() {
+export function maxToOne() {
   if (this.array.length === 0) return this;
   let currentMax = this.array[0].y;
   for (let item of this.array) {
@@ -14,4 +12,4 @@ module.exports = function maxToOne() {
     item.y /= currentMax;
   }
   return this;
-};
+}

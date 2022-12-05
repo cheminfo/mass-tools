@@ -1,6 +1,4 @@
-'use strict';
-
-const getDerivedCompositionInfo = require('../getDerivedCompositionInfo');
+const { getDerivedCompositionInfo } = require('../getDerivedCompositionInfo');
 
 test('getDerivedCompositionInfo', () => {
   const data = {

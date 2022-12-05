@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = [
+export const info = [
   {
     quantity: 0.05,
     type: 'y8-B1',

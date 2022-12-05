@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export const unsaturationsObject = {
   O: 0,
   N: 1,
   H: -1,

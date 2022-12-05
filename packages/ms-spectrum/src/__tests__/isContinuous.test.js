@@ -1,11 +1,9 @@
-'use strict';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
-const { readFileSync } = require('fs');
-const { join } = require('path');
+import { parseXY } from 'xy-parser';
 
-const { parseXY } = require('xy-parser');
-
-const isContinuous = require('../isContinuous');
+import { isContinuous } from '../isContinuous';
 
 describe('test isContinuous', () => {
   it('to small', () => {

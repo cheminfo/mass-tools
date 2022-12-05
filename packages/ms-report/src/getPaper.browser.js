@@ -1,9 +1,6 @@
-'use strict';
+import { SVG } from '@svgdotjs/svg.js';
 
-const { SVG } = require('@svgdotjs/svg.js');
-
-function getPaper() {
+export function getPaper() {
+  // eslint-disable-next-line new-cap
   return SVG();
 }
-
-module.exports = getPaper;

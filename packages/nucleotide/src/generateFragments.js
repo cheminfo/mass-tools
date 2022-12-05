@@ -1,12 +1,10 @@
-'use strict';
+import { addFiveTerm } from './addFiveTerm';
+import { addFiveTermBaseLoss } from './addFiveTermBaseLoss';
+import { addInternalTerm } from './addInternalTerm';
+import { addThreeTerm } from './addThreeTerm';
+import { addThreeTermBaseLoss } from './addThreeTermBaseLoss';
 
-const addFiveTerm = require('./addFiveTerm');
-const addFiveTermBaseLoss = require('./addFiveTermBaseLoss');
-const addInternalTerm = require('./addInternalTerm');
-const addThreeTerm = require('./addThreeTerm');
-const addThreeTermBaseLoss = require('./addThreeTermBaseLoss');
-
-module.exports = function generateFragments(mf, options) {
+export function generateFragments(mf, options) {
   if (options === undefined) {
     options = {
       a: false,
@@ -72,4 +70,4 @@ module.exports = function generateFragments(mf, options) {
   }
 
   return mfs;
-};
+}

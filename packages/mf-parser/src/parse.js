@@ -1,16 +1,14 @@
-'use strict';
-
-const Kind = require('./Kind');
-const parseCharge = require('./util/parseCharge');
+import { Kind } from './Kind';
+import { parseCharge } from './util/parseCharge';
 
 /**
  * Parse a mf to an array of kind / value
  * @param {String} mf
  */
 
-module.exports = function parse(mf) {
+export function parse(mf) {
   return new MFParser().parse(mf);
-};
+}
 
 class MFParser {
   parse(mf = '') {
@@ -55,18 +53,16 @@ class MFParser {
             throw new MFError(this.mf, this.i, 'Anchor ID may not contain -');
           }
           this.result[this.result.length - 1].value = value.from;
+        } else if (value.to) {
+          this.result.push({
+            kind: Kind.MULTIPLIER_RANGE,
+            value: {
+              from: Math.min(value.from, value.to),
+              to: Math.max(value.from, value.to),
+            },
+          });
         } else {
-          if (value.to) {
-            this.result.push({
-              kind: Kind.MULTIPLIER_RANGE,
-              value: {
-                from: Math.min(value.from, value.to),
-                to: Math.max(value.from, value.to),
-              },
-            });
-          } else {
-            this.result.push({ kind: Kind.MULTIPLIER, value: value.from });
-          }
+          this.result.push({ kind: Kind.MULTIPLIER, value: value.from });
         }
         continue;
       } else if (char === '.') {

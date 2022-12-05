@@ -1,6 +1,4 @@
-'use strict';
-
-function addCSS(paper) {
+export function addCSS(paper) {
   let cssCode = `
     .highlight {
         stroke: yellow;
@@ -14,5 +12,3 @@ function addCSS(paper) {
   let style = paper.element('style');
   style.words(cssCode);
 }
-
-module.exports = addCSS;

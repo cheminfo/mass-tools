@@ -1,6 +1,4 @@
-'use strict';
-
-const findMFs = require('..');
+import { findMFs } from '..';
 
 describe('test mf-finder', () => {
   it('basic case', async () => {

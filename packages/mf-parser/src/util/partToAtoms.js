@@ -1,6 +1,4 @@
-'use strict';
-
-const Kind = require('../Kind');
+import { Kind } from '../Kind.js';
 
 /**
  * Convert a MF part to an array of atoms
@@ -8,7 +6,7 @@ const Kind = require('../Kind');
  * This is mainly used to make queries
  */
 
-module.exports = function partToAtoms(part) {
+export function partToAtoms(part) {
   let atoms = {};
   for (let line of part) {
     switch (line.kind) {
@@ -33,4 +31,4 @@ module.exports = function partToAtoms(part) {
     }
   }
   return atoms;
-};
+}
