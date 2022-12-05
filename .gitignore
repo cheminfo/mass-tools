@@ -10,3 +10,5 @@ dist
 packages/mass-tools/README.md
 
 packages/**/lib
+
+docs

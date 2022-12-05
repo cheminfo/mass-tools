@@ -3,8 +3,6 @@
 [![NPM version][npm-image]][npm-url]
 [![npm download][download-image]][download-url]
 
-.
-
 ## Installation
 
 `$ npm install --save atom-sorter`
@@ -12,10 +10,10 @@
 ## Usage
 
 ```js
-import atomSorter from 'atom-sorter';
+import { atomSorter } from 'atom-sorter';
 
-['C', 'O', 'N', 'H'].osrt(atomSorter);
-// result is ...
+['C', 'O', 'N', 'H'].sort(atomSorter);
+// result is : ['C', 'H', 'N', 'O']
 ```
 
 ## License

@@ -2,6 +2,7 @@
   "name": "mass-tools",
   "version": "0.61.4",
   "main": "lib/index.js",
+  "description": "Many tools allowing to analyze mass spectra",
   "module": "src/index.js",
   "files": [
     "src",
