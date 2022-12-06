@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.0.2](https://github.com/cheminfo/mass-tools/compare/v6.0.1...v6.0.2) (2022-12-06)
+
+
+### Bug Fixes
+
+* create more compatible build of mass-tools ([7b6ded6](https://github.com/cheminfo/mass-tools/commit/7b6ded63bb6aa4d1cab7da8f5521a7cae6b5cc09))
+
 ## [6.0.1](https://github.com/cheminfo/mass-tools/compare/v6.0.0...v6.0.1) (2022-12-05)
 
 
