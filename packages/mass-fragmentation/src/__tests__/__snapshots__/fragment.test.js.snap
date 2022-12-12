@@ -159,7 +159,7 @@ exports[`fragment C1CCC1 1`] = `
     },
   },
   {
-    "fragmentType": "molecular ion",
+    "fragmentType": "molecule",
     "idCode": "gBP@DiVj\`@",
     "mfInfo": {
       "atoms": {
@@ -231,7 +231,7 @@ exports[`fragment CC 1`] = `
     },
   },
   {
-    "fragmentType": "molecular ion",
+    "fragmentType": "molecule",
     "idCode": "eF@Hp@",
     "mfInfo": {
       "atoms": {
@@ -355,7 +355,7 @@ exports[`fragment CCC 1`] = `
     },
   },
   {
-    "fragmentType": "molecular ion",
+    "fragmentType": "molecule",
     "idCode": "eM@Hz@",
     "mfInfo": {
       "atoms": {
@@ -1893,7 +1893,7 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     },
   },
   {
-    "fragmentType": "molecular ion",
+    "fragmentType": "molecule",
     "idCode": "fhiA@@@YEDeDddbeQbcMUUUUU@@@",
     "mfInfo": {
       "atoms": {
@@ -2434,7 +2434,7 @@ exports[`fragment CCCCCC(CC)CCC 1`] = `
     },
   },
   {
-    "fragmentType": "molecular ion",
+    "fragmentType": "molecule",
     "idCode": "dmT@@DjUWzjjh@@",
     "mfInfo": {
       "atoms": {

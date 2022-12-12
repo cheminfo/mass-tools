@@ -115,7 +115,7 @@ describe('fragment', () => {
           atoms: {},
           unsaturation: 1,
         },
-        fragmentType: 'molecular ion',
+        fragmentType: 'molecule',
       },
     ]);
   });

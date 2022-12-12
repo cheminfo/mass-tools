@@ -158,21 +158,6 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
       "unsaturation": 0.5,
     },
   },
-  {
-    "fragmentType": "molecular ion",
-    "idCode": "gC\`@Dij@@",
-    "mfInfo": {
-      "atoms": {
-        "C": 4,
-        "H": 10,
-      },
-      "charge": 0,
-      "mass": 58.12235112749877,
-      "mf": "C4H10",
-      "monoisotopicMass": 58.0782503223,
-      "unsaturation": 0,
-    },
-  },
 ]
 `;
 
@@ -384,21 +369,6 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = 
       "mf": "C13H23",
       "monoisotopicMass": 179.17997574129,
       "unsaturation": 2.5,
-    },
-  },
-  {
-    "fragmentType": "molecular ion",
-    "idCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
-    "mfInfo": {
-      "atoms": {
-        "C": 19,
-        "H": 28,
-      },
-      "charge": 0,
-      "mass": 256.4263231515315,
-      "mf": "C19H28",
-      "monoisotopicMass": 256.21910090244,
-      "unsaturation": 6,
     },
   },
 ]
@@ -668,21 +638,6 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
       "mf": "C13H23",
       "monoisotopicMass": 179.17997574129,
       "unsaturation": 2.5,
-    },
-  },
-  {
-    "fragmentType": "molecular ion",
-    "idCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
-    "mfInfo": {
-      "atoms": {
-        "C": 19,
-        "H": 28,
-      },
-      "charge": 0,
-      "mass": 256.4263231515315,
-      "mf": "C19H28",
-      "monoisotopicMass": 256.21910090244,
-      "unsaturation": 6,
     },
   },
 ]

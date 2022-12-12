@@ -52,13 +52,7 @@ export function fragmentAcyclicBonds(molecule, options = {}) {
   let brokenMolecule = {};
   let fragmentMap = [];
   let nbFragments = [];
-  let results = [
-    {
-      idCode: molecule.getIDCode(),
-      mfInfo: new MF(getMF(molecule).mf).getInfo(),
-      fragmentType: 'molecular ion',
-    },
-  ];
+  let results = [];
 
   for (let bond of bonds) {
     if (bond.selected) {

@@ -8,7 +8,6 @@ describe('fragmentAcyclicBonds', () => {
   it('CCCC', () => {
     const molecule = Molecule.fromSmiles('CCCC'); // for some reason tostrictEqual has problems with: 'eMHAIhNFhF`QR\\Ji\\Jh'
     const result = fragmentAcyclicBonds(molecule);
-
     expect(result).toMatchSnapshot();
   });
   it('c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false', () => {
