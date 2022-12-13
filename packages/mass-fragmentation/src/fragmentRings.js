@@ -15,13 +15,6 @@ import { getFragmentableRings } from './utils/getFragmentableRings.js';
 export function fragmentRings(molecule, options = {}) {
   const { Molecule } = molecule.getOCL();
   const { calculateHoseCodes, parentIDCode = molecule.getIDCode() } = options;
-  let atoms = [];
-  for (let i = 0; i < molecule.getAllAtoms(); i++) {
-    let atom = {};
-    atoms.push(atom);
-    atom.i = i;
-    atom.links = [];
-  }
 
   const fragmentableRingBonds = getFragmentableRings(molecule);
 
