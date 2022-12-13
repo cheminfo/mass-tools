@@ -15,19 +15,31 @@ import { fragmentRings } from './fragmentRings.js';
  * @returns {object} In-Silico fragmentation results
  */
 export function fragment(molecule, options = {}) {
-  const { cyclic = true, acyclic = true, full = true } = options;
+  const {
+    cyclic = true,
+    acyclic = true,
+    full = true,
+    calculateHoseCodes = false,
+  } = options;
+
+  const parentIDCode = molecule.getIDCode();
 
   let molecularIon = full
     ? [
         {
-          idCode: molecule.getIDCode(),
+          idCode: parentIDCode,
+          parentIDCode,
           mfInfo: new MF(getMF(molecule).mf).getInfo(),
           fragmentType: 'molecule',
         },
       ]
     : [];
-  let acyclicBonds = acyclic ? fragmentAcyclicBonds(molecule, options) : [];
-  let cyclicBonds = cyclic ? fragmentRings(molecule, options) : [];
+  let acyclicBonds = acyclic
+    ? fragmentAcyclicBonds(molecule, { calculateHoseCodes, parentIDCode })
+    : [];
+  let cyclicBonds = cyclic
+    ? fragmentRings(molecule, { calculateHoseCodes, parentIDCode })
+    : [];
   let result = [...molecularIon, ...acyclicBonds, ...cyclicBonds];
 
   return result.sort(

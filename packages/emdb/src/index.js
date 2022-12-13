@@ -2,6 +2,7 @@ import { Spectrum } from 'ms-spectrum';
 
 import { appendFragmentsInfo } from './append/appendFragmentsInfo.js';
 import { fromArray } from './from/fromArray.js';
+import { fromMolecules } from './from/fromMolecules.js';
 import { fromMonoisotopicMass } from './from/fromMonoisotopicMass.js';
 import { fromNucleicSequence } from './from/fromNucleicSequence.js';
 import { fromPeptidicSequence } from './from/fromPeptidicSequence.js';
@@ -114,6 +115,12 @@ export class EMDB {
     const { databaseName = 'generated', append = false, estimate } = options;
     const results = await fromArray(sequence, options);
     if (estimate) return results;
+    replaceOrAppend(this, databaseName, results, append);
+  }
+
+  async fromMolecules(entries, ocl, options = {}) {
+    const { databaseName = 'molecules', append = false } = options;
+    const results = await fromMolecules(entries, ocl, options);
     replaceOrAppend(this, databaseName, results, append);
   }
 

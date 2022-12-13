@@ -8,12 +8,13 @@ import { getFragmentableRings } from './utils/getFragmentableRings.js';
  * @param {import('openchemlib').Molecule} molecule - The OCL molecule to be fragmented
  * @param {object} [options={}]
  * @param {boolean} [options.calculateHoseCodes=false] - calculating hose code for bonds is quite time consuming
+ * @param {string} [options.parentIDCode=molecule.getIDCode()]
  * @returns  Array with results for the fragmentation of ring bonds
  */
 
 export function fragmentRings(molecule, options = {}) {
   const { Molecule } = molecule.getOCL();
-  const { calculateHoseCodes } = options;
+  const { calculateHoseCodes, parentIDCode = molecule.getIDCode() } = options;
   let atoms = [];
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
     let atom = {};
@@ -73,6 +74,7 @@ export function fragmentRings(molecule, options = {}) {
       fragment.setFragment(false);
       //      console.log(fragment.getIDCode(), getMF(fragment).mf);
       result.idCode = fragment.getIDCode();
+      result.parentIDCode = parentIDCode;
       result.cleavedBonds = ringBonds.bonds;
       result.mfInfo = new MF(
         getMF(fragment).mf.replace(/R[1-9]?/, ''),

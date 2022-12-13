@@ -6,12 +6,13 @@ import { getMF, getHoseCodesForAtoms } from 'openchemlib-utils';
  * @param {import('openchemlib').Molecule} molecule - The OCL molecule to be fragmented
  * @param {object} [options={}]
  * @param {boolean} [options.calculateHoseCodes=false] - calculating hose code for bonds is quite time consuming
+ * @param {string} [options.parentIDCode=molecule.getIDCode()]
  * @returns Results fragmentation of acyclic bonds
  */
 
 export function fragmentAcyclicBonds(molecule, options = {}) {
   const { Molecule } = molecule.getOCL();
-  const { calculateHoseCodes } = options;
+  const { calculateHoseCodes, parentIDCode = molecule.getIDCode() } = options;
   let atoms = [];
   // Prepare object with lenght equal to number of atoms
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
@@ -106,6 +107,7 @@ export function fragmentAcyclicBonds(molecule, options = {}) {
         fragment.removeAtomCustomLabels();
         fragment.setFragment(false);
         result.idCode = fragment.getIDCode();
+        result.parentIDCode = parentIDCode;
         result.cleavedBonds = [
           {
             index: bond.index,

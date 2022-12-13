@@ -1,0 +1,1162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fromMolecules smiles + H+,Na+ 1`] = `
+EMDB {
+  "databases": {
+    "molecules": [
+      {
+        "atoms": {
+          "C": 2,
+          "H": 6,
+        },
+        "charge": 0,
+        "em": 30.04695019338,
+        "fragment": {
+          "idCode": "eF@Hp@",
+          "parent": {
+            "idCode": "eF@Hp@",
+            "smiles": "CC",
+          },
+          "type": "molecule",
+        },
+        "ionization": {
+          "atoms": {
+            "H": 1,
+          },
+          "charge": 1,
+          "em": 1.00782503223,
+          "mf": "H+",
+        },
+        "mf": "C2H6",
+        "ms": {
+          "charge": 1,
+          "em": 31.05422664570093,
+          "ionization": "H+",
+        },
+        "mw": 30.06911631780516,
+        "unsaturation": 0,
+      },
+      {
+        "atoms": {
+          "C": 2,
+          "H": 6,
+        },
+        "charge": 0,
+        "em": 30.04695019338,
+        "fragment": {
+          "idCode": "eF@Hp@",
+          "parent": {
+            "idCode": "eF@Hp@",
+            "smiles": "CC",
+          },
+          "type": "molecule",
+        },
+        "ionization": {
+          "atoms": {
+            "Na": 1,
+          },
+          "charge": 1,
+          "em": 22.989769282,
+          "mf": "Na+",
+        },
+        "mf": "C2H6",
+        "ms": {
+          "charge": 1,
+          "em": 53.036170895470924,
+          "ionization": "Na+",
+        },
+        "mw": 30.06911631780516,
+        "unsaturation": 0,
+      },
+      {
+        "atoms": {
+          "C": 3,
+          "H": 8,
+        },
+        "charge": 0,
+        "em": 44.06260025784,
+        "fragment": {
+          "idCode": "eM@Hz@",
+          "parent": {
+            "idCode": "eM@Hz@",
+            "smiles": "CCC",
+          },
+          "type": "molecule",
+        },
+        "ionization": {
+          "atoms": {
+            "H": 1,
+          },
+          "charge": 1,
+          "em": 1.00782503223,
+          "mf": "H+",
+        },
+        "mf": "C3H8",
+        "ms": {
+          "charge": 1,
+          "em": 45.06987671016093,
+          "ionization": "H+",
+        },
+        "mw": 44.095733722651964,
+        "unsaturation": 0,
+      },
+      {
+        "atoms": {
+          "C": 3,
+          "H": 8,
+        },
+        "charge": 0,
+        "em": 44.06260025784,
+        "fragment": {
+          "idCode": "eM@Hz@",
+          "parent": {
+            "idCode": "eM@Hz@",
+            "smiles": "CCC",
+          },
+          "type": "molecule",
+        },
+        "ionization": {
+          "atoms": {
+            "Na": 1,
+          },
+          "charge": 1,
+          "em": 22.989769282,
+          "mf": "Na+",
+        },
+        "mf": "C3H8",
+        "ms": {
+          "charge": 1,
+          "em": 67.05182095993094,
+          "ionization": "Na+",
+        },
+        "mw": 44.095733722651964,
+        "unsaturation": 0,
+      },
+      {
+        "atoms": {
+          "C": 3,
+          "H": 8,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 60.05751487741,
+        "fragment": {
+          "idCode": "gCa@@eMP@",
+          "parent": {
+            "idCode": "gCa@@eMP@",
+            "smiles": "CCOC",
+          },
+          "type": "molecule",
+        },
+        "ionization": {
+          "atoms": {
+            "H": 1,
+          },
+          "charge": 1,
+          "em": 1.00782503223,
+          "mf": "H+",
+        },
+        "mf": "C3H8O",
+        "ms": {
+          "charge": 1,
+          "em": 61.06479132973093,
+          "ionization": "H+",
+        },
+        "mw": 60.09513864697024,
+        "unsaturation": 0,
+      },
+      {
+        "atoms": {
+          "C": 3,
+          "H": 8,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 60.05751487741,
+        "fragment": {
+          "idCode": "gCa@@eMP@",
+          "parent": {
+            "idCode": "gCa@@eMP@",
+            "smiles": "CCOC",
+          },
+          "type": "molecule",
+        },
+        "ionization": {
+          "atoms": {
+            "Na": 1,
+          },
+          "charge": 1,
+          "em": 22.989769282,
+          "mf": "Na+",
+        },
+        "mf": "C3H8O",
+        "ms": {
+          "charge": 1,
+          "em": 83.04673557950093,
+          "ionization": "Na+",
+        },
+        "mw": 60.09513864697024,
+        "unsaturation": 0,
+      },
+    ],
+  },
+  "experimentalSpectrum": undefined,
+}
+`;
+
+exports[`fromMolecules smiles + fragmentation 1`] = `
+EMDB {
+  "databases": {
+    "molecules": [
+      {
+        "atoms": {
+          "C": 1,
+          "H": 3,
+        },
+        "charge": 0,
+        "em": 15.02347509669,
+        "fragment": {
+          "idCode": "eFBAYc@@",
+          "parent": {
+            "idCode": "eMHAIh@",
+            "smiles": "CCO",
+          },
+          "type": "acyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "CH3",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 15.03455815890258,
+        "unsaturation": 0.5,
+      },
+      {
+        "atoms": {
+          "H": 1,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 17.0027396518,
+        "fragment": {
+          "idCode": "eFJHVXp@",
+          "parent": {
+            "idCode": "eMHAIh@",
+            "smiles": "CCO",
+          },
+          "type": "acyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "HO",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 17.007345678374055,
+        "unsaturation": 0.5,
+      },
+      {
+        "atoms": {
+          "C": 2,
+          "H": 4,
+        },
+        "charge": 0,
+        "em": 28.03130012892,
+        "fragment": {
+          "idCode": "gC\`D@lyYRVh@",
+          "parent": {
+            "idCode": "gKQ@@eKcUP@",
+            "smiles": "C1COCC1",
+          },
+          "type": "cyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C2H4",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 28.053234809693606,
+        "unsaturation": 1,
+      },
+      {
+        "atoms": {
+          "C": 2,
+          "H": 4,
+        },
+        "charge": 0,
+        "em": 28.03130012892,
+        "fragment": {
+          "idCode": "gC\`D@lyYRVh@",
+          "parent": {
+            "idCode": "gKQ@@eKcUP@",
+            "smiles": "C1COCC1",
+          },
+          "type": "cyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C2H4",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 28.053234809693606,
+        "unsaturation": 1,
+      },
+      {
+        "atoms": {
+          "C": 2,
+          "H": 4,
+        },
+        "charge": 0,
+        "em": 28.03130012892,
+        "fragment": {
+          "idCode": "gC\`D@lyYRVh@",
+          "parent": {
+            "idCode": "gKQ@@eKcUP@",
+            "smiles": "C1COCC1",
+          },
+          "type": "cyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C2H4",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 28.053234809693606,
+        "unsaturation": 1,
+      },
+      {
+        "atoms": {
+          "C": 2,
+          "H": 5,
+        },
+        "charge": 0,
+        "em": 29.03912516115,
+        "fragment": {
+          "idCode": "eMBAYRZ@",
+          "parent": {
+            "idCode": "eMHAIh@",
+            "smiles": "CCO",
+          },
+          "type": "acyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C2H5",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 29.061175563749384,
+        "unsaturation": 0.5,
+      },
+      {
+        "atoms": {
+          "C": 1,
+          "H": 2,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 30.01056468403,
+        "fragment": {
+          "idCode": "gCaDHEgKJRu@@",
+          "parent": {
+            "idCode": "gKQ@@eKcUP@",
+            "smiles": "C1COCC1",
+          },
+          "type": "cyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "CH2O",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 30.02602232916508,
+        "unsaturation": 1,
+      },
+      {
+        "atoms": {
+          "C": 1,
+          "H": 2,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 30.01056468403,
+        "fragment": {
+          "idCode": "gCaDHEgKJRu@@",
+          "parent": {
+            "idCode": "gKQ@@eKcUP@",
+            "smiles": "C1COCC1",
+          },
+          "type": "cyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "CH2O",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 30.02602232916508,
+        "unsaturation": 1,
+      },
+      {
+        "atoms": {
+          "C": 1,
+          "H": 3,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 31.01838971626,
+        "fragment": {
+          "idCode": "eMJDVTf\`@",
+          "parent": {
+            "idCode": "eMHAIh@",
+            "smiles": "CCO",
+          },
+          "type": "acyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "CH3O",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 31.033963083220858,
+        "unsaturation": 0.5,
+      },
+      {
+        "atoms": {
+          "C": 3,
+          "H": 6,
+        },
+        "charge": 0,
+        "em": 42.04695019338,
+        "fragment": {
+          "idCode": "gJPD@leYRUj\`@",
+          "parent": {
+            "idCode": "gKQ@@eKcUP@",
+            "smiles": "C1COCC1",
+          },
+          "type": "cyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C3H6",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 42.07985221454041,
+        "unsaturation": 1,
+      },
+      {
+        "atoms": {
+          "C": 3,
+          "H": 6,
+        },
+        "charge": 0,
+        "em": 42.04695019338,
+        "fragment": {
+          "idCode": "gJPD@leYRUj\`@",
+          "parent": {
+            "idCode": "gKQ@@eKcUP@",
+            "smiles": "C1COCC1",
+          },
+          "type": "cyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C3H6",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 42.07985221454041,
+        "unsaturation": 1,
+      },
+      {
+        "atoms": {
+          "C": 2,
+          "H": 4,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 44.026214748490005,
+        "fragment": {
+          "idCode": "gJQDDEdkJRmT@@",
+          "parent": {
+            "idCode": "gKQ@@eKcUP@",
+            "smiles": "C1COCC1",
+          },
+          "type": "cyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C2H4O",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 44.05263973401188,
+        "unsaturation": 1,
+      },
+      {
+        "atoms": {
+          "C": 2,
+          "H": 4,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 44.026214748490005,
+        "fragment": {
+          "idCode": "gJQDHEdkJRmT@@",
+          "parent": {
+            "idCode": "gKQ@@eKcUP@",
+            "smiles": "C1COCC1",
+          },
+          "type": "cyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C2H4O",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 44.05263973401188,
+        "unsaturation": 1,
+      },
+      {
+        "atoms": {
+          "C": 2,
+          "H": 4,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 44.026214748490005,
+        "fragment": {
+          "idCode": "gJQDHEdkJRmT@@",
+          "parent": {
+            "idCode": "gKQ@@eKcUP@",
+            "smiles": "C1COCC1",
+          },
+          "type": "cyclic",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C2H4O",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 44.05263973401188,
+        "unsaturation": 1,
+      },
+      {
+        "atoms": {
+          "C": 2,
+          "H": 6,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 46.041864812949996,
+        "fragment": {
+          "idCode": "eMHAIh@",
+          "parent": {
+            "idCode": "eMHAIh@",
+            "smiles": "CCO",
+          },
+          "type": "molecule",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C2H6O",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 46.06852124212344,
+        "unsaturation": 0,
+      },
+      {
+        "atoms": {
+          "C": 4,
+          "H": 8,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 72.05751487741,
+        "fragment": {
+          "idCode": "gKQ@@eKcUP@",
+          "parent": {
+            "idCode": "gKQ@@eKcUP@",
+            "smiles": "C1COCC1",
+          },
+          "type": "molecule",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C4H8O",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 72.10587454370548,
+        "unsaturation": 1,
+      },
+    ],
+  },
+  "experimentalSpectrum": undefined,
+}
+`;
+
+exports[`fromMolecules smiles + fragments + group 1`] = `
+EMDB {
+  "databases": {
+    "molecules": [
+      {
+        "atoms": {
+          "C": 1,
+          "H": 3,
+        },
+        "charge": 0,
+        "em": 15.02347509669,
+        "fragments": [
+          {
+            "idCode": "eFBAYc@@",
+            "parents": [
+              {
+                "count": 2,
+                "idCode": "eM@Hz@",
+                "smiles": "CCC",
+              },
+              {
+                "count": 2,
+                "idCode": "gCa@@eMP@",
+                "smiles": "CCOC",
+              },
+            ],
+            "type": "acyclic",
+          },
+        ],
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "CH3",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 15.03455815890258,
+        "unsaturation": 0.5,
+      },
+      {
+        "atoms": {
+          "C": 2,
+          "H": 5,
+        },
+        "charge": 0,
+        "em": 29.03912516115,
+        "fragments": [
+          {
+            "idCode": "eMBAYRZ@",
+            "parents": [
+              {
+                "count": 2,
+                "idCode": "eM@Hz@",
+                "smiles": "CCC",
+              },
+              {
+                "count": 1,
+                "idCode": "gCa@@eMP@",
+                "smiles": "CCOC",
+              },
+            ],
+            "type": "acyclic",
+          },
+        ],
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C2H5",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 29.061175563749384,
+        "unsaturation": 0.5,
+      },
+      {
+        "atoms": {
+          "C": 1,
+          "H": 3,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 31.01838971626,
+        "fragments": [
+          {
+            "idCode": "eMJHVTf\`@",
+            "parents": [
+              {
+                "count": 1,
+                "idCode": "gCa@@eMP@",
+                "smiles": "CCOC",
+              },
+            ],
+            "type": "acyclic",
+          },
+        ],
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "CH3O",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 31.033963083220858,
+        "unsaturation": 0.5,
+      },
+      {
+        "atoms": {
+          "C": 3,
+          "H": 8,
+        },
+        "charge": 0,
+        "em": 44.06260025784,
+        "fragments": [
+          {
+            "idCode": "eM@Hz@",
+            "parents": [
+              {
+                "count": 1,
+                "idCode": "eM@Hz@",
+                "smiles": "CCC",
+              },
+            ],
+            "type": "molecule",
+          },
+        ],
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C3H8",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 44.095733722651964,
+        "unsaturation": 0,
+      },
+      {
+        "atoms": {
+          "C": 2,
+          "H": 5,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 45.03403978072,
+        "fragments": [
+          {
+            "idCode": "gCaHDEeIZ\`@",
+            "parents": [
+              {
+                "count": 1,
+                "idCode": "gCa@@eMP@",
+                "smiles": "CCOC",
+              },
+            ],
+            "type": "acyclic",
+          },
+          {
+            "idCode": "gCaHHEeIZ\`@",
+            "parents": [
+              {
+                "count": 1,
+                "idCode": "gCa@@eMP@",
+                "smiles": "CCOC",
+              },
+            ],
+            "type": "acyclic",
+          },
+        ],
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C2H5O",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 45.06058048806766,
+        "unsaturation": 0.5,
+      },
+      {
+        "atoms": {
+          "C": 3,
+          "H": 8,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 60.05751487741,
+        "fragments": [
+          {
+            "idCode": "gCa@@eMP@",
+            "parents": [
+              {
+                "count": 1,
+                "idCode": "gCa@@eMP@",
+                "smiles": "CCOC",
+              },
+            ],
+            "type": "molecule",
+          },
+        ],
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C3H8O",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 60.09513864697024,
+        "unsaturation": 0,
+      },
+    ],
+  },
+  "experimentalSpectrum": undefined,
+}
+`;
+
+exports[`fromMolecules smiles + parts 1`] = `
+EMDB {
+  "databases": {
+    "molecules": [
+      {
+        "atoms": {
+          "H": 4,
+          "N": 1,
+        },
+        "charge": 1,
+        "em": 18.03437413335,
+        "fragment": {
+          "idCode": "fJRP@",
+          "parent": {
+            "idCode": "fJRP@",
+            "smiles": "[NH4+]",
+          },
+          "type": "molecule",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "H4N(+1)",
+        "ms": {
+          "charge": 1,
+          "em": 18.03382555344093,
+          "ionization": "",
+        },
+        "mw": 18.038466227668906,
+        "unsaturation": -1,
+      },
+      {
+        "atoms": {
+          "C": 3,
+          "H": 10,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 62.073164941870004,
+        "fragment": {
+          "idCode": "gBa@@d]@@",
+          "parent": {
+            "idCode": "gBa@@d]@@",
+            "smiles": "CC.OC",
+          },
+          "type": "molecule",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C3H10O",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 62.111020155081796,
+        "unsaturation": -1,
+      },
+    ],
+  },
+  "experimentalSpectrum": undefined,
+}
+`;
+
+exports[`fromMolecules smiles + target spectrum 1`] = `
+[
+  {
+    "atoms": {
+      "H": 1,
+      "O": 1,
+    },
+    "charge": 0,
+    "em": 17.0027396518,
+    "fragment": {
+      "idCode": "eFJHVXp@",
+      "parent": {
+        "idCode": "gCa@@dmP@",
+        "smiles": "CCCO",
+      },
+      "type": "acyclic",
+    },
+    "ionization": {
+      "atoms": {
+        "H": 1,
+      },
+      "charge": 1,
+      "em": 1.00782503223,
+      "mf": "H+",
+    },
+    "mf": "HO",
+    "ms": {
+      "charge": 1,
+      "delta": -0.010016104120929015,
+      "em": 18.01001610412093,
+      "ionization": "H+",
+      "ppm": -556.1407642848914,
+      "target": {
+        "intensity": 30,
+        "mass": 18,
+      },
+    },
+    "mw": 17.007345678374055,
+    "unsaturation": 0.5,
+  },
+]
+`;
+
+exports[`fromMolecules smiles 1`] = `
+EMDB {
+  "databases": {
+    "molecules": [
+      {
+        "atoms": {
+          "C": 2,
+          "H": 6,
+        },
+        "charge": 0,
+        "em": 30.04695019338,
+        "fragment": {
+          "idCode": "eF@Hp@",
+          "parent": {
+            "idCode": "eF@Hp@",
+            "smiles": "CC",
+          },
+          "type": "molecule",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C2H6",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 30.06911631780516,
+        "unsaturation": 0,
+      },
+      {
+        "atoms": {
+          "C": 3,
+          "H": 8,
+        },
+        "charge": 0,
+        "em": 44.06260025784,
+        "fragment": {
+          "idCode": "eM@Hz@",
+          "parent": {
+            "idCode": "eM@Hz@",
+            "smiles": "CCC",
+          },
+          "type": "molecule",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C3H8",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 44.095733722651964,
+        "unsaturation": 0,
+      },
+      {
+        "atoms": {
+          "C": 3,
+          "H": 8,
+          "O": 1,
+        },
+        "charge": 0,
+        "em": 60.05751487741,
+        "fragment": {
+          "idCode": "gCa@@eMP@",
+          "parent": {
+            "idCode": "gCa@@eMP@",
+            "smiles": "CCOC",
+          },
+          "type": "molecule",
+        },
+        "ionization": {
+          "atoms": {},
+          "charge": 0,
+          "em": 0,
+          "mf": "",
+        },
+        "mf": "C3H8O",
+        "ms": {
+          "charge": 0,
+          "em": 0,
+          "ionization": "",
+        },
+        "mw": 60.09513864697024,
+        "unsaturation": 0,
+      },
+    ],
+  },
+  "experimentalSpectrum": undefined,
+}
+`;
