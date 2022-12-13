@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/cheminfo/mass-tools/compare/emdb@2.0.0...emdb@2.1.0) (2022-12-13)
+
+### Features
+
+- **emdb:** add count in fromMolecules ([bd9fab5](https://github.com/cheminfo/mass-tools/commit/bd9fab5398713d10b00fe93afb92c2c6c7e1ea29))
+- **emdb:** add method fromMolecules ([ecde199](https://github.com/cheminfo/mass-tools/commit/ecde199ddc31d75ffa849a6a8cefbb1d1965905e))
+
 # [2.0.0](https://github.com/cheminfo/mass-tools/compare/emdb@1.13.3...emdb@2.0.0) (2022-12-05)
 
 **Note:** Version bump only for package emdb
