@@ -27,6 +27,7 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
       "monoisotopicMass": 15.02347509669,
       "unsaturation": 0.5,
     },
+    "parentIDCode": "gC\`@Dij@@",
   },
   {
     "atomMap": [
@@ -53,6 +54,7 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
       "monoisotopicMass": 15.02347509669,
       "unsaturation": 0.5,
     },
+    "parentIDCode": "gC\`@Dij@@",
   },
   {
     "atomMap": [
@@ -79,6 +81,7 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
       "monoisotopicMass": 29.03912516115,
       "unsaturation": 0.5,
     },
+    "parentIDCode": "gC\`@Dij@@",
   },
   {
     "atomMap": [
@@ -105,6 +108,7 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
       "monoisotopicMass": 29.03912516115,
       "unsaturation": 0.5,
     },
+    "parentIDCode": "gC\`@Dij@@",
   },
   {
     "atomMap": [
@@ -131,6 +135,7 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
       "monoisotopicMass": 43.05477522561,
       "unsaturation": 0.5,
     },
+    "parentIDCode": "gC\`@Dij@@",
   },
   {
     "atomMap": [
@@ -157,6 +162,7 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
       "monoisotopicMass": 43.05477522561,
       "unsaturation": 0.5,
     },
+    "parentIDCode": "gC\`@Dij@@",
   },
 ]
 `;
@@ -188,6 +194,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = 
       "monoisotopicMass": 77.03912516115,
       "unsaturation": 4.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -214,6 +221,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = 
       "monoisotopicMass": 91.05477522561,
       "unsaturation": 4.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -240,6 +248,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = 
       "monoisotopicMass": 105.07042529007,
       "unsaturation": 4.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -266,6 +275,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = 
       "monoisotopicMass": 119.08607535453,
       "unsaturation": 4.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -292,6 +302,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = 
       "monoisotopicMass": 137.13302554791,
       "unsaturation": 2.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -318,6 +329,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = 
       "monoisotopicMass": 151.14867561237,
       "unsaturation": 2.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -344,6 +356,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = 
       "monoisotopicMass": 165.16432567683,
       "unsaturation": 2.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -370,6 +383,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = 
       "monoisotopicMass": 179.17997574129,
       "unsaturation": 2.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
 ]
 `;
@@ -408,6 +422,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
       "monoisotopicMass": 77.03912516115,
       "unsaturation": 4.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -441,6 +456,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
       "monoisotopicMass": 91.05477522561,
       "unsaturation": 4.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -474,6 +490,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
       "monoisotopicMass": 105.07042529007,
       "unsaturation": 4.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -507,6 +524,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
       "monoisotopicMass": 119.08607535453,
       "unsaturation": 4.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -540,6 +558,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
       "monoisotopicMass": 137.13302554791,
       "unsaturation": 2.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -573,6 +592,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
       "monoisotopicMass": 151.14867561237,
       "unsaturation": 2.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -606,6 +626,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
       "monoisotopicMass": 165.16432567683,
       "unsaturation": 2.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
   {
     "atomMap": [
@@ -639,6 +660,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
       "monoisotopicMass": 179.17997574129,
       "unsaturation": 2.5,
     },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
   },
 ]
 `;

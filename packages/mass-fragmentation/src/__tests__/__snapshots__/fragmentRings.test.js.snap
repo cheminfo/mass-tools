@@ -47,6 +47,7 @@ exports[`fragmentRings C1CCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "gBP@DiVj\`@",
   },
   {
     "atomMap": [
@@ -93,6 +94,7 @@ exports[`fragmentRings C1CCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "gBP@DiVj\`@",
   },
   {
     "atomMap": [
@@ -139,6 +141,7 @@ exports[`fragmentRings C1CCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "gBP@DiVj\`@",
   },
   {
     "atomMap": [
@@ -185,6 +188,7 @@ exports[`fragmentRings C1CCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "gBP@DiVj\`@",
   },
 ]
 `;
@@ -229,6 +233,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -268,6 +273,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -307,6 +313,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -346,6 +353,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -385,6 +393,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -424,6 +433,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -463,6 +473,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -502,6 +513,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -541,6 +553,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -580,6 +593,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -619,6 +633,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 42.04695019338,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -658,6 +673,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 42.04695019338,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -697,6 +713,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 42.04695019338,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -736,6 +753,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 42.04695019338,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -775,6 +793,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 42.04695019338,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -814,6 +833,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 42.04695019338,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -853,6 +873,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 56.06260025784,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -892,6 +913,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 56.06260025784,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -931,6 +953,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 70.0782503223,
       "unsaturation": 1,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -970,6 +993,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 190.17215070906,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1009,6 +1033,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 204.18780077352,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1048,6 +1073,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 204.18780077352,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1087,6 +1113,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 218.20345083798,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1126,6 +1153,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 218.20345083798,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1165,6 +1193,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 218.20345083798,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1204,6 +1233,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 218.20345083798,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1243,6 +1273,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 218.20345083798,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1282,6 +1313,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 218.20345083798,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1321,6 +1353,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 232.21910090244,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1360,6 +1393,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 232.21910090244,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1399,6 +1433,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 232.21910090244,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1438,6 +1473,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 232.21910090244,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1477,6 +1513,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 232.21910090244,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1516,6 +1553,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 232.21910090244,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1555,6 +1593,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 232.21910090244,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1594,6 +1633,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 232.21910090244,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1633,6 +1673,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 232.21910090244,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
   {
     "atomMap": [
@@ -1672,6 +1713,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       "monoisotopicMass": 232.21910090244,
       "unsaturation": 4,
     },
+    "parentIDCode": "flm@@@LddTTRRTTSU{UcQBfjjjjjjj@@",
   },
 ]
 `;
@@ -1716,6 +1758,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -1755,6 +1798,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -1794,6 +1838,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -1833,6 +1878,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -1872,6 +1918,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -1911,6 +1958,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -1950,6 +1998,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 42.04695019338,
       "unsaturation": 1,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -1989,6 +2038,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 42.04695019338,
       "unsaturation": 1,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2028,6 +2078,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 42.04695019338,
       "unsaturation": 1,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2067,6 +2118,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 42.04695019338,
       "unsaturation": 1,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2106,6 +2158,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 56.06260025784,
       "unsaturation": 1,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2145,6 +2198,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 56.06260025784,
       "unsaturation": 1,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2184,6 +2238,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 82.0782503223,
       "unsaturation": 2,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2223,6 +2278,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 82.0782503223,
       "unsaturation": 2,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2262,6 +2318,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 96.09390038676,
       "unsaturation": 2,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2301,6 +2358,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 96.09390038676,
       "unsaturation": 2,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2340,6 +2398,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 96.09390038676,
       "unsaturation": 2,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2379,6 +2438,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 96.09390038676,
       "unsaturation": 2,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2418,6 +2478,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 110.10955045122,
       "unsaturation": 2,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2457,6 +2518,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 110.10955045122,
       "unsaturation": 2,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2496,6 +2558,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 110.10955045122,
       "unsaturation": 2,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2535,6 +2598,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 110.10955045122,
       "unsaturation": 2,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2574,6 +2638,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 110.10955045122,
       "unsaturation": 2,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
   {
     "atomMap": [
@@ -2613,6 +2678,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       "monoisotopicMass": 110.10955045122,
       "unsaturation": 2,
     },
+    "parentIDCode": "det@@DjYUX^fjjj\`@",
   },
 ]
 `;
@@ -2657,6 +2723,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -2696,6 +2763,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -2735,6 +2803,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -2774,6 +2843,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -2813,6 +2883,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -2852,6 +2923,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 28.03130012892,
       "unsaturation": 1,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -2891,6 +2963,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 42.04695019338,
       "unsaturation": 1,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -2930,6 +3003,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 42.04695019338,
       "unsaturation": 1,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -2969,6 +3043,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 42.04695019338,
       "unsaturation": 1,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -3008,6 +3083,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 136.12520051568,
       "unsaturation": 3,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -3047,6 +3123,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 136.12520051568,
       "unsaturation": 3,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -3086,6 +3163,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 136.12520051568,
       "unsaturation": 3,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -3125,6 +3203,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 150.14085058014,
       "unsaturation": 3,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -3164,6 +3243,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 150.14085058014,
       "unsaturation": 3,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -3203,6 +3283,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 150.14085058014,
       "unsaturation": 3,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -3242,6 +3323,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 150.14085058014,
       "unsaturation": 3,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -3281,6 +3363,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 150.14085058014,
       "unsaturation": 3,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
   {
     "atomMap": [
@@ -3320,6 +3403,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       "monoisotopicMass": 150.14085058014,
       "unsaturation": 3,
     },
+    "parentIDCode": "dk|@@DjYfWYQvSjjjjj@@",
   },
 ]
 `;

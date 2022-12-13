@@ -107,6 +107,7 @@ describe('fragment', () => {
     expect(results).toStrictEqual([
       {
         idCode: 'd@',
+        parentIDCode: 'd@',
         mfInfo: {
           mass: 0,
           monoisotopicMass: 0,
