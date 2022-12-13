@@ -23,6 +23,9 @@ import { preprocessIonizations } from 'mf-utilities';
  * @param {number}    [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
  * @param {number}    [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
  * @param {number}    [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ * @param {number}    [options.filter.targetMass] - Target mass, allows to calculate error and filter results
+ * @param {number[]}  [options.filter.targetMasses] - Target masses: SORTED array of numbers
+ * @param {number[]}  [options.filter.targetIntensities] - Target intensities: SORTED array of numbers
  * @param {object}    [options.filter.atoms] - object of atom:{min, max}
  * @param {function}  [options.filter.callback] - a function to filter the MF
  * @returns {Promise}
@@ -95,6 +98,7 @@ function groupFragmentationResults(results) {
         {
           idCode: result.fragment.idCode,
           type: result.fragment.type,
+          count: 1,
           parents: [{ ...result.fragment.parent, count: 1 }],
         },
       ];
@@ -104,6 +108,7 @@ function groupFragmentationResults(results) {
       const lastFragment =
         currentResult.fragments[currentResult.fragments.length - 1];
       if (lastFragment.idCode === result.fragment.idCode) {
+        lastFragment.count++;
         if (
           lastFragment.parents[lastFragment.parents.length - 1].idCode ===
           result.fragment.parent.idCode
@@ -116,10 +121,14 @@ function groupFragmentationResults(results) {
         currentResult.fragments.push({
           idCode: result.fragment.idCode,
           type: result.fragment.type,
+          count: 1,
           parents: [{ ...result.fragment.parent, count: 1 }],
         });
       }
     }
+  }
+  for (let group of groupedResults) {
+    group.fragments = group.fragments.sort((a, b) => b.count - a.count);
   }
   return groupedResults;
 }
@@ -132,6 +141,9 @@ function groupFragmentationResults(results) {
 function getMolecule(entry, ocl) {
   if (entry.idCode) {
     return ocl.Molecule.fromIDCode(entry.idCode);
+  }
+  if (entry.ocl && entry.ocl.idCode) {
+    return ocl.Molecule.fromIDCode(entry.ocl.idCode);
   }
   if (entry.smiles) {
     return ocl.Molecule.fromSmiles(entry.smiles);

@@ -39,6 +39,7 @@ describe('fromMolecules', () => {
       groupResults: true,
     });
     expect(emdb.databases.molecules[1].fragments[0]).toStrictEqual({
+      count: 3,
       idCode: 'eMBAYRZ@',
       type: 'acyclic',
       parents: [

@@ -715,6 +715,7 @@ EMDB {
         "em": 15.02347509669,
         "fragments": [
           {
+            "count": 4,
             "idCode": "eFBAYc@@",
             "parents": [
               {
@@ -755,6 +756,7 @@ EMDB {
         "em": 29.03912516115,
         "fragments": [
           {
+            "count": 3,
             "idCode": "eMBAYRZ@",
             "parents": [
               {
@@ -796,6 +798,7 @@ EMDB {
         "em": 31.01838971626,
         "fragments": [
           {
+            "count": 1,
             "idCode": "eMJHVTf\`@",
             "parents": [
               {
@@ -831,6 +834,7 @@ EMDB {
         "em": 44.06260025784,
         "fragments": [
           {
+            "count": 1,
             "idCode": "eM@Hz@",
             "parents": [
               {
@@ -867,6 +871,7 @@ EMDB {
         "em": 45.03403978072,
         "fragments": [
           {
+            "count": 1,
             "idCode": "gCaHDEeIZ\`@",
             "parents": [
               {
@@ -878,6 +883,7 @@ EMDB {
             "type": "acyclic",
           },
           {
+            "count": 1,
             "idCode": "gCaHHEeIZ\`@",
             "parents": [
               {
@@ -914,6 +920,7 @@ EMDB {
         "em": 60.05751487741,
         "fragments": [
           {
+            "count": 1,
             "idCode": "gCa@@eMP@",
             "parents": [
               {
