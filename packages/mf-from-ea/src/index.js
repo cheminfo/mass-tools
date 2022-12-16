@@ -11,11 +11,11 @@ import { preprocessEARanges } from './preprocessEARanges';
  * @param {number} [options.maxTotalError=0.01]
  * @param {number} [options.minMW=0] minimal molecular weight
  * @param {number} [options.maxMW=+Infinity] maximal molecular weight
- * @param {number} [options.unsaturation={}]
+ * @param {object} [options.unsaturation={}]
  * @param {number} [options.unsaturation.min=-Infinity] Minimal unsaturation
  * @param {number} [options.unsaturation.max=+Infinity] Maximal unsaturation
- * @param {number} [options.unsaturation.onlyInteger=false] Integer unsaturation
- * @param {number} [options.unsaturation.onlyNonInteger=false] Non integer unsaturation
+ * @param {boolean} [options.unsaturation.onlyInteger=false] Integer unsaturation
+ * @param {boolean} [options.unsaturation.onlyNonInteger=false] Non integer unsaturation
  * @return {Array<object>}
  */
 

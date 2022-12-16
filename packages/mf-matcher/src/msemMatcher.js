@@ -21,9 +21,9 @@ import { unsaturationMatcher } from './unsaturationMatcher.js';
  * @param {object}         [options.unsaturation={}]
  * @param {number}         [options.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number}         [options.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {number}         [options.unsaturation.onlyInteger=false] - Integer unsaturation
- * @param {number}         [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
- * @param {object}         [options.atoms] - object of atom:{min, max}
+ * @param {boolean}         [options.unsaturation.onlyInteger=false] - Integer unsaturation
+ * @param {boolean}         [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ * @param {boolean}         [options.atoms] - object of atom:{min, max}
  * @param {Function}       [options.callback] - a function that contains information about the current MF
  * @return {boolean}
  */

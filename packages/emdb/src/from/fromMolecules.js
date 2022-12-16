@@ -21,8 +21,8 @@ import { preprocessIonizations } from 'mf-utilities';
  * @param {object}    [options.filter.unsaturation={}]
  * @param {number}    [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number}    [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {number}    [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
- * @param {number}    [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ * @param {boolean}    [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
+ * @param {boolean}    [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
  * @param {number}    [options.filter.targetMass] - Target mass, allows to calculate error and filter results
  * @param {number[]}  [options.filter.targetMasses] - Target masses: SORTED array of numbers
  * @param {number[]}  [options.filter.targetIntensities] - Target intensities: SORTED array of numbers

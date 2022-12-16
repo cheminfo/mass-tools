@@ -13,8 +13,8 @@ import { generalMatcher } from 'mf-matcher';
 * @param {object}   [filter.unsaturation={}]
 * @param {number}   [filter.unsaturation.min=-Infinity] - Minimal unsaturation
 * @param {number}   [filter.unsaturation.max=+Infinity] - Maximal unsaturation
-* @param {number}   [filter.unsaturation.onlyInteger=false] - Integer unsaturation
-* @param {number}   [filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+* @param {boolean}   [filter.unsaturation.onlyInteger=false] - Integer unsaturation
+* @param {boolean}   [filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
 * @param {object}   [filter.atoms] - object of atom:{min, max}
 
 * @param {object}   [options={}]

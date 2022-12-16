@@ -3,8 +3,8 @@
  * @param {object}   [options={}]
  * @param {number}   [options.min=-Infinity] - Minimal unsaturation
  * @param {number}   [options.max=+Infinity] - Maximal unsaturation
- * @param {number}   [options.onlyInteger=false] - Integer unsaturation
- * @param {number}   [options.onlyNonInteger=false] - Non integer unsaturation
+ * @param {boolean}   [options.onlyInteger=false] - Integer unsaturation
+ * @param {boolean}   [options.onlyNonInteger=false] - Non integer unsaturation
  * @return {boolean}
  */
 

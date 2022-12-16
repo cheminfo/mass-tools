@@ -21,8 +21,8 @@ Search for an experimental monoisotopic mass
 * @param {object}         [options.filter.unsaturation={}]
 * @param {number}         [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
 * @param {number}         [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
-* @param {number}         [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
-* @param {number}         [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+* @param {boolean}         [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
+* @param {boolean}         [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
 * @param {object}         [options.filter.callback] - a function to filter the MF
 * @param {object}         [options.filter.atoms] - object of atom:{min, max}
 */
