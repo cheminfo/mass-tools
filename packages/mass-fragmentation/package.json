@@ -22,5 +22,8 @@
   "dependencies": {
     "mf-parser": "^2.0.0",
     "openchemlib-utils": "^2.1.2"
+  },
+  "devDependencies": {
+    "openchemlib": "^8.0.1"
   }
 }
