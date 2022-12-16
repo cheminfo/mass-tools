@@ -41,8 +41,8 @@ import { fragmentPeptide } from './util/fragmentPeptide';
  * @param {object}         [options.filter={}] Object defining options for molecular formula filter
  * @param {number}         [options.filter.precision=1000] - The precision on the experimental mass
  * @param {number}         [options.filter.targetMass] - Target mass, allows to calculate error and filter results
- * @param {Array<number>}  [options.filter.targetMasses] - Target masses: SORTED array of numbers
- * @param {Array<number>}  [options.filter.targetIntensities] - Target intensities: SORTED array of numbers
+ * @param {number[]}       [options.filter.targetMasses] - Target masses: SORTED array of numbers
+ * @param {number[]}       [options.filter.targetIntensities] - Target intensities: SORTED array of numbers
  * @param {number}         [options.filter.minEM=0] - Minimal neutral monoisotopic mass
  * @param {number}         [options.filter.maxEM=+Infinity] - Maximal neutral monoisotopic mass
  * @param {number}         [options.filter.minMSEM=0] - Minimal observed monoisotopic mass

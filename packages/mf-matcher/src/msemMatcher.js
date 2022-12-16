@@ -9,8 +9,8 @@ import { unsaturationMatcher } from './unsaturationMatcher.js';
  * @param {boolean}        [options.forceIonization=false] - If true ignore existing ionizations
  * @param {number}         [options.precision=1000] - The precision on the experimental mass
  * @param {number}         [options.targetMass] - Target mass, allows to calculate error and filter results
- * @param {Array<number>}  [options.targetMasses] - Target masses: SORTED array of numbers
- * @param {Array<number>}  [options.targetIntensities] - Target intensities: SORTED array of numbers
+ * @param {number[]}       [options.targetMasses] - Target masses: SORTED array of numbers
+ * @param {number[]}       [options.targetIntensities] - Target intensities: SORTED array of numbers
  * @param {number}         [options.minEM=0] - Minimal monoisotopic mass
  * @param {number}         [options.maxEM=+Infinity] - Maximal monoisotopic mass
  * @param {number}         [options.minMSEM=0] - Minimal monoisotopic mass observed by mass
@@ -21,9 +21,9 @@ import { unsaturationMatcher } from './unsaturationMatcher.js';
  * @param {object}         [options.unsaturation={}]
  * @param {number}         [options.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number}         [options.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {boolean}         [options.unsaturation.onlyInteger=false] - Integer unsaturation
- * @param {boolean}         [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
- * @param {boolean}         [options.atoms] - object of atom:{min, max}
+ * @param {boolean}        [options.unsaturation.onlyInteger=false] - Integer unsaturation
+ * @param {boolean}        [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ * @param {boolean}        [options.atoms] - object of atom:{min, max}
  * @param {Function}       [options.callback] - a function that contains information about the current MF
  * @return {boolean}
  */

@@ -9,10 +9,10 @@ Search for an experimental monoisotopic mass
 * @param {boolean}  [options.flatten=false] - should we return the array as a flat result
 * @param {string}   [options.ionizations] - list the allowed ionizations possibilities
 * @param {object}   [options.filter={}]
-* @param {number}         [options.filter.targetMass] - Target mass, allows to calculate error and filter results
-* @param {Array<number>}  [options.filter.targetMasses] - Target masses: SORTED array of numbers
-* @param {Array<number>}  [options.filter.targetIntensities] - Target intensities: SORTED array of numbers
-* @param {number}         [options.filter.minEM=0] - Minimal monoisotopic mass
+* @param {number}   [options.filter.targetMass] - Target mass, allows to calculate error and filter results
+* @param {number[]} [options.filter.targetMasses] - Target masses: SORTED array of numbers
+* @param {number[]} [options.filter.targetIntensities] - Target intensities: SORTED array of numbers
+* @param {number}   [options.filter.minEM=0] - Minimal monoisotopic mass
 * @param {number}         [options.filter.maxEM=+Infinity] - Maximal monoisotopic mass
 * @param {number}         [options.filter.minMSEM=0] - Minimal monoisotopic mass observed by mass
 * @param {number}         [options.filter.maxMSEM=+Infinity] - Maximal monoisotopic mass observed by mass

@@ -11,8 +11,8 @@ const MINIMAL_FWHM = 1e-8;
 /**
  * An object containing two arrays
  * @typedef {object} XY
- * @property {Array<number>} x - The x array
- * @property {Array<number>} y - The y array
+ * @property {number[]} x - The x array
+ * @property {number[]} y - The y array
  */
 
 /**
