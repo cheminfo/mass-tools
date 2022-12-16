@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.2.0](https://github.com/cheminfo/mass-tools/compare/v6.1.0...v6.2.0) (2022-12-16)
+
+
+### Features
+
+* **mf-finder:** add method mfIncluded ([88e937c](https://github.com/cheminfo/mass-tools/commit/88e937c65dd6b628783bffdce79f42d9eb95512f))
+
 ## [6.1.0](https://github.com/cheminfo/mass-tools/compare/v6.0.2...v6.1.0) (2022-12-13)
 
 
