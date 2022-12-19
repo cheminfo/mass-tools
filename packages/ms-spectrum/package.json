@@ -20,12 +20,14 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/emdb#readme",
   "dependencies": {
+    "cheminfo-types": "^1.4.0",
     "emdb": "^2.1.1",
     "is-any-array": "^2.0.0",
     "mf-parser": "^2.0.0",
+    "ml-distance": "^3.0.0",
     "ml-gsd": "^12.1.2",
     "ml-regression-power": "^2.0.0",
-    "ml-spectra-processing": "^11.14.0",
+    "ml-spectra-processing": "^11.15.0",
     "peaks-similarity": "^3.1.1",
     "xy-parser": "^5.0.3"
   },

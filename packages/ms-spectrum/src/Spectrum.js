@@ -23,10 +23,7 @@ export class Spectrum {
     ) {
       throw new TypeError('Spectrum data must be an object with x:[], y:[]');
     }
-    this.data = {}; // we make a copy so that we can add new properties
-    for (let key in data) {
-      this.data[key] = data[key];
-    }
+    this.data = { ...data };
     Object.defineProperty(this.data, 'xOriginal', {
       enumerable: false,
       writable: true,
