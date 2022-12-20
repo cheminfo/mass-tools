@@ -1,5 +1,14 @@
 # Changelog
 
+## [6.3.0](https://github.com/cheminfo/mass-tools/compare/v6.2.0...v6.3.0) (2022-12-20)
+
+
+### Features
+
+* **mf-finder:** Add docs and filter options to mfIncluded ([1c532f3](https://github.com/cheminfo/mass-tools/commit/1c532f3fb01e9a42db619d4fdde9334a4538b066))
+* **ms-spectrum:** add class MSComparator to get spectra similarity ([f794da6](https://github.com/cheminfo/mass-tools/commit/f794da6cdb8426ffdcec1585e70263f1e0b74890))
+* **ms-spectrum:** add class MSComparator to get spectra similarity ([f794da6](https://github.com/cheminfo/mass-tools/commit/f794da6cdb8426ffdcec1585e70263f1e0b74890))
+
 ## [6.2.0](https://github.com/cheminfo/mass-tools/compare/v6.1.0...v6.2.0) (2022-12-16)
 
 
