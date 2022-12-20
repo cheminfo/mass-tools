@@ -23,10 +23,7 @@ export class Spectrum {
     ) {
       throw new TypeError('Spectrum data must be an object with x:[], y:[]');
     }
-    this.data = {}; // we make a copy so that we can add new properties
-    for (let key in data) {
-      this.data[key] = data[key];
-    }
+    this.data = { ...data };
     Object.defineProperty(this.data, 'xOriginal', {
       enumerable: false,
       writable: true,
@@ -101,6 +98,15 @@ export class Spectrum {
   getPeaks(options) {
     peakPicking(this);
     return getPeaks(this.peaks, options);
+  }
+
+  getPeaksAsDataXY(options) {
+    peakPicking(this);
+    const peaks = getPeaks(this.peaks, options);
+    return {
+      x: peaks.map((peak) => peak.x),
+      y: peaks.map((peak) => peak.y),
+    };
   }
 
   /**
