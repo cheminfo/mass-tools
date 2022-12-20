@@ -100,6 +100,15 @@ export class Spectrum {
     return getPeaks(this.peaks, options);
   }
 
+  getPeaksAsDataXY(options) {
+    peakPicking(this);
+    const peaks = getPeaks(this.peaks, options);
+    return {
+      x: peaks.map((peak) => peak.x),
+      y: peaks.map((peak) => peak.y),
+    };
+  }
+
   /**
    * Returns also peaks possible for a specific molecular formula
    * @example

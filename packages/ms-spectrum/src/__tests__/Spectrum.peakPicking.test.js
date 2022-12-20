@@ -4,8 +4,8 @@ import { join } from 'path';
 import { fromText } from '../Spectrum';
 
 describe('peakPicking on Spectrum', () => {
-  let chargedText = readFileSync(join(__dirname, 'data/lowres2.txt'), 'utf8');
   it('lowres2', () => {
+    let chargedText = readFileSync(join(__dirname, 'data/lowres2.txt'), 'utf8');
     let spectrum = fromText(chargedText);
     let peaks = spectrum.peakPicking();
 
@@ -14,5 +14,12 @@ describe('peakPicking on Spectrum', () => {
 
     expect(nbNaNX).toHaveLength(0);
     expect(nbNaNY).toHaveLength(0);
+
+    expect(spectrum.data.x).toHaveLength(149056);
+    expect(peaks).toHaveLength(2159);
+
+    const peaksDataXY = spectrum.getPeaksAsDataXY();
+    expect(peaksDataXY.x).toHaveLength(136);
+    expect(peaksDataXY.y).toHaveLength(136);
   });
 });

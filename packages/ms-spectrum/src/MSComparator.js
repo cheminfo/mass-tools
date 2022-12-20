@@ -7,19 +7,21 @@ import {
   xySortX,
 } from 'ml-spectra-processing';
 
-export class Comparator {
+export class MSComparator {
   /**
-   *
+   * Create a class that will be able to get the similarity between 2 spectra
    * @param {object} [options={}]
    * @param {number} [options.nbPeaks]
    * @param {number} [options.minIntensity]
    * @param {number} [options.massPower=3]
    * @param {number} [options.intensityPower=0.6]
+   * @param {number|Function} [options.delta=0.1]
    */
   constructor(options = {}) {
     this.options = {
       massPower: 3,
       intensityPower: 0.6,
+      delta: 0.1,
       ...options,
     };
     this.cache = new WeakMap();
@@ -33,7 +35,7 @@ export class Comparator {
   getSimilarity(dataXY1, dataXY2) {
     const data1 = normalizeAndCacheData(this.cache, dataXY1, this.options);
     const data2 = normalizeAndCacheData(this.cache, dataXY2, this.options);
-    const aligned = xyArrayAlign([data1, data2]);
+    const aligned = xyArrayAlign([data1, data2], this.options);
 
     const vector1 = new Float64Array(aligned.x.length);
     const vector2 = new Float64Array(aligned.x.length);
