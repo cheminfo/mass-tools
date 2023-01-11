@@ -1,5 +1,7 @@
 import { searchPubchem } from '../searchPubchem.js';
 
+jest.setTimeout(30000);
+
 describe('searchPubchem', () => {
   it('simple case', async () => {
     let data = await searchPubchem(60, {
