@@ -82,6 +82,23 @@ describe('MF', () => {
     });
   });
 
+  it('T', () => {
+    let mfT = new MF('T');
+    let infoT = mfT.getInfo();
+    let mf3H = new MF('[3H]');
+    let info3H = mf3H.getInfo();
+
+    expect(infoT).toStrictEqual(info3H);
+    expect(infoT).toStrictEqual({
+      atoms: { H: 1 },
+      charge: 0,
+      mass: 3.0160492779,
+      mf: '[3H]',
+      monoisotopicMass: 3.0160492779,
+      unsaturation: 0.5,
+    });
+  });
+
   it('H2Si(OH)2', () => {
     let mf = new MF('H2Si(OH)2');
     expect(mf.getInfo()).toStrictEqual({
