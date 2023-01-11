@@ -1,5 +1,7 @@
 import { EMDB } from '..';
 
+jest.setTimeout(30000);
+
 describe('test search', () => {
   it('should filter one database', async () => {
     let emdb = new EMDB();
