@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.4.0](https://github.com/cheminfo/mass-tools/compare/v6.3.0...v6.4.0) (2023-01-11)
+
+
+### Features
+
+* add T as group (synonym of 3H) ([1ad569a](https://github.com/cheminfo/mass-tools/commit/1ad569a6ad080442434bb9bb44be9f442fdb1833))
+
 ## [6.3.0](https://github.com/cheminfo/mass-tools/compare/v6.2.0...v6.3.0) (2022-12-20)
 
 
