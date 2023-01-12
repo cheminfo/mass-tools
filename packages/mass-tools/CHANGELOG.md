@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/cheminfo/mass-tools/compare/mass-tools@1.0.3...mass-tools@1.1.0) (2023-01-12)
+
+
+### Features
+
+* **ms-spectrum:** add class MSComparator to get spectra similarity ([f794da6](https://github.com/cheminfo/mass-tools/commit/f794da6cdb8426ffdcec1585e70263f1e0b74890))
+
+
+
+
+
 ## [1.0.3](https://github.com/cheminfo/mass-tools/compare/mass-tools@1.0.2...mass-tools@1.0.3) (2022-12-16)
 
 **Note:** Version bump only for package mass-tools

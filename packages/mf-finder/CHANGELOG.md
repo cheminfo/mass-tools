@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/cheminfo/mass-tools/compare/mf-finder@2.1.0...mf-finder@2.2.0) (2023-01-12)
+
+
+### Features
+
+* **mf-finder:** Add docs and filter options to mfIncluded ([1c532f3](https://github.com/cheminfo/mass-tools/commit/1c532f3fb01e9a42db619d4fdde9334a4538b066))
+
+
+
+
+
 # [2.1.0](https://github.com/cheminfo/mass-tools/compare/mf-finder@2.0.0...mf-finder@2.1.0) (2022-12-16)
 
 ### Features

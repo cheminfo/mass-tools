@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/cheminfo/mass-tools/compare/mf-global@2.0.2...mf-global@2.1.0) (2023-01-12)
+
+
+### Features
+
+* add T as group (synonym of 3H) ([1ad569a](https://github.com/cheminfo/mass-tools/commit/1ad569a6ad080442434bb9bb44be9f442fdb1833))
+
+
+
+
+
 ## [2.0.2](https://github.com/cheminfo/mass-tools/compare/mf-global@2.0.1...mf-global@2.0.2) (2022-12-16)
 
 **Note:** Version bump only for package mf-global

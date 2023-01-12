@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/cheminfo/mass-tools/compare/emdb@2.1.1...emdb@2.1.2) (2023-01-12)
+
+
+### Bug Fixes
+
+* **emdb:** increase timeout on search.test ([e23b3c5](https://github.com/cheminfo/mass-tools/commit/e23b3c532cd947bcd167f128807c7037bb61d8b9))
+* increase timeout to avoid test failing ([95fb021](https://github.com/cheminfo/mass-tools/commit/95fb021b1dfc74dd4bed842cbf86432ee3e5970a))
+
+
+
+
+
 ## [2.1.1](https://github.com/cheminfo/mass-tools/compare/emdb@2.1.0...emdb@2.1.1) (2022-12-16)
 
 **Note:** Version bump only for package emdb
