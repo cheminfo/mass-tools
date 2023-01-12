@@ -1,5 +1,14 @@
 # Changelog
 
+## [6.4.1](https://github.com/cheminfo/mass-tools/compare/v6.4.0...v6.4.1) (2023-01-11)
+
+
+### Bug Fixes
+
+* **emdb:** increase timeout on search.test ([e23b3c5](https://github.com/cheminfo/mass-tools/commit/e23b3c532cd947bcd167f128807c7037bb61d8b9))
+* **emdb:** increase timeout on searchCommercials.test ([a8d6a0b](https://github.com/cheminfo/mass-tools/commit/a8d6a0b7526fde6f703af108fcb90615ad35a9c0))
+* increase timeout to avoid test failing ([95fb021](https://github.com/cheminfo/mass-tools/commit/95fb021b1dfc74dd4bed842cbf86432ee3e5970a))
+
 ## [6.4.0](https://github.com/cheminfo/mass-tools/compare/v6.3.0...v6.4.0) (2023-01-11)
 
 
