@@ -1,0 +1,65 @@
+<datawarrior-fileinfo>
+<version="3.3">
+<created="1673861749226">
+<rowcount="10">
+</datawarrior-fileinfo>
+<column properties>
+<columnName="atomMapping">
+<columnProperty="parent	Transformation">
+<columnProperty="specialType	atomMapping">
+<columnName="idcoordinates2D">
+<columnProperty="parent	Transformation">
+<columnProperty="specialType	idcoordinates2D">
+<columnName="reactionFP">
+<columnProperty="parent	Transformation">
+<columnProperty="specialType	RxnFP">
+<columnProperty="version	1.0.0">
+<columnName="reactantFFP">
+<columnProperty="parent	Transformation">
+<columnProperty="specialType	FragFp">
+<columnProperty="reactionPart	reactants">
+<columnProperty="version	1.2.1">
+<columnName="productFFP">
+<columnProperty="parent	Transformation">
+<columnProperty="specialType	FragFp">
+<columnProperty="reactionPart	products">
+<columnProperty="version	1.2.1">
+<columnName="Transformation">
+<columnProperty="isFragment	true">
+<columnProperty="specialType	rxncode">
+</column properties>
+atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	Label	Transformation	Ionization
+QF@@ Qd	!RbKrHoSx@E?rH?Kx_Eut]Jop !R_|p]Nop	V#4+21*B!24&@V!l#60Z4%J0J01V0802V06FF0N#FF05083//////&	o0V4/////+10	0F/%8////)	Dehydratation	daxH@@RZZjj`CZlJf{tADZrF@hXJa`ZFChXJhcb]mXUMp!eF@HhP	
+qLr@@@@ QP qLp	!RBOqW?@`}?`B~Owx@uwwW?Hc|oc?~@Awr?@ !RG]i| !R|BQ?Lawz?@	V$V04#F1!2W!1!8#8!AD!1X08@c!J0402042F!V1F4J$@82V020F0F!J%812!2/$4///#V/(	y4V4%V!4/////#	60V&V/////&	Ether	dctH@@Rfffjjjj@MaJfxYWXbTLEPpMCAtL@ppSC@lLFppUSGT{QJfxYWP!fH@O}R eMH`fN``	
+qjN` qjH Ql	!R?g~w?[_|m?t]tmp !R?g~w?QvZw@ !R_vp]nop	#8)2#1%220F#1R01!1!2!F!F1)l0N01V#HV02140N!J!1!83040@8$4-4,1(4/,8/(	RNF140V)V)1////%	JF!4/!8////)	McLafferty	gJQ@@dju@P!eMHAIXO}R` eF@HhP	
+q\oQp qVa]x	!Rmww~@Ha}mpJw@ox@GPk| !Rw|XxCFvp?`@RlD\LG]kB	V80VcF0XFF0c$W@2V$1%B104#18NVF!28!2$2F0H%F2V024!H0F!20F091F049&2+8-1//08#8!4!4%2*	FF0F$8-8////)	0F/%8////)		gOpAMJUKua@@D!gOpAGJTju`@@D	
+							
+							
+							
+							
+							
+							
+<hitlist data>
+<hitlistName="<selection>">
+<hitlistData="H@">
+</hitlist data>
+<datawarrior properties>
+<columnFilter_Table="">
+<columnWidth_Table_Ionization="80">
+<columnWidth_Table_Label="228">
+<columnWidth_Table_Transformation="393">
+<detailView="height[Data]=0.5;height[Transformation]=0.5">
+<filter0="#string#	Label">
+<filter1="#reaction#	Transformation">
+<filter2="#retron#	Transformation">
+<filter3="#string#	Ionization">
+<headerLines_Table="2">
+<mainSplitting="0.72386">
+<mainView="Table">
+<mainViewCount="1">
+<mainViewDockInfo0="root">
+<mainViewName0="Table">
+<mainViewType0="tableView">
+<rightSplitting="0.65953">
+<rowHeight_Table="80">
+</datawarrior properties>
