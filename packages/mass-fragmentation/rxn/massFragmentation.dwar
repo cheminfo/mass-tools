@@ -1,7 +1,7 @@
 <datawarrior-fileinfo>
 <version="3.3">
-<created="1673886777856">
-<rowcount="20">
+<created="1674489580021">
+<rowcount="26">
 </datawarrior-fileinfo>
 <column properties>
 <columnName="atomMapping">
@@ -28,49 +28,60 @@
 <columnProperty="isFragment	true">
 <columnProperty="specialType	rxncode">
 </column properties>
-atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	Label	Transformation	Ionization
-QF@@ Qd	!RbKrHoSx@E?rH?Kx_Eut]Jop !R_|p]Nop	V#4+21*B!24&@V!l#60Z4%J0J01V0802V06FF0N#FF05083//////&	o0V4/////+10	0F/%8////)	Dehydratation	daxH@@RZZjj`CZlJf{tADZrF@hXJa`ZFChXJhcb]mXUMp!eF@HhP	
-qLr@@@@ QP qLp	!RBOqW?@`}?`B~Owx@uwwW?Hc|oc?~@Awr?@ !RG]i| !R|BQ?Lawz?@	V$V04#F1!2W!1!8#8!AD!1X08@c!J0402042F!V1F4J$@82V020F0F!J%812!2/$4///#V/(	y4V4%V!4/////#	60V&V/////&	Ether	dctH@@Rfffjjjj@MaJfxYWXbTLEPpMCAtL@ppSC@lLFppUSGT{QJfxYWP!fH@O}R eMH`fN``	
-qjN` qjH Ql	!R?g~w?[_|m?t]tmp !R?g~w?QvZw@ !R_vp]nop	#8)2#1%220F#1R01!1!2!F!F1)l0N01V#HV02140N!J!1!83040@8$4-4,1(4/,8/(	RNF140V)V)1////%	JF!4/!8////)	McLafferty	gJQ@@dju@P!eMHAIXO}R` eF@HhP	
-q\oQp qVa]x	!Rmww~@Ha}mpJw@ox@GPk| !Rw|XxCFvp?`@RlD\LG]kB	V80VcF0XFF0c$W@2V$1%B104#18NVF!28!2$2F0H%F2V024!H0F!20F091F049&2+8-1//08#8!4!4%2*	FF0F$8-8////)	0F/%8////)		gOpAMJUKua@@D!gOpAGJTju`@@D	
-sA@BL@p@@@@@ s`t@@@L@@@	!Resv~@H`}e?r~Wy\}o`A_ocvWW{z~WpB~W{z~@@B~GUJ| !Re?rH?OrWoY_|bI_|OY^Ho[x@?HbHo[vWG[k|	W8!1WV80F80F!X1!F0B08!cO0XB4010F0@kGJF2@0aZBs088c@80FJs!8FXV26FO8F!k9!JV81011J/-2////#	t@220GVV08#J.1$V///,	N8$V/////*	Simple Inductive cleavage	f`~`@@@YIEHYEIiJjjjj`@vtcCARUhug^}@DQtbFCDLCHXAPpRa`UCAjF@tLEhXGPp^a`wRLLEIVcV]x!dkL@BDgIIEHiyJjjj`CZ\JfzUtxsdLAPpUC@tLGPpSC@lLFppGCAlxUMtki`	[M+H]+
-Sg@B@@@@@ Sg@P@@	!Rb@Jw@oy?bOw~@Oy?b@K~_xa}b@Jw@k]}bGw~@K\BGShb !Rb@Jw@oy??`BH_X`BmpJw_QwFp`	V!H1VX%F2021F!1Z!408A10CV!W20@V!F0V83F4128saV8FN42V0N02V46FG0FD0F1!5G@9RO0V/-2#1//!2/(4!	t@220GVV08#J.1$V///,	FF2///-F//	Alpha cleavage	f`~`@D@@gIHiCHiMIUUUUT@FvdXXJRmFl{t]Ha`qC@rF@TLDhXEPpZa`MCAZFAtLGhXOz`A{iFFBdkQkN|!diF@@@rRJFQjj`CYdrfxXldLFPpUC@tLGPpCCAkIeMp`	M+°
-Q@HDL@ Q[@@	!RxqU~UJpUxri~RwyTxqU~UGyKxri~Rw}MGQJ| !RxAI?CG{gzIv^DJ^]GWk|	W9!10Z!F0VF!X1*N8FVJb!201@VOFF0Z0X04!88228FF5!4NV2k022GkJ8011!o0810AH/.2//1.F-V#	tNH101(4%V08/&F///0	FF/%8////)	Displacement Reaction a.	dkN@B@B\dbdLaajjjZBImaSJXYtPDQEHXLa`jFAhXAa`fFCXXCa`tTrfF]L!gNpAEJULmU@[GFnItLAa`lLCa`txu`	[M+H]+
-qQ` qQ`	!R@NL?xqvJ?@ !R@NL?xqtz?@	///////%1!F$@#1%1(1!4&20V%408/(	!2/////.	!2/////,V0	Protonation (ionization)	eM`BN`vktQFhXO}h!eM``fN`vktYFhXO}h	[M+H]+
-Qd@ Qd@	!Rm?w~@Oy?bOt]|gp !Rm?w~@Oy?bOt]Ngp	V%V%F!21(80802F4%1@V!F#204#8!80F4#802V020G4F)c1012//.F//+V&	//////!	//////!	Radical ionization	gJP@H~j@vLVLSLxA@HTLFa`LLG~fKD!gJP@H~j@vLVLSLxA@HTLFa`LLG}ROSEb	M+°
-IhfOAbTy] IRLueKjdq	!R_`CW_Xb}upJH@m\B_c?W_Wx@u{wW@awR@` !RkX~@QgMXxh}?_easQhB@VWMG_g?Pxauzw@	02V881#4!B040501@8!1!1F0BBF!O10F#F1580F!F4!208PV20V6G2Z231H0N05!40128G0W021!4F$4%1#2$F%1!V(1/(2@$1%1&1#	FF0F$8-8////)	0F/%8////)	Tropylium rearrangement	dcL@BLeJf[oXPbHj@CZjzUwtYdZiF@PyF@PeF@PUF@PuF@PvjzUt!dcL@BEeJf[nEPbHb@CZlkiwrCBqFlQ`DJQ`DNQ`DIQ`DMQ`DO}kJz]@	+
-I@`kAZTyXt IGBRhZ^WP	!RXAiSFCas?`@lFLCFv]|xCAJpCD_@vPC~GViB !R@OxRcqJppMg@qc`Lqm|x\{AmlAH]a`H	0N098k4pJKA20Z0Xd1l1lCVF14k61VZ04H4180FKkO15BV!40CEWIN5k24B0C0TcQ6ZO2l4D01O0J48G2042/-2/.2//#	jot1!N!V4$8080V08+4#1-2//)	JNF242,8#8,2F!8$F04/01(8/#	Dioxolane elimination (aromatic)	dk\DB@hYRfV^tjgZBHHh@MlyS|`qlQshXEa`NFC\yS@!dmtHB@RTfUevEiZjPC[Ne_IdUD\zFBXXEa`wNeP	+
-IaLJfxYWS IrNEBtzZU	!RhLTuDDl[ZNqVg?rHW|{N@Hb}`E[CZAur`` !Rxh?btG}~`EesQxAF\uaX]D[_VGOPkQuzo@	//////%F%404461$2!1FV#110208#FF0c0FIs20F0B#c#F1F0838$VV!V01!W0209#	0F/%8////)	0F/%8////)	Tropylium resonance "a"	dcL@BEeJf[nEPbHb@CZlkiwrCBqFlQ`DJQ`DNQ`DIQ`DMQ`DO}kJz]@!dcL@BAeJf[oEPbHb@CZlkiwrMBqFlQ`DJQ`DNQ`DIQ`DMQ`DO}kJz]@	
-IrNEBtpZP I{MNAeBA`	!Rxh?btG}~`EesQxAF\uaX]D[_VGOPkQwro@ !RdW|{EA@JE~NH?[}Igyhvo?vwZsm?katzg@	V0F8608V041V480FG%243%48V0V0108V0F304VVF20HF82k4F080k402W03F@8F!F090G19G04%8F$4#F$4F$FV0V!1#8&10F1!2&c)38$2F$1&1#	0F/%8////)	0F/%8////)	Tropylium resonance "b"	dcL@BAeJf[oEPbHb@CZlkiwrMBqFlQ`DJQ`DNQ`DIQ`DMQ`DO}kJz]@!dcL@BBeJf^wzPbBJ@CZlhUwrICQFlQ`DJQ`DAQ`DEQ`DMQ`DO}kJE]@	
-IRJY\Dmg` IIYzMDDrf	!RdW|{EA@JE~NH?[}Igyhvo?vwZsm?kawRg@ !RQFn?RYj`dW|PBovwxv`Wxxc}Bf|voqvzg@	B!18%F%1$101&4&40W0F4$F4FF#V0F18W010DV034!J#84!48104028!4F!4$40X1c202!8!V#11#8%1F0F1#2441!V01!1!838G#8%1!F1!1#	0F/%8////)	0F/%8////)	Tropylium resonance "c"	dcL@BBeJf^wzPbBJ@CZlhUwrICQFlQ`DJQ`DAQ`DEQ`DMQ`DO}kJE]@!dcL@BAeJf[oEPbHb@CZlkiwrMBqFlQ`DJQ`DNQ`DIQ`DMQ`DO}kJz]@	
-IinJMptEY IibzMptEY	!RbOw~@K_}?g~H?Oy?mpJw?Xc}m?w~_qvrg@ !RbOvw?_x@?g~H?Oy?mpJw?Xc}m?w~_qvzg@	V@!2F040F#N!104G!40GF!F0J$8408F2F!20F22!403@VI!B0V02X0@081koF88!FV91!12/0202*V0F1#26&4!V!40V#F!F&8#1$41$F040420	NNFY02V!8(8#8,2F!8$k04+FF#102/*	FNF202,8#8,HF!8$F04,F!81/,	Displacement Reaction a. <NL>Aromatic Resonance "a"	dcL@BLeJfyoXYfjjPCZjzUwtIdZhfC`D@cbXN@PBII`xA@HTfC`D@cRXN@PBO}jne]@!dcL@BAeJf[oXZVZj`CZjzUwtYdZhfC`D@cbXN@PBII`xA@HTfC`D@cRXN@PBO}jne]@	
-IinJEptgQ IibzEptgQ	!Rb@Jw@oy?bOw~@Hc}mww~_x`B?g~H_QvRo@ !Rb@K~_{\BbOw~@Hc}mww~_x`B?g~H_QtFw@	V@!2F040F#N!104G!40GF!F0J$8408F2F!20F22!403@VI!B0V02X0@081koF88!FV91!12/0202*V0F1#26&4!V!40V#F!F&8#1$41$F040420	NNFY02V!8(8#8,2F!8$k04+FF#102/*	FNF202,8#8,HF!8$F04,F!81/,	Displacement Reaction a. <NL>Aromatic Resonance "b"	dcL@BLeJfyoXYfjjPCZjzUwtIdZhfC`D@cbXN@PBII`xA@HTfC`D@cRXN@PBO}jne]@!dcL@BAeJf[oXZVZj`CZjzUwtYdZhfC`D@cbXN@PBII`xA@HTfC`D@cRXN@PBO}jne]@	
-Ihn[I`TT} Ihf{I`TT}	!Rm?w~@Hc}?g~w@oy?bOrH?[_}bOw~_qvrg@ !Rm?vH?_x@?g~w@oy?bOrH?[_}bOw~_qvzg@	V040@G0614V1$1041!8ClF!1N5H!2J02RF2F!N!2m80J0W0VIF0D3402X820B0oo0T8!81O102W@///)V#F//#	NNFY02V!8(8#8,2F!8$k04+FF#102/*	FF0F$8-8////)	Displacement Reaction a. <NL>Aromatic Resonance "c"	dcL@BLeJfyoXYfjjPCZjzUwtIdZhfC`D@cbXN@PBII`xA@HTfC`D@cRXN@PBO}jne]@!dcL@BLeJf[oXPbHj@CZjzUwtYdZhfC`D@cbXN@PBII`xA@HTfC`D@cRXN@PBO}jne]@	
-							
-							
-							
+atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	Label	Transformation	Ionization	Text
+qb@qE@@@@ qVM a`	!Rqyu^@Hb]q?q^K|^]W`@oWiwGKuy^KpA^Kuy^@@A^GWJ| !RWzL@`|~lGSi| !RG\X|	Z8@01V0F0k0V!H258F048#8BV@8BX030208VH0F1F0XV4!N0e23DF#k8V2W020FZF8VFGd8J0812108//////!	t@220GVV08#J.1$V///,	N82#V/////*	Inductive cleavage	f`~`@D@@gIHiCHiMIUUUUT@FvdXXJRmFl{wh@bNdPpXa`YC@JFBTLBhXMPpFa`mC@zFCtLG~zQa`iJtZso@!gC`AAJTu@P fJ@Gu@	[M+H]+	CMF
+qb@pA@h@ qNh Qd	!RxzW^IORexxk^R}xdxzW^IMyKxxk^Rw?uG^J| !R`JI?UAtz@` !R@BL]agp	_9!1#VN0V!Fm58(88VFV4b02221@VG0F1J0207V080222JF01Vo8V2V022GkR801G!o0832AN//////#	tNH101(4%V08/&F///0	FF2/$8////)	Displacement Reaction a.	dkN@B@B\dbdLaajjjZBImaSJXYtPDQEHXLa`jFAhXAa`fFCXXCa`tTrfF]L!eM@fXvB eF`BLGtP	[M+H]+	CMF
+qipB@`@ a` qi Qt	!RzrRw_SwpoOBw@gsWO]_~@C~~O]_WoAvb`` !RGUi| !R_tp]ngp !R@BL]Akp	V!F1%V02FFX58!820V!8V844V02021NV40F9F0244!c0F!4F01Vk80XV820F0R8!1!4093281F/$4///#V/(	xNH141(40V#V////+	4F204/!8////)	Grob-Wharton	dcvHBA@YrJQRFPmUUT@[]aMtkohFH}dLAPpMCAtLDppKCAlLG~}aMtkh!fJ@Gu@ eFH`fJD eF@HhP	[M+H]+	CMF
+qb@qE@@@@ qbH qu	!RbOsg?Cx_bCt~@Cx_bOp~Gxc]bOsg?N_]bMt~@N\BGRhB !RbOp~@Auz@` !R@AL]Ikp	V!F1Z2$8#21F01Vg2240B031BV111!8V!F0V0Xk4908ke0F0F01V080HV42FF0F40J9V06G@18B1X//////!	t@220GVV08#J.1$V///,	FF2///-F//	Alpha cleavage	f`~`@D@@gIHiCHiMIUUUUT@FvdXXJRmFl{t]Ha`qC@rF@TLDhXEPpZa`MCAZFAtLGhXOz`A{iFFBdkQkN|!eM``eIXH eF@Hp_za@	M+°	CRF
+IaLJfxAdE@ Ql IZdDezP	!RXFicFCaSo`@lFLBFfY|xCFJpC@_@fPA~GTk| !R@AL]Iep !R@KybmvJppIg@ac`LNEL]~op	kO0AAk5k5Jb02Z0Xd9n1k8V016fL0VBVJH41BDoouF15BX34549_WIo4k62BWU2@VQa0OAo86F190JacG02c@//////!	jot1!N!V4$8080V08+4#1-2//)	JNF242,8#8,2F!8$F04/01(8/#	Dioxolane elimination (aromatic)	dk\DB@hYRfV^tjgZBHHh@MlyS}bXL[D\zFAXXCa`wNTp!eFHBJGuX daDHB@RTfUVyiZPCyLbh@	+	CRF
+qV`A@@@ QX qq	!RZvt@DxGPvBJgHkzovJK~sz]]?iBgHhv|@` !R@ALMqbH !R_vpMEaH	ZN9!40B0H06#29%@V98N@804801011BcF0G0102142#8H!FkdVV803c028F0RF!N!F0d381//////$	N8$V/////*	FF/%8////)	Aromatic Indicutive Cleavage	dct@BHgIIEECIUUUPAuGUapfxYWXcdLAPpMCAtL@ppSC@lLFpp_zNDwCJz!eF@bXpP eF@HhP		CRF
+IzAYI@JCB@@ IdP qzfYh	!RhJVSipc|_k?Lis}~{W\H_Wx@BGu~oxc|_c~HoQurW@ !R@FL]vgp !Rs}oOxg|S_rq?KG|SGWj|	X0108FPNk0@!Z02f0k12HV@04c0V0606040c@kK1F84J2044!O15!F!B89VDYPXFN4F$JV10850F!F//01//%8/(	jotG!NG0V4#2B080V0N&1!2440V1-2#VF2/$204*	6FsF40810V%4%8*202/&F6/&4*	CO elimination	foA@`@@TrQQRJJsHeEZhJbBj@@vXsdcV]EcHXNPpRa`MCAZFAtLG~lYrQkN@!eFHBJD dnDH@@ReVDij@@@H		CRF
+qgVHhX@ qYoTp	!Ro`BWoXb}e?rH@i_|_m~WoWz@usuW?Awr@` !RN@soakx@K[A{CFJpG[kB	08!8F8XGFGV!409@2e105!5#14F$O4JN0FBF28F!H080XF8H!8!l2V024!N!40Z0H087FVk3V//////0	FF0F$8-8////)	0F/%8////)	Tropylium rearragement	dcL@BLeJf[oXPbHj@CZjzUwtYdZhfC`D@cbXN@PBII`xA@HTfC`D@cRXN@PBO}jne]@!gOpAGJTju`@@D	[M+H]+	Rearrangement
+IaLB`xICP Iv^kD`	!RhDWUD@mkZNrV{?rHGtyN@H`}`IZCZAur`` !RfKM?n_z?GR~gbvHOG[h\	B@k08FNcFqFV0F!18208!9#s014090F0@41k0meVCV#V202X!F805!a6V02020F1!848H8N90ZF+4-8/&F1//V-	0F/%8////)	0F/%8////)	Tropylium resonance "a"	dcL@BEeJf[nEPbHb@CZlkiwrCBqFlQ`DJQ`DNQ`DIQ`DMQ`DO}kJz]@!gOpAMJTju`@@GrDR@		Resonance
+IrNA@t@BP Iv^CD`	!RX`}bTK~~@IfsapBFlybXmHY_fKMPKQwro@ !RoxeDFwvwDW~J{q_cG[il	g@s8@FFcHJ1V4804Ge4#253$5B0W!434Os0FY06cV070FF02k4F!1kB06W0@J20F!J9C0G39G1401///0F1//!1+	0F/%8////)	0F/%8////)	Tropylium resonance "b"	dcL@BAeJf[oEPbHb@CZlkiwrMBqFlQ`DJQ`DNQ`DIQ`DMQ`DO}kJz]@!gOpAGJTju`@@GrDR@		Resonance
+IRJAPD`d@ IFiPhT	!RDW|{YFCrE~Op_[~IgqkVowvwZsm?KawRg@ !R\n?|BBAe@KZh{OakG_i|	gN!8F8cFL0V0H1018%AY!c014090F0848G4Hc04V0F2k0F0X!F!141X6W0240VF103840G8910ZF2/#2$8/&F1//.	0F/%8////)	0F/%8////)	Tropylium resonance "c"	dcL@BBeJf^wzPbBJ@CZlhUwrICQFlQ`DJQ`DAQ`DEQ`DMQ`DO}kJE]@!gOpAMJTju`@@GrDR@		Resonance
+qky`pP@ qkOfP	!RbGu~@M]}_c~H?Gx?upKW_Xa}uwu~Oqvrg@ !RbGwW_Wx@_c}~O}]}G[j\	V8!3G041sF#2c10J9!80lK0F90_F!2012NF2F0F8403220B03JVn!B#2X06088FJ088!I0A1F01@/#2-1//%8#1/420	NNFY02V!8(8#8,2F!8$k04+FF#102/*	FNF202,8#8,HF!8$F04,F!81/,	Displacement Reaction a. <NL>Aromatic Resonance "a"	dcL@BLeJfyoXYfjjPCZjzUwtIdZhfC`D@cbXN@PBII`xA@HTfC`D@cRXN@PBO}jne]@!gOpAGJUKutkPGtv@		Resonance
+qky`pP@ qkOfP	!RbOsW?Gx?bGu~@Ha}u{u~Oxc|_c~HoQwrO@ !R|Gq~_{]||Owp_Wy?GWh|	V8!3G041sF#2c10J9!80lK0F90_F!2012NF2F0F8403220B03JVn!B#2X06088FJ088!I0A1F01@/#2-1//%8#1/420	NNFY02V!8(8#8,2F!8$k04+FF#102/*	FNF202,8#8,HF!8$F04,F!81/,	Displacement Reaction a. <NL>Aromatic Resonance "b"	dcL@BLeJfyoXYfjjPCZjzUwtIdZhfC`D@cbXN@PBII`xA@HTfC`D@cRXN@PBO}jne]@!gOpAGJUKutkPGtv@		Resonance
+qi{p`P@ qi_tP	!Ruwu~@Ha}_c?W?Gx?bOrH_]]}bGu~Oqvrg@ !RuwvH_Wx@_c}~Oxa}G[j\	V!8@1c6G0k%1049!N0lK!185H!2J30RF2F80N422m@0R0W0VIF1D14V2X860B0Jo0R8!21A5F0W@//////!	NNFY02V!8(8#8,2F!8$k04+FF#102/*	FF0F$8-8////)	Displacement Reaction a. <NL>Aromatic Resonance "c"	dcL@BLeJfyoXYfjjPCZjzUwtIdZhfC`D@cbXN@PBII`xA@HTfC`D@cRXN@PBO}jne]@!gOpAMJUKua@@Gtv@		Resonance
+Qd@@ Qd	!R\FwgO_x@R@J^gxF@GXj| !R@Ct]ngp	W*8$2104$1!8F02J!12!9k!F!420J$8#F0J!@N2V020F0F010V$815//////%	!2/////.	!2/////,V0	Protonation (ionization)	gNx@@eSUUPFuVM_hHcUCAhXCCAXXGCAmVMX!eF``fLGtX	[M+H]+	Ionisation
+QX@@ QX	!Rm?w~@Hc}?Xbw?PJwGPj| !R@AL]^gp	_$8!408#12104!401!BF02J!120V8k!F#204#F8#F0J!8F2V020F0F)81//////&	!2/////.	!2/////.	Radical ionization	gNx@@eSUUPFuVM_hHcUCAhXCCAXXGCAmVMX!eF``fLGtQTH	M+°	Ionisation
+Qv@@ Qp Qd	!Rb@JH@ovH@k_~@Hc}GXjB !RG]i| !R@AL]^kp	V!1402V48!21021082#VF08102Z!84!8V0BF60J20Z4$8JJF81VFBV2V160F0N$907883//////&	o0V4/////+10	4F/%8////)	Remote Hydrogen rearrangement	gNq@@dtuUPFRtVKGForDJHgPpFFBppNFCScV!fI@Gu` eF@HhP	[M+H]+	CRF
+qTq@@@@ Q\ qa	!RbOvw?X`B@k_}m?vHm?tBm?x@bOt]|kp !R@AL]~gp !R@AL]Nkp	V282!20W0402!2G0H2F8Z0NAc02@404802V8cVBF424204!4134!N01V1802V96FN0N42!F11FB340F2F//////0	y4V4%V!4/////#	4FV/$8////&10	Remote Hydrogen rearrangement	dmTH@@Rfffjjj`CJl`hZNbXmqTwCJ~cHcqPpUC@qLG@HAGDp\@`DCCALLBpp_{qTwCJ`!eFHBLGtP eF@HhP	[M+H]+	CRF
+IOPC`B@AdB`pAH@BP@E@@ qb^i IO^ IeQ	!RbGvw__x@b@HBmwvwbGu}b@JH?g~H?K]}bGvw?Xa}?`C~_x`BbGtBb@C~bGu}mw?~bGw~_xa}mwt]lbp !R?g~w@k_}m?vw@avZO@ !R@Fp@Dqwz_@ !R@AM?DquFo@	VN!180WVs0b05a@9ck12g@01BhO@2aJ01_57Eck6J4L630UP080B@RSP0QWuR0YV92XH@NaV4195K0CA4VFd//!1//%8/(	tvLAcAq07Cs29B1!3F89c50H!XV#F8#F$FV#8*2$202&8)2%	kNH!1,8#8,H#8$F/#1/,	Remote Hydrogen rearrangement	fkw`@D@JgIHiCHYCEMIiiE[OIjjjjjjjjfh@MhhqQ`iF\GIZ}GOYHuBXcEDLFHXJPpLa`ECAJF@tLChX@tp\@axAFXXBppUa`{C@NFB]LG@H^@QnF@|LG~qQbcARLxNRuzN^s`!gFpAEJTjZuRA@ eM`AIhH eM@HvB	[M+H]+	CRF
+IwlDdd@Vh@@X@@ IFP IwlIEjF	!RO`BH?N_|O`BHwSx@w^\_On\Bb@JH@cx_Gs{]bHc]O`BHwXc|G[Ib !R_pp]Vop !Rm{vwoSy?musPO[\}m{vwWAuzG@	Vk!V8e0F2I3V4F1G1J@0gcV1wXB0J404F444ZF44FR24X0l2N50G0F4J75V23Z6Xg3FBJs04JVNHk0hEWXF2F/!8-1//%8!4/$	zxxr5XsGde40402g28VWXN#V!13024FFVG02!VF16$@1!VJHV0V8!2081!80V010204#4#10	JFcF#18&408#N(202$1/$2/+4!V10	Retro-Diels–Alder 	fle@`D@ReNQQQRJJJVJleksPUPUET@AlK`cV\FJ_PeDQ\i`xACpBATp\@axAAjXN@P|@buLG@H^@PzfC`DO@HCSApBG`DQi`xACpBDtp\@axAG~bxHugAbd!eF@HhP didDB@hIRVY~G``@@~bh@	[M+H]+	CRF
+iup`jXAH@EL@`Ah@AFp@`\Cp@I iSxKhvMHP IwbkEYH	!RbOrH__x@b@K~_{_}b@I??gvH?`BH_Xc|bGvw?_x@?g~H?Oy?bOrw@hc}?`BH?_x@m?vw@hc|mpK~@AuRH` !RmpJw__x@mpJw@ox@mpJw@atZP` !Rm?vw?_y?mpJH?[_}m?vw@atFG@	kJF1CG04FX075LGD9VkI0kV_93gp8L_d4gCB9gvHpF44FD4oa23PkFJ0Fsbo4Cm6WJ78PDQVamVF2rD9ALb02k$4-4////,	:xzCqslde4mZ0EgHsVhXSH01Z0F9Y924FFVl02k0lkG6FF01@105ZJHZ1dc!20814180V05V205!F4#10	RNFY42V!8%V08#8#F8&HF!8$k04!V(FF!8102%8#V.	Retro-Diels–Alder 	eg`PL@H@EKnIrJJQRJQSV[QFJZ[\JVACKMAUQEEADQU@@AlXpIHXyDeUuMl]zBzHfLPpBTp\@axADeLG@H^@PYC@ySApBG`DQTp\@axABULG@H^@QUSApBG`D]Tp\@axADuLG@H^@QmSApBG`DGTp\@axAG~fLBRFNQIU]S[G@!didHB@BTfUvfZVV@OhB@ didD@@iIYgxUie`B	[M+H]+	CRF
+IwbFldEY@N@@@@@ IwaeS qb^i	!RbGvH?Oy?bGw~@Ha}m?w~_xc|bOrw@oy??`BH__x@_?{~_pC~bOp]\mp !RbOvH?X`B?`BH?Qvz_@ !R?g~w@k_}m?vw@atFO@	kV1N1Fc4km@IZ8F0G_F21weW0gbJ@J41BK040ZJgBmB2Ff0O2F2098D2J11022Z6VBMJ8Sm6040F0o0dC1YF6F//01//%8/(	yRsr468G8V4040240805VN$F013020HFV58$F16$2!80F6V0V810V081!80V#204#5#10	oFcJ04,8#8$F*18/8//!V10	Retro-Diels–Alder 	fbu@`D@BENQQQQQQFKRI`eVZAhJJjh@CjAjpnZ]xLTy}@TQErfC`DO@HuSApBG`DNi`xACpBOTp\@axA@ZXN@P|@bMLG@H^@PffC`DO@HsSApBG`D_zKfg^CENP!gGPa@QJRmsPb_hX@ gFp@DiTt@@B	[M+H]+	CRF
+								
+								
+								
+								
 <hitlist data>
 <hitlistName="<selection>">
-<hitlistData="@B@@">
+<hitlistData="@@@`@">
 </hitlist data>
 <datawarrior properties>
+<columnAliasCount="1">
+<columnAlias_0="Text	Reaction">
 <columnFilter_Table="">
 <columnWidth_Table_Ionization="80">
 <columnWidth_Table_Label="228">
+<columnWidth_Table_Text="80">
 <columnWidth_Table_Transformation="393">
-<currentRecord="9">
+<columnWrapping_Table_Label="true">
+<currentRecord="2">
 <detailView="height[Data]=0.5;height[Transformation]=0.5">
 <filter0="#string#	Label">
 <filter1="#reaction#	Transformation">
 <filter2="#retron#	Transformation">
 <filter3="#string#	Ionization">
+<filter4="#string#	Text">
 <headerLines_Table="2">
-<mainSplitting="0.73249">
+<mainSplitting="0.85807">
 <mainView="Table">
 <mainViewCount="1">
 <mainViewDockInfo0="root">
 <mainViewName0="Table">
 <mainViewType0="tableView">
-<rightSplitting="0.65447">
+<rightSplitting="0.65517">
 <rowHeight_Table="80">
 </datawarrior properties>
