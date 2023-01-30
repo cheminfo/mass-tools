@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: 'If you use this software, please cite it as below.'
+title: 'Javascript libraries dealing with mass spectra'
+abstract: 'This lerna project contains various packages that allows to deal with molecular formula and assign high resolution mass spectra'
+repository-artifact: http://cheminfo.github.io/mass-tools/
+repository-code: https://github.com/cheminfo/mass-tools
+authors:
+  - family-names: 'Patiny'
+    given-names: 'Luc'
+    orcid: 'https://orcid.org/0000-0002-4943-2643'
+  - family-names: 'Zasso'
+    given-names: 'Michaël'
+    affiliation: 'Zakodium Sàrl, Switzerland'
+    orcid: 'https://orcid.org/0000-0001-5295-2159'
+license: MIT
+keywords:
+  - Mass spectra
+  - Molecular formula
+doi: 10.5281/zenodo.5091564
