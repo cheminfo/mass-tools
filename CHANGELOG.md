@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.5.0](https://github.com/cheminfo/mass-tools/compare/v6.4.1...v6.5.0) (2023-01-30)
+
+
+### Features
+
+* add CITATION.cff ([eabded5](https://github.com/cheminfo/mass-tools/commit/eabded55fa5896f55f251db0e654906cfa2c69cf))
+
 ## [6.4.1](https://github.com/cheminfo/mass-tools/compare/v6.4.0...v6.4.1) (2023-01-11)
 
 
