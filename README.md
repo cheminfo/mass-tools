@@ -1,5 +1,8 @@
 # mass-tools
 
+[![NPM version][npm-image]][npm-url]
+[![build status][ci-image]][ci-url]
+[![Test coverage][codecov-image]][codecov-url]
 [![DOI](https://www.zenodo.org/badge/111557358.svg)](https://www.zenodo.org/badge/latestdoi/111557358)
 
 Various tools allowing to manipulate molecular formula and analyse mass spectra.
@@ -41,3 +44,13 @@ This package should not be installed as we provide many specific packages with t
 ## License
 
 [MIT](./LICENSE)
+
+
+[npm-image]: https://img.shields.io/npm/v/mass-tools.svg
+[npm-url]: https://npmjs.org/package/mass-tools
+[codecov-image]: https://img.shields.io/codecov/c/github/cheminfo/mass-tools.svg
+[codecov-url]: https://codecov.io/gh/cheminfo/mass-tools
+[ci-image]: https://github.com/cheminfo/mass-tools/workflows/Node.js%20CI/badge.svg?branch=main
+[ci-url]: https://github.com/cheminfo/mass-tools/actions?query=workflow%3A%22Node.js+CI%22
+[download-image]: https://img.shields.io/npm/dm/mass-tools.svg
+[download-url]: https://npmjs.org/package/mass-tools
