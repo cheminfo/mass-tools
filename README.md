@@ -3,7 +3,8 @@
 [![NPM version][npm-image]][npm-url]
 [![build status][ci-image]][ci-url]
 [![Test coverage][codecov-image]][codecov-url]
-[![DOI](https://www.zenodo.org/badge/111557358.svg)](https://www.zenodo.org/badge/latestdoi/111557358)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5091564.svg)](https://doi.org/10.5281/zenodo.5091564)
+
 
 Various tools allowing to manipulate molecular formula and analyse mass spectra.
 
