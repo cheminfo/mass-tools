@@ -26,7 +26,7 @@ SpectrumPkg.Spectrum.prototype.JsGraph = SpectrumPkg.JsGraph;
 export const Spectrum = SpectrumPkg.Spectrum;
 export const MSComparator = SpectrumPkg.MSComparator;
 
-export { MF } from 'mf-parser';
+export { MF, ensureCase } from 'mf-parser';
 export { preprocessRanges, getRangesForFragment } from 'mf-utilities';
 export { generateMFs } from 'mf-generator';
 
