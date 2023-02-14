@@ -1,4 +1,4 @@
-import { xMaxValue } from 'ml-spectra-processing';
+import { xMaxValue, xMinMaxDelta } from 'ml-spectra-processing';
 /**
  * When a spectrum is continous ?
  * - has more than 100 points
@@ -45,7 +45,6 @@ export function isContinuous(spectrum, options = {}) {
             ys[i + 1] !== 0
           ) {
             failed++;
-            break;
           } else {
             success++;
           }
