@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/cheminfo/mass-tools/compare/emdb@2.1.2...emdb@2.2.0) (2023-02-14)
+
+
+### Features
+
+* **ms-spectrum:** create searchGNPS ([3bb28ba](https://github.com/cheminfo/mass-tools/commit/3bb28ba71e8ac61a4f4cdc118cbb0ad59b84f010))
+
+
+
+
+
 ## [2.1.2](https://github.com/cheminfo/mass-tools/compare/emdb@2.1.1...emdb@2.1.2) (2023-01-12)
 
 

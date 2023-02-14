@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@2.1.0...ms-spectrum@2.2.0) (2023-02-14)
+
+
+### Bug Fixes
+
+* isContinuous was not correcly allowing fails ([c3e705a](https://github.com/cheminfo/mass-tools/commit/c3e705a108daa4944f54f565971ce4601986e6ac))
+
+
+### Features
+
+* **ms-spectrum:** add minMaxX ([af77171](https://github.com/cheminfo/mass-tools/commit/af771710b594d489333115fdae090658b184f47a))
+* **ms-spectrum:** create searchGNPS ([3bb28ba](https://github.com/cheminfo/mass-tools/commit/3bb28ba71e8ac61a4f4cdc118cbb0ad59b84f010))
+
+
+
+
+
 # [2.1.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@2.0.2...ms-spectrum@2.1.0) (2023-01-12)
 
 
