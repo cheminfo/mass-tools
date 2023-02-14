@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.7.0](https://github.com/cheminfo/mass-tools/compare/v6.6.0...v6.7.0) (2023-02-14)
+
+
+### Features
+
+* **mass-tools:** expose searchGNPS ([5d57a09](https://github.com/cheminfo/mass-tools/commit/5d57a09826586f87b94457e657ad38dde185620f))
+
 ## [6.6.0](https://github.com/cheminfo/mass-tools/compare/v6.5.0...v6.6.0) (2023-02-14)
 
 
