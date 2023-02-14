@@ -5,12 +5,15 @@ import { fromText } from '../Spectrum';
 
 describe('peakPicking on Spectrum', () => {
   it('lowres2', () => {
-    let chargedText = readFileSync(join(__dirname, 'data/lowres2.txt'), 'utf8');
-    let spectrum = fromText(chargedText);
-    let peaks = spectrum.peakPicking();
+    const chargedText = readFileSync(
+      join(__dirname, 'data/lowres2.txt'),
+      'utf8',
+    );
+    const spectrum = fromText(chargedText);
+    const peaks = spectrum.peakPicking();
 
-    let nbNaNX = peaks.filter((peak) => isNaN(peak.x));
-    let nbNaNY = peaks.filter((peak) => isNaN(peak.y));
+    const nbNaNX = peaks.filter((peak) => isNaN(peak.x));
+    const nbNaNY = peaks.filter((peak) => isNaN(peak.y));
 
     expect(nbNaNX).toHaveLength(0);
     expect(nbNaNY).toHaveLength(0);

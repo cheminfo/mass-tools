@@ -7,7 +7,7 @@ import { isContinuous } from '../isContinuous';
 
 describe('test isContinuous', () => {
   it('to small', () => {
-    let data = { x: [], y: [] };
+    const data = { x: [], y: [] };
     for (let i = 0; i < 50; i++) {
       data.x.push(i / 20);
       data.y.push(i + 1);
@@ -16,7 +16,7 @@ describe('test isContinuous', () => {
   });
 
   it('to separated', () => {
-    let data = { x: [], y: [] };
+    const data = { x: [], y: [] };
     for (let i = 0; i < 200; i++) {
       data.x.push(i / 5);
       data.y.push(i + 1);
@@ -25,7 +25,7 @@ describe('test isContinuous', () => {
   });
 
   it('bad points', () => {
-    let data = { x: [], y: [] };
+    const data = { x: [], y: [] };
     for (let i = 0; i < 200; i++) {
       data.x.push(i / 20);
       data.y.push(i + 1);
@@ -35,7 +35,7 @@ describe('test isContinuous', () => {
   });
 
   it('just ok', () => {
-    let data = { x: [], y: [] };
+    const data = { x: [], y: [] };
     for (let i = 0; i < 200; i++) {
       data.x.push(i / 20);
       data.y.push(i + 1);
@@ -44,7 +44,7 @@ describe('test isContinuous', () => {
   });
 
   it('ok because < = 0', () => {
-    let data = { x: [], y: [] };
+    const data = { x: [], y: [] };
     for (let i = 0; i < 200; i++) {
       data.x.push(i / 20);
       data.y.push(i / 20);
@@ -55,26 +55,26 @@ describe('test isContinuous', () => {
   });
 
   it('big experimental data', () => {
-    let text = readFileSync(join(__dirname, 'data/continuous.txt'), 'utf8');
-    let data = parseXY(text);
+    const text = readFileSync(join(__dirname, 'data/continuous.txt'), 'utf8');
+    const data = parseXY(text);
     expect(isContinuous({ data })).toBe(true);
   });
 
   it('other big experimental data', () => {
-    let text = readFileSync(join(__dirname, 'data/continuous2.txt'), 'utf8');
-    let data = parseXY(text);
+    const text = readFileSync(join(__dirname, 'data/continuous2.txt'), 'utf8');
+    const data = parseXY(text);
     expect(isContinuous({ data })).toBe(true);
   });
 
   it('low experimental data', () => {
-    let text = readFileSync(join(__dirname, 'data/lowres.txt'), 'utf8');
-    let data = parseXY(text);
+    const text = readFileSync(join(__dirname, 'data/lowres.txt'), 'utf8');
+    const data = parseXY(text);
     expect(isContinuous({ data })).toBe(true);
   });
 
   it('check joined spectrum', () => {
-    let text = readFileSync(join(__dirname, 'data/joinedHPLC.txt'), 'utf8');
-    let data = parseXY(text);
+    const text = readFileSync(join(__dirname, 'data/joinedHPLC.txt'), 'utf8');
+    const data = parseXY(text);
     expect(isContinuous({ data })).toBe(true);
   });
 });
