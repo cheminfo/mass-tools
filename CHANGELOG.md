@@ -1,5 +1,19 @@
 # Changelog
 
+## [6.6.0](https://github.com/cheminfo/mass-tools/compare/v6.5.0...v6.6.0) (2023-02-14)
+
+
+### Features
+
+* **mass-tools:** expose ensureCase ([316aa11](https://github.com/cheminfo/mass-tools/commit/316aa11e451fc753015de1007f528274d5c20ca9))
+* **ms-spectrum:** add minMaxX ([af77171](https://github.com/cheminfo/mass-tools/commit/af771710b594d489333115fdae090658b184f47a))
+* **ms-spectrum:** create searchGNPS ([3bb28ba](https://github.com/cheminfo/mass-tools/commit/3bb28ba71e8ac61a4f4cdc118cbb0ad59b84f010))
+
+
+### Bug Fixes
+
+* isContinuous was not correcly allowing fails ([c3e705a](https://github.com/cheminfo/mass-tools/commit/c3e705a108daa4944f54f565971ce4601986e6ac))
+
 ## [6.5.0](https://github.com/cheminfo/mass-tools/compare/v6.4.1...v6.5.0) (2023-01-30)
 
 
