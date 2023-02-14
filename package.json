@@ -37,6 +37,7 @@
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.19.6",
     "@types/jest": "^29.2.4",
+    "@types/node": "^18.13.0",
     "benchmark": "^2.1.4",
     "chemcalc": "^3.4.1",
     "chemical-elements": "^1.2.3",

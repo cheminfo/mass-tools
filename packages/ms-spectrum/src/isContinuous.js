@@ -1,4 +1,4 @@
-import { xMaxValue, xMinMaxDelta } from 'ml-spectra-processing';
+import { xMaxValue } from 'ml-spectra-processing';
 /**
  * When a spectrum is continous ?
  * - has more than 100 points

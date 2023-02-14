@@ -1,3 +1,9 @@
+import { readFileSync } from 'fs';
+import { join } from 'path';
+
+import { xy2ToXY } from 'ml-spectra-processing';
+
+import { Spectrum } from '../Spectrum.js';
 import { getBestPeaks } from '../getBestPeaks';
 
 describe('test getBestPeaks', () => {
@@ -37,6 +43,27 @@ describe('test getBestPeaks', () => {
       { close: false, x: 4, y: 5 },
       { close: false, x: 5, y: 3 },
     ]);
+  });
+
+  it('complex spectrum', () => {
+    const data = xy2ToXY(
+      JSON.parse(
+        readFileSync(join(__dirname, 'data/CCMSLIB00005716776.json'), 'utf8'),
+      ),
+    );
+    const spectrum = new Spectrum(data);
+    const minMaxX = spectrum.minMaxX();
+    const maxY = spectrum.maxY();
+    const slots = (minMaxX.max - minMaxX.min) / 0.1 - 1;
+    const bestPeaks = spectrum.getBestPeaks({
+      numberSlots: slots,
+      numberCloseSlots: slots,
+      limit: 100,
+      threshold: 0.01,
+    });
+    bestPeaks.forEach((peak) => (peak.y = peak.y / maxY));
+    expect(bestPeaks).toHaveLength(100);
+    expect(Math.max(...bestPeaks.map((peak) => peak.y))).toBeCloseTo(1, 5);
   });
 });
 

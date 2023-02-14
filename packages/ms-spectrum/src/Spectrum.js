@@ -1,5 +1,5 @@
 import { isAnyArray } from 'is-any-array';
-import { xMaxValue, xNormed } from 'ml-spectra-processing';
+import { xMaxValue, xMinMaxValues, xNormed } from 'ml-spectra-processing';
 import { parseXY } from 'xy-parser';
 
 import { getBestPeaks } from './getBestPeaks';
@@ -30,6 +30,10 @@ export class Spectrum {
     });
     this.cache = {};
     this.peaks = [];
+  }
+
+  minMaxX() {
+    return xMinMaxValues(this.data.x);
   }
 
   maxY() {
