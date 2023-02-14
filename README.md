@@ -5,7 +5,6 @@
 [![Test coverage][codecov-image]][codecov-url]
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5091564.svg)](https://doi.org/10.5281/zenodo.5091564)
 
-
 Various tools allowing to manipulate molecular formula and analyse mass spectra.
 
 The library is published as a full package on npm as `mass-tools`.
@@ -45,7 +44,6 @@ This package should not be installed as we provide many specific packages with t
 ## License
 
 [MIT](./LICENSE)
-
 
 [npm-image]: https://img.shields.io/npm/v/mass-tools.svg
 [npm-url]: https://npmjs.org/package/mass-tools
