@@ -24,6 +24,7 @@
     "emdb": "^2.1.2",
     "is-any-array": "^2.0.0",
     "mf-parser": "^2.1.0",
+    "mf-utilities": "^2.0.1",
     "ml-distance": "^4.0.0",
     "ml-gsd": "^12.1.2",
     "ml-regression-power": "^2.0.0",

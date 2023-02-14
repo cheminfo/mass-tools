@@ -17,7 +17,7 @@ import { searchSimilarity } from './searchSimilarity.js';
 export * from './searchPubchem.js';
 export * from './searchActivesOrNaturals.js';
 export * from './massShifts.js';
-
+export * from './util/fetchJSON.js';
 /**
  * A class that deals with database of monoisotopic mass and molecular formula
  */
