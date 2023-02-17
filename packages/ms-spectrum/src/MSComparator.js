@@ -1,6 +1,6 @@
 import { similarity } from 'ml-distance';
 import {
-  xIsMonotoneIncreasing,
+  xIsMonotonic,
   xyArrayAlign,
   xyFilterMinYValue,
   xyFilterTopYValues,
@@ -10,10 +10,13 @@ import {
 export class MSComparator {
   /**
    * Create a class that will be able to get the similarity between 2 spectra
+   * The similarity is based on 'cosine' similarity. The goal is 2 prepare 2 vectors
+   * on which the similarity is calculated.
+   * The vectors are created by taking the mass and the intensity of the peaks.
    * @param {object} [options={}]
-   * @param {number} [options.nbPeaks]
-   * @param {number} [options.minIntensity]
-   * @param {number} [options.massPower=3]
+   * @param {number} [options.nbPeaks] - Before comparing spectra how many peaks should be kept
+   * @param {number} [options.minIntensity] - What is the minimal relative intensity to keep a peak
+   * @param {number} [options.massPower=3] -
    * @param {number} [options.intensityPower=0.6]
    * @param {number|Function} [options.delta=0.1]
    */
@@ -65,7 +68,7 @@ function normalizeAndCacheData(cache, dataXY, options = {}) {
   if (cache.has(dataXY)) return cache.get(dataXY);
 
   let data = { ...dataXY };
-  if (!xIsMonotoneIncreasing(data.x)) {
+  if (xIsMonotonic(data.x) !== 1) {
     data = xySortX(data);
   }
 

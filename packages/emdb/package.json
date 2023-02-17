@@ -33,7 +33,7 @@
     "mf-parser": "^2.1.0",
     "mf-utilities": "^2.0.1",
     "ml-regression-theil-sen": "^2.0.0",
-    "ml-spectra-processing": "^11.17.0",
+    "ml-spectra-processing": "^12.0.0",
     "ms-spectrum": "^2.2.0",
     "nucleotide": "^2.0.1",
     "openchemlib-utils": "^2.4.0",
