@@ -1603,7 +1603,10 @@ extra annotation <code>close</code> to true</p>
   </div>
   
 
-  <p>Create a class that will be able to get the similarity between 2 spectra</p>
+  <p>Create a class that will be able to get the similarity between 2 spectra
+The similarity is based on 'cosine' similarity. The goal is 2 prepare 2 vectors
+on which the similarity is calculated.
+The vectors are created by taking the mass and the intensity of the peaks.</p>
 
     <div class='pre p1 fill-light mt0'>constructor(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
   
@@ -1643,7 +1646,17 @@ extra annotation <code>close</code> to true</p>
                 <tr>
   <td class='break-word'><span class='code bold'>options.nbPeaks</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
   </td>
-  <td class='break-word'><span></span></td>
+  <td class='break-word'><span>Before comparing spectra how many peaks should be kept
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.minNbCommonPeaks</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  </td>
+  <td class='break-word'><span>Minimum number of peaks in common to consider any similarity
+</span></td>
 </tr>
 
 
@@ -1651,7 +1664,8 @@ extra annotation <code>close</code> to true</p>
                 <tr>
   <td class='break-word'><span class='code bold'>options.minIntensity</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
   </td>
-  <td class='break-word'><span></span></td>
+  <td class='break-word'><span>What is the minimal relative intensity to keep a peak
+</span></td>
 </tr>
 
 
@@ -1661,7 +1675,8 @@ extra annotation <code>close</code> to true</p>
   
     (default <code>3</code>)
   </td>
-  <td class='break-word'><span></span></td>
+  <td class='break-word'><span>High power will give more weight to the mass. If you would prefer to observe fragments you should use a number less than 1
+</span></td>
 </tr>
 
 
@@ -1671,7 +1686,19 @@ extra annotation <code>close</code> to true</p>
   
     (default <code>0.6</code>)
   </td>
-  <td class='break-word'><span></span></td>
+  <td class='break-word'><span>How important is the intensity. By default we don't give to much importance to it
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.requiredY</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>If true we remove all the peaks that don't have a common y value. Similarity will therefore usually be much higher
+</span></td>
 </tr>
 
 
@@ -1681,7 +1708,8 @@ extra annotation <code>close</code> to true</p>
   
     (default <code>0.1</code>)
   </td>
-  <td class='break-word'><span></span></td>
+  <td class='break-word'><span>Tolerance in Da (u) to consider 2 peaks as aligned. If a function is provided it will be called with the mass of the peak
+</span></td>
 </tr>
 
 
