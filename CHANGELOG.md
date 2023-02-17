@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.8.0](https://github.com/cheminfo/mass-tools/compare/v6.7.0...v6.8.0) (2023-02-17)
+
+
+### Features
+
+* **ms-spectrum:** MSComparator has 2 new options: requiredY and minNbCommonPeaks ([3fa3ea5](https://github.com/cheminfo/mass-tools/commit/3fa3ea55450c899000b600a76da8b271e50a02ea))
+
 ## [6.7.0](https://github.com/cheminfo/mass-tools/compare/v6.6.0...v6.7.0) (2023-02-14)
 
 
