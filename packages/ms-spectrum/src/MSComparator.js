@@ -1,5 +1,3 @@
-import { allowedNodeEnvironmentFlags } from 'process';
-
 import { similarity } from 'ml-distance';
 import {
   xIsMonotonic,
