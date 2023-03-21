@@ -1,6 +1,6 @@
 {
   "name": "mf-global",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Various libraries to deal with molecular formula and mass spectra",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -20,15 +20,15 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/mf-global#readme",
   "dependencies": {
-    "chemical-elements": "^2.0.0",
+    "chemical-elements": "^2.0.1",
     "chemical-groups": "^2.1.0",
-    "emdb": "^2.2.0",
-    "isotopic-distribution": "^2.0.1",
-    "mf-generator": "^2.0.3",
-    "mf-parser": "^2.1.0",
-    "ms-report": "^2.0.1",
-    "ms-spectrum": "^2.2.0",
-    "nucleotide": "^2.0.1",
+    "emdb": "^2.2.1",
+    "isotopic-distribution": "^2.0.2",
+    "mf-generator": "^2.0.4",
+    "mf-parser": "^2.2.0",
+    "ms-report": "^2.0.2",
+    "ms-spectrum": "^2.3.0",
+    "nucleotide": "^2.0.2",
     "peptide": "^2.0.0"
   }
 }

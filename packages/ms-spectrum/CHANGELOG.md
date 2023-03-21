@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@2.2.0...ms-spectrum@2.3.0) (2023-03-21)
+
+
+### Features
+
+* add selectedMasses options in MSComparator ([31f830a](https://github.com/cheminfo/mass-tools/commit/31f830a9f25c13a5c9f1ae8d0c16318ac327b63a))
+* **ms-spectrum:** MSComparator has 2 new options: requiredY and minNbCommonPeaks ([3fa3ea5](https://github.com/cheminfo/mass-tools/commit/3fa3ea55450c899000b600a76da8b271e50a02ea))
+
+
+
+
+
 # [2.2.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@2.1.0...ms-spectrum@2.2.0) (2023-02-14)
 
 
