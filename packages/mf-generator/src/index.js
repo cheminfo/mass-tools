@@ -208,15 +208,15 @@ function appendResult(results, currents, keys, options = {}) {
   // therefore we should put all the comments at the ned
 
   if (links.filter) {
-    let stars = [];
+    let sharps = [];
     for (let i = 0; i < keys.length; i++) {
       let anchors = keys[i][currents[i]].match(/#[0-9]+/g);
-      if (anchors) stars.push(...anchors);
+      if (anchors) sharps.push(...anchors);
     }
-    if (stars.length % 2 === 1) return;
-    stars = stars.sort();
-    for (let i = 0; i < stars.length; i += 2) {
-      if (stars[i] !== stars[i + 1]) return;
+    if (sharps.length % 2 === 1) return;
+    sharps = sharps.sort();
+    for (let i = 0; i < sharps.length; i += 2) {
+      if (sharps[i] !== sharps[i + 1]) return;
     }
   }
 
