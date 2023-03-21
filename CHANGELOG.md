@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.9.0](https://github.com/cheminfo/mass-tools/compare/v6.8.0...v6.9.0) (2023-03-21)
+
+
+### Features
+
+* getInfo returns the sum if many parts ([b96a6d6](https://github.com/cheminfo/mass-tools/commit/b96a6d605af0d01bf9bac54de341c27f6c19a8c3))
+
 ## [6.8.0](https://github.com/cheminfo/mass-tools/compare/v6.7.0...v6.8.0) (2023-02-17)
 
 
