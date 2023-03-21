@@ -19,7 +19,7 @@ export class MSComparator {
    * @param {number} [options.minIntensity] - What is the minimal relative intensity to keep a peak
    * @param {number} [options.massPower=3] - High power will give more weight to the mass. If you would prefer to observe fragments you should use a number less than 1
    * @param {number} [options.intensityPower=0.6] - How important is the intensity. By default we don't give to much importance to it
-   * @param {boolean} [options.requiredY=false] - If true we remove all the peaks that don't have a common y value. Similarity will therefore usually be much higher
+   * @param {number[]} [options.selectedMasses] - List of allowed masses.
    * @param {number|Function} [options.delta=0.1] - Tolerance in Da (u) to consider 2 peaks as aligned. If a function is provided it will be called with the mass of the peak
    */
   constructor(options = {}) {
@@ -40,7 +40,28 @@ export class MSComparator {
   getSimilarity(dataXY1, dataXY2) {
     const data1 = normalizeAndCacheData(this.cache, dataXY1, this.options);
     const data2 = normalizeAndCacheData(this.cache, dataXY2, this.options);
-    const aligned = xyArrayAlign([data1, data2], this.options);
+
+    let aligned;
+    if (this.options.selectedMasses?.length > 0) {
+      aligned = xyArrayAlign(
+        [
+          data1,
+          data2,
+          {
+            x: Float64Array.from(this.options.selectedMasses),
+            y: new Float64Array(this.options.selectedMasses.length).fill(1),
+          },
+        ],
+        {
+          delta: this.options.delta,
+          requiredY: true,
+        },
+      );
+    } else {
+      aligned = xyArrayAlign([data1, data2], {
+        delta: this.options.delta,
+      });
+    }
 
     if (this.options.minNbCommonPeaks) {
       let commonPeaks = 0;

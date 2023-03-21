@@ -84,7 +84,10 @@ describe('Comprator', () => {
       x: [10, 20.2, 30.2],
       y: [2, 4, 6],
     };
-    const comparator = new MSComparator({ intensityPower: 1, requiredY: true });
+    const comparator = new MSComparator({
+      intensityPower: 1,
+      selectedMasses: [10],
+    });
     expect(comparator.getSimilarity(data1, data2)).toBeCloseTo(1);
   });
 
