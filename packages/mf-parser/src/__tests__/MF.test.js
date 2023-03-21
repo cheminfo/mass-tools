@@ -29,6 +29,53 @@ describe('MF', () => {
     });
   });
 
+  it('C.C', () => {
+    let mf = new MF('C.C');
+    let parts = mf.toParts();
+
+    expect(parts).toStrictEqual([
+      [{ kind: 'atom', value: 'C', multiplier: 1 }],
+      [{ kind: 'atom', value: 'C', multiplier: 1 }],
+    ]);
+
+    let newMF = mf.toMF();
+    expect(newMF).toBe('C . C');
+
+    mf.canonize();
+    let html = mf.toHtml();
+
+    expect(html).toBe('C • C');
+
+    let info = mf.getInfo();
+
+    expect(info).toStrictEqual({
+      parts: [
+        {
+          mass: 12.010735896735248,
+          monoisotopicMass: 12,
+          charge: 0,
+          mf: 'C',
+          atoms: { C: 1 },
+          unsaturation: 2,
+        },
+        {
+          mass: 12.010735896735248,
+          monoisotopicMass: 12,
+          charge: 0,
+          mf: 'C',
+          atoms: { C: 1 },
+          unsaturation: 2,
+        },
+      ],
+      monoisotopicMass: 24,
+      mass: 24.021471793470496,
+      charge: 0,
+      unsaturation: 4,
+      atoms: { C: 2 },
+      mf: 'C.C',
+    });
+  });
+
   it('[11C][11C]', () => {
     let mf = new MF('[11C][11C]');
     let parts = mf.toParts();
@@ -158,6 +205,8 @@ describe('MF', () => {
       monoisotopicMass: 137.09712720211002,
       mass: 137.6511082393577,
       charge: 0,
+      unsaturation: 0,
+      atoms: { C: 6, H: 16, N: 1, Cl: 1 },
       mf: 'C6H15N.HCl',
     });
   });

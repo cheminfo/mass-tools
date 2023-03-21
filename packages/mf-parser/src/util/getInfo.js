@@ -32,12 +32,21 @@ export function getInfo(parts, options = {}) {
   result.monoisotopicMass = 0;
   result.mass = 0;
   result.charge = 0;
+  result.unsaturation = 0;
+  result.atoms = {};
   result.mf = result.parts.map((a) => a.mf).join('.');
-  result.parts.forEach((a) => {
-    result.mass += a.mass;
-    result.monoisotopicMass += a.monoisotopicMass;
-    result.charge += a.charge;
-  });
+  for (const part of result.parts) {
+    result.mass += part.mass;
+    result.monoisotopicMass += part.monoisotopicMass;
+    result.charge += part.charge;
+    result.unsaturation += part.unsaturation;
+    for (const atom in part.atoms) {
+      if (!result.atoms[atom]) {
+        result.atoms[atom] = 0;
+      }
+      result.atoms[atom] += part.atoms[atom];
+    }
+  }
   return result;
 }
 
