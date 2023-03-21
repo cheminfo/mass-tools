@@ -34,6 +34,10 @@ Unsaturation is based on Pretsch
 
 http://pubs.acs.org/doi/pdf/10.1021/ci000135o
 
+## Aromaticity index
+
+https://dx.doi.org/10.1002/rcm.2386
+
 ## License
 
 [MIT](./LICENSE)
