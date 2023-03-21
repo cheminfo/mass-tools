@@ -1,5 +1,17 @@
 # Changelog
 
+## [6.10.0](https://github.com/cheminfo/mass-tools/compare/v6.9.0...v6.10.0) (2023-03-21)
+
+
+### Features
+
+* add selectedMasses options in MSComparator ([31f830a](https://github.com/cheminfo/mass-tools/commit/31f830a9f25c13a5c9f1ae8d0c16318ac327b63a))
+
+
+### Bug Fixes
+
+* update dependencies ([5561677](https://github.com/cheminfo/mass-tools/commit/5561677a490ae59abe196279ce7c0e66f1537ffb))
+
 ## [6.9.0](https://github.com/cheminfo/mass-tools/compare/v6.8.0...v6.9.0) (2023-03-21)
 
 
