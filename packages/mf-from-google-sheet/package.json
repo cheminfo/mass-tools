@@ -24,6 +24,6 @@
     "mf-generator": "^2.0.4",
     "mf-parser": "^2.2.0",
     "mf-utilities": "^2.0.2",
-    "papaparse": "^5.4.0"
+    "papaparse": "^5.4.1"
   }
 }
