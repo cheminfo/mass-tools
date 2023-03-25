@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.10.1](https://github.com/cheminfo/mass-tools/compare/v6.10.0...v6.10.1) (2023-03-25)
+
+
+### Bug Fixes
+
+* update dependencies ([ea54f52](https://github.com/cheminfo/mass-tools/commit/ea54f529fb5c4683937e1264e0bdc5e9b90d90af))
+
 ## [6.10.0](https://github.com/cheminfo/mass-tools/compare/v6.9.0...v6.10.0) (2023-03-21)
 
 
