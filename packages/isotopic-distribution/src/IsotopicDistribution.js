@@ -292,6 +292,22 @@ export class IsotopicDistribution {
   }
 
   /**
+   * Returns the isotopic distirubtion
+   * @param {object} [options={}]
+   * @param {number} [options.maxValue=100]
+   * @param {number} [options.sumValue] // if sumValue is defined, maxValue is ignored
+   * @return {import('cheminfo-types').MeasurementXYVariables} an object containing at least the 2 properties: x:[] and y:[]
+   */
+  getVariables(options = {}) {
+    const xy = this.getXY(options);
+
+    return {
+      x: { data: xy.x, label: 'm/z', units: 'u' },
+      y: { data: xy.y, label: 'Relative intensity', units: '%' },
+    };
+  }
+
+  /**
    * Returns the isotopic distribution as the sum of gaussian
    * @param {object} [options={}]
    * @param {number} [options.gaussianWidth=10]

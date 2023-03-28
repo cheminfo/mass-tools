@@ -188,12 +188,19 @@ describe('test isotopicDistribution', () => {
     });
   });
 
-  it('create distribution of C10 and getXY with sumValue to 1', () => {
+  it('create distribution of C10 and getXY with sumValue to 100', () => {
     let isotopicDistribution = new IsotopicDistribution('C10');
     let xy = isotopicDistribution.getXY({ sumValue: 100 });
     expect(isotopicDistribution.confidence).toBeGreaterThan(0.99999);
     expect(xy.x[0]).toBe(120);
     expect(xy.y.reduce((previous, current) => previous + current, 0)).toBe(100);
+  });
+
+  it('create distribution of C10 and getVariables with maxValue to 100', () => {
+    let isotopicDistribution = new IsotopicDistribution('C10');
+    let variables = isotopicDistribution.getVariables();
+    expect(variables.x.data.length).toBe(6);
+    expect(Math.max(...variables.y.data)).toBe(100);
   });
 
   it('create distribution of Ru5 and getXY', () => {
