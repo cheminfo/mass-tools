@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.11.0](https://github.com/cheminfo/mass-tools/compare/v6.10.1...v6.11.0) (2023-03-28)
+
+
+### Features
+
+* **isotopic-distribution:** add getVariables method ([fc452b9](https://github.com/cheminfo/mass-tools/commit/fc452b948a7341797d5dbd14ada81d664ed8f9a6))
+
 ## [6.10.1](https://github.com/cheminfo/mass-tools/compare/v6.10.0...v6.10.1) (2023-03-25)
 
 
