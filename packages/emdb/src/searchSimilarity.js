@@ -15,11 +15,12 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @param {number}   [options.filter.precision=1000] - The precision on the experimental mass
 * @param {number}   [options.filter.minCharge=-Infinity] - Minimal charge
 * @param {number}   [options.filter.maxCharge=+Infinity] - Maximal charge
+* @param {boolean}  [options.filter.absoluteCharge=false] - If true, the charge is absolute (so between 0 and +Infinity by default)
 * @param {object}   [options.filter.unsaturation={}]
 * @param {number}   [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
 * @param {number}   [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
-* @param {boolean}   [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
-* @param {boolean}   [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
+* @param {boolean}  [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
+* @param {boolean}  [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
 * @param {object}   [options.filter.atoms] - object of atom:{min, max}
 * @param {object}   [options.filter.callback] - a function to filter the MF
 * @param {object}   [options.similarity={}]

@@ -27,6 +27,7 @@ import sum from 'sum-object-keys';
  * @param {number}        [options.filter.precision=1000] - Precision
  * @param {number}        [options.filter.minCharge=-Infinity] - Minimal charge
  * @param {number}        [options.filter.maxCharge=+Infinity] - Maximal charge
+ * @param {boolean}       [options.filter.absoluteCharge=false] - If true, the charge is absolute (so between 0 and +Infinity by default)
  * @param {boolean}       [options.filter.allowNegativeAtoms=false] - Allow to have negative number of atoms
  * @param {object}        [options.filter.unsaturation={}]
  * @param {number}        [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation

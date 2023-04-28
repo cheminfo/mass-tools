@@ -10,6 +10,7 @@ import { generalMatcher } from 'mf-matcher';
 * @param {number}   [filter.maxEM=+Infinity] - Maximal monoisotopic mass
 * @param {number}   [filter.minCharge=-Infinity] - Minimal charge
 * @param {number}   [filter.maxCharge=+Infinity] - Maximal charge
+* @param {boolean}   [filter.absoluteCharge=false] - If true, the charge is absolute (so between 0 and +Infinity by default)
 * @param {object}   [filter.unsaturation={}]
 * @param {number}   [filter.unsaturation.min=-Infinity] - Minimal unsaturation
 * @param {number}   [filter.unsaturation.max=+Infinity] - Maximal unsaturation

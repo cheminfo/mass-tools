@@ -67,6 +67,35 @@ describe('msemMatcher', () => {
     ).toBeInstanceOf(Object);
   });
 
+  it('negative charge', () => {
+    let entry = {
+      mf: 'C10',
+      em: 120,
+      charge: 0,
+      msem: 0,
+      unsaturation: 11,
+      atoms: {
+        C: 10,
+      },
+      ionization: { mf: 'Cl-', charge: -1, em: 0 },
+    };
+
+    expect(msemMatcher(entry, { minCharge: 0 })).toBe(false);
+    expect(msemMatcher(entry, { minCharge: -1 }).ms.charge).toBe(-1);
+    expect(
+      msemMatcher(entry, { minCharge: 0, absoluteCharge: true }).ms.charge,
+    ).toBe(-1);
+    expect(
+      msemMatcher(entry, { minCharge: 0, maxCharge: 0, absoluteCharge: true }),
+    ).toBe(false);
+    expect(msemMatcher(entry, { minCharge: 2, absoluteCharge: true })).toBe(
+      false,
+    );
+    expect(
+      msemMatcher(entry, { minCharge: 1, absoluteCharge: true }).ms.charge,
+    ).toBe(-1);
+  });
+
   it('forced ionization', () => {
     let entry = {
       mf: 'C10',

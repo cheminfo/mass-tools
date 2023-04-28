@@ -17,6 +17,7 @@ test('mfFilter', () => {
   expect(generalMatcher(entry, { maxCharge: -1 })).toBe(false);
   expect(generalMatcher(entry, { maxCharge: 0 })).toBe(true);
   expect(generalMatcher(entry, { minCharge: -1 })).toBe(true);
+
   expect(
     generalMatcher(entry, {
       atoms: {
@@ -46,4 +47,29 @@ test('mfFilter', () => {
       },
     }),
   ).toBe(true);
+});
+
+test('negative charge', () => {
+  let entry = {
+    mf: 'C10',
+    em: 120,
+    charge: -1,
+    msem: 0,
+    unsaturation: 11,
+  };
+
+  expect(generalMatcher(entry, { minCharge: 0 })).toBe(false);
+  expect(generalMatcher(entry, { minCharge: -1 })).toBe(true);
+  expect(generalMatcher(entry, { minCharge: 0, absoluteCharge: true })).toBe(
+    true,
+  );
+  expect(
+    generalMatcher(entry, { minCharge: 0, maxCharge: 0, absoluteCharge: true }),
+  ).toBe(false);
+  expect(generalMatcher(entry, { minCharge: 2, absoluteCharge: true })).toBe(
+    false,
+  );
+  expect(generalMatcher(entry, { minCharge: 1, absoluteCharge: true })).toBe(
+    true,
+  );
 });

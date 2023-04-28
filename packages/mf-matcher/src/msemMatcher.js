@@ -17,6 +17,7 @@ import { unsaturationMatcher } from './unsaturationMatcher.js';
  * @param {number}         [options.maxMSEM=+Infinity] - Maximal monoisotopic mass observed by mass
  * @param {number}         [options.minCharge=-Infinity] - Minimal charge
  * @param {number}         [options.maxCharge=+Infinity] - Maximal charge
+ * @param {boolean}        [options.absoluteCharge=false] - If true, the charge is absolute (so between 0 and +Infinity by default)
  * @param {boolean}        [options.allowNegativeAtoms=false] - Allow to have negative number of atoms
  * @param {object}         [options.unsaturation={}]
  * @param {number}         [options.unsaturation.min=-Infinity] - Minimal unsaturation
@@ -39,6 +40,7 @@ export function msemMatcher(entry, options = {}) {
     precision = 1000,
     minCharge = Number.MIN_SAFE_INTEGER,
     maxCharge = Number.MAX_SAFE_INTEGER,
+    absoluteCharge = false,
     unsaturation = {},
     targetMass, // if present we will calculate the errors
     targetMasses, // if present we will calculate the smallest error
@@ -69,8 +71,9 @@ export function msemMatcher(entry, options = {}) {
 
   if (targetMass && Math.abs(ms.ppm) > precision) return false;
 
-  if (entry.charge !== undefined) {
-    if (ms.charge < minCharge || ms.charge > maxCharge) return false;
+  if (ms.charge !== undefined) {
+    let charge = absoluteCharge ? Math.abs(ms.charge) : ms.charge;
+    if (charge < minCharge || charge > maxCharge) return false;
   }
   if (unsaturation !== undefined && entry.unsaturation !== undefined) {
     if (!unsaturationMatcher(entry, unsaturation)) {

@@ -10,6 +10,7 @@ import { unsaturationMatcher } from './unsaturationMatcher.js';
  * @param {number}   [options.maxEM=+Infinity] - Maximal monoisotopic mass
  * @param {number}   [options.minCharge=-Infinity] - Minimal charge
  * @param {number}   [options.maxCharge=+Infinity] - Maximal charge
+ * @param {boolean}  [options.absoluteCharge=false] - If true, the charge is absolute (so between 0 and +Infinity by default)
  * @param {object}   [options.unsaturation={}]
  * @param {number}   [options.unsaturation.min=-Infinity] - Minimal unsaturation
  * @param {number}   [options.unsaturation.max=+Infinity] - Maximal unsaturation
@@ -27,6 +28,7 @@ export function generalMatcher(entry, options = {}) {
     maxEM = +Infinity,
     minCharge = Number.MIN_SAFE_INTEGER,
     maxCharge = Number.MAX_SAFE_INTEGER,
+    absoluteCharge = false,
     unsaturation = {},
     atoms,
   } = options;
@@ -40,7 +42,8 @@ export function generalMatcher(entry, options = {}) {
   }
 
   if (entry.charge !== undefined) {
-    if (entry.charge < minCharge || entry.charge > maxCharge) return false;
+    let charge = absoluteCharge ? Math.abs(entry.charge) : entry.charge;
+    if (charge < minCharge || charge > maxCharge) return false;
   }
 
   if (unsaturation !== undefined && entry.unsaturation !== undefined) {
