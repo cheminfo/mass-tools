@@ -101,7 +101,7 @@ export function findMFsSync(targetMass, options = {}) {
     if (possibilities.length === 0) return { mfs: [] };
     targetMassCache = new TargetMassCache(targetMass, possibilities, {
       ...options,
-      ...{ charge: ionization.charge },
+      charge: ionization.charge,
     });
 
     let theEnd = false;

@@ -32,6 +32,26 @@ describe('test mf-finder', () => {
     });
   });
 
+  it('basic case with negative charge and wrong parameters', async () => {
+    let result = await findMFs(24 + 35.5, {
+      ranges: [{ mf: 'C', min: 1, max: 2 }],
+      minCharge: 1, // this is a mistake, it should not be at this level
+      precision: 1e5,
+      ionizations: 'Cl-',
+    });
+    expect(result.mfs).toHaveLength(1);
+  });
+
+  it('basic case with negative charge', async () => {
+    let result = await findMFs(24 + 35.5, {
+      ranges: [{ mf: 'C', min: 1, max: 2 }],
+      filter: { minCharge: 1 }, // this is a mistake, it should not be at this level
+      precision: 1e5,
+      ionizations: 'Cl-',
+    });
+    expect(result.mfs).toHaveLength(0);
+  });
+
   it('basic case with charge and extreme error', async () => {
     let result = await findMFs(24, {
       ranges: [{ mf: 'C', min: 1, max: 2 }],

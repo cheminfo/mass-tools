@@ -28,8 +28,7 @@ describe('TargetMassCache', () => {
   it('check the result with min, max charge', () => {
     let possibilities = preprocessRanges([{ mf: 'C+', min: -10, max: 5 }]);
     let cache = new TargetMassCache(100, possibilities, {
-      minCharge: -1,
-      maxCharge: 2,
+      filter: { minCharge: -1, maxCharge: 2 },
     });
     expect(cache.minCharge).toBe(-1);
     expect(cache.maxCharge).toBe(2);
@@ -38,8 +37,7 @@ describe('TargetMassCache', () => {
   it('check the result with neutral', () => {
     let possibilities = preprocessRanges([{ mf: 'C', min: 0, max: 2 }]);
     let cache = new TargetMassCache(100, possibilities, {
-      minCharge: -1,
-      maxCharge: 2,
+      filter: { minCharge: -1, maxCharge: 2 },
       precision: 1000,
       allowNeutral: true,
     });
@@ -53,8 +51,7 @@ describe('TargetMassCache', () => {
   it('check the result with simple charge', () => {
     let possibilities = preprocessRanges([{ mf: 'C+', min: 0, max: 2 }]);
     let cache = new TargetMassCache(100, possibilities, {
-      minCharge: -1,
-      maxCharge: 2,
+      filter: { minCharge: -1, maxCharge: 2 },
       precision: 1000,
     });
     expect(cache).toMatchObject({
@@ -75,8 +72,7 @@ describe('TargetMassCache', () => {
   it('check the result positive and negative charge', () => {
     let possibilities = preprocessRanges([{ mf: 'C+', min: -1, max: 1 }]);
     let cache = new TargetMassCache(100, possibilities, {
-      minCharge: -1,
-      maxCharge: 1,
+      filter: { minCharge: -1, maxCharge: 1 },
       allowNeutral: false,
       precision: 1e6,
     });
@@ -99,8 +95,7 @@ describe('TargetMassCache', () => {
     let possibilities = preprocessRanges([{ mf: 'C+', min: -1, max: 1 }]);
     let cache = new TargetMassCache(100, possibilities, {
       charge: 1,
-      minCharge: -1,
-      maxCharge: 1,
+      filter: { minCharge: -1, maxCharge: 1 },
       allowNeutral: false,
       precision: 1e6,
     });
