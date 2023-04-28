@@ -1,6 +1,6 @@
 {
   "name": "mf-matcher",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "description": "Returns true / false for an object using mw, em, msem, unsaturation and atoms",
   "main": "lib/index.js",
   "module": "src/index.js",

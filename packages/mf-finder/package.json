@@ -1,6 +1,6 @@
 {
   "name": "mf-finder",
-  "version": "2.2.3",
+  "version": "2.3.0",
   "description": "Find a molecular formula from a monoisotopic mass",
   "types": "mfFinder.d.ts",
   "main": "lib/index.js",
@@ -23,7 +23,7 @@
   "dependencies": {
     "atom-sorter": "^2.0.0",
     "chemical-elements": "^2.0.2",
-    "mf-matcher": "^2.0.4",
+    "mf-matcher": "^2.1.0",
     "mf-parser": "^2.2.1",
     "mf-utilities": "^2.0.3"
   }

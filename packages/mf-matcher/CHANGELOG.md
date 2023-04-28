@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/cheminfo/mass-tools/compare/mf-matcher@2.0.4...mf-matcher@2.1.0) (2023-04-28)
+
+
+### Features
+
+* **mf-matcher:** allow filtering by absolute charge ([8e45b1d](https://github.com/cheminfo/mass-tools/commit/8e45b1d98fdfa080e6c0b2fba0af1f8b1ac8121b))
+
+
+
+
+
 ## [2.0.4](https://github.com/cheminfo/mass-tools/compare/mf-matcher@2.0.3...mf-matcher@2.0.4) (2023-03-28)
 
 **Note:** Version bump only for package mf-matcher
