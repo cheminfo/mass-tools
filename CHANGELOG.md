@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.12.0](https://github.com/cheminfo/mass-tools/compare/v6.11.0...v6.12.0) (2023-04-28)
+
+
+### Features
+
+* **mf-matcher:** allow filtering by absolute charge ([8e45b1d](https://github.com/cheminfo/mass-tools/commit/8e45b1d98fdfa080e6c0b2fba0af1f8b1ac8121b))
+
 ## [6.11.0](https://github.com/cheminfo/mass-tools/compare/v6.10.1...v6.11.0) (2023-03-28)
 
 
