@@ -178,7 +178,7 @@ exports[`searchPubchem string containing more than 1 monoisotopic mass 1`] = `
     "charge": 0,
     "em": 12,
     "info": {
-      "nbPubchemEntries": 1,
+      "nbPubchemEntries": 2,
     },
     "ionization": {
       "atoms": {},

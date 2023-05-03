@@ -1,9 +1,10 @@
 import { ELECTRON_MASS } from 'chemical-elements';
-import { findMFs } from 'mf-finder';
 import { MF } from 'mf-parser';
 import { getMsInfo, preprocessIonizations } from 'mf-utilities';
 
 import { fetchJSON } from './util/fetchJSON.js';
+import { getAllowedEMs } from './util/getAllowedEMs.js';
+import { parseMassesAndMFs } from './util/parseMassesAndMFs.js';
 
 /**
  * Generates a database 'pubchem' based on all molecular formula available
@@ -16,40 +17,20 @@ import { fetchJSON } from './util/fetchJSON.js';
  * @param {string} [options.ranges=''] -
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {number} [options.minPubchemEntries=5] - Minimal number of molecules having a specific MF
- * @param {string} [options.url='https://pubchem.cheminfo.org/mfs/v1/fromEM'] - URL of the webservice
+ * @param {string} [options.url='https://octochemdb.cheminfo.org/mfs/v1/fromEM'] - URL of the webservice
  */
 
-export async function searchPubchem(masses, options = {}) {
+export async function searchPubchem(originalMasses, options = {}) {
   const {
-    url = 'https://pubchem.cheminfo.org/mfs/v1/fromEM',
+    url = 'https://octochemdb.cheminfo.org/mfs/v1/fromEM',
     precision = 1000,
     limit = 1000,
-    ranges = '',
     minPubchemEntries = 5,
   } = options;
 
-  if (typeof masses === 'number') {
-    masses = [masses];
-  }
-  if (typeof masses === 'string') {
-    masses = masses.split(/[\r\n\t,; ]+/).map(Number);
-  }
+  const masses = parseMassesAndMFs({ masses: originalMasses });
+  const allowedEMs = await getAllowedEMs({ ...options, masses }); // we prefer to use the exact mass rather than MF
 
-  let allowedEMs;
-  if (ranges) {
-    const allowedEMsArray = [];
-    for (let mass of masses) {
-      (
-        await findMFs(mass, {
-          ionizations: options.ionizations,
-          precision,
-          ranges,
-          limit: 100000,
-        })
-      ).mfs.forEach((mf) => allowedEMsArray.push(mf.em));
-    }
-    allowedEMs = Float64Array.from(allowedEMsArray).sort();
-  }
   let promises = [];
   let ionizations = preprocessIonizations(options.ionizations);
   for (let mass of masses) {

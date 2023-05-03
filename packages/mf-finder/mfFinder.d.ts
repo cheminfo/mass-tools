@@ -3,34 +3,34 @@ export type MFFinderOptions = {
    * Maximum number of iterations
    * @default 10000000
    */
-  maxIterations: number;
+  maxIterations?: number;
   /**
    * @default true
    */
-  allowNeutral: boolean;
+  allowNeutral?: boolean;
   /**
    * @default true
    */
-  uniqueMFs: boolean;
+  uniqueMFs?: boolean;
   /**
    * Maximum number of results
    * @default 1000
    */
-  limit: number;
+  limit?: number;
   /**
    *  string containing a comma separated list of modifications
    */
-  ionizations: string;
+  ionizations?: string;
   /**
    * range of mfs to search
    * @default 'C0-100 H0-100 O0-100 N0-100'
    */
-  ranges: string;
+  ranges?: string;
   /**
    * @default 100
    */
-  precision: number;
-  filter: MFrFilter;
+  precision?: number;
+  filter?: MFrFilter;
 };
 
 export type MFrFilter = {

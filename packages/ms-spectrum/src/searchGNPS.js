@@ -9,12 +9,12 @@ import { preprocessIonizations } from 'mf-utilities';
  * @param {number} [options.precision=1000] - Precision of the monoisotopic mass in ppm
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {string} [options.modifications=''] - Comma
- * @param {string} [options.url='https://pubchem.cheminfo.org/mfs/v1/fromEM'] - URL of the webservice
+ * @param {string} [options.url='https://octochemdb.cheminfo.org/mfs/v1/fromEM'] - URL of the webservice
  */
 
 export async function searchGNPS(masses, options = {}) {
   const {
-    url = 'https://octochemdb.epfl.ch/gnps/v1/fromMasses',
+    url = 'https://octochemdb.cheminfo.org/gnps/v1/fromMasses',
     precision = 100,
     limit = 1000,
   } = options;
