@@ -300,6 +300,38 @@ describe('MF', () => {
     });
   });
 
+  it('customFieldName', () => {
+    let mf = new MF('Na+.Cl-');
+
+    let info = mf.getInfo({ emFieldName: 'em', msemFieldName: 'msem' });
+    expect(info).toMatchObject({
+      parts: [
+        {
+          mass: 22.989769282,
+          charge: 1,
+          mf: 'Na(+1)',
+          em: 22.989769282,
+          msem: 22.989220702090932,
+          unsaturation: 0,
+        },
+        {
+          mass: 35.452937582608,
+          charge: -1,
+          mf: 'Cl(-1)',
+          em: 34.968852682,
+          msem: 34.96940126190907,
+          unsaturation: 1,
+        },
+      ],
+      em: 57.958621964,
+      mass: 58.442706864608,
+      charge: 0,
+      unsaturation: 1,
+      atoms: { Na: 1, Cl: 1 },
+      mf: 'Na(+1).Cl(-1)',
+    });
+  });
+
   it('unsaturation with charges', () => {
     expect(new MF('CH4').getInfo().unsaturation).toBe(0);
     expect(new MF('C10H22O').getInfo().unsaturation).toBe(0);

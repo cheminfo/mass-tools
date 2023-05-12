@@ -18,18 +18,32 @@ import { partToMF } from './partToMF';
  * @param {*} [options={}]
  */
 export function getInfo(parts, options = {}) {
-  let { customUnsaturations = {} } = options;
+  let {
+    customUnsaturations = {},
+    emFieldName = 'monoisotopicMass',
+    msemFieldName = 'observedMonoisotopicMass',
+  } = options;
   if (parts.length === 0) return {};
   if (parts.length === 1) {
-    return getProcessedPart(parts[0], customUnsaturations);
+    return getProcessedPart(parts[0], {
+      customUnsaturations,
+      emFieldName,
+      msemFieldName,
+    });
   }
 
   let result = { parts: [] };
   for (let part of parts) {
-    result.parts.push(getProcessedPart(part, customUnsaturations));
+    result.parts.push(
+      getProcessedPart(part, {
+        customUnsaturations,
+        emFieldName,
+        msemFieldName,
+      }),
+    );
   }
 
-  result.monoisotopicMass = 0;
+  result[emFieldName] = 0;
   result.mass = 0;
   result.charge = 0;
   result.unsaturation = 0;
@@ -37,7 +51,7 @@ export function getInfo(parts, options = {}) {
   result.mf = result.parts.map((a) => a.mf).join('.');
   for (const part of result.parts) {
     result.mass += part.mass;
-    result.monoisotopicMass += part.monoisotopicMass;
+    result[emFieldName] += part[emFieldName];
     result.charge += part.charge;
     result.unsaturation += part.unsaturation;
     for (const atom in part.atoms) {
@@ -50,14 +64,17 @@ export function getInfo(parts, options = {}) {
   return result;
 }
 
-function getProcessedPart(part, customUnsaturations) {
+function getProcessedPart(part, options) {
+  let { customUnsaturations, emFieldName, msemFieldName } = options;
+
   let currentPart = {
     mass: 0,
-    monoisotopicMass: 0,
     charge: 0,
     mf: '',
     atoms: partToAtoms(part),
   };
+  currentPart[emFieldName] = 0;
+
   let unsaturation = 0;
   let validUnsaturation = true;
   currentPart.mf = partToMF(part);
@@ -78,8 +95,7 @@ function getProcessedPart(part, customUnsaturations) {
           }
         }
         if (!element) throw new Error(`Unknown element: ${line.value}`);
-        currentPart.monoisotopicMass +=
-          element.monoisotopicMass * line.multiplier;
+        currentPart[emFieldName] += element.monoisotopicMass * line.multiplier;
         currentPart.mass += element.mass * line.multiplier;
         break;
       }
@@ -91,15 +107,15 @@ function getProcessedPart(part, customUnsaturations) {
             `Unknown isotope: ${line.value.isotope}${line.value.atom}`,
           );
         }
-        currentPart.monoisotopicMass += isotope.mass * line.multiplier;
+        currentPart[emFieldName] += isotope.mass * line.multiplier;
         currentPart.mass += isotope.mass * line.multiplier;
         break;
       }
       case Kind.ISOTOPE_RATIO: {
         currentElement = line.value.atom;
         let isotopeRatioInfo = getIsotopeRatioInfo(line.value);
-        currentPart.monoisotopicMass +=
-          isotopeRatioInfo.monoisotopicMass * line.multiplier;
+        currentPart[emFieldName] +=
+          isotopeRatioInfo[emFieldName] * line.multiplier;
         currentPart.mass += isotopeRatioInfo.mass * line.multiplier;
         break;
       }
@@ -125,8 +141,8 @@ function getProcessedPart(part, customUnsaturations) {
 
   // need to calculate the observedMonoisotopicMass
   if (currentPart.charge) {
-    currentPart.observedMonoisotopicMass =
-      (currentPart.monoisotopicMass - currentPart.charge * ELECTRON_MASS) /
+    currentPart[msemFieldName] =
+      (currentPart[emFieldName] - currentPart.charge * ELECTRON_MASS) /
       Math.abs(currentPart.charge);
   }
   if (validUnsaturation) {

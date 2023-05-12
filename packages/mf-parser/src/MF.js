@@ -62,6 +62,9 @@ export class MF {
    * Returns an object with the global MF, global charge, monoisotopic mass and mass
    * as well as the same information for all the parts
    * @param {object} [options={}] options
+   * @param {object} [options.customUnsaturations={}] custom unsaturations
+   * @param {string} [options.emFieldName='monoisotopicMass'] name of the monoisotopic mass field
+   * @param {string} [options.msemFieldName='observedMonoisotopicMass'] name of the observed monoisotopic mass field
    */
   getInfo(options = {}) {
     if (!this.cache.info) {
