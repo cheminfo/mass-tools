@@ -1,0 +1,31 @@
+{
+  "author": {
+    "name": "Luc Patiny"
+  },
+  "bugs": {
+    "url": "https://github.com/cheminfo/mass-tools/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Helper that allows to query the OctoChemDB webservices",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/octochemdb#readme",
+  "keywords": [],
+  "license": "MIT",
+  "name": "octochemdb",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo/mass-tools.git"
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "mf-finder": "^2.3.0",
+    "mf-parser": "^2.2.1",
+    "mf-utilities": "^2.0.3"
+  }
+}
