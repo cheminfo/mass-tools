@@ -14,8 +14,6 @@ import { search } from './search.js';
 import { searchMSEM } from './searchMSEM.js';
 import { searchSimilarity } from './searchSimilarity.js';
 
-export * from './searchPubchem.js';
-export * from './searchActivesOrNaturals.js';
 export * from './massShifts.js';
 export * from './util/fetchJSON.js';
 /**

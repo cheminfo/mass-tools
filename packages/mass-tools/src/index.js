@@ -15,9 +15,6 @@ export { IsotopicDistribution } from 'isotopic-distribution';
 EMDBPkg.EMDB.searchPubchem = EMDBPkg.searchPubchem;
 EMDBPkg.EMDB.searchActivesOrNaturals = EMDBPkg.searchActivesOrNaturals;
 EMDBPkg.EMDB.massShifts = EMDBPkg.massShifts;
-EMDBPkg.EMDB.prototype.searchPubchem = EMDBPkg.searchPubchem;
-EMDBPkg.EMDB.prototype.searchActivesOrNaturals =
-  EMDBPkg.searchActivesOrNaturals;
 EMDBPkg.EMDB.prototype.massShifts = EMDBPkg.massShifts;
 export const EMDB = EMDBPkg.EMDB;
 
@@ -33,3 +30,4 @@ export { generateMFs } from 'mf-generator';
 
 export { atomSorter } from 'atom-sorter';
 export { mfFromEA } from 'mf-from-ea';
+export { OctoChemDB } from 'octochemdb';
