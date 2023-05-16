@@ -1,23 +1,29 @@
-import { fetchJSON } from 'emdb';
 import { preprocessIonizations } from 'mf-utilities';
+
+import { fetchJSON } from './utils/fetchJSON.js';
 
 /**
  * Generates a database 'pubchem' based on all molecular formula available
  * in the database and a monoisotopic mass.
  * @param {number|string|number[]} masses - Observed monoisotopic mass
  * @param {object} [options={}]
+ * @param {string} [options.baseURL='https://octochemdb.cheminfo.org/'] - URL of the webservice
  * @param {number} [options.precision=1000] - Precision of the monoisotopic mass in ppm
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {string} [options.modifications=''] - Comma
- * @param {string} [options.url='https://octochemdb.cheminfo.org/mfs/v1/fromEM'] - URL of the webservice
+ * @param {string} [options.url='gnps/v1/fromMasses']
  */
 
-export async function searchGNPS(masses, options = {}) {
+export async function gnps(masses, options = {}) {
   const {
-    url = 'https://octochemdb.cheminfo.org/gnps/v1/fromMasses',
+    url = 'gnps/v1/fromMasses',
+    baseURL = 'https://octochemdb.cheminfo.org/',
     precision = 100,
     limit = 1000,
   } = options;
+
+  const realURL = (new URL(url, baseURL)).toString();
+
 
   const modifications = preprocessIonizations(options.modifications);
   const allResults = [];
@@ -29,7 +35,7 @@ export async function searchGNPS(masses, options = {}) {
       limit,
     }).toString();
 
-    const results = (await fetchJSON(`${url}?${searchParams}`)).data;
+    const results = (await fetchJSON(`${realURL}?${searchParams}`)).data;
     results.forEach((result) => {
       allResults.push({
         ...result,
@@ -38,5 +44,7 @@ export async function searchGNPS(masses, options = {}) {
       });
     });
   }
+
+
   return allResults;
 }

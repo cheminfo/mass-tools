@@ -12,8 +12,6 @@ export { groups, groupsObject } from 'chemical-groups';
 export { elements, elementsObject } from 'chemical-elements';
 export { IsotopicDistribution } from 'isotopic-distribution';
 
-EMDBPkg.EMDB.searchPubchem = EMDBPkg.searchPubchem;
-EMDBPkg.EMDB.searchActivesOrNaturals = EMDBPkg.searchActivesOrNaturals;
 EMDBPkg.EMDB.massShifts = EMDBPkg.massShifts;
 EMDBPkg.EMDB.prototype.massShifts = EMDBPkg.massShifts;
 export const EMDB = EMDBPkg.EMDB;
@@ -22,7 +20,6 @@ SpectrumPkg.Spectrum.JsGraph = SpectrumPkg.JsGraph;
 SpectrumPkg.Spectrum.prototype.JsGraph = SpectrumPkg.JsGraph;
 export const Spectrum = SpectrumPkg.Spectrum;
 export const MSComparator = SpectrumPkg.MSComparator;
-export const searchGNPS = SpectrumPkg.searchGNPS;
 
 export { MF, ensureCase } from 'mf-parser';
 export { preprocessRanges, getRangesForFragment } from 'mf-utilities';
