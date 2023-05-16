@@ -1,9 +1,10 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`mfsFromEM > simple case negative ionization 1`] = `
+exports[`mfsFromEM simple case negative ionization 1`] = `
 [
   {
     "_id": "C2H6N2O2S",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C2H6N2O2S",
     "data": {
       "atoms": {
         "C": 2,
@@ -48,6 +49,7 @@ exports[`mfsFromEM > simple case negative ionization 1`] = `
   },
   {
     "_id": "C4H7ClO2",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C4H7ClO2",
     "data": {
       "atoms": {
         "C": 4,
@@ -90,6 +92,7 @@ exports[`mfsFromEM > simple case negative ionization 1`] = `
   },
   {
     "_id": "C5H",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C5H",
     "data": {
       "atoms": {
         "C": 5,
@@ -129,10 +132,11 @@ exports[`mfsFromEM > simple case negative ionization 1`] = `
 ]
 `;
 
-exports[`mfsFromEM > string containing more than 1 monoisotopic mass 1`] = `
+exports[`mfsFromEM string containing more than 1 monoisotopic mass 1`] = `
 [
   {
     "_id": "C",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C",
     "data": {
       "atoms": {
         "C": 1,
@@ -167,6 +171,7 @@ exports[`mfsFromEM > string containing more than 1 monoisotopic mass 1`] = `
   },
   {
     "_id": "C2",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C2",
     "data": {
       "atoms": {
         "C": 2,
@@ -201,6 +206,7 @@ exports[`mfsFromEM > string containing more than 1 monoisotopic mass 1`] = `
   },
   {
     "_id": "C3",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C3",
     "data": {
       "atoms": {
         "C": 3,

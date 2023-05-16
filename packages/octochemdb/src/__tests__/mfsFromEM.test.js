@@ -36,7 +36,7 @@ describe('mfsFromEM', () => {
 
 
 
-  it.only('string containing more than 1 monoisotopic mass', async () => {
+  it('string containing more than 1 monoisotopic mass', async () => {
     let data = await mfsFromEM('12,24,36', {
       ionizations: '',
       precision: 10,
