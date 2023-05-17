@@ -28,11 +28,11 @@ export async function gnps(masses, options = {}) {
   const allResults = [];
   for (let modification of modifications) {
     const massShift = modification.em;
-    const searchParams = ({
+    const searchParams = {
       masses: masses.map((mass) => mass + massShift).join(','),
       precision,
       limit,
-    }).toString();
+    };
 
     const results = (await fetchJSON(realURL, searchParams)).data;
     results.forEach((result) => {
