@@ -1,5 +1,5 @@
-
 import { fetchJSON } from './utils/fetchJSON.js';
+import { postFetchJSON } from './utils/postFetchJSON.js';
 
 /**
  * Search for a specific natural or active compound using its ID
@@ -13,42 +13,47 @@ export async function activeOrNaturalDetails(id, options = {}) {
   const {
     url = 'activesOrNaturals/v1/id',
     baseURL = 'https://octochemdb.cheminfo.org/',
-    fields = '_id,data'
+    fields = '_id,data',
   } = options;
 
-  const activeOrNatural = await fetchActiveOrNatural(id, { url: (new URL(url, baseURL)).toString(), fields });
+  const activeOrNatural = await fetchActiveOrNatural(id, {
+    url: new URL(url, baseURL).toString(),
+    fields,
+  });
 
-  await appendMedline(activeOrNatural, { baseURL })
-  await appendCompounds(activeOrNatural, { baseURL })
-  await appendActivities(activeOrNatural, { baseURL })
-  await appendPatents(activeOrNatural, { baseURL })
+  await appendMedline(activeOrNatural, { baseURL });
+  await appendCompounds(activeOrNatural, { baseURL });
+  await appendActivities(activeOrNatural, { baseURL });
+  await appendPatents(activeOrNatural, { baseURL });
 
   return activeOrNatural;
 }
 
 async function fetchActiveOrNatural(id, options) {
   const { fields, url } = options;
-  const searchParams = new URLSearchParams();
-  searchParams.set('id', id);
+  const searchParams = {}
+  searchParams.id = id
   if (fields) {
-    searchParams.set('fields', fields);
+    searchParams.fields = fields
   }
-  return (await fetchJSON(`${url}?${searchParams.toString()}`)).data;
+  return (await fetchJSON(url, searchParams)).data;
 }
 
 async function appendMedline(activeOrNatural, options) {
   const { baseURL } = options;
-  const url = (new URL('pubmeds/v1/ids', baseURL)).toString()
+  const url = new URL('pubmeds/v1/ids', baseURL).toString();
 
   const pubmedIDs = activeOrNatural.data.pubmeds?.map((pubmed) => pubmed.$id);
   if (!pubmedIDs) return;
 
-  const searchParams = new URLSearchParams();
-  searchParams.set('ids', pubmedIDs.join(','));
+  const searchParams = {}
+  searchParams.ids = pubmedIDs.join(',')
   const medlines = {};
-  (await fetchJSON(`${url}?${searchParams.toString()}`)).data.forEach((medline) => {
-    medlines[medline._id] = medline.data;
-  });
+  (await fetchJSON(url, searchParams)).data.forEach(
+    (medline) => {
+      medlines[medline._id] = medline.data;
+    },
+  );
 
   for (let pubmed of activeOrNatural.data.pubmeds) {
     pubmed.data = medlines[pubmed.$id];
@@ -64,23 +69,26 @@ async function appendActivities(activeOrNatural, options) {
   const activities = {};
 
   // TODO dbRef level will be removed
-  activeOrNatural.data.activities = activeOrNatural.data.activities.map((activity) => activity.dbRef);
+  activeOrNatural.data.activities = activeOrNatural.data.activities.map(
+    (activity) => activity.dbRef,
+  );
 
   for (let activity of activeOrNatural.data.activities) {
     if (!activities[activity.$ref]) activities[activity.$ref] = [];
     activities[activity.$ref].push(activity);
   }
 
-
   for (const [collection, group] of Object.entries(activities)) {
-    const url = (new URL(`${collection}/v1/ids`, baseURL)).toString()
-    const searchParams = new URLSearchParams();
-    searchParams.set('ids', group.map(activity => activity.$id).join(','));
+    const url = new URL(`${collection}/v1/ids`, baseURL).toString();
+    const searchParams = {}
+    searchParams.ids = group.map((activity) => activity.$id).join(',')
 
     const data = {};
-    (await fetchJSON(`${url}?${searchParams.toString()}`)).data.forEach((activity) => {
-      data[activity._id] = activity.data;
-    });
+    (await fetchJSON(url, searchParams)).data.forEach(
+      (activity) => {
+        data[activity._id] = activity.data;
+      },
+    );
     for (let activity of group) {
       activity.data = data[activity.$id];
     }
@@ -93,19 +101,23 @@ async function appendActivities(activeOrNatural, options) {
 
 async function appendCompounds(activeOrNatural, options) {
   const { baseURL } = options;
-  const url = (new URL('compounds/v1/ids', baseURL)).toString()
+  const url = new URL('compounds/v1/ids', baseURL).toString();
 
   if (!activeOrNatural.data.compounds) return;
 
-  const compoundIDss = activeOrNatural.data.compounds.map((compouund) => compouund.$id);
+  const compoundIDss = activeOrNatural.data.compounds.map(
+    (compouund) => compouund.$id,
+  );
 
-  const searchParams = new URLSearchParams();
-  searchParams.set('ids', compoundIDss.join(','));
+  const searchParams = {}
+  searchParams.ids = compoundIDss.join(',')
 
   const compounds = {};
-  (await fetchJSON(`${url}?${searchParams.toString()}`)).data.forEach((compound) => {
-    compounds[compound._id] = compound.data;
-  });
+  (await fetchJSON(url, searchParams)).data.forEach(
+    (compound) => {
+      compounds[compound._id] = compound.data;
+    },
+  );
   for (let compound of activeOrNatural.data.compounds) {
     compound.data = compounds[compound.$id];
   }
@@ -118,15 +130,17 @@ async function appendPatents(activeOrNatural, options) {
 
   // activities may come from 3 different tables
 
-  const url = (new URL('patents/v1/ids', baseURL)).toString()
+  const url = new URL('patents/v1/ids', baseURL).toString();
 
   const patentsIDs = activeOrNatural.data.patents.map((patent) => patent.$id);
 
-  const searchParams = new URLSearchParams();
-  searchParams.set('ids', patentsIDs.join(','));
+  const searchParams = {}
+  searchParams.ids = patentsIDs.join(',')
 
   const patents = {};
-  (await fetchJSON(`${url}?${searchParams.toString()}`, { method: 'POST' })).data.forEach((patent) => {
+  (
+    await postFetchJSON(url, searchParams)
+  ).data.forEach((patent) => {
     patents[patent._id] = patent.data;
   });
   for (let patent of activeOrNatural.data.patents) {
@@ -140,7 +154,10 @@ function appendActivityURL(activity) {
   const id = activity.$id;
   switch (kind) {
     case 'bioassays':
-      activity.url = `https://pubchem.ncbi.nlm.nih.gov/bioassay/${id.replace(/.*_/, '')}`;
+      activity.url = `https://pubchem.ncbi.nlm.nih.gov/bioassay/${id.replace(
+        /.*_/,
+        '',
+      )}`;
       break;
     case 'npasses':
       activity.url = `http://bidd.group/NPASS/compound.php?compoundID=${id}`;
@@ -158,7 +175,7 @@ function appendActivityURL(activity) {
       activity.url = `https://www.npatlas.org/explore/compounds/${id}`;
       break;
     default:
-      console.error('Unknown activity kind, can not appendActivityURL', kind)
+      console.error('Unknown activity kind, can not appendActivityURL', kind);
       break;
   }
 }

@@ -11,7 +11,7 @@ describe('activesOrNaturalsByMF', () => {
     expect(data.length).toBeGreaterThan(2);
   });
 
-  it.only('with range', async () => {
+  it('with range', async () => {
     let entries = await activesOrNaturalsByMF({
       masses: 300.123,
       ionizations: '(H+)2, H+, Na+',
@@ -22,8 +22,10 @@ describe('activesOrNaturalsByMF', () => {
 
     expect(entries.length).toBeGreaterThan(2);
 
-
-    const nbNaturals = entries.reduce((sum, value) => sum + value.nbNaturals, 0);
+    const nbNaturals = entries.reduce(
+      (sum, value) => sum + value.nbNaturals,
+      0,
+    );
     const nbBioactives = entries.reduce(
       (sum, value) => sum + value.nbBioactives,
       0,

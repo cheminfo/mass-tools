@@ -22,20 +22,19 @@ export async function gnps(masses, options = {}) {
     limit = 1000,
   } = options;
 
-  const realURL = (new URL(url, baseURL)).toString();
-
+  const realURL = new URL(url, baseURL).toString();
 
   const modifications = preprocessIonizations(options.modifications);
   const allResults = [];
   for (let modification of modifications) {
     const massShift = modification.em;
-    const searchParams = new URLSearchParams({
+    const searchParams = ({
       masses: masses.map((mass) => mass + massShift).join(','),
       precision,
       limit,
     }).toString();
 
-    const results = (await fetchJSON(`${realURL}?${searchParams}`)).data;
+    const results = (await fetchJSON(realURL, searchParams)).data;
     results.forEach((result) => {
       allResults.push({
         ...result,
@@ -44,7 +43,6 @@ export async function gnps(masses, options = {}) {
       });
     });
   }
-
 
   return allResults;
 }

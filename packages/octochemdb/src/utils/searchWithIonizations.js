@@ -1,17 +1,24 @@
 import { ELECTRON_MASS } from 'chemical-elements';
 import { MF } from 'mf-parser';
-import { getMsInfo, preprocessIonizations } from "mf-utilities";
+import { getMsInfo, preprocessIonizations } from 'mf-utilities';
 
-import { fetchJSON } from "./fetchJSON.js";
-import { getAllowedEMs } from "./getAllowedEMs.js";
-import { parseMassesAndMFs } from "./parseMassesAndMFs.js";
+import { fetchJSON } from './fetchJSON.js';
+import { getAllowedEMs } from './getAllowedEMs.js';
+import { parseMassesAndMFs } from './parseMassesAndMFs.js';
 
 export async function searchWithIonizations(options) {
-  const { realURL, fields, precision = 100, limit = 1000, searchParams, ranges } = options
+  const {
+    realURL,
+    fields,
+    precision = 100,
+    limit = 1000,
+    searchParams,
+    ranges,
+  } = options;
 
-  searchParams.set('precision', String(precision));
-  searchParams.set('limit', String(limit));
-  if (fields) searchParams.set('fields', fields);
+  searchParams.precision = String(precision)
+  searchParams.limit = String(limit)
+  if (fields) searchParams.fields = fields
 
   let ionizations = preprocessIonizations(options.ionizations);
   const masses = parseMassesAndMFs({ masses: options.masses });
@@ -32,9 +39,9 @@ export async function searchWithIonizations(options) {
           mass * Math.abs(ionization.charge || 1) -
           ionization.em +
           ELECTRON_MASS * ionization.charge;
-        searchParams.set('em', String(realMass));
+        searchParams.em = String(realMass)
       }
-      promises.push(fetchJSON(`${realURL}?${searchParams.toString()}`));
+      promises.push(fetchJSON(realURL, searchParams));
     }
   }
   const results = await Promise.all(promises);
@@ -55,7 +62,7 @@ export async function searchWithIonizations(options) {
       try {
         entry.mfInfo = new MF(entry.data?.mf || entry._id).getInfo({
           emFieldName: 'em',
-          msemFieldName: 'msem'
+          msemFieldName: 'msem',
         });
         entry.ionization = ionization;
         entry.ms = getMsInfo(entry.mfInfo, {

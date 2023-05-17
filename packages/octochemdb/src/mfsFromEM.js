@@ -1,4 +1,3 @@
-
 import { searchWithIonizations } from './utils/searchWithIonizations.js';
 
 /**
@@ -25,25 +24,24 @@ export async function mfsFromEM(masses, options = {}) {
     minCount = 5,
   } = options;
 
-  const realURL = (new URL(url, baseURL)).toString();
+  const realURL = new URL(url, baseURL).toString();
 
-
-  const searchParams = new URLSearchParams();
-  searchParams.set('minCount', String(minCount));
+  const searchParams = {}
+  searchParams.minCount = String(minCount)
 
   const entries = await searchWithIonizations({
     ...options,
     masses,
     realURL,
     searchParams,
-  })
+  });
 
+  const realCompoundsURL = new URL(compoundsURL, baseURL).toString();
+  const searchParamsCompounds = new URLSearchParams()
 
-  const realCompoundsURL = (new URL(compoundsURL, baseURL)).toString();
-  const searchParamsCompounds = new URLSearchParams();
   for (const entry of entries) {
-    searchParamsCompounds.set('mf', String(entry._id));
-    entry.compoundsURL = `${realCompoundsURL}?${searchParamsCompounds.toString()}`
+    searchParamsCompounds.set('mf', String(entry._id))
+    entry.compoundsURL = `${realCompoundsURL}?${searchParamsCompounds.toString()}`;
   }
 
   // because we can combine many ionizations we should resort the data

@@ -19,8 +19,9 @@ import { activesOrNaturals } from './activesOrNaturals.js';
 
 export async function activesOrNaturalsByMF(options = {}) {
   const fields =
-    'data.noStereoOcl,data.mf,data.em,data.nbPatents,data.nbPubmeds,data.nbActivities,data.bioactive,data.nbMassSpectra,data.naturalProduct'.split(',')
-    ;
+    'data.noStereoOcl,data.mf,data.em,data.nbPatents,data.nbPubmeds,data.nbActivities,data.bioactive,data.nbMassSpectra,data.naturalProduct'.split(
+      ',',
+    );
   if (options.fields) fields.push(...options.fields.split(/[ ,]+/));
 
   const entries = await activesOrNaturals({

@@ -1,9 +1,8 @@
-
-import { activeOrNaturalDetails } from "./activeOrNaturalDetails.js";
-import { activesOrNaturals } from "./activesOrNaturals.js";
-import { activesOrNaturalsByMF } from "./activesOrNaturalsByMF.js";
-import { gnps } from "./gnps.js";
-import { mfsFromEM } from "./mfsFromEM.js";
+import { activeOrNaturalDetails } from './activeOrNaturalDetails.js';
+import { activesOrNaturals } from './activesOrNaturals.js';
+import { activesOrNaturalsByMF } from './activesOrNaturalsByMF.js';
+import { gnps } from './gnps.js';
+import { mfsFromEM } from './mfsFromEM.js';
 
 export class OctoChemDB {
   /**
@@ -13,7 +12,6 @@ export class OctoChemDB {
   constructor(options = {}) {
     this.baseURL = options.baseURL ?? 'https://octochemdb.cheminfo.org/';
   }
-
 
   async mfsFromEMs(masses, options = {}) {
     return mfsFromEM(masses, { baseURL: this.baseURL, ...options });
@@ -31,7 +29,7 @@ export class OctoChemDB {
     return activeOrNaturalDetails(id, { baseURL: this.baseURL, ...options });
   }
 
-  async gnps(id, options = {}) {
+  async gnps(masses, options = {}) {
     return gnps(masses, { baseURL: this.baseURL, ...options });
   }
 }

@@ -1,4 +1,3 @@
-
 import { parseMassesAndMFs } from './utils/parseMassesAndMFs.js';
 import { searchWithIonizations } from './utils/searchWithIonizations.js';
 
@@ -25,7 +24,7 @@ export async function activesOrNaturals(options = {}) {
     baseURL = 'https://octochemdb.cheminfo.org/',
   } = options;
 
-  const realURL = (new URL(url, baseURL)).toString();
+  const realURL = new URL(url, baseURL).toString();
 
   const searchParams = prepareSearchParams(options);
 
@@ -36,30 +35,25 @@ export async function activesOrNaturals(options = {}) {
     masses,
     realURL,
     searchParams,
-  })
+  });
 
   return entries;
 }
 
 function prepareSearchParams(options) {
-  const {
-    kwTaxonomies,
-    kwActiveAgainst,
-    kwBioassays,
-    kwMeshTerms,
-  } = options;
-  const searchParams = new URLSearchParams();
+  const { kwTaxonomies, kwActiveAgainst, kwBioassays, kwMeshTerms } = options;
+  const searchParams = {}
   if (kwTaxonomies) {
-    searchParams.set('kwTaxonomies', kwTaxonomies);
+    searchParams.kwTaxonomies = kwTaxonomies
   }
   if (kwActiveAgainst) {
-    searchParams.set('kwActiveAgainst', kwActiveAgainst);
+    searchParams.kwActiveAgainst = kwActiveAgainst
   }
   if (kwBioassays) {
-    searchParams.set('kwBioassays', kwBioassays);
+    searchParams.kwBioassays = kwBioassays
   }
   if (kwMeshTerms) {
-    searchParams.set('kwMeshTerms', kwMeshTerms);
+    searchParams.kwMeshTerms = kwMeshTerms
   }
   return searchParams;
 }

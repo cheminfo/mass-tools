@@ -49,14 +49,22 @@ describe('activesOrNaturals', () => {
       fields: 'data',
     });
     expect(Object.keys(data[0].data).sort()).toStrictEqual([
-      'bioactive', 'charge',
-      'compounds', 'em',
-      'kwMeshTerms', 'mf',
-      'naturalProduct', 'nbActivities',
-      'nbMassSpectra', 'nbPatents',
-      'nbPubmeds', 'nbTaxonomies',
-      'noStereoOCL', 'patents',
-      'pubmeds', 'unsaturation'
+      'bioactive',
+      'charge',
+      'compounds',
+      'em',
+      'kwMeshTerms',
+      'mf',
+      'naturalProduct',
+      'nbActivities',
+      'nbMassSpectra',
+      'nbPatents',
+      'nbPubmeds',
+      'nbTaxonomies',
+      'noStereoOCL',
+      'patents',
+      'pubmeds',
+      'unsaturation',
     ]);
   });
 });
