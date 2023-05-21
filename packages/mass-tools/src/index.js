@@ -20,6 +20,7 @@ SpectrumPkg.Spectrum.JsGraph = SpectrumPkg.JsGraph;
 SpectrumPkg.Spectrum.prototype.JsGraph = SpectrumPkg.JsGraph;
 export const Spectrum = SpectrumPkg.Spectrum;
 export const MSComparator = SpectrumPkg.MSComparator;
+export const getBestPeaks = SpectrumPkg.getBestPeaks;
 
 export { MF, ensureCase } from 'mf-parser';
 export { preprocessRanges, getRangesForFragment } from 'mf-utilities';
