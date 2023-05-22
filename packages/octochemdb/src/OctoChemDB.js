@@ -2,6 +2,8 @@ import { activeOrNaturalDetails } from './activeOrNaturalDetails.js';
 import { activesOrNaturals } from './activesOrNaturals.js';
 import { activesOrNaturalsByMF } from './activesOrNaturalsByMF.js';
 import { gnps } from './gnps.js';
+import { massBank } from './massBank.js';
+import { massSpectra } from './massSpectra.js';
 import { mfsFromEM } from './mfsFromEM.js';
 
 export class OctoChemDB {
@@ -29,7 +31,15 @@ export class OctoChemDB {
     return activeOrNaturalDetails(id, { baseURL: this.baseURL, ...options });
   }
 
-  async gnps(masses, options = {}) {
-    return gnps(masses, { baseURL: this.baseURL, ...options });
+  async gnps(options = {}) {
+    return gnps({ baseURL: this.baseURL, ...options });
+  }
+
+  async massBank(options = {}) {
+    return massBank({ baseURL: this.baseURL, ...options });
+  }
+
+  async massSpectra(options = {}) {
+    return massBank({ baseURL: this.baseURL, ...options });
   }
 }

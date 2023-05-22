@@ -29,5 +29,4 @@ test('activeOrNaturalDetails', async () => {
     'taxonomies',
     'compounds',
   ]);
-
 });

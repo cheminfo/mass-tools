@@ -11,38 +11,39 @@ import { parseMasses } from './utils/parseMasses.js';
  * @param {number} [options.precision=100] - Precision of the monoisotopic mass in ppm
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {string} [options.modifications=''] - Comma
- * @param {string} [options.url='gnps/v1/fromMasses']
- *
+ * @param {string} [options.url='massBank/v1/fromMasses']
  */
 
-export async function gnps(options = {}) {
+export async function massBank(options = {}) {
   const {
-    url = 'gnps/v1/search',
+    url = 'massBank/v1/search',
     baseURL = 'https://octochemdb.cheminfo.org/',
     precision = 100,
     limit = 1000,
     mf = "",
   } = options;
 
-  const realURL = new URL(url, baseURL).toString();
   const masses = parseMasses(options.masses)
+
+  const realURL = new URL(url, baseURL).toString();
+
   const modifications = preprocessIonizations(options.modifications);
   const allResults = [];
   for (let modification of modifications) {
     const massShift = modification.em;
     const searchParams = {
-      masses: masses && masses.map((mass) => mass + massShift).join(','),
+      masses: masses.map((mass) => mass + massShift).join(','),
       precision,
       limit,
-      mf,
+      mf
     };
-    const results = (await fetchJSON(realURL, searchParams)).data;
 
+    const results = (await fetchJSON(realURL, searchParams)).data;
     results.forEach((result) => {
       allResults.push({
         ...result,
         modification,
-        url: `https://gnps.ucsd.edu/ProteoSAFe/gnpslibraryspectrum.jsp?SpectrumID=${result._id}`,
+        url: `https://massbank.eu/MassBank/RecordDisplay?id=${result._id}`,
       });
     });
   }

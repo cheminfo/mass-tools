@@ -5,7 +5,6 @@
   "bugs": {
     "url": "https://github.com/cheminfo/mass-tools/issues"
   },
-  "bundleDependencies": false,
   "deprecated": false,
   "description": "Helper that allows to query the OctoChemDB webservices",
   "main": "lib/index.js",
@@ -24,8 +23,10 @@
   },
   "version": "1.0.0",
   "dependencies": {
+    "@orama/orama": "^1.0.0-beta.16",
     "mf-finder": "^2.3.0",
     "mf-parser": "^2.2.1",
-    "mf-utilities": "^2.0.3"
+    "mf-utilities": "^2.0.3",
+    "ms-spectrum": "^2.3.2"
   }
 }

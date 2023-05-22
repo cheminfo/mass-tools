@@ -1,4 +1,4 @@
-import { parseMassesAndMFs } from './utils/parseMassesAndMFs.js';
+import { parseMasses } from './utils/parseMasses.js';
 import { searchWithIonizations } from './utils/searchWithIonizations.js';
 
 /**
@@ -28,7 +28,7 @@ export async function activesOrNaturals(options = {}) {
 
   const searchParams = prepareSearchParams(options);
 
-  const masses = parseMassesAndMFs(options);
+  const masses = parseMasses(options.masses || [0]);
 
   const entries = await searchWithIonizations({
     ...options,

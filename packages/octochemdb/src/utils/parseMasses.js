@@ -1,5 +1,6 @@
-export function parseMassesAndMFs(options) {
-  const { masses = [0] } = options;
+export function parseMasses(masses) {
+  if (!masses) return [];
+  if (Array.isArray(masses)) return masses;
   if (typeof masses === 'number') {
     return [masses];
   }
@@ -9,5 +10,5 @@ export function parseMassesAndMFs(options) {
       .filter((value) => value)
       .map(Number);
   }
-  return masses;
+  throw new Error('Cannot parse masses');
 }

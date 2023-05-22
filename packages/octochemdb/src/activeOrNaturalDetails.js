@@ -57,6 +57,7 @@ async function appendMedline(activeOrNatural, options) {
 
   for (let pubmed of activeOrNatural.data.pubmeds) {
     pubmed.data = medlines[pubmed.$id];
+    pubmed.url = ` https://pubmed.ncbi.nlm.nih.gov/${pubmed.$id}`;
   }
 }
 

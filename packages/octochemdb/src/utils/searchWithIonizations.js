@@ -4,7 +4,7 @@ import { getMsInfo, preprocessIonizations } from 'mf-utilities';
 
 import { fetchJSON } from './fetchJSON.js';
 import { getAllowedEMs } from './getAllowedEMs.js';
-import { parseMassesAndMFs } from './parseMassesAndMFs.js';
+import { parseMasses } from './parseMasses.js';
 
 export async function searchWithIonizations(options) {
   const {
@@ -21,7 +21,7 @@ export async function searchWithIonizations(options) {
   if (fields) searchParams.fields = fields
 
   let ionizations = preprocessIonizations(options.ionizations);
-  const masses = parseMassesAndMFs({ masses: options.masses });
+  const masses = parseMasses(options.masses || [0]);
 
   // if we have ranges we need to filter the allowed EMs
   const allowedEMs = await getAllowedEMs({
