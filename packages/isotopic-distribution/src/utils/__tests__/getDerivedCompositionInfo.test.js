@@ -1,4 +1,4 @@
-const { getDerivedCompositionInfo } = require('../getDerivedCompositionInfo');
+import { getDerivedCompositionInfo } from '../getDerivedCompositionInfo';
 
 test('getDerivedCompositionInfo', () => {
   const data = {
