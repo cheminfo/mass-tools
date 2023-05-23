@@ -1,11 +1,18 @@
+import { appendAllDBRefs } from "./appendAllDBRefs.js"
 import { postFetchJSON } from "./postFetchJSON.js"
 
-
-
+/**
+ * Load the DBrefs and create a new property `data` for each DBRef
+ * @param {any} object
+ * @param {object} [options={}]
+ * @param {string[]|undefined} [options.collections] - List of collections to include
+ * @param {boolean} [options.force=false] - Force the inclusion of the data even if it is already present
+ * @param {string} [options.baseURL='https://octochemdb.cheminfo.org/'] - URL of the webservice
+ */
 export async function includeDBRefs(object, options = {}) {
   const {
     collections,
-    forceReload = false,
+    force = false,
     baseURL = 'https://octochemdb.cheminfo.org/',
   } = options
   let allDBRefs = []
@@ -13,7 +20,7 @@ export async function includeDBRefs(object, options = {}) {
   if (collections) {
     allDBRefs = allDBRefs.filter((dbRef) => collections.includes(dbRef.$ref))
   }
-  if (!forceReload) {
+  if (!force) {
     allDBRefs = allDBRefs.filter((dbRef) => !dbRef.data)
   }
   const groups = groupsByCollection(allDBRefs)
@@ -55,17 +62,3 @@ function groupsByCollection(allDBRefs) {
 
 
 
-function appendAllDBRefs(object, allDBRefs) {
-  if (Array.isArray(object)) {
-    for (let item of object) {
-      appendAllDBRefs(item, allDBRefs)
-    }
-  } else if (typeof object === 'object' && object !== null) {
-    if (object.$ref && object.$id) {
-      allDBRefs.push(object)
-    }
-    for (let key of Object.keys(object)) {
-      appendAllDBRefs(object[key], allDBRefs)
-    }
-  }
-}
