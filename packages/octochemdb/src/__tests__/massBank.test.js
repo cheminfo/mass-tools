@@ -1,6 +1,6 @@
 import { massBank } from '../massBank.js';
 
-test('massBank', () => {
+test('massBank', async () => {
   const results = await massBank({
     masses: [100, 200, 300],
     precision: 200,

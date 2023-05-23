@@ -45,6 +45,7 @@ describe('massSpectra', () => {
         experimental: { x: peaks.map(peak => peak.x), y: peaks.map(peak => peak.y) },
       } // by default minSimilarity is 0.2 but no experimental spectrum is provided so no filtering
     });
+
     expect(results.length).toBeGreaterThan(50);
     expect(results.length).toBeLessThan(200);
 

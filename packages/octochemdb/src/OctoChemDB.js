@@ -40,6 +40,6 @@ export class OctoChemDB {
   }
 
   async massSpectra(options = {}) {
-    return massBank({ baseURL: this.baseURL, ...options });
+    return massSpectra({ baseURL: this.baseURL, ...options });
   }
 }

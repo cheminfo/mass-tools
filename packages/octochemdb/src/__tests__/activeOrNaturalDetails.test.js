@@ -21,12 +21,12 @@ test('activeOrNaturalDetails', async () => {
     'nbActivities',
     'kwMeshTerms',
     'pubmeds',
-    'massSpectraRefs',
     'kwBioassays',
     'kwActiveAgainst',
     'kwTaxonomies',
     'activities',
     'taxonomies',
     'compounds',
+    'massSpectra',
   ]);
 });

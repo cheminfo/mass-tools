@@ -31,7 +31,6 @@ export async function massSpectra(options = {}) {
   } = options;
 
   let results = (await Promise.all([gnps(options), massBank(options)])).flat();
-
   results = appendAndFilterSimilarity(results, options);
   if (uniqueMolecules) {
     results = uniqueMol(results);
@@ -60,6 +59,7 @@ function appendAndFilterSimilarity(results, options = {}) {
     intensityPower = 0.6,
     minNbCommonPeaks = 0,
   } = similarity;
+
 
   const precision = Number(options.precision) / 1e6;
   const comparator = new MSComparator({
