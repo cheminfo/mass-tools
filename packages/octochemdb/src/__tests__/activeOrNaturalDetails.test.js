@@ -1,5 +1,7 @@
 import { activeOrNaturalDetails } from '../activeOrNaturalDetails.js';
 
+jest.setTimeout(30000);
+
 test('activeOrNaturalDetails', async () => {
   const id = 'dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgEx\x7FRLjmcxX~F@';
   const entry = await activeOrNaturalDetails(id, {});

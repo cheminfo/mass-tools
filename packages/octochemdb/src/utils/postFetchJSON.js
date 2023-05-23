@@ -1,4 +1,3 @@
-import crossFetch from 'cross-fetch';
 
 export async function postFetchJSON(url, data = {}) {
   const formData = new FormData();
@@ -6,9 +5,10 @@ export async function postFetchJSON(url, data = {}) {
     formData.append(name, data[name]);
   }
 
-  const result = await crossFetch(url, {
+  const result = await fetch(url, {
     method: 'POST',
     body: formData,
   });
+
   return result.json();
 }

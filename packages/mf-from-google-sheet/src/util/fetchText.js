@@ -1,8 +1,7 @@
-// eslint-disable-next-line no-shadow
-import fetch from 'cross-fetch';
+import crossFetch from 'cross-fetch';
 
 export async function fetchText(url) {
-  const result = await fetch(url);
+  const result = await crossFetch(url);
   if (result.status !== 200) {
     throw new Error(String(result.status));
   }

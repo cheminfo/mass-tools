@@ -3,6 +3,8 @@ import { join } from 'path';
 
 import { includeDBRefs } from '../includeDBRefs.js';
 
+jest.setTimeout(30000);
+
 test('includeDBRefs', async () => {
   const object = JSON.parse(
     readFileSync(join(__dirname, 'details.json'), 'utf8'),
