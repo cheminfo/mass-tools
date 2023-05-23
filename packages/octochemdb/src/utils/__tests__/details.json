@@ -1,0 +1,639 @@
+{
+  "_id": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+  "data": {
+    "naturalProduct": true,
+    "em": 193.11027872702,
+    "charge": 0,
+    "unsaturation": 5,
+    "mf": "C11H15NO2",
+    "bioactive": true,
+    "noStereoOCL": {
+      "idCode": "dg~D@MBdin]V^G[hHBjb@@",
+      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\Bm?vw__x@m?p"
+    },
+    "nbPatents": 96,
+    "patents": [
+      {
+        "$ref": "patents",
+        "$id": "US-10161929-B2",
+        "data": {
+          "title": "Theranostics platform and methods of use",
+          "abstract": "Theranostics platforms for identifying drugs and nutraceuticals for treatment of rare disease are described. The platforms comprise (a) a cell-phenotype image-enhancing instrument; (b) a drug/nutraceutical library; and (c) a computer-implemented system for analyzing a response of an optically-visible rare-disease cell phenotype to a drug or nutraceutical from the drug/nutraceutical library."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-10161929-B2"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-10656126-B2",
+        "data": {
+          "title": "Pre-analysis treatment method for sample containing plurality of components with greatly different concentrations",
+          "abstract": "A pre-analysis treatment method includes: a first retaining step of supplying, to a solid phase, each predetermined amount of the sample and a first solvent, and allowing a component at low concentration to be retained in the solid phase; a first washing step of supplying the first solvent to the solid phase and removing a component at high concentration from the solid phase; a second retaining step of supplying the sample in a smaller amount than the predetermined amount supplied in the first retaining step, and a second solvent to the solid phase, and allowing the component at high concentration to be retained in the solid phase; and an elution step of simultaneously extruding the components retained in the solid phase with an extrusion solvent."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-10656126-B2"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-11164733-B2",
+        "data": {
+          "title": "Fabrication of mass spectrometry surface",
+          "abstract": "Disclosed herein are compositions for ionizing a target and methods for making the compositions. In some embodiments, the compositions can include a structured substrate having a plurality of upright surface features, for example, microscale or nanoscale pillars, in contact with an initiator. Also disclosed herein are methods for ionizing targets."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-11164733-B2"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-2008039458-A1",
+        "data": {
+          "title": "Substituted pyrazolopyrimidines, a process for their preparation and their use as medicine",
+          "abstract": "Substituted pyrazolopyrimidine derivatives of formula (I)  n                 nwherein n     Y 1 , Y 2 , Y 3 , Y 4  represent N or C\\u2014, whereby at least two of the groups Y 1  to Y 4  represent a carbon atom, R 1  represents chloro or bromo,    R 2  to R 7  represent e.g. hydrogen, methyl or ethyl; and    R 10  and R 11  independently represent e.g. hydrogen or C 1 -C 6 alkyl, are potent mGluR5 modulators and are useful for the prevention of acute and chronic neurological disorders."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2008039458-A1"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-2009143279-A1",
+        "data": {
+          "title": "Methods and compositions for treating metabolic disorders",
+          "abstract": "The present invention provides methods of treating of disorders characterized by defective mitochondrial activity. In particular compounds of the present invention can be used in the treatment metabolic diseases and neurodegenerative diseases. The methods are also useful to increase oxidative phosphorylation or to decrease reactive oxygen species (ROS) production in a subject in need thereof."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2009143279-A1"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-2009269772-A1",
+        "data": {
+          "title": "Systems and methods for identifying combinations of compounds of therapeutic interest",
+          "abstract": "Systems, methods, and apparatus for searching for a combination of compounds of therapeutic interest are provided. Cell-based assays are performed, each cell-based assay exposing a different sample of cells to a different compound in a plurality of compounds. From the cell-based assays, a subset of the tested compounds is selected. For each respective compound in the subset, a molecular abundance profile from cells exposed to the respective compound is measured. Targets of transcription factors and post-translational modulators of transcription factor activity are inferred from the molecular abundance profile data using information theoretic measures. This data is used to construct an interaction network. Variances in edges in the interaction network are used to determine the drug activity profile of compounds in the subset of compounds. The drug activity profiles are used to form a filter set of compound combinations from the subset of compounds."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2009269772-A1"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-2011212956-A1",
+        "data": {
+          "title": "Pyrazolopyrimidines for treating CNS disorders",
+          "abstract": "Substituted pyrazolopyrimidine derivatives of formula (I) n     n       n         n         n             n             n         n       n     n     whereinn         Y 1 , Y 2 , Y 3 , Y 4  represent N or C\\u2014, whereby at least two of the groups Y 1  to Y 4  represent a carbon atom, R 1  represents chloro or bromo,   R 2  to R7 represent e.g. hydrogen, methyl or ethyl; and   R 10  and R 11  independently represent e.g. hydrogen or C 1 -C 6 alkyl,n nare potent mGluR5 modulators and are useful for the prevention of acute and chronic neurological disorders."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2011212956-A1"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-2014050694-A1",
+        "data": {
+          "title": "Method of Treating Transplant Rejection and Autoimmune Diseases",
+          "abstract": "A method of treating autoimmune diseases and transplant rejection, comprising the step of treating the autoimmune or transplant patient with an effective amount of SU-5416 is disclosed."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2014050694-A1"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-2015018240-A1",
+        "data": {
+          "title": "Theranostics platform and methods of use",
+          "abstract": "Theranostics platforms for identifying drugs and nutraceuticals for treatment of rare disease are described. The platforms comprise (a) a cell-phenotype image-enhancing instrument; (b) a drug/nutraceutical library; and (c) a computer-implemented system for analyzing a response of an optically-visible rare-disease cell phenotype to a drug or nutraceutical from the drug/nutraceutical library."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2015018240-A1"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-2015050368-A1",
+        "data": {
+          "title": "Method for producing a plant extract from desmodium and its extract thereof",
+          "abstract": "This invention relates to a method for producing a plant extract, quantified on pinitol, wherein a plant  Desmodium adscendens  is selected from the  Desmodium  family, wherein a fraction is extracted from  Desmodium  plant parts, wherein a plant extract is derived from said fraction thereof, which is remarkable in that a characterised extract is derived from  Desmodium adscendens , from which a preparation of said plant extract is quantified on pinitol."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2015050368-A1"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-2018042899-A1",
+        "data": {
+          "title": "Method of Treating Transplant Rejection and Autoimmune Diseases",
+          "abstract": "A method of treating autoimmune diseases and transplant rejection, comprising the step of treating the autoimmune or transplant patient with an effective amount of SU-5416 is disclosed."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2018042899-A1"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-2018209945-A1"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-2018254177-A1"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-3480634-A",
+        "data": {
+          "title": "1,4-dihydro-3(2h)-isoquinolones and process for their preparation"
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-3480634-A"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-5001115-A",
+        "data": {
+          "title": "Prodrugs of biologically active hydroxyaromatic compounds",
+          "abstract": "Prodrugs of bio-active hydroxyaromatic drugs having the structural formula: n     A pharmaceutically acceptable prodrug of a biologically active, therapeutically effective hydroxyaromatic drug, said prodrug being selected from the group consisting of, (A) compounds having the structural formula: n     n         DRUG--O--CR&#39;R&#34;--Z].sub.n n    n     wherein: n     DRUG --O-- is the hydroxyaromatic O-dehydro residue of said drug; n     R&#39; and R&#39; may be the same or different and may be H, alkyl, aryl or electron withdrawing groups; n     Z is a displaceable leaving group; and n     n is an integer in the range of from 1 to 3, and (B) pharmaceutically acceptable salts thereof."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-5001115-A"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-5272270-A",
+        "data": {
+          "title": "Process for the preparation of 1-alkylisoquinoline derivatives",
+          "abstract": "The invention relates to a process for the preparation of 1-alkyl-1,2,3,4-tetrahydroisoquinoline derivatives of the general formula ##STR1## The compounds can be used for the preparation of tetrahydroisoquinolines of the reticuline type, or of the norreticuline type, by reductive removal of the OH groups or, if they carry an acyl protective group on the nitrogen, for the preparation of isoquinolines of the papaverine type by acid-catalyzed hydrolysis with removal of the acyl groups and simultaneous removal of the hydroxyl groups. n     These 1-alkyl-1,2-dihydroisoquinoline derivatives can then be used for the preparation of isoquinolines of the papaverine type by aromatization by means of acids or hydrazine."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-5272270-A"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-5668131-A"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-5925642-A"
+      },
+      {
+        "$ref": "patents",
+        "$id": "US-7985753-B2",
+        "data": {
+          "title": "Substituted pyrazolo[1,5-A]pyrimidines as metabotropic glutamate receptor modulators",
+          "abstract": "Substituted pyrazolopyrimidine derivatives of formula (I) n                         nwhereinn     Y 1 , Y 2 , Y 3 , Y 4  represent N or C\\u2014, whereby at least two of the groups Y 1  to Y 4  represent a carbon atom, R 1  represents chloro or bromo,   R 2  to R 7  represent e.g. hydrogen, methyl or ethyl; and   R 10  and R 11  independently represent e.g. hydrogen or C 1 -C 6 alkyl,   are potent mGluR5 modulators and are useful for the prevention of acute and chronic neurological disorders."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-7985753-B2"
+      },
+      {
+        "$ref": "patents",
+        "$id": "AU-2007280428-B2",
+        "data": {
+          "title": "Substituted pyrazolopyrimidines, a process for their preparation and their use as medicine",
+          "abstract": "Substituted pyrazolopyrimidine derivatives of formula (I) wherein Y, Y, Y, Y represent N or C-, whereby at least two of the groups Y to Y denote a carbon atom, R represents chloro or bromo, R to R7 represent e.g. hydrogen, methyl or ethyl; and R and R independent ly represent e.g. hydrogen or C-Calkyl, are potent mGluR5 modulators and are useful for the prevention of acute and chronic neurological disorders."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/AU-2007280428-B2"
+      },
+      {
+        "$ref": "patents",
+        "$id": "AU-640259-B2",
+        "data": {
+          "title": "Process for the preparation of 1-alkylisoquinoline derivatives"
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/AU-640259-B2"
+      },
+      {
+        "$ref": "patents",
+        "$id": "BE-1020835-A5",
+        "data": {
+          "title": "METHOD FOR MANUFACTURING A PLANT EXTRACT, I.H.B. FROM DESMODIUM."
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/BE-1020835-A5"
+      },
+      {
+        "$ref": "patents",
+        "$id": "WO-9719946-A1"
+      }
+    ],
+    "cas": ["89-31-6"],
+    "nbPubmeds": 73,
+    "nbMassSpectra": 2,
+    "nbTaxonomies": 5,
+    "pubmeds": [
+      {
+        "$ref": "pubmeds",
+        "$id": "1400775"
+      }
+    ],
+    "massSpectraRefs": [
+      {
+        "$ref": "massBank",
+        "$id": "MSBNK-Washington_State_Univ-BML82135"
+      },
+      {
+        "$ref": "massBank",
+        "$id": "MSBNK-Washington_State_Univ-BML82137"
+      }
+    ],
+    "kwBioassays": [
+      "a350",
+      "assay",
+      "inhibition",
+      "mu",
+      "potency",
+      "profiling",
+      "qhts",
+      "region",
+      "spectral",
+      "spectroscopic"
+    ],
+    "kwActiveAgainst": [
+      "actinopteri",
+      "anthracis",
+      "bacillaceae",
+      "bacillales",
+      "bacilli",
+      "bacillota",
+      "bacillus",
+      "bacteria",
+      "caballus",
+      "chordata",
+      "electricus",
+      "electrophorus",
+      "equidae",
+      "equus",
+      "eukaryota",
+      "gymnotidae",
+      "gymnotiformes",
+      "hominidae",
+      "homo",
+      "mammalia",
+      "metazoa",
+      "perissodactyla",
+      "primates",
+      "sapiens"
+    ],
+    "kwTaxonomies": [
+      "eukaryota",
+      "viridiplantae",
+      "streptophyta",
+      "magnoliopsida",
+      "caryophyllales",
+      "chenopodiaceae",
+      "xylosalsola",
+      "paletzkiana",
+      "fabales",
+      "fabaceae",
+      "desmodium",
+      "adscendens",
+      "salsola",
+      "collina",
+      "richteri",
+      "cornales",
+      "cornaceae",
+      "alangium",
+      "lamarckii"
+    ],
+    "activities": [
+      {
+        "$ref": "npasses",
+        "$id": "NPC294249",
+        "data": {
+          "ocl": {
+            "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
+            "coordinates": "!BbOvw?_y?bOrw?Xa}bGvH@hc|bGvH?_x@bOp",
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@"
+          },
+          "cid": "442356",
+          "taxonomies": [
+            {
+              "superkingdom": "Eukaryota",
+              "kingdom": "Viridiplantae",
+              "phylum": "Streptophyta",
+              "class": "Magnoliopsida",
+              "order": "Caryophyllales",
+              "family": "Chenopodiaceae",
+              "genus": "Salsola",
+              "species": "Salsola collina",
+              "dbRef": {
+                "$ref": "npasses",
+                "$id": "NPC294249"
+              }
+            },
+            {
+              "superkingdom": "Eukaryota",
+              "kingdom": "Viridiplantae",
+              "phylum": "Streptophyta",
+              "class": "Magnoliopsida",
+              "order": "Caryophyllales",
+              "family": "Chenopodiaceae",
+              "genus": "Salsola",
+              "species": "Salsola collina",
+              "dbRef": {
+                "$ref": "npasses",
+                "$id": "NPC294249"
+              }
+            },
+            {
+              "superkingdom": "Eukaryota",
+              "kingdom": "Viridiplantae",
+              "phylum": "Streptophyta",
+              "class": "Magnoliopsida",
+              "order": "Caryophyllales",
+              "family": "Chenopodiaceae",
+              "genus": "Salsola",
+              "species": "Salsola collina",
+              "dbRef": {
+                "$ref": "npasses",
+                "$id": "NPC294249"
+              }
+            }
+          ],
+          "activities": [
+            {
+              "assay": "Potency : 12589.3 nM",
+              "dbRef": {
+                "$ref": "npasses",
+                "$id": "NPC294249"
+              },
+              "externalRef": "Dataset : PubChem BioAssay data set",
+              "targetTaxonomies": {
+                "superkingdom": "Bacteria",
+                "phylum": "Bacillota",
+                "class": "Bacilli",
+                "order": "Bacillales",
+                "family": "Bacillaceae",
+                "genus": "Bacillus",
+                "species": "Bacillus anthracis"
+              }
+            },
+            {
+              "assay": "Potency : 39810.7 nM",
+              "dbRef": {
+                "$ref": "npasses",
+                "$id": "NPC294249"
+              },
+              "externalRef": "Dataset : PubChem BioAssay data set",
+              "targetTaxonomies": {
+                "superkingdom": "Eukaryota",
+                "kingdom": "Metazoa",
+                "phylum": "Chordata",
+                "class": "Mammalia",
+                "order": "Primates",
+                "family": "Hominidae",
+                "genus": "Homo",
+                "species": "Homo sapiens"
+              }
+            },
+            {
+              "assay": "Potency : 19952.6 nM",
+              "dbRef": {
+                "$ref": "npasses",
+                "$id": "NPC294249"
+              },
+              "externalRef": "Dataset : PubChem BioAssay data set",
+              "targetTaxonomies": {
+                "superkingdom": "Eukaryota",
+                "kingdom": "Metazoa",
+                "phylum": "Chordata",
+                "class": "Mammalia",
+                "order": "Primates",
+                "family": "Hominidae",
+                "genus": "Homo",
+                "species": "Homo sapiens"
+              }
+            },
+            {
+              "assay": "Inhibition : 10.75 %",
+              "dbRef": {
+                "$ref": "npasses",
+                "$id": "NPC294249"
+              },
+              "externalRef": "PMID : 23062825",
+              "targetTaxonomies": {
+                "superkingdom": "Eukaryota",
+                "kingdom": "Metazoa",
+                "phylum": "Chordata",
+                "class": "Actinopteri",
+                "order": "Gymnotiformes",
+                "family": "Gymnotidae",
+                "genus": "Electrophorus",
+                "species": "Electrophorus electricus"
+              }
+            },
+            {
+              "assay": "Inhibition : -4.77 %",
+              "dbRef": {
+                "$ref": "npasses",
+                "$id": "NPC294249"
+              },
+              "externalRef": "PMID : 23062825",
+              "targetTaxonomies": {
+                "superkingdom": "Eukaryota",
+                "kingdom": "Metazoa",
+                "phylum": "Chordata",
+                "class": "Mammalia",
+                "order": "Perissodactyla",
+                "family": "Equidae",
+                "genus": "Equus",
+                "species": "Equus caballus"
+              }
+            }
+          ]
+        },
+        "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249"
+      },
+      {
+        "$ref": "bioassays",
+        "$id": "442356_589",
+        "data": {
+          "cid": 442356,
+          "aid": 589,
+          "assay": "qHTS Assay for Spectroscopic Profiling in 4-MU Spectral Region",
+          "ocl": {
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
+            "noStereoID": "dg~D@MBdin]V^G[hHBjb@@"
+          }
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/bioassay/589"
+      },
+      {
+        "$ref": "bioassays",
+        "$id": "442356_590",
+        "data": {
+          "cid": 442356,
+          "aid": 590,
+          "assay": "qHTS Assay for Spectroscopic Profiling in A350 Spectral Region",
+          "ocl": {
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
+            "noStereoID": "dg~D@MBdin]V^G[hHBjb@@"
+          }
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/bioassay/590"
+      }
+    ],
+    "taxonomies": [
+      {
+        "superkingdom": "Eukaryota",
+        "kingdom": "Viridiplantae",
+        "phylum": "Streptophyta",
+        "class": "Magnoliopsida",
+        "order": "Caryophyllales",
+        "family": "Chenopodiaceae",
+        "genus": "Xylosalsola",
+        "species": "Xylosalsola paletzkiana",
+        "dbRef": {
+          "$ref": "lotuses",
+          "$id": "LTS0005803"
+        }
+      },
+      {
+        "superkingdom": "Eukaryota",
+        "kingdom": "Viridiplantae",
+        "phylum": "Streptophyta",
+        "class": "Magnoliopsida",
+        "order": "Fabales",
+        "family": "Fabaceae",
+        "genus": "Desmodium",
+        "species": "Desmodium adscendens",
+        "dbRef": {
+          "$ref": "lotuses",
+          "$id": "LTS0064081"
+        }
+      },
+      {
+        "superkingdom": "Eukaryota",
+        "kingdom": "Viridiplantae",
+        "phylum": "Streptophyta",
+        "class": "Magnoliopsida",
+        "order": "Caryophyllales",
+        "family": "Chenopodiaceae",
+        "genus": "Salsola",
+        "species": "Salsola collina",
+        "dbRef": {
+          "$ref": "npasses",
+          "$id": "NPC294249"
+        }
+      },
+      {
+        "superkingdom": "Eukaryota",
+        "kingdom": "Viridiplantae",
+        "phylum": "Streptophyta",
+        "class": "Magnoliopsida",
+        "order": "Caryophyllales",
+        "family": "Chenopodiaceae",
+        "genus": "Salsola",
+        "species": "Salsola richteri",
+        "dbRef": {
+          "$ref": "coconuts",
+          "$id": "CNP0237841"
+        }
+      },
+      {
+        "superkingdom": "Eukaryota",
+        "kingdom": "Viridiplantae",
+        "phylum": "Streptophyta",
+        "class": "Magnoliopsida",
+        "order": "Cornales",
+        "family": "Cornaceae",
+        "genus": "Alangium",
+        "species": "Alangium lamarckii",
+        "dbRef": {
+          "$ref": "coconuts",
+          "$id": "CNP0237841"
+        }
+      }
+    ],
+    "compounds": [
+      {
+        "$ref": "compounds",
+        "$id": 40010,
+        "data": {
+          "ocl": {
+            "idCode": "dg~D@MBdin]V^G[hHBjbbT@",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
+            "index": [138428489],
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "acceptorCount": 3,
+            "donorCount": 2,
+            "logP": 1.5439999848604202,
+            "logS": -1.6339999437332153,
+            "polarSurfaceArea": 41.48999881744385,
+            "rotatableBondCount": 1,
+            "stereoCenterCount": 1
+          },
+          "mf": "C11H15NO2",
+          "em": 193.11027872702,
+          "charge": 0,
+          "mw": 193.24271923500675,
+          "nbFragments": 1,
+          "unsaturation": 5,
+          "inchi": "InChI=1S/C11H15NO2/c1-7-9-6-11(14-2)10(13)5-8(9)3-4-12-7/h5-7,12-13H,3-4H2,1-2H3/t7-/m1/s1",
+          "inchiKey": "YTPRLBGPGZHUPD-SSDOTTSWSA-N",
+          "iupac": "(1R)-7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol",
+          "molfile": "40010\n  -OEChem-03172303102D\n\n 29 30  0     1  0  0  0  0  0999 V2000\n    2.0000   -0.7927    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000    1.2073    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3981   -0.3135    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4920   -0.8274    0.0000 C   0  0  1  0  0  0  0  0  0  0  0  0\n    4.5981   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5981    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4920    1.2420    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3981    0.7281    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4804   -1.8273    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320   -0.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320    1.2073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8660   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8660    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000   -1.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.0259   -1.1425    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.8856    1.7210    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0874    1.7118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.0089    0.6220    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.6071    1.3118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9338   -0.6256    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8605   -1.8201    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4733   -2.4473    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1004   -1.8345    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320   -1.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3800   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000   -2.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6200   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1 12  1  0  0  0  0\n  1 14  1  0  0  0  0\n  2 13  1  0  0  0  0\n  2 26  1  0  0  0  0\n  3  4  1  0  0  0  0\n  3  8  1  0  0  0  0\n  3 20  1  0  0  0  0\n  4  5  1  0  0  0  0\n  4  9  1  6  0  0  0\n  4 15  1  0  0  0  0\n  5  6  1  0  0  0  0\n  5 10  2  0  0  0  0\n  6  7  1  0  0  0  0\n  6 11  2  0  0  0  0\n  7  8  1  0  0  0  0\n  7 16  1  0  0  0  0\n  7 17  1  0  0  0  0\n  8 18  1  0  0  0  0\n  8 19  1  0  0  0  0\n  9 21  1  0  0  0  0\n  9 22  1  0  0  0  0\n  9 23  1  0  0  0  0\n 10 12  1  0  0  0  0\n 10 24  1  0  0  0  0\n 11 13  1  0  0  0  0\n 11 25  1  0  0  0  0\n 12 13  2  0  0  0  0\n 14 27  1  0  0  0  0\n 14 28  1  0  0  0  0\n 14 29  1  0  0  0  0\nM  END\n",
+          "atoms": {
+            "C": 11,
+            "H": 15,
+            "N": 1,
+            "O": 2
+          }
+        }
+      },
+      {
+        "$ref": "compounds",
+        "$id": 46695,
+        "data": {
+          "ocl": {
+            "idCode": "dg~D@MBdin]V^G[hHBjb@@",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
+            "index": [138428489],
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "acceptorCount": 3,
+            "donorCount": 2,
+            "logP": 1.5439999848604202,
+            "logS": -1.6339999437332153,
+            "polarSurfaceArea": 41.48999881744385,
+            "rotatableBondCount": 1,
+            "stereoCenterCount": 1
+          },
+          "mf": "C11H15NO2",
+          "em": 193.11027872702,
+          "charge": 0,
+          "mw": 193.24271923500675,
+          "nbFragments": 1,
+          "unsaturation": 5,
+          "inchi": "InChI=1S/C11H15NO2/c1-7-9-6-11(14-2)10(13)5-8(9)3-4-12-7/h5-7,12-13H,3-4H2,1-2H3",
+          "inchiKey": "YTPRLBGPGZHUPD-UHFFFAOYSA-N",
+          "iupac": "7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol",
+          "molfile": "46695\n  -OEChem-03172303102D\n\n 29 30  0     1  0  0  0  0  0999 V2000\n    2.0000   -0.7927    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000    1.2073    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3981   -0.3135    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4920   -0.8274    0.0000 C   0  0  3  0  0  0  0  0  0  0  0  0\n    4.5981   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5981    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4920    1.2420    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3981    0.7281    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4804   -1.8273    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320   -0.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320    1.2073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8660   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8660    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000   -1.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.0259   -1.1425    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.8856    1.7210    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0874    1.7118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.0089    0.6220    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.6071    1.3118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9338   -0.6256    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8605   -1.8201    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4733   -2.4473    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1004   -1.8345    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320   -1.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3800   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000   -2.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6200   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1 12  1  0  0  0  0\n  1 14  1  0  0  0  0\n  2 13  1  0  0  0  0\n  2 26  1  0  0  0  0\n  3  4  1  0  0  0  0\n  3  8  1  0  0  0  0\n  3 20  1  0  0  0  0\n  4  5  1  0  0  0  0\n  4  9  1  0  0  0  0\n  4 15  1  0  0  0  0\n  5  6  1  0  0  0  0\n  5 10  2  0  0  0  0\n  6  7  1  0  0  0  0\n  6 11  2  0  0  0  0\n  7  8  1  0  0  0  0\n  7 16  1  0  0  0  0\n  7 17  1  0  0  0  0\n  8 18  1  0  0  0  0\n  8 19  1  0  0  0  0\n  9 21  1  0  0  0  0\n  9 22  1  0  0  0  0\n  9 23  1  0  0  0  0\n 10 12  1  0  0  0  0\n 10 24  1  0  0  0  0\n 11 13  1  0  0  0  0\n 11 25  1  0  0  0  0\n 12 13  2  0  0  0  0\n 14 27  1  0  0  0  0\n 14 28  1  0  0  0  0\n 14 29  1  0  0  0  0\nM  END\n",
+          "atoms": {
+            "C": 11,
+            "H": 15,
+            "N": 1,
+            "O": 2
+          }
+        }
+      },
+      {
+        "$ref": "compounds",
+        "$id": 442356,
+        "data": {
+          "ocl": {
+            "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
+            "index": [
+              -1057975, -1773066496, 813777542, 1098920065, -2137647040,
+              268448322, -1321147900, -2147480172, 150995008, 2170896, 73569282,
+              2139152, 67592, 131587, 68485138, 25722948
+            ],
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "acceptorCount": 3,
+            "donorCount": 2,
+            "logP": 1.5439999848604202,
+            "logS": -1.6339999437332153,
+            "polarSurfaceArea": 41.48999881744385,
+            "rotatableBondCount": 1,
+            "stereoCenterCount": 1
+          },
+          "mf": "C11H15NO2",
+          "em": 193.11027872702,
+          "charge": 0,
+          "mw": 193.24271923500675,
+          "nbFragments": 1,
+          "unsaturation": 5,
+          "inchi": "InChI=1S/C11H15NO2/c1-7-9-6-11(14-2)10(13)5-8(9)3-4-12-7/h5-7,12-13H,3-4H2,1-2H3/t7-/m0/s1",
+          "inchiKey": "YTPRLBGPGZHUPD-ZETCQYMHSA-N",
+          "iupac": "(1S)-7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol",
+          "molfile": "442356\n  -OEChem-03172303402D\n\n 29 30  0     1  0  0  0  0  0999 V2000\n    2.0000   -0.7927    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000    1.2073    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3981   -0.3135    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4920   -0.8274    0.0000 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.5981   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5981    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4920    1.2420    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3981    0.7281    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4804   -1.8273    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320   -0.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320    1.2073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8660   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8660    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000   -1.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.0259   -1.1425    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.8856    1.7210    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0874    1.7118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.0089    0.6220    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.6071    1.3118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9338   -0.6256    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8605   -1.8201    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4733   -2.4473    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1004   -1.8345    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320   -1.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3800   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000   -2.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6200   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1 12  1  0  0  0  0\n  1 14  1  0  0  0  0\n  2 13  1  0  0  0  0\n  2 26  1  0  0  0  0\n  3  4  1  0  0  0  0\n  3  8  1  0  0  0  0\n  3 20  1  0  0  0  0\n  4  5  1  0  0  0  0\n  4  9  1  1  0  0  0\n  4 15  1  0  0  0  0\n  5  6  1  0  0  0  0\n  5 10  2  0  0  0  0\n  6  7  1  0  0  0  0\n  6 11  2  0  0  0  0\n  7  8  1  0  0  0  0\n  7 16  1  0  0  0  0\n  7 17  1  0  0  0  0\n  8 18  1  0  0  0  0\n  8 19  1  0  0  0  0\n  9 21  1  0  0  0  0\n  9 22  1  0  0  0  0\n  9 23  1  0  0  0  0\n 10 12  1  0  0  0  0\n 10 24  1  0  0  0  0\n 11 13  1  0  0  0  0\n 11 25  1  0  0  0  0\n 12 13  2  0  0  0  0\n 14 27  1  0  0  0  0\n 14 28  1  0  0  0  0\n 14 29  1  0  0  0  0\nM  END\n",
+          "atoms": {
+            "C": 11,
+            "H": 15,
+            "N": 1,
+            "O": 2
+          }
+        }
+      }
+    ]
+  }
+}
