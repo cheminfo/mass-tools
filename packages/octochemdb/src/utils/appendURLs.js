@@ -1,35 +1,31 @@
-
-import { appendAllDBRefs } from "./appendAllDBRefs.js"
+import { appendAllDBRefs } from './appendAllDBRefs.js';
 
 export async function appendURLs(object, options = {}) {
-  const {
-    collections,
-    force = false,
-  } = options
+  const { collections, force = false } = options;
 
-  let allDBRefs = []
+  let allDBRefs = [];
 
-  appendAllDBRefs(object, allDBRefs)
+  appendAllDBRefs(object, allDBRefs);
   if (collections) {
-    allDBRefs = allDBRefs.filter((dbRef) => collections.includes(dbRef.$ref))
+    allDBRefs = allDBRefs.filter((dbRef) => collections.includes(dbRef.$ref));
   }
   if (!force) {
-    allDBRefs = allDBRefs.filter((dbRef) => !dbRef.url)
+    allDBRefs = allDBRefs.filter((dbRef) => !dbRef.url);
   }
 
-  const unknowns = {}
+  const unknowns = {};
 
   for (const entry of allDBRefs) {
     switch (entry.$ref) {
       case 'compounds':
         entry.url = `https://pubchem.ncbi.nlm.nih.gov/compound/${entry.$id}`;
-        break
+        break;
       case 'pubmeds':
         entry.url = `https://pubmed.ncbi.nlm.nih.gov/${entry.$id}`;
-        break
+        break;
       case 'gnps':
         entry.url = `https://gnps.ucsd.edu/ProteoSAFe/gnpslibraryspectrum.jsp?SpectrumID=${entry.$id}`;
-        break
+        break;
       case 'patents':
         entry.url = `https://pubchem.ncbi.nlm.nih.gov/patent/${entry.$id}`;
         break;
@@ -58,13 +54,15 @@ export async function appendURLs(object, options = {}) {
         entry.url = `https://massbank.eu/MassBank/RecordDisplay?id=${entry.$id}`;
         break;
       default:
-        unknowns[entry.$ref] = true
+        unknowns[entry.$ref] = true;
         break;
     }
-
   }
   if (Object.keys(unknowns).length) {
-    console.log('Unknown url to original data for the following collections: ', unknowns)
+    // eslint-disable-next-line no-console
+    console.error(
+      'Unknown url to original data for the following collections: ',
+      unknowns,
+    );
   }
 }
-

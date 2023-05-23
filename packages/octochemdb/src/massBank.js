@@ -20,10 +20,10 @@ export async function massBank(options = {}) {
     baseURL = 'https://octochemdb.cheminfo.org/',
     precision = 100,
     limit = 1000,
-    mf = "",
+    mf = '',
   } = options;
 
-  const masses = parseMasses(options.masses)
+  const masses = parseMasses(options.masses);
 
   const realURL = new URL(url, baseURL).toString();
 
@@ -35,7 +35,7 @@ export async function massBank(options = {}) {
       masses: masses.map((mass) => mass + massShift).join(','),
       precision,
       limit,
-      mf
+      mf,
     };
 
     const results = (await fetchJSON(realURL, searchParams)).data;

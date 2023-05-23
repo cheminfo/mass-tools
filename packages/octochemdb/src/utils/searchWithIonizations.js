@@ -16,9 +16,9 @@ export async function searchWithIonizations(options) {
     ranges,
   } = options;
 
-  searchParams.precision = String(precision)
-  searchParams.limit = String(limit)
-  if (fields) searchParams.fields = fields
+  searchParams.precision = String(precision);
+  searchParams.limit = String(limit);
+  if (fields) searchParams.fields = fields;
 
   let ionizations = preprocessIonizations(options.ionizations);
   const masses = parseMasses(options.masses || [0]);
@@ -39,7 +39,7 @@ export async function searchWithIonizations(options) {
           mass * Math.abs(ionization.charge || 1) -
           ionization.em +
           ELECTRON_MASS * ionization.charge;
-        searchParams.em = String(realMass)
+        searchParams.em = String(realMass);
       }
       promises.push(fetchJSON(realURL, searchParams));
     }

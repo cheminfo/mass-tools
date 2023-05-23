@@ -1,7 +1,3 @@
-
-export async function activeOrNaturalSummarize(entry, options = {}) {
-
-
-  return entry
-
+export async function activeOrNaturalSummarize(entry) {
+  return entry;
 }

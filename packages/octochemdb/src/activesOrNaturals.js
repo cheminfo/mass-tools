@@ -27,7 +27,7 @@ export async function activesOrNaturals(options = {}) {
   const {
     url = 'activesOrNaturals/v1/search',
     baseURL = 'https://octochemdb.cheminfo.org/',
-    includes
+    includes,
   } = options;
 
   const realURL = new URL(url, baseURL).toString();
@@ -52,25 +52,32 @@ export async function activesOrNaturals(options = {}) {
 }
 
 function prepareSearchParams(options) {
-  const { kwTaxonomies, kwActiveAgainst, kwBioassays, kwMeshTerms, mf, minNbMassSpectra } = options;
-  const searchParams = {}
+  const {
+    kwTaxonomies,
+    kwActiveAgainst,
+    kwBioassays,
+    kwMeshTerms,
+    mf,
+    minNbMassSpectra,
+  } = options;
+  const searchParams = {};
   if (kwTaxonomies) {
-    searchParams.kwTaxonomies = kwTaxonomies
+    searchParams.kwTaxonomies = kwTaxonomies;
   }
   if (kwActiveAgainst) {
-    searchParams.kwActiveAgainst = kwActiveAgainst
+    searchParams.kwActiveAgainst = kwActiveAgainst;
   }
   if (kwBioassays) {
-    searchParams.kwBioassays = kwBioassays
+    searchParams.kwBioassays = kwBioassays;
   }
   if (kwMeshTerms) {
-    searchParams.kwMeshTerms = kwMeshTerms
+    searchParams.kwMeshTerms = kwMeshTerms;
   }
   if (mf) {
-    searchParams.mf = mf
+    searchParams.mf = mf;
   }
   if (minNbMassSpectra) {
-    searchParams.minNbMassSpectra = minNbMassSpectra
+    searchParams.minNbMassSpectra = minNbMassSpectra;
   }
   return searchParams;
 }

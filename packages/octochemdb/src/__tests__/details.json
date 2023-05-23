@@ -733,9 +733,7 @@
         "url": "https://pubchem.ncbi.nlm.nih.gov/patent/WO-9719946-A1"
       }
     ],
-    "cas": [
-      "89-31-6"
-    ],
+    "cas": ["89-31-6"],
     "nbPubmeds": 73,
     "nbMassSpectra": 2,
     "nbTaxonomies": 5,
@@ -2672,10 +2670,7 @@
             ],
             "languageTextSearch": "english",
             "language": "eng",
-            "publicationTypeList": [
-              "Comparative Study",
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Comparative Study", "Journal Article"]
           },
           "chemicals": [
             {
@@ -4383,9 +4378,7 @@
             ],
             "languageTextSearch": "english",
             "language": "eng",
-            "publicationTypeList": [
-              "Editorial"
-            ]
+            "publicationTypeList": ["Editorial"]
           },
           "chemicals": [
             {
@@ -6745,9 +6738,7 @@
             ],
             "languageTextSearch": "english",
             "language": "eng",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -6900,9 +6891,7 @@
             ],
             "languageTextSearch": "english",
             "language": "eng",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -7186,9 +7175,7 @@
             ],
             "languageTextSearch": "english",
             "language": "eng",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -7902,10 +7889,7 @@
               }
             ],
             "language": "jpn",
-            "publicationTypeList": [
-              "English Abstract",
-              "Journal Article"
-            ]
+            "publicationTypeList": ["English Abstract", "Journal Article"]
           },
           "chemicals": [
             {
@@ -9159,9 +9143,7 @@
             ],
             "languageTextSearch": "english",
             "language": "eng",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -9314,9 +9296,7 @@
             ],
             "languageTextSearch": "english",
             "language": "eng",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -9452,9 +9432,7 @@
             ],
             "languageTextSearch": "russian",
             "language": "rus",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -9555,9 +9533,7 @@
             ],
             "languageTextSearch": "russian",
             "language": "rus",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -9678,9 +9654,7 @@
             ],
             "languageTextSearch": "russian",
             "language": "rus",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -9800,9 +9774,7 @@
             ],
             "languageTextSearch": "russian",
             "language": "rus",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -9912,9 +9884,7 @@
             ],
             "languageTextSearch": "russian",
             "language": "rus",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -10100,9 +10070,7 @@
             ],
             "languageTextSearch": "russian",
             "language": "rus",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -10252,9 +10220,7 @@
             ],
             "languageTextSearch": "russian",
             "language": "rus",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -10632,9 +10598,7 @@
             ],
             "languageTextSearch": "english",
             "language": "eng",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -10996,9 +10960,7 @@
             ],
             "languageTextSearch": "english",
             "language": "eng",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -11386,10 +11348,7 @@
               }
             ],
             "language": "chi",
-            "publicationTypeList": [
-              "English Abstract",
-              "Journal Article"
-            ]
+            "publicationTypeList": ["English Abstract", "Journal Article"]
           },
           "chemicals": [
             {
@@ -12084,10 +12043,7 @@
             ],
             "languageTextSearch": "english",
             "language": "eng",
-            "publicationTypeList": [
-              "Journal Article",
-              "Review"
-            ]
+            "publicationTypeList": ["Journal Article", "Review"]
           },
           "chemicals": [
             {
@@ -12537,9 +12493,7 @@
             ],
             "languageTextSearch": "english",
             "language": "eng",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -12668,9 +12622,7 @@
             ],
             "languageTextSearch": "english",
             "language": "eng",
-            "publicationTypeList": [
-              "Journal Article"
-            ]
+            "publicationTypeList": ["Journal Article"]
           },
           "chemicals": [
             {
@@ -17412,9 +17364,7 @@
             ],
             "languageTextSearch": "english",
             "language": "eng",
-            "publicationTypeList": [
-              "Journal Article"
-            ],
+            "publicationTypeList": ["Journal Article"],
             "doi": "10.1093/abbs/gmz073"
           },
           "chemicals": [
@@ -17865,9 +17815,7 @@
           "ocl": {
             "idCode": "dg~D@MBdin]V^G[hHBjbbT@",
             "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
-            "index": [
-              138428489
-            ],
+            "index": [138428489],
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
             "acceptorCount": 3,
             "donorCount": 2,
@@ -17902,9 +17850,7 @@
           "ocl": {
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
-            "index": [
-              138428489
-            ],
+            "index": [138428489],
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
             "acceptorCount": 3,
             "donorCount": 2,
@@ -17940,22 +17886,9 @@
             "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
             "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "index": [
-              -1057975,
-              -1773066496,
-              813777542,
-              1098920065,
-              -2137647040,
-              268448322,
-              -1321147900,
-              -2147480172,
-              150995008,
-              2170896,
-              73569282,
-              2139152,
-              67592,
-              131587,
-              68485138,
-              25722948
+              -1057975, -1773066496, 813777542, 1098920065, -2137647040,
+              268448322, -1321147900, -2147480172, 150995008, 2170896, 73569282,
+              2139152, 67592, 131587, 68485138, 25722948
             ],
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
             "acceptorCount": 3,

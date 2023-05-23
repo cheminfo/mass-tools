@@ -1,5 +1,3 @@
-
-
 /**
  * This method will retrieve similar mass spectra
  * @param {object} [options={}]
@@ -21,14 +19,11 @@
 
 import { MSComparator } from 'ms-spectrum';
 
-import { gnps } from "./gnps.js";
-import { massBank } from "./massBank.js";
-
+import { gnps } from './gnps.js';
+import { massBank } from './massBank.js';
 
 export async function massSpectra(options = {}) {
-  const {
-    uniqueMolecules = true,
-  } = options;
+  const { uniqueMolecules = true } = options;
 
   let results = (await Promise.all([gnps(options), massBank(options)])).flat();
   results = appendAndFilterSimilarity(results, options);
@@ -52,14 +47,14 @@ function appendAndFilterSimilarity(results, options = {}) {
   const { similarity } = options;
   if (!similarity || !similarity.experimental) return results;
 
-  const { experimental,
+  const {
+    experimental,
     nbPeaks = 5,
     massPower = 1,
     minSimilarity = 0.2,
     intensityPower = 0.6,
     minNbCommonPeaks = 0,
   } = similarity;
-
 
   const precision = Number(options.precision) / 1e6;
   const comparator = new MSComparator({
@@ -70,10 +65,12 @@ function appendAndFilterSimilarity(results, options = {}) {
     minNbCommonPeaks,
   });
   for (const result of results) {
-    result.similarity = comparator.getSimilarity(experimental, JSON.parse(JSON.stringify(result.data.spectrum.data)));
+    result.similarity = comparator.getSimilarity(
+      experimental,
+      JSON.parse(JSON.stringify(result.data.spectrum.data)),
+    );
   }
   results = results.filter((a) => a.similarity >= minSimilarity);
   results.sort((a, b) => b.similarity - a.similarity);
-  return results
+  return results;
 }
-

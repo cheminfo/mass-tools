@@ -21,11 +21,11 @@ export async function gnps(options = {}) {
     baseURL = 'https://octochemdb.cheminfo.org/',
     precision = 100,
     limit = 1000,
-    mf = "",
+    mf = '',
   } = options;
 
   const realURL = new URL(url, baseURL).toString();
-  const masses = parseMasses(options.masses)
+  const masses = parseMasses(options.masses);
   const modifications = preprocessIonizations(options.modifications);
   const allResults = [];
   for (let modification of modifications) {

@@ -1,6 +1,6 @@
 import { appendURLs } from './utils/appendURLs.js';
 import { fetchJSON } from './utils/fetchJSON.js';
-import { includeDBRefs } from './utils/includeDBRefs.js'
+import { includeDBRefs } from './utils/includeDBRefs.js';
 /**
  * Search for a specific natural or active compound using its ID
  * @param {object} [options={}]
@@ -21,18 +21,18 @@ export async function activeOrNaturalDetails(id, options = {}) {
     fields,
   });
 
-  await includeDBRefs(activeOrNatural, { baseURL })
-  appendURLs(activeOrNatural)
+  await includeDBRefs(activeOrNatural, { baseURL });
+  appendURLs(activeOrNatural);
 
-  return activeOrNatural
+  return activeOrNatural;
 }
 
 async function fetchActiveOrNatural(id, options) {
   const { fields, url } = options;
-  const searchParams = {}
-  searchParams.id = id
+  const searchParams = {};
+  searchParams.id = id;
   if (fields) {
-    searchParams.fields = fields
+    searchParams.fields = fields;
   }
   return (await fetchJSON(url, searchParams)).data;
 }
