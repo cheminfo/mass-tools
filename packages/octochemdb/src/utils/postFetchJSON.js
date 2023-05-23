@@ -1,4 +1,3 @@
-
 export async function postFetchJSON(url, data = {}) {
   const formData = new FormData();
   for (const name in data) {

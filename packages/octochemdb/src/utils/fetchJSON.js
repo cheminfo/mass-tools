@@ -1,4 +1,3 @@
-
 export async function fetchJSON(url, data) {
   if (data) {
     const searchParams = new URLSearchParams(data);
