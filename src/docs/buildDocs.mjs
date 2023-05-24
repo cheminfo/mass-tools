@@ -34,6 +34,7 @@ html += `
     </tr>
   </thead>`;
 for (let source of sources) {
+  if (source.startsWith('.')) continue;
   const projectPackage = JSON.parse(
     readFileSync(join(sourceURL, source, 'package.json'), {
       encoding: 'utf-8',
