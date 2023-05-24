@@ -48,6 +48,16 @@ export async function activesOrNaturals(options = {}) {
   }
   appendURLs(entries);
 
+  entries.sort((a, b) => {
+    if (a.data.nbMassSpectra > b.data.nbMassSpectra) return -1;
+    if (a.data.nbMassSpectra < b.data.nbMassSpectra) return 1;
+    if (a.data.nbPubmeds > b.data.nbPubmeds) return -1;
+    if (a.data.nbPubmeds < b.data.nbPubmeds) return 1;
+    if (a.data.nbPatents > b.data.nbPatents) return -1;
+    if (a.data.nbPatents < b.data.nbPatents) return 1;
+    return 0;
+  });
+
   return entries;
 }
 
