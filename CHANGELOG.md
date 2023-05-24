@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.1.0](https://github.com/cheminfo/mass-tools/compare/v7.0.0...v7.1.0) (2023-05-24)
+
+
+### Features
+
+* **octochemdb:** sort by default activesOrNaturals by nbMassSpectra ([cbcf4d2](https://github.com/cheminfo/mass-tools/commit/cbcf4d25a61d9a5f02e29b8418f53bf393ae86e4))
+
 ## [7.0.0](https://github.com/cheminfo/mass-tools/compare/v6.12.0...v7.0.0) (2023-05-24)
 
 
