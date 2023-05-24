@@ -45,18 +45,28 @@ describe('activesOrNaturals', () => {
   it('search by keywords', async () => {
     let data = await activesOrNaturals({
       kwMeshTerms: 'antibiotic',
-      limit: 5,
+      limit: 100,
       fields: 'data',
     });
-    expect(Object.keys(data[0].data).sort()).toStrictEqual([
+
+    const fields = new Set();
+    for (const entry of data) {
+      for (const field of Object.keys(entry.data)) {
+        fields.add(field);
+      }
+    }
+    expect([...fields].sort()).toStrictEqual([
       'activities',
       'bioactive',
+      'cas',
       'charge',
       'compounds',
       'em',
       'kwActiveAgainst',
       'kwBioassays',
       'kwMeshTerms',
+      "kwTaxonomies",
+      "massSpectra",
       'mf',
       'naturalProduct',
       'nbActivities',
@@ -67,6 +77,7 @@ describe('activesOrNaturals', () => {
       'noStereoOCL',
       'patents',
       'pubmeds',
+      'taxonomies',
       'unsaturation',
     ]);
   });

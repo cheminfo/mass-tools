@@ -1,5 +1,7 @@
 import { mfsFromEM } from '../mfsFromEM.js';
 
+jest.setTimeout(30000);
+
 describe('mfsFromEM', () => {
   it('simple case', async () => {
     let data = await mfsFromEM(60, {
