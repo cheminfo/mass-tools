@@ -49,10 +49,13 @@ describe('activesOrNaturals', () => {
       fields: 'data',
     });
     expect(Object.keys(data[0].data).sort()).toStrictEqual([
+      'activities',
       'bioactive',
       'charge',
       'compounds',
       'em',
+      "kwActiveAgainst",
+      "kwBioassays",
       'kwMeshTerms',
       'mf',
       'naturalProduct',
