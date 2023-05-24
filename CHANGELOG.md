@@ -1,5 +1,35 @@
 # Changelog
 
+## [7.0.0](https://github.com/cheminfo/mass-tools/compare/v6.12.0...v7.0.0) (2023-05-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* move searchGNPS to OctoChemDB
+* remove searchPubchem, searchActivesOrNaturals, searchAndGroupActivesOrNaturals
+
+### Features
+
+* **mf-parser:** possibility to customize getInfo fieldNames for em ([d4e422e](https://github.com/cheminfo/mass-tools/commit/d4e422e6c226f444afdb10523274161cd2b36ff1))
+* move searchGNPS to OctoChemDB ([abff44a](https://github.com/cheminfo/mass-tools/commit/abff44abe763e8c033c788102c5449bba610111f))
+* **octochemdb:** add activeOrNaturalDetails ([610f7b1](https://github.com/cheminfo/mass-tools/commit/610f7b14ecfe3d6d582966421911ac15e71c2771))
+* **octochemdb:** add activeOrNaturalSummarize ([ca852b7](https://github.com/cheminfo/mass-tools/commit/ca852b70e540227665a7ca65793c25ef3d7ffe38))
+* **octochemdb:** add activesOrNaturals and activesOrNaturalsByMF ([9a31172](https://github.com/cheminfo/mass-tools/commit/9a311727a592198fe91c23639bd7f2968eb753ae))
+* **octochemdb:** add package and mfsFromEM ([6d97f90](https://github.com/cheminfo/mass-tools/commit/6d97f900bb97226b460cf758869164d93e12924f))
+* **octochemdb:** allow to retrieve thousands of patents in activesOrNaturalsDetailllllllls ([c8425c5](https://github.com/cheminfo/mass-tools/commit/c8425c591ced79f2f42342e7b1a9d6f684001a5b))
+* use octochemdb.cheminfo.org and refactor searchActivesOrNaturals ([d216a82](https://github.com/cheminfo/mass-tools/commit/d216a8207e2ac507da6a20b2331b94ed5d866833))
+
+
+### Bug Fixes
+
+* **mass-tools:** expose getBestPeaks that was removed in a previous commit ([d585116](https://github.com/cheminfo/mass-tools/commit/d585116af22c8ab3be8003826357d662144131ee))
+* **mf-finder:** minCharge and maxCharge was incorrectly managed by TargetMassCache ([dd53e2e](https://github.com/cheminfo/mass-tools/commit/dd53e2e693738367e2a8c7056ed37e44a0a042d4))
+
+
+### Miscellaneous Chores
+
+* remove searchPubchem, searchActivesOrNaturals, searchAndGroupActivesOrNaturals ([bac4a83](https://github.com/cheminfo/mass-tools/commit/bac4a83be1093b5b75bebcb9af50bd99ec9d1a4e))
+
 ## [6.12.0](https://github.com/cheminfo/mass-tools/compare/v6.11.0...v6.12.0) (2023-04-28)
 
 
