@@ -41,16 +41,13 @@ export async function summarizePubMeds(entry, options = {}) {
     boost: options.boostPubMed,
     relevance: options.relevance,
   });
-
   queryResult.hits.map((item) => {
-    if (Number(item.document.nbCompounds) !== 0) {
-      if (Number(item.document.nbCompounds) === 1) {
-        item.score =
-          item.score / Math.log2(Number(item.document.nbCompounds) + 0.5);
-      } else {
-        item.score = item.score / Math.log2(Number(item.document.nbCompounds));
-      }
+    let nbCompounds = 2;
+    if (item.document.nbCompounds) {
+      nbCompounds = +Number(item.document.nbCompounds);
     }
+    item.score = item.score / Math.log2(nbCompounds);
+
     return item;
   });
   queryResult.hits.sort((a, b) => b.score - a.score);
