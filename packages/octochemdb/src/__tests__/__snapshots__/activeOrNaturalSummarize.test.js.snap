@@ -1,0 +1,4372 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`activeOrNaturalSummarize > term:anti 1`] = `
+{
+  "_id": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+  "data": {
+    "activities": [],
+    "bioactive": true,
+    "cas": [
+      "89-31-6",
+    ],
+    "charge": 0,
+    "compounds": [
+      {
+        "$id": 40010,
+        "$ref": "compounds",
+        "data": {
+          "atoms": {
+            "C": 11,
+            "H": 15,
+            "N": 1,
+            "O": 2,
+          },
+          "charge": 0,
+          "em": 193.11027872702,
+          "inchi": "InChI=1S/C11H15NO2/c1-7-9-6-11(14-2)10(13)5-8(9)3-4-12-7/h5-7,12-13H,3-4H2,1-2H3/t7-/m1/s1",
+          "inchiKey": "YTPRLBGPGZHUPD-SSDOTTSWSA-N",
+          "iupac": "(1R)-7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol",
+          "mf": "C11H15NO2",
+          "molfile": "40010
+  -OEChem-03172303102D
+
+ 29 30  0     1  0  0  0  0  0999 V2000
+    2.0000   -0.7927    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.2073    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981   -0.3135    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920   -0.8274    0.0000 C   0  0  1  0  0  0  0  0  0  0  0  0
+    4.5981   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.5981    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920    1.2420    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981    0.7281    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4804   -1.8273    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -0.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.2073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -1.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0259   -1.1425    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.8856    1.7210    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.0874    1.7118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.0089    0.6220    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.6071    1.3118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.9338   -0.6256    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.8605   -1.8201    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4733   -2.4473    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.1004   -1.8345    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -1.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3800   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -2.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6200   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1 12  1  0  0  0  0
+  1 14  1  0  0  0  0
+  2 13  1  0  0  0  0
+  2 26  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  3 20  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  6  0  0  0
+  4 15  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6 11  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7 16  1  0  0  0  0
+  7 17  1  0  0  0  0
+  8 18  1  0  0  0  0
+  8 19  1  0  0  0  0
+  9 21  1  0  0  0  0
+  9 22  1  0  0  0  0
+  9 23  1  0  0  0  0
+ 10 12  1  0  0  0  0
+ 10 24  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 11 25  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 14 27  1  0  0  0  0
+ 14 28  1  0  0  0  0
+ 14 29  1  0  0  0  0
+M  END
+",
+          "mw": 193.24271923500675,
+          "nbFragments": 1,
+          "ocl": {
+            "acceptorCount": 3,
+            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "donorCount": 2,
+            "idCode": "dg~D@MBdin]V^G[hHBjbbT@",
+            "index": [
+              138428489,
+            ],
+            "logP": 1.5439999848604202,
+            "logS": -1.6339999437332153,
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "polarSurfaceArea": 41.48999881744385,
+            "rotatableBondCount": 1,
+            "stereoCenterCount": 1,
+          },
+          "unsaturation": 5,
+        },
+      },
+      {
+        "$id": 46695,
+        "$ref": "compounds",
+        "data": {
+          "atoms": {
+            "C": 11,
+            "H": 15,
+            "N": 1,
+            "O": 2,
+          },
+          "charge": 0,
+          "em": 193.11027872702,
+          "inchi": "InChI=1S/C11H15NO2/c1-7-9-6-11(14-2)10(13)5-8(9)3-4-12-7/h5-7,12-13H,3-4H2,1-2H3",
+          "inchiKey": "YTPRLBGPGZHUPD-UHFFFAOYSA-N",
+          "iupac": "7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol",
+          "mf": "C11H15NO2",
+          "molfile": "46695
+  -OEChem-03172303102D
+
+ 29 30  0     1  0  0  0  0  0999 V2000
+    2.0000   -0.7927    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.2073    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981   -0.3135    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920   -0.8274    0.0000 C   0  0  3  0  0  0  0  0  0  0  0  0
+    4.5981   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.5981    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920    1.2420    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981    0.7281    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4804   -1.8273    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -0.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.2073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -1.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0259   -1.1425    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.8856    1.7210    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.0874    1.7118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.0089    0.6220    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.6071    1.3118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.9338   -0.6256    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.8605   -1.8201    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4733   -2.4473    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.1004   -1.8345    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -1.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3800   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -2.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6200   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1 12  1  0  0  0  0
+  1 14  1  0  0  0  0
+  2 13  1  0  0  0  0
+  2 26  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  3 20  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  4 15  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6 11  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7 16  1  0  0  0  0
+  7 17  1  0  0  0  0
+  8 18  1  0  0  0  0
+  8 19  1  0  0  0  0
+  9 21  1  0  0  0  0
+  9 22  1  0  0  0  0
+  9 23  1  0  0  0  0
+ 10 12  1  0  0  0  0
+ 10 24  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 11 25  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 14 27  1  0  0  0  0
+ 14 28  1  0  0  0  0
+ 14 29  1  0  0  0  0
+M  END
+",
+          "mw": 193.24271923500675,
+          "nbFragments": 1,
+          "ocl": {
+            "acceptorCount": 3,
+            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "donorCount": 2,
+            "idCode": "dg~D@MBdin]V^G[hHBjb@@",
+            "index": [
+              138428489,
+            ],
+            "logP": 1.5439999848604202,
+            "logS": -1.6339999437332153,
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "polarSurfaceArea": 41.48999881744385,
+            "rotatableBondCount": 1,
+            "stereoCenterCount": 1,
+          },
+          "unsaturation": 5,
+        },
+      },
+      {
+        "$id": 442356,
+        "$ref": "compounds",
+        "data": {
+          "atoms": {
+            "C": 11,
+            "H": 15,
+            "N": 1,
+            "O": 2,
+          },
+          "charge": 0,
+          "em": 193.11027872702,
+          "inchi": "InChI=1S/C11H15NO2/c1-7-9-6-11(14-2)10(13)5-8(9)3-4-12-7/h5-7,12-13H,3-4H2,1-2H3/t7-/m0/s1",
+          "inchiKey": "YTPRLBGPGZHUPD-ZETCQYMHSA-N",
+          "iupac": "(1S)-7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol",
+          "mf": "C11H15NO2",
+          "molfile": "442356
+  -OEChem-03172303402D
+
+ 29 30  0     1  0  0  0  0  0999 V2000
+    2.0000   -0.7927    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.2073    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981   -0.3135    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920   -0.8274    0.0000 C   0  0  2  0  0  0  0  0  0  0  0  0
+    4.5981   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.5981    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920    1.2420    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981    0.7281    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4804   -1.8273    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -0.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.2073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -1.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0259   -1.1425    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.8856    1.7210    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.0874    1.7118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.0089    0.6220    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.6071    1.3118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.9338   -0.6256    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.8605   -1.8201    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4733   -2.4473    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.1004   -1.8345    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -1.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3800   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -2.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6200   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1 12  1  0  0  0  0
+  1 14  1  0  0  0  0
+  2 13  1  0  0  0  0
+  2 26  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  3 20  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  1  0  0  0
+  4 15  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6 11  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7 16  1  0  0  0  0
+  7 17  1  0  0  0  0
+  8 18  1  0  0  0  0
+  8 19  1  0  0  0  0
+  9 21  1  0  0  0  0
+  9 22  1  0  0  0  0
+  9 23  1  0  0  0  0
+ 10 12  1  0  0  0  0
+ 10 24  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 11 25  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 14 27  1  0  0  0  0
+ 14 28  1  0  0  0  0
+ 14 29  1  0  0  0  0
+M  END
+",
+          "mw": 193.24271923500675,
+          "nbFragments": 1,
+          "ocl": {
+            "acceptorCount": 3,
+            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "donorCount": 2,
+            "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
+            "index": [
+              -1057975,
+              -1773066496,
+              813777542,
+              1098920065,
+              -2137647040,
+              268448322,
+              -1321147900,
+              -2147480172,
+              150995008,
+              2170896,
+              73569282,
+              2139152,
+              67592,
+              131587,
+              68485138,
+              25722948,
+            ],
+            "logP": 1.5439999848604202,
+            "logS": -1.6339999437332153,
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "polarSurfaceArea": 41.48999881744385,
+            "rotatableBondCount": 1,
+            "stereoCenterCount": 1,
+          },
+          "unsaturation": 5,
+        },
+      },
+    ],
+    "em": 193.11027872702,
+    "kwActiveAgainst": [
+      "actinopteri",
+      "anthracis",
+      "bacillaceae",
+      "bacillales",
+      "bacilli",
+      "bacillota",
+      "bacillus",
+      "bacteria",
+      "caballus",
+      "chordata",
+      "electricus",
+      "electrophorus",
+      "equidae",
+      "equus",
+      "eukaryota",
+      "gymnotidae",
+      "gymnotiformes",
+      "hominidae",
+      "homo",
+      "mammalia",
+      "metazoa",
+      "perissodactyla",
+      "primates",
+      "sapiens",
+    ],
+    "kwBioassays": [
+      "a350",
+      "assay",
+      "inhibition",
+      "mu",
+      "potency",
+      "profiling",
+      "qhts",
+      "region",
+      "spectral",
+      "spectroscopic",
+    ],
+    "kwMeshTerms": [
+      "1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine",
+      "1-methyl-4-phenylpyridinium",
+      "3,4-dihydroxyphenylacetic acid",
+      "8-hydroxy-2'-deoxyguanosine",
+      "acetaldehyde",
+      "acetylcholine",
+      "acetylcholinesterase",
+      "active transport, cell nucleus",
+      "adenosine triphosphate",
+      "adrenergic uptake inhibitors",
+      "adult",
+      "age factors",
+      "aged",
+      "aging",
+      "alcohol drinking",
+      "alcoholic intoxication",
+      "alcoholism",
+      "alkaloids",
+      "alkynes",
+      "amyloid beta-peptides",
+      "analysis of variance",
+      "animals",
+      "annexin a5",
+      "antihypertensive agents",
+      "antioxidants",
+      "antiparkinson agents",
+      "apoptosis",
+      "apoptosis regulatory proteins",
+      "ascorbic acid",
+      "atropine",
+      "autoradiography",
+      "behavior, animal",
+      "benzofurans",
+      "benzophenanthridines",
+      "benzoquinones",
+      "beta-cyclodextrins",
+      "beverages",
+      "binding sites",
+      "biogenic amines",
+      "biomarkers",
+      "biosensing techniques",
+      "blood coagulation",
+      "blood coagulation tests",
+      "blood pressure",
+      "blood pressure determination",
+      "borates",
+      "brain",
+      "brain chemistry",
+      "breeding",
+      "butyrylcholinesterase",
+      "calcium",
+      "carbolines",
+      "carcinogens",
+      "cardiovascular agents",
+      "carrier proteins",
+      "caspase 3",
+      "caspase inhibitors",
+      "caspases",
+      "catalase",
+      "catalytic domain",
+      "catecholamine plasma membrane transport proteins",
+      "catecholamines",
+      "catechols",
+      "caudate nucleus",
+      "cell count",
+      "cell cycle",
+      "cell death",
+      "cell differentiation",
+      "cell line",
+      "cell line, tumor",
+      "cell nucleus",
+      "cell survival",
+      "cells, cultured",
+      "central nervous system depressants",
+      "centrifugation, density gradient",
+      "cerebrospinal fluid",
+      "chemistry, organic",
+      "chemistry, pharmaceutical",
+      "chenopodiaceae",
+      "choline",
+      "cholinesterase inhibitors",
+      "chromatography, high pressure liquid",
+      "chromatography, liquid",
+      "chromatography, micellar electrokinetic capillary",
+      "circular dichroism",
+      "conditioning, classical",
+      "copper",
+      "corpus striatum",
+      "cyclodextrins",
+      "cycloheximide",
+      "cyclosporine",
+      "cysteine proteinase inhibitors",
+      "cytochromes c",
+      "data interpretation, statistical",
+      "deoxyepinephrine",
+      "deoxyguanosine",
+      "desipramine",
+      "deuterium",
+      "diabetes mellitus, type 2",
+      "diet, high-fat",
+      "disease models, animal",
+      "disease progression",
+      "dna",
+      "dna damage",
+      "dna fragmentation",
+      "dna, neoplasm",
+      "dogs",
+      "donepezil",
+      "dopamine",
+      "dopamine agents",
+      "dopamine antagonists",
+      "dopamine plasma membrane transport proteins",
+      "dopamine uptake inhibitors",
+      "dopaminergic neurons",
+      "dose-response relationship, drug",
+      "drosophila melanogaster",
+      "drosophila proteins",
+      "drug combinations",
+      "drug interactions",
+      "egypt",
+      "electrochemistry",
+      "electrodes",
+      "electrophoresis, capillary",
+      "electrophoresis, polyacrylamide gel",
+      "enkephalin, methionine",
+      "enkephalins",
+      "enzyme activation",
+      "enzyme inhibitors",
+      "enzyme precursors",
+      "equipment design",
+      "equipment failure analysis",
+      "ethanol",
+      "ethylmorphine",
+      "female",
+      "ferric compounds",
+      "ferrous compounds",
+      "flow cytometry",
+      "fluorescent dyes",
+      "food analysis",
+      "food contamination",
+      "free radical scavengers",
+      "free radicals",
+      "fruit",
+      "gas chromatography-mass spectrometry",
+      "gene expression regulation",
+      "gene expression regulation, neoplastic",
+      "gene silencing",
+      "glucose intolerance",
+      "glutathione",
+      "glyceraldehyde-3-phosphate dehydrogenases",
+      "harmine",
+      "homovanillic acid",
+      "humans",
+      "hydrogen-ion concentration",
+      "hydrolysis",
+      "hydroxyindoleacetic acid",
+      "hydroxyl radical",
+      "hypertension",
+      "hypothalamus",
+      "immunoblotting",
+      "immunohistochemistry",
+      "inactivation, metabolic",
+      "indans",
+      "indicators and reagents",
+      "indoles",
+      "ion channels",
+      "ion transport",
+      "iron",
+      "iron metabolism disorders",
+      "isoquinolines",
+      "kinetics",
+      "levodopa",
+      "ligands",
+      "lithium",
+      "lithium compounds",
+      "lymphocytes",
+      "magnetic resonance spectroscopy",
+      "male",
+      "malondialdehyde",
+      "mass spectrometry",
+      "mecamylamine",
+      "membrane glycoproteins",
+      "membrane potential, mitochondrial",
+      "membrane potentials",
+      "membrane transport proteins",
+      "methoxyhydroxyphenylglycol",
+      "methylation",
+      "methyltransferases",
+      "mice",
+      "mice, inbred balb c",
+      "mice, transgenic",
+      "microdialysis",
+      "microscopy, fluorescence",
+      "middle aged",
+      "mitochondria",
+      "mitochondria, liver",
+      "mitochondrial membrane transport proteins",
+      "mitochondrial membranes",
+      "mitochondrial permeability transition pore",
+      "models, biological",
+      "models, molecular",
+      "molecular conformation",
+      "molecular docking simulation",
+      "molecular structure",
+      "molsidomine",
+      "monoamine oxidase",
+      "monoamine oxidase inhibitors",
+      "morphine",
+      "mptp poisoning",
+      "musa",
+      "muscle relaxants, central",
+      "nad",
+      "nanotechnology",
+      "necrosis",
+      "nerve degeneration",
+      "nerve tissue proteins",
+      "nervous system",
+      "nervous system physiological phenomena",
+      "neuroblastoma",
+      "neurologic examination",
+      "neurons",
+      "neuroprotective agents",
+      "neuropsychological tests",
+      "neurotoxins",
+      "neurotransmitter agents",
+      "nicotine",
+      "nicotinic agonists",
+      "nicotinic antagonists",
+      "nitric oxide donors",
+      "norepinephrine",
+      "nucleus accumbens",
+      "oligopeptides",
+      "osmolar concentration",
+      "oxidation-reduction",
+      "oxidative stress",
+      "oxidopamine",
+      "papaverine",
+      "parasympatholytics",
+      "pargyline",
+      "parkinson disease",
+      "parkinson disease, secondary",
+      "parkinsonian disorders",
+      "pc12 cells",
+      "perfusion",
+      "permeability",
+      "pharmacy",
+      "phenanthridines",
+      "phenanthrolines",
+      "phenobarbital",
+      "pheochromocytoma",
+      "phosphorus isotopes",
+      "piperazines",
+      "piperidines",
+      "plant components, aerial",
+      "plant extracts",
+      "plants, medicinal",
+      "postmortem changes",
+      "posture",
+      "potassium",
+      "propidium",
+      "propylamines",
+      "prospective studies",
+      "protein synthesis inhibitors",
+      "proto-oncogene proteins c-bcl-2",
+      "putamen",
+      "quinolines",
+      "rats",
+      "rats, inbred strains",
+      "rats, sprague-dawley",
+      "rats, wistar",
+      "reactive oxygen species",
+      "receptors, dopamine",
+      "receptors, dopamine d2",
+      "receptors, dopamine d3",
+      "receptors, opioid",
+      "receptors, purinergic",
+      "reference values",
+      "reflex",
+      "regression analysis",
+      "reproducibility of results",
+      "research",
+      "reserpine",
+      "reverse transcriptase polymerase chain reaction",
+      "rna, small interfering",
+      "salsola",
+      "salsoline alkaloids",
+      "secretory vesicles",
+      "seeds",
+      "selegiline",
+      "semicarbazides",
+      "serotonin",
+      "sex factors",
+      "signal transduction",
+      "sodium dodecyl sulfate",
+      "spectrometry, mass, electrospray ionization",
+      "spectrophotometry, ultraviolet",
+      "statistics, nonparametric",
+      "stereoisomerism",
+      "structure-activity relationship",
+      "subcellular fractions",
+      "substantia nigra",
+      "superoxide dismutase",
+      "tandem mass spectrometry",
+      "tetrahydroisoquinolines",
+      "tetrahydropapaveroline",
+      "tetrazolium salts",
+      "thiazoles",
+      "time factors",
+      "tissue distribution",
+      "tobacco use disorder",
+      "transfection",
+      "triterpenes",
+      "trpc cation channels",
+      "tumor cells, cultured",
+      "tyrosine 3-monooxygenase",
+      "up-regulation",
+      "uricosuric agents",
+      "urination",
+      "vasodilator agents",
+      "ventral tegmental area",
+      "vitis",
+      "wine",
+    ],
+    "kwTaxonomies": [
+      "eukaryota",
+      "viridiplantae",
+      "streptophyta",
+      "magnoliopsida",
+      "caryophyllales",
+      "chenopodiaceae",
+      "xylosalsola",
+      "paletzkiana",
+      "fabales",
+      "fabaceae",
+      "desmodium",
+      "adscendens",
+      "salsola",
+      "collina",
+      "richteri",
+      "cornales",
+      "cornaceae",
+      "alangium",
+      "lamarckii",
+    ],
+    "massSpectraRefs": [
+      {
+        "$id": "MSBNK-Washington_State_Univ-BML82135",
+        "$ref": "massBank",
+      },
+      {
+        "$id": "MSBNK-Washington_State_Univ-BML82137",
+        "$ref": "massBank",
+      },
+    ],
+    "mf": "C11H15NO2",
+    "naturalProduct": true,
+    "nbActivities": 3,
+    "nbMassSpectra": 2,
+    "nbPatents": 96,
+    "nbPubmeds": 73,
+    "nbTaxonomies": 5,
+    "noStereoOCL": {
+      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\\\Bm?vw__x@m?p",
+      "idCode": "dg~D@MBdin]V^G[hHBjb@@",
+    },
+    "patents": [
+      {
+        "$id": "CN-113441185-B",
+        "$ref": "patents",
+        "data": {
+          "abstract": "The invention discloses a method for continuously producing 1-hexene and 1-octene, which comprises the following steps: (1) mixing a solvent and an alkyl aluminum compound through a mixing tank, continuously introducing the mixture into a reaction kettle, introducing ethylene, and carrying out ethylene oligomerization reaction under the action of a continuously introduced catalyst to obtain a reaction solution containing 1-hexene and 1-octene; (2) the reaction liquid containing 1-hexene and 1-octene enters an overflow tank reactor through an overflow pipeline; (3) and (3) introducing the reaction liquid obtained from the overflow tank reactor into a quenching reactor, and quenching the reaction by using an alcohol substance as a quenching agent to obtain the 1-hexene and the 1-octene. Wherein the used catalyst is a solution formed by a metal chromium compound, a PNSiNP ligand and an organic boron compound. The invention adopts higher temperature for the overflow tank under the condition of not changing the reaction temperature, and the polymer coming from the reaction kettle can be dissolved in the reaction liquid, thereby reducing the possibility of pipeline blockage and improving the continuous operation time of the device.",
+          "title": "Ethylene oligomerization catalyst and method for continuously producing 1-hexene and 1-octene",
+        },
+        "score": 4.898642939155435,
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-113441185-B",
+      },
+      {
+        "$id": "CN-113441185-A",
+        "$ref": "patents",
+        "data": {
+          "abstract": "The invention discloses a method for continuous production of 1-hexene and 1-octene, comprising: (1) after mixing a solvent and an alkyl aluminum compound in a mixing tank, they are continuously introduced into a reaction kettle, and ethylene is introduced into the reaction kettle. Under the effect of the catalyzer that feeds, ethylene oligomerization reaction occurs, obtains the reaction solution containing 1-hexene and 1-octene; (2) the reaction solution containing 1-hexene and 1-octene enters through overflow line to the overflow tank reactor; (3) the reaction solution obtained by the overflow tank reactor enters the quenching reactor, and uses alcohols as a quenching agent to quench the reaction to obtain 1-hexene and 1-octene. Wherein, the catalyst used is a solution formed by a metal chromium compound, a PNSiNP ligand and an organic boron compound. In the present invention, under the condition of not changing the reaction temperature, the overflow tank adopts a higher temperature, and the polymer from the reaction kettle can be dissolved in the reaction liquid, thereby reducing the possibility of pipeline blockage and improving the continuous operation time of the device.",
+          "title": "A kind of ethylene oligomerization catalyst and method for continuous production of 1-hexene and 1-octene",
+        },
+        "score": 4.189764698893736,
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-113441185-A",
+      },
+    ],
+    "pubmeds": [],
+    "taxonomies": [
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "LTS0005803",
+          "$ref": "lotuses",
+        },
+        "family": "Chenopodiaceae",
+        "genus": "Xylosalsola",
+        "kingdom": "Viridiplantae",
+        "order": "Caryophyllales",
+        "phylum": "Streptophyta",
+        "species": "Xylosalsola paletzkiana",
+        "superkingdom": "Eukaryota",
+      },
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "LTS0064081",
+          "$ref": "lotuses",
+        },
+        "family": "Fabaceae",
+        "genus": "Desmodium",
+        "kingdom": "Viridiplantae",
+        "order": "Fabales",
+        "phylum": "Streptophyta",
+        "species": "Desmodium adscendens",
+        "superkingdom": "Eukaryota",
+      },
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "NPC294249",
+          "$ref": "npasses",
+        },
+        "family": "Chenopodiaceae",
+        "genus": "Salsola",
+        "kingdom": "Viridiplantae",
+        "order": "Caryophyllales",
+        "phylum": "Streptophyta",
+        "species": "Salsola collina",
+        "superkingdom": "Eukaryota",
+      },
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "CNP0237841",
+          "$ref": "coconuts",
+        },
+        "family": "Chenopodiaceae",
+        "genus": "Salsola",
+        "kingdom": "Viridiplantae",
+        "order": "Caryophyllales",
+        "phylum": "Streptophyta",
+        "species": "Salsola richteri",
+        "superkingdom": "Eukaryota",
+      },
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "CNP0237841",
+          "$ref": "coconuts",
+        },
+        "family": "Cornaceae",
+        "genus": "Alangium",
+        "kingdom": "Viridiplantae",
+        "order": "Cornales",
+        "phylum": "Streptophyta",
+        "species": "Alangium lamarckii",
+        "superkingdom": "Eukaryota",
+      },
+    ],
+    "unsaturation": 5,
+  },
+}
+`;
+
+exports[`activeOrNaturalSummarize > term:inhibition 3`] = `
+{
+  "_id": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+  "data": {
+    "activities": [
+      {
+        "assay": "Inhibition : 10.75 %",
+        "dbRef": {
+          "$id": "NPC294249",
+          "$ref": "npasses",
+        },
+        "externalRef": "PMID : 23062825",
+        "score": 1.172060050051001,
+        "targetTaxonomies": {
+          "class": "Actinopteri",
+          "family": "Gymnotidae",
+          "genus": "Electrophorus",
+          "kingdom": "Metazoa",
+          "order": "Gymnotiformes",
+          "phylum": "Chordata",
+          "species": "Electrophorus electricus",
+          "superkingdom": "Eukaryota",
+        },
+      },
+      {
+        "assay": "Inhibition : -4.77 %",
+        "dbRef": {
+          "$id": "NPC294249",
+          "$ref": "npasses",
+        },
+        "externalRef": "PMID : 23062825",
+        "score": 1.172060050051001,
+        "targetTaxonomies": {
+          "class": "Mammalia",
+          "family": "Equidae",
+          "genus": "Equus",
+          "kingdom": "Metazoa",
+          "order": "Perissodactyla",
+          "phylum": "Chordata",
+          "species": "Equus caballus",
+          "superkingdom": "Eukaryota",
+        },
+      },
+    ],
+    "bioactive": true,
+    "cas": [
+      "89-31-6",
+    ],
+    "charge": 0,
+    "compounds": [
+      {
+        "$id": 40010,
+        "$ref": "compounds",
+        "data": {
+          "atoms": {
+            "C": 11,
+            "H": 15,
+            "N": 1,
+            "O": 2,
+          },
+          "charge": 0,
+          "em": 193.11027872702,
+          "inchi": "InChI=1S/C11H15NO2/c1-7-9-6-11(14-2)10(13)5-8(9)3-4-12-7/h5-7,12-13H,3-4H2,1-2H3/t7-/m1/s1",
+          "inchiKey": "YTPRLBGPGZHUPD-SSDOTTSWSA-N",
+          "iupac": "(1R)-7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol",
+          "mf": "C11H15NO2",
+          "molfile": "40010
+  -OEChem-03172303102D
+
+ 29 30  0     1  0  0  0  0  0999 V2000
+    2.0000   -0.7927    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.2073    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981   -0.3135    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920   -0.8274    0.0000 C   0  0  1  0  0  0  0  0  0  0  0  0
+    4.5981   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.5981    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920    1.2420    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981    0.7281    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4804   -1.8273    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -0.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.2073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -1.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0259   -1.1425    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.8856    1.7210    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.0874    1.7118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.0089    0.6220    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.6071    1.3118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.9338   -0.6256    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.8605   -1.8201    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4733   -2.4473    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.1004   -1.8345    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -1.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3800   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -2.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6200   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1 12  1  0  0  0  0
+  1 14  1  0  0  0  0
+  2 13  1  0  0  0  0
+  2 26  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  3 20  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  6  0  0  0
+  4 15  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6 11  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7 16  1  0  0  0  0
+  7 17  1  0  0  0  0
+  8 18  1  0  0  0  0
+  8 19  1  0  0  0  0
+  9 21  1  0  0  0  0
+  9 22  1  0  0  0  0
+  9 23  1  0  0  0  0
+ 10 12  1  0  0  0  0
+ 10 24  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 11 25  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 14 27  1  0  0  0  0
+ 14 28  1  0  0  0  0
+ 14 29  1  0  0  0  0
+M  END
+",
+          "mw": 193.24271923500675,
+          "nbFragments": 1,
+          "ocl": {
+            "acceptorCount": 3,
+            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "donorCount": 2,
+            "idCode": "dg~D@MBdin]V^G[hHBjbbT@",
+            "index": [
+              138428489,
+            ],
+            "logP": 1.5439999848604202,
+            "logS": -1.6339999437332153,
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "polarSurfaceArea": 41.48999881744385,
+            "rotatableBondCount": 1,
+            "stereoCenterCount": 1,
+          },
+          "unsaturation": 5,
+        },
+      },
+      {
+        "$id": 46695,
+        "$ref": "compounds",
+        "data": {
+          "atoms": {
+            "C": 11,
+            "H": 15,
+            "N": 1,
+            "O": 2,
+          },
+          "charge": 0,
+          "em": 193.11027872702,
+          "inchi": "InChI=1S/C11H15NO2/c1-7-9-6-11(14-2)10(13)5-8(9)3-4-12-7/h5-7,12-13H,3-4H2,1-2H3",
+          "inchiKey": "YTPRLBGPGZHUPD-UHFFFAOYSA-N",
+          "iupac": "7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol",
+          "mf": "C11H15NO2",
+          "molfile": "46695
+  -OEChem-03172303102D
+
+ 29 30  0     1  0  0  0  0  0999 V2000
+    2.0000   -0.7927    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.2073    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981   -0.3135    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920   -0.8274    0.0000 C   0  0  3  0  0  0  0  0  0  0  0  0
+    4.5981   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.5981    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920    1.2420    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981    0.7281    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4804   -1.8273    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -0.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.2073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -1.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0259   -1.1425    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.8856    1.7210    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.0874    1.7118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.0089    0.6220    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.6071    1.3118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.9338   -0.6256    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.8605   -1.8201    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4733   -2.4473    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.1004   -1.8345    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -1.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3800   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -2.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6200   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1 12  1  0  0  0  0
+  1 14  1  0  0  0  0
+  2 13  1  0  0  0  0
+  2 26  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  3 20  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  4 15  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6 11  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7 16  1  0  0  0  0
+  7 17  1  0  0  0  0
+  8 18  1  0  0  0  0
+  8 19  1  0  0  0  0
+  9 21  1  0  0  0  0
+  9 22  1  0  0  0  0
+  9 23  1  0  0  0  0
+ 10 12  1  0  0  0  0
+ 10 24  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 11 25  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 14 27  1  0  0  0  0
+ 14 28  1  0  0  0  0
+ 14 29  1  0  0  0  0
+M  END
+",
+          "mw": 193.24271923500675,
+          "nbFragments": 1,
+          "ocl": {
+            "acceptorCount": 3,
+            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "donorCount": 2,
+            "idCode": "dg~D@MBdin]V^G[hHBjb@@",
+            "index": [
+              138428489,
+            ],
+            "logP": 1.5439999848604202,
+            "logS": -1.6339999437332153,
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "polarSurfaceArea": 41.48999881744385,
+            "rotatableBondCount": 1,
+            "stereoCenterCount": 1,
+          },
+          "unsaturation": 5,
+        },
+      },
+      {
+        "$id": 442356,
+        "$ref": "compounds",
+        "data": {
+          "atoms": {
+            "C": 11,
+            "H": 15,
+            "N": 1,
+            "O": 2,
+          },
+          "charge": 0,
+          "em": 193.11027872702,
+          "inchi": "InChI=1S/C11H15NO2/c1-7-9-6-11(14-2)10(13)5-8(9)3-4-12-7/h5-7,12-13H,3-4H2,1-2H3/t7-/m0/s1",
+          "inchiKey": "YTPRLBGPGZHUPD-ZETCQYMHSA-N",
+          "iupac": "(1S)-7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol",
+          "mf": "C11H15NO2",
+          "molfile": "442356
+  -OEChem-03172303402D
+
+ 29 30  0     1  0  0  0  0  0999 V2000
+    2.0000   -0.7927    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.2073    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981   -0.3135    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920   -0.8274    0.0000 C   0  0  2  0  0  0  0  0  0  0  0  0
+    4.5981   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.5981    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920    1.2420    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981    0.7281    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4804   -1.8273    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -0.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.2073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -1.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0259   -1.1425    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.8856    1.7210    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.0874    1.7118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.0089    0.6220    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.6071    1.3118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.9338   -0.6256    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.8605   -1.8201    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4733   -2.4473    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.1004   -1.8345    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -1.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3800   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -2.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6200   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1 12  1  0  0  0  0
+  1 14  1  0  0  0  0
+  2 13  1  0  0  0  0
+  2 26  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  3 20  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  1  0  0  0
+  4 15  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6 11  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7 16  1  0  0  0  0
+  7 17  1  0  0  0  0
+  8 18  1  0  0  0  0
+  8 19  1  0  0  0  0
+  9 21  1  0  0  0  0
+  9 22  1  0  0  0  0
+  9 23  1  0  0  0  0
+ 10 12  1  0  0  0  0
+ 10 24  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 11 25  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 14 27  1  0  0  0  0
+ 14 28  1  0  0  0  0
+ 14 29  1  0  0  0  0
+M  END
+",
+          "mw": 193.24271923500675,
+          "nbFragments": 1,
+          "ocl": {
+            "acceptorCount": 3,
+            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "donorCount": 2,
+            "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
+            "index": [
+              -1057975,
+              -1773066496,
+              813777542,
+              1098920065,
+              -2137647040,
+              268448322,
+              -1321147900,
+              -2147480172,
+              150995008,
+              2170896,
+              73569282,
+              2139152,
+              67592,
+              131587,
+              68485138,
+              25722948,
+            ],
+            "logP": 1.5439999848604202,
+            "logS": -1.6339999437332153,
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "polarSurfaceArea": 41.48999881744385,
+            "rotatableBondCount": 1,
+            "stereoCenterCount": 1,
+          },
+          "unsaturation": 5,
+        },
+      },
+    ],
+    "em": 193.11027872702,
+    "kwActiveAgainst": [
+      "actinopteri",
+      "anthracis",
+      "bacillaceae",
+      "bacillales",
+      "bacilli",
+      "bacillota",
+      "bacillus",
+      "bacteria",
+      "caballus",
+      "chordata",
+      "electricus",
+      "electrophorus",
+      "equidae",
+      "equus",
+      "eukaryota",
+      "gymnotidae",
+      "gymnotiformes",
+      "hominidae",
+      "homo",
+      "mammalia",
+      "metazoa",
+      "perissodactyla",
+      "primates",
+      "sapiens",
+    ],
+    "kwBioassays": [
+      "a350",
+      "assay",
+      "inhibition",
+      "mu",
+      "potency",
+      "profiling",
+      "qhts",
+      "region",
+      "spectral",
+      "spectroscopic",
+    ],
+    "kwMeshTerms": [
+      "1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine",
+      "1-methyl-4-phenylpyridinium",
+      "3,4-dihydroxyphenylacetic acid",
+      "8-hydroxy-2'-deoxyguanosine",
+      "acetaldehyde",
+      "acetylcholine",
+      "acetylcholinesterase",
+      "active transport, cell nucleus",
+      "adenosine triphosphate",
+      "adrenergic uptake inhibitors",
+      "adult",
+      "age factors",
+      "aged",
+      "aging",
+      "alcohol drinking",
+      "alcoholic intoxication",
+      "alcoholism",
+      "alkaloids",
+      "alkynes",
+      "amyloid beta-peptides",
+      "analysis of variance",
+      "animals",
+      "annexin a5",
+      "antihypertensive agents",
+      "antioxidants",
+      "antiparkinson agents",
+      "apoptosis",
+      "apoptosis regulatory proteins",
+      "ascorbic acid",
+      "atropine",
+      "autoradiography",
+      "behavior, animal",
+      "benzofurans",
+      "benzophenanthridines",
+      "benzoquinones",
+      "beta-cyclodextrins",
+      "beverages",
+      "binding sites",
+      "biogenic amines",
+      "biomarkers",
+      "biosensing techniques",
+      "blood coagulation",
+      "blood coagulation tests",
+      "blood pressure",
+      "blood pressure determination",
+      "borates",
+      "brain",
+      "brain chemistry",
+      "breeding",
+      "butyrylcholinesterase",
+      "calcium",
+      "carbolines",
+      "carcinogens",
+      "cardiovascular agents",
+      "carrier proteins",
+      "caspase 3",
+      "caspase inhibitors",
+      "caspases",
+      "catalase",
+      "catalytic domain",
+      "catecholamine plasma membrane transport proteins",
+      "catecholamines",
+      "catechols",
+      "caudate nucleus",
+      "cell count",
+      "cell cycle",
+      "cell death",
+      "cell differentiation",
+      "cell line",
+      "cell line, tumor",
+      "cell nucleus",
+      "cell survival",
+      "cells, cultured",
+      "central nervous system depressants",
+      "centrifugation, density gradient",
+      "cerebrospinal fluid",
+      "chemistry, organic",
+      "chemistry, pharmaceutical",
+      "chenopodiaceae",
+      "choline",
+      "cholinesterase inhibitors",
+      "chromatography, high pressure liquid",
+      "chromatography, liquid",
+      "chromatography, micellar electrokinetic capillary",
+      "circular dichroism",
+      "conditioning, classical",
+      "copper",
+      "corpus striatum",
+      "cyclodextrins",
+      "cycloheximide",
+      "cyclosporine",
+      "cysteine proteinase inhibitors",
+      "cytochromes c",
+      "data interpretation, statistical",
+      "deoxyepinephrine",
+      "deoxyguanosine",
+      "desipramine",
+      "deuterium",
+      "diabetes mellitus, type 2",
+      "diet, high-fat",
+      "disease models, animal",
+      "disease progression",
+      "dna",
+      "dna damage",
+      "dna fragmentation",
+      "dna, neoplasm",
+      "dogs",
+      "donepezil",
+      "dopamine",
+      "dopamine agents",
+      "dopamine antagonists",
+      "dopamine plasma membrane transport proteins",
+      "dopamine uptake inhibitors",
+      "dopaminergic neurons",
+      "dose-response relationship, drug",
+      "drosophila melanogaster",
+      "drosophila proteins",
+      "drug combinations",
+      "drug interactions",
+      "egypt",
+      "electrochemistry",
+      "electrodes",
+      "electrophoresis, capillary",
+      "electrophoresis, polyacrylamide gel",
+      "enkephalin, methionine",
+      "enkephalins",
+      "enzyme activation",
+      "enzyme inhibitors",
+      "enzyme precursors",
+      "equipment design",
+      "equipment failure analysis",
+      "ethanol",
+      "ethylmorphine",
+      "female",
+      "ferric compounds",
+      "ferrous compounds",
+      "flow cytometry",
+      "fluorescent dyes",
+      "food analysis",
+      "food contamination",
+      "free radical scavengers",
+      "free radicals",
+      "fruit",
+      "gas chromatography-mass spectrometry",
+      "gene expression regulation",
+      "gene expression regulation, neoplastic",
+      "gene silencing",
+      "glucose intolerance",
+      "glutathione",
+      "glyceraldehyde-3-phosphate dehydrogenases",
+      "harmine",
+      "homovanillic acid",
+      "humans",
+      "hydrogen-ion concentration",
+      "hydrolysis",
+      "hydroxyindoleacetic acid",
+      "hydroxyl radical",
+      "hypertension",
+      "hypothalamus",
+      "immunoblotting",
+      "immunohistochemistry",
+      "inactivation, metabolic",
+      "indans",
+      "indicators and reagents",
+      "indoles",
+      "ion channels",
+      "ion transport",
+      "iron",
+      "iron metabolism disorders",
+      "isoquinolines",
+      "kinetics",
+      "levodopa",
+      "ligands",
+      "lithium",
+      "lithium compounds",
+      "lymphocytes",
+      "magnetic resonance spectroscopy",
+      "male",
+      "malondialdehyde",
+      "mass spectrometry",
+      "mecamylamine",
+      "membrane glycoproteins",
+      "membrane potential, mitochondrial",
+      "membrane potentials",
+      "membrane transport proteins",
+      "methoxyhydroxyphenylglycol",
+      "methylation",
+      "methyltransferases",
+      "mice",
+      "mice, inbred balb c",
+      "mice, transgenic",
+      "microdialysis",
+      "microscopy, fluorescence",
+      "middle aged",
+      "mitochondria",
+      "mitochondria, liver",
+      "mitochondrial membrane transport proteins",
+      "mitochondrial membranes",
+      "mitochondrial permeability transition pore",
+      "models, biological",
+      "models, molecular",
+      "molecular conformation",
+      "molecular docking simulation",
+      "molecular structure",
+      "molsidomine",
+      "monoamine oxidase",
+      "monoamine oxidase inhibitors",
+      "morphine",
+      "mptp poisoning",
+      "musa",
+      "muscle relaxants, central",
+      "nad",
+      "nanotechnology",
+      "necrosis",
+      "nerve degeneration",
+      "nerve tissue proteins",
+      "nervous system",
+      "nervous system physiological phenomena",
+      "neuroblastoma",
+      "neurologic examination",
+      "neurons",
+      "neuroprotective agents",
+      "neuropsychological tests",
+      "neurotoxins",
+      "neurotransmitter agents",
+      "nicotine",
+      "nicotinic agonists",
+      "nicotinic antagonists",
+      "nitric oxide donors",
+      "norepinephrine",
+      "nucleus accumbens",
+      "oligopeptides",
+      "osmolar concentration",
+      "oxidation-reduction",
+      "oxidative stress",
+      "oxidopamine",
+      "papaverine",
+      "parasympatholytics",
+      "pargyline",
+      "parkinson disease",
+      "parkinson disease, secondary",
+      "parkinsonian disorders",
+      "pc12 cells",
+      "perfusion",
+      "permeability",
+      "pharmacy",
+      "phenanthridines",
+      "phenanthrolines",
+      "phenobarbital",
+      "pheochromocytoma",
+      "phosphorus isotopes",
+      "piperazines",
+      "piperidines",
+      "plant components, aerial",
+      "plant extracts",
+      "plants, medicinal",
+      "postmortem changes",
+      "posture",
+      "potassium",
+      "propidium",
+      "propylamines",
+      "prospective studies",
+      "protein synthesis inhibitors",
+      "proto-oncogene proteins c-bcl-2",
+      "putamen",
+      "quinolines",
+      "rats",
+      "rats, inbred strains",
+      "rats, sprague-dawley",
+      "rats, wistar",
+      "reactive oxygen species",
+      "receptors, dopamine",
+      "receptors, dopamine d2",
+      "receptors, dopamine d3",
+      "receptors, opioid",
+      "receptors, purinergic",
+      "reference values",
+      "reflex",
+      "regression analysis",
+      "reproducibility of results",
+      "research",
+      "reserpine",
+      "reverse transcriptase polymerase chain reaction",
+      "rna, small interfering",
+      "salsola",
+      "salsoline alkaloids",
+      "secretory vesicles",
+      "seeds",
+      "selegiline",
+      "semicarbazides",
+      "serotonin",
+      "sex factors",
+      "signal transduction",
+      "sodium dodecyl sulfate",
+      "spectrometry, mass, electrospray ionization",
+      "spectrophotometry, ultraviolet",
+      "statistics, nonparametric",
+      "stereoisomerism",
+      "structure-activity relationship",
+      "subcellular fractions",
+      "substantia nigra",
+      "superoxide dismutase",
+      "tandem mass spectrometry",
+      "tetrahydroisoquinolines",
+      "tetrahydropapaveroline",
+      "tetrazolium salts",
+      "thiazoles",
+      "time factors",
+      "tissue distribution",
+      "tobacco use disorder",
+      "transfection",
+      "triterpenes",
+      "trpc cation channels",
+      "tumor cells, cultured",
+      "tyrosine 3-monooxygenase",
+      "up-regulation",
+      "uricosuric agents",
+      "urination",
+      "vasodilator agents",
+      "ventral tegmental area",
+      "vitis",
+      "wine",
+    ],
+    "kwTaxonomies": [
+      "eukaryota",
+      "viridiplantae",
+      "streptophyta",
+      "magnoliopsida",
+      "caryophyllales",
+      "chenopodiaceae",
+      "xylosalsola",
+      "paletzkiana",
+      "fabales",
+      "fabaceae",
+      "desmodium",
+      "adscendens",
+      "salsola",
+      "collina",
+      "richteri",
+      "cornales",
+      "cornaceae",
+      "alangium",
+      "lamarckii",
+    ],
+    "massSpectraRefs": [
+      {
+        "$id": "MSBNK-Washington_State_Univ-BML82135",
+        "$ref": "massBank",
+      },
+      {
+        "$id": "MSBNK-Washington_State_Univ-BML82137",
+        "$ref": "massBank",
+      },
+    ],
+    "mf": "C11H15NO2",
+    "naturalProduct": true,
+    "nbActivities": 3,
+    "nbMassSpectra": 2,
+    "nbPatents": 96,
+    "nbPubmeds": 73,
+    "nbTaxonomies": 5,
+    "noStereoOCL": {
+      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\\\Bm?vw__x@m?p",
+      "idCode": "dg~D@MBdin]V^G[hHBjb@@",
+    },
+    "patents": [],
+    "pubmeds": [],
+    "taxonomies": [
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "LTS0005803",
+          "$ref": "lotuses",
+        },
+        "family": "Chenopodiaceae",
+        "genus": "Xylosalsola",
+        "kingdom": "Viridiplantae",
+        "order": "Caryophyllales",
+        "phylum": "Streptophyta",
+        "species": "Xylosalsola paletzkiana",
+        "superkingdom": "Eukaryota",
+      },
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "LTS0064081",
+          "$ref": "lotuses",
+        },
+        "family": "Fabaceae",
+        "genus": "Desmodium",
+        "kingdom": "Viridiplantae",
+        "order": "Fabales",
+        "phylum": "Streptophyta",
+        "species": "Desmodium adscendens",
+        "superkingdom": "Eukaryota",
+      },
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "NPC294249",
+          "$ref": "npasses",
+        },
+        "family": "Chenopodiaceae",
+        "genus": "Salsola",
+        "kingdom": "Viridiplantae",
+        "order": "Caryophyllales",
+        "phylum": "Streptophyta",
+        "species": "Salsola collina",
+        "superkingdom": "Eukaryota",
+      },
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "CNP0237841",
+          "$ref": "coconuts",
+        },
+        "family": "Chenopodiaceae",
+        "genus": "Salsola",
+        "kingdom": "Viridiplantae",
+        "order": "Caryophyllales",
+        "phylum": "Streptophyta",
+        "species": "Salsola richteri",
+        "superkingdom": "Eukaryota",
+      },
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "CNP0237841",
+          "$ref": "coconuts",
+        },
+        "family": "Cornaceae",
+        "genus": "Alangium",
+        "kingdom": "Viridiplantae",
+        "order": "Cornales",
+        "phylum": "Streptophyta",
+        "species": "Alangium lamarckii",
+        "superkingdom": "Eukaryota",
+      },
+    ],
+    "unsaturation": 5,
+  },
+}
+`;
+
+exports[`term:Apoptosis 2`] = `
+{
+  "_id": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+  "data": {
+    "activities": [],
+    "bioactive": true,
+    "cas": [
+      "89-31-6",
+    ],
+    "charge": 0,
+    "compounds": [
+      {
+        "$id": 40010,
+        "$ref": "compounds",
+        "data": {
+          "atoms": {
+            "C": 11,
+            "H": 15,
+            "N": 1,
+            "O": 2,
+          },
+          "charge": 0,
+          "em": 193.11027872702,
+          "inchi": "InChI=1S/C11H15NO2/c1-7-9-6-11(14-2)10(13)5-8(9)3-4-12-7/h5-7,12-13H,3-4H2,1-2H3/t7-/m1/s1",
+          "inchiKey": "YTPRLBGPGZHUPD-SSDOTTSWSA-N",
+          "iupac": "(1R)-7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol",
+          "mf": "C11H15NO2",
+          "molfile": "40010
+  -OEChem-03172303102D
+
+ 29 30  0     1  0  0  0  0  0999 V2000
+    2.0000   -0.7927    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.2073    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981   -0.3135    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920   -0.8274    0.0000 C   0  0  1  0  0  0  0  0  0  0  0  0
+    4.5981   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.5981    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920    1.2420    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981    0.7281    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4804   -1.8273    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -0.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.2073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -1.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0259   -1.1425    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.8856    1.7210    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.0874    1.7118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.0089    0.6220    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.6071    1.3118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.9338   -0.6256    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.8605   -1.8201    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4733   -2.4473    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.1004   -1.8345    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -1.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3800   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -2.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6200   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1 12  1  0  0  0  0
+  1 14  1  0  0  0  0
+  2 13  1  0  0  0  0
+  2 26  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  3 20  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  6  0  0  0
+  4 15  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6 11  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7 16  1  0  0  0  0
+  7 17  1  0  0  0  0
+  8 18  1  0  0  0  0
+  8 19  1  0  0  0  0
+  9 21  1  0  0  0  0
+  9 22  1  0  0  0  0
+  9 23  1  0  0  0  0
+ 10 12  1  0  0  0  0
+ 10 24  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 11 25  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 14 27  1  0  0  0  0
+ 14 28  1  0  0  0  0
+ 14 29  1  0  0  0  0
+M  END
+",
+          "mw": 193.24271923500675,
+          "nbFragments": 1,
+          "ocl": {
+            "acceptorCount": 3,
+            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "donorCount": 2,
+            "idCode": "dg~D@MBdin]V^G[hHBjbbT@",
+            "index": [
+              138428489,
+            ],
+            "logP": 1.5439999848604202,
+            "logS": -1.6339999437332153,
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "polarSurfaceArea": 41.48999881744385,
+            "rotatableBondCount": 1,
+            "stereoCenterCount": 1,
+          },
+          "unsaturation": 5,
+        },
+      },
+      {
+        "$id": 46695,
+        "$ref": "compounds",
+        "data": {
+          "atoms": {
+            "C": 11,
+            "H": 15,
+            "N": 1,
+            "O": 2,
+          },
+          "charge": 0,
+          "em": 193.11027872702,
+          "inchi": "InChI=1S/C11H15NO2/c1-7-9-6-11(14-2)10(13)5-8(9)3-4-12-7/h5-7,12-13H,3-4H2,1-2H3",
+          "inchiKey": "YTPRLBGPGZHUPD-UHFFFAOYSA-N",
+          "iupac": "7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol",
+          "mf": "C11H15NO2",
+          "molfile": "46695
+  -OEChem-03172303102D
+
+ 29 30  0     1  0  0  0  0  0999 V2000
+    2.0000   -0.7927    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.2073    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981   -0.3135    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920   -0.8274    0.0000 C   0  0  3  0  0  0  0  0  0  0  0  0
+    4.5981   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.5981    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920    1.2420    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981    0.7281    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4804   -1.8273    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -0.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.2073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -1.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0259   -1.1425    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.8856    1.7210    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.0874    1.7118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.0089    0.6220    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.6071    1.3118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.9338   -0.6256    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.8605   -1.8201    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4733   -2.4473    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.1004   -1.8345    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -1.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3800   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -2.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6200   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1 12  1  0  0  0  0
+  1 14  1  0  0  0  0
+  2 13  1  0  0  0  0
+  2 26  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  3 20  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  4 15  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6 11  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7 16  1  0  0  0  0
+  7 17  1  0  0  0  0
+  8 18  1  0  0  0  0
+  8 19  1  0  0  0  0
+  9 21  1  0  0  0  0
+  9 22  1  0  0  0  0
+  9 23  1  0  0  0  0
+ 10 12  1  0  0  0  0
+ 10 24  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 11 25  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 14 27  1  0  0  0  0
+ 14 28  1  0  0  0  0
+ 14 29  1  0  0  0  0
+M  END
+",
+          "mw": 193.24271923500675,
+          "nbFragments": 1,
+          "ocl": {
+            "acceptorCount": 3,
+            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "donorCount": 2,
+            "idCode": "dg~D@MBdin]V^G[hHBjb@@",
+            "index": [
+              138428489,
+            ],
+            "logP": 1.5439999848604202,
+            "logS": -1.6339999437332153,
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "polarSurfaceArea": 41.48999881744385,
+            "rotatableBondCount": 1,
+            "stereoCenterCount": 1,
+          },
+          "unsaturation": 5,
+        },
+      },
+      {
+        "$id": 442356,
+        "$ref": "compounds",
+        "data": {
+          "atoms": {
+            "C": 11,
+            "H": 15,
+            "N": 1,
+            "O": 2,
+          },
+          "charge": 0,
+          "em": 193.11027872702,
+          "inchi": "InChI=1S/C11H15NO2/c1-7-9-6-11(14-2)10(13)5-8(9)3-4-12-7/h5-7,12-13H,3-4H2,1-2H3/t7-/m0/s1",
+          "inchiKey": "YTPRLBGPGZHUPD-ZETCQYMHSA-N",
+          "iupac": "(1S)-7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol",
+          "mf": "C11H15NO2",
+          "molfile": "442356
+  -OEChem-03172303402D
+
+ 29 30  0     1  0  0  0  0  0999 V2000
+    2.0000   -0.7927    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.2073    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981   -0.3135    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920   -0.8274    0.0000 C   0  0  2  0  0  0  0  0  0  0  0  0
+    4.5981   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.5981    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4920    1.2420    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3981    0.7281    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4804   -1.8273    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -0.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.2073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660   -0.2927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.8660    0.7073    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -1.7927    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0259   -1.1425    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.8856    1.7210    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.0874    1.7118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.0089    0.6220    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.6071    1.3118    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.9338   -0.6256    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.8605   -1.8201    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.4733   -2.4473    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.1004   -1.8345    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320   -1.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7320    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000    1.8273    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3800   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0000   -2.4127    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6200   -1.7927    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1 12  1  0  0  0  0
+  1 14  1  0  0  0  0
+  2 13  1  0  0  0  0
+  2 26  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  3 20  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  1  0  0  0
+  4 15  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6 11  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7 16  1  0  0  0  0
+  7 17  1  0  0  0  0
+  8 18  1  0  0  0  0
+  8 19  1  0  0  0  0
+  9 21  1  0  0  0  0
+  9 22  1  0  0  0  0
+  9 23  1  0  0  0  0
+ 10 12  1  0  0  0  0
+ 10 24  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 11 25  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 14 27  1  0  0  0  0
+ 14 28  1  0  0  0  0
+ 14 29  1  0  0  0  0
+M  END
+",
+          "mw": 193.24271923500675,
+          "nbFragments": 1,
+          "ocl": {
+            "acceptorCount": 3,
+            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "donorCount": 2,
+            "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
+            "index": [
+              -1057975,
+              -1773066496,
+              813777542,
+              1098920065,
+              -2137647040,
+              268448322,
+              -1321147900,
+              -2147480172,
+              150995008,
+              2170896,
+              73569282,
+              2139152,
+              67592,
+              131587,
+              68485138,
+              25722948,
+            ],
+            "logP": 1.5439999848604202,
+            "logS": -1.6339999437332153,
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            "polarSurfaceArea": 41.48999881744385,
+            "rotatableBondCount": 1,
+            "stereoCenterCount": 1,
+          },
+          "unsaturation": 5,
+        },
+      },
+    ],
+    "em": 193.11027872702,
+    "kwActiveAgainst": [
+      "actinopteri",
+      "anthracis",
+      "bacillaceae",
+      "bacillales",
+      "bacilli",
+      "bacillota",
+      "bacillus",
+      "bacteria",
+      "caballus",
+      "chordata",
+      "electricus",
+      "electrophorus",
+      "equidae",
+      "equus",
+      "eukaryota",
+      "gymnotidae",
+      "gymnotiformes",
+      "hominidae",
+      "homo",
+      "mammalia",
+      "metazoa",
+      "perissodactyla",
+      "primates",
+      "sapiens",
+    ],
+    "kwBioassays": [
+      "a350",
+      "assay",
+      "inhibition",
+      "mu",
+      "potency",
+      "profiling",
+      "qhts",
+      "region",
+      "spectral",
+      "spectroscopic",
+    ],
+    "kwMeshTerms": [
+      "1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine",
+      "1-methyl-4-phenylpyridinium",
+      "3,4-dihydroxyphenylacetic acid",
+      "8-hydroxy-2'-deoxyguanosine",
+      "acetaldehyde",
+      "acetylcholine",
+      "acetylcholinesterase",
+      "active transport, cell nucleus",
+      "adenosine triphosphate",
+      "adrenergic uptake inhibitors",
+      "adult",
+      "age factors",
+      "aged",
+      "aging",
+      "alcohol drinking",
+      "alcoholic intoxication",
+      "alcoholism",
+      "alkaloids",
+      "alkynes",
+      "amyloid beta-peptides",
+      "analysis of variance",
+      "animals",
+      "annexin a5",
+      "antihypertensive agents",
+      "antioxidants",
+      "antiparkinson agents",
+      "apoptosis",
+      "apoptosis regulatory proteins",
+      "ascorbic acid",
+      "atropine",
+      "autoradiography",
+      "behavior, animal",
+      "benzofurans",
+      "benzophenanthridines",
+      "benzoquinones",
+      "beta-cyclodextrins",
+      "beverages",
+      "binding sites",
+      "biogenic amines",
+      "biomarkers",
+      "biosensing techniques",
+      "blood coagulation",
+      "blood coagulation tests",
+      "blood pressure",
+      "blood pressure determination",
+      "borates",
+      "brain",
+      "brain chemistry",
+      "breeding",
+      "butyrylcholinesterase",
+      "calcium",
+      "carbolines",
+      "carcinogens",
+      "cardiovascular agents",
+      "carrier proteins",
+      "caspase 3",
+      "caspase inhibitors",
+      "caspases",
+      "catalase",
+      "catalytic domain",
+      "catecholamine plasma membrane transport proteins",
+      "catecholamines",
+      "catechols",
+      "caudate nucleus",
+      "cell count",
+      "cell cycle",
+      "cell death",
+      "cell differentiation",
+      "cell line",
+      "cell line, tumor",
+      "cell nucleus",
+      "cell survival",
+      "cells, cultured",
+      "central nervous system depressants",
+      "centrifugation, density gradient",
+      "cerebrospinal fluid",
+      "chemistry, organic",
+      "chemistry, pharmaceutical",
+      "chenopodiaceae",
+      "choline",
+      "cholinesterase inhibitors",
+      "chromatography, high pressure liquid",
+      "chromatography, liquid",
+      "chromatography, micellar electrokinetic capillary",
+      "circular dichroism",
+      "conditioning, classical",
+      "copper",
+      "corpus striatum",
+      "cyclodextrins",
+      "cycloheximide",
+      "cyclosporine",
+      "cysteine proteinase inhibitors",
+      "cytochromes c",
+      "data interpretation, statistical",
+      "deoxyepinephrine",
+      "deoxyguanosine",
+      "desipramine",
+      "deuterium",
+      "diabetes mellitus, type 2",
+      "diet, high-fat",
+      "disease models, animal",
+      "disease progression",
+      "dna",
+      "dna damage",
+      "dna fragmentation",
+      "dna, neoplasm",
+      "dogs",
+      "donepezil",
+      "dopamine",
+      "dopamine agents",
+      "dopamine antagonists",
+      "dopamine plasma membrane transport proteins",
+      "dopamine uptake inhibitors",
+      "dopaminergic neurons",
+      "dose-response relationship, drug",
+      "drosophila melanogaster",
+      "drosophila proteins",
+      "drug combinations",
+      "drug interactions",
+      "egypt",
+      "electrochemistry",
+      "electrodes",
+      "electrophoresis, capillary",
+      "electrophoresis, polyacrylamide gel",
+      "enkephalin, methionine",
+      "enkephalins",
+      "enzyme activation",
+      "enzyme inhibitors",
+      "enzyme precursors",
+      "equipment design",
+      "equipment failure analysis",
+      "ethanol",
+      "ethylmorphine",
+      "female",
+      "ferric compounds",
+      "ferrous compounds",
+      "flow cytometry",
+      "fluorescent dyes",
+      "food analysis",
+      "food contamination",
+      "free radical scavengers",
+      "free radicals",
+      "fruit",
+      "gas chromatography-mass spectrometry",
+      "gene expression regulation",
+      "gene expression regulation, neoplastic",
+      "gene silencing",
+      "glucose intolerance",
+      "glutathione",
+      "glyceraldehyde-3-phosphate dehydrogenases",
+      "harmine",
+      "homovanillic acid",
+      "humans",
+      "hydrogen-ion concentration",
+      "hydrolysis",
+      "hydroxyindoleacetic acid",
+      "hydroxyl radical",
+      "hypertension",
+      "hypothalamus",
+      "immunoblotting",
+      "immunohistochemistry",
+      "inactivation, metabolic",
+      "indans",
+      "indicators and reagents",
+      "indoles",
+      "ion channels",
+      "ion transport",
+      "iron",
+      "iron metabolism disorders",
+      "isoquinolines",
+      "kinetics",
+      "levodopa",
+      "ligands",
+      "lithium",
+      "lithium compounds",
+      "lymphocytes",
+      "magnetic resonance spectroscopy",
+      "male",
+      "malondialdehyde",
+      "mass spectrometry",
+      "mecamylamine",
+      "membrane glycoproteins",
+      "membrane potential, mitochondrial",
+      "membrane potentials",
+      "membrane transport proteins",
+      "methoxyhydroxyphenylglycol",
+      "methylation",
+      "methyltransferases",
+      "mice",
+      "mice, inbred balb c",
+      "mice, transgenic",
+      "microdialysis",
+      "microscopy, fluorescence",
+      "middle aged",
+      "mitochondria",
+      "mitochondria, liver",
+      "mitochondrial membrane transport proteins",
+      "mitochondrial membranes",
+      "mitochondrial permeability transition pore",
+      "models, biological",
+      "models, molecular",
+      "molecular conformation",
+      "molecular docking simulation",
+      "molecular structure",
+      "molsidomine",
+      "monoamine oxidase",
+      "monoamine oxidase inhibitors",
+      "morphine",
+      "mptp poisoning",
+      "musa",
+      "muscle relaxants, central",
+      "nad",
+      "nanotechnology",
+      "necrosis",
+      "nerve degeneration",
+      "nerve tissue proteins",
+      "nervous system",
+      "nervous system physiological phenomena",
+      "neuroblastoma",
+      "neurologic examination",
+      "neurons",
+      "neuroprotective agents",
+      "neuropsychological tests",
+      "neurotoxins",
+      "neurotransmitter agents",
+      "nicotine",
+      "nicotinic agonists",
+      "nicotinic antagonists",
+      "nitric oxide donors",
+      "norepinephrine",
+      "nucleus accumbens",
+      "oligopeptides",
+      "osmolar concentration",
+      "oxidation-reduction",
+      "oxidative stress",
+      "oxidopamine",
+      "papaverine",
+      "parasympatholytics",
+      "pargyline",
+      "parkinson disease",
+      "parkinson disease, secondary",
+      "parkinsonian disorders",
+      "pc12 cells",
+      "perfusion",
+      "permeability",
+      "pharmacy",
+      "phenanthridines",
+      "phenanthrolines",
+      "phenobarbital",
+      "pheochromocytoma",
+      "phosphorus isotopes",
+      "piperazines",
+      "piperidines",
+      "plant components, aerial",
+      "plant extracts",
+      "plants, medicinal",
+      "postmortem changes",
+      "posture",
+      "potassium",
+      "propidium",
+      "propylamines",
+      "prospective studies",
+      "protein synthesis inhibitors",
+      "proto-oncogene proteins c-bcl-2",
+      "putamen",
+      "quinolines",
+      "rats",
+      "rats, inbred strains",
+      "rats, sprague-dawley",
+      "rats, wistar",
+      "reactive oxygen species",
+      "receptors, dopamine",
+      "receptors, dopamine d2",
+      "receptors, dopamine d3",
+      "receptors, opioid",
+      "receptors, purinergic",
+      "reference values",
+      "reflex",
+      "regression analysis",
+      "reproducibility of results",
+      "research",
+      "reserpine",
+      "reverse transcriptase polymerase chain reaction",
+      "rna, small interfering",
+      "salsola",
+      "salsoline alkaloids",
+      "secretory vesicles",
+      "seeds",
+      "selegiline",
+      "semicarbazides",
+      "serotonin",
+      "sex factors",
+      "signal transduction",
+      "sodium dodecyl sulfate",
+      "spectrometry, mass, electrospray ionization",
+      "spectrophotometry, ultraviolet",
+      "statistics, nonparametric",
+      "stereoisomerism",
+      "structure-activity relationship",
+      "subcellular fractions",
+      "substantia nigra",
+      "superoxide dismutase",
+      "tandem mass spectrometry",
+      "tetrahydroisoquinolines",
+      "tetrahydropapaveroline",
+      "tetrazolium salts",
+      "thiazoles",
+      "time factors",
+      "tissue distribution",
+      "tobacco use disorder",
+      "transfection",
+      "triterpenes",
+      "trpc cation channels",
+      "tumor cells, cultured",
+      "tyrosine 3-monooxygenase",
+      "up-regulation",
+      "uricosuric agents",
+      "urination",
+      "vasodilator agents",
+      "ventral tegmental area",
+      "vitis",
+      "wine",
+    ],
+    "kwTaxonomies": [
+      "eukaryota",
+      "viridiplantae",
+      "streptophyta",
+      "magnoliopsida",
+      "caryophyllales",
+      "chenopodiaceae",
+      "xylosalsola",
+      "paletzkiana",
+      "fabales",
+      "fabaceae",
+      "desmodium",
+      "adscendens",
+      "salsola",
+      "collina",
+      "richteri",
+      "cornales",
+      "cornaceae",
+      "alangium",
+      "lamarckii",
+    ],
+    "massSpectraRefs": [
+      {
+        "$id": "MSBNK-Washington_State_Univ-BML82135",
+        "$ref": "massBank",
+      },
+      {
+        "$id": "MSBNK-Washington_State_Univ-BML82137",
+        "$ref": "massBank",
+      },
+    ],
+    "mf": "C11H15NO2",
+    "naturalProduct": true,
+    "nbActivities": 3,
+    "nbMassSpectra": 2,
+    "nbPatents": 96,
+    "nbPubmeds": 73,
+    "nbTaxonomies": 5,
+    "noStereoOCL": {
+      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\\\Bm?vw__x@m?p",
+      "idCode": "dg~D@MBdin]V^G[hHBjb@@",
+    },
+    "patents": [],
+    "pubmeds": [
+      {
+        "$id": "11090952",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": null,
+            "authors": [
+              {
+                "firstName": "M",
+                "initials": "M",
+                "lastName": "Naoi",
+              },
+              {
+                "firstName": "W",
+                "initials": "W",
+                "lastName": "Maruyama",
+              },
+              {
+                "firstName": "Y",
+                "initials": "Y",
+                "lastName": "Akao",
+              },
+              {
+                "firstName": "J",
+                "initials": "J",
+                "lastName": "Zhang",
+              },
+              {
+                "firstName": "H",
+                "initials": "H",
+                "lastName": "Parvez",
+              },
+            ],
+            "journal": {
+              "iSSN": "0300-483X",
+              "isoAbbreviation": "Toxicology",
+              "issue": "1-3",
+              "pubDate": {
+                "Day": 16,
+                "Month": "Nov",
+                "Year": 2000,
+              },
+              "title": "Toxicology",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, Non-U.S. Gov't",
+              "Review",
+            ],
+            "title": "Apoptosis induced by an endogenous neurotoxin, N-methyl(R)salsolinol, in dopamine neurons.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Neurotoxins",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Tetrahydroisoquinolines",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+            {
+              "nameOfSubstance": "Dopamine",
+              "unii": "VTD58H1Z2X",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 681,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 65340,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 3713609,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+            },
+          ],
+          "dateCompleted": {
+            "Day": 3,
+            "Month": 1,
+            "Year": 2001,
+          },
+          "dateRevised": {
+            "Day": 19,
+            "Month": 8,
+            "Year": 2019,
+          },
+          "journalInfo": {
+            "Country": "Ireland",
+            "ISSNLinking": "0300-483X",
+            "MedlineTA": "Toxicology",
+            "NlmUniqueID": 361055,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Animals",
+            },
+            {
+              "descriptorName": "Apoptosis",
+              "qualifierName": "drug effects",
+            },
+            {
+              "descriptorName": "DNA Fragmentation",
+              "qualifierName": "drug effects",
+            },
+            {
+              "descriptorName": "Dopamine",
+              "qualifierName": "physiology",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "Neurons",
+            },
+            {
+              "descriptorName": "Neurotoxins",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Tetrahydroisoquinolines",
+            },
+          ],
+        },
+        "score": 1.019916591035438,
+        "url": " https://pubmed.ncbi.nlm.nih.gov/11090952",
+      },
+      {
+        "$id": "10380999",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": null,
+            "authors": [
+              {
+                "firstName": "Y",
+                "initials": "Y",
+                "lastName": "Akao",
+              },
+              {
+                "firstName": "Y",
+                "initials": "Y",
+                "lastName": "Nakagawa",
+              },
+              {
+                "firstName": "W",
+                "initials": "W",
+                "lastName": "Maruyama",
+              },
+              {
+                "firstName": "T",
+                "initials": "T",
+                "lastName": "Takahashi",
+              },
+              {
+                "firstName": "M",
+                "initials": "M",
+                "lastName": "Naoi",
+              },
+            ],
+            "journal": {
+              "iSSN": "0304-3940",
+              "isoAbbreviation": "Neurosci Lett",
+              "issue": 3,
+              "pubDate": {
+                "Day": 4,
+                "Month": "Jun",
+                "Year": 1999,
+              },
+              "title": "Neuroscience letters",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, Non-U.S. Gov't",
+            ],
+            "title": "Apoptosis induced by an endogenous neurotoxin, N-methyl(R)salsolinol, is mediated by activation of caspase 3.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Caspase Inhibitors",
+            },
+            {
+              "nameOfSubstance": "Enzyme Precursors",
+            },
+            {
+              "nameOfSubstance": "Neurotoxins",
+            },
+            {
+              "nameOfSubstance": "Oligopeptides",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Tetrahydroisoquinolines",
+            },
+            {
+              "nameOfSubstance": "acetyl-aspartyl-glutamyl-valyl-aspartal",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+            {
+              "nameOfSubstance": "CASP3 protein, human",
+              "unii": "EC 3.4.22.-",
+            },
+            {
+              "nameOfSubstance": "Caspase 3",
+              "unii": "EC 3.4.22.-",
+            },
+            {
+              "nameOfSubstance": "Caspases",
+              "unii": "EC 3.4.22.-",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 644345,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 101009379,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+            },
+          ],
+          "dateCompleted": {
+            "Day": 3,
+            "Month": 8,
+            "Year": 1999,
+          },
+          "dateRevised": {
+            "Day": 1,
+            "Month": 7,
+            "Year": 2019,
+          },
+          "journalInfo": {
+            "Country": "Ireland",
+            "ISSNLinking": "0304-3940",
+            "MedlineTA": "Neurosci Lett",
+            "NlmUniqueID": 7600130,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Apoptosis",
+            },
+            {
+              "descriptorName": "Caspase 3",
+            },
+            {
+              "descriptorName": "Caspase Inhibitors",
+            },
+            {
+              "descriptorName": "Caspases",
+              "qualifierName": "physiology",
+            },
+            {
+              "descriptorName": "DNA Fragmentation",
+              "qualifierName": "drug effects",
+            },
+            {
+              "descriptorName": "Enzyme Activation",
+            },
+            {
+              "descriptorName": "Enzyme Precursors",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "Neurotoxins",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Oligopeptides",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Parkinson Disease",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Tetrahydroisoquinolines",
+            },
+            {
+              "descriptorName": "Tumor Cells, Cultured",
+            },
+          ],
+        },
+        "score": 0.8324504922849117,
+        "url": " https://pubmed.ncbi.nlm.nih.gov/10380999",
+      },
+      {
+        "$id": "16336631",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": null,
+            "authors": [
+              {
+                "firstName": "Hong",
+                "initials": "H",
+                "lastName": "Yi",
+              },
+              {
+                "firstName": "Yukihiro",
+                "initials": "Y",
+                "lastName": "Akao",
+              },
+              {
+                "firstName": "Wakako",
+                "initials": "W",
+                "lastName": "Maruyama",
+              },
+              {
+                "firstName": "Kavin",
+                "initials": "K",
+                "lastName": "Chen",
+              },
+              {
+                "firstName": "Jean",
+                "initials": "J",
+                "lastName": "Shih",
+              },
+              {
+                "firstName": "Makoto",
+                "initials": "M",
+                "lastName": "Naoi",
+              },
+            ],
+            "journal": {
+              "iSSN": "0022-3042",
+              "isoAbbreviation": "J Neurochem",
+              "issue": 2,
+              "pubDate": {
+                "Month": "Jan",
+                "Year": 2006,
+              },
+              "title": "Journal of neurochemistry",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, Non-U.S. Gov't",
+            ],
+            "title": "Type A monoamine oxidase is the target of an endogenous dopaminergic neurotoxin, N-methyl(R)salsolinol, leading to apoptosis in SH-SY5Y cells.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Monoamine Oxidase Inhibitors",
+            },
+            {
+              "nameOfSubstance": "Neurotoxins",
+            },
+            {
+              "nameOfSubstance": "RNA, Small Interfering",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Tetrahydroisoquinolines",
+            },
+            {
+              "nameOfSubstance": "DNA",
+              "unii": "9007-49-2",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+            {
+              "nameOfSubstance": "Monoamine Oxidase",
+              "unii": "EC 1.4.3.4",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 5202,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 1001,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 44135672,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+            },
+          ],
+          "dateCompleted": {
+            "Day": 17,
+            "Month": 2,
+            "Year": 2006,
+          },
+          "dateRevised": {
+            "Day": 14,
+            "Month": 11,
+            "Year": 2013,
+          },
+          "journalInfo": {
+            "Country": "England",
+            "ISSNLinking": "0022-3042",
+            "MedlineTA": "J Neurochem",
+            "NlmUniqueID": "2985190R",
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Apoptosis",
+            },
+            {
+              "descriptorName": "Binding Sites",
+            },
+            {
+              "descriptorName": "Cell Line, Tumor",
+            },
+            {
+              "descriptorName": "DNA",
+            },
+            {
+              "descriptorName": "Gene Silencing",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "Kinetics",
+            },
+            {
+              "descriptorName": "Membrane Potentials",
+            },
+            {
+              "descriptorName": "Mitochondria",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Monoamine Oxidase",
+            },
+            {
+              "descriptorName": "Monoamine Oxidase Inhibitors",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Neuroblastoma",
+            },
+            {
+              "descriptorName": "Neurotoxins",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "RNA, Small Interfering",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Tetrahydroisoquinolines",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Transfection",
+            },
+          ],
+        },
+        "score": 0.7333607110511594,
+        "url": " https://pubmed.ncbi.nlm.nih.gov/16336631",
+      },
+      {
+        "$id": "11128601",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": null,
+            "authors": [
+              {
+                "firstName": "M",
+                "initials": "M",
+                "lastName": "Naoi",
+              },
+              {
+                "firstName": "W",
+                "initials": "W",
+                "lastName": "Maruyama",
+              },
+              {
+                "firstName": "T",
+                "initials": "T",
+                "lastName": "Takahashi",
+              },
+              {
+                "firstName": "Y",
+                "initials": "Y",
+                "lastName": "Akao",
+              },
+              {
+                "firstName": "Y",
+                "initials": "Y",
+                "lastName": "Nakagawa",
+              },
+            ],
+            "journal": {
+              "iSSN": "0303-6995",
+              "isoAbbreviation": "J Neural Transm Suppl",
+              "issue": 58,
+              "pubDate": {
+                "Year": 2000,
+              },
+              "title": "Journal of neural transmission. Supplementum",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, Non-U.S. Gov't",
+            ],
+            "title": "Involvement of endogenous N-methyl(R)salsolinol in Parkinson's disease: induction of apoptosis and protection by (-)deprenyl.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Caspase Inhibitors",
+            },
+            {
+              "nameOfSubstance": "Cysteine Proteinase Inhibitors",
+            },
+            {
+              "nameOfSubstance": "Neuroprotective Agents",
+            },
+            {
+              "nameOfSubstance": "Oligopeptides",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Tetrahydroisoquinolines",
+            },
+            {
+              "nameOfSubstance": "acetyl-aspartyl-glutamyl-valyl-aspartal",
+            },
+            {
+              "nameOfSubstance": "Selegiline",
+              "unii": "2K1V7GP655",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+            {
+              "nameOfSubstance": "CASP3 protein, human",
+              "unii": "EC 3.4.22.-",
+            },
+            {
+              "nameOfSubstance": "Caspase 3",
+              "unii": "EC 3.4.22.-",
+            },
+            {
+              "nameOfSubstance": "Caspases",
+              "unii": "EC 3.4.22.-",
+            },
+            {
+              "nameOfSubstance": "Dopamine",
+              "unii": "VTD58H1Z2X",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 92913,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 65340,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 5195,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 26757,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 26758,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 681,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 644345,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 3713609,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 25058197,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 101009379,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+            },
+          ],
+          "dateCompleted": {
+            "Day": 22,
+            "Month": 2,
+            "Year": 2001,
+          },
+          "dateRevised": {
+            "Day": 25,
+            "Month": 10,
+            "Year": 2019,
+          },
+          "journalInfo": {
+            "Country": "Austria",
+            "ISSNLinking": "0303-6995",
+            "MedlineTA": "J Neural Transm Suppl",
+            "NlmUniqueID": 425126,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Apoptosis",
+              "qualifierName": "drug effects",
+            },
+            {
+              "descriptorName": "Caspase 3",
+            },
+            {
+              "descriptorName": "Caspase Inhibitors",
+            },
+            {
+              "descriptorName": "Caspases",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Cysteine Proteinase Inhibitors",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Dopamine",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Enzyme Activation",
+            },
+            {
+              "descriptorName": "Female",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "Male",
+            },
+            {
+              "descriptorName": "Neuroprotective Agents",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Oligopeptides",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Parkinson Disease",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+            },
+            {
+              "descriptorName": "Selegiline",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Tetrahydroisoquinolines",
+            },
+            {
+              "descriptorName": "Tumor Cells, Cultured",
+            },
+          ],
+        },
+        "score": 0.6398677490508105,
+        "url": " https://pubmed.ncbi.nlm.nih.gov/11128601",
+      },
+      {
+        "$id": "12111453",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": null,
+            "authors": [
+              {
+                "firstName": "M",
+                "initials": "M",
+                "lastName": "Naoi",
+              },
+              {
+                "firstName": "W",
+                "initials": "W",
+                "lastName": "Maruyama",
+              },
+              {
+                "firstName": "Y",
+                "initials": "Y",
+                "lastName": "Akao",
+              },
+              {
+                "firstName": "H",
+                "initials": "H",
+                "lastName": "Yi",
+              },
+            ],
+            "journal": {
+              "iSSN": "0300-9564",
+              "isoAbbreviation": "J Neural Transm (Vienna)",
+              "issue": "5-6",
+              "pubDate": {
+                "Month": "May",
+                "Year": 2002,
+              },
+              "title": "Journal of neural transmission (Vienna, Austria : 1996)",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, Non-U.S. Gov't",
+            ],
+            "title": "Mitochondria determine the survival and death in apoptosis by an endogenous neurotoxin, N-methyl(R)salsolinol, and neuroprotection by propargylamines.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Alkynes",
+            },
+            {
+              "nameOfSubstance": "Indans",
+            },
+            {
+              "nameOfSubstance": "N-2-heptyl-N-methylpropargylamine",
+            },
+            {
+              "nameOfSubstance": "Neuroprotective Agents",
+            },
+            {
+              "nameOfSubstance": "Proto-Oncogene Proteins c-bcl-2",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Tetrahydroisoquinolines",
+            },
+            {
+              "nameOfSubstance": "rasagiline",
+              "unii": "003N66TS6T",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 681,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 122316,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 3052776,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 3052776,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 3052775,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 5289310,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 9794292,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 57133438,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 100956408,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 156963728,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+            },
+          ],
+          "dateCompleted": {
+            "Day": 6,
+            "Month": 8,
+            "Year": 2002,
+          },
+          "dateRevised": {
+            "Day": 26,
+            "Month": 10,
+            "Year": 2015,
+          },
+          "journalInfo": {
+            "Country": "Austria",
+            "ISSNLinking": "0300-9564",
+            "MedlineTA": "J Neural Transm (Vienna)",
+            "NlmUniqueID": 9702341,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Alkynes",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Animals",
+            },
+            {
+              "descriptorName": "Apoptosis",
+            },
+            {
+              "descriptorName": "Cell Survival",
+              "qualifierName": "physiology",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "Indans",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Male",
+            },
+            {
+              "descriptorName": "Mice",
+            },
+            {
+              "descriptorName": "Mice, Transgenic",
+            },
+            {
+              "descriptorName": "Mitochondria",
+              "qualifierName": "physiology",
+            },
+            {
+              "descriptorName": "Mitochondria, Liver",
+              "qualifierName": "physiology",
+            },
+            {
+              "descriptorName": "Neuroprotective Agents",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Proto-Oncogene Proteins c-bcl-2",
+              "qualifierName": "physiology",
+            },
+            {
+              "descriptorName": "Rats",
+            },
+            {
+              "descriptorName": "Rats, Inbred Strains",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Signal Transduction",
+              "qualifierName": "physiology",
+            },
+            {
+              "descriptorName": "Tetrahydroisoquinolines",
+            },
+            {
+              "descriptorName": "Tumor Cells, Cultured",
+            },
+          ],
+        },
+        "score": 0.6289118551911014,
+        "url": " https://pubmed.ncbi.nlm.nih.gov/12111453",
+      },
+      {
+        "$id": "11261742",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": null,
+            "authors": [
+              {
+                "firstName": "W",
+                "initials": "W",
+                "lastName": "Maruyama",
+              },
+              {
+                "firstName": "A A",
+                "initials": "AA",
+                "lastName": "Boulton",
+              },
+              {
+                "firstName": "B A",
+                "initials": "BA",
+                "lastName": "Davis",
+              },
+              {
+                "firstName": "P",
+                "initials": "P",
+                "lastName": "Dostert",
+              },
+              {
+                "firstName": "M",
+                "initials": "M",
+                "lastName": "Naoi",
+              },
+            ],
+            "journal": {
+              "iSSN": "0300-9564",
+              "isoAbbreviation": "J Neural Transm (Vienna)",
+              "issue": 1,
+              "pubDate": {
+                "Year": 2001,
+              },
+              "title": "Journal of neural transmission (Vienna, Austria : 1996)",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, Non-U.S. Gov't",
+            ],
+            "title": "Enantio-specific induction of apoptosis by an endogenous neurotoxin, N-methyl(R)salsolinol, in dopaminergic SH-SY5Y cells: suppression of apoptosis by N-(2-heptyl)-N-methylpropargylamine.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Alkynes",
+            },
+            {
+              "nameOfSubstance": "Fluorescent Dyes",
+            },
+            {
+              "nameOfSubstance": "Monoamine Oxidase Inhibitors",
+            },
+            {
+              "nameOfSubstance": "N-2-heptyl-N-methylpropargylamine",
+            },
+            {
+              "nameOfSubstance": "Neuroprotective Agents",
+            },
+            {
+              "nameOfSubstance": "Neurotoxins",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Tetrahydroisoquinolines",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+            {
+              "nameOfSubstance": "Dopamine",
+              "unii": "VTD58H1Z2X",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 24256,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 681,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 65340,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 681,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 3713609,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 57133438,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+            },
+          ],
+          "dateCompleted": {
+            "Day": 21,
+            "Month": 6,
+            "Year": 2001,
+          },
+          "dateRevised": {
+            "Day": 19,
+            "Month": 11,
+            "Year": 2015,
+          },
+          "journalInfo": {
+            "Country": "Austria",
+            "ISSNLinking": "0300-9564",
+            "MedlineTA": "J Neural Transm (Vienna)",
+            "NlmUniqueID": 9702341,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Alkynes",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Apoptosis",
+            },
+            {
+              "descriptorName": "Dopamine",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Drug Interactions",
+              "qualifierName": "physiology",
+            },
+            {
+              "descriptorName": "Fluorescent Dyes",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "Membrane Potentials",
+            },
+            {
+              "descriptorName": "Mitochondria",
+            },
+            {
+              "descriptorName": "Monoamine Oxidase Inhibitors",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Neuroblastoma",
+            },
+            {
+              "descriptorName": "Neurons",
+            },
+            {
+              "descriptorName": "Neuroprotective Agents",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Neurotoxins",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Parkinsonian Disorders",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Signal Transduction",
+            },
+            {
+              "descriptorName": "Stereoisomerism",
+            },
+            {
+              "descriptorName": "Substantia Nigra",
+            },
+            {
+              "descriptorName": "Tetrahydroisoquinolines",
+            },
+            {
+              "descriptorName": "Tumor Cells, Cultured",
+            },
+          ],
+        },
+        "score": 0.5876804368841665,
+        "url": " https://pubmed.ncbi.nlm.nih.gov/11261742",
+      },
+      {
+        "$id": "19012744",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": null,
+            "authors": [
+              {
+                "firstName": "Hatasu",
+                "initials": "H",
+                "lastName": "Kobayashi",
+              },
+              {
+                "firstName": "Kiyoshi",
+                "initials": "K",
+                "lastName": "Fukuhara",
+              },
+              {
+                "firstName": "Saeko",
+                "initials": "S",
+                "lastName": "Tada-Oikawa",
+              },
+              {
+                "firstName": "Yuki",
+                "initials": "Y",
+                "lastName": "Yada",
+              },
+              {
+                "firstName": "Yusuke",
+                "initials": "Y",
+                "lastName": "Hiraku",
+              },
+              {
+                "firstName": "Mariko",
+                "initials": "M",
+                "lastName": "Murata",
+              },
+              {
+                "firstName": "Shinji",
+                "initials": "S",
+                "lastName": "Oikawa",
+              },
+            ],
+            "doi": "10.1111/j.1471-4159.2008.05774.x",
+            "journal": {
+              "iSSN": "1471-4159",
+              "isoAbbreviation": "J Neurochem",
+              "issue": 2,
+              "pubDate": {
+                "Month": "Jan",
+                "Year": 2009,
+              },
+              "title": "Journal of neurochemistry",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, Non-U.S. Gov't",
+            ],
+            "title": "The mechanisms of oxidative DNA damage and apoptosis induced by norsalsolinol, an endogenous tetrahydroisoquinoline derivative associated with Parkinson's disease.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Benzoquinones",
+            },
+            {
+              "nameOfSubstance": "Free Radical Scavengers",
+            },
+            {
+              "nameOfSubstance": "Phenanthrolines",
+            },
+            {
+              "nameOfSubstance": "Phosphorus Isotopes",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Tetrahydroisoquinolines",
+            },
+            {
+              "nameOfSubstance": "Tetrazolium Salts",
+            },
+            {
+              "nameOfSubstance": "Thiazoles",
+            },
+            {
+              "nameOfSubstance": "NAD",
+              "unii": "0U46U6E8UK",
+            },
+            {
+              "nameOfSubstance": "quinone",
+              "unii": "3T006GV98U",
+            },
+            {
+              "nameOfSubstance": "Copper",
+              "unii": "789U1901C5",
+            },
+            {
+              "nameOfSubstance": "8-Hydroxy-2'-Deoxyguanosine",
+              "unii": "88847-89-6",
+            },
+            {
+              "nameOfSubstance": "Cytochromes c",
+              "unii": "9007-43-6",
+            },
+            {
+              "nameOfSubstance": "norsalsolinol",
+              "unii": "9SPO03ZH41",
+            },
+            {
+              "nameOfSubstance": "bathocuproine",
+              "unii": "9THP2V94FX",
+            },
+            {
+              "nameOfSubstance": "Tyrosine 3-Monooxygenase",
+              "unii": "EC 1.14.16.2",
+            },
+            {
+              "nameOfSubstance": "Caspase 3",
+              "unii": "EC 3.4.22.-",
+            },
+            {
+              "nameOfSubstance": "thiazolyl blue",
+              "unii": "EUY85H477I",
+            },
+            {
+              "nameOfSubstance": "Deoxyguanosine",
+              "unii": "G9481N71RO",
+            },
+            {
+              "nameOfSubstance": "cupric chloride",
+              "unii": "S2QG84156O",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 6057,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 36937,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 12035,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 7046,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 4650,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 9256,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 67519,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 64965,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 36937,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 23978,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 5893,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 439153,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 5892,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 65149,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 24014,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 64966,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 9256,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 4650,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 15938971,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 16057918,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 42626467,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 73415790,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 135398592,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 135440064,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 135398592,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 136652147,
+              "$ref": "compounds",
+            },
+          ],
+          "dateCompleted": {
+            "Day": 8,
+            "Month": 4,
+            "Year": 2009,
+          },
+          "dateRevised": {
+            "Day": 10,
+            "Month": 12,
+            "Year": 2019,
+          },
+          "journalInfo": {
+            "Country": "England",
+            "ISSNLinking": "0022-3042",
+            "MedlineTA": "J Neurochem",
+            "NlmUniqueID": "2985190R",
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "8-Hydroxy-2'-Deoxyguanosine",
+            },
+            {
+              "descriptorName": "Apoptosis",
+              "qualifierName": "drug effects",
+            },
+            {
+              "descriptorName": "Autoradiography",
+            },
+            {
+              "descriptorName": "Benzoquinones",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Caspase 3",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Cell Line, Tumor",
+            },
+            {
+              "descriptorName": "Copper",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Cytochromes c",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "DNA Damage",
+              "qualifierName": "drug effects",
+            },
+            {
+              "descriptorName": "Deoxyguanosine",
+            },
+            {
+              "descriptorName": "Dose-Response Relationship, Drug",
+            },
+            {
+              "descriptorName": "Free Radical Scavengers",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "NAD",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Neuroblastoma",
+            },
+            {
+              "descriptorName": "Phenanthrolines",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Phosphorus Isotopes",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Tetrahydroisoquinolines",
+              "qualifierName": "chemistry",
+            },
+            {
+              "descriptorName": "Tetrazolium Salts",
+            },
+            {
+              "descriptorName": "Thiazoles",
+            },
+            {
+              "descriptorName": "Time Factors",
+            },
+            {
+              "descriptorName": "Tyrosine 3-Monooxygenase",
+              "qualifierName": "metabolism",
+            },
+          ],
+        },
+        "score": 0.5536653745419153,
+        "url": " https://pubmed.ncbi.nlm.nih.gov/19012744",
+      },
+      {
+        "$id": "15843867",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": null,
+            "authors": [
+              {
+                "firstName": "H",
+                "initials": "H",
+                "lastName": "Yi",
+              },
+              {
+                "firstName": "W",
+                "initials": "W",
+                "lastName": "Maruyama",
+              },
+              {
+                "firstName": "Y",
+                "initials": "Y",
+                "lastName": "Akao",
+              },
+              {
+                "firstName": "T",
+                "initials": "T",
+                "lastName": "Takahashi",
+              },
+              {
+                "firstName": "K",
+                "initials": "K",
+                "lastName": "Iwasa",
+              },
+              {
+                "firstName": "M B H",
+                "initials": "MB",
+                "lastName": "Youdim",
+              },
+              {
+                "firstName": "M",
+                "initials": "M",
+                "lastName": "Naoi",
+              },
+            ],
+            "journal": {
+              "iSSN": "0300-9564",
+              "isoAbbreviation": "J Neural Transm (Vienna)",
+              "issue": 1,
+              "pubDate": {
+                "Month": "Jan",
+                "Year": 2006,
+              },
+              "title": "Journal of neural transmission (Vienna, Austria : 1996)",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Comparative Study",
+              "Journal Article",
+              "Research Support, Non-U.S. Gov't",
+            ],
+            "title": "N-Propargylamine protects SH-SY5Y cells from apoptosis induced by an endogenous neurotoxin, N-methyl(R)salsolinol, through stabilization of mitochondrial membrane and induction of anti-apoptotic Bcl-2.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Apoptosis Regulatory Proteins",
+            },
+            {
+              "nameOfSubstance": "Neuroprotective Agents",
+            },
+            {
+              "nameOfSubstance": "Propylamines",
+            },
+            {
+              "nameOfSubstance": "Proto-Oncogene Proteins c-bcl-2",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Tetrahydroisoquinolines",
+            },
+            {
+              "nameOfSubstance": "propargylamine",
+              "unii": "2450-71-7",
+            },
+            {
+              "nameOfSubstance": "Pargyline",
+              "unii": "9MV14S8G3E",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 6335,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 239041,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 12222,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 4688,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 239041,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 9373,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 3052776,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 10290734,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+            },
+          ],
+          "dateCompleted": {
+            "Day": 15,
+            "Month": 9,
+            "Year": 2006,
+          },
+          "dateRevised": {
+            "Day": 13,
+            "Month": 11,
+            "Year": 2018,
+          },
+          "journalInfo": {
+            "Country": "Austria",
+            "ISSNLinking": "0300-9564",
+            "MedlineTA": "J Neural Transm (Vienna)",
+            "NlmUniqueID": 9702341,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Apoptosis",
+            },
+            {
+              "descriptorName": "Apoptosis Regulatory Proteins",
+            },
+            {
+              "descriptorName": "Dose-Response Relationship, Drug",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "Mitochondria",
+            },
+            {
+              "descriptorName": "Mitochondrial Membranes",
+            },
+            {
+              "descriptorName": "Neuroprotective Agents",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Pargyline",
+            },
+            {
+              "descriptorName": "Propylamines",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Proto-Oncogene Proteins c-bcl-2",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Tetrahydroisoquinolines",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Tumor Cells, Cultured",
+            },
+          ],
+        },
+        "score": 0.5210690471509675,
+        "url": " https://pubmed.ncbi.nlm.nih.gov/15843867",
+      },
+    ],
+    "taxonomies": [
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "LTS0005803",
+          "$ref": "lotuses",
+        },
+        "family": "Chenopodiaceae",
+        "genus": "Xylosalsola",
+        "kingdom": "Viridiplantae",
+        "order": "Caryophyllales",
+        "phylum": "Streptophyta",
+        "species": "Xylosalsola paletzkiana",
+        "superkingdom": "Eukaryota",
+      },
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "LTS0064081",
+          "$ref": "lotuses",
+        },
+        "family": "Fabaceae",
+        "genus": "Desmodium",
+        "kingdom": "Viridiplantae",
+        "order": "Fabales",
+        "phylum": "Streptophyta",
+        "species": "Desmodium adscendens",
+        "superkingdom": "Eukaryota",
+      },
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "NPC294249",
+          "$ref": "npasses",
+        },
+        "family": "Chenopodiaceae",
+        "genus": "Salsola",
+        "kingdom": "Viridiplantae",
+        "order": "Caryophyllales",
+        "phylum": "Streptophyta",
+        "species": "Salsola collina",
+        "superkingdom": "Eukaryota",
+      },
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "CNP0237841",
+          "$ref": "coconuts",
+        },
+        "family": "Chenopodiaceae",
+        "genus": "Salsola",
+        "kingdom": "Viridiplantae",
+        "order": "Caryophyllales",
+        "phylum": "Streptophyta",
+        "species": "Salsola richteri",
+        "superkingdom": "Eukaryota",
+      },
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "CNP0237841",
+          "$ref": "coconuts",
+        },
+        "family": "Cornaceae",
+        "genus": "Alangium",
+        "kingdom": "Viridiplantae",
+        "order": "Cornales",
+        "phylum": "Streptophyta",
+        "species": "Alangium lamarckii",
+        "superkingdom": "Eukaryota",
+      },
+    ],
+    "unsaturation": 5,
+  },
+}
+`;
