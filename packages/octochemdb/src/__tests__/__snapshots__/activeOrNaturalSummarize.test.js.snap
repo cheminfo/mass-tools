@@ -2590,7 +2590,7 @@ M  END
             },
           ],
         },
-        "score": 1.1006748575782699,
+        "score": 1.019916591035438,
         "url": " https://pubmed.ncbi.nlm.nih.gov/11090952",
       },
       {
@@ -2788,7 +2788,7 @@ M  END
             },
           ],
         },
-        "score": 0.9084775042470403,
+        "score": 0.8324504922849117,
         "url": " https://pubmed.ncbi.nlm.nih.gov/10380999",
       },
       {
@@ -2998,7 +2998,7 @@ M  END
             },
           ],
         },
-        "score": 0.7844517256181169,
+        "score": 0.7333607110511594,
         "url": " https://pubmed.ncbi.nlm.nih.gov/16336631",
       },
       {
@@ -3245,7 +3245,7 @@ M  END
             },
           ],
         },
-        "score": 0.6649875293610482,
+        "score": 0.6398677490508105,
         "url": " https://pubmed.ncbi.nlm.nih.gov/11128601",
       },
       {
@@ -3484,7 +3484,7 @@ M  END
             },
           ],
         },
-        "score": 0.6518370990408703,
+        "score": 0.6289118551911014,
         "url": " https://pubmed.ncbi.nlm.nih.gov/12111453",
       },
       {
@@ -3715,7 +3715,7 @@ M  END
             },
           ],
         },
-        "score": 0.6174159739923244,
+        "score": 0.5876804368841665,
         "url": " https://pubmed.ncbi.nlm.nih.gov/11261742",
       },
       {
@@ -4065,7 +4065,7 @@ M  END
             },
           ],
         },
-        "score": 0.5656697168883607,
+        "score": 0.5536653745419153,
         "url": " https://pubmed.ncbi.nlm.nih.gov/19012744",
       },
       {
@@ -4290,233 +4290,8 @@ M  END
             },
           ],
         },
-        "score": 0.5432047117981356,
+        "score": 0.5210690471509675,
         "url": " https://pubmed.ncbi.nlm.nih.gov/15843867",
-      },
-      {
-        "$id": "15102525",
-        "$ref": "pubmeds",
-        "data": {
-          "article": {
-            "abstract": null,
-            "authors": [
-              {
-                "firstName": "Wakako",
-                "initials": "W",
-                "lastName": "Maruyama",
-              },
-              {
-                "firstName": "Hong",
-                "initials": "H",
-                "lastName": "Yi",
-              },
-              {
-                "firstName": "Tsutomu",
-                "initials": "T",
-                "lastName": "Takahashi",
-              },
-              {
-                "firstName": "Seiichiro",
-                "initials": "S",
-                "lastName": "Shimazu",
-              },
-              {
-                "firstName": "Hironori",
-                "initials": "H",
-                "lastName": "Ohde",
-              },
-              {
-                "firstName": "Fumio",
-                "initials": "F",
-                "lastName": "Yoneda",
-              },
-              {
-                "firstName": "Kinuko",
-                "initials": "K",
-                "lastName": "Iwasa",
-              },
-              {
-                "firstName": "Makoto",
-                "initials": "M",
-                "lastName": "Naoi",
-              },
-            ],
-            "journal": {
-              "iSSN": "0024-3205",
-              "isoAbbreviation": "Life Sci",
-              "issue": 1,
-              "pubDate": {
-                "Day": 21,
-                "Month": "May",
-                "Year": 2004,
-              },
-              "title": "Life sciences",
-            },
-            "language": "eng",
-            "languageTextSearch": "english",
-            "publicationTypeList": [
-              "Journal Article",
-              "Research Support, Non-U.S. Gov't",
-            ],
-            "title": "Neuroprotective function of R-(-)-1-(benzofuran-2-yl)-2-propylaminopentane, R-(-)-BPAP, against apoptosis induced by N-methyl(R)salsolinol, an endogenous dopaminergic neurotoxin, in human dopaminergic neuroblastoma SH-SY5Y cells.",
-          },
-          "chemicals": [
-            {
-              "nameOfSubstance": "1-(benzofuran-2-yl)-2-propylaminopentane",
-            },
-            {
-              "nameOfSubstance": "Benzofurans",
-            },
-            {
-              "nameOfSubstance": "Neuroprotective Agents",
-            },
-            {
-              "nameOfSubstance": "Neurotoxins",
-            },
-            {
-              "nameOfSubstance": "Proto-Oncogene Proteins c-bcl-2",
-            },
-            {
-              "nameOfSubstance": "Receptors, Dopamine",
-            },
-            {
-              "nameOfSubstance": "Salsoline Alkaloids",
-            },
-            {
-              "nameOfSubstance": "Tetrahydroisoquinolines",
-            },
-            {
-              "nameOfSubstance": "salsoline",
-              "unii": "9Q83ETU10C",
-            },
-          ],
-          "compounds": [
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-            },
-            {
-              "$id": 6334,
-              "$ref": "compounds",
-            },
-            {
-              "$id": 681,
-              "$ref": "compounds",
-            },
-            {
-              "$id": 6335,
-              "$ref": "compounds",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-            },
-            {
-              "$id": 40009,
-              "$ref": "compounds",
-            },
-            {
-              "$id": 442356,
-              "$ref": "compounds",
-            },
-            {
-              "$id": 40010,
-              "$ref": "compounds",
-            },
-            {
-              "$id": 253613,
-              "$ref": "compounds",
-            },
-            {
-              "$id": 9859674,
-              "$ref": "compounds",
-            },
-            {
-              "$id": 12989303,
-              "$ref": "compounds",
-            },
-            {
-              "$id": 17994716,
-              "$ref": "compounds",
-            },
-            {
-              "$id": 45259939,
-              "$ref": "compounds",
-            },
-            {
-              "$id": 165415541,
-              "$ref": "compounds",
-            },
-          ],
-          "dateCompleted": {
-            "Day": 20,
-            "Month": 5,
-            "Year": 2004,
-          },
-          "dateRevised": {
-            "Day": 14,
-            "Month": 11,
-            "Year": 2013,
-          },
-          "journalInfo": {
-            "Country": "Netherlands",
-            "ISSNLinking": "0024-3205",
-            "MedlineTA": "Life Sci",
-            "NlmUniqueID": 375521,
-          },
-          "meshHeadings": [
-            {
-              "descriptorName": "Apoptosis",
-              "qualifierName": "drug effects",
-            },
-            {
-              "descriptorName": "Benzofurans",
-            },
-            {
-              "descriptorName": "Electrophoresis, Polyacrylamide Gel",
-            },
-            {
-              "descriptorName": "Flow Cytometry",
-            },
-            {
-              "descriptorName": "Humans",
-            },
-            {
-              "descriptorName": "Neuroblastoma",
-            },
-            {
-              "descriptorName": "Neuroprotective Agents",
-            },
-            {
-              "descriptorName": "Neurotoxins",
-              "qualifierName": "toxicity",
-            },
-            {
-              "descriptorName": "Proto-Oncogene Proteins c-bcl-2",
-              "qualifierName": "biosynthesis",
-            },
-            {
-              "descriptorName": "Receptors, Dopamine",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Salsoline Alkaloids",
-              "qualifierName": "toxicity",
-            },
-            {
-              "descriptorName": "Structure-Activity Relationship",
-            },
-            {
-              "descriptorName": "Tetrahydroisoquinolines",
-              "qualifierName": "toxicity",
-            },
-            {
-              "descriptorName": "Tumor Cells, Cultured",
-            },
-          ],
-        },
-        "score": 0.5172612098535196,
-        "url": " https://pubmed.ncbi.nlm.nih.gov/15102525",
       },
     ],
     "taxonomies": [

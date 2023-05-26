@@ -4,7 +4,7 @@ import { join } from 'path';
 import { activeOrNaturalSummarize } from '../activeOrNaturalSummarize.js';
 
 describe('activeOrNaturalSummarize', () => {
-  it.only('empty term', async () => {
+  it('empty term', async () => {
     const entry = JSON.parse(
       readFileSync(join(__dirname, './details.json'), 'utf8'),
     );
