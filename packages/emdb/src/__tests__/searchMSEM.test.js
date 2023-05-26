@@ -1,7 +1,5 @@
 import { EMDB } from '..';
 
-jest.setTimeout(20000);
-
 describe('test searchMSEM', () => {
   it('should filter one database with existing ionization', async () => {
     let emdb = new EMDB();

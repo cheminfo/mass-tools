@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`fromMolecules smiles + H+,Na+ 1`] = `
+exports[`fromMolecules > smiles + H+,Na+ 1`] = `
 EMDB {
   "databases": {
     "molecules": [
@@ -204,7 +204,7 @@ EMDB {
 }
 `;
 
-exports[`fromMolecules smiles + fragmentation 1`] = `
+exports[`fromMolecules > smiles + fragmentation 1`] = `
 EMDB {
   "databases": {
     "molecules": [
@@ -702,7 +702,7 @@ EMDB {
 }
 `;
 
-exports[`fromMolecules smiles + fragments + group 1`] = `
+exports[`fromMolecules > smiles + fragments + group 1`] = `
 EMDB {
   "databases": {
     "molecules": [
@@ -953,7 +953,7 @@ EMDB {
 }
 `;
 
-exports[`fromMolecules smiles + parts 1`] = `
+exports[`fromMolecules > smiles + parts 1`] = `
 EMDB {
   "databases": {
     "molecules": [
@@ -1024,7 +1024,7 @@ EMDB {
 }
 `;
 
-exports[`fromMolecules smiles + target spectrum 1`] = `
+exports[`fromMolecules > smiles + target spectrum 1`] = `
 [
   {
     "atoms": {
@@ -1067,7 +1067,7 @@ exports[`fromMolecules smiles + target spectrum 1`] = `
 ]
 `;
 
-exports[`fromMolecules smiles 1`] = `
+exports[`fromMolecules > smiles 1`] = `
 EMDB {
   "databases": {
     "molecules": [

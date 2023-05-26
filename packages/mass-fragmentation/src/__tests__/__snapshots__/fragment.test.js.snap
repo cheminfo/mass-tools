@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`fragment C1CCC1 1`] = `
+exports[`fragment > C1CCC1 1`] = `
 [
   {
     "atomMap": [
@@ -181,7 +181,7 @@ exports[`fragment C1CCC1 1`] = `
 ]
 `;
 
-exports[`fragment CC 1`] = `
+exports[`fragment > CC 1`] = `
 [
   {
     "atomMap": [
@@ -256,7 +256,7 @@ exports[`fragment CC 1`] = `
 ]
 `;
 
-exports[`fragment CCC 1`] = `
+exports[`fragment > CCC 1`] = `
 [
   {
     "atomMap": [
@@ -385,7 +385,7 @@ exports[`fragment CCC 1`] = `
 ]
 `;
 
-exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
+exports[`fragment > CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
 [
   {
     "atomMap": [
@@ -401,11 +401,11 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "eM@HzCaJBhOIewzJCaUSaU@",
-      "gC\`@Dkj@xPhIP^pr\\lQHGBjcaU@",
+      "gC\`@Dkj@xPhIP^pr\\\\lQHGBjcaU@",
       "gJP@DkZhCaB\`eAxcIrsY~bPNEUGBj@",
-      "gNp@DkVjj@xPhIP^hr\\lvFOtRApjhxUP",
+      "gNp@DkVjj@xPhIP^hr\\\\lvFOtRApjhxUP",
     ],
     "idCode": "eFBAYc@@",
     "mfInfo": {
@@ -435,11 +435,11 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "eM@HzCaJBhOIewzJCaUSaU@",
-      "gJP@DkjhCaB\`eA{CIrc}D\`\\JjNET",
+      "gJP@DkjhCaB\`eA{CIrc}D\`\\\\JjNET",
       "dax@@DkfZjjDhCa@hHhOTFQrQdEgzH\`NEUCaU@",
-      "dcLH@@rJIJIHusUUUVEQUGDApcTDtGnSBbh[Nb^WOtQF\\JjWBj@",
+      "dcLH@@rJIJIHusUUUVEQUGDApcTDtGnSBbh[Nb^WOtQF\\\\JjWBj@",
     ],
     "idCode": "eFBAYc@@",
     "mfInfo": {
@@ -484,9 +484,9 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     "hoses": [
       "gC\`@Dij@xHhIPJ\`uA~aPNEUGBjSaUYpj\`",
       "daD@@DjWzZjjdAM@xHJBJ@jAjCqADXVMGzD\`NEUCaUDxUSNET",
-      "dcL@@LdbTTSUSUUUU\`TIQI@\\DEAE@UAMAxPbLRL\`lkIa\\PdApjh\\JhgBjepj\`",
+      "dcL@@LdbTTSUSUUUU\`TIQI@\\\\DEAE@UAMAxPbLRL\`lkIa\\\\PdApjh\\\\JhgBjepj\`",
       "foA@@@LdbTTVrJiKbjjjjjh\`JDTXhdPC\`\`JBE@R\`eP^LBHXbLPSJXsNXKIP[KY~aD@xUTGBjHxUTgBj@",
-      "fhiA@@@YEDeDddbeQbcMUUUUUDIQPaeBj@\\DYPRhETAjCsdYcBQRFQsAYKEQkcY[GY{OtHcGBjdxURgBjLxUP",
+      "fhiA@@@YEDeDddbeQbcMUUUUUDIQPaeBj@\\\\DYPRhETAjCsdYcBQRFQsAYKEQkcY[GY{OtHcGBjdxURgBjLxUP",
     ],
     "idCode": "gC\`D@lyYRVh@",
     "mfInfo": {
@@ -516,11 +516,11 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
       "gJP@DiZhCaB\`eAxcIbs]~bPNEUGBj@",
       "gNp@Di^jj@xPhIP^hrXlwFOtRApjhxUP",
-      "diD@@Di^Vjj\`Ca@hHhO\\FQbYgEEXv_hb@xUTNET",
+      "diD@@Di^Vjj\`Ca@hHhO\\\\FQbYgEEXv_hb@xUTNET",
     ],
     "idCode": "eMBAYRZ@",
     "mfInfo": {
@@ -550,11 +550,11 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
-      "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gJP@DjZhCaB\`eAyBIgzI@xUT\\\\Jh",
       "dax@@DjVZjj@hCa@hHhOTDQbQfEwzH\`NEUCaU@",
-      "dcLH@@rJIJIHusUUUVEQUGDApaTCTGnSBbh[Nb^WOtQB\\JigBj@",
-      "dk\\H@@RYVU^ntvjjjjpjJhx\`NDJ\`Z\`|jYfEEPv]@yOKay~bHSaULxUP",
+      "dcLH@@rJIJIHusUUUVEQUGDApaTCTGnSBbh[Nb^WOtQB\\\\JigBj@",
+      "dk\\\\H@@RYVU^ntvjjjjpjJhx\`NDJ\`Z\`|jYfEEPv]@yOKay~bHSaULxUP",
     ],
     "idCode": "eMBAYRZ@",
     "mfInfo": {
@@ -600,10 +600,10 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
       "gC\`@Dij@xHhIPJ\`uA~aPNEUGBjSaUYpj\`",
       "daDH@@RYVifjj\`j@xJJAJCJ@jCvIfXT_hRPxURNEUcaUDxUP",
       "dmtH@@RYVUifjjjpjJHZ\`NBb\`R\`r\`J\`|rYfEEPt]gzDdNETcaUXxUQNET",
-      "dk\\H@@RYVUVftvjjjjpjJHZ\`NBb\`R\`r\`J\`}JYfEEPt]\`yNKwzDdNETcaUXxUQNET",
+      "dk\\\\H@@RYVUVftvjjjjpjJHZ\`NBb\`R\`r\`J\`}JYfEEPt]\`yNKwzDdNETcaUXxUQNET",
       "dg|H@@RYVUWimMjjjjhbhhajMHC\`hhDhLhBhOZfYaQTMGXNSb}lGgzDdNETcaUXxUQNET",
     ],
-    "idCode": "gJQDDEdkJS\\t@@",
+    "idCode": "gJQDDEdkJS\\\\t@@",
     "mfInfo": {
       "atoms": {
         "C": 2,
@@ -649,9 +649,9 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
       "daDH@@RYVifjj\`j@xJJAJCJ@jCvIfXT_hRPxURNEUcaUDxUP",
       "dmtH@@RYVUifjjjpjJHZ\`NBb\`R\`r\`J\`|rYfEEPt]gzDdNETcaUXxUQNET",
       "dg|H@@RYVUUieMjjjjhbhhajEhC\`hhDhLhBhORfYaQTMGXNSbq~aICaUHxUVNETSaU@",
-      "foAA@@@YEDeDddcQbcMUUUUQBTTHYPj\`GAHTBJCE@R\`|YFXpdTad\\pVRqTZxvVs}BIApjdNEUapjbNET",
+      "foAA@@@YEDeDddcQbcMUUUUQBTTHYPj\`GAHTBJCE@R\`|YFXpdTad\\\\pVRqTZxvVs}BIApjdNEUapjbNET",
     ],
-    "idCode": "gJQDDEdkJS\\t@@",
+    "idCode": "gJQDDEdkJS\\\\t@@",
     "mfInfo": {
       "atoms": {
         "C": 2,
@@ -680,10 +680,10 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
       "gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj\`",
-      "diD@@DiYVjj\`Ca@hHhO\\FQbQfEeXw_hb@xUTNET",
+      "diD@@DiYVjj\`Ca@hHhO\\\\FQbQfEeXw_hb@xUTNET",
       "dmt@@DiYWafjjjdRcb@xPJBJCtadXdYaYVMwPN_hb@xUTNET",
     ],
     "idCode": "gC\`H@liKT@@",
@@ -727,11 +727,11 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "cyclic",
     "hoses": [
-      "gB\`@DchC\`b\`e@jCTGzE@xUT\\JiNEUgBj@",
+      "gB\`@DchC\`b\`e@jCTGzE@xUT\\\\JiNEUgBj@",
       "daD@@DjWZZjjdAT\`xHJBJBjAjCqADYTMgzD\`NEUCaUTxUSNET",
-      "dcLH@@RYVUZYjjjkBUQdGAIPYPEPUP^yLsBbhZNp\\PdQpjl\\JhgBjipj\`",
+      "dcLH@@RYVUZYjjjkBUQdGAIPYPEPUP^yLsBbhZNp\\\\PdQpjl\\\\JhgBjipj\`",
       "dg|H@@RYVUUieMjjjjhbhhajEhC\`dhLhBhJhOJfYaQTMGXNSbqo_hRHxUVNETSaUTxUP",
-      "foAA@@@YEDeDddcQbcMUUUUQBTTHYPj\`GADTFJ@eAR\`|YFXpdTad\\pVRqTZxvVs}BHapjlNETQpjjNET",
+      "foAA@@@YEDeDddcQbcMUUUUQBTTHYPj\`GADTFJ@eAR\`|YFXpdTad\\\\pVRqTZxvVs}BHapjlNETQpjjNET",
     ],
     "idCode": "gGQDLEfkJRwSP@",
     "mfInfo": {
@@ -778,7 +778,7 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
       "gC\`@Dij@xHhIPJ\`uA~aPNEUGBjSaUYpj\`",
       "didH@@RYVzYjjiBHX\`NBb\`R\`J\`Z\`}bXTMGzDdNETcaUDxUSNET",
       "dcLH@@RYVUzYjjjkBHjab@xJJAJ@jAjCwIfXTUCQvSgzDdNETcaUDxUSNET",
-      "dk\\H@@RYVUVftvjjjjpjJHZ\`NBb\`R\`J\`Z\`|jYfEEPt]\`yNKqy~aICaUHxUQNETsaU@",
+      "dk\\\\H@@RYVUVftvjjjjpjJHZ\`NBb\`R\`J\`Z\`|jYfEEPt]\`yNKqy~aICaUHxUQNETsaU@",
       "dg|H@@RYVUWimMjjjjhbhhajMHC\`hhDhBhFhOZfYaQTMGXNSb}lGgzDdNETcaUDxUSNET",
     ],
     "idCode": "gGPD@leYRYZj@@",
@@ -809,8 +809,8 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
-      "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gJP@DjZhCaB\`eAyBIgzI@xUT\\\\Jh",
       "dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP",
       "dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP",
       "dkl@@DjUVuXZjjjk@hh\`R@xPJBJCvaDXfYaYTMgXLSb}~bHCaUPxUP",
@@ -856,10 +856,10 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "cyclic",
     "hoses": [
-      "gB\`@DchC\`b\`e@jCTGzE@xUT\\JiNEUgBj@",
+      "gB\`@DchC\`b\`e@jCTGzE@xUT\\\\JiNEUgBj@",
       "didH@@RYUZYjjiJHZ\`NBb\`R\`j\`Z\`}bYTMGzDdNETcaUTxUSNET",
       "dcLH@@RYVWZYjjjkBHjab@xJJAJBjAjCwIfXTUCPNSgzDdNETcaUTxUSNET",
-      "dk\\H@@RYVUVfTvjjjjpbJhX\`NBb\`R\`j\`Z\`|jYfEEPt]\`yN[qy~aICaUHxUUNETsaU@",
+      "dk\\\\H@@RYVUVfTvjjjjpbJhX\`NBb\`R\`j\`Z\`|jYfEEPt]\`yN[qy~aICaUHxUUNETsaU@",
       "dg|H@@RYVUUieMjjjjhbHjabEHC\`hhDhJhFhOZfYaQTMGXNSbqoGgzDdNETcaUTxUSNET",
     ],
     "idCode": "daxHPDAYiYR[[fj\`@",
@@ -908,7 +908,7 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
       "daD@@DjWjZjjdB\`b@xHJBJAJ@jCqADXfEGzD\`NEUCaUHxUQNET",
       "dmt@@LdbRTJkjjjjpJBHx\`NBB\`b\`R\`J\`|HQFIfXTUgPN_hR@xUTNETcaUDxUP",
       "foAA@@@YEDeDehUSbmMUUUUQBTThxQH\`GABTCJBUAj\`|iFDbdLsdRaVZpvVs}BHQpjfNEUIpjmNET",
-      "fhiA@@@YEDeDdeJeSbcMUUUUUDIQRcaDb@\\DIPLhITAjCudYcBQRFYrAYJEX[KX{OY~aDHxUSGBjdxUQgBj@",
+      "fhiA@@@YEDeDdeJeSbcMUUUUUDIQRcaDb@\\\\DIPLhITAjCudYcBQRFYrAYJEX[KX{OY~aDHxUSGBjdxUQgBj@",
     ],
     "idCode": "dax@P@VRVTfWZjh@@",
     "mfInfo": {
@@ -952,10 +952,10 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     "fragmentType": "cyclic",
     "hoses": [
       "gC\`@Dij@xHhIPJ\`uA~aPNEUGBjSaUYpj\`",
-      "gOp@DjWkjjhJApQPR\`U@ZCqDSEas}B\`\\JjNETgBjKaU@",
+      "gOp@DjWkjjhJApQPR\`U@ZCqDSEas}B\`\\\\JjNETgBjKaU@",
       "deT@@DjUWkjjjk@hjcb@xHJBJAJ@jCwADXfYaYT]GzD\`NEUCaUHxUQNET",
       "dg|@@DjUUWj{SjjjjjHJJhxaR@xHJBJAJ@jCraDXfYaYTMgPNKGzD\`NEUCaUHxUQNET",
-      "fhiA@@@YEDeDdeJeSbcMUUUUUDIQRcaDb@\\DYPRhETAjCudYcBQRFYrAYJEX[KX{OY~aDXxUTgBjTxUQgBj@",
+      "fhiA@@@YEDeDdeJeSbcMUUUUUDIQRcaDb@\\\\DYPRhETAjCudYcBQRFYrAYJEX[KX{OY~aDXxUTgBjTxUQgBj@",
     ],
     "idCode": "dax@P@VRVTfWZjh@@",
     "mfInfo": {
@@ -1000,9 +1000,9 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     "hoses": [
       "gC\`@Dij@xHhIPJ\`uA~aPNEUGBjSaUYpj\`",
       "did@@DjYmajjjpJHHR\`NBB\`b\`R\`J\`|PQDIAY~aHCaUPxURNETSaU@",
-      "dk\\H@@RYVUVfTvjjjjpjJHZ\`NBR\`J\`j\`Z\`|JYfEEPt]\`yN_hRHxUQNEUSaULxUP",
+      "dk\\\\H@@RYVUVfTvjjjjpjJHZ\`NBR\`J\`j\`Z\`|JYfEEPt]\`yN_hRHxUQNEUSaULxUP",
       "dg|H@@RYVUUieMjjjjhbhhajEhC\`dhBhJhFhOZfYaQTMGXNSbqoGgzDbNETSaUTxUSNET",
-      "foAA@@@YEDeDddcQbcMUUUUQBTTHYPj\`GADTAJBe@r\`|YFXpdTad\\pVRqTZxvVs}BHapjbNEUQpjfNET",
+      "foAA@@@YEDeDddcQbcMUUUUQBTTHYPj\`GADTAJBe@r\`|YFXpdTad\\\\pVRqTZxvVs}BHapjbNEUQpjfNET",
     ],
     "idCode": "diDHPFAYEYrJIJFjf\`@",
     "mfInfo": {
@@ -1046,11 +1046,11 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "cyclic",
     "hoses": [
-      "gB\`@DchC\`b\`e@jCTGzE@xUT\\JiNEUgBj@",
-      "gOp@DjWkjjhJApQPR\`m@zCqDSKcs}B\`\\JjNEUWBj[aU@",
+      "gB\`@DchC\`b\`e@jCTGzE@xUT\\\\JiNEUgBj@",
+      "gOp@DjWkjjhJApQPR\`m@zCqDSKcs}B\`\\\\JjNEUWBj[aU@",
       "deT@@DjVVhZjjk@hR\`b@xHJBJBj@ZCwADXdYaQVCgzD\`NEUCaUTxUPnET",
-      "dg|H@@rJIJIKPurzuUUUTQTUQqDdApQTCTBtFtGiSBbh[NbXWMp|PdIpjf\\JiWBjupj\`",
-      "f\`qA@@@YEDeDdeJj\\TYjjjjjbDhiQpbQ@NBDhFTBj@uAxrLqaHiCLy@leBlMel]gzDPcaUL\\JiSaUF\\Jh",
+      "dg|H@@rJIJIKPurzuUUUTQTUQqDdApQTCTBtFtGiSBbh[NbXWMp|PdIpjf\\\\JiWBjupj\`",
+      "f\`qA@@@YEDeDdeJj\\\\TYjjjjjbDhiQpbQ@NBDhFTBj@uAxrLqaHiCLy@leBlMel]gzDPcaUL\\\\JiSaUF\\\\Jh",
     ],
     "idCode": "diD@P@VZVTeevjj\`@",
     "mfInfo": {
@@ -1093,11 +1093,11 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "cyclic",
     "hoses": [
-      "gB\`@DchC\`b\`e@jCTGzE@xUT\\JiNEUgBj@",
+      "gB\`@DchC\`b\`e@jCTGzE@xUT\\\\JiNEUgBj@",
       "daD@@DjWzZjjdBab@xHJBJBjAjCqADYVMGzD\`NEUCaUTxUSNET",
-      "dcL@@LdbTTSUSUUUU\`TIQI@\\DEAEAUAMAxPbLRL\`lkIa\\PdApjh\\JjgBjepj\`",
+      "dcL@@LdbTTSUSUUUU\`TIQI@\\\\DEAEAUAMAxPbLRL\`lkIa\\\\PdApjh\\\\JjgBjepj\`",
       "foA@@@LdbTTVrJiKbjjjjjh\`JDTXhdPC\`\`JBEAR\`eP^LBHXbLPSJXsNXKIP[KY~aD@xUTGBjhxUTgBj@",
-      "fhiA@@@YEDeDddbeQbcMUUUUUDIQPaeBj@\\DYP\\hITBjCsdYcBQRFQsAYKEQkcY[GY{OtHcGBjxxUTgBjTxUP",
+      "fhiA@@@YEDeDddbeQbcMUUUUUDIQPaeBj@\\\\DYP\\\\hITBjCsdYcBQRFQsAYKEQkcY[GY{OtHcGBjxxUTgBjTxUP",
     ],
     "idCode": "diD@P@VVVTfU^jj\`@",
     "mfInfo": {
@@ -1142,9 +1142,9 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     "hoses": [
       "gC\`@Dij@xHhIPJ\`uA~aPNEUGBjSaUYpj\`",
       "daD@@DjYvzjjdAQ@xHJBJAJ@jCqADPfEgzD\`NEUCaUHxUQNET",
-      "dcl@@LdbbTRkSruUUUQAQAFDRPGAAPQPIPEP^DHbDsHKJqlfOtI@\\JjGBjQpjb\\Jh",
-      "foAA@@@YEDeDddcQbcMUUUUQBDThXPh\`GABTCJCeAJ\`}iFXpdTad\\pVRqTFrv_hQBNETqpjnNEUIpj\`",
-      "f\`qA@@@YEDeDddbjLTYjjjjjbDHiPpaQ@NBDhFTGJBUAzrLqaHiCHy\`lebhuqlmclPbD\\JicaU\\\\JjSaU@",
+      "dcl@@LdbbTRkSruUUUQAQAFDRPGAAPQPIPEP^DHbDsHKJqlfOtI@\\\\JjGBjQpjb\\\\Jh",
+      "foAA@@@YEDeDddcQbcMUUUUQBDThXPh\`GABTCJCeAJ\`}iFXpdTad\\\\pVRqTFrv_hQBNETqpjnNEUIpj\`",
+      "f\`qA@@@YEDeDddbjLTYjjjjjbDHiPpaQ@NBDhFTGJBUAzrLqaHiCHy\`lebhuqlmclPbD\\\\JicaU\\\\\\\\JjSaU@",
     ],
     "idCode": "ded@P@V^VTeeWjjj@@",
     "mfInfo": {
@@ -1189,9 +1189,9 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     "hoses": [
       "gC\`@Dij@xHhIPJ\`uA~aPNEUGBjSaUYpj\`",
       "daD@@DjYvzjjdAQ@xHJBJAJ@jCqADPfEgzD\`NEUCaUHxUQNET",
-      "dcl@@LdbbTRkSruUUUQAQAFDRPGAAPQPIPEP^DHbDsHKJqlfOtI@\\JjGBjQpjb\\Jh",
-      "foAA@@@YEDeDddcQbcMUUUUQBDThXPh\`GABTCJCeAJ\`}iFXpdTad\\pVRqTFrv_hQBNETqpjnNEUIpj\`",
-      "f\`qA@@@YEDeDddbjLTYjjjjjbDHiPpaQ@NBDhFTGJBUAzrLqaHiCHy\`lebhuqlmclPbD\\JicaU\\\\JjSaU@",
+      "dcl@@LdbbTRkSruUUUQAQAFDRPGAAPQPIPEP^DHbDsHKJqlfOtI@\\\\JjGBjQpjb\\\\Jh",
+      "foAA@@@YEDeDddcQbcMUUUUQBDThXPh\`GABTCJCeAJ\`}iFXpdTad\\\\pVRqTFrv_hQBNETqpjnNEUIpj\`",
+      "f\`qA@@@YEDeDddbjLTYjjjjjbDHiPpaQ@NBDhFTGJBUAzrLqaHiCHy\`lebhuqlmclPbD\\\\JicaU\\\\\\\\JjSaU@",
     ],
     "idCode": "dmtHPEAYIYRYf}XZjjf@@",
     "mfInfo": {
@@ -1235,11 +1235,11 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "cyclic",
     "hoses": [
-      "gB\`@DchC\`b\`e@jCTGzE@xUT\\JiNEUgBj@",
-      "gOp@DjWkjjhJApQPR\`m@zCqDSKcs}B\`\\JjNEUWBj[aU@",
+      "gB\`@DchC\`b\`e@jCTGzE@xUT\\\\JiNEUgBj@",
+      "gOp@DjWkjjhJApQPR\`m@zCqDSKcs}B\`\\\\JjNEUWBj[aU@",
       "deT@@DjVVhZjjk@hR\`b@xHJBJBj@ZCwADXdYaQVCgzD\`NEUCaUTxUPnET",
-      "dg|H@@rJIJIKPurzuUUUTQTUQqDdApQTCTBtFtGiSBbh[NbXWMp|PdIpjf\\JiWBjupj\`",
-      "f\`qA@@@YEDeDdeJj\\TYjjjjjbDhiQpbQ@NBDhFTBj@uAxrLqaHiCLy@leBlMel]gzDPcaUL\\JiSaUF\\Jh",
+      "dg|H@@rJIJIKPurzuUUUTQTUQqDdApQTCTBtFtGiSBbh[NbXWMp|PdIpjf\\\\JiWBjupj\`",
+      "f\`qA@@@YEDeDdeJj\\\\TYjjjjjbDhiQpbQ@NBDhFTBj@uAxrLqaHiCLy@leBlMel]gzDPcaUL\\\\JiSaUF\\\\Jh",
     ],
     "idCode": "dcLHPEAYeYRYeevzjjih@@",
     "mfInfo": {
@@ -1283,11 +1283,11 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "cyclic",
     "hoses": [
-      "gB\`@DchC\`b\`e@jCTGzE@xUT\\JiNEUgBj@",
+      "gB\`@DchC\`b\`e@jCTGzE@xUT\\\\JiNEUgBj@",
       "daD@@DjWzZjjdBab@xHJBJBjAjCqADYVMGzD\`NEUCaUTxUSNET",
-      "dcL@@LdbTTSUSUUUU\`TIQI@\\DEAEAUAMAxPbLRL\`lkIa\\PdApjh\\JjgBjepj\`",
+      "dcL@@LdbTTSUSUUUU\`TIQI@\\\\DEAEAUAMAxPbLRL\`lkIa\\\\PdApjh\\\\JjgBjepj\`",
       "foA@@@LdbTTVrJiKbjjjjjh\`JDTXhdPC\`\`JBEAR\`eP^LBHXbLPSJXsNXKIP[KY~aD@xUTGBjhxUTgBj@",
-      "fhiA@@@YEDeDddbeQbcMUUUUUDIQPaeBj@\\DYP\\hITBjCsdYcBQRFQsAYKEQkcY[GY{OtHcGBjxxUTgBjTxUP",
+      "fhiA@@@YEDeDddbeQbcMUUUUUDIQPaeBj@\\\\DYP\\\\hITBjCsdYcBQRFQsAYKEQkcY[GY{OtHcGBjxxUTgBjTxUP",
     ],
     "idCode": "dcLHPMAYeYRYfWVFjjjX@@",
     "mfInfo": {
@@ -1333,9 +1333,9 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     "hoses": [
       "gC\`@Dij@xHhIPJ\`uA~aPNEUGBjSaUYpj\`",
       "did@@DjYmajjjpJHHR\`NBB\`b\`R\`J\`|PQDIAY~aHCaUPxURNETSaU@",
-      "dk\\H@@RYVUVfTvjjjjpjJHZ\`NBR\`J\`j\`Z\`|JYfEEPt]\`yN_hRHxUQNEUSaULxUP",
+      "dk\\\\H@@RYVUVfTvjjjjpjJHZ\`NBR\`J\`j\`Z\`|JYfEEPt]\`yN_hRHxUQNEUSaULxUP",
       "dg|H@@RYVUUieMjjjjhbhhajEhC\`dhBhJhFhOZfYaQTMGXNSbqoGgzDbNETSaUTxUSNET",
-      "foAA@@@YEDeDddcQbcMUUUUQBTTHYPj\`GADTAJBe@r\`|YFXpdTad\\pVRqTZxvVs}BHapjbNEUQpjfNET",
+      "foAA@@@YEDeDddcQbcMUUUUQBTTHYPj\`GADTAJBe@r\`|YFXpdTad\\\\pVRqTZxvVs}BHapjbNEUQpjfNET",
     ],
     "idCode": "dcL@P@VRVTfYwUnjjjj@@",
     "mfInfo": {
@@ -1382,7 +1382,7 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
       "daD@@DjWjZjjdB\`b@xHJBJAJ@jCqADXfEGzD\`NEUCaUHxUQNET",
       "dmt@@LdbRTJkjjjjpJBHx\`NBB\`b\`R\`J\`|HQFIfXTUgPN_hR@xUTNETcaUDxUP",
       "foAA@@@YEDeDehUSbmMUUUUQBTThxQH\`GABTCJBUAj\`|iFDbdLsdRaVZpvVs}BHQpjfNEUIpjmNET",
-      "fhiA@@@YEDeDdeJeSbcMUUUUUDIQRcaDb@\\DIPLhITAjCudYcBQRFYrAYJEX[KX{OY~aDHxUSGBjdxUQgBj@",
+      "fhiA@@@YEDeDdeJeSbcMUUUUUDIQRcaDb@\\\\DIPLhITAjCudYcBQRFYrAYJEX[KX{OY~aDHxUSGBjdxUQgBj@",
     ],
     "idCode": "dklHPEAYMYRYeeunjjjZ\`@",
     "mfInfo": {
@@ -1427,10 +1427,10 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     "fragmentType": "cyclic",
     "hoses": [
       "gC\`@Dij@xHhIPJ\`uA~aPNEUGBjSaUYpj\`",
-      "gOp@DjWkjjhJApQPR\`U@ZCqDSEas}B\`\\JjNETgBjKaU@",
+      "gOp@DjWkjjhJApQPR\`U@ZCqDSEas}B\`\\\\JjNETgBjKaU@",
       "deT@@DjUWkjjjk@hjcb@xHJBJAJ@jCwADXfYaYT]GzD\`NEUCaUHxUQNET",
       "dg|@@DjUUWj{SjjjjjHJJhxaR@xHJBJAJ@jCraDXfYaYTMgPNKGzD\`NEUCaUHxUQNET",
-      "fhiA@@@YEDeDdeJeSbcMUUUUUDIQRcaDb@\\DYPRhETAjCudYcBQRFYrAYJEX[KX{OY~aDXxUTgBjTxUQgBj@",
+      "fhiA@@@YEDeDdeJeSbcMUUUUUDIQRcaDb@\\\\DYPRhETAjCudYcBQRFYrAYJEX[KX{OY~aDXxUTgBjTxUQgBj@",
     ],
     "idCode": "dklHPCAYUYRVYewijjji\`@",
     "mfInfo": {
@@ -1474,10 +1474,10 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "cyclic",
     "hoses": [
-      "gB\`@DchC\`b\`e@jCTGzE@xUT\\JiNEUgBj@",
+      "gB\`@DchC\`b\`e@jCTGzE@xUT\\\\JiNEUgBj@",
       "didH@@RYUZYjjiJHZ\`NBb\`R\`j\`Z\`}bYTMGzDdNETcaUTxUSNET",
       "dcLH@@RYVWZYjjjkBHjab@xJJAJBjAjCwIfXTUCPNSgzDdNETcaUTxUSNET",
-      "dk\\H@@RYVUVfTvjjjjpbJhX\`NBb\`R\`j\`Z\`|jYfEEPt]\`yN[qy~aICaUHxUUNETsaU@",
+      "dk\\\\H@@RYVUVfTvjjjjpbJhX\`NBb\`R\`j\`Z\`|jYfEEPt]\`yN[qy~aICaUHxUUNETsaU@",
       "dg|H@@RYVUUieMjjjjhbHjabEHC\`hhDhJhFhOZfYaQTMGXNSbqoGgzDdNETcaUTxUSNET",
     ],
     "idCode": "dkl@P@VQVTfYWu[jjjjh@@",
@@ -1508,8 +1508,8 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
-      "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gJP@DjZhCaB\`eAyBIgzI@xUT\\\\Jh",
       "dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP",
       "dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP",
       "dkl@@DjUVuXZjjjk@hh\`R@xPJBJCvaDXfYaYTMgXLSb}~bHCaUPxUP",
@@ -1559,7 +1559,7 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
       "gC\`@Dij@xHhIPJ\`uA~aPNEUGBjSaUYpj\`",
       "didH@@RYVzYjjiBHX\`NBb\`R\`J\`Z\`}bXTMGzDdNETcaUDxUSNET",
       "dcLH@@RYVUzYjjjkBHjab@xJJAJ@jAjCwIfXTUCQvSgzDdNETcaUDxUSNET",
-      "dk\\H@@RYVUVftvjjjjpjJHZ\`NBb\`R\`J\`Z\`|jYfEEPt]\`yNKqy~aICaUHxUQNETsaU@",
+      "dk\\\\H@@RYVUVftvjjjjpjJHZ\`NBb\`R\`J\`Z\`|jYfEEPt]\`yNKqy~aICaUHxUQNETsaU@",
       "dg|H@@RYVUWimMjjjjhbhhajMHC\`hhDhBhFhOZfYaQTMGXNSb}lGgzDdNETcaUDxUSNET",
     ],
     "idCode": "do|HPDAYyYR[Yg]YVZjjjh@@",
@@ -1604,11 +1604,11 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "cyclic",
     "hoses": [
-      "gB\`@DchC\`b\`e@jCTGzE@xUT\\JiNEUgBj@",
+      "gB\`@DchC\`b\`e@jCTGzE@xUT\\\\JiNEUgBj@",
       "daD@@DjWZZjjdAT\`xHJBJBjAjCqADYTMgzD\`NEUCaUTxUSNET",
-      "dcLH@@RYVUZYjjjkBUQdGAIPYPEPUP^yLsBbhZNp\\PdQpjl\\JhgBjipj\`",
+      "dcLH@@RYVUZYjjjkBUQdGAIPYPEPUP^yLsBbhZNp\\\\PdQpjl\\\\JhgBjipj\`",
       "dg|H@@RYVUUieMjjjjhbhhajEhC\`dhLhBhJhOJfYaQTMGXNSbqo_hRHxUVNETSaUTxUP",
-      "foAA@@@YEDeDddcQbcMUUUUQBTTHYPj\`GADTFJ@eAR\`|YFXpdTad\\pVRqTZxvVs}BHapjlNETQpjjNET",
+      "foAA@@@YEDeDddcQbcMUUUUQBTTHYPj\`GADTFJ@eAR\`|YFXpdTad\\\\pVRqTZxvVs}BHapjlNETQpjjNET",
     ],
     "idCode": "do|@P@V^VTfYY_uijjjjj@@",
     "mfInfo": {
@@ -1638,10 +1638,10 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
       "gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj\`",
-      "diD@@DiYVjj\`Ca@hHhO\\FQbQfEeXw_hb@xUTNET",
+      "diD@@DiYVjj\`Ca@hHhO\\\\FQbQfEeXw_hb@xUTNET",
       "dmt@@DiYWafjjjdRcb@xPJBJCtadXdYaYVMwPN_hb@xUTNET",
     ],
     "idCode": "foAAB@K@VTee[V]gEZjjjjZ\`@@",
@@ -1689,7 +1689,7 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
       "gC\`@Dij@xHhIPJ\`uA~aPNEUGBjSaUYpj\`",
       "daDH@@RYVifjj\`j@xJJAJCJ@jCvIfXT_hRPxURNEUcaUDxUP",
       "dmtH@@RYVUifjjjpjJHZ\`NBb\`R\`r\`J\`|rYfEEPt]gzDdNETcaUXxUQNET",
-      "dk\\H@@RYVUVftvjjjjpjJHZ\`NBb\`R\`r\`J\`}JYfEEPt]\`yNKwzDdNETcaUXxUQNET",
+      "dk\\\\H@@RYVUVftvjjjjpjJHZ\`NBb\`R\`r\`J\`}JYfEEPt]\`yNKwzDdNETcaUXxUQNET",
       "dg|H@@RYVUWimMjjjjhbhhajMHC\`hhDhLhBhOZfYaQTMGXNSb}lGgzDdNETcaUXxUQNET",
     ],
     "idCode": "f\`a@A@@KNeeIfV]}YJjjjjj\`@@",
@@ -1737,7 +1737,7 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
       "daDH@@RYVifjj\`j@xJJAJCJ@jCvIfXT_hRPxURNEUcaUDxUP",
       "dmtH@@RYVUifjjjpjJHZ\`NBb\`R\`r\`J\`|rYfEEPt]gzDdNETcaUXxUQNET",
       "dg|H@@RYVUUieMjjjjhbhhajEhC\`hhDhLhBhORfYaQTMGXNSbq~aICaUHxUVNETSaU@",
-      "foAA@@@YEDeDddcQbcMUUUUQBTTHYPj\`GAHTBJCE@R\`|YFXpdTad\\pVRqTZxvVs}BIApjdNEUapjbNET",
+      "foAA@@@YEDeDddcQbcMUUUUQBTTHYPj\`GAHTBJCE@R\`|YFXpdTad\\\\pVRqTZxvVs}BIApjdNEUapjbNET",
     ],
     "idCode": "f\`a@A@@KNegHhheDdlTrUUUUUT@@",
     "mfInfo": {
@@ -1767,11 +1767,11 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
       "gJP@DiZhCaB\`eAxcIbs]~bPNEUGBj@",
       "gNp@Di^jj@xPhIP^hrXlwFOtRApjhxUP",
-      "diD@@Di^Vjj\`Ca@hHhO\\FQbYgEEXv_hb@xUTNET",
+      "diD@@Di^Vjj\`Ca@hHhO\\\\FQbYgEEXv_hb@xUTNET",
     ],
     "idCode": "f\`qAB@G@VTeYVugxKQjjjjij@@",
     "mfInfo": {
@@ -1802,13 +1802,13 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
-      "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gJP@DjZhCaB\`eAyBIgzI@xUT\\\\Jh",
       "dax@@DjVZjj@hCa@hHhOTDQbQfEwzH\`NEUCaU@",
-      "dcLH@@rJIJIHusUUUVEQUGDApaTCTGnSBbh[Nb^WOtQB\\JigBj@",
-      "dk\\H@@RYVU^ntvjjjjpjJhx\`NDJ\`Z\`|jYfEEPv]@yOKay~bHSaULxUP",
+      "dcLH@@rJIJIHusUUUVEQUGDApaTCTGnSBbh[Nb^WOtQB\\\\JigBj@",
+      "dk\\\\H@@RYVU^ntvjjjjpjJhx\`NDJ\`Z\`|jYfEEPv]@yOKay~bHSaULxUP",
     ],
-    "idCode": "f\`qAB@E@V\\bbbTRqRSNRuUUTuUP@@",
+    "idCode": "f\`qAB@E@V\\\\bbbTRqRSNRuUUTuUP@@",
     "mfInfo": {
       "atoms": {
         "C": 14,
@@ -1852,9 +1852,9 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     "hoses": [
       "gC\`@Dij@xHhIPJ\`uA~aPNEUGBjSaUYpj\`",
       "daD@@DjWzZjjdAM@xHJBJ@jAjCqADXVMGzD\`NEUCaUDxUSNET",
-      "dcL@@LdbTTSUSUUUU\`TIQI@\\DEAE@UAMAxPbLRL\`lkIa\\PdApjh\\JhgBjepj\`",
+      "dcL@@LdbTTSUSUUUU\`TIQI@\\\\DEAE@UAMAxPbLRL\`lkIa\\\\PdApjh\\\\JhgBjepj\`",
       "foA@@@LdbTTVrJiKbjjjjjh\`JDTXhdPC\`\`JBE@R\`eP^LBHXbLPSJXsNXKIP[KY~aD@xUTGBjHxUTgBj@",
-      "fhiA@@@YEDeDddbeQbcMUUUUUDIQPaeBj@\\DYPRhETAjCsdYcBQRFQsAYKEQkcY[GY{OtHcGBjdxURgBjLxUP",
+      "fhiA@@@YEDeDddbeQbcMUUUUUDIQPaeBj@\\\\DYPRhETAjCsdYcBQRFQsAYKEQkcY[GY{OtHcGBjdxURgBjLxUP",
     ],
     "idCode": "fhqAA@M@VSKNQQQQKIRiLEUUUMUP@@",
     "mfInfo": {
@@ -1885,11 +1885,11 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "eM@HzCaJBhOIewzJCaUSaU@",
-      "gC\`@Dkj@xPhIP^pr\\lQHGBjcaU@",
+      "gC\`@Dkj@xPhIP^pr\\\\lQHGBjcaU@",
       "gJP@DkZhCaB\`eAxcIrsY~bPNEUGBj@",
-      "gNp@DkVjj@xPhIP^hr\\lvFOtRApjhxUP",
+      "gNp@DkVjj@xPhIP^hr\\\\lvFOtRApjhxUP",
     ],
     "idCode": "fhiAB@O@VTeVUmYqRMZjjjjfh@@",
     "mfInfo": {
@@ -1920,13 +1920,13 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "eM@HzCaJBhOIewzJCaUSaU@",
-      "gJP@DkjhCaB\`eA{CIrc}D\`\\JjNET",
+      "gJP@DkjhCaB\`eA{CIrc}D\`\\\\JjNET",
       "dax@@DkfZjjDhCa@hHhOTFQrQdEgzH\`NEUCaU@",
-      "dcLH@@rJIJIHusUUUVEQUGDApcTDtGnSBbh[Nb^WOtQF\\JjWBj@",
+      "dcLH@@rJIJIHusUUUVEQUGDApcTDtGnSBbh[Nb^WOtQF\\\\JjWBj@",
     ],
-    "idCode": "fhiAB@M@V\\bTTRbVJRxIQjjjijj\`@@",
+    "idCode": "fhiAB@M@V\\\\bTTRbVJRxIQjjjijj\`@@",
     "mfInfo": {
       "atoms": {
         "C": 15,
@@ -1961,7 +1961,7 @@ exports[`fragment CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes 1`] = `
 ]
 `;
 
-exports[`fragment CCCCCC(CC)CCC 1`] = `
+exports[`fragment > CCCCCC(CC)CCC 1`] = `
 [
   {
     "atomMap": [

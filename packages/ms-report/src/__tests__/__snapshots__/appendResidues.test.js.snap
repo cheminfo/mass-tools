@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`appendResidues (C5H5O)IleLeuAspAspLeuCys(C26H30N2OSi)AlaAsnGlnLeuGlnProLeuLeuLeuLysOH 1`] = `
+exports[`appendResidues > (C5H5O)IleLeuAspAspLeuCys(C26H30N2OSi)AlaAsnGlnLeuGlnProLeuLeuLeuLysOH 1`] = `
 {
   "residues": {
     "all": [
@@ -540,7 +540,7 @@ exports[`appendResidues (C5H5O)IleLeuAspAspLeuCys(C26H30N2OSi)AlaAsnGlnLeuGlnPro
 }
 `;
 
-exports[`appendResidues (MeO)AA(H-1NH2)AA rna 1`] = `
+exports[`appendResidues > (MeO)AA(H-1NH2)AA rna 1`] = `
 {
   "residues": {
     "all": [
@@ -720,7 +720,7 @@ exports[`appendResidues (MeO)AA(H-1NH2)AA rna 1`] = `
 }
 `;
 
-exports[`appendResidues AA(Ph)A(Ph)A(Ts)A(Ph)U 1`] = `
+exports[`appendResidues > AA(Ph)A(Ph)A(Ts)A(Ph)U 1`] = `
 {
   "residues": {
     "all": [
@@ -974,7 +974,7 @@ exports[`appendResidues AA(Ph)A(Ph)A(Ts)A(Ph)U 1`] = `
 }
 `;
 
-exports[`appendResidues ForAlaAla(H-1OH)AlaOH 1`] = `
+exports[`appendResidues > ForAlaAla(H-1OH)AlaOH 1`] = `
 {
   "residues": {
     "all": [
@@ -1124,7 +1124,7 @@ exports[`appendResidues ForAlaAla(H-1OH)AlaOH 1`] = `
 }
 `;
 
-exports[`appendResidues H(+)AlaAla(H-1OH)AlaOH 1`] = `
+exports[`appendResidues > H(+)AlaAla(H-1OH)AlaOH 1`] = `
 {
   "residues": {
     "all": [
@@ -1274,7 +1274,7 @@ exports[`appendResidues H(+)AlaAla(H-1OH)AlaOH 1`] = `
 }
 `;
 
-exports[`appendResidues HAlaAla(H-1OH)AlaOH 1`] = `
+exports[`appendResidues > HAlaAla(H-1OH)AlaOH 1`] = `
 {
   "residues": {
     "all": [
@@ -1421,7 +1421,7 @@ exports[`appendResidues HAlaAla(H-1OH)AlaOH 1`] = `
 }
 `;
 
-exports[`appendResidues HAlaAlaAlaOH 1`] = `
+exports[`appendResidues > HAlaAlaAlaOH 1`] = `
 {
   "residues": {
     "all": [

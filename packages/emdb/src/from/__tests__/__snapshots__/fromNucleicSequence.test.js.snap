@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`fromNucleicSequence AGG with d-h2o and base loss 1`] = `
+exports[`fromNucleicSequence > AGG with d-h2o and base loss 1`] = `
 [
   {
     "atoms": {
@@ -164,7 +164,7 @@ exports[`fromNucleicSequence AGG with d-h2o and base loss 1`] = `
 ]
 `;
 
-exports[`fromNucleicSequence AGGCAG fragment 1`] = `
+exports[`fromNucleicSequence > AGGCAG fragment 1`] = `
 [
   {
     "atoms": {
@@ -360,7 +360,7 @@ exports[`fromNucleicSequence AGGCAG fragment 1`] = `
 ]
 `;
 
-exports[`fromNucleicSequence HODamDamDamDamDamH 1`] = `
+exports[`fromNucleicSequence > HODamDamDamDamDamH 1`] = `
 [
   {
     "atoms": {
@@ -524,7 +524,7 @@ exports[`fromNucleicSequence HODamDamDamDamDamH 1`] = `
 ]
 `;
 
-exports[`fromNucleicSequence fromNucleicSequence ds-DNA 1`] = `
+exports[`fromNucleicSequence > fromNucleicSequence ds-DNA 1`] = `
 [
   {
     "atoms": {

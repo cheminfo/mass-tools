@@ -1,6 +1,5 @@
 import { loadKnapSack } from '../loadKnapSack';
 
-jest.setTimeout(30000);
 test('loadKnapSack', async () => {
   let data = await loadKnapSack();
 

@@ -3,8 +3,6 @@ import { join } from 'path';
 
 import { massSpectra } from '../massSpectra.js';
 
-jest.setTimeout(30000);
-
 describe('massSpectra', () => {
   it('simple case', async () => {
     const resultsAll = await massSpectra({

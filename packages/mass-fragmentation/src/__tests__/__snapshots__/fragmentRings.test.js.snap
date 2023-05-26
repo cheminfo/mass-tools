@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`fragmentRings C1CCC1 1`] = `
+exports[`fragmentRings > C1CCC1 1`] = `
 [
   {
     "atomMap": [
@@ -29,11 +29,11 @@ exports[`fragmentRings C1CCC1 1`] = `
     ],
     "fragmentType": "cyclic",
     "hoses": [
-      "gBP@DiVj\`NBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
+      "gBP@DiVj\`NBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
     ],
     "idCode": "gC\`D@lyYRVh@",
     "mfInfo": {
@@ -76,11 +76,11 @@ exports[`fragmentRings C1CCC1 1`] = `
     ],
     "fragmentType": "cyclic",
     "hoses": [
-      "gBP@DiVj\`NBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
+      "gBP@DiVj\`NBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
     ],
     "idCode": "gC\`D@lyYRVh@",
     "mfInfo": {
@@ -123,11 +123,11 @@ exports[`fragmentRings C1CCC1 1`] = `
     ],
     "fragmentType": "cyclic",
     "hoses": [
-      "gBP@DiVj\`NBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
+      "gBP@DiVj\`NBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
     ],
     "idCode": "gC\`D@lyYRVh@",
     "mfInfo": {
@@ -170,11 +170,11 @@ exports[`fragmentRings C1CCC1 1`] = `
     ],
     "fragmentType": "cyclic",
     "hoses": [
-      "gBP@DiVj\`NBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
-      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\Jh",
+      "gBP@DiVj\`NBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
+      "gBP@DiVj\`FBJBTBhMP_hTCaUQpjdxUV\\\\Jh",
     ],
     "idCode": "gC\`D@lyYRVh@",
     "mfInfo": {
@@ -193,7 +193,7 @@ exports[`fragmentRings C1CCC1 1`] = `
 ]
 `;
 
-exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
+exports[`fragmentRings > C2CCC1CCCC3CCCC4CCCC1 1`] = `
 [
   {
     "atomMap": [
@@ -1461,7 +1461,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "flu@A@@KJUgHiEEDdhh\\YNT[tZjjjjjj\`@@",
+    "idCode": "flu@A@@KJUgHiEEDdhh\\\\YNT[tZjjjjjj\`@@",
     "mfInfo": {
       "atoms": {
         "C": 17,
@@ -1718,7 +1718,7 @@ exports[`fragmentRings C2CCC1CCCC3CCCC4CCCC1 1`] = `
 ]
 `;
 
-exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
+exports[`fragmentRings > C2CCC1CCCCC1C2 1`] = `
 [
   {
     "atomMap": [
@@ -2466,7 +2466,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "deT@P@VYV\\bbbRK]UUU@@",
+    "idCode": "deT@P@VYV\\\\bbbRK]UUU@@",
     "mfInfo": {
       "atoms": {
         "C": 8,
@@ -2546,7 +2546,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "deT@P@VYV\\bbbRK]UUU@@",
+    "idCode": "deT@P@VYV\\\\bbbRK]UUU@@",
     "mfInfo": {
       "atoms": {
         "C": 8,
@@ -2586,7 +2586,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "deT@P@VYV\\bbbRK]UUU@@",
+    "idCode": "deT@P@VYV\\\\bbbRK]UUU@@",
     "mfInfo": {
       "atoms": {
         "C": 8,
@@ -2626,7 +2626,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "deT@P@VYV\\bbbRK]UUU@@",
+    "idCode": "deT@P@VYV\\\\bbbRK]UUU@@",
     "mfInfo": {
       "atoms": {
         "C": 8,
@@ -2683,7 +2683,7 @@ exports[`fragmentRings C2CCC1CCCCC1C2 1`] = `
 ]
 `;
 
-exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
+exports[`fragmentRings > CCC13CCCC2CCCC(CCC1)C23 1`] = `
 [
   {
     "atomMap": [
@@ -3071,7 +3071,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "dcl@P@V^V\\bbbTTKRnuUUUP@@",
+    "idCode": "dcl@P@V^V\\\\bbbTTKRnuUUUP@@",
     "mfInfo": {
       "atoms": {
         "C": 10,
@@ -3111,7 +3111,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "dcl@P@V^V\\bbbTTKRnuUUUP@@",
+    "idCode": "dcl@P@V^V\\\\bbbTTKRnuUUUP@@",
     "mfInfo": {
       "atoms": {
         "C": 10,
@@ -3151,7 +3151,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "dcl@P@V^V\\bbbTTKRnuUUUP@@",
+    "idCode": "dcl@P@V^V\\\\bbbTTKRnuUUUP@@",
     "mfInfo": {
       "atoms": {
         "C": 10,
@@ -3191,7 +3191,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "dk\\@P@VSV\\bbbTTN[ivjjjj\`@",
+    "idCode": "dk\\\\@P@VSV\\\\bbbTTN[ivjjjj\`@",
     "mfInfo": {
       "atoms": {
         "C": 11,
@@ -3231,7 +3231,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "dk\\@P@VSV\\bbbTTN[ivjjjj\`@",
+    "idCode": "dk\\\\@P@VSV\\\\bbbTTN[ivjjjj\`@",
     "mfInfo": {
       "atoms": {
         "C": 11,
@@ -3271,7 +3271,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "dk\\@P@VSV\\bbbTTN[ivjjjj\`@",
+    "idCode": "dk\\\\@P@VSV\\\\bbbTTN[ivjjjj\`@",
     "mfInfo": {
       "atoms": {
         "C": 11,
@@ -3311,7 +3311,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "dk\\@P@VSV\\bbbTTN[ivjjjj\`@",
+    "idCode": "dk\\\\@P@VSV\\\\bbbTTN[ivjjjj\`@",
     "mfInfo": {
       "atoms": {
         "C": 11,
@@ -3351,7 +3351,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "dk\\@P@VSV\\bbbTTN[ivjjjj\`@",
+    "idCode": "dk\\\\@P@VSV\\\\bbbTTN[ivjjjj\`@",
     "mfInfo": {
       "atoms": {
         "C": 11,
@@ -3391,7 +3391,7 @@ exports[`fragmentRings CCC13CCCC2CCCC(CCC1)C23 1`] = `
       },
     ],
     "fragmentType": "cyclic",
-    "idCode": "dk\\@P@VSV\\bbbTTN[ivjjjj\`@",
+    "idCode": "dk\\\\@P@VSV\\\\bbbTTN[ivjjjj\`@",
     "mfInfo": {
       "atoms": {
         "C": 11,

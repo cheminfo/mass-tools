@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`fromPeptidicSequence AAKK 1`] = `
+exports[`fromPeptidicSequence > AAKK 1`] = `
 [
   {
     "atoms": {
@@ -71,7 +71,7 @@ exports[`fromPeptidicSequence AAKK 1`] = `
 ]
 `;
 
-exports[`fromPeptidicSequence AAKK with callback 1`] = `
+exports[`fromPeptidicSequence > AAKK with callback 1`] = `
 [
   {
     "atoms": {
@@ -198,7 +198,7 @@ exports[`fromPeptidicSequence AAKK with callback 1`] = `
 ]
 `;
 
-exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
+exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
 [
   {
     "atoms": {
@@ -962,7 +962,7 @@ exports[`fromPeptidicSequence AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
 ]
 `;
 
-exports[`fromPeptidicSequence Linked AA(H-1#1)AA,GG(H-1#1)GG 1`] = `
+exports[`fromPeptidicSequence > Linked AA(H-1#1)AA,GG(H-1#1)GG 1`] = `
 [
   [
     "#1C6H4#2",
@@ -1012,7 +1012,7 @@ exports[`fromPeptidicSequence Linked AA(H-1#1)AA,GG(H-1#1)GG 1`] = `
 ]
 `;
 
-exports[`fromPeptidicSequence Optional linked AA(H-1#1)A,GG(H-1#1)G 1`] = `
+exports[`fromPeptidicSequence > Optional linked AA(H-1#1)A,GG(H-1#1)G 1`] = `
 [
   [
     "#1C6H4#2",

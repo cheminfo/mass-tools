@@ -1,7 +1,5 @@
 import { massBank } from '../massBank.js';
 
-jest.setTimeout(30000);
-
 test('massBank', async () => {
   const results = await massBank({
     masses: [100, 200, 300],

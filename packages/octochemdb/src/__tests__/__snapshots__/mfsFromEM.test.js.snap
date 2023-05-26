@@ -1,4 +1,246 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`mfsFromEM > simple case negative ionization 1`] = `
+[
+  {
+    "_id": "C2H6N2O2S",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C2H6N2O2S",
+    "data": {
+      "atoms": {
+        "C": 2,
+        "H": 6,
+        "N": 2,
+        "O": 2,
+        "S": 1,
+      },
+      "count": 70,
+      "em": 122.01499861577999,
+      "unsaturation": 1,
+    },
+    "ionization": {
+      "atoms": {
+        "H": -2,
+      },
+      "charge": -2,
+      "em": -2.01565006446,
+      "mf": "(H+)-2",
+    },
+    "mfInfo": {
+      "atoms": {
+        "C": 2,
+        "H": 6,
+        "N": 2,
+        "O": 2,
+        "S": 1,
+      },
+      "charge": 0,
+      "em": 122.01499861577999,
+      "mass": 122.14611999546037,
+      "mf": "C2H6N2O2S",
+      "unsaturation": 1,
+    },
+    "ms": {
+      "charge": -2,
+      "delta": -0.00022285556906354032,
+      "em": 60.00022285556906,
+      "ionization": "(H+)-2",
+      "ppm": -3.714245688720062,
+    },
+  },
+  {
+    "_id": "C4H7ClO2",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C4H7ClO2",
+    "data": {
+      "atoms": {
+        "C": 4,
+        "Cl": 1,
+        "H": 7,
+        "O": 2,
+      },
+      "count": 155,
+      "em": 122.01345714675,
+      "unsaturation": 1,
+    },
+    "ionization": {
+      "atoms": {
+        "H": -2,
+      },
+      "charge": -2,
+      "em": -2.01565006446,
+      "mf": "(H+)-2",
+    },
+    "mfInfo": {
+      "atoms": {
+        "C": 4,
+        "Cl": 1,
+        "H": 7,
+        "O": 2,
+      },
+      "charge": 0,
+      "em": 122.01345714675,
+      "mass": 122.55027629657599,
+      "mf": "C4H7ClO2",
+      "unsaturation": 1,
+    },
+    "ms": {
+      "charge": -2,
+      "delta": 0.0005478789459303357,
+      "em": 59.99945212105407,
+      "ionization": "(H+)-2",
+      "ppm": 9.131399147194589,
+    },
+  },
+  {
+    "_id": "C5H",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C5H",
+    "data": {
+      "atoms": {
+        "C": 5,
+        "H": 1,
+      },
+      "count": 9,
+      "em": 61.00782503223,
+      "unsaturation": 5.5,
+    },
+    "ionization": {
+      "atoms": {
+        "H": -1,
+      },
+      "charge": -1,
+      "em": -1.00782503223,
+      "mf": "(H+)-1",
+    },
+    "mfInfo": {
+      "atoms": {
+        "C": 5,
+        "H": 1,
+      },
+      "charge": 0,
+      "em": 61.00782503223,
+      "mass": 61.061620237732015,
+      "mf": "C5H",
+      "unsaturation": 5.5,
+    },
+    "ms": {
+      "charge": -1,
+      "delta": -0.0005485799090720889,
+      "em": 60.00054857990907,
+      "ionization": "(H+)-1",
+      "ppm": -9.142914890877822,
+    },
+  },
+]
+`;
+
+exports[`mfsFromEM > string containing more than 1 monoisotopic mass 1`] = `
+[
+  {
+    "_id": "C",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C",
+    "data": {
+      "atoms": {
+        "C": 1,
+      },
+      "count": 5,
+      "em": 12,
+      "unsaturation": 2,
+    },
+    "ionization": {
+      "atoms": {},
+      "charge": 0,
+      "em": 0,
+      "mf": "",
+    },
+    "mfInfo": {
+      "atoms": {
+        "C": 1,
+      },
+      "charge": 0,
+      "em": 12,
+      "mass": 12.010735896735248,
+      "mf": "C",
+      "unsaturation": 2,
+    },
+    "ms": {
+      "charge": 0,
+      "delta": 12,
+      "em": 0,
+      "ionization": "",
+      "ppm": Infinity,
+    },
+  },
+  {
+    "_id": "C2",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C2",
+    "data": {
+      "atoms": {
+        "C": 2,
+      },
+      "count": 1,
+      "em": 24,
+      "unsaturation": 3,
+    },
+    "ionization": {
+      "atoms": {},
+      "charge": 0,
+      "em": 0,
+      "mf": "",
+    },
+    "mfInfo": {
+      "atoms": {
+        "C": 2,
+      },
+      "charge": 0,
+      "em": 24,
+      "mass": 24.021471793470496,
+      "mf": "C2",
+      "unsaturation": 3,
+    },
+    "ms": {
+      "charge": 0,
+      "delta": 24,
+      "em": 0,
+      "ionization": "",
+      "ppm": Infinity,
+    },
+  },
+  {
+    "_id": "C3",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C3",
+    "data": {
+      "atoms": {
+        "C": 3,
+      },
+      "count": 2,
+      "em": 36,
+      "unsaturation": 4,
+    },
+    "ionization": {
+      "atoms": {},
+      "charge": 0,
+      "em": 0,
+      "mf": "",
+    },
+    "mfInfo": {
+      "atoms": {
+        "C": 3,
+      },
+      "charge": 0,
+      "em": 36,
+      "mass": 36.032207690205745,
+      "mf": "C3",
+      "unsaturation": 4,
+    },
+    "ms": {
+      "charge": 0,
+      "delta": 36,
+      "em": 0,
+      "ionization": "",
+      "ppm": Infinity,
+    },
+  },
+]
+`;
 
 exports[`mfsFromEM simple case negative ionization 1`] = `
 [

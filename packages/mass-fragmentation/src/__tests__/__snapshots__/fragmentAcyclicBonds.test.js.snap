@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`fragmentAcyclicBonds CCCC 1`] = `
+exports[`fragmentAcyclicBonds > CCCC 1`] = `
 [
   {
     "atomMap": [
@@ -167,7 +167,7 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
 ]
 `;
 
-exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = `
+exports[`fragmentAcyclicBonds > c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = `
 [
   {
     "atomMap": [
@@ -344,7 +344,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = 
       },
     ],
     "fragmentType": "acyclic",
-    "idCode": "dk\\@\`@VTeYVux]Njjjj\`@",
+    "idCode": "dk\\\\@\`@VTeYVux]Njjjj\`@",
     "mfInfo": {
       "atoms": {
         "C": 12,
@@ -388,7 +388,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = 
 ]
 `;
 
-exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
+exports[`fragmentAcyclicBonds > c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
 [
   {
     "atomMap": [
@@ -404,7 +404,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "gJP@DjXHCaB\`eAzSOtRApjhxUP",
       "dax@@DjUXHH@xPJBJCqQbQdEgzH\`NEUCaU@",
       "deT@@DjUWXXHH\`@xPJBJCwQbQdEePt]gzH\`NEUCaU@",
@@ -438,11 +438,11 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
       "gNp@DiYjB@xPhIP^prYlQHGBjcaU@",
       "dmT@@DiYUj\`\`h@xPJBJCsAdYfEEPt_hb@xUTNET",
-      "dg\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET",
+      "dg\\\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET",
     ],
     "idCode": "daD@\`@VTeeVz\`@@@",
     "mfInfo": {
@@ -472,7 +472,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
       "gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj\`",
       "dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET",
@@ -506,8 +506,8 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
-      "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gJP@DjZhCaB\`eAyBIgzI@xUT\\\\Jh",
       "dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP",
       "dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP",
       "do|@@DjUVuYajjjjBpJJHD\`NDB\`b\`|hQFIfXVUCYvCDy~bHCaUPxUP",
@@ -540,8 +540,8 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
-      "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gJP@DjZhCaB\`eAyBIgzI@xUT\\\\Jh",
       "dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP",
       "dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP",
       "do|@@DjUVuYajjjjBpJJHD\`NDB\`b\`|hQFIfXVUCYvCDy~bHCaUPxUP",
@@ -574,7 +574,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
       "gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj\`",
       "dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET",
@@ -608,13 +608,13 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
       "gNp@DiYjB@xPhIP^prYlQHGBjcaU@",
       "dmT@@DiYUj\`\`h@xPJBJCsAdYfEEPt_hb@xUTNET",
-      "dg\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET",
+      "dg\\\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET",
     ],
-    "idCode": "dk\\@\`@VTeYVux]Njjjj\`@",
+    "idCode": "dk\\\\@\`@VTeYVux]Njjjj\`@",
     "mfInfo": {
       "atoms": {
         "C": 12,
@@ -642,7 +642,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
     ],
     "fragmentType": "acyclic",
     "hoses": [
-      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
       "gJP@DjXHCaB\`eAzSOtRApjhxUP",
       "dax@@DjUXHH@xPJBJCqQbQdEgzH\`NEUCaU@",
       "deT@@DjUWXXHH\`@xPJBJCwQbQdEePt]gzH\`NEUCaU@",

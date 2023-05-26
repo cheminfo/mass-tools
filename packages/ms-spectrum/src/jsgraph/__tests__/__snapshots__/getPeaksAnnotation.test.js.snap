@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`test getPeaksAnnotation default options 1`] = `
+exports[`test getPeaksAnnotation > default options 1`] = `
 [
   {
     "_highlight": undefined,
@@ -157,7 +157,7 @@ exports[`test getPeaksAnnotation default options 1`] = `
 ]
 `;
 
-exports[`test getPeaksAnnotation shift -12 1`] = `
+exports[`test getPeaksAnnotation > shift -12 1`] = `
 [
   {
     "_highlight": undefined,

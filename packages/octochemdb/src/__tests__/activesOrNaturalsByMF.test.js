@@ -1,7 +1,5 @@
 import { activesOrNaturalsByMF } from '../activesOrNaturalsByMF.js';
 
-jest.setTimeout(30000);
-
 describe('activesOrNaturalsByMF', () => {
   it('simple case', async () => {
     let data = await activesOrNaturalsByMF({
