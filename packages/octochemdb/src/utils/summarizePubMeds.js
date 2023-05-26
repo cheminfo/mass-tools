@@ -4,10 +4,15 @@ import { create, insert, search } from '@orama/orama';
  *
  * @param {object} entry
  * @param {string} term
- * @param { article.nbCompounds = pubmeds.data.compounds.length;} [options={}]
+ * @param {object} [options={}]
+ * @param {number} [options.minScore=0.5]
+ * @param {number} [options.maxNbEntries=50]
  * @returns
  */
 export async function summarizePubMeds(entry, term, options = {}) {
+
+  const { maxNbEntries = 100, minScore = 0.5 } = options
+
   const db = await create({
     schema: {
       $ref: 'string',
@@ -60,5 +65,9 @@ export async function summarizePubMeds(entry, term, options = {}) {
     results.push({ score: result.score, document: result.document });
   }
 
+  results = results.filter(result => result.score >= minScore)
+  if (results.length > maxNbEntries) {
+    results.length = maxNbEntries;
+  }
   return results;
 }
