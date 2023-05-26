@@ -1,6 +1,13 @@
 import { create, insert, search } from '@orama/orama';
 
-export async function summarizePubMeds(entry, options = {}) {
+/**
+ *
+ * @param {object} entry
+ * @param {string} term
+ * @param { article.nbCompounds = pubmeds.data.compounds.length;} [options={}]
+ * @returns
+ */
+export async function summarizePubMeds(entry, term, options = {}) {
   const db = await create({
     schema: {
       $ref: 'string',
@@ -12,28 +19,23 @@ export async function summarizePubMeds(entry, options = {}) {
     },
   });
   for (const pubmeds of entry.data.pubmeds) {
+
+    const meshHeadings = [];
+    for (const meshHeading of pubmeds.data.meshHeadings) {
+      if (meshHeading.descriptorName !== undefined) {
+        meshHeadings.push(meshHeading.descriptorName);
+      }
+    }
+
     let article = {
       $id: pubmeds.$id,
       url: pubmeds.url,
+      title: pubmeds.data.article.title || "",
+      abstract: pubmeds.data.article.abstract || "",
+      meshHeadings,
+      nbCompounds: pubmeds.data.compounds.length || 0
     };
 
-    if (pubmeds.data.article.title) {
-      article.title = pubmeds.data.article.title;
-    }
-    if (pubmeds.data.article.abstract) {
-      article.abstract = pubmeds.data.article.abstract;
-    }
-    if (pubmeds.data.meshHeadings) {
-      article.meshHeadings = [];
-      for (const meshHeading of pubmeds.data.meshHeadings) {
-        if (meshHeading.descriptorName !== undefined) {
-          article.meshHeadings.push(meshHeading.descriptorName);
-        }
-      }
-    }
-    if (pubmeds.data.compounds) {
-      article.nbCompounds = pubmeds.data.compounds.length;
-    }
     await insert(db, article);
   }
   let queryResult = await search(db, {

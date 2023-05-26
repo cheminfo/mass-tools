@@ -2,40 +2,30 @@ import { summarizeActivities } from './utils/summarizeActivities.js';
 import { summarizePatents } from './utils/summarizePatents.js';
 import { summarizePubMeds } from './utils/summarizePubMeds.js';
 
-export async function activeOrNaturalSummarize(entry, options = {}) {
-  let patents;
-  let pubmeds;
-  let activities;
+export async function activeOrNaturalSummarize(entry, term, options = {}) {
+
+
+  entry = { ...entry }
+
   let promises = [];
 
   promises.push(
-    summarizeActivities(entry, options).then((output) => {
-      activities = output;
+    summarizeActivities(entry.activities, options).then((activities) => {
+      entry.activities = activities;
     }),
   );
   promises.push(
-    summarizePatents(entry, options).then((output) => {
-      patents = output;
+    summarizePatents(entry.patents, options.patents).then((patents) => {
+      entry.patents = patents;
     }),
   );
   promises.push(
-    summarizePubMeds(entry, options).then((output) => {
-      pubmeds = output;
+    summarizePubMeds(entry, options).then((pubmeds) => {
+      entry.pubmeds = pubmeds;
     }),
   );
 
   await Promise.all(promises);
-  let result = [];
-  if (activities !== undefined) {
-    result = [...result, ...activities];
-  }
-  if (patents !== undefined) {
-    result = [...result, ...patents];
-  }
-  if (pubmeds !== undefined) {
-    result = [...result, ...pubmeds];
-  }
-  result.sort((a, b) => b.score - a.score);
 
-  return result;
+  return entry
 }

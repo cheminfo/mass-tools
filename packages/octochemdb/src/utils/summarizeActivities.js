@@ -1,6 +1,9 @@
 import { create, insert, search } from '@orama/orama';
 
-export async function summarizeActivities(entry, options = {}) {
+export async function summarizeActivities(activities, term, options = {}) {
+
+  const { maxEntries = 100, minScore = 0.5 } = options
+
   const db = await create({
     schema: {
       $id: 'string',
@@ -8,7 +11,7 @@ export async function summarizeActivities(entry, options = {}) {
       url: 'string',
     },
   });
-  for (const activity of entry.data.activities) {
+  for (const activity of activities) {
     let assay = {
       $id: activity.$id,
       url: activity.url,
@@ -27,19 +30,18 @@ export async function summarizeActivities(entry, options = {}) {
 
         assay = {
           $id: activity.$id,
-          url: activity.url,
         };
       }
     }
   }
   let queryResult = await search(db, {
-    term: options.term,
+    term,
     properties: options.fieldsActivities,
   });
 
   let results = [];
   for (let result of queryResult.hits) {
-    results.push({ score: result.score, document: result.document });
+    results.push({ ...result.document, score: result.score });
   }
 
   return results;
