@@ -3,13 +3,12 @@ import { create, insert, search } from '@orama/orama';
 export async function summarizePubMeds(entry, options = {}) {
   const db = await create({
     schema: {
+      $ref: 'string',
       $id: 'string',
       title: 'string',
       abstract: 'string',
-      meshHeadings: 'string',
-      journalInfo: 'string',
       nbCompounds: 'number',
-      url: 'string',
+      meshHeadings: 'string[]',
     },
   });
   for (const pubmeds of entry.data.pubmeds) {
@@ -25,10 +24,12 @@ export async function summarizePubMeds(entry, options = {}) {
       article.abstract = pubmeds.data.article.abstract;
     }
     if (pubmeds.data.meshHeadings) {
-      article.meshHeadings = pubmeds.data.meshHeadings;
-    }
-    if (pubmeds.data.journalInfo) {
-      article.journalInfo = pubmeds.data.journalInfo;
+      article.meshHeadings = [];
+      for (const meshHeading of pubmeds.data.meshHeadings) {
+        if (meshHeading.descriptorName !== undefined) {
+          article.meshHeadings.push(meshHeading.descriptorName);
+        }
+      }
     }
     if (pubmeds.data.compounds) {
       article.nbCompounds = pubmeds.data.compounds.length;

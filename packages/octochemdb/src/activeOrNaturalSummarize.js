@@ -35,7 +35,7 @@ export async function activeOrNaturalSummarize(entry, options = {}) {
   if (pubmeds !== undefined) {
     result = [...result, ...pubmeds];
   }
+  result.sort((a, b) => b.score - a.score);
 
   return result;
 }
-//vitest --globals activeOrNaturalSummarize.test.js
