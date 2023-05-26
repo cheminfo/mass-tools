@@ -4,19 +4,25 @@ import { create, insert, search } from '@orama/orama';
  * @param {string} term
  * @param {object} [options={}]
  * @param {number} [options.minScore=0.5]
- * @param {number} [options.maxEntries=50]
+ * @param {number} [options.maxNbEntries=50]
  * @param {object} [options.relevance={ k: 1.2, b: 0.75, d: 0.5 }]
  * @param {number} [options.tolerance=1]
- * @param {string[]} [options.fields=['assay']]
+ * @param {string[]} [options.queryFields=['assay']]
  */
-export async function summarizeActivities(activities, term = "", options = {}) {
+export async function summarizeActivities(activities, term = '', options = {}) {
   const {
-    maxEntries = 100,
+    maxNbEntries = 100,
     minScore = 0.5,
     relevance = { k: 1.2, b: 0.75, d: 0.5 },
     tolerance = 1,
-    fields = ['assay'],
+    queryFields = ['assay'],
   } = options;
+  if (term === '') {
+    if (activities.length > maxNbEntries) {
+      activities.length = maxNbEntries;
+    }
+    return activities;
+  }
   const db = await create({
     schema: {
       $id: 'string',
@@ -48,7 +54,7 @@ export async function summarizeActivities(activities, term = "", options = {}) {
   let queryResult = await search(db, {
     term,
     relevance,
-    properties: fields,
+    properties: queryFields,
     tolerance,
   });
   let results = [];
@@ -62,8 +68,8 @@ export async function summarizeActivities(activities, term = "", options = {}) {
     results.push({ ...activityDocument, score: result.score });
   }
   results = results.filter((result) => result.score >= minScore);
-  if (results.length > maxEntries) {
-    results.length = maxEntries;
+  if (results.length > maxNbEntries) {
+    results.length = maxNbEntries;
   }
   results.sort((a, b) => b.score - a.score);
   return results;

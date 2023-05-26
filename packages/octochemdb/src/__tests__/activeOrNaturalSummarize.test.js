@@ -4,21 +4,32 @@ import { join } from 'path';
 import { activeOrNaturalSummarize } from '../activeOrNaturalSummarize.js';
 
 describe('activeOrNaturalSummarize', () => {
-
-
   it.only('empty term', async () => {
     const entry = JSON.parse(
       readFileSync(join(__dirname, './details.json'), 'utf8'),
     );
+    const nbPatents = entry.data.patents.length;
+    const nbPubmeds = entry.data.pubmeds.length;
+    const nbActivities = entry.data.activities.length;
+    const options = {
+      activities: {
+        maxNbEntries: 2,
+      },
+      patents: {
+        maxNbEntries: 50,
+      },
+      pubmeds: {
+        maxNbEntries: 65,
+      },
+    };
+    const result = await activeOrNaturalSummarize(entry, '', options);
 
-    const result = await activeOrNaturalSummarize(entry, '');
-    expect(result.data.patents[0].score).toBeGreaterThan(
-      result.data.patents[1].score,
+    expect(result.data.pubmeds[0].data.compounds.length).toBeLessThan(
+      result.data.pubmeds[1].data.compounds.length,
     );
-
-    expect(result.data.patents).toHaveLength(0);
-    expect(result.data.pubmeds).toHaveLength(0);
-    expect(result.data.activities).toHaveLength(0);
+    expect(result.data.patents.length).toBeLessThan(nbPatents);
+    expect(result.data.pubmeds.length).toBeLessThan(nbPubmeds);
+    expect(result.data.activities.length).toBeLessThan(nbActivities);
   });
 
   it('term:anti', async () => {

@@ -8,23 +8,28 @@ import { create, insert, search } from '@orama/orama';
  * @param {number} [options.minScore=0.5]
  * @param {object} [options.relevance={ k: 1.2, b: 0.75, d: 0.5 }]
  * @param {number} [options.tolerance=1]
- * @param {string[]} [options.fields=['title', 'abstract']]
+ * @param {string[]} [options.queryFields=['title', 'abstract']]
  * @param {object} [options.boostFields={ title: 2, abstract: 1 }]
  * @returns
  */
-export async function summarizePatents(patents, term = "", options = {}) {
+export async function summarizePatents(patents, term = '', options = {}) {
   const {
     maxNbEntries = 100,
     minScore = 0.5,
     relevance = { k: 1.2, b: 0.75, d: 0.5 },
     tolerance = 1,
-    fields = ['title', 'abstract'],
+    queryFields = ['title', 'abstract'],
     boostFields = {
       title: 2,
       abstract: 1,
     },
   } = options;
-
+  if (term === '') {
+    if (patents.length > maxNbEntries) {
+      patents.length = maxNbEntries;
+    }
+    return patents;
+  }
   const db = await create({
     schema: {
       $id: 'string',
@@ -43,7 +48,7 @@ export async function summarizePatents(patents, term = "", options = {}) {
   }
   let queryResult = await search(db, {
     term,
-    properties: fields,
+    properties: queryFields,
     boost: boostFields,
     relevance,
     tolerance,

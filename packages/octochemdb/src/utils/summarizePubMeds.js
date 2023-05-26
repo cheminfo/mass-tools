@@ -10,23 +10,35 @@ import { create, insert, search } from '@orama/orama';
  * @param {object} [options.relevance={ k: 1.2, b: 0.75, d: 0.5 }]
  * @param {number} [options.tolerance=1]
  * @param {object} [options.boostFields={ title: 2, abstract: 1, meshHeadings: 1 }]
- * @param {string[]} [options.fields=['title', 'abstract', 'meshHeadings']]
+ * @param {string[]} [options.queryFields=['title', 'abstract', 'meshHeadings']]
  * @returns
  */
-export async function summarizePubMeds(pubmeds, term = "", options = {}) {
+export async function summarizePubMeds(pubmeds, term = '', options = {}) {
   const {
     maxNbEntries = 100,
     minScore = 0.5,
     relevance = { k: 1.2, b: 0.75, d: 0.5 },
     tolerance = 1,
-    fields = ['title', 'abstract', 'meshHeadings'],
+    queryFields = ['title', 'abstract', 'meshHeadings'],
     boostFields = {
       title: 2,
       abstract: 1,
       meshHeadings: 1,
     },
   } = options;
-
+  if (term === '') {
+    if (pubmeds.length > maxNbEntries) {
+      pubmeds.length = maxNbEntries;
+    }
+    pubmeds.sort((a, b) => {
+      const nbCompoundsEntryA = a.data.compounds.length + 2 || 2;
+      const nbCompoundsEntryB = b.data.compounds.length + 2 || 2;
+      return (
+        1 / Math.log2(nbCompoundsEntryB) - 1 / Math.log2(nbCompoundsEntryA)
+      );
+    });
+    return pubmeds;
+  }
   const db = await create({
     schema: {
       $ref: 'string',
@@ -51,14 +63,14 @@ export async function summarizePubMeds(pubmeds, term = "", options = {}) {
       title: pubmed.data.article.title || '',
       abstract: pubmed.data.article.abstract || '',
       meshHeadings,
-      nbCompounds: pubmed.data.compounds.length || 0,
+      nbCompounds: pubmed.data.compounds.length + 2 || +2,
     };
 
     await insert(db, article);
   }
   let queryResult = await search(db, {
     term,
-    properties: fields,
+    properties: queryFields,
     boost: boostFields,
     relevance,
     tolerance,
