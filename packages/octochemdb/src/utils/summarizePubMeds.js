@@ -2,7 +2,7 @@ import { create, insert, search } from '@orama/orama';
 
 /**
  *
- * @param {object} pubmeds
+ * @param {object[]} pubmeds
  * @param {string} term
  * @param {object} [options={}]
  * @param {number} [options.minScore=0.5]
@@ -13,7 +13,7 @@ import { create, insert, search } from '@orama/orama';
  * @param {string[]} [options.fields=['title', 'abstract', 'meshHeadings']]
  * @returns
  */
-export async function summarizePubMeds(pubmeds, term, options = {}) {
+export async function summarizePubMeds(pubmeds, term = "", options = {}) {
   const {
     maxNbEntries = 100,
     minScore = 0.5,

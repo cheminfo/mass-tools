@@ -1,6 +1,6 @@
 import { create, insert, search } from '@orama/orama';
 /**
- * @param {object} activities
+ * @param {object[]} activities
  * @param {string} term
  * @param {object} [options={}]
  * @param {number} [options.minScore=0.5]
@@ -9,7 +9,7 @@ import { create, insert, search } from '@orama/orama';
  * @param {number} [options.tolerance=1]
  * @param {string[]} [options.fields=['assay']]
  */
-export async function summarizeActivities(activities, term, options = {}) {
+export async function summarizeActivities(activities, term = "", options = {}) {
   const {
     maxEntries = 100,
     minScore = 0.5,

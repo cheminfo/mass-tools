@@ -4,6 +4,23 @@ import { join } from 'path';
 import { activeOrNaturalSummarize } from '../activeOrNaturalSummarize.js';
 
 describe('activeOrNaturalSummarize', () => {
+
+
+  it.only('empty term', async () => {
+    const entry = JSON.parse(
+      readFileSync(join(__dirname, './details.json'), 'utf8'),
+    );
+
+    const result = await activeOrNaturalSummarize(entry, '');
+    expect(result.data.patents[0].score).toBeGreaterThan(
+      result.data.patents[1].score,
+    );
+
+    expect(result.data.patents).toHaveLength(0);
+    expect(result.data.pubmeds).toHaveLength(0);
+    expect(result.data.activities).toHaveLength(0);
+  });
+
   it('term:anti', async () => {
     const entry = JSON.parse(
       readFileSync(join(__dirname, './details.json'), 'utf8'),

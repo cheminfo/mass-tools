@@ -1,7 +1,7 @@
 import { create, insert, search } from '@orama/orama';
 /**
  *
- * @param {object} patents
+ * @param {object[]} patents
  * @param {string} term
  * @param {object} options
  * @param {number} [options.maxNbEntries=100]
@@ -12,7 +12,7 @@ import { create, insert, search } from '@orama/orama';
  * @param {object} [options.boostFields={ title: 2, abstract: 1 }]
  * @returns
  */
-export async function summarizePatents(patents, term, options = {}) {
+export async function summarizePatents(patents, term = "", options = {}) {
   const {
     maxNbEntries = 100,
     minScore = 0.5,
@@ -52,6 +52,7 @@ export async function summarizePatents(patents, term, options = {}) {
   let results = [];
   for (let result of queryResult.hits) {
     let id = result.document.$id;
+    // todo this could be maybe improved using Map
     let patentsDocument = patents.find((patent) => patent.$id === id);
     results.push({ ...patentsDocument, score: result.score });
   }
