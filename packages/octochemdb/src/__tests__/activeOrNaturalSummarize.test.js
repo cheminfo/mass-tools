@@ -8,9 +8,7 @@ describe('activeOrNaturalSummarize', () => {
     const entry = JSON.parse(
       readFileSync(join(__dirname, './details.json'), 'utf8'),
     );
-    const nbPatents = entry.data.patents.length;
-    const nbPubmeds = entry.data.pubmeds.length;
-    const nbActivities = entry.data.activities.length;
+
     const options = {
       activities: {
         maxNbEntries: 2,
@@ -27,9 +25,9 @@ describe('activeOrNaturalSummarize', () => {
     expect(result.data.pubmeds[0].data.compounds.length).toBeLessThan(
       result.data.pubmeds[1].data.compounds.length,
     );
-    expect(result.data.patents.length).toBeLessThan(nbPatents);
-    expect(result.data.pubmeds.length).toBeLessThan(nbPubmeds);
-    expect(result.data.activities.length).toBeLessThan(nbActivities);
+    expect(result.data.patents.length).toBe(options.patents.maxNbEntries);
+    expect(result.data.pubmeds.length).toBe(options.pubmeds.maxNbEntries);
+    expect(result.data.activities.length).toBe(options.activities.maxNbEntries);
   });
 
   it('term:anti', async () => {
