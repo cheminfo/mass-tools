@@ -1,13 +1,14 @@
 import { create, insert, search } from '@orama/orama';
 /**
- * @param {object[]} activities
- * @param {string} term
- * @param {object} [options={}]
- * @param {number} [options.minScore=0.5]
- * @param {number} [options.maxNbEntries=50]
- * @param {object} [options.relevance={ k: 1.2, b: 0.75, d: 0.5 }]
- * @param {number} [options.tolerance=1]
- * @param {string[]} [options.queryFields=['assay']]
+ * @description This function performs a search on a list of activities and returns the most relevant ones using the BM25 algorithm.
+ * @param {object[]} activities - Activities to summarize
+ * @param {string} term - Search term
+ * @param {object} [options={}] - Options
+ * @param {number} [options.minScore=0.5] - Minimum score for an entry to be returned
+ * @param {number} [options.maxNbEntries=50] - Maximum number of entries to return
+ * @param {object} [options.relevance={ k: 1.2, b: 0.75, d: 0.5 }] - BM25 algorithm {k: Term frequency saturation parameter, b: Length normalization parameter, d:Frequency normalization lower bound}
+ * @param {number} [options.tolerance=1] -Typo Tolerance following the Levenshtein algorithm
+ * @param {string[]} [options.queryFields=['assay']] - Fields to query
  */
 export async function summarizeActivities(activities, term = '', options = {}) {
   const {

@@ -2,14 +2,14 @@ import { summarizeActivities } from './utils/summarizeActivities.js';
 import { summarizePatents } from './utils/summarizePatents.js';
 import { summarizePubMeds } from './utils/summarizePubMeds.js';
 /**
- *
- * @param {object} entry
- * @param {string} term
- * @param {object} options
- * @param {object} [options.activities]
- * @param {object} [options.patents]
- * @param {object} [options.pubmeds]
- * @returns
+ * @description This function summarizes the activities, patents and pubmeds of an entry of ActivesOrNaturals collection.
+ * @param {object} entry - Entry to summarize
+ * @param {string} term - Search term
+ * @param {object} options - Options
+ * @param {object} [options.activities] - Options for activities
+ * @param {object} [options.patents] - Options for patents
+ * @param {object} [options.pubmeds] - Options for pubmeds
+ * @returns {Promise<Object>} - Summarized entry of ActivesOrNaturals collection
  */
 export async function activeOrNaturalSummarize(entry, term, options = {}) {
   entry = { ...entry };

@@ -1,15 +1,15 @@
 import { create, insert, search } from '@orama/orama';
 /**
- *
- * @param {object[]} patents
- * @param {string} term
- * @param {object} options
- * @param {number} [options.maxNbEntries=100]
- * @param {number} [options.minScore=0.5]
- * @param {object} [options.relevance={ k: 1.2, b: 0.75, d: 0.5 }]
- * @param {number} [options.tolerance=1]
- * @param {string[]} [options.queryFields=['title', 'abstract']]
- * @param {object} [options.boostFields={ title: 2, abstract: 1 }]
+ * @description This function performs a search on a list of patents and returns the most relevant ones using the BM25 algorithm.
+ * @param {object[]} patents - Patents to summarize
+ * @param {string} term - Search term
+ * @param {object} options - Options
+ * @param {number} [options.maxNbEntries=100] - Maximum number of entries to return
+ * @param {number} [options.minScore=0.5] - Minimum score for an entry to be returned
+ * @param {object} [options.relevance={ k: 1.2, b: 0.75, d: 0.5 }] - BM25 algorithm {k: Term frequency saturation parameter, b: Length normalization parameter, d:Frequency normalization lower bound}
+ * @param {number} [options.tolerance=1] -Typo Tolerance following the Levenshtein algorithm
+ * @param {string[]} [options.queryFields=['title', 'abstract']] - Fields to query
+ * @param {object} [options.boostFields={ title: 2, abstract: 1 }] - Fields weights, higher weight means higher importance
  * @returns
  */
 export async function summarizePatents(patents, term = '', options = {}) {
