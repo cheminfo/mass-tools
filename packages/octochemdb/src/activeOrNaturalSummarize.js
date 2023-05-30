@@ -4,7 +4,7 @@ import { summarizePubMeds } from './utils/summarizePubMeds.js';
 /**
  * @description This function summarizes the activities, patents and pubmeds of an entry of ActivesOrNaturals collection.
  * @param {object} entry - an entry of ActivesOrNaturals collection
- * @param {string} term - Search term
+ * @param {string} terms - Search terms
  * @param {object} options - Options
  * @param {object} [options.activities={}] - Options for activities
  * @param {number} [options.activities.minScore=0.5] - Minimum score for an entry to be returned
@@ -28,20 +28,20 @@ import { summarizePubMeds } from './utils/summarizePubMeds.js';
  * @param {string[]} [options.queryFields=['title', 'abstract', 'meshHeadings']] - Fields to query
  * @returns {Promise<Object>} - Summarized entry of ActivesOrNaturals collection
  */
-export async function activeOrNaturalSummarize(entry, term, options = {}) {
+export async function activeOrNaturalSummarize(entry, terms, options = {}) {
   entry = { ...entry };
 
   let promises = [];
 
   promises.push(
-    summarizeActivities(entry.data.activities, term, options.activities).then(
+    summarizeActivities(entry.data.activities, terms, options.activities).then(
       (activities) => {
         entry.data.activities = activities;
       },
     ),
   );
   promises.push(
-    summarizePatents(entry.data.patents, term, options.patents).then(
+    summarizePatents(entry.data.patents, terms, options.patents).then(
       (patents) => {
         entry.data.patents = patents;
       },
@@ -49,7 +49,7 @@ export async function activeOrNaturalSummarize(entry, term, options = {}) {
   );
 
   promises.push(
-    summarizePubMeds(entry.data.pubmeds, term, options.pubmeds).then(
+    summarizePubMeds(entry.data.pubmeds, terms, options.pubmeds).then(
       (pubmeds) => {
         entry.data.pubmeds = pubmeds;
       },

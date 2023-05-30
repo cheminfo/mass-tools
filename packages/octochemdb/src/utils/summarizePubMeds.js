@@ -3,7 +3,7 @@ import { create, insert, search } from '@orama/orama';
 /**
  * @description This function performs a search on a list of PubMed articles and returns the most relevant ones using the BM25 algorithm. Articles related to less compounds are prioritized.
  * @param {object[]} pubmeds - Pubmeds to summarize
- * @param {string} term - Search term
+ * @param {string} terms - Search terms
  * @param {object} [options={}] - Options
  * @param {number} [options.minScore=0.5] - Minimum score for an entry to be returned
  * @param {number} [options.maxNbEntries=50] - Maximum number of entries to return
@@ -13,7 +13,7 @@ import { create, insert, search } from '@orama/orama';
  * @param {string[]} [options.queryFields=['title', 'abstract', 'meshHeadings']] - Fields to query
  * @returns
  */
-export async function summarizePubMeds(pubmeds, term = '', options = {}) {
+export async function summarizePubMeds(pubmeds, terms = '', options = {}) {
   const {
     maxNbEntries = 100,
     minScore = 0.5,
@@ -26,7 +26,7 @@ export async function summarizePubMeds(pubmeds, term = '', options = {}) {
       meshHeadings: 1,
     },
   } = options;
-  if (term === '') {
+  if (terms === '') {
     if (pubmeds.length > maxNbEntries) {
       pubmeds.length = maxNbEntries;
     }
@@ -43,10 +43,12 @@ export async function summarizePubMeds(pubmeds, term = '', options = {}) {
     schema: {
       $ref: 'string',
       $id: 'string',
-      title: 'string',
-      abstract: 'string',
+      ...(queryFields.includes('title') ? { title: 'string' } : null),
+      ...(queryFields.includes('abstract') ? { abstract: 'string' } : null),
+      ...(queryFields.includes('meshHeadings')
+        ? { meshHeadings: 'string[]' }
+        : null),
       nbCompounds: 'number',
-      meshHeadings: 'string[]',
     },
   });
   for (const pubmed of pubmeds) {
@@ -59,17 +61,22 @@ export async function summarizePubMeds(pubmeds, term = '', options = {}) {
 
     let article = {
       $id: pubmed.$id,
-      url: pubmed.url,
-      title: pubmed.data.article.title || '',
-      abstract: pubmed.data.article.abstract || '',
-      meshHeadings,
+      ...(queryFields.includes('title')
+        ? { title: pubmed.data.article.title || '' }
+        : null),
+      ...(queryFields.includes('abstract')
+        ? { abstract: pubmed.data.article.abstract || '' }
+        : null),
+      ...(queryFields.includes('meshHeadings')
+        ? { meshHeadings: meshHeadings || '' }
+        : null),
       nbCompounds: pubmed.data.compounds.length + 2 || +2,
     };
 
     await insert(db, article);
   }
   let queryResult = await search(db, {
-    term,
+    term: terms,
     properties: queryFields,
     boost: boostFields,
     relevance,

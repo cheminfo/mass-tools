@@ -2,7 +2,7 @@ import { create, insert, search } from '@orama/orama';
 /**
  * @description This function performs a search on a list of activities and returns the most relevant ones using the BM25 algorithm.
  * @param {object[]} activities - Activities to summarize
- * @param {string} term - Search term
+ * @param {string} terms - Search terms
  * @param {object} [options={}] - Options
  * @param {number} [options.minScore=0.5] - Minimum score for an entry to be returned
  * @param {number} [options.maxNbEntries=50] - Maximum number of entries to return
@@ -10,7 +10,11 @@ import { create, insert, search } from '@orama/orama';
  * @param {number} [options.tolerance=1] -Typo Tolerance following the Levenshtein algorithm
  * @param {string[]} [options.queryFields=['assay']] - Fields to query
  */
-export async function summarizeActivities(activities, term = '', options = {}) {
+export async function summarizeActivities(
+  activities,
+  terms = '',
+  options = {},
+) {
   const {
     maxNbEntries = 100,
     minScore = 0.5,
@@ -18,7 +22,7 @@ export async function summarizeActivities(activities, term = '', options = {}) {
     tolerance = 1,
     queryFields = ['assay'],
   } = options;
-  if (term === '') {
+  if (terms === '') {
     if (activities.length > maxNbEntries) {
       activities.length = maxNbEntries;
     }
@@ -53,7 +57,7 @@ export async function summarizeActivities(activities, term = '', options = {}) {
     }
   }
   let queryResult = await search(db, {
-    term,
+    term: terms,
     relevance,
     properties: queryFields,
     tolerance,

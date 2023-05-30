@@ -2,7 +2,7 @@ import { create, insert, search } from '@orama/orama';
 /**
  * @description This function performs a search on a list of patents and returns the most relevant ones using the BM25 algorithm.
  * @param {object[]} patents - Patents to summarize
- * @param {string} term - Search term
+ * @param {string} terms - Search terms
  * @param {object} options - Options
  * @param {number} [options.maxNbEntries=100] - Maximum number of entries to return
  * @param {number} [options.minScore=0.5] - Minimum score for an entry to be returned
@@ -12,7 +12,7 @@ import { create, insert, search } from '@orama/orama';
  * @param {object} [options.boostFields={ title: 2, abstract: 1 }] - Fields weights, higher weight means higher importance
  * @returns
  */
-export async function summarizePatents(patents, term = '', options = {}) {
+export async function summarizePatents(patents, terms = '', options = {}) {
   const {
     maxNbEntries = 100,
     minScore = 0.5,
@@ -24,40 +24,61 @@ export async function summarizePatents(patents, term = '', options = {}) {
       abstract: 1,
     },
   } = options;
-  if (term === '') {
+  if (terms === '') {
     if (patents.length > maxNbEntries) {
       patents.length = maxNbEntries;
     }
+    patents.sort((a, b) => {
+      const nbCompoundsEntryA = a.data.nbCompounds + 2 || 2;
+      const nbCompoundsEntryB = b.data.nbCompounds + 2 || 2;
+      return (
+        1 / Math.log2(nbCompoundsEntryB) - 1 / Math.log2(nbCompoundsEntryA)
+      );
+    });
     return patents;
   }
+
   const db = await create({
     schema: {
       $id: 'string',
-      title: 'string',
-      abstract: 'string',
+      ...(queryFields.includes('title') ? { title: 'string' } : null),
+      ...(queryFields.includes('abstract') ? { abstract: 'string' } : null),
+      nbCompounds: 'number',
     },
   });
   for (const patent of patents) {
     let article = {
       $id: patent.$id,
-      title: patent.data.title || '',
-      abstract: patent.data.abstract || '',
+      ...(queryFields.includes('title') ? { title: patent.data.title } : null),
+      ...(queryFields.includes('abstract')
+        ? { abstract: patent.data.abstract }
+        : null),
+      nbCompounds: patent.data.nbCompounds + 2 || +2,
     };
 
     await insert(db, article);
   }
   let queryResult = await search(db, {
-    term,
+    term: terms,
     properties: queryFields,
     boost: boostFields,
     relevance,
     tolerance,
   });
-  //console.log(queryResult);
+  queryResult.hits.map((item) => {
+    let nbCompounds = 2;
+    if (item.document.nbCompounds) {
+      nbCompounds = +Number(item.document.nbCompounds);
+    }
+    item.score = item.score / Math.log2(nbCompounds);
+
+    return item;
+  });
+
   let results = [];
   for (let result of queryResult.hits) {
     let id = result.document.$id;
-    // todo this could be maybe improved using Map
+    // to do this could be maybe improved using Map
     let patentsDocument = patents.find((patent) => patent.$id === id);
     results.push({ ...patentsDocument, score: result.score });
   }
