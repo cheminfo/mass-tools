@@ -22,6 +22,7 @@ export async function summarizeActivities(
     tolerance = 1,
     queryFields = ['assay'],
   } = options;
+
   if (terms === '') {
     if (activities.length > maxNbEntries) {
       activities.length = maxNbEntries;

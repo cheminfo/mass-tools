@@ -30,26 +30,26 @@ import { summarizePubMeds } from './utils/summarizePubMeds.js';
  */
 export async function activeOrNaturalSummarize(entry, terms, options = {}) {
   entry = { ...entry };
+  entry.data = { ...entry.data }
 
   let promises = [];
 
   promises.push(
-    summarizeActivities(entry.data.activities, terms, options.activities).then(
+    summarizeActivities(entry.data.activities.slice(), terms, options.activities).then(
       (activities) => {
         entry.data.activities = activities;
       },
     ),
   );
   promises.push(
-    summarizePatents(entry.data.patents, terms, options.patents).then(
+    summarizePatents(entry.data.patents.slice(), terms, options.patents).then(
       (patents) => {
         entry.data.patents = patents;
       },
     ),
   );
-
   promises.push(
-    summarizePubMeds(entry.data.pubmeds, terms, options.pubmeds).then(
+    summarizePubMeds(entry.data.pubmeds.slice(), terms, options.pubmeds).then(
       (pubmeds) => {
         entry.data.pubmeds = pubmeds;
       },
