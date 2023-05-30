@@ -23,6 +23,7 @@ export async function activeOrNaturalDetails(id, options = {}) {
 
   await includeDBRefs(activeOrNatural, { baseURL });
   appendURLs(activeOrNatural);
+  // todo normalize activities
 
   return activeOrNatural;
 }
