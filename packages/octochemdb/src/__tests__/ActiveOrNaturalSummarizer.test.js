@@ -1,22 +1,27 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-import { activeOrNaturalSummarize } from '../activeOrNaturalSummarize.js';
+import { ActiveOrNaturalSummarizer } from '../ActiveOrNaturalSummarizer.js';
+import { normalizeActivities } from '../utils/normalizeActivities.js';
 
-describe('activeOrNaturalSummarize', () => {
+describe('ActiveOrNaturalSummarizer', () => {
   it('multiple terms', async () => {
     const entry = JSON.parse(
       readFileSync(join(__dirname, './details.json'), 'utf8'),
     );
+    normalizeActivities(entry);
     const options = {
       pubmeds: {
         queryFields: ['title', 'abstract'],
       },
     };
-    const result = await activeOrNaturalSummarize(
+    const activeOrNaturalSummarizer = new ActiveOrNaturalSummarizer(
       entry,
-      'Apoptosis ethylene inhibition',
       options,
+    );
+
+    const result = await activeOrNaturalSummarizer.summarize(
+      'Apoptosis ethylene inhibition',
     );
     expect(result.data.patents[0].score).toBeGreaterThan(
       result.data.patents[1].score,
@@ -31,6 +36,7 @@ describe('activeOrNaturalSummarize', () => {
     const entry = JSON.parse(
       readFileSync(join(__dirname, './details.json'), 'utf8'),
     );
+    normalizeActivities(entry);
 
     const options = {
       activities: {
@@ -43,7 +49,11 @@ describe('activeOrNaturalSummarize', () => {
         maxNbEntries: 65,
       },
     };
-    const result = await activeOrNaturalSummarize(entry, '', options);
+    const activeOrNaturalSummarizer = new ActiveOrNaturalSummarizer(
+      entry,
+      options,
+    );
+    const result = await activeOrNaturalSummarizer.summarize('');
 
     expect(result.data.pubmeds[0].data.compounds.length).toBeLessThan(
       result.data.pubmeds[1].data.compounds.length,
@@ -54,12 +64,15 @@ describe('activeOrNaturalSummarize', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('terms:anti', async () => {
+  it('terms:ethylene', async () => {
     const entry = JSON.parse(
       readFileSync(join(__dirname, './details.json'), 'utf8'),
     );
+    normalizeActivities(entry);
 
-    const result = await activeOrNaturalSummarize(entry, 'ethylene');
+    const activeOrNaturalSummarizer = new ActiveOrNaturalSummarizer(entry);
+    const result = await activeOrNaturalSummarizer.summarize('ethylene');
+
     expect(result.data.patents[0].score).toBeGreaterThan(
       result.data.patents[1].score,
     );
@@ -72,9 +85,11 @@ describe('activeOrNaturalSummarize', () => {
     const entry = JSON.parse(
       readFileSync(join(__dirname, './details.json'), 'utf8'),
     );
+    normalizeActivities(entry);
 
-    const result = await activeOrNaturalSummarize(entry, 'inhibition');
-    expect(result.data.activities[0].assay).toMatchInlineSnapshot(
+    const activeOrNaturalSummarizer = new ActiveOrNaturalSummarizer(entry);
+    const result = await activeOrNaturalSummarizer.summarize('inhibition');
+    expect(result.data.activities[0].data.assay).toMatchInlineSnapshot(
       '"Inhibition : 10.75 %"',
     );
     expect(result.data.activities[0].score).toMatchInlineSnapshot(
@@ -87,8 +102,10 @@ it('terms:Apoptosis', async () => {
   const entry = JSON.parse(
     readFileSync(join(__dirname, './details.json'), 'utf8'),
   );
+  normalizeActivities(entry);
 
-  const result = await activeOrNaturalSummarize(entry, 'Apoptosis');
+  const activeOrNaturalSummarizer = new ActiveOrNaturalSummarizer(entry);
+  const result = await activeOrNaturalSummarizer.summarize('Apoptosis');
 
   expect(result.data.pubmeds[0].data.article.title).toMatchInlineSnapshot(
     '"Apoptosis induced by an endogenous neurotoxin, N-methyl(R)salsolinol, in dopamine neurons."',

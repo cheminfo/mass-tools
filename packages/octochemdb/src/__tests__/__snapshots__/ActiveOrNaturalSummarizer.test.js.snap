@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`activeOrNaturalSummarize > empty terms 1`] = `
+exports[`ActiveOrNaturalSummarizer > empty terms 1`] = `
 {
   "_id": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
   "data": {
@@ -9,147 +9,46 @@ exports[`activeOrNaturalSummarize > empty terms 1`] = `
         "$id": "NPC294249",
         "$ref": "npasses",
         "data": {
-          "activities": [
-            {
-              "assay": "Potency : 12589.3 nM",
-              "externalRef": "Dataset : PubChem BioAssay data set",
-              "targetTaxonomies": {
-                "class": "Bacilli",
-                "family": "Bacillaceae",
-                "genus": "Bacillus",
-                "order": "Bacillales",
-                "phylum": "Bacillota",
-                "species": "Bacillus anthracis",
-                "superkingdom": "Bacteria",
-              },
-            },
-            {
-              "assay": "Potency : 39810.7 nM",
-              "externalRef": "Dataset : PubChem BioAssay data set",
-              "targetTaxonomies": {
-                "class": "Mammalia",
-                "family": "Hominidae",
-                "genus": "Homo",
-                "kingdom": "Metazoa",
-                "order": "Primates",
-                "phylum": "Chordata",
-                "species": "Homo sapiens",
-                "superkingdom": "Eukaryota",
-              },
-            },
-            {
-              "assay": "Potency : 19952.6 nM",
-              "externalRef": "Dataset : PubChem BioAssay data set",
-              "targetTaxonomies": {
-                "class": "Mammalia",
-                "family": "Hominidae",
-                "genus": "Homo",
-                "kingdom": "Metazoa",
-                "order": "Primates",
-                "phylum": "Chordata",
-                "species": "Homo sapiens",
-                "superkingdom": "Eukaryota",
-              },
-            },
-            {
-              "assay": "Inhibition : 10.75 %",
-              "externalRef": "PMID : 23062825",
-              "targetTaxonomies": {
-                "class": "Actinopteri",
-                "family": "Gymnotidae",
-                "genus": "Electrophorus",
-                "kingdom": "Metazoa",
-                "order": "Gymnotiformes",
-                "phylum": "Chordata",
-                "species": "Electrophorus electricus",
-                "superkingdom": "Eukaryota",
-              },
-            },
-            {
-              "assay": "Inhibition : -4.77 %",
-              "externalRef": "PMID : 23062825",
-              "targetTaxonomies": {
-                "class": "Mammalia",
-                "family": "Equidae",
-                "genus": "Equus",
-                "kingdom": "Metazoa",
-                "order": "Perissodactyla",
-                "phylum": "Chordata",
-                "species": "Equus caballus",
-                "superkingdom": "Eukaryota",
-              },
-            },
-          ],
-          "cid": "442356",
+          "assay": "Potency : 12589.3 nM",
           "ocl": {
             "coordinates": "!BbOvw?_y?bOrw?Xa}bGvH@hc|bGvH?_x@bOp",
             "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
-          "taxonomies": [
-            {
-              "class": "Magnoliopsida",
-              "dbRef": {
-                "$id": "NPC294249",
-                "$ref": "npasses",
-                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
-              },
-              "family": "Chenopodiaceae",
-              "genus": "Salsola",
-              "kingdom": "Viridiplantae",
-              "order": "Caryophyllales",
-              "phylum": "Streptophyta",
-              "species": "Salsola collina",
-              "superkingdom": "Eukaryota",
-            },
-            {
-              "class": "Magnoliopsida",
-              "dbRef": {
-                "$id": "NPC294249",
-                "$ref": "npasses",
-                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
-              },
-              "family": "Chenopodiaceae",
-              "genus": "Salsola",
-              "kingdom": "Viridiplantae",
-              "order": "Caryophyllales",
-              "phylum": "Streptophyta",
-              "species": "Salsola collina",
-              "superkingdom": "Eukaryota",
-            },
-            {
-              "class": "Magnoliopsida",
-              "dbRef": {
-                "$id": "NPC294249",
-                "$ref": "npasses",
-                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
-              },
-              "family": "Chenopodiaceae",
-              "genus": "Salsola",
-              "kingdom": "Viridiplantae",
-              "order": "Caryophyllales",
-              "phylum": "Streptophyta",
-              "species": "Salsola collina",
-              "superkingdom": "Eukaryota",
-            },
-          ],
+          "targetTaxonomies": {
+            "class": "Bacilli",
+            "family": "Bacillaceae",
+            "genus": "Bacillus",
+            "order": "Bacillales",
+            "phylum": "Bacillota",
+            "species": "Bacillus anthracis",
+            "superkingdom": "Bacteria",
+          },
         },
         "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
       },
       {
-        "$id": "442356_589",
-        "$ref": "bioassays",
+        "$id": "NPC294249",
+        "$ref": "npasses",
         "data": {
-          "aid": 589,
-          "assay": "qHTS Assay for Spectroscopic Profiling in 4-MU Spectral Region",
-          "cid": 442356,
+          "assay": "Potency : 39810.7 nM",
           "ocl": {
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
-            "noStereoID": "dg~D@MBdin]V^G[hHBjb@@",
+            "coordinates": "!BbOvw?_y?bOrw?Xa}bGvH@hc|bGvH?_x@bOp",
+            "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
+          "targetTaxonomies": {
+            "class": "Mammalia",
+            "family": "Hominidae",
+            "genus": "Homo",
+            "kingdom": "Metazoa",
+            "order": "Primates",
+            "phylum": "Chordata",
+            "species": "Homo sapiens",
+            "superkingdom": "Eukaryota",
+          },
         },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/bioassay/589",
+        "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
       },
     ],
     "bioactive": true,
@@ -954,6 +853,43 @@ M  END
         "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-109769540-A",
       },
       {
+        "$id": "SU-514854-A1",
+        "$ref": "patents",
+        "data": {
+          "nbCompounds": 2,
+          "title": "The method of obtaining physiologically active polymers",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/SU-514854-A1",
+      },
+      {
+        "$id": "SU-957075-A1",
+        "$ref": "patents",
+        "data": {
+          "nbCompounds": 2,
+          "title": "Hydrochloride salsoline determination method",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/SU-957075-A1",
+      },
+      {
+        "$id": "RU-2011127776-A",
+        "$ref": "patents",
+        "data": {
+          "abstract": "1. The group of compounds represented by formula (I) where the isobornyl moieties have the configuration (1S, 2R, 4R, 1'R, 2'S, 4'5), where the isobornyl moieties have the configuration (1S, 2R, 4R, 1'S, 2'R, 4'R) and (1R, 2S, 4S 1'R, 2'S, 4'S), R is a group of the general formula II - (CH) NX, where X is an alkyl radical C1-C8 linear or branched, cyclohexyl-, morpholine-, piperidine, benzyl, salsolidine, salsoline, N-benzyl-1-phenylethylamine, n = 1-30.2. The group of compounds is represented by formula (I) where the isobornyl moieties have the configuration (1S, 2R, 4R, 1'R, 2'S, 4'5), where the isobornyl moieties have the configuration (1S, 2R, 4R, 1'S, 2'R, 4 ' R) and (1R, 2S, 4S 1'R, 2'S, 4'S), R is a group of the general formula II - (CH) HX, where X is an alkyl radical C1-C8 linear or branched, cyclohexyl-, morpholine-, piperidine- benzyl; n = 1-30.3. The group of compounds is represented by formula (I) where the isobornyl moieties have the configuration (1S, 2R, 4R, 1'R, 2'S, 4'5), where the isobornyl moieties have the configuration (1S, 2R, 4R, 1'S, 2'R, 4 ' R) and (1R, 2S, 4S 1'R, 2'S, 4'S), R is a group of the general formula III - (CH) Y where Y is an OH group; Hal; SH; n = 1-30.4. The group of compounds is represented by formula (I) where the isobornyl moieties have the configuration (1S, 2R, 4R, 1'R, 2'S, 4'S), where the isobornyl moieties have the configuration (1S, 2R, 4R, 1'S, 2'R, 4'R) and (1R, 2S, 4S 1'R, 2'S, 4'S), R is a formyl group.",
+          "nbCompounds": 3,
+          "title": "Derivatives of 2,6-diisobornylphenol",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/RU-2011127776-A",
+      },
+      {
+        "$id": "SU-412192-A1",
+        "$ref": "patents",
+        "data": {
+          "nbCompounds": 3,
+          "title": "The method of isolation of salsoline and salsolidine",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/SU-412192-A1",
+      },
+      {
         "$id": "CN-105078992-B",
         "$ref": "patents",
         "data": {
@@ -972,6 +908,25 @@ M  END
           "title": "Auxiliary heat stabilizer and preparation method and application thereof",
         },
         "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-107955295-B",
+      },
+      {
+        "$id": "CN-113331233-A",
+        "$ref": "patents",
+        "data": {
+          "abstract": "The present invention relates to a Chinese modern unique excellent inventor, i.e. a couple culture, a yankee rope trampling and medicinal and edible preparation, which can create Chinese food therapy product and cast Chinese food therapy brand. The invention discloses a Korean hot sauce which is developed and innovated and has the traditional blood pressure reducing effect, adopts modern science and technology, extracts traditional Chinese medicinal materials with double blood pressure reducing effects to create combined blood pressure reducing alcohol, properly dissolves the raw materials and blood pressure reducing foodstuff, innovates raw materials and raw materials which are mutually fresh and mutually reinforced and have the same affinity, reduces the blood pressure and is fragrant, sweet and delicious, improves the edible value and the dietary therapy value of the sauce, creates the blood pressure reducing sauce which can be eaten more than one sauce, can lower the blood pressure, has diseases, is healthy and has the best dietary therapy effect. The sauce enters the food therapy case spectrum at first, opens up the precedent of Chinese food therapy products, and creates a new way for lowering blood pressure for human food therapy.",
+          "nbCompounds": 4,
+          "title": "Blood pressure lowering sauce",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-113331233-A",
+      },
+      {
+        "$id": "SU-691740-A1",
+        "$ref": "patents",
+        "data": {
+          "nbCompounds": 4,
+          "title": "Method of the quantitative detection of dibazole and salsoline hydrochloride present together",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/SU-691740-A1",
       },
       {
         "$id": "CN-107427508-A",
@@ -1024,6 +979,26 @@ M  END
         "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-112159699-A",
       },
       {
+        "$id": "WO-2013006098-A2",
+        "$ref": "patents",
+        "data": {
+          "abstract": "The invention relates to sterically hindered phenols, and specifically to terpenophenols, and more precisely, to functional derivatives of isobornylphenol. The group of compounds is represented by formula (I):",
+          "nbCompounds": 10,
+          "title": "2,6-diisobornylphenol derivatives",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/WO-2013006098-A2",
+      },
+      {
+        "$id": "RU-2656225-C1",
+        "$ref": "patents",
+        "data": {
+          "abstract": "FIELD: chemistry. n     SUBSTANCE: invention relates to the field of organic chemistry, specifically to a process for the preparation of pyrrolo[2,1- a ]isoquinolines 3-6, where 3: R 1 =OCH 3 , R 2 =H, R 3 =Cl, R 4 =H; 4: R 1 =OCH 3 , R 2 =H, R 3 =Cl, R 4 =CH 3 ; 5: R 1 =R 2 =R 3 =OC 2 H 5 , R 4 =H; 6: R 1 =R 2 =R 3 =OC 2 H 5 , R 4 =CH 3 , comprising the dissolution of 6,7-dimethoxy-3,4-dihydro-1-(4-chlorobenzoyl)isoquinoline or 6,7-diethoxy-3,4-dihydro-1-(3,4-diethoxybenzoyl)isoquinoline in acetonitrile and the addition of 1,5-diphenyl-1-penten-4-yn-3-one or 1-(4-methylphenyl)-5-phenyl-1-penten-4-yn-3-one and 30 mol% of copper (I) bromide and exposure to microwave irradiation (300 W) for 30 min at +200 °C, the residue obtained after completion of the reaction and removal of the solvent is crystallised from the ester.   3-6. n     EFFECT: method has been developed for the preparation of pyrrolo[2,1- a ]isoquinolines, which may have useful biological properties. n     1 cl, 4 ex",
+          "nbCompounds": 14,
+          "title": "Method for producing pyrrolo[2,1-a]isoquinolines",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/RU-2656225-C1",
+      },
+      {
         "$id": "CN-101977612-A",
         "$ref": "patents",
         "data": {
@@ -1073,6 +1048,55 @@ M  END
         "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CA-2868128-A1",
       },
       {
+        "$id": "EP-2849769-B1",
+        "$ref": "patents",
+        "data": {
+          "nbCompounds": 23,
+          "title": "Method for producing a plant extract from desmodium and its extract",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/EP-2849769-B1",
+      },
+      {
+        "$id": "WO-2013166563-A9",
+        "$ref": "patents",
+        "data": {
+          "abstract": "This invention relates to a method for producing a plant extract, quantified on pinitol, wherein a plant  Desmodium adscendens  is selected from the  Desmodium  family, wherein a fraction is extracted from  Desmodium  plant parts, wherein a plant extract is derived from said fraction thereof, which is remarkable in that a characterised extract is derived from  Desmodium adscendens , from which a preparation of said plant extract is quantified on pinitol.",
+          "nbCompounds": 24,
+          "title": "Method for producing a plant extract from desmodium and its extract",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/WO-2013166563-A9",
+      },
+      {
+        "$id": "CN-113441185-B",
+        "$ref": "patents",
+        "data": {
+          "abstract": "The invention discloses a method for continuously producing 1-hexene and 1-octene, which comprises the following steps: (1) mixing a solvent and an alkyl aluminum compound through a mixing tank, continuously introducing the mixture into a reaction kettle, introducing ethylene, and carrying out ethylene oligomerization reaction under the action of a continuously introduced catalyst to obtain a reaction solution containing 1-hexene and 1-octene; (2) the reaction liquid containing 1-hexene and 1-octene enters an overflow tank reactor through an overflow pipeline; (3) and (3) introducing the reaction liquid obtained from the overflow tank reactor into a quenching reactor, and quenching the reaction by using an alcohol substance as a quenching agent to obtain the 1-hexene and the 1-octene. Wherein the used catalyst is a solution formed by a metal chromium compound, a PNSiNP ligand and an organic boron compound. The invention adopts higher temperature for the overflow tank under the condition of not changing the reaction temperature, and the polymer coming from the reaction kettle can be dissolved in the reaction liquid, thereby reducing the possibility of pipeline blockage and improving the continuous operation time of the device.",
+          "nbCompounds": 26,
+          "title": "Ethylene oligomerization catalyst and method for continuously producing 1-hexene and 1-octene",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-113441185-B",
+      },
+      {
+        "$id": "CN-113441185-A",
+        "$ref": "patents",
+        "data": {
+          "abstract": "The invention discloses a method for continuous production of 1-hexene and 1-octene, comprising: (1) after mixing a solvent and an alkyl aluminum compound in a mixing tank, they are continuously introduced into a reaction kettle, and ethylene is introduced into the reaction kettle. Under the effect of the catalyzer that feeds, ethylene oligomerization reaction occurs, obtains the reaction solution containing 1-hexene and 1-octene; (2) the reaction solution containing 1-hexene and 1-octene enters through overflow line to the overflow tank reactor; (3) the reaction solution obtained by the overflow tank reactor enters the quenching reactor, and uses alcohols as a quenching agent to quench the reaction to obtain 1-hexene and 1-octene. Wherein, the catalyst used is a solution formed by a metal chromium compound, a PNSiNP ligand and an organic boron compound. In the present invention, under the condition of not changing the reaction temperature, the overflow tank adopts a higher temperature, and the polymer from the reaction kettle can be dissolved in the reaction liquid, thereby reducing the possibility of pipeline blockage and improving the continuous operation time of the device.",
+          "nbCompounds": 27,
+          "title": "A kind of ethylene oligomerization catalyst and method for continuous production of 1-hexene and 1-octene",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-113441185-A",
+      },
+      {
+        "$id": "EP-2849769-A1",
+        "$ref": "patents",
+        "data": {
+          "abstract": "This invention relates to a method for producing a plant extract, quantified on pinitol, wherein a plant Desmodium adscendens is selected from the Desmodium family, wherein a fraction is extracted from Desmodium plant parts, wherein a plant extract is derived from said fraction thereof, which is remarkable in that a characterised extract is derived from Desmodium adscendens, from which a preparation of said plant extract is quantified on pinitol.",
+          "nbCompounds": 27,
+          "title": "Method for producing a plant extract from desmodium and its extract",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/EP-2849769-A1",
+      },
+      {
         "$id": "CN-108872443-A",
         "$ref": "patents",
         "data": {
@@ -1081,6 +1105,16 @@ M  END
           "title": "A kind of quality determining method of ginger toast Cortex Magnoliae Officinalis",
         },
         "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-108872443-A",
+      },
+      {
+        "$id": "WO-2013166563-A1",
+        "$ref": "patents",
+        "data": {
+          "abstract": "This invention relates to a method for producing a plant extract, quantified on pinitol, wherein a plant  Desmodium adscendens  is selected from the  Desmodium  family, wherein a fraction is extracted from  Desmodium  plant parts, wherein a plant extract is derived from said fraction thereof, which is remarkable in that a characterised extract is derived from  Desmodium adscendens , from which a preparation of said plant extract is quantified on pinitol.",
+          "nbCompounds": 28,
+          "title": "Method for producing a plant extract from desmodium and extract thereof",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/WO-2013166563-A1",
       },
       {
         "$id": "WO-2015198346-A1",
@@ -1159,6 +1193,16 @@ M  END
           "title": "Method for eliminating and reducing generation of accelerated blood clearance phenomenon",
         },
         "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-103169981-A",
+      },
+      {
+        "$id": "WO-2017062481-A1",
+        "$ref": "patents",
+        "data": {
+          "abstract": "Disclosed herein are compositions for ionizing a target and methods for making the compositions. In some embodiments, the compositions can include a structured substrate having a plurality of upright surface features, for example, microscale or nanoscale pillars, in contact with an initiator. Also disclosed herein are methods for ionizing targets.",
+          "nbCompounds": 80,
+          "title": "Fabrication of mass spectrometry surface",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/WO-2017062481-A1",
       },
       {
         "$id": "US-2018254177-A1",
@@ -1241,6 +1285,26 @@ M  END
         "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-10656126-B2",
       },
       {
+        "$id": "WO-9719946-A1",
+        "$ref": "patents",
+        "data": {
+          "abstract": "The invention concerns compounds of formula (I) in which the substituents and symbols have the meanings given in the description. These compounds are advantageous resistance modulators.",
+          "nbCompounds": 154,
+          "title": "Pyridopyrimidines",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/WO-9719946-A1",
+      },
+      {
+        "$id": "EP-0863899-A1",
+        "$ref": "patents",
+        "data": {
+          "abstract": "The invention concerns compounds of formula (I) in which the substituents and symbols have the meanings given in the description. These compounds are advantageous resistance modulators.",
+          "nbCompounds": 175,
+          "title": "Pyridopyrimidines",
+        },
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/EP-0863899-A1",
+      },
+      {
         "$id": "WO-2007110637-A1",
         "$ref": "patents",
         "data": {
@@ -1261,184 +1325,14 @@ M  END
         "url": "https://pubchem.ncbi.nlm.nih.gov/patent/EP-2001877-A1",
       },
       {
-        "$id": "US-5925642-A",
+        "$id": "CN-114430738-A",
         "$ref": "patents",
         "data": {
-          "abstract": "PCT No. PCT/EP96/05046 Sec. 371 Date May 21, 1998 Sec. 102(e) Date May 21, 1998 PCT Filed Nov. 16, 1996 PCT Pub. No. WO97/19946 PCT Pub. Date Jun. 5, 1997The invention concerns compounds of formula (I) in which the substituents and symbols have the meanings given in the specification. These compounds are advantageous as resistance modulators.",
-          "nbCompounds": 230,
-          "title": "Pyridopyrimidines",
+          "abstract": "Compounds useful as biologically active compounds are disclosed. The compounds have the following structure (I): or a stereoisomer, tautomer or salt thereof, wherein R 1 、R 2 、R 3 、R 4 、R 5 、L、L 1 、L 2 M and n are as defined herein. Also provided are methods relating to their preparation and uses of such compounds.",
+          "nbCompounds": 226,
+          "title": "Programmable polymeric pharmaceuticals",
         },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-5925642-A",
-      },
-      {
-        "$id": "US-5668131-A",
-        "$ref": "patents",
-        "data": {
-          "abstract": "PCT No. PCT/EP94/03911 Sec. 371 Date May 31, 1996 Sec. 102(e) Date May 31, 1996 PCT Filed Nov. 26, 1994 PCT Pub. No. WO95/15324 PCT Pub. Date Jun. 8, 1995Compounds of formula I    &lt;IMAGE&gt;  (I)  wherein R1, R2, R3, R4, R5, R6, X, n and A have the meanings as given in the description, can be used for combatting Helicobacter bacteria.",
-          "nbCompounds": 267,
-          "title": "Substituted aminoalkylaminopyridines",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-5668131-A",
-      },
-      {
-        "$id": "EP-0046270-A1",
-        "$ref": "patents",
-        "data": {
-          "abstract": "Novel transient prodrug forms of bio-affecting phenolic compounds are selected from the group consisting of those having the structural formula (I):n     wherein X is O, S or NR 5  wherein R 5  is hydrogen or lower alkyl; R 1  is the mono- or polydehydroxylated residue of a non-steroidal bio-affecting phenol, with the proviso that R' is other than a monohydroxylated or didehydroxylated residue of a phenolic, nuclear dihydroxy natural sympathetic or sympathomimetic amine; R 2  is selected from the group consisting of straight or branched chain alkyl, aryl, cycloalkyl, alkenyl, cycloalkenyl, alkynyl, aralkyl, alkaryl, aralkenyl, aralkynyl, alkenylaryl, alkynylaryl, (lower acyloxy)alkyl, and carboxyalkyl; 3- to 8-membered, saturated or unsaturated mono-heterocyclic or polyheterocyclic containing from 1 to 3 of any one or more of the heteroatoms N, S or O; and mono- or polysubstituted derivatives of the above; R 3  is hydrogen, lower acyl, cyano, halo(lower alkyl), carbamyl, lower alkylcarbamyl, di(lower alkyl)carbamyl, CH 2 ONO 2 , -CH 2 OCOR 2  or any non-heterocyclic member of the group defined by R 2  above; and n is at least one and equals the total number of phenolic hydroxyl functions comprising the non-steroidal bioaffecting phenol etherified via a R2COXCH(R3)0-moiety; those having the structural formula (II):n     wherein X, R', R 2  and R 3  are as defined above, and n and m are each at least one and the sum of n+m equals the total number of phenolic hydroxyl functions comprising the non-steroidal bioaffecting phenol either etherified via a R 2 COXCH(R 3 )0-moiety or esterified via a R 2 COO-moiety; and the pharmaceutically acceptable acid addition salts, quaternary ammonium salts and N-oxides thereof.",
-          "nbCompounds": 389,
-          "title": "Novel derivatives of bio-affecting phenolic compounds and pharmaceutical composition containing them",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/EP-0046270-A1",
-      },
-      {
-        "$id": "BR-PI0714622-A2",
-        "$ref": "patents",
-        "data": {
-          "abstract": "REPLACED PIRAZOLOPYRIMIDINES, PROCESS FOR THEIR PREPARATION AND THEIR USE AS A MEDICINAL PRODUCT. The present invention relates to substituted pyrzohydropyrimidine derivatives of Formula (1).",
-          "nbCompounds": 392,
-          "title": "substituted pyrazolopyrimidines, process for their preparation and use as a medicine",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/BR-PI0714622-A2",
-      },
-      {
-        "$id": "US-5001115-A",
-        "$ref": "patents",
-        "data": {
-          "abstract": "Prodrugs of bio-active hydroxyaromatic drugs having the structural formula: n     A pharmaceutically acceptable prodrug of a biologically active, therapeutically effective hydroxyaromatic drug, said prodrug being selected from the group consisting of, (A) compounds having the structural formula: n     n         DRUG--O--CR'R\\"--Z].sub.n n    n     wherein: n     DRUG --O-- is the hydroxyaromatic O-dehydro residue of said drug; n     R' and R' may be the same or different and may be H, alkyl, aryl or electron withdrawing groups; n     Z is a displaceable leaving group; and n     n is an integer in the range of from 1 to 3, and (B) pharmaceutically acceptable salts thereof.",
-          "nbCompounds": 434,
-          "title": "Prodrugs of biologically active hydroxyaromatic compounds",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-5001115-A",
-      },
-      {
-        "$id": "AU-2007280428-B2",
-        "$ref": "patents",
-        "data": {
-          "abstract": "Substituted pyrazolopyrimidine derivatives of formula (I) wherein Y, Y, Y, Y represent N or C-, whereby at least two of the groups Y to Y denote a carbon atom, R represents chloro or bromo, R to R7 represent e.g. hydrogen, methyl or ethyl; and R and R independent ly represent e.g. hydrogen or C-Calkyl, are potent mGluR5 modulators and are useful for the prevention of acute and chronic neurological disorders.",
-          "nbCompounds": 588,
-          "title": "Substituted pyrazolopyrimidines, a process for their preparation and their use as medicine",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/AU-2007280428-B2",
-      },
-      {
-        "$id": "US-7985753-B2",
-        "$ref": "patents",
-        "data": {
-          "abstract": "Substituted pyrazolopyrimidine derivatives of formula (I) n                         nwhereinn     Y 1 , Y 2 , Y 3 , Y 4  represent N or C—, whereby at least two of the groups Y 1  to Y 4  represent a carbon atom, R 1  represents chloro or bromo,   R 2  to R 7  represent e.g. hydrogen, methyl or ethyl; and   R 10  and R 11  independently represent e.g. hydrogen or C 1 -C 6 alkyl,   are potent mGluR5 modulators and are useful for the prevention of acute and chronic neurological disorders.",
-          "nbCompounds": 705,
-          "title": "Substituted pyrazolo[1,5-A]pyrimidines as metabotropic glutamate receptor modulators",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-7985753-B2",
-      },
-      {
-        "$id": "US-2008039458-A1",
-        "$ref": "patents",
-        "data": {
-          "abstract": "Substituted pyrazolopyrimidine derivatives of formula (I)  n                 nwherein n     Y 1 , Y 2 , Y 3 , Y 4  represent N or C—, whereby at least two of the groups Y 1  to Y 4  represent a carbon atom, R 1  represents chloro or bromo,    R 2  to R 7  represent e.g. hydrogen, methyl or ethyl; and    R 10  and R 11  independently represent e.g. hydrogen or C 1 -C 6 alkyl, are potent mGluR5 modulators and are useful for the prevention of acute and chronic neurological disorders.",
-          "nbCompounds": 772,
-          "title": "Substituted pyrazolopyrimidines, a process for their preparation and their use as medicine",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2008039458-A1",
-      },
-      {
-        "$id": "US-2011212956-A1",
-        "$ref": "patents",
-        "data": {
-          "abstract": "Substituted pyrazolopyrimidine derivatives of formula (I) n     n       n         n         n             n             n         n       n     n     whereinn         Y 1 , Y 2 , Y 3 , Y 4  represent N or C—, whereby at least two of the groups Y 1  to Y 4  represent a carbon atom, R 1  represents chloro or bromo,   R 2  to R7 represent e.g. hydrogen, methyl or ethyl; and   R 10  and R 11  independently represent e.g. hydrogen or C 1 -C 6 alkyl,n nare potent mGluR5 modulators and are useful for the prevention of acute and chronic neurological disorders.",
-          "nbCompounds": 778,
-          "title": "Pyrazolopyrimidines for treating CNS disorders",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2011212956-A1",
-      },
-      {
-        "$id": "US-2015018240-A1",
-        "$ref": "patents",
-        "data": {
-          "abstract": "Theranostics platforms for identifying drugs and nutraceuticals for treatment of rare disease are described. The platforms comprise (a) a cell-phenotype image-enhancing instrument; (b) a drug/nutraceutical library; and (c) a computer-implemented system for analyzing a response of an optically-visible rare-disease cell phenotype to a drug or nutraceutical from the drug/nutraceutical library.",
-          "nbCompounds": 978,
-          "title": "Theranostics platform and methods of use",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2015018240-A1",
-      },
-      {
-        "$id": "WO-2013123403-A1",
-        "$ref": "patents",
-        "data": {
-          "abstract": "Theranostics platforms for identifying drugs and nutraceuticals for treatment of rare disease are described. The platforms comprise (a) a cell-phenotype image-enhancing instrument; (b) a drug/nutraceutical library; and (c) a computer-implemented system for analyzing a response of an optically- visible rare-disease cell phenotype to a drug or nutraceutical from the drug/nutraceutical library.",
-          "nbCompounds": 1034,
-          "title": "Theranostics platform and methods of use",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/WO-2013123403-A1",
-      },
-      {
-        "$id": "US-10161929-B2",
-        "$ref": "patents",
-        "data": {
-          "abstract": "Theranostics platforms for identifying drugs and nutraceuticals for treatment of rare disease are described. The platforms comprise (a) a cell-phenotype image-enhancing instrument; (b) a drug/nutraceutical library; and (c) a computer-implemented system for analyzing a response of an optically-visible rare-disease cell phenotype to a drug or nutraceutical from the drug/nutraceutical library.",
-          "nbCompounds": 1865,
-          "title": "Theranostics platform and methods of use",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-10161929-B2",
-      },
-      {
-        "$id": "US-2009269772-A1",
-        "$ref": "patents",
-        "data": {
-          "abstract": "Systems, methods, and apparatus for searching for a combination of compounds of therapeutic interest are provided. Cell-based assays are performed, each cell-based assay exposing a different sample of cells to a different compound in a plurality of compounds. From the cell-based assays, a subset of the tested compounds is selected. For each respective compound in the subset, a molecular abundance profile from cells exposed to the respective compound is measured. Targets of transcription factors and post-translational modulators of transcription factor activity are inferred from the molecular abundance profile data using information theoretic measures. This data is used to construct an interaction network. Variances in edges in the interaction network are used to determine the drug activity profile of compounds in the subset of compounds. The drug activity profiles are used to form a filter set of compound combinations from the subset of compounds.",
-          "nbCompounds": 1929,
-          "title": "Systems and methods for identifying combinations of compounds of therapeutic interest",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2009269772-A1",
-      },
-      {
-        "$id": "CN-104758253-A",
-        "$ref": "patents",
-        "data": {
-          "abstract": "Microspheres are produced by contacting an aqueous solution of a protein or other macromolecule with an organic solvent and a counterion, and chilling the solution. The microspheres are useful for preparing pharmaceuticals of defined dimensions.",
-          "nbCompounds": 2024,
-          "title": "Technology for preparation of macromolecular microspheres",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-104758253-A",
-      },
-      {
-        "$id": "CN-101404980-A",
-        "$ref": "patents",
-        "data": {
-          "abstract": "Microspheres are produced by contacting an aqueous solution of a protein or other macromoiecule with an organic solvent and a counterion, and chilling the solution. The microspheres are useful for preparing pharmaceuticals of defined dimensions.",
-          "nbCompounds": 2050,
-          "title": "Technology for preparation of macromolecular microspheres",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-101404980-A",
-      },
-      {
-        "$id": "US-2018042899-A1",
-        "$ref": "patents",
-        "data": {
-          "abstract": "A method of treating autoimmune diseases and transplant rejection, comprising the step of treating the autoimmune or transplant patient with an effective amount of SU-5416 is disclosed.",
-          "nbCompounds": 2880,
-          "title": "Method of Treating Transplant Rejection and Autoimmune Diseases",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2018042899-A1",
-      },
-      {
-        "$id": "US-2014050694-A1",
-        "$ref": "patents",
-        "data": {
-          "abstract": "A method of treating autoimmune diseases and transplant rejection, comprising the step of treating the autoimmune or transplant patient with an effective amount of SU-5416 is disclosed.",
-          "nbCompounds": 3006,
-          "title": "Method of Treating Transplant Rejection and Autoimmune Diseases",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2014050694-A1",
-      },
-      {
-        "$id": "US-2009143279-A1",
-        "$ref": "patents",
-        "data": {
-          "abstract": "The present invention provides methods of treating of disorders characterized by defective mitochondrial activity. In particular compounds of the present invention can be used in the treatment metabolic diseases and neurodegenerative diseases. The methods are also useful to increase oxidative phosphorylation or to decrease reactive oxygen species (ROS) production in a subject in need thereof.",
-          "nbCompounds": 3376,
-          "title": "Methods and compositions for treating metabolic disorders",
-        },
-        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-2009143279-A1",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-114430738-A",
       },
     ],
     "pubmeds": [
@@ -7550,6 +7444,193 @@ M  END
         "url": "https://pubmed.ncbi.nlm.nih.gov/17382522",
       },
       {
+        "$id": "31392317",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "authors": [
+              {
+                "firstName": "Hanyan",
+                "initials": "H",
+                "lastName": "Wu",
+              },
+              {
+                "firstName": "Bingjie",
+                "initials": "B",
+                "lastName": "Xie",
+              },
+              {
+                "firstName": "Ming",
+                "initials": "M",
+                "lastName": "Ke",
+              },
+              {
+                "firstName": "Yulin",
+                "initials": "Y",
+                "lastName": "Deng",
+              },
+            ],
+            "doi": "10.1093/abbs/gmz073",
+            "journal": {
+              "isoAbbreviation": "Acta Biochim Biophys Sin (Shanghai)",
+              "issn": "1745-7270",
+              "issue": 9,
+              "pubDate": {
+                "Day": 6,
+                "Month": "Sep",
+                "Year": 2019,
+              },
+              "title": "Acta biochimica et biophysica Sinica",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+            ],
+            "title": "High-fat diet causes increased endogenous neurotoxins and phenotype of Parkinson's disease in mice.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Isoquinolines",
+            },
+            {
+              "nameOfSubstance": "Neurotoxins",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Malondialdehyde",
+              "unii": "4Y8F71G49Q",
+            },
+            {
+              "nameOfSubstance": "salsolinol",
+              "unii": "9ILS801M65",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
+            },
+            {
+              "$id": 54456,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/54456",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
+            },
+            {
+              "$id": 10964,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/10964",
+            },
+            {
+              "$id": 91588,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/91588",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
+            },
+            {
+              "$id": 6419979,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6419979",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
+            },
+            {
+              "$id": 23712862,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/23712862",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
+            },
+          ],
+          "dateCompleted": {
+            "day": 21,
+            "month": 2,
+            "year": 2020,
+          },
+          "dateCreated": {},
+          "dateRevised": {
+            "day": 21,
+            "month": 2,
+            "year": 2020,
+          },
+          "journalInfo": {
+            "country": "China",
+            "issnLinking": "1672-9145",
+            "medlineTa": "Acta Biochim Biophys Sin (Shanghai)",
+            "nlmUniqueId": 101206716,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Animals",
+            },
+            {
+              "descriptorName": "Diabetes Mellitus, Type 2",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Diet, High-Fat",
+              "qualifierName": "adverse effects",
+            },
+            {
+              "descriptorName": "Glucose Intolerance",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Isoquinolines",
+            },
+            {
+              "descriptorName": "Malondialdehyde",
+            },
+            {
+              "descriptorName": "Mice",
+            },
+            {
+              "descriptorName": "Neurotoxins",
+            },
+            {
+              "descriptorName": "Parkinson Disease",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+            },
+          ],
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31392317",
+      },
+      {
         "$id": "9120428",
         "$ref": "pubmeds",
         "data": {
@@ -9729,6 +9810,463 @@ M  END
         "url": "https://pubmed.ncbi.nlm.nih.gov/10456568",
       },
       {
+        "$id": "20446293",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": "Micellar electrokinetic chromatography coupled to amperometric electrochemical detection was used to resolve and then quantify biogenic amines and metabolites within the fruit fly Drosophila melanogaster. A new separation scheme was devised to allow resolution of 24 compounds of interest. This was accomplished by precisely controlling the amount of base added to the background buffer, optimizing the resolution of the separation, and then calculating the pH. Here we focused on measurements of six of the analytes that are thought to be involved in the response to alcohol, dopamine, salsolinol, norsalsolinol, N-acetyloctopamine, octopamine, and N-acetyldopamine. These were identified and quantified within the fly head. We believe that the identification of salsolinol and norsalsolinol in the fly brain is novel.",
+            "authors": [
+              {
+                "firstName": "Nicholas J",
+                "initials": "NJ",
+                "lastName": "Kuklinski",
+              },
+              {
+                "firstName": "E Carina",
+                "initials": "EC",
+                "lastName": "Berglund",
+              },
+              {
+                "firstName": "Johan",
+                "initials": "J",
+                "lastName": "Engelbreksson",
+              },
+              {
+                "firstName": "Andrew G",
+                "initials": "AG",
+                "lastName": "Ewing",
+              },
+            ],
+            "doi": "10.1002/elps.200900761",
+            "journal": {
+              "iSsn": "1522-2683",
+              "isoAbbreviation": "Electrophoresis",
+              "issue": 11,
+              "pubDate": {
+                "Month": "Jun",
+                "Year": 2010,
+              },
+              "title": "Electrophoresis",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, N.I.H., Extramural",
+              "Research Support, Non-U.S. Gov't",
+            ],
+            "title": "Determination of salsolinol, norsalsolinol, and twenty-one biogenic amines using micellar electrokinetic capillary chromatography-electrochemical detection.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Biogenic Amines",
+            },
+            {
+              "nameOfSubstance": "Borates",
+            },
+            {
+              "nameOfSubstance": "Drosophila Proteins",
+            },
+            {
+              "nameOfSubstance": "Isoquinolines",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Sodium Dodecyl Sulfate",
+              "unii": "368GB5141J",
+            },
+            {
+              "nameOfSubstance": "salsolinol",
+              "unii": "9ILS801M65",
+            },
+            {
+              "nameOfSubstance": "norsalsolinol",
+              "unii": "9SPO03ZH41",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 681,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
+            },
+            {
+              "$id": 702,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/702",
+            },
+            {
+              "$id": 100526,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/100526",
+            },
+            {
+              "$id": 4581,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/4581",
+            },
+            {
+              "$id": 8778,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/8778",
+            },
+            {
+              "$id": 36937,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/36937",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 26574,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/26574",
+            },
+            {
+              "$id": 36937,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/36937",
+            },
+            {
+              "$id": 54456,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/54456",
+            },
+            {
+              "$id": 91588,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/91588",
+            },
+            {
+              "$id": 3423265,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3423265",
+            },
+            {
+              "$id": 4329331,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/4329331",
+            },
+            {
+              "$id": 6419979,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6419979",
+            },
+            {
+              "$id": 21909502,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/21909502",
+            },
+          ],
+          "dateCompleted": {
+            "day": 24,
+            "month": 8,
+            "year": 2010,
+          },
+          "dateCreated": {},
+          "dateRevised": {
+            "day": 20,
+            "month": 10,
+            "year": 2021,
+          },
+          "journalInfo": {
+            "country": "Germany",
+            "issnLinking": "0173-0835",
+            "medlineTa": "Electrophoresis",
+            "nlmUniqueId": 8204476,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Animals",
+            },
+            {
+              "descriptorName": "Biogenic Amines",
+            },
+            {
+              "descriptorName": "Borates",
+              "qualifierName": "chemistry",
+            },
+            {
+              "descriptorName": "Chromatography, Micellar Electrokinetic Capillary",
+              "qualifierName": "methods",
+            },
+            {
+              "descriptorName": "Drosophila Proteins",
+            },
+            {
+              "descriptorName": "Drosophila melanogaster",
+              "qualifierName": "chemistry",
+            },
+            {
+              "descriptorName": "Hydrogen-Ion Concentration",
+            },
+            {
+              "descriptorName": "Isoquinolines",
+            },
+            {
+              "descriptorName": "Male",
+            },
+            {
+              "descriptorName": "Nervous System",
+              "qualifierName": "chemistry",
+            },
+            {
+              "descriptorName": "Regression Analysis",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+            },
+            {
+              "descriptorName": "Sodium Dodecyl Sulfate",
+              "qualifierName": "chemistry",
+            },
+          ],
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20446293",
+      },
+      {
+        "$id": "24252728",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": "Neurotoxins and alterations in Ca2+ homeostasis have been associated with Parkinson's disease (PD), but the role of store-operated Ca2+ entry channels is not well understood. Previous studies have shown the neurotoxicity of salsolinol and 1-methyl-4-phenylpyridinium ion on SH-SY5Y cells and cytoprotection induced by transient receptor potential protein 1 (TRPC1). In the present study, N-methyl-(R)-salsolinol was tested for its cellular toxicity and effects on TRPC1 expression. MTT (3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyltetrazolium bromide) assays, DAPI (4',6-diamidino-2-phenylindole), fluorescein isothiocyanate-Annexin-V/propidium iodide, western blot analysis, and JC-1 labeling revealed that the three indicated drugs could induce caspase-dependent, mitochondrial-mediated apoptosis. Exposure of SH-SY5Y cells to the indicated drugs resulted in a significant decrease in thapsigargin-mediated Ca2+ influx and TRPC1 expression. Immunocytochemistry experiments revealed that neurotoxins treatment induced TRPC1 translocation to the cytoplasm. Taken together, our results indicate that treatment with neurotoxins may alter Ca2+ homeostasis and induce mitochondrial-mediated caspase-dependent cytotoxicity, an important characteristic of PD.",
+            "authors": [
+              {
+                "firstName": "Abida",
+                "initials": "A",
+                "lastName": "Arshad",
+              },
+              {
+                "firstName": "Xuechai",
+                "initials": "X",
+                "lastName": "Chen",
+              },
+              {
+                "firstName": "Zhenzhen",
+                "initials": "Z",
+                "lastName": "Cong",
+              },
+              {
+                "firstName": "Hong",
+                "initials": "H",
+                "lastName": "Qing",
+              },
+              {
+                "firstName": "Yulin",
+                "initials": "Y",
+                "lastName": "Deng",
+              },
+            ],
+            "doi": "10.1093/abbs/gmt127",
+            "journal": {
+              "isoAbbreviation": "Acta Biochim Biophys Sin (Shanghai)",
+              "issn": "1745-7270",
+              "issue": 1,
+              "pubDate": {
+                "Month": "Jan",
+                "Year": 2014,
+              },
+              "title": "Acta biochimica et biophysica Sinica",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, Non-U.S. Gov't",
+            ],
+            "title": "TRPC1 protects dopaminergic SH-SY5Y cells from MPP+, salsolinol, and N-methyl-(R)-salsolinol-induced cytotoxicity.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Isoquinolines",
+            },
+            {
+              "nameOfSubstance": "Neurotoxins",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "TRPC Cation Channels",
+            },
+            {
+              "nameOfSubstance": "transient receptor potential cation channel, subfamily C, member 1",
+            },
+            {
+              "nameOfSubstance": "salsolinol",
+              "unii": "9ILS801M65",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+            {
+              "nameOfSubstance": "Caspases",
+              "unii": "EC 3.4.22.-",
+            },
+            {
+              "nameOfSubstance": "1-Methyl-4-phenylpyridinium",
+              "unii": "R865A5OY8J",
+            },
+            {
+              "nameOfSubstance": "Calcium",
+              "unii": "SY7Q814VUP",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 39484,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/39484",
+            },
+            {
+              "$id": 54456,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/54456",
+            },
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
+            },
+            {
+              "$id": 91588,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/91588",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
+            },
+            {
+              "$id": 94497,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/94497",
+            },
+            {
+              "$id": 188614,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/188614",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
+            },
+            {
+              "$id": 5460341,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5460341",
+            },
+            {
+              "$id": 6337033,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6337033",
+            },
+            {
+              "$id": 6419979,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6419979",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
+            },
+          ],
+          "dateCompleted": {
+            "day": 4,
+            "month": 8,
+            "year": 2014,
+          },
+          "dateCreated": {},
+          "dateRevised": {
+            "day": 23,
+            "month": 12,
+            "year": 2013,
+          },
+          "journalInfo": {
+            "country": "China",
+            "issnLinking": "1672-9145",
+            "medlineTa": "Acta Biochim Biophys Sin (Shanghai)",
+            "nlmUniqueId": 101206716,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "1-Methyl-4-phenylpyridinium",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Apoptosis",
+              "qualifierName": "drug effects",
+            },
+            {
+              "descriptorName": "Calcium",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Caspases",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Cell Line, Tumor",
+            },
+            {
+              "descriptorName": "Cell Survival",
+              "qualifierName": "drug effects",
+            },
+            {
+              "descriptorName": "Dopaminergic Neurons",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "Isoquinolines",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Membrane Potential, Mitochondrial",
+              "qualifierName": "drug effects",
+            },
+            {
+              "descriptorName": "Neurotoxins",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "TRPC Cation Channels",
+              "qualifierName": "pharmacology",
+            },
+          ],
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24252728",
+      },
+      {
         "$id": "11482518",
         "$ref": "pubmeds",
         "data": {
@@ -10224,6 +10762,216 @@ M  END
           ],
         },
         "url": "https://pubmed.ncbi.nlm.nih.gov/15843867",
+      },
+      {
+        "$id": "21470616",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": "Previous studies have shown that certain 1,2,3,4-tetrahydroisoquinoline derivatives (TIQs) are neurotoxins inducing Parkinsonism. Further, individual enantiomers of these toxins such as (R/S)-N-methylsalsolinol ((R/S)-NMSal) possess distinct neurotoxicological properties. In this work, a chiral capillary electrophoresis (CE) method with electrospray ionization-tandem mass spectrometric (ESI-MS/MS) detection was developed for the quantification of TIQ enantiomers. Enantioseparation was achieved with sulfated β-cyclodextrin (sulfated β-CD) as chiral selector. To avoid any potential contamination of MS ionization source by the non-volatile chiral selector, partial filling technique was deployed in the CE separation. TIQ derivatives, including (R/S)-6,7-dihydroxy-1-methy-TIQ (salsolinol, Sal), (R/S)-1-benzyl-TIQ (BTIQ), and (R/S)-NMSal, were base-line resolved with resolution values (R) ranging from 3 (for Sal) to 4.5 (for BTIQ), which were much better than those reported previously by HPLC methods. ESI-MS/MS detection of the resolved TIQ enantiomers was specific and sensitive (LOD=1.2 μM for Sal enantiomers). The proposed chiral CE-MS/MS method was used to study in vitro formation of (R/S)-NMSal. It was found that NMSal was formed from the incubation of epinine (a dopamine metabolite) with acetaldehyde (a metabolite of alcohol). More interestingly, four isomers of NMSal were separated and detected in the incubation solution. They were identified as (R)-e.e-NMSal, (R)-e.a-NMSal, (S)-e.e-NMSal, and (S)-e.a-NMSal. This was the first lab evidence that this Parkinsonian neurotoxin exists in multiple isomeric forms.",
+            "authors": [
+              {
+                "firstName": "Hao",
+                "initials": "H",
+                "lastName": "Wu",
+              },
+              {
+                "firstName": "Baiqing",
+                "initials": "B",
+                "lastName": "Yuan",
+              },
+              {
+                "firstName": "Yi-Ming",
+                "initials": "YM",
+                "lastName": "Liu",
+              },
+            ],
+            "doi": "10.1016/j.chroma.2011.03.026",
+            "journal": {
+              "isoAbbreviation": "J Chromatogr A",
+              "issn": "1873-3778",
+              "issue": 20,
+              "pubDate": {
+                "Day": 20,
+                "Month": "May",
+                "Year": 2011,
+              },
+              "title": "Journal of chromatography. A",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, N.I.H., Extramural",
+            ],
+            "title": "Chiral capillary electrophoresis-mass spectrometry of tetrahydroisoquinoline-derived neurotoxins: observation of complex stereoisomerism.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Indoles",
+            },
+            {
+              "nameOfSubstance": "Neurotoxins",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "indolin-2-one",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+            {
+              "nameOfSubstance": "Acetaldehyde",
+              "unii": "GO1N1ZPR3B",
+            },
+            {
+              "nameOfSubstance": "Deoxyepinephrine",
+              "unii": "R7339QLN1C",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 681,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
+            },
+            {
+              "$id": 7046,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/7046",
+            },
+            {
+              "$id": 321710,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/321710",
+            },
+            {
+              "$id": 702,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/702",
+            },
+            {
+              "$id": 177,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/177",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
+            },
+            {
+              "$id": 4382,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/4382",
+            },
+            {
+              "$id": 177,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/177",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
+            },
+            {
+              "$id": 139191468,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/139191468",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
+            },
+          ],
+          "dateCompleted": {
+            "day": 9,
+            "month": 8,
+            "year": 2011,
+          },
+          "dateCreated": {},
+          "dateRevised": {
+            "day": 20,
+            "month": 10,
+            "year": 2021,
+          },
+          "journalInfo": {
+            "country": "Netherlands",
+            "issnLinking": "0021-9673",
+            "medlineTa": "J Chromatogr A",
+            "nlmUniqueId": 9318488,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Acetaldehyde",
+              "qualifierName": "chemistry",
+            },
+            {
+              "descriptorName": "Deoxyepinephrine",
+              "qualifierName": "chemistry",
+            },
+            {
+              "descriptorName": "Electrophoresis, Capillary",
+              "qualifierName": "methods",
+            },
+            {
+              "descriptorName": "Indoles",
+              "qualifierName": "chemistry",
+            },
+            {
+              "descriptorName": "Mass Spectrometry",
+            },
+            {
+              "descriptorName": "Neurotoxins",
+              "qualifierName": "chemistry",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "chemistry",
+            },
+            {
+              "descriptorName": "Spectrometry, Mass, Electrospray Ionization",
+              "qualifierName": "methods",
+            },
+            {
+              "descriptorName": "Stereoisomerism",
+            },
+            {
+              "descriptorName": "Tandem Mass Spectrometry",
+            },
+          ],
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21470616",
       },
       {
         "$id": "2822473",
@@ -12591,6 +13339,262 @@ M  END
         "url": "https://pubmed.ncbi.nlm.nih.gov/12111453",
       },
       {
+        "$id": "21222065",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": "It is well established that combination of heavy drinking and smoking has severe health consequences. However, at relatively low concentrations, both alcohol and nicotine may have beneficial effects including neuroprotection. Thus, protective effects of low alcohol concentration against beta-amyloid-induced toxicity in organotypic hippocampal slices and protective effects of nicotine against salsolinol-induced toxicity in human-derived neuroblastoma cells (SH-SY5Y) have been reported. In this study, we sought to determine whether alcohol might also be protective against salsolinol-induced toxicity in SH-SY5Y cells and whether the combination of low doses of alcohol and nicotine might have an additive or synergistic effect. Pre-exposure of SH-SY5Y cells to either ethanol (1 or 10 mM) or nicotine (20 or 50 μM) significantly attenuated salsolinol-induced toxicity. However, contrary to the expectation the combination of low doses of alcohol and nicotine not only did not provide any synergistic or additive protective effect, but exacerbated salsolinol-induced toxicity. Indeed, simple combination of low alcohol and nicotine resulted in significant toxicity in SH-SY5Y cells. This toxicity, reflected in a reduction in cell viability was associated with an increase in apoptosis as determined by caspase-3 measurement. These in vitro results suggest that combination of even low concentrations of alcohol and nicotine may activate apoptotic mechanisms that can lead to cell toxicity and detrimental consequences.",
+            "authors": [
+              {
+                "firstName": "Carlana",
+                "initials": "C",
+                "lastName": "Ramlochansingh",
+              },
+              {
+                "firstName": "Robert E",
+                "initials": "RE",
+                "lastName": "Taylor",
+              },
+              {
+                "firstName": "Yousef",
+                "initials": "Y",
+                "lastName": "Tizabi",
+              },
+            ],
+            "doi": "10.1007/s12640-011-9239-x",
+            "journal": {
+              "isoAbbreviation": "Neurotox Res",
+              "issn": "1476-3524",
+              "issue": 3,
+              "pubDate": {
+                "Month": "Oct",
+                "Year": 2011,
+              },
+              "title": "Neurotoxicity research",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, N.I.H., Extramural",
+            ],
+            "title": "Toxic effects of low alcohol and nicotine combinations in SH-SY5Y cells are apoptotically mediated.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Central Nervous System Depressants",
+            },
+            {
+              "nameOfSubstance": "Drug Combinations",
+            },
+            {
+              "nameOfSubstance": "Nicotinic Agonists",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Tetrazolium Salts",
+            },
+            {
+              "nameOfSubstance": "Thiazoles",
+            },
+            {
+              "nameOfSubstance": "Ethanol",
+              "unii": "3K9958V90M",
+            },
+            {
+              "nameOfSubstance": "Nicotine",
+              "unii": "6M3C89ZY6R",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+            {
+              "nameOfSubstance": "Caspase 3",
+              "unii": "EC 3.4.22.-",
+            },
+            {
+              "nameOfSubstance": "thiazolyl blue",
+              "unii": "EUY85H477I",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 942,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/942",
+            },
+            {
+              "$id": 702,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/702",
+            },
+            {
+              "$id": 9256,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9256",
+            },
+            {
+              "$id": 67519,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/67519",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
+            },
+            {
+              "$id": 64965,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/64965",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 89594,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/89594",
+            },
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
+            },
+            {
+              "$id": 64966,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/64966",
+            },
+            {
+              "$id": 9256,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9256",
+            },
+            {
+              "$id": 702,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/702",
+            },
+            {
+              "$id": 2735102,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/2735102",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
+            },
+          ],
+          "dateCompleted": {
+            "day": 29,
+            "month": 11,
+            "year": 2011,
+          },
+          "dateCreated": {},
+          "dateRevised": {
+            "day": 20,
+            "month": 10,
+            "year": 2021,
+          },
+          "journalInfo": {
+            "country": "United States",
+            "issnLinking": "1029-8428",
+            "medlineTa": "Neurotox Res",
+            "nlmUniqueId": 100929017,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Analysis of Variance",
+            },
+            {
+              "descriptorName": "Animals",
+            },
+            {
+              "descriptorName": "Apoptosis",
+              "qualifierName": "drug effects",
+            },
+            {
+              "descriptorName": "Caspase 3",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Cell Line, Tumor",
+            },
+            {
+              "descriptorName": "Cell Survival",
+              "qualifierName": "drug effects",
+            },
+            {
+              "descriptorName": "Central Nervous System Depressants",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Dose-Response Relationship, Drug",
+            },
+            {
+              "descriptorName": "Drug Combinations",
+            },
+            {
+              "descriptorName": "Ethanol",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "Neuroblastoma",
+              "qualifierName": "pathology",
+            },
+            {
+              "descriptorName": "Nicotine",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Nicotinic Agonists",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Tetrazolium Salts",
+            },
+            {
+              "descriptorName": "Thiazoles",
+            },
+          ],
+        },
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21222065",
+      },
+      {
         "$id": "14082756",
         "$ref": "pubmeds",
         "data": {
@@ -13368,1609 +14372,6 @@ M  END
         },
         "url": "https://pubmed.ncbi.nlm.nih.gov/17447417",
       },
-      {
-        "$id": "18500384",
-        "$ref": "pubmeds",
-        "data": {
-          "article": {
-            "abstract": "The selective loss of dopaminergic neurons in Parkinson's disease is suspected to correlate with the increase of cellular iron, which may be involved in the pathogenesis of PD by promotion of oxidative stress. This research investigated dopamine-induced oxidative stress toxicity contributed by iron and the production of dopamine-derived neurotoxins in dopaminergic SH-SY5Y cells. After the SH-SY5Y cells were pre-incubated with dopamine and Fe2+ for 24 h, the cell viability, hydroxyl radical, melondialdehyde, cell apoptosis, and catechol isoquinolines were measured by lactate dehydrogenase assay, salicylic acid trapping method, thiobarbuteric acid assay, Hoechst 33258 staining and HPLC-electrochemical detection (HPLC-ECD), respectively. (1) Optimal dopamine (150 micromol/L) and Fe2+ (40 or 80 micromol/L) significantly increased the concentrations of hydroxy radicals and melondialdehyde in SH-SY5Y cells. (2) Induction with dopamine alone or dopamine and Fe2+ (dopamine/Fe2+) caused cell apoptosis. (3) Compared with untreated cells, the catechol isoquinolines, salsolinol and N-methyl-salsolinol in dopamine/Fe2+-induced cells were detected in increasing amounts. Due to dopamine/Fe2+-induced oxidative stress similar to the state in the parkinsonian substantia nigra neurons, dopamine and Fe2+ impaired SH-SY5Y cells could be used as the cell oxidative stress model of Parkinson's disease. The catechol isoquinolines detected in cells may be involved in the pathogenesis of Parkinson's disease as potential neurotoxins.",
-            "authors": [
-              {
-                "firstName": "Ran",
-                "initials": "R",
-                "lastName": "Wang",
-              },
-              {
-                "firstName": "Hong",
-                "initials": "H",
-                "lastName": "Qing",
-              },
-              {
-                "firstName": "Xiao-Qian",
-                "initials": "XQ",
-                "lastName": "Liu",
-              },
-              {
-                "firstName": "Xiao-Lin",
-                "initials": "XL",
-                "lastName": "Zheng",
-              },
-              {
-                "firstName": "Yu-Lin",
-                "initials": "YL",
-                "lastName": "Deng",
-              },
-            ],
-            "doi": "10.1007/s12264-008-1214-z",
-            "journal": {
-              "iSsn": "1673-7067",
-              "isoAbbreviation": "Neurosci Bull",
-              "issue": 3,
-              "pubDate": {
-                "Month": "Jun",
-                "Year": 2008,
-              },
-              "title": "Neuroscience bulletin",
-            },
-            "language": "eng",
-            "languageTextSearch": "english",
-            "publicationTypeList": [
-              "Journal Article",
-              "Research Support, Non-U.S. Gov't",
-            ],
-            "title": "Iron contributes to the formation of catechol isoquinolines and oxidative toxicity induced by overdose dopamine in dopaminergic SH-SY5Y cells.",
-          },
-          "chemicals": [
-            {
-              "nameOfSubstance": "Catechols",
-            },
-            {
-              "nameOfSubstance": "Isoquinolines",
-            },
-            {
-              "nameOfSubstance": "Neurotoxins",
-            },
-            {
-              "nameOfSubstance": "Salsoline Alkaloids",
-            },
-            {
-              "nameOfSubstance": "Hydroxyl Radical",
-              "unii": "3352-57-6",
-            },
-            {
-              "nameOfSubstance": "Malondialdehyde",
-              "unii": "4Y8F71G49Q",
-            },
-            {
-              "nameOfSubstance": "salsolinol",
-              "unii": "9ILS801M65",
-            },
-            {
-              "nameOfSubstance": "salsoline",
-              "unii": "9Q83ETU10C",
-            },
-            {
-              "nameOfSubstance": "Iron",
-              "unii": "E1UOL152H7",
-            },
-            {
-              "nameOfSubstance": "Dopamine",
-              "unii": "VTD58H1Z2X",
-            },
-          ],
-          "compounds": [
-            {
-              "$id": 10964,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/10964",
-            },
-            {
-              "$id": 681,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
-            },
-            {
-              "$id": 612,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/612",
-            },
-            {
-              "$id": 338,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/338",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 10964,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/10964",
-            },
-            {
-              "$id": 157350,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/157350",
-            },
-            {
-              "$id": 442356,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
-            },
-            {
-              "$id": 54456,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/54456",
-            },
-            {
-              "$id": 681,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
-            },
-            {
-              "$id": 91588,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/91588",
-            },
-            {
-              "$id": 40010,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 65340,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/65340",
-            },
-            {
-              "$id": 40009,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
-            },
-            {
-              "$id": 3713609,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3713609",
-            },
-            {
-              "$id": 6419979,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6419979",
-            },
-            {
-              "$id": 10313045,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/10313045",
-            },
-            {
-              "$id": 12989303,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
-            },
-            {
-              "$id": 23712862,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/23712862",
-            },
-            {
-              "$id": 45259939,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
-            },
-            {
-              "$id": 165415541,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
-            },
-          ],
-          "dateCompleted": {
-            "day": 21,
-            "month": 8,
-            "year": 2008,
-          },
-          "dateCreated": {},
-          "dateRevised": {
-            "day": 20,
-            "month": 10,
-            "year": 2021,
-          },
-          "journalInfo": {
-            "country": "Singapore",
-            "issnLinking": "1995-8218",
-            "medlineTa": "Neurosci Bull",
-            "nlmUniqueId": 101256850,
-          },
-          "meshHeadings": [
-            {
-              "descriptorName": "Apoptosis",
-            },
-            {
-              "descriptorName": "Catechols",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Cell Line, Tumor",
-            },
-            {
-              "descriptorName": "Cell Survival",
-            },
-            {
-              "descriptorName": "Dopamine",
-              "qualifierName": "toxicity",
-            },
-            {
-              "descriptorName": "Dose-Response Relationship, Drug",
-            },
-            {
-              "descriptorName": "Humans",
-            },
-            {
-              "descriptorName": "Hydroxyl Radical",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Iron",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Iron Metabolism Disorders",
-            },
-            {
-              "descriptorName": "Isoquinolines",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Malondialdehyde",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Models, Biological",
-            },
-            {
-              "descriptorName": "Nerve Degeneration",
-            },
-            {
-              "descriptorName": "Neurons",
-            },
-            {
-              "descriptorName": "Neurotoxins",
-              "qualifierName": "toxicity",
-            },
-            {
-              "descriptorName": "Oxidative Stress",
-              "qualifierName": "drug effects",
-            },
-            {
-              "descriptorName": "Parkinson Disease",
-            },
-            {
-              "descriptorName": "Salsoline Alkaloids",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Up-Regulation",
-            },
-          ],
-        },
-        "url": "https://pubmed.ncbi.nlm.nih.gov/18500384",
-      },
-      {
-        "$id": "11411492",
-        "$ref": "pubmeds",
-        "data": {
-          "article": {
-            "abstract": "The intracellular dynamics of norsalsolinol, a neurotoxin candidate causing parkinsonism-like symptoms, in PC12 cells was studied. We found that dopamine and norsalsolinol are co-localized to secretory granule layer by sucrose density gradient in norsalsolinol-treated PC12 cells. The norsalsolinol was actively taken up into isolated secretory vesicle fraction from PC12 cells with a Km value of 41.5+/-6.8 microM. The uptake of 10 microM of norsalsolinol was sensitive to reserpine (1 microM), an inhibitor of vesicular dopamine transporter, and dopamine, an endogenous substrate, but insensitive to GBR-12909, an inhibitor of dopamine transporter on plasma membrane. In norsalsolinol-treated PC12 cells, exposure to high K+ or ATP resulted in simultaneous release of norsalsolinol and dopamine. Time course of a release of dopamine and that of norsalsolinol evoked by 50 mM KCl or 100 microM ATP corresponded to each other. These releases were dependent on the concentrations of secretagogues. These data suggest that norsalsolinol is taken up with dopamine into secretory vesicle via vesicular catecholamine transporter.",
-            "authors": [
-              {
-                "firstName": "Y",
-                "initials": "Y",
-                "lastName": "Maruyama",
-              },
-              {
-                "firstName": "Y",
-                "initials": "Y",
-                "lastName": "Suzuki",
-              },
-              {
-                "firstName": "A",
-                "initials": "A",
-                "lastName": "Kazusaka",
-              },
-              {
-                "firstName": "S",
-                "initials": "S",
-                "lastName": "Fujita",
-              },
-            ],
-            "journal": {
-              "iSsn": "0916-7250",
-              "isoAbbreviation": "J Vet Med Sci",
-              "issue": 5,
-              "pubDate": {
-                "Month": "May",
-                "Year": 2001,
-              },
-              "title": "The Journal of veterinary medical science",
-            },
-            "language": "eng",
-            "languageTextSearch": "english",
-            "publicationTypeList": [
-              "Journal Article",
-            ],
-            "title": "Norsalsolinol uptake into secretory vesicles via vesicular monoamine transporter and its secretion by membrane depolarization or purinoceptor stimulation in PC12 cells.",
-          },
-          "chemicals": [
-            {
-              "nameOfSubstance": "Adrenergic Uptake Inhibitors",
-            },
-            {
-              "nameOfSubstance": "Carrier Proteins",
-            },
-            {
-              "nameOfSubstance": "Catecholamine Plasma Membrane Transport Proteins",
-            },
-            {
-              "nameOfSubstance": "Dopamine Uptake Inhibitors",
-            },
-            {
-              "nameOfSubstance": "Membrane Transport Proteins",
-            },
-            {
-              "nameOfSubstance": "Piperazines",
-            },
-            {
-              "nameOfSubstance": "Receptors, Purinergic",
-            },
-            {
-              "nameOfSubstance": "Salsoline Alkaloids",
-            },
-            {
-              "nameOfSubstance": "Slc22a1 protein, rat",
-            },
-            {
-              "nameOfSubstance": "Reserpine",
-              "unii": "8B1QWR724A",
-            },
-            {
-              "nameOfSubstance": "Adenosine Triphosphate",
-              "unii": "8L70Q75FXE",
-            },
-            {
-              "nameOfSubstance": "vanoxerine",
-              "unii": "90X28IKH43",
-            },
-            {
-              "nameOfSubstance": "norsalsolinol",
-              "unii": "9SPO03ZH41",
-            },
-            {
-              "nameOfSubstance": "Potassium",
-              "unii": "RWP5GA015D",
-            },
-            {
-              "nameOfSubstance": "Dopamine",
-              "unii": "VTD58H1Z2X",
-            },
-          ],
-          "compounds": [
-            {
-              "$id": 681,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
-            },
-            {
-              "$id": 189460,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/189460",
-            },
-            {
-              "$id": 3455,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3455",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 5988,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5988",
-            },
-            {
-              "$id": 36937,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/36937",
-            },
-            {
-              "$id": 5957,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5957",
-            },
-            {
-              "$id": 5052,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5052",
-            },
-            {
-              "$id": 681,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
-            },
-            {
-              "$id": 3455,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3455",
-            },
-            {
-              "$id": 5770,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5770",
-            },
-            {
-              "$id": 124341,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/124341",
-            },
-            {
-              "$id": 65340,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/65340",
-            },
-            {
-              "$id": 5957,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5957",
-            },
-            {
-              "$id": 36937,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/36937",
-            },
-            {
-              "$id": 104920,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/104920",
-            },
-            {
-              "$id": 15126,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/15126",
-            },
-            {
-              "$id": 3713609,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3713609",
-            },
-            {
-              "$id": 5462222,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5462222",
-            },
-            {
-              "$id": 5461108,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5461108",
-            },
-            {
-              "$id": 10238982,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/10238982",
-            },
-            {
-              "$id": 18666496,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/18666496",
-            },
-            {
-              "$id": 101915880,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/101915880",
-            },
-            {
-              "$id": 129660564,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/129660564",
-            },
-          ],
-          "dateCompleted": {
-            "day": 4,
-            "month": 12,
-            "year": 2001,
-          },
-          "dateCreated": {},
-          "dateRevised": {
-            "day": 5,
-            "month": 6,
-            "year": 2019,
-          },
-          "journalInfo": {
-            "country": "Japan",
-            "issnLinking": "0916-7250",
-            "medlineTa": "J Vet Med Sci",
-            "nlmUniqueId": 9105360,
-          },
-          "meshHeadings": [
-            {
-              "descriptorName": "Adenosine Triphosphate",
-              "qualifierName": "physiology",
-            },
-            {
-              "descriptorName": "Adrenergic Uptake Inhibitors",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Animals",
-            },
-            {
-              "descriptorName": "Carrier Proteins",
-            },
-            {
-              "descriptorName": "Catecholamine Plasma Membrane Transport Proteins",
-            },
-            {
-              "descriptorName": "Cells, Cultured",
-            },
-            {
-              "descriptorName": "Centrifugation, Density Gradient",
-            },
-            {
-              "descriptorName": "Dopamine",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Dopamine Uptake Inhibitors",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Membrane Potentials",
-            },
-            {
-              "descriptorName": "Membrane Transport Proteins",
-            },
-            {
-              "descriptorName": "PC12 Cells",
-            },
-            {
-              "descriptorName": "Piperazines",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Potassium",
-              "qualifierName": "physiology",
-            },
-            {
-              "descriptorName": "Rats",
-            },
-            {
-              "descriptorName": "Receptors, Purinergic",
-              "qualifierName": "physiology",
-            },
-            {
-              "descriptorName": "Reserpine",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Salsoline Alkaloids",
-            },
-            {
-              "descriptorName": "Secretory Vesicles",
-            },
-            {
-              "descriptorName": "Subcellular Fractions",
-              "qualifierName": "metabolism",
-            },
-          ],
-        },
-        "url": "https://pubmed.ncbi.nlm.nih.gov/11411492",
-      },
-      {
-        "$id": "11489679",
-        "$ref": "pubmeds",
-        "data": {
-          "article": {
-            "abstract": "In Parkinson's disease neuroprotective therapy to rescue dopamine neurons has been proposed. Selegiline is one of neuroprotective drug candidates, as proved by in vivo and in vitro experiments. In this paper, the mechanism underlying neuroprotection by selegiline and related propargylamines was studied against apoptosis induced by an endogenous toxin, N-methyl(R)salsolinol, synthetic 6-hydroxydopamine and peroxynitrite in dopaminergic SH-SY5Y cells. Propargylamines prevented apoptotic DNA damage, through suppression of collapse in mitochondrial membrane potential and following activation of caspase 3 and signal transduction to nuclei. These results suggest that propargylamines may rescue or protect dopamine neurons in Parkinson's disease.",
-            "authors": [
-              {
-                "firstName": "M",
-                "initials": "M",
-                "lastName": "Naoi",
-              },
-              {
-                "firstName": "W",
-                "initials": "W",
-                "lastName": "Maruyama",
-              },
-            ],
-            "journal": {
-              "iSsn": "1353-8020",
-              "isoAbbreviation": "Parkinsonism Relat Disord",
-              "issue": 2,
-              "pubDate": {
-                "Month": "Oct",
-                "Year": 2001,
-              },
-              "title": "Parkinsonism &amp; related disorders",
-            },
-            "language": "eng",
-            "languageTextSearch": "english",
-            "publicationTypeList": [
-              "Journal Article",
-              "Research Support, Non-U.S. Gov't",
-            ],
-            "title": "Future of neuroprotection in Parkinson's disease.",
-          },
-          "chemicals": [
-            {
-              "nameOfSubstance": "Neuroprotective Agents",
-            },
-            {
-              "nameOfSubstance": "Neurotoxins",
-            },
-            {
-              "nameOfSubstance": "Nitric Oxide Donors",
-            },
-            {
-              "nameOfSubstance": "Propylamines",
-            },
-            {
-              "nameOfSubstance": "Salsoline Alkaloids",
-            },
-            {
-              "nameOfSubstance": "Tetrahydroisoquinolines",
-            },
-            {
-              "nameOfSubstance": "Selegiline",
-              "unii": "2K1V7GP655",
-            },
-            {
-              "nameOfSubstance": "linsidomine",
-              "unii": "5O5U71P6VQ",
-            },
-            {
-              "nameOfSubstance": "Oxidopamine",
-              "unii": "8HW4YBZ748",
-            },
-            {
-              "nameOfSubstance": "salsoline",
-              "unii": "9Q83ETU10C",
-            },
-            {
-              "nameOfSubstance": "Molsidomine",
-              "unii": "D46583G77X",
-            },
-          ],
-          "compounds": [
-            {
-              "$id": 4624,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/4624",
-            },
-            {
-              "$id": 4239,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/4239",
-            },
-            {
-              "$id": 65388,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/65388",
-            },
-            {
-              "$id": 26757,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/26757",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 681,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
-            },
-            {
-              "$id": 4624,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/4624",
-            },
-            {
-              "$id": 92913,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/92913",
-            },
-            {
-              "$id": 26758,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/26758",
-            },
-            {
-              "$id": 40010,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
-            },
-            {
-              "$id": 176170,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/176170",
-            },
-            {
-              "$id": 5219,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5219",
-            },
-            {
-              "$id": 40009,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
-            },
-            {
-              "$id": 26757,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/26757",
-            },
-            {
-              "$id": 442356,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
-            },
-            {
-              "$id": 4238,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/4238",
-            },
-            {
-              "$id": 5195,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5195",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 160157,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/160157",
-            },
-            {
-              "$id": 5353788,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5353788",
-            },
-            {
-              "$id": 9859122,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9859122",
-            },
-            {
-              "$id": 12989303,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
-            },
-            {
-              "$id": 25058197,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/25058197",
-            },
-            {
-              "$id": 45259939,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
-            },
-            {
-              "$id": 165415541,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
-            },
-          ],
-          "dateCompleted": {
-            "day": 20,
-            "month": 6,
-            "year": 2002,
-          },
-          "dateCreated": {},
-          "dateRevised": {
-            "day": 5,
-            "month": 11,
-            "year": 2019,
-          },
-          "journalInfo": {
-            "country": "England",
-            "issnLinking": "1353-8020",
-            "medlineTa": "Parkinsonism Relat Disord",
-            "nlmUniqueId": 9513583,
-          },
-          "meshHeadings": [
-            {
-              "descriptorName": "Apoptosis",
-              "qualifierName": "drug effects",
-            },
-            {
-              "descriptorName": "Humans",
-            },
-            {
-              "descriptorName": "Molsidomine",
-            },
-            {
-              "descriptorName": "Neuroprotective Agents",
-              "qualifierName": "therapeutic use",
-            },
-            {
-              "descriptorName": "Neurotoxins",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Nitric Oxide Donors",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Oxidopamine",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Parkinson Disease",
-              "qualifierName": "drug therapy",
-            },
-            {
-              "descriptorName": "Propylamines",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Salsoline Alkaloids",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Selegiline",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Tetrahydroisoquinolines",
-            },
-            {
-              "descriptorName": "Tumor Cells, Cultured",
-              "qualifierName": "drug effects",
-            },
-          ],
-        },
-        "url": "https://pubmed.ncbi.nlm.nih.gov/11489679",
-      },
-      {
-        "$id": "19012744",
-        "$ref": "pubmeds",
-        "data": {
-          "article": {
-            "abstract": "Tetrahydroisoquinoline (TIQ) derivatives are putative neurotoxins that may contribute to the degeneration of dopaminergic neurons in Parkinson's disease. One TIQ, norsalsolinol (NorSAL), is present in dopamine-rich areas of human brain, including the substantia nigra. Here, we demonstrate that NorSAL reduces cell viability and induces apoptosis via cytochrome c release and caspase 3 activation in SH-SY5Y human neuroblastoma cells. Cytochrome c release, caspase 3 activation, and apoptosis induction were all inhibited by the antioxidant N-acetylcysteine. Thus, reactive oxygen species (ROS) contribute to apoptosis induced by NorSAL. Treatment with NorSAL also increased levels of oxidative damage to DNA, a stimulus for apoptosis, in SH-SY5Y. To clarify the mechanism of intracellular DNA damage, we examined the DNA damage caused by NorSAL using (32)P-5'-end-labeled isolated DNA fragments. NorSAL induced DNA damage in the presence of Cu(II). Catalase and bathocuproine, a Cu(I) chelator, inhibited this DNA damage, suggesting that ROS such as the Cu(I)-hydroperoxo complex derived from the reaction of H(2)O(2) with Cu(I), promote DNA damage by NorSAL. In summary, NorSAL-generated ROS induced oxidative DNA damage, which led to caspase-dependent apoptosis in neuronal cells.",
-            "authors": [
-              {
-                "firstName": "Hatasu",
-                "initials": "H",
-                "lastName": "Kobayashi",
-              },
-              {
-                "firstName": "Kiyoshi",
-                "initials": "K",
-                "lastName": "Fukuhara",
-              },
-              {
-                "firstName": "Saeko",
-                "initials": "S",
-                "lastName": "Tada-Oikawa",
-              },
-              {
-                "firstName": "Yuki",
-                "initials": "Y",
-                "lastName": "Yada",
-              },
-              {
-                "firstName": "Yusuke",
-                "initials": "Y",
-                "lastName": "Hiraku",
-              },
-              {
-                "firstName": "Mariko",
-                "initials": "M",
-                "lastName": "Murata",
-              },
-              {
-                "firstName": "Shinji",
-                "initials": "S",
-                "lastName": "Oikawa",
-              },
-            ],
-            "doi": "10.1111/j.1471-4159.2008.05774.x",
-            "journal": {
-              "iSsn": "1471-4159",
-              "isoAbbreviation": "J Neurochem",
-              "issue": 2,
-              "pubDate": {
-                "Month": "Jan",
-                "Year": 2009,
-              },
-              "title": "Journal of neurochemistry",
-            },
-            "language": "eng",
-            "languageTextSearch": "english",
-            "publicationTypeList": [
-              "Journal Article",
-              "Research Support, Non-U.S. Gov't",
-            ],
-            "title": "The mechanisms of oxidative DNA damage and apoptosis induced by norsalsolinol, an endogenous tetrahydroisoquinoline derivative associated with Parkinson's disease.",
-          },
-          "chemicals": [
-            {
-              "nameOfSubstance": "Benzoquinones",
-            },
-            {
-              "nameOfSubstance": "Free Radical Scavengers",
-            },
-            {
-              "nameOfSubstance": "Phenanthrolines",
-            },
-            {
-              "nameOfSubstance": "Phosphorus Isotopes",
-            },
-            {
-              "nameOfSubstance": "Salsoline Alkaloids",
-            },
-            {
-              "nameOfSubstance": "Tetrahydroisoquinolines",
-            },
-            {
-              "nameOfSubstance": "Tetrazolium Salts",
-            },
-            {
-              "nameOfSubstance": "Thiazoles",
-            },
-            {
-              "nameOfSubstance": "NAD",
-              "unii": "0U46U6E8UK",
-            },
-            {
-              "nameOfSubstance": "quinone",
-              "unii": "3T006GV98U",
-            },
-            {
-              "nameOfSubstance": "Copper",
-              "unii": "789U1901C5",
-            },
-            {
-              "nameOfSubstance": "8-Hydroxy-2'-Deoxyguanosine",
-              "unii": "88847-89-6",
-            },
-            {
-              "nameOfSubstance": "Cytochromes c",
-              "unii": "9007-43-6",
-            },
-            {
-              "nameOfSubstance": "norsalsolinol",
-              "unii": "9SPO03ZH41",
-            },
-            {
-              "nameOfSubstance": "bathocuproine",
-              "unii": "9THP2V94FX",
-            },
-            {
-              "nameOfSubstance": "Tyrosine 3-Monooxygenase",
-              "unii": "EC 1.14.16.2",
-            },
-            {
-              "nameOfSubstance": "Caspase 3",
-              "unii": "EC 3.4.22.-",
-            },
-            {
-              "nameOfSubstance": "thiazolyl blue",
-              "unii": "EUY85H477I",
-            },
-            {
-              "nameOfSubstance": "Deoxyguanosine",
-              "unii": "G9481N71RO",
-            },
-            {
-              "nameOfSubstance": "cupric chloride",
-              "unii": "S2QG84156O",
-            },
-          ],
-          "compounds": [
-            {
-              "$id": 6057,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6057",
-            },
-            {
-              "$id": 36937,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/36937",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 12035,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12035",
-            },
-            {
-              "$id": 7046,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/7046",
-            },
-            {
-              "$id": 4650,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/4650",
-            },
-            {
-              "$id": 67519,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/67519",
-            },
-            {
-              "$id": 9256,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9256",
-            },
-            {
-              "$id": 64965,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/64965",
-            },
-            {
-              "$id": 36937,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/36937",
-            },
-            {
-              "$id": 23978,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/23978",
-            },
-            {
-              "$id": 5893,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5893",
-            },
-            {
-              "$id": 439153,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/439153",
-            },
-            {
-              "$id": 65149,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/65149",
-            },
-            {
-              "$id": 24014,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/24014",
-            },
-            {
-              "$id": 5892,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5892",
-            },
-            {
-              "$id": 9256,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9256",
-            },
-            {
-              "$id": 4650,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/4650",
-            },
-            {
-              "$id": 64966,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/64966",
-            },
-            {
-              "$id": 15938971,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/15938971",
-            },
-            {
-              "$id": 16057918,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/16057918",
-            },
-            {
-              "$id": 42626467,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/42626467",
-            },
-            {
-              "$id": 73415790,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/73415790",
-            },
-            {
-              "$id": 135398592,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/135398592",
-            },
-            {
-              "$id": 135440064,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/135440064",
-            },
-            {
-              "$id": 135398592,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/135398592",
-            },
-            {
-              "$id": 136652147,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/136652147",
-            },
-          ],
-          "dateCompleted": {
-            "day": 8,
-            "month": 4,
-            "year": 2009,
-          },
-          "dateCreated": {},
-          "dateRevised": {
-            "day": 10,
-            "month": 12,
-            "year": 2019,
-          },
-          "journalInfo": {
-            "country": "England",
-            "issnLinking": "0022-3042",
-            "medlineTa": "J Neurochem",
-            "nlmUniqueId": "2985190R",
-          },
-          "meshHeadings": [
-            {
-              "descriptorName": "8-Hydroxy-2'-Deoxyguanosine",
-            },
-            {
-              "descriptorName": "Apoptosis",
-              "qualifierName": "drug effects",
-            },
-            {
-              "descriptorName": "Autoradiography",
-            },
-            {
-              "descriptorName": "Benzoquinones",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Caspase 3",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Cell Line, Tumor",
-            },
-            {
-              "descriptorName": "Copper",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Cytochromes c",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "DNA Damage",
-              "qualifierName": "drug effects",
-            },
-            {
-              "descriptorName": "Deoxyguanosine",
-            },
-            {
-              "descriptorName": "Dose-Response Relationship, Drug",
-            },
-            {
-              "descriptorName": "Free Radical Scavengers",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Humans",
-            },
-            {
-              "descriptorName": "NAD",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Neuroblastoma",
-            },
-            {
-              "descriptorName": "Phenanthrolines",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Phosphorus Isotopes",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Salsoline Alkaloids",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Tetrahydroisoquinolines",
-              "qualifierName": "chemistry",
-            },
-            {
-              "descriptorName": "Tetrazolium Salts",
-            },
-            {
-              "descriptorName": "Thiazoles",
-            },
-            {
-              "descriptorName": "Time Factors",
-            },
-            {
-              "descriptorName": "Tyrosine 3-Monooxygenase",
-              "qualifierName": "metabolism",
-            },
-          ],
-        },
-        "url": "https://pubmed.ncbi.nlm.nih.gov/19012744",
-      },
-      {
-        "$id": "12358797",
-        "$ref": "pubmeds",
-        "data": {
-          "article": {
-            "abstract": "The role of mitochondrial permeability transition (PT) in apoptosis induced by an endogenous neurotoxin, N-methyl(R)salsolinol [NM(R)Sal], was studied by use of dopaminergic neuroblastoma SH-SY5Y cells. NM(R)Sal reduced mitochondrial membrane potential, DeltaPsim, in the early phase of apoptosis, which was not suppressed by a pan-caspase inhibitor, but was antagonized by Bcl-2 and cyclosporin A, suggesting the involvement of the PT in NM(R)Sal-induced loss of DeltaPsim. NM(R)Sal-induced apoptosis was completely inhibited not only by Bcl-2 and a pan-caspase inhibitor, but also by cyclosporin A, suggesting the essential role of the PT in NM(R)Sal-induced apoptosis. In mitochondria isolated from rat liver, NM(R)Sal induced swelling and reduced DeltaPsim, which was inhibited by cyclosporin A and Bcl-2 overexpression. These results indicate that NM(R)Sal induced the PT by direct action on the mitochondria. Rasagiline, N-propargyl-1(R)-aminoindan, which is a now under a clinical trial for Parkinson's disease, suppressed the DeltaPsim reduction, release of cytochrome c, and apoptosis induced by NM(R)Sal in SH-SY5Y cells. Rasagiline also inhibited the NM(R)Sal-induced loss of DeltaPsim and swelling in the isolated mitochondria, proving that rasagiline directly targets the mitochondria also. Altogether, mitochondrial PT plays a key role both in NM(R)Sal-induced cell death and the neuroprotective effect of rasagiline.",
-            "authors": [
-              {
-                "firstName": "Yukihiro",
-                "initials": "Y",
-                "lastName": "Akao",
-              },
-              {
-                "firstName": "Wakako",
-                "initials": "W",
-                "lastName": "Maruyama",
-              },
-              {
-                "firstName": "Shigeomi",
-                "initials": "S",
-                "lastName": "Shimizu",
-              },
-              {
-                "firstName": "Hong",
-                "initials": "H",
-                "lastName": "Yi",
-              },
-              {
-                "firstName": "Yoshihito",
-                "initials": "Y",
-                "lastName": "Nakagawa",
-              },
-              {
-                "firstName": "Masayo",
-                "initials": "M",
-                "lastName": "Shamoto-Nagai",
-              },
-              {
-                "firstName": "Moussa B H",
-                "initials": "MB",
-                "lastName": "Youdim",
-              },
-              {
-                "firstName": "Yoshihide",
-                "initials": "Y",
-                "lastName": "Tsujimoto",
-              },
-              {
-                "firstName": "Makoto",
-                "initials": "M",
-                "lastName": "Naoi",
-              },
-            ],
-            "journal": {
-              "iSsn": "0022-3042",
-              "isoAbbreviation": "J Neurochem",
-              "issue": 4,
-              "pubDate": {
-                "Month": "Aug",
-                "Year": 2002,
-              },
-              "title": "Journal of neurochemistry",
-            },
-            "language": "eng",
-            "languageTextSearch": "english",
-            "publicationTypeList": [
-              "Journal Article",
-              "Research Support, Non-U.S. Gov't",
-            ],
-            "title": "Mitochondrial permeability transition mediates apoptosis induced by N-methyl(R)salsolinol, an endogenous neurotoxin, and is inhibited by Bcl-2 and rasagiline, N-propargyl-1(R)-aminoindan.",
-          },
-          "chemicals": [
-            {
-              "nameOfSubstance": "Enzyme Inhibitors",
-            },
-            {
-              "nameOfSubstance": "Indans",
-            },
-            {
-              "nameOfSubstance": "Ion Channels",
-            },
-            {
-              "nameOfSubstance": "Mitochondrial Membrane Transport Proteins",
-            },
-            {
-              "nameOfSubstance": "Mitochondrial Permeability Transition Pore",
-            },
-            {
-              "nameOfSubstance": "Neuroprotective Agents",
-            },
-            {
-              "nameOfSubstance": "Neurotoxins",
-            },
-            {
-              "nameOfSubstance": "Proto-Oncogene Proteins c-bcl-2",
-            },
-            {
-              "nameOfSubstance": "Salsoline Alkaloids",
-            },
-            {
-              "nameOfSubstance": "Tetrahydroisoquinolines",
-            },
-            {
-              "nameOfSubstance": "rasagiline",
-              "unii": "003N66TS6T",
-            },
-            {
-              "nameOfSubstance": "Cyclosporine",
-              "unii": "83HN0GTJ6D",
-            },
-            {
-              "nameOfSubstance": "salsoline",
-              "unii": "9Q83ETU10C",
-            },
-          ],
-          "compounds": [
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 40010,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 40009,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
-            },
-            {
-              "$id": 122316,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/122316",
-            },
-            {
-              "$id": 442356,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
-            },
-            {
-              "$id": 3052776,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3052776",
-            },
-            {
-              "$id": 3052776,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3052776",
-            },
-            {
-              "$id": 3052775,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3052775",
-            },
-            {
-              "$id": 5289310,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5289310",
-            },
-            {
-              "$id": 5497195,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5497195",
-            },
-            {
-              "$id": 5280754,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5280754",
-            },
-            {
-              "$id": 5284373,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5284373",
-            },
-            {
-              "$id": 6435893,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6435893",
-            },
-            {
-              "$id": 9794292,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9794292",
-            },
-            {
-              "$id": 12989303,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
-            },
-            {
-              "$id": 16404350,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/16404350",
-            },
-            {
-              "$id": 24883466,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/24883466",
-            },
-            {
-              "$id": 25246316,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/25246316",
-            },
-            {
-              "$id": 45259939,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
-            },
-            {
-              "$id": 49867938,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/49867938",
-            },
-            {
-              "$id": 57317596,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/57317596",
-            },
-            {
-              "$id": 71463825,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/71463825",
-            },
-            {
-              "$id": 73896891,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/73896891",
-            },
-            {
-              "$id": 100956408,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/100956408",
-            },
-            {
-              "$id": 123134270,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/123134270",
-            },
-            {
-              "$id": 123134263,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/123134263",
-            },
-            {
-              "$id": 156963728,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/156963728",
-            },
-            {
-              "$id": 165415541,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
-            },
-          ],
-          "dateCompleted": {
-            "day": 18,
-            "month": 10,
-            "year": 2002,
-          },
-          "dateCreated": {},
-          "dateRevised": {
-            "day": 8,
-            "month": 12,
-            "year": 2020,
-          },
-          "journalInfo": {
-            "country": "England",
-            "issnLinking": "0022-3042",
-            "medlineTa": "J Neurochem",
-            "nlmUniqueId": "2985190R",
-          },
-          "meshHeadings": [
-            {
-              "descriptorName": "Animals",
-            },
-            {
-              "descriptorName": "Apoptosis",
-            },
-            {
-              "descriptorName": "Cyclosporine",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Enzyme Inhibitors",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Humans",
-            },
-            {
-              "descriptorName": "Indans",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Ion Channels",
-            },
-            {
-              "descriptorName": "Mitochondria, Liver",
-            },
-            {
-              "descriptorName": "Mitochondrial Membrane Transport Proteins",
-            },
-            {
-              "descriptorName": "Mitochondrial Permeability Transition Pore",
-            },
-            {
-              "descriptorName": "Neuroblastoma",
-            },
-            {
-              "descriptorName": "Neuroprotective Agents",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Neurotoxins",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Permeability",
-              "qualifierName": "drug effects",
-            },
-            {
-              "descriptorName": "Proto-Oncogene Proteins c-bcl-2",
-            },
-            {
-              "descriptorName": "Rats",
-            },
-            {
-              "descriptorName": "Salsoline Alkaloids",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Tetrahydroisoquinolines",
-            },
-            {
-              "descriptorName": "Tumor Cells, Cultured",
-            },
-          ],
-        },
-        "url": "https://pubmed.ncbi.nlm.nih.gov/12358797",
-      },
     ],
     "taxonomies": [
       {
@@ -15348,40 +14749,58 @@ M  END
 }
 `;
 
-exports[`activeOrNaturalSummarize > multiple terms 2`] = `
+exports[`ActiveOrNaturalSummarizer > multiple terms 2`] = `
 {
   "_id": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
   "data": {
     "activities": [
       {
-        "assay": "Inhibition : 10.75 %",
-        "externalRef": "PMID : 23062825",
-        "score": 1.172060050051001,
-        "targetTaxonomies": {
-          "class": "Actinopteri",
-          "family": "Gymnotidae",
-          "genus": "Electrophorus",
-          "kingdom": "Metazoa",
-          "order": "Gymnotiformes",
-          "phylum": "Chordata",
-          "species": "Electrophorus electricus",
-          "superkingdom": "Eukaryota",
+        "$id": "NPC294249",
+        "$ref": "npasses",
+        "data": {
+          "assay": "Inhibition : 10.75 %",
+          "ocl": {
+            "coordinates": "!BbOvw?_y?bOrw?Xa}bGvH@hc|bGvH?_x@bOp",
+            "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+          },
+          "targetTaxonomies": {
+            "class": "Actinopteri",
+            "family": "Gymnotidae",
+            "genus": "Electrophorus",
+            "kingdom": "Metazoa",
+            "order": "Gymnotiformes",
+            "phylum": "Chordata",
+            "species": "Electrophorus electricus",
+            "superkingdom": "Eukaryota",
+          },
         },
+        "score": 1.172060050051001,
+        "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
       },
       {
-        "assay": "Inhibition : -4.77 %",
-        "externalRef": "PMID : 23062825",
-        "score": 1.172060050051001,
-        "targetTaxonomies": {
-          "class": "Mammalia",
-          "family": "Equidae",
-          "genus": "Equus",
-          "kingdom": "Metazoa",
-          "order": "Perissodactyla",
-          "phylum": "Chordata",
-          "species": "Equus caballus",
-          "superkingdom": "Eukaryota",
+        "$id": "NPC294249",
+        "$ref": "npasses",
+        "data": {
+          "assay": "Inhibition : -4.77 %",
+          "ocl": {
+            "coordinates": "!BbOvw?_y?bOrw?Xa}bGvH@hc|bGvH?_x@bOp",
+            "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+          },
+          "targetTaxonomies": {
+            "class": "Mammalia",
+            "family": "Equidae",
+            "genus": "Equus",
+            "kingdom": "Metazoa",
+            "order": "Perissodactyla",
+            "phylum": "Chordata",
+            "species": "Equus caballus",
+            "superkingdom": "Eukaryota",
+          },
         },
+        "score": 1.172060050051001,
+        "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
       },
     ],
     "bioactive": true,
@@ -18574,7 +17993,7 @@ M  END
 }
 `;
 
-exports[`activeOrNaturalSummarize > terms:anti 1`] = `
+exports[`ActiveOrNaturalSummarizer > terms:ethylene 1`] = `
 {
   "_id": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
   "data": {
@@ -19770,40 +19189,58 @@ M  END
 }
 `;
 
-exports[`activeOrNaturalSummarize > terms:inhibition 3`] = `
+exports[`ActiveOrNaturalSummarizer > terms:inhibition 3`] = `
 {
   "_id": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
   "data": {
     "activities": [
       {
-        "assay": "Inhibition : 10.75 %",
-        "externalRef": "PMID : 23062825",
-        "score": 1.172060050051001,
-        "targetTaxonomies": {
-          "class": "Actinopteri",
-          "family": "Gymnotidae",
-          "genus": "Electrophorus",
-          "kingdom": "Metazoa",
-          "order": "Gymnotiformes",
-          "phylum": "Chordata",
-          "species": "Electrophorus electricus",
-          "superkingdom": "Eukaryota",
+        "$id": "NPC294249",
+        "$ref": "npasses",
+        "data": {
+          "assay": "Inhibition : 10.75 %",
+          "ocl": {
+            "coordinates": "!BbOvw?_y?bOrw?Xa}bGvH@hc|bGvH?_x@bOp",
+            "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+          },
+          "targetTaxonomies": {
+            "class": "Actinopteri",
+            "family": "Gymnotidae",
+            "genus": "Electrophorus",
+            "kingdom": "Metazoa",
+            "order": "Gymnotiformes",
+            "phylum": "Chordata",
+            "species": "Electrophorus electricus",
+            "superkingdom": "Eukaryota",
+          },
         },
+        "score": 1.172060050051001,
+        "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
       },
       {
-        "assay": "Inhibition : -4.77 %",
-        "externalRef": "PMID : 23062825",
-        "score": 1.172060050051001,
-        "targetTaxonomies": {
-          "class": "Mammalia",
-          "family": "Equidae",
-          "genus": "Equus",
-          "kingdom": "Metazoa",
-          "order": "Perissodactyla",
-          "phylum": "Chordata",
-          "species": "Equus caballus",
-          "superkingdom": "Eukaryota",
+        "$id": "NPC294249",
+        "$ref": "npasses",
+        "data": {
+          "assay": "Inhibition : -4.77 %",
+          "ocl": {
+            "coordinates": "!BbOvw?_y?bOrw?Xa}bGvH@hc|bGvH?_x@bOp",
+            "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
+            "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+          },
+          "targetTaxonomies": {
+            "class": "Mammalia",
+            "family": "Equidae",
+            "genus": "Equus",
+            "kingdom": "Metazoa",
+            "order": "Perissodactyla",
+            "phylum": "Chordata",
+            "species": "Equus caballus",
+            "superkingdom": "Eukaryota",
+          },
         },
+        "score": 1.172060050051001,
+        "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
       },
     ],
     "bioactive": true,
