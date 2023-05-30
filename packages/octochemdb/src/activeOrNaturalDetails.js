@@ -1,6 +1,7 @@
 import { appendURLs } from './utils/appendURLs.js';
 import { fetchJSON } from './utils/fetchJSON.js';
 import { includeDBRefs } from './utils/includeDBRefs.js';
+import { normalizeActivities } from './utils/normalizeActivities.js';
 /**
  * Search for a specific natural or active compound using its ID
  * @param {object} [options={}]
@@ -23,7 +24,7 @@ export async function activeOrNaturalDetails(id, options = {}) {
 
   await includeDBRefs(activeOrNatural, { baseURL });
   appendURLs(activeOrNatural);
-  // todo normalize activities
+  normalizeActivities(activeOrNatural);
 
   return activeOrNatural;
 }
