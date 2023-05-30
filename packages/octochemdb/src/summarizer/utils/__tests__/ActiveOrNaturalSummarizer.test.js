@@ -1,8 +1,8 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-import { ActiveOrNaturalSummarizer } from '../ActiveOrNaturalSummarizer.js';
-import { normalizeActivities } from '../utils/normalizeActivities.js';
+import { normalizeActivities } from '../../../utils/normalizeActivities.js';
+import { ActiveOrNaturalSummarizer } from '../../ActiveOrNaturalSummarizer.js';
 
 describe('ActiveOrNaturalSummarizer', () => {
   it('multiple terms', async () => {
