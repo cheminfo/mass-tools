@@ -13,7 +13,19 @@ import { summarizePubMeds } from './utils/summarizePubMeds.js';
  * @param {number} [options.activities.tolerance=1] -Typo Tolerance following the Levenshtein algorithm
  * @param {string[]} [options.queryFields=['assay']] - Fields to query
  * @param {object} [options.patents={}] - Options for patents
+ * @param {number} [options.maxNbEntries=100] - Maximum number of entries to return
+ * @param {number} [options.minScore=0.5] - Minimum score for an entry to be returned
+ * @param {object} [options.relevance={ k: 1.2, b: 0.75, d: 0.5 }] - BM25 algorithm {k: Term frequency saturation parameter, b: Length normalization parameter, d:Frequency normalization lower bound}
+ * @param {number} [options.tolerance=1] -Typo Tolerance following the Levenshtein algorithm
+ * @param {string[]} [options.queryFields=['title', 'abstract']] - Fields to query
+ * @param {object} [options.boostFields={ title: 2, abstract: 1 }] - Fields weights, higher weight means higher importance
  * @param {object} [options.pubmeds={}] - Options for pubmeds
+ * @param {number} [options.minScore=0.5] - Minimum score for an entry to be returned
+ * @param {number} [options.maxNbEntries=50] - Maximum number of entries to return
+ * @param {object} [options.relevance={ k: 1.2, b: 0.75, d: 0.5 }] - BM25 algorithm {k: Term frequency saturation parameter, b: Length normalization parameter, d:Frequency normalization lower bound}
+ * @param {number} [options.tolerance=1] -Typo Tolerance following the Levenshtein algorithm
+ * @param {object} [options.boostFields={ title: 2, abstract: 1, meshHeadings: 1 }]  - Fields weights, higher weight means higher importance
+ * @param {string[]} [options.queryFields=['title', 'abstract', 'meshHeadings']] - Fields to query
  * @returns {Promise<Object>} - Summarized entry of ActivesOrNaturals collection
  */
 export async function activeOrNaturalSummarize(entry, term, options = {}) {
