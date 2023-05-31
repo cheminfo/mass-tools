@@ -14,7 +14,7 @@ export function normalizeActivities(activeOrNatural) {
           $id: activity.$id,
           data: {
             assay: activityEntry.assay,
-            targetTaxonomies: activityEntry.targetTaxonomies,
+            targetTaxonomies: [activityEntry.targetTaxonomies],
             ocl: activity.data.ocl,
           },
           url: activity.url,
