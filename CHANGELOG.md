@@ -1,5 +1,22 @@
 # Changelog
 
+## [7.2.0](https://github.com/cheminfo/mass-tools/compare/v7.1.0...v7.2.0) (2023-05-31)
+
+
+### Features
+
+* db schema based on queryField and sort patents by nbCompounds ([fa76d88](https://github.com/cheminfo/mass-tools/commit/fa76d882388a4fdc06d7ec33eabd8bd9d6edb88d))
+* **ms-spectrum:** add spectrum info containing min / max values of the original spectrum ([3dbf517](https://github.com/cheminfo/mass-tools/commit/3dbf5175e1ef4f7689a5ff666fdabc2167691405))
+* normalize activities ([0f2a99a](https://github.com/cheminfo/mass-tools/commit/0f2a99aaa250cca23943f9a6e4f35eead35b753e))
+* **octochemdb:** expose activeOrNaturalSummarize ([3be69fa](https://github.com/cheminfo/mass-tools/commit/3be69fadd481deba2ca60e4a1b8e6e0e7f9449ea))
+* text search to summarize activeOrNatural entry ([78a4112](https://github.com/cheminfo/mass-tools/commit/78a41127fa2ffd4e2375956bf164b141b257bfc9))
+
+
+### Bug Fixes
+
+* activeOrNaturalSummarize ([a525411](https://github.com/cheminfo/mass-tools/commit/a525411c7ca77758e6d856ffeedfafcbe763fb5a))
+* add +2 to nbCompounds to avoid dividing by 0 ([5d60062](https://github.com/cheminfo/mass-tools/commit/5d6006204b3979e22895e7ac33ba36f9633b39e6))
+
 ## [7.1.0](https://github.com/cheminfo/mass-tools/compare/v7.0.0...v7.1.0) (2023-05-24)
 
 
