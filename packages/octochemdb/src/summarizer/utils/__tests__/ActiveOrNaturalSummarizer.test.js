@@ -153,4 +153,57 @@ describe('ActiveOrNaturalSummarizer', () => {
     expect(result.data.patents).toHaveLength(0);
     expect(result.data.activities).toHaveLength(2);
   });
+  it('taxonomies', async () => {
+    const entry = JSON.parse(
+      readFileSync(join(__dirname, './details.json'), 'utf8'),
+    );
+    normalizeActivities(entry);
+
+    const activeOrNaturalSummarizer = new ActiveOrNaturalSummarizer(entry);
+    const result = await activeOrNaturalSummarizer.summarize('Caryophyllales');
+    expect(result.data.taxonomies).toMatchSnapshot();
+    expect(result.data.taxonomies[0]).toMatchInlineSnapshot(`
+      {
+        "class": "Magnoliopsida",
+        "dbRef": {
+          "$id": "LTS0005803",
+          "$ref": "lotuses",
+          "data": {
+            "iupacName": "(1S)-7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol",
+            "ocl": {
+              "coordinates": "!BbGvw__y?bOrw?Xa}bGvH@hc|bGvH__x@bOp",
+              "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
+              "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+            },
+            "taxonomies": [
+              {
+                "class": "Magnoliopsida",
+                "dbRef": {
+                  "$id": "LTS0005803",
+                  "$ref": "lotuses",
+                  "url": "https://lotus.naturalproducts.net/compound/lotus_id/LTS0005803",
+                },
+                "family": "Chenopodiaceae",
+                "genus": "Xylosalsola",
+                "kingdom": "Viridiplantae",
+                "order": "Caryophyllales",
+                "phylum": "Streptophyta",
+                "species": "Xylosalsola paletzkiana",
+                "superkingdom": "Eukaryota",
+              },
+            ],
+          },
+          "url": "https://lotus.naturalproducts.net/compound/lotus_id/LTS0005803",
+        },
+        "family": "Chenopodiaceae",
+        "genus": "Xylosalsola",
+        "kingdom": "Viridiplantae",
+        "order": "Caryophyllales",
+        "phylum": "Streptophyta",
+        "score": 0.6614957054446614,
+        "species": "Xylosalsola paletzkiana",
+        "superkingdom": "Eukaryota",
+      }
+    `);
+  });
 });

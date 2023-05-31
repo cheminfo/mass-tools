@@ -1,4 +1,10 @@
-export function summarizeEmptyTerms(activities, patents, pubmeds, options) {
+export function summarizeEmptyTerms(
+  activities,
+  patents,
+  pubmeds,
+  taxonomies,
+  options,
+) {
   activities = activities.slice();
   patents = patents.slice();
   pubmeds = pubmeds.slice();
@@ -28,6 +34,11 @@ export function summarizeEmptyTerms(activities, patents, pubmeds, options) {
   if (activities.length > activitiesMaxNbEntries) {
     activities.length = activitiesMaxNbEntries;
   }
+  // TAXONOMIES
+  const taxonomiesMaxNbEntries = options?.taxonomies?.maxNbEntries || 50;
+  if (taxonomies.length > taxonomiesMaxNbEntries) {
+    taxonomies.length = activitiesMaxNbEntries;
+  }
 
-  return { activities, patents, pubmeds };
+  return { activities, patents, pubmeds, taxonomies };
 }

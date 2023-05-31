@@ -1,9 +1,11 @@
 import { getActivitiesDB } from './utils/getActivitiesDB';
 import { getPatentsDB } from './utils/getPatentsDB';
 import { getPubmedsDB } from './utils/getPubmedsDB';
+import { getTaxonomiesDB } from './utils/getTaxonomiesDB';
 import { searchActivitiesDB } from './utils/searchActivitiesDB';
 import { searchPatentsDB } from './utils/searchPatentsDB';
 import { searchPubmedsDB } from './utils/searchPubmedsDB';
+import { searchTaxonomiesDB } from './utils/searchTaxonomiesDB';
 import { summarizeEmptyTerms } from './utils/summarizeEmptyTerms';
 
 export class ActiveOrNaturalSummarizer {
@@ -13,10 +15,14 @@ export class ActiveOrNaturalSummarizer {
    * @param {Object} [options={}] The options to use for the search
    * @param {Object} [options.activities={}] The options to use for the activities search
    * @param {number} [options.activities.minScore=0.5] - Minimum score for an entry to be returned
-   * @param {number} [options.activities.maxNbEntries=50] - Maximum number of entries to return
+   * @param {number} [options.activities.maxNbEntries=100] - Maximum number of entries to return
    * @param {object} [options.activities.relevance={ k: 1.2, b: 0.75, d: 0.5 }] - BM25 algorithm {k: Term frequency saturation parameter, b: Length normalization parameter, d:Frequency normalization lower bound}
    * @param {number} [options.activities.tolerance=1] -Typo Tolerance following the Levenshtein algorithm
-   * @param {string[]} [options.queryFields=['assay']] - Fields to query
+   * @param {string[]} [options.activities.queryFields=['assay']] - Fields to query
+   * @param {Object} [options.taxonomies={}] The options to use for the activities search
+   * @param {number} [options.taxonomies.minScore=0.5] - Minimum score for an entry to be returned
+   * @param {number} [options.taxonomies.maxNbEntries=50] - Maximum number of entries to return
+   * @param {number} [options.taxonomies.tolerance=1] -Typo Tolerance following the Levenshtein algorithm
    * @param {object} [options.patents={}] - Options for patents
    * @param {number} [options.patents.abstractsLimit=1000] - If more than this number of abstracts, the search will be done on the without abstracts
    * @param {number} [options.patents.maxNbEntries=100] - Maximum number of entries to return
@@ -28,7 +34,7 @@ export class ActiveOrNaturalSummarizer {
    * @param {object} [options.pubmeds={}] - Options for pubmeds
    * @param {number} [options.pubmeds.abstractsLimit=1000] - If more than this number of abstracts, the search will be done on the without abstracts
    * @param {number} [options.pubmeds.minScore=0.5] - Minimum score for an entry to be returned
-   * @param {number} [options.pubmeds.maxNbEntries=50] - Maximum number of entries to return
+   * @param {number} [options.pubmeds.maxNbEntries=100] - Maximum number of entries to return
    * @param {object} [options.pubmeds.relevance={ k: 1.2, b: 0.75, d: 0.5 }] - BM25 algorithm {k: Term frequency saturation parameter, b: Length normalization parameter, d:Frequency normalization lower bound}
    * @param {number} [options.pubmeds.tolerance=1] -Typo Tolerance following the Levenshtein algorithm
    * @param {object} [options.pubmeds.boostFields={ title: 2, abstract: 1, meshHeadings: 1 }]  - Fields weights, higher weight means higher importance
@@ -41,6 +47,7 @@ export class ActiveOrNaturalSummarizer {
     this.activities = activeOrNaturalDetails.data.activities;
     this.patents = activeOrNaturalDetails.data.patents;
     this.pubmeds = activeOrNaturalDetails.data.pubmeds;
+    this.taxonomies = activeOrNaturalDetails.data.taxonomies;
     this.isInitialized = false;
   }
   /**
@@ -54,6 +61,7 @@ export class ActiveOrNaturalSummarizer {
         this.activities,
         this.patents,
         this.pubmeds,
+        this.taxonomies,
         this.options,
       );
       return {
@@ -93,6 +101,12 @@ export class ActiveOrNaturalSummarizer {
           terms,
           this.options?.pubmeds,
         ),
+        taxonomies: await searchTaxonomiesDB(
+          this.taxonomiesDB,
+          this.taxonomies,
+          terms,
+          this.options?.taxonomies,
+        ),
       },
     };
   }
@@ -104,5 +118,9 @@ export class ActiveOrNaturalSummarizer {
       this.options.activities,
     );
     this.patentsDB = await getPatentsDB(this.patents, this.options.patents);
+    this.taxonomiesDB = await getTaxonomiesDB(
+      this.taxonomies,
+      this.options.taxonomies,
+    );
   }
 }
