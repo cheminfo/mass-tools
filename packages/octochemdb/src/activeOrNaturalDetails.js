@@ -42,7 +42,6 @@ function ensureArray(activeOrNatural) {
   }
 }
 
-
 async function fetchActiveOrNatural(id, options) {
   const { fields, url } = options;
   const searchParams = {};
