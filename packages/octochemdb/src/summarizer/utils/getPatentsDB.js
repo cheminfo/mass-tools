@@ -1,7 +1,11 @@
 import { create, insert } from '@orama/orama';
 
 export async function getPatentsDB(patents, options = {}) {
-  const { queryFields = ['title', 'abstract'] } = options;
+  const { queryFields = ['title', 'abstract'], abstractsLimit = 1000 } =
+    options;
+  if (patents.length > abstractsLimit) {
+    queryFields.splice(queryFields.indexOf('abstract'), 1);
+  }
   const patentsDB = await create({
     schema: {
       $id: 'string',

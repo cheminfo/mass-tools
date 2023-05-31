@@ -16,7 +16,11 @@ export async function searchPatentsDB(
       title: 2,
       abstract: 1,
     },
+    abstractsLimit = 1000,
   } = options;
+  if (patents.length > abstractsLimit) {
+    queryFields.splice(queryFields.indexOf('abstract'), 1);
+  }
   if (terms === '') {
     throw new Error('terms is empty');
   }

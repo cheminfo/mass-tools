@@ -18,6 +18,7 @@ export class ActiveOrNaturalSummarizer {
    * @param {number} [options.activities.tolerance=1] -Typo Tolerance following the Levenshtein algorithm
    * @param {string[]} [options.queryFields=['assay']] - Fields to query
    * @param {object} [options.patents={}] - Options for patents
+   * @param {number} [options.patents.abstractsLimit=1000] - If more than this number of abstracts, the search will be done on the without abstracts
    * @param {number} [options.patents.maxNbEntries=100] - Maximum number of entries to return
    * @param {number} [options.patents.inScore=0.5] - Minimum score for an entry to be returned
    * @param {object} [options.patents.relevance={ k: 1.2, b: 0.75, d: 0.5 }] - BM25 algorithm {k: Term frequency saturation parameter, b: Length normalization parameter, d:Frequency normalization lower bound}
@@ -25,6 +26,7 @@ export class ActiveOrNaturalSummarizer {
    * @param {string[]} [options.patents.queryFields=['title', 'abstract']] - Fields to query
    * @param {object} [options.patents.boostFields={ title: 2, abstract: 1 }] - Fields weights, higher weight means higher importance
    * @param {object} [options.pubmeds={}] - Options for pubmeds
+   * @param {number} [options.pubmeds.abstractsLimit=1000] - If more than this number of abstracts, the search will be done on the without abstracts
    * @param {number} [options.pubmeds.minScore=0.5] - Minimum score for an entry to be returned
    * @param {number} [options.pubmeds.maxNbEntries=50] - Maximum number of entries to return
    * @param {object} [options.pubmeds.relevance={ k: 1.2, b: 0.75, d: 0.5 }] - BM25 algorithm {k: Term frequency saturation parameter, b: Length normalization parameter, d:Frequency normalization lower bound}

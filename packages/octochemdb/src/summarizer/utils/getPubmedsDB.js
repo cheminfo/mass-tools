@@ -1,7 +1,13 @@
 import { create, insert } from '@orama/orama';
 
 export async function getPubmedsDB(pubmeds, options = {}) {
-  const { queryFields = ['title', 'abstract', 'meshHeadings'] } = options;
+  const {
+    queryFields = ['title', 'abstract', 'meshHeadings'],
+    abstractsLimit = 1000,
+  } = options;
+  if (pubmeds.length > abstractsLimit) {
+    queryFields.splice(queryFields.indexOf('abstract'), 1);
+  }
   const pubmedsDB = await create({
     schema: {
       $ref: 'string',
@@ -14,6 +20,7 @@ export async function getPubmedsDB(pubmeds, options = {}) {
       nbCompounds: 'number',
     },
   });
+
   for (const pubmed of pubmeds) {
     const meshHeadings = [];
     for (const meshHeading of pubmed.data.meshHeadings) {

@@ -112,20 +112,45 @@ describe('ActiveOrNaturalSummarizer', () => {
     );
     expect(result).toMatchSnapshot();
   });
-});
-it('terms:Apoptosis', async () => {
-  const entry = JSON.parse(
-    readFileSync(join(__dirname, './details.json'), 'utf8'),
-  );
-  normalizeActivities(entry);
+  it('terms:Apoptosis', async () => {
+    const entry = JSON.parse(
+      readFileSync(join(__dirname, './details.json'), 'utf8'),
+    );
+    normalizeActivities(entry);
 
-  const activeOrNaturalSummarizer = new ActiveOrNaturalSummarizer(entry);
-  const result = await activeOrNaturalSummarizer.summarize('Apoptosis');
+    const activeOrNaturalSummarizer = new ActiveOrNaturalSummarizer(entry);
+    const result = await activeOrNaturalSummarizer.summarize('Apoptosis');
 
-  expect(result.data.pubmeds[0].data.article.title).toMatchInlineSnapshot(
-    '"Apoptosis induced by an endogenous neurotoxin, N-methyl(R)salsolinol, in dopamine neurons."',
-  );
+    expect(result.data.pubmeds[0].data.article.title).toMatchInlineSnapshot(
+      '"Apoptosis induced by an endogenous neurotoxin, N-methyl(R)salsolinol, in dopamine neurons."',
+    );
 
-  expect(result.data.pubmeds[0].data.article.title).toContain('Apoptosis');
-  expect(result).toMatchSnapshot();
+    expect(result.data.pubmeds[0].data.article.title).toContain('Apoptosis');
+    expect(result).toMatchSnapshot();
+  });
+  it('abstractsLimit', async () => {
+    const entry = JSON.parse(
+      readFileSync(join(__dirname, './details.json'), 'utf8'),
+    );
+    normalizeActivities(entry);
+    const options = {
+      pubmeds: {
+        abstractsLimit: 2,
+      },
+      patents: {
+        abstractsLimit: 2,
+      },
+    };
+    const activeOrNaturalSummarizer = new ActiveOrNaturalSummarizer(
+      entry,
+      options,
+    );
+    // terms present only on abstracts: "alternative", "pipeline"
+    const result = await activeOrNaturalSummarizer.summarize(
+      'alternative pipeline qHTS',
+    );
+    expect(result.data.pubmeds).toHaveLength(0);
+    expect(result.data.patents).toHaveLength(0);
+    expect(result.data.activities).toHaveLength(2);
+  });
 });

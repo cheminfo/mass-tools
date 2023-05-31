@@ -17,9 +17,13 @@ export async function searchPubmedsDB(
       abstract: 1,
       meshHeadings: 1,
     },
+    abstractsLimit = 1000,
   } = options;
   if (terms === '') {
     throw new Error('terms is empty');
+  }
+  if (pubmeds.length > abstractsLimit) {
+    queryFields.splice(queryFields.indexOf('abstract'), 1);
   }
   let queryResult = await search(pubmedsDB, {
     term: terms,
