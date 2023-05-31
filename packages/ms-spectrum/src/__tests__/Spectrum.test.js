@@ -30,7 +30,9 @@ describe('test Spectrum', () => {
   });
 
   it('info', () => {
-    expect(new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).info).toStrictEqual({
+    expect(
+      new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).info,
+    ).toStrictEqual({
       minX: 1,
       maxX: 4,
       minY: 1,

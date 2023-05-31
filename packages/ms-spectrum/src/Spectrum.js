@@ -1,5 +1,11 @@
 import { isAnyArray } from 'is-any-array';
-import { xMaxValue, xMinMaxValues, xNormed, xSum, xMinValue } from 'ml-spectra-processing';
+import {
+  xMaxValue,
+  xMinMaxValues,
+  xNormed,
+  xSum,
+  xMinValue,
+} from 'ml-spectra-processing';
 import { parseXY } from 'xy-parser';
 
 import { getBestPeaks } from './getBestPeaks';
@@ -34,14 +40,14 @@ export class Spectrum {
         maxX: xMaxValue(this.data.x),
         minY: xMinValue(this.data.y),
         maxY: xMaxValue(this.data.y),
-      }
+      };
     } else {
       this.info = {
         minX: NaN,
         maxX: NaN,
         minY: NaN,
         maxY: NaN,
-      }
+      };
     }
 
     this.cache = {};
@@ -58,13 +64,15 @@ export class Spectrum {
 
   sumY() {
     if (!this.cache.sumY) {
-      this.cache.sumY = xSum(this.data.y)
+      this.cache.sumY = xSum(this.data.y);
     }
     return this.cache.sumY;
   }
 
   scaleY(intensity = 1) {
-    this.data.y = Array.from(xNormed(this.data.y, { value: intensity, algorithm: 'max' }))
+    this.data.y = Array.from(
+      xNormed(this.data.y, { value: intensity, algorithm: 'max' }),
+    );
     return this;
   }
 
