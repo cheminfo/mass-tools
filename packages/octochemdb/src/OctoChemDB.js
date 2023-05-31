@@ -1,5 +1,4 @@
 import { activeOrNaturalDetails } from './activeOrNaturalDetails.js';
-import { activeOrNaturalSummarize } from './activeOrNaturalSummarize.js';
 import { activesOrNaturals } from './activesOrNaturals.js';
 import { activesOrNaturalsByMF } from './activesOrNaturalsByMF.js';
 import { gnps } from './gnps.js';
@@ -42,9 +41,5 @@ export class OctoChemDB {
 
   async massSpectra(options = {}) {
     return massSpectra({ baseURL: this.baseURL, ...options });
-  }
-
-  async activeOrNaturalSummarize(entry, term, options) {
-    return activeOrNaturalSummarize(entry, term, options);
   }
 }

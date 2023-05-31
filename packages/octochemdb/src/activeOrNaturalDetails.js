@@ -23,10 +23,23 @@ export async function activeOrNaturalDetails(id, options = {}) {
   });
 
   await includeDBRefs(activeOrNatural, { baseURL });
+  ensureArray(activeOrNatural);
   appendURLs(activeOrNatural);
   normalizeActivities(activeOrNatural);
 
   return activeOrNatural;
+}
+
+function ensureArray(activeOrNatural) {
+  if (!activeOrNatural.data.activities) {
+    activeOrNatural.data.activities = [];
+  }
+  if (!activeOrNatural.data.pubmeds) {
+    activeOrNatural.data.pubmeds = [];
+  }
+  if (!activeOrNatural.data.patents) {
+    activeOrNatural.data.patents = [];
+  }
 }
 
 async function fetchActiveOrNatural(id, options) {

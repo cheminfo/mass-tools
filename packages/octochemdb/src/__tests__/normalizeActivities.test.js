@@ -21,15 +21,17 @@ describe('normalizeActivities', () => {
             "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
-          "targetTaxonomies": {
-            "class": "Bacilli",
-            "family": "Bacillaceae",
-            "genus": "Bacillus",
-            "order": "Bacillales",
-            "phylum": "Bacillota",
-            "species": "Bacillus anthracis",
-            "superkingdom": "Bacteria",
-          },
+          "targetTaxonomies": [
+            {
+              "class": "Bacilli",
+              "family": "Bacillaceae",
+              "genus": "Bacillus",
+              "order": "Bacillales",
+              "phylum": "Bacillota",
+              "species": "Bacillus anthracis",
+              "superkingdom": "Bacteria",
+            },
+          ],
         },
         "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
       }

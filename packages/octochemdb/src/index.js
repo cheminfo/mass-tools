@@ -1,2 +1,2 @@
 export * from './OctoChemDB';
-export * from './activeOrNaturalSummarize';
+export * from './summarizer/ActiveOrNaturalSummarizer';

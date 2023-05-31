@@ -56,20 +56,31 @@ describe('activesOrNaturals', () => {
       }
     }
 
-
     expect([...fields].sort()).toStrictEqual([
-      'activities', 'bioactive',
-      'cas', 'charge',
-      'em', 'kwActiveAgainst',
-      'kwBioassays', 'kwMeshTerms',
-      'kwTaxonomies', 'massSpectra',
-      'mf', 'molecules',
-      'naturalProduct', 'nbActivities',
-      'nbMassSpectra', 'nbMolecules',
-      'nbPatents', 'nbPubmeds',
-      'nbTaxonomies', 'noStereoOCL',
-      'patents', 'pubmeds',
-      'taxonomies', 'unsaturation'
+      'activities',
+      'bioactive',
+      'cas',
+      'charge',
+      'em',
+      'kwActiveAgainst',
+      'kwBioassays',
+      'kwMeshTerms',
+      'kwTaxonomies',
+      'massSpectra',
+      'mf',
+      'molecules',
+      'naturalProduct',
+      'nbActivities',
+      'nbMassSpectra',
+      'nbMolecules',
+      'nbPatents',
+      'nbPubmeds',
+      'nbTaxonomies',
+      'noStereoOCL',
+      'patents',
+      'pubmeds',
+      'taxonomies',
+      'unsaturation',
     ]);
   });
 });
