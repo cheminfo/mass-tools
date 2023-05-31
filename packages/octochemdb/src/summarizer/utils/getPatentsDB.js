@@ -13,9 +13,11 @@ export async function getPatentsDB(patents, options = {}) {
   for (const patent of patents) {
     let article = {
       $id: patent.$id,
-      ...(queryFields.includes('title') ? { title: patent.data.title } : null),
+      ...(queryFields.includes('title')
+        ? { title: patent?.data?.title }
+        : null),
       ...(queryFields.includes('abstract')
-        ? { abstract: patent.data.abstract }
+        ? { abstract: patent?.data?.abstract }
         : null),
       nbCompounds: patent.data.nbCompounds + 2 || +2,
     };

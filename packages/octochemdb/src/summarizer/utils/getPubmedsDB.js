@@ -25,10 +25,10 @@ export async function getPubmedsDB(pubmeds, options = {}) {
     let article = {
       $id: pubmed.$id,
       ...(queryFields.includes('title')
-        ? { title: pubmed.data.article.title || '' }
+        ? { title: pubmed?.data?.article?.title || '' }
         : null),
       ...(queryFields.includes('abstract')
-        ? { abstract: pubmed.data.article.abstract || '' }
+        ? { abstract: pubmed?.data?.article?.abstract || '' }
         : null),
       ...(queryFields.includes('meshHeadings')
         ? { meshHeadings: meshHeadings || '' }
