@@ -64,6 +64,21 @@ describe('ActiveOrNaturalSummarizer', () => {
     expect(result).toMatchSnapshot();
   });
 
+  it('empty terms, no options', async () => {
+    const entry = JSON.parse(
+      readFileSync(join(__dirname, './details.json'), 'utf8'),
+    );
+    normalizeActivities(entry);
+
+    const activeOrNaturalSummarizer = new ActiveOrNaturalSummarizer(entry);
+    const result = await activeOrNaturalSummarizer.summarize('');
+
+    expect(result.data.pubmeds[0].data.compounds.length).toBeLessThan(
+      result.data.pubmeds[1].data.compounds.length,
+    );
+
+    expect(result).toMatchSnapshot();
+  });
   it('terms:ethylene', async () => {
     const entry = JSON.parse(
       readFileSync(join(__dirname, './details.json'), 'utf8'),
