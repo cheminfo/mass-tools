@@ -1,5 +1,5 @@
 import { isAnyArray } from 'is-any-array';
-import { xMaxValue, xMinMaxValues, xNormed } from 'ml-spectra-processing';
+import { xMaxValue, xMinMaxValues, xNormed, xSum, xMinValue } from 'ml-spectra-processing';
 import { parseXY } from 'xy-parser';
 
 import { getBestPeaks } from './getBestPeaks';
@@ -28,6 +28,22 @@ export class Spectrum {
       enumerable: false,
       writable: true,
     });
+    if (this.data && this.data.x.length > 0) {
+      this.info = {
+        minX: xMinValue(this.data.x),
+        maxX: xMaxValue(this.data.x),
+        minY: xMinValue(this.data.y),
+        maxY: xMaxValue(this.data.y),
+      }
+    } else {
+      this.info = {
+        minX: NaN,
+        maxX: NaN,
+        minY: NaN,
+        maxY: NaN,
+      }
+    }
+
     this.cache = {};
     this.peaks = [];
   }
@@ -42,17 +58,13 @@ export class Spectrum {
 
   sumY() {
     if (!this.cache.sumY) {
-      this.cache.sumY = this.data.y.reduce(
-        (previous, current) => previous + current,
-        0,
-      );
+      this.cache.sumY = xSum(this.data.y)
     }
     return this.cache.sumY;
   }
 
   scaleY(intensity = 1) {
-    let basePeak = this.maxY() / intensity;
-    this.data.y = this.data.y.map((y) => y / basePeak);
+    this.data.y = Array.from(xNormed(this.data.y, { value: intensity, algorithm: 'max' }))
     return this;
   }
 
@@ -73,10 +85,7 @@ export class Spectrum {
   }
 
   normedY(total = 1) {
-    this.data.y = xNormed(this.data.y);
-    if (total !== 1) {
-      this.data.y = this.data.y.map((y) => y * total);
-    }
+    this.data.y = xNormed(this.data.y, { value: total });
     return this;
   }
 

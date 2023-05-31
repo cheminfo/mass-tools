@@ -29,6 +29,15 @@ describe('test Spectrum', () => {
     expect(new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).maxY()).toBe(2);
   });
 
+  it('info', () => {
+    expect(new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).info).toStrictEqual({
+      minX: 1,
+      maxX: 4,
+      minY: 1,
+      maxY: 2,
+    });
+  });
+
   it('sumY', () => {
     let spectrum = new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] });
     expect(spectrum.sumY()).toBe(5);
