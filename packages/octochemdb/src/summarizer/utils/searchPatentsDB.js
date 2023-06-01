@@ -30,6 +30,7 @@ export async function searchPatentsDB(
     boost: boostFields,
     relevance,
     tolerance,
+    limit: maxNbEntries,
   });
   queryResult.hits.map((item) => {
     let nbCompounds = 2;

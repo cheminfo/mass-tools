@@ -29,6 +29,7 @@ export async function searchTaxonomiesDB(
     term: terms,
     properties: queryFields,
     tolerance,
+    limit: maxNbEntries,
   });
   let results = [];
   for (let result of queryResult.hits) {

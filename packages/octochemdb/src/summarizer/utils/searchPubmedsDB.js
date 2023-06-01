@@ -30,6 +30,7 @@ export async function searchPubmedsDB(
     properties: queryFields,
     boost: boostFields,
     relevance,
+    limit: maxNbEntries,
     tolerance,
   });
   queryResult.hits.map((item) => {

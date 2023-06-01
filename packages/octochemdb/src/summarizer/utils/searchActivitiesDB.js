@@ -21,6 +21,7 @@ export async function searchActivitiesDB(
     relevance,
     properties: queryFields,
     tolerance,
+    limit: maxNbEntries,
   });
   let results = [];
 
