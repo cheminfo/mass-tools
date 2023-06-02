@@ -5,6 +5,7 @@ import { gnps } from './gnps.js';
 import { massBank } from './massBank.js';
 import { massSpectra } from './massSpectra.js';
 import { mfsFromEM } from './mfsFromEM.js';
+import { pubmedCompounds } from './pubmedCompounds.js';
 
 export class OctoChemDB {
   /**
@@ -42,4 +43,9 @@ export class OctoChemDB {
   async massSpectra(options = {}) {
     return massSpectra({ baseURL: this.baseURL, ...options });
   }
+
+  async pubmedCompounds(pubmedID, options = {}) {
+    return pubmedCompounds(pubmedID, { baseURL: this.baseURL, ...options });
+  }
+
 }
