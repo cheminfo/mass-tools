@@ -40,6 +40,9 @@ function ensureArray(activeOrNatural) {
   if (!activeOrNatural.data.patents) {
     activeOrNatural.data.patents = [];
   }
+  if (!activeOrNatural.data.taxonomies) {
+    activeOrNatural.data.taxonomies = [];
+  }
 }
 
 async function fetchActiveOrNatural(id, options) {

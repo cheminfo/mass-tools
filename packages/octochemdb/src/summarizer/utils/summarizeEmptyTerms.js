@@ -8,6 +8,7 @@ export function summarizeEmptyTerms(
   activities = activities.slice();
   patents = patents.slice();
   pubmeds = pubmeds.slice();
+  taxonomies = taxonomies.slice();
   // PATENTS
   const patentsMaxNbEntries = options?.patents?.maxNbEntries || 100;
   patents.sort((a, b) => {
