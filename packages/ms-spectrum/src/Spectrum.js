@@ -21,6 +21,10 @@ import { peaksWidth } from './peaksWidth';
  * Class dealing with mass spectra and peak picking
  */
 export class Spectrum {
+  /**
+   *
+   * @param {import('cheminfo-types').DataXY} data
+   */
   constructor(data = { x: [], y: [] }) {
     if (
       typeof data !== 'object' ||
