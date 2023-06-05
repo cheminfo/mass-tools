@@ -43,11 +43,9 @@ import sum from 'sum-object-keys';
  */
 
 export async function generateMFs(ranges, options = {}) {
-
   if (!Array.isArray(ranges)) {
     throw new Error('Ranges must be an array of string or object');
   }
-
 
   options = { ...options };
 
@@ -238,7 +236,7 @@ function appendResult(results, currents, keys, options = {}) {
       variables.push(
         result.em,
         (result.em + ionization.em - ionization.charge * ELECTRON_MASS) /
-        Math.abs(ionization.charge),
+          Math.abs(ionization.charge),
         result.charge + result.ionization.charge,
         result.unsaturation,
         result.atoms,

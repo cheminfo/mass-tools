@@ -1,1 +1,1 @@
-export * from './generateMFs.js'
+export * from './generateMFs.js';
