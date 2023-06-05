@@ -1,4 +1,3 @@
-
 import { fetchJSON } from './utils/fetchJSON.js';
 import { includeDBRefs } from './utils/includeDBRefs.js';
 
@@ -20,10 +19,10 @@ export async function pubmedCompounds(pubmedID, options = {}) {
 
   const searchParams = {
     id: pubmedID,
-    fields: 'data.compounds'
+    fields: 'data.compounds',
   };
 
   const result = (await fetchJSON(realURL, searchParams)).data;
   await includeDBRefs(result, { baseURL });
-  return result.data.compounds
+  return result.data.compounds;
 }

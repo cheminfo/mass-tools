@@ -47,5 +47,4 @@ export class OctoChemDB {
   async pubmedCompounds(pubmedID, options = {}) {
     return pubmedCompounds(pubmedID, { baseURL: this.baseURL, ...options });
   }
-
 }
