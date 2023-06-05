@@ -1,6 +1,11 @@
-import { generateMFs } from '..';
+import { generateMFs } from '../index.js';
 
 describe('generateMFs', () => {
+
+  it('empty', async () => {
+    expect(async () => generateMFs()).rejects.toThrow('Ranges must be an array of string or object');
+  })
+
   it('from array of array with comment', async () => {
     let mfsArray = [['C', 'H$YY'], [], [''], ['Cl', 'Br$XX']];
     let result = await generateMFs(mfsArray);
