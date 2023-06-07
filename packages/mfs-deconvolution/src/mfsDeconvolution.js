@@ -34,6 +34,11 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
   }
 
   const { threshold = 0.001, filter, ionizations, logger } = options;
+  if (!ionizations) {
+    logger?.warn(
+      'No ionizations provided this could be an error if the molecule is not naturally charged.',
+    );
+  }
 
   const peakWidthFct = getPeakWidthFct(options);
   const centroids = getCentroids(spectrum, { threshold });
@@ -42,6 +47,11 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
   mfs = addIsotopicDistributionAndCheckMF(mfs, { logger, peakWidthFct });
 
   const combined = buildCombined(centroids, mfs, { peakWidthFct });
+  if (!hasOverlap(combined.ys)) {
+    throw new Error(
+      'Could not find any overlaping peaks between experimental and theoretical spectrum.',
+    );
+  }
 
   // Time to make the NNMF
   const A = new Matrix(combined.ys.slice(1));
@@ -98,11 +108,9 @@ function addIsotopicDistributionAndCheckMF(mfs, options) {
     try {
       mf.distribution = isotopicDistribution.getXY({ sumValue: 1 });
     } catch (e) {
-      if (logger) {
-        logger.warn(
-          'Problem with isotopic distribution calculation. Negative number of atoms ?',
-        );
-      }
+      logger?.warn(
+        'Problem with isotopic distribution calculation. Negative number of atoms ?',
+      );
     }
   }
 
@@ -127,7 +135,11 @@ function getPeakWidthFct(options = {}) {
   if (peakWidthFct instanceof Function) {
     return peakWidthFct;
   }
+  if (!peakWidthFct) {
+    return () => 0.01;
+  }
   try {
+    // eslint-disable-next-line no-new-func
     return new Function(
       'mass',
       `return ${peakWidthFct} + ${precision} * mass / 1e6`,
@@ -151,4 +163,19 @@ function buildCombined(centroids, mfs, options = {}) {
     delta: peakWidthFct,
   });
   return combined;
+}
+
+/**
+ * We will check if there is any overlap between the theoretical and experimental spectra
+ * @param {number[][]} ys
+ */
+function hasOverlap(ys) {
+  for (let i = 0; i < ys[0].length; i++) {
+    for (let j = 1; j < ys.length; j++) {
+      if (ys[0][i] > 0 && ys[j][i] > 0) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
