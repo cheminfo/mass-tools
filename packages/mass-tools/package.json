@@ -28,6 +28,7 @@
     "mf-generator": "^2.1.0",
     "mf-parser": "^2.2.1",
     "mf-utilities": "^2.0.3",
+    "mfs-deconvolution": "^1.0.0",
     "ms-report": "^2.0.3",
     "ms-spectrum": "^2.3.2",
     "nucleotide": "^2.0.3",

@@ -29,3 +29,5 @@ export { generateMFs } from 'mf-generator';
 export { atomSorter } from 'atom-sorter';
 export { mfFromEA } from 'mf-from-ea';
 export { OctoChemDB, ActiveOrNaturalSummarizer } from 'octochemdb';
+
+export { mfsDeconvolution } from 'mfs-deconvolution';
