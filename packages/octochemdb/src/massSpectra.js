@@ -3,7 +3,7 @@
  * @param {object} [options={}]
  * @param {string} [options.baseURL='https://octochemdb.cheminfo.org/'] - URL of the webservice
  * @param {number|string|number[]} [options.masses] - Observed monoisotopic mass
- * @param {number} [options.precision=1000] - Precision of the monoisotopic mass in ppm
+ * @param {number} [options.precision=1000] - Precision (accuracy) of the monoisotopic mass in ppm
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {string} [options.modifications=''] - Comma
  * @param {boolean} [options.uniqueMolecules=true] - If true, only one molecule per entry is returned

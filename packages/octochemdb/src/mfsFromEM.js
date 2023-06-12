@@ -6,7 +6,7 @@ import { searchWithIonizations } from './utils/searchWithIonizations.js';
  * @param {number|string|number[]} masses - Observed monoisotopic mass
  * @param {object} [options={}]
  * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
- * @param {number} [options.precision=1000] - Precision of the monoisotopic mass in ppm
+ * @param {number} [options.precision=1000] - Precision (accuracy) of the monoisotopic mass in ppm
  * @param {string} [options.ranges=''] - Range of allowed molecular formula
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {number} [options.minCount=5] - Minimal number of molecules having a specific MF

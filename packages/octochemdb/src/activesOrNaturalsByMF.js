@@ -6,7 +6,7 @@ import { activesOrNaturals } from './activesOrNaturals.js';
  * @param {number|string|number[]} [options.masses] - Observed monoisotopic mass
  * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
  * @param {string} [options.ranges=''] - Allows to filter by a range of molecular formula
- * @param {number} [options.precision=1000] - Precision of the monoisotopic mass in ppm
+ * @param {number} [options.precision=1000] - Precision (accuracy) of the monoisotopic mass in ppm
  * @param {string} [options.fields='data.noStereoOcl,data.em,data.mf'] - List of fields to retrieve
  * @param {string} [options.kwTaxonomies=''] - Comma separated list of taxonomies family, genus or species of the product source
  * @param {string} [options.kwActiveAgainst=''] - Comma separated list of taxonomies family, genus or species of the bioactivity target

@@ -8,7 +8,7 @@ import { parseMasses } from './utils/parseMasses.js';
  * @param {string} [options.baseURL='https://octochemdb.cheminfo.org/'] - URL of the webservice
  * @param {number|string|number[]} [options.masses] - Observed fragment masses
  * @param {string} [options.mf] - Molecular formula of the non ionized molecule
- * @param {number} [options.precision=100] - Precision of the monoisotopic mass in ppm
+ * @param {number} [options.precision=100] - Precision (accuracy) of the monoisotopic mass in ppm
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {string} [options.modifications=''] - Comma
  * @param {string} [options.url='massBank/v1/fromMasses']

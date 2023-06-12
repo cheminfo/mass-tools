@@ -36,21 +36,23 @@ test('activeOrNaturalDetails', async () => {
       "$id": "NPC294249",
       "$ref": "npasses",
       "data": {
-        "assay": "Potency : 12589.3 nM",
+        "assay": "Potency = 12589.3 nM",
         "ocl": {
-          "coordinates": "!BbOvw?_y?bOrw?Xa}bGvH@hc|bGvH?_x@bOp",
+          "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
           "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
           "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
         },
-        "targetTaxonomies": {
-          "class": "Bacilli",
-          "family": "Bacillaceae",
-          "genus": "Bacillus",
-          "order": "Bacillales",
-          "phylum": "Bacillota",
-          "species": "Bacillus anthracis",
-          "superkingdom": "Bacteria",
-        },
+        "targetTaxonomies": [
+          {
+            "class": "Bacilli",
+            "family": "Bacillaceae",
+            "genus": "Bacillus",
+            "order": "Bacillales",
+            "phylum": "Bacillota",
+            "species": "Bacillus anthracis",
+            "superkingdom": "Bacteria",
+          },
+        ],
       },
       "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
     }
