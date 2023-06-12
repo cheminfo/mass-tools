@@ -6,12 +6,14 @@ import { xyArrayAlignToFirst, xNormed } from 'ml-spectra-processing';
 /**
  *
  * @param {import('ms-spectrum').Spectrum} spectrum
- * @param {Array} ranges
- * @param {object} [options={}]
- * @param {number} [options.threshold=0.001]
- * @param {string|Function} [options.peakWidthFct=()=>0.01]
+ * @param {Array}         ranges
+ * @param {object}        [options={}]
+ * @param {string}        [options.ionizations=''] - Comma separated list of ionizations (to charge the molecule)
+ * @param {object}        [options.mass={}]
+ * @param {number}        [options.mass.threshold=0.001]
+ * @param {number}        [options.mass.precision=0] -  Precision (accuracy) of the monoisotopic mass in ppm
+ * @param {string|Function} [options.mass.peakWidthFct=()=>0.01]
  * @param {import('cheminfo-types').Logger} [options.logger]
- * @param {string}   [options.ionizations=''] - Comma separated list of ionizations (to charge the molecule)
  * @param {object}        [options.filter={}]
  * @param {number}        [options.filter.minMass=0] - Minimal monoisotopic mass
  * @param {number}        [options.filter.maxMass=+Infinity] - Maximal monoisotopic mass
@@ -33,7 +35,8 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
     throw new Error('spectrum must be an instance of Spectrum');
   }
 
-  const { threshold = 0.001, filter, ionizations, logger } = options;
+  const { mass: massOptions = {}, filter, ionizations, logger } = options;
+  const { threshold = 0.001 } = massOptions;
   if (!ionizations) {
     logger?.warn(
       'No ionizations provided this could be an error if the molecule is not naturally charged.',
@@ -45,6 +48,8 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
 
   let mfs = await generateMFs(ranges, { filter, ionizations });
   mfs = addIsotopicDistributionAndCheckMF(mfs, { logger, peakWidthFct });
+
+  mfs.sort((mf1, mf2) => mf1.ms.em - mf2.ms.em);
 
   const combined = buildCombined(centroids, mfs, { peakWidthFct });
   if (!hasOverlap(combined.ys)) {
@@ -67,10 +72,12 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
   const relativeIntensity = xNormed(w);
 
   for (let i = 0; i < mfs.length; i++) {
-    mfs[i].weight = w[i];
-    mfs[i].relative = relativeIntensity[i];
+    mfs[i].absoluteQuantity = w[i];
+    mfs[i].relativeQuantity = relativeIntensity[i];
     mfs[i].distribution.y = mfs[i].distribution.y.map((y) => y * w[i]);
   }
+
+  mfs.sort((mf1, mf2) => mf2.absoluteQuantity - mf1.absoluteQuantity);
 
   return {
     reconstructed: {
@@ -105,16 +112,15 @@ function addIsotopicDistributionAndCheckMF(mfs, options) {
       fwhm: peakWidthFct(mf.ms.em), // when should we join peaks
       ionizations: mf.ms.ionization,
     });
-    try {
-      mf.distribution = isotopicDistribution.getXY({ sumValue: 1 });
-    } catch (e) {
+    mf.distribution = isotopicDistribution.getXY({ sumValue: 1 });
+    if (mf.distribution.y.length === 0) {
       logger?.warn(
-        'Problem with isotopic distribution calculation. Negative number of atoms ?',
+        `Problem with isotopic distribution calculation. Negative number of atoms ? ${mf.mf} ${mf.ms.ionization}`,
       );
     }
   }
 
-  mfs = mfs.filter((mf) => mf.distribution);
+  mfs = mfs.filter((mf) => mf.distribution.x.length > 0);
 
   if (mfs.length === 0) {
     throw new Error('No MF found. Did you forget ionization ?');
@@ -125,13 +131,15 @@ function addIsotopicDistributionAndCheckMF(mfs, options) {
 /**
  *
  * @param {object} [options ={}]
- * @param {string|Function} [options.peakWidthFct=()=>0.01]
+ * @param {object}        [options.mass={}]
+ * @param {number}        [options.mass.precision=0] -  Precision (accuracy) of the monoisotopic mass in ppm
+ * @param {string|Function} [options.mass.peakWidthFct=()=>0.01]
  * @param {import('cheminfo-types').Logger} [options.logger]
- * @param {number} [options.precision=0]
  * @returns
  */
 function getPeakWidthFct(options = {}) {
-  const { logger, precision = 0, peakWidthFct } = options;
+  const { logger, mass: massOptions = {} } = options;
+  const { precision = 0, peakWidthFct } = massOptions;
   if (peakWidthFct instanceof Function) {
     return peakWidthFct;
   }
