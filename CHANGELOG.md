@@ -1,5 +1,21 @@
 # Changelog
 
+## [7.3.0](https://github.com/cheminfo/mass-tools/compare/v7.2.0...v7.3.0) (2023-06-12)
+
+
+### Features
+
+* **mass-tools:** expose mfsDeconvolution ([31e32c1](https://github.com/cheminfo/mass-tools/commit/31e32c1f4d193585cdc885b7fe19f34633d5391d))
+* **mfs-deconvolution:** specify precision and sort result ([c1b985e](https://github.com/cheminfo/mass-tools/commit/c1b985e35bc563c3d89100b8f37c28a57731bf96))
+* **octochemdb:** add pubmedCompounds method ([4ebadd2](https://github.com/cheminfo/mass-tools/commit/4ebadd236088fbe01caa06e53013a47708a07cee))
+* search taxonomies ([347da02](https://github.com/cheminfo/mass-tools/commit/347da02a11940392563d29faad28a30682cc402e))
+* working version of mfsDeconvolutionq ([e80c71c](https://github.com/cheminfo/mass-tools/commit/e80c71c72455b07623796362788757984c12087b))
+
+
+### Bug Fixes
+
+* **octochemdb:** correctly summarize taxonomies ([ca91403](https://github.com/cheminfo/mass-tools/commit/ca91403aa4479233cd3188a47854e218cd13141a))
+
 ## [7.2.0](https://github.com/cheminfo/mass-tools/compare/v7.1.0...v7.2.0) (2023-05-31)
 
 
