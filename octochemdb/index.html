@@ -129,6 +129,16 @@
               
                 
                 <li><a
+                  href='#pubmedcompounds'
+                  class="">
+                  pubmedCompounds
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#constructor'
                   class="">
                   constructor
@@ -855,7 +865,7 @@
   
     (default <code>1000</code>)
   </td>
-  <td class='break-word'><span>Precision of the monoisotopic mass in ppm
+  <td class='break-word'><span>Precision (accuracy) of the monoisotopic mass in ppm
 </span></td>
 </tr>
 
@@ -1062,7 +1072,7 @@
   
     (default <code>100</code>)
   </td>
-  <td class='break-word'><span>Precision of the monoisotopic mass in ppm
+  <td class='break-word'><span>Precision (accuracy) of the monoisotopic mass in ppm
 </span></td>
 </tr>
 
@@ -1213,7 +1223,7 @@
   
     (default <code>100</code>)
   </td>
-  <td class='break-word'><span>Precision of the monoisotopic mass in ppm
+  <td class='break-word'><span>Precision (accuracy) of the monoisotopic mass in ppm
 </span></td>
 </tr>
 
@@ -1356,7 +1366,7 @@
   
     (default <code>1000</code>)
   </td>
-  <td class='break-word'><span>Precision of the monoisotopic mass in ppm
+  <td class='break-word'><span>Precision (accuracy) of the monoisotopic mass in ppm
 </span></td>
 </tr>
 
@@ -1579,7 +1589,7 @@ in the database and a monoisotopic mass.</p>
   
     (default <code>1000</code>)
   </td>
-  <td class='break-word'><span>Precision of the monoisotopic mass in ppm
+  <td class='break-word'><span>Precision (accuracy) of the monoisotopic mass in ppm
 </span></td>
 </tr>
 
@@ -1655,6 +1665,116 @@ in the database and a monoisotopic mass.</p>
     (default <code>&#39;mfs/v1/fromMF&#39;</code>)
   </td>
   <td class='break-word'><span>URL to retrieve corresponding compounds
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='pubmedcompounds'>
+      pubmedCompounds
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Retrieve the compounds from a pubmedID</p>
+
+    <div class='pre p1 fill-light mt0'>pubmedCompounds(pubmedID: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>pubmedID</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.url</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  
+    (default <code>&#39;pubmeds/v1/id&#39;</code>)
+  </td>
+  <td class='break-word'><span>relative URL of the webservice
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.baseURL</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  
+    (default <code>&#39;https://octochemdb.cheminfo.org/&#39;</code>)
+  </td>
+  <td class='break-word'><span>URL of the webservice
 </span></td>
 </tr>
 
@@ -1774,7 +1894,7 @@ in the database and a monoisotopic mass.</p>
     <tr>
   <td class='break-word'><span class='code bold'>options.activities.maxNbEntries</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
-    (default <code>50</code>)
+    (default <code>100</code>)
   </td>
   <td class='break-word'><span>Maximum number of entries to return
 </span></td>
@@ -1804,17 +1924,63 @@ in the database and a monoisotopic mass.</p>
 
 
   
-
-
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>options.queryFields</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></code>
+    <tr>
+  <td class='break-word'><span class='code bold'>options.activities.queryFields</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></code>
   
     (default <code>[&#39;assay&#39;]</code>)
   </td>
   <td class='break-word'><span>Fields to query
 </span></td>
 </tr>
+
+
+  
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.taxonomies</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  
+    (default <code>{}</code>)
+  </td>
+  <td class='break-word'><span>The options to use for the activities search
+</span></td>
+</tr>
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.taxonomies.minScore</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0.5</code>)
+  </td>
+  <td class='break-word'><span>Minimum score for an entry to be returned
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.taxonomies.maxNbEntries</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>50</code>)
+  </td>
+  <td class='break-word'><span>Maximum number of entries to return
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.taxonomies.tolerance</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>1</code>)
+  </td>
+  <td class='break-word'><span>-Typo Tolerance following the Levenshtein algorithm
+</span></td>
+</tr>
+
+
+  
 
 
               
@@ -1943,7 +2109,7 @@ in the database and a monoisotopic mass.</p>
     <tr>
   <td class='break-word'><span class='code bold'>options.pubmeds.maxNbEntries</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
-    (default <code>50</code>)
+    (default <code>100</code>)
   </td>
   <td class='break-word'><span>Maximum number of entries to return
 </span></td>
