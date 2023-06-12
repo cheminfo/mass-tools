@@ -1,6 +1,6 @@
 {
   "name": "mfs-deconvolution",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -21,12 +21,12 @@
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/emdb#readme",
   "dependencies": {
     "cheminfo-types": "^1.4.0",
-    "isotopic-distribution": "^2.1.0",
-    "mf-generator": "^2.1.0",
+    "isotopic-distribution": "^2.2.0",
+    "mf-generator": "^2.1.1",
     "ml-fcnnls": "^1.1.2",
     "ml-matrix": "^6.10.4",
     "ml-spectra-processing": "^12.4.0",
-    "ms-spectrum": "^2.3.2"
+    "ms-spectrum": "^2.4.0"
   },
   "devDependencies": {
     "fifo-logger": "^0.6.1",

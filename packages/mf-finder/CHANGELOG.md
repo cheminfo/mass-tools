@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/cheminfo/mass-tools/compare/mf-finder@2.3.0...mf-finder@2.4.0) (2023-06-12)
+
+
+### Bug Fixes
+
+* **mf-finder:** minCharge and maxCharge was incorrectly managed by TargetMassCache ([dd53e2e](https://github.com/cheminfo/mass-tools/commit/dd53e2e693738367e2a8c7056ed37e44a0a042d4))
+
+
+### Features
+
+* use octochemdb.cheminfo.org and refactor searchActivesOrNaturals ([d216a82](https://github.com/cheminfo/mass-tools/commit/d216a8207e2ac507da6a20b2331b94ed5d866833))
+
+
+
+
+
 # [2.3.0](https://github.com/cheminfo/mass-tools/compare/mf-finder@2.2.3...mf-finder@2.3.0) (2023-04-28)
 
 

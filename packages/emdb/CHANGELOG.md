@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/cheminfo/mass-tools/compare/emdb@2.3.0...emdb@2.4.0) (2023-06-12)
+
+
+### Features
+
+* use octochemdb.cheminfo.org and refactor searchActivesOrNaturals ([d216a82](https://github.com/cheminfo/mass-tools/commit/d216a8207e2ac507da6a20b2331b94ed5d866833))
+
+
+
+
+
 # [2.3.0](https://github.com/cheminfo/mass-tools/compare/emdb@2.2.2...emdb@2.3.0) (2023-04-28)
 
 

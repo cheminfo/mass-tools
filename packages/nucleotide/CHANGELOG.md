@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/cheminfo/mass-tools/compare/nucleotide@2.0.3...nucleotide@2.1.0) (2023-06-12)
+
+
+### Features
+
+* **octochemdb:** allow to retrieve thousands of patents in activesOrNaturalsDetailllllllls ([c8425c5](https://github.com/cheminfo/mass-tools/commit/c8425c591ced79f2f42342e7b1a9d6f684001a5b))
+
+
+
+
+
 ## [2.0.3](https://github.com/cheminfo/mass-tools/compare/nucleotide@2.0.2...nucleotide@2.0.3) (2023-03-28)
 
 **Note:** Version bump only for package nucleotide

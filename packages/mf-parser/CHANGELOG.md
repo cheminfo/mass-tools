@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/cheminfo/mass-tools/compare/mf-parser@2.2.1...mf-parser@2.3.0) (2023-06-12)
+
+
+### Features
+
+* **mf-parser:** possibility to customize getInfo fieldNames for em ([d4e422e](https://github.com/cheminfo/mass-tools/commit/d4e422e6c226f444afdb10523274161cd2b36ff1))
+
+
+
+
+
 ## [2.2.1](https://github.com/cheminfo/mass-tools/compare/mf-parser@2.2.0...mf-parser@2.2.1) (2023-03-28)
 
 **Note:** Version bump only for package mf-parser

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/cheminfo/mass-tools/compare/mass-tools@1.2.2...mass-tools@1.3.0) (2023-06-12)
+
+
+### Bug Fixes
+
+* **mass-tools:** expose getBestPeaks that was removed in a previous commit ([d585116](https://github.com/cheminfo/mass-tools/commit/d585116af22c8ab3be8003826357d662144131ee))
+
+
+### Features
+
+* **mass-tools:** expose mfsDeconvolution ([31e32c1](https://github.com/cheminfo/mass-tools/commit/31e32c1f4d193585cdc885b7fe19f34633d5391d))
+
+
+
+
+
 ## [1.2.2](https://github.com/cheminfo/mass-tools/compare/mass-tools@1.2.1...mass-tools@1.2.2) (2023-04-28)
 
 **Note:** Version bump only for package mass-tools

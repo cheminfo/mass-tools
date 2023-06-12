@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@2.3.2...ms-spectrum@2.4.0) (2023-06-12)
+
+
+### Features
+
+* **ms-spectrum:** add spectrum info containing min / max values of the original spectrum ([3dbf517](https://github.com/cheminfo/mass-tools/commit/3dbf5175e1ef4f7689a5ff666fdabc2167691405))
+* use octochemdb.cheminfo.org and refactor searchActivesOrNaturals ([d216a82](https://github.com/cheminfo/mass-tools/commit/d216a8207e2ac507da6a20b2331b94ed5d866833))
+
+
+
+
+
 ## [2.3.2](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@2.3.1...ms-spectrum@2.3.2) (2023-04-28)
 
 **Note:** Version bump only for package ms-spectrum
