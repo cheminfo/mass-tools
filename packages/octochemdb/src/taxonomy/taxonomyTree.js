@@ -32,5 +32,16 @@ export function taxonomyTree(taxonomies) {
     }
   }
 
+  cleanEmptyBranches(tree);
+
   return tree;
+}
+
+function cleanEmptyBranches(branch) {
+
+
+  for (let child of branch.children) {
+    cleanEmptyBranches(child);
+  }
+
 }

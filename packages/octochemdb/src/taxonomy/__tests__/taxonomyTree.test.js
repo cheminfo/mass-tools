@@ -50,7 +50,7 @@ test('taxonomyTree', () => {
   expect(tree[0].children[0].children[0].name).toBe('Ascomycota');
   expect(tree[0].children[0].children[0].children).toHaveLength(2);
 
-  expect(JSON.stringify(tree, null, 2)).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });
 test('only one entry', () => {
   const taxonomies = [
@@ -66,7 +66,7 @@ test('only one entry', () => {
   expect(tree[0].children[0].name).toBe('');
   expect(tree[0].children[0].count).toBe(1);
 
-  expect(JSON.stringify(tree, null, 2)).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });
 test('taxonomyTree', () => {
   const taxonomies = [
@@ -98,5 +98,5 @@ test('taxonomyTree', () => {
   expect(tree[1].children[0].count).toBe(1);
   expect(tree[0].children[0].name).toBe('bacteria');
   expect(tree[0].children[0].count).toBe(3);
-  expect(JSON.stringify(tree, null, 2)).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });
