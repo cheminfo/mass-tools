@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/cheminfo/mass-tools/compare/mfs-deconvolution@1.1.0...mfs-deconvolution@1.2.0) (2023-06-13)
+
+
+### Features
+
+* **mfs-deconvolution:** add method reconstruct ([c328711](https://github.com/cheminfo/mass-tools/commit/c328711e0ea719a6de9a955c0a45354fa0c20cea))
+* **mfs-deconvolution:** improve speed if no overlap between theoretical and experimental ([ed6eb92](https://github.com/cheminfo/mass-tools/commit/ed6eb921e3c969a17930f40c59fe5e88d9228769))
+
+
+
+
+
 # 1.1.0 (2023-06-12)
 
 

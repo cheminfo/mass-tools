@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/cheminfo/mass-tools/compare/mass-tools@1.3.0...mass-tools@1.4.0) (2023-06-13)
+
+
+### Features
+
+* **mfs-deconvolution:** add method reconstruct ([c328711](https://github.com/cheminfo/mass-tools/commit/c328711e0ea719a6de9a955c0a45354fa0c20cea))
+
+
+
+
+
 # [1.3.0](https://github.com/cheminfo/mass-tools/compare/mass-tools@1.2.2...mass-tools@1.3.0) (2023-06-12)
 
 
