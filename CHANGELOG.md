@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.4.0](https://github.com/cheminfo/mass-tools/compare/v7.3.0...v7.4.0) (2023-06-13)
+
+
+### Features
+
+* **mfs-deconvolution:** add method reconstruct ([c328711](https://github.com/cheminfo/mass-tools/commit/c328711e0ea719a6de9a955c0a45354fa0c20cea))
+
 ## [7.3.0](https://github.com/cheminfo/mass-tools/compare/v7.2.0...v7.3.0) (2023-06-12)
 
 
