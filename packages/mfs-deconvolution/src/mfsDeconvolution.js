@@ -54,16 +54,22 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
   mfs.sort((mf1, mf2) => mf1.ms.em - mf2.ms.em);
 
   const combined = buildCombined(centroids, mfs, { peakWidthFct });
+
   if (!hasOverlap(combined.ys)) {
     throw new Error(
-      'Could not find any overlaping peaks between experimental and theoretical spectrum.',
+      'Could not find any overlaping peaks between experimental and theoretical spectra.',
     );
   }
 
+  const { mfsWithOverlap, mfsWithoutOverlap, newYSs } = filterIfOverlap(
+    mfs,
+    combined,
+  );
+
   // Time to make the NNMF
-  const A = new Matrix(combined.ys.slice(1));
+  const A = new Matrix(newYSs.slice(1));
   const At = A.transpose();
-  const b = Array.from(combined.ys[0]); // target
+  const b = Array.from(newYSs[0]); // target
 
   const w = fcnnlsVector(At, b);
   const W = new Matrix([w]); // weights
@@ -73,10 +79,19 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
 
   const relativeIntensity = xNormed(w);
 
-  for (let i = 0; i < mfs.length; i++) {
-    mfs[i].absoluteQuantity = w[i];
-    mfs[i].relativeQuantity = relativeIntensity[i];
-    mfs[i].distribution.y = mfs[i].distribution.y.map((y) => y * w[i]);
+  for (let i = 0; i < mfsWithOverlap.length; i++) {
+    mfsWithOverlap[i].absoluteQuantity = w[i];
+    mfsWithOverlap[i].relativeQuantity = relativeIntensity[i];
+    mfsWithOverlap[i].distribution.y = mfsWithOverlap[i].distribution.y.map(
+      (y) => y * w[i],
+    );
+  }
+  for (let i = 0; i < mfsWithoutOverlap.length; i++) {
+    mfsWithoutOverlap[i].absoluteQuantity = 0;
+    mfsWithoutOverlap[i].relativeQuantity = 0;
+    mfsWithoutOverlap[i].distribution.y = mfsWithoutOverlap[
+      i
+    ].distribution.y.map((y) => y * 0);
   }
 
   mfs.sort((mf1, mf2) => mf2.absoluteQuantity - mf1.absoluteQuantity);
@@ -88,6 +103,33 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
     },
     mfs,
   };
+}
+
+/**
+ * We don't need to calculate the quantity if there is no overlap between the theoretical and experimental spectra
+ * @param {*} mfs
+ * @param {*} combined
+ */
+function filterIfOverlap(mfs, combined) {
+  const mfsWithOverlap = [];
+  const mfsWithoutOverlap = [];
+  const newYSs = [combined.ys[0]];
+  for (let i = 1; i < combined.ys.length; i++) {
+    let overlapWithFirst = false;
+    for (let j = 0; j < combined.ys[i].length; j++) {
+      if (combined.ys[i][j] !== 0 && combined.ys[0][j] !== 0) {
+        overlapWithFirst = true;
+        break;
+      }
+    }
+    if (overlapWithFirst) {
+      mfsWithOverlap.push(mfs[i - 1]);
+      newYSs.push(combined.ys[i]);
+    } else {
+      mfsWithoutOverlap.push(mfs[i - 1]);
+    }
+  }
+  return { mfsWithOverlap, mfsWithoutOverlap, newYSs };
 }
 
 /**
@@ -139,6 +181,7 @@ function buildCombined(centroids, mfs, options = {}) {
   const data = [centroids];
   mfs.forEach((mf) => data.push(mf.distribution));
 
+  // we align all the spectra to the first one but if some values (X) are missing we will add them
   let combined = xyArrayAlignToFirst(data, {
     delta: peakWidthFct,
   });

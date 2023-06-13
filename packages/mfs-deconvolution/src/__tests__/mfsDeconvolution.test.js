@@ -17,7 +17,7 @@ describe('mfsDeconvolution', () => {
     expect(async () =>
       mfsDeconvolution(spectrum, ['C.N', 'N.O']),
     ).rejects.toThrow(
-      'Could not find any overlaping peaks between experimental and theoretical spectrum.',
+      'Could not find any overlaping peaks between experimental and theoretical spectra.',
     );
   });
 
