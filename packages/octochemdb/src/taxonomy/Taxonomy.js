@@ -10,3 +10,4 @@
  * @property {string} [genus] - The genus
  * @property {string} [species] - The species
  */
+export default Taxonomy;
