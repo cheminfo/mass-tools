@@ -45,164 +45,58 @@ test('taxonomyTree', () => {
 
   let tree = taxonomyTree(taxonomies);
   expect(tree[1].children).toHaveLength(2);
-  expect(tree[1].children[0].name).toBe('Apicomplexa');
+  expect(tree[1].children[0].name).toBe('');
   expect(tree[1].children[1].name).toBe('Fungi');
-  expect(JSON.stringify(tree, null, 2)).toMatchInlineSnapshot(`
-    "[
-      {
-        \\"name\\": \\"Eukaryota\\",
-        \\"rank\\": \\"superKingdom\\",
-        \\"children\\": [
-          {
-            \\"name\\": \\"Fungi\\",
-            \\"rank\\": \\"kingdom\\",
-            \\"children\\": [
-              {
-                \\"name\\": \\"Ascomycota\\",
-                \\"rank\\": \\"phylum\\",
-                \\"children\\": [
-                  {
-                    \\"name\\": \\"Saccharomycetes\\",
-                    \\"rank\\": \\"class\\",
-                    \\"children\\": [
-                      {
-                        \\"name\\": \\"Saccharomycetales\\",
-                        \\"rank\\": \\"order\\",
-                        \\"children\\": [
-                          {
-                            \\"name\\": \\"Debaryomycetaceae\\",
-                            \\"rank\\": \\"family\\",
-                            \\"children\\": [
-                              {
-                                \\"name\\": \\"Candida\\",
-                                \\"rank\\": \\"genus\\",
-                                \\"children\\": [
-                                  {
-                                    \\"name\\": \\"Candida albicans\\",
-                                    \\"rank\\": \\"species\\"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    \\"name\\": \\"Sordariomycetes\\",
-                    \\"rank\\": \\"class\\",
-                    \\"children\\": [
-                      {
-                        \\"name\\": \\"Hypocreales\\",
-                        \\"rank\\": \\"order\\",
-                        \\"children\\": [
-                          {
-                            \\"name\\": \\"Stachybotryaceae\\",
-                            \\"rank\\": \\"family\\",
-                            \\"children\\": [
-                              {
-                                \\"name\\": \\"Stachybotrys\\",
-                                \\"rank\\": \\"genus\\",
-                                \\"children\\": [
-                                  {
-                                    \\"name\\": \\"Stachybotrys chartarum\\",
-                                    \\"rank\\": \\"species\\"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        \\"name\\": \\"bacteria\\",
-        \\"rank\\": \\"superKingdom\\",
-        \\"children\\": [
-          {
-            \\"name\\": \\"Apicomplexa\\",
-            \\"rank\\": \\"phylum\\",
-            \\"children\\": [
-              {
-                \\"name\\": \\"Aconoidasida\\",
-                \\"rank\\": \\"class\\",
-                \\"children\\": [
-                  {
-                    \\"name\\": \\"Haemosporida\\",
-                    \\"rank\\": \\"order\\",
-                    \\"children\\": [
-                      {
-                        \\"name\\": \\"Plasmodiidae\\",
-                        \\"rank\\": \\"family\\",
-                        \\"children\\": [
-                          {
-                            \\"name\\": \\"Plasmodium\\",
-                            \\"rank\\": \\"genus\\",
-                            \\"children\\": [
-                              {
-                                \\"name\\": \\"Plasmodium falciparum\\",
-                                \\"rank\\": \\"species\\"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            \\"name\\": \\"Fungi\\",
-            \\"rank\\": \\"kingdom\\",
-            \\"children\\": [
-              {
-                \\"name\\": \\"Ascomycota\\",
-                \\"rank\\": \\"phylum\\",
-                \\"children\\": [
-                  {
-                    \\"name\\": \\"Sordariomycetes\\",
-                    \\"rank\\": \\"class\\",
-                    \\"children\\": [
-                      {
-                        \\"name\\": \\"Hypocreales\\",
-                        \\"rank\\": \\"order\\",
-                        \\"children\\": [
-                          {
-                            \\"name\\": \\"Stachybotryaceae\\",
-                            \\"rank\\": \\"family\\",
-                            \\"children\\": [
-                              {
-                                \\"name\\": \\"Stachybotrys\\",
-                                \\"rank\\": \\"genus\\",
-                                \\"children\\": [
-                                  {
-                                    \\"name\\": \\"Stachybotrys cylindrospora\\",
-                                    \\"rank\\": \\"species\\"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]"
-  `);
+  expect(tree[0].children[0].children[0].name).toBe('Ascomycota');
+  expect(tree[0].children[0].children[0].children).toHaveLength(2);
+
+  expect(JSON.stringify(tree, null, 2)).toMatchSnapshot();
+});
+test('only one entry', () => {
+  const taxonomies = [
+    {
+      superKingdom: 'Eukaryota',
+    },
+  ];
+
+  let tree = taxonomyTree(taxonomies);
+
+  expect(tree[0].name).toBe('Eukaryota');
+  expect(tree[0].count).toBe(1);
+  expect(tree[0].children[0].name).toBe('');
+  expect(tree[0].children[0].count).toBe(1);
+
+  expect(JSON.stringify(tree, null, 2)).toMatchSnapshot();
+});
+test('taxonomyTree', () => {
+  const taxonomies = [
+    {
+      kingdom: 'bacteria',
+    },
+    {
+      superKingdom: 'Eukaryota',
+    },
+    {
+      kingdom: 'bacteria',
+      phylum: 'Ascomycota',
+    },
+    {
+      kingdom: 'bacteria',
+      phylum: 'Ascomycota',
+    },
+    {
+      superKingdom: 'Eukaryota',
+      kingdom: 'bacteria',
+      phylum: 'Ascomycota',
+    },
+  ];
+
+  let tree = taxonomyTree(taxonomies);
+  expect(tree[1].name).toBe('Eukaryota');
+  expect(tree[1].count).toBe(2);
+  expect(tree[1].children[0].name).toBe('');
+  expect(tree[1].children[0].count).toBe(1);
+  expect(tree[0].children[0].name).toBe('bacteria');
+  expect(tree[0].children[0].count).toBe(3);
+  expect(JSON.stringify(tree, null, 2)).toMatchSnapshot();
 });

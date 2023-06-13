@@ -11,20 +11,24 @@ export function taxonomyTree(taxonomies) {
   for (let taxonomy of taxonomies) {
     let current = tree;
     for (let rank of taxonomyRanks) {
-      if (taxonomy[rank]) {
-        const name = taxonomy[rank];
-        let existing = current.find((node) => node.name === name);
-        if (!existing) {
-          existing = {
-            name,
-            rank,
-            children: rank !== 'species' ? [] : undefined,
-          };
-          current.push(existing);
+      const name = taxonomy[rank] || '';
+      let existing = current.find(
+        (node) => node.name === name && node.rank === rank,
+      );
+      if (!existing) {
+        existing = {
+          name,
+          rank,
+          count: 1,
+        };
+        if (taxonomyRanks.indexOf(rank) < taxonomyRanks.length - 1) {
+          existing.children = [];
         }
-
-        current = existing.children;
+        current.push(existing);
+      } else {
+        existing.count++;
       }
+      current = existing.children;
     }
   }
 
