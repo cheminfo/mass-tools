@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.5.0](https://github.com/cheminfo/mass-tools/compare/v7.4.0...v7.5.0) (2023-06-13)
+
+
+### Features
+
+* **mfs-deconvolution:** improve speed if no overlap between theoretical and experimental ([ed6eb92](https://github.com/cheminfo/mass-tools/commit/ed6eb921e3c969a17930f40c59fe5e88d9228769))
+
 ## [7.4.0](https://github.com/cheminfo/mass-tools/compare/v7.3.0...v7.4.0) (2023-06-13)
 
 
