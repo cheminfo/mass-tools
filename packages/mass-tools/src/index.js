@@ -8,7 +8,7 @@ import * as PeptidePkg from 'peptide';
 export const Nucleotide = NucleotidePkg;
 export const Report = ReportPkg;
 export const Peptide = PeptidePkg;
-export const MFSDeconvolution = MFSDeconvolutionPkg
+export const MFSDeconvolution = MFSDeconvolutionPkg;
 
 export { groups, groupsObject } from 'chemical-groups';
 export { elements, elementsObject } from 'chemical-elements';
@@ -31,4 +31,3 @@ export { generateMFs } from 'mf-generator';
 export { atomSorter } from 'atom-sorter';
 export { mfFromEA } from 'mf-from-ea';
 export { OctoChemDB, ActiveOrNaturalSummarizer } from 'octochemdb';
-

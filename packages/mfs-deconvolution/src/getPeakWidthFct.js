@@ -20,7 +20,7 @@ export function getPeakWidthFct(options = {}) {
     // eslint-disable-next-line no-new-func
     return new Function(
       'mass',
-      `return ${peakWidthFct} + ${precision} * mass / 1e6`
+      `return ${peakWidthFct} + ${precision} * mass / 1e6`,
     );
   } catch (e) {
     logger?.warn(`error in peakWidthFct: ${e.toString()}`);

@@ -16,7 +16,7 @@ import { getPeakWidthFct } from './getPeakWidthFct.js';
 export function reconstruct(mfs, options = {}) {
   const delta = getPeakWidthFct(options);
 
-  const data = mfs.map(mf => mf.distribution);
-  const reconstructed = xyArrayWeightedMerge(data, { delta })
-  return reconstructed
+  const data = mfs.map((mf) => mf.distribution);
+  const reconstructed = xyArrayWeightedMerge(data, { delta });
+  return reconstructed;
 }
