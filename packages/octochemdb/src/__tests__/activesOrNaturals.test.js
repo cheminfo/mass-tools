@@ -76,7 +76,6 @@ describe('activesOrNaturals', () => {
       'nbPatents',
       'nbPubmeds',
       'nbTaxonomies',
-      'noStereoOCL',
       'patents',
       'pubmeds',
       'taxonomies',
