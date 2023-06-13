@@ -3,6 +3,8 @@ import { generateMFs } from 'mf-generator';
 import { fcnnlsVector } from 'ml-fcnnls';
 import { Matrix } from 'ml-matrix';
 import { xyArrayAlignToFirst, xNormed } from 'ml-spectra-processing';
+
+import { getPeakWidthFct } from './getPeakWidthFct';
 /**
  *
  * @param {import('ms-spectrum').Spectrum} spectrum
@@ -126,36 +128,6 @@ function addIsotopicDistributionAndCheckMF(mfs, options) {
     throw new Error('No MF found. Did you forget ionization ?');
   }
   return mfs;
-}
-
-/**
- *
- * @param {object} [options ={}]
- * @param {object}        [options.mass={}]
- * @param {number}        [options.mass.precision=0] -  Precision (accuracy) of the monoisotopic mass in ppm
- * @param {string|Function} [options.mass.peakWidthFct=()=>0.01]
- * @param {import('cheminfo-types').Logger} [options.logger]
- * @returns
- */
-function getPeakWidthFct(options = {}) {
-  const { logger, mass: massOptions = {} } = options;
-  const { precision = 0, peakWidthFct } = massOptions;
-  if (peakWidthFct instanceof Function) {
-    return peakWidthFct;
-  }
-  if (!peakWidthFct) {
-    return () => 0.01;
-  }
-  try {
-    // eslint-disable-next-line no-new-func
-    return new Function(
-      'mass',
-      `return ${peakWidthFct} + ${precision} * mass / 1e6`,
-    );
-  } catch (e) {
-    logger?.warn(`error in peakWidthFct: ${e.toString()}`);
-    return () => 0.01;
-  }
 }
 
 function buildCombined(centroids, mfs, options = {}) {
