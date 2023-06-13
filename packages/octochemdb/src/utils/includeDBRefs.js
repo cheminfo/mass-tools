@@ -5,13 +5,15 @@ import { postFetchJSON } from './postFetchJSON.js';
  * Load the DBrefs and create a new property `data` for each DBRef
  * @param {any} object
  * @param {object} [options={}]
- * @param {string[]|undefined} [options.collections] - List of collections to include
+ * @param {string[]} [options.collections] - List of collections to include
+ * @param {string[]} [options.excludedCollections] - List of collections to include
  * @param {boolean} [options.force=false] - Force the inclusion of the data even if it is already present
  * @param {string} [options.baseURL='https://octochemdb.cheminfo.org/'] - URL of the webservice
  */
 export async function includeDBRefs(object, options = {}) {
   const {
     collections,
+    excludedCollections,
     force = false,
     baseURL = 'https://octochemdb.cheminfo.org/',
   } = options;
@@ -19,6 +21,11 @@ export async function includeDBRefs(object, options = {}) {
   appendAllDBRefs(object, allDBRefs);
   if (collections) {
     allDBRefs = allDBRefs.filter((dbRef) => collections.includes(dbRef.$ref));
+  }
+  if (excludedCollections) {
+    allDBRefs = allDBRefs.filter(
+      (dbRef) => !excludedCollections.includes(dbRef.$ref),
+    );
   }
   if (!force) {
     allDBRefs = allDBRefs.filter((dbRef) => !dbRef.data);
