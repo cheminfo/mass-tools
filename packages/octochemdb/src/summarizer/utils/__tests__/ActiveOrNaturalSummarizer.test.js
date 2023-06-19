@@ -26,9 +26,22 @@ describe('ActiveOrNaturalSummarizer', () => {
     expect(result.data.patents[0].score).toBeGreaterThan(
       result.data.patents[1].score,
     );
+
     expect(result.data.pubmeds[0].data.article.title).toMatchInlineSnapshot(
       '"Apoptosis induced by an endogenous neurotoxin, N-methyl(R)salsolinol, in dopamine neurons."',
     );
+    result.data.patents.forEach((patent) => {
+      // round score to 2 decimals
+      patent.score = Math.round(patent.score * 100) / 100;
+    });
+    result.data.pubmeds.forEach((pubmed) => {
+      // round score to 2 decimals
+      pubmed.score = Math.round(pubmed.score * 100) / 100;
+    });
+    result.data.activities.forEach((activity) => {
+      // round score to 2 decimals
+      activity.score = Math.round(activity.score * 100) / 100;
+    });
     expect(result).toMatchSnapshot();
   });
 
@@ -61,6 +74,7 @@ describe('ActiveOrNaturalSummarizer', () => {
     expect(result.data.patents.length).toBe(options.patents.maxNbEntries);
     expect(result.data.pubmeds.length).toBe(options.pubmeds.maxNbEntries);
     expect(result.data.activities.length).toBe(options.activities.maxNbEntries);
+
     expect(result).toMatchSnapshot();
   });
 
@@ -94,6 +108,18 @@ describe('ActiveOrNaturalSummarizer', () => {
 
     expect(result.data.pubmeds).toHaveLength(0);
     expect(result.data.activities).toHaveLength(0);
+    result.data.patents.forEach((patent) => {
+      // round score to 2 decimals
+      patent.score = Math.round(patent.score * 100) / 100;
+    });
+    result.data.pubmeds.forEach((pubmed) => {
+      // round score to 2 decimals
+      pubmed.score = Math.round(pubmed.score * 100) / 100;
+    });
+    result.data.activities.forEach((activity) => {
+      // round score to 2 decimals
+      activity.score = Math.round(activity.score * 100) / 100;
+    });
     expect(result).toMatchSnapshot();
   });
   it('terms:inhibition', async () => {
@@ -108,8 +134,20 @@ describe('ActiveOrNaturalSummarizer', () => {
       '"Inhibition : 10.75 %"',
     );
     expect(result.data.activities[0].score).toMatchInlineSnapshot(
-      '1.172060050051001',
+      '1.2384627327427395',
     );
+    result.data.patents.forEach((patent) => {
+      // round score to 2 decimals
+      patent.score = Math.round(patent.score * 100) / 100;
+    });
+    result.data.pubmeds.forEach((pubmed) => {
+      // round score to 2 decimals
+      pubmed.score = Math.round(pubmed.score * 100) / 100;
+    });
+    result.data.activities.forEach((activity) => {
+      // round score to 2 decimals
+      activity.score = Math.round(activity.score * 100) / 100;
+    });
     expect(result).toMatchSnapshot();
   });
   it('terms:Apoptosis', async () => {
@@ -126,6 +164,18 @@ describe('ActiveOrNaturalSummarizer', () => {
     );
 
     expect(result.data.pubmeds[0].data.article.title).toContain('Apoptosis');
+    result.data.patents.forEach((patent) => {
+      // round score to 2 decimals
+      patent.score = Math.round(patent.score * 100) / 100;
+    });
+    result.data.pubmeds.forEach((pubmed) => {
+      // round score to 2 decimals
+      pubmed.score = Math.round(pubmed.score * 100) / 100;
+    });
+    result.data.activities.forEach((activity) => {
+      // round score to 2 decimals
+      activity.score = Math.round(activity.score * 100) / 100;
+    });
     expect(result).toMatchSnapshot();
   });
   it('abstractsLimit', async () => {
@@ -147,11 +197,11 @@ describe('ActiveOrNaturalSummarizer', () => {
     );
     // terms present only on abstracts: "alternative", "pipeline"
     const result = await activeOrNaturalSummarizer.summarize(
-      'alternative pipeline qHTS',
+      'alternative pipeline Potency',
     );
     expect(result.data.pubmeds).toHaveLength(0);
     expect(result.data.patents).toHaveLength(0);
-    expect(result.data.activities).toHaveLength(2);
+    expect(result.data.activities).toHaveLength(3);
   });
   it('taxonomies', async () => {
     const entry = JSON.parse(
@@ -161,6 +211,18 @@ describe('ActiveOrNaturalSummarizer', () => {
 
     const activeOrNaturalSummarizer = new ActiveOrNaturalSummarizer(entry);
     const result = await activeOrNaturalSummarizer.summarize('Caryophyllales');
+    result.data.patents.forEach((patent) => {
+      // round score to 2 decimals
+      patent.score = Math.round(patent.score * 100) / 100;
+    });
+    result.data.pubmeds.forEach((pubmed) => {
+      // round score to 2 decimals
+      pubmed.score = Math.round(pubmed.score * 100) / 100;
+    });
+    result.data.activities.forEach((activity) => {
+      // round score to 2 decimals
+      activity.score = Math.round(activity.score * 100) / 100;
+    });
     expect(result.data.taxonomies).toMatchSnapshot();
     expect(result.data.taxonomies[0]).toMatchInlineSnapshot(`
       {

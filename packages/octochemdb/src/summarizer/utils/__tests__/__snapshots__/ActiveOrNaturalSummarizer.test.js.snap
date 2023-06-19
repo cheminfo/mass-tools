@@ -34914,7 +34914,7 @@ exports[`ActiveOrNaturalSummarizer > multiple terms 2`] = `
             },
           ],
         },
-        "score": 1.172060050051001,
+        "score": 1.24,
         "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
       },
       {
@@ -34940,7 +34940,7 @@ exports[`ActiveOrNaturalSummarizer > multiple terms 2`] = `
             },
           ],
         },
-        "score": 1.172060050051001,
+        "score": 1.24,
         "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
       },
     ],
@@ -35743,7 +35743,7 @@ M  END
           "nbCompounds": 26,
           "title": "Ethylene oligomerization catalyst and method for continuously producing 1-hexene and 1-octene",
         },
-        "score": 1.0386530176628106,
+        "score": 1.05,
         "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-113441185-B",
       },
       {
@@ -35754,7 +35754,7 @@ M  END
           "nbCompounds": 27,
           "title": "A kind of ethylene oligomerization catalyst and method for continuous production of 1-hexene and 1-octene",
         },
-        "score": 0.8820539878516719,
+        "score": 0.87,
         "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-113441185-A",
       },
     ],
@@ -35935,7 +35935,7 @@ M  END
             },
           ],
         },
-        "score": 0.9461216598392181,
+        "score": 0.9,
         "url": "https://pubmed.ncbi.nlm.nih.gov/11090952",
       },
       {
@@ -36143,7 +36143,7 @@ M  END
             },
           ],
         },
-        "score": 0.888207442578601,
+        "score": 0.83,
         "url": "https://pubmed.ncbi.nlm.nih.gov/10380999",
       },
       {
@@ -36385,7 +36385,7 @@ M  END
             },
           ],
         },
-        "score": 0.6858364722913595,
+        "score": 0.65,
         "url": "https://pubmed.ncbi.nlm.nih.gov/15843867",
       },
       {
@@ -36650,8 +36650,476 @@ M  END
             },
           ],
         },
-        "score": 0.671861771931316,
+        "score": 0.64,
         "url": "https://pubmed.ncbi.nlm.nih.gov/11128601",
+      },
+      {
+        "$id": "16336631",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": "Mitochondrial monoamine oxidase (MAO) has been considered to be involved in neuronal degeneration either by increased oxidative stress or protection with the inhibitors of type B MAO (MAO-B). In this paper, the role of type A MAO (MAO-A) in apoptosis was studied using human neuroblastoma SH-SY5Y cells, where only MAO-A is expressed. An endogenous dopaminergic neurotoxin, N-methyl(R)salsolinol, an MAO-A inhibitor, reduced membrane potential, DeltaPsim, in isolated mitochondria, and induced apoptosis in the cells, which 5-hydroxytryptamine, an MAO-A substrate, prevented. In contrast, beta-phenylethylamine, an MAO-B substrate, did not suppress the DeltaPsim decline by N-methyl(R)salsolinol. The binding of N-methyl(R)salsolinol to mitochondria was inhibited by clorgyline, a MOA-A inhibitor, but not by (-)deprenyl, an MAO-B inhibitor. RNA interference targeting MAO-A significantly reduced the binding of N-methyl(R)salsolinol with simultaneous reduction in the MAO activity. To examine the intervention of MAO-B in the apoptotic process, human MAO-B was transfected to SH-SY5Y cells, but the sensitivity to N-methyl(R)salsolinol was not affected, even although the activity and protein of MAO increased markedly. These results demonstrate a novel function of MAO-A in the binding of neurotoxins and the induction of apoptosis, which may account for neuronal cell death in neurodegenerative disorders, including Parkinson's disease.",
+            "authors": [
+              {
+                "firstName": "Hong",
+                "initials": "H",
+                "lastName": "Yi",
+              },
+              {
+                "firstName": "Yukihiro",
+                "initials": "Y",
+                "lastName": "Akao",
+              },
+              {
+                "firstName": "Wakako",
+                "initials": "W",
+                "lastName": "Maruyama",
+              },
+              {
+                "firstName": "Kavin",
+                "initials": "K",
+                "lastName": "Chen",
+              },
+              {
+                "firstName": "Jean",
+                "initials": "J",
+                "lastName": "Shih",
+              },
+              {
+                "firstName": "Makoto",
+                "initials": "M",
+                "lastName": "Naoi",
+              },
+            ],
+            "journal": {
+              "iSsn": "0022-3042",
+              "isoAbbreviation": "J Neurochem",
+              "issue": 2,
+              "pubDate": {
+                "Month": "Jan",
+                "Year": 2006,
+              },
+              "title": "Journal of neurochemistry",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, Non-U.S. Gov't",
+            ],
+            "title": "Type A monoamine oxidase is the target of an endogenous dopaminergic neurotoxin, N-methyl(R)salsolinol, leading to apoptosis in SH-SY5Y cells.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Monoamine Oxidase Inhibitors",
+            },
+            {
+              "nameOfSubstance": "Neurotoxins",
+            },
+            {
+              "nameOfSubstance": "RNA, Small Interfering",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Tetrahydroisoquinolines",
+            },
+            {
+              "nameOfSubstance": "DNA",
+              "unii": "9007-49-2",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+            {
+              "nameOfSubstance": "Monoamine Oxidase",
+              "unii": "EC 1.4.3.4",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 5202,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5202",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 1001,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/1001",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
+            },
+            {
+              "$id": 44135672,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/44135672",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
+            },
+          ],
+          "dateCompleted": {
+            "day": 17,
+            "month": 2,
+            "year": 2006,
+          },
+          "dateCreated": {},
+          "dateRevised": {
+            "day": 14,
+            "month": 11,
+            "year": 2013,
+          },
+          "journalInfo": {
+            "country": "England",
+            "issnLinking": "0022-3042",
+            "medlineTa": "J Neurochem",
+            "nlmUniqueId": "2985190R",
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Apoptosis",
+            },
+            {
+              "descriptorName": "Binding Sites",
+            },
+            {
+              "descriptorName": "Cell Line, Tumor",
+            },
+            {
+              "descriptorName": "DNA",
+            },
+            {
+              "descriptorName": "Gene Silencing",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "Kinetics",
+            },
+            {
+              "descriptorName": "Membrane Potentials",
+            },
+            {
+              "descriptorName": "Mitochondria",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Monoamine Oxidase",
+            },
+            {
+              "descriptorName": "Monoamine Oxidase Inhibitors",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Neuroblastoma",
+            },
+            {
+              "descriptorName": "Neurotoxins",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "RNA, Small Interfering",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Tetrahydroisoquinolines",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Transfection",
+            },
+          ],
+        },
+        "score": 0.62,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16336631",
+      },
+      {
+        "$id": "11261742",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": "Endogenous N-methyl(R)salsolinol, which caused parkinsonism in rats by injection in the striatum, was found to induce apoptosis in dopaminergic neuroblastoma SH-SY5Y cells. After 12-h incubation with 500[microM N-methyl(R)salsolinol, almost all the cells died with apoptosis and necrotic cell death was negligible. N-Methyl(R)salsolinol was much more potent to induce apoptosis than the (S)-enantiomer. The mechanism of apoptosis was studied in relation to changes in mitochondrial membrane potential, deltapsi(m), using a fluorescent indicator, JC-1. Red fluorescence of J-aggregates representing hyperpolarized deltapsi(m) was found to decrease significantly within 60 min after incubation with N-methyl(R)salsolinol, but not by the (S)-enantiomer at the same concentration. It suggests that mitochondria may recognize the stereo-chemical structure of N-methyl(R) salsolinol. Aliphatic propargylamines, (R)-N-(2-heptyl)-N-methylpropargylamine and (R)-N-(2-heptyl)propargylamine, were found to prevent deltapsim loss and subsequent apoptosis induced by N-methyl(R)salsolinol. These results suggest that mitochondria play a key role in the induction of apoptosis by the neurotoxin and the prevention by aliphatic propargylamines.",
+            "authors": [
+              {
+                "firstName": "W",
+                "initials": "W",
+                "lastName": "Maruyama",
+              },
+              {
+                "firstName": "A A",
+                "initials": "AA",
+                "lastName": "Boulton",
+              },
+              {
+                "firstName": "B A",
+                "initials": "BA",
+                "lastName": "Davis",
+              },
+              {
+                "firstName": "P",
+                "initials": "P",
+                "lastName": "Dostert",
+              },
+              {
+                "firstName": "M",
+                "initials": "M",
+                "lastName": "Naoi",
+              },
+            ],
+            "journal": {
+              "iSsn": "0300-9564",
+              "isoAbbreviation": "J Neural Transm (Vienna)",
+              "issue": 1,
+              "pubDate": {
+                "Year": 2001,
+              },
+              "title": "Journal of neural transmission (Vienna, Austria : 1996)",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, Non-U.S. Gov't",
+            ],
+            "title": "Enantio-specific induction of apoptosis by an endogenous neurotoxin, N-methyl(R)salsolinol, in dopaminergic SH-SY5Y cells: suppression of apoptosis by N-(2-heptyl)-N-methylpropargylamine.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Alkynes",
+            },
+            {
+              "nameOfSubstance": "Fluorescent Dyes",
+            },
+            {
+              "nameOfSubstance": "Monoamine Oxidase Inhibitors",
+            },
+            {
+              "nameOfSubstance": "N-2-heptyl-N-methylpropargylamine",
+            },
+            {
+              "nameOfSubstance": "Neuroprotective Agents",
+            },
+            {
+              "nameOfSubstance": "Neurotoxins",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Tetrahydroisoquinolines",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+            {
+              "nameOfSubstance": "Dopamine",
+              "unii": "VTD58H1Z2X",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 24256,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/24256",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 681,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
+            },
+            {
+              "$id": 65340,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/65340",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
+            },
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 681,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
+            },
+            {
+              "$id": 3713609,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3713609",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
+            },
+            {
+              "$id": 57133438,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/57133438",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
+            },
+          ],
+          "dateCompleted": {
+            "day": 21,
+            "month": 6,
+            "year": 2001,
+          },
+          "dateCreated": {},
+          "dateRevised": {
+            "day": 19,
+            "month": 11,
+            "year": 2015,
+          },
+          "journalInfo": {
+            "country": "Austria",
+            "issnLinking": "0300-9564",
+            "medlineTa": "J Neural Transm (Vienna)",
+            "nlmUniqueId": 9702341,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Alkynes",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Apoptosis",
+            },
+            {
+              "descriptorName": "Dopamine",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Drug Interactions",
+              "qualifierName": "physiology",
+            },
+            {
+              "descriptorName": "Fluorescent Dyes",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "Membrane Potentials",
+            },
+            {
+              "descriptorName": "Mitochondria",
+            },
+            {
+              "descriptorName": "Monoamine Oxidase Inhibitors",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Neuroblastoma",
+            },
+            {
+              "descriptorName": "Neurons",
+            },
+            {
+              "descriptorName": "Neuroprotective Agents",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Neurotoxins",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Parkinsonian Disorders",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Signal Transduction",
+            },
+            {
+              "descriptorName": "Stereoisomerism",
+            },
+            {
+              "descriptorName": "Substantia Nigra",
+            },
+            {
+              "descriptorName": "Tetrahydroisoquinolines",
+            },
+            {
+              "descriptorName": "Tumor Cells, Cultured",
+            },
+          ],
+        },
+        "score": 0.61,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11261742",
       },
       {
         "$id": "12111453",
@@ -36908,40 +37376,50 @@ M  END
             },
           ],
         },
-        "score": 0.6582911197414241,
+        "score": 0.61,
         "url": "https://pubmed.ncbi.nlm.nih.gov/12111453",
       },
       {
-        "$id": "16336631",
+        "$id": "15102525",
         "$ref": "pubmeds",
         "data": {
           "article": {
-            "abstract": "Mitochondrial monoamine oxidase (MAO) has been considered to be involved in neuronal degeneration either by increased oxidative stress or protection with the inhibitors of type B MAO (MAO-B). In this paper, the role of type A MAO (MAO-A) in apoptosis was studied using human neuroblastoma SH-SY5Y cells, where only MAO-A is expressed. An endogenous dopaminergic neurotoxin, N-methyl(R)salsolinol, an MAO-A inhibitor, reduced membrane potential, DeltaPsim, in isolated mitochondria, and induced apoptosis in the cells, which 5-hydroxytryptamine, an MAO-A substrate, prevented. In contrast, beta-phenylethylamine, an MAO-B substrate, did not suppress the DeltaPsim decline by N-methyl(R)salsolinol. The binding of N-methyl(R)salsolinol to mitochondria was inhibited by clorgyline, a MOA-A inhibitor, but not by (-)deprenyl, an MAO-B inhibitor. RNA interference targeting MAO-A significantly reduced the binding of N-methyl(R)salsolinol with simultaneous reduction in the MAO activity. To examine the intervention of MAO-B in the apoptotic process, human MAO-B was transfected to SH-SY5Y cells, but the sensitivity to N-methyl(R)salsolinol was not affected, even although the activity and protein of MAO increased markedly. These results demonstrate a novel function of MAO-A in the binding of neurotoxins and the induction of apoptosis, which may account for neuronal cell death in neurodegenerative disorders, including Parkinson's disease.",
+            "abstract": "R-(-)-1-(Benzofuran-2-yl)-2-propylaminopentane HCl [R-(-)-BPAP] is one of \\"catecholaminergic and serotonergic enhancers\\", which were proposed to improve symptoms through increase in impulse-evoked release of monoamine neurotransmitters for Parkinson's disease. It was reported that (-)-BPAP up-regulated the synthesis of neurotrophic factors in mouse astrocytes, suggesting the neuroprotective potency of (-)-BPAP. In this paper, the neuroprotective function of (-)-BPAP and the related compounds was examined against apoptosis induced by an endogenous neurotoxin, N-methyl(R)salsolinol [NM(R)Sal], a possible pathogenic toxin in Parkinson's disease, in human dopaminergic neuroblastoma SH-SY5Y cells. The anti-apoptotic activity was confirmed with some of (-)-BPAP analogues, and the mechanism was found to be due to the direct stabilization of mitochondrial membrane potential and the induction of anti-apoptotic Bcl-2. The studies on structure-activity relationship demonstrated that the potency to stabilize the mitochondrial membrane potential depended on the absolute stereo-chemical structure of BPAP derivatives. The compounds with dextrorotation prevented the mitochondrial permeability transition, whereas those with levorotation did not. The presence of a propargyl or propyl group at the amino residue of R-(-)-1-(benzofuran-2-yl)-2-propylamine increased potency to stabilize the membrane potential and prevent apoptosis. R-FPFS-1169 and R-FPFS-1180 had more potent to induce Bcl-2 and prevent apoptosis than the corresponding S-enantiomers. These results are discussed with the possible application of BPAP derivatives as neuroprotective agents in Parkinson's disease and other neurodegenerative disorders.",
             "authors": [
-              {
-                "firstName": "Hong",
-                "initials": "H",
-                "lastName": "Yi",
-              },
-              {
-                "firstName": "Yukihiro",
-                "initials": "Y",
-                "lastName": "Akao",
-              },
               {
                 "firstName": "Wakako",
                 "initials": "W",
                 "lastName": "Maruyama",
               },
               {
-                "firstName": "Kavin",
-                "initials": "K",
-                "lastName": "Chen",
+                "firstName": "Hong",
+                "initials": "H",
+                "lastName": "Yi",
               },
               {
-                "firstName": "Jean",
-                "initials": "J",
-                "lastName": "Shih",
+                "firstName": "Tsutomu",
+                "initials": "T",
+                "lastName": "Takahashi",
+              },
+              {
+                "firstName": "Seiichiro",
+                "initials": "S",
+                "lastName": "Shimazu",
+              },
+              {
+                "firstName": "Hironori",
+                "initials": "H",
+                "lastName": "Ohde",
+              },
+              {
+                "firstName": "Fumio",
+                "initials": "F",
+                "lastName": "Yoneda",
+              },
+              {
+                "firstName": "Kinuko",
+                "initials": "K",
+                "lastName": "Iwasa",
               },
               {
                 "firstName": "Makoto",
@@ -36950,230 +37428,15 @@ M  END
               },
             ],
             "journal": {
-              "iSsn": "0022-3042",
-              "isoAbbreviation": "J Neurochem",
-              "issue": 2,
-              "pubDate": {
-                "Month": "Jan",
-                "Year": 2006,
-              },
-              "title": "Journal of neurochemistry",
-            },
-            "language": "eng",
-            "languageTextSearch": "english",
-            "publicationTypeList": [
-              "Journal Article",
-              "Research Support, Non-U.S. Gov't",
-            ],
-            "title": "Type A monoamine oxidase is the target of an endogenous dopaminergic neurotoxin, N-methyl(R)salsolinol, leading to apoptosis in SH-SY5Y cells.",
-          },
-          "chemicals": [
-            {
-              "nameOfSubstance": "Monoamine Oxidase Inhibitors",
-            },
-            {
-              "nameOfSubstance": "Neurotoxins",
-            },
-            {
-              "nameOfSubstance": "RNA, Small Interfering",
-            },
-            {
-              "nameOfSubstance": "Salsoline Alkaloids",
-            },
-            {
-              "nameOfSubstance": "Tetrahydroisoquinolines",
-            },
-            {
-              "nameOfSubstance": "DNA",
-              "unii": "9007-49-2",
-            },
-            {
-              "nameOfSubstance": "salsoline",
-              "unii": "9Q83ETU10C",
-            },
-            {
-              "nameOfSubstance": "Monoamine Oxidase",
-              "unii": "EC 1.4.3.4",
-            },
-          ],
-          "compounds": [
-            {
-              "$id": 5202,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5202",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 1001,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/1001",
-            },
-            {
-              "$id": 40009,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 442356,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
-            },
-            {
-              "$id": 40010,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
-            },
-            {
-              "$id": 12989303,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
-            },
-            {
-              "$id": 44135672,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/44135672",
-            },
-            {
-              "$id": 45259939,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
-            },
-            {
-              "$id": 165415541,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
-            },
-          ],
-          "dateCompleted": {
-            "day": 17,
-            "month": 2,
-            "year": 2006,
-          },
-          "dateCreated": {},
-          "dateRevised": {
-            "day": 14,
-            "month": 11,
-            "year": 2013,
-          },
-          "journalInfo": {
-            "country": "England",
-            "issnLinking": "0022-3042",
-            "medlineTa": "J Neurochem",
-            "nlmUniqueId": "2985190R",
-          },
-          "meshHeadings": [
-            {
-              "descriptorName": "Apoptosis",
-            },
-            {
-              "descriptorName": "Binding Sites",
-            },
-            {
-              "descriptorName": "Cell Line, Tumor",
-            },
-            {
-              "descriptorName": "DNA",
-            },
-            {
-              "descriptorName": "Gene Silencing",
-            },
-            {
-              "descriptorName": "Humans",
-            },
-            {
-              "descriptorName": "Kinetics",
-            },
-            {
-              "descriptorName": "Membrane Potentials",
-            },
-            {
-              "descriptorName": "Mitochondria",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Monoamine Oxidase",
-            },
-            {
-              "descriptorName": "Monoamine Oxidase Inhibitors",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Neuroblastoma",
-            },
-            {
-              "descriptorName": "Neurotoxins",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "RNA, Small Interfering",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Salsoline Alkaloids",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Tetrahydroisoquinolines",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Transfection",
-            },
-          ],
-        },
-        "score": 0.6579279364589976,
-        "url": "https://pubmed.ncbi.nlm.nih.gov/16336631",
-      },
-      {
-        "$id": "11261742",
-        "$ref": "pubmeds",
-        "data": {
-          "article": {
-            "abstract": "Endogenous N-methyl(R)salsolinol, which caused parkinsonism in rats by injection in the striatum, was found to induce apoptosis in dopaminergic neuroblastoma SH-SY5Y cells. After 12-h incubation with 500[microM N-methyl(R)salsolinol, almost all the cells died with apoptosis and necrotic cell death was negligible. N-Methyl(R)salsolinol was much more potent to induce apoptosis than the (S)-enantiomer. The mechanism of apoptosis was studied in relation to changes in mitochondrial membrane potential, deltapsi(m), using a fluorescent indicator, JC-1. Red fluorescence of J-aggregates representing hyperpolarized deltapsi(m) was found to decrease significantly within 60 min after incubation with N-methyl(R)salsolinol, but not by the (S)-enantiomer at the same concentration. It suggests that mitochondria may recognize the stereo-chemical structure of N-methyl(R) salsolinol. Aliphatic propargylamines, (R)-N-(2-heptyl)-N-methylpropargylamine and (R)-N-(2-heptyl)propargylamine, were found to prevent deltapsim loss and subsequent apoptosis induced by N-methyl(R)salsolinol. These results suggest that mitochondria play a key role in the induction of apoptosis by the neurotoxin and the prevention by aliphatic propargylamines.",
-            "authors": [
-              {
-                "firstName": "W",
-                "initials": "W",
-                "lastName": "Maruyama",
-              },
-              {
-                "firstName": "A A",
-                "initials": "AA",
-                "lastName": "Boulton",
-              },
-              {
-                "firstName": "B A",
-                "initials": "BA",
-                "lastName": "Davis",
-              },
-              {
-                "firstName": "P",
-                "initials": "P",
-                "lastName": "Dostert",
-              },
-              {
-                "firstName": "M",
-                "initials": "M",
-                "lastName": "Naoi",
-              },
-            ],
-            "journal": {
-              "iSsn": "0300-9564",
-              "isoAbbreviation": "J Neural Transm (Vienna)",
+              "iSsn": "0024-3205",
+              "isoAbbreviation": "Life Sci",
               "issue": 1,
               "pubDate": {
-                "Year": 2001,
+                "Day": 21,
+                "Month": "May",
+                "Year": 2004,
               },
-              "title": "Journal of neural transmission (Vienna, Austria : 1996)",
+              "title": "Life sciences",
             },
             "language": "eng",
             "languageTextSearch": "english",
@@ -37181,20 +37444,14 @@ M  END
               "Journal Article",
               "Research Support, Non-U.S. Gov't",
             ],
-            "title": "Enantio-specific induction of apoptosis by an endogenous neurotoxin, N-methyl(R)salsolinol, in dopaminergic SH-SY5Y cells: suppression of apoptosis by N-(2-heptyl)-N-methylpropargylamine.",
+            "title": "Neuroprotective function of R-(-)-1-(benzofuran-2-yl)-2-propylaminopentane, R-(-)-BPAP, against apoptosis induced by N-methyl(R)salsolinol, an endogenous dopaminergic neurotoxin, in human dopaminergic neuroblastoma SH-SY5Y cells.",
           },
           "chemicals": [
             {
-              "nameOfSubstance": "Alkynes",
+              "nameOfSubstance": "1-(benzofuran-2-yl)-2-propylaminopentane",
             },
             {
-              "nameOfSubstance": "Fluorescent Dyes",
-            },
-            {
-              "nameOfSubstance": "Monoamine Oxidase Inhibitors",
-            },
-            {
-              "nameOfSubstance": "N-2-heptyl-N-methylpropargylamine",
+              "nameOfSubstance": "Benzofurans",
             },
             {
               "nameOfSubstance": "Neuroprotective Agents",
@@ -37203,6 +37460,12 @@ M  END
               "nameOfSubstance": "Neurotoxins",
             },
             {
+              "nameOfSubstance": "Proto-Oncogene Proteins c-bcl-2",
+            },
+            {
+              "nameOfSubstance": "Receptors, Dopamine",
+            },
+            {
               "nameOfSubstance": "Salsoline Alkaloids",
             },
             {
@@ -37212,21 +37475,17 @@ M  END
               "nameOfSubstance": "salsoline",
               "unii": "9Q83ETU10C",
             },
-            {
-              "nameOfSubstance": "Dopamine",
-              "unii": "VTD58H1Z2X",
-            },
           ],
           "compounds": [
-            {
-              "$id": 24256,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/24256",
-            },
             {
               "$id": 46695,
               "$ref": "compounds",
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 6334,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6334",
             },
             {
               "$id": 681,
@@ -37234,14 +37493,14 @@ M  END
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
             },
             {
-              "$id": 40010,
+              "$id": 6335,
               "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6335",
             },
             {
-              "$id": 65340,
+              "$id": 46695,
               "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/65340",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
             },
             {
               "$id": 40009,
@@ -37254,19 +37513,19 @@ M  END
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
             },
             {
-              "$id": 46695,
+              "$id": 40010,
               "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
             },
             {
-              "$id": 681,
+              "$id": 253613,
               "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/253613",
             },
             {
-              "$id": 3713609,
+              "$id": 9859674,
               "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3713609",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9859674",
             },
             {
               "$id": 12989303,
@@ -37274,14 +37533,14 @@ M  END
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
             },
             {
+              "$id": 17994716,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/17994716",
+            },
+            {
               "$id": 45259939,
               "$ref": "compounds",
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
-            },
-            {
-              "$id": 57133438,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/57133438",
             },
             {
               "$id": 165415541,
@@ -37290,472 +37549,75 @@ M  END
             },
           ],
           "dateCompleted": {
-            "day": 21,
-            "month": 6,
-            "year": 2001,
+            "day": 20,
+            "month": 5,
+            "year": 2004,
           },
           "dateCreated": {},
           "dateRevised": {
-            "day": 19,
+            "day": 14,
             "month": 11,
-            "year": 2015,
+            "year": 2013,
           },
           "journalInfo": {
-            "country": "Austria",
-            "issnLinking": "0300-9564",
-            "medlineTa": "J Neural Transm (Vienna)",
-            "nlmUniqueId": 9702341,
+            "country": "Netherlands",
+            "issnLinking": "0024-3205",
+            "medlineTa": "Life Sci",
+            "nlmUniqueId": 375521,
           },
           "meshHeadings": [
             {
-              "descriptorName": "Alkynes",
-              "qualifierName": "pharmacology",
-            },
-            {
               "descriptorName": "Apoptosis",
+              "qualifierName": "drug effects",
             },
             {
-              "descriptorName": "Dopamine",
-              "qualifierName": "metabolism",
+              "descriptorName": "Benzofurans",
             },
             {
-              "descriptorName": "Drug Interactions",
-              "qualifierName": "physiology",
+              "descriptorName": "Electrophoresis, Polyacrylamide Gel",
             },
             {
-              "descriptorName": "Fluorescent Dyes",
+              "descriptorName": "Flow Cytometry",
             },
             {
               "descriptorName": "Humans",
             },
             {
-              "descriptorName": "Membrane Potentials",
-            },
-            {
-              "descriptorName": "Mitochondria",
-            },
-            {
-              "descriptorName": "Monoamine Oxidase Inhibitors",
-              "qualifierName": "pharmacology",
-            },
-            {
               "descriptorName": "Neuroblastoma",
             },
             {
-              "descriptorName": "Neurons",
-            },
-            {
               "descriptorName": "Neuroprotective Agents",
-              "qualifierName": "pharmacology",
             },
             {
               "descriptorName": "Neurotoxins",
-              "qualifierName": "pharmacology",
+              "qualifierName": "toxicity",
             },
             {
-              "descriptorName": "Parkinsonian Disorders",
+              "descriptorName": "Proto-Oncogene Proteins c-bcl-2",
+              "qualifierName": "biosynthesis",
+            },
+            {
+              "descriptorName": "Receptors, Dopamine",
+              "qualifierName": "metabolism",
             },
             {
               "descriptorName": "Salsoline Alkaloids",
-              "qualifierName": "pharmacology",
+              "qualifierName": "toxicity",
             },
             {
-              "descriptorName": "Signal Transduction",
-            },
-            {
-              "descriptorName": "Stereoisomerism",
-            },
-            {
-              "descriptorName": "Substantia Nigra",
+              "descriptorName": "Structure-Activity Relationship",
             },
             {
               "descriptorName": "Tetrahydroisoquinolines",
+              "qualifierName": "toxicity",
             },
             {
               "descriptorName": "Tumor Cells, Cultured",
             },
           ],
         },
-        "score": 0.6172835491282279,
-        "url": "https://pubmed.ncbi.nlm.nih.gov/11261742",
-      },
-      {
-        "$id": "19012744",
-        "$ref": "pubmeds",
-        "data": {
-          "article": {
-            "abstract": "Tetrahydroisoquinoline (TIQ) derivatives are putative neurotoxins that may contribute to the degeneration of dopaminergic neurons in Parkinson's disease. One TIQ, norsalsolinol (NorSAL), is present in dopamine-rich areas of human brain, including the substantia nigra. Here, we demonstrate that NorSAL reduces cell viability and induces apoptosis via cytochrome c release and caspase 3 activation in SH-SY5Y human neuroblastoma cells. Cytochrome c release, caspase 3 activation, and apoptosis induction were all inhibited by the antioxidant N-acetylcysteine. Thus, reactive oxygen species (ROS) contribute to apoptosis induced by NorSAL. Treatment with NorSAL also increased levels of oxidative damage to DNA, a stimulus for apoptosis, in SH-SY5Y. To clarify the mechanism of intracellular DNA damage, we examined the DNA damage caused by NorSAL using (32)P-5'-end-labeled isolated DNA fragments. NorSAL induced DNA damage in the presence of Cu(II). Catalase and bathocuproine, a Cu(I) chelator, inhibited this DNA damage, suggesting that ROS such as the Cu(I)-hydroperoxo complex derived from the reaction of H(2)O(2) with Cu(I), promote DNA damage by NorSAL. In summary, NorSAL-generated ROS induced oxidative DNA damage, which led to caspase-dependent apoptosis in neuronal cells.",
-            "authors": [
-              {
-                "firstName": "Hatasu",
-                "initials": "H",
-                "lastName": "Kobayashi",
-              },
-              {
-                "firstName": "Kiyoshi",
-                "initials": "K",
-                "lastName": "Fukuhara",
-              },
-              {
-                "firstName": "Saeko",
-                "initials": "S",
-                "lastName": "Tada-Oikawa",
-              },
-              {
-                "firstName": "Yuki",
-                "initials": "Y",
-                "lastName": "Yada",
-              },
-              {
-                "firstName": "Yusuke",
-                "initials": "Y",
-                "lastName": "Hiraku",
-              },
-              {
-                "firstName": "Mariko",
-                "initials": "M",
-                "lastName": "Murata",
-              },
-              {
-                "firstName": "Shinji",
-                "initials": "S",
-                "lastName": "Oikawa",
-              },
-            ],
-            "doi": "10.1111/j.1471-4159.2008.05774.x",
-            "journal": {
-              "iSsn": "1471-4159",
-              "isoAbbreviation": "J Neurochem",
-              "issue": 2,
-              "pubDate": {
-                "Month": "Jan",
-                "Year": 2009,
-              },
-              "title": "Journal of neurochemistry",
-            },
-            "language": "eng",
-            "languageTextSearch": "english",
-            "publicationTypeList": [
-              "Journal Article",
-              "Research Support, Non-U.S. Gov't",
-            ],
-            "title": "The mechanisms of oxidative DNA damage and apoptosis induced by norsalsolinol, an endogenous tetrahydroisoquinoline derivative associated with Parkinson's disease.",
-          },
-          "chemicals": [
-            {
-              "nameOfSubstance": "Benzoquinones",
-            },
-            {
-              "nameOfSubstance": "Free Radical Scavengers",
-            },
-            {
-              "nameOfSubstance": "Phenanthrolines",
-            },
-            {
-              "nameOfSubstance": "Phosphorus Isotopes",
-            },
-            {
-              "nameOfSubstance": "Salsoline Alkaloids",
-            },
-            {
-              "nameOfSubstance": "Tetrahydroisoquinolines",
-            },
-            {
-              "nameOfSubstance": "Tetrazolium Salts",
-            },
-            {
-              "nameOfSubstance": "Thiazoles",
-            },
-            {
-              "nameOfSubstance": "NAD",
-              "unii": "0U46U6E8UK",
-            },
-            {
-              "nameOfSubstance": "quinone",
-              "unii": "3T006GV98U",
-            },
-            {
-              "nameOfSubstance": "Copper",
-              "unii": "789U1901C5",
-            },
-            {
-              "nameOfSubstance": "8-Hydroxy-2'-Deoxyguanosine",
-              "unii": "88847-89-6",
-            },
-            {
-              "nameOfSubstance": "Cytochromes c",
-              "unii": "9007-43-6",
-            },
-            {
-              "nameOfSubstance": "norsalsolinol",
-              "unii": "9SPO03ZH41",
-            },
-            {
-              "nameOfSubstance": "bathocuproine",
-              "unii": "9THP2V94FX",
-            },
-            {
-              "nameOfSubstance": "Tyrosine 3-Monooxygenase",
-              "unii": "EC 1.14.16.2",
-            },
-            {
-              "nameOfSubstance": "Caspase 3",
-              "unii": "EC 3.4.22.-",
-            },
-            {
-              "nameOfSubstance": "thiazolyl blue",
-              "unii": "EUY85H477I",
-            },
-            {
-              "nameOfSubstance": "Deoxyguanosine",
-              "unii": "G9481N71RO",
-            },
-            {
-              "nameOfSubstance": "cupric chloride",
-              "unii": "S2QG84156O",
-            },
-          ],
-          "compounds": [
-            {
-              "$id": 6057,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6057",
-            },
-            {
-              "$id": 36937,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/36937",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 12035,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12035",
-            },
-            {
-              "$id": 7046,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/7046",
-            },
-            {
-              "$id": 4650,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/4650",
-            },
-            {
-              "$id": 67519,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/67519",
-            },
-            {
-              "$id": 9256,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9256",
-            },
-            {
-              "$id": 64965,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/64965",
-            },
-            {
-              "$id": 36937,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/36937",
-            },
-            {
-              "$id": 23978,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/23978",
-            },
-            {
-              "$id": 5893,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5893",
-            },
-            {
-              "$id": 439153,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/439153",
-            },
-            {
-              "$id": 65149,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/65149",
-            },
-            {
-              "$id": 24014,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/24014",
-            },
-            {
-              "$id": 5892,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5892",
-            },
-            {
-              "$id": 9256,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9256",
-            },
-            {
-              "$id": 4650,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/4650",
-            },
-            {
-              "$id": 64966,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/64966",
-            },
-            {
-              "$id": 15938971,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/15938971",
-            },
-            {
-              "$id": 16057918,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/16057918",
-            },
-            {
-              "$id": 42626467,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/42626467",
-            },
-            {
-              "$id": 73415790,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/73415790",
-            },
-            {
-              "$id": 135398592,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/135398592",
-            },
-            {
-              "$id": 135440064,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/135440064",
-            },
-            {
-              "$id": 135398592,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/135398592",
-            },
-            {
-              "$id": 136652147,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/136652147",
-            },
-          ],
-          "dateCompleted": {
-            "day": 8,
-            "month": 4,
-            "year": 2009,
-          },
-          "dateCreated": {},
-          "dateRevised": {
-            "day": 10,
-            "month": 12,
-            "year": 2019,
-          },
-          "journalInfo": {
-            "country": "England",
-            "issnLinking": "0022-3042",
-            "medlineTa": "J Neurochem",
-            "nlmUniqueId": "2985190R",
-          },
-          "meshHeadings": [
-            {
-              "descriptorName": "8-Hydroxy-2'-Deoxyguanosine",
-            },
-            {
-              "descriptorName": "Apoptosis",
-              "qualifierName": "drug effects",
-            },
-            {
-              "descriptorName": "Autoradiography",
-            },
-            {
-              "descriptorName": "Benzoquinones",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Caspase 3",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Cell Line, Tumor",
-            },
-            {
-              "descriptorName": "Copper",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Cytochromes c",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "DNA Damage",
-              "qualifierName": "drug effects",
-            },
-            {
-              "descriptorName": "Deoxyguanosine",
-            },
-            {
-              "descriptorName": "Dose-Response Relationship, Drug",
-            },
-            {
-              "descriptorName": "Free Radical Scavengers",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Humans",
-            },
-            {
-              "descriptorName": "NAD",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Neuroblastoma",
-            },
-            {
-              "descriptorName": "Phenanthrolines",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Phosphorus Isotopes",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Salsoline Alkaloids",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Tetrahydroisoquinolines",
-              "qualifierName": "chemistry",
-            },
-            {
-              "descriptorName": "Tetrazolium Salts",
-            },
-            {
-              "descriptorName": "Thiazoles",
-            },
-            {
-              "descriptorName": "Time Factors",
-            },
-            {
-              "descriptorName": "Tyrosine 3-Monooxygenase",
-              "qualifierName": "metabolism",
-            },
-          ],
-        },
-        "score": 0.5488036502132602,
-        "url": "https://pubmed.ncbi.nlm.nih.gov/19012744",
+        "score": 0.5,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15102525",
       },
     ],
     "taxonomies": [],
@@ -39000,7 +38862,7 @@ M  END
             },
           ],
         },
-        "score": 1.2666703740325955,
+        "score": 1.23,
         "url": "https://pubmed.ncbi.nlm.nih.gov/11090952",
       },
       {
@@ -39208,7 +39070,7 @@ M  END
             },
           ],
         },
-        "score": 1.1154470158198446,
+        "score": 1.06,
         "url": "https://pubmed.ncbi.nlm.nih.gov/10380999",
       },
       {
@@ -39430,7 +39292,7 @@ M  END
             },
           ],
         },
-        "score": 0.9684734952486749,
+        "score": 0.93,
         "url": "https://pubmed.ncbi.nlm.nih.gov/16336631",
       },
       {
@@ -39695,8 +39557,254 @@ M  END
             },
           ],
         },
-        "score": 0.8569213715098257,
+        "score": 0.83,
         "url": "https://pubmed.ncbi.nlm.nih.gov/11128601",
+      },
+      {
+        "$id": "11261742",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": "Endogenous N-methyl(R)salsolinol, which caused parkinsonism in rats by injection in the striatum, was found to induce apoptosis in dopaminergic neuroblastoma SH-SY5Y cells. After 12-h incubation with 500[microM N-methyl(R)salsolinol, almost all the cells died with apoptosis and necrotic cell death was negligible. N-Methyl(R)salsolinol was much more potent to induce apoptosis than the (S)-enantiomer. The mechanism of apoptosis was studied in relation to changes in mitochondrial membrane potential, deltapsi(m), using a fluorescent indicator, JC-1. Red fluorescence of J-aggregates representing hyperpolarized deltapsi(m) was found to decrease significantly within 60 min after incubation with N-methyl(R)salsolinol, but not by the (S)-enantiomer at the same concentration. It suggests that mitochondria may recognize the stereo-chemical structure of N-methyl(R) salsolinol. Aliphatic propargylamines, (R)-N-(2-heptyl)-N-methylpropargylamine and (R)-N-(2-heptyl)propargylamine, were found to prevent deltapsim loss and subsequent apoptosis induced by N-methyl(R)salsolinol. These results suggest that mitochondria play a key role in the induction of apoptosis by the neurotoxin and the prevention by aliphatic propargylamines.",
+            "authors": [
+              {
+                "firstName": "W",
+                "initials": "W",
+                "lastName": "Maruyama",
+              },
+              {
+                "firstName": "A A",
+                "initials": "AA",
+                "lastName": "Boulton",
+              },
+              {
+                "firstName": "B A",
+                "initials": "BA",
+                "lastName": "Davis",
+              },
+              {
+                "firstName": "P",
+                "initials": "P",
+                "lastName": "Dostert",
+              },
+              {
+                "firstName": "M",
+                "initials": "M",
+                "lastName": "Naoi",
+              },
+            ],
+            "journal": {
+              "iSsn": "0300-9564",
+              "isoAbbreviation": "J Neural Transm (Vienna)",
+              "issue": 1,
+              "pubDate": {
+                "Year": 2001,
+              },
+              "title": "Journal of neural transmission (Vienna, Austria : 1996)",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, Non-U.S. Gov't",
+            ],
+            "title": "Enantio-specific induction of apoptosis by an endogenous neurotoxin, N-methyl(R)salsolinol, in dopaminergic SH-SY5Y cells: suppression of apoptosis by N-(2-heptyl)-N-methylpropargylamine.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "Alkynes",
+            },
+            {
+              "nameOfSubstance": "Fluorescent Dyes",
+            },
+            {
+              "nameOfSubstance": "Monoamine Oxidase Inhibitors",
+            },
+            {
+              "nameOfSubstance": "N-2-heptyl-N-methylpropargylamine",
+            },
+            {
+              "nameOfSubstance": "Neuroprotective Agents",
+            },
+            {
+              "nameOfSubstance": "Neurotoxins",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Tetrahydroisoquinolines",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+            {
+              "nameOfSubstance": "Dopamine",
+              "unii": "VTD58H1Z2X",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 24256,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/24256",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 681,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
+            },
+            {
+              "$id": 65340,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/65340",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
+            },
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 681,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
+            },
+            {
+              "$id": 3713609,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3713609",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
+            },
+            {
+              "$id": 57133438,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/57133438",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
+            },
+          ],
+          "dateCompleted": {
+            "day": 21,
+            "month": 6,
+            "year": 2001,
+          },
+          "dateCreated": {},
+          "dateRevised": {
+            "day": 19,
+            "month": 11,
+            "year": 2015,
+          },
+          "journalInfo": {
+            "country": "Austria",
+            "issnLinking": "0300-9564",
+            "medlineTa": "J Neural Transm (Vienna)",
+            "nlmUniqueId": 9702341,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Alkynes",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Apoptosis",
+            },
+            {
+              "descriptorName": "Dopamine",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Drug Interactions",
+              "qualifierName": "physiology",
+            },
+            {
+              "descriptorName": "Fluorescent Dyes",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "Membrane Potentials",
+            },
+            {
+              "descriptorName": "Mitochondria",
+            },
+            {
+              "descriptorName": "Monoamine Oxidase Inhibitors",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Neuroblastoma",
+            },
+            {
+              "descriptorName": "Neurons",
+            },
+            {
+              "descriptorName": "Neuroprotective Agents",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Neurotoxins",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Parkinsonian Disorders",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "pharmacology",
+            },
+            {
+              "descriptorName": "Signal Transduction",
+            },
+            {
+              "descriptorName": "Stereoisomerism",
+            },
+            {
+              "descriptorName": "Substantia Nigra",
+            },
+            {
+              "descriptorName": "Tetrahydroisoquinolines",
+            },
+            {
+              "descriptorName": "Tumor Cells, Cultured",
+            },
+          ],
+        },
+        "score": 0.81,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11261742",
       },
       {
         "$id": "12111453",
@@ -39953,35 +40061,45 @@ M  END
             },
           ],
         },
-        "score": 0.8401821062218209,
+        "score": 0.79,
         "url": "https://pubmed.ncbi.nlm.nih.gov/12111453",
       },
       {
-        "$id": "11261742",
+        "$id": "15843867",
         "$ref": "pubmeds",
         "data": {
           "article": {
-            "abstract": "Endogenous N-methyl(R)salsolinol, which caused parkinsonism in rats by injection in the striatum, was found to induce apoptosis in dopaminergic neuroblastoma SH-SY5Y cells. After 12-h incubation with 500[microM N-methyl(R)salsolinol, almost all the cells died with apoptosis and necrotic cell death was negligible. N-Methyl(R)salsolinol was much more potent to induce apoptosis than the (S)-enantiomer. The mechanism of apoptosis was studied in relation to changes in mitochondrial membrane potential, deltapsi(m), using a fluorescent indicator, JC-1. Red fluorescence of J-aggregates representing hyperpolarized deltapsi(m) was found to decrease significantly within 60 min after incubation with N-methyl(R)salsolinol, but not by the (S)-enantiomer at the same concentration. It suggests that mitochondria may recognize the stereo-chemical structure of N-methyl(R) salsolinol. Aliphatic propargylamines, (R)-N-(2-heptyl)-N-methylpropargylamine and (R)-N-(2-heptyl)propargylamine, were found to prevent deltapsim loss and subsequent apoptosis induced by N-methyl(R)salsolinol. These results suggest that mitochondria play a key role in the induction of apoptosis by the neurotoxin and the prevention by aliphatic propargylamines.",
+            "abstract": "Propargylamine derivatives, rasagiline and (-)deprenyl, are anti-Parkinson agents and protect neurons from cell death as shown by in vivo and in vitro experiments. The studies on the chemical structure-activity relationship proved that the propargyl moiety is essentially required for the neuroprotective function. In this paper, neuroprotective activity of free N-propargylamine was studied using SH-SY5Y cells expressing only type A monoamine oxidase (MAO) against apoptosis induced by an endogenous dopaminergic neurotoxin, N-methyl(R)salsolinol. N-Propargylamine prevented apoptosis, whereas N-methylpropargylamine and propiolaldehyde did not. N-Propargylamine stabilized mitochondrial membrane potential and induced anti-apoptotic Bcl-2 at 1 microM-10 nM. N-Propargylamine inhibited MAO-A in competition to substrate with the apparent K(i) value of 28 microM, which was significantly higher than the concentration required for neuroprotection. It indicates that MAO inhibition is not prerequisite for the protective function of N-propargylamine. The anti-apoptotic function of N-propargylamine is discussed in terms of neuroprotection by propargylamines in neurodegenerative diseases, including Parkinson's disease.",
             "authors": [
+              {
+                "firstName": "H",
+                "initials": "H",
+                "lastName": "Yi",
+              },
               {
                 "firstName": "W",
                 "initials": "W",
                 "lastName": "Maruyama",
               },
               {
-                "firstName": "A A",
-                "initials": "AA",
-                "lastName": "Boulton",
+                "firstName": "Y",
+                "initials": "Y",
+                "lastName": "Akao",
               },
               {
-                "firstName": "B A",
-                "initials": "BA",
-                "lastName": "Davis",
+                "firstName": "T",
+                "initials": "T",
+                "lastName": "Takahashi",
               },
               {
-                "firstName": "P",
-                "initials": "P",
-                "lastName": "Dostert",
+                "firstName": "K",
+                "initials": "K",
+                "lastName": "Iwasa",
+              },
+              {
+                "firstName": "M B H",
+                "initials": "MB",
+                "lastName": "Youdim",
               },
               {
                 "firstName": "M",
@@ -39994,36 +40112,32 @@ M  END
               "isoAbbreviation": "J Neural Transm (Vienna)",
               "issue": 1,
               "pubDate": {
-                "Year": 2001,
+                "Month": "Jan",
+                "Year": 2006,
               },
               "title": "Journal of neural transmission (Vienna, Austria : 1996)",
             },
             "language": "eng",
             "languageTextSearch": "english",
             "publicationTypeList": [
+              "Comparative Study",
               "Journal Article",
               "Research Support, Non-U.S. Gov't",
             ],
-            "title": "Enantio-specific induction of apoptosis by an endogenous neurotoxin, N-methyl(R)salsolinol, in dopaminergic SH-SY5Y cells: suppression of apoptosis by N-(2-heptyl)-N-methylpropargylamine.",
+            "title": "N-Propargylamine protects SH-SY5Y cells from apoptosis induced by an endogenous neurotoxin, N-methyl(R)salsolinol, through stabilization of mitochondrial membrane and induction of anti-apoptotic Bcl-2.",
           },
           "chemicals": [
             {
-              "nameOfSubstance": "Alkynes",
-            },
-            {
-              "nameOfSubstance": "Fluorescent Dyes",
-            },
-            {
-              "nameOfSubstance": "Monoamine Oxidase Inhibitors",
-            },
-            {
-              "nameOfSubstance": "N-2-heptyl-N-methylpropargylamine",
+              "nameOfSubstance": "Apoptosis Regulatory Proteins",
             },
             {
               "nameOfSubstance": "Neuroprotective Agents",
             },
             {
-              "nameOfSubstance": "Neurotoxins",
+              "nameOfSubstance": "Propylamines",
+            },
+            {
+              "nameOfSubstance": "Proto-Oncogene Proteins c-bcl-2",
             },
             {
               "nameOfSubstance": "Salsoline Alkaloids",
@@ -40032,19 +40146,28 @@ M  END
               "nameOfSubstance": "Tetrahydroisoquinolines",
             },
             {
-              "nameOfSubstance": "salsoline",
-              "unii": "9Q83ETU10C",
+              "nameOfSubstance": "propargylamine",
+              "unii": "2450-71-7",
             },
             {
-              "nameOfSubstance": "Dopamine",
-              "unii": "VTD58H1Z2X",
+              "nameOfSubstance": "Pargyline",
+              "unii": "9MV14S8G3E",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
             },
           ],
           "compounds": [
             {
-              "$id": 24256,
+              "$id": 6335,
               "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/24256",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6335",
+            },
+            {
+              "$id": 239041,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/239041",
             },
             {
               "$id": 46695,
@@ -40052,9 +40175,14 @@ M  END
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
             },
             {
-              "$id": 681,
+              "$id": 12222,
               "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12222",
+            },
+            {
+              "$id": 4688,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/4688",
             },
             {
               "$id": 40010,
@@ -40062,9 +40190,9 @@ M  END
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
             },
             {
-              "$id": 65340,
+              "$id": 239041,
               "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/65340",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/239041",
             },
             {
               "$id": 40009,
@@ -40072,24 +40200,29 @@ M  END
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
             },
             {
-              "$id": 442356,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
-            },
-            {
               "$id": 46695,
               "$ref": "compounds",
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
             },
             {
-              "$id": 681,
+              "$id": 9373,
               "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9373",
             },
             {
-              "$id": 3713609,
+              "$id": 442356,
               "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3713609",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
+            },
+            {
+              "$id": 3052776,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3052776",
+            },
+            {
+              "$id": 10290734,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/10290734",
             },
             {
               "$id": 12989303,
@@ -40102,26 +40235,21 @@ M  END
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
             },
             {
-              "$id": 57133438,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/57133438",
-            },
-            {
               "$id": 165415541,
               "$ref": "compounds",
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
             },
           ],
           "dateCompleted": {
-            "day": 21,
-            "month": 6,
-            "year": 2001,
+            "day": 15,
+            "month": 9,
+            "year": 2006,
           },
           "dateCreated": {},
           "dateRevised": {
-            "day": 19,
+            "day": 13,
             "month": 11,
-            "year": 2015,
+            "year": 2018,
           },
           "journalInfo": {
             "country": "Austria",
@@ -40131,76 +40259,292 @@ M  END
           },
           "meshHeadings": [
             {
-              "descriptorName": "Alkynes",
-              "qualifierName": "pharmacology",
-            },
-            {
               "descriptorName": "Apoptosis",
             },
             {
-              "descriptorName": "Dopamine",
-              "qualifierName": "metabolism",
+              "descriptorName": "Apoptosis Regulatory Proteins",
             },
             {
-              "descriptorName": "Drug Interactions",
-              "qualifierName": "physiology",
-            },
-            {
-              "descriptorName": "Fluorescent Dyes",
+              "descriptorName": "Dose-Response Relationship, Drug",
             },
             {
               "descriptorName": "Humans",
             },
             {
-              "descriptorName": "Membrane Potentials",
-            },
-            {
               "descriptorName": "Mitochondria",
             },
             {
-              "descriptorName": "Monoamine Oxidase Inhibitors",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Neuroblastoma",
-            },
-            {
-              "descriptorName": "Neurons",
+              "descriptorName": "Mitochondrial Membranes",
             },
             {
               "descriptorName": "Neuroprotective Agents",
               "qualifierName": "pharmacology",
             },
             {
-              "descriptorName": "Neurotoxins",
+              "descriptorName": "Pargyline",
+            },
+            {
+              "descriptorName": "Propylamines",
               "qualifierName": "pharmacology",
             },
             {
-              "descriptorName": "Parkinsonian Disorders",
+              "descriptorName": "Proto-Oncogene Proteins c-bcl-2",
             },
             {
               "descriptorName": "Salsoline Alkaloids",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Signal Transduction",
-            },
-            {
-              "descriptorName": "Stereoisomerism",
-            },
-            {
-              "descriptorName": "Substantia Nigra",
+              "qualifierName": "toxicity",
             },
             {
               "descriptorName": "Tetrahydroisoquinolines",
+              "qualifierName": "toxicity",
             },
             {
               "descriptorName": "Tumor Cells, Cultured",
             },
           ],
         },
-        "score": 0.813813490297329,
-        "url": "https://pubmed.ncbi.nlm.nih.gov/11261742",
+        "score": 0.71,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15843867",
+      },
+      {
+        "$id": "15102525",
+        "$ref": "pubmeds",
+        "data": {
+          "article": {
+            "abstract": "R-(-)-1-(Benzofuran-2-yl)-2-propylaminopentane HCl [R-(-)-BPAP] is one of \\"catecholaminergic and serotonergic enhancers\\", which were proposed to improve symptoms through increase in impulse-evoked release of monoamine neurotransmitters for Parkinson's disease. It was reported that (-)-BPAP up-regulated the synthesis of neurotrophic factors in mouse astrocytes, suggesting the neuroprotective potency of (-)-BPAP. In this paper, the neuroprotective function of (-)-BPAP and the related compounds was examined against apoptosis induced by an endogenous neurotoxin, N-methyl(R)salsolinol [NM(R)Sal], a possible pathogenic toxin in Parkinson's disease, in human dopaminergic neuroblastoma SH-SY5Y cells. The anti-apoptotic activity was confirmed with some of (-)-BPAP analogues, and the mechanism was found to be due to the direct stabilization of mitochondrial membrane potential and the induction of anti-apoptotic Bcl-2. The studies on structure-activity relationship demonstrated that the potency to stabilize the mitochondrial membrane potential depended on the absolute stereo-chemical structure of BPAP derivatives. The compounds with dextrorotation prevented the mitochondrial permeability transition, whereas those with levorotation did not. The presence of a propargyl or propyl group at the amino residue of R-(-)-1-(benzofuran-2-yl)-2-propylamine increased potency to stabilize the membrane potential and prevent apoptosis. R-FPFS-1169 and R-FPFS-1180 had more potent to induce Bcl-2 and prevent apoptosis than the corresponding S-enantiomers. These results are discussed with the possible application of BPAP derivatives as neuroprotective agents in Parkinson's disease and other neurodegenerative disorders.",
+            "authors": [
+              {
+                "firstName": "Wakako",
+                "initials": "W",
+                "lastName": "Maruyama",
+              },
+              {
+                "firstName": "Hong",
+                "initials": "H",
+                "lastName": "Yi",
+              },
+              {
+                "firstName": "Tsutomu",
+                "initials": "T",
+                "lastName": "Takahashi",
+              },
+              {
+                "firstName": "Seiichiro",
+                "initials": "S",
+                "lastName": "Shimazu",
+              },
+              {
+                "firstName": "Hironori",
+                "initials": "H",
+                "lastName": "Ohde",
+              },
+              {
+                "firstName": "Fumio",
+                "initials": "F",
+                "lastName": "Yoneda",
+              },
+              {
+                "firstName": "Kinuko",
+                "initials": "K",
+                "lastName": "Iwasa",
+              },
+              {
+                "firstName": "Makoto",
+                "initials": "M",
+                "lastName": "Naoi",
+              },
+            ],
+            "journal": {
+              "iSsn": "0024-3205",
+              "isoAbbreviation": "Life Sci",
+              "issue": 1,
+              "pubDate": {
+                "Day": 21,
+                "Month": "May",
+                "Year": 2004,
+              },
+              "title": "Life sciences",
+            },
+            "language": "eng",
+            "languageTextSearch": "english",
+            "publicationTypeList": [
+              "Journal Article",
+              "Research Support, Non-U.S. Gov't",
+            ],
+            "title": "Neuroprotective function of R-(-)-1-(benzofuran-2-yl)-2-propylaminopentane, R-(-)-BPAP, against apoptosis induced by N-methyl(R)salsolinol, an endogenous dopaminergic neurotoxin, in human dopaminergic neuroblastoma SH-SY5Y cells.",
+          },
+          "chemicals": [
+            {
+              "nameOfSubstance": "1-(benzofuran-2-yl)-2-propylaminopentane",
+            },
+            {
+              "nameOfSubstance": "Benzofurans",
+            },
+            {
+              "nameOfSubstance": "Neuroprotective Agents",
+            },
+            {
+              "nameOfSubstance": "Neurotoxins",
+            },
+            {
+              "nameOfSubstance": "Proto-Oncogene Proteins c-bcl-2",
+            },
+            {
+              "nameOfSubstance": "Receptors, Dopamine",
+            },
+            {
+              "nameOfSubstance": "Salsoline Alkaloids",
+            },
+            {
+              "nameOfSubstance": "Tetrahydroisoquinolines",
+            },
+            {
+              "nameOfSubstance": "salsoline",
+              "unii": "9Q83ETU10C",
+            },
+          ],
+          "compounds": [
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 6334,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6334",
+            },
+            {
+              "$id": 681,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
+            },
+            {
+              "$id": 6335,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6335",
+            },
+            {
+              "$id": 46695,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
+            },
+            {
+              "$id": 40009,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
+            },
+            {
+              "$id": 442356,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
+            },
+            {
+              "$id": 40010,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
+            },
+            {
+              "$id": 253613,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/253613",
+            },
+            {
+              "$id": 9859674,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9859674",
+            },
+            {
+              "$id": 12989303,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
+            },
+            {
+              "$id": 17994716,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/17994716",
+            },
+            {
+              "$id": 45259939,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
+            },
+            {
+              "$id": 165415541,
+              "$ref": "compounds",
+              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
+            },
+          ],
+          "dateCompleted": {
+            "day": 20,
+            "month": 5,
+            "year": 2004,
+          },
+          "dateCreated": {},
+          "dateRevised": {
+            "day": 14,
+            "month": 11,
+            "year": 2013,
+          },
+          "journalInfo": {
+            "country": "Netherlands",
+            "issnLinking": "0024-3205",
+            "medlineTa": "Life Sci",
+            "nlmUniqueId": 375521,
+          },
+          "meshHeadings": [
+            {
+              "descriptorName": "Apoptosis",
+              "qualifierName": "drug effects",
+            },
+            {
+              "descriptorName": "Benzofurans",
+            },
+            {
+              "descriptorName": "Electrophoresis, Polyacrylamide Gel",
+            },
+            {
+              "descriptorName": "Flow Cytometry",
+            },
+            {
+              "descriptorName": "Humans",
+            },
+            {
+              "descriptorName": "Neuroblastoma",
+            },
+            {
+              "descriptorName": "Neuroprotective Agents",
+            },
+            {
+              "descriptorName": "Neurotoxins",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Proto-Oncogene Proteins c-bcl-2",
+              "qualifierName": "biosynthesis",
+            },
+            {
+              "descriptorName": "Receptors, Dopamine",
+              "qualifierName": "metabolism",
+            },
+            {
+              "descriptorName": "Salsoline Alkaloids",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Structure-Activity Relationship",
+            },
+            {
+              "descriptorName": "Tetrahydroisoquinolines",
+              "qualifierName": "toxicity",
+            },
+            {
+              "descriptorName": "Tumor Cells, Cultured",
+            },
+          ],
+        },
+        "score": 0.7,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15102525",
       },
       {
         "$id": "19012744",
@@ -40577,490 +40921,8 @@ M  END
             },
           ],
         },
-        "score": 0.7334852545007067,
+        "score": 0.68,
         "url": "https://pubmed.ncbi.nlm.nih.gov/19012744",
-      },
-      {
-        "$id": "15843867",
-        "$ref": "pubmeds",
-        "data": {
-          "article": {
-            "abstract": "Propargylamine derivatives, rasagiline and (-)deprenyl, are anti-Parkinson agents and protect neurons from cell death as shown by in vivo and in vitro experiments. The studies on the chemical structure-activity relationship proved that the propargyl moiety is essentially required for the neuroprotective function. In this paper, neuroprotective activity of free N-propargylamine was studied using SH-SY5Y cells expressing only type A monoamine oxidase (MAO) against apoptosis induced by an endogenous dopaminergic neurotoxin, N-methyl(R)salsolinol. N-Propargylamine prevented apoptosis, whereas N-methylpropargylamine and propiolaldehyde did not. N-Propargylamine stabilized mitochondrial membrane potential and induced anti-apoptotic Bcl-2 at 1 microM-10 nM. N-Propargylamine inhibited MAO-A in competition to substrate with the apparent K(i) value of 28 microM, which was significantly higher than the concentration required for neuroprotection. It indicates that MAO inhibition is not prerequisite for the protective function of N-propargylamine. The anti-apoptotic function of N-propargylamine is discussed in terms of neuroprotection by propargylamines in neurodegenerative diseases, including Parkinson's disease.",
-            "authors": [
-              {
-                "firstName": "H",
-                "initials": "H",
-                "lastName": "Yi",
-              },
-              {
-                "firstName": "W",
-                "initials": "W",
-                "lastName": "Maruyama",
-              },
-              {
-                "firstName": "Y",
-                "initials": "Y",
-                "lastName": "Akao",
-              },
-              {
-                "firstName": "T",
-                "initials": "T",
-                "lastName": "Takahashi",
-              },
-              {
-                "firstName": "K",
-                "initials": "K",
-                "lastName": "Iwasa",
-              },
-              {
-                "firstName": "M B H",
-                "initials": "MB",
-                "lastName": "Youdim",
-              },
-              {
-                "firstName": "M",
-                "initials": "M",
-                "lastName": "Naoi",
-              },
-            ],
-            "journal": {
-              "iSsn": "0300-9564",
-              "isoAbbreviation": "J Neural Transm (Vienna)",
-              "issue": 1,
-              "pubDate": {
-                "Month": "Jan",
-                "Year": 2006,
-              },
-              "title": "Journal of neural transmission (Vienna, Austria : 1996)",
-            },
-            "language": "eng",
-            "languageTextSearch": "english",
-            "publicationTypeList": [
-              "Comparative Study",
-              "Journal Article",
-              "Research Support, Non-U.S. Gov't",
-            ],
-            "title": "N-Propargylamine protects SH-SY5Y cells from apoptosis induced by an endogenous neurotoxin, N-methyl(R)salsolinol, through stabilization of mitochondrial membrane and induction of anti-apoptotic Bcl-2.",
-          },
-          "chemicals": [
-            {
-              "nameOfSubstance": "Apoptosis Regulatory Proteins",
-            },
-            {
-              "nameOfSubstance": "Neuroprotective Agents",
-            },
-            {
-              "nameOfSubstance": "Propylamines",
-            },
-            {
-              "nameOfSubstance": "Proto-Oncogene Proteins c-bcl-2",
-            },
-            {
-              "nameOfSubstance": "Salsoline Alkaloids",
-            },
-            {
-              "nameOfSubstance": "Tetrahydroisoquinolines",
-            },
-            {
-              "nameOfSubstance": "propargylamine",
-              "unii": "2450-71-7",
-            },
-            {
-              "nameOfSubstance": "Pargyline",
-              "unii": "9MV14S8G3E",
-            },
-            {
-              "nameOfSubstance": "salsoline",
-              "unii": "9Q83ETU10C",
-            },
-          ],
-          "compounds": [
-            {
-              "$id": 6335,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6335",
-            },
-            {
-              "$id": 239041,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/239041",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 12222,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12222",
-            },
-            {
-              "$id": 4688,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/4688",
-            },
-            {
-              "$id": 40010,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
-            },
-            {
-              "$id": 239041,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/239041",
-            },
-            {
-              "$id": 40009,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 9373,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9373",
-            },
-            {
-              "$id": 442356,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
-            },
-            {
-              "$id": 3052776,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/3052776",
-            },
-            {
-              "$id": 10290734,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/10290734",
-            },
-            {
-              "$id": 12989303,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
-            },
-            {
-              "$id": 45259939,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
-            },
-            {
-              "$id": 165415541,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
-            },
-          ],
-          "dateCompleted": {
-            "day": 15,
-            "month": 9,
-            "year": 2006,
-          },
-          "dateCreated": {},
-          "dateRevised": {
-            "day": 13,
-            "month": 11,
-            "year": 2018,
-          },
-          "journalInfo": {
-            "country": "Austria",
-            "issnLinking": "0300-9564",
-            "medlineTa": "J Neural Transm (Vienna)",
-            "nlmUniqueId": 9702341,
-          },
-          "meshHeadings": [
-            {
-              "descriptorName": "Apoptosis",
-            },
-            {
-              "descriptorName": "Apoptosis Regulatory Proteins",
-            },
-            {
-              "descriptorName": "Dose-Response Relationship, Drug",
-            },
-            {
-              "descriptorName": "Humans",
-            },
-            {
-              "descriptorName": "Mitochondria",
-            },
-            {
-              "descriptorName": "Mitochondrial Membranes",
-            },
-            {
-              "descriptorName": "Neuroprotective Agents",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Pargyline",
-            },
-            {
-              "descriptorName": "Propylamines",
-              "qualifierName": "pharmacology",
-            },
-            {
-              "descriptorName": "Proto-Oncogene Proteins c-bcl-2",
-            },
-            {
-              "descriptorName": "Salsoline Alkaloids",
-              "qualifierName": "toxicity",
-            },
-            {
-              "descriptorName": "Tetrahydroisoquinolines",
-              "qualifierName": "toxicity",
-            },
-            {
-              "descriptorName": "Tumor Cells, Cultured",
-            },
-          ],
-        },
-        "score": 0.7314255632864364,
-        "url": "https://pubmed.ncbi.nlm.nih.gov/15843867",
-      },
-      {
-        "$id": "15102525",
-        "$ref": "pubmeds",
-        "data": {
-          "article": {
-            "abstract": "R-(-)-1-(Benzofuran-2-yl)-2-propylaminopentane HCl [R-(-)-BPAP] is one of \\"catecholaminergic and serotonergic enhancers\\", which were proposed to improve symptoms through increase in impulse-evoked release of monoamine neurotransmitters for Parkinson's disease. It was reported that (-)-BPAP up-regulated the synthesis of neurotrophic factors in mouse astrocytes, suggesting the neuroprotective potency of (-)-BPAP. In this paper, the neuroprotective function of (-)-BPAP and the related compounds was examined against apoptosis induced by an endogenous neurotoxin, N-methyl(R)salsolinol [NM(R)Sal], a possible pathogenic toxin in Parkinson's disease, in human dopaminergic neuroblastoma SH-SY5Y cells. The anti-apoptotic activity was confirmed with some of (-)-BPAP analogues, and the mechanism was found to be due to the direct stabilization of mitochondrial membrane potential and the induction of anti-apoptotic Bcl-2. The studies on structure-activity relationship demonstrated that the potency to stabilize the mitochondrial membrane potential depended on the absolute stereo-chemical structure of BPAP derivatives. The compounds with dextrorotation prevented the mitochondrial permeability transition, whereas those with levorotation did not. The presence of a propargyl or propyl group at the amino residue of R-(-)-1-(benzofuran-2-yl)-2-propylamine increased potency to stabilize the membrane potential and prevent apoptosis. R-FPFS-1169 and R-FPFS-1180 had more potent to induce Bcl-2 and prevent apoptosis than the corresponding S-enantiomers. These results are discussed with the possible application of BPAP derivatives as neuroprotective agents in Parkinson's disease and other neurodegenerative disorders.",
-            "authors": [
-              {
-                "firstName": "Wakako",
-                "initials": "W",
-                "lastName": "Maruyama",
-              },
-              {
-                "firstName": "Hong",
-                "initials": "H",
-                "lastName": "Yi",
-              },
-              {
-                "firstName": "Tsutomu",
-                "initials": "T",
-                "lastName": "Takahashi",
-              },
-              {
-                "firstName": "Seiichiro",
-                "initials": "S",
-                "lastName": "Shimazu",
-              },
-              {
-                "firstName": "Hironori",
-                "initials": "H",
-                "lastName": "Ohde",
-              },
-              {
-                "firstName": "Fumio",
-                "initials": "F",
-                "lastName": "Yoneda",
-              },
-              {
-                "firstName": "Kinuko",
-                "initials": "K",
-                "lastName": "Iwasa",
-              },
-              {
-                "firstName": "Makoto",
-                "initials": "M",
-                "lastName": "Naoi",
-              },
-            ],
-            "journal": {
-              "iSsn": "0024-3205",
-              "isoAbbreviation": "Life Sci",
-              "issue": 1,
-              "pubDate": {
-                "Day": 21,
-                "Month": "May",
-                "Year": 2004,
-              },
-              "title": "Life sciences",
-            },
-            "language": "eng",
-            "languageTextSearch": "english",
-            "publicationTypeList": [
-              "Journal Article",
-              "Research Support, Non-U.S. Gov't",
-            ],
-            "title": "Neuroprotective function of R-(-)-1-(benzofuran-2-yl)-2-propylaminopentane, R-(-)-BPAP, against apoptosis induced by N-methyl(R)salsolinol, an endogenous dopaminergic neurotoxin, in human dopaminergic neuroblastoma SH-SY5Y cells.",
-          },
-          "chemicals": [
-            {
-              "nameOfSubstance": "1-(benzofuran-2-yl)-2-propylaminopentane",
-            },
-            {
-              "nameOfSubstance": "Benzofurans",
-            },
-            {
-              "nameOfSubstance": "Neuroprotective Agents",
-            },
-            {
-              "nameOfSubstance": "Neurotoxins",
-            },
-            {
-              "nameOfSubstance": "Proto-Oncogene Proteins c-bcl-2",
-            },
-            {
-              "nameOfSubstance": "Receptors, Dopamine",
-            },
-            {
-              "nameOfSubstance": "Salsoline Alkaloids",
-            },
-            {
-              "nameOfSubstance": "Tetrahydroisoquinolines",
-            },
-            {
-              "nameOfSubstance": "salsoline",
-              "unii": "9Q83ETU10C",
-            },
-          ],
-          "compounds": [
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 6334,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6334",
-            },
-            {
-              "$id": 681,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/681",
-            },
-            {
-              "$id": 6335,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/6335",
-            },
-            {
-              "$id": 46695,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/46695",
-            },
-            {
-              "$id": 40009,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40009",
-            },
-            {
-              "$id": 442356,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/442356",
-            },
-            {
-              "$id": 40010,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/40010",
-            },
-            {
-              "$id": 253613,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/253613",
-            },
-            {
-              "$id": 9859674,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9859674",
-            },
-            {
-              "$id": 12989303,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/12989303",
-            },
-            {
-              "$id": 17994716,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/17994716",
-            },
-            {
-              "$id": 45259939,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/45259939",
-            },
-            {
-              "$id": 165415541,
-              "$ref": "compounds",
-              "url": "https://pubchem.ncbi.nlm.nih.gov/compound/165415541",
-            },
-          ],
-          "dateCompleted": {
-            "day": 20,
-            "month": 5,
-            "year": 2004,
-          },
-          "dateCreated": {},
-          "dateRevised": {
-            "day": 14,
-            "month": 11,
-            "year": 2013,
-          },
-          "journalInfo": {
-            "country": "Netherlands",
-            "issnLinking": "0024-3205",
-            "medlineTa": "Life Sci",
-            "nlmUniqueId": 375521,
-          },
-          "meshHeadings": [
-            {
-              "descriptorName": "Apoptosis",
-              "qualifierName": "drug effects",
-            },
-            {
-              "descriptorName": "Benzofurans",
-            },
-            {
-              "descriptorName": "Electrophoresis, Polyacrylamide Gel",
-            },
-            {
-              "descriptorName": "Flow Cytometry",
-            },
-            {
-              "descriptorName": "Humans",
-            },
-            {
-              "descriptorName": "Neuroblastoma",
-            },
-            {
-              "descriptorName": "Neuroprotective Agents",
-            },
-            {
-              "descriptorName": "Neurotoxins",
-              "qualifierName": "toxicity",
-            },
-            {
-              "descriptorName": "Proto-Oncogene Proteins c-bcl-2",
-              "qualifierName": "biosynthesis",
-            },
-            {
-              "descriptorName": "Receptors, Dopamine",
-              "qualifierName": "metabolism",
-            },
-            {
-              "descriptorName": "Salsoline Alkaloids",
-              "qualifierName": "toxicity",
-            },
-            {
-              "descriptorName": "Structure-Activity Relationship",
-            },
-            {
-              "descriptorName": "Tetrahydroisoquinolines",
-              "qualifierName": "toxicity",
-            },
-            {
-              "descriptorName": "Tumor Cells, Cultured",
-            },
-          ],
-        },
-        "score": 0.6963728301472607,
-        "url": "https://pubmed.ncbi.nlm.nih.gov/15102525",
       },
       {
         "$id": "12358797",
@@ -41408,7 +41270,7 @@ M  END
             },
           ],
         },
-        "score": 0.6434814635781304,
+        "score": 0.64,
         "url": "https://pubmed.ncbi.nlm.nih.gov/12358797",
       },
     ],
@@ -42222,7 +42084,7 @@ M  END
           "nbCompounds": 26,
           "title": "Ethylene oligomerization catalyst and method for continuously producing 1-hexene and 1-octene",
         },
-        "score": 1.0386530176628106,
+        "score": 1.05,
         "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-113441185-B",
       },
       {
@@ -42233,7 +42095,7 @@ M  END
           "nbCompounds": 27,
           "title": "A kind of ethylene oligomerization catalyst and method for continuous production of 1-hexene and 1-octene",
         },
-        "score": 0.8820539878516719,
+        "score": 0.87,
         "url": "https://pubchem.ncbi.nlm.nih.gov/patent/CN-113441185-A",
       },
     ],
@@ -42272,7 +42134,7 @@ exports[`ActiveOrNaturalSummarizer > terms:inhibition 3`] = `
             },
           ],
         },
-        "score": 1.172060050051001,
+        "score": 1.24,
         "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
       },
       {
@@ -42298,7 +42160,7 @@ exports[`ActiveOrNaturalSummarizer > terms:inhibition 3`] = `
             },
           ],
         },
-        "score": 1.172060050051001,
+        "score": 1.24,
         "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
       },
     ],
