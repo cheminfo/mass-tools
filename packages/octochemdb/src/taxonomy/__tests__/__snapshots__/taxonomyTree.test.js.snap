@@ -14,27 +14,20 @@ exports[`Rank Limit 1`] = `
                 "rank": "class",
               },
               {
-                "count": 1,
+                "count": 2,
                 "name": "Sordariomycetes",
                 "rank": "class",
               },
             ],
-            "count": 2,
+            "count": 3,
             "name": "Ascomycota",
             "rank": "phylum",
           },
         ],
-        "count": 2,
+        "count": 3,
         "name": "Fungi",
         "rank": "kingdom",
       },
-    ],
-    "count": 2,
-    "name": "Eukaryota",
-    "rank": "superKingdom",
-  },
-  {
-    "children": [
       {
         "children": [
           {
@@ -54,29 +47,215 @@ exports[`Rank Limit 1`] = `
         "name": "",
         "rank": "kingdom",
       },
+    ],
+    "count": 4,
+    "name": "",
+    "rank": "superkingdom",
+  },
+]
+`;
+
+exports[`True data 1`] = `
+[
+  {
+    "children": [
       {
         "children": [
           {
             "children": [
               {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "plants",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "",
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "",
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "",
+                    "rank": "order",
+                  },
+                ],
                 "count": 1,
-                "name": "Sordariomycetes",
+                "name": "",
                 "rank": "class",
               },
             ],
             "count": 1,
-            "name": "Ascomycota",
+            "name": "",
             "rank": "phylum",
           },
         ],
         "count": 1,
-        "name": "Fungi",
+        "name": "",
         "rank": "kingdom",
       },
     ],
-    "count": 2,
-    "name": "bacteria",
-    "rank": "superKingdom",
+    "count": 1,
+    "name": "",
+    "rank": "superkingdom",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Bacillus subtilis",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Bacillus",
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Bacillaceae",
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Bacillales",
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Bacilli",
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Bacillota",
+            "rank": "phylum",
+          },
+        ],
+        "count": 1,
+        "name": "",
+        "rank": "kingdom",
+      },
+    ],
+    "count": 1,
+    "name": "Bacteria",
+    "rank": "superkingdom",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Aster altaicus",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Aster",
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Heteropappus altaicus",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Heteropappus",
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Asteraceae",
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Asterales",
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Cassia roxburghii",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Cassia",
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Fabaceae",
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Fabales",
+                    "rank": "order",
+                  },
+                ],
+                "count": 3,
+                "name": "Magnoliopsida",
+                "rank": "class",
+              },
+            ],
+            "count": 3,
+            "name": "Streptophyta",
+            "rank": "phylum",
+          },
+        ],
+        "count": 3,
+        "name": "Viridiplantae",
+        "rank": "kingdom",
+      },
+    ],
+    "count": 3,
+    "name": "Eukaryota",
+    "rank": "superkingdom",
   },
 ]
 `;
@@ -100,7 +279,7 @@ exports[`multiple undefined fields 1`] = `
     ],
     "count": 3,
     "name": "",
-    "rank": "superKingdom",
+    "rank": "superkingdom",
   },
   {
     "children": [
@@ -119,7 +298,7 @@ exports[`multiple undefined fields 1`] = `
     ],
     "count": 2,
     "name": "Eukaryota",
-    "rank": "superKingdom",
+    "rank": "superkingdom",
   },
 ]
 `;
@@ -130,7 +309,7 @@ exports[`only one entry 1`] = `
     "children": [],
     "count": 1,
     "name": "Eukaryota",
-    "rank": "superKingdom",
+    "rank": "superkingdom",
   },
 ]
 `;
@@ -222,7 +401,7 @@ exports[`taxonomyTree 1`] = `
     ],
     "count": 2,
     "name": "Eukaryota",
-    "rank": "superKingdom",
+    "rank": "superkingdom",
   },
   {
     "children": [
@@ -323,7 +502,7 @@ exports[`taxonomyTree 1`] = `
     ],
     "count": 2,
     "name": "bacteria",
-    "rank": "superKingdom",
+    "rank": "superkingdom",
   },
 ]
 `;

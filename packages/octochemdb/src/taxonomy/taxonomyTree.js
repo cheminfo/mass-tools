@@ -11,8 +11,15 @@ export function taxonomyTree(taxonomies, options = {}) {
   const tree = [];
 
   for (let taxonomy of taxonomies) {
+    let reachedRankLimit = false;
     let current = tree;
     for (let rank of taxonomyRanks) {
+      if (rank === rankLimit) {
+        reachedRankLimit = true;
+      }
+      if (reachedRankLimit && rank !== rankLimit) {
+        break;
+      }
       const name = taxonomy[rank] || '';
       let existing = current.find(
         (node) => node.name === name && node.rank === rank,
@@ -30,10 +37,8 @@ export function taxonomyTree(taxonomies, options = {}) {
         existing.count++;
       }
       current = existing.children;
-      if (rank === rankLimit) break;
     }
   }
-
   for (let branch of tree) {
     cleanEmptyBranches(branch);
   }

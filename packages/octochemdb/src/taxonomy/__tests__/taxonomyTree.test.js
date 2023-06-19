@@ -3,7 +3,7 @@ import { taxonomyTree } from '../taxonomyTree';
 test('taxonomyTree', () => {
   const taxonomies = [
     {
-      superKingdom: 'Eukaryota',
+      superkingdom: 'Eukaryota',
       kingdom: 'Fungi',
       phylum: 'Ascomycota',
       class: 'Saccharomycetes',
@@ -13,7 +13,7 @@ test('taxonomyTree', () => {
       species: 'Candida albicans',
     },
     {
-      superKingdom: 'bacteria',
+      superkingdom: 'bacteria',
       phylum: 'Apicomplexa',
       class: 'Aconoidasida',
       order: 'Haemosporida',
@@ -22,7 +22,7 @@ test('taxonomyTree', () => {
       species: 'Plasmodium falciparum',
     },
     {
-      superKingdom: 'Eukaryota',
+      superkingdom: 'Eukaryota',
       kingdom: 'Fungi',
       phylum: 'Ascomycota',
       class: 'Sordariomycetes',
@@ -32,7 +32,7 @@ test('taxonomyTree', () => {
       species: 'Stachybotrys chartarum',
     },
     {
-      superKingdom: 'bacteria',
+      superkingdom: 'bacteria',
       kingdom: 'Fungi',
       phylum: 'Ascomycota',
       class: 'Sordariomycetes',
@@ -50,12 +50,13 @@ test('taxonomyTree', () => {
   expect(tree[1].children[1].name).toBe('Fungi');
   expect(tree[0].children[0].children[0].name).toBe('Ascomycota');
   expect(tree[0].children[0].children[0].children).toHaveLength(2);
+
   expect(tree).toMatchSnapshot();
 });
 test('only one entry', () => {
   const taxonomies = [
     {
-      superKingdom: 'Eukaryota',
+      superkingdom: 'Eukaryota',
     },
   ];
 
@@ -72,7 +73,7 @@ test('multiple undefined fields', () => {
       kingdom: 'bacteria',
     },
     {
-      superKingdom: 'Eukaryota',
+      superkingdom: 'Eukaryota',
     },
     {
       kingdom: 'bacteria',
@@ -83,7 +84,7 @@ test('multiple undefined fields', () => {
       phylum: 'Ascomycota',
     },
     {
-      superKingdom: 'Eukaryota',
+      superkingdom: 'Eukaryota',
       kingdom: 'bacteria',
       phylum: 'Ascomycota',
     },
@@ -97,7 +98,6 @@ test('multiple undefined fields', () => {
   expect(tree[1].children[0].count).toBe(1);
   expect(tree[0].children[0].name).toBe('bacteria');
   expect(tree[0].children[0].count).toBe(3);
-
   expect(tree).toMatchSnapshot();
 });
 test('Rank Limit', () => {
@@ -146,5 +146,55 @@ test('Rank Limit', () => {
     rankLimit: 'Class',
   };
   let tree = taxonomyTree(taxonomies, options);
+
+  expect(tree).toMatchSnapshot();
+});
+test('True data', () => {
+  const taxonomies = [
+    {
+      species: 'plants',
+    },
+    {
+      superkingdom: 'Bacteria',
+      phylum: 'Bacillota',
+      class: 'Bacilli',
+      order: 'Bacillales',
+      family: 'Bacillaceae',
+      genus: 'Bacillus',
+      species: 'Bacillus subtilis',
+    },
+    {
+      superkingdom: 'Eukaryota',
+      kingdom: 'Viridiplantae',
+      phylum: 'Streptophyta',
+      class: 'Magnoliopsida',
+      order: 'Asterales',
+      family: 'Asteraceae',
+      genus: 'Aster',
+      species: 'Aster altaicus',
+    },
+    {
+      superkingdom: 'Eukaryota',
+      kingdom: 'Viridiplantae',
+      phylum: 'Streptophyta',
+      class: 'Magnoliopsida',
+      order: 'Asterales',
+      family: 'Asteraceae',
+      genus: 'Heteropappus',
+      species: 'Heteropappus altaicus',
+    },
+    {
+      superkingdom: 'Eukaryota',
+      kingdom: 'Viridiplantae',
+      phylum: 'Streptophyta',
+      class: 'Magnoliopsida',
+      order: 'Fabales',
+      family: 'Fabaceae',
+      genus: 'Cassia',
+      species: 'Cassia roxburghii',
+    },
+  ];
+
+  let tree = taxonomyTree(taxonomies);
   expect(tree).toMatchSnapshot();
 });
