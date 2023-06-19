@@ -38,7 +38,7 @@ export async function compoundsFromMF(mf, options = {}) {
     if (titles[datum._id]) datum.data.title = titles[datum._id];
   }
 
-  data.sort((a, b) => a.data.title.length - b.data.title.length);
+  data.sort((a, b) => (a.data.title?.length || Number.MAX_SAFE_INTEGER) - (b.data.title?.length || Number.MAX_SAFE_INTEGER));
 
   return data;
 }

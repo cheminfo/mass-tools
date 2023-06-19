@@ -24,6 +24,7 @@ test('activeOrNaturalDetails', async () => {
     'nbPatents',
     'nbPubmeds',
     'nbTaxonomies',
+    'noStereoOCL',
     'patents',
     'pubmeds',
     'taxonomies',
