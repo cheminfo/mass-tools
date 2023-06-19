@@ -1,6 +1,6 @@
 {
   "name": "mass-tools",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "main": "lib/index.js",
   "description": "Many tools allowing to analyze mass spectra",
   "module": "src/index.js",
@@ -32,7 +32,7 @@
     "ms-report": "^2.1.0",
     "ms-spectrum": "^2.4.0",
     "nucleotide": "^2.1.0",
-    "octochemdb": "^1.1.1",
+    "octochemdb": "^1.2.0",
     "peaks-similarity": "^3.1.1",
     "peptide": "^2.0.0",
     "sum-object-keys": "^1.0.2"

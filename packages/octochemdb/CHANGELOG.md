@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@1.1.1...octochemdb@1.2.0) (2023-06-19)
+
+
+### Bug Fixes
+
+* taxonomy type ([a9a01be](https://github.com/cheminfo/mass-tools/commit/a9a01be7a597b54902f1f4bef2e40c60fede1f68))
+* test cases ([a0393fd](https://github.com/cheminfo/mass-tools/commit/a0393fdb94cffaf4ebc2cc944e9e4697470eb57e))
+
+
+### Features
+
+* **octochemdb:** add compoundsFromMF and append title ([679103d](https://github.com/cheminfo/mass-tools/commit/679103d065f4abf8dbd324e1e5d4b7990d7da628))
+* **octochemdb:** add excludedCollections ([1a5f907](https://github.com/cheminfo/mass-tools/commit/1a5f907e68d49d795bbf4617adb0922ab46369a2))
+* **octochemdb:** add taxonomyComparator ([bf0aa42](https://github.com/cheminfo/mass-tools/commit/bf0aa42d94c78e46282343a74cb8c27abe556e96))
+* **octochemdb:** compoundsFromMF sorts results by title length ([90778bc](https://github.com/cheminfo/mass-tools/commit/90778bc45001747cfddc945d6dead40ac6038365))
+* taxonomyTree ([2cd05f1](https://github.com/cheminfo/mass-tools/commit/2cd05f1ac0c2b2923d3e277567599624f3b9a04e))
+
+
+
+
+
 ## [1.1.1](https://github.com/cheminfo/mass-tools/compare/octochemdb@1.1.0...octochemdb@1.1.1) (2023-06-13)
 
 **Note:** Version bump only for package octochemdb
