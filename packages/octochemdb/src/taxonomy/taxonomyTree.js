@@ -46,7 +46,7 @@ function cleanEmptyBranches(branch) {
     if (child.children.length === 0 && child.name === '') {
       return false;
     }
-    // This part is used to remove the children in species rank
+    // This part is used to remove the children in the lowest rank
     if (child.children.length === 0 && child.name !== '') {
       delete child.children;
     }
