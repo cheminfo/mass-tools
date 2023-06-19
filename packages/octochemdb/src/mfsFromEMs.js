@@ -16,7 +16,7 @@ import { searchWithIonizations } from './utils/searchWithIonizations.js';
  * @param {string} [options.compoundsURL='mfs/v1/fromMF'] - URL to retrieve corresponding compounds
  */
 
-export async function mfsFromEM(masses, options = {}) {
+export async function mfsFromEMs(masses, options = {}) {
   const {
     url = 'mfs/v1/fromEM',
     compoundsURL = 'compounds/v1/fromMF',

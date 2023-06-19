@@ -1,8 +1,8 @@
-import { mfsFromEM } from '../mfsFromEM.js';
+import { mfsFromEMs } from '../mfsFromEMs.js';
 
-describe('mfsFromEM', () => {
+describe('mfsFromEMs', () => {
   it('simple case', async () => {
-    let data = await mfsFromEM(60, {
+    let data = await mfsFromEMs(60, {
       ionizations: '(H+)2,H+',
       precision: 10,
     });
@@ -40,7 +40,7 @@ describe('mfsFromEM', () => {
   });
 
   it('string containing more than 1 monoisotopic mass', async () => {
-    let data = await mfsFromEM('12,24,36', {
+    let data = await mfsFromEMs('12,24,36', {
       ionizations: '',
       precision: 10,
       minCount: 0,
@@ -50,7 +50,7 @@ describe('mfsFromEM', () => {
   });
 
   it('simple case negative ionization', async () => {
-    let data = await mfsFromEM(60, {
+    let data = await mfsFromEMs(60, {
       ionizations: '(H+)-2, (H+)-1',
       precision: 10,
     });
@@ -59,7 +59,7 @@ describe('mfsFromEM', () => {
   });
 
   it('highly precise', async () => {
-    let data = await mfsFromEM(81.06987671016094, {
+    let data = await mfsFromEMs(81.06987671016094, {
       ionizations: 'H+',
       precision: 1,
     });
@@ -67,7 +67,7 @@ describe('mfsFromEM', () => {
   });
 
   it('simple case with range filter', async () => {
-    let data = await mfsFromEM(60, {
+    let data = await mfsFromEMs(60, {
       ionizations: '(H+)2, H+',
       precision: 100,
       ranges: 'C0-10H0-10N0-10O0-10',

@@ -4,7 +4,7 @@ import { activesOrNaturalsByMF } from './activesOrNaturalsByMF.js';
 import { gnps } from './gnps.js';
 import { massBank } from './massBank.js';
 import { massSpectra } from './massSpectra.js';
-import { mfsFromEM } from './mfsFromEM.js';
+import { mfsFromEMs } from './mfsFromEMs.js';
 import { pubmedCompounds } from './pubmedCompounds.js';
 
 export class OctoChemDB {
@@ -17,7 +17,7 @@ export class OctoChemDB {
   }
 
   async mfsFromEMs(masses, options = {}) {
-    return mfsFromEM(masses, { baseURL: this.baseURL, ...options });
+    return mfsFromEMs(masses, { baseURL: this.baseURL, ...options });
   }
 
   async activesOrNaturals(options = {}) {
