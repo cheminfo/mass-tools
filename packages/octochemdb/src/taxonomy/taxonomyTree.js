@@ -11,7 +11,8 @@ export function taxonomyTree(taxonomies) {
   for (let taxonomy of taxonomies) {
     let current = tree;
     for (let rank of taxonomyRanks) {
-      const name = taxonomy[rank] || '';
+      const name = taxonomy[rank];
+      if (!name) continue;
       let existing = current.find(
         (node) => node.name === name && node.rank === rank,
       );
@@ -22,6 +23,7 @@ export function taxonomyTree(taxonomies) {
           count: 1,
           children: [],
         };
+
         current.push(existing);
       } else {
         existing.count++;
@@ -29,6 +31,7 @@ export function taxonomyTree(taxonomies) {
       current = existing.children;
     }
   }
+
   for (let branch of tree) {
     cleanEmptyBranches(branch);
   }
@@ -46,8 +49,6 @@ function cleanEmptyBranches(branch) {
     // This part is used to remove the children in species rank
     if (child.children.length === 0 && child.name !== '') {
       delete child.children;
-    }
-    if (child.name === '' && child.children.length > 0) {
     }
 
     return true;

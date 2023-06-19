@@ -5,21 +5,14 @@ exports[`multiple undefined fields 1`] = `
   {
     "children": [
       {
-        "children": [
-          {
-            "count": 2,
-            "name": "Ascomycota",
-            "rank": "phylum",
-          },
-        ],
-        "count": 3,
-        "name": "bacteria",
-        "rank": "kingdom",
+        "count": 2,
+        "name": "Ascomycota",
+        "rank": "phylum",
       },
     ],
     "count": 3,
-    "name": "",
-    "rank": "superKingdom",
+    "name": "bacteria",
+    "rank": "kingdom",
   },
   {
     "children": [
@@ -156,41 +149,34 @@ exports[`taxonomyTree 1`] = `
                       {
                         "children": [
                           {
-                            "children": [
-                              {
-                                "count": 1,
-                                "name": "Plasmodium falciparum",
-                                "rank": "species",
-                              },
-                            ],
                             "count": 1,
-                            "name": "Plasmodium",
-                            "rank": "genus",
+                            "name": "Plasmodium falciparum",
+                            "rank": "species",
                           },
                         ],
                         "count": 1,
-                        "name": "Plasmodiidae",
-                        "rank": "family",
+                        "name": "Plasmodium",
+                        "rank": "genus",
                       },
                     ],
                     "count": 1,
-                    "name": "Haemosporida",
-                    "rank": "order",
+                    "name": "Plasmodiidae",
+                    "rank": "family",
                   },
                 ],
                 "count": 1,
-                "name": "Aconoidasida",
-                "rank": "class",
+                "name": "Haemosporida",
+                "rank": "order",
               },
             ],
             "count": 1,
-            "name": "Apicomplexa",
-            "rank": "phylum",
+            "name": "Aconoidasida",
+            "rank": "class",
           },
         ],
         "count": 1,
-        "name": "",
-        "rank": "kingdom",
+        "name": "Apicomplexa",
+        "rank": "phylum",
       },
       {
         "children": [
