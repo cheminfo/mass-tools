@@ -100,3 +100,51 @@ test('multiple undefined fields', () => {
 
   expect(tree).toMatchSnapshot();
 });
+test('Rank Limit', () => {
+  const taxonomies = [
+    {
+      superKingdom: 'Eukaryota',
+      kingdom: 'Fungi',
+      phylum: 'Ascomycota',
+      class: 'Saccharomycetes',
+      order: 'Saccharomycetales',
+      family: 'Debaryomycetaceae',
+      genus: 'Candida',
+      species: 'Candida albicans',
+    },
+    {
+      superKingdom: 'bacteria',
+      phylum: 'Apicomplexa',
+      class: 'Aconoidasida',
+      order: 'Haemosporida',
+      family: 'Plasmodiidae',
+      genus: 'Plasmodium',
+      species: 'Plasmodium falciparum',
+    },
+    {
+      superKingdom: 'Eukaryota',
+      kingdom: 'Fungi',
+      phylum: 'Ascomycota',
+      class: 'Sordariomycetes',
+      order: 'Hypocreales',
+      family: 'Stachybotryaceae',
+      genus: 'Stachybotrys',
+      species: 'Stachybotrys chartarum',
+    },
+    {
+      superKingdom: 'bacteria',
+      kingdom: 'Fungi',
+      phylum: 'Ascomycota',
+      class: 'Sordariomycetes',
+      order: 'Hypocreales',
+      family: 'Stachybotryaceae',
+      genus: 'Stachybotrys',
+      species: 'Stachybotrys cylindrospora',
+    },
+  ];
+  const options = {
+    rankLimit: 'Class',
+  };
+  let tree = taxonomyTree(taxonomies, options);
+  expect(tree).toMatchSnapshot();
+});

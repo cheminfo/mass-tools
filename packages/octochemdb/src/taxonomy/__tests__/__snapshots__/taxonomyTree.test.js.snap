@@ -1,5 +1,86 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Rank Limit 1`] = `
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "count": 1,
+                "name": "Saccharomycetes",
+                "rank": "class",
+              },
+              {
+                "count": 1,
+                "name": "Sordariomycetes",
+                "rank": "class",
+              },
+            ],
+            "count": 2,
+            "name": "Ascomycota",
+            "rank": "phylum",
+          },
+        ],
+        "count": 2,
+        "name": "Fungi",
+        "rank": "kingdom",
+      },
+    ],
+    "count": 2,
+    "name": "Eukaryota",
+    "rank": "superKingdom",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "count": 1,
+                "name": "Aconoidasida",
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Apicomplexa",
+            "rank": "phylum",
+          },
+        ],
+        "count": 1,
+        "name": "",
+        "rank": "kingdom",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "count": 1,
+                "name": "Sordariomycetes",
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Ascomycota",
+            "rank": "phylum",
+          },
+        ],
+        "count": 1,
+        "name": "Fungi",
+        "rank": "kingdom",
+      },
+    ],
+    "count": 2,
+    "name": "bacteria",
+    "rank": "superKingdom",
+  },
+]
+`;
+
 exports[`multiple undefined fields 1`] = `
 [
   {
