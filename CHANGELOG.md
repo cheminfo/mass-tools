@@ -1,5 +1,22 @@
 # Changelog
 
+## [7.6.0](https://github.com/cheminfo/mass-tools/compare/v7.5.0...v7.6.0) (2023-06-19)
+
+
+### Features
+
+* **octochemdb:** add compoundsFromMF and append title ([679103d](https://github.com/cheminfo/mass-tools/commit/679103d065f4abf8dbd324e1e5d4b7990d7da628))
+* **octochemdb:** add excludedCollections ([1a5f907](https://github.com/cheminfo/mass-tools/commit/1a5f907e68d49d795bbf4617adb0922ab46369a2))
+* **octochemdb:** add taxonomyComparator ([bf0aa42](https://github.com/cheminfo/mass-tools/commit/bf0aa42d94c78e46282343a74cb8c27abe556e96))
+* **octochemdb:** compoundsFromMF sorts results by title length ([90778bc](https://github.com/cheminfo/mass-tools/commit/90778bc45001747cfddc945d6dead40ac6038365))
+* taxonomyTree ([2cd05f1](https://github.com/cheminfo/mass-tools/commit/2cd05f1ac0c2b2923d3e277567599624f3b9a04e))
+
+
+### Bug Fixes
+
+* taxonomy type ([a9a01be](https://github.com/cheminfo/mass-tools/commit/a9a01be7a597b54902f1f4bef2e40c60fede1f68))
+* test cases ([a0393fd](https://github.com/cheminfo/mass-tools/commit/a0393fdb94cffaf4ebc2cc944e9e4697470eb57e))
+
 ## [7.5.0](https://github.com/cheminfo/mass-tools/compare/v7.4.0...v7.5.0) (2023-06-13)
 
 
