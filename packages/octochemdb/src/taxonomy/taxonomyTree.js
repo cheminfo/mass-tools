@@ -11,8 +11,7 @@ export function taxonomyTree(taxonomies) {
   for (let taxonomy of taxonomies) {
     let current = tree;
     for (let rank of taxonomyRanks) {
-      const name = taxonomy[rank];
-      if (!name) continue;
+      const name = taxonomy[rank] || '';
       let existing = current.find(
         (node) => node.name === name && node.rank === rank,
       );
