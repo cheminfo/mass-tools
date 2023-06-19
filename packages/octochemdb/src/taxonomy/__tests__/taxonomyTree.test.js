@@ -44,6 +44,7 @@ test('taxonomyTree', () => {
   ];
 
   let tree = taxonomyTree(taxonomies);
+  console.log(JSON.stringify(tree[1], null, 2));
   expect(tree[1].children).toHaveLength(2);
   expect(tree[1].children[0].name).toBe('');
   expect(tree[1].children[1].name).toBe('Fungi');
@@ -63,12 +64,10 @@ test('only one entry', () => {
 
   expect(tree[0].name).toBe('Eukaryota');
   expect(tree[0].count).toBe(1);
-  expect(tree[0].children[0].name).toBe('');
-  expect(tree[0].children[0].count).toBe(1);
 
   expect(tree).toMatchSnapshot();
 });
-test('taxonomyTree', () => {
+test('multiple undefined fields', () => {
   const taxonomies = [
     {
       kingdom: 'bacteria',
@@ -94,7 +93,7 @@ test('taxonomyTree', () => {
   let tree = taxonomyTree(taxonomies);
   expect(tree[1].name).toBe('Eukaryota');
   expect(tree[1].count).toBe(2);
-  expect(tree[1].children[0].name).toBe('');
+  expect(tree[1].children[0].name).toBe('bacteria');
   expect(tree[1].children[0].count).toBe(1);
   expect(tree[0].children[0].name).toBe('bacteria');
   expect(tree[0].children[0].count).toBe(3);

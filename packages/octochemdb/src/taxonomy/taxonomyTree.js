@@ -20,10 +20,8 @@ export function taxonomyTree(taxonomies) {
           name,
           rank,
           count: 1,
+          children: [],
         };
-        if (taxonomyRanks.indexOf(rank) < taxonomyRanks.length - 1) {
-          existing.children = [];
-        }
         current.push(existing);
       } else {
         existing.count++;
@@ -31,17 +29,27 @@ export function taxonomyTree(taxonomies) {
       current = existing.children;
     }
   }
-
-  cleanEmptyBranches(tree);
-
+  for (let branch of tree) {
+    cleanEmptyBranches(branch);
+  }
   return tree;
 }
 
 function cleanEmptyBranches(branch) {
+  branch.children.forEach((child) => cleanEmptyBranches(child));
 
+  branch.children = branch.children.filter((child) => {
+    // This part is used empty nodes
+    if (child.children.length === 0 && child.name === '') {
+      return false;
+    }
+    // This part is used to remove the children in species rank
+    if (child.children.length === 0 && child.name !== '') {
+      delete child.children;
+    }
+    if (child.name === '' && child.children.length > 0) {
+    }
 
-  for (let child of branch.children) {
-    cleanEmptyBranches(child);
-  }
-
+    return true;
+  });
 }
