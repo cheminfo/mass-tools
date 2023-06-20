@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.7.0](https://github.com/cheminfo/mass-tools/compare/v7.6.0...v7.7.0) (2023-06-20)
+
+
+### Features
+
+* **octochemdb:** add callback for in-memory search DB preparation ([a89d628](https://github.com/cheminfo/mass-tools/commit/a89d628e5539f5814b603044666b08d9ff68d894))
+* **octochemdb:** taxonomyTree ([31a58e6](https://github.com/cheminfo/mass-tools/commit/31a58e66a84bc0460972f67a3a360324e5dce111))
+
 ## [7.6.0](https://github.com/cheminfo/mass-tools/compare/v7.5.0...v7.6.0) (2023-06-19)
 
 
