@@ -1,453 +1,508 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`only one entry 1`] = `
-"[
+exports[`Rank Limit 1`] = `
+[
   {
-    \\"name\\": \\"Eukaryota\\",
-    \\"rank\\": \\"superKingdom\\",
-    \\"count\\": 1,
-    \\"children\\": [
+    "children": [
       {
-        \\"name\\": \\"\\",
-        \\"rank\\": \\"kingdom\\",
-        \\"count\\": 1,
-        \\"children\\": [
+        "children": [
           {
-            \\"name\\": \\"\\",
-            \\"rank\\": \\"phylum\\",
-            \\"count\\": 1,
-            \\"children\\": [
+            "children": [
               {
-                \\"name\\": \\"\\",
-                \\"rank\\": \\"class\\",
-                \\"count\\": 1,
-                \\"children\\": [
+                "count": 1,
+                "name": "Saccharomycetes",
+                "rank": "class",
+              },
+              {
+                "count": 2,
+                "name": "Sordariomycetes",
+                "rank": "class",
+              },
+            ],
+            "count": 3,
+            "name": "Ascomycota",
+            "rank": "phylum",
+          },
+        ],
+        "count": 3,
+        "name": "Fungi",
+        "rank": "kingdom",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "count": 1,
+                "name": "Aconoidasida",
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Apicomplexa",
+            "rank": "phylum",
+          },
+        ],
+        "count": 1,
+        "name": "",
+        "rank": "kingdom",
+      },
+    ],
+    "count": 4,
+    "name": "",
+    "rank": "superkingdom",
+  },
+]
+`;
+
+exports[`True data 1`] = `
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
                   {
-                    \\"name\\": \\"\\",
-                    \\"rank\\": \\"order\\",
-                    \\"count\\": 1,
-                    \\"children\\": [
+                    "children": [
                       {
-                        \\"name\\": \\"\\",
-                        \\"rank\\": \\"family\\",
-                        \\"count\\": 1,
-                        \\"children\\": [
+                        "children": [
                           {
-                            \\"name\\": \\"\\",
-                            \\"rank\\": \\"genus\\",
-                            \\"count\\": 1,
-                            \\"children\\": [
+                            "children": [
                               {
-                                \\"name\\": \\"\\",
-                                \\"rank\\": \\"species\\",
-                                \\"count\\": 1
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-]"
+                                "count": 1,
+                                "name": "plants",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "",
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "",
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "",
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "",
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "",
+            "rank": "phylum",
+          },
+        ],
+        "count": 1,
+        "name": "",
+        "rank": "kingdom",
+      },
+    ],
+    "count": 1,
+    "name": "",
+    "rank": "superkingdom",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Bacillus subtilis",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Bacillus",
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Bacillaceae",
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Bacillales",
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Bacilli",
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Bacillota",
+            "rank": "phylum",
+          },
+        ],
+        "count": 1,
+        "name": "",
+        "rank": "kingdom",
+      },
+    ],
+    "count": 1,
+    "name": "Bacteria",
+    "rank": "superkingdom",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Aster altaicus",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Aster",
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Heteropappus altaicus",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Heteropappus",
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Asteraceae",
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Asterales",
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Cassia roxburghii",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Cassia",
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Fabaceae",
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Fabales",
+                    "rank": "order",
+                  },
+                ],
+                "count": 3,
+                "name": "Magnoliopsida",
+                "rank": "class",
+              },
+            ],
+            "count": 3,
+            "name": "Streptophyta",
+            "rank": "phylum",
+          },
+        ],
+        "count": 3,
+        "name": "Viridiplantae",
+        "rank": "kingdom",
+      },
+    ],
+    "count": 3,
+    "name": "Eukaryota",
+    "rank": "superkingdom",
+  },
+]
+`;
+
+exports[`multiple undefined fields 1`] = `
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "count": 2,
+            "name": "Ascomycota",
+            "rank": "phylum",
+          },
+        ],
+        "count": 3,
+        "name": "bacteria",
+        "rank": "kingdom",
+      },
+    ],
+    "count": 3,
+    "name": "",
+    "rank": "superkingdom",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "count": 1,
+            "name": "Ascomycota",
+            "rank": "phylum",
+          },
+        ],
+        "count": 1,
+        "name": "bacteria",
+        "rank": "kingdom",
+      },
+    ],
+    "count": 2,
+    "name": "Eukaryota",
+    "rank": "superkingdom",
+  },
+]
+`;
+
+exports[`only one entry 1`] = `
+[
+  {
+    "children": [],
+    "count": 1,
+    "name": "Eukaryota",
+    "rank": "superkingdom",
+  },
+]
 `;
 
 exports[`taxonomyTree 1`] = `
-"[
+[
   {
-    \\"name\\": \\"Eukaryota\\",
-    \\"rank\\": \\"superKingdom\\",
-    \\"count\\": 2,
-    \\"children\\": [
+    "children": [
       {
-        \\"name\\": \\"Fungi\\",
-        \\"rank\\": \\"kingdom\\",
-        \\"count\\": 2,
-        \\"children\\": [
+        "children": [
           {
-            \\"name\\": \\"Ascomycota\\",
-            \\"rank\\": \\"phylum\\",
-            \\"count\\": 2,
-            \\"children\\": [
+            "children": [
               {
-                \\"name\\": \\"Saccharomycetes\\",
-                \\"rank\\": \\"class\\",
-                \\"count\\": 1,
-                \\"children\\": [
+                "children": [
                   {
-                    \\"name\\": \\"Saccharomycetales\\",
-                    \\"rank\\": \\"order\\",
-                    \\"count\\": 1,
-                    \\"children\\": [
+                    "children": [
                       {
-                        \\"name\\": \\"Debaryomycetaceae\\",
-                        \\"rank\\": \\"family\\",
-                        \\"count\\": 1,
-                        \\"children\\": [
+                        "children": [
                           {
-                            \\"name\\": \\"Candida\\",
-                            \\"rank\\": \\"genus\\",
-                            \\"count\\": 1,
-                            \\"children\\": [
+                            "children": [
                               {
-                                \\"name\\": \\"Candida albicans\\",
-                                \\"rank\\": \\"species\\",
-                                \\"count\\": 1
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
+                                "count": 1,
+                                "name": "Candida albicans",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Candida",
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Debaryomycetaceae",
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Saccharomycetales",
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Saccharomycetes",
+                "rank": "class",
               },
               {
-                \\"name\\": \\"Sordariomycetes\\",
-                \\"rank\\": \\"class\\",
-                \\"count\\": 1,
-                \\"children\\": [
+                "children": [
                   {
-                    \\"name\\": \\"Hypocreales\\",
-                    \\"rank\\": \\"order\\",
-                    \\"count\\": 1,
-                    \\"children\\": [
+                    "children": [
                       {
-                        \\"name\\": \\"Stachybotryaceae\\",
-                        \\"rank\\": \\"family\\",
-                        \\"count\\": 1,
-                        \\"children\\": [
+                        "children": [
                           {
-                            \\"name\\": \\"Stachybotrys\\",
-                            \\"rank\\": \\"genus\\",
-                            \\"count\\": 1,
-                            \\"children\\": [
+                            "children": [
                               {
-                                \\"name\\": \\"Stachybotrys chartarum\\",
-                                \\"rank\\": \\"species\\",
-                                \\"count\\": 1
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    \\"name\\": \\"bacteria\\",
-    \\"rank\\": \\"superKingdom\\",
-    \\"count\\": 2,
-    \\"children\\": [
-      {
-        \\"name\\": \\"\\",
-        \\"rank\\": \\"kingdom\\",
-        \\"count\\": 1,
-        \\"children\\": [
-          {
-            \\"name\\": \\"Apicomplexa\\",
-            \\"rank\\": \\"phylum\\",
-            \\"count\\": 1,
-            \\"children\\": [
-              {
-                \\"name\\": \\"Aconoidasida\\",
-                \\"rank\\": \\"class\\",
-                \\"count\\": 1,
-                \\"children\\": [
-                  {
-                    \\"name\\": \\"Haemosporida\\",
-                    \\"rank\\": \\"order\\",
-                    \\"count\\": 1,
-                    \\"children\\": [
-                      {
-                        \\"name\\": \\"Plasmodiidae\\",
-                        \\"rank\\": \\"family\\",
-                        \\"count\\": 1,
-                        \\"children\\": [
-                          {
-                            \\"name\\": \\"Plasmodium\\",
-                            \\"rank\\": \\"genus\\",
-                            \\"count\\": 1,
-                            \\"children\\": [
-                              {
-                                \\"name\\": \\"Plasmodium falciparum\\",
-                                \\"rank\\": \\"species\\",
-                                \\"count\\": 1
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        \\"name\\": \\"Fungi\\",
-        \\"rank\\": \\"kingdom\\",
-        \\"count\\": 1,
-        \\"children\\": [
-          {
-            \\"name\\": \\"Ascomycota\\",
-            \\"rank\\": \\"phylum\\",
-            \\"count\\": 1,
-            \\"children\\": [
-              {
-                \\"name\\": \\"Sordariomycetes\\",
-                \\"rank\\": \\"class\\",
-                \\"count\\": 1,
-                \\"children\\": [
-                  {
-                    \\"name\\": \\"Hypocreales\\",
-                    \\"rank\\": \\"order\\",
-                    \\"count\\": 1,
-                    \\"children\\": [
-                      {
-                        \\"name\\": \\"Stachybotryaceae\\",
-                        \\"rank\\": \\"family\\",
-                        \\"count\\": 1,
-                        \\"children\\": [
-                          {
-                            \\"name\\": \\"Stachybotrys\\",
-                            \\"rank\\": \\"genus\\",
-                            \\"count\\": 1,
-                            \\"children\\": [
-                              {
-                                \\"name\\": \\"Stachybotrys cylindrospora\\",
-                                \\"rank\\": \\"species\\",
-                                \\"count\\": 1
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-]"
-`;
-
-exports[`taxonomyTree 2`] = `
-"[
-  {
-    \\"name\\": \\"\\",
-    \\"rank\\": \\"superKingdom\\",
-    \\"count\\": 3,
-    \\"children\\": [
-      {
-        \\"name\\": \\"bacteria\\",
-        \\"rank\\": \\"kingdom\\",
-        \\"count\\": 3,
-        \\"children\\": [
-          {
-            \\"name\\": \\"\\",
-            \\"rank\\": \\"phylum\\",
-            \\"count\\": 1,
-            \\"children\\": [
-              {
-                \\"name\\": \\"\\",
-                \\"rank\\": \\"class\\",
-                \\"count\\": 1,
-                \\"children\\": [
-                  {
-                    \\"name\\": \\"\\",
-                    \\"rank\\": \\"order\\",
-                    \\"count\\": 1,
-                    \\"children\\": [
-                      {
-                        \\"name\\": \\"\\",
-                        \\"rank\\": \\"family\\",
-                        \\"count\\": 1,
-                        \\"children\\": [
-                          {
-                            \\"name\\": \\"\\",
-                            \\"rank\\": \\"genus\\",
-                            \\"count\\": 1,
-                            \\"children\\": [
-                              {
-                                \\"name\\": \\"\\",
-                                \\"rank\\": \\"species\\",
-                                \\"count\\": 1
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+                                "count": 1,
+                                "name": "Stachybotrys chartarum",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Stachybotrys",
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Stachybotryaceae",
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Hypocreales",
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Sordariomycetes",
+                "rank": "class",
+              },
+            ],
+            "count": 2,
+            "name": "Ascomycota",
+            "rank": "phylum",
           },
-          {
-            \\"name\\": \\"Ascomycota\\",
-            \\"rank\\": \\"phylum\\",
-            \\"count\\": 2,
-            \\"children\\": [
-              {
-                \\"name\\": \\"\\",
-                \\"rank\\": \\"class\\",
-                \\"count\\": 2,
-                \\"children\\": [
-                  {
-                    \\"name\\": \\"\\",
-                    \\"rank\\": \\"order\\",
-                    \\"count\\": 2,
-                    \\"children\\": [
-                      {
-                        \\"name\\": \\"\\",
-                        \\"rank\\": \\"family\\",
-                        \\"count\\": 2,
-                        \\"children\\": [
-                          {
-                            \\"name\\": \\"\\",
-                            \\"rank\\": \\"genus\\",
-                            \\"count\\": 2,
-                            \\"children\\": [
-                              {
-                                \\"name\\": \\"\\",
-                                \\"rank\\": \\"species\\",
-                                \\"count\\": 2
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
+        ],
+        "count": 2,
+        "name": "Fungi",
+        "rank": "kingdom",
+      },
+    ],
+    "count": 2,
+    "name": "Eukaryota",
+    "rank": "superkingdom",
   },
   {
-    \\"name\\": \\"Eukaryota\\",
-    \\"rank\\": \\"superKingdom\\",
-    \\"count\\": 2,
-    \\"children\\": [
+    "children": [
       {
-        \\"name\\": \\"\\",
-        \\"rank\\": \\"kingdom\\",
-        \\"count\\": 1,
-        \\"children\\": [
+        "children": [
           {
-            \\"name\\": \\"\\",
-            \\"rank\\": \\"phylum\\",
-            \\"count\\": 1,
-            \\"children\\": [
+            "children": [
               {
-                \\"name\\": \\"\\",
-                \\"rank\\": \\"class\\",
-                \\"count\\": 1,
-                \\"children\\": [
+                "children": [
                   {
-                    \\"name\\": \\"\\",
-                    \\"rank\\": \\"order\\",
-                    \\"count\\": 1,
-                    \\"children\\": [
+                    "children": [
                       {
-                        \\"name\\": \\"\\",
-                        \\"rank\\": \\"family\\",
-                        \\"count\\": 1,
-                        \\"children\\": [
+                        "children": [
                           {
-                            \\"name\\": \\"\\",
-                            \\"rank\\": \\"genus\\",
-                            \\"count\\": 1,
-                            \\"children\\": [
+                            "children": [
                               {
-                                \\"name\\": \\"\\",
-                                \\"rank\\": \\"species\\",
-                                \\"count\\": 1
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+                                "count": 1,
+                                "name": "Plasmodium falciparum",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Plasmodium",
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Plasmodiidae",
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Haemosporida",
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Aconoidasida",
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Apicomplexa",
+            "rank": "phylum",
+          },
+        ],
+        "count": 1,
+        "name": "",
+        "rank": "kingdom",
       },
       {
-        \\"name\\": \\"bacteria\\",
-        \\"rank\\": \\"kingdom\\",
-        \\"count\\": 1,
-        \\"children\\": [
+        "children": [
           {
-            \\"name\\": \\"Ascomycota\\",
-            \\"rank\\": \\"phylum\\",
-            \\"count\\": 1,
-            \\"children\\": [
+            "children": [
               {
-                \\"name\\": \\"\\",
-                \\"rank\\": \\"class\\",
-                \\"count\\": 1,
-                \\"children\\": [
+                "children": [
                   {
-                    \\"name\\": \\"\\",
-                    \\"rank\\": \\"order\\",
-                    \\"count\\": 1,
-                    \\"children\\": [
+                    "children": [
                       {
-                        \\"name\\": \\"\\",
-                        \\"rank\\": \\"family\\",
-                        \\"count\\": 1,
-                        \\"children\\": [
+                        "children": [
                           {
-                            \\"name\\": \\"\\",
-                            \\"rank\\": \\"genus\\",
-                            \\"count\\": 1,
-                            \\"children\\": [
+                            "children": [
                               {
-                                \\"name\\": \\"\\",
-                                \\"rank\\": \\"species\\",
-                                \\"count\\": 1
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-]"
+                                "count": 1,
+                                "name": "Stachybotrys cylindrospora",
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Stachybotrys",
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Stachybotryaceae",
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Hypocreales",
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Sordariomycetes",
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Ascomycota",
+            "rank": "phylum",
+          },
+        ],
+        "count": 1,
+        "name": "Fungi",
+        "rank": "kingdom",
+      },
+    ],
+    "count": 2,
+    "name": "bacteria",
+    "rank": "superkingdom",
+  },
+]
 `;

@@ -1,5 +1,5 @@
 export const taxonomyRanks = [
-  'superKingdom',
+  'superkingdom',
   'kingdom',
   'phylum',
   'class',
