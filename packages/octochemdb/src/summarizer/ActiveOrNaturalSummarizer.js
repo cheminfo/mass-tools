@@ -39,6 +39,7 @@ export class ActiveOrNaturalSummarizer {
    * @param {number} [options.pubmeds.tolerance=1] -Typo Tolerance following the Levenshtein algorithm
    * @param {object} [options.pubmeds.boostFields={ title: 2, abstract: 1, meshHeadings: 1 }]  - Fields weights, higher weight means higher importance
    * @param {string[]} [options.pubmeds.queryFields=['title', 'abstract', 'meshHeadings']] - Fields to query
+   * @param {(action,current,last)=>{}} [options.callback] - Callback function to call during database creation
    * @returns
    */
   constructor(activeOrNaturalDetails, options = {}) {
@@ -112,12 +113,12 @@ export class ActiveOrNaturalSummarizer {
   }
 
   async createDB() {
-    this.pubmedsDB = await getPubmedsDB(this.pubmeds, this.options.pubmeds);
+    this.pubmedsDB = await getPubmedsDB(this.pubmeds, { callback: this.options.callback, ...this.options.pubmeds });
     this.activitiesDB = await getActivitiesDB(
       this.activities,
       this.options.activities,
     );
-    this.patentsDB = await getPatentsDB(this.patents, this.options.patents);
+    this.patentsDB = await getPatentsDB(this.patents, { callback: this.options.callback, ...this.options.patents });
     this.taxonomiesDB = await getTaxonomiesDB(
       this.taxonomies,
       this.options.taxonomies,

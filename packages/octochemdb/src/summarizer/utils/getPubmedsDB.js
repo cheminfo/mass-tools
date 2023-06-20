@@ -4,6 +4,7 @@ export async function getPubmedsDB(pubmeds, options = {}) {
   const {
     queryFields = ['title', 'abstract', 'meshHeadings'],
     abstractsLimit = 1000,
+    callback,
   } = options;
   if (pubmeds.length > abstractsLimit) {
     queryFields.splice(queryFields.indexOf('abstract'), 1);
@@ -21,7 +22,13 @@ export async function getPubmedsDB(pubmeds, options = {}) {
     },
   });
 
-  for (const pubmed of pubmeds) {
+  let lastCallback = Date.now()
+  for (let i = 0; i < pubmeds.length; i++) {
+    const pubmed = pubmeds[i]
+    if (callback && (Date.now() - lastCallback > 1000)) {
+      lastCallback = Date.now()
+      await callback('Pubmed DB creation', i, pubmeds.length)
+    }
     const meshHeadings = [];
     for (const meshHeading of pubmed.data.meshHeadings) {
       if (meshHeading.descriptorName !== undefined) {
