@@ -113,12 +113,18 @@ export class ActiveOrNaturalSummarizer {
   }
 
   async createDB() {
-    this.pubmedsDB = await getPubmedsDB(this.pubmeds, { callback: this.options.callback, ...this.options.pubmeds });
+    this.pubmedsDB = await getPubmedsDB(this.pubmeds, {
+      callback: this.options.callback,
+      ...this.options.pubmeds,
+    });
     this.activitiesDB = await getActivitiesDB(
       this.activities,
       this.options.activities,
     );
-    this.patentsDB = await getPatentsDB(this.patents, { callback: this.options.callback, ...this.options.patents });
+    this.patentsDB = await getPatentsDB(this.patents, {
+      callback: this.options.callback,
+      ...this.options.patents,
+    });
     this.taxonomiesDB = await getTaxonomiesDB(
       this.taxonomies,
       this.options.taxonomies,

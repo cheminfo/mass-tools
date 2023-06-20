@@ -22,12 +22,12 @@ export async function getPubmedsDB(pubmeds, options = {}) {
     },
   });
 
-  let lastCallback = Date.now()
+  let lastCallback = Date.now();
   for (let i = 0; i < pubmeds.length; i++) {
-    const pubmed = pubmeds[i]
-    if (callback && (Date.now() - lastCallback > 1000)) {
-      lastCallback = Date.now()
-      await callback('Pubmed DB creation', i, pubmeds.length)
+    const pubmed = pubmeds[i];
+    if (callback && Date.now() - lastCallback > 1000) {
+      lastCallback = Date.now();
+      await callback('Pubmed DB creation', i, pubmeds.length);
     }
     const meshHeadings = [];
     for (const meshHeading of pubmed.data.meshHeadings) {

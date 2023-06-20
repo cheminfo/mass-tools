@@ -1,8 +1,11 @@
 import { create, insert } from '@orama/orama';
 
 export async function getPatentsDB(patents, options = {}) {
-  const { queryFields = ['title', 'abstract'], abstractsLimit = 1000, callback } =
-    options;
+  const {
+    queryFields = ['title', 'abstract'],
+    abstractsLimit = 1000,
+    callback,
+  } = options;
   if (patents.length > abstractsLimit) {
     queryFields.splice(queryFields.indexOf('abstract'), 1);
   }
@@ -14,12 +17,12 @@ export async function getPatentsDB(patents, options = {}) {
       nbCompounds: 'number',
     },
   });
-  let lastCallback = Date.now()
+  let lastCallback = Date.now();
   for (let i = 0; i < patents.length; i++) {
-    const patent = patents[i]
-    if (callback && (Date.now() - lastCallback > 1000)) {
-      lastCallback = Date.now()
-      await callback('Patent DB creation', i, patents.length)
+    const patent = patents[i];
+    if (callback && Date.now() - lastCallback > 1000) {
+      lastCallback = Date.now();
+      await callback('Patent DB creation', i, patents.length);
     }
     let article = {
       $id: patent.$id,
