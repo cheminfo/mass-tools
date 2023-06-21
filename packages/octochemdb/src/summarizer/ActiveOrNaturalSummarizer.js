@@ -76,8 +76,12 @@ export class ActiveOrNaturalSummarizer {
       };
     }
     if (!this.isInitialized) {
-      await this.createDB();
+      if (!this.creatingDB) {
+        this.creatingDB = this.createDB();
+      }
+      await this.creatingDB;
       this.isInitialized = true;
+      this.creatingDB = undefined
     }
 
     return {
