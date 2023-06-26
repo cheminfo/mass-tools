@@ -11,21 +11,25 @@ exports[`Rank Limit 1`] = `
               {
                 "count": 1,
                 "name": "Saccharomycetes",
+                "nbTaxonomies": 1,
                 "rank": "class",
               },
               {
                 "count": 2,
                 "name": "Sordariomycetes",
+                "nbTaxonomies": 1,
                 "rank": "class",
               },
             ],
             "count": 3,
             "name": "Ascomycota",
+            "nbTaxonomies": 2,
             "rank": "phylum",
           },
         ],
         "count": 3,
         "name": "Fungi",
+        "nbTaxonomies": 2,
         "rank": "kingdom",
       },
       {
@@ -35,21 +39,25 @@ exports[`Rank Limit 1`] = `
               {
                 "count": 1,
                 "name": "Aconoidasida",
+                "nbTaxonomies": 1,
                 "rank": "class",
               },
             ],
             "count": 1,
             "name": "Apicomplexa",
+            "nbTaxonomies": 1,
             "rank": "phylum",
           },
         ],
         "count": 1,
         "name": "",
+        "nbTaxonomies": 1,
         "rank": "kingdom",
       },
     ],
     "count": 4,
     "name": "",
+    "nbTaxonomies": 3,
     "rank": "superkingdom",
   },
 ]
@@ -74,41 +82,49 @@ exports[`True data 1`] = `
                               {
                                 "count": 1,
                                 "name": "plants",
+                                "nbTaxonomies": 1,
                                 "rank": "species",
                               },
                             ],
                             "count": 1,
                             "name": "",
+                            "nbTaxonomies": 1,
                             "rank": "genus",
                           },
                         ],
                         "count": 1,
                         "name": "",
+                        "nbTaxonomies": 1,
                         "rank": "family",
                       },
                     ],
                     "count": 1,
                     "name": "",
+                    "nbTaxonomies": 1,
                     "rank": "order",
                   },
                 ],
                 "count": 1,
                 "name": "",
+                "nbTaxonomies": 1,
                 "rank": "class",
               },
             ],
             "count": 1,
             "name": "",
+            "nbTaxonomies": 1,
             "rank": "phylum",
           },
         ],
         "count": 1,
         "name": "",
+        "nbTaxonomies": 1,
         "rank": "kingdom",
       },
     ],
     "count": 1,
     "name": "",
+    "nbTaxonomies": 1,
     "rank": "superkingdom",
   },
   {
@@ -128,41 +144,49 @@ exports[`True data 1`] = `
                               {
                                 "count": 1,
                                 "name": "Bacillus subtilis",
+                                "nbTaxonomies": 1,
                                 "rank": "species",
                               },
                             ],
                             "count": 1,
                             "name": "Bacillus",
+                            "nbTaxonomies": 1,
                             "rank": "genus",
                           },
                         ],
                         "count": 1,
                         "name": "Bacillaceae",
+                        "nbTaxonomies": 1,
                         "rank": "family",
                       },
                     ],
                     "count": 1,
                     "name": "Bacillales",
+                    "nbTaxonomies": 1,
                     "rank": "order",
                   },
                 ],
                 "count": 1,
                 "name": "Bacilli",
+                "nbTaxonomies": 1,
                 "rank": "class",
               },
             ],
             "count": 1,
             "name": "Bacillota",
+            "nbTaxonomies": 1,
             "rank": "phylum",
           },
         ],
         "count": 1,
         "name": "",
+        "nbTaxonomies": 1,
         "rank": "kingdom",
       },
     ],
     "count": 1,
     "name": "Bacteria",
+    "nbTaxonomies": 1,
     "rank": "superkingdom",
   },
   {
@@ -182,11 +206,13 @@ exports[`True data 1`] = `
                               {
                                 "count": 1,
                                 "name": "Aster altaicus",
+                                "nbTaxonomies": 1,
                                 "rank": "species",
                               },
                             ],
                             "count": 1,
                             "name": "Aster",
+                            "nbTaxonomies": 1,
                             "rank": "genus",
                           },
                           {
@@ -194,21 +220,25 @@ exports[`True data 1`] = `
                               {
                                 "count": 1,
                                 "name": "Heteropappus altaicus",
+                                "nbTaxonomies": 1,
                                 "rank": "species",
                               },
                             ],
                             "count": 1,
                             "name": "Heteropappus",
+                            "nbTaxonomies": 1,
                             "rank": "genus",
                           },
                         ],
                         "count": 2,
                         "name": "Asteraceae",
+                        "nbTaxonomies": 2,
                         "rank": "family",
                       },
                     ],
                     "count": 2,
                     "name": "Asterales",
+                    "nbTaxonomies": 2,
                     "rank": "order",
                   },
                   {
@@ -220,41 +250,49 @@ exports[`True data 1`] = `
                               {
                                 "count": 1,
                                 "name": "Cassia roxburghii",
+                                "nbTaxonomies": 1,
                                 "rank": "species",
                               },
                             ],
                             "count": 1,
                             "name": "Cassia",
+                            "nbTaxonomies": 1,
                             "rank": "genus",
                           },
                         ],
                         "count": 1,
                         "name": "Fabaceae",
+                        "nbTaxonomies": 1,
                         "rank": "family",
                       },
                     ],
                     "count": 1,
                     "name": "Fabales",
+                    "nbTaxonomies": 1,
                     "rank": "order",
                   },
                 ],
                 "count": 3,
                 "name": "Magnoliopsida",
+                "nbTaxonomies": 3,
                 "rank": "class",
               },
             ],
             "count": 3,
             "name": "Streptophyta",
+            "nbTaxonomies": 3,
             "rank": "phylum",
           },
         ],
         "count": 3,
         "name": "Viridiplantae",
+        "nbTaxonomies": 3,
         "rank": "kingdom",
       },
     ],
     "count": 3,
     "name": "Eukaryota",
+    "nbTaxonomies": 3,
     "rank": "superkingdom",
   },
 ]
@@ -269,16 +307,19 @@ exports[`multiple undefined fields 1`] = `
           {
             "count": 2,
             "name": "Ascomycota",
+            "nbTaxonomies": 1,
             "rank": "phylum",
           },
         ],
         "count": 3,
         "name": "bacteria",
+        "nbTaxonomies": 1,
         "rank": "kingdom",
       },
     ],
     "count": 3,
     "name": "",
+    "nbTaxonomies": 1,
     "rank": "superkingdom",
   },
   {
@@ -288,16 +329,19 @@ exports[`multiple undefined fields 1`] = `
           {
             "count": 1,
             "name": "Ascomycota",
+            "nbTaxonomies": 1,
             "rank": "phylum",
           },
         ],
         "count": 1,
         "name": "bacteria",
+        "nbTaxonomies": 1,
         "rank": "kingdom",
       },
     ],
     "count": 2,
     "name": "Eukaryota",
+    "nbTaxonomies": 1,
     "rank": "superkingdom",
   },
 ]
@@ -309,6 +353,4594 @@ exports[`only one entry 1`] = `
     "children": [],
     "count": 1,
     "name": "Eukaryota",
+    "nbTaxonomies": 0,
+    "rank": "superkingdom",
+  },
+]
+`;
+
+exports[`over 200 entries 1`] = `
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Bacterial strain",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Calvatia nipponica",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Chlorophora regia",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Kalimeris shimadae",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Melandryum firmum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Omphalia",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "plants",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Polysaccharidum versicolor",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 8,
+                            "name": "",
+                            "nbTaxonomies": 8,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 8,
+                        "name": "",
+                        "nbTaxonomies": 8,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 8,
+                    "name": "",
+                    "nbTaxonomies": 8,
+                    "rank": "order",
+                  },
+                ],
+                "count": 8,
+                "name": "",
+                "nbTaxonomies": 8,
+                "rank": "class",
+              },
+            ],
+            "count": 8,
+            "name": "",
+            "nbTaxonomies": 8,
+            "rank": "phylum",
+          },
+        ],
+        "count": 8,
+        "name": "",
+        "nbTaxonomies": 8,
+        "rank": "kingdom",
+      },
+    ],
+    "count": 8,
+    "name": "",
+    "nbTaxonomies": 8,
+    "rank": "superkingdom",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Sargassum kjellmanianum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Sargassum pallidum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Sargassum",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Sargassaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Fucales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                ],
+                "count": 2,
+                "name": "Phaeophyceae",
+                "nbTaxonomies": 2,
+                "rank": "class",
+              },
+            ],
+            "count": 2,
+            "name": "",
+            "nbTaxonomies": 2,
+            "rank": "phylum",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Gloiosiphonia verticillaris",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Gloiosiphonia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Gloiosiphoniaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Gigartinales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Ganonema farinosum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Ganonema",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Liagoraceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Nemaliales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 2,
+                "name": "Florideophyceae",
+                "nbTaxonomies": 2,
+                "rank": "class",
+              },
+            ],
+            "count": 2,
+            "name": "Rhodophyta",
+            "nbTaxonomies": 2,
+            "rank": "phylum",
+          },
+        ],
+        "count": 4,
+        "name": "",
+        "nbTaxonomies": 4,
+        "rank": "kingdom",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Acremonium roseum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Acremonium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "",
+            "nbTaxonomies": 1,
+            "rank": "phylum",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Guignardia laricina",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Guignardia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Phyllostictaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Botryosphaeriales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Cladosporium sp.",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Cladosporium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Cladosporiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Cladosporiales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 2,
+                "name": "Dothideomycetes",
+                "nbTaxonomies": 2,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Aspergillus brunneus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Aspergillus ochraceus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Aspergillus",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Penicillium camemberti",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Penicillium commune",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Penicillium",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 4,
+                        "name": "Aspergillaceae",
+                        "nbTaxonomies": 4,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 4,
+                    "name": "Eurotiales",
+                    "nbTaxonomies": 4,
+                    "rank": "order",
+                  },
+                ],
+                "count": 4,
+                "name": "Eurotiomycetes",
+                "nbTaxonomies": 4,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Cetraria islandica",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Cetraria richardsonii",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Cetraria",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Parmeliaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Lecanorales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Thamnolia subuniformis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Thamnolia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Icmadophilaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Ochrolechia parella",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Ochrolechia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Ochrolechiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Pertusariales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                ],
+                "count": 4,
+                "name": "Lecanoromycetes",
+                "nbTaxonomies": 4,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Tuber indicum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Tuber",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Tuberaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Pezizales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Pezizomycetes",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Phomopsis archeri",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Phomopsis",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Valsaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Diaporthales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Cordyceps sinensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Cordyceps",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Cordycipitaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Neonectria obtusispora",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Neonectria",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Nectriaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Hypocreales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "[Phialophora] cyclaminis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Chaetomium arcuatum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Chaetomium globosum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Chaetomium longirostre",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 3,
+                            "name": "Chaetomium",
+                            "nbTaxonomies": 3,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 3,
+                        "name": "Chaetomiaceae",
+                        "nbTaxonomies": 3,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 4,
+                    "name": "Sordariales",
+                    "nbTaxonomies": 4,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Nigrospora oryzae",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Nigrospora sphaerica",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Nigrospora",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Apiosporaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Hypoxylon fragiforme",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Hypoxylon",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Hypoxylaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Xylaria",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Xylaria",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Xylariaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 4,
+                    "name": "Xylariales",
+                    "nbTaxonomies": 4,
+                    "rank": "order",
+                  },
+                ],
+                "count": 11,
+                "name": "Sordariomycetes",
+                "nbTaxonomies": 11,
+                "rank": "class",
+              },
+            ],
+            "count": 22,
+            "name": "Ascomycota",
+            "nbTaxonomies": 22,
+            "rank": "phylum",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Catathelasma ventricosa",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Catathelasma",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Biannulariaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Lepista nuda",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Lepista",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Clitocybaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Panellus eryngii (DC.:FR.) QUEL.",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Panellus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Mycenaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Armillaria mellea",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Armillaria",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Physalacriaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pleurotus eryngii",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pleurotus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Pleurotaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 5,
+                    "name": "Agaricales",
+                    "nbTaxonomies": 5,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pisolithus tinctorius",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pisolithus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Pisolithaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Rhizopogon pumilionus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Rhizopogon",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Rhizopogonaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Boletales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Rhizoctonia repens",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Rhizoctonia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Ceratobasidiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Tulasnella deliquescens",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Tulasnella",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Tulasnellaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Cantharellales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Ramaria botrytis (Pers.) Ricken",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Ramaria",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Gomphaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Gomphales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Coltricia cinnamomea",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Coltricia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Hymenochaetaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Hymenochaetales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Antrodia camphorata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Antrodia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Daedalea quercina",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Daedalea",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Fomitopsis fomentarius",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Fomitopsis",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 3,
+                        "name": "Fomitopsidaceae",
+                        "nbTaxonomies": 3,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Laetiporus sulphureus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Laetiporus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Laetiporaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Daedaleopsis confragosa",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Daedaleopsis confragosa var. tricolor",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Daedaleopsis confragosa var.tricolor",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Daedaleopsis quercina",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 5,
+                            "name": "Daedaleopsis",
+                            "nbTaxonomies": 4,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Ganoderma applanatum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Ganoderma carnosum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Ganoderma lucidum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Ganoderma pfeifferi",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Ganoderma sinense",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 5,
+                            "name": "Ganoderma",
+                            "nbTaxonomies": 5,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Polyporus umbellatus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Polyporus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 11,
+                        "name": "Polyporaceae",
+                        "nbTaxonomies": 10,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Taiwanofungus camphoratus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Taiwanofungus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Taiwanofungaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 16,
+                    "name": "Polyporales",
+                    "nbTaxonomies": 15,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Hericium erinaceus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Hericium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Hericiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Stereum hirsutum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Stereum",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Stereaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Russulales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Sarcodon aspratus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Sarcodon scabrosus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Sarcodon",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Thelephoraceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Thelephorales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                ],
+                "count": 31,
+                "name": "Agaricomycetes",
+                "nbTaxonomies": 30,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Helicobasidium mompa",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Helicobasidium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Helicobasidiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Helicobasidiales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Pucciniomycetes",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 32,
+            "name": "Basidiomycota",
+            "nbTaxonomies": 31,
+            "rank": "phylum",
+          },
+        ],
+        "count": 55,
+        "name": "Fungi",
+        "nbTaxonomies": 54,
+        "rank": "kingdom",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Agelenopsis aperta",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Agelenopsis",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Agelenidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Araneae",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Arachnida",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Antitrogus consanguineus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Antitrogus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Scarabaeidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Coleoptera",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Phora hyperborea",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Phora",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Phoridae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Diptera",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Leucoptera malifoliella",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Leucoptera",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Lyonetiidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Manduca sexta",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Manduca",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Sphingidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Lepidoptera",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                ],
+                "count": 4,
+                "name": "Insecta",
+                "nbTaxonomies": 4,
+                "rank": "class",
+              },
+            ],
+            "count": 5,
+            "name": "Arthropoda",
+            "nbTaxonomies": 5,
+            "rank": "phylum",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Watersipora cucullata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Watersipora",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Watersiporidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Cheilostomatida",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Gymnolaemata",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Bryozoa",
+            "nbTaxonomies": 1,
+            "rank": "phylum",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Halocynthia aurantium",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Halocynthia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Pyuridae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Stolidobranchia",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Ascidiacea",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Chordata",
+            "nbTaxonomies": 1,
+            "rank": "phylum",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Alcyonium grandis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Alcyonium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Alcyoniidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Eunicella stricta",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Eunicella",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Eunicellidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Malacalcyonacea",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Junceella fragilis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Junceella",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Ellisellidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Scleralcyonacea",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 3,
+                "name": "Anthozoa",
+                "nbTaxonomies": 3,
+                "rank": "class",
+              },
+            ],
+            "count": 3,
+            "name": "Cnidaria",
+            "nbTaxonomies": 3,
+            "rank": "phylum",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Diplopteraster multipes",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Diplopteraster",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Pterasteridae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Velatida",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Asteroidea",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Lamprometra klunzingeri",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Lamprometra",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Mariametridae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Comatulida",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Crinoidea",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Echinus miliaris",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Echinus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Echinidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Camarodonta",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Echinoidea",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 3,
+            "name": "Echinodermata",
+            "nbTaxonomies": 3,
+            "rank": "phylum",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Bolinus brandaris",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Bolinus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Muricidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Neogastropoda",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Doris petechialis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Doris",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Dorididae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Nudibranchia",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 2,
+                "name": "Gastropoda",
+                "nbTaxonomies": 2,
+                "rank": "class",
+              },
+            ],
+            "count": 2,
+            "name": "Mollusca",
+            "nbTaxonomies": 2,
+            "rank": "phylum",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Axinyssa isabela",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Axinyssa",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Halichondriidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Suberitida",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Demospongiae",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Porifera",
+            "nbTaxonomies": 1,
+            "rank": "phylum",
+          },
+        ],
+        "count": 16,
+        "name": "Metazoa",
+        "nbTaxonomies": 16,
+        "rank": "kingdom",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Calypogeia integristipula",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Calypogeia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Calypogeiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Jungermanniales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Frullania inflata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Frullania",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Frullaniaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Porellales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 2,
+                "name": "Jungermanniopsida",
+                "nbTaxonomies": 2,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Arum ternatum thunb",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Arum",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Heteropsis integerrima",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Heteropsis",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pothos chinensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pothos",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Zantedeschia aethiopica",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Zantedeschia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 4,
+                        "name": "Araceae",
+                        "nbTaxonomies": 4,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 4,
+                    "name": "Alismatales",
+                    "nbTaxonomies": 4,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Anethum foeniculum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Anethum",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Apiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Cussonia arborea",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Cussonia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Araliaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Apiales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Crinum firmifolium",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Crinum",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Lycoris x chejuensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Lycoris",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Amaryllidaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Yucca baccata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Yucca",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Asparagaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 3,
+                    "name": "Asparagales",
+                    "nbTaxonomies": 3,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Andryala pinnatifida",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Andryala",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Artemisia lanata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Artemisia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Baccharoides adoensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Baccharoides",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Centaurea napifolia",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Centaurea",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Cirsium brevistylum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Cirsium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Hilliardiella oligocephala",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Hilliardiella",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Inula anatolica",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Inula",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Moquiniastrum paniculatum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Moquiniastrum",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pleocarphus revolutus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pleocarphus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pteronia eenii",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pteronia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pulicaria canariensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pulicaria",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Stomatanthes corumbensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Stomatanthes",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Tanacetum parthenium",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Tanacetum",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Urospermum dalechampii",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Urospermum",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Vernonia condensata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Vernonia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Xanthium strumarium",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Xanthium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 16,
+                        "name": "Asteraceae",
+                        "nbTaxonomies": 16,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 16,
+                    "name": "Asterales",
+                    "nbTaxonomies": 16,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Heliotropium ramosissimum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Heliotropium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Heliotropiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Boraginales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Dimorphocarpa wislizeni",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Dimorphocarpa",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Brassicaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Brassicales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pachysandra procumbens",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pachysandra",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Buxaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Buxales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Eremogone kansuensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Eremogone",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Gypsophila vaccaria",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Gypsophila",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Caryophyllaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Haloxylon salicornicum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Haloxylon",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Chenopodiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pisonia aculeata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pisonia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Nyctaginaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Fagopyrum esculentum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Fagopyrum tataricum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Fagopyrum",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Polygonaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 6,
+                    "name": "Caryophyllales",
+                    "nbTaxonomies": 6,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Putterlickia verrucosa",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Putterlickia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Celastraceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Celastrales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Diospyros ferrea",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Diospyros",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Ebenaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Cyclamen repandum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Cyclamen",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Rapanea laetevirens",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Rapanea",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Primulaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 3,
+                    "name": "Ericales",
+                    "nbTaxonomies": 3,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Acacia saligna",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Acacia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Cassia reticulata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Cassia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Desmodium oxyphyllum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Desmodium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Erythrina suberosa",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Erythrina",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Ormosia sumatrana",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Ormosia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Vigna mungo",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Vigna",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 6,
+                        "name": "Fabaceae",
+                        "nbTaxonomies": 6,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 6,
+                    "name": "Fabales",
+                    "nbTaxonomies": 6,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Castanopsis fissa",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Castanopsis",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Fagaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Fagales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Gentiana dahurica",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Gentiana purpurea",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Gentiana",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Gentianaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Coussarea brevicaulis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Coussarea",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Rubiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 3,
+                    "name": "Gentianales",
+                    "nbTaxonomies": 3,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Andrographis paniculata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Andrographis",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Barleria strigosa",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Barleria",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Strobilanthes psilostachys",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Strobilanthes",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 3,
+                        "name": "Acanthaceae",
+                        "nbTaxonomies": 3,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Radermachera boniana",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Radermachera",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Bignoniaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Dracocephalum heterophyllum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Dracocephalum",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Gmelina arborea",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Gmelina",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Mentha x piperita",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Mentha",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Mosla scabra",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Mosla",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Orthosiphon wulfenioides",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Orthosiphon",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Plectranthus grandidentatus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Plectranthus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Thymus marschallianus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Thymus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 7,
+                        "name": "Lamiaceae",
+                        "nbTaxonomies": 7,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pinguicula moranensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pinguicula",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Lentibulariaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Plantago subulata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Plantago",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Plantaginaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Eremophila latrobei",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Eremophila",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Scrophulariaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Duranta repens",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Duranta",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Verbenaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 15,
+                    "name": "Lamiales",
+                    "nbTaxonomies": 15,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Hornschuchia citriodora",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Hornschuchia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Uvaria chamae",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Uvaria",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Annonaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Knema attenuata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Knema",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Myristicaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 3,
+                    "name": "Magnoliales",
+                    "nbTaxonomies": 3,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Hydnocarpus octandra",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Hydnocarpus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Achariaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Garcinia atroviridis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Garcinia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Clusiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Euphorbia granulata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Euphorbia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Macaranga conifera",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Macaranga",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Mallotus pallidus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Mallotus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 3,
+                        "name": "Euphorbiaceae",
+                        "nbTaxonomies": 3,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Breynia fruticosa",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Breynia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Phyllanthaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Rhizophora apiculata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Rhizophora",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Rhizophoraceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 7,
+                    "name": "Malpighiales",
+                    "nbTaxonomies": 7,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Dipterocarpus pilosus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Dipterocarpus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Shorea seminis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Shorea",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Dipterocarpaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Sterculia urens",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Sterculia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Malvaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 3,
+                    "name": "Malvales",
+                    "nbTaxonomies": 3,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Eucalyptus maideni",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Eucalyptus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Myrtaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Myrtales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Nymphaea ampla",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Nymphaea",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Nymphaeaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Nymphaeales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Ananas comosus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Ananas",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Bromeliaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Paepalanthus ramosus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Paepalanthus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Eriocaulaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Juncus effusus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Juncus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Juncaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Oryza sativa",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Oryza",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Urochloa ruziziensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Urochloa",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Poaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Typha capensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Typha latifolia",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Typha",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Typhaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 7,
+                    "name": "Poales",
+                    "nbTaxonomies": 7,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Kermadecia elliptica",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Kermadecia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Proteaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Proteales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Berberis aquifolium",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Berberis tabiensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Berberis",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Berberidaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Burasaia madagascariensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Burasaia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Menispermaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Delphinium winklerianum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Delphinium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pulsatilla dahurica",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pulsatilla",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Ranunculaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 5,
+                    "name": "Ranunculales",
+                    "nbTaxonomies": 5,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Trema dielsiana",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Trema",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Cannabaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Elaeagnus glabra",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Elaeagnus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Elaeagnaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Colubrina asiatica",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Colubrina",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Gouania lupuloides",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Gouania",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Paliurus ramosissimus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Paliurus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 3,
+                        "name": "Rhamnaceae",
+                        "nbTaxonomies": 3,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Prunus persica",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Prunus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Rosaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 6,
+                    "name": "Rosales",
+                    "nbTaxonomies": 6,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Commiphora mukul",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Commiphora",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Burseraceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Melia toosendan",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Melia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Meliaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Glycosmis craibii",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Glycosmis",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Melicope melanophloia",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Melicope",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Rutaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 4,
+                    "name": "Sapindales",
+                    "nbTaxonomies": 4,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Rhodiola rosea",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Rhodiola",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Crassulaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Saxifragales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Stictocardia campanulata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Stictocardia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Convolvulaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Nicotiana cavicola",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Nicotiana",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Solanum nodiflorum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Solanum violaceum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Solanum",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 3,
+                        "name": "Solanaceae",
+                        "nbTaxonomies": 3,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 4,
+                    "name": "Solanales",
+                    "nbTaxonomies": 4,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Etlingera elatior",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Etlingera",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Zingiberaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Zingiberales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 107,
+                "name": "Magnoliopsida",
+                "nbTaxonomies": 107,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Podocarpus lawrencei",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Podocarpus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Podocarpaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Araucariales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Juniperus occidentalis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Juniperus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Cupressaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Cupressales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Abies rubra",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Abies",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pinus pinaster",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pinus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pseudotsuga menziesii",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pseudotsuga",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 3,
+                        "name": "Pinaceae",
+                        "nbTaxonomies": 3,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 3,
+                    "name": "Pinales",
+                    "nbTaxonomies": 3,
+                    "rank": "order",
+                  },
+                ],
+                "count": 5,
+                "name": "Pinopsida",
+                "nbTaxonomies": 5,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Azolla filiculoides",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Azolla",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Salviniaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Salviniales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Polypodiopsida",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 115,
+            "name": "Streptophyta",
+            "nbTaxonomies": 115,
+            "rank": "phylum",
+          },
+        ],
+        "count": 115,
+        "name": "Viridiplantae",
+        "nbTaxonomies": 115,
+        "rank": "kingdom",
+      },
+    ],
+    "count": 190,
+    "name": "Eukaryota",
+    "nbTaxonomies": 189,
+    "rank": "superkingdom",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Streptantibioticus cattleyicolor",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Streptantibioticus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Streptomyces anandii",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Streptomyces",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Streptomycetaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Kitasatosporales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Brevibacterium iodinum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Brevibacterium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Brevibacteriaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Micrococcales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 3,
+                "name": "Actinomycetes",
+                "nbTaxonomies": 3,
+                "rank": "class",
+              },
+            ],
+            "count": 3,
+            "name": "Actinomycetota",
+            "nbTaxonomies": 3,
+            "rank": "phylum",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Sphingomonas paucimobilis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Sphingomonas",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Sphingomonadaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Sphingomonadales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Alphaproteobacteria",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Pseudomonadota",
+            "nbTaxonomies": 1,
+            "rank": "phylum",
+          },
+        ],
+        "count": 4,
+        "name": "",
+        "nbTaxonomies": 4,
+        "rank": "kingdom",
+      },
+    ],
+    "count": 4,
+    "name": "Bacteria",
+    "nbTaxonomies": 4,
     "rank": "superkingdom",
   },
 ]
@@ -333,26 +4965,31 @@ exports[`taxonomyTree 1`] = `
                               {
                                 "count": 1,
                                 "name": "Candida albicans",
+                                "nbTaxonomies": 1,
                                 "rank": "species",
                               },
                             ],
                             "count": 1,
                             "name": "Candida",
+                            "nbTaxonomies": 1,
                             "rank": "genus",
                           },
                         ],
                         "count": 1,
                         "name": "Debaryomycetaceae",
+                        "nbTaxonomies": 1,
                         "rank": "family",
                       },
                     ],
                     "count": 1,
                     "name": "Saccharomycetales",
+                    "nbTaxonomies": 1,
                     "rank": "order",
                   },
                 ],
                 "count": 1,
                 "name": "Saccharomycetes",
+                "nbTaxonomies": 1,
                 "rank": "class",
               },
               {
@@ -366,41 +5003,49 @@ exports[`taxonomyTree 1`] = `
                               {
                                 "count": 1,
                                 "name": "Stachybotrys chartarum",
+                                "nbTaxonomies": 1,
                                 "rank": "species",
                               },
                             ],
                             "count": 1,
                             "name": "Stachybotrys",
+                            "nbTaxonomies": 1,
                             "rank": "genus",
                           },
                         ],
                         "count": 1,
                         "name": "Stachybotryaceae",
+                        "nbTaxonomies": 1,
                         "rank": "family",
                       },
                     ],
                     "count": 1,
                     "name": "Hypocreales",
+                    "nbTaxonomies": 1,
                     "rank": "order",
                   },
                 ],
                 "count": 1,
                 "name": "Sordariomycetes",
+                "nbTaxonomies": 1,
                 "rank": "class",
               },
             ],
             "count": 2,
             "name": "Ascomycota",
+            "nbTaxonomies": 2,
             "rank": "phylum",
           },
         ],
         "count": 2,
         "name": "Fungi",
+        "nbTaxonomies": 2,
         "rank": "kingdom",
       },
     ],
     "count": 2,
     "name": "Eukaryota",
+    "nbTaxonomies": 2,
     "rank": "superkingdom",
   },
   {
@@ -420,36 +5065,43 @@ exports[`taxonomyTree 1`] = `
                               {
                                 "count": 1,
                                 "name": "Plasmodium falciparum",
+                                "nbTaxonomies": 1,
                                 "rank": "species",
                               },
                             ],
                             "count": 1,
                             "name": "Plasmodium",
+                            "nbTaxonomies": 1,
                             "rank": "genus",
                           },
                         ],
                         "count": 1,
                         "name": "Plasmodiidae",
+                        "nbTaxonomies": 1,
                         "rank": "family",
                       },
                     ],
                     "count": 1,
                     "name": "Haemosporida",
+                    "nbTaxonomies": 1,
                     "rank": "order",
                   },
                 ],
                 "count": 1,
                 "name": "Aconoidasida",
+                "nbTaxonomies": 1,
                 "rank": "class",
               },
             ],
             "count": 1,
             "name": "Apicomplexa",
+            "nbTaxonomies": 1,
             "rank": "phylum",
           },
         ],
         "count": 1,
         "name": "",
+        "nbTaxonomies": 1,
         "rank": "kingdom",
       },
       {
@@ -467,41 +5119,49 @@ exports[`taxonomyTree 1`] = `
                               {
                                 "count": 1,
                                 "name": "Stachybotrys cylindrospora",
+                                "nbTaxonomies": 1,
                                 "rank": "species",
                               },
                             ],
                             "count": 1,
                             "name": "Stachybotrys",
+                            "nbTaxonomies": 1,
                             "rank": "genus",
                           },
                         ],
                         "count": 1,
                         "name": "Stachybotryaceae",
+                        "nbTaxonomies": 1,
                         "rank": "family",
                       },
                     ],
                     "count": 1,
                     "name": "Hypocreales",
+                    "nbTaxonomies": 1,
                     "rank": "order",
                   },
                 ],
                 "count": 1,
                 "name": "Sordariomycetes",
+                "nbTaxonomies": 1,
                 "rank": "class",
               },
             ],
             "count": 1,
             "name": "Ascomycota",
+            "nbTaxonomies": 1,
             "rank": "phylum",
           },
         ],
         "count": 1,
         "name": "Fungi",
+        "nbTaxonomies": 1,
         "rank": "kingdom",
       },
     ],
     "count": 2,
     "name": "bacteria",
+    "nbTaxonomies": 2,
     "rank": "superkingdom",
   },
 ]

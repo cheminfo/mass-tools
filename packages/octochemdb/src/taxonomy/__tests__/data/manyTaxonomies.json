@@ -1,0 +1,1949 @@
+[
+  {
+    "species": "Bacterial strain"
+  },
+  {
+    "species": "Calvatia nipponica"
+  },
+  {
+    "species": "Chlorophora regia"
+  },
+  {
+    "species": "Kalimeris shimadae"
+  },
+  {
+    "species": "Melandryum firmum"
+  },
+  {
+    "species": "Omphalia"
+  },
+  {
+    "species": "plants"
+  },
+  {
+    "species": "Polysaccharidum versicolor"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "class": "Phaeophyceae",
+    "order": "Fucales",
+    "family": "Sargassaceae",
+    "genus": "Sargassum",
+    "species": "Sargassum kjellmanianum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "class": "Phaeophyceae",
+    "order": "Fucales",
+    "family": "Sargassaceae",
+    "genus": "Sargassum",
+    "species": "Sargassum pallidum"
+  },
+  {
+    "superkingdom": "Bacteria",
+    "phylum": "Actinomycetota",
+    "class": "Actinomycetes",
+    "order": "Kitasatosporales",
+    "family": "Streptomycetaceae",
+    "genus": "Streptantibioticus",
+    "species": "Streptantibioticus cattleyicolor"
+  },
+  {
+    "superkingdom": "Bacteria",
+    "phylum": "Actinomycetota",
+    "class": "Actinomycetes",
+    "order": "Kitasatosporales",
+    "family": "Streptomycetaceae",
+    "genus": "Streptomyces",
+    "species": "Streptomyces anandii"
+  },
+  {
+    "superkingdom": "Bacteria",
+    "phylum": "Actinomycetota",
+    "class": "Actinomycetes",
+    "order": "Micrococcales",
+    "family": "Brevibacteriaceae",
+    "genus": "Brevibacterium",
+    "species": "Brevibacterium iodinum"
+  },
+  {
+    "superkingdom": "Bacteria",
+    "phylum": "Pseudomonadota",
+    "class": "Alphaproteobacteria",
+    "order": "Sphingomonadales",
+    "family": "Sphingomonadaceae",
+    "genus": "Sphingomonas",
+    "species": "Sphingomonas paucimobilis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "phylum": "Rhodophyta",
+    "class": "Florideophyceae",
+    "order": "Gigartinales",
+    "family": "Gloiosiphoniaceae",
+    "genus": "Gloiosiphonia",
+    "species": "Gloiosiphonia verticillaris"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "phylum": "Rhodophyta",
+    "class": "Florideophyceae",
+    "order": "Nemaliales",
+    "family": "Liagoraceae",
+    "genus": "Ganonema",
+    "species": "Ganonema farinosum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "genus": "Acremonium",
+    "species": "Acremonium roseum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Dothideomycetes",
+    "order": "Botryosphaeriales",
+    "family": "Phyllostictaceae",
+    "genus": "Guignardia",
+    "species": "Guignardia laricina"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Dothideomycetes",
+    "order": "Cladosporiales",
+    "family": "Cladosporiaceae",
+    "genus": "Cladosporium",
+    "species": "Cladosporium sp."
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Eurotiomycetes",
+    "order": "Eurotiales",
+    "family": "Aspergillaceae",
+    "genus": "Aspergillus",
+    "species": "Aspergillus brunneus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Eurotiomycetes",
+    "order": "Eurotiales",
+    "family": "Aspergillaceae",
+    "genus": "Aspergillus",
+    "species": "Aspergillus ochraceus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Eurotiomycetes",
+    "order": "Eurotiales",
+    "family": "Aspergillaceae",
+    "genus": "Penicillium",
+    "species": "Penicillium camemberti"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Eurotiomycetes",
+    "order": "Eurotiales",
+    "family": "Aspergillaceae",
+    "genus": "Penicillium",
+    "species": "Penicillium commune"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Lecanoromycetes",
+    "order": "Lecanorales",
+    "family": "Parmeliaceae",
+    "genus": "Cetraria",
+    "species": "Cetraria islandica"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Lecanoromycetes",
+    "order": "Lecanorales",
+    "family": "Parmeliaceae",
+    "genus": "Cetraria",
+    "species": "Cetraria richardsonii"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Lecanoromycetes",
+    "order": "Pertusariales",
+    "family": "Icmadophilaceae",
+    "genus": "Thamnolia",
+    "species": "Thamnolia subuniformis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Lecanoromycetes",
+    "order": "Pertusariales",
+    "family": "Ochrolechiaceae",
+    "genus": "Ochrolechia",
+    "species": "Ochrolechia parella"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Pezizomycetes",
+    "order": "Pezizales",
+    "family": "Tuberaceae",
+    "genus": "Tuber",
+    "species": "Tuber indicum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Sordariomycetes",
+    "order": "Diaporthales",
+    "family": "Valsaceae",
+    "genus": "Phomopsis",
+    "species": "Phomopsis archeri"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Sordariomycetes",
+    "order": "Hypocreales",
+    "family": "Cordycipitaceae",
+    "genus": "Cordyceps",
+    "species": "Cordyceps sinensis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Sordariomycetes",
+    "order": "Hypocreales",
+    "family": "Nectriaceae",
+    "genus": "Neonectria",
+    "species": "Neonectria obtusispora"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Sordariomycetes",
+    "order": "Sordariales",
+    "species": "[Phialophora] cyclaminis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Sordariomycetes",
+    "order": "Sordariales",
+    "family": "Chaetomiaceae",
+    "genus": "Chaetomium",
+    "species": "Chaetomium arcuatum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Sordariomycetes",
+    "order": "Sordariales",
+    "family": "Chaetomiaceae",
+    "genus": "Chaetomium",
+    "species": "Chaetomium globosum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Sordariomycetes",
+    "order": "Sordariales",
+    "family": "Chaetomiaceae",
+    "genus": "Chaetomium",
+    "species": "Chaetomium longirostre"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Sordariomycetes",
+    "order": "Xylariales",
+    "family": "Apiosporaceae",
+    "genus": "Nigrospora",
+    "species": "Nigrospora oryzae"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Sordariomycetes",
+    "order": "Xylariales",
+    "family": "Apiosporaceae",
+    "genus": "Nigrospora",
+    "species": "Nigrospora sphaerica"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Sordariomycetes",
+    "order": "Xylariales",
+    "family": "Hypoxylaceae",
+    "genus": "Hypoxylon",
+    "species": "Hypoxylon fragiforme"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Ascomycota",
+    "class": "Sordariomycetes",
+    "order": "Xylariales",
+    "family": "Xylariaceae",
+    "genus": "Xylaria",
+    "species": "Xylaria"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Agaricales",
+    "family": "Biannulariaceae",
+    "genus": "Catathelasma",
+    "species": "Catathelasma ventricosa"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Agaricales",
+    "family": "Clitocybaceae",
+    "genus": "Lepista",
+    "species": "Lepista nuda"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Agaricales",
+    "family": "Mycenaceae",
+    "genus": "Panellus",
+    "species": "Panellus eryngii (DC.:FR.) QUEL."
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Agaricales",
+    "family": "Physalacriaceae",
+    "genus": "Armillaria",
+    "species": "Armillaria mellea"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Agaricales",
+    "family": "Pleurotaceae",
+    "genus": "Pleurotus",
+    "species": "Pleurotus eryngii"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Boletales",
+    "family": "Pisolithaceae",
+    "genus": "Pisolithus",
+    "species": "Pisolithus tinctorius"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Boletales",
+    "family": "Rhizopogonaceae",
+    "genus": "Rhizopogon",
+    "species": "Rhizopogon pumilionus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Cantharellales",
+    "family": "Ceratobasidiaceae",
+    "genus": "Rhizoctonia",
+    "species": "Rhizoctonia repens"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Cantharellales",
+    "family": "Tulasnellaceae",
+    "genus": "Tulasnella",
+    "species": "Tulasnella deliquescens"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Gomphales",
+    "family": "Gomphaceae",
+    "genus": "Ramaria",
+    "species": "Ramaria botrytis (Pers.) Ricken"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Hymenochaetales",
+    "family": "Hymenochaetaceae",
+    "genus": "Coltricia",
+    "species": "Coltricia cinnamomea"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Fomitopsidaceae",
+    "genus": "Antrodia",
+    "species": "Antrodia camphorata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Fomitopsidaceae",
+    "genus": "Daedalea",
+    "species": "Daedalea quercina"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Fomitopsidaceae",
+    "genus": "Fomitopsis",
+    "species": "Fomitopsis fomentarius"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Laetiporaceae",
+    "genus": "Laetiporus",
+    "species": "Laetiporus sulphureus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Polyporaceae",
+    "genus": "Daedaleopsis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Polyporaceae",
+    "genus": "Daedaleopsis",
+    "species": "Daedaleopsis confragosa"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Polyporaceae",
+    "genus": "Daedaleopsis",
+    "species": "Daedaleopsis confragosa var. tricolor"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Polyporaceae",
+    "genus": "Daedaleopsis",
+    "species": "Daedaleopsis confragosa var.tricolor"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Polyporaceae",
+    "genus": "Daedaleopsis",
+    "species": "Daedaleopsis quercina"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Polyporaceae",
+    "genus": "Ganoderma",
+    "species": "Ganoderma applanatum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Polyporaceae",
+    "genus": "Ganoderma",
+    "species": "Ganoderma carnosum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Polyporaceae",
+    "genus": "Ganoderma",
+    "species": "Ganoderma lucidum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Polyporaceae",
+    "genus": "Ganoderma",
+    "species": "Ganoderma pfeifferi"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Polyporaceae",
+    "genus": "Ganoderma",
+    "species": "Ganoderma sinense"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Polyporaceae",
+    "genus": "Polyporus",
+    "species": "Polyporus umbellatus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Polyporales",
+    "family": "Taiwanofungaceae",
+    "genus": "Taiwanofungus",
+    "species": "Taiwanofungus camphoratus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Russulales",
+    "family": "Hericiaceae",
+    "genus": "Hericium",
+    "species": "Hericium erinaceus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Russulales",
+    "family": "Stereaceae",
+    "genus": "Stereum",
+    "species": "Stereum hirsutum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Thelephorales",
+    "family": "Thelephoraceae",
+    "genus": "Sarcodon",
+    "species": "Sarcodon aspratus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Agaricomycetes",
+    "order": "Thelephorales",
+    "family": "Thelephoraceae",
+    "genus": "Sarcodon",
+    "species": "Sarcodon scabrosus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Fungi",
+    "phylum": "Basidiomycota",
+    "class": "Pucciniomycetes",
+    "order": "Helicobasidiales",
+    "family": "Helicobasidiaceae",
+    "genus": "Helicobasidium",
+    "species": "Helicobasidium mompa"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Arthropoda",
+    "class": "Arachnida",
+    "order": "Araneae",
+    "family": "Agelenidae",
+    "genus": "Agelenopsis",
+    "species": "Agelenopsis aperta"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Arthropoda",
+    "class": "Insecta",
+    "order": "Coleoptera",
+    "family": "Scarabaeidae",
+    "genus": "Antitrogus",
+    "species": "Antitrogus consanguineus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Arthropoda",
+    "class": "Insecta",
+    "order": "Diptera",
+    "family": "Phoridae",
+    "genus": "Phora",
+    "species": "Phora hyperborea"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Arthropoda",
+    "class": "Insecta",
+    "order": "Lepidoptera",
+    "family": "Lyonetiidae",
+    "genus": "Leucoptera",
+    "species": "Leucoptera malifoliella"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Arthropoda",
+    "class": "Insecta",
+    "order": "Lepidoptera",
+    "family": "Sphingidae",
+    "genus": "Manduca",
+    "species": "Manduca sexta"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Bryozoa",
+    "class": "Gymnolaemata",
+    "order": "Cheilostomatida",
+    "family": "Watersiporidae",
+    "genus": "Watersipora",
+    "species": "Watersipora cucullata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Chordata",
+    "class": "Ascidiacea",
+    "order": "Stolidobranchia",
+    "family": "Pyuridae",
+    "genus": "Halocynthia",
+    "species": "Halocynthia aurantium"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Cnidaria",
+    "class": "Anthozoa",
+    "order": "Malacalcyonacea",
+    "family": "Alcyoniidae",
+    "genus": "Alcyonium",
+    "species": "Alcyonium grandis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Cnidaria",
+    "class": "Anthozoa",
+    "order": "Malacalcyonacea",
+    "family": "Eunicellidae",
+    "genus": "Eunicella",
+    "species": "Eunicella stricta"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Cnidaria",
+    "class": "Anthozoa",
+    "order": "Scleralcyonacea",
+    "family": "Ellisellidae",
+    "genus": "Junceella",
+    "species": "Junceella fragilis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Echinodermata",
+    "class": "Asteroidea",
+    "order": "Velatida",
+    "family": "Pterasteridae",
+    "genus": "Diplopteraster",
+    "species": "Diplopteraster multipes"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Echinodermata",
+    "class": "Crinoidea",
+    "order": "Comatulida",
+    "family": "Mariametridae",
+    "genus": "Lamprometra",
+    "species": "Lamprometra klunzingeri"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Echinodermata",
+    "class": "Echinoidea",
+    "order": "Camarodonta",
+    "family": "Echinidae",
+    "genus": "Echinus",
+    "species": "Echinus miliaris"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Mollusca",
+    "class": "Gastropoda",
+    "order": "Neogastropoda",
+    "family": "Muricidae",
+    "genus": "Bolinus",
+    "species": "Bolinus brandaris"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Mollusca",
+    "class": "Gastropoda",
+    "order": "Nudibranchia",
+    "family": "Dorididae",
+    "genus": "Doris",
+    "species": "Doris petechialis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Metazoa",
+    "phylum": "Porifera",
+    "class": "Demospongiae",
+    "order": "Suberitida",
+    "family": "Halichondriidae",
+    "genus": "Axinyssa",
+    "species": "Axinyssa isabela"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Jungermanniopsida",
+    "order": "Jungermanniales",
+    "family": "Calypogeiaceae",
+    "genus": "Calypogeia",
+    "species": "Calypogeia integristipula"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Jungermanniopsida",
+    "order": "Porellales",
+    "family": "Frullaniaceae",
+    "genus": "Frullania",
+    "species": "Frullania inflata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Alismatales",
+    "family": "Araceae",
+    "genus": "Arum",
+    "species": "Arum ternatum thunb"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Alismatales",
+    "family": "Araceae",
+    "genus": "Heteropsis",
+    "species": "Heteropsis integerrima"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Alismatales",
+    "family": "Araceae",
+    "genus": "Pothos",
+    "species": "Pothos chinensis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Alismatales",
+    "family": "Araceae",
+    "genus": "Zantedeschia",
+    "species": "Zantedeschia aethiopica"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Apiales",
+    "family": "Apiaceae",
+    "genus": "Anethum",
+    "species": "Anethum foeniculum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Apiales",
+    "family": "Araliaceae",
+    "genus": "Cussonia",
+    "species": "Cussonia arborea"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asparagales",
+    "family": "Amaryllidaceae",
+    "genus": "Crinum",
+    "species": "Crinum firmifolium"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asparagales",
+    "family": "Amaryllidaceae",
+    "genus": "Lycoris",
+    "species": "Lycoris x chejuensis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asparagales",
+    "family": "Asparagaceae",
+    "genus": "Yucca",
+    "species": "Yucca baccata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Andryala",
+    "species": "Andryala pinnatifida"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Artemisia",
+    "species": "Artemisia lanata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Baccharoides",
+    "species": "Baccharoides adoensis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Centaurea",
+    "species": "Centaurea napifolia"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Cirsium",
+    "species": "Cirsium brevistylum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Hilliardiella",
+    "species": "Hilliardiella oligocephala"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Inula",
+    "species": "Inula anatolica"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Moquiniastrum",
+    "species": "Moquiniastrum paniculatum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Pleocarphus",
+    "species": "Pleocarphus revolutus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Pteronia",
+    "species": "Pteronia eenii"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Pulicaria",
+    "species": "Pulicaria canariensis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Stomatanthes",
+    "species": "Stomatanthes corumbensis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Tanacetum",
+    "species": "Tanacetum parthenium"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Urospermum",
+    "species": "Urospermum dalechampii"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Vernonia",
+    "species": "Vernonia condensata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Xanthium",
+    "species": "Xanthium strumarium"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Boraginales",
+    "family": "Heliotropiaceae",
+    "genus": "Heliotropium",
+    "species": "Heliotropium ramosissimum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Brassicales",
+    "family": "Brassicaceae",
+    "genus": "Dimorphocarpa",
+    "species": "Dimorphocarpa wislizeni"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Buxales",
+    "family": "Buxaceae",
+    "genus": "Pachysandra",
+    "species": "Pachysandra procumbens"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Caryophyllales",
+    "family": "Caryophyllaceae",
+    "genus": "Eremogone",
+    "species": "Eremogone kansuensis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Caryophyllales",
+    "family": "Caryophyllaceae",
+    "genus": "Gypsophila",
+    "species": "Gypsophila vaccaria"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Caryophyllales",
+    "family": "Chenopodiaceae",
+    "genus": "Haloxylon",
+    "species": "Haloxylon salicornicum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Caryophyllales",
+    "family": "Nyctaginaceae",
+    "genus": "Pisonia",
+    "species": "Pisonia aculeata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Caryophyllales",
+    "family": "Polygonaceae",
+    "genus": "Fagopyrum",
+    "species": "Fagopyrum esculentum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Caryophyllales",
+    "family": "Polygonaceae",
+    "genus": "Fagopyrum",
+    "species": "Fagopyrum tataricum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Celastrales",
+    "family": "Celastraceae",
+    "genus": "Putterlickia",
+    "species": "Putterlickia verrucosa"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Ericales",
+    "family": "Ebenaceae",
+    "genus": "Diospyros",
+    "species": "Diospyros ferrea"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Ericales",
+    "family": "Primulaceae",
+    "genus": "Cyclamen",
+    "species": "Cyclamen repandum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Ericales",
+    "family": "Primulaceae",
+    "genus": "Rapanea",
+    "species": "Rapanea laetevirens"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Fabales",
+    "family": "Fabaceae",
+    "genus": "Acacia",
+    "species": "Acacia saligna"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Fabales",
+    "family": "Fabaceae",
+    "genus": "Cassia",
+    "species": "Cassia reticulata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Fabales",
+    "family": "Fabaceae",
+    "genus": "Desmodium",
+    "species": "Desmodium oxyphyllum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Fabales",
+    "family": "Fabaceae",
+    "genus": "Erythrina",
+    "species": "Erythrina suberosa"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Fabales",
+    "family": "Fabaceae",
+    "genus": "Ormosia",
+    "species": "Ormosia sumatrana"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Fabales",
+    "family": "Fabaceae",
+    "genus": "Vigna",
+    "species": "Vigna mungo"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Fagales",
+    "family": "Fagaceae",
+    "genus": "Castanopsis",
+    "species": "Castanopsis fissa"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Gentianales",
+    "family": "Gentianaceae",
+    "genus": "Gentiana",
+    "species": "Gentiana dahurica"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Gentianales",
+    "family": "Gentianaceae",
+    "genus": "Gentiana",
+    "species": "Gentiana purpurea"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Gentianales",
+    "family": "Rubiaceae",
+    "genus": "Coussarea",
+    "species": "Coussarea brevicaulis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Acanthaceae",
+    "genus": "Andrographis",
+    "species": "Andrographis paniculata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Acanthaceae",
+    "genus": "Barleria",
+    "species": "Barleria strigosa"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Acanthaceae",
+    "genus": "Strobilanthes",
+    "species": "Strobilanthes psilostachys"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Bignoniaceae",
+    "genus": "Radermachera",
+    "species": "Radermachera boniana"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Lamiaceae",
+    "genus": "Dracocephalum",
+    "species": "Dracocephalum heterophyllum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Lamiaceae",
+    "genus": "Gmelina",
+    "species": "Gmelina arborea"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Lamiaceae",
+    "genus": "Mentha",
+    "species": "Mentha x piperita"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Lamiaceae",
+    "genus": "Mosla",
+    "species": "Mosla scabra"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Lamiaceae",
+    "genus": "Orthosiphon",
+    "species": "Orthosiphon wulfenioides"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Lamiaceae",
+    "genus": "Plectranthus",
+    "species": "Plectranthus grandidentatus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Lamiaceae",
+    "genus": "Thymus",
+    "species": "Thymus marschallianus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Lentibulariaceae",
+    "genus": "Pinguicula",
+    "species": "Pinguicula moranensis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Plantaginaceae",
+    "genus": "Plantago",
+    "species": "Plantago subulata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Scrophulariaceae",
+    "genus": "Eremophila",
+    "species": "Eremophila latrobei"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Lamiales",
+    "family": "Verbenaceae",
+    "genus": "Duranta",
+    "species": "Duranta repens"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Magnoliales",
+    "family": "Annonaceae",
+    "genus": "Hornschuchia",
+    "species": "Hornschuchia citriodora"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Magnoliales",
+    "family": "Annonaceae",
+    "genus": "Uvaria",
+    "species": "Uvaria chamae"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Magnoliales",
+    "family": "Myristicaceae",
+    "genus": "Knema",
+    "species": "Knema attenuata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Malpighiales",
+    "family": "Achariaceae",
+    "genus": "Hydnocarpus",
+    "species": "Hydnocarpus octandra"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Malpighiales",
+    "family": "Clusiaceae",
+    "genus": "Garcinia",
+    "species": "Garcinia atroviridis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Malpighiales",
+    "family": "Euphorbiaceae",
+    "genus": "Euphorbia",
+    "species": "Euphorbia granulata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Malpighiales",
+    "family": "Euphorbiaceae",
+    "genus": "Macaranga",
+    "species": "Macaranga conifera"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Malpighiales",
+    "family": "Euphorbiaceae",
+    "genus": "Mallotus",
+    "species": "Mallotus pallidus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Malpighiales",
+    "family": "Phyllanthaceae",
+    "genus": "Breynia",
+    "species": "Breynia fruticosa"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Malpighiales",
+    "family": "Rhizophoraceae",
+    "genus": "Rhizophora",
+    "species": "Rhizophora apiculata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Malvales",
+    "family": "Dipterocarpaceae",
+    "genus": "Dipterocarpus",
+    "species": "Dipterocarpus pilosus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Malvales",
+    "family": "Dipterocarpaceae",
+    "genus": "Shorea",
+    "species": "Shorea seminis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Malvales",
+    "family": "Malvaceae",
+    "genus": "Sterculia",
+    "species": "Sterculia urens"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Myrtales",
+    "family": "Myrtaceae",
+    "genus": "Eucalyptus",
+    "species": "Eucalyptus maideni"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Nymphaeales",
+    "family": "Nymphaeaceae",
+    "genus": "Nymphaea",
+    "species": "Nymphaea ampla"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Poales",
+    "family": "Bromeliaceae",
+    "genus": "Ananas",
+    "species": "Ananas comosus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Poales",
+    "family": "Eriocaulaceae",
+    "genus": "Paepalanthus",
+    "species": "Paepalanthus ramosus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Poales",
+    "family": "Juncaceae",
+    "genus": "Juncus",
+    "species": "Juncus effusus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Poales",
+    "family": "Poaceae",
+    "genus": "Oryza",
+    "species": "Oryza sativa"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Poales",
+    "family": "Poaceae",
+    "genus": "Urochloa",
+    "species": "Urochloa ruziziensis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Poales",
+    "family": "Typhaceae",
+    "genus": "Typha",
+    "species": "Typha capensis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Poales",
+    "family": "Typhaceae",
+    "genus": "Typha",
+    "species": "Typha latifolia"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Proteales",
+    "family": "Proteaceae",
+    "genus": "Kermadecia",
+    "species": "Kermadecia elliptica"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Ranunculales",
+    "family": "Berberidaceae",
+    "genus": "Berberis",
+    "species": "Berberis aquifolium"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Ranunculales",
+    "family": "Berberidaceae",
+    "genus": "Berberis",
+    "species": "Berberis tabiensis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Ranunculales",
+    "family": "Menispermaceae",
+    "genus": "Burasaia",
+    "species": "Burasaia madagascariensis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Ranunculales",
+    "family": "Ranunculaceae",
+    "genus": "Delphinium",
+    "species": "Delphinium winklerianum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Ranunculales",
+    "family": "Ranunculaceae",
+    "genus": "Pulsatilla",
+    "species": "Pulsatilla dahurica"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Rosales",
+    "family": "Cannabaceae",
+    "genus": "Trema",
+    "species": "Trema dielsiana"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Rosales",
+    "family": "Elaeagnaceae",
+    "genus": "Elaeagnus",
+    "species": "Elaeagnus glabra"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Rosales",
+    "family": "Rhamnaceae",
+    "genus": "Colubrina",
+    "species": "Colubrina asiatica"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Rosales",
+    "family": "Rhamnaceae",
+    "genus": "Gouania",
+    "species": "Gouania lupuloides"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Rosales",
+    "family": "Rhamnaceae",
+    "genus": "Paliurus",
+    "species": "Paliurus ramosissimus"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Rosales",
+    "family": "Rosaceae",
+    "genus": "Prunus",
+    "species": "Prunus persica"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Sapindales",
+    "family": "Burseraceae",
+    "genus": "Commiphora",
+    "species": "Commiphora mukul"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Sapindales",
+    "family": "Meliaceae",
+    "genus": "Melia",
+    "species": "Melia toosendan"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Sapindales",
+    "family": "Rutaceae",
+    "genus": "Glycosmis",
+    "species": "Glycosmis craibii"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Sapindales",
+    "family": "Rutaceae",
+    "genus": "Melicope",
+    "species": "Melicope melanophloia"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Saxifragales",
+    "family": "Crassulaceae",
+    "genus": "Rhodiola",
+    "species": "Rhodiola rosea"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Solanales",
+    "family": "Convolvulaceae",
+    "genus": "Stictocardia",
+    "species": "Stictocardia campanulata"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Solanales",
+    "family": "Solanaceae",
+    "genus": "Nicotiana",
+    "species": "Nicotiana cavicola"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Solanales",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "species": "Solanum nodiflorum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Solanales",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "species": "Solanum violaceum"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Magnoliopsida",
+    "order": "Zingiberales",
+    "family": "Zingiberaceae",
+    "genus": "Etlingera",
+    "species": "Etlingera elatior"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Pinopsida",
+    "order": "Araucariales",
+    "family": "Podocarpaceae",
+    "genus": "Podocarpus",
+    "species": "Podocarpus lawrencei"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Pinopsida",
+    "order": "Cupressales",
+    "family": "Cupressaceae",
+    "genus": "Juniperus",
+    "species": "Juniperus occidentalis"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Pinopsida",
+    "order": "Pinales",
+    "family": "Pinaceae",
+    "genus": "Abies",
+    "species": "Abies rubra"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Pinopsida",
+    "order": "Pinales",
+    "family": "Pinaceae",
+    "genus": "Pinus",
+    "species": "Pinus pinaster"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Pinopsida",
+    "order": "Pinales",
+    "family": "Pinaceae",
+    "genus": "Pseudotsuga",
+    "species": "Pseudotsuga menziesii"
+  },
+  {
+    "superkingdom": "Eukaryota",
+    "kingdom": "Viridiplantae",
+    "phylum": "Streptophyta",
+    "class": "Polypodiopsida",
+    "order": "Salviniales",
+    "family": "Salviniaceae",
+    "genus": "Azolla",
+    "species": "Azolla filiculoides"
+  }
+]

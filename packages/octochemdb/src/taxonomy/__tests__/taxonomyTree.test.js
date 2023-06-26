@@ -1,3 +1,6 @@
+import { readFileSync } from 'fs';
+import { join } from 'path';
+
 import { taxonomyTree } from '../taxonomyTree';
 
 test('taxonomyTree', () => {
@@ -195,6 +198,12 @@ test('True data', () => {
     },
   ];
 
+  let tree = taxonomyTree(taxonomies);
+  expect(tree).toMatchSnapshot();
+});
+test('over 200 entries', () => {
+  const path = join(__dirname, 'data/manyTaxonomies.json');
+  const taxonomies = JSON.parse(readFileSync(path, 'utf8'));
   let tree = taxonomyTree(taxonomies);
   expect(tree).toMatchSnapshot();
 });
