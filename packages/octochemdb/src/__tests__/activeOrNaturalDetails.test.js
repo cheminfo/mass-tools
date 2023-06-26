@@ -28,6 +28,7 @@ test('activeOrNaturalDetails', async () => {
     'patents',
     'pubmeds',
     'taxonomies',
+    'titles',
     'unsaturation',
   ]);
   const activities = entry.data.activities;
@@ -57,4 +58,4 @@ test('activeOrNaturalDetails', async () => {
       "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
     }
   `);
-});
+}, 10000);

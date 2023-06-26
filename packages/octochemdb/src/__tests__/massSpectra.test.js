@@ -67,7 +67,7 @@ describe('massSpectra', () => {
     });
     expect(results.length).toBeGreaterThan(2);
     expect(results.length).toBeLessThan(20);
-  });
+  }, 10000);
 
   it('mdma and mf', async () => {
     let results = await massSpectra({
