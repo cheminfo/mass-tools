@@ -41,6 +41,7 @@ export function taxonomyTree(taxonomies, options = {}) {
   }
   for (let branch of tree) {
     cleanEmptyBranches(branch);
+    nbTaxonomies(branch);
   }
   return tree;
 }
@@ -60,4 +61,18 @@ function cleanEmptyBranches(branch) {
 
     return true;
   });
+}
+
+function nbTaxonomies(branch) {
+  branch.nbTaxonomies = 0; // count the current node
+  if (branch.children) {
+    for (let child of branch.children) {
+      nbTaxonomies(child);
+      branch.nbTaxonomies += child.nbTaxonomies;
+    }
+  } else {
+    branch.nbTaxonomies = 1;
+  }
+
+  return branch.nbTaxonomies;
 }
