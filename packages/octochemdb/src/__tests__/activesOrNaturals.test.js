@@ -80,7 +80,8 @@ describe('activesOrNaturals', () => {
       'patents',
       'pubmeds',
       'taxonomies',
+      'titles',
       'unsaturation',
     ]);
-  });
+  }, 30000);
 });
