@@ -81,7 +81,7 @@ export class ActiveOrNaturalSummarizer {
       }
       await this.creatingDB;
       this.isInitialized = true;
-      this.creatingDB = undefined
+      this.creatingDB = undefined;
     }
 
     return {
