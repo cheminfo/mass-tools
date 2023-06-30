@@ -1,0 +1,73 @@
+<datawarrior-fileinfo>
+<version="3.3">
+<created="1688115855225">
+<rowcount="18">
+</datawarrior-fileinfo>
+<column properties>
+<columnName="Transformation">
+<columnProperty="isFragment	true">
+<columnProperty="specialType	rxncode">
+<columnName="atomMapping">
+<columnProperty="parent	Transformation">
+<columnProperty="specialType	atomMapping">
+<columnName="idcoordinates2D">
+<columnProperty="parent	Transformation">
+<columnProperty="specialType	idcoordinates2D">
+<columnName="reactionFP">
+<columnProperty="parent	Transformation">
+<columnProperty="specialType	RxnFP">
+<columnProperty="version	1.0.0">
+<columnName="reactantFFP">
+<columnProperty="parent	Transformation">
+<columnProperty="specialType	FragFp">
+<columnProperty="reactionPart	reactants">
+<columnProperty="version	1.2.1">
+<columnName="productFFP">
+<columnProperty="parent	Transformation">
+<columnProperty="specialType	FragFp">
+<columnProperty="reactionPart	products">
+<columnProperty="version	1.2.1">
+</column properties>
+atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	Label	Transformation
+QX QX	!R@AL]Pmp !R@AL]^gp	////////#W.F*4*8/$4!	40V/////,10	40V/////,10	Protonation	eFHBLGtP!eFH`fLGtX
+QX QX	!R_vp]bgp !R_vp]vgp	//////!2/%V)12+4/(8/(	//,8///$	//,8///$	Protonation	eFB@HcA}D@!eFB`HIcA}F@
+Qd Qd	!R@FL]Rgp !R@FL]vgp	////////2!1-40V,2&8/(	!2/////,V0	!2/////,V0	Protonation	eF`BLGtX!eF``fLGt\
+Q[ Q[	!R@AM?DquRo@ !R@AM?Dqtzo@	////////#1!2+1!4)V%408/&V	2020201/////(F0	2020201/////(k0	Protonation	eM`BN`~b@!eM``fN`~c@
+qTq qTq	!RbOvw?_x@GYK| !RbOvw?_x@GWk|	///////)F)1//02!8808.8V$	2220201#1$1/////	2220201#1$1////-F0	Protonation	gCh@AGj@`!gChA@Icu@_PP
+IaLhfGed Ql IZdDezP	!RXJhcFCx@NALlFC`Lp@[@FZJpGWK| !R@FL]vkp !R@CzbuzJppAg@Ac`LNAL]aop	VNH0IJ0P0J2@8J021GG38WV010kF2JB0BN4090xJ8s90e0EVL!V1XS0I424690PWDXc8@F3#J0J2O1C!9//////!	jot1!N!V4$8080V08+4#1-2//)	JNF242,8#8,2F!8$F04/01(8/#	Dioxolane elimination (aromatic)	detDB@iiRfUwJFZB@H@H!eFHBJD daDHB@RTfUVyiZPB
+IzAQirb IdP qzfYh	!RPJVSY{y?lKrLY{A}lGvpoAurW@ !R@BL]vgp !Rs}oOXg|S_tq?SG|SGWi|	$8F4F!@!402Y1k10Gc8!k#406F4080FG0F!4&F10F0F!4010LVP2V84F$F04281+2+8,V1//08#8!4!4%2#1%	jotG!NG0V4#2B080V0N&1!2440V1-2#VF2/$204*	6FsF40810V%4%8*202/&F6/&4*	CO elimination	diTD@@iJYWrnF``H@H!eFHBJD dnDH@@ReVDij@@@H
+qnJ` qnH Qd	!Ru?q~@M]}u?p]dhH !R_wy?_atZ_@ !R@FL]~cp	%F0V24!G4821!1FV$VF6V440O2080GF0F504F&40X4F!40V12V02#F1#9040h1$V$4-4,1//%8/(	xNsZ440402#14V/)4///%	JF!4////,V.	α-elimination	gJPa@erS[TA}M@!eMDARUB eF@khp_U@
+IfESBinD IGfhlP IfE	!R?g~H?[_}mpJw?[\Bm?vw@k_}GUs\ !R_vq?Dw}l_qM?[G|SGQi| !R_?y??avF_@	!4V0F#@!140210F1FV#VV0Z0J!G0480FH0k11!4098!4F20H!40V12V0@F@0F!J!141B1#8V$Z-4&F$W014F01!802!F*4F)84601$4#2%V!	xtw_ZZq4W3F6114V05V#401$8!2$F4%F4//$2%10	xtZ4Z0Z!202&V#4&8/F/.V.	α-elimination	dedLB@RTyImUVjj`CzI`!gNq@`N_IJkUTA@ eMDARUB
+IzaIla@ qrLk IxP	!Rm?vH?[\B?g~w?[_}?g|]tep !Rb@Jw@ox@?`Bw@auZp` !R_vp]^gp	8$F#1#B0292F180V!8V#404F0480JF0F801(1!FF8040V0HV82480F0V!F20181#J02$2%101!8-1$1#4/#10V8#8!4!4%2!J0V$	6FsF!810V$2&8*2/)F//#	4F0F4/!8////)	α-elimination	daDHB@KdimVz`@@B!gFpAKrTjZ@@A@ eFHBJD
+qJtk qJt q]	!R?g~H?[_}b@JH?QtJw@ !R?g~H?[_}GUk\ !R_vp]^gp	V0V!F10844!40211F10VV@10V040J04FV084FF0F1!2FGF#J020J41Z0402V0H082s!H401V0B30e08V//01//%8/(	xtkb4VV!@%V!VV/!F//#8/#	oFc444/08////)	α-elimination	gGPaA[rSNuPD!gCaA@NRZXB eFHBJD
+IxjqaR@ IZa Q[ qy	!R?`BH@k\B?`BH?[_}mpH]xlH !R_?y??awz_@ !R_qL@DqtzO@ !R_vp]Zgp	V$F#8#B0613k10VV!1V0B0K14GFZ84JF0k1$G14!4020F4040V02V42F80k!F20W38R10X08V//01)V/%F$8/(	xtsb4ak40@0R!4Va0V!8&F04!2F(k$V(F&20V#8)4)	JF!4/!8///)V+V!	α-elimination	daxDB@HnrJJHmSHA@!eMHAITH eM@ghvB eFHBND
+IDjsfR@ IDlYH q}	!RmpJw__x@?g~w@k\B?`@]dop !R]?pq@B?MOrXkAAtz`` !R_vp]Fgp	$1F!2#89!10H!V#1X040410kFBB41F0G10F!F04014V20F4040c02V02F82FFN#c18R10X!V$4-4,1#F01/.8#1$4-	xtwbZao4V@0T!4VZBc8084010F0N84!FF018$J0J4#2808V0F#8!20V#8)4)	RsFY4Xk!80@#V4!8$G/&4%4/!8/V!	α-elimination	daDDB@HnRYg[fij@H!gFqAAnRYSVj`H eFHBND
+qiZ|p qiTp q_	!R?`BH@k\BbOvw?_y?GUJB !R_qM?Dw}l_qL]Fcp !R@AL]Agp	04!1F44%40614k10Vc1!VRB0444k!80FF0F1046202!15060F!40883VB2F9BF0F02J0c2BI8#k$4-4,1//%8/(	yJs_448!V0F41#804082,F0108$8%2%F)V1&4.	JFV04/!8-F//*V.	γ-elimination 	gNqa@f~RY]jXPl!gJP`@TeUdB eFHBLD
+!R?g~w?Xc}mpK~_{_}bOvw@k_}G\H\ !RGTY| !R?g~H?[_}b@Jw@hc}b@JH?Quzw@		Calculation Failed	oNs404%F%8#8$F(F018$F84$2!8,V1&4#F(10	JNs242,8#8,2F018$F04/01$1!8/#	ζ-elimination	dedDB@f^RYU^ejXLRrz~`H@!fH@Oj@ diDDB@D^RYWVefALfh
+IeQtNZlIH IeQwfh qNT	!R@hbw@gvwbOvw?[\Bm?vw@ox@m?vw@at|?@ !R?`Bw?Xc}mpJw?[\BGP[| !R@Ox@?`JHG]k|	B48B1VVVO9B$J10k!1kW50VN80J04$8HV0G!80H8k!890Z0L0410H02VRLV9gF8FF4JWZ09G0828V$4+40401*1#F)4*F0V)8#1#8.	zxx_pZTBlYJCM14cD5842!WVV%V2$3BJ!2!9%F2,4%4$2V%14!	zpx_KVN4VV444!824#80V/(9%F/&V!2&1410	Eliminations assisted by β-hydrogen removal	dctJbHSNdOCNrRSEISMUTt@[PTXIF@PvB@!gNpYHlqxOdj}Zj@~f` gCa@@djpD
+IpdjFGiT qcUq IGiT	!RbGvw_X`B?g?~@K]}b@K~_?x@G_J| !R?g~w@k_}m?vw@avzO@ !Rb@K~_xc}G]j|	#81Vc8k0F%1)40F!40VV0F$2F8!c$111040F#F8V2Z42!8G0F%F85F!FV//01//%8/(	FF/08#8-F!8///&	FF0F.8#8/08///&	Aromatic eliminations	ded@@DiUUeiZ@hTZfh!gFp@DiTt@@B gC`@DiZDC@
+q~QeX q\jH q~	!RmpK~@K_}mpJw@k_}GUJB !RXFUSY?y?KF\]Vmp !R_vp]^gp	V$F%8!4011F!4V820V080J040F0B40F0F%G04&F4040242V224N0k!F!W!810XF8%4-4,1/)F#2&8(8.	zxpbKXk0We0@4!V40VV$FV#80V48!F$V)V(F*8/#	zhW4F0V!X!4%V&V%V*V*4/*V(V!	Carbon monoxide eliminations from cyclic carbonyls compounds	gOp`@tfUkZj`H!gKQ@@eKcUPD eFHBND
+<datawarrior properties>
+<columnFilter_Table="">
+<columnWidth_Table_Label="166">
+<columnWidth_Table_Transformation="415">
+<detailView="height[Data]=0.5;height[Transformation]=0.5">
+<filter0="#reaction#	Transformation">
+<filter1="#retron#	Transformation">
+<formLayout_Form View="TableLayout,3,6.0,-1.0,6.0,3,4.0,-1.0,4.0">
+<formObjectCount_Form View="1">
+<formObjectInfo_Form View_0="Label	textLine	1, 1, 1, 1, full, full">
+<headerLines_Table="2">
+<mainSplitting="0.72708">
+<mainView="Table">
+<mainViewCount="2">
+<mainViewDockInfo0="root">
+<mainViewDockInfo1="Table	center">
+<mainViewInFront0="true">
+<mainViewName0="Table">
+<mainViewName1="Form View">
+<mainViewType0="tableView">
+<mainViewType1="formView">
+<rightSplitting="0.65829">
+<rowHeight_Table="80">
+</datawarrior properties>
