@@ -1,12 +1,9 @@
 <datawarrior-fileinfo>
 <version="3.3">
-<created="1688115855225">
-<rowcount="18">
+<created="1688479206698">
+<rowcount="71">
 </datawarrior-fileinfo>
 <column properties>
-<columnName="Transformation">
-<columnProperty="isFragment	true">
-<columnProperty="specialType	rxncode">
 <columnName="atomMapping">
 <columnProperty="parent	Transformation">
 <columnProperty="specialType	atomMapping">
@@ -27,38 +24,103 @@
 <columnProperty="specialType	FragFp">
 <columnProperty="reactionPart	products">
 <columnProperty="version	1.2.1">
+<columnName="Transformation">
+<columnProperty="isFragment	true">
+<columnProperty="specialType	rxncode">
 </column properties>
-atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	Label	Transformation
-QX QX	!R@AL]Pmp !R@AL]^gp	////////#W.F*4*8/$4!	40V/////,10	40V/////,10	Protonation	eFHBLGtP!eFH`fLGtX
-QX QX	!R_vp]bgp !R_vp]vgp	//////!2/%V)12+4/(8/(	//,8///$	//,8///$	Protonation	eFB@HcA}D@!eFB`HIcA}F@
-Qd Qd	!R@FL]Rgp !R@FL]vgp	////////2!1-40V,2&8/(	!2/////,V0	!2/////,V0	Protonation	eF`BLGtX!eF``fLGt\
-Q[ Q[	!R@AM?DquRo@ !R@AM?Dqtzo@	////////#1!2+1!4)V%408/&V	2020201/////(F0	2020201/////(k0	Protonation	eM`BN`~b@!eM``fN`~c@
-qTq qTq	!RbOvw?_x@GYK| !RbOvw?_x@GWk|	///////)F)1//02!8808.8V$	2220201#1$1/////	2220201#1$1////-F0	Protonation	gCh@AGj@`!gChA@Icu@_PP
-IaLhfGed Ql IZdDezP	!RXJhcFCx@NALlFC`Lp@[@FZJpGWK| !R@FL]vkp !R@CzbuzJppAg@Ac`LNAL]aop	VNH0IJ0P0J2@8J021GG38WV010kF2JB0BN4090xJ8s90e0EVL!V1XS0I424690PWDXc8@F3#J0J2O1C!9//////!	jot1!N!V4$8080V08+4#1-2//)	JNF242,8#8,2F!8$F04/01(8/#	Dioxolane elimination (aromatic)	detDB@iiRfUwJFZB@H@H!eFHBJD daDHB@RTfUVyiZPB
-IzAQirb IdP qzfYh	!RPJVSY{y?lKrLY{A}lGvpoAurW@ !R@BL]vgp !Rs}oOXg|S_tq?SG|SGWi|	$8F4F!@!402Y1k10Gc8!k#406F4080FG0F!4&F10F0F!4010LVP2V84F$F04281+2+8,V1//08#8!4!4%2#1%	jotG!NG0V4#2B080V0N&1!2440V1-2#VF2/$204*	6FsF40810V%4%8*202/&F6/&4*	CO elimination	diTD@@iJYWrnF``H@H!eFHBJD dnDH@@ReVDij@@@H
-qnJ` qnH Qd	!Ru?q~@M]}u?p]dhH !R_wy?_atZ_@ !R@FL]~cp	%F0V24!G4821!1FV$VF6V440O2080GF0F504F&40X4F!40V12V02#F1#9040h1$V$4-4,1//%8/(	xNsZ440402#14V/)4///%	JF!4////,V.	α-elimination	gJPa@erS[TA}M@!eMDARUB eF@khp_U@
-IfESBinD IGfhlP IfE	!R?g~H?[_}mpJw?[\Bm?vw@k_}GUs\ !R_vq?Dw}l_qM?[G|SGQi| !R_?y??avF_@	!4V0F#@!140210F1FV#VV0Z0J!G0480FH0k11!4098!4F20H!40V12V0@F@0F!J!141B1#8V$Z-4&F$W014F01!802!F*4F)84601$4#2%V!	xtw_ZZq4W3F6114V05V#401$8!2$F4%F4//$2%10	xtZ4Z0Z!202&V#4&8/F/.V.	α-elimination	dedLB@RTyImUVjj`CzI`!gNq@`N_IJkUTA@ eMDARUB
-IzaIla@ qrLk IxP	!Rm?vH?[\B?g~w?[_}?g|]tep !Rb@Jw@ox@?`Bw@auZp` !R_vp]^gp	8$F#1#B0292F180V!8V#404F0480JF0F801(1!FF8040V0HV82480F0V!F20181#J02$2%101!8-1$1#4/#10V8#8!4!4%2!J0V$	6FsF!810V$2&8*2/)F//#	4F0F4/!8////)	α-elimination	daDHB@KdimVz`@@B!gFpAKrTjZ@@A@ eFHBJD
-qJtk qJt q]	!R?g~H?[_}b@JH?QtJw@ !R?g~H?[_}GUk\ !R_vp]^gp	V0V!F10844!40211F10VV@10V040J04FV084FF0F1!2FGF#J020J41Z0402V0H082s!H401V0B30e08V//01//%8/(	xtkb4VV!@%V!VV/!F//#8/#	oFc444/08////)	α-elimination	gGPaA[rSNuPD!gCaA@NRZXB eFHBJD
-IxjqaR@ IZa Q[ qy	!R?`BH@k\B?`BH?[_}mpH]xlH !R_?y??awz_@ !R_qL@DqtzO@ !R_vp]Zgp	V$F#8#B0613k10VV!1V0B0K14GFZ84JF0k1$G14!4020F4040V02V42F80k!F20W38R10X08V//01)V/%F$8/(	xtsb4ak40@0R!4Va0V!8&F04!2F(k$V(F&20V#8)4)	JF!4/!8///)V+V!	α-elimination	daxDB@HnrJJHmSHA@!eMHAITH eM@ghvB eFHBND
-IDjsfR@ IDlYH q}	!RmpJw__x@?g~w@k\B?`@]dop !R]?pq@B?MOrXkAAtz`` !R_vp]Fgp	$1F!2#89!10H!V#1X040410kFBB41F0G10F!F04014V20F4040c02V02F82FFN#c18R10X!V$4-4,1#F01/.8#1$4-	xtwbZao4V@0T!4VZBc8084010F0N84!FF018$J0J4#2808V0F#8!20V#8)4)	RsFY4Xk!80@#V4!8$G/&4%4/!8/V!	α-elimination	daDDB@HnRYg[fij@H!gFqAAnRYSVj`H eFHBND
-qiZ|p qiTp q_	!R?`BH@k\BbOvw?_y?GUJB !R_qM?Dw}l_qL]Fcp !R@AL]Agp	04!1F44%40614k10Vc1!VRB0444k!80FF0F1046202!15060F!40883VB2F9BF0F02J0c2BI8#k$4-4,1//%8/(	yJs_448!V0F41#804082,F0108$8%2%F)V1&4.	JFV04/!8-F//*V.	γ-elimination 	gNqa@f~RY]jXPl!gJP`@TeUdB eFHBLD
-!R?g~w?Xc}mpK~_{_}bOvw@k_}G\H\ !RGTY| !R?g~H?[_}b@Jw@hc}b@JH?Quzw@		Calculation Failed	oNs404%F%8#8$F(F018$F84$2!8,V1&4#F(10	JNs242,8#8,2F018$F04/01$1!8/#	ζ-elimination	dedDB@f^RYU^ejXLRrz~`H@!fH@Oj@ diDDB@D^RYWVefALfh
-IeQtNZlIH IeQwfh qNT	!R@hbw@gvwbOvw?[\Bm?vw@ox@m?vw@at|?@ !R?`Bw?Xc}mpJw?[\BGP[| !R@Ox@?`JHG]k|	B48B1VVVO9B$J10k!1kW50VN80J04$8HV0G!80H8k!890Z0L0410H02VRLV9gF8FF4JWZ09G0828V$4+40401*1#F)4*F0V)8#1#8.	zxx_pZTBlYJCM14cD5842!WVV%V2$3BJ!2!9%F2,4%4$2V%14!	zpx_KVN4VV444!824#80V/(9%F/&V!2&1410	Eliminations assisted by β-hydrogen removal	dctJbHSNdOCNrRSEISMUTt@[PTXIF@PvB@!gNpYHlqxOdj}Zj@~f` gCa@@djpD
-IpdjFGiT qcUq IGiT	!RbGvw_X`B?g?~@K]}b@K~_?x@G_J| !R?g~w@k_}m?vw@avzO@ !Rb@K~_xc}G]j|	#81Vc8k0F%1)40F!40VV0F$2F8!c$111040F#F8V2Z42!8G0F%F85F!FV//01//%8/(	FF/08#8-F!8///&	FF0F.8#8/08///&	Aromatic eliminations	ded@@DiUUeiZ@hTZfh!gFp@DiTt@@B gC`@DiZDC@
-q~QeX q\jH q~	!RmpK~@K_}mpJw@k_}GUJB !RXFUSY?y?KF\]Vmp !R_vp]^gp	V$F%8!4011F!4V820V080J040F0B40F0F%G04&F4040242V224N0k!F!W!810XF8%4-4,1/)F#2&8(8.	zxpbKXk0We0@4!V40VV$FV#80V48!F$V)V(F*8/#	zhW4F0V!X!4%V&V%V*V*4/*V(V!	Carbon monoxide eliminations from cyclic carbonyls compounds	gOp`@tfUkZj`H!gKQ@@eKcUPD eFHBND
+atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	Label	Transformation	Ionization	Reaction	DOI	Section	Description
+qbq a` qQp	!RtEJHC^h@GPhB !RGUi| !R@FN?Dquz_@	0804#10F4!13!VF*804V!80V!H0F2FF)A#84(2#F&F401#8//!1//%8/(	o@V60J/04////&10	J8//////	Alpha cleavage	gCa@@duPGtF@!fI@Gu` eM@bXzB	Positive	CMF			
+qbqh qfUH	!Rmwwp_[]|_g|]lcp !R?`BE@[_|b@H]vgp	0cJN8#4F$2!4k!4$80804)k0F#82#F!2F0X#V044013#F&kF01#8//!1//%8/(	uD020F&V/-8///$	F8//*8///$	Alpha cleavage	gJPI@DBTijhCzB@!gK`I@DJTcj`OhH@	Positive	CMF			
+qbqh qbH qu	!Rw`BH?J_|bMt]|hH !Rwpq?Dquz?@ !R?`@]vgp	VV)2108!l1F208V!8V#404&VZF0202014F&J1102242V43F90k!40F#9910F2F//01//%8/(	yJsZ448!V!41%4/$8///#30	J0V/////+V10	Alpha cleavage	gJPa@eJSKTA}E@!eMH`eIxH eFHBLGtP	Positive	CMF			
+qbqh qJh Ql	!Rm?wpwXE?y{p]lmp !Rwxq?Dquz?@ !R@NL]vgp	VVFN8!V2!1$15F!4V020c#B04&V4F#@21)m!82042V130B0k$F1VF991//%1//%8/(	yJNV408//$8///$	J//+8///0V!	Alpha cleavage	gJQIL@`ReMS@_PP!eMH`eIxH eFB@HcA}D@	Positive	CMF			
+qbuH qfjH	!RM{upoPD@Mwp]lgp !R@BL?x~WAwrp]Vgp	4808#20F$F0J01&80W404!202#F0F)V042!8$F#82040F!8N!F20G61F//#1//%8/(	u620211#1$1////-F0	H020201/////*	Alpha cleavage	gJXA@IRij`OhH@!gKhAAirPFhB	Positive	CMF			
+qbqh qbH qu	!RO`BH?C_|bGt]|hH !Rwtq?Dquz_@ !R?`@]vgp	VV80N$201WV!11G!8k!VV210404#FV4V4F#201$V#F#2082V03080k$F!29A1F08//!1//%8/(	yJPV619&F/&V///(k0	J02/////+VV0	Alpha cleavage	gJYADEJSKTA}E`!eMH`eIxH eF`BLGtX	Positive	CMF			
+qTq qa Q\	!R@AM?DpAlGTJB !R@DQCrip !R_sL}Nmp	Z8%40F!2#1$1!1840604!10V!8F0F&21!82!F&HV02#F4B0F!F09109//$1//%8/(	N8$V/////*	F//////0	Alpha cleavage	gC`AAJTu@P!eF@bXpP eF@HpP	Positive				
+qbq Ql qQ	!R{|L@p~~lG[K| !R@DL]Vgp !R_xp]ngp	48%10H!W#1)801F0404!VF04k0F+Z2!8$F8#2#FFV0F85F0414G//$1//%8/(	u420211/////(k0	F02/////.	Alpha cleavage	gChA@IRfhCzC@!eF`BLD eF@bXpP	Positive	CMF			
+qrL QX qq	!Rgzp@kI}cG]K| !R@BL]vgp !R@BL]~kp	Z8%W0F082!41(182#B!40V!8F0F&21#2!F01V#3c02#P4!F!F09309,8///-8/(	N8$V/////*	FF/%8////)	Aromatic Indicutive Cleavage	gC`AAJTu@]SP!eF@bXpP eF@HhP	Positive	CRF			
+qkOfP qi{tP	!Rm?w~@Hc}mpJw@ox@GWHB !R?`BH?[_}mpJw@k_}G]k|	W8!1$N0V202870F%1!F81_40VFV128F0F8FG!1Y1210240F2!88F6k02!8FBF#4F0d1#8%F#F/&1)V#2/0F02!8/(	FNF202,8#8,HF!8$F04,F!81/,	NNFY02V!8(8#8,2F!8$k04+FF#102/*	Benzyl carbocation Resonance	gOpAGJUKutkPD!gOpAMJUNusMHD	Positive	Resonance			
+qkyfP qkOfP	!Rb@Jw@oy?bOvH?_y?G_H| !Rb@K~_{\BbOvH?_y?GXY|	V8401!J0s!202810F%140F85Z!V0V1@8F0F0FFV0W352102J2F#8802k02!8F4F#ZG0d1#8%F#F/&1)V#2/0F02!8/(	NNFY02V!8(8#8,2F!8$k04+FF#102/*	FNF202,8#8,HF!8$F04,F!81/,	Benzyl carbocation Resonance	gOpAMJUNusMHD!gOpAGJUKutkPD	Positive	Resonance			
+qi{tP qkOfP	!R?`BH?[_}mpJw@k_}GWK| !Rm?w~@Hc}mpJw@ox@G]k|	o849!cFFF!2!410V5#11B!1540FV0k!@F0F8NFV01352102F3F04F8BV2k02V!t4F0F0ZG0d50GF0V//////0	NNFY02V!8(8#8,2F!8$k04+FF#102/*	FF0F$8-8////)	Benzyl carbocation Resonance	gOpAMJUNusMHD!gOpAMJUKua@@D	Positive	Resonance			
+q~QeX q\jH q~	!RmpK~@K_}mpJw@k_}GUJB !RXFUSY?y?KF\]Vmp !R_vp]^gp	V$F%8!4011F!4V820V080J040F0B40F0F%G04&F4040242V224N0k!F!W!810XF8%4-4,1/)F#2&8(8.	zxpbKXk0We0@4!V40VV$FV#80V48!F$V)V(F*8/#	zhW4F0V!X!4%V&V%V*V*4/*V(V!	Carbon monoxide eliminations from cyclic carbonyls compounds	gOp`@tfUkZj`H!gKQ@@eKcUPD eFHBND	Positive				
+IaLhfGed Ql IZdDezP	!RXJhcFCx@NALlFC`Lp@[@FZJpGWK| !R@FL]vkp !R@CzbuzJppAg@Ac`LNAL]aop	VNH0IJ0P0J2@8J021GG38WV010kF2JB0BN4090xJ8s90e0EVL!V1XS0I424690PWDXc8@F3#J0J2O1C!9//////!	jot1!N!V4$8080V08+4#1-2//)	JNF242,8#8,2F!8$F04/01(8/#	Dioxolane elimination (aromatic)	detDB@iiRfUwJFZB@H@H!eFHBJD daDHB@RTfUVyiZPB	Positive	CRF			
+qbqkx q~Yh Qd	!R_g}~_?A}|Gsp?_A||Gt]Rap !R_g|_za~eTv\]vcp !R@FL]Agp	kV01!48#3!D014R020V041c#4044H40s4!J!F2540420V1!F4#202V020NVF%W4V81c040V$4#8/&14!F01/&V&8/(	J0V/////+V!	zhW4F0V!X!4%V&V%V*V*4/*V(V!	Displacement Reaction a.	daxDB@XIRUUzj`CZNcGPpUqDX`d_{G@!gKQA@IReqjhB eFHBND	Positive	CMF			
+q{ENT q~Yh Qd	!Rm?vH?[\Bm?vw@ox@?`@]ThH !R?g|_Fa}eTv\]vcp !R@AL]Agp	l%44V01F10D01J808#80N2V044FJH6184!F80F04604X!V!N4!1442V4@0FVF%V4Z81VF4&4#8/&14!F01/&V&8/(	J//+8///0V!	zh10F0V//$8,4/*V(V!	Displacement Reaction a.	daxHbN@HzTiuZjl@vaHpdLE\QFHIG~p`!gKPI@DBTi\Zj@` eFHBND	Positive	CMF			
+q]|VH qOtP q]	!RO`@~@N\Byswg@n\}y?p]XbH !RcLbLipBe@Lh]Ngp !R_pp]~op	k880VB4&VR014cV0W2010R8!B#H6086!F!H0_4042%F41$XZ820FVN4!8cVFV81V85&4#8/&14!F01/&V&8/(	J02/////+V!	zh30H1W!F#4%F)V/)4/*V(V!	Displacement Reaction a.	dazHBF@IRUUzj`CZNcGPpUqDX`d_{G@!gKXA@IReqjhB eFHBND	Positive	CMF			
+qlVH qrH ql	!R@FL@[@CC@Fp]bgp !RGtL@PqwZO@ !R@DL]~gp	4@(N%F1084%8!10J!V#22FFH0NF!3V!146F0F41V0802V024!s0FFF01F08301N8//&4//)2/	tNH101(4%V08/&F///0	FF2/$8////)	Displacement Reaction b.	gJXA@IRUjPH!eM@fXvB eF`BLGtP	Positive	CMF			
+qYuT quT qY	!RE?rQ@G\M[xYsAAwR`` !R@Cx~Gsx_GUj| !R_pp]nop	V$F$H!8!G1F#V#V0104V4VF08!FZH!F!W4J01!40J7040@42X42080k0F4V0V40892!2F//01#F//08#1/#	yos_JZ8!V4F41#804082)V!F!88#V84+F)Z(4#F(30	yJs4!8!V0F4$8#8/1//(4+V10	Displacement Reaction b.	gFpa@eJSJZuLA}E@!gBQA@IReZf@~`` eFHBND	Positive	CMF			
+qYuT qre qY	!RM?sQ@D}MW|YKAAwb`` !R_rq?Dw|lGYk| !R_rp]~gp	V#1FVV!2!8!G1F0J0VV02WF0240JVF08!FaF094!14J20F044J51Z0242Z4H088s!609V098A8102F//////0	zwt_44840X48414VB80Z08#V(2!10BF!F$V02%4$1/0V(30	JF!4/!8-F///&V!	Displacement Reaction b.	gFpa@eJSJZuRA|eE`!gCaA@IRUdCzB@ eFHBND	Positive	CMF			
+qYuT qYlP Qp	!RM?sQ@D}MW|YKAAvR`` !R_`A~@M\Buwt]fdH !RGWi|	VV!1!V04210O!G1F#c#VF!404&VZN20J2014F#8Z4JO1V@X42V43k@8s1040O0209A1!2//!1//%8/(	zxt_JZs40X4B414cD0V4$1V%V&BF0V*4-4+VV(30	JNF/$8/&F//-V!	Displacement Reaction b.	gFpa@eJSJZuTA|eE`!gJQA@IRUzPH fI@Gu`	Positive	CMF			
+qrlK quY Qd	!Rsg}_qdc}Stw}mquRw@ !R_rq?Dw|lGYk| !R_rp]~gp	V02F1F0V4#V80kW5F044V070VF42B040k08!k2F1048210J0F!44k41ZX042Z020BBu0k709WV88I$F//////0	zwOW4084!48#VB80V08,2!1!8!F$V02%4$1/,	JF/%8-F$8///0V!	Displacement Reaction b.	gFqIL@`ReLfts@_HQX@!gC`I@DBTeY@~`` eFHBND	Positive	CMF			
+qrlK qqk Qd	!Rsg}_qdc}Stu}mqvrw@ !R@Gy~Owx?GUj| !R_rp]ngp	V!F0H&V#W5F!4V060V#BVZVH08!k0F1!821ZJ81$k40Z2842V0X0B0k0F1!WV0810F//$1#F//08#1/#	yoNWJV8#4F%8#82,F!808!V84+F)V,F*	yJN#8$F%8#8/1!8///0V!	Displacement Reaction b.	gFqIL@`ReLftt`_PP!gBPI@DBTiVi`OhH@ eFHBND	Positive	CMF			
+qrlK qbKh Qp	!RSg}_Q`a}Sxu}mqtrw@ !Ro`B~@I_|e{t]fdH !RGWi|	VV0F180V#1!1015F0F4e0X0WF!B04#8!VZF!BP21&Z4kFWV@VB2V03VD8s5#O1V09A1!2//!1//%8/(	zxOWJVs4!4B#cD(1/8,4/*V+	JNF/$8/#8!F//-V!	Displacement Reaction b.	gFqIL@`ReLftu@_HQX@!gJQA@IRUzPH fH`PA}X	Positive	CMF			
+qYuT qYlP Qp	!R]?pq@B?MOrXkAAvR`` !R?`C~@K\Bm?t]fdH !RG_i|	VVFFG!V02F1W#11F#c!VVH!424#FV40ZF084201$V0Z4JF1V@V82VF3W@8s1#O#9A1F42//!1//%8/(	zxQWLWt40F4B0J0cD!F$1!1V%V2,1#4%8/#V)k0	JNH/$8/&F//-V!	Displacement Reaction b.	gFyADEJSJZuTA|ee`!gJQA@IRUzPH fJ@Gup	Positive	CMF			
+qbqkx qbOn qX	!RU?qQ@@~MGtXYGplDG^K| !Rog~~_{B}lCrpoQtzg@ !RGPY|	40FF540F5!F0140M4o2FBVF39VF12K0o$F0FWF22I02V50V01@J0kN10X043V8DF8Bk!k0F1_0871FF8F//01//%8/(	:xjOqsa1i6w4XB8j0V424!Vc0JF04V$m!N0V4%2!J#1%V.V)10	oFk4(F%8#8/0808#8//4+V10	Displacement Reaction b.	gOpiEPDBTfVKZj`OdHl@!gGQIJ@`Rdj|tHgzV@ fI@Gu`	Positive	CMF			
+qYuW` qYlV qx	!RU?qQ@@~MGtXYGplDG^K| !Rog~~_{B}lCrpoQtzg@ !RGPY|	4V!S4!50V121V0G0s24NV!8VF1@J04$F!oF2@G20V40401@J0JO1020Z3VBMF88F22k2F1509C1VF@F//01//%8/(	:xjSqsa1i6w4YBcj0V424!Wc8JF04V$m0BF0V4%2!J#1#40V!4+VV4&10	oFk4(F%8#8/08%8//4+V10	Displacement Reaction b.	gOqa@jIRYXmjj@~Pbp!gGPaAQJRksPb_iX@ fI@Gu`	Positive	CMF			
+qNWeX qNW qlX	!Rb@JH_Wx@b@I~@Ha}GWJB !Ru?sW_Wx@GYjB !R_rq?Dqwz_@	8#4!4522#V0G0s2080V0@7022J0JW8%4K02#V4048s2J4J11F!53V46F!F!F!154898WG@F//01//%8/(	xvkj4oVV0@02!5V!Vc04F01,k*F+1+8/010	oPV64J/04////&10	Grob-Wharton	gNpaAQJSOMU@_HQX@!gCa@@duPGtD@ eMH`eIXOh`	Positive	CMF			
+q{iV` Qv qM q{	!Rm?vw?[\|m?v~_{\|GXJ\ !R@Kx@oauZ_@ !R@BL]^gp !R_tp]Agp	lV8!44!V014!F19F8!V080Vk024048F0H04E4F11020104!4040k5FFH0F2V03190k9F01NVF0d9_)4/+1/-V&8/(	yoPWLW9!F4!F%F/V2/(8/,VF0	JF2///-F/,V80	Grob-Wharton	gNxaLJIRU[jXCzZ@!eMH`eIxH eF`BJGtP eFHBND	Positive	CMF			
+qbq Qd qq	!R@AL@[@@SGPi| !R@AL]Vgp !R@AL]^kp	#F0408#F$1041VV22$11S#1&F%F8%F0F010140HV02#F02J8k1!818B1@//!1//%8/(	t82!1(4/////!	FF2///-F//	Inductive cleavage	gChA@IRVhCTB!eF``fJD eF@Hp_za@	Positive	CRF			
+IaLJnXP qbqk IxP	!RtEsPO]A\tCwPWCy?tCt]Bkp !R@DL@[@AC@Fp@Pquz_@ !R@DL]akp	VV!W!Z!1N$104041!910J!B!4#98!F!42!2%4ZFF1V#2V03029P14209#9308VV8-4$4,1#F01*81$4,8#1$4&22$	RuJAB2k01802#V!F80140G!V/#4//-	RNF140V)V%8!1/#k/%2/*	Inductive cleavages assisted by β-hydrogen removal	daxHB@zTeVVjh@~ah@!gGQA@IRUVi@~`` eF@HhP	Positive	CMF			
+qbqk qbqk	!R_O@T~pAYDEKp@quJ_@ !R@Fq?[@@S_qM?[AwZ_@	Z2!110V!F8!211#4!F1F0F!BVF4$822F0V4#2#V04JF01V#@V02!NP602V924F97$F/#4,1/,4(8(8(2%	zj_DO2V20i2042!V0k&V0VF!V$F$V*4/*V!1(	yJs5!8!V4F4)82/%V//04,10	Inductive cleavages assisted by β-hydrogen removal	gFqAAYRe|Zj`OiH@!gGQA@IRezY@~``	Positive	CMF			
+Qd Qd	!R@FL]Rgp !R@FL]vgp	////////2!1-40V,2&8/(	!2/////,V0	!2/////,V0	Ionisation	eF`BLGtX!eF``fLGt\	Positive	Ionisation			
+QX QX	!R@Fp]rgp !R@FL]Nkp	08(F$V0F08208#8$4(8F0F#F$4!2!4104!4!42#F0F$F!10V02F//////0	4F!4/////,	40V/////,10	Oxonium Resonance	eFH`fJGtP!eFHbfLGtP	Positive	Resonance			
+Q[ Q[	!R@AM?DquRo@ !R@AM?Dqtzo@	////////#1!2+1!4)V%408/&V	2020201/////(F0	2020201/////(k0	Ionisation	eM`BN`~b@!eM``fN`~c@	Positive	Ionisation			
+qTq qTq	!RbOvw?_x@GYK| !RbOvw?_x@GWk|	///////)F)1//02!8808.8V$	2220201#1$1/////	2220201#1$1////-F0	Ionisation	gCh@AGj@`!gChA@Icu@_PP	Positive				
+Qv@ Qv	!R@AL@[@@SGSH| !R@Fp@Dqwz``	V/21*B0204!10V88VB0H#204$8#F04!802V020F0F)8G04//$W.F*4*8/$4!	o0V4/////+10	o0V4/////+10	Ionisation	gCa@@dmPFtwhHcMCAlp!eMH`eIhOhp					
+Qd@ Qd	!R@Fq?[@@SGTk| !R@AL]ngp	W#F+3104(cF0248%9V!F!420J!1V$F0F!@N2Z020FVF010V$815//////%	!2/////.	!2/////,V0	Ionisation	gCh@@eMPFrV}ADThXMCAjV@!eF``fLGtX					
+QX QX	!R_vp]bgp !R_vp]vgp	//////!2/%V)12+4/(8/(	//,8///$	//,8///$	Ionisation	eFB@HcA}D@!eFB`HIcA}F@					
+Q[ Q[	!R@AM?Dqtbo@ !R@AM?Dquz@`	//////$4#F/)101/.FF!8/V&	2//+8///$	2//+8///$	Ionisation	eMB@HchH!eMB`HIchOh`					
+QX QX	!R@AL@[AtbO@ !R@AL]nkp	V/21V%VV08#404$8X!F#204$F#F$822V020F0F)8101/&4////%2%	4F!4/////,	4F!4/////,	Ionisation	eMHAIXMicLLG~r!eFH`fJGtP					
+Qg Qg	!R@FL?XqtJ_@ !R@FL?XqwZ_@	///////%4,1.4)F!4(8(8(2%	60V&V/////&	60V&V/////$10	Ionisation	eMHBN``!eMH`fN`~b@					
+QX QX	!R_vp]bgp !R_vp]vgp	//////!2/%V)12+4/(8/(	//,8///$	//,8///$	Ionisation	eFB@HcA}D@!eFB`HIcA}F@					
+QX QX	!R@AL]Pmp !R@AL]^gp	////////#W.F*4*8/$4!	40V/////,10	40V/////,10	Ionisation	eFHBLGtP!eFH`fLGtX					
+Qd Qd	!R@FL]Rgp !R@FL]vgp	////////2!1-40V,2&8/(	!2/////,V0	!2/////,V0	Ionisation	eF`BLGtX!eF``fLGt\					
+Q[ Q[	!R@AM?DquRo@ !R@AM?Dqtzo@	////////#1!2+1!4)V%408/&V	2020201/////(F0	2020201/////(k0	Ionisation	eM`BN`~b@!eM``fN`~c@					
+qTq qTq	!RbOvw?_x@GYK| !RbOvw?_x@GWk|	///////)F)1//02!8808.8V$	2220201#1$1/////	2220201#1$1////-F0	Ionisation	gCh@AGj@`!gChA@Icu@_PP					
+Qg Qg	!R@Fq?[AuJ?@ !R@FM?Dqvz_@	//////01/F/1!2/)V%409/(	2020201/////(F0	2020201/////(F0	Ionisation	eM`BN`~b@!eM``fN`~bOza@	Positive	Ionisation			
+qbq a` qrH	!RuKWT|`AIw[I\ !RGUi| !RTMq?[Ivz_@	4#5)1!11%V#F02J(8V0F20F!V4$8J0F81V#2V06!8N!F!1C0830208//!1//%8/(	x8V4%2/////$10	JF/%8////)	Remote Hydrogen rearrangement	gCa@@dmPGtD@!fI@Gu` eM@HvB	Positive	CRF			
+qTq Q\ qa	!R@NL?xpAlG_K\ !R@FL]Ngp !R@FL]Akp	#8$V(G0F208VF18V#405%2!F0H)1!4J01V1!2V82FB0N$F#83!F0F//01//%8/(	y4V4%V!4/////#	4FV/$8////&10	Remote Hydrogen rearrangement	gCa@@eMPD!eFHBLGtP eF@HhP	Positive	CRF			
+IO^adkBFU qb^i IO^ IeQ	!Rm?u~_?C}|Gq~_?A}|Gu~_?A||Gwp_Atr{@ !R_g~w_K_}mwvw_AvZo@ !R@Fp@XqtF_@ !ROvL@XquFo@	04!1!V0c05#81F$2180_F2Vo449!1H482FGF4!W$80ZBF$k03W02!8F1FF895!9104088//01)V/V$F#8808-101$	tvLAcAq07Cs29B1!3F89c50H!XV#F8#F$FV#8*2$202&8)2%	kNH!1,8#8,H#8$F/#1/,	Remote Hydrogen rearrangement	dcN@B@J\bRbRaWCUUUL@_ITC@!gFpAEJTjZuRA@ eM`AIhH eM@HvB	Positive	CRF			
+Qg Qg	!R@Fp@HquJ_@ !R@Fp@Hqtz?@	08010F#F$20808BZ#1#8042(F0F#V1#2!2#V!4$82040F0V$F211!4//#1//%8/(	FF//*8///$	k//+8///$	Resonance	eMB`HIRVB!eMB`HiRZB	Positive	Resonance			
+Qg Qg	!R@Fp@XquJ_@ !R@Fp@Xqtz?@	0820k0F!J&B%F#F1!4!VF$K0F!4#F#42!8$F#F21!F!2040F!14!2//!1//%8/(	FF2///-F//	k02!1/////+	Resonance	eM``eIXH!eM`beIhH	Positive	Resonance			
+IZhILxP q]a ISND	!RmwvH__y??g~H_Xa}?g|]lnp !R@Fq?[@@SGWk| !Rb@K~_xc}GUj|	$1!8F(G+kFFo28V$F!F080VV$1!40F21VFB02V020V8N0NF0V1!83F08N//!1//%8/(	NuJA82k!802!1!8G80940FF0V8$F#8$F#84.F2/*	FF/08#8-F!8///&	Retro-Diels–Alder 	daD@@DiURijj`B!gC`@Die@` gC`@DiZDC@	Positive				
+IhfpXS` IhlEN qc	!RbGw~@H`B?g~H@ox@bGt]Bgp !RmpJw?_x@?g~w@atZ?@ !R@AL]~kp	#80F1V!982402l0F1!cF95V010J04!890FF0FVF088F81581!4F21Z1!2V820cFQ01F0NWZ0832!8F//01//%8/(	zxxblZu8ke42J!828VB08#VF0880V0F!18#VF&2808#F%2/*	RNFX40V!8%V%8#F8(F(F.F,8/#	Retro-Diels–Alder 	daDH@@RfVijZj@H!gGQ@@dsMLA@ eF@HhP	Positive				
+ItYyRkFMH IeP It^JlMd`	!R?g~H?[_}?g?~_{_}m?w~_xc}?g~w?QuRK@ !R_vp]~gp !RmpK~@K\Bm?w~@Oy?m?rw@ox@G^hb	#B1F4&4H210F1!cGG2V8044050N890Ho0FHF0420Z83BW#J81Z1!2V820C4O!23R0V08I4#F$J#F)6*401#F01!V#2/0F120888!1V#4%F%8	:xjxiu@peimK398X9mgHA60mkFXNc0V4FGGFBN!cG84V24B0@!V0FF!80FH1ZV!1I0FJ#F01(	RsJY4Xk0V80@%8080840FFF08$HF!8$k04)V0FF!8102/*	Retro-Diels–Alder 	dclD@@QIeUeieujZij@H!eFHBJD deTH@@RUf\YYif`aF	Positive				
+IgBRnaa IgDaa qMx	!RmpJw__x@mpK~_{\B?`Bw@atb@` !Rb@JH@hc}b@K~@Atz`` !R_qL@DqtF_@	04Z31&8!V4W8c01X0F030K@0B!mB01F!8o232#8!1_0_0Oc042R6XWg2XF8P0FV0c0WN81g0W0V$4-4,1//%8/(	zrUdUdO2WF7k0H99380VF9A%8#4Fl014#@084V!4HF!V0F#8F0F1WW%4*V$	JF206-8#80V+F/)F/V.	Retro-Diels–Alder 	dieH@DxLbbbQ[fjZ`B!gGY@BDeUYaLp eM`BM``	Positive				
+IZhddp^ Ipdza IZI	!R?g~H@k\BbGvH_X`B?g~H_Qurg@ !Rm?w~@Hc}mpK~_qvZo@ !R_qL@Dqwz_@	(2!2!2V018FFdW08#5!J!H580F1!F153!V805d4010Oc1X0F0XV8HV01O!k28lX0834!N//!1//%8/(	vzMfvdn0oNWF2411080k09@#F0c!8BG5!801!F8&8%F24020F01#G8/!	NNHX20V!8,80V0F)F(F.FF//	Retro-Diels–Alder 	dif@@@Ri^zZjfh@`!gGP@DjZY`H eM`BM``	Positive				
+IwbFleVPx IwaeS qb^i	!RbCvH?Ky_bCv~@H`}oe~H?Hc|oe~~@Aurw@ !RbKvHoX`Bo`BHoQtz_@ !Rog~wOK_}m?vwOAwzO@	Vk2@0Fc0G201V#1WF!oV2FBV#Z4g!V8B0R4F8!20G!6F1443P!420V2V1r080k2F!F0V49C1m05F$F2+8-1#F$V/%F82!8!4104%2*	yRsr468G8V4040240805VN$F013020HFV58$F16$2!80F6V0V810V081!80V#204#5%	oFcJ04,8#8$F*18/8//!V!	Retro-Diels–Alder 	dclDB@{iRYeevz]ZA`b@B!gGPa@QJRmsPbX gFp@DiTt@@B	Positive	CRF			
+IwlDdeZa` IFP IwlIEjF	!Rg`BH?H_|g`BHGYx@a?rH?Hc|bAt]\bH !R_uP]Fop !RmuvwWYy?mrr`g[^]muvwKAtzg@	VV08VH%W0@1W11F240WV08V2!J6ZV0V8B0G4F0V020l08101440H0WZ2!2VG3V80s2FF0F7809A1X19&@/)V1/-4&8%4*1%	zxxr5XsGde40402g28VWXN#V!13024FFVG02!VF16$@1!VJHV0V8!2081!80V010204#4%	JFcF#18&408#N(202$1/$2/+4!V!	Retro-Diels–Alder 	dmLDB@{irJJIQEneV`hB@B!eF@HhP didDB@hIRVY~G``@@`	Positive	CRF			
+iup`jXdibCPcXKoI iSxKhvMHP IwbkEYH	!RbOrHW]x@bOs^[xc|w`BHWXa]w`C^[xc|ipK^@Mx@i?s^@AuRx` !Ri?rgW]x@i?rg?Mx@i?rg?Aujp` !RmsvwO]y?mqrPw[_]msvwGAwzG@	WRF4CK4MF2291L8TdVkWWliV12ZJ@bZf4g5TC4QP_F40FZ0o6F38sVL0H47w61F6WD7cP8QFaHX!M69v6f6Ek$4-4////,	:xzCqslde4mZ0EgHsVhXSH01Z0F9Y924FFVl02k0lkG6FF01@105ZJHZ1dc!20814180V05V205!F4#10	RNFY42V!8%V08#8#F8&HF!8$k04!V(FF!8102%8#V.	Retro-Diels–Alder 	fdeA`D@\brTfYY_m]gIZ|EhJB@@h@@~aF@!didHB@BTfUvfZVV@OhB@ didD@@iIYgxUie`B	Positive	CRF			
+IphiFG` IrDZax`	!RbOrW?Hb}e{vH?Hb}o`@]|hH !R@BL@[@@c@FqlWrM_@BL]~cp	!2B1F04k0F!J4250F104XF10VF!445ZVFB0HF0F0H0BV0802d1044J03Z3c02V824RRP4J08JVX1B3!F//#1//%8/(	ywk7F0F!V0F4$8#82#F08!V!1!8%8&8%F/04.	RPF342V!80V!9V!H!8F01!V(F&k/10V!2&I/!	Retro-heteroene (Claisen rearrangement)	daxH@@Re^jf`B!daxH@@RUiZjPB	Positive				
+IaLJfxP IJfxP Qg	!R@FL@[@Ac@FqlOvL?@FL]Bcp !R|Grw_Gy?|Ot]vkp !R@Fp@XqtF_@	V!8(20F04I1F208X!@k#J07408202!G02V!5!5B1#H81V#2V02FB0t!F081!8304F@F//01)V/%F$8/(	RPF342V!80V!9V!H!8F01!V(F&k/10V!2&I/!	JNs2/#8-F(F.F/.10	Retro-heteroene (McLafferty-type rearrangement)	daxH@@RUiZjPB!gJP@DjYdB eMHAIdOh`	Positive				
+qgVMX qYoTp	!Rg`BGgXb]a?rG?H^]GPhB !RN@swnix@C[AkCDJpGSkB	V80VcF0XFF0c$W@2V$1%B104#18NVF!28!2$2F0H%F2V024!H0F!20F091F049&2+8-1//08#8!4!4%2*	FF0F$8-8////)	0F/%8////)	Tropylium rearragement	gOpAMJUKua@@D!gOpAGJTju`@@D	Positive	Rearrangement			
+IaLkit I{MbTh	!Rh@VUDFcl?H`N@HCfGXiB !R[X~@abJwFEL@F[y_GSi\	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	Positive	Resonance			
+q]yfP qgSuH	!R[X?@qaJONGO@v_y?GWK\ !RQps~_}?YQwMmc}?FG[i|	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	Positive	Resonance			
+qrLoX qMsW`	!RN@s_qox@[[AGCAJpGWKB !R[[C@vQJpN@s@qox@G_iB	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	Positive	Resonance			
+qMsW` q{eQp	!R[[C@vQJpN@s@qox@GPkB !Rw}dx\vvO?g|Rct]sGP[\	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	Positive	Resonance			
+q{eQp qTwKh	!Rw}dx\vvO?g|Rct]sG]K\ !R?`AG\t\Lw|[_vVvpGSiB	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	Positive	Resonance			
+qTwKh qqUcx	!R?`AG\t\Lw|[_vVvpG]JB !Rw|XxCFvp?`@RlD\LG[kB	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	Positive	Resonance			
+qgSuH qrLoX	!RQps~_}?YQwMmc}?FGUH| !RN@s_qox@[[AGCAJpGXXb	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance 	gOpAGJTju`@@D!gOpAGJTju`@@D	Positive	Resonance			
 <datawarrior properties>
 <columnFilter_Table="">
-<columnWidth_Table_Label="166">
-<columnWidth_Table_Transformation="415">
+<columnWidth_Table_DOI="80">
+<columnWidth_Table_Description="80">
+<columnWidth_Table_Ionization="80">
+<columnWidth_Table_Label="337">
+<columnWidth_Table_Reaction="80">
+<columnWidth_Table_Section="80">
+<columnWidth_Table_Transformation="460">
 <detailView="height[Data]=0.5;height[Transformation]=0.5">
-<filter0="#reaction#	Transformation">
-<filter1="#retron#	Transformation">
+<filter0="#string#	Ionization">
+<filter1="#string#	Reaction">
+<filter2="#string#	DOI">
+<filter3="#string#	Section">
+<filter4="#string#	Description">
+<filter5="#string#	Label">
 <formLayout_Form View="TableLayout,3,6.0,-1.0,6.0,3,4.0,-1.0,4.0">
 <formObjectCount_Form View="1">
 <formObjectInfo_Form View_0="Label	textLine	1, 1, 1, 1, full, full">
 <headerLines_Table="2">
-<mainSplitting="0.72708">
+<mainSplitting="0.82137">
 <mainView="Table">
 <mainViewCount="2">
 <mainViewDockInfo0="root">
@@ -68,6 +130,6 @@ q~QeX q\jH q~	!RmpK~@K_}mpJw@k_}GUJB !RXFUSY?y?KF\]Vmp !R_vp]^gp	V$F%8!4011F!4V8
 <mainViewName1="Form View">
 <mainViewType0="tableView">
 <mainViewType1="formView">
-<rightSplitting="0.65829">
-<rowHeight_Table="80">
+<rightSplitting="0.66935">
+<rowHeight_Table="81">
 </datawarrior properties>
