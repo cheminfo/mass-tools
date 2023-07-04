@@ -1,10 +1,15 @@
 import { MF } from 'mf-parser';
 import { applyReactions } from 'openchemlib-utils';
 
+import { cid } from './database/collisionInducedDissociation';
+
+const databases = {
+  cid,
+};
 let masses = {};
 export function reactionFragmentation(molecule, options = {}) {
-  const { database = 'cid', reactions, maxDepth } = options;
-
+  const { database = 'cid', mode = 'positive', maxDepth = 10 } = options;
+  let reactions = databases[database][mode];
   let fragmentation = applyReactions([molecule], reactions, maxDepth);
 
   for (let fragment of fragmentation) {
