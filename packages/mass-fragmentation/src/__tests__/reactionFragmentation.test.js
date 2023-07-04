@@ -1,6 +1,3 @@
-import { write, writeFileSync } from 'fs';
-import { join } from 'path';
-
 import OCL from 'openchemlib';
 
 import { reactionFragmentation } from '../reactionFragmentation.js';
