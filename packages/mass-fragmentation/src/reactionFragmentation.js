@@ -9,14 +9,17 @@ const databases = {
 
 //ionizationLevel fix the maximum depth of the ionization reactions in the molecule
 export function reactionFragmentation(molecule, options = {}) {
-  const {
+  let {
     database = 'cid',
     mode = 'positive',
-    maxDepth = 10,
+    maxDepth = 0,
     ionizationLevel = 1,
   } = options;
+  if (maxDepth === 0) {
+    let mass = molecule.getMolecularFormula().absoluteWeight;
+    maxDepth = Math.round(mass / 10);
+  }
   const reactions = databases[database][mode];
-
   let ionizedFragments = applyIonizationReactions(
     molecule,
     reactions,
