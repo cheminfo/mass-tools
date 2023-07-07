@@ -161,70 +161,53 @@ export const cid = {
         'gFqAAYRe|Zj`OiH@!gGQA@IRezY@~``#qbqk qbqk#!R_O@T~pAYDEKp@quJ_@ !R@Fq?[@@S_qM?[AwZ_@',
     },
     {
-      Label: 'Ionisation',
+      Label: 'Ionization',
       rxnCode: 'eF`BLGtX!eF``fLGt\\#Qd Qd#!R@FL]Rgp !R@FL]vgp',
     },
     {
-      Label: 'Oxonium Resonance',
-      rxnCode: 'eFH`fJGtP!eFHbfLGtP#QX QX#!R@Fp]rgp !R@FL]Nkp',
-    },
-    {
-      Label: 'Ionisation',
+      Label: 'Ionization',
       rxnCode: 'eM`BN`~b@!eM``fN`~c@#Q[ Q[#!R@AM?DquRo@ !R@AM?Dqtzo@',
     },
     {
-      Label: 'Ionisation',
+      Label: 'Ionization',
       rxnCode: 'gCh@AGj@`!gChA@Icu@_PP#qTq qTq#!RbOvw?_x@GYK| !RbOvw?_x@GWk|',
     },
     {
-      Label: 'Ionisation',
+      Label: 'Ionization',
       rxnCode:
         'gCa@@dmPFtwhHcMCAlp!eMH`eIhOhp#Qv@ Qv#!R@AL@[@@SGSH| !R@Fp@Dqwz``',
     },
     {
-      Label: 'Ionisation',
-      rxnCode:
-        'gCh@@eMPFrV}ADThXMCAjV@!eF``fLGtX#Qd@ Qd#!R@Fq?[@@SGTk| !R@AL]ngp',
-    },
-    {
-      Label: 'Ionisation',
+      Label: 'Ionization',
       rxnCode: 'eFB@HcA}D@!eFB`HIcA}F@#QX QX#!R_vp]bgp !R_vp]vgp',
     },
     {
-      Label: 'Ionisation',
+      Label: 'Ionization',
       rxnCode: 'eMB@HchH!eMB`HIchOh`#Q[ Q[#!R@AM?Dqtbo@ !R@AM?Dquz@`',
     },
     {
-      Label: 'Ionisation',
+      Label: 'Ionization',
       rxnCode: 'eMHAIXMicLLG~r!eFH`fJGtP#QX QX#!R@AL@[AtbO@ !R@AL]nkp',
     },
     {
-      Label: 'Ionisation',
+      Label: 'Ionization',
       rxnCode: 'eMHBN``!eMH`fN`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@',
     },
     {
-      Label: 'Ionisation',
+      Label: 'Ionization',
       rxnCode: 'eFB@HcA}D@!eFB`HIcA}F@#QX QX#!R_vp]bgp !R_vp]vgp',
     },
     {
-      Label: 'Ionisation',
+      Label: 'Ionization',
       rxnCode: 'eFHBLGtP!eFH`fLGtX#QX QX#!R@AL]Pmp !R@AL]^gp',
     },
     {
-      Label: 'Ionisation',
-      rxnCode: 'eF`BLGtX!eF``fLGt\\#Qd Qd#!R@FL]Rgp !R@FL]vgp',
-    },
-    {
-      Label: 'Ionisation',
-      rxnCode: 'eM`BN`~b@!eM``fN`~c@#Q[ Q[#!R@AM?DquRo@ !R@AM?Dqtzo@',
-    },
-    {
-      Label: 'Ionisation',
-      rxnCode: 'gCh@AGj@`!gChA@Icu@_PP#qTq qTq#!RbOvw?_x@GYK| !RbOvw?_x@GWk|',
-    },
-    {
-      Label: 'Ionisation',
+      Label: 'Ionization',
       rxnCode: 'eM`BN`~b@!eM``fN`~bOza@#Qg Qg#!R@Fq?[AuJ?@ !R@FM?Dqvz_@',
+    },
+    {
+      Label: 'Oxonium Resonance',
+      rxnCode: 'eFH`fJGtP!eFHbfLGtP#QX QX#!R@Fp]rgp !R@FL]Nkp',
     },
     {
       Label: 'Remote Hydrogen rearrangement',

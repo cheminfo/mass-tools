@@ -28,7 +28,9 @@ describe('ReactionFragmentation', async () => {
     const molecule = Molecule.fromSmiles('CNC(Cc1ccc2c(c1)OCO2)C');
     const options = {
       maxDepth: 20,
+      ionizationLevel: 1,
     };
+
     const result = reactionFragmentation(molecule, options);
     expect(result).toMatchSnapshot();
   });

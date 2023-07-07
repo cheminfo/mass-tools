@@ -1,7 +1,7 @@
 <datawarrior-fileinfo>
 <version="3.3">
-<created="1688479206698">
-<rowcount="71">
+<created="1688722953096">
+<rowcount="67">
 </datawarrior-fileinfo>
 <column properties>
 <columnName="atomMapping">
@@ -61,22 +61,18 @@ q{iV` Qv qM q{	!Rm?vw?[\|m?v~_{\|GXJ\ !R@Kx@oauZ_@ !R@BL]^gp !R_tp]Agp	lV8!44!V0
 qbq Qd qq	!R@AL@[@@SGPi| !R@AL]Vgp !R@AL]^kp	#F0408#F$1041VV22$11S#1&F%F8%F0F010140HV02#F02J8k1!818B1@//!1//%8/(	t82!1(4/////!	FF2///-F//	Inductive cleavage	gChA@IRVhCTB!eF``fJD eF@Hp_za@	Positive	CRF			
 IaLJnXP qbqk IxP	!RtEsPO]A\tCwPWCy?tCt]Bkp !R@DL@[@AC@Fp@Pquz_@ !R@DL]akp	VV!W!Z!1N$104041!910J!B!4#98!F!42!2%4ZFF1V#2V03029P14209#9308VV8-4$4,1#F01*81$4,8#1$4&22$	RuJAB2k01802#V!F80140G!V/#4//-	RNF140V)V%8!1/#k/%2/*	Inductive cleavages assisted by β-hydrogen removal	daxHB@zTeVVjh@~ah@!gGQA@IRUVi@~`` eF@HhP	Positive	CMF			
 qbqk qbqk	!R_O@T~pAYDEKp@quJ_@ !R@Fq?[@@S_qM?[AwZ_@	Z2!110V!F8!211#4!F1F0F!BVF4$822F0V4#2#V04JF01V#@V02!NP602V924F97$F/#4,1/,4(8(8(2%	zj_DO2V20i2042!V0k&V0VF!V$F$V*4/*V!1(	yJs5!8!V4F4)82/%V//04,10	Inductive cleavages assisted by β-hydrogen removal	gFqAAYRe|Zj`OiH@!gGQA@IRezY@~``	Positive	CMF			
-Qd Qd	!R@FL]Rgp !R@FL]vgp	////////2!1-40V,2&8/(	!2/////,V0	!2/////,V0	Ionisation	eF`BLGtX!eF``fLGt\	Positive	Ionisation			
+Qd Qd	!R@FL]Rgp !R@FL]vgp	////////2!1-40V,2&8/(	!2/////,V0	!2/////,V0	Ionization	eF`BLGtX!eF``fLGt\	Positive	Ionisation			
+Q[ Q[	!R@AM?DquRo@ !R@AM?Dqtzo@	////////#1!2+1!4)V%408/&V	2020201/////(F0	2020201/////(k0	Ionization	eM`BN`~b@!eM``fN`~c@	Positive	Ionisation			
+qTq qTq	!RbOvw?_x@GYK| !RbOvw?_x@GWk|	///////)F)1//02!8808.8V$	2220201#1$1/////	2220201#1$1////-F0	Ionization	gCh@AGj@`!gChA@Icu@_PP	Positive				
+Qv@ Qv	!R@AL@[@@SGSH| !R@Fp@Dqwz``	V/21*B0204!10V88VB0H#204$8#F04!802V020F0F)8G04//$W.F*4*8/$4!	o0V4/////+10	o0V4/////+10	Ionization	gCa@@dmPFtwhHcMCAlp!eMH`eIhOhp					
+QX QX	!R_vp]bgp !R_vp]vgp	//////!2/%V)12+4/(8/(	//,8///$	//,8///$	Ionization	eFB@HcA}D@!eFB`HIcA}F@					
+Q[ Q[	!R@AM?Dqtbo@ !R@AM?Dquz@`	//////$4#F/)101/.FF!8/V&	2//+8///$	2//+8///$	Ionization	eMB@HchH!eMB`HIchOh`					
+QX QX	!R@AL@[AtbO@ !R@AL]nkp	V/21V%VV08#404$8X!F#204$F#F$822V020F0F)8101/&4////%2%	4F!4/////,	4F!4/////,	Ionization	eMHAIXMicLLG~r!eFH`fJGtP					
+Qg Qg	!R@FL?XqtJ_@ !R@FL?XqwZ_@	///////%4,1.4)F!4(8(8(2%	60V&V/////&	60V&V/////$10	Ionization	eMHBN``!eMH`fN`~b@					
+QX QX	!R_vp]bgp !R_vp]vgp	//////!2/%V)12+4/(8/(	//,8///$	//,8///$	Ionization	eFB@HcA}D@!eFB`HIcA}F@					
+QX QX	!R@AL]Pmp !R@AL]^gp	////////#W.F*4*8/$4!	40V/////,10	40V/////,10	Ionization	eFHBLGtP!eFH`fLGtX					
+Qg Qg	!R@Fq?[AuJ?@ !R@FM?Dqvz_@	//////01/F/1!2/)V%409/(	2020201/////(F0	2020201/////(F0	Ionization	eM`BN`~b@!eM``fN`~bOza@	Positive	Ionisation			
 QX QX	!R@Fp]rgp !R@FL]Nkp	08(F$V0F08208#8$4(8F0F#F$4!2!4104!4!42#F0F$F!10V02F//////0	4F!4/////,	40V/////,10	Oxonium Resonance	eFH`fJGtP!eFHbfLGtP	Positive	Resonance			
-Q[ Q[	!R@AM?DquRo@ !R@AM?Dqtzo@	////////#1!2+1!4)V%408/&V	2020201/////(F0	2020201/////(k0	Ionisation	eM`BN`~b@!eM``fN`~c@	Positive	Ionisation			
-qTq qTq	!RbOvw?_x@GYK| !RbOvw?_x@GWk|	///////)F)1//02!8808.8V$	2220201#1$1/////	2220201#1$1////-F0	Ionisation	gCh@AGj@`!gChA@Icu@_PP	Positive				
-Qv@ Qv	!R@AL@[@@SGSH| !R@Fp@Dqwz``	V/21*B0204!10V88VB0H#204$8#F04!802V020F0F)8G04//$W.F*4*8/$4!	o0V4/////+10	o0V4/////+10	Ionisation	gCa@@dmPFtwhHcMCAlp!eMH`eIhOhp					
-Qd@ Qd	!R@Fq?[@@SGTk| !R@AL]ngp	W#F+3104(cF0248%9V!F!420J!1V$F0F!@N2Z020FVF010V$815//////%	!2/////.	!2/////,V0	Ionisation	gCh@@eMPFrV}ADThXMCAjV@!eF``fLGtX					
-QX QX	!R_vp]bgp !R_vp]vgp	//////!2/%V)12+4/(8/(	//,8///$	//,8///$	Ionisation	eFB@HcA}D@!eFB`HIcA}F@					
-Q[ Q[	!R@AM?Dqtbo@ !R@AM?Dquz@`	//////$4#F/)101/.FF!8/V&	2//+8///$	2//+8///$	Ionisation	eMB@HchH!eMB`HIchOh`					
-QX QX	!R@AL@[AtbO@ !R@AL]nkp	V/21V%VV08#404$8X!F#204$F#F$822V020F0F)8101/&4////%2%	4F!4/////,	4F!4/////,	Ionisation	eMHAIXMicLLG~r!eFH`fJGtP					
-Qg Qg	!R@FL?XqtJ_@ !R@FL?XqwZ_@	///////%4,1.4)F!4(8(8(2%	60V&V/////&	60V&V/////$10	Ionisation	eMHBN``!eMH`fN`~b@					
-QX QX	!R_vp]bgp !R_vp]vgp	//////!2/%V)12+4/(8/(	//,8///$	//,8///$	Ionisation	eFB@HcA}D@!eFB`HIcA}F@					
-QX QX	!R@AL]Pmp !R@AL]^gp	////////#W.F*4*8/$4!	40V/////,10	40V/////,10	Ionisation	eFHBLGtP!eFH`fLGtX					
-Qd Qd	!R@FL]Rgp !R@FL]vgp	////////2!1-40V,2&8/(	!2/////,V0	!2/////,V0	Ionisation	eF`BLGtX!eF``fLGt\					
-Q[ Q[	!R@AM?DquRo@ !R@AM?Dqtzo@	////////#1!2+1!4)V%408/&V	2020201/////(F0	2020201/////(k0	Ionisation	eM`BN`~b@!eM``fN`~c@					
-qTq qTq	!RbOvw?_x@GYK| !RbOvw?_x@GWk|	///////)F)1//02!8808.8V$	2220201#1$1/////	2220201#1$1////-F0	Ionisation	gCh@AGj@`!gChA@Icu@_PP					
-Qg Qg	!R@Fq?[AuJ?@ !R@FM?Dqvz_@	//////01/F/1!2/)V%409/(	2020201/////(F0	2020201/////(F0	Ionisation	eM`BN`~b@!eM``fN`~bOza@	Positive	Ionisation			
 qbq a` qrH	!RuKWT|`AIw[I\ !RGUi| !RTMq?[Ivz_@	4#5)1!11%V#F02J(8V0F20F!V4$8J0F81V#2V06!8N!F!1C0830208//!1//%8/(	x8V4%2/////$10	JF/%8////)	Remote Hydrogen rearrangement	gCa@@dmPGtD@!fI@Gu` eM@HvB	Positive	CRF			
 qTq Q\ qa	!R@NL?xpAlG_K\ !R@FL]Ngp !R@FL]Akp	#8$V(G0F208VF18V#405%2!F0H)1!4J01V1!2V82FB0N$F#83!F0F//01//%8/(	y4V4%V!4/////#	4FV/$8////&10	Remote Hydrogen rearrangement	gCa@@eMPD!eFHBLGtP eF@HhP	Positive	CRF			
 IO^adkBFU qb^i IO^ IeQ	!Rm?u~_?C}|Gq~_?A}|Gu~_?A||Gwp_Atr{@ !R_g~w_K_}mwvw_AvZo@ !R@Fp@XqtF_@ !ROvL@XquFo@	04!1!V0c05#81F$2180_F2Vo449!1H482FGF4!W$80ZBF$k03W02!8F1FF895!9104088//01)V/V$F#8808-101$	tvLAcAq07Cs29B1!3F89c50H!XV#F8#F$FV#8*2$202&8)2%	kNH!1,8#8,H#8$F/#1/,	Remote Hydrogen rearrangement	dcN@B@J\bRbRaWCUUUL@_ITC@!gFpAEJTjZuRA@ eM`AIhH eM@HvB	Positive	CRF			
@@ -100,6 +96,10 @@ qMsW` q{eQp	!R[[C@vQJpN@s@qox@GPkB !Rw}dx\vvO?g|Rct]sGP[\	//////08#2028+V8*VW)4$
 q{eQp qTwKh	!Rw}dx\vvO?g|Rct]sG]K\ !R?`AG\t\Lw|[_vVvpGSiB	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	Positive	Resonance			
 qTwKh qqUcx	!R?`AG\t\Lw|[_vVvpG]JB !Rw|XxCFvp?`@RlD\LG[kB	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	Positive	Resonance			
 qgSuH qrLoX	!RQps~_}?YQwMmc}?FGUH| !RN@s_qox@[[AGCAJpGXXb	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance 	gOpAGJTju`@@D!gOpAGJTju`@@D	Positive	Resonance			
+<hitlist data>
+<hitlistName="<selection>">
+<hitlistData="@@@@@|@@@@@@">
+</hitlist data>
 <datawarrior properties>
 <columnFilter_Table="">
 <columnWidth_Table_DOI="80">
@@ -115,12 +115,12 @@ qgSuH qrLoX	!RQps~_}?YQwMmc}?FGUH| !RN@s_qox@[[AGCAJpGXXb	//////08#2028+V8*VW)4$
 <filter2="#string#	DOI">
 <filter3="#string#	Section">
 <filter4="#string#	Description">
-<filter5="#string#	Label">
+<filter5="#string#	Label	#contains#	ioni">
 <formLayout_Form View="TableLayout,3,6.0,-1.0,6.0,3,4.0,-1.0,4.0">
 <formObjectCount_Form View="1">
 <formObjectInfo_Form View_0="Label	textLine	1, 1, 1, 1, full, full">
 <headerLines_Table="2">
-<mainSplitting="0.82137">
+<mainSplitting="0.78785">
 <mainView="Table">
 <mainViewCount="2">
 <mainViewDockInfo0="root">
@@ -130,6 +130,6 @@ qgSuH qrLoX	!RQps~_}?YQwMmc}?FGUH| !RN@s_qox@[[AGCAJpGXXb	//////08#2028+V8*VW)4$
 <mainViewName1="Form View">
 <mainViewType0="tableView">
 <mainViewType1="formView">
-<rightSplitting="0.66935">
+<rightSplitting="0.67638">
 <rowHeight_Table="81">
 </datawarrior properties>
