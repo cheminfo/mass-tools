@@ -23,11 +23,16 @@ export function reactionFragmentation(molecule, options = {}) {
 
 function mfInfoFragments(reaction) {
   if (reaction?.reactant) {
-    reaction.reactant.monoisotopicMass = new MF(
-      reaction?.reactant.mf,
-    ).getInfo().monoisotopicMass;
+    let reactantMF = new MF(reaction?.reactant.mf);
+    reaction.reactant.monoisotopicMass =
+      reactantMF.getInfo().observedMonoisotopicMass;
+    if (reaction.reactant.monoisotopicMass === undefined) {
+      reaction.reactant.monoisotopicMass =
+        reactantMF.getInfo().monoisotopicMass;
+    }
     reaction.reactant.monoisotopicMass =
       Math.round(reaction.reactant.monoisotopicMass * 10000) / 10000;
+
     masses[reaction.reactant.monoisotopicMass] = true;
   }
 
@@ -38,7 +43,11 @@ function mfInfoFragments(reaction) {
           mfInfoFragments(child);
         }
       }
-      product.monoisotopicMass = new MF(product.mf).getInfo().monoisotopicMass;
+      let productMF = new MF(product.mf);
+      product.monoisotopicMass = productMF.getInfo().observedMonoisotopicMass;
+      if (product.monoisotopicMass === undefined) {
+        product.monoisotopicMass = productMF.getInfo().monoisotopicMass;
+      }
       product.monoisotopicMass =
         Math.round(product.monoisotopicMass * 10000) / 10000;
       masses[product.monoisotopicMass] = true;
