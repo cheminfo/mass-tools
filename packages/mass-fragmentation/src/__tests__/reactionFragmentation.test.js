@@ -30,7 +30,6 @@ describe('ReactionFragmentation', async () => {
       maxDepth: 20,
     };
     const result = reactionFragmentation(molecule, options);
-
     expect(result).toMatchSnapshot();
   });
 });
