@@ -9,7 +9,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 * **octochemdb:** add callback for in-memory search DB preparation ([a89d628](https://github.com/cheminfo/mass-tools/commit/a89d628e5539f5814b603044666b08d9ff68d894))
-* **octochemdb:** taxonomyTree ([31a58e6](https://github.com/cheminfo/mass-tools/commit/31a58e66a84bc0460972f67a3a360324e5dce111))
+* **octochemdb:** createTaxonomyTree ([31a58e6](https://github.com/cheminfo/mass-tools/commit/31a58e66a84bc0460972f67a3a360324e5dce111))
 
 
 
@@ -30,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * **octochemdb:** add excludedCollections ([1a5f907](https://github.com/cheminfo/mass-tools/commit/1a5f907e68d49d795bbf4617adb0922ab46369a2))
 * **octochemdb:** add taxonomyComparator ([bf0aa42](https://github.com/cheminfo/mass-tools/commit/bf0aa42d94c78e46282343a74cb8c27abe556e96))
 * **octochemdb:** compoundsFromMF sorts results by title length ([90778bc](https://github.com/cheminfo/mass-tools/commit/90778bc45001747cfddc945d6dead40ac6038365))
-* taxonomyTree ([2cd05f1](https://github.com/cheminfo/mass-tools/commit/2cd05f1ac0c2b2923d3e277567599624f3b9a04e))
+* createTaxonomyTree ([2cd05f1](https://github.com/cheminfo/mass-tools/commit/2cd05f1ac0c2b2923d3e277567599624f3b9a04e))
 
 
 

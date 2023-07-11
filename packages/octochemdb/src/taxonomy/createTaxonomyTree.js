@@ -5,7 +5,7 @@ import { taxonomyRanks } from './taxonomyRanks';
  * @param {import('./Taxonomy.js').Taxonomy[]} taxonomies - The array of taxonomies to create a tree from.
  * @returns {Object[]} The tree structure.
  */
-export function taxonomyTree(taxonomies, options = {}) {
+export function createTaxonomyTree(taxonomies, options = {}) {
   let { rankLimit = '' } = options;
   rankLimit = rankLimit.toLowerCase();
   const tree = [];

@@ -4946,7 +4946,7 @@ exports[`over 200 entries 1`] = `
 ]
 `;
 
-exports[`taxonomyTree 1`] = `
+exports[`createTaxonomyTree 1`] = `
 [
   {
     "children": [

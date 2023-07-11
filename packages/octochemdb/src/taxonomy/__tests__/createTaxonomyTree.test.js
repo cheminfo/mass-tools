@@ -1,9 +1,9 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-import { taxonomyTree } from '../taxonomyTree';
+import { createTaxonomyTree } from '../createTaxonomyTree';
 
-test('taxonomyTree', () => {
+test('createTaxonomyTree', () => {
   const taxonomies = [
     {
       superkingdom: 'Eukaryota',
@@ -46,7 +46,7 @@ test('taxonomyTree', () => {
     },
   ];
 
-  let tree = taxonomyTree(taxonomies);
+  let tree = createTaxonomyTree(taxonomies);
   expect(tree[1].children).toHaveLength(2);
   expect(tree[1].children[0].name).toBe('');
   expect(tree[1].children[0].rank).toBe('kingdom');
@@ -63,7 +63,7 @@ test('only one entry', () => {
     },
   ];
 
-  let tree = taxonomyTree(taxonomies);
+  let tree = createTaxonomyTree(taxonomies);
 
   expect(tree[0].name).toBe('Eukaryota');
   expect(tree[0].count).toBe(1);
@@ -93,7 +93,7 @@ test('multiple undefined fields', () => {
     },
   ];
 
-  let tree = taxonomyTree(taxonomies);
+  let tree = createTaxonomyTree(taxonomies);
 
   expect(tree[1].name).toBe('Eukaryota');
   expect(tree[1].count).toBe(2);
@@ -148,7 +148,7 @@ test('Rank Limit', () => {
   const options = {
     rankLimit: 'Class',
   };
-  let tree = taxonomyTree(taxonomies, options);
+  let tree = createTaxonomyTree(taxonomies, options);
 
   expect(tree).toMatchSnapshot();
 });
@@ -198,12 +198,12 @@ test('True data', () => {
     },
   ];
 
-  let tree = taxonomyTree(taxonomies);
+  let tree = createTaxonomyTree(taxonomies);
   expect(tree).toMatchSnapshot();
 });
 test('over 200 entries', () => {
   const path = join(__dirname, 'data/manyTaxonomies.json');
   const taxonomies = JSON.parse(readFileSync(path, 'utf8'));
-  let tree = taxonomyTree(taxonomies);
+  let tree = createTaxonomyTree(taxonomies);
   expect(tree).toMatchSnapshot();
 });
