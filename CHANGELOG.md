@@ -1,5 +1,24 @@
 # Changelog
 
+## [7.8.0](https://github.com/cheminfo/mass-tools/compare/v7.7.0...v7.8.0) (2023-07-11)
+
+
+### Features
+
+* apply ionization to fixed level [#126](https://github.com/cheminfo/mass-tools/issues/126) ([028d53e](https://github.com/cheminfo/mass-tools/commit/028d53eb8ac432e160471f08f8b2c3fba4f80495))
+* full fragmentation of mdma ([ec526fb](https://github.com/cheminfo/mass-tools/commit/ec526fb241cf56eccde4f50cd1c1681c71a8dd06))
+* get count of lowest children ([4f7b02a](https://github.com/cheminfo/mass-tools/commit/4f7b02a8f8179725edc92423373571372c6e9a7f))
+
+
+### Bug Fixes
+
+* add new field titles ([cadee5d](https://github.com/cheminfo/mass-tools/commit/cadee5d7cc691e9edd80d1bb5a03832484f0a28e))
+* get observed monoisotopic mass [#123](https://github.com/cheminfo/mass-tools/issues/123) ([592ff9a](https://github.com/cheminfo/mass-tools/commit/592ff9a1b3b7c501415ea85169fb6e343ac054cc))
+* increased timeout ([ceffed3](https://github.com/cheminfo/mass-tools/commit/ceffed30fd2647533325fb5a3fb0fbd7a623e4fc))
+* **octochemdb:** prevent double DB creating ([a925180](https://github.com/cheminfo/mass-tools/commit/a9251804deec2c0211ca8683378cd2be3a7a064e))
+* removed useless imports ([18e42e9](https://github.com/cheminfo/mass-tools/commit/18e42e95d29309c579cf031d77ec078f26418a86))
+* updated snapshot ([aafde06](https://github.com/cheminfo/mass-tools/commit/aafde06a8e52ab10094ae64b60448252b46245c4))
+
 ## [7.7.0](https://github.com/cheminfo/mass-tools/compare/v7.6.0...v7.7.0) (2023-06-20)
 
 
