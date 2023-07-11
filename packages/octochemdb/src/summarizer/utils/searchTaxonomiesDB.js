@@ -33,28 +33,29 @@ export async function searchTaxonomiesDB(
   });
   let results = [];
   for (let result of queryResult.hits) {
-    let id = result.document.$id;
-    let species = result.document?.species;
-    let genus = result.document?.genus;
-    let family = result.document?.family;
-    let order = result.document?.order;
-    let phylum = result.document?.phylum;
-    let kingdom = result.document?.kingdom;
-    let superKingdom = result.document?.superKingdom;
-    let taxonomiesDocument = taxonomies.find((taxonomy) => {
-      return (
-        taxonomy.dbRef.$id === id &&
-        (taxonomy?.species === species ||
-          taxonomy?.genus === genus ||
-          taxonomy?.family === family ||
-          taxonomy?.order === order ||
-          taxonomy?.phylum === phylum ||
-          taxonomy?.kingdom === kingdom ||
-          taxonomy?.superKingdom === superKingdom)
-      );
-    });
+    let keys = Object.keys(result.document);
+    let currentTaxonomy = {};
+    for (let key of keys) {
+      if (key !== '$id') {
+        currentTaxonomy[key] = result.document[key];
+      } else {
+        currentTaxonomy.dbRef = { $id: result.document.$id };
+      }
+    }
 
-    results.push({ ...taxonomiesDocument, score: result.score });
+    let taxonomiesDocument = taxonomies.filter((taxonomy) =>
+      Object.keys(currentTaxonomy).every((key) => {
+        if (key === 'dbRef') {
+          return currentTaxonomy[key].$id === taxonomy.dbRef.$id;
+        }
+        return currentTaxonomy[key] === taxonomy[key];
+      }),
+    );
+
+    for (let taxonomy of taxonomiesDocument) {
+      taxonomy.score = result.score;
+      results.push(taxonomy);
+    }
   }
   results = results.filter((result) => result.score >= minScore);
   if (results.length > maxNbEntries) {
