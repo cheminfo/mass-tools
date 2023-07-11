@@ -298,6 +298,227 @@ exports[`True data 1`] = `
 ]
 `;
 
+exports[`createTaxonomyTree 1`] = `
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Candida albicans",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Candida",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Debaryomycetaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Saccharomycetales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Saccharomycetes",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Stachybotrys chartarum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Stachybotrys",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Stachybotryaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Hypocreales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Sordariomycetes",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 2,
+            "name": "Ascomycota",
+            "nbTaxonomies": 2,
+            "rank": "phylum",
+          },
+        ],
+        "count": 2,
+        "name": "Fungi",
+        "nbTaxonomies": 2,
+        "rank": "kingdom",
+      },
+    ],
+    "count": 2,
+    "name": "Eukaryota",
+    "nbTaxonomies": 2,
+    "rank": "superkingdom",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Plasmodium falciparum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Plasmodium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Plasmodiidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Haemosporida",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Aconoidasida",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Apicomplexa",
+            "nbTaxonomies": 1,
+            "rank": "phylum",
+          },
+        ],
+        "count": 1,
+        "name": "",
+        "nbTaxonomies": 1,
+        "rank": "kingdom",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Stachybotrys cylindrospora",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Stachybotrys",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Stachybotryaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Hypocreales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Sordariomycetes",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Ascomycota",
+            "nbTaxonomies": 1,
+            "rank": "phylum",
+          },
+        ],
+        "count": 1,
+        "name": "Fungi",
+        "nbTaxonomies": 1,
+        "rank": "kingdom",
+      },
+    ],
+    "count": 2,
+    "name": "bacteria",
+    "nbTaxonomies": 2,
+    "rank": "superkingdom",
+  },
+]
+`;
+
 exports[`multiple undefined fields 1`] = `
 [
   {
@@ -4941,227 +5162,6 @@ exports[`over 200 entries 1`] = `
     "count": 4,
     "name": "Bacteria",
     "nbTaxonomies": 4,
-    "rank": "superkingdom",
-  },
-]
-`;
-
-exports[`createTaxonomyTree 1`] = `
-[
-  {
-    "children": [
-      {
-        "children": [
-          {
-            "children": [
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "count": 1,
-                                "name": "Candida albicans",
-                                "nbTaxonomies": 1,
-                                "rank": "species",
-                              },
-                            ],
-                            "count": 1,
-                            "name": "Candida",
-                            "nbTaxonomies": 1,
-                            "rank": "genus",
-                          },
-                        ],
-                        "count": 1,
-                        "name": "Debaryomycetaceae",
-                        "nbTaxonomies": 1,
-                        "rank": "family",
-                      },
-                    ],
-                    "count": 1,
-                    "name": "Saccharomycetales",
-                    "nbTaxonomies": 1,
-                    "rank": "order",
-                  },
-                ],
-                "count": 1,
-                "name": "Saccharomycetes",
-                "nbTaxonomies": 1,
-                "rank": "class",
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "count": 1,
-                                "name": "Stachybotrys chartarum",
-                                "nbTaxonomies": 1,
-                                "rank": "species",
-                              },
-                            ],
-                            "count": 1,
-                            "name": "Stachybotrys",
-                            "nbTaxonomies": 1,
-                            "rank": "genus",
-                          },
-                        ],
-                        "count": 1,
-                        "name": "Stachybotryaceae",
-                        "nbTaxonomies": 1,
-                        "rank": "family",
-                      },
-                    ],
-                    "count": 1,
-                    "name": "Hypocreales",
-                    "nbTaxonomies": 1,
-                    "rank": "order",
-                  },
-                ],
-                "count": 1,
-                "name": "Sordariomycetes",
-                "nbTaxonomies": 1,
-                "rank": "class",
-              },
-            ],
-            "count": 2,
-            "name": "Ascomycota",
-            "nbTaxonomies": 2,
-            "rank": "phylum",
-          },
-        ],
-        "count": 2,
-        "name": "Fungi",
-        "nbTaxonomies": 2,
-        "rank": "kingdom",
-      },
-    ],
-    "count": 2,
-    "name": "Eukaryota",
-    "nbTaxonomies": 2,
-    "rank": "superkingdom",
-  },
-  {
-    "children": [
-      {
-        "children": [
-          {
-            "children": [
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "count": 1,
-                                "name": "Plasmodium falciparum",
-                                "nbTaxonomies": 1,
-                                "rank": "species",
-                              },
-                            ],
-                            "count": 1,
-                            "name": "Plasmodium",
-                            "nbTaxonomies": 1,
-                            "rank": "genus",
-                          },
-                        ],
-                        "count": 1,
-                        "name": "Plasmodiidae",
-                        "nbTaxonomies": 1,
-                        "rank": "family",
-                      },
-                    ],
-                    "count": 1,
-                    "name": "Haemosporida",
-                    "nbTaxonomies": 1,
-                    "rank": "order",
-                  },
-                ],
-                "count": 1,
-                "name": "Aconoidasida",
-                "nbTaxonomies": 1,
-                "rank": "class",
-              },
-            ],
-            "count": 1,
-            "name": "Apicomplexa",
-            "nbTaxonomies": 1,
-            "rank": "phylum",
-          },
-        ],
-        "count": 1,
-        "name": "",
-        "nbTaxonomies": 1,
-        "rank": "kingdom",
-      },
-      {
-        "children": [
-          {
-            "children": [
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "count": 1,
-                                "name": "Stachybotrys cylindrospora",
-                                "nbTaxonomies": 1,
-                                "rank": "species",
-                              },
-                            ],
-                            "count": 1,
-                            "name": "Stachybotrys",
-                            "nbTaxonomies": 1,
-                            "rank": "genus",
-                          },
-                        ],
-                        "count": 1,
-                        "name": "Stachybotryaceae",
-                        "nbTaxonomies": 1,
-                        "rank": "family",
-                      },
-                    ],
-                    "count": 1,
-                    "name": "Hypocreales",
-                    "nbTaxonomies": 1,
-                    "rank": "order",
-                  },
-                ],
-                "count": 1,
-                "name": "Sordariomycetes",
-                "nbTaxonomies": 1,
-                "rank": "class",
-              },
-            ],
-            "count": 1,
-            "name": "Ascomycota",
-            "nbTaxonomies": 1,
-            "rank": "phylum",
-          },
-        ],
-        "count": 1,
-        "name": "Fungi",
-        "nbTaxonomies": 1,
-        "rank": "kingdom",
-      },
-    ],
-    "count": 2,
-    "name": "bacteria",
-    "nbTaxonomies": 2,
     "rank": "superkingdom",
   },
 ]

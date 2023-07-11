@@ -1,0 +1,666 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`fragmentAcyclicBonds > CCCC 1`] = `
+[
+  {
+    "atomMap": [
+      0,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 0,
+        "atom2": 1,
+        "index": 0,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "eFBAYc@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 1,
+        "H": 3,
+      },
+      "charge": 0,
+      "mass": 15.03455815890258,
+      "mf": "CH3",
+      "monoisotopicMass": 15.02347509669,
+      "unsaturation": 0.5,
+    },
+    "parentIDCode": "gC\`@Dij@@",
+  },
+  {
+    "atomMap": [
+      3,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 2,
+        "atom2": 3,
+        "index": 2,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "eFBAYc@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 1,
+        "H": 3,
+      },
+      "charge": 0,
+      "mass": 15.03455815890258,
+      "mf": "CH3",
+      "monoisotopicMass": 15.02347509669,
+      "unsaturation": 0.5,
+    },
+    "parentIDCode": "gC\`@Dij@@",
+  },
+  {
+    "atomMap": [
+      1,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 1,
+        "atom2": 2,
+        "index": 1,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "eMBAYRZ@",
+    "mfInfo": {
+      "atoms": {
+        "C": 2,
+        "H": 5,
+      },
+      "charge": 0,
+      "mass": 29.061175563749384,
+      "mf": "C2H5",
+      "monoisotopicMass": 29.03912516115,
+      "unsaturation": 0.5,
+    },
+    "parentIDCode": "gC\`@Dij@@",
+  },
+  {
+    "atomMap": [
+      2,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 1,
+        "atom2": 2,
+        "index": 1,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "eMBAYRZ@",
+    "mfInfo": {
+      "atoms": {
+        "C": 2,
+        "H": 5,
+      },
+      "charge": 0,
+      "mass": 29.061175563749384,
+      "mf": "C2H5",
+      "monoisotopicMass": 29.03912516115,
+      "unsaturation": 0.5,
+    },
+    "parentIDCode": "gC\`@Dij@@",
+  },
+  {
+    "atomMap": [
+      1,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 0,
+        "atom2": 1,
+        "index": 0,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "gC\`H@liKT@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 3,
+        "H": 7,
+      },
+      "charge": 0,
+      "mass": 43.08779296859618,
+      "mf": "C3H7",
+      "monoisotopicMass": 43.05477522561,
+      "unsaturation": 0.5,
+    },
+    "parentIDCode": "gC\`@Dij@@",
+  },
+  {
+    "atomMap": [
+      2,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 2,
+        "atom2": 3,
+        "index": 2,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "gC\`H@liKT@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 3,
+        "H": 7,
+      },
+      "charge": 0,
+      "mass": 43.08779296859618,
+      "mf": "C3H7",
+      "monoisotopicMass": 43.05477522561,
+      "unsaturation": 0.5,
+    },
+    "parentIDCode": "gC\`@Dij@@",
+  },
+]
+`;
+
+exports[`fragmentAcyclicBonds > c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options false 1`] = `
+[
+  {
+    "atomMap": [
+      3,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 3,
+        "atom2": 4,
+        "index": 3,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "gOpH@liLkW@@@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 6,
+        "H": 5,
+      },
+      "charge": 0,
+      "mass": 77.10411915069038,
+      "mf": "C6H5",
+      "monoisotopicMass": 77.03912516115,
+      "unsaturation": 4.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      4,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 4,
+        "atom2": 5,
+        "index": 4,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "daD@\`@VTeeVz\`@@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 7,
+        "H": 7,
+      },
+      "charge": 0,
+      "mass": 91.13073655553718,
+      "mf": "C7H7",
+      "monoisotopicMass": 91.05477522561,
+      "unsaturation": 4.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      5,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 5,
+        "atom2": 6,
+        "index": 5,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "did@\`@VTeYWaj@@@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 8,
+        "H": 9,
+      },
+      "charge": 0,
+      "mass": 105.15735396038399,
+      "mf": "C8H9",
+      "monoisotopicMass": 105.07042529007,
+      "unsaturation": 4.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      6,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 6,
+        "atom2": 7,
+        "index": 6,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "deT@\`@VTeVUFZh@@@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 9,
+        "H": 11,
+      },
+      "charge": 0,
+      "mass": 119.18397136523078,
+      "mf": "C9H11",
+      "monoisotopicMass": 119.08607535453,
+      "unsaturation": 4.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      7,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 6,
+        "atom2": 7,
+        "index": 6,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "dmL@\`@VTfUmZZUjjjj@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 10,
+        "H": 17,
+      },
+      "charge": 0,
+      "mass": 137.2423517863007,
+      "mf": "C10H17",
+      "monoisotopicMass": 137.13302554791,
+      "unsaturation": 2.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      6,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 5,
+        "atom2": 6,
+        "index": 5,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "dcl@\`@VTee[UnWZjjjh@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 11,
+        "H": 19,
+      },
+      "charge": 0,
+      "mass": 151.2689691911475,
+      "mf": "C11H19",
+      "monoisotopicMass": 151.14867561237,
+      "unsaturation": 2.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      5,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 4,
+        "atom2": 5,
+        "index": 4,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "dk\\\\@\`@VTeYVux]Njjjj\`@",
+    "mfInfo": {
+      "atoms": {
+        "C": 12,
+        "H": 21,
+      },
+      "charge": 0,
+      "mass": 165.2955865959943,
+      "mf": "C12H21",
+      "monoisotopicMass": 165.16432567683,
+      "unsaturation": 2.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      4,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 3,
+        "atom2": 4,
+        "index": 3,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "idCode": "dg|@\`@VTeVUmQd{jjjjj@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 13,
+        "H": 23,
+      },
+      "charge": 0,
+      "mass": 179.3222040008411,
+      "mf": "C13H23",
+      "monoisotopicMass": 179.17997574129,
+      "unsaturation": 2.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+]
+`;
+
+exports[`fragmentAcyclicBonds > c3ccc(CCCC2CCC1CCCCC1C2)cc3 - options true 1`] = `
+[
+  {
+    "atomMap": [
+      3,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 3,
+        "atom2": 4,
+        "index": 3,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "hoses": [
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gJP@DjXHCaB\`eAzSOtRApjhxUP",
+      "dax@@DjUXHH@xPJBJCqQbQdEgzH\`NEUCaU@",
+      "deT@@DjUWXXHH\`@xPJBJCwQbQdEePt]gzH\`NEUCaU@",
+      "dcL@@DjUWya\`\`bh@NDB\`b\`}LXdYAYTMGXLSGzH\`NEUCaU@",
+    ],
+    "idCode": "gOpH@liLkW@@@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 6,
+        "H": 5,
+      },
+      "charge": 0,
+      "mass": 77.10411915069038,
+      "mf": "C6H5",
+      "monoisotopicMass": 77.03912516115,
+      "unsaturation": 4.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      4,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 4,
+        "atom2": 5,
+        "index": 4,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "hoses": [
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
+      "gNp@DiYjB@xPhIP^prYlQHGBjcaU@",
+      "dmT@@DiYUj\`\`h@xPJBJCsAdYfEEPt_hb@xUTNET",
+      "dg\\\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET",
+    ],
+    "idCode": "daD@\`@VTeeVz\`@@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 7,
+        "H": 7,
+      },
+      "charge": 0,
+      "mass": 91.13073655553718,
+      "mf": "C7H7",
+      "monoisotopicMass": 91.05477522561,
+      "unsaturation": 4.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      5,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 5,
+        "atom2": 6,
+        "index": 5,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "hoses": [
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
+      "gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj\`",
+      "dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET",
+      "do|@@DiYUft]jjhJBQJNHCa@hHhOJFQbQfEeYtCdpl_hb@xUTNET",
+    ],
+    "idCode": "did@\`@VTeYWaj@@@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 8,
+        "H": 9,
+      },
+      "charge": 0,
+      "mass": 105.15735396038399,
+      "mf": "C8H9",
+      "monoisotopicMass": 105.07042529007,
+      "unsaturation": 4.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      6,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 6,
+        "atom2": 7,
+        "index": 6,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "hoses": [
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gJP@DjZhCaB\`eAyBIgzI@xUT\\\\Jh",
+      "dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP",
+      "dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP",
+      "do|@@DjUVuYajjjjBpJJHD\`NDB\`b\`|hQFIfXVUCYvCDy~bHCaUPxUP",
+    ],
+    "idCode": "deT@\`@VTeVUFZh@@@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 9,
+        "H": 11,
+      },
+      "charge": 0,
+      "mass": 119.18397136523078,
+      "mf": "C9H11",
+      "monoisotopicMass": 119.08607535453,
+      "unsaturation": 4.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      7,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 6,
+        "atom2": 7,
+        "index": 6,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "hoses": [
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gJP@DjZhCaB\`eAyBIgzI@xUT\\\\Jh",
+      "dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP",
+      "dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP",
+      "do|@@DjUVuYajjjjBpJJHD\`NDB\`b\`|hQFIfXVUCYvCDy~bHCaUPxUP",
+    ],
+    "idCode": "dmL@\`@VTfUmZZUjjjj@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 10,
+        "H": 17,
+      },
+      "charge": 0,
+      "mass": 137.2423517863007,
+      "mf": "C10H17",
+      "monoisotopicMass": 137.13302554791,
+      "unsaturation": 2.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      6,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 5,
+        "atom2": 6,
+        "index": 5,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "hoses": [
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
+      "gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj\`",
+      "dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET",
+      "do|@@DiYUft]jjhJBQJNHCa@hHhOJFQbQfEeYtCdpl_hb@xUTNET",
+    ],
+    "idCode": "dcl@\`@VTee[UnWZjjjh@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 11,
+        "H": 19,
+      },
+      "charge": 0,
+      "mass": 151.2689691911475,
+      "mf": "C11H19",
+      "monoisotopicMass": 151.14867561237,
+      "unsaturation": 2.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      5,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 4,
+        "atom2": 5,
+        "index": 4,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "hoses": [
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
+      "gNp@DiYjB@xPhIP^prYlQHGBjcaU@",
+      "dmT@@DiYUj\`\`h@xPJBJCsAdYfEEPt_hb@xUTNET",
+      "dg\\\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET",
+    ],
+    "idCode": "dk\\\\@\`@VTeYVux]Njjjj\`@",
+    "mfInfo": {
+      "atoms": {
+        "C": 12,
+        "H": 21,
+      },
+      "charge": 0,
+      "mass": 165.2955865959943,
+      "mf": "C12H21",
+      "monoisotopicMass": 165.16432567683,
+      "unsaturation": 2.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+  {
+    "atomMap": [
+      4,
+    ],
+    "cleavedBonds": [
+      {
+        "atom1": 3,
+        "atom2": 4,
+        "index": 3,
+        "order": 1,
+      },
+    ],
+    "fragmentType": "acyclic",
+    "hoses": [
+      "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "gJP@DjXHCaB\`eAzSOtRApjhxUP",
+      "dax@@DjUXHH@xPJBJCqQbQdEgzH\`NEUCaU@",
+      "deT@@DjUWXXHH\`@xPJBJCwQbQdEePt]gzH\`NEUCaU@",
+      "dcL@@DjUWya\`\`bh@NDB\`b\`}LXdYAYTMGXLSGzH\`NEUCaU@",
+    ],
+    "idCode": "dg|@\`@VTeVUmQd{jjjjj@@",
+    "mfInfo": {
+      "atoms": {
+        "C": 13,
+        "H": 23,
+      },
+      "charge": 0,
+      "mass": 179.3222040008411,
+      "mf": "C13H23",
+      "monoisotopicMass": 179.17997574129,
+      "unsaturation": 2.5,
+    },
+    "parentIDCode": "flu@@@DjU_YVuirshiBBJjjjJ@@",
+  },
+]
+`;
