@@ -31,7 +31,9 @@ export function createTaxonomyTree(taxonomies, options = {}) {
           count: 1,
           children: [],
         };
-
+        if (rank === 'species' && taxonomy?.dbRef) {
+          existing.url = taxonomy.dbRef.url;
+        }
         current.push(existing);
       } else {
         existing.count++;

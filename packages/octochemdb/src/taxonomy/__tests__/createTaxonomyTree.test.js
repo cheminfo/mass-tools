@@ -207,3 +207,9 @@ test('over 200 entries', () => {
   let tree = createTaxonomyTree(taxonomies);
   expect(tree).toMatchSnapshot();
 });
+test('full data', () => {
+  const path = join(__dirname, 'data/fullData.json');
+  const taxonomies = JSON.parse(readFileSync(path, 'utf8'));
+  let tree = createTaxonomyTree(taxonomies);
+  expect(tree).toMatchSnapshot();
+});

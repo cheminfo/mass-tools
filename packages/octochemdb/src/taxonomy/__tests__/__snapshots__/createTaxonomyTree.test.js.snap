@@ -519,6 +519,2104 @@ exports[`createTaxonomyTree 1`] = `
 ]
 `;
 
+exports[`full data 1`] = `
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Streptomyces melanogenes",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Streptomyces parvisporogenes",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Streptomyces",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Streptomycetaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Kitasatosporales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Micromonospora echinospora",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Micromonospora",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Micromonosporaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Micromonosporales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 3,
+                "name": "Actinomycetes",
+                "nbTaxonomies": 3,
+                "rank": "class",
+              },
+            ],
+            "count": 3,
+            "name": "Actinomycetota",
+            "nbTaxonomies": 3,
+            "rank": "phylum",
+          },
+        ],
+        "count": 3,
+        "name": "",
+        "nbTaxonomies": 3,
+        "rank": "kingdom",
+      },
+    ],
+    "count": 3,
+    "name": "Bacteria",
+    "nbTaxonomies": 3,
+    "rank": "superkingdom",
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Delisea elegans",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Delisea",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Bonnemaisoniaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Bonnemaisoniales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Mazzaella laminarioides",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Mazzaella",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Gigartinaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Gigartinales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 2,
+                "name": "Florideophyceae",
+                "nbTaxonomies": 2,
+                "rank": "class",
+              },
+            ],
+            "count": 2,
+            "name": "Rhodophyta",
+            "nbTaxonomies": 2,
+            "rank": "phylum",
+          },
+        ],
+        "count": 2,
+        "name": "",
+        "nbTaxonomies": 2,
+        "rank": "kingdom",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Aspergillus microcysticus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Aspergillus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Aspergillaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Eurotiales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Eurotiomycetes",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Stereocaulon sterile",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Stereocaulon",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Stereocaulaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Lecanorales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pseudocyphellaria australiensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pseudocyphellaria",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Lobariaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Peltigerales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 2,
+                "name": "Lecanoromycetes",
+                "nbTaxonomies": 2,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Emericellopsis minima",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Emericellopsis",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Hypocreales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pestalotiopsis oenotherae",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pestalotiopsis",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Sporocadaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Creosphaeria sassafras",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Creosphaeria",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Xylariaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Xylariales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                ],
+                "count": 3,
+                "name": "Sordariomycetes",
+                "nbTaxonomies": 3,
+                "rank": "class",
+              },
+            ],
+            "count": 6,
+            "name": "Ascomycota",
+            "nbTaxonomies": 6,
+            "rank": "phylum",
+          },
+        ],
+        "count": 6,
+        "name": "Fungi",
+        "nbTaxonomies": 6,
+        "rank": "kingdom",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Ormosia dasycarpa",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Ormosia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Limoniidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Diptera",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Lindera megaphylla",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "https://coconut.naturalproducts.net/compound/coconut_id/CNP0233468",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Lindera",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Tineidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Lepidoptera",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 2,
+                "name": "Insecta",
+                "nbTaxonomies": 2,
+                "rank": "class",
+              },
+            ],
+            "count": 2,
+            "name": "Arthropoda",
+            "nbTaxonomies": 2,
+            "rank": "phylum",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Sarcophyton flexuosum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Sarcophyton",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Alcyoniidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Malacalcyonacea",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Anthozoa",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Cnidaria",
+            "nbTaxonomies": 1,
+            "rank": "phylum",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Asteronyx loveni",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Asteronyx",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Asteronychidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Euryalida",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Ophiuroidea",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Echinodermata",
+            "nbTaxonomies": 1,
+            "rank": "phylum",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Costasiella ocellifera",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Costasiella",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Costasiellidae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Gastropoda",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Mollusca",
+            "nbTaxonomies": 1,
+            "rank": "phylum",
+          },
+        ],
+        "count": 5,
+        "name": "Metazoa",
+        "nbTaxonomies": 5,
+        "rank": "kingdom",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Selinum libanotis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Selinum",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Apiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Apiales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Zephyranthes flava",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Zephyranthes",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Amaryllidaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Asparagales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Artemisia pectinata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Artemisia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Baccharis grandicapitulata",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Baccharis",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Gutierrezia dracunculoides",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Gutierrezia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Helenium integrifolium",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Helenium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Helichrysum fulvum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Helichrysum",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Hymenothrix wislizeni",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Hymenothrix",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Lasianthaea podocephala",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Lasianthaea",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Melampodium leucanthum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Melampodium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Nassauvia uniflora",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Nassauvia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pentzia albida",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pentzia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Senecio congestus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Senecio",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Tephroseris kirilowii",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Tephroseris",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 12,
+                        "name": "Asteraceae",
+                        "nbTaxonomies": 12,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 12,
+                    "name": "Asterales",
+                    "nbTaxonomies": 12,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Euploca racemosa",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Euploca",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Heliotropiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Boraginales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Cardamine amara",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Cardamine",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Brassicaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Brassicales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Silene viridiflora",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Silene",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Stellaria media",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Stellaria",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Caryophyllaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Caryophyllales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Euonymus fortunei",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Euonymus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Celastraceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Celastrales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Valeriana ficariifolia",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Valeriana",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Caprifoliaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Dipsacales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Rhododendron mucronulatum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Rhododendron",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Ericaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Ericales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Baptisia australis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Baptisia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Crotalaria stolzii",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Crotalaria",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Hedysarum gmelini",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Hedysarum",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Lupinus cosentinii",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Lupinus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 4,
+                        "name": "Fabaceae",
+                        "nbTaxonomies": 4,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 4,
+                    "name": "Fabales",
+                    "nbTaxonomies": 4,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Morella pensylvanica",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Morella",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Myricaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Fagales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Alstonia angustiloba",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Alstonia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Apocynaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Coffea liberica",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Coffea",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Rubiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Gentianales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Clinacanthus nutans",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Clinacanthus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Acanthaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Clerodendrum trichotomum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Clerodendrum",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Phlomis crinita",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Phlomis",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Sideritis dasygnaphala",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Sideritis",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 3,
+                        "name": "Lamiaceae",
+                        "nbTaxonomies": 3,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Phillyrea latifolia",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Phillyrea",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Oleaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Boschniakia rossica",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Boschniakia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Orobanchaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Verbena littoralis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Verbena",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Verbenaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 7,
+                    "name": "Lamiales",
+                    "nbTaxonomies": 7,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Illigera luzonensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Illigera",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Hernandiaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Litsea sericea",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Litsea",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Ocotea leucoxylon",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Ocotea macropoda",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "https://coconut.naturalproducts.net/compound/coconut_id/CNP0233468",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Ocotea",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 3,
+                        "name": "Lauraceae",
+                        "nbTaxonomies": 3,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 4,
+                    "name": "Laurales",
+                    "nbTaxonomies": 4,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Annona cherimola",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Annona",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Desmos dasymachalus",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "https://coconut.naturalproducts.net/compound/coconut_id/CNP0233468",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Desmos",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Duguetia surinamensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Duguetia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Xylopia championi",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "https://coconut.naturalproducts.net/compound/coconut_id/CNP0233468",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Xylopia championii",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Xylopia",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 5,
+                        "name": "Annonaceae",
+                        "nbTaxonomies": 5,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Magnolia coco",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "https://lotus.naturalproducts.net/compound/lotus_id/LTS0151114",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Magnolia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Magnoliaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 6,
+                    "name": "Magnoliales",
+                    "nbTaxonomies": 6,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Pellacalyx axillaris",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Pellacalyx",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Rhizophoraceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Malpighiales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Wikstroemia hainanensis",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Wikstroemia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Thymelaeaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Malvales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Eucalyptus albens",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Eucalyptus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Psidium acutangulum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Psidium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Myrtaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Myrtales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Piper brachystachyum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Piper sylvaticum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 2,
+                            "name": "Piper",
+                            "nbTaxonomies": 2,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Piperaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Piperales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Avena fatua",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Avena",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Poaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Poales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Sinomenium acutum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Sinomenium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Stephania abyssinica Walp.",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "https://coconut.naturalproducts.net/compound/coconut_id/CNP0233468",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Stephania dinklagei",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "https://coconut.naturalproducts.net/compound/coconut_id/CNP0233468",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Stephania mashanica H.S.Lo & B.N.",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "https://coconut.naturalproducts.net/compound/coconut_id/CNP0233468",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Stephania mashanica H.S.Lo.et.B.N.Chang",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "https://coconut.naturalproducts.net/compound/coconut_id/CNP0233468",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Stephania tetrandra",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                              {
+                                "count": 1,
+                                "name": "Stephania zippeliana Miq.",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "https://coconut.naturalproducts.net/compound/coconut_id/CNP0233468",
+                              },
+                            ],
+                            "count": 6,
+                            "name": "Stephania",
+                            "nbTaxonomies": 6,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 7,
+                        "name": "Menispermaceae",
+                        "nbTaxonomies": 7,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Papaver pseudocanescens",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Papaver",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Papaveraceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Beesia calthifolia",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Beesia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Delphinium giraldii",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Delphinium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Ranunculaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 10,
+                    "name": "Ranunculales",
+                    "nbTaxonomies": 10,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Bursera kerberi",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Bursera",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Burseraceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Sapindales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Curcuma aeruginosa",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Curcuma",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Renealmia alpinia",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Renealmia",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 2,
+                        "name": "Zingiberaceae",
+                        "nbTaxonomies": 2,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 2,
+                    "name": "Zingiberales",
+                    "nbTaxonomies": 2,
+                    "rank": "order",
+                  },
+                ],
+                "count": 65,
+                "name": "Magnoliopsida",
+                "nbTaxonomies": 65,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Juniperus scopulorum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Juniperus",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Cupressaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Cupressales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Pinopsida",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "count": 1,
+                                "name": "Botrychium ternatum",
+                                "nbTaxonomies": 1,
+                                "rank": "species",
+                                "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC189903",
+                              },
+                            ],
+                            "count": 1,
+                            "name": "Botrychium",
+                            "nbTaxonomies": 1,
+                            "rank": "genus",
+                          },
+                        ],
+                        "count": 1,
+                        "name": "Ophioglossaceae",
+                        "nbTaxonomies": 1,
+                        "rank": "family",
+                      },
+                    ],
+                    "count": 1,
+                    "name": "Ophioglossales",
+                    "nbTaxonomies": 1,
+                    "rank": "order",
+                  },
+                ],
+                "count": 1,
+                "name": "Polypodiopsida",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 67,
+            "name": "Streptophyta",
+            "nbTaxonomies": 67,
+            "rank": "phylum",
+          },
+        ],
+        "count": 67,
+        "name": "Viridiplantae",
+        "nbTaxonomies": 67,
+        "rank": "kingdom",
+      },
+    ],
+    "count": 80,
+    "name": "Eukaryota",
+    "nbTaxonomies": 80,
+    "rank": "superkingdom",
+  },
+]
+`;
+
 exports[`multiple undefined fields 1`] = `
 [
   {
