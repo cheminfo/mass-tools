@@ -25,7 +25,7 @@ describe('ReactionFragmentation', async () => {
   });
 
   it('Full fragmentation: MDMA', async () => {
-    const molecule = Molecule.fromSmiles('CNC(Cc1ccc2c(c1)OCO2)C');
+    const molecule = Molecule.fromSmiles('CNCC(O)c1cccc(O)c1');
     const options = {
       ionizationLevel: 1,
     };
