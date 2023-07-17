@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.8.1](https://github.com/cheminfo/mass-tools/compare/v7.8.0...v7.8.1) (2023-07-11)
+
+
+### Bug Fixes
+
+* searchTaxonomies filter instead of find ([f3b01fe](https://github.com/cheminfo/mass-tools/commit/f3b01fe66628719541b003fdc4d5af28ed140e4d))
+
 ## [7.8.0](https://github.com/cheminfo/mass-tools/compare/v7.7.0...v7.8.0) (2023-07-11)
 
 
