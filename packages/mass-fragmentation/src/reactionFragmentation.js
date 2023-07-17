@@ -1,8 +1,8 @@
 import { applyReactions } from 'openchemlib-utils';
 
 import { cid } from './database/collisionInducedDissociation';
-import { applyFragmentationReactions } from './utils/applyFragmentationReactions';
-import { applyIonizationReactions } from './utils/applyIonizationReactions';
+//import { applyFragmentationReactions } from './utils/applyFragmentationReactions';
+//import { applyIonizationReactions } from './utils/applyIonizationReactions';
 import { insertMfInfoFragments } from './utils/insertMfInfoFragments';
 
 const databases = {
@@ -14,8 +14,8 @@ export function reactionFragmentation(molecule, options = {}) {
   let {
     database = 'cid',
     mode = 'positive',
-    maxDepth = 0,
-    ionizationLevel = 1,
+    //   maxDepth = 0,
+    //  ionizationLevel = 1,
   } = options;
   /* if (maxDepth === 0) {
     let mass = molecule.getMolecularFormula().absoluteWeight;
