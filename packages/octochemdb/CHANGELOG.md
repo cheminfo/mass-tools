@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@1.3.0...octochemdb@1.4.0) (2023-07-17)
+
+
+### Bug Fixes
+
+* add new field titles ([cadee5d](https://github.com/cheminfo/mass-tools/commit/cadee5d7cc691e9edd80d1bb5a03832484f0a28e))
+* increased timeout ([ceffed3](https://github.com/cheminfo/mass-tools/commit/ceffed30fd2647533325fb5a3fb0fbd7a623e4fc))
+* **octochemdb:** prevent double DB creating ([a925180](https://github.com/cheminfo/mass-tools/commit/a9251804deec2c0211ca8683378cd2be3a7a064e))
+* searchTaxonomies filter instead of find ([f3b01fe](https://github.com/cheminfo/mass-tools/commit/f3b01fe66628719541b003fdc4d5af28ed140e4d))
+* updated snapshot ([aafde06](https://github.com/cheminfo/mass-tools/commit/aafde06a8e52ab10094ae64b60448252b46245c4))
+
+
+### Features
+
+* get count of lowest children ([4f7b02a](https://github.com/cheminfo/mass-tools/commit/4f7b02a8f8179725edc92423373571372c6e9a7f))
+
+
+
+
+
 # [1.3.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@1.2.0...octochemdb@1.3.0) (2023-06-20)
 
 

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@0.3.0...mass-fragmentation@0.4.0) (2023-07-17)
+
+
+### Bug Fixes
+
+*  get observed monoisotopic mass [#123](https://github.com/cheminfo/mass-tools/issues/123) ([592ff9a](https://github.com/cheminfo/mass-tools/commit/592ff9a1b3b7c501415ea85169fb6e343ac054cc))
+* removed useless imports ([18e42e9](https://github.com/cheminfo/mass-tools/commit/18e42e95d29309c579cf031d77ec078f26418a86))
+
+
+### Features
+
+* apply ionization to fixed level [#126](https://github.com/cheminfo/mass-tools/issues/126) ([028d53e](https://github.com/cheminfo/mass-tools/commit/028d53eb8ac432e160471f08f8b2c3fba4f80495))
+* full fragmentation of mdma ([ec526fb](https://github.com/cheminfo/mass-tools/commit/ec526fb241cf56eccde4f50cd1c1681c71a8dd06))
+
+
+
+
+
 # [0.3.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@0.2.5...mass-fragmentation@0.3.0) (2023-06-12)
 
 
