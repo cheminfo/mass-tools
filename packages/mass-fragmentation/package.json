@@ -24,6 +24,7 @@
     "openchemlib-utils": "^2.4.0"
   },
   "devDependencies": {
-    "openchemlib": "^8.2.0"
+    "openchemlib": "^8.2.0",
+    "react-tree-svg": "^0.0.2"
   }
 }

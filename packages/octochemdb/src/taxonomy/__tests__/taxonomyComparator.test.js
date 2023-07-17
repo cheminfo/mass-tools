@@ -2,19 +2,19 @@ import { taxonomyComparator } from '../taxonomyComparator.js';
 
 test('taxonomyComparator', () => {
   const tax1 = {
-    superKingdom: 'Bacteria',
+    superkingdom: 'Bacteria',
     kingdom: 'Bacteria',
     phylum: 'Proteobacteria',
     class: 'Gammaproteobacteria',
     order: 'Enterobacterales',
   };
   const tax2 = {
-    superKingdom: 'Bacteria',
+    superkingdom: 'Bacteria',
     phylum: 'Phylum',
   };
 
   const tax3 = {
-    superKingdom: 'Bacteria',
+    superkingdom: 'Bacteria',
     kingdom: '',
     phylum: 'Phylum',
   };

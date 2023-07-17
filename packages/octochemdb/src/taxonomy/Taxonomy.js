@@ -9,6 +9,7 @@
  * @property {string} [family] - The family
  * @property {string} [genus] - The genus
  * @property {string} [species] - The species
+ * @property {object} [dbRef] - The database reference
  */
 const Taxonomy = {};
 export default Taxonomy;

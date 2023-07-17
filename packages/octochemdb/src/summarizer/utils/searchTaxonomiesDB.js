@@ -8,7 +8,7 @@ export async function searchTaxonomiesDB(
 ) {
   const {
     queryFields = [
-      'superKingdom',
+      'superkingdom',
       'kingdom',
       'phylum',
       'class',

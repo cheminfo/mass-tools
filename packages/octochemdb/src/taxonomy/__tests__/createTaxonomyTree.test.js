@@ -106,7 +106,7 @@ test('multiple undefined fields', () => {
 test('Rank Limit', () => {
   const taxonomies = [
     {
-      superKingdom: 'Eukaryota',
+      superkingdom: 'Eukaryota',
       kingdom: 'Fungi',
       phylum: 'Ascomycota',
       class: 'Saccharomycetes',
@@ -116,7 +116,7 @@ test('Rank Limit', () => {
       species: 'Candida albicans',
     },
     {
-      superKingdom: 'bacteria',
+      superkingdom: 'bacteria',
       phylum: 'Apicomplexa',
       class: 'Aconoidasida',
       order: 'Haemosporida',
@@ -125,7 +125,7 @@ test('Rank Limit', () => {
       species: 'Plasmodium falciparum',
     },
     {
-      superKingdom: 'Eukaryota',
+      superkingdom: 'Eukaryota',
       kingdom: 'Fungi',
       phylum: 'Ascomycota',
       class: 'Sordariomycetes',
@@ -135,7 +135,7 @@ test('Rank Limit', () => {
       species: 'Stachybotrys chartarum',
     },
     {
-      superKingdom: 'bacteria',
+      superkingdom: 'bacteria',
       kingdom: 'Fungi',
       phylum: 'Ascomycota',
       class: 'Sordariomycetes',
@@ -203,6 +203,12 @@ test('True data', () => {
 });
 test('over 200 entries', () => {
   const path = join(__dirname, 'data/manyTaxonomies.json');
+  const taxonomies = JSON.parse(readFileSync(path, 'utf8'));
+  let tree = createTaxonomyTree(taxonomies);
+  expect(tree).toMatchSnapshot();
+});
+test('full data', () => {
+  const path = join(__dirname, 'data/fullData.json');
   const taxonomies = JSON.parse(readFileSync(path, 'utf8'));
   let tree = createTaxonomyTree(taxonomies);
   expect(tree).toMatchSnapshot();
