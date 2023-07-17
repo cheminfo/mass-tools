@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.8.2](https://github.com/cheminfo/mass-tools/compare/v7.8.1...v7.8.2) (2023-07-17)
+
+
+### Bug Fixes
+
+* **octochemdb:** taxonomy search ([bf4eee0](https://github.com/cheminfo/mass-tools/commit/bf4eee09a50b414d32756034f79b6e900ef3921d))
+
 ## [7.8.1](https://github.com/cheminfo/mass-tools/compare/v7.8.0...v7.8.1) (2023-07-11)
 
 
