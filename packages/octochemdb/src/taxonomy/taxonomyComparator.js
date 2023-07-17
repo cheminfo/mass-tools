@@ -1,6 +1,6 @@
 import { taxonomyRanks } from './taxonomyRanks.js';
 /**
- * @description sort taxonomies by superKingdom, kingdom, phylum, class, order, family, genus, species
+ * @description sort taxonomies by superkingdom, kingdom, phylum, class, order, family, genus, species
  * @param {import('./Taxonomy.js').Taxonomy} a
  * @param {import('./Taxonomy.js').Taxonomy} b
  * @returns {number}

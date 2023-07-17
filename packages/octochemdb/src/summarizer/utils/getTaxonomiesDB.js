@@ -3,7 +3,7 @@ import { create, insert } from '@orama/orama';
 export async function getTaxonomiesDB(taxonomies, options = {}) {
   const {
     queryFields = [
-      'superKingdom',
+      'superkingdom',
       'kingdom',
       'phylum',
       'class',
@@ -16,8 +16,8 @@ export async function getTaxonomiesDB(taxonomies, options = {}) {
   const taxonomiesDB = await create({
     schema: {
       $id: 'string',
-      ...(queryFields.includes('superKingdom')
-        ? { superKingdom: 'string' }
+      ...(queryFields.includes('superkingdom')
+        ? { superkingdom: 'string' }
         : null),
       ...(queryFields.includes('kingdom') ? { kingdom: 'string' } : null),
       ...(queryFields.includes('phylum') ? { phylum: 'string' } : null),
@@ -32,8 +32,8 @@ export async function getTaxonomiesDB(taxonomies, options = {}) {
     let level = Object.keys(taxonomy);
     let taxonomyEntry = {
       $id: taxonomy.dbRef.$id,
-      ...(level.includes('superKingdom')
-        ? { superKingdom: taxonomy.superKingdom }
+      ...(level.includes('superkingdom')
+        ? { superkingdom: taxonomy.superkingdom }
         : null),
       ...(level.includes('kingdom') ? { kingdom: taxonomy.kingdom } : null),
       ...(level.includes('phylum') ? { phylum: taxonomy.phylum } : null),

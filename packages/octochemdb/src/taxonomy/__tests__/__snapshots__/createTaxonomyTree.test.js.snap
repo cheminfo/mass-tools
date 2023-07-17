@@ -15,23 +15,31 @@ exports[`Rank Limit 1`] = `
                 "rank": "class",
               },
               {
-                "count": 2,
+                "count": 1,
                 "name": "Sordariomycetes",
                 "nbTaxonomies": 1,
                 "rank": "class",
               },
             ],
-            "count": 3,
+            "count": 2,
             "name": "Ascomycota",
             "nbTaxonomies": 2,
             "rank": "phylum",
           },
         ],
-        "count": 3,
+        "count": 2,
         "name": "Fungi",
         "nbTaxonomies": 2,
         "rank": "kingdom",
       },
+    ],
+    "count": 2,
+    "name": "Eukaryota",
+    "nbTaxonomies": 2,
+    "rank": "superkingdom",
+  },
+  {
+    "children": [
       {
         "children": [
           {
@@ -54,10 +62,32 @@ exports[`Rank Limit 1`] = `
         "nbTaxonomies": 1,
         "rank": "kingdom",
       },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "count": 1,
+                "name": "Sordariomycetes",
+                "nbTaxonomies": 1,
+                "rank": "class",
+              },
+            ],
+            "count": 1,
+            "name": "Ascomycota",
+            "nbTaxonomies": 1,
+            "rank": "phylum",
+          },
+        ],
+        "count": 1,
+        "name": "Fungi",
+        "nbTaxonomies": 1,
+        "rank": "kingdom",
+      },
     ],
-    "count": 4,
-    "name": "",
-    "nbTaxonomies": 3,
+    "count": 2,
+    "name": "bacteria",
+    "nbTaxonomies": 2,
     "rank": "superkingdom",
   },
 ]
