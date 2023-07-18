@@ -21,7 +21,7 @@
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/mass-fragmentation#readme",
   "dependencies": {
     "mf-parser": "^2.3.0",
-    "openchemlib-utils": "^2.7.0"
+    "openchemlib-utils": "^2.7.1"
   },
   "devDependencies": {
     "openchemlib": "^8.3.0",
