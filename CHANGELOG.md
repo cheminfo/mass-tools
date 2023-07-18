@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.9.0](https://github.com/cheminfo/mass-tools/compare/v7.8.2...v7.9.0) (2023-07-18)
+
+
+### Features
+
+* reactionFragmentation ([#130](https://github.com/cheminfo/mass-tools/issues/130)) ([bd7aaad](https://github.com/cheminfo/mass-tools/commit/bd7aaadde5d2442f2caf1c69ff1d693d8e9f1840))
+
 ## [7.8.2](https://github.com/cheminfo/mass-tools/compare/v7.8.1...v7.8.2) (2023-07-17)
 
 
