@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/number-treemap#readme",
   "dependencies": {
-    "mf-utilities": "^2.0.3"
+    "mf-utilities": "^2.0.4"
   }
 }
