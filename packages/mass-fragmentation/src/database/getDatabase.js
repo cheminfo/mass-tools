@@ -326,8 +326,8 @@ export const cid = {
   negative: [],
 };
 
-export default function getDatabase(databaseName){
-  if(databaseName === 'cid'){
+export default function getDatabase(databaseName) {
+  if (databaseName === 'cid') {
     return cid;
   }
 }

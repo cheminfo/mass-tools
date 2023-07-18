@@ -34,21 +34,21 @@
     "url": "https://github.com/cheminfo/mass-tools/issues"
   },
   "homepage": "https://github.com/cheminfo/mass-tools#readme",
-  "devDependencies": { 
-  "@babel/plugin-transform-modules-commonjs": "^7.21.2",
-  "@types/jest": "^29.5.0",
-  "@types/node": "^18.15.7",
-  "@vitest/coverage-c8": "^0.31.1",
-  "benchmark": "^2.1.4",
-  "chemical-elements": "^2.0.1",
-  "cheminfo-build": "^1.2.0",
-  "documentation": "^14.0.1",
-  "eslint": "^8.36.0",
-  "eslint-config-cheminfo": "^8.2.0",
-  "jest-matcher-deep-close-to": "^3.0.2",
-  "lerna": "^6.6.1",
-  "prettier": "^2.8.8",
-  "rimraf": "^4.4.1",
-  "vitest": "^0.31.1"
-}
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.21.2",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.7",
+    "@vitest/coverage-c8": "^0.31.1",
+    "benchmark": "^2.1.4",
+    "chemical-elements": "^2.0.1",
+    "cheminfo-build": "^1.2.0",
+    "documentation": "^14.0.1",
+    "eslint": "^8.36.0",
+    "eslint-config-cheminfo": "^8.2.0",
+    "jest-matcher-deep-close-to": "^3.0.2",
+    "lerna": "^6.6.1",
+    "prettier": "^2.8.8",
+    "rimraf": "^4.4.1",
+    "vitest": "^0.31.1"
+  }
 }
