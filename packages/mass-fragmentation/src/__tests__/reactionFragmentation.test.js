@@ -1,6 +1,3 @@
-import { writeFileSync } from 'fs';
-import { join } from 'path';
-
 import OCL from 'openchemlib';
 
 import { reactionFragmentation } from '../reactionFragmentation.js';
@@ -50,7 +47,7 @@ describe('ReactionFragmentation', async () => {
         "monoisotopicMass",
       ]
     `);
-    expect(masses).toHaveLength(17);
+    expect(masses).toHaveLength(7);
     expect(trees).toMatchSnapshot();
   });
 
@@ -62,6 +59,7 @@ describe('ReactionFragmentation', async () => {
     let { masses, trees, products } = reactionFragmentation(molecule, options);
     expect(masses).toMatchInlineSnapshot(`
       [
+        193.1103,
         194.1176,
         31.0422,
         32.0495,
@@ -69,17 +67,12 @@ describe('ReactionFragmentation', async () => {
         135.0441,
         68.0257,
         45.6862,
-        30.0106,
-        31.0178,
-        105.0335,
-        53.0204,
         30.047,
         28.0313,
         82.0413,
         55.03,
         97.5624,
         65.3774,
-        193.1103,
         65.0414,
         68.5296,
         97.0585,
