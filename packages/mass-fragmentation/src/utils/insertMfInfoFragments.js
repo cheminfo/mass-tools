@@ -2,13 +2,23 @@ import { MF } from 'mf-parser';
 
 const masses = {};
 
-export function insertMfInfoFragments(fragmentation) {
-  for (let fragment of fragmentation) {
-    mfInfoFragments(fragment);
+export function insertMfInfoFragments(trees,products) {
+  for (let tree of trees) {
+    mfInfoFragments(tree);
+
+  }
+  for(let product of products){
+    const productMF = new MF(product.mf);
+    product.monoisotopicMass =
+      Math.round(
+        (productMF.getInfo().observedMonoisotopicMass ??
+        productMF.getInfo().monoisotopicMass) * 10000,
+      ) / 10000;
   }
   return {
     masses: Object.keys(masses).map(Number),
-    tree: fragmentation,
+    trees,
+    products,
   };
 }
 
@@ -40,3 +50,5 @@ function mfInfoFragments(reaction) {
     }
   }
 }
+
+
