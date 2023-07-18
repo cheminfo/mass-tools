@@ -77,6 +77,36 @@
                 
                 </li>
               
+                
+                <li><a
+                  href='#reactionfragmentation'
+                  class="">
+                  reactionFragmentation
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#insertmfinfofragments'
+                  class="">
+                  insertMfInfoFragments
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#mfinfofragments'
+                  class="">
+                  mfInfoFragments
+                  
+                </a>
+                
+                </li>
+              
             </ul>
           </div>
           <div class='mt1 h6 quiet'>
@@ -583,6 +613,299 @@
 
       
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='reactionfragmentation'>
+      reactionFragmentation
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Fragment a molecule by applying reactions from a custom database of reactions</p>
+
+    <div class='pre p1 fill-light mt0'>reactionFragmentation(molecule: any, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.databaseName</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  
+    (default <code>&#39;cid&#39;</code>)
+  </td>
+  <td class='break-word'><span>The database to be used
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.mode</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  
+    (default <code>&#39;positive&#39;</code>)
+  </td>
+  <td class='break-word'><span>The mode to be used
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.maxDepth</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>5</code>)
+  </td>
+  <td class='break-word'><span>The maximum depth of the fragmentation tree
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        In-Silico fragmentation results with the following properties:
+<ul>
+<li>masses: array of monoisotopic masses</li>
+<li>trees: array of fragmentation trees</li>
+<li>products: array of trees grouped by product idCode</li>
+</ul>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='insertmfinfofragments'>
+      insertMfInfoFragments
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Recursively insert monoisotopic mass information into the fragmentation trees, products and get array of monoisotopic masses</p>
+
+    <div class='pre p1 fill-light mt0'>insertMfInfoFragments(trees: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, products: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>trees</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Fragmentation trees
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>products</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Fragmentation trees grouped by product idCode
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        Object with the following properties:
+<ul>
+<li>masses: array of monoisotopic masses</li>
+<li>trees: array of fragmentation trees with monoisotopic mass</li>
+<li>products: array of trees grouped by product idCode with monoisotopic mass</li>
+</ul>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='mfinfofragments'>
+      mfInfoFragments
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Recursively insert monoisotopic mass information into the fragmentation trees and get array of monoisotopic masses</p>
+
+    <div class='pre p1 fill-light mt0'>mfInfoFragments(reaction: any, masses: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>reaction</span> <code class='quiet'>(any)</code>
+	    Fragmentation trees
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>masses</span> <code class='quiet'>(any)</code>
+	    Object with monoisotopic masses
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
   
 
   
