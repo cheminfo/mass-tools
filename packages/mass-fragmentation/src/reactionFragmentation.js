@@ -1,45 +1,39 @@
 import { applyReactions } from 'openchemlib-utils';
 
-import { cid } from './database/collisionInducedDissociation';
-//import { applyFragmentationReactions } from './utils/applyFragmentationReactions';
-//import { applyIonizationReactions } from './utils/applyIonizationReactions';
+import getDatabase from './database/getDatabase';
 import { insertMfInfoFragments } from './utils/insertMfInfoFragments';
 
-const databases = {
-  cid,
-};
-
-//ionizationLevel fix the maximum depth of the ionization reactions in the molecule
+/**
+ * @description Fragment a molecule by applying reactions from a custom database of reactions
+ * @param {import('openchemlib').Molecule} molecule - The OCL molecule to be fragmented
+ * @param {Object}  [options={}]
+ * @param {string}  [options.databaseName='cid'] - The database to be used
+ * @param {string}  [options.mode='positive'] - The mode to be used
+ * @param {number}  [options.maxDepth=5] - The maximum depth of the fragmentation tree
+ * @returns {object} In-Silico fragmentation results with the following properties:
+ * - masses: array of monoisotopic masses
+ * - trees: array of fragmentation trees
+ * - products: array of trees grouped by product idCode
+ */
 export function reactionFragmentation(molecule, options = {}) {
-  let {
-    database = 'cid',
-    mode = 'positive',
-    //   maxDepth = 0,
-    //  ionizationLevel = 1,
-  } = options;
-  /* if (maxDepth === 0) {
-    let mass = molecule.getMolecularFormula().absoluteWeight;
-    maxDepth = Math.round(mass / 10);
+  let { databaseName = 'cid', mode = 'positive', maxDepth = 5 } = options;
+  let database = getDatabase(databaseName);
+  if (!database) {
+    throw new Error(`Database ${databaseName} not found`);
   }
-  const reactions = databases[database][mode];
-  let ionizedFragments = applyIonizationReactions(
-    molecule,
-    reactions,
-    ionizationLevel,
+
+  const reactions = database[mode];
+  let fragments = applyReactions([molecule], reactions, {
+    maxDepth,
+  });
+
+  let { masses, trees, products } = insertMfInfoFragments(
+    fragments.trees,
+    fragments.products,
   );
-  for (let ionizedFragment of ionizedFragments) {
-    applyFragmentationReactions(ionizedFragment, reactions, maxDepth);
-  }*/
-  let result = applyReactions(
-    [molecule],
-    databases[database][mode].filter(
-      (reaction) => reaction.Label === 'Ionization',
-    ),
-    { maxDepth: 3 },
-  );
-  let { masses, tree } = insertMfInfoFragments(result);
   return {
     masses,
-    tree,
+    trees,
+    products,
   };
 }
