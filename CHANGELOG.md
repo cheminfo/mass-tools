@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.9.1](https://github.com/cheminfo/mass-tools/compare/v7.9.0...v7.9.1) (2023-07-18)
+
+
+### Bug Fixes
+
+* update dependencies ([2beb667](https://github.com/cheminfo/mass-tools/commit/2beb667c10cea4cc85b1da02150390421ae739fc))
+
 ## [7.9.0](https://github.com/cheminfo/mass-tools/compare/v7.8.2...v7.9.0) (2023-07-18)
 
 
