@@ -2,9 +2,10 @@ import { IsotopicDistribution } from 'isotopic-distribution';
 import { generateMFs } from 'mf-generator';
 import { fcnnlsVector } from 'ml-fcnnls';
 import { Matrix } from 'ml-matrix';
-import { xyArrayAlignToFirst, xNormed } from 'ml-spectra-processing';
+import { xyArrayAlignToFirst, xNormed, xSum } from 'ml-spectra-processing';
 
 import { getPeakWidthFct } from './getPeakWidthFct';
+
 /**
  *
  * @param {import('ms-spectrum').Spectrum} spectrum
@@ -96,12 +97,25 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
 
   mfs.sort((mf1, mf2) => mf2.absoluteQuantity - mf1.absoluteQuantity);
 
+  let matchingScore = 0;
+  const difference = [];
+  for (let i = 0; i < combined.ys[0].length; i++) {
+    matchingScore += Math.min(combined.ys[0][i], reconstructed[i]);
+    difference.push(combined.ys[0][i] - reconstructed[i]);
+  }
+  matchingScore = matchingScore / xSum(combined.ys[0]);
+
   return {
     reconstructed: {
       x: combined.x,
       y: reconstructed,
     },
+    difference: {
+      x: combined,
+      y: difference,
+    },
     mfs,
+    matchingScore,
   };
 }
 
@@ -165,7 +179,6 @@ function addIsotopicDistributionAndCheckMF(mfs, options) {
   }
 
   mfs = mfs.filter((mf) => mf.distribution.x.length > 0);
-
   if (mfs.length === 0) {
     throw new Error('No MF found. Did you forget ionization ?');
   }

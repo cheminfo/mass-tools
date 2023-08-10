@@ -97,13 +97,13 @@ describe('mfsDeconvolution', () => {
     const text = readFileSync(join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
     const logger = new FifoLogger();
-    const { mfs } = await mfsDeconvolution(
+    const result = await mfsDeconvolution(
       spectrum,
       ['HValOH', '([13C]C-1)0-10'],
       { logger },
     );
 
-    const absoluteQuantities = mfs.map((mf) => mf.absoluteQuantity);
+    const absoluteQuantities = result.mfs.map((mf) => mf.absoluteQuantity);
     // results is completely wrong because
     // we didn't set the ionizations
     expect(absoluteQuantities).toBeDeepCloseTo([99, 50.5, 20.3, 10, 0, 0], 0);
@@ -121,7 +121,7 @@ describe('mfsDeconvolution', () => {
     const logger = new FifoLogger();
     const text = readFileSync(join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
-    const { mfs, reconstructed } = await mfsDeconvolution(
+    const { mfs, reconstructed, matchingScore } = await mfsDeconvolution(
       spectrum,
       ['HValOH', '([13C]C-1)0-10,Br'],
       {
@@ -130,17 +130,18 @@ describe('mfsDeconvolution', () => {
         peakWidthFct: (em) => em / 1000,
       },
     );
+    expect(matchingScore).toBeCloseTo(1);
     const absoluteQuantities = mfs.map((mf) => mf.absoluteQuantity);
     expect(absoluteQuantities).toBeDeepCloseTo([100, 50, 20, 10, 0, 0, 0], 3);
     const relativeQuantities = mfs.map((mf) => mf.relativeQuantity);
     expect(relativeQuantities).toBeDeepCloseTo([
       0.555556, 0.277778, 0.111111, 0.055554, 0, 0, 0,
     ]);
-    let difference = 0;
+    let totalDifference = 0;
     spectrum.peaks.forEach((peak, index) => {
-      difference += Math.abs(reconstructed.y[index] - peak.y);
+      totalDifference += Math.abs(reconstructed.y[index] - peak.y);
     });
-    expect(difference).toBeLessThan(0.001);
+    expect(totalDifference).toBeLessThan(0.001);
     expect(logger.getLogs()).toHaveLength(5);
   });
 });

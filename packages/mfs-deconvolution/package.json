@@ -23,7 +23,7 @@
     "cheminfo-types": "^1.4.0",
     "isotopic-distribution": "^2.2.0",
     "mf-generator": "^2.1.1",
-    "ml-fcnnls": "^1.1.2",
+    "ml-fcnnls": "^2.0.1",
     "ml-matrix": "^6.10.4",
     "ml-spectra-processing": "^12.4.0",
     "ms-spectrum": "^2.4.2"
