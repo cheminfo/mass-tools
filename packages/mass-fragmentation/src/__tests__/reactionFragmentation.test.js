@@ -19,6 +19,8 @@ describe('ReactionFragmentation', async () => {
       [
         "idCode",
         "mf",
+        "em",
+        "charge",
         "trees",
         "reactions",
         "minSteps",
@@ -41,6 +43,8 @@ describe('ReactionFragmentation', async () => {
       [
         "idCode",
         "mf",
+        "em",
+        "charge",
         "trees",
         "reactions",
         "minSteps",
@@ -84,6 +88,8 @@ describe('ReactionFragmentation', async () => {
     `);
     expect(products[0]).toMatchInlineSnapshot(`
       {
+        "charge": 1,
+        "em": 194.11810400000002,
         "idCode": "dg~DBMBmeJYW]gJxZB@jj@@",
         "mf": "C11H16NO2(+)",
         "minSteps": 1,
@@ -95,7 +101,9 @@ describe('ReactionFragmentation', async () => {
           {
             "products": [
               {
+                "charge": 1,
                 "children": [],
+                "em": 194.11810400000002,
                 "flag": true,
                 "idCode": "dg~DBMBmeJYW]gJxZB@jj@@",
                 "mf": "C11H16NO2(+)",
@@ -138,6 +146,8 @@ describe('ReactionFragmentation', async () => {
               },
             ],
             "reactant": {
+              "charge": 0,
+              "em": 193.11027900000002,
               "idCode": "dg~D@MBdie]v\\\\kahHBjh@@",
               "mf": "C11H15NO2",
               "molfile": "
