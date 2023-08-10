@@ -9,7 +9,10 @@ describe('peakPicking on Spectrum', () => {
       join(__dirname, 'data/lowres2.txt'),
       'utf8',
     );
-    const spectrum = fromText(chargedText);
+    let spectrum = fromText(chargedText, { threshold: 0.1 });
+    expect(spectrum.peakPicking()).toHaveLength(55);
+
+    spectrum = fromText(chargedText);
     const peaks = spectrum.peakPicking();
 
     const nbNaNX = peaks.filter((peak) => isNaN(peak.x));

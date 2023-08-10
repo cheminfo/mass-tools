@@ -27,7 +27,7 @@ export function peakPicking(spectrum, options = {}) {
       // some experimental data are really problematic and we need to add this line
       const data = xyEnsureGrowingX(spectrum.data);
       const gsdPeaks = gsd(data, {
-        minMaxRatio: 0.00025, // Threshold to determine if a given peak should be considered as a noise
+        minMaxRatio: spectrum.options.threshold || 0.00025, // Threshold to determine if a given peak should be considered as a noise
         realTopDetection: true,
         smoothY: false,
         sgOptions: { windowSize: 7, polynomial: 3 },

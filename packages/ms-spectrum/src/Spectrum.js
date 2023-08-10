@@ -24,8 +24,10 @@ export class Spectrum {
   /**
    *
    * @param {import('cheminfo-types').DataXY} data
+   * @param {object} [options={}]
+   * @param {number} [options.threshold]
    */
-  constructor(data = { x: [], y: [] }) {
+  constructor(data = { x: [], y: [] }, options = {}) {
     if (
       typeof data !== 'object' ||
       !isAnyArray(data.x) ||
@@ -34,6 +36,7 @@ export class Spectrum {
       throw new TypeError('Spectrum data must be an object with x:[], y:[]');
     }
     this.data = { ...data };
+    this.options = options;
     Object.defineProperty(this.data, 'xOriginal', {
       enumerable: false,
       writable: true,
@@ -170,7 +173,7 @@ export function fromPeaks(peaks) {
   return new Spectrum(data);
 }
 
-export function fromText(text) {
+export function fromText(text, options) {
   const data = parseXY(text);
-  return new Spectrum(data);
+  return new Spectrum(data, options);
 }
