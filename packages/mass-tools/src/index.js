@@ -1,4 +1,5 @@
 import * as EMDBPkg from 'emdb';
+import * as MassFragmentationPkg from 'mass-fragmentation';
 import * as MFSDeconvolutionPkg from 'mfs-deconvolution';
 import * as ReportPkg from 'ms-report';
 import * as SpectrumPkg from 'ms-spectrum';
@@ -9,6 +10,7 @@ export const Nucleotide = NucleotidePkg;
 export const Report = ReportPkg;
 export const Peptide = PeptidePkg;
 export const MFSDeconvolution = MFSDeconvolutionPkg;
+export const MassFragmentation = MassFragmentationPkg;
 
 export { groups, groupsObject } from 'chemical-groups';
 export { elements, elementsObject } from 'chemical-elements';

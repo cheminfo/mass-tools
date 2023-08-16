@@ -24,6 +24,7 @@
     "chemical-groups": "^2.1.0",
     "emdb": "^2.4.2",
     "isotopic-distribution": "^2.2.0",
+    "mass-fragmentation": "^0.5.0",
     "mf-from-ea": "^1.0.4",
     "mf-generator": "^2.1.1",
     "mf-parser": "^2.3.0",
