@@ -1,8 +1,8 @@
-import { applyReactions } from 'openchemlib-utils';
+import OCL from 'openchemlib';
+import { applyReactions, groupTreesByProducts } from 'openchemlib-utils';
 
 import getDatabase from './database/getDatabase';
 import { insertMfInfoFragments } from './utils/insertMfInfoFragments';
-
 /**
  * @description Fragment a molecule by applying reactions from a custom database of reactions
  * @param {import('openchemlib').Molecule} molecule - The OCL molecule to be fragmented
@@ -10,6 +10,7 @@ import { insertMfInfoFragments } from './utils/insertMfInfoFragments';
  * @param {string}  [options.databaseName='cid'] - The database to be used
  * @param {string}  [options.mode='positive'] - The mode to be used
  * @param {number}  [options.maxDepth=5] - The maximum depth of the fragmentation tree
+ * @param {number}  [options.maxIonizationDepth=1] - The maximum depth of the ionization tree
  * @param {Object}  [options.customDatabase={}] - A custom database of reactions
  * @param {Array}  [options.customDatabase.positive] - A custom database of reactions for positive mode
  * @param {Array}  [options.customDatabase.negative] - A custom database of reactions for negative mode
@@ -22,10 +23,12 @@ export function reactionFragmentation(molecule, options = {}) {
   let {
     databaseName = 'cid',
     mode = 'positive',
-    maxDepth = 5,
+    maxDepth = 3,
+    maxIonizationDepth = 1,
     customDatabase = {},
   } = options;
   let database;
+  let IonizationDb;
   if (customDatabase[mode]) {
     database = customDatabase;
   } else {
@@ -34,19 +37,55 @@ export function reactionFragmentation(molecule, options = {}) {
   if (!database) {
     throw new Error(`Database ${databaseName} not found`);
   }
-
+  if (databaseName === 'cid') {
+    IonizationDb = getDatabase('');
+  }
+  let results = {};
   const reactions = database[mode];
-  let fragments = applyReactions([molecule], reactions, {
-    maxDepth,
-  });
+  if (IonizationDb) {
+    const ionizationReactions = IonizationDb[mode];
+    let ionizationFragments = applyReactions([molecule], ionizationReactions, {
+      maxDepth: maxIonizationDepth,
+    });
+
+    for (let tree of ionizationFragments.trees) {
+      getMoleculesToFragment(tree, reactions, maxDepth);
+    }
+    ionizationFragments.products = groupTreesByProducts(
+      ionizationFragments.trees,
+    );
+    results = ionizationFragments;
+  } else {
+    results = applyReactions([molecule], reactions, {
+      maxDepth,
+    });
+  }
 
   let { masses, trees, products } = insertMfInfoFragments(
-    fragments.trees,
-    fragments.products,
+    results.trees,
+    results.products,
   );
   return {
     masses,
     trees,
     products,
   };
+}
+
+function getMoleculesToFragment(tree, reactions, maxDepth) {
+  for (let product of tree.products) {
+    if (product.children.length === 0) {
+      if (product.charge !== 0) {
+        let molecule = OCL.Molecule.fromIDCode(product.idCode);
+        let fragments = applyReactions([molecule], reactions, {
+          maxDepth,
+        });
+        product.children = fragments.trees;
+      }
+    } else {
+      for (let child of product.children) {
+        getMoleculesToFragment(child, reactions, maxDepth);
+      }
+    }
+  }
 }

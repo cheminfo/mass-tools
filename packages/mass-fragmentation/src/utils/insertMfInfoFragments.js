@@ -42,7 +42,9 @@ function mfInfoFragments(reaction, masses) {
         (reactantMF.getInfo().observedMonoisotopicMass ??
           reactantMF.getInfo().monoisotopicMass) * 10000,
       ) / 10000;
-    masses[reaction.reactant.mz] = true;
+    if (Math.abs(reaction.reactant.charge) > 0) {
+      masses[reaction.reactant.mz] = true;
+    }
   }
 
   if (reaction?.products?.length > 0) {
@@ -53,7 +55,9 @@ function mfInfoFragments(reaction, masses) {
           (productMF.getInfo().observedMonoisotopicMass ??
             productMF.getInfo().monoisotopicMass) * 10000,
         ) / 10000;
-      masses[product.mz] = true;
+      if (Math.abs(product.charge) > 0) {
+        masses[product.mz] = true;
+      }
       if (product.children?.length > 0) {
         for (const child of product.children) {
           mfInfoFragments(child, masses);

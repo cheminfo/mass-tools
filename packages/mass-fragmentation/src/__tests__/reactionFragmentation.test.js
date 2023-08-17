@@ -9,6 +9,7 @@ describe('ReactionFragmentation', async () => {
     const molecule = Molecule.fromSmiles('C[NH2+]C(C)Cc2ccc1OCOc1c2');
     const options = {
       maxDepth: 20,
+      maxIonizationDepth: 2,
     };
     const { masses, trees, products } = reactionFragmentation(
       molecule,
@@ -27,13 +28,14 @@ describe('ReactionFragmentation', async () => {
         "mz",
       ]
     `);
-    expect(masses).toHaveLength(17);
+    expect(masses).toHaveLength(5);
     expect(trees).toMatchSnapshot();
   });
   it('tropylium rearrangement: MDMA after Alpha cleavage', async () => {
     const molecule = Molecule.fromSmiles('[CH2+]c2ccc1OCOc1c2');
     const options = {
-      maxDepth: 20,
+      maxDepth: 5,
+      maxIonizationDepth: 2,
     };
     const { masses, trees, products } = reactionFragmentation(
       molecule,
@@ -51,7 +53,7 @@ describe('ReactionFragmentation', async () => {
         "mz",
       ]
     `);
-    expect(masses).toHaveLength(7);
+    expect(masses).toHaveLength(3);
     expect(trees).toMatchSnapshot();
   });
 
@@ -63,27 +65,12 @@ describe('ReactionFragmentation', async () => {
     let { masses, trees, products } = reactionFragmentation(molecule, options);
     expect(masses).toMatchInlineSnapshot(`
       [
-        193.1103,
         194.1176,
-        31.0422,
-        32.0495,
         163.0754,
         135.0441,
-        68.0257,
-        45.6862,
-        30.047,
-        28.0313,
-        82.0413,
-        55.03,
-        97.5624,
-        65.3774,
-        65.0414,
-        68.5296,
-        97.0585,
-        58.0651,
-        136.0519,
+        105.0335,
         193.1097,
-        135.0446,
+        58.0651,
       ]
     `);
     expect(products[0]).toMatchInlineSnapshot(`
@@ -256,7 +243,6 @@ describe('ReactionFragmentation', async () => {
     let { masses, trees, products } = reactionFragmentation(molecule, options);
     expect(masses).toMatchInlineSnapshot(`
       [
-        193.1103,
         194.1176,
         97.5624,
         65.3774,
