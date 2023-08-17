@@ -16,7 +16,7 @@ export function insertMfInfoFragments(trees, products) {
   }
   for (let product of products) {
     const productMF = new MF(product.mf);
-    product.monoisotopicMass =
+    product.mz =
       Math.round(
         (productMF.getInfo().observedMonoisotopicMass ??
           productMF.getInfo().monoisotopicMass) * 10000,
@@ -37,23 +37,23 @@ export function insertMfInfoFragments(trees, products) {
 function mfInfoFragments(reaction, masses) {
   if (reaction?.reactant) {
     const reactantMF = new MF(reaction.reactant.mf);
-    reaction.reactant.monoisotopicMass =
+    reaction.reactant.mz =
       Math.round(
         (reactantMF.getInfo().observedMonoisotopicMass ??
           reactantMF.getInfo().monoisotopicMass) * 10000,
       ) / 10000;
-    masses[reaction.reactant.monoisotopicMass] = true;
+    masses[reaction.reactant.mz] = true;
   }
 
   if (reaction?.products?.length > 0) {
     for (const product of reaction.products) {
       const productMF = new MF(product.mf);
-      product.monoisotopicMass =
+      product.mz =
         Math.round(
           (productMF.getInfo().observedMonoisotopicMass ??
             productMF.getInfo().monoisotopicMass) * 10000,
         ) / 10000;
-      masses[product.monoisotopicMass] = true;
+      masses[product.mz] = true;
       if (product.children?.length > 0) {
         for (const child of product.children) {
           mfInfoFragments(child, masses);

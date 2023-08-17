@@ -24,7 +24,7 @@ describe('ReactionFragmentation', async () => {
         "trees",
         "reactions",
         "minSteps",
-        "monoisotopicMass",
+        "mz",
       ]
     `);
     expect(masses).toHaveLength(17);
@@ -48,7 +48,7 @@ describe('ReactionFragmentation', async () => {
         "trees",
         "reactions",
         "minSteps",
-        "monoisotopicMass",
+        "mz",
       ]
     `);
     expect(masses).toHaveLength(7);
@@ -93,7 +93,7 @@ describe('ReactionFragmentation', async () => {
         "idCode": "dg~DBMBmeJYW]gJxZB@jj@@",
         "mf": "C11H16NO2(+)",
         "minSteps": 1,
-        "monoisotopicMass": 194.1176,
+        "mz": 194.1176,
         "reactions": [
           "eM\`BN\`~b@!eM\`\`fN\`~c@#Q[ Q[#!R@AM?DquRo@ !R@AM?Dqtzo@",
         ],
