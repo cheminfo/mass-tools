@@ -190,52 +190,101 @@ describe('ReactionFragmentation', async () => {
     const customDatabase = {
       positive: [
         {
-          Label: 'Ionization',
-          rxnCode: 'eF`BLGtX!eF``fLGt\\#Qd Qd#!R@FL]Rgp !R@FL]vgp',
-        },
-        {
-          Label: 'Ionization',
-          rxnCode: 'eM`BN`~b@!eM``fN`~c@#Q[ Q[#!R@AM?DquRo@ !R@AM?Dqtzo@',
-        },
-        {
-          Label: 'Ionization',
+          Label: 'Alpha cleavage',
           rxnCode:
-            'gCh@AGj@`!gChA@Icu@_PP#qTq qTq#!RbOvw?_x@GYK| !RbOvw?_x@GWk|',
+            'gCa@@duPGtF@!fI@Gu` eM@bXzB#qbq a` qQp#!RtEJHC^h@GPhB !RGUi| !R@FN?Dquz_@',
         },
         {
-          Label: 'Ionization',
+          Label: 'Alpha cleavage',
           rxnCode:
-            'gCa@@dmPFtwhHcMCAlp!eMH`eIhOhp#Qv@ Qv#!R@AL@[@@SGSH| !R@Fp@Dqwz``',
+            'gJPI@DBTijhCzB@!gK`I@DJTcj`OhH@#qbqh qfUH#!Rmwwp_[]|_g|]lcp !R?`BE@[_|b@H]vgp',
         },
         {
-          Label: 'Ionization',
-          rxnCode: 'eFB@HcA}D@!eFB`HIcA}F@#QX QX#!R_vp]bgp !R_vp]vgp',
+          Label: 'Alpha cleavage',
+          rxnCode:
+            'gJPa@eJSKTA}E@!eMH`eIxH eFHBLGtP#qbqh qbH qu#!Rw`BH?J_|bMt]|hH !Rwpq?Dquz?@ !R?`@]vgp',
         },
         {
-          Label: 'Ionization',
-          rxnCode: 'eMB@HchH!eMB`HIchOh`#Q[ Q[#!R@AM?Dqtbo@ !R@AM?Dquz@`',
+          Label: 'Alpha cleavage',
+          rxnCode:
+            'gJQIL@`ReMS@_PP!eMH`eIxH eFB@HcA}D@#qbqh qJh Ql#!Rm?wpwXE?y{p]lmp !Rwxq?Dquz?@ !R@NL]vgp',
         },
         {
-          Label: 'Ionization',
-          rxnCode: 'eMHAIXMicLLG~r!eFH`fJGtP#QX QX#!R@AL@[AtbO@ !R@AL]nkp',
+          Label: 'Alpha cleavage',
+          rxnCode:
+            'gJXA@IRij`OhH@!gKhAAirPFhB#qbuH qfjH#!RM{upoPD@Mwp]lgp !R@BL?x~WAwrp]Vgp',
         },
         {
-          Label: 'Ionization',
-          rxnCode: 'eMHBN``!eMH`fN`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@',
+          Label: 'Alpha cleavage',
+          rxnCode:
+            'gJYADEJSKTA}E`!eMH`eIxH eF`BLGtX#qbqh qbH qu#!RO`BH?C_|bGt]|hH !Rwtq?Dquz_@ !R?`@]vgp',
         },
         {
-          Label: 'Ionization',
-          rxnCode: 'eFB@HcA}D@!eFB`HIcA}F@#QX QX#!R_vp]bgp !R_vp]vgp',
+          Label: 'Alpha cleavage',
+          rxnCode:
+            'gC`AAJTu@P!eF@bXpP eF@HpP#qTq qa Q\\#!R@AM?DpAlGTJB !R@DQCrip !R_sL}Nmp',
         },
         {
-          Label: 'Ionization',
-          rxnCode: 'eFHBLGtP!eFH`fLGtX#QX QX#!R@AL]Pmp !R@AL]^gp',
+          Label: 'Alpha cleavage',
+          rxnCode:
+            'gChA@IRfhCzC@!eF`BLD eF@bXpP#qbq Ql qQ#!R{|L@p~~lG[K| !R@DL]Vgp !R_xp]ngp',
         },
         {
-          Label: 'Ionization',
-          rxnCode: 'eM`BN`~b@!eM``fN`~bOza@#Qg Qg#!R@Fq?[AuJ?@ !R@FM?Dqvz_@',
+          Label: 'Aromatic Indicutive Cleavage',
+          rxnCode:
+            'gC`AAJTu@]SP!eF@bXpP eF@HhP#qrL QX qq#!Rgzp@kI}cG]K| !R@BL]vgp !R@BL]~kp',
         },
       ],
+      ionization: {
+        positive: [
+          {
+            Label: 'Ionization',
+            rxnCode: 'eF`BLGtX!eF``fLGt\\#Qd Qd#!R@FL]Rgp !R@FL]vgp',
+          },
+          {
+            Label: 'Ionization',
+            rxnCode: 'eM`BN`~b@!eM``fN`~c@#Q[ Q[#!R@AM?DquRo@ !R@AM?Dqtzo@',
+          },
+          {
+            Label: 'Ionization',
+            rxnCode:
+              'gCh@AGj@`!gChA@Icu@_PP#qTq qTq#!RbOvw?_x@GYK| !RbOvw?_x@GWk|',
+          },
+          {
+            Label: 'Ionization',
+            rxnCode:
+              'gCa@@dmPFtwhHcMCAlp!eMH`eIhOhp#Qv@ Qv#!R@AL@[@@SGSH| !R@Fp@Dqwz``',
+          },
+          {
+            Label: 'Ionization',
+            rxnCode: 'eFB@HcA}D@!eFB`HIcA}F@#QX QX#!R_vp]bgp !R_vp]vgp',
+          },
+          {
+            Label: 'Ionization',
+            rxnCode: 'eMB@HchH!eMB`HIchOh`#Q[ Q[#!R@AM?Dqtbo@ !R@AM?Dquz@`',
+          },
+          {
+            Label: 'Ionization',
+            rxnCode: 'eMHAIXMicLLG~r!eFH`fJGtP#QX QX#!R@AL@[AtbO@ !R@AL]nkp',
+          },
+          {
+            Label: 'Ionization',
+            rxnCode: 'eMHBN``!eMH`fN`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@',
+          },
+          {
+            Label: 'Ionization',
+            rxnCode: 'eFB@HcA}D@!eFB`HIcA}F@#QX QX#!R_vp]bgp !R_vp]vgp',
+          },
+          {
+            Label: 'Ionization',
+            rxnCode: 'eFHBLGtP!eFH`fLGtX#QX QX#!R@AL]Pmp !R@AL]^gp',
+          },
+          {
+            Label: 'Ionization',
+            rxnCode: 'eM`BN`~b@!eM``fN`~bOza@#Qg Qg#!R@Fq?[AuJ?@ !R@FM?Dqvz_@',
+          },
+        ],
+      },
     };
 
     const options = {
@@ -246,10 +295,8 @@ describe('ReactionFragmentation', async () => {
     expect(masses).toMatchInlineSnapshot(`
       [
         194.11810400000002,
-        97.5629645,
-        65.37791800000001,
-        65.04197633333334,
-        97.05905200000001,
+        163.075905,
+        135.04460500000002,
         193.11027900000002,
       ]
     `);

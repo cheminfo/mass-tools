@@ -14,6 +14,9 @@ import { getMasses } from './utils/getMasses';
  * @param {Object}  [options.customDatabase={}] - A custom database of reactions
  * @param {Array}  [options.customDatabase.positive] - A custom database of reactions for positive mode
  * @param {Array}  [options.customDatabase.negative] - A custom database of reactions for negative mode
+ * @param {Object}  [options.customDatabase.ionization] - A custom database ionization reactions
+ * @param {Array}  [options.customDatabase.ionization.positive] - A custom database of ionization reactions for positive mode
+ * @param {Array}  [options.customDatabase.ionization.negative] - A custom database of ionization reactions for negative mode
  * @returns {object} In-Silico fragmentation results with the following properties:
  * - masses: array of monoisotopic masses
  * - trees: array of fragmentation trees
@@ -29,7 +32,7 @@ export function reactionFragmentation(molecule, options = {}) {
   } = options;
   let database;
   let IonizationDb;
-  if (customDatabase[mode]) {
+  if (customDatabase[mode] && customDatabase[mode].length > 0) {
     database = customDatabase;
   } else {
     database = getDatabase(databaseName);
@@ -38,13 +41,19 @@ export function reactionFragmentation(molecule, options = {}) {
     throw new Error(`Database ${databaseName} not found`);
   }
   if (databaseName === 'cid') {
-    IonizationDb = getDatabase('');
+    if (
+      customDatabase.ionization &&
+      customDatabase.ionization[mode].length > 0
+    ) {
+      IonizationDb = customDatabase.ionization[mode];
+    } else {
+      IonizationDb = getDatabase('')[mode];
+    }
   }
   let results = {};
   const reactions = database[mode];
   if (IonizationDb) {
-    const ionizationReactions = IonizationDb[mode];
-    let ionizationFragments = applyReactions([molecule], ionizationReactions, {
+    let ionizationFragments = applyReactions([molecule], IonizationDb, {
       maxDepth: maxIonizationDepth,
     });
 
