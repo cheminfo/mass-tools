@@ -1,5 +1,16 @@
 # Changelog
 
+## [7.10.0](https://github.com/cheminfo/mass-tools/compare/v7.9.1...v7.10.0) (2023-08-18)
+
+
+### Features
+
+* custom ionization db for fragmentation ([4672fe4](https://github.com/cheminfo/mass-tools/commit/4672fe4b2bf77e35882ff42a7db3be96c3bdec43))
+* **mass-fragmentation:** export getDatabase ([37873c2](https://github.com/cheminfo/mass-tools/commit/37873c2a1a91d8ae5fe186dc01938ec89ba784ad))
+* **mass-tools:** give access to MassFragmentation in lactame ([b9e9879](https://github.com/cheminfo/mass-tools/commit/b9e9879e5fc77e7d4cbda3c105d2b38d0361fcb6))
+* **mfs-deconvolution:** add difference and matchingScore ([c00901a](https://github.com/cheminfo/mass-tools/commit/c00901a4dc17d39bc116cd9f980a7058aa2abdcf))
+* **ms-spectrum:** allow to define threshold for peakPicking when creating spectrum ([bbf0365](https://github.com/cheminfo/mass-tools/commit/bbf0365c368d935649026d717af9cfb0c2000df3))
+
 ## [7.9.1](https://github.com/cheminfo/mass-tools/compare/v7.9.0...v7.9.1) (2023-07-18)
 
 
