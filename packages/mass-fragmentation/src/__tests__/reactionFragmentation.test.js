@@ -21,14 +21,14 @@ describe('ReactionFragmentation', async () => {
         "idCode",
         "mf",
         "em",
+        "mz",
         "charge",
         "trees",
         "reactions",
         "minSteps",
-        "mz",
       ]
     `);
-    expect(masses).toHaveLength(5);
+    expect(masses).toHaveLength(4);
     expect(trees).toMatchSnapshot();
   });
   it('tropylium rearrangement: MDMA after Alpha cleavage', async () => {
@@ -46,14 +46,14 @@ describe('ReactionFragmentation', async () => {
         "idCode",
         "mf",
         "em",
+        "mz",
         "charge",
         "trees",
         "reactions",
         "minSteps",
-        "mz",
       ]
     `);
-    expect(masses).toHaveLength(3);
+    expect(masses).toHaveLength(2);
     expect(trees).toMatchSnapshot();
   });
 
@@ -65,12 +65,12 @@ describe('ReactionFragmentation', async () => {
     let { masses, trees, products } = reactionFragmentation(molecule, options);
     expect(masses).toMatchInlineSnapshot(`
       [
-        194.1176,
-        163.0754,
-        135.0441,
-        105.0335,
-        193.1097,
-        58.0651,
+        194.11810400000002,
+        163.075905,
+        135.04460500000002,
+        105.03404,
+        193.11027900000002,
+        58.065674,
       ]
     `);
     expect(products[0]).toMatchInlineSnapshot(`
@@ -80,7 +80,7 @@ describe('ReactionFragmentation', async () => {
         "idCode": "dg~DBMBmeJYW]gJxZB@jj@@",
         "mf": "C11H16NO2(+)",
         "minSteps": 1,
-        "mz": 194.1176,
+        "mz": 194.11810400000002,
         "reactions": [
           "eM\`BN\`~b@!eM\`\`fN\`~c@#Q[ Q[#!R@AM?DquRo@ !R@AM?Dqtzo@",
         ],
@@ -130,6 +130,7 @@ describe('ReactionFragmentation', async () => {
       M  CHG  1  13   1
       M  END
       ",
+                "mz": 194.11810400000002,
               },
             ],
             "reactant": {
@@ -172,6 +173,7 @@ describe('ReactionFragmentation', async () => {
        13 14  1  0  0  0  0
       M  END
       ",
+              "mz": 193.11027900000002,
             },
             "reaction": {
               "Label": "Ionization",
@@ -243,12 +245,12 @@ describe('ReactionFragmentation', async () => {
     let { masses, trees, products } = reactionFragmentation(molecule, options);
     expect(masses).toMatchInlineSnapshot(`
       [
-        194.1176,
-        97.5624,
-        65.3774,
-        65.0414,
-        97.0585,
-        193.1097,
+        194.11810400000002,
+        97.5629645,
+        65.37791800000001,
+        65.04197633333334,
+        97.05905200000001,
+        193.11027900000002,
       ]
     `);
     expect(products[0].mf).toMatchInlineSnapshot('"C11H16NO2(+)"');

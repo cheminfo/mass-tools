@@ -2,7 +2,7 @@ import OCL from 'openchemlib';
 import { applyReactions, groupTreesByProducts } from 'openchemlib-utils';
 
 import getDatabase from './database/getDatabase';
-import { insertMfInfoFragments } from './utils/insertMfInfoFragments';
+import { getMasses } from './utils/getMasses';
 /**
  * @description Fragment a molecule by applying reactions from a custom database of reactions
  * @param {import('openchemlib').Molecule} molecule - The OCL molecule to be fragmented
@@ -61,10 +61,7 @@ export function reactionFragmentation(molecule, options = {}) {
     });
   }
 
-  let { masses, trees, products } = insertMfInfoFragments(
-    results.trees,
-    results.products,
-  );
+  let { masses, trees, products } = getMasses(results.trees, results.products);
   return {
     masses,
     trees,
