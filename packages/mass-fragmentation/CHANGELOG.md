@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@0.5.0...mass-fragmentation@0.6.0) (2023-08-18)
+
+
+### Bug Fixes
+
+* update dependencies ([2beb667](https://github.com/cheminfo/mass-tools/commit/2beb667c10cea4cc85b1da02150390421ae739fc))
+
+
+### Features
+
+* custom ionization db for fragmentation ([4672fe4](https://github.com/cheminfo/mass-tools/commit/4672fe4b2bf77e35882ff42a7db3be96c3bdec43))
+* **mass-fragmentation:** export getDatabase ([37873c2](https://github.com/cheminfo/mass-tools/commit/37873c2a1a91d8ae5fe186dc01938ec89ba784ad))
+
+
+
+
+
 # [0.5.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@0.4.0...mass-fragmentation@0.5.0) (2023-07-18)
 
 
