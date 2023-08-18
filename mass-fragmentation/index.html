@@ -89,9 +89,9 @@
               
                 
                 <li><a
-                  href='#insertmfinfofragments'
+                  href='#getmasses'
                   class="">
-                  insertMfInfoFragments
+                  getMasses
                   
                 </a>
                 
@@ -99,9 +99,9 @@
               
                 
                 <li><a
-                  href='#mfinfofragments'
+                  href='#getdatabase'
                   class="">
-                  mfInfoFragments
+                  getDatabase
                   
                 </a>
                 
@@ -725,6 +725,17 @@
 
               
                 <tr>
+  <td class='break-word'><span class='code bold'>options.maxIonizationDepth</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>1</code>)
+  </td>
+  <td class='break-word'><span>The maximum depth of the ionization tree
+</span></td>
+</tr>
+
+
+              
+                <tr>
   <td class='break-word'><span class='code bold'>options.customDatabase</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
   
     (default <code>{}</code>)
@@ -749,6 +760,35 @@
   <td class='break-word'><span>A custom database of reactions for negative mode
 </span></td>
 </tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.customDatabase.ionization</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?</code>
+  </td>
+  <td class='break-word'><span>A custom database ionization reactions
+</span></td>
+</tr>
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.customDatabase.ionization.positive</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>A custom database of ionization reactions for positive mode
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.customDatabase.ionization.negative</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?</code>
+  </td>
+  <td class='break-word'><span>A custom database of ionization reactions for negative mode
+</span></td>
+</tr>
+
+
+  
 
 
   
@@ -803,17 +843,17 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='insertmfinfofragments'>
-      insertMfInfoFragments
+    <h3 class='fl m0' id='getmasses'>
+      getMasses
     </h3>
     
     
   </div>
   
 
-  <p>Recursively insert monoisotopic mass information into the fragmentation trees, products and get array of monoisotopic masses</p>
+  <p>get array of mz from fragmentation trees</p>
 
-    <div class='pre p1 fill-light mt0'>insertMfInfoFragments(trees: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, products: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+    <div class='pre p1 fill-light mt0'>getMasses(trees: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, products: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
   
   
 
@@ -858,8 +898,8 @@
         Object with the following properties:
 <ul>
 <li>masses: array of monoisotopic masses</li>
-<li>trees: array of fragmentation trees with monoisotopic mass</li>
-<li>products: array of trees grouped by product idCode with monoisotopic mass</li>
+<li>trees: array of fragmentation trees</li>
+<li>products: array of trees grouped by product idCode</li>
 </ul>
 
       
@@ -889,17 +929,17 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='mfinfofragments'>
-      mfInfoFragments
+    <h3 class='fl m0' id='getdatabase'>
+      getDatabase
     </h3>
     
     
   </div>
   
 
-  <p>Recursively insert monoisotopic mass information into the fragmentation trees and get array of monoisotopic masses</p>
+  <p>get fragmentation databases based on the technique used</p>
 
-    <div class='pre p1 fill-light mt0'>mfInfoFragments(reaction: any, masses: any)</div>
+    <div class='pre p1 fill-light mt0'>getDatabase(databaseName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
   
   
 
@@ -916,17 +956,8 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>reaction</span> <code class='quiet'>(any)</code>
-	    Fragmentation trees
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>masses</span> <code class='quiet'>(any)</code>
-	    Object with monoisotopic masses
+            <span class='code bold'>databaseName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    "cid", "ei" or "esi"
 
           </div>
           
@@ -937,6 +968,14 @@
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        object containing the fragmentation database
+
+      
+    
   
 
   
