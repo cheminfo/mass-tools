@@ -187,7 +187,7 @@ describe('ReactionFragmentation', async () => {
         ],
       }
     `);
-    //expect(trees).toMatchSnapshot();
+    expect(trees).toMatchSnapshot();
   });
   it('Full fragmentation: MDMA with custom database', async () => {
     const molecule = Molecule.fromSmiles('CC(CC1=CC2=C(C=C1)OCO2)NC');
