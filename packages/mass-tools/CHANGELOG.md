@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/cheminfo/mass-tools/compare/mass-tools@1.4.4...mass-tools@1.5.0) (2023-08-18)
+
+
+### Features
+
+* **mass-tools:** give access to MassFragmentation in lactame ([b9e9879](https://github.com/cheminfo/mass-tools/commit/b9e9879e5fc77e7d4cbda3c105d2b38d0361fcb6))
+
+
+
+
+
 ## [1.4.4](https://github.com/cheminfo/mass-tools/compare/mass-tools@1.4.3...mass-tools@1.4.4) (2023-07-18)
 
 **Note:** Version bump only for package mass-tools

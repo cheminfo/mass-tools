@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@2.4.2...ms-spectrum@2.5.0) (2023-08-18)
+
+
+### Features
+
+* **ms-spectrum:** allow to define threshold for peakPicking when creating spectrum ([bbf0365](https://github.com/cheminfo/mass-tools/commit/bbf0365c368d935649026d717af9cfb0c2000df3))
+
+
+
+
+
 ## [2.4.2](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@2.4.1...ms-spectrum@2.4.2) (2023-07-18)
 
 **Note:** Version bump only for package ms-spectrum
