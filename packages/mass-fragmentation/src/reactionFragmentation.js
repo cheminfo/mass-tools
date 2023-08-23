@@ -10,6 +10,8 @@ import { getMasses } from './utils/getMasses';
  * @param {string}  [options.databaseName='cid'] - The database to be used
  * @param {string}  [options.mode='positive'] - The mode to be used
  * @param {number}  [options.maxDepth=5] - The maximum depth of the fragmentation tree
+ * @param {boolean}  [options.getProductsTrees=false] - If true, the products trees are returned else products is an empty array
+ * @param {number}  [options.limitReactions=200] - The maximum number of reactions to be applied
  * @param {number}  [options.maxIonizationDepth=1] - The maximum depth of the ionization tree
  * @param {Object}  [options.customDatabase={}] - A custom database of reactions
  * @param {Array}  [options.customDatabase.positive] - A custom database of reactions for positive mode
@@ -26,9 +28,11 @@ export function reactionFragmentation(molecule, options = {}) {
   let {
     databaseName = 'cid',
     mode = 'positive',
-    maxDepth = 3,
+    maxDepth = 5,
     maxIonizationDepth = 1,
+    getProductsTrees = false,
     customDatabase = {},
+    limitReactions = 200,
   } = options;
   let database;
   let IonizationDb;
@@ -55,18 +59,22 @@ export function reactionFragmentation(molecule, options = {}) {
   if (IonizationDb) {
     let ionizationFragments = applyReactions([molecule], IonizationDb, {
       maxDepth: maxIonizationDepth,
+      limitReactions,
     });
-
     for (let tree of ionizationFragments.trees) {
-      getMoleculesToFragment(tree, reactions, maxDepth);
+      getMoleculesToFragment(tree, reactions, maxDepth, limitReactions);
     }
-    ionizationFragments.products = groupTreesByProducts(
-      ionizationFragments.trees,
-    );
+
+    if (getProductsTrees) {
+      ionizationFragments.products = groupTreesByProducts(
+        ionizationFragments.trees,
+      );
+    }
     results = ionizationFragments;
   } else {
     results = applyReactions([molecule], reactions, {
       maxDepth,
+      limitReactions,
     });
   }
 
@@ -78,19 +86,22 @@ export function reactionFragmentation(molecule, options = {}) {
   };
 }
 
-function getMoleculesToFragment(tree, reactions, maxDepth) {
+function getMoleculesToFragment(tree, reactions, maxDepth, limitReactions) {
   for (let product of tree.products) {
     if (product.children.length === 0) {
       if (product.charge !== 0) {
         let molecule = OCL.Molecule.fromIDCode(product.idCode);
+
         let fragments = applyReactions([molecule], reactions, {
           maxDepth,
+          limitReactions,
+          getProductsTrees: true,
         });
         product.children = fragments.trees;
       }
     } else {
       for (let child of product.children) {
-        getMoleculesToFragment(child, reactions, maxDepth);
+        getMoleculesToFragment(child, reactions, maxDepth, limitReactions);
       }
     }
   }

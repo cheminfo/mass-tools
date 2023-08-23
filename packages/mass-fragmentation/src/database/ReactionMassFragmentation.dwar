@@ -1,6 +1,6 @@
 <datawarrior-fileinfo>
 <version="3.3">
-<created="1689690927936">
+<created="1692619723139">
 <rowcount="67">
 </datawarrior-fileinfo>
 <column properties>
@@ -73,7 +73,7 @@ QX QX	!R_vp]bgp !R_vp]vgp	//////!2/%V)12+4/(8/(	//,8///$	//,8///$	Ionization	eFB
 QX QX	!R@AL]Pmp !R@AL]^gp	////////#W.F*4*8/$4!	40V/////,10	40V/////,10	Ionization	eFHBLGtP!eFH`fLGtX						false
 Qg Qg	!R@Fq?[AuJ?@ !R@FM?Dqvz_@	//////01/F/1!2/)V%409/(	2020201/////(F0	2020201/////(F0	Ionization	eM`BN`~b@!eM``fN`~bOza@	Positive	Ionisation				false
 QX QX	!R@Fp]rgp !R@FL]Nkp	08(F$V0F08208#8$4(8F0F#F$4!2!4104!4!42#F0F$F!10V02F//////0	4F!4/////,	40V/////,10	Oxonium Resonance	eFH`fJGtP!eFHbfLGtP	Positive	Resonance				true
-qbq a` qrH	!RuKWT|`AIw[I\ !RGUi| !RTMq?[Ivz_@	4#5)1!11%V#F02J(8V0F20F!V4$8J0F81V#2V06!8N!F!1C0830208//!1//%8/(	x8V4%2/////$10	JF/%8////)	Remote Hydrogen rearrangement	gCa@@dmPGtD@!fI@Gu` eM@HvB	Positive	CRF				true
+qbq a` qrH	!R@AL@[@@SGPi| !RGUi| !R_qL@Dquzo@	04!5!V%1!108#4$F024+F20J08V4$8o4F81V0V02V06!8NG#90_0@3//&1//%8/(	x8V4%2/////$10	JF/%8////)	Remote Hydrogen rearrangement	gCa@@dmPGrDJ@!fI@Gu` eM@HvB	Positive	CRF				true
 qTq Q\ qa	!R@NL?xpAlG_K\ !R@FL]Ngp !R@FL]Akp	#8$V(G0F208VF18V#405%2!F0H)1!4J01V1!2V82FB0N$F#83!F0F//01//%8/(	y4V4%V!4/////#	4FV/$8////&10	Remote Hydrogen rearrangement	gCa@@eMPD!eFHBLGtP eF@HhP	Positive	CRF				true
 IO^adkBFU qb^i IO^ IeQ	!Rm?u~_?C}|Gq~_?A}|Gu~_?A||Gwp_Atr{@ !R_g~w_K_}mwvw_AvZo@ !R@Fp@XqtF_@ !ROvL@XquFo@	04!1!V0c05#81F$2180_F2Vo449!1H482FGF4!W$80ZBF$k03W02!8F1FF895!9104088//01)V/V$F#8808-101$	tvLAcAq07Cs29B1!3F89c50H!XV#F8#F$FV#8*2$202&8)2%	kNH!1,8#8,H#8$F/#1/,	Remote Hydrogen rearrangement	dcN@B@J\bRbRaWCUUUL@_ITC@!gFpAEJTjZuRA@ eM`AIhH eM@HvB	Positive	CRF				true
 Qg Qg	!R@Fp@HquJ_@ !R@Fp@Hqtz?@	08010F#F$20808BZ#1#8042(F0F#V1#2!2#V!4$82040F0V$F211!4//#1//%8/(	FF//*8///$	k//+8///$	Resonance	eMB`HIRVB!eMB`HiRZB	Positive	Resonance				true
@@ -96,6 +96,10 @@ qMsW` q{eQp	!R[[C@vQJpN@s@qox@GPkB !Rw}dx\vvO?g|Rct]sGP[\	//////08#2028+V8*VW)4$
 q{eQp qTwKh	!Rw}dx\vvO?g|Rct]sG]K\ !R?`AG\t\Lw|[_vVvpGSiB	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	Positive	Resonance				true
 qTwKh qqUcx	!R?`AG\t\Lw|[_vVvpG]JB !Rw|XxCFvp?`@RlD\LG[kB	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	Positive	Resonance				true
 qgSuH qrLoX	!RQps~_}?YQwMmc}?FGUH| !RN@s_qox@[[AGCAJpGXXb	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance 	gOpAGJTju`@@D!gOpAGJTju`@@D	Positive	Resonance				true
+<hitlist data>
+<hitlistName="<selection>">
+<hitlistData="@@@@@@@D@@@@">
+</hitlist data>
 <datawarrior properties>
 <columnFilter_Table="">
 <columnWidth_Table_DOI="80">
@@ -112,13 +116,13 @@ qgSuH qrLoX	!RQps~_}?YQwMmc}?FGUH| !RN@s_qox@[[AGCAJpGXXb	//////08#2028+V8*VW)4$
 <filter2="#string#	DOI">
 <filter3="#string#	Section">
 <filter4="#string#	Description">
-<filter5="#string#	Label">
+<filter5="#string#	Label	#contains#	remote">
 <filter6="#string#	needToBeCharged">
 <formLayout_Form View="TableLayout,3,6.0,-1.0,6.0,3,4.0,-1.0,4.0">
 <formObjectCount_Form View="1">
 <formObjectInfo_Form View_0="Label	textLine	1, 1, 1, 1, full, full">
 <headerLines_Table="2">
-<mainSplitting="0.77014">
+<mainSplitting="0.75867">
 <mainView="Table">
 <mainViewCount="2">
 <mainViewDockInfo0="root">
@@ -128,6 +132,6 @@ qgSuH qrLoX	!RQps~_}?YQwMmc}?FGUH| !RN@s_qox@[[AGCAJpGXXb	//////08#2028+V8*VW)4$
 <mainViewName1="Form View">
 <mainViewType0="tableView">
 <mainViewType1="formView">
-<rightSplitting="0.67836">
+<rightSplitting="0.67797">
 <rowHeight_Table="80">
 </datawarrior properties>
