@@ -60,21 +60,13 @@ export const cid = {
       rxnCode:
         'gOpAMJUNusMHD!gOpAMJUKua@@D#qi{tP qkOfP#!R?`BH?[_}mpJw@k_}GWK| !Rm?w~@Hc}mpJw@ox@G]k|',
     },
-    {
-      Label: 'Carbon monoxide eliminations from cyclic carbonyls compounds',
-      rxnCode:
-        'gOp`@tfUkZj`H!gKQ@@eKcUPD eFHBND#q~QeX q\\jH q~#!RmpK~@K_}mpJw@k_}GUJB !RXFUSY?y?KF\\]Vmp !R_vp]^gp',
-    },
+
     {
       Label: 'Dioxolane elimination (aromatic)',
       rxnCode:
         'detDB@iiRfUwJFZB@H@H!eFHBJD daDHB@RTfUVyiZPB#IaLhfGed Ql IZdDezP#!RXJhcFCx@NALlFC`Lp@[@FZJpGWK| !R@FL]vkp !R@CzbuzJppAg@Ac`LNAL]aop',
     },
-    {
-      Label: 'Displacement Reaction a.',
-      rxnCode:
-        'daxDB@XIRUUzj`CZNcGPpUqDX`d_{G@!gKQA@IReqjhB eFHBND#qbqkx q~Yh Qd#!R_g}~_?A}|Gsp?_A||Gt]Rap !R_g|_za~eTv\\]vcp !R@FL]Agp',
-    },
+
     {
       Label: 'Displacement Reaction a.',
       rxnCode:
@@ -168,12 +160,12 @@ export const cid = {
     {
       Label: 'Remote Hydrogen rearrangement',
       rxnCode:
-        'gCa@@dmPGtD@!fI@Gu` eM@HvB#qbq a` qrH#!RuKWT|`AIw[I\\ !RGUi| !RTMq?[Ivz_@',
+        'gCa@@dmPGrDJ@!fI@Gu` eM@HvB#qbq a` qrH#!R@AL@[@@SGPi| !RGUi| !R_qL@Dquzo@',
     },
     {
       Label: 'Remote Hydrogen rearrangement',
       rxnCode:
-        'gCa@@eMPD!eFHBLGtP eF@HhP#qTq Q\\ qa#!R@NL?xpAlG_K\\ !R@FL]Ngp !R@FL]Akp',
+        'gCa@@eMPD!eFHBLGtP eF@HhP#qTq Q qa#!R@NL?xpAlG_K !R@FL]Ngp !R@FL]Akp',
     },
     {
       Label: 'Remote Hydrogen rearrangement',
