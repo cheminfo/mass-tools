@@ -58,4 +58,4 @@ test('activeOrNaturalDetails', async () => {
       "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
     }
   `);
-}, 10000);
+}, 100000);

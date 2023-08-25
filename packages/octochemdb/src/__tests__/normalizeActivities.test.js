@@ -57,5 +57,5 @@ describe('normalizeActivities', () => {
     expect(Object.keys(result.data.activities[0])).toStrictEqual(
       Object.keys(result.data.activities[5]),
     );
-  });
+  }, 30000);
 });

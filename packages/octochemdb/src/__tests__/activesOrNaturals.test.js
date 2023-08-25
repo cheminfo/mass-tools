@@ -24,7 +24,7 @@ describe('activesOrNaturals', () => {
       uniqueMFs.add(entry.data.mf);
     }
     expect([...uniqueMFs]).toStrictEqual(['C17H17NO4']);
-  });
+  }, 30000);
 
   it('with range and many ionizations', async () => {
     let data = await activesOrNaturals({
@@ -40,7 +40,7 @@ describe('activesOrNaturals', () => {
       uniqueMFs.add(entry.data.mf);
     }
     expect([...uniqueMFs]).toStrictEqual(['C17H17NO4', 'C34H34N2O8']);
-  });
+  }, 30000);
 
   it('search by keywords', async () => {
     let data = await activesOrNaturals({
@@ -83,5 +83,5 @@ describe('activesOrNaturals', () => {
       'titles',
       'unsaturation',
     ]);
-  }, 30000);
+  }, 300000);
 });

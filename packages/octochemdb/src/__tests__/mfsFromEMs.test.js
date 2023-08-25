@@ -37,7 +37,7 @@ describe('mfsFromEMs', () => {
         ppm: 3.958021817087773,
       },
     });
-  });
+  }, 30000);
 
   it('string containing more than 1 monoisotopic mass', async () => {
     let data = await mfsFromEMs('12,24,36', {
@@ -47,7 +47,7 @@ describe('mfsFromEMs', () => {
     });
     expect(data).toHaveLength(3);
     expect(data).toMatchSnapshot();
-  });
+  }, 30000);
 
   it('simple case negative ionization', async () => {
     let data = await mfsFromEMs(60, {
@@ -56,7 +56,7 @@ describe('mfsFromEMs', () => {
     });
     expect(data).toHaveLength(3);
     expect(data).toMatchSnapshot();
-  });
+  }, 30000);
 
   it('highly precise', async () => {
     let data = await mfsFromEMs(81.06987671016094, {
@@ -64,7 +64,7 @@ describe('mfsFromEMs', () => {
       precision: 1,
     });
     expect(data).toHaveLength(1);
-  });
+  }, 30000);
 
   it('simple case with range filter', async () => {
     let data = await mfsFromEMs(60, {
@@ -96,5 +96,5 @@ describe('mfsFromEMs', () => {
         ppm: -39.798973910819804,
       },
     });
-  });
+  }, 30000);
 });

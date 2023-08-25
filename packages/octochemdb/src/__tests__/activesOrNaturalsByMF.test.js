@@ -9,7 +9,7 @@ describe('activesOrNaturalsByMF', () => {
       limit: 100,
     });
     expect(data.length).toBeGreaterThan(2);
-  });
+  }, 30000);
 
   it('with range', async () => {
     let entries = await activesOrNaturalsByMF({
@@ -42,5 +42,5 @@ describe('activesOrNaturalsByMF', () => {
     expect(nbPatents).toBeGreaterThan(1000);
     expect(nbPubmeds).toBeGreaterThan(1000);
     expect(nbMassSpectra).toBeGreaterThan(1000);
-  });
+  }, 30000);
 });

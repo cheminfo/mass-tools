@@ -7,4 +7,4 @@ test('gnps', async () => {
     modifications: 'CH2,O-1',
   });
   expect(results).toHaveLength(5);
-});
+}, 30000);

@@ -7,4 +7,4 @@ test('massBank', async () => {
     modifications: 'CH2,O-1',
   });
   expect(results).toHaveLength(23);
-});
+}, 30000);

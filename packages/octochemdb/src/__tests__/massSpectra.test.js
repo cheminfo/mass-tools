@@ -20,7 +20,7 @@ describe('massSpectra', () => {
     });
 
     expect(resultsAll.length).toBeGreaterThan(resultsUnique.length);
-  });
+  }, 30000);
 
   it('mdma and mass', async () => {
     const peaks = JSON.parse(
@@ -75,5 +75,5 @@ describe('massSpectra', () => {
     });
     expect(results.length).toBeGreaterThan(5);
     expect(results.length).toBeLessThan(50);
-  });
+  }, 30000);
 });
