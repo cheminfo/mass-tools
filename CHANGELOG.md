@@ -1,5 +1,17 @@
 # Changelog
 
+## [7.11.0](https://github.com/cheminfo/mass-tools/compare/v7.10.0...v7.11.0) (2023-08-25)
+
+
+### Features
+
+* **mass-fragmentation:** limit reactions ([ad5c902](https://github.com/cheminfo/mass-tools/commit/ad5c902d986cebc187817c6a85a5b94d35dc320d))
+
+
+### Bug Fixes
+
+* **mass-fragmentation:** generate all combinations of ionization ([efcc9dd](https://github.com/cheminfo/mass-tools/commit/efcc9ddb2b1d4bbab5427e43da8b3d9e0723214d))
+
 ## [7.10.0](https://github.com/cheminfo/mass-tools/compare/v7.9.1...v7.10.0) (2023-08-18)
 
 
