@@ -57,10 +57,23 @@ export function reactionFragmentation(molecule, options = {}) {
   let results = {};
   const reactions = database[mode];
   if (IonizationDb) {
-    let ionizationFragments = applyReactions([molecule], IonizationDb, {
-      maxDepth: maxIonizationDepth,
-      limitReactions,
-    });
+    let ionizationFragments = {
+      trees: [],
+      products: [],
+    };
+    for (
+      let currentMaxIonizationDepth = 1;
+      currentMaxIonizationDepth <= maxIonizationDepth;
+      currentMaxIonizationDepth++
+    ) {
+      let ionizationLevelResult = applyReactions([molecule], IonizationDb, {
+        maxDepth: currentMaxIonizationDepth,
+        limitReactions,
+      });
+      // add array to ionizationfragments.trees
+      ionizationFragments.trees.push(...ionizationLevelResult.trees);
+      ionizationFragments.products.push(...ionizationLevelResult.products);
+    }
     for (let tree of ionizationFragments.trees) {
       getMoleculesToFragment(tree, reactions, maxDepth, limitReactions);
     }
