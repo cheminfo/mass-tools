@@ -71,7 +71,9 @@ export function reactionFragmentation(molecule, options = {}) {
         limitReactions,
       });
       // add array to ionizationfragments.trees
+      // @ts-ignore
       ionizationFragments.trees.push(...ionizationLevelResult.trees);
+      // @ts-ignore
       ionizationFragments.products.push(...ionizationLevelResult.products);
     }
     for (let tree of ionizationFragments.trees) {
@@ -79,6 +81,7 @@ export function reactionFragmentation(molecule, options = {}) {
     }
 
     if (getProductsTrees) {
+      // @ts-ignore
       ionizationFragments.products = groupTreesByProducts(
         ionizationFragments.trees,
       );
@@ -110,6 +113,7 @@ function getMoleculesToFragment(tree, reactions, maxDepth, limitReactions) {
           limitReactions,
           getProductsTrees: true,
         });
+        // @ts-ignore
         product.children = fragments.trees;
       }
     } else {
