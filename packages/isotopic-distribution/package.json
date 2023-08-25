@@ -23,7 +23,7 @@
     "chemical-elements": "^2.0.2",
     "mf-parser": "^2.3.0",
     "mf-utilities": "^2.0.4",
-    "spectrum-generator": "^8.0.7"
+    "spectrum-generator": "^8.0.8"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2"
