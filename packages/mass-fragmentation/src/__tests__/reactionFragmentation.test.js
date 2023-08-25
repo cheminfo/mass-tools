@@ -29,7 +29,7 @@ describe('ReactionFragmentation', async () => {
         "minSteps",
       ]
     `);
-    expect(masses).toHaveLength(4);
+    expect(masses).toHaveLength(6);
     expect(trees).toMatchSnapshot();
   });
   it('tropylium rearrangement: MDMA after Alpha cleavage', async () => {
