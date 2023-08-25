@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.11.1](https://github.com/cheminfo/mass-tools/compare/v7.11.0...v7.11.1) (2023-08-25)
+
+
+### Bug Fixes
+
+* **mass-fragmentation:** ts-ignore for ionizationFragments ([bef8b48](https://github.com/cheminfo/mass-tools/commit/bef8b48c6b1f6bb2a9aa14e43f2be806befef4bf))
+* update all dependencies ([c1aee41](https://github.com/cheminfo/mass-tools/commit/c1aee417d98ee83caf88489dc60db7ee449c744e))
+
 ## [7.11.0](https://github.com/cheminfo/mass-tools/compare/v7.10.0...v7.11.0) (2023-08-25)
 
 
