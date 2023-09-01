@@ -26,7 +26,7 @@ describe('activesOrNaturalsByMF', () => {
     expect(data.length).toBeGreaterThan(2);
   }, 30000);
 
-  it.only('with range', async () => {
+  it('with range', async () => {
     let entries = await activesOrNaturalsByMF({
       url: 'http://localhost/data/activesOrNaturalsByMFRange.json',
       masses: 300.123,
