@@ -1,0 +1,3362 @@
+[
+  {
+    "_id": "ff}`P@G@xZJSLljwZnrmfkPLEPEA@@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@I@L{vRJQSKQIPfIKCB\\EHmZjjjjh@F`@MR\\qkElNq~bLMTq|L_CNjX~FOa`",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@L@QYvQQJJIIKPzIIUc^KUjhJBb@B@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@E@mDnQQQIIZZIJEXRoIZAB@`hj@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@D@dYNQQQJJIQFYIGbgQKUjfjj`XB`@MTBqKGzPrUSGpq|L",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@I@pJJTssKoKNzmfmUUUUUUU@AjeFLXIbfFXy`VIXUcVCXmavOXcaNBx[c}DYbccxX~FEQq|L_C@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@B`EfnRJIIKIQIIZGd`ihHHhHHj@@MZVpGB\\YpWGzPrmKGpq|L",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`PBL@xKVIEvRJJJDjZIKIHe@qjjjjjjjh@M\\hqcALTps@lRpkFlFq[Cl^pGD\\IqgE\\Mq~dLxxsX~FOa`",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@F@]xNQQQQQIISQYWdeVMEhJHhjjjH@MQTpsBlZq{@\\QqwGzPpM[Gpq|L",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@C@IjjSL{kZlklydmUUUUUUU@AktFHXQcFBXiafNXEbVEXu`vKX]cv@xcaNLxKbnFxRF@\\Yl_CGpp",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`PBM@PFNicvQQJIQZIQQYVrRuZi`h@h@@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@L@PhjSKKZkvndXYr\\mUPPP@EP@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@A@qHnRJJYZJEJYKHeEZ]yNZjjjj@Bj`@M^HqcALLpKDlUq~dLeVq|L_C@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@C@RVjTwKjrno\\EhpXuKUUUSUU@AjHVIXMcvHxs`nJxQFIkX~FOabuL_CGpp",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@I@ihjTrn{ZrnxipR\\uUUUT@ET@AjiFLXiafNXEbVEXuanOtafjNOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@K@iHrTrnzvrnxipR\\tDAUUUUQ@AjiVMXMbvGX}`NHxScnOtaajNOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@D@IPvQQQQIIQJsI[WleZhJBh@B@@MTZp[GzPpuSGpq|L",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@J@xZvRJJJIEJUJIKCIZKVjjjZf@B`@MRBqKFlFq~bLMTq|L_CVjX~FOa`",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffk`P@G@iDnRJIKIJQIJZkENBLyrPyhHBjijjbh@MTAqGGzPrMSGpq|L",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@M@UdnRJIIKPjIKJKd`qhHHjjjjH@MS\\qKBlZp[ElNq{@\\QqgC\\_iCBnLFOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@I@ijrTrn{ZsKxipVRuUUUTAAT@AjiFLXiafNXEbVEXuanOtafjNOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@E@}GJSLjoZrkbTxKPHP@QUP@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@@`hYNRJJIZKQGISPVg^hJBbjjjH@M[DqS@lRqkAlVp{GlAqGB\\Mq~dLLxpX~FOa`",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@I@ijvRJIKKJYJJIGENBrVjjjj`HJ`@MUHqcELLqs@lRpkFlMq~dLuQq|L_C@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@F@bgNRJKZJJIKZIGEIZ\\FfZjjjjjh@MSBqKBlZp[ElNq{D\\IpwG\\_iCLnLFOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@I@ijrTrn{\\|rxipQZuUUUU@PT@AjiFLXiafNXEbVEXuanOtafjNOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@L@P{vQQJISQQQIHzI\\uZjjBjBbH@MU\\pKFlFq[ClQpgA\\Mq~dL]Qq|L_C@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@K@qxNRJJZIQIIIMRgENmFjjjjjjZh@MWHqcALTps@lRpkFlVp{GlUpwGzPsCcIcxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@J@MzNRJZJIQQJIITRmA\\Vjjjjjjjh@MThqcALTpsGLBqKBlFq[Cl^qGF\\UpwG\\_iCONLVOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@J`TXJSLjlljobufkPHTPUA@@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@O@]dnRJIIHiQQPj[doAhHDjjjjH@MYJp[ElNq{@\\QqgC\\_iCGT\\_CGpp",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@I@PFNQQJJIIKESIIUcNZ`@@BZj@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`PBH@PSTIQrS\\kk\\kmLxFKTuLp@UR@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@F@qZjTsvrjsnrt{vRuUUUUUUU@AkeFLXiafNXEbVEXubvGX}bNDxs`nJx[cnOtaeWFKGpq|L",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@B@}GJSLjoZrkbTxKPHP@QUP@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@J@uZNRJIQIYIJFIJgAJl{MZBHbjBBH`@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@D@XENQQQRISIERqHgG^KUjjbbBihD@MTFq{GzPpMSGpq|L",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@D@tXNQQQQYISIJEIUoAKUj``hj@@`@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@@`YdnRJIQKHqQJKQdaJBgMZjjjjjjjh@MWHqcCL\\qKBlZp[ElNq{D\\MqwGzPpKcIcxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@M@qZJTsvnmsJrUfmUUUUAAD@AkiFLXiafNXEbVEXu`vJxRFV\\XL_CGpp",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffk`P@D`iIvRJIQZQPyYSHeAFUZJRujjjjjjjjh@M]HqcCL\\qkAlVq{B\\MqwGzPqscAcxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@H`PFnQSQQIPjIRiHTg^jjiijjjh@M_@qCBLXpSCL\\pkAlVq{@\\QpgC\\_iC@NLfOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@@`qyNRJJZIQIIIFZgENmFjjjjjjjh@MPhqcALTpsGLBqKFlFq[ClAqWC\\]q~dLpxqX~FOa`",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@@`dxnRJJIJSQqIPkCAVBdmZjjjjjjjh@MSXpsGLZp{GlQpgA\\UpwG\\_iC@nLfOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@M@i[NRJJIYEJZIJXRdejjjjh@b`@M]HqcALTpsGLRpkFlFqWGzHreSGpq|MZccxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@I@uYrTtvzmsoxXS`iYKUUUUPPDt@AjqfNXeaVKX[c}HYjecxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@E@hfjTrnzkJvxipT\\ekPPEU@DUA@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@@`ednRJIQYEQQJKRcAJBgMZjjjjjjjh@MXhqcELLqs@lRpkFlFq[Cl^qGE\\MqwGzPrScIcxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@I@pZvRJFJJIQKYYKdoQKVjjjjjjVh@MSHqcALTpsGLRpkAlNpGC\\_iCLNLFOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@M@UdnRJIIKPjIJZ[d`ihHHjjjjH@M[DqsDlJqkAlVp{GlAqGF\\Mq~dLJxpX~FOa`",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@I@uYrTtvzmssxXS`iEkUUUUPQ@t@AjqfNXeaVKX[c}HYjecxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@K@LFNRJYKJQQQQYUgKNKV`@jjjjhh@MYVp{GlApgF\\EpwG\\_hcKUl_CGppZfOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@D`xZJSLljwZnrmfkPLEPEA@@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@F@QQrSKOrnkJflVkUUUUT@D@AkHfJXy`VIXUcVCXkc}HYRccxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@C@BgNRJJJIIKYHqJgIVUiwjjjjjjjjh@M\\hqcALTpsGLBqKBlZp[ElNq{@\\UpwG\\Cq~dLBxrX~FOa`",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@E@hXjTwNzvlk\\EfmUUUUUUU@AkUFLXIbfFXy`VIXUcVCXmavOXCbNDxs`nJx[c}HYQqfq|L_C@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@M@TgNRJIQYRjJIQXThehH`jjjjH@M]RpkFlFq[Cl^pGB\\YpwGzPqScAcxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@M@QQVQQJIIRjJIQXThyKUjfjj`bA`@M\\LqKBl_iCEUL_CGpp",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@E@ednRJJIJXzIKJHV`qhJBbjjjH@MSDpKDlZp[ElNq{@\\QqgC\\_iCBnLFOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@I@ufnRJYKIJYJIJEgDeh@JjjjjH@MWBqKBlZp[ElNq{@\\QpgF\\EpwGzPsKcAcxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@E@ydnRJJJMQZIKJHe@qjjjjjjjh@M\\hqcALTpsGLBqKBlZp[ElNq{@\\QqgE\\Mq~dLJxsX~FOa`",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@E@yZJTsL}kJtyKVRtEPQUUUQ@AkKVCXmavOXccNBx{c}HYZccxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@E@HVjSLvnjvjlDkSoIsUUUUUUUU@AjtFHXQcFBXiafNXEaVCXmavOXCbNDxs`nJx{`^Ota`GFSGpq|L",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@E@X[NRJIQEYSQIYJcARbfjjjj@Bj`@MYHqcCL\\pKDlJqkC\\_iCCT\\_CGpp",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@J`xZJSLljwZnrmfkPLEPEA@@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffk`P@D@CfnQJJIQYQIIKGdeVMxLTeZjjfjjjjh@M^VpGD\\YpWC\\Sq~dLkVq|L_C@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@L@UyNRJIKQIIHiSPeNBLyNZA@HHjjhH@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@D@EENQQQQIKIJZIDcMVKUj`XHfjjH@MTAqGGzPrMSGpq|L",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@I@ijrTrn{ZsKXipVRuUUUTAAT@AjiFLXiafNXEbVEXuanOtafjNOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@I@uYrTtvzmsjxXS`iYkUUUUPPPt@AjqfNXeaVKX[c}HYjecxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@I@PIVQQIIQSQIVIIwbuZfjfj`@P@MTTqsGzPpUSGpq|L",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@N@Q[vQQJZIQZJGJJQgASdmVhHJJjjbh@M^Fq[Cl^pGD\\Mq~dLmRq|L_C@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@D`pDnRJFIKJJIQQXToIsVjjjjjjjh@M\\hqcALTpsGLBqKBlZp[ElNq{@\\QpgF\\Mq~dLJxqX~FOa`",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@F@iEJTsKoZ{NbT{uAPQUUUQ@AkhfJXEaVMXMbvGX}bNFxRFT\\XL_CGpp",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@I@hIVRJZYQRqQJKRB@irVjjjjjjjd@M[Tqs@lRpkFlFp{GlAqGA\\Mq~bLETq|L_CJ\\XL_CGpp",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@E@ExnQQQQQQIJKEUbmAleh@b@hbj@@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@A@psbTslLl{~RVmUUUUUUU@AkeFLXIafNXeaVMXMbvGX}`NHxScNBxkanOtQfJfOacx[ccEcxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@K@EHvRJJJqYSQQI[E@iKVjjjjhHB`@MQHqcALLpKBlZqWGzHrU[Gpq|LZicxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@E@hXjTrnzvrnxipR\\tDAUUUUQ@AjiVMXMbvGX}`NHxScnOtaajNOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@N@p[vRJJZQJpjZIJgMVKVjjjjj@B`@MUDqSDlJqkAlVp{E\\Mq~dLMQq|L_C@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@C@xKRTln{\\kZdXFIZtuUUUP@T@AjsFBXybVEXkc}DXJecxX~FuTq|L_C@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@B@XZNQQQJKIQFZIKEMNsUjVjf``b`@@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffk`P@G@iFjTrnkKS_xipUg^SdmUUUUUUUU@AjyFLXiafNXEbVMXM`NHxKanAxRFQ\\XL_CGpp",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffs`P@I@uYvRJQSKIJXjIKCB\\EHmZjjjjh@F`@M^LqsDlJp[ElMq~dLuRq|L_C@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@E@hXJTrnzwLkXipRRtDAUPPQP@AjaVMXRFFjX~FOa`",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@M@xhNRJJJIPgQQIIgIFRV`jBbjjjH@M]DqKBlFq[ClAqGF\\EqwGzPqUGGpq|L",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@@`LVjSLsK|zoLEGMUUUPPQT@AjDFHXQcFBXiafNXEaVMX]bNLxKbnOta`GFCGpq|L",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@H`dDjTrrk{LnbUfmADQTEA@@AkQVCX}`NLxRFEiX~FOa`",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@K@iHrTrnzvsJxipVRtDAUUUUQ@AjiVMXMbvGX}`NDxscnOtaajNOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@C@qFnRJJZEKIJJKIVlejjjjjjjh@M\\hqcCL\\pKDlJqkAlVp{GlAqGB\\YpWE\\Mq~dLbxsX~FOa`",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@D@H{vQQQSIJKQVIIUbuZhHJJ`@@@M\\Jq[Cl_iCGUL_CGpp",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@E@YxnRJIQEYJJKIJcARbfjjjjjjjh@MXhqcCL\\pKDlJqkAlVp{GlAqGF\\MqwGzPsscEcxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@J@pVnRJFIIQQII[KrXyjjjjjjjh@MZhqcALTpsGLBqKBlZp[ElNq{@\\QpgF\\EqWC\\_iCJnLvOacxX",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ff}`P@E@xVnRJJJMQZJIEPeHijjjjjjjh@MRhqcALTpsGLBqKBlZp[ElNpGD\\IqgA\\UpwGzPpkcMcxX~F@",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ffc`P@G@T[vRJJJIIQFFIDeIVrVjjjjjjjh@MPhqcALTps@lRpkFlFq{F\\EqWC\\]q~dLLxqX~FOa`",
+    "data": {
+      "em": 299.11575803062,
+      "mf": "C17H17NO4"
+    },
+    "mfInfo": {
+      "mass": 299.3218259721663,
+      "charge": 0,
+      "mf": "C17H17NO4",
+      "atoms": {
+        "C": 17,
+        "H": 17,
+        "N": 1,
+        "O": 4
+      },
+      "em": 299.11575803062,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 300.1230344829409,
+      "charge": 1,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  },
+  {
+    "_id": "ecPtA@@KmPFDanQYU\\dTRbJtTReRbRfRRbRTTtVeC@dg`WTrMMAPDAAT@QUAAQUU@@@FhgvD\\XxYqs`WDnE\\_hagMSGpq|LkTq|L_C@",
+    "data": {
+      "em": 598.23151606124,
+      "mf": "C34H34N2O8"
+    },
+    "mfInfo": {
+      "mass": 598.6436519443326,
+      "charge": 0,
+      "mf": "C34H34N2O8",
+      "atoms": {
+        "C": 34,
+        "H": 34,
+        "N": 2,
+        "O": 8
+      },
+      "em": 598.23151606124,
+      "unsaturation": 19
+    },
+    "ionization": {
+      "mf": "(H+)2",
+      "em": 2.01565006446,
+      "charge": 2,
+      "atoms": {
+        "H": 2
+      }
+    },
+    "ms": {
+      "ionization": "(H+)2",
+      "em": 300.1230344829409,
+      "charge": 2,
+      "delta": -0.00003448294091867865,
+      "ppm": -0.11489601582259983
+    }
+  }
+]

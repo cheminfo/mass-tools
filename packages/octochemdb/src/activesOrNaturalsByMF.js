@@ -28,7 +28,6 @@ export async function activesOrNaturalsByMF(options = {}) {
     ...options,
     fields: fields.join(','),
   });
-
   // we will now group the data per mf
   const grouped = {};
   for (const entry of entries) {

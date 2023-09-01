@@ -1,0 +1,1712 @@
+[
+  {
+    "_id": "doB`B[ZfwCDrJIQPkSQnfjjjj@MYKEXGDxWFxOEx_GzIdtl_CGpuuL_CGpp",
+    "data": {
+      "naturalProduct": false,
+      "em": 276.96981834941,
+      "mf": "C7H8BrN3O4",
+      "bioactive": true,
+      "nbPatents": 21,
+      "nbPubmeds": 11,
+      "nbMassSpectra": 0,
+      "nbActivities": 12
+    },
+    "mfInfo": {
+      "mass": 278.0599344217135,
+      "charge": 0,
+      "mf": "C7H8BrN3O4",
+      "atoms": {
+        "C": 7,
+        "H": 8,
+        "Br": 1,
+        "N": 3,
+        "O": 4
+      },
+      "em": 276.96981834941,
+      "unsaturation": 5
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9590390515009,
+      "charge": 1,
+      "delta": 0.1639609484990956,
+      "ppm": 546.611127364442
+    }
+  },
+  {
+    "_id": "fhqqb@BVC`w`XfQJYQISPjRuUUUUUP@Z~aaFLXIbfFXy`VEXu`vKX]cv@xQFXhx~FOaoTl_CGpp",
+    "data": {
+      "naturalProduct": false,
+      "em": 298.9905537943,
+      "mf": "C10H10BrN3O3",
+      "bioactive": true,
+      "nbPatents": 17,
+      "nbPubmeds": 5,
+      "nbMassSpectra": 0,
+      "nbActivities": 57
+    },
+    "mfInfo": {
+      "mass": 300.10861869571244,
+      "charge": 0,
+      "mf": "C10H10BrN3O3",
+      "atoms": {
+        "C": 10,
+        "H": 10,
+        "Br": 1,
+        "N": 3,
+        "O": 3
+      },
+      "em": 298.9905537943,
+      "unsaturation": 7
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 299.99783024662094,
+      "charge": 1,
+      "delta": 0.12516975337905478,
+      "ppm": 417.2355289241784
+    }
+  },
+  {
+    "_id": "fhi`RBGLUxHLQta{HhdhdddcJ\\uZ@HjZfH@@",
+    "data": {
+      "naturalProduct": false,
+      "em": 298.97932040501,
+      "mf": "C11H10BrNO4",
+      "bioactive": true,
+      "nbPatents": 2,
+      "nbPubmeds": 4,
+      "nbMassSpectra": 0,
+      "nbActivities": 22
+    },
+    "mfInfo": {
+      "mass": 300.10535309387444,
+      "charge": 0,
+      "mf": "C11H10BrNO4",
+      "atoms": {
+        "C": 11,
+        "H": 10,
+        "Br": 1,
+        "N": 1,
+        "O": 4
+      },
+      "em": 298.97932040501,
+      "unsaturation": 7
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 299.98659685733094,
+      "charge": 1,
+      "delta": 0.13640314266905307,
+      "ppm": 454.6974568131267
+    }
+  },
+  {
+    "_id": "fhipRBNRLkW``qNSklbbbTrbQRXJsjjjjjj`@uCCBLXpSELLqs@lRqkAlVp{GlAqGGzPqScIcxX~F@",
+    "data": {
+      "naturalProduct": false,
+      "em": 298.95416828495,
+      "mf": "C9H6BrN3O4",
+      "bioactive": true,
+      "nbPatents": 12,
+      "nbPubmeds": 2,
+      "nbMassSpectra": 0,
+      "nbActivities": 2
+    },
+    "mfInfo": {
+      "mass": 300.06552470707237,
+      "charge": 0,
+      "mf": "C9H6BrN3O4",
+      "atoms": {
+        "C": 9,
+        "H": 6,
+        "Br": 1,
+        "N": 3,
+        "O": 4
+      },
+      "em": 298.95416828495,
+      "unsaturation": 8
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 299.96144473727094,
+      "charge": 1,
+      "delta": 0.16155526272905263,
+      "ppm": 538.5867602769918
+    }
+  },
+  {
+    "_id": "fik@P`BMzLFIsDsbUqLbbbtQdTVRTRfXJIZjjjjjjjj@CVLLHqcALTqsAlVq{@\\QqgE\\Mqw@|Sq~fLIVq|L_CMjX~FOaaul_CGpp",
+    "data": {
+      "naturalProduct": false,
+      "em": 597.7625593295,
+      "mf": "C17H14Br4O4",
+      "bioactive": true,
+      "nbPatents": 6,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 12
+    },
+    "mfInfo": {
+      "mass": 601.9054116205931,
+      "charge": 0,
+      "mf": "C17H14Br4O4",
+      "atoms": {
+        "C": 17,
+        "H": 14,
+        "Br": 4,
+        "O": 4
+      },
+      "em": 597.7625593295,
+      "unsaturation": 9
+    },
+    "ionization": {
+      "mf": "(H+)2",
+      "em": 2.01565006446,
+      "charge": 2,
+      "atoms": {
+        "H": 2
+      }
+    },
+    "ms": {
+      "ionization": "(H+)2",
+      "em": 299.88855611707095,
+      "charge": 2,
+      "delta": 0.2344438829290425,
+      "ppm": 781.7700213859442
+    }
+  },
+  {
+    "_id": "f`qqB@BR|HFHdrkvrmFN}@AUUTP@Zry`VIXUcVCXmav@xRFBhx~FOa`",
+    "data": {
+      "naturalProduct": false,
+      "em": 276.9850744907,
+      "mf": "C11H8BrN3O",
+      "bioactive": true,
+      "nbPatents": 5,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 3
+    },
+    "mfInfo": {
+      "mass": 278.10466323569966,
+      "charge": 0,
+      "mf": "C11H8BrN3O",
+      "atoms": {
+        "C": 11,
+        "H": 8,
+        "Br": 1,
+        "N": 3,
+        "O": 1
+      },
+      "em": 276.9850744907,
+      "unsaturation": 9
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9742951927909,
+      "charge": 1,
+      "delta": 0.14870480720907153,
+      "ppm": 495.72516576295385
+    }
+  },
+  {
+    "_id": "edRPND@BMCKMck`LSkDRYeY{kyuY]eubRsrhZBBbZjBBbijh`@@",
+    "data": {
+      "naturalProduct": false,
+      "em": 598.02017843943,
+      "mf": "C25H28Br2O7",
+      "bioactive": true,
+      "nbPatents": 3,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 2
+    },
+    "mfInfo": {
+      "mass": 600.2936285631909,
+      "charge": 0,
+      "mf": "C25H28Br2O7",
+      "atoms": {
+        "C": 25,
+        "H": 28,
+        "Br": 2,
+        "O": 7
+      },
+      "em": 598.02017843943,
+      "unsaturation": 11
+    },
+    "ionization": {
+      "mf": "(H+)2",
+      "em": 2.01565006446,
+      "charge": 2,
+      "atoms": {
+        "H": 2
+      }
+    },
+    "ms": {
+      "ionization": "(H+)2",
+      "em": 300.0173656720359,
+      "charge": 2,
+      "delta": 0.10563432796408279,
+      "ppm": 352.0940453812163
+    }
+  },
+  {
+    "_id": "dmvHPFHLQLQInyVUjh@@@uQLYc}HpjfOacxX",
+    "data": {
+      "naturalProduct": false,
+      "em": 276.87378898515,
+      "mf": "C7H5Br2NO",
+      "bioactive": true,
+      "nbPatents": 2,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 1
+    },
+    "mfInfo": {
+      "mass": 278.92801874420974,
+      "charge": 0,
+      "mf": "C7H5Br2NO",
+      "atoms": {
+        "C": 7,
+        "H": 5,
+        "Br": 2,
+        "N": 1,
+        "O": 1
+      },
+      "em": 276.87378898515,
+      "unsaturation": 5
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.8630096872409,
+      "charge": 1,
+      "delta": 0.25999031275910056,
+      "ppm": 867.0302916997738
+    }
+  },
+  {
+    "_id": "dcW@PDyPqHqL@tTRac]UUU@FjabLIcLEblMclCb\\_iFIRq|L_C@",
+    "data": {
+      "naturalProduct": false,
+      "em": 298.96327269674,
+      "mf": "H2Br2.C7H13N3",
+      "bioactive": true,
+      "nbPatents": 1,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 3
+    },
+    "mfInfo": {
+      "parts": [
+        {
+          "mass": 161.82293706913154,
+          "charge": 0,
+          "mf": "H2Br2",
+          "atoms": {
+            "H": 2,
+            "Br": 2
+          },
+          "em": 159.85232526446,
+          "unsaturation": -1
+        },
+        {
+          "mass": 139.19849071420924,
+          "charge": 0,
+          "mf": "C7H13N3",
+          "atoms": {
+            "C": 7,
+            "H": 13,
+            "N": 3
+          },
+          "em": 139.11094743228,
+          "unsaturation": 3
+        }
+      ],
+      "em": 298.96327269674,
+      "mass": 301.02142778334076,
+      "charge": 0,
+      "unsaturation": 2,
+      "atoms": {
+        "H": 15,
+        "Br": 2,
+        "C": 7,
+        "N": 3
+      },
+      "mf": "H2Br2.C7H13N3"
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 299.9705491490609,
+      "charge": 1,
+      "delta": 0.15245085093908983,
+      "ppm": 508.21939477576575
+    }
+  },
+  {
+    "_id": "fikPP`I^IippXgLRnIwDrJJKQESJYQIQY`bmjjjjjjjjh@MVppcFLDqSGLBqKBlZp[ElNq{@\\QpgF\\Uqw@|Sq~dLHxsX~FOa`",
+    "data": {
+      "naturalProduct": false,
+      "em": 597.73740720944,
+      "mf": "C15H10Br4N2O4",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 2
+    },
+    "mfInfo": {
+      "mass": 601.8655832337912,
+      "charge": 0,
+      "mf": "C15H10Br4N2O4",
+      "atoms": {
+        "C": 15,
+        "H": 10,
+        "Br": 4,
+        "N": 2,
+        "O": 4
+      },
+      "em": 597.73740720944,
+      "unsaturation": 10
+    },
+    "ionization": {
+      "mf": "(H+)2",
+      "em": 2.01565006446,
+      "charge": 2,
+      "atoms": {
+        "H": 2
+      }
+    },
+    "ms": {
+      "ionization": "(H+)2",
+      "em": 299.8759800570409,
+      "charge": 2,
+      "delta": 0.2470199429590707,
+      "ppm": 823.7403439651412
+    }
+  },
+  {
+    "_id": "ed\\PND@BMCEmc`PLQkDrJJIJKSSJKIJIYQKHlRE]PPTSSAAQTuU@@@@",
+    "data": {
+      "naturalProduct": false,
+      "em": 598.02017843943,
+      "mf": "C25H28Br2O7",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 1
+    },
+    "mfInfo": {
+      "mass": 600.2936285631909,
+      "charge": 0,
+      "mf": "C25H28Br2O7",
+      "atoms": {
+        "C": 25,
+        "H": 28,
+        "Br": 2,
+        "O": 7
+      },
+      "em": 598.02017843943,
+      "unsaturation": 11
+    },
+    "ionization": {
+      "mf": "(H+)2",
+      "em": 2.01565006446,
+      "charge": 2,
+      "atoms": {
+        "H": 2
+      }
+    },
+    "ms": {
+      "ionization": "(H+)2",
+      "em": 300.0173656720359,
+      "charge": 2,
+      "delta": 0.10563432796408279,
+      "ppm": 352.0940453812163
+    }
+  },
+  {
+    "_id": "ebQR@DBDINc`LRCD@zCdIzg@MHdeMDddedbhdiddepiXxEdUUm\\}|ccUUUUUUUUUUUUU@@Zb`X`pacCAFJLLXxpIbSBfMLFXlpycs@VHlIXrpUbkCVNlCXfpmc[AvKlOX~pCbGBNL\\DxipscgGzPX`|pX~FOa`",
+    "data": {
+      "naturalProduct": false,
+      "em": 598.03677199124,
+      "mf": "Br2(-2).C30H24N4(+2)",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 2
+    },
+    "mfInfo": {
+      "parts": [
+        {
+          "mass": 159.80705556101998,
+          "charge": -2,
+          "mf": "Br2(-2)",
+          "atoms": {
+            "Br": 2
+          },
+          "em": 157.8366752,
+          "msem": 78.91888617990907,
+          "unsaturation": 1
+        },
+        {
+          "mass": 440.5394678451793,
+          "charge": 2,
+          "mf": "C30H24N4(+2)",
+          "atoms": {
+            "C": 30,
+            "H": 24,
+            "N": 4
+          },
+          "em": 440.20009679124,
+          "msem": 220.09949981571094,
+          "unsaturation": 20
+        }
+      ],
+      "em": 598.03677199124,
+      "mass": 600.3465234061993,
+      "charge": 0,
+      "unsaturation": 21,
+      "atoms": {
+        "Br": 2,
+        "C": 30,
+        "H": 24,
+        "N": 4
+      },
+      "mf": "Br2(-2).C30H24N4(+2)"
+    },
+    "ionization": {
+      "mf": "(H+)2",
+      "em": 2.01565006446,
+      "charge": 2,
+      "atoms": {
+        "H": 2
+      }
+    },
+    "ms": {
+      "ionization": "(H+)2",
+      "em": 300.02566244794093,
+      "charge": 2,
+      "delta": 0.09733755205905936,
+      "ppm": 324.4307545723657
+    }
+  },
+  {
+    "_id": "fhiaRBCDh{pPXai}rSLszwKAZmUUUUUT@FkhXQ`fJXY`VIXUcVCXmcv@xcc}HXyqdq|L_C@",
+    "data": {
+      "naturalProduct": false,
+      "em": 298.94293489566,
+      "mf": "C10H6BrNO5",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 1
+    },
+    "mfInfo": {
+      "mass": 300.06225910523426,
+      "charge": 0,
+      "mf": "C10H6BrNO5",
+      "atoms": {
+        "C": 10,
+        "H": 6,
+        "Br": 1,
+        "N": 1,
+        "O": 5
+      },
+      "em": 298.94293489566,
+      "unsaturation": 8
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 299.95021134798094,
+      "charge": 1,
+      "delta": 0.17278865201905091,
+      "ppm": 576.0577771975422
+    }
+  },
+  {
+    "_id": "fhiaRBKDh{pPXeiCrSLszjsAZMUUUUUT@FkhXQ`fJXY`VIXUcVCXmav@xcc}HYyqdq|L_C@",
+    "data": {
+      "naturalProduct": false,
+      "em": 298.94293489566,
+      "mf": "C10H6BrNO5",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 1
+    },
+    "mfInfo": {
+      "mass": 300.06225910523426,
+      "charge": 0,
+      "mf": "C10H6BrNO5",
+      "atoms": {
+        "C": 10,
+        "H": 6,
+        "Br": 1,
+        "N": 1,
+        "O": 5
+      },
+      "em": 298.94293489566,
+      "unsaturation": 8
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 299.95021134798094,
+      "charge": 1,
+      "delta": 0.17278865201905091,
+      "ppm": 576.0577771975422
+    }
+  },
+  {
+    "_id": "fhiqb@NR|YpPXbSLl~o[ARUUUUUUT@FmhXQcFJXYcfIXu`vKX]cv@xQFFhx~FOa`uL_CGpp",
+    "data": {
+      "naturalProduct": false,
+      "em": 298.9905537943,
+      "mf": "C10H10BrN3O3",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 1
+    },
+    "mfInfo": {
+      "mass": 300.10861869571244,
+      "charge": 0,
+      "mf": "C10H10BrN3O3",
+      "atoms": {
+        "C": 10,
+        "H": 10,
+        "Br": 1,
+        "N": 3,
+        "O": 3
+      },
+      "em": 298.9905537943,
+      "unsaturation": 7
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 299.99783024662094,
+      "charge": 1,
+      "delta": 0.12516975337905478,
+      "ppm": 417.2355289241784
+    }
+  },
+  {
+    "_id": "fhqqb@BJ]bpPXbRvrm}lmUUUUUT@FhXXQcFBXiafNXEbVEXu`vKX]cv@xRFV\\YL_CGpp",
+    "data": {
+      "naturalProduct": false,
+      "em": 298.9905537943,
+      "mf": "C10H10BrN3O3",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 1
+    },
+    "mfInfo": {
+      "mass": 300.10861869571244,
+      "charge": 0,
+      "mf": "C10H10BrN3O3",
+      "atoms": {
+        "C": 10,
+        "H": 10,
+        "Br": 1,
+        "N": 3,
+        "O": 3
+      },
+      "em": 298.9905537943,
+      "unsaturation": 7
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 299.99783024662094,
+      "charge": 1,
+      "delta": 0.12516975337905478,
+      "ppm": 417.2355289241784
+    }
+  },
+  {
+    "_id": "f`q`b@OBLCDRYVv~vcAR`@jjjH@M^BqKBlZp[ElNq~dLMRq|L_C@",
+    "data": {
+      "naturalProduct": false,
+      "em": 276.97384110141,
+      "mf": "C12H8BrNO2",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 1
+    },
+    "mfInfo": {
+      "mass": 278.10139763386155,
+      "charge": 0,
+      "mf": "C12H8BrNO2",
+      "atoms": {
+        "C": 12,
+        "H": 8,
+        "Br": 1,
+        "N": 1,
+        "O": 2
+      },
+      "em": 276.97384110141,
+      "unsaturation": 9
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9630618035009,
+      "charge": 1,
+      "delta": 0.15993819649906982,
+      "ppm": 533.1929722861735
+    }
+  },
+  {
+    "_id": "f`iqB@EZ]xFHdrmrs}NRUYuUUUUUP@ZqaaFLXIbfFXy`VIXUcVCXmavOXCbNOtaggFSGpq|L",
+    "data": {
+      "naturalProduct": false,
+      "em": 276.9850744907,
+      "mf": "C11H8BrN3O",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 7
+    },
+    "mfInfo": {
+      "mass": 278.10466323569966,
+      "charge": 0,
+      "mf": "C11H8BrN3O",
+      "atoms": {
+        "C": 11,
+        "H": 8,
+        "Br": 1,
+        "N": 3,
+        "O": 1
+      },
+      "em": 276.9850744907,
+      "unsaturation": 9
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9742951927909,
+      "charge": 1,
+      "delta": 0.14870480720907153,
+      "ppm": 495.72516576295385
+    }
+  },
+  {
+    "_id": "f`qqB@AJ}hFHdrnrnmFZMUUUUUP@ZnaaFLXIbfFXy`VIXu`vKX]cvOta`gFCGpq|L",
+    "data": {
+      "naturalProduct": false,
+      "em": 276.9850744907,
+      "mf": "C11H8BrN3O",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 2
+    },
+    "mfInfo": {
+      "mass": 278.10466323569966,
+      "charge": 0,
+      "mf": "C11H8BrN3O",
+      "atoms": {
+        "C": 11,
+        "H": 8,
+        "Br": 1,
+        "N": 3,
+        "O": 1
+      },
+      "em": 276.9850744907,
+      "unsaturation": 9
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9742951927909,
+      "charge": 1,
+      "delta": 0.14870480720907153,
+      "ppm": 495.72516576295385
+    }
+  },
+  {
+    "_id": "f`iaB@EBAbILk\\}kSbmN}UUUUUT@FmhXQcFBXiafNXEbVEXMcv@xRFB\\XL_CGpp",
+    "data": {
+      "naturalProduct": false,
+      "em": 277.01022661076,
+      "mf": "C13H12BrNO",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 1,
+      "nbMassSpectra": 0,
+      "nbActivities": 11
+    },
+    "mfInfo": {
+      "mass": 278.1444916225016,
+      "charge": 0,
+      "mf": "C13H12BrNO",
+      "atoms": {
+        "C": 13,
+        "H": 12,
+        "Br": 1,
+        "N": 1,
+        "O": 1
+      },
+      "em": 277.01022661076,
+      "unsaturation": 8
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9994473128509,
+      "charge": 1,
+      "delta": 0.12355268714907197,
+      "ppm": 411.84304923144236
+    }
+  },
+  {
+    "_id": "dmvHPBTLR\\QIf^]njjjh@ufLIcLEblMclSa\\_iFKQq|L_C@",
+    "data": {
+      "naturalProduct": true,
+      "em": 276.87378898515,
+      "mf": "C7H5Br2NO",
+      "bioactive": false,
+      "nbPatents": 199,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 0
+    },
+    "mfInfo": {
+      "mass": 278.92801874420974,
+      "charge": 0,
+      "mf": "C7H5Br2NO",
+      "atoms": {
+        "C": 7,
+        "H": 5,
+        "Br": 2,
+        "N": 1,
+        "O": 1
+      },
+      "em": 276.87378898515,
+      "unsaturation": 5
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.8630096872409,
+      "charge": 1,
+      "delta": 0.25999031275910056,
+      "ppm": 867.0302916997738
+    }
+  },
+  {
+    "_id": "doJ`bk^E[\\LPiGme~rJJIQHiQi``XjX@@",
+    "data": {
+      "naturalProduct": false,
+      "em": 276.93343284006,
+      "mf": "C6H4BrN3O5",
+      "bioactive": true,
+      "nbPatents": 8,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 2
+    },
+    "mfInfo": {
+      "mass": 278.01684043307336,
+      "charge": 0,
+      "mf": "C6H4BrN3O5",
+      "atoms": {
+        "C": 6,
+        "H": 4,
+        "Br": 1,
+        "N": 3,
+        "O": 5
+      },
+      "em": 276.93343284006,
+      "unsaturation": 6
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9226535421509,
+      "charge": 1,
+      "delta": 0.20034645784909344,
+      "ppm": 667.9937493315653
+    }
+  },
+  {
+    "_id": "dmv@PACDKDRYg^[hHBh@@",
+    "data": {
+      "naturalProduct": false,
+      "em": 276.9101744945,
+      "mf": "C8H9Br2N",
+      "bioactive": true,
+      "nbPatents": 5,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 1
+    },
+    "mfInfo": {
+      "mass": 278.9711127328498,
+      "charge": 0,
+      "mf": "C8H9Br2N",
+      "atoms": {
+        "C": 8,
+        "H": 9,
+        "Br": 2,
+        "N": 1
+      },
+      "em": 276.9101744945,
+      "unsaturation": 4
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.8993951965909,
+      "charge": 1,
+      "delta": 0.22360480340910271,
+      "ppm": 745.5993809608208
+    }
+  },
+  {
+    "_id": "figI@`EZmGHLPfHsDEbYEEEMMedhheBerVcIst]UUUUUUUUT@FohXQ`fFXEbVEXu`vKX]cvHxGb^OtabjNOacxX",
+    "data": {
+      "naturalProduct": false,
+      "em": 597.8214116174299,
+      "mf": "C16H18Br4N4O",
+      "bioactive": true,
+      "nbPatents": 3,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 1
+    },
+    "mfInfo": {
+      "mass": 601.9550368129094,
+      "charge": 0,
+      "mf": "C16H18Br4N4O",
+      "atoms": {
+        "C": 16,
+        "H": 18,
+        "Br": 4,
+        "N": 4,
+        "O": 1
+      },
+      "em": 597.8214116174299,
+      "unsaturation": 8
+    },
+    "ionization": {
+      "mf": "(H+)2",
+      "em": 2.01565006446,
+      "charge": 2,
+      "atoms": {
+        "H": 2
+      }
+    },
+    "ms": {
+      "ionization": "(H+)2",
+      "em": 299.9179822610359,
+      "charge": 2,
+      "delta": 0.20501773896410214,
+      "ppm": 683.5793486556047
+    }
+  },
+  {
+    "_id": "fhqqb@BVC`w`XbRvrnvteUUUUUT@FhXXQcFBXiafNXEbVEXu`vKX]cv@xRF^\\YL_CGpp",
+    "data": {
+      "naturalProduct": false,
+      "em": 298.9905537943,
+      "mf": "C10H10BrN3O3",
+      "bioactive": true,
+      "nbPatents": 3,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 6
+    },
+    "mfInfo": {
+      "mass": 300.10861869571244,
+      "charge": 0,
+      "mf": "C10H10BrN3O3",
+      "atoms": {
+        "C": 10,
+        "H": 10,
+        "Br": 1,
+        "N": 3,
+        "O": 3
+      },
+      "em": 298.9905537943,
+      "unsaturation": 7
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 299.99783024662094,
+      "charge": 1,
+      "delta": 0.12516975337905478,
+      "ppm": 417.2355289241784
+    }
+  },
+  {
+    "_id": "f`iaB@BVAbYEEDeDdXfRxIwjjjjjj`@ucCBLXpSELLqs@lRpkFlFq[Cl^pGD\\_iCKNLFOacxX",
+    "data": {
+      "naturalProduct": false,
+      "em": 277.01022661076,
+      "mf": "C13H12BrNO",
+      "bioactive": true,
+      "nbPatents": 3,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 2
+    },
+    "mfInfo": {
+      "mass": 278.1444916225016,
+      "charge": 0,
+      "mf": "C13H12BrNO",
+      "atoms": {
+        "C": 13,
+        "H": 12,
+        "Br": 1,
+        "N": 1,
+        "O": 1
+      },
+      "em": 277.01022661076,
+      "unsaturation": 8
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9994473128509,
+      "charge": 1,
+      "delta": 0.12355268714907197,
+      "ppm": 411.84304923144236
+    }
+  },
+  {
+    "_id": "el^RLD@EDegcI`PLSkDrJIJYKJZJIIIHsJKJZabQPIHijyz@BjfdHHjjjYJH@CWCk@vIl_iAduSGpq|L",
+    "data": {
+      "naturalProduct": false,
+      "em": 598.02151584995,
+      "mf": "C26H24Br2N4O3",
+      "bioactive": true,
+      "nbPatents": 2,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 2
+    },
+    "mfInfo": {
+      "mass": 600.3017945922131,
+      "charge": 0,
+      "mf": "C26H24Br2N4O3",
+      "atoms": {
+        "C": 26,
+        "H": 24,
+        "Br": 2,
+        "N": 4,
+        "O": 3
+      },
+      "em": 598.02151584995,
+      "unsaturation": 16
+    },
+    "ionization": {
+      "mf": "(H+)2",
+      "em": 2.01565006446,
+      "charge": 2,
+      "atoms": {
+        "H": 2
+      }
+    },
+    "ms": {
+      "ionization": "(H+)2",
+      "em": 300.0180343772959,
+      "charge": 2,
+      "delta": 0.10496562270407139,
+      "ppm": 349.8643770596437
+    }
+  },
+  {
+    "_id": "doBaD[et{CDZ]{HhhhdhXRzjjijh@uYLMclC`|Oc}DsjVOacxZzfOacxX",
+    "data": {
+      "naturalProduct": false,
+      "em": 276.96981834941,
+      "mf": "C7H8BrN3O4",
+      "bioactive": true,
+      "nbPatents": 1,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 3
+    },
+    "mfInfo": {
+      "mass": 278.0599344217135,
+      "charge": 0,
+      "mf": "C7H8BrN3O4",
+      "atoms": {
+        "C": 7,
+        "H": 8,
+        "Br": 1,
+        "N": 3,
+        "O": 4
+      },
+      "em": 276.96981834941,
+      "unsaturation": 5
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9590390515009,
+      "charge": 1,
+      "delta": 0.1639609484990956,
+      "ppm": 546.611127364442
+    }
+  },
+  {
+    "_id": "f`i`bBNZLCDyInRYefyUdeV]zjjjjjh@MWPpcFLDqSCL\\pKDlJp[ElNq{GzPsScIcxX~F@",
+    "data": {
+      "naturalProduct": false,
+      "em": 276.97384110141,
+      "mf": "C12H8BrNO2",
+      "bioactive": true,
+      "nbPatents": 1,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 1
+    },
+    "mfInfo": {
+      "mass": 278.10139763386155,
+      "charge": 0,
+      "mf": "C12H8BrNO2",
+      "atoms": {
+        "C": 12,
+        "H": 8,
+        "Br": 1,
+        "N": 1,
+        "O": 2
+      },
+      "em": 276.97384110141,
+      "unsaturation": 9
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9630618035009,
+      "charge": 1,
+      "delta": 0.15993819649906982,
+      "ppm": 533.1929722861735
+    }
+  },
+  {
+    "_id": "ebQT@DDJF@LSGDhgGdeVYeUY[][mUsbSqIjX[YzDEFjZjH`@@@@@@@@@@@",
+    "data": {
+      "naturalProduct": false,
+      "em": 598.0619241113,
+      "mf": "Br(-1).C32H28BrN2(+1)",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 54
+    },
+    "mfInfo": {
+      "parts": [
+        {
+          "mass": 79.90352778050999,
+          "charge": -1,
+          "mf": "Br(-1)",
+          "atoms": {
+            "Br": 1
+          },
+          "em": 78.9183376,
+          "msem": 78.91888617990907,
+          "unsaturation": 1
+        },
+        {
+          "mass": 520.4828240124913,
+          "charge": 1,
+          "mf": "C32H28BrN2(+1)",
+          "atoms": {
+            "C": 32,
+            "H": 28,
+            "Br": 1,
+            "N": 2
+          },
+          "em": 519.1435865113,
+          "msem": 519.143037931391,
+          "unsaturation": 19
+        }
+      ],
+      "em": 598.0619241113,
+      "mass": 600.3863517930013,
+      "charge": 0,
+      "unsaturation": 20,
+      "atoms": {
+        "Br": 2,
+        "C": 32,
+        "H": 28,
+        "N": 2
+      },
+      "mf": "Br(-1).C32H28BrN2(+1)"
+    },
+    "ionization": {
+      "mf": "(H+)2",
+      "em": 2.01565006446,
+      "charge": 2,
+      "atoms": {
+        "H": 2
+      }
+    },
+    "ms": {
+      "ionization": "(H+)2",
+      "em": 300.0382385079709,
+      "charge": 2,
+      "delta": 0.084761492029088,
+      "ppm": 282.50229854231134
+    }
+  },
+  {
+    "_id": "ea[TFH@IbSHfakg`LSHhdlhhdldheeieEDXhdmPphXyxdTbRss@ARDAUUUUUUUTQT@AjMEaKAVJlMXzpMb[BvMlGXnp}c{@NH\\HxqpSbgCNE\\ZxMq~dFMNLvOacxX",
+    "data": {
+      "naturalProduct": true,
+      "em": 598.0739490675701,
+      "mf": "C31H23BrN2O6",
+      "bioactive": false,
+      "nbPatents": 0,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 0
+    },
+    "mfInfo": {
+      "mass": 599.4288138913868,
+      "charge": 0,
+      "mf": "C31H23BrN2O6",
+      "atoms": {
+        "C": 31,
+        "H": 23,
+        "Br": 1,
+        "N": 2,
+        "O": 6
+      },
+      "em": 598.0739490675701,
+      "unsaturation": 21
+    },
+    "ionization": {
+      "mf": "(H+)2",
+      "em": 2.01565006446,
+      "charge": 2,
+      "atoms": {
+        "H": 2
+      }
+    },
+    "ms": {
+      "ionization": "(H+)2",
+      "em": 300.04425098610596,
+      "charge": 2,
+      "delta": 0.07874901389402567,
+      "ppm": 262.4579995624454
+    }
+  },
+  {
+    "_id": "fhiib@NBMxJENAbILkjwKDh{uMUUMUP@ZbiafNXEbVGX}`NOtQbjvOacx[uSGpq|L",
+    "data": {
+      "naturalProduct": false,
+      "em": 298.96540167424,
+      "mf": "C8H6BrN5O3",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 4
+    },
+    "mfInfo": {
+      "mass": 300.0687903089105,
+      "charge": 0,
+      "mf": "C8H6BrN5O3",
+      "atoms": {
+        "C": 8,
+        "H": 6,
+        "Br": 1,
+        "N": 5,
+        "O": 3
+      },
+      "em": 298.96540167424,
+      "unsaturation": 8
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 299.97267812656094,
+      "charge": 1,
+      "delta": 0.15032187343905434,
+      "ppm": 501.1185497888321
+    }
+  },
+  {
+    "_id": "fhi`R@IHxZpLQIe^Vy|eIZijfijf@CUElQq~dLeTq|L_C@",
+    "data": {
+      "naturalProduct": false,
+      "em": 298.97932040501,
+      "mf": "C11H10BrNO4",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 1
+    },
+    "mfInfo": {
+      "mass": 300.10535309387444,
+      "charge": 0,
+      "mf": "C11H10BrNO4",
+      "atoms": {
+        "C": 11,
+        "H": 10,
+        "Br": 1,
+        "N": 1,
+        "O": 4
+      },
+      "em": 298.97932040501,
+      "unsaturation": 7
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 299.98659685733094,
+      "charge": 1,
+      "delta": 0.13640314266905307,
+      "ppm": 454.6974568131267
+    }
+  },
+  {
+    "_id": "fhy`R@GLM[pLSHhhhhdeD~RT{Qjjjjjjh@MUPpcFLDpsGLBp[ClAq~dLmQq|L_C@",
+    "data": {
+      "naturalProduct": true,
+      "em": 298.97932040501,
+      "mf": "C11H10BrNO4",
+      "bioactive": false,
+      "nbPatents": 0,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 0
+    },
+    "mfInfo": {
+      "mass": 300.10535309387444,
+      "charge": 0,
+      "mf": "C11H10BrNO4",
+      "atoms": {
+        "C": 11,
+        "H": 10,
+        "Br": 1,
+        "N": 1,
+        "O": 4
+      },
+      "em": 298.97932040501,
+      "unsaturation": 7
+    },
+    "ionization": {
+      "mf": "H+",
+      "em": 1.00782503223,
+      "charge": 1,
+      "atoms": {
+        "H": 1
+      }
+    },
+    "ms": {
+      "ionization": "H+",
+      "em": 299.98659685733094,
+      "charge": 1,
+      "delta": 0.13640314266905307,
+      "ppm": 454.6974568131267
+    }
+  },
+  {
+    "_id": "f`q`b@KLdCDRYV~yVgG^`BI`@@@@",
+    "data": {
+      "naturalProduct": false,
+      "em": 276.97384110141,
+      "mf": "C12H8BrNO2",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 2
+    },
+    "mfInfo": {
+      "mass": 278.10139763386155,
+      "charge": 0,
+      "mf": "C12H8BrNO2",
+      "atoms": {
+        "C": 12,
+        "H": 8,
+        "Br": 1,
+        "N": 1,
+        "O": 2
+      },
+      "em": 276.97384110141,
+      "unsaturation": 9
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9630618035009,
+      "charge": 1,
+      "delta": 0.15993819649906982,
+      "ppm": 533.1929722861735
+    }
+  },
+  {
+    "_id": "f`q`b@K\\dCDRYWVyVcG^`@i`@@@@",
+    "data": {
+      "naturalProduct": false,
+      "em": 276.97384110141,
+      "mf": "C12H8BrNO2",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 3
+    },
+    "mfInfo": {
+      "mass": 278.10139763386155,
+      "charge": 0,
+      "mf": "C12H8BrNO2",
+      "atoms": {
+        "C": 12,
+        "H": 8,
+        "Br": 1,
+        "N": 1,
+        "O": 2
+      },
+      "em": 276.97384110141,
+      "unsaturation": 9
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9630618035009,
+      "charge": 1,
+      "delta": 0.15993819649906982,
+      "ppm": 533.1929722861735
+    }
+  },
+  {
+    "_id": "f`qqB@NZ]HFHdrnmrmFN}UUU@A@@ZraaFLXIbfFXy`VOXRFRhx~FOa`",
+    "data": {
+      "naturalProduct": false,
+      "em": 276.9850744907,
+      "mf": "C11H8BrN3O",
+      "bioactive": true,
+      "nbPatents": 0,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 4
+    },
+    "mfInfo": {
+      "mass": 278.10466323569966,
+      "charge": 0,
+      "mf": "C11H8BrN3O",
+      "atoms": {
+        "C": 11,
+        "H": 8,
+        "Br": 1,
+        "N": 3,
+        "O": 1
+      },
+      "em": 276.9850744907,
+      "unsaturation": 9
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9742951927909,
+      "charge": 1,
+      "delta": 0.14870480720907153,
+      "ppm": 495.72516576295385
+    }
+  },
+  {
+    "_id": "f`iQBDINHCDeNQQQSIPiY`iJlzjjVejh@MRPpcFLLq~dLIRq|L_C@",
+    "data": {
+      "naturalProduct": true,
+      "em": 276.99765055073,
+      "mf": "C12H10BrN2O(+1)",
+      "bioactive": false,
+      "nbPatents": 0,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 0
+    },
+    "mfInfo": {
+      "mass": 278.12457742910067,
+      "charge": 1,
+      "mf": "C12H10BrN2O(+1)",
+      "atoms": {
+        "C": 12,
+        "H": 10,
+        "Br": 1,
+        "N": 2,
+        "O": 1
+      },
+      "em": 276.99765055073,
+      "msem": 276.9971019708209,
+      "unsaturation": 8
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 149.99316133645593,
+      "charge": 2,
+      "delta": 150.12983866354406,
+      "ppm": 1000911.2237242708
+    }
+  },
+  {
+    "_id": "f`qaB@FRAbYEDeBihdj\\]zjjj@B@@uyCBLXpSELLq{GzPqe[Gpq|L",
+    "data": {
+      "naturalProduct": true,
+      "em": 277.01022661076,
+      "mf": "C13H12BrNO",
+      "bioactive": false,
+      "nbPatents": 0,
+      "nbPubmeds": 0,
+      "nbMassSpectra": 0,
+      "nbActivities": 0
+    },
+    "mfInfo": {
+      "mass": 278.1444916225016,
+      "charge": 0,
+      "mf": "C13H12BrNO",
+      "atoms": {
+        "C": 13,
+        "H": 12,
+        "Br": 1,
+        "N": 1,
+        "O": 1
+      },
+      "em": 277.01022661076,
+      "unsaturation": 8
+    },
+    "ionization": {
+      "mf": "Na+",
+      "em": 22.989769282,
+      "charge": 1,
+      "atoms": {
+        "Na": 1
+      }
+    },
+    "ms": {
+      "ionization": "Na+",
+      "em": 299.9994473128509,
+      "charge": 1,
+      "delta": 0.12355268714907197,
+      "ppm": 411.84304923144236
+    }
+  }
+]

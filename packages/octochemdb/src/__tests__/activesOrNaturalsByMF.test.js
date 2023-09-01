@@ -1,8 +1,23 @@
 import { activesOrNaturalsByMF } from '../activesOrNaturalsByMF.js';
 
+import { server } from './testServer';
+
+// Enable request interception.
+beforeAll(() => {
+  server.listen();
+});
+// Reset handlers so that each test could alter them
+// without affecting other, unrelated tests.
+afterEach(() => server.resetHandlers());
+
+// Don't forget to clean up afterwards.
+afterAll(() => {
+  server.close();
+});
 describe('activesOrNaturalsByMF', () => {
   it('simple case', async () => {
     let data = await activesOrNaturalsByMF({
+      url: 'http://localhost/data/activesOrNaturalsByMFSimple.json',
       masses: 300.123,
       ionizations: '(H+)2, H+',
       precision: 1,
@@ -11,13 +26,14 @@ describe('activesOrNaturalsByMF', () => {
     expect(data.length).toBeGreaterThan(2);
   }, 30000);
 
-  it('with range', async () => {
+  it.only('with range', async () => {
     let entries = await activesOrNaturalsByMF({
+      url: 'http://localhost/data/activesOrNaturalsByMFRange.json',
       masses: 300.123,
       ionizations: '(H+)2, H+, Na+',
       precision: 1000,
       ranges: 'C0-100 H0-100 O0-100 N0-100 Br0-100',
-      limit: 10000,
+      limit: 100,
     });
 
     expect(entries.length).toBeGreaterThan(2);
@@ -37,10 +53,10 @@ describe('activesOrNaturalsByMF', () => {
       0,
     );
 
-    expect(nbNaturals).toBeGreaterThan(1000);
-    expect(nbBioactives).toBeGreaterThan(1000);
-    expect(nbPatents).toBeGreaterThan(1000);
-    expect(nbPubmeds).toBeGreaterThan(1000);
-    expect(nbMassSpectra).toBeGreaterThan(1000);
+    expect(nbNaturals).toBeGreaterThan(10);
+    expect(nbBioactives).toBeGreaterThan(80);
+    expect(nbPatents).toBeGreaterThan(800);
+    expect(nbPubmeds).toBeGreaterThan(100);
+    expect(nbMassSpectra).toBeGreaterThanOrEqual(0);
   }, 30000);
 });

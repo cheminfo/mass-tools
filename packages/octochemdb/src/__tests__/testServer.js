@@ -11,7 +11,16 @@ export const server = setupServer(
     if (pathnameStat.isFile()) {
       const data = await readFile(pathname);
       const jsonContent = JSON.parse(data.toString());
-      if (req.url.pathname.includes('massBank')) {
+      if (
+        req.url.pathname.includes('activesOrNaturalsSimple') ||
+        req.url.pathname.includes('activesOrNaturalsWithRange') ||
+        req.url.pathname.includes('activesOrNaturalsRangeAndIonization') ||
+        req.url.pathname.includes('activesOrNaturalsKeywords') ||
+        req.url.pathname.includes('activesOrNaturalsByMFSimple') ||
+        req.url.pathname.includes('activesOrNaturalsByMFRange')
+      ) {
+        return res(ctx.json({ data: jsonContent }));
+      } else if (req.url.pathname.includes('massBank')) {
         // @ts-ignore
         const searchMasses = req.url.searchParams
           .get('masses')
