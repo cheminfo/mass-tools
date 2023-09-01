@@ -5,6 +5,7 @@ describe('mfsFromEMs', () => {
     let data = await mfsFromEMs(60, {
       ionizations: '(H+)2,H+',
       precision: 10,
+      limit: 10,
     });
     expect(data).toHaveLength(2);
     expect(data[0]).toMatchObject({
@@ -44,6 +45,7 @@ describe('mfsFromEMs', () => {
       ionizations: '',
       precision: 10,
       minCount: 0,
+      limit: 10,
     });
     expect(data).toHaveLength(3);
     expect(data).toMatchSnapshot();
@@ -53,6 +55,7 @@ describe('mfsFromEMs', () => {
     let data = await mfsFromEMs(60, {
       ionizations: '(H+)-2, (H+)-1',
       precision: 10,
+      limit: 10,
     });
     expect(data).toHaveLength(3);
     expect(data).toMatchSnapshot();
@@ -62,6 +65,7 @@ describe('mfsFromEMs', () => {
     let data = await mfsFromEMs(81.06987671016094, {
       ionizations: 'H+',
       precision: 1,
+      limit: 10,
     });
     expect(data).toHaveLength(1);
   }, 30000);
@@ -71,6 +75,7 @@ describe('mfsFromEMs', () => {
       ionizations: '(H+)2, H+',
       precision: 100,
       ranges: 'C0-10H0-10N0-10O0-10',
+      limit: 50,
     });
     expect(data).toHaveLength(1);
     expect(data[0]).toMatchObject({
