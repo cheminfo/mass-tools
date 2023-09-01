@@ -1,8 +1,29 @@
 import { activeOrNaturalDetails } from '../activeOrNaturalDetails.js';
 
+import { server } from './testServer';
+
+// Enable request interception.
+beforeAll(() => {
+  server.listen();
+});
+// Reset handlers so that each test could alter them
+// without affecting other, unrelated tests.
+afterEach(() => server.resetHandlers());
+
+// Don't forget to clean up afterwards.
+afterAll(() => {
+  server.close();
+});
+
 test('activeOrNaturalDetails', async () => {
   const id = 'dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgEx\x7FRLjmcxX~F@';
-  const entry = await activeOrNaturalDetails(id, {});
+  const url = 'http://localhost/data/activeOrNaturalDetails.json';
+  //const response = await fetch(url);
+  //  console.log(await response.json());
+  const entry = await activeOrNaturalDetails(id, {
+    url,
+    fields: '_id,data',
+  });
   const fields = Object.keys(entry.data).sort();
   expect(fields).toStrictEqual([
     'activities',

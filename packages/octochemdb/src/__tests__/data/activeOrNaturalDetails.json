@@ -1,0 +1,1183 @@
+[
+  {
+    "data": {
+      "_id": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
+      "data": {
+        "naturalProduct": true,
+        "em": 193.11027872702,
+        "charge": 0,
+        "unsaturation": 5,
+        "mf": "C11H15NO2",
+        "bioactive": true,
+        "noStereoOCL": {
+          "idCode": "dg~D@MBdin]V^G[hHBjb@@",
+          "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\Bm?vw__x@m?p"
+        },
+        "nbPatents": 81,
+        "patents": [
+          {
+            "$ref": "patents",
+            "$id": "US-10161929-B2"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-10656126-B2"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-2009143279-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-2009269772-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-2014050694-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-2018042899-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-2018209945-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-5001115-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-5272270-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "EP-0046270-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "EP-2001877-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "WO-2007110637-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "WO-2013089689-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "WO-2013123403-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "WO-2015198346-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-11164733-B2"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-2008039458-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-2011212956-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-2015018240-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-2015050368-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-2018254177-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-3480634-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-5668131-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-5925642-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "US-7985753-B2"
+          },
+          {
+            "$ref": "patents",
+            "$id": "AU-2007280428-B2"
+          },
+          {
+            "$ref": "patents",
+            "$id": "AU-640259-B2"
+          },
+          {
+            "$ref": "patents",
+            "$id": "BE-1020835-A5"
+          },
+          {
+            "$ref": "patents",
+            "$id": "BR-PI0714622-A2"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CA-2868128-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-101404980-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-101601642-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-101977612-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-102813929-B"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-102846474-B"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-103156871-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-103169981-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-104758253-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-105078992-B"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-107043371-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-107043371-B"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-107427508-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-107850581-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-107955295-B"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-108391756-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-108872443-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-109769540-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-112142784-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-112142784-B"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-112159699-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-113226378-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-113331233-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-113441185-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-113441185-B"
+          },
+          {
+            "$ref": "patents",
+            "$id": "CN-114430738-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "EP-0863899-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "EP-2054416-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "EP-2054416-B1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "EP-2090576-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "EP-2295439-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "EP-2849769-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "EP-2849769-B1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "JP-2010500288-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "KR-20090047450-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "PT-2054416-E"
+          },
+          {
+            "$ref": "patents",
+            "$id": "RU-2011127776-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "RU-2450004-C2"
+          },
+          {
+            "$ref": "patents",
+            "$id": "RU-2656225-C1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "SU-412192-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "SU-514854-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "SU-691740-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "SU-957075-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "TW-200817394-A"
+          },
+          {
+            "$ref": "patents",
+            "$id": "TW-I399376-B"
+          },
+          {
+            "$ref": "patents",
+            "$id": "WO-2008015269-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "WO-2009095253-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "WO-2013006098-A2"
+          },
+          {
+            "$ref": "patents",
+            "$id": "WO-2013166563-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "WO-2013166563-A9"
+          },
+          {
+            "$ref": "patents",
+            "$id": "WO-2017062481-A1"
+          },
+          {
+            "$ref": "patents",
+            "$id": "WO-9719946-A1"
+          }
+        ],
+        "titles": ["Salsoline", "(R)-salsoline", "(-)-Salsoline"],
+        "nbMolecules": 3,
+        "molecules": [
+          {
+            "ocl": {
+              "idCode": "dg~D@MBdin]V^G[hHBjbbT@",
+              "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL"
+            },
+            "sources": [
+              {
+                "$ref": "compounds",
+                "$id": 40010
+              }
+            ],
+            "titles": ["(R)-salsoline"]
+          },
+          {
+            "ocl": {
+              "idCode": "dg~D@MBdin]V^G[hHBjb@@",
+              "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL"
+            },
+            "sources": [
+              {
+                "$ref": "compounds",
+                "$id": 46695
+              },
+              {
+                "$ref": "lotuses",
+                "$id": "LTS0064081"
+              },
+              {
+                "$ref": "coconuts",
+                "$id": "CNP0237841"
+              }
+            ],
+            "titles": ["Salsoline"]
+          },
+          {
+            "ocl": {
+              "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
+              "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL"
+            },
+            "sources": [
+              {
+                "$ref": "compounds",
+                "$id": 442356
+              },
+              {
+                "$ref": "lotuses",
+                "$id": "LTS0005803"
+              },
+              {
+                "$ref": "npasses",
+                "$id": "NPC294249"
+              }
+            ],
+            "titles": ["(-)-Salsoline"]
+          }
+        ],
+        "cas": ["89-31-6"],
+        "nbPubmeds": 73,
+        "nbMassSpectra": 2,
+        "nbTaxonomies": 5,
+        "nbActivities": 7,
+        "kwMeshTerms": [
+          "1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine",
+          "1-methyl-4-phenylpyridinium",
+          "3,4-dihydroxyphenylacetic acid",
+          "8-hydroxy-2'-deoxyguanosine",
+          "acetaldehyde",
+          "acetylcholine",
+          "acetylcholinesterase",
+          "active transport, cell nucleus",
+          "adenosine triphosphate",
+          "adrenergic uptake inhibitors",
+          "adult",
+          "age factors",
+          "aged",
+          "aging",
+          "alcohol drinking",
+          "alcoholic intoxication",
+          "alcoholism",
+          "alkaloids",
+          "alkynes",
+          "amyloid beta-peptides",
+          "analysis of variance",
+          "animals",
+          "annexin a5",
+          "antihypertensive agents",
+          "antioxidants",
+          "antiparkinson agents",
+          "apoptosis",
+          "apoptosis regulatory proteins",
+          "ascorbic acid",
+          "atropine",
+          "autoradiography",
+          "behavior, animal",
+          "benzofurans",
+          "benzophenanthridines",
+          "benzoquinones",
+          "beta-cyclodextrins",
+          "beverages",
+          "binding sites",
+          "biogenic amines",
+          "biomarkers",
+          "biosensing techniques",
+          "blood coagulation",
+          "blood coagulation tests",
+          "blood pressure",
+          "blood pressure determination",
+          "borates",
+          "brain",
+          "brain chemistry",
+          "breeding",
+          "butyrylcholinesterase",
+          "calcium",
+          "carbolines",
+          "carcinogens",
+          "cardiovascular agents",
+          "carrier proteins",
+          "caspase 3",
+          "caspase inhibitors",
+          "caspases",
+          "catalase",
+          "catalytic domain",
+          "catecholamine plasma membrane transport proteins",
+          "catecholamines",
+          "catechols",
+          "caudate nucleus",
+          "cell count",
+          "cell cycle",
+          "cell death",
+          "cell differentiation",
+          "cell line",
+          "cell line, tumor",
+          "cell nucleus",
+          "cell survival",
+          "cells, cultured",
+          "central nervous system depressants",
+          "centrifugation, density gradient",
+          "cerebrospinal fluid",
+          "chemistry, organic",
+          "chemistry, pharmaceutical",
+          "chenopodiaceae",
+          "choline",
+          "cholinesterase inhibitors",
+          "chromatography, high pressure liquid",
+          "chromatography, liquid",
+          "chromatography, micellar electrokinetic capillary",
+          "circular dichroism",
+          "conditioning, classical",
+          "copper",
+          "corpus striatum",
+          "cyclodextrins",
+          "cycloheximide",
+          "cyclosporine",
+          "cysteine proteinase inhibitors",
+          "cytochromes c",
+          "data interpretation, statistical",
+          "deoxyepinephrine",
+          "deoxyguanosine",
+          "desipramine",
+          "deuterium",
+          "diabetes mellitus, type 2",
+          "diet, high-fat",
+          "disease models, animal",
+          "disease progression",
+          "dna",
+          "dna damage",
+          "dna fragmentation",
+          "dna, neoplasm",
+          "dogs",
+          "donepezil",
+          "dopamine",
+          "dopamine agents",
+          "dopamine antagonists",
+          "dopamine plasma membrane transport proteins",
+          "dopamine uptake inhibitors",
+          "dopaminergic neurons",
+          "dose-response relationship, drug",
+          "drosophila melanogaster",
+          "drosophila proteins",
+          "drug combinations",
+          "drug interactions",
+          "egypt",
+          "electrochemistry",
+          "electrodes",
+          "electrophoresis, capillary",
+          "electrophoresis, polyacrylamide gel",
+          "enkephalin, methionine",
+          "enkephalins",
+          "enzyme activation",
+          "enzyme inhibitors",
+          "enzyme precursors",
+          "equipment design",
+          "equipment failure analysis",
+          "ethanol",
+          "ethylmorphine",
+          "female",
+          "ferric compounds",
+          "ferrous compounds",
+          "flow cytometry",
+          "fluorescent dyes",
+          "food analysis",
+          "food contamination",
+          "free radical scavengers",
+          "free radicals",
+          "fruit",
+          "gas chromatography-mass spectrometry",
+          "gene expression regulation",
+          "gene expression regulation, neoplastic",
+          "gene silencing",
+          "glucose intolerance",
+          "glutathione",
+          "glyceraldehyde-3-phosphate dehydrogenases",
+          "harmine",
+          "homovanillic acid",
+          "humans",
+          "hydrogen-ion concentration",
+          "hydrolysis",
+          "hydroxyindoleacetic acid",
+          "hydroxyl radical",
+          "hypertension",
+          "hypothalamus",
+          "immunoblotting",
+          "immunohistochemistry",
+          "inactivation, metabolic",
+          "indans",
+          "indicators and reagents",
+          "indoles",
+          "ion channels",
+          "ion transport",
+          "iron",
+          "iron metabolism disorders",
+          "isoquinolines",
+          "kinetics",
+          "levodopa",
+          "ligands",
+          "lithium",
+          "lithium compounds",
+          "lymphocytes",
+          "magnetic resonance spectroscopy",
+          "male",
+          "malondialdehyde",
+          "mass spectrometry",
+          "mecamylamine",
+          "membrane glycoproteins",
+          "membrane potential, mitochondrial",
+          "membrane potentials",
+          "membrane transport proteins",
+          "methoxyhydroxyphenylglycol",
+          "methylation",
+          "methyltransferases",
+          "mice",
+          "mice, inbred balb c",
+          "mice, transgenic",
+          "microdialysis",
+          "microscopy, fluorescence",
+          "middle aged",
+          "mitochondria",
+          "mitochondria, liver",
+          "mitochondrial membrane transport proteins",
+          "mitochondrial membranes",
+          "mitochondrial permeability transition pore",
+          "models, biological",
+          "models, molecular",
+          "molecular conformation",
+          "molecular docking simulation",
+          "molecular structure",
+          "molsidomine",
+          "monoamine oxidase",
+          "monoamine oxidase inhibitors",
+          "morphine",
+          "mptp poisoning",
+          "musa",
+          "muscle relaxants, central",
+          "nad",
+          "nanotechnology",
+          "necrosis",
+          "nerve degeneration",
+          "nerve tissue proteins",
+          "nervous system",
+          "nervous system physiological phenomena",
+          "neuroblastoma",
+          "neurologic examination",
+          "neurons",
+          "neuroprotective agents",
+          "neuropsychological tests",
+          "neurotoxins",
+          "neurotransmitter agents",
+          "nicotine",
+          "nicotinic agonists",
+          "nicotinic antagonists",
+          "nitric oxide donors",
+          "norepinephrine",
+          "nucleus accumbens",
+          "oligopeptides",
+          "osmolar concentration",
+          "oxidation-reduction",
+          "oxidative stress",
+          "oxidopamine",
+          "papaverine",
+          "parasympatholytics",
+          "pargyline",
+          "parkinson disease",
+          "parkinson disease, secondary",
+          "parkinsonian disorders",
+          "pc12 cells",
+          "perfusion",
+          "permeability",
+          "pharmacy",
+          "phenanthridines",
+          "phenanthrolines",
+          "phenobarbital",
+          "pheochromocytoma",
+          "phosphorus isotopes",
+          "piperazines",
+          "piperidines",
+          "plant components, aerial",
+          "plant extracts",
+          "plants, medicinal",
+          "postmortem changes",
+          "posture",
+          "potassium",
+          "propidium",
+          "propylamines",
+          "prospective studies",
+          "protein synthesis inhibitors",
+          "proto-oncogene proteins c-bcl-2",
+          "putamen",
+          "quinolines",
+          "rats",
+          "rats, inbred strains",
+          "rats, sprague-dawley",
+          "rats, wistar",
+          "reactive oxygen species",
+          "receptors, dopamine",
+          "receptors, dopamine d2",
+          "receptors, dopamine d3",
+          "receptors, opioid",
+          "receptors, purinergic",
+          "reference values",
+          "reflex",
+          "regression analysis",
+          "reproducibility of results",
+          "research",
+          "reserpine",
+          "reverse transcriptase polymerase chain reaction",
+          "rna, small interfering",
+          "salsola",
+          "salsoline alkaloids",
+          "secretory vesicles",
+          "seeds",
+          "selegiline",
+          "semicarbazides",
+          "serotonin",
+          "sex factors",
+          "signal transduction",
+          "sodium dodecyl sulfate",
+          "spectrometry, mass, electrospray ionization",
+          "spectrophotometry, ultraviolet",
+          "statistics, nonparametric",
+          "stereoisomerism",
+          "structure-activity relationship",
+          "subcellular fractions",
+          "substantia nigra",
+          "superoxide dismutase",
+          "tandem mass spectrometry",
+          "tetrahydroisoquinolines",
+          "tetrahydropapaveroline",
+          "tetrazolium salts",
+          "thiazoles",
+          "time factors",
+          "tissue distribution",
+          "tobacco use disorder",
+          "transfection",
+          "triterpenes",
+          "trpc cation channels",
+          "tumor cells, cultured",
+          "tyrosine 3-monooxygenase",
+          "up-regulation",
+          "uricosuric agents",
+          "urination",
+          "vasodilator agents",
+          "ventral tegmental area",
+          "vitis",
+          "wine"
+        ],
+        "pubmeds": [
+          {
+            "$ref": "pubmeds",
+            "$id": "1400775"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "2822473"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "6479017"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "7302805"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "7493084"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "7635360"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "7710080"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "8458887"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "8687181"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "9058423"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "9080316"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "9120428"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "9202326"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "9449579"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "9564615"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "9720969"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "9922818"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "10076861"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "10380999"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "10410730"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "10456568"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "10656535"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "11008878"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "11008879"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "11090952"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "11128601"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "11188501"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "11261742"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "11290381"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "11411492"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "11482518"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "11489679"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "11520893"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "11523160"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "12034373"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "12111453"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "12200189"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "12358797"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "12375057"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "12899734"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "12939030"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "13208191"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "13448005"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "13672243"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "13732142"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "14082756"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "14150722"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "14457592"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "14528920"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "14978525"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "14978947"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "15026514"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "15102525"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "15563059"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "15654290"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "15843867"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "16336631"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "17382522"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "17447417"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "17702398"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "18098162"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "18438936"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "18500384"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "19012744"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "19034892"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "19523811"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "19526284"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "20446293"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "21222065"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "21470616"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "23062825"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "24252728"
+          },
+          {
+            "$ref": "pubmeds",
+            "$id": "31392317"
+          }
+        ],
+        "massSpectra": [
+          {
+            "$ref": "massBank",
+            "$id": "MSBNK-Washington_State_Univ-BML82135"
+          },
+          {
+            "$ref": "massBank",
+            "$id": "MSBNK-Washington_State_Univ-BML82137"
+          }
+        ],
+        "kwBioassays": [
+          "a350",
+          "assay",
+          "inhibition",
+          "mu",
+          "potency",
+          "profiling",
+          "qhts",
+          "region",
+          "spectral",
+          "spectroscopic"
+        ],
+        "kwActiveAgainst": [
+          "actinopteri",
+          "anthracis",
+          "bacillaceae",
+          "bacillales",
+          "bacilli",
+          "bacillota",
+          "bacillus",
+          "bacteria",
+          "caballus",
+          "chordata",
+          "electricus",
+          "electrophorus",
+          "equidae",
+          "equus",
+          "eukaryota",
+          "gymnotidae",
+          "gymnotiformes",
+          "hominidae",
+          "homo",
+          "mammalia",
+          "metazoa",
+          "perissodactyla",
+          "primates",
+          "sapiens"
+        ],
+        "kwTaxonomies": [
+          "eukaryota",
+          "viridiplantae",
+          "streptophyta",
+          "magnoliopsida",
+          "caryophyllales",
+          "chenopodiaceae",
+          "salsola",
+          "collina",
+          "richteri",
+          "xylosalsola",
+          "paletzkiana",
+          "cornales",
+          "cornaceae",
+          "alangium",
+          "lamarckii",
+          "fabales",
+          "fabaceae",
+          "desmodium",
+          "adscendens"
+        ],
+        "activities": [
+          {
+            "$ref": "npasses",
+            "$id": "NPC294249"
+          },
+          {
+            "$ref": "bioassays",
+            "$id": "442356_589"
+          },
+          {
+            "$ref": "bioassays",
+            "$id": "442356_590"
+          }
+        ],
+        "taxonomies": [
+          {
+            "superkingdom": "Eukaryota",
+            "kingdom": "Viridiplantae",
+            "phylum": "Streptophyta",
+            "class": "Magnoliopsida",
+            "order": "Caryophyllales",
+            "family": "Chenopodiaceae",
+            "genus": "Salsola",
+            "species": "Salsola collina",
+            "dbRef": {
+              "$ref": "npasses",
+              "$id": "NPC294249"
+            }
+          },
+          {
+            "superkingdom": "Eukaryota",
+            "kingdom": "Viridiplantae",
+            "phylum": "Streptophyta",
+            "class": "Magnoliopsida",
+            "order": "Caryophyllales",
+            "family": "Chenopodiaceae",
+            "genus": "Salsola",
+            "species": "Salsola richteri",
+            "dbRef": {
+              "$ref": "coconuts",
+              "$id": "CNP0237841"
+            }
+          },
+          {
+            "superkingdom": "Eukaryota",
+            "kingdom": "Viridiplantae",
+            "phylum": "Streptophyta",
+            "class": "Magnoliopsida",
+            "order": "Caryophyllales",
+            "family": "Chenopodiaceae",
+            "genus": "Xylosalsola",
+            "species": "Xylosalsola paletzkiana",
+            "dbRef": {
+              "$ref": "lotuses",
+              "$id": "LTS0005803"
+            }
+          },
+          {
+            "superkingdom": "Eukaryota",
+            "kingdom": "Viridiplantae",
+            "phylum": "Streptophyta",
+            "class": "Magnoliopsida",
+            "order": "Cornales",
+            "family": "Cornaceae",
+            "genus": "Alangium",
+            "species": "Alangium lamarckii",
+            "dbRef": {
+              "$ref": "coconuts",
+              "$id": "CNP0237841"
+            }
+          },
+          {
+            "superkingdom": "Eukaryota",
+            "kingdom": "Viridiplantae",
+            "phylum": "Streptophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Desmodium",
+            "species": "Desmodium adscendens",
+            "dbRef": {
+              "$ref": "lotuses",
+              "$id": "LTS0064081"
+            }
+          }
+        ]
+      }
+    }
+  }
+]

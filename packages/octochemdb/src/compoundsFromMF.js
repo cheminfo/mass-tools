@@ -6,7 +6,7 @@ import { postFetchJSON } from './utils/postFetchJSON.js';
  * in the database and a monoisotopic mass.
  * @param {string} mf - Observed monoisotopic mass
  * @param {object} [options={}]
- * @param {number} [options.fields] - Fields to retrieve from the database
+ * @param {string} [options.fields] - Fields to retrieve from the database
  * @param {string} [options.baseURL='https://octochemdb.cheminfo.org/'] - URL of the webservice
  * @param {string} [options.url='mfs/v1/fromMF'] - URL of the webservice
  * @param {string} [options.titleCompoundsURL='titleCompounds/v1/ids'] - URL of the webservice
