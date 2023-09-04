@@ -14,9 +14,6 @@
     "packages/mf-from-ea",
     "packages/mf-from-google-sheet",
     "packages/mf-generator",
-    "packages/mf-matcher",
-    "packages/mf-parser",
-    "packages/mf-utilities",
     "packages/ms-spectrum"
   ]
 }
