@@ -17,8 +17,6 @@
     "packages/mf-matcher",
     "packages/mf-parser",
     "packages/mf-utilities",
-    "packages/ms-report",
-    "packages/nucleotide",
     "packages/number-treemap",
     "packages/peptide",
     "packages/ms-spectrum"
