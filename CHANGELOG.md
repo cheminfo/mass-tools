@@ -1,5 +1,17 @@
 # Changelog
 
+## [7.11.2](https://github.com/cheminfo/mass-tools/compare/v7.11.1...v7.11.2) (2023-09-04)
+
+
+### Bug Fixes
+
+* fetchJSON use local test files ([55f222e](https://github.com/cheminfo/mass-tools/commit/55f222e9e412d043b4d124adaed3fc07c6e7f9cd))
+* **octochemdb:** .only in tests ([a089f13](https://github.com/cheminfo/mass-tools/commit/a089f13c0818cd1dfe6632c154fd8d0db04dfd0a))
+* **octochemdb:** fetch local files for activesOrNaturals ([39d3a89](https://github.com/cheminfo/mass-tools/commit/39d3a891df2cd622b52e41339682b37d8c41516c))
+* **octochemdb:** missing package msw for tests ([00cf005](https://github.com/cheminfo/mass-tools/commit/00cf00593a5a933b70fdd01907a6ea62691d204d))
+* **octochemdb:** retry if fetch fail ([8489705](https://github.com/cheminfo/mass-tools/commit/8489705bad049383dd7fa22fe79cdb4f99edb709))
+* use limit in tests to avoid timeout ([b2c102e](https://github.com/cheminfo/mass-tools/commit/b2c102e0b5f25963e7071d4f38ece8f622f60787))
+
 ## [7.11.1](https://github.com/cheminfo/mass-tools/compare/v7.11.0...v7.11.1) (2023-08-25)
 
 
