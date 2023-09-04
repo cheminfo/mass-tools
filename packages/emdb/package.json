@@ -1,6 +1,6 @@
 {
   "name": "emdb",
-  "version": "2.4.4",
+  "version": "2.4.5",
   "description": "Database manager for exact mass query",
   "main": "lib/index.js",
   "module": "src/index.js",
