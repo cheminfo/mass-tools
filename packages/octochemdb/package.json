@@ -27,7 +27,6 @@
     "mf-finder": "^2.4.0",
     "mf-parser": "^2.3.0",
     "mf-utilities": "^2.0.4",
-    "ms-spectrum": "^2.5.0",
-    "msw": "^1.2.5"
+    "ms-spectrum": "^2.5.0"
   }
 }
