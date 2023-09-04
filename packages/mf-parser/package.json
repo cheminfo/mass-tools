@@ -1,6 +1,6 @@
 {
   "name": "mf-parser",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Parse a molecular formula",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -21,9 +21,9 @@
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/mf-parser#readme",
   "dependencies": {
     "atom-sorter": "^2.0.0",
-    "chemical-elements": "^2.0.2",
+    "chemical-elements": "^2.0.3",
     "chemical-groups": "^2.1.0",
-    "mf-utilities": "^2.0.4"
+    "mf-utilities": "^2.0.5"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2"

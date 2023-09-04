@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.3](https://github.com/cheminfo/mass-tools/compare/octochemdb@1.4.2...octochemdb@1.4.3) (2023-09-04)
+
+
+### Bug Fixes
+
+* fetchJSON use local test files ([55f222e](https://github.com/cheminfo/mass-tools/commit/55f222e9e412d043b4d124adaed3fc07c6e7f9cd))
+* **octochemdb:** .only in tests ([a089f13](https://github.com/cheminfo/mass-tools/commit/a089f13c0818cd1dfe6632c154fd8d0db04dfd0a))
+* **octochemdb:** fetch local files for activesOrNaturals ([39d3a89](https://github.com/cheminfo/mass-tools/commit/39d3a891df2cd622b52e41339682b37d8c41516c))
+* **octochemdb:** missing package msw for tests ([00cf005](https://github.com/cheminfo/mass-tools/commit/00cf00593a5a933b70fdd01907a6ea62691d204d))
+* **octochemdb:** retry if fetch fail ([8489705](https://github.com/cheminfo/mass-tools/commit/8489705bad049383dd7fa22fe79cdb4f99edb709))
+* update all dependencies ([c1aee41](https://github.com/cheminfo/mass-tools/commit/c1aee417d98ee83caf88489dc60db7ee449c744e))
+* use limit in tests to avoid timeout ([b2c102e](https://github.com/cheminfo/mass-tools/commit/b2c102e0b5f25963e7071d4f38ece8f622f60787))
+
+
+
+
+
 ## [1.4.2](https://github.com/cheminfo/mass-tools/compare/octochemdb@1.4.1...octochemdb@1.4.2) (2023-08-18)
 
 **Note:** Version bump only for package octochemdb

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/cheminfo/mass-tools/compare/mfs-deconvolution@1.3.0...mfs-deconvolution@1.3.1) (2023-09-04)
+
+
+### Bug Fixes
+
+* update all dependencies ([c1aee41](https://github.com/cheminfo/mass-tools/commit/c1aee417d98ee83caf88489dc60db7ee449c744e))
+
+
+
+
+
 # [1.3.0](https://github.com/cheminfo/mass-tools/compare/mfs-deconvolution@1.2.2...mfs-deconvolution@1.3.0) (2023-08-18)
 
 

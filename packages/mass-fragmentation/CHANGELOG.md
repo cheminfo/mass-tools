@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@0.6.0...mass-fragmentation@0.7.0) (2023-09-04)
+
+
+### Bug Fixes
+
+* **mass-fragmentation:** generate all combinations of ionization ([efcc9dd](https://github.com/cheminfo/mass-tools/commit/efcc9ddb2b1d4bbab5427e43da8b3d9e0723214d))
+* **mass-fragmentation:** ts-ignore for ionizationFragments ([bef8b48](https://github.com/cheminfo/mass-tools/commit/bef8b48c6b1f6bb2a9aa14e43f2be806befef4bf))
+
+
+### Features
+
+* **mass-fragmentation:** limit reactions ([ad5c902](https://github.com/cheminfo/mass-tools/commit/ad5c902d986cebc187817c6a85a5b94d35dc320d))
+
+
+
+
+
 # [0.6.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@0.5.0...mass-fragmentation@0.6.0) (2023-08-18)
 
 

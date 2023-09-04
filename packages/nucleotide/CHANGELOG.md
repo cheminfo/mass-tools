@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/cheminfo/mass-tools/compare/nucleotide@2.1.0...nucleotide@2.1.1) (2023-09-04)
+
+**Note:** Version bump only for package nucleotide
+
+
+
+
+
 # [2.1.0](https://github.com/cheminfo/mass-tools/compare/nucleotide@2.0.3...nucleotide@2.1.0) (2023-06-12)
 
 
