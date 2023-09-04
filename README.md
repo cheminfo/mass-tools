@@ -41,6 +41,10 @@ This package should not be installed as we provide many specific packages with t
 - Report: `npm i ms-report`
 - atomSorter: `npm i atom-sorter`
 
+## Monorepo
+
+`npm install <dependency> -w <package>`
+
 ## License
 
 [MIT](./LICENSE)
