@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.11.3](https://github.com/cheminfo/mass-tools/compare/v7.11.2...v7.11.3) (2023-09-04)
+
+
+### Bug Fixes
+
+* **emdb:** correct documentation ([3df769b](https://github.com/cheminfo/mass-tools/commit/3df769bd954c61e25b776c2ba0f38dc9117ec94e))
+* **mass-fragmentation:** correct documentation ([539f924](https://github.com/cheminfo/mass-tools/commit/539f924b35d29bb8c4af44863b0df986867917a8))
+
 ## [7.11.2](https://github.com/cheminfo/mass-tools/compare/v7.11.1...v7.11.2) (2023-09-04)
 
 
