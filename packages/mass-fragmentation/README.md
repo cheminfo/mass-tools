@@ -10,8 +10,8 @@
 ## Usage
 
 ```js
-const { fragment } require('mass-fragmentation');
-const { Molecule } require('openchemlib');
+const { fragment } = require('mass-fragmentation');
+const { Molecule } = require('openchemlib');
 
 const molecule = Molecule.fromSmiles('CCCCC');
 const fragments = fragment(molecule);
