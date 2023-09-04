@@ -19,10 +19,10 @@ There are 2 parts:
 
 ### Adding database in the database manager
 
-```
-  const emdb = require('emdb');
+```js
+const emdb = require('emdb');
 
-  emdb.loadTest();  // add a database named test containing all the molecular formula from C1 to C100
+emdb.loadTest(); // add a database named test containing all the molecular formula from C1 to C100
 ```
 
 #### loadTest
