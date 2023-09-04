@@ -22,7 +22,6 @@
     "packages/number-treemap",
     "packages/peptide",
     "packages/mfs-deconvolution",
-    "packages/ms-spectrum",
-    "packages/octochemdb"
+    "packages/ms-spectrum"
   ]
 }
