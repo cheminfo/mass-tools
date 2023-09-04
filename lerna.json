@@ -1,21 +1,5 @@
 {
   "conventionalCommits": true,
-  "version": "independent",
-  "packages": [
-    "packages/atom-sorter",
-    "packages/chemical-elements",
-    "packages/chemical-groups",
-    "packages/emdb",
-    "packages/isotopic-distribution",
-    "packages/mass-fragmentation",
-    "packages/mass-tools",
-    "packages/mf-global",
-    "packages/mf-finder",
-    "packages/mf-from-ea",
-    "packages/mf-from-google-sheet",
-    "packages/mf-generator",
-    "packages/mf-parser",
-    "packages/mf-utilities",
-    "packages/ms-spectrum"
-  ]
+  "version": "dependent",
+  "packages": ["packages/*"]
 }
