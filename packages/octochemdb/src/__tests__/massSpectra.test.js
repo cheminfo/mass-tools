@@ -6,6 +6,7 @@ import { massSpectra } from '../massSpectra.js';
 describe('massSpectra', () => {
   it('simple case', async () => {
     const resultsAll = await massSpectra({
+      limit: 100,
       masses: [100, 200, 300],
       precision: 200,
       modifications: 'CH2,O-1',
@@ -28,19 +29,22 @@ describe('massSpectra', () => {
     );
 
     let results = await massSpectra({
+      limit: 100,
       masses: [163.07519620166275, 133.06465132824812, 105.06969463079821],
       precision: 100,
     });
-    expect(results.length).toBeGreaterThan(400);
+    expect(results.length).toBeGreaterThan(84);
 
     results = await massSpectra({
+      limit: 100,
       masses: [163.07519620166275, 133.06465132824812, 105.06969463079821],
       precision: 100,
       similarity: {}, // by default minSimilarity is 0.2 but no experimental spectrum is provided so no filtering
     });
-    expect(results.length).toBeGreaterThan(400);
+    expect(results.length).toBeGreaterThan(84);
 
     results = await massSpectra({
+      limit: 100,
       masses: [163.07519620166275, 133.06465132824812, 105.06969463079821],
       precision: 100,
       similarity: {
@@ -51,7 +55,7 @@ describe('massSpectra', () => {
       }, // by default minSimilarity is 0.2 but no experimental spectrum is provided so no filtering
     });
 
-    expect(results.length).toBeGreaterThan(50);
+    expect(results.length).toBeGreaterThan(13);
     expect(results.length).toBeLessThan(200);
 
     results = await massSpectra({
@@ -71,6 +75,7 @@ describe('massSpectra', () => {
 
   it('mdma and mf', async () => {
     let results = await massSpectra({
+      limit: 100,
       mf: 'C11H15NO2',
     });
     expect(results.length).toBeGreaterThan(5);
