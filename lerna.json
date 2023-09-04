@@ -1,5 +1,13 @@
 {
   "conventionalCommits": true,
   "version": "independent",
-  "packages": ["packages/*"]
+  "packages": [
+    "packages/emdb",
+    "packages/mass-fragmentation",
+    "packages/mass-tools",
+    "packages/mf-global",
+    "packages/mfs-deconvolution",
+    "packages/ms-spectrum",
+    "packages/octochemdb"
+  ]
 }
