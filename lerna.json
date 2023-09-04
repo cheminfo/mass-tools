@@ -1,5 +1,17 @@
 {
   "conventionalCommits": true,
   "version": "independent",
-  "packages": ["packages/*"]
+  "packages": [
+    "packages/atom-sorter",
+    "packages/chemical-elements",
+    "packages/chemical-groups",
+    "packages/emdb",
+    "packages/isotopic-distribution",
+    "packages/mass-fragmentation",
+    "packages/mass-tools",
+    "packages/mf-global",
+    "packages/mfs-deconvolution",
+    "packages/ms-spectrum",
+    "packages/octochemdb"
+  ]
 }
