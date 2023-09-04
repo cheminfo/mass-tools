@@ -21,7 +21,6 @@
     "packages/nucleotide",
     "packages/number-treemap",
     "packages/peptide",
-    "packages/mfs-deconvolution",
     "packages/ms-spectrum"
   ]
 }
