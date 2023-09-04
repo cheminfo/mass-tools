@@ -23,7 +23,7 @@
   },
   "version": "1.4.3",
   "dependencies": {
-    "@orama/orama": "^1.2.1",
+    "@orama/orama": "^1.2.2",
     "mf-finder": "^2.4.1",
     "mf-parser": "^2.3.1",
     "mf-utilities": "^2.0.5",
