@@ -15,7 +15,6 @@
     "packages/mf-from-google-sheet",
     "packages/mf-generator",
     "packages/mf-parser",
-    "packages/mf-utilities",
     "packages/ms-spectrum"
   ]
 }
