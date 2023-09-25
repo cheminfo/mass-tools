@@ -6,6 +6,8 @@
  * @param {number} [options.precision=1000] - Precision (accuracy) of the monoisotopic mass in ppm
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {string} [options.modifications=''] - Comma
+ * @param {string} [options.databases='massBank,gnps'] - List of databases to search for mass spectra
+ * @param {object} [options.routes] - Object that contains the routes to use for each database
  * @param {boolean} [options.uniqueMolecules=true] - If true, only one molecule per entry is returned
  * @param {object} [options.similarity={}]
  * @param {number} [options.similarity.nbPeaks=5] - Number of peaks to use for the similarity
@@ -21,6 +23,15 @@ import { MSComparator } from 'ms-spectrum';
 
 import { gnps } from './gnps.js';
 import { massBank } from './massBank.js';
+
+const defaultRoutes = [
+  {
+    name: 'massBank',
+    url: 'https://octochemdb.cheminfo.org/massBank/v1/search',
+    link: 'https://massbank.eu/MassBank/RecordDisplay?id=',
+  },
+]
+
 
 export async function massSpectra(options = {}) {
   const { uniqueMolecules = true } = options;
