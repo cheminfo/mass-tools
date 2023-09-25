@@ -16,6 +16,7 @@ import { searchWithIonizations } from './utils/searchWithIonizations.js';
  * @param {string} [options.kwActiveAgainst=''] - Comma separated list of taxonomies family, genus or species of the bioactivity target
  * @param {string} [options.kwBioassays=''] - Comma separated list of keyword from the description of the bioassay
  * @param {string} [options.kwMeshTerms=''] - Comma separated list of keyword from the medline MeshTerms
+ * @param {string} [options.kwTitles=''] - Comma separated list of keyword from the compound title
  * @param {string} [options.minNbMassSpectra] - Minimal number of mass spectra
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {string} [options.url='activesOrNaturals/v1/search'] - URL of the webservice
@@ -67,6 +68,7 @@ function prepareSearchParams(options) {
     kwActiveAgainst,
     kwBioassays,
     kwMeshTerms,
+    kwTitles,
     mf,
     minNbMassSpectra,
   } = options;
@@ -82,6 +84,9 @@ function prepareSearchParams(options) {
   }
   if (kwMeshTerms) {
     searchParams.kwMeshTerms = kwMeshTerms;
+  }
+  if (kwTitles) {
+    searchParams.kwTitles = kwTitles;
   }
   if (mf) {
     searchParams.mf = mf;
