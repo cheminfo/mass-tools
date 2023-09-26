@@ -52,8 +52,5 @@
     "prettier": "^3.0.3",
     "rimraf": "^5.0.1",
     "vitest": "^0.34.3"
-  },
-  "overrides": {
-    "get-func-name": "2.0.0"
   }
 }
