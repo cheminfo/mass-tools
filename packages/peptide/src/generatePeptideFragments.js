@@ -20,7 +20,7 @@ export function generatePeptideFragments(mf, options) {
   let mfs = [];
   // need to allow 0-9 to deal with neutral loss
   let mfparts = mf
-    .replace(/([a-z)0-9])([A-Z][a-z](?=[a-z]))/g, '$1 $2')
+    .replace(/(?<t1>[a-z)0-9])(?<t2>[A-Z][a-z](?=[a-z]))/g, '$<t1> $<t2>')
     .split(/ /);
 
   let nTerm = '';

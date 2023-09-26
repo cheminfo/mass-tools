@@ -93,7 +93,7 @@ export async function generateMFs(ranges, options = {}) {
     let newParts = [];
     for (let j = 0; j < parts.length; j++) {
       let part = parts[j];
-      let comment = part.replace(/^([^$]*\$|.*)/, '');
+      let comment = part.replace(/^(?<t1>[^$]*\$|.*)/, '');
       part = part.replace(/\$.*/, '').replace(/\s/g, '');
       if (part.match(/[0-9]-[0-9-]/)) {
         // deal with negative numbers

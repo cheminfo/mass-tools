@@ -85,7 +85,7 @@ export function appendResults(data, analysisResult, options = {}) {
 }
 
 function getNumber(text) {
-  return Number(text.replace(/^.([0-9]+).*$/, '$1'));
+  return Number(text.replace(/^.(?<t1>[0-9]+).*$/, '$<t1>'));
 }
 
 function filterResults(results, filter) {

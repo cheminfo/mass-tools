@@ -8,7 +8,7 @@ Iotuibs:
  */
 
 export function digestPeptide(sequence, options = {}) {
-  sequence = sequence.replace(/^H([^a-z])/, '$1').replace(/OH$/, '');
+  sequence = sequence.replace(/^H(?<t1>[^a-z])/, '$<t1>').replace(/OH$/, '');
 
   options.enzyme = options.enzyme || 'trypsin';
   if (options.minMissed === undefined) options.minMissed = 0;
@@ -17,7 +17,7 @@ export function digestPeptide(sequence, options = {}) {
   if (options.maxResidue === undefined) options.maxResidue = Number.MAX_VALUE;
   let regexp = getRegexp(options.enzyme);
   let fragments = sequence
-    .replace(regexp, '$1 ')
+    .replace(regexp, '$<t1> ')
     .split(/ /)
     .filter((entry) => entry);
 
@@ -25,7 +25,7 @@ export function digestPeptide(sequence, options = {}) {
     let from = 0;
     for (let i = 0; i < fragments.length; i++) {
       let nbResidue = fragments[i]
-        .replace(/([A-Z][a-z][a-z])/g, ' $1')
+        .replace(/(?<t1>[A-Z][a-z][a-z])/g, ' $<t1>')
         .split(/ /)
         .filter((entry) => entry).length;
       fragments[i] = {
@@ -70,21 +70,21 @@ export function digestPeptide(sequence, options = {}) {
 function getRegexp(enzyme) {
   switch (enzyme.toLowerCase().replace(/[^a-z0-9]/g, '')) {
     case 'chymotrypsin':
-      return /(Phe|Tyr|Trp)(?!Pro)/g;
+      return /(?<t1>Phe|Tyr|Trp)(?!Pro)/g;
     case 'trypsin':
-      return /(Lys|Arg)(?!Pro)/g;
+      return /(?<t1>Lys|Arg)(?!Pro)/g;
     case 'lysc':
-      return /(Lys)(?!Pro)/g;
+      return /(?<t1>Lys)(?!Pro)/g;
     case 'glucph4':
-      return /(Glu)(?!Pro|Glu)/g;
+      return /(?<t1>Glu)(?!Pro|Glu)/g;
     case 'glucph8':
-      return /(Asp|Glu)(?!Pro|Glu)/g;
+      return /(?<t1>Asp|Glu)(?!Pro|Glu)/g;
     case 'thermolysin': // N-term of  Leu, Phe, Val, Ile, Ala, Met
-      return /()(?=Ile|Leu|Val|Ala|Met|Phe)/g;
+      return /(?<t1>)(?=Ile|Leu|Val|Ala|Met|Phe)/g;
     case 'cyanogenbromide':
-      return /(Met)/g;
+      return /(?<t1>Met)/g;
     case 'any':
-      return /()(?=[A-Z][a-z][a-z])/g;
+      return /(?<t1>)(?=[A-Z][a-z][a-z])/g;
     default:
       throw new Error(`Digestion enzyme: ${enzyme} is unknown`);
   }

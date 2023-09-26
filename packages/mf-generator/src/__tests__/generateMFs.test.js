@@ -86,7 +86,7 @@ describe('generateMFs', () => {
     let mfsArray = ['C0-2.O', ['+', '(-)', '++', '(--)']];
 
     let result = await generateMFs(mfsArray);
-    expect(result[0].mf).toMatch(/^(.*)$/);
+    expect(result[0].mf).toMatch(/^(?:.*)$/);
     expect(result[0].charge).not.toBe(0);
     expect(result).toHaveLength(16);
   });

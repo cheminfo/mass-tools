@@ -14,7 +14,7 @@ export function sequenceToMF(mf) {
   if (mf.search(/[A-Z]{3} [A-Z]{3} [A-Z]{3}/) > -1) {
     // this is a PDB !
     let tmpmf = mf.replace(/[\r\n]+/g, ' ');
-    tmpmf = tmpmf.replace(/(SEQRES|[0-9]+| [A-Z] | [0-9A-Z]{4-50})/g, '');
+    tmpmf = tmpmf.replace(/(?<t1>SEQRES|[0-9]+| [A-Z] | [0-9A-Z]{4-50})/g, '');
     // we need to correct the uppercase / lowercase
     let parts = tmpmf.split(' ');
     newMF = 'H';

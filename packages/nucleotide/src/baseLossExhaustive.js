@@ -3,7 +3,7 @@ export function baseLossExhaustive(nucleotide) {
   let results = [];
   let parts = nucleotide
     .replace(/ /g, '')
-    .replace(/([a-zA-Z0-9)])(?=[A-Z])/g, '$1 ')
+    .replace(/(?<t1>[a-zA-Z0-9)])(?=[A-Z])/g, '$<t1> ')
     .split(/ /);
   let counter = 0;
   for (let i = 0; i < parts.length; i++) {

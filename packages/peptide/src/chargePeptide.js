@@ -20,30 +20,42 @@ function chargeOnePeptide(mf, options) {
 
   // first amino acids (N-terminal)
   if (mf.match(/^H[A-Z][a-z]{2}/)) {
-    let firstAA = mf.replace(/^H([A-Z][a-z]{2}).*/, '$1');
+    let firstAA = mf.replace(/^H(?<t1>[A-Z][a-z]{2}).*/, '$<t1>');
     if (getAA(firstAA) && pH < getAA(firstAA).pKaN) {
-      mf = mf.replace(/^H([^+])/, 'H+H$1');
+      mf = mf.replace(/^H(?<t1>[^+])/, 'H+H$<t1>');
     }
   }
 
   // last amino acids (C-terminal)
   if (mf.match(/[A-Z][a-z]{2}OH$/)) {
-    let lastAA = mf.replace(/.*([A-Z][a-z]{2})OH$/, '$1');
+    let lastAA = mf.replace(/.*(?<t1>[A-Z][a-z]{2})OH$/, '$<t1>');
     if (getAA(lastAA) && pH > getAA(lastAA).pKaC) {
       mf = mf.replace(/OH$/, 'O-');
     }
   }
 
   // basic AA
-  if (pH < getAA('Arg').sc.pKa) mf = mf.replace(/(Arg)(?!\()/g, '$1(H+)');
-  if (pH < getAA('His').sc.pKa) mf = mf.replace(/(His)(?!\()/g, '$1(H+)');
-  if (pH < getAA('Lys').sc.pKa) mf = mf.replace(/(Lys)(?!\()/g, '$1(H+)');
+  if (pH < getAA('Arg').sc.pKa) {
+    mf = mf.replace(/(?<t1>Arg)(?!\()/g, '$<t1>(H+)');
+  }
+  if (pH < getAA('His').sc.pKa) {
+    mf = mf.replace(/(?<t1>His)(?!\()/g, '$<t1>(H+)');
+  }
+  if (pH < getAA('Lys').sc.pKa) {
+    mf = mf.replace(/(?<t1>Lys)(?!\()/g, '$<t1>(H+)');
+  }
 
   // acid AA
-  if (pH > getAA('Asp').sc.pKa) mf = mf.replace(/(Asp)(?!\()/g, '$1(H-1-)');
-  if (pH > getAA('Glu').sc.pKa) mf = mf.replace(/(Glu)(?!\()/g, '$1(H-1-)');
+  if (pH > getAA('Asp').sc.pKa) {
+    mf = mf.replace(/(?<t1>Asp)(?!\()/g, '$<t1>(H-1-)');
+  }
+  if (pH > getAA('Glu').sc.pKa) {
+    mf = mf.replace(/(?<t1>Glu)(?!\()/g, '$<t1>(H-1-)');
+  }
 
-  if (pH > getAA('Cys').sc.pKa) mf = mf.replace(/(Cys)(?!\()/g, '$1(H-1-)');
+  if (pH > getAA('Cys').sc.pKa) {
+    mf = mf.replace(/(?<t1>Cys)(?!\()/g, '$<t1>(H-1-)');
+  }
 
   return mf;
 }
