@@ -25,9 +25,7 @@
           "url": "https://pubchem.ncbi.nlm.nih.gov/patent/EP-0051415-B1"
         }
       ],
-      "titles": [
-        "JB-11 isethionate"
-      ],
+      "titles": ["JB-11 isethionate"],
       "nbMolecules": 1,
       "molecules": [
         {
@@ -42,9 +40,7 @@
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/332299"
             }
           ],
-          "titles": [
-            "JB-11 isethionate"
-          ]
+          "titles": ["JB-11 isethionate"]
         }
       ],
       "nbPubmeds": 362,
@@ -2723,9 +2719,7 @@
         "tumor",
         "vivo"
       ],
-      "kwTitles": [
-        "JB-11 isethionate"
-      ],
+      "kwTitles": ["JB-11 isethionate"],
       "activities": [
         {
           "$ref": "bioassays",
@@ -52799,9 +52793,7 @@
           "url": "https://pubchem.ncbi.nlm.nih.gov/patent/EP-1689852-A2"
         }
       ],
-      "titles": [
-        "Bropirimine"
-      ],
+      "titles": ["Bropirimine"],
       "nbMolecules": 2,
       "molecules": [
         {
@@ -52816,9 +52808,7 @@
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/135413497"
             }
           ],
-          "titles": [
-            "Bropirimine"
-          ]
+          "titles": ["Bropirimine"]
         },
         {
           "ocl": {
@@ -54687,9 +54677,7 @@
         "zymomonadaceae",
         "zymomonas"
       ],
-      "kwTitles": [
-        "Bropirimine"
-      ],
+      "kwTitles": ["Bropirimine"],
       "activities": [
         {
           "$ref": "bioassays",
@@ -55060,10 +55048,7 @@
           "url": "https://pubchem.ncbi.nlm.nih.gov/patent/WO-2009097651-A1"
         }
       ],
-      "titles": [
-        "25-Hydroxy-rifabutin",
-        "25-O-Deacetylrifabutin"
-      ],
+      "titles": ["25-Hydroxy-rifabutin", "25-O-Deacetylrifabutin"],
       "nbMolecules": 10,
       "molecules": [
         {
@@ -55078,9 +55063,7 @@
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/135459775"
             }
           ],
-          "titles": [
-            "25-Hydroxy-rifabutin"
-          ]
+          "titles": ["25-Hydroxy-rifabutin"]
         },
         {
           "ocl": {
@@ -55094,9 +55077,7 @@
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/135472677"
             }
           ],
-          "titles": [
-            "25-O-Deacetylrifabutin"
-          ]
+          "titles": ["25-O-Deacetylrifabutin"]
         },
         {
           "ocl": {
@@ -55347,10 +55328,7 @@
         "mycobacterium",
         "tuberculosis"
       ],
-      "kwTitles": [
-        "25-Hydroxy-rifabutin",
-        "25-O-Deacetylrifabutin"
-      ],
+      "kwTitles": ["25-Hydroxy-rifabutin", "25-O-Deacetylrifabutin"],
       "activities": [
         {
           "$ref": "bioassays",
@@ -56061,10 +56039,7 @@
         "idCode": "eo\\xMH@FXIKDlnmkol^PHc@eEEEEEEhdeeFmEMDlhmlhdaMC@oJaidR[WV`BH`IhjjjZjjh@HJ@@@"
       },
       "nbPatents": 0,
-      "titles": [
-        "C34H35NO11.ClH",
-        "C34-H35-N-O11.Cl-H"
-      ],
+      "titles": ["C34H35NO11.ClH", "C34-H35-N-O11.Cl-H"],
       "nbMolecules": 3,
       "molecules": [
         {
@@ -56093,9 +56068,7 @@
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/24197666"
             }
           ],
-          "titles": [
-            "C34H35NO11.ClH"
-          ]
+          "titles": ["C34H35NO11.ClH"]
         },
         {
           "ocl": {
@@ -56109,9 +56082,7 @@
               "url": "https://pubchem.ncbi.nlm.nih.gov/compound/53462549"
             }
           ],
-          "titles": [
-            "C34-H35-N-O11.Cl-H"
-          ]
+          "titles": ["C34-H35-N-O11.Cl-H"]
         }
       ],
       "nbPubmeds": 1,
@@ -56163,10 +56134,7 @@
         "tumor",
         "vivo"
       ],
-      "kwTitles": [
-        "C34H35NO11.ClH",
-        "C34-H35-N-O11.Cl-H"
-      ],
+      "kwTitles": ["C34H35NO11.ClH", "C34-H35-N-O11.Cl-H"],
       "activities": [
         {
           "$ref": "bioassays",
@@ -56480,9 +56448,7 @@
           "titles": []
         }
       ],
-      "cas": [
-        "206451-92-5"
-      ],
+      "cas": ["206451-92-5"],
       "nbPubmeds": 1,
       "nbMassSpectra": 0,
       "nbTaxonomies": 2,
@@ -56590,9 +56556,7 @@
         "coordinates": "!BbGvH@oy?bGvH?[]}b@K~_?y??`BH_[]}bOv{Jxc|?g~Ywx`B?g?Rs{}NbGvH_UR{Tv]SY?y?otx"
       },
       "nbPatents": 0,
-      "titles": [
-        "Marinacarboline N"
-      ],
+      "titles": ["Marinacarboline N"],
       "nbMolecules": 1,
       "molecules": [
         {
@@ -56617,9 +56581,7 @@
               "url": "https://www.npatlas.org/explore/compounds/NPA029375"
             }
           ],
-          "titles": [
-            "Marinacarboline N"
-          ]
+          "titles": ["Marinacarboline N"]
         }
       ],
       "nbPubmeds": 1,
@@ -56660,9 +56622,7 @@
         "sp",
         "zz1866"
       ],
-      "kwTitles": [
-        "Marinacarboline N"
-      ],
+      "kwTitles": ["Marinacarboline N"],
       "taxonomies": [
         {
           "superkingdom": "Bacteria",
