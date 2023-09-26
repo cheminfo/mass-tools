@@ -47,7 +47,7 @@ export async function massSpectra(options = {}) {
     routes = defaultRoutes,
   } = options;
   const promises = [];
-  routes.forEach((route) => {
+  for (const route of routes) {
     if (databases && databases.includes(route.name)) {
       promises.push(
         searchMasses({
@@ -57,8 +57,7 @@ export async function massSpectra(options = {}) {
         }),
       );
     }
-  });
-
+  }
   let results = (await Promise.all(promises)).flat();
   results = appendAndFilterSimilarity(results, options);
   if (uniqueMolecules) {
