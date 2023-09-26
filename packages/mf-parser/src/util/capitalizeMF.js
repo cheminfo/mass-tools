@@ -14,7 +14,7 @@ export function capitalizeMF(mf) {
     .replace(/co/, 'C O')
     .replace(/mn/, ' Mn ')
     .replace(/cd/, ' C D ')
-    .replace(/(?<t1>[0-9])(?<t2>[a-zA-Z])/, '$<t1> $<t2>');
+    .replace(/([0-9])([a-zA-Z])/, '$1 $2');
   let newMF = '';
   let parts = oldMF.split(/ +/);
 

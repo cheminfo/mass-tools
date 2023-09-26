@@ -16,9 +16,7 @@ export function ensureCase(mf) {
       return mf;
     }
   }
-  let parts = mf
-    .replace(/(?<t1>[a-z]*)(?<t2>[^a-z]*)/g, '$<t1> $<t2> ')
-    .split(/ +/);
+  let parts = mf.replace(/([a-z]*)([^a-z]*)/g, '$1 $2 ').split(/ +/);
   for (let i = 0; i < parts.length; i++) {
     if (parts[i].match(/^[a-z]$/)) {
       parts[i] = parts[i].toUpperCase();

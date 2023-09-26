@@ -48,12 +48,8 @@ async function retrieve(refresh = false) {
         } else if (value.match(/^\[[0-9]+\]$/)) {
           element.mass = Number(value.substring(1, value.length - 1));
         } else if (value.startsWith('[')) {
-          let number1 = Number(
-            value.replace(/\[(?<t1>.*),(?<t2>.*)\]/, '$<t1>'),
-          );
-          let number2 = Number(
-            value.replace(/\[(?<t1>.*),(?<t2>.*)\]/, '$<t2>'),
-          );
+          let number1 = Number(value.replace(/\[(.*),(.*)\]/, '$1'));
+          let number2 = Number(value.replace(/\[(.*),(.*)\]/, '$2'));
           let middle = (number1 + number2) / 2;
           let length = (value.length - 3) / 2 - 1;
           element.mass = Number(String(middle).substring(0, length));

@@ -1,7 +1,7 @@
 export function processRange(string, comment, options = {}) {
   const { limit } = options;
   let results = [];
-  let parts = string.split(/(?<t1>-?[0-9]+--?[0-9]+)/).filter((v) => v); // remove empty parts
+  let parts = string.split(/(-?[0-9]+--?[0-9]+)/).filter((v) => v); // remove empty parts
 
   let position = -1;
   let mfs = [];
@@ -15,8 +15,8 @@ export function processRange(string, comment, options = {}) {
         max: 1,
       };
     } else {
-      let min = part.replace(/^(?<t1>-?[0-9]*)-(?<t2>-?[0-9]*)/, '$<t1>') >> 0;
-      let max = part.replace(/^(?<t1>-?[0-9]*)-(?<t2>-?[0-9]*)/, '$<t2>') >> 0;
+      let min = part.replace(/^(-?[0-9]*)-(-?[0-9]*)/, '$1') >> 0;
+      let max = part.replace(/^(-?[0-9]*)-(-?[0-9]*)/, '$2') >> 0;
       mfs[position].min = Math.min(min, max);
       mfs[position].max = Math.max(min, max);
     }
