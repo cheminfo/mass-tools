@@ -13,7 +13,7 @@
           "idCode": "dg~D@MBdin]V^G[hHBjb@@",
           "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\Bm?vw__x@m?p"
         },
-        "nbPatents": 81,
+        "nbPatents": 69,
         "patents": [
           {
             "$ref": "patents",
@@ -145,10 +145,6 @@
           },
           {
             "$ref": "patents",
-            "$id": "CN-101977612-A"
-          },
-          {
-            "$ref": "patents",
             "$id": "CN-102813929-B"
           },
           {
@@ -173,10 +169,6 @@
           },
           {
             "$ref": "patents",
-            "$id": "CN-107043371-A"
-          },
-          {
-            "$ref": "patents",
             "$id": "CN-107043371-B"
           },
           {
@@ -185,35 +177,11 @@
           },
           {
             "$ref": "patents",
-            "$id": "CN-107850581-A"
-          },
-          {
-            "$ref": "patents",
             "$id": "CN-107955295-B"
           },
           {
             "$ref": "patents",
-            "$id": "CN-108391756-A"
-          },
-          {
-            "$ref": "patents",
-            "$id": "CN-108872443-A"
-          },
-          {
-            "$ref": "patents",
-            "$id": "CN-109769540-A"
-          },
-          {
-            "$ref": "patents",
-            "$id": "CN-112142784-A"
-          },
-          {
-            "$ref": "patents",
             "$id": "CN-112142784-B"
-          },
-          {
-            "$ref": "patents",
-            "$id": "CN-112159699-A"
           },
           {
             "$ref": "patents",
@@ -222,10 +190,6 @@
           {
             "$ref": "patents",
             "$id": "CN-113331233-A"
-          },
-          {
-            "$ref": "patents",
-            "$id": "CN-113441185-A"
           },
           {
             "$ref": "patents",
@@ -257,19 +221,7 @@
           },
           {
             "$ref": "patents",
-            "$id": "EP-2849769-A1"
-          },
-          {
-            "$ref": "patents",
-            "$id": "EP-2849769-B1"
-          },
-          {
-            "$ref": "patents",
             "$id": "JP-2010500288-A"
-          },
-          {
-            "$ref": "patents",
-            "$id": "KR-20090047450-A"
           },
           {
             "$ref": "patents",
@@ -1025,11 +977,11 @@
         "massSpectra": [
           {
             "$ref": "massBank",
-            "$id": "MSBNK-Washington_State_Univ-BML82135"
+            "$id": "MSBNK-Washington_State_Univ-BML82137"
           },
           {
             "$ref": "massBank",
-            "$id": "MSBNK-Washington_State_Univ-BML82137"
+            "$id": "MSBNK-Washington_State_Univ-BML82135"
           }
         ],
         "kwBioassays": [
@@ -1091,6 +1043,7 @@
           "desmodium",
           "adscendens"
         ],
+        "kwTitles": ["(R)-salsoline", "Salsoline", "(-)-Salsoline"],
         "activities": [
           {
             "$ref": "npasses",
