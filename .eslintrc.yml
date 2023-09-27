@@ -7,6 +7,16 @@ rules:
     - builtinGlobals: true
       hoist: all
       allow: []
+  max-lines-per-function:
+    - warn
+    - max: 100
+      skipBlankLines: true
+      skipComments: true
+overrides:
+  - files: '**/__tests__/**'
+    rules:
+      max-lines-per-function:
+        - off
 env:
   jest: true
   node: true

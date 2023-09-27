@@ -1,7 +1,8 @@
+import { MF } from 'mf-parser';
 import OCL from 'openchemlib';
-import { applyReactions, groupTreesByProducts } from 'openchemlib-utils';
+import { Reactions, getMF } from 'openchemlib-utils';
 
-import getDatabase from './database/getDatabase';
+import { getDatabases } from './database/getDatabases';
 import { getMasses } from './utils/getMasses';
 /**
  * @description Fragment a molecule by applying reactions from a custom database of reactions
@@ -25,101 +26,47 @@ import { getMasses } from './utils/getMasses';
  * - products: array of trees grouped by product idCode
  */
 export function reactionFragmentation(molecule, options = {}) {
-  let {
-    databaseName = 'cid',
+  const {
+    ionization = 'cid',
     mode = 'positive',
     maxDepth = 5,
     maxIonizationDepth = 1,
     getProductsTrees = false,
-    customDatabase = {},
+    databases = getDatabases(),
     limitReactions = 200,
   } = options;
-  let database;
-  let IonizationDb;
-  if (customDatabase[mode] && customDatabase[mode].length > 0) {
-    database = customDatabase;
-  } else {
-    database = getDatabase(databaseName);
-  }
-  if (!database) {
-    throw new Error(`Database ${databaseName} not found`);
-  }
-  if (databaseName === 'cid') {
-    if (
-      customDatabase.ionization &&
-      customDatabase.ionization[mode].length > 0
-    ) {
-      IonizationDb = customDatabase.ionization[mode];
-    } else {
-      IonizationDb = getDatabase('')[mode];
-    }
-  }
-  let results = {};
-  const reactions = database[mode];
-  if (IonizationDb) {
-    let ionizationFragments = {
-      trees: [],
-      products: [],
-    };
-    for (
-      let currentMaxIonizationDepth = 1;
-      currentMaxIonizationDepth <= maxIonizationDepth;
-      currentMaxIonizationDepth++
-    ) {
-      let ionizationLevelResult = applyReactions([molecule], IonizationDb, {
-        maxDepth: currentMaxIonizationDepth,
-        limitReactions,
-      });
-      // add array to ionizationfragments.trees
-      // @ts-ignore
-      ionizationFragments.trees.push(...ionizationLevelResult.trees);
-      // @ts-ignore
-      ionizationFragments.products.push(...ionizationLevelResult.products);
-    }
-    for (let tree of ionizationFragments.trees) {
-      getMoleculesToFragment(tree, reactions, maxDepth, limitReactions);
-    }
 
-    if (getProductsTrees) {
-      // @ts-ignore
-      ionizationFragments.products = groupTreesByProducts(
-        ionizationFragments.trees,
-      );
-    }
-    results = ionizationFragments;
-  } else {
-    results = applyReactions([molecule], reactions, {
-      maxDepth,
-      limitReactions,
-    });
-  }
+  const reactions = new Reactions(OCL, {
+    moleculeInfoCallback: (molecule) => {
+      const mf = getMF(molecule).mf;
+      const mfInfo = new MF(mf).getInfo();
+      return {
+        mf,
+        mw: mfInfo.mass,
+        em: mfInfo.monoisotopicMass,
+        mz: mfInfo.observedMonoisotopicMass,
+        charge: mfInfo.charge,
+      };
+    },
+    maxDepth,
+    skipProcessed: true,
+  });
 
-  let { masses, trees, products } = getMasses(results.trees, results.products);
+  reactions.appendHead([molecule]);
+  reactions.applyOneReactantReactions(databases.ionizations, {
+    min: 1,
+    max: 1,
+  });
+  reactions.applyOneReactantReactions(databases.fragmentations, {
+    min: 0,
+    max: 2,
+  });
+
+  const trees = reactions.trees;
+  const validNodes = reactions.getValidNodes();
+
   return {
-    masses,
     trees,
-    products,
+    validNodes,
   };
-}
-
-function getMoleculesToFragment(tree, reactions, maxDepth, limitReactions) {
-  for (let product of tree.products) {
-    if (product.children.length === 0) {
-      if (product.charge !== 0) {
-        let molecule = OCL.Molecule.fromIDCode(product.idCode);
-
-        let fragments = applyReactions([molecule], reactions, {
-          maxDepth,
-          limitReactions,
-          getProductsTrees: true,
-        });
-        // @ts-ignore
-        product.children = fragments.trees;
-      }
-    } else {
-      for (let child of product.children) {
-        getMoleculesToFragment(child, reactions, maxDepth, limitReactions);
-      }
-    }
-  }
 }

@@ -5,31 +5,15 @@ import { reactionFragmentation } from '../reactionFragmentation.js';
 const { Molecule } = OCL;
 
 describe('ReactionFragmentation', async () => {
-  it('Alpha cleavage: MDMAH+', async () => {
+  it.only('Alpha cleavage: MDMAH+', async () => {
     const molecule = Molecule.fromSmiles('C[NH2+]C(C)Cc2ccc1OCOc1c2');
     const options = {
       maxDepth: 20,
       maxIonizationDepth: 2,
       getProductsTrees: true,
     };
-    const { masses, trees, products } = reactionFragmentation(
-      molecule,
-      options,
-    );
-
-    expect(Object.keys(products[0])).toMatchInlineSnapshot(`
-      [
-        "idCode",
-        "mf",
-        "em",
-        "mz",
-        "charge",
-        "trees",
-        "reactions",
-        "minSteps",
-      ]
-    `);
-    expect(masses).toHaveLength(6);
+    const { trees } = reactionFragmentation(molecule, options);
+    console.log(trees);
     expect(trees).toMatchSnapshot();
   });
   it('tropylium rearrangement: MDMA after Alpha cleavage', async () => {

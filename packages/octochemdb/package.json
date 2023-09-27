@@ -27,7 +27,6 @@
     "mf-finder": "^3.0.1",
     "mf-parser": "^3.0.1",
     "mf-utilities": "^3.0.1",
-    "ms-spectrum": "^3.0.1",
-    "react-tree-svg": "^0.6.0"
+    "ms-spectrum": "^3.0.1"
   }
 }
