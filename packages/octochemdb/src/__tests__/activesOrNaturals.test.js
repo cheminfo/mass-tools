@@ -23,6 +23,7 @@ describe('activesOrNaturals', () => {
       precision: 1,
       limit: 100,
     });
+
     expect(data.length).toBe(100);
   });
   it('with range', async () => {
@@ -54,6 +55,7 @@ describe('activesOrNaturals', () => {
     for (const entry of data) {
       uniqueMFs.add(entry.data.mf);
     }
+
     expect([...uniqueMFs]).toStrictEqual(['C17H17NO4', 'C34H34N2O8']);
   }, 30000);
 
@@ -70,7 +72,6 @@ describe('activesOrNaturals', () => {
         fields.add(field);
       }
     }
-
     expect([...fields].sort()).toStrictEqual([
       'activities',
       'bioactive',
@@ -81,7 +82,7 @@ describe('activesOrNaturals', () => {
       'kwBioassays',
       'kwMeshTerms',
       'kwTaxonomies',
-      'massSpectra',
+      'kwTitles',
       'mf',
       'molecules',
       'naturalProduct',

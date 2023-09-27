@@ -21,8 +21,7 @@
 
 import { MSComparator } from 'ms-spectrum';
 
-import { gnps } from './gnps.js';
-import { massBank } from './massBank.js';
+import { searchMasses } from './searchMasses.js';
 
 const defaultRoutes = [
   {
@@ -30,13 +29,36 @@ const defaultRoutes = [
     url: 'https://octochemdb.cheminfo.org/massBank/v1/search',
     link: 'https://massbank.eu/MassBank/RecordDisplay?id=',
   },
-]
-
+  {
+    name: 'gnps',
+    url: 'https://octochemdb.cheminfo.org/gnps/v1/search',
+    link: 'https://gnps.ucsd.edu/ProteoSAFe/gnpslibraryspectrum.jsp?SpectrumID=',
+  },
+  {
+    name: 'inSilicoFragments',
+    url: 'https://octochemdb.cheminfo.org/inSilicoFragments/v1/search',
+  },
+];
 
 export async function massSpectra(options = {}) {
-  const { uniqueMolecules = true } = options;
-
-  let results = (await Promise.all([gnps(options), massBank(options)])).flat();
+  const {
+    uniqueMolecules = true,
+    databases = 'massBank,gnps',
+    routes = defaultRoutes,
+  } = options;
+  const promises = [];
+  for (const route of routes) {
+    if (databases && databases.includes(route.name)) {
+      promises.push(
+        searchMasses({
+          ...options,
+          url: route.url,
+          link: route.link,
+        }),
+      );
+    }
+  }
+  let results = (await Promise.all(promises)).flat();
   results = appendAndFilterSimilarity(results, options);
   if (uniqueMolecules) {
     results = uniqueMol(results);

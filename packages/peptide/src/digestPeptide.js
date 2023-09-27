@@ -9,7 +9,6 @@ Iotuibs:
 
 export function digestPeptide(sequence, options = {}) {
   sequence = sequence.replace(/^H([^a-z])/, '$1').replace(/OH$/, '');
-
   options.enzyme = options.enzyme || 'trypsin';
   if (options.minMissed === undefined) options.minMissed = 0;
   if (options.maxMissed === undefined) options.maxMissed = 0;

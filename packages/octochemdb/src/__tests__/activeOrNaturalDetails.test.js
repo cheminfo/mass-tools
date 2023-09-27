@@ -18,12 +18,12 @@ afterAll(() => {
 test('activeOrNaturalDetails', async () => {
   const id = 'dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgEx\x7FRLjmcxX~F@';
   const url = 'http://localhost/data/activeOrNaturalDetails.json';
-  //const response = await fetch(url);
-  //  console.log(await response.json());
+
   const entry = await activeOrNaturalDetails(id, {
     url,
     fields: '_id,data',
   });
+
   const fields = Object.keys(entry.data).sort();
   expect(fields).toStrictEqual([
     'activities',
@@ -35,6 +35,7 @@ test('activeOrNaturalDetails', async () => {
     'kwBioassays',
     'kwMeshTerms',
     'kwTaxonomies',
+    'kwTitles',
     'massSpectra',
     'mf',
     'molecules',
