@@ -111,7 +111,7 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
       y: reconstructed,
     },
     difference: {
-      x: combined,
+      x: combined.x,
       y: difference,
     },
     mfs,
