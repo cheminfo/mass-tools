@@ -1,0 +1,278 @@
+<datawarrior-fileinfo>
+<version="3.3">
+<created="1696003343999">
+<rowcount="199">
+</datawarrior-fileinfo>
+<column properties>
+<columnName="atomMapping">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	atomMapping">
+<columnName="idcoordinates2D">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	idcoordinates2D">
+<columnName="reactionFP">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	RxnFP">
+<columnProperty="version	1.0.0">
+<columnName="reactantFFP">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	FragFp">
+<columnProperty="reactionPart	reactants">
+<columnProperty="version	1.2.1">
+<columnName="productFFP">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	FragFp">
+<columnProperty="reactionPart	products">
+<columnProperty="version	1.2.1">
+<columnName="rxnCode">
+<columnProperty="isFragment	true">
+<columnProperty="specialType	rxncode">
+</column properties>
+atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	label	rxnCode	ionization	reaction	doi	section	description	kind	web	mode	isbn
+qlVH qrH ql	!R@FL@[@CC@Fp]bgp !RGtL@PqwZO@ !R@DL]~gp	4@(N%F1084%8!10J!V#22FFH0NF!3V!146F0F41V0802V024!s0FFF01F08301N8//&4//)2/	tNH101(4%V08/&F///0	FF2/$8////)	Displacement Reaction b.	gJXA@IRUjPH!eM@fXvB eF`BLGtP	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	4.1	Fig. 7	reaction		positive	
+qbqh qNh Qd	!R@BL@[@BC@Fp]Bgp !R[pL@@qwZO@ !R@@L]~gp	Z@(N$FV1084%8!10J!V#22F0F0N#1!2502!HFGV0882V13#s0FFH01FF830908#2/01////+	tNF1/0V08/#8!F///0	FF/%8/#8///$	Displacement Reaction b.	gJPI@DBTeZdB!eM@fXvB eFB@HcA}D@	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	4.1	Fig. 7	reaction		positive	
+qbqh qNh Qd	!R@BL@[@BC@Fp]Bgp !R[pL@@qwZO@ !R@@L]~gp	4@!V02!N%V10@4#188!10J!V!822F0F0s#108010@!F01V0802V02#s0FFF01F0B30108F////V/)2%	xNk5%2*V08/&F///0	JFV/$8////&10	Displacement Reaction b.	gJQA@IRUjPH!eM@fXvB eFH`fLGtP	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	4.1	Fig. 7	reaction		positive	
+Qg a` Qt	!R@FL@[AtJ_@ !RGUi| !R_qL]^kp	$4!V!1!1!1080404&24&1#F20J!V4$8J4F81V#2V06!1N$90_0@3//////&	o0V4/////+10	4F/%8////)	Remote Hydrogen rearrangement	eMHAIhOda`!fI@Gu` eF@HhP	[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	5.1	Fig. 8 a. & b.	reaction		positive	
+qTq Q\ qa	!R@NL?xpAlG_K\ !R@FL]Ngp !R@FL]Akp	#8$V(G0F208VF18V#405%2!F0H)1!4J01V1!2V82FB0N$F#83!F0F//01//%8/(	y4V4%V!4/////#	4FV/$8////&10	Remote Hydrogen rearrangement	gCa@@eMPD!eFHBLGtP eF@HhP	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	5.1	Fig. 8 c.	reaction		negative	
+IO^adkBFU qb^i IO^ IeQ	!Rm?u~_?C}|Gq~_?A}|Gu~_?A||Gwp_Atr{@ !R_g~w_K_}mwvw_AvZo@ !R@Fp@XqtF_@ !ROvL@XquFo@	04!1!V0c05#81F$2180_F2Vo449!1H482FGF4!W$80ZBF$k03W02!8F1FF895!9104088//01)V/V$F#8808-101$	tvLAcAq07Cs29B1!3F89c50H!XV#F8#F$FV#8*2$202&8)2%	kNH!1,8#8,H#8$F/#1/,	Remote Hydrogen rearrangement	dcN@B@J\bRbRaWCUUUL@_ITC@!gFpAEJTjZuRA@ eM`AIhH eM@HvB	[M]+	CRF	https://doi.org/10.1039/C5NP00073D	5.1	Fig. 8 d.	reaction		positive	
+qi^b qir qc	!R?g~w@k_}m?vw@auRO@ !R@AL@[@@SG]i| !R@AL]^kp	!481F4&4VHO0F1!dF10VH0XJ25V!80FF0FZF0B%11040F01Z1802cN28cBN0FF0J1VF8I#8F//////0	zxx510s!X404!828V!8#V(F!1$VF&2-2/*	JF!4/!8-F///*	Retro-Diels–Alder 	gFq@@eJftu@P!gCa@@dkHD eF@HhP	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	5.2	Fig. 9 d. & Fig 10 e.	reaction		negative	
+IwbFleVPx IwaeS qb^i	!RbMvH?Cx_bMt~@Hc]Oa~H?Hc|Oa|~@Aurw@ !RbCvHOXc|O`BHOQtz_@ !ROg~wWK_}mwvwWAwzO@	VV3c0Fc0F2X1W#15F!kV204V#45Z#c40N4F84028K0Fa010D1R10426Z2V4I480k2040F0149C1X07%F2+8-1#F$V/%F82!8!4104%2*	yRsr468G8V4040240805VN$F013020HFV58$F16$2!80F6V0V810V081!80V#204#5#10	oFcJ04,8#8$F*18/8//!V!	Retro-Diels–Alder 	dclDB@{iRYeevz]ZA`b@CzN`!gGPa@QJRmsPbX gFp@DiTt@@B	[M]+	CRF	https://doi.org/10.1039/C5NP00073D	5.2	Fig. 9 c.	reaction		positive	
+iup`jXdibCPcXKoI iSxKhvMHP IwbkEYH	!RbOrHW]x@bOs^[xc|w`BHWXa]w`C^[xc|ipK^@Mx@i?s^@AuRx` !Ri?rgW]x@i?rg?Mx@i?rg?Aujp` !RmsvwO]y?mqrPw[_]msvwGAwzG@	WRF4CK4MF2291L8TdVkWWliV12ZJ@bZf4g5TC4QP_F40FZ0o6F38sVL0H47w61F6WD7cP8QFaHX!M69v6f6Ek$4-4////,	:xzCqslde4mZ0EgHsVhXSH01Z0F9Y924FFVl02k0lkG6FF01@105ZJHZ1dc!20814180V05V205!F4#10	RNFY42V!8%V08#8#F8&HF!8$k04!V(FF!8102%8#V.	Retro-Diels–Alder 	fdeA`D@\brTfYY_m]gIZ|EhJB@@h@@~aF@!didHB@BTfUvfZVV@OhB@ didD@@iIYgxUie`B	[M]+	CRF	https://doi.org/10.1039/C5NP00073D	5.2	Fig. 9 b.	reaction		positive	
+IwlDdeZa` IFP IwlIEjF	!Rg`BH?H_|g`BHGYx@a?rH?Hc|bAt]\bH !R_uP]Fop !RmuvwWYy?mrr`g[^]muvwKAtzg@	VV08VH%W0@1W11F240WV08V2!J6ZV0V8B0G4F0V020l08101440H0WZ2!2VG3V80s2FF0F7809A1X19&@/)V1/-4&8%4*1%	zxxr5XsGde40402g28VWXN#V!13024FFVG02!VF16$@1!VJHV0V8!2081!80V010204#4%	JFcF#18&408#N(202$1/$2/+4!V!	Retro-Diels–Alder 	dmLDB@{irJJIQEneV`hB@B!eF@HhP didDB@hIRVY~G``@@`	[M]+	CRF	https://doi.org/10.1039/C5NP00073D	5.2	Fig. 9 a.	reaction		positive	
+IgBRhX IgDa` qM	!RepJWO[x@e?rW@kx@G^IB !R@Fp@[@Bc@Fp]N`H !R_qL]~gp	0Zo0108$1V02418V04V0F030G@24!V8!N!cF222V%3_0_FNV040RIXVg2XF8N0F04c0W0814V!V$4-4////,	zpUWMWO0VF4F0F08280V082*4Fl01&84$2#V0F#8!F0V1%4*V$	JF204/!8-F/)F/V.	Retro-Diels–Alder 	gOu@Dpdrm[TtA@!gJY@BDeUdB eF`BJD	[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	5.2	Fig. 10 d.	reaction		positive	
+q]aV qqU q\	!Rog~pOK@}lCvpOAwrO@ !Re{v~@I\BGQk| !R_qL]ngp	!40W02$1$1$V$4GFFJ08V408F#F0BHV!2!140BFNX1V0N1XZ8H!8NGFFB812F834!8//////!	vwM1H1G!F0F04#80k082*BF1!8$F8/$F/*	FF2/$8-F/)F//	Retro-Diels–Alder 	gFx@@eJfuS@P!gC`@Die@` eF`BJD	[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	5.2	Fig. 10 c.	reaction		positive	
+q]aV q]a Q\	!Rm{wpoWy?_g?poQvr{@ !R@Fp?[@AcGUk| !R@Fp]~kp	!401+V1+FFFJ18V(F090V%10V40F23V0802VF2!8N0FF!1V083#8//////!	NsJ1!k$2%8#84+F#8$F/%2/*	FF/%8-F///*	Retro-Diels–Alder 	gFp@DiTujhB!gC`@Die@` eF@HhP	[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	5.2	Fig. 10 b.	reaction		positive	
+ItYyRhp It^Jc IeP	!RbOvH?Oy?bOvH__y?bOt]|ep !RbOw~_xc}b@JH?QtFW@ !R@AL]fgp	#B1F42!1!60210F1F0cG10VN!Z2C#80Hk0F0NF4X0Z#10L0F23Z5!2V92VCBN0802J!F8I4020F$4-4,1)V/%F$8/(	zyxjJiN2WX4k4388V8FZF92!V0V#V4FG!88!8F84V!4$V0F#8!F0ZV&4%1(	JF!4-8#8-F!8///&	Retro-Diels–Alder 	daDD@@QIe^fZfh@`!gGQ@@djlrHf eFHBJD	[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	5.2	Fig. 10 a.	reaction		positive	
+qir` qip Qd	!RpQ]?oQNx`cQCGMP !R{d]?{WORi@ !Rpw~C^hp	Z&V!120F!G1F248V!8o030J241#G202k02Z!5!408!4F01V#2V02F81sV0I091!83F0F8F//////0	RNF140V)V)1////%	oFV4/#8////&10	Retro-heteroene (McLafferty-type rearrangement)	gJQ@@dju@_Pp!eMHAIhOh` eF@HhP	[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	5.4	Fig. 12 b.	reaction		positive	
+q}NS` q~M qS`	!R@O{DK\QRqBw~e|QRG_K\ !R@O{DK\QRGXY| !R@AM?DqvZo@	V0VJ9G0V!1!402G1F348V0F8VJ!604!481FF0F02a!1#4104BF01Z4V82V82F89w#8O1!83!FFF//01-8/&8#8/#	yTs74J8!V40Z11$404F/08V)1//&2!	JFc04)1(8////%230	Retro-heteroene (McLafferty-type rearrangement)	gNpiIahBTeVfj@~ec|x@!gC`iIahBTef@~fc|x@ eM@HvB	[M+Na]+	CRF	https://doi.org/10.1039/C5NP00073D	5.4	Fig. 12 a.	reaction		positive	
+IrBRfxP IrDZax`	!RmpJH@k_}bOvH@hc}?`@]|`H !R@AL@[@@S@Fql_qM?@AL]~cp	!241F04F0F!44H51F5F4YF10Vm1VJ4KZV0B0HF0F4P0B!802d1040F01Z3c0@c824NRP0J08JVV1B3!J//#1//%8/(	yRs7!8!V4F4$8#82#F+8$V8&8%F/04.	RPF342V!80V!9V!H!8F01!V(F&k/10V!2&I/!	Retro-heteroene (Claisen rearrangement)	daxH@@Revif`B!daxH@@RUiZjPB	[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	5.4	Fig. 12 b.	reaction		positive	
+qirc qip qbX	!RmpJw?[\Bm?w~@Awb@` !R_vq?Dquz_@ !R@Ox@?auZ_@	V#4F%20K02I1l308V!8k082J06F0V80HFVF0XV!_404#J0N01Z0202V46F80u!F!15083!F8k//01//%8/(	xNs_440402$4V#V08,2)F$V//)10	4Fc04/!8///)V,10	Retro-heteroene	gGP`@TeYjPOhX@!eMHAIdOh` eMHAITH	[M+Na]+	CRF	https://doi.org/10.1039/C5NP00073D	5.4	Fig. 14 c.	reaction		positive	
+Izb[HPP IFDp q}K	!R?g~w_Xa}?g?~_xa}bGt]tnp !R_vq?Dw}lG^k| !R?g~H?[_}GP[\	Z8!5F245F2!B02G3k708V!9V!2J04!180FP_J02040W4F2!2J0J3Aw0X43XZ6F86tV0JFB1K0c341F@F//01//%8/(	:xjxywZli4D4W_sB4VZ24F8nW#80W08!k0BFFV#4F2!V&1F!V!4%G%V02%30	oNs04+V%8////&10	Retro-heteroene	daDLB@SdeIeVfZjh@~QHz@!gCaAAiRUhB gC``@dfi@~PaP	[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	5.4	Fig. 14 b.	reaction		positive	
+qYnb qYn Qd	!R?g~H?[_}b@JH?QvJw@ !RmpK~@K_}GUjB !R@AL]~kp	02FF#V!1!4!O0F248V!8V#404$1F08N024$1!1!4F03V#2V82F81N81!O#8I!F0N$4(4$4,1#F#4&1/$8#1/#	yos_JZ8!V4041%4,V&8///%	oFc444(1(8////&30	Retro-heteroene	gGP`@df]j`OiX@!gC``@dfZ@~b` eF@HhP	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	5.4	Fig. 14 a.	reaction		negative	
+qnQcG qnKx QX	!R?g~w?Xc}mpJH@k_}?`@]dep !R@AL@DpAl@AL]^cp !R@AL]agp	V4V0G01V!d0Vh06A0m440k080dG8@5HBV0V4OV!F094H0Kk!130Z5F21V0802VB20NdR0M!O0V08310N0V$4////1/*	yJs_448!V0F41#804082,F!88$8,F)V(4.	JFV04/!8-F//*V,10	Retro-heteroene	daxDB@PIRYUZf``gZF|`QtQahXO}a`!gJQ@@djl`P eFH`fLGtX	[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	5.5	Fig. 13 a.	reaction		positive	
+qVak qiX Q^	!R@Fq?[@@S@Fp@DqtJ?@ !R_qL@DqwZo@ !R@AM?Dqwzo@	0F!5!V#V$1#5&F!4$1$2F204*Z4F01V0V02V02!8N10209#83F!4F//01//%8/(	Nc4#V$2+4////(	FF/%8////)	1,4-elimination	gGP@Divj`OdHL@!eM@HvB eM@HvB	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	5.5	Fig 15 a.	reaction		negative	
+qnSa qnX qbH	!Rog~po[^}og~pOAvrg@ !R@Fp@Hqtz_@ !R@Fp@HqtF_@	$5F!5$40210V5&V!24%80FF0F#40V4!F!J0F!4#3V06!4F$405081$F//01//%8/(	x@V60JVX0@$40V01!4#F!2(V/F//$10	JF!4/////,	1,4-elimination	gGP`@TfZj`OdHL@!eMHAIXH eMHAIXH	Unknown	CRF	https://doi.org/10.1039/C5NP00073D	5.5	Fig 15 c.	reaction			
+IXjsaRX IXjxY Q^	!R?g~H?[_}?g~H@k\BbOvw?QtrG@ !Rb@JH?_y?b@JH?QvzO@ !R@AM?DqtFo@	1F!CF4V5!V040210V14#V0VF024F1!180FF2FF0440V4%o4FF1Z4V03V06!DN1020C050N3$F-8!4.W#F01408$1*4*8!4F0F/4	xfZDcTVX4@X20VZ0V0W84440FF!H8&VF.F//$10	xPk74LVV0@0k!BV1$B!108F)V//-4&10	1,4-elimination	diDD@@IIf]jjh@~HHJFch@!gGP`Ademj`Oih@ eM@HvB	Unknown	CRF	https://doi.org/10.1039/C5NP00073D	5.5	Fig 15 d.	reaction			
+qJth qJ` qu	!R_`BH?M_|bGt]BhH !R_rq?DquZ_@ !R@FL]~kp	$5F0V501!40210V14%V!24%81FF3F!440V4%J4F01o#3V06!5N!20C05083$F//01//%8/(	x@V60JVV0@$4&4/V///%10	JF!4/!8////)	1,3-elimination	gJQ@@dsU@_HPX@!eMHAIXH eF@HhP	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	5.5	Fig 15 b.	reaction		negative	
+IpdjFGiT qcUq IGiT	!RbGvw_X`B?g?~@K]}b@K~_?x@G_J| !R?g~w@k_}m?vw@avzO@ !Rb@K~_xc}G]j|	#81Vc8k0F%1)40F!40VV0F$2F8!c$111040F#F8V2Z42!8G0F%F85F!FV//01//%8/(	FF/08#8-F!8///&	FF0F.8#8/08///&	Aromatic elimination	ded@@DiUUeiZ@hTZfh!gFp@DiTt@@B gC`@DiZDC@	[M+Na]+	CRF	https://doi.org/10.1039/C5NP00073D	5.6	Fig. 16	reaction		positive	
+Qv Qp Qd	!R_vq?Dqur?@ !RG[i| !R@AL]Vkp	10V04!V%1!1-204&808022J!k4!V0804F81V#@V%88#904082//////&	o0V4/////+10	4F/%8////)	Water elimination	eMHAIhOlba`!fI@Gu` eF@HhP	[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	5.7	Fig. 18 b.	reaction		positive	
+Q^ Q[	!R@AM?DqvJO@ !R_qL@DqwZo@	$1!V!1%1!44#804F304!1#12!F084F01$@044F01V#2V02!9N$9#83//////&	FF/%8////)	FF/%8////)	Sigmatropic rearrangement	eM@HvCzX@!eM@HvB	[M]+	CRF	https://doi.org/10.1039/C5NP00073D	5.7	Fig. 18 a.	reaction		positive	
+qcUq Qd qk qN	!R_`CW_]\BupKW_QwR@` !R@FL]fkp !R@FL]nkp !R@FL]~kp	/!1.J1*F01$8$V08F01V#2V02#N!F!1!83#8//////!	Nc4#V$2+4+8///+	0F/%8////)	Cycloreversion	gFp@DiTvjhB!eF@HhP eF@HhP eF@HhP	[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	5.7	Fig. 17 a.	reaction		positive	
+q~JlX q\jH q~	!RupKW_Wx@upKW@gx@GUIB !RHJUSYwy?SF\]Vmp !R_rp]^gp	VZ#k)4015F!4V0H0V080J040F0B40F0F!F!G04@%F4044202V024NVk!F!W!c10X08%4-4,1/)F#2&8(8.	zxpb5Xk0Ve!4!V!VV%V&4#F$V/-8/#	zhW4F0V!X!4%V&V%V*V*4/*V(V!	CO elimination	gOp`@tfUkZj`MYd@!gKQ@@eKcUPD eFHBND	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	5.8	Fig. 19	reaction		negative	
+Qg Qp Qd	!RG`BH?AtJ`` !RGYk| !R_qP]nop	VX010F01#1$11F#V#V#4040208!F0F#203)J1042042V4A080kV#F#811802//////!	4Fc04)1/////30	4/////-V!	Inductive cleavagea	eMDaYRVCzX@!fI@D eFH`fND	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	6.1.1	Fig 22 b.	reaction		positive	
+Qg a` Qt	!Rm{u~_qurw@ !RGUi| !R_yP]nop	VV0G(1$15F0V0V#V#404&80F#23101808#kV!2!2V83480k!F0F0V0811!2//////!	4F804//&8///$	4//+8///0V!	Inductive cleavagea	eMJdBBTfP~b@!fH`PA@ eFH`fND	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	6.1.1	Fig 22 b.	reaction		positive	
+Qg Qp Qd	!RG`BH?AtJ`` !RGUi| !R_qP]nop	XV(201V#11F#V#V1!Z04#F04!F#201$40VFN#2F02V03080k$G#817//////%	4F@04//0V///(V0	402/////+V!	Inductive cleavagea	eMhdYRVCz\@!fJ@D eFH`fND	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	6.1.1	Fig 22 b.	reaction		positive	
+Qd a` QP	!R@AL]|gp !RGUi| !RG[i|	08$F!F#180F&V08$4)F0F20F018%@!F8)2#F!8#F!1//////&	40V/////,10	4//////0	Inductive cleavagea	eFH`fLGtX!fI@Gu` fHT`P	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	6.1.1	Fig 22 a.	reaction		positive	
+Qd a` QP	!R@BL]Bgp !RGYi| !RGSi|	09(F%14#F%1#4$1#F0F!8!8%2#J$8#2!1F&F!1//////&	//,8///$	//,8///$	Inductive cleavagea	eFB`HIcA}F@!fH`PA}X fHT`P	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	6.1.1	Fig 22 a.	reaction		positive	
+Qd a` QP	!R@BL]Bgp !RGYi| !RGSi|	080GG#8F!1$2)2#4)F0F,2+1k2#J$10F!1#2//////!	!2/////,V0	!2/////.	Inductive cleavagea	eF``fLGt\!fJ@Gup fHT`P	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	6.1.1	Fig 22 a.	reaction		positive	
+Qd a` QP	!R@DL]Bgp !RGYi| !RGSi|	08(F-2$20V4!140F!F1k,2)4!824!H&FF01!F//////#	/////.4!	/////.4!	Inductive cleavagea	eFBcpIcA}G@!fHg`A}\ fHT`P	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	6.1.1	Fig 22 a.	reaction		positive	
+Qg QP Ql	!R@DL?xqwr_@ !RG[i| !R?`@]Vgp	28!8$H!W)8F%10404#F04k4F%1$V2)8#2#F$10F2032F08//!1//%8/(	2020201/////(k0	!2/////,V0	Inductive cleavagea	eM``fN`~c@!fHT`P eF`BLGtX	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	6.1.1	Fig 22 a.	reaction		positive	
+IyjH\R@ IyjD qbq	!RmpJw?[\B?g~w?[\Bm?t]Pkp !R_vq?Dw}lGWi| !R@AL@[@@SG]i|	#VW2FX01F010FV5NF$4#k!4!202%F104%V#aBH91VJm02V42048N9!V9!2832#8$4-4,1(4/(2!8808/V$	:U979O01F5V04N91#2#Z*Z/0F&8/-F0	qFP0619$F*8-V///(F0	Inductive cleavages assisted by β-hydrogen removal	dayHBDxDeIYujj@OdRJ`!gCi@DDeZ@~b` gChA@IRVdCzB@	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	6.1.4	Fig 23 c.	reaction		positive	
+qbqk qbqk	!R_O@T~pAYDEKp@quJ_@ !R@Fq?[@@S_qM?[AwZ_@	Z2!110V!F8!211#4!F1F0F!BVF4$822F0V4#2#V04JF01V#@V02!NP602V924F97$F/#4,1/,4(8(8(2%	zj_DO2V20i2042!V0k&V0VF!V$F$V*4/*V!1(	yJs5!8!V4F4)82/%V//04,10	Inductive cleavages assisted by β-hydrogen removal	gFqAAYRe|Zj`OiH@!gGQA@IRezY@~``	[M]+	CMF	https://doi.org/10.1039/C5NP00073D	6.1.4 	Fig 23 b.	reaction		positive	
+IaLJnXP qbqk IxP	!RdArPwY@\dMvPGMy?dMt]Bkp !R@@L@[@@C@Fp@@quz_@ !R@@L]akp	VV!W!Z!1N$104041!910J!B!4#98!F!42!2%4ZFF1V#2V03029P14209#9308VV8-4$4,1#F01*81$4,8#1$4&22$	RuJAB2k01802#V!F80140G!V/#4//-	RNF140V)V%8!1/#k/%2/*	Inductive cleavages assisted by β-hydrogen removal	daxHB@zTeVVjh@~ah@!gGQA@IRUVi@~`` eF@HhP	[M]+	CMF	https://doi.org/10.1039/C5NP00073D	6.1.4 	Fig 23 a.	reaction		positive	
+qNWeX qNW qlX	!Rb@JH_Wx@b@I~@Ha}GWJB !Ru?sW_Wx@GYjB !R_rq?Dqwz_@	8#4!4522#V0G0s2080V0@7022J0JW8%4K02#V4048s2J4J11F!53V46F!F!F!154898WG@F//01//%8/(	xvkj4oVV0@02!5V!Vc04F01,k*F+1+8/010	oPV64J/04////&10	Grob-Wharton	gNpaAQJSOMU@_HQX@!gCa@@duPGtD@ eMH`eIXOh`	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	6.1.5	Fig. 24 a.	reaction		positive	
+q{iV` Qv qM q{	!Rm?vw?[\|m?v~_{\|GXJ\ !R@Kx@oauZ_@ !R@BL]^gp !R_tp]Agp	lV8!44!V014!F19F8!V080Vk024048F0H04E4F11020104!4040k5FFH0F2V03190k9F01NVF0d9_)4/+1/-V&8/(	yoPWLW9!F4!F%F/V2/(8/,VF0	JF2///-F/,V80	Grob-Wharton	gNxaLJIRU[jXCzZ@!eMH`eIxH eF`BJGtP eFHBND	[M]+	CMF	https://doi.org/10.1039/C5NP00073D	6.1.5	Fig. 24 b.	reaction		positive	
+IMTwBFi[h q{l IMTwBFP	!RmpJw?_x@mpJw?_x@mpJH?K_}?g~w@aw|@` !RmpK~@K_}GYjB !R?`BH@k\BbOt`^gi_^e|]ahH	W0140G!@0B0V08216F05kcH10V04041JGW0@V0k0N9F0HF0kF0F_k20o8141!3Z8H08FF#4F080D1HB10c$4(4$4,1#F#4&1(F&2#8#1F!8.	:xjxyTepXi0pYW8XV44L7F0VV1@#V#804NZ!1F$502F*V!4/(	:xjxqNelX60Z118XV0424F!V%V%48Z)1!F-4/(	Displacement Reaction a.	dctJB@SaT^RYyWfjjf@H!gC`a@erSM@P daDL@@Sdf^Vyjj`B	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	6.2	Fig. 28 c.	reaction		negative	
+ISBbfOae] IWP ISJJIX~D	!R@k^w?Hc|?[^w?Xc}m?s~@K_}m?rw?QuB?@ !R_vp]agp !Rm?w~_xc|mpJH?Xc}m?vH?Ha}G[h|	X$N!W043#VG0F24BXF18V0J4404F!80FF0R1H08F$k1024J01710F@V8XF@0F#2F01081!F0F0V!4804%8#411V#F$W(48#40F$1!F404V&84682!@B!F!F4204F!	:xjtyTirbrCzekNiaB2L_chcVa8!FJ3$2$2JV9!402F218!Z#V4-2&1410	:xjtyTirbECyXkNiZB2L5chcVW8#J18#2$2LV9!402F01#ZF!V)1$2$V01410	Displacement Reaction a.	dctFbHSBEP|ByJk_mZjjh@~`X@!eFHBLGtP deTJbHSBdOB^rRSIHlKUUT@P	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	6.2	Fig. 28 b.	reaction		negative	
+IIjshPYWS IuYL IIjshPP	!Rs|uTaOrwYrsPs\Bfb@JH?X`B?`BH?QtJ@` !RmpK~@K_}GUjB !RbOu?x_h`Ou}udE_\U}p]~gp	W!4VG!834022!10F044XF10V04440JF!8Z0k0N1F!F0k!kWF60o!71!HV8H0@0F#6F0908108028$48%148!F409V)1#F#4$411$1%4V&80201+4&	:xjxyTirbzCzflNibB6MbOhcV7@!FV3!807OZF03FV9!502J2$V!FV!4+X&14!	:xjxyRilaEBaYlNiZ84H7OgVV12%8#60VF02H09!502J%VF0FV)1$X$V014!	Displacement Reaction a.	dcLFbHSBEP|ByJk_Vifjjf`B!gC`a@erSM@P dadB`HSBCpRjuijyjjh@`	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	6.2	Fig. 28 a.	reaction		negative	
+!R?g~w?Xc}mpK~_{_}bOvw@k_}G\H\ !RGTY| !R?g~H?[_}b@Jw@hc}b@JH?Quzw@		Calculation Failed	oNs404%F%8#8$F(F018$F84$2!8,V1&4#F(10	JNs242,8#8,2F018$F04/01$1!8/#	ζ-elimination	dedDB@f^RYU^ejXLRrz~`H@!fH@Oj@ diDDB@D^RYWVefALfh	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	6.2	Fig. 27 d.	reaction		negative	
+qiZ|p qiTp q_	!R?`BH@k\BbOvw?_y?GUJB !R_qM?Dw}l_qL]Fcp !R@AL]Agp	04!1F44%40614k10Vc1!VRB0444k!80FF0F1046202!15060F!40883VB2F9BF0F02J0c2BI8#k$4-4,1//%8/(	yJs_448!V0F41#804082,F0108$8%2%F)V1&4.	JFV04/!8-F//*V.	γ-elimination 	gNqa@f~RY]jXPl!gJP`@TeUdB eFHBLD	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	6.2	Fig. 27 c.	reaction		negative	
+qbq qH Qg	!Rb@K~@Hc}GPjB !RGWi| !R_?y??avZ_@	%F0V2010140210F1JV$V04V4!F2481FF0F104(4024F!40V12V02F81F$9040C1$V$4-4////,	oFc444(1/////!	4F!4////,V.	α-elimination	gC`a@erSM@_SP!fHW@P eMDARUB	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	6.2	Fig. 25 a.	reaction		negative	
+IfESBinD IGfhlP IfE	!R?g~H?[_}mpJw?[\Bm?vw@k_}GUs\ !R_vq?Dw}l_qM?[G|SGQi| !R_?y??avF_@	!4V0F#@!140210F1FV#VV0Z0J!G0480FH0k11!4098!4F20H!40V12V0@F@0F!J!141B1#8V$Z-4&F$W014F01!802!F*4F)84601$4#2%V!	xtw_ZZq4W3F6114V05V#401$8!2$F4%F4//$2%10	xtZ4Z0Z!202&V#4&8/F/.V.	α-elimination	dedLB@RTyImUVjj`CzI`!gNq@`N_IJkUTA@ eMDARUB	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	6.2	Fig. 25 b.	reaction		negative	
+IzaIla@ qrLk IxP	!Rm?vH?[\B?g~w?[_}?g|]tep !Rb@Jw@ox@?`Bw@auZp` !R_vp]^gp	8$F#1#B0292F180V!8V#404F0480JF0F801(1!FF8040V0HV82480F0V!F20181#J02$2%101!8-1$1#4/#10V8#8!4!4%2!J0V$	6FsF!810V$2&8*2/)F//#	4F0F4/!8////)	α-elimination	daDHB@KdimVz`@@B!gFpAKrTjZ@@A@ eFHBJD	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	6.2	Fig. 25 c.	reaction		negative	
+qJuX qJp q]	!R_g?p?_A||Ot]Bmp !R_g?p?QuZw@ !R_rp]^gp	V0V!F1080428J0211F10VV210k040J04FV080HF2F1#F5F0404022J4GZ#2V0H080s10F40G!B30808V//////0	xNk54$2%V#V////+	4Fc04/!8////)	α-elimination	gJPa@SrRkTA@!eMH`yIdH eFHBJD	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	6.2	Fig. 26 	reaction		negative	
+IxjqaR@ IZa Q[ qy	!R?`BH@k\B?`BH?[_}mpH]xlH !R_?y??awz_@ !R_qL@DqtzO@ !R_vp]Zgp	V$F#8#B0613k10VV!1V0B0K14GFZ84JF0k1$G14!4020F4040V02V42F80k!F20W38R10X08V//01)V/%F$8/(	xtsb4ak40@0R!4Va0V!8&F04!2F(k$V(F&20V#8)4)	JF!4/!8///)V+V!	α-elimination	daxDB@HnrJJHmSHA@!eMHAITH eM@ghvB eFHBND	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	6.2	Fig. 27 a.	reaction		negative	
+IDjsfR@ IDlYH q}	!RmpJw__x@?g~w@k\B?`@]dop !R]?pq@B?MOrXkAAtz`` !R_vp]Fgp	$1F!2#89!10H!V#1X040410kFBB41F0G10F!F04014V20F4040c02V02F82FFN#c18R10X!V$4-4,1#F01/.8#1$4-	xtwbZao4V@0T!4VZBc8084010F0N84!FF018$J0J4#2808V0F#8!20V#8)4)	RsFY4Xk!80@#V4!8$G/&4%4/!8/V!	α-elimination	daDDB@HnRYg[fij@H!gFqAAnRYSVj`H eFHBND	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	6.2	Fig. 27 b.	reaction		negative	
+IeQtNZlIH IeQwfh qNT	!R@hbw@gvwbOvw?[\Bm?vw@ox@m?vw@at|?@ !R?`Bw?Xc}mpJw?[\BGP[| !R@Ox@?`JHG]k|	B48B1VVVO9B$J10k!1kW50VN80J04$8HV0G!80H8k!890Z0L0410H02VRLV9gF8FF4JWZ09G0828V$4+40401*1#F)4*F0V)8#1#8.	zxx_pZTBlYJCM14cD5842!WVV%V2$3BJ!2!9%F2,4%4$2V%14!	zpx_KVN4VV444!824#80V/(9%F/&V!2&1410	Eliminations assisted by β-hydrogen removal	dctJbHSNdOCNrRSEISMUTt@[PTXIF@PvB@!gNpYHlqxOdj}Zj@~f` gCa@@djpD	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	6.2.4	Fig. 29	reaction		negative	
+qtSi qQ] Qx	!RbGvH@gx?bGu~@AtJo@ !Ruwu~@Ha}GUk| !R_rp]^gp	V24!G0408$k851F#V#V!VJ04@F@8!F0F%104#10FF4448442V0@F80l1#4V0F8Y2#V//01/*F*8/(	yLPV619#1V0F011/#V&2)F//%F0	6220201#1$1////,VF0	Displacement Reaction a.	gGYADEJSLuPGtT_nlK|!gChA@Icu@_PP eFHBND	[M+H]+	CMF	https://doi.org/10.1039/C5NP00073D	7.1.3	Fig. 22 c. 	reaction		positive	
+qgSuH qrLoX	!RQps~_}?YQwMmc}?FGUH| !RN@s_qox@[[AGCAJpGXXb	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance 	gOpAGJTju`@@D!gOpAGJTju`@@D	[M+H]+	Resonance				resonance	https://homework.study.com/cimages/multimages/16/capture2867284230232943485.jpg	positive	
+IaLkit I{MbTh	!Rh@VUDFcl?H`N@HCfGXiB !R[X~@abJwFEL@F[y_GSi\	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	[M]+	Resonance				resonance	https://homework.study.com/cimages/multimages/16/capture2867284230232943485.jpg	positive	
+q]yfP qgSuH	!R[X?@qaJONGO@v_y?GWK\ !RQps~_}?YQwMmc}?FG[i|	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	[M]+	Resonance				resonance	https://homework.study.com/cimages/multimages/16/capture2867284230232943485.jpg	positive	
+qrLoX qMsW`	!RN@s_qox@[[AGCAJpGWKB !R[[C@vQJpN@s@qox@G_iB	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	[M]+	Resonance				resonance	https://homework.study.com/cimages/multimages/16/capture2867284230232943485.jpg	positive	
+qMsW` q{eQp	!R[[C@vQJpN@s@qox@GPkB !Rw}dx\vvO?g|Rct]sGP[\	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	[M]+	Resonance				resonance	https://homework.study.com/cimages/multimages/16/capture2867284230232943485.jpg	positive	
+q{eQp qTwKh	!Rw}dx\vvO?g|Rct]sG]K\ !R?`AG\t\Lw|[_vVvpGSiB	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	[M]+	Resonance				resonance	https://homework.study.com/cimages/multimages/16/capture2867284230232943485.jpg	positive	
+qTwKh qqUcx	!R?`AG\t\Lw|[_vVvpG]JB !Rw|XxCFvp?`@RlD\LG[kB	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	[M]+	Resonance				resonance	https://homework.study.com/cimages/multimages/16/capture2867284230232943485.jpg	positive	
+qgVMX qYoTp	!Rg`BGgXb]a?rG?H^]GPhB !RN@swnix@C[AkCDJpGSkB	V80VcF0XFF0c$W@2V$1%B104#18NVF!28!2$2F0H%F2V024!H0F!20F091F049&2+8-1//08#8!4!4%2*	FF0F$8-8////)	0F/%8////)	Tropylium rearragement	gOpAMJUKua@@D!gOpAGJTju`@@D	[M]+	Rearrangement				reaction		positive	ISBN: 978-0-470-03310-4
+Qd Qd	!R@Fp]bgp !R@Fp]Nop	08010F#F$20808BZ(804)F0F$1&2#V!4$82#F0V$F!1!4//////#	0F//*8///$	//,8///$	Resonance	eFB`HIba@!eFB`HicA@	[M+H]+	Resonance				resonance	https://en.wikipedia.org/wiki/Oxonium_ion	positive	
+Qd Qd	!R@Fp]bgp !R@Fp]Nop	08!V$J&8%F#F1!4#F$J0F!4#F#42!8$F#F21!F!2#F!14!2//////!	0F2///-F//	!2/////.	Resonance	eF``fJD!eF`bfLD	[M+H]+	Resonance				resonance	https://en.wikipedia.org/wiki/Oxonium_ion	positive	
+QX QX	!R@Fp]rgp !R@FL]Nkp	08(F$V0F08208#8$4(8F0F#F$4!2!4104!4!42#F0F$F!10V02F//////0	4F!4/////,	40V/////,10	Oxonium Resonance	eFH`fJGtP!eFHbfLGtP	[M+H]+	Resonance				resonance	https://en.wikipedia.org/wiki/Oxonium_ion	positive	
+qkOfP qi{tP	!Rm?w~@Hc}mpJw@ox@GWHB !R?`BH?[_}mpJw@k_}G]k|	W8!1$N0V202870F%1!F81_40VFV128F0F8FG!1Y1210240F2!88F6k02!8FBF#4F0d1#8%F#F/&1)V#2/0F02!8/(	FNF202,8#8,HF!8$F04,F!81/,	NNFY02V!8(8#8,2F!8$k04+FF#102/*	Benzyl carbocation Resonance	gOpAGJUKutkPD!gOpAMJUNusMHD	[M]+	Resonance				resonance	https://homework.study.com/cimages/multimages/16/1123794039966492669191.png	positive	
+qkyfP qkOfP	!Rb@Jw@oy?bOvH?_y?G_H| !Rb@K~_{\BbOvH?_y?GXY|	V8401!J0s!202810F%140F85Z!V0V1@8F0F0FFV0W352102J2F#8802k02!8F4F#ZG0d1#8%F#F/&1)V#2/0F02!8/(	NNFY02V!8(8#8,2F!8$k04+FF#102/*	FNF202,8#8,HF!8$F04,F!81/,	Benzyl carbocation Resonance	gOpAMJUNusMHD!gOpAGJUKutkPD	[M]+	Resonance				resonance	https://homework.study.com/cimages/multimages/16/1123794039966492669191.png	positive	
+qi{tP qkOfP	!R?`BH?[_}mpJw@k_}GWK| !Rm?w~@Hc}mpJw@ox@G]k|	o849!cFFF!2!410V5#11B!1540FV0k!@F0F8NFV01352102F3F04F8BV2k02V!t4F0F0ZG0d50GF0V//////0	NNFY02V!8(8#8,2F!8$k04+FF#102/*	FF0F$8-8////)	Benzyl carbocation Resonance	gOpAMJUNusMHD!gOpAMJUKua@@D	[M]+	Resonance				resonance	https://homework.study.com/cimages/multimages/16/1123794039966492669191.png	positive	
+QP` QX	!Ro`BHoY^}GXk| !R_tp]Ngp	V04!1$V$V*88#4V%8*4%1#F!80404#J!1#4!F020V1//#1//%8/(	!2/////.	!2/////.	Ionization	gCh@AGj@vTTUHXECAdEzh`!eF``fLGtP	[M+H]+	ionization	https://doi.org/10.1186/1477-5956-10-S1-S8			ionization		positive	
+QR QX	!R@BM_HqvJo@ !R_tp]Ngp	V&F+H(8&VV048!4&4%8!F!8#F02!F+48$F//01//%8/(	40V/////.	40V/////,10	Ionization	eMHBN`vjMPp_yE{P!eFH`fLGtP	[M+H]+	ionization	https://doi.org/10.1186/1477-5956-10-S1-S8			ionization		positive	
+QX QX	!R_~L]Bgp !R_pp]vop	////////!V1/(4&2$8/02%	4F!4/////,	4F!4/////,	Ionization	eFHBJGHh!eFH`fJGtP	[M+H]+	ionization	https://doi.org/10.1186/1477-5956-10-S1-S8			ionization		positive	
+Qa Qd	!R@DL_PqvJo@ !R_pp]Nop	V0V%V01+8!60804!4BV#8$1$40F!9!4#5202%F$1//.1//%8/(	//,8///$	//,8///$	Ionization	eMB@HchMjcTLG~Q^t!eFB`HIcA}D@	[M+H]+	ionization	https://doi.org/10.1186/1477-5956-10-S1-S8			ionization		positive	
+QX QX	!R_rp]Bop !R_rp]Vop	//////(8/$F$V%8/&V)8/%	4/////,1410	4/////,14!	Ionization	eFJH|Hp_U@!eFJh|KhpP	[M-H]-	ionization	https://doi.org/10.1186/1477-5956-10-S1-S8			ionization		negative	
+QX QX	!R_vp]Rgp !R_vp]vgp	///////-F$W/*4*804/%	40V/////,10	40V/////.	Ionization	eFHBLGtP!eFH`zLD	[M-H]-	ionization	https://doi.org/10.1186/1477-5956-10-S1-S8			ionization		negative	
+a` a`	!R_tp]Rgp !RG[i|	V$401H(8%40808&1#8$F!204%4/F&F#2#4//////#	//,8///$	//,8///$	Ionization	eFB@HcAmWhbMPp_{P!fHpPxB	[M-H]-	ionization	https://doi.org/10.1186/1477-5956-10-S1-S8			ionization		negative	
+Qa Qd	!Ro`BWoQvJ?@ !R_tp]Ngp	W,8%4%80cF02(B$F#F4&F#F#F%F+1FV//%1//%8/(	!2/////.	!2/////.	Ionization	eM`BN`vktQFhXO}h!eF``zLD	[M-H]-	ionization	https://doi.org/10.1186/1477-5956-10-S1-S8			ionization		negative	
+qiTp Qg qi	!R_vq?Dw}l_qL]top !R_qL@DqwZo@ !R_vp]^gp	82405F0F08V!4021401F0F#ZF@24!1088VFF0H%V52!81J4N11ZF0W2V06108O&5F834//////%	xNk5%2*V08/&F//.10	JF!4/!8////)	Retro-ene	gJQ@@dkT`_PQ~zSOp!eM@HvB eFHBJD	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	5.3	Fig. 11 a.	reaction		negative	
+qTuH qTh qq	!R@Fp?[@AcOvL]lgp !R_rq?DqvZ_@ !R@FL]~kp	020FGF0V!12040290F940V0F0Z0304041!B1FF8N!44&9!4G23Z#2W820B5N!V0S#83!82//////!	yJs5!8!V404)8////)	JF!4/!8////)	Retro-ene	gJQ@@eKS@_Pq~LT!eMHAIXH eF@HhP	[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	5.3	Fig. 11 b.	reaction		positive	
+qrLk qrL qk	!R?g~H?[_}b@JH?QvJw@ !RmpK~@K_}GUjB !R@AL]~kp	X!B0c0V401%9GF041V#V1F0504!A2G0@8F4V4!1!144!4NV5V0F02V020@1sF0209V2083o6!k//01//%8/(	yoPWLW9!F4!F%F/V2/(8/-F0	oFe404/08//(F/-10	Retro-heteroene	gGY@DDf]j`Odkl@!gCi@DDff@~`l eF@HhP	[M]+	CRF	https://doi.org/10.1039/C5NP00073D	5.5	Fig. 13 b.	reaction		positive	
+q\jN q] qN Qd	!RbOvw?_y??g~w?QtrW@ !R@AL]zgp !R@AL]Nkp !R@AL]~kp	V82$42F!20201!801Z01%J1020V!8F0F01#V2W!1X!F01Z!82V02#N46F!1F0930808//////!	Nc4#V$2+4+8///+	0F/%8////)	Cycloreversion	gFpAAJTj[UTA@!eF@bXhP eF@HhP eF@HhP	[M]+	CRF	https://doi.org/10.1039/C5NP00073D	5.7	Fig. 17 b.	reaction		positive	
+Qg Qp Qd	!R_qL@Dqur_@ !RG[i| !R_vp]fgp	0F08!2(4#k080V#V!1B24F$F08F$1%10F+82080F0V40F$1!22//!1//%8/(	60V&V/////&	40V/////.	Radical fragmentation	eMHBN``!fH@O}R eFHBLG~hP	[M]-/[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	5.9	Fig. 20 a./ Fig. 21	reaction			
+I{DJJXY I{DJJXY	!R_cbDdknR?lc~rKnR?ba?REwLp` !R?`BH@k_|?`C~@K_|?`B_TMuzH`	050F3k840228240218450c660FVF1Wg16ZG890mk8F086V!4H3E80J0H1o4080Ic031F8G0NJ10V498124FD//////!	JFcF#18(F!108)12!F/$2/%V-	JNF242,8#8$F&HF!8$F04,F!81(8/#	Radical fragmentation	didH@@RYWZZ@BP@u@H!didH@@RYWZYiYh@u@h	[M]-	CRF	https://doi.org/10.1039/C5NP00073D	5.9	Fig. 20 a.	reaction		negative	
+Qg  Qg	!R_qL@Dqwro@ !RGSi| !R_vq?Dqwj_@	$1FF!8#42211F180V!FZ020404G!80FF0F8!4&80N0F114#2V02084F0V!Z#85////)V/,	60V&V/////&	JF!4/////)1!	Radical fragmentation	eMHBN`uR!fHd@AjP eMHAIXH	[M]-	CRF	https://doi.org/10.1039/C5NP00073D	5.9	Fig. 20 b.	reaction		negative	
+qrLk qJt qk	!R{AxRsWi|fUu?IsuBs@ !Rs~KONXH@ZqHd !R[w}[WG`	V!90J0V4$50211F1VVVF!VB02404!38ZFN0F0V4021#4141ZF014F022V820f8k!20O0J2810F//$1//%8/(	yJs_448!V4041%408,2$8)V(4//!	oFc444(1////.V30	McLafferty rearrangement	gGP`@df]jPOiX@!gC``@dfZ@~bl eF@HxP	[M]-	CRF	https://doi.org/10.1039/C5NP00073D	7	Fig. 30	reaction		negative	
+I`tu\JfxY I[jFRp IaEtp	!R@hbH?_vwmpJH@hc}b@K~@H`BbOw~@AvJ`` !R?g~w@k_}bOvw?[\BG_k\ !R?g?~@K_}bOt]vgp	Vc040oVV@07V!f01YN0LGXFIVV10640J109B10H2RVkL44G5N808FFBL8Wa1!2V0uX@_s#49W!83022&4-4,1!F%V,10F0V#F$8%F08.	zrthJoNZ0V5JZ1!280Z092V$8#4H10108#VN090V02%4$1FF)F4!2&14!	zrx_GkN40V5R4!8@80V082c)4H101%V808#2%4$10F*4*1410	McLafferty rearrangement	dctFbHSBEP|B{IILTdhuTtpPs}Fp!gOp`AdiekjV`H gJPYHlQxGh}j@~bl	[M]-	CMF	https://doi.org/10.1039/C5NP00073D	7	Fig. 30	reaction		negative	
+IZnFRqH IZagb Q^	!R@AMl@G}lDw|@[@@S@Fp@Dqwr_@ !R@FpS@G|S[G|@Dqtz_@ !R_qL@DqtFo@	02!1!VF&1148Z5%4F3FJV0WF#202F0849F!V018044F01c0N0es03!8w0FH0990F832048k)808V/#c(2/,8-F)	vzK918k0101%202!8!2/#F/%2+1*4!	HHN#8#1V&2!8//F/$1.4!	Remote hydrogen rearrangement	diD@b@|@gIIETjji@NlRrJ}DP!gGPIAxBTjfjPH eM@HvB	[M]+	CRF	https://doi.org/10.1039/C5NP00073D	7	Fig. 31	reaction		positive	
+IaLJfxY qan IF^ qS	!R@AMl@G}lDw|@[@@S@Fp@Dqvr_@ !Rm?w~@Hc}GX[| !R_qL@DqvZO@ !R@AL]^kp	484#V!NVF02011040k$8#2q9!40G20FVF0J$V#8240FBWV8!2VF2V44N!FN0Wk0e3010B*8/&1)V/%F$8/(	vzK918k0101%202!8!2/#F/%2+1*4!	HH)1+8////%4!	Inductive cleavage	diD@b@|@gIIETjji@NlRrJ@!gC`HAxQz`H eM@fXvB eF@HhP	[M]+	CMF	https://doi.org/10.1039/C5NP00073D	7	Fig. 31	reaction		positive	
+qnZa qnTH qX	!Rm?vH?[\Bm?w~@AwR_@ !RmpJw?[\B?g|]Fkp !RGWi|	08080G#k21040210FG@FV#VF!404F!80kF0F#cV2%204F!4#2VF2J80F0V0202F08191,8/&1#4F04&F.V%8(2&101$	jonW2V1!V0F#1&2V/(9,F/#2%2$	6FP0609)1(V+k+8,F//	Inductive cleavage	gGYALMJT}TpGRdX!gJY@DDefXB fHT`P	[M]+	CMF	https://doi.org/10.1039/C5NP00073D	7	Fig. 32 a.	reaction		positive	
+IqBZJG` IqF`^ qM	!RbOvw?X`B?g~w@hc}?`@]|cp !R?g~w?Xc}mpK~_quZg@ !R@AL]~kp	02FNVF1V0V3!40290J540V#Z064404128c1FF8NF048%19G44H03Z#2V82081N$O4!83V1,8+F1)1#4F,F+VF$8(2.	zpz_IVO4VV4R4!18$82c+G+9*F0F&V&4#2%2$	yJPV619&F01%80V+k&2#9,F/#2+	Inductive cleavage	dazHBLCIRfVjY`CiBfoQT@!gGYADEJSLtpD eF@HhP	[M]+	CMF	https://doi.org/10.1039/C5NP00073D	7	Fig. 32 b.	reaction		positive	
+Qv Qy	!R_vq?DqvJ_@ !R~nzi_qtz_@	$4!V!1!1!1080404&24&1#F20J!V4$8J4F81V#2V06!1N$90_0@3//////&	o0V4/////+10	4F/%8////)	Water elimination	eMHAIhOda`!eNHAAP~c@	[M+H]+	CRF	https://doi.org/10.1039/C5NP00073D	7	Fig. 32 c.	reaction		positive	
+qrLk qrLX qh	!RbOw~_x`B?`BH?QvJo@ !RmpK~@K_}mpH]zhH !RGWi|	04085#50V!1!10V)F02441%2!F20F!V4$8J0F81Z#3V060J8N%15083$8$4-4&F$1(Z/!V)804/1#8	xPsa4J0a020k014VW$4$8J+4-F(4/#4&10	oFs444%F01(8-F//0V(4.	CO Elimination	gGQa@bnR[fj@~a`!gJPa@erS[RA@ fI@Gu`	[M-H]-	CRF	https://doi.org/10.1039/C5NP00073D	2	Fig. 3	reaction		negative	
+Qv a` Qt	!R_rq?Dqvr_@ !RGYi| !R@FL]ngp	8!8-W0F04!k#801B05Z!30204F#4$10F0F0F!1#2V02040F!4!2!c90102F//////0	o0V4/////+10	4F!4/////,	α-cleavage	eMH`eIhOho~hP!fH@O}R eFH`fJGtP	[M]+*	CRF		1	Fig. 1<NL>	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qi^b qNk Qd	!R?g~H@hc}bOvH@awrO@ !R@AM?Dw}lGSj| !R@AL]Fkp	4!2V0F40@#V!30F0131&1R!2!2H4!F0F#182$O4F51V0882V02F!N0ZJ1V1048Q180@8///,V//#	Nc4#V$2+4+8///+	FNF/$8/&F///0	α-cleavage (cyclic)	gFpAAJTj[UTAjQ@!gC`AEJUm@_zfP eF@HhP	[M]+*	CRF		2	Fig. 2	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qir` qir`	!R@Fp@DpAl@AL]Rgp !R@Fp@DpAl@AL]~gp	///////)40c04$1044!1(108080V1404*8%F!4&26#4	RNF140V)V)1////%	RNF140V)V)1////%	Remote Hydrogen Rearrangment	gJQA@IRUZ`OhXjA@!gJQA@IRUZ`OhHjE@	[M]+*	CRF		4	Fig. 4	rearrangement	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qrL a` qrH	!R_qL@Dw}lG_J| !RGQi| !R_qL@DqvzO@	#8!F!@#V!1#1)1B01#2260FF0FV!1&N0F11V0902V02040N0V40V#8I1!28///,V//#	N8$V/////*	FF/%8////)	α-cleavage	gC`AEJTu@_z`P!fH@O}R eM@fXvB	[M]+*	CRF		5	Fig. 8	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qTis qUap qX	!RmpJH@oy?m?vH?Quro@ !RbOvw?_x@mpH]fgp !RGWi|	0oVc402F#44#1!804!820J01B01%H!F!4*F2F01V0V02V02049N!4%83!421)8/+V/%V*8/%F0	Ne0282V!802&F%F!V////!	NNFX!V!8,8/&F.F//0	α-cleavage	gGPAIJUKUPGQEKQoz`P!gJPAEJU[TA@ fH@O}R	[M]+*	CRF		5	Fig. 8	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qrL a` qrH	!R_qL@Dw}lGWI| !RGQi| !R_qL@Dqtz_@	0V0N&V12!118#F$8V51BF5%304F#2$V01FF0FF0V0F02V02040F!6%810V02//!1//%8/(	y4V4%V!4/////#	4FV04$V.V////&	α-cleavage	gCaA@IRfhCTB!fH@O}R eMH`fM``	[M]+*	CRF		5	Fig. 8	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qrM` qrM a`	!Rm?w~@Hc}mpH]|op !Rm?w~@Hc}GSk| !RGQi|	#N04%F$10Z1VV$1011BV101#202F&8%F0FF9!102V4H040F0248VV!818812//!1//%8/(	u620211#1$1/////	2F20201)1(V/(8,F//	α-cleavage	gJXA@IRij`O}PH!gChA@Icm@P fH@O}R	[M]+*	CRF		5	Fig. 8	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qra a` qrH	!R?g~w?Xc}G_K\ !RG[i| !R@Ox@?avZ_@	@V08&V1$1$F0V$31B01#41204F#2&10F0F!F2!2V03040F0840F#991!2//!1//%8/(	JN024////(8/#	J/////-V!	α-cleavage	gCaA@IRYhCTB!fH@O}R eMH`eIxH	[M]+*	CRF		5	Fig. 8	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qrM` qrM a`	!Rm?w~@Hc}mpH]lop !Rm?w~@Hc}G[k| !RGYi|	#N04%F$10Z1VV$1011BV101#202F&8%F0FF9!102V4H040F0248VV!818812//!1//%8/(	u620211#1$1/////	2F20201)1(V/(8,F//	α-cleavage	gJXA@IRij`O}PH!gChA@Icm@P fH@O}R	[M]+*	CRF		5	Fig. 8	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qra a` qrH	!R?g~w?Xc}GWK\ !RG^i| !R@Ox@?avz_@	@V08&V1$1$F0V$31B01#41204F#2&10F0F!F2!2V03040F0840F#991!2//!1//%8/(	JN024////(8/#	J/////-V!	α-cleavage	gCaA@IRYhCTB!fH@O}R eMH`eIxH	[M]+*	CRF		5	Fig. 8	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qjtH qjq a`	!R?`BH@k\BbOt]bhH !R?`C~@K\BGSiB !RGYi|	0V08&V1F0801$J0Z$11B01#40204F#3&10FVF1FF6!2V03040H0840F#O11!2%4-4,1/)F+8(8.	yJsZ448!V!41%4/$8///%	60V&V/////#V!	α-cleavage	gJPa@aJSKTAjA@!gC`a@aJR}@P fH@O}R	[M]+*	CRF		5	Fig. 8	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qrLk qJn` qX	!R?g~H?[_}b@JH?QtJW@ !Rm?vH?_y?mpH]nmp !RGQi|	0V0N02$V12!119#F!208V51BF5%304F#202!V21FF0FF0V0F02V02040F!6%810V038$4(4$4,1#F#4&1/$8#1/#	yos_JZ8!V4041%4,V&8///%	oFs444#V!41%4#V+F#8&1//-	α-cleavage	gGPa@eJSNuPG~hd!gJPaAaJTtlA@ fH@O}R	[M]+*	CRF		5	Fig. 8	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qNj` qNh Qd	!RWrL@Hu}lWrL]tkp !RWrL@HqwZo@ !R@BL]~kp	!F0V!Z!1%30F043(1B&G!2FF04*F4F01V!82V02!1N04609#830802O///,V*8+8!1(	Nc$V$2/////$	FN/%8////)	α-cleavage	gJPAAJT}TA}CG}QH!eM@bXzCUH eF@HhP	[M]+*	CRF		5	Fig. 9	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qisT qis Qd	!R?g~w?Xc}mpJw?Qtrw@ !R?g~w?Xc}G[k\ !R@AL]fkp	(V!18$1#4062%1R#V!1!2F!Z*F4F01V2!HV02!1sV0L091!83F40@F/&408&1#F/!14,8#1,22$	RsFY4VV!802#V#8$1///08/#	JN024/!8///$8/#	α-cleavage	gGQA@IRYvj@~ec~hD!gCaA@IRYhCzBOzbP eF@HhP	[M]+*	CRF		5	Fig. 9	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+qi^T qi^ Qd	!R_qL@Dw}l_qM?[AuR_@ !R_qL@Dw}lG[i| !R@AL]fkp	(V!1$83#40220F0801R&1!2F80Z&180F4F01V#HV02!1NV0L0910883F42@F/$F+11#F,4-2#8+V%V#F	NNH120V+8%V//%F//	FF202-8#80V//%F/-80	α-cleavage	gGXA@IRgVjDE}KG}PH!gChA@IRehPWtD_uL` eF@HhP	[M]+*	CRF		5	Fig. 9	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+IJlYHxY qMsTx IdP	!R?`BH?X`Bb@JH?Xc}b@JH?QwJ?@ !R?g~w@k_}m?vw@k\BG[h| !R@AL]Vkp	$V!Z!10F#30F241(1B!F08010B2FF04#2%F4F01V!82V02F01N0B609#830802N$F0V02(4#404$601#8!o$H%812#V$132!8&V#@+	NuJA82k0180X!9!8F80840F!V8V$F!8#8k04/V!2/*	NPF302V!80V!9!8F!8%V&F!8#8k04/V!2/*	α-cleavage	did@BBeJU]JiZj`CzAc~hi@!gOpACJTjfruPG~ht eF@HhP	[M]+*	CRF		5	Fig. 9	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+QX QP a`	!R_rp]\gp !RGUi| !RG[i|	09!F2#F0F)8%4#4!80V#F4F$8&2-@F01F&F011//////&	/////.4!	/////.4!	Halide elimination	eFBcDIcA}D@!fHfHA}P fHT`P	[M+H]+	CMF		5	Fig. 10	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+Qd a` QP	!R_pp]\op !RGUi| !RG[i|	08#14!F!1*F&140N&F0F$2#2282(44#2V!F&F!1//////&	//!2///.	//!2///.	Halide elimination	eFBbHIcA}D@!fHdPA}P fHT`P	[M+H]+	CMF		5	Fig. 10	reaction	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+QX QX	!R@CloZM@ !R@L^{hf`	////////#1/$8/804*F1)	//!2///.	//!2///.	Ionization	eFBBHcA@!eEBbHIbEA}D@	[M+H]+			5	Fig. 10	ionization	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+QX QX	!R_vp]Rgp !R_vp]Vgp	//////.8!4/1//01#8/4&	/////.4!	/////.4!	Ionization	eFBCDcA@!eFBcDIcA}D@	[M+H]+			5	Fig. 10	ionization	https://www.orgchemboulder.com/Spectroscopy/MS/fragmech.shtml	positive	
+Q[ Qp QX	!R_qL@Dqur_@ !RG[i| !R_vp]fgp	0N08!2!FV#4!8V!F&5042#8#FBF$302#12%V0F01!2#F&F!1!2//#1//%8/(	60V&V/////&	40V/////.	Cleavage Bond Adjacent heteroatom	eMH`fN`uB!fHT`P eFHBLG~hP	[M]+*	CRF		7.4.1.3.	Fig 7.7	reaction		positive	ISBN: 978-0-470-03310-4
+Qd Qd	!R@AL]rkp !R_?x]zgp	0808%F/%1B01%2F0F,2F,2040F!4#F!1#2//////!	F//////0	//////!	Ionization	eF@HpP!eD@bPCUH	[M]+*			7.4.1.1.	Fig. 7.6	ionization		positive	ISBN: 978-0-470-03310-4
+Qd QP a`	!R@AL]Rgp !RG]i| !RG^i|	08&2F#2!2-1B!1%F0FV*F2F+82#F0448!F!1#2//////!	F//////0	//////!	Cleavage Bond Adjacent heteroatom	eF@bXp_za@!fHT`P fH@O}R	[M]+*	CMF		7.4.1.1.	Fig. 7.6	reaction		positive	ISBN: 978-0-470-03310-4
+qVa qVa	!R@Fq?[@@SGTi| !RDw|S@IW~GYi|	0V0N&V12!118#F$8V51BF5%304F#2$V01FF0FF0V0F02V02040F!6%810V02//!1//%8/(	y4V4%V!4/////#	4FV04$V.V////&	Cleavage Bond Adjacent heteroatom	gCaA@IRfhCTB!gBaA@IcLAjY@	[M]+*	CRF		7.4.1.3.	Fig. 7.7	reaction		positive	ISBN: 978-0-470-03310-4
+qqT qq Qd	!R_vp@[@@SGTk| !R_vp]^gp !R@AL]Vkp	(V!1V8#10F04!V&40ZV0V09!4F!4!V8!1N!4L01V#2V03081N0F!90F09A01!F//01//%8/(	oFk44$V!4+V/(1//-	4F!4/!8////)	Inductive cleavage	gBQA@IRoYj@~f`!eFH`fJGtP eF@HhP	[M+H]+	CRF		7.4.1.3.	Fig. 7.7	reaction		positive	ISBN: 978-0-470-03310-4
+Q[ Qp QX	!R@Fp@DqtJ_@ !RG[i| !R_vp]fgp	#8%F2#F01$J20B$1R010V!1208N1#1F&F0F%82V02040FV14V$81!V2//////!	k02!1/////+	0F2///-F/-80	α-cleavage	eM``eIhO}PqFp!fH@O}R eF``fJGtX	[M]+*	CRF		7.4.1.3.	Fig. 7.7	reaction		positive	ISBN: 978-0-470-03310-4
+Q[ Qp QX	!R_qL@Dqwr_@ !RGSi| !R_vp]fgp	/0V1!28V!4#45B040V&F10F!2&F0F#2!2V82#F0H5#40810102F//////0	2//+8///$	0F//*8///$	α-cleavage	eMB`HIchO}P`!fH@O}R eFB`HIba}D@	[M]+*	CRF		7.4.1.4.	Fig 7.9	reaction		positive	ISBN: 978-0-470-03310-4
+QX QP a`	!R_vp]Bgp !RGSi| !RG^i|	08!44V!F%8#1#2!1#4V(F0F,2!2$V#42#F01#8F!1#2//////!	//,8///$	//,8///$	Cleavage Bond Adjacent heteroatom	eFB`HIcA}D_uB!fH`PA}QT` fHT`P	[M]+*	CMF		7.4.1.5.	Fig. 7.10	reaction		positive	ISBN: 978-0-470-03310-4
+Q[ Qp QX	!R@Fp@Xqwr_@ !RGYi| !R_rp]ngp	#844V&10c1!1$4#41BV5%280F1V+F0F#2802V42040F0G5%81#2F//////0	k//+8///$	0F//*8///$	α-cleavage	eMB`HIRZCzHjD!fH@O}R eFB`HIba}D@	[M]+*	CRF		7.4.1.5.	Fig. 7.10	reaction		positive	ISBN: 978-0-470-03310-4
+Q[ Qp QX	!R@Fp@DquJ_@ !RGSi| !R_vp]Fgp	0V0c&V1$1$F0V$11B01#40204FF!28$410F0F!F2!2V03040F0840F#811!2//////!	JF!4/////,	4/////-V!	α-cleavage	eMH`eIXO}P`!fH@O}R eFH`fND	[M]+*	CRF		7.4.1.5.	Fig. 11	reaction		positive	ISBN: 978-0-470-03310-4
+qir` qip Qd	!R@Fp@XpAl@FL]bgp !R_rq?DqwZ?@ !R@FL]Akp	0880V!VFFW%G0F2484018#1R&18F2F0FZF!4$2F4F11o!83VV20VGNVFL891FV8IP!@F//////0	RNF140V)V)1////%	oFV4/#8////&10	α-cleavage	gJQA@IRUZ`OdHL_u@`!eMHbeIhOhc~iP eF@HhP	[M]+*	CMF		7.4.2.	Fig. 11	reaction		positive	ISBN: 978-0-470-03310-4
+qbqh Qg qi	!R@Fp@DpAl@AL]rgp !R[g|vzqwzW@ !R[g|]Vcp	!80V#F0V%I0F2484018#1R02(2F0HV#4%F0F11V!83V02FV0NV0L!10V8IP0F@F///01*V//#	RNF140V)V)1////%	JFc/$8////&10	Cleavage Bond Adjacent heteroatom	gJQA@IRUZ`OdHL_u@`!eMHAIdOh` eF@bXp_zi@	[M]+*	CMF		7.4.2.	Fig. 11	reaction		positive	ISBN: 978-0-470-03310-4
+q|VMX q|jN qX	!R_vq?Dw}l_qM?[G|SGYI| !R?g~w@k_}m?vw@auZw@ !RG_i|	Ve02%201!2591FH!V!4V1!4041F18#FH0XJ211F01F4FN0Nm4V0FV2V42Z80o$V080c9B0H2V/,8#1#F//880B01+101$	zxU171O01F4!408$2#V*V/)8//	zxz571O!m40440828%V0V(FV01)1#2(8/$2*	Cleavage Bond Adjacent heteroatom with cyclisation	gNuADpyRUUjhB!gFyALAJTjZuTA@ fJ@D	[M+H]+	CMF		7.4.3.		reaction		positive	ISBN: 978-0-470-03310-4
+qbqk qn\J	!R?g~w@k_}m?vw@aurO@ !RbOvw?_y??g~w?QwZW@	0c!8F8VHF0V02J01@22!F!4$60NV0F840N0F80@9V4!VW0XF0F01!8dXV024NcG0F!B0F28_F0F3V//////0	NNF1!V+8#8-F!8$k04/#2/*	0F0F/#8////)	Hydrogen elimination	gFpACJTj[KTA}C`!gFpAAJTjZ@@A@	[M+H]+	CRF		7.4.3.		reaction		positive	ISBN: 978-0-470-03310-4
+qNT qH Qg	!R@AL@[@@SGXj| !RG_i| !R?g~w?QwZo@	#B08FF%18VG#1!V08$Z06G#1#N2FF01N!4!N!F8F8!82V02#F018V!2FB1!2//#1//%8/(	x0X401/+V///,W0	q020211!F/////#Fk0	water elimination	gCiALAJRu@_HYl@!fI@Gu` eO``fNZ`~c@	[M+H]+	CMF		7.4.3.		reaction		positive	ISBN: 978-0-470-03310-4
+qbqk q]Qp a`	!R@AL@[@@S@Fp@DquJo@ !R?g|_Fa}eTv\]vcp !RGPY|	#428FFB0V0V18VG&V08#4406$1010F2FF41N!4!N!G8G8FV83V020J0F018V!2F81V022//!1#F01/.8#1$4-	xda401V!2#4$V*V///.W0	zh30H1W!F#4%F)V/)4/*V)k0	water elimination	gGYAJAJRkUPGrFW@!gKXA@IReqjhCzC@ fI@Gu`	[M+H]+	CMF		7.4.3.		reaction		positive	ISBN: 978-0-470-03310-4
+qNTh qlr qH	!R@Fp@DpAl@AL]rgp !R@O{~@Ox@G]k| !RG_i|	!4408FFB0V0V18VG&V08#4446!401#F2FF41N!4!N!J8G80V83V020F0F01cV!2F81V022//!1#F//08#1/#	xdX401#2#4////&2(W0	zB20211!F#4/////k0	water elimination	gJYABAJRmTA|aap!gBXA@IReZj@~`p fI@Gu`	[M+H]+	CMF		7.4.3.		reaction		positive	ISBN: 978-0-470-03310-4
+q}NTX q\jN qx	!R_vq?Dw}l_qM?[G|SGVI| !RbOvw?_y??g~w?QtzW@ !RGPY|	#428FFB0V0V18VG0201!V08#4406$1#F2FF41N044!N!K8G8FVc3V020F0F018V!2F8GV022//!1#F01$2.F)8#1$4-	xda4V1Z!20204$V*V8///-W0	zh70I1W!F0204%F)V#88/+F/,k0	water elimination	gNyAFAJRjuU@_HX|@!gFxA@IReSZj`OhL@ fI@Gu`	[M+H]+	CMF		7.4.3.		reaction		positive	ISBN: 978-0-470-03310-4
+IEjKDc` q|ZnH ID	!R@AL@[@@S@Fp@DpAl@AL]rkp !R?g}GCD]sw}g_qfvOGSh| !RGXY|	#428FFB0V0VG8VG0201!V08#4406$1#F2FF41N044!N!K8G8FVc3V020F0F018V!2F81V022//!1#F01$2!F+F)80201$4-	xda4V1a!30204$V#4%V8/F/-8-W0	zh70n1_8FF0224%F!4%V#8/,4*F!8-k0	water elimination	dazHBN@IRUUjj`Cy@sl@!gOxA@IReVnjj@~`p fI@Gu`	[M+H]+	CMF		7.4.3.		reaction		positive	ISBN: 978-0-470-03310-4
+qTq qTq	!Rm?w~@Hc}GPk| !RDp@S_yW~GYi|	!4$2&F05&8&440202%F$F#V%F8!80B2V02040F#2!1F81Y!1V//01//%8/(	2220201#1$1////-F0	0F202/$V//%F/-80	Double cleavage	gChA@Icu@_PP!gBhA@IcLA}A@	[M+H]+	CMF		7.4.3.		reaction		positive	ISBN: 978-0-470-03310-4
+Qy Qy	!R_vq?DqvJ_@ !R~nzi_qtz?@	0808#V2F1!1V0108840Z(4!2!810F0F20J%4!@04J9$42V42!1F$90F0810V02//////!	JF!4/////,	4F/%8////)	water elimination	eMH`eIXOda`!eNHbeAP~c@	[M+H]+	CMF		7.4.3.		reaction		positive	ISBN: 978-0-470-03310-4
+qbqh qbH qu	!RupJH@gx@bGt]\hH !R_rq?DquZ_@ !R@FL]Akp	&2V!1V8#10F04!X&40ZV0V09!5F!4!V80F1N!4L01X#2VF3281N0FV19FF09A0104F/04.V///.	oFs44$V!41#8%V-1)1#2//&30	4Fc04)1(8////&30	Double cleavage	gJPaAaJTkTHGyZC@!eMDaIRVCyHX@ eF@HhP	[M+H]+	CRF		7.4.3.		reaction		positive	ISBN: 978-0-470-03310-4
+qTq QX qq	!R_vp@[@@SGXi| !R_vp]Ngp !R@AL]Fkp	!F8%F$F0501#2#VV0V40120211208F%F%1!F01V!82V02040NV10c!4X832//%1//%8/(	kFH021/#V/(1,F/-80	0F2/$8//(F/-80	Double cleavage	gChA@IRmhCzB@!eF``fJGtX eF@HhP	[M+H]+	CRF		7.4.3.		reaction		positive	ISBN: 978-0-470-03310-4
+qTqh Q^ qi	!R_qL@DpAl@AL]Rkp !R_qL@DquZo@ !R@AL]~kp	08F#8V0G1#FH5810Z2F010VV0XJ!206150F2F105!HYV#304k01VF!2V02!1N802890JX832090F//////0	tNH121(4*V/(1,F/-80	2F20201/8////&F0	Double cleavage	gJXA@IRmZ`OdHL@!eM`bfN`~b@ eF@HhP	[M+H]+	CMF		7.4.3.		reaction		positive	ISBN: 978-0-470-03310-4
+Qd Qd	!R@AL]rkp !R@AL]Vkp	08!V$F)F4)11B(2F0F08*2F0F%8#2#F!4#F!1#2//////!	0F/%8////)	F//////0	ionization	eF@HhP!eF@bXp_zi@	[M]*+	ionization	https://doi.org/10.1002/anie.200352044		Scheme 1.	ionization		positive	
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+<hitlist data>
+<hitlistName="<selection>">
+<hitlistData="@@@@@@@@@@@@@@@@@@@@@@`@@@@@@@@@@@">
+</hitlist data>
+<datawarrior properties>
+<columnFilter_Table="">
+<columnOrder_Table="label	rxnCode	section	description	ionization	reaction	doi	kind	mode	web	isbn">
+<columnWidth_Table_description="80">
+<columnWidth_Table_doi="374">
+<columnWidth_Table_ionization="80">
+<columnWidth_Table_isbn="80">
+<columnWidth_Table_kind="80">
+<columnWidth_Table_label="220">
+<columnWidth_Table_mode="80">
+<columnWidth_Table_reaction="80">
+<columnWidth_Table_rxnCode="460">
+<columnWidth_Table_section="80">
+<columnWidth_Table_web="80">
+<columnWrapping_Table_description="true">
+<currentRecord="63">
+<detailView="height[Data]=0.5;height[rxnCode]=0.5">
+<filter0="#string#	ionization">
+<filter1="#string#	reaction">
+<filter2="#string#	doi">
+<filter3="#string#	section">
+<filter4="#string#	description">
+<filter5="#string#	label">
+<filter6="#string#	kind">
+<filter7="#string#	web">
+<filter8="#string#	mode">
+<filter9="#string#	isbn">
+<formLayout_Form View="TableLayout,3,6.0,-1.0,6.0,3,4.0,-1.0,4.0">
+<formObjectCount_Form View="1">
+<formObjectInfo_Form View_0="Label	textLine	1, 1, 1, 1, full, full">
+<headerLines_Table="2">
+<mainSplitting="1">
+<mainView="Table">
+<mainViewCount="2">
+<mainViewDockInfo0="root">
+<mainViewDockInfo1="Table	center">
+<mainViewInFront0="true">
+<mainViewName0="Table">
+<mainViewName1="Form View">
+<mainViewType0="tableView">
+<mainViewType1="formView">
+<rightSplitting="0.34093">
+<rowHeight_Table="80">
+</datawarrior properties>
