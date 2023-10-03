@@ -1,5 +1,18 @@
 # Changelog
 
+## [7.12.0](https://github.com/cheminfo/mass-tools/compare/v7.11.3...v7.12.0) (2023-09-28)
+
+
+### Features
+
+* add kwTitles in activesOrNaturals ([9fdb6be](https://github.com/cheminfo/mass-tools/commit/9fdb6be47cdaa9eb0717c8fa923804697fac8248))
+* **octochemdb:** Generalise mass spectra search  ([#142](https://github.com/cheminfo/mass-tools/issues/142)) ([de90b45](https://github.com/cheminfo/mass-tools/commit/de90b45a97f64ab9af8a2de4ce2a81b6f0c4db62))
+
+
+### Bug Fixes
+
+* **mfs-deconvolution:** difference was not correctly calculated ([2f7d37b](https://github.com/cheminfo/mass-tools/commit/2f7d37b0d7f5e28d7ec35143567ec714dfb8666c))
+
 ## [7.11.3](https://github.com/cheminfo/mass-tools/compare/v7.11.2...v7.11.3) (2023-09-04)
 
 

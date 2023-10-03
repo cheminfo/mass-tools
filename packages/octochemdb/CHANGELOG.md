@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.0.1...octochemdb@2.1.0) (2023-09-28)
+
+
+### Features
+
+* add kwTitles in activesOrNaturals ([9fdb6be](https://github.com/cheminfo/mass-tools/commit/9fdb6be47cdaa9eb0717c8fa923804697fac8248))
+* **octochemdb:** Generalise mass spectra search  ([#142](https://github.com/cheminfo/mass-tools/issues/142)) ([de90b45](https://github.com/cheminfo/mass-tools/commit/de90b45a97f64ab9af8a2de4ce2a81b6f0c4db62))
+
+
+
+
+
 ## [2.0.1](https://github.com/cheminfo/mass-tools/compare/octochemdb@1.4.3...octochemdb@2.0.1) (2023-09-04)
 
 **Note:** Version bump only for package octochemdb

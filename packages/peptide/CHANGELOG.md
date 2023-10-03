@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/cheminfo/mass-tools/compare/peptide@2.0.0...peptide@2.1.0) (2023-09-28)
+
+
+### Features
+
+* **octochemdb:** Generalise mass spectra search  ([#142](https://github.com/cheminfo/mass-tools/issues/142)) ([de90b45](https://github.com/cheminfo/mass-tools/commit/de90b45a97f64ab9af8a2de4ce2a81b6f0c4db62))
+
+
+
+
+
 # [2.0.0](https://github.com/cheminfo/mass-tools/compare/peptide@1.11.5...peptide@2.0.0) (2022-12-05)
 
 **Note:** Version bump only for package peptide

@@ -121,15 +121,12 @@ describe('mfsDeconvolution', () => {
     const logger = new FifoLogger();
     const text = readFileSync(join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
-    const { mfs, reconstructed, matchingScore } = await mfsDeconvolution(
-      spectrum,
-      ['HValOH', '([13C]C-1)0-10,Br'],
-      {
+    const { mfs, reconstructed, matchingScore, difference } =
+      await mfsDeconvolution(spectrum, ['HValOH', '([13C]C-1)0-10,Br'], {
         ionizations: 'H+',
         logger,
         peakWidthFct: (em) => em / 1000,
-      },
-    );
+      });
     expect(matchingScore).toBeCloseTo(1);
     const absoluteQuantities = mfs.map((mf) => mf.absoluteQuantity);
     expect(absoluteQuantities).toBeDeepCloseTo([100, 50, 20, 10, 0, 0, 0], 3);
@@ -142,6 +139,8 @@ describe('mfsDeconvolution', () => {
       totalDifference += Math.abs(reconstructed.y[index] - peak.y);
     });
     expect(totalDifference).toBeLessThan(0.001);
+    expect(difference.x).toHaveLength(19);
+    expect(difference.y).toHaveLength(19);
     expect(logger.getLogs()).toHaveLength(5);
   });
 });
