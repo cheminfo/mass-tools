@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.13.0](https://github.com/cheminfo/mass-tools/compare/v7.12.0...v7.13.0) (2023-10-05)
+
+
+### Features
+
+* allow to findMFs with negative atoms ([d4fa5c5](https://github.com/cheminfo/mass-tools/commit/d4fa5c5a45e8bf7b5ca1e8649508a9ba8ddc135b))
+
 ## [7.12.0](https://github.com/cheminfo/mass-tools/compare/v7.11.3...v7.12.0) (2023-09-28)
 
 
