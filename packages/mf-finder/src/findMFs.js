@@ -7,7 +7,7 @@ import { findMFsSync } from './findMFsSync';
  * @param {boolean}       [options.allowNeutral=true]
  * @param {boolean}       [options.uniqueMFs=true]
  * @param {number}        [options.limit=1000] - Maximum number of results
- * @param {string}        [options.ionizations=''] - string containing a comma separated list of modifications
+ * @param {string|{mf:string,min:number,max:number}[]}        [options.ionizations=''] - string containing a comma separated list of modifications
  * @param {string}        [options.ranges='C0-100 H0-100 O0-100 N0-100'] - range of mfs to search
  * @param {number}        [options.precision=100] - Allowed mass range based on precision
  * @param {object}        [options.filter={}]

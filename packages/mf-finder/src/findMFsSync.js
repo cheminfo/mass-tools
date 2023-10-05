@@ -16,7 +16,7 @@ import { TargetMassCache } from './TargetMassCache';
  * @param {boolean}       [options.uniqueMFs=true]
  * @param {number}        [options.limit=1000] - Maximum number of results
  * @param {string}        [options.ionizations=''] - string containing a comma separated list of modifications
- * @param {string}        [options.ranges='C0-100 H0-100 O0-100 N0-100'] - range of mfs to search
+ * @param {string|{mf:string,min:number,max:number}[]}        [options.ranges='C0-100 H0-100 O0-100 N0-100'] - range of mfs to search
  * @param {number}        [options.precision=100] - Allowed mass range based on precision
  * @param {object}        [options.filter={}]
  * @param {number}        [options.filter.minCharge=-Infinity] - Minimal charge
@@ -153,7 +153,6 @@ export function findMFsSync(targetMass, options = {}) {
           isValid = false;
         }
       }
-
       if (isValid) {
         result.info.numberResults++;
         let newResult = getResult(
@@ -323,7 +322,12 @@ function getResult(
 
 function setCurrentMinMax(currentAtom, previousAtom, targetMassCache) {
   // the current min max can only be optimize if the charge will not change anymore
-  if (currentAtom.innerCharge === true || currentAtom.charge !== 0) {
+  // and the currentAtom.em >= 0
+  if (
+    currentAtom.innerCharge === true ||
+    currentAtom.charge !== 0 ||
+    currentAtom.em < 0
+  ) {
     currentAtom.currentMinCount = currentAtom.originalMinCount;
     currentAtom.currentMaxCount = currentAtom.originalMaxCount;
     currentAtom.currentCount = currentAtom.currentMinCount - 1;

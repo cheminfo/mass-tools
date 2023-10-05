@@ -10,6 +10,24 @@ describe('test mf-finder', () => {
     expect(result.mfs).toHaveLength(1);
   });
 
+  it('negative atoms', async () => {
+    let result = await findMFs(24, {
+      ranges: 'C-1 C0-3',
+      precision: 1e5,
+      allowNeutral: true,
+    });
+    expect(result.mfs).toHaveLength(1);
+  });
+
+  it('negative atoms as second parameter', async () => {
+    let result = await findMFs(24, {
+      ranges: 'C0-3 H0-5 C-1',
+      precision: 1,
+      allowNeutral: true,
+    });
+    expect(result.mfs).toHaveLength(1);
+  });
+
   it('basic case with charge', async () => {
     let result = await findMFs(24, {
       ranges: [{ mf: 'C', min: 1, max: 2 }],
