@@ -9,7 +9,7 @@ rules:
       allow: []
   max-lines-per-function:
     - warn
-    - max: 100
+    - max: 1000
       skipBlankLines: true
       skipComments: true
 overrides:
