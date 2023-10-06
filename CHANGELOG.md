@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.13.1](https://github.com/cheminfo/mass-tools/compare/v7.13.0...v7.13.1) (2023-10-06)
+
+
+### Bug Fixes
+
+* **mass-fragmentation:** load correctly the datatabase of fragmentations ([#145](https://github.com/cheminfo/mass-tools/issues/145)) ([0bde65d](https://github.com/cheminfo/mass-tools/commit/0bde65d0a76323bc2a761ce766877d1d533c0c93))
+
 ## [7.13.0](https://github.com/cheminfo/mass-tools/compare/v7.12.0...v7.13.0) (2023-10-05)
 
 
