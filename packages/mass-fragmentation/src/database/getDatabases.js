@@ -1,7 +1,6 @@
-
 import { parseDwar } from 'openchemlib-utils';
 
-import { defaultDatabase } from './defaultDatabase.js'
+import { defaultDatabase } from './defaultDatabase.js';
 /**
  * @description Get the default databases of reactions for positive and negative mode
  * @param {Object} options - Options for database selection
@@ -13,9 +12,7 @@ import { defaultDatabase } from './defaultDatabase.js'
 export function getDatabases(options = {}) {
   const { mode = 'positive', kind = 'ionization', dwar } = options;
 
-  const fullDatabase = dwar ? parseDwar(dwar).data : defaultDatabase
-
-  console.log(fullDatabase)
+  const fullDatabase = dwar ? parseDwar(dwar).data : defaultDatabase;
 
   const database = fullDatabase.filter(
     (entry) =>
