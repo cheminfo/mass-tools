@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>mass-fragmentation 1.0.2 | Documentation</title>
+  <title>mass-fragmentation 1.0.3 | Documentation</title>
   <meta name='description' content='Code to fragment molecules'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>mass-fragmentation</h3>
-          <div class='mb1'><code>1.0.2</code></div>
+          <div class='mb1'><code>1.0.3</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -725,7 +725,7 @@
 
               
                 <tr>
-  <td class='break-word'><span class='code bold'>options.dwarEntry</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  <td class='break-word'><span class='code bold'>options.dwar</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
   </td>
   <td class='break-word'><span>The dwar entry to be used, if not provided, the default one will be used
 </span></td>
@@ -907,7 +907,7 @@
 
   <p>Get the default databases of reactions for positive and negative mode</p>
 
-    <div class='pre p1 fill-light mt0'>getDatabases(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, dwarEntry: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>getDatabases(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
   
   
 
@@ -965,18 +965,17 @@
 
 
               
+                <tr>
+  <td class='break-word'><span class='code bold'>options.dwar</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span>The dwar file to use. Default will use an included mass fragmentation database
+</span></td>
+</tr>
+
+
+              
             </tbody>
           </table>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>dwarEntry</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
-            = <code>&#39;&#39;</code>)</code>
-	    The dwar entry to be used
-
-          </div>
           
         </div>
       
