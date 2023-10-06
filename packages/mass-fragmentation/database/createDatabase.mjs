@@ -10,7 +10,7 @@ const dwar = readFileSync(
 const database = parseDwar(dwar).data;
 
 writeFileSync(
-  new URL('../src/database/database.js', import.meta.url),
+  new URL('../src/database/defaultDatabase.js', import.meta.url),
   `export const defaultDatabase=${JSON.stringify(database, null, 2)}`,
   'utf-8',
 );

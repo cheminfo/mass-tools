@@ -11,7 +11,7 @@ import { getMasses } from './utils/getMasses';
  * @param {string}  [options.mode='positive'] - The mode to be used
  * @param {number}  [options.maxDepth=5] - The maximum depth of the overall fragmentation tree
  * @param {number}  [options.limitReactions=200] - The maximum number of reactions to be applied
- * @param {string}  [options.dwarEntry] - The dwar entry to be used, if not provided, the default one will be used
+ * @param {string}  [options.dwar] - The dwar entry to be used, if not provided, the default one will be used
  * @param {number}  [options.maxIonizationDepth=1] - The maximum depth of the ionization tree
  * @param {number}  [options.minIonizationDepth=1] - The minimum depth of the ionization tree
  * @param {number}  [options.minReactionDepth=0] - The minimum depth of the reaction tree
@@ -24,7 +24,7 @@ import { getMasses } from './utils/getMasses';
 export function reactionFragmentation(oclMolecule, options = {}) {
   const {
     mode = 'positive',
-    dwarEntry = '',
+    dwar,
     maxDepth = 5,
     limitReactions = 200,
     minIonizationDepth = 1,
@@ -53,14 +53,14 @@ export function reactionFragmentation(oclMolecule, options = {}) {
 
   reactions.appendHead([oclMolecule]);
   reactions.applyOneReactantReactions(
-    getDatabases({ kind: 'ionization', mode }, dwarEntry),
+    getDatabases({ kind: 'ionization', mode, dwar }),
     {
       min: minIonizationDepth,
       max: maxIonizationDepth,
     },
   );
   reactions.applyOneReactantReactions(
-    getDatabases({ kind: 'reaction', mode }, dwarEntry),
+    getDatabases({ kind: 'reaction', mode, dwar }),
     {
       min: minReactionDepth,
       max: maxReactionDepth,
