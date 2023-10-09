@@ -76,5 +76,6 @@ export function reactionFragmentation(oclMolecule, options = {}) {
     trees,
     validNodes,
     masses,
+    reactions,
   };
 }
