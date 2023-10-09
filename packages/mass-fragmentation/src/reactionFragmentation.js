@@ -8,14 +8,14 @@ import { getMasses } from './utils/getMasses';
  * @description Fragment a molecule by applying reactions from a custom database of reactions
  * @param {import('openchemlib').Molecule} oclMolecule - The OCL molecule to be fragmented
  * @param {Object}  [options={}]
- * @param {string}  [options.mode='positive'] - The mode to be used
+ * @param {'positive'|'negative'|'both'}  [options.mode='positive'] - The mode to be used
  * @param {number}  [options.maxDepth=5] - The maximum depth of the overall fragmentation tree
  * @param {number}  [options.limitReactions=200] - The maximum number of reactions to be applied
  * @param {string}  [options.dwar] - The dwar entry to be used, if not provided, the default one will be used
- * @param {number}  [options.maxIonizationDepth=1] - The maximum depth of the ionization tree
- * @param {number}  [options.minIonizationDepth=1] - The minimum depth of the ionization tree
- * @param {number}  [options.minReactionDepth=0] - The minimum depth of the reaction tree
- * @param {number}  [options.maxReactionDepth=3] - The maximum depth of the reaction tree
+ * @param {number}  [options.maxIonizations=1] - The maximum depth of the ionization tree
+ * @param {number}  [options.minIonizations=1] - The minimum depth of the ionization tree
+ * @param {number}  [options.minReactions=0] - The minimum depth of the reaction tree
+ * @param {number}  [options.maxReactions=3] - The maximum depth of the reaction tree
  * @returns {object} In-Silico fragmentation results with the following properties:
  * - masses: array of monoisotopic masses
  * - trees: array of fragmentation trees
@@ -27,10 +27,10 @@ export function reactionFragmentation(oclMolecule, options = {}) {
     dwar,
     maxDepth = 5,
     limitReactions = 200,
-    minIonizationDepth = 1,
-    maxIonizationDepth = 1,
-    minReactionDepth = 0,
-    maxReactionDepth = 3,
+    minIonizations = 1,
+    maxIonizations = 1,
+    minReactions = 0,
+    maxReactions = 3,
   } = options;
 
   const reactions = new Reactions(OCL, {
@@ -55,15 +55,15 @@ export function reactionFragmentation(oclMolecule, options = {}) {
   reactions.applyOneReactantReactions(
     getDatabases({ kind: 'ionization', mode, dwar }),
     {
-      min: minIonizationDepth,
-      max: maxIonizationDepth,
+      min: minIonizations,
+      max: maxIonizations,
     },
   );
   reactions.applyOneReactantReactions(
     getDatabases({ kind: 'reaction', mode, dwar }),
     {
-      min: minReactionDepth,
-      max: maxReactionDepth,
+      min: minReactions,
+      max: maxReactions,
     },
   );
 
@@ -77,3 +77,5 @@ export function reactionFragmentation(oclMolecule, options = {}) {
     masses,
   };
 }
+
+

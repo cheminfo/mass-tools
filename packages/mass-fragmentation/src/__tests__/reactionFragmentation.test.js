@@ -5,7 +5,7 @@ import { reactionFragmentation } from '../reactionFragmentation.js';
 const { Molecule } = OCL;
 
 describe('ReactionFragmentation', async () => {
-  it('Alpha cleavage: MDMA', async () => {
+  it('full process', async () => {
     const molecule = Molecule.fromSmiles('CNC(Cc1ccc2c(c1)OCO2)C');
     const { trees, validNodes, masses } = reactionFragmentation(molecule);
     expect(validNodes).toHaveLength(274);
