@@ -8,34 +8,34 @@ describe('ReactionFragmentation', async () => {
   it('full process: MDMA', async () => {
     const molecule = Molecule.fromSmiles('CNC(Cc1ccc2c(c1)OCO2)C');
     const { trees, validNodes, masses } = reactionFragmentation(molecule);
-    expect(validNodes).toHaveLength(274);
-    expect(masses).toHaveLength(52);
-    for (const tree of trees) {
-      deleteMolFile(tree);
-    }
+    expect(validNodes).toHaveLength(11);
+    expect(masses).toHaveLength(4);
+    removeCoordinates(trees);
     expect(trees).toMatchSnapshot();
   });
-  it.only('full process: Equisetin', async () => {
+  it('full process: Equisetin', async () => {
     const molecule = Molecule.fromSmiles(
       'CC=CC1C=CC2CC(CCC2C1(C)C(=C3C(=O)C(N(C3=O)C)CO)O)C',
     );
     const { trees, validNodes, masses } = reactionFragmentation(molecule);
-    expect(validNodes).toHaveLength(266);
-    expect(masses).toHaveLength(41);
-    for (const tree of trees) {
-      deleteMolFile(tree);
-    }
+    expect(validNodes).toHaveLength(196);
+    expect(masses).toHaveLength(33);
+
+    removeCoordinates(trees);
     expect(trees).toMatchSnapshot();
   });
 });
 
-function deleteMolFile(currentBranch) {
-  for (const node of currentBranch.children) {
-    for (const molecule of node.molecules) {
-      delete molecule.molfile;
-    }
-    if (node.children?.length > 0) {
-      deleteMolFile(node);
+function removeCoordinates(trees) {
+  if (trees) {
+    for (const tree of trees) {
+      for (const molecule of tree.molecules) {
+        molecule.molfile = molecule.molfile.replace(/^.{30}/gm, '');
+      }
+
+      if (tree.children) {
+        removeCoordinates(tree.children);
+      }
     }
   }
 }
