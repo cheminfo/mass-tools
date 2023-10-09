@@ -15,7 +15,7 @@ describe('getDatabases', () => {
   });
   it('should return the  reactions DB positive', () => {
     const ionizationDB = getDatabases({ kind: 'reaction', mode: 'positive' });
-    expect(ionizationDB).toHaveLength(88);
+    expect(ionizationDB).toHaveLength(91);
   });
   it('should return the  resonance DB positive', () => {
     const ionizationDB = getDatabases({ kind: 'resonance', mode: 'positive' });

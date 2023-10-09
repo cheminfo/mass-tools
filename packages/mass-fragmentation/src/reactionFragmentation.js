@@ -59,6 +59,7 @@ export function reactionFragmentation(oclMolecule, options = {}) {
       max: maxIonizations,
     },
   );
+
   reactions.applyOneReactantReactions(
     getDatabases({ kind: 'reaction', mode, dwar }),
     {
@@ -69,7 +70,7 @@ export function reactionFragmentation(oclMolecule, options = {}) {
 
   const trees = reactions.trees;
   const validNodes = reactions.getValidNodes();
-  const masses = getMasses(trees);
+  const masses = getMasses(validNodes);
 
   return {
     trees,
@@ -77,5 +78,3 @@ export function reactionFragmentation(oclMolecule, options = {}) {
     masses,
   };
 }
-
-

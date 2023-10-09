@@ -7,7 +7,7 @@ export function getFragmentationSVG(trees, options = {}) {
     nodeRenderer: moleculeRenderer,
     arrowRendererOptions: {
       getLabel: (node) => {
-        return node?.reaction?.labreel;
+        return node?.reaction?.label;
       },
       labelPosition: 'center',
     },
