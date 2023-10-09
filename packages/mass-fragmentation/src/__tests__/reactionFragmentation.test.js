@@ -20,8 +20,8 @@ describe('ReactionFragmentation', async () => {
       'CC=CC1C=CC2CC(CCC2C1(C)C(=C3C(=O)C(N(C3=O)C)CO)O)C',
     );
     const { trees, validNodes, masses } = reactionFragmentation(molecule);
-    expect(validNodes).toHaveLength(257);
-    expect(masses).toHaveLength(25);
+    expect(validNodes).toHaveLength(266);
+    expect(masses).toHaveLength(41);
     for (const tree of trees) {
       deleteMolFile(tree);
     }

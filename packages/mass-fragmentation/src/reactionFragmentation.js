@@ -59,6 +59,7 @@ export function reactionFragmentation(oclMolecule, options = {}) {
       max: maxIonizations,
     },
   );
+
   reactions.applyOneReactantReactions(
     getDatabases({ kind: 'reaction', mode, dwar }),
     {
