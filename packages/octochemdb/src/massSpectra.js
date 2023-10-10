@@ -6,7 +6,7 @@
  * @param {number} [options.precision=1000] - Precision (accuracy) of the monoisotopic mass in ppm
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {string} [options.modifications=''] - Comma
- * @param {string} [options.databases='massBank,gnps'] - List of databases to search for mass spectra
+ * @param {('massBank'|'gnps'|'inSilicoFragments')[]} [options.databases=['massBank','gnps']] - List of databases to search for mass spectra
  * @param {object} [options.routes] - Object that contains the routes to use for each database
  * @param {boolean} [options.uniqueMolecules=true] - If true, only one molecule per entry is returned
  * @param {object} [options.similarity={}]
@@ -43,7 +43,7 @@ const defaultRoutes = [
 export async function massSpectra(options = {}) {
   const {
     uniqueMolecules = true,
-    databases = 'massBank,gnps',
+    databases = ['massBank', 'gnps'],
     routes = defaultRoutes,
   } = options;
   const promises = [];
@@ -54,7 +54,7 @@ export async function massSpectra(options = {}) {
           ...options,
           url: route.url,
           link: route.link,
-        }),
+        }).then(entries => entries.map(entry => ({ ...entry, database: route.name }))),
       );
     }
   }

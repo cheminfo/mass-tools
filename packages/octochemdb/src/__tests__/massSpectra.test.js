@@ -86,7 +86,7 @@ describe('massSpectra', () => {
       masses: [194.118104, 193.110279, 135.044605, 58.065674],
       precision: 100,
       mode: 'positive',
-      databases: 'inSilicoFragments',
+      databases: ['inSilicoFragments'],
     };
     let results = await massSpectra(options);
     // mdma and mdma-HCL
@@ -100,7 +100,7 @@ describe('massSpectra', () => {
     results = await massSpectra({
       ...options,
       mode: 'positive',
-      databases: 'inSilicoFragments,massBank,gnps',
+      databases: ['inSilicoFragments', 'massBank', 'gnps'],
     });
     expect(results[0].url).toMatchInlineSnapshot(
       '"https://gnps.ucsd.edu/ProteoSAFe/gnpslibraryspectrum.jsp?SpectrumID=CCMSLIB00000085779"',
