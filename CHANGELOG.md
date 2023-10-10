@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.16.0](https://github.com/cheminfo/mass-tools/compare/v7.15.0...v7.16.0) (2023-10-10)
+
+
+### Features
+
+* **mass-fragmentation:** improve getDatabase filter options ([#150](https://github.com/cheminfo/mass-tools/issues/150)) ([2a8c5b8](https://github.com/cheminfo/mass-tools/commit/2a8c5b83ea752524f98a0f77241f172747f0e66c))
+
 ## [7.15.0](https://github.com/cheminfo/mass-tools/compare/v7.14.0...v7.15.0) (2023-10-10)
 
 
