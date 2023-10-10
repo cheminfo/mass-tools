@@ -24,6 +24,16 @@ describe('ReactionFragmentation', async () => {
     removeCoordinates(trees);
     expect(trees).toMatchSnapshot();
   });
+  it('full process: Cephalocromin', async () => {
+    const molecule = Molecule.fromSmiles(
+      'CC1CC(=O)C2=C(O1)C=C3C(=C2O)C(=CC(=C3C4=C(C=C(C5=C(C6=C(C=C54)OC(CC6=O)C)O)O)O)O)O',
+    );
+    const { trees, validNodes, masses } = reactionFragmentation(molecule);
+    expect(validNodes).toHaveLength(130);
+    expect(masses).toHaveLength(14);
+    removeCoordinates(trees);
+    expect(trees).toMatchSnapshot();
+  });
 });
 
 function removeCoordinates(trees) {
