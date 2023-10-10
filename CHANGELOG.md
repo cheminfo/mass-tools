@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.15.0](https://github.com/cheminfo/mass-tools/compare/v7.14.0...v7.15.0) (2023-10-10)
+
+
+### Features
+
+* **octochemdb:** massSpectra queries returns the database ([ace015d](https://github.com/cheminfo/mass-tools/commit/ace015dc660d14118996ceb3e5fd537e29b9b22f))
+
 ## [7.14.0](https://github.com/cheminfo/mass-tools/compare/v7.13.1...v7.14.0) (2023-10-10)
 
 
