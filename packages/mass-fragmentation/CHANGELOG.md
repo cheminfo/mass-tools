@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.1.0...mass-fragmentation@1.2.0) (2023-10-10)
+
+
+### Features
+
+* **mass-fragmentation:** improve getDatabase filter options ([#150](https://github.com/cheminfo/mass-tools/issues/150)) ([2a8c5b8](https://github.com/cheminfo/mass-tools/commit/2a8c5b83ea752524f98a0f77241f172747f0e66c))
+
+
+
+
+
 # [1.1.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.0.4...mass-fragmentation@1.1.0) (2023-10-10)
 
 
