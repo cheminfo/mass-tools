@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.0.4...mass-fragmentation@1.1.0) (2023-10-10)
+
+
+### Bug Fixes
+
+* **mass-fragmentation:** typos in getLabel function ([#147](https://github.com/cheminfo/mass-tools/issues/147)) ([7bc8dd2](https://github.com/cheminfo/mass-tools/commit/7bc8dd23ee9e77376bab41a8d32458c79f7daecb))
+
+
+### Features
+
+* **mass-fragmentation:** select ionization kind ([abb429b](https://github.com/cheminfo/mass-tools/commit/abb429b9f548f70ba699beff2e2f596433c254ce))
+* **mass-fragmentation:** update openchemlib-utils ([10737d8](https://github.com/cheminfo/mass-tools/commit/10737d8b8f44995b640a3a07b2fe09b1e0ab495b))
+
+
+
+
+
 ## [1.0.4](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.0.3...mass-fragmentation@1.0.4) (2023-10-06)
 
 
