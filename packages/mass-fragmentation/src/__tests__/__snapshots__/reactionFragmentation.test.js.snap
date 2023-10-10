@@ -33,7 +33,7 @@ M  END
             "reaction": {
               "description": "Fig. 18 b.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Water elimination",
@@ -113,7 +113,7 @@ M  END
                     "reaction": {
                       "description": "Fig 22 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Inductive cleavagea",
@@ -191,7 +191,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -269,7 +269,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -347,7 +347,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 10 b.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Retro-Diels–Alder ",
@@ -429,7 +429,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -509,7 +509,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -588,7 +588,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -678,7 +678,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -768,7 +768,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -858,7 +858,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -948,7 +948,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -1005,7 +1005,7 @@ M  END
                     "reaction": {
                       "description": "scheme 1",
                       "doi": "https://doi.org/10.1002/rcm.9131",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Inductive cleavage",
@@ -1095,7 +1095,7 @@ M  END
                 "reaction": {
                   "description": "Fig 22 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Inductive cleavagea",
@@ -1157,7 +1157,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 7",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Displacement Reaction b.",
@@ -1239,7 +1239,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -1321,7 +1321,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -1403,7 +1403,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -1485,7 +1485,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -1567,7 +1567,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 17 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Cycloreversion",
@@ -1651,7 +1651,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -1733,7 +1733,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -1815,7 +1815,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -1897,7 +1897,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -1979,7 +1979,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -2061,7 +2061,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 17 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Cycloreversion",
@@ -2144,7 +2144,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -2225,7 +2225,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -2306,7 +2306,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -2387,7 +2387,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -2468,7 +2468,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -2549,7 +2549,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 17 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Cycloreversion",
@@ -2627,7 +2627,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 10 b.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Retro-Diels–Alder ",
@@ -2709,7 +2709,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -2791,7 +2791,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -2883,7 +2883,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -2975,7 +2975,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -3067,7 +3067,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -3161,7 +3161,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -3253,7 +3253,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -3345,7 +3345,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -3419,7 +3419,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 10 b.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Retro-Diels–Alder ",
@@ -3511,7 +3511,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -3603,7 +3603,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -3695,7 +3695,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -3787,7 +3787,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -3879,7 +3879,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -3971,7 +3971,7 @@ M  END
             "reaction": {
               "description": "Fig. 18 b.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Water elimination",
@@ -4060,7 +4060,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 b.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Water elimination",
@@ -4133,7 +4133,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 10 b.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Retro-Diels–Alder ",
@@ -4218,7 +4218,7 @@ M  END
                     "reaction": {
                       "description": "Fig 22 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Inductive cleavagea",
@@ -4295,7 +4295,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -4372,7 +4372,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -4448,7 +4448,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -4535,7 +4535,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -4622,7 +4622,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -4709,7 +4709,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -4796,7 +4796,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -4883,7 +4883,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 b.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Water elimination",
@@ -4958,7 +4958,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 10 b.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Retro-Diels–Alder ",
@@ -5043,7 +5043,7 @@ M  END
                     "reaction": {
                       "description": "Fig 22 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Inductive cleavagea",
@@ -5120,7 +5120,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -5197,7 +5197,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -5273,7 +5273,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -5360,7 +5360,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -5447,7 +5447,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -5534,7 +5534,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -5621,7 +5621,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -5708,7 +5708,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -5795,7 +5795,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 b.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Water elimination",
@@ -5870,7 +5870,7 @@ M  END
                     "reaction": {
                       "description": "Fig 22 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Inductive cleavagea",
@@ -5945,7 +5945,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -6020,7 +6020,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -6095,7 +6095,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -6170,7 +6170,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 10 b.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Retro-Diels–Alder ",
@@ -6249,7 +6249,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -6326,7 +6326,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -6402,7 +6402,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -6489,7 +6489,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -6576,7 +6576,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -6663,7 +6663,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -6750,7 +6750,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -6804,7 +6804,7 @@ M  END
                     "reaction": {
                       "description": "scheme 1",
                       "doi": "https://doi.org/10.1002/rcm.9131",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Inductive cleavage",
@@ -6891,7 +6891,7 @@ M  END
                 "reaction": {
                   "description": "Fig 22 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Inductive cleavagea",
@@ -6950,7 +6950,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 7",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Displacement Reaction b.",
@@ -7029,7 +7029,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -7108,7 +7108,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -7187,7 +7187,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -7266,7 +7266,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -7345,7 +7345,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -7424,7 +7424,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 17 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Cycloreversion",
@@ -7505,7 +7505,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -7584,7 +7584,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -7663,7 +7663,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -7742,7 +7742,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -7821,7 +7821,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -7900,7 +7900,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -7979,7 +7979,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 17 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Cycloreversion",
@@ -8059,7 +8059,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -8137,7 +8137,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -8215,7 +8215,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -8293,7 +8293,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -8371,7 +8371,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -8449,7 +8449,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -8527,7 +8527,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 17 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Cycloreversion",
@@ -8616,7 +8616,7 @@ M  END
                     "reaction": {
                       "description": "Fig 22 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Inductive cleavagea",
@@ -8705,7 +8705,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -8794,7 +8794,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -8883,7 +8883,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -8972,7 +8972,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -9061,7 +9061,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -9136,7 +9136,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 10 b.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Retro-Diels–Alder ",
@@ -9215,7 +9215,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -9294,7 +9294,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 17 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Cycloreversion",
@@ -9383,7 +9383,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -9472,7 +9472,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -9561,7 +9561,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -9652,7 +9652,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -9741,7 +9741,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -9830,7 +9830,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -9901,7 +9901,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 10 b.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Retro-Diels–Alder ",
@@ -9990,7 +9990,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -10079,7 +10079,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -10168,7 +10168,7 @@ M  END
                     "reaction": {
                       "description": "Fig. 18 a.",
                       "doi": "https://doi.org/10.1039/C5NP00073D",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "",
                       "kind": "reaction",
                       "label": "Sigmatropic rearrangement",
@@ -10257,7 +10257,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -10346,7 +10346,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -10435,7 +10435,7 @@ M  END
             "reaction": {
               "description": "Fig. 12 b.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Retro-heteroene (McLafferty-type rearrangement)",
@@ -10489,7 +10489,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -10541,7 +10541,7 @@ M  END
             "reaction": {
               "description": "Fig. 12 b.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Retro-heteroene (McLafferty-type rearrangement)",
@@ -10605,7 +10605,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -10667,7 +10667,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -10729,7 +10729,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -10791,7 +10791,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -10853,7 +10853,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -10915,7 +10915,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -10977,7 +10977,7 @@ M  END
             "reaction": {
               "description": "Fig. 10 b.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Retro-Diels–Alder ",
@@ -11057,7 +11057,7 @@ M  END
                 "reaction": {
                   "description": "Fig 22 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Inductive cleavagea",
@@ -11137,7 +11137,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -11217,7 +11217,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -11297,7 +11297,7 @@ M  END
             "reaction": {
               "description": "Fig. 10 b.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Retro-Diels–Alder ",
@@ -11381,7 +11381,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 17 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Cycloreversion",
@@ -11463,7 +11463,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 17 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Cycloreversion",
@@ -11544,7 +11544,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 17 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Cycloreversion",
@@ -11636,7 +11636,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -11728,7 +11728,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -11820,7 +11820,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -11912,7 +11912,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -11971,7 +11971,7 @@ M  END
                 "reaction": {
                   "description": "scheme 1",
                   "doi": "https://doi.org/10.1002/rcm.9131",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Inductive cleavage",
@@ -12040,7 +12040,7 @@ M  END
                 "reaction": {
                   "description": "scheme 1",
                   "doi": "https://doi.org/10.1002/rcm.9131",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Inductive cleavage",
@@ -12132,7 +12132,7 @@ M  END
             "reaction": {
               "description": "Fig 22 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Inductive cleavagea",
@@ -12193,7 +12193,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 7",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Displacement Reaction b.",
@@ -12255,7 +12255,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 7",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Displacement Reaction b.",
@@ -12339,7 +12339,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -12423,7 +12423,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -12507,7 +12507,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -12591,7 +12591,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -12675,7 +12675,7 @@ M  END
             "reaction": {
               "description": "Fig. 17 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Cycloreversion",
@@ -12761,7 +12761,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -12845,7 +12845,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -12929,7 +12929,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -13013,7 +13013,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -13097,7 +13097,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -13181,7 +13181,7 @@ M  END
             "reaction": {
               "description": "Fig. 17 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Cycloreversion",
@@ -13223,7 +13223,7 @@ M  END
             "reaction": {
               "description": "Fig. 17 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Cycloreversion",
@@ -13283,7 +13283,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 7",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Displacement Reaction b.",
@@ -13366,7 +13366,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -13449,7 +13449,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -13532,7 +13532,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -13615,7 +13615,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -13698,7 +13698,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -13781,7 +13781,7 @@ M  END
             "reaction": {
               "description": "Fig. 17 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Cycloreversion",
@@ -13821,7 +13821,7 @@ M  END
             "reaction": {
               "description": "Fig. 17 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Cycloreversion",
@@ -13901,7 +13901,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 10 b.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Retro-Diels–Alder ",
@@ -13952,7 +13952,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 10 b.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Retro-Diels–Alder ",
@@ -14021,7 +14021,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 7",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Displacement Reaction b.",
@@ -14105,7 +14105,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 17 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Cycloreversion",
@@ -14189,7 +14189,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 17 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Cycloreversion",
@@ -14283,7 +14283,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -14377,7 +14377,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -14471,7 +14471,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -14565,7 +14565,7 @@ M  END
             "reaction": {
               "description": "Fig. 18 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Sigmatropic rearrangement",
@@ -14636,7 +14636,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 7",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Displacement Reaction b.",
@@ -14730,7 +14730,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -14824,7 +14824,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -14918,7 +14918,7 @@ M  END
             "reaction": {
               "description": "Fig. 18 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Sigmatropic rearrangement",
@@ -14975,7 +14975,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 10 b.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Retro-Diels–Alder ",
@@ -15049,7 +15049,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 10 b.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Retro-Diels–Alder ",
@@ -15143,7 +15143,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -15237,7 +15237,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -15331,7 +15331,7 @@ M  END
                 "reaction": {
                   "description": "Fig. 18 a.",
                   "doi": "https://doi.org/10.1039/C5NP00073D",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Sigmatropic rearrangement",
@@ -15425,7 +15425,7 @@ M  END
             "reaction": {
               "description": "Fig. 18 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Sigmatropic rearrangement",
@@ -15519,7 +15519,7 @@ M  END
             "reaction": {
               "description": "Fig. 18 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Sigmatropic rearrangement",
@@ -15613,7 +15613,7 @@ M  END
         "reaction": {
           "description": "",
           "doi": "https://doi.org/10.1186/1477-5956-10-S1-S8",
-          "ionization": "esiPos",
+          "ionization": "esiPositive",
           "isbn": "",
           "kind": "ionization",
           "label": "Ionization",
@@ -15707,7 +15707,7 @@ M  END
         "reaction": {
           "description": "",
           "doi": "https://doi.org/10.1186/1477-5956-10-S1-S8",
-          "ionization": "esiPos",
+          "ionization": "esiPositive",
           "isbn": "",
           "kind": "ionization",
           "label": "Ionization",
@@ -15801,7 +15801,7 @@ M  END
         "reaction": {
           "description": "",
           "doi": "https://doi.org/10.1186/1477-5956-10-S1-S8",
-          "ionization": "esiPos",
+          "ionization": "esiPositive",
           "isbn": "",
           "kind": "ionization",
           "label": "Ionization",
@@ -15895,7 +15895,7 @@ M  END
         "reaction": {
           "description": "",
           "doi": "https://doi.org/10.1186/1477-5956-10-S1-S8",
-          "ionization": "esiPos",
+          "ionization": "esiPositive",
           "isbn": "",
           "kind": "ionization",
           "label": "Ionization",
@@ -16026,7 +16026,7 @@ M  END
                 "reaction": {
                   "description": "scheme 1",
                   "doi": "https://doi.org/10.1002/rcm.9131",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Inductive cleavage",
@@ -16087,7 +16087,7 @@ M  END
                     "reaction": {
                       "description": "",
                       "doi": "",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "ISBN: 978-0-470-03310-4",
                       "kind": "reaction",
                       "label": "Tropylium rearragement",
@@ -16146,7 +16146,7 @@ M  END
                     "reaction": {
                       "description": "",
                       "doi": "",
-                      "ionization": "esiPos",
+                      "ionization": "esiPositive",
                       "isbn": "ISBN: 978-0-470-03310-4",
                       "kind": "reaction",
                       "label": "Tropylium rearragement",
@@ -16205,7 +16205,7 @@ M  END
                 "reaction": {
                   "description": "scheme 1",
                   "doi": "https://doi.org/10.1002/rcm.9131",
-                  "ionization": "esiPos",
+                  "ionization": "esiPositive",
                   "isbn": "",
                   "kind": "reaction",
                   "label": "Inductive cleavage",
@@ -16268,7 +16268,7 @@ M  END
             "reaction": {
               "description": "Fig 22 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Inductive cleavagea",
@@ -16308,7 +16308,7 @@ M  END
             "reaction": {
               "description": "Fig 22 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Inductive cleavagea",
@@ -16347,7 +16347,7 @@ M  END
             "reaction": {
               "description": "Fig 22 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Inductive cleavagea",
@@ -16411,7 +16411,7 @@ M  END
             "reaction": {
               "description": "Fig 22 a.",
               "doi": "https://doi.org/10.1039/C5NP00073D",
-              "ionization": "esiPos",
+              "ionization": "esiPositive",
               "isbn": "",
               "kind": "reaction",
               "label": "Inductive cleavagea",
@@ -16478,7 +16478,7 @@ M  END
         "reaction": {
           "description": "",
           "doi": "https://doi.org/10.1186/1477-5956-10-S1-S8",
-          "ionization": "esiPos",
+          "ionization": "esiPositive",
           "isbn": "",
           "kind": "ionization",
           "label": "Ionization",
@@ -16545,7 +16545,7 @@ M  END
         "reaction": {
           "description": "",
           "doi": "https://doi.org/10.1186/1477-5956-10-S1-S8",
-          "ionization": "esiPos",
+          "ionization": "esiPositive",
           "isbn": "",
           "kind": "ionization",
           "label": "Ionization",
@@ -16612,7 +16612,7 @@ M  END
         "reaction": {
           "description": "",
           "doi": "https://doi.org/10.1186/1477-5956-10-S1-S8",
-          "ionization": "esiPos",
+          "ionization": "esiPositive",
           "isbn": "",
           "kind": "ionization",
           "label": "Ionization",
