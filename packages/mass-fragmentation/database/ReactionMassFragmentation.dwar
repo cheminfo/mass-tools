@@ -1,6 +1,6 @@
 <datawarrior-fileinfo>
 <version="3.3">
-<created="1696941423953">
+<created="1696946060552">
 <rowcount="190">
 </datawarrior-fileinfo>
 <column properties>
@@ -124,7 +124,7 @@ Qg Qp Qd	!R_qL@Dqwr_@ !RGYi| !R@AL]ngp	(6%F!8!F(805B08%242F!V!H$10F8!@%102#k4040
 Qd Qd	!R@AL]Rgp !R@AL]vgp	///////-1!401/)8#2&8/(	!2/////.	!2/////.	Ionization	eF`BLGtWdT!eF``fLGtWTH	ei	Ionisation 	https://doi.org/10.1186/1477-5956-10-S1-S8			ionization		positive	
 Qd Qd	!R@AL]Rgp !R@AL]vgp	//////%2/,1+4*8-8&2/	40V/////,10	40V/////,10	Ionization	eFHBLGtWdT!eFH`fLGtWTH	ei	Ionisation 	https://doi.org/10.1186/1477-5956-10-S1-S8			ionization		positive	
 Qd Qd	!R@AL]Rgp !R@AL]vgp	///////2#5-1//%8$4/!	//,8///$	//,8///$	Ionization	eFB@HcA}EyE@!eFB`HIcA}EuB	ei	Ionisation 	https://doi.org/10.1186/1477-5956-10-S1-S8			ionization		positive	
-qgVMX qYoTp	!Rm?w~@Hc}mpJw@ox@G_K| !R?g}GCD]sw}g_qfvOGUh|	V80VcF0XFF0c$W@2V$1%B104#18NVF!28!2$2F0H%F2V024!H0F!20F091F049&2+8-1//08#8!4!4%2*	FF0F$8-8////)	0F/%8////)	Tropylium rearragement	gOpAMJUKua@@D!gOpAGJTju`@@D	esiPositive	Rearrangement				reaction		positive	ISBN: 978-0-470-03310-4
+qgVMX qYoTp	!Ruwu~@Ha}u?sW?Gx@G_HB !R_g}G]D]swug_QjvOGUh|	$4N2$@8!F50108$201084#81!H@VF0802V%V2!PF!V!IV0208ZJ23%281!F8&2+8-1//08#8!4!4%2*	FF0F$8-8////)	0F/%8////)	Tropylium rearragement	gOpAMJUKua@@Gtt@!gOpAGJTju`@@Gt\@	esiPositive	Rearrangement				reaction		positive	ISBN: 978-0-470-03310-4
 Q^ Q[	!R_qL@DquJO@ !R_qL@Dqtzo@	$1!V!1%1!44#804F304!1#12!F084F01$@044F01V#2V02!9N$9#83//////&	FF/%8////)	FF/%8////)	Sigmatropic rearrangement	eM@HvCzX@!eM@HvB	esiPositive	CRF	https://doi.org/10.1039/C5NP00073D	5.7	Fig. 18 a.	reaction		positive	
 qrLk qrL qk	!Rb@JH?_x@b@JH?QuJ@` !Rb@K~@Hc}GSjB !R@AL]~kp	X!B0c0V401%9GF041V#V1F0504!A2G0@8F4V4!1!144!4NV5V0F02V020@1sF0209V2083o6!k//01//%8/(	yoPWLW9!F4!F%F/V2/(8/-F0	oFe404/08//(F/-10	Retro-heteroene	gGY@DDf]j`Odkl@!gCi@DDff@~`l eF@HhP	esiPositive	CRF	https://doi.org/10.1039/C5NP00073D	5.5	Fig. 13 b.	reaction		positive	
 iup`jXdibCPcXKoI iSxKhvMHP IwbkEYH	!RbGvH?Oy?bGw~@Ha}?g~H?Hc|?g?~@Ha}mww~_?y?m?w~_quRS@ !RbOvH?Oy?bOvH__y?bOvH_QwZg@ !Rm?vw?_y?mpJH?[_}m?vw@auzG@	WRF4CK4MF2291L8TdVkWWliV12ZJ@bZf4g5TC4QP_F40FZ0o6F38sVL0H47w61F6WD7cP8QFaHX!M69v6f6Ek$4-4////,	:xzCqslde4mZ0EgHsVhXSH01Z0F9Y924FFVl02k0lkG6FF01@105ZJHZ1dc!20814180V05V205!F4#10	RNFY42V!8%V08#8#F8&HF!8$k04!V(FF!8102%8#V.	Retro-Diels–Alder 	fdeA`D@\brTfYY_m]gIZ|EhJB@@h@@~aF@!didHB@BTfUvfZVV@OhB@ didD@@iIYgxUie`B	esiPositive	CRF	https://doi.org/10.1039/C5NP00073D	5.2	Fig. 9 b.	reaction		positive	
@@ -221,7 +221,7 @@ Qg Qp Qd	!R_qL@Dqur_@ !RGYi| !R@AL]ngp	0F08!2F&4#V)201B6!V041!8F#81#2#F!108%22#F
 															
 <hitlist data>
 <hitlistName="<selection>">
-<hitlistData="@@@@@@@@@@xG@@@@@@@@@@@@@@@@@@@@">
+<hitlistData="@@@@@@@@@@@@@@@`@@@@@@@@@@@@@@@@">
 </hitlist data>
 <datawarrior properties>
 <columnFilter_Table="">
@@ -245,7 +245,7 @@ Qg Qp Qd	!R_qL@Dqur_@ !RGYi| !R@AL]ngp	0F08!2F&4#V)201B6!V041!8F#81#2#F!108%22#F
 <filter2="#string#	doi">
 <filter3="#string#	section">
 <filter4="#string#	description">
-<filter5="#string#	label">
+<filter5="#string#	label	#contains#	Tropylium rearragement">
 <filter6="#string#	kind">
 <filter7="#string#	web">
 <filter8="#string#	mode">
