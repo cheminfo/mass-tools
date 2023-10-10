@@ -1,5 +1,18 @@
 # Changelog
 
+## [7.14.0](https://github.com/cheminfo/mass-tools/compare/v7.13.1...v7.14.0) (2023-10-10)
+
+
+### Features
+
+* **mass-fragmentation:** select ionization kind ([abb429b](https://github.com/cheminfo/mass-tools/commit/abb429b9f548f70ba699beff2e2f596433c254ce))
+* **mass-fragmentation:** update openchemlib-utils ([10737d8](https://github.com/cheminfo/mass-tools/commit/10737d8b8f44995b640a3a07b2fe09b1e0ab495b))
+
+
+### Bug Fixes
+
+* **mass-fragmentation:** typos in getLabel function ([#147](https://github.com/cheminfo/mass-tools/issues/147)) ([7bc8dd2](https://github.com/cheminfo/mass-tools/commit/7bc8dd23ee9e77376bab41a8d32458c79f7daecb))
+
 ## [7.13.1](https://github.com/cheminfo/mass-tools/compare/v7.13.0...v7.13.1) (2023-10-06)
 
 
