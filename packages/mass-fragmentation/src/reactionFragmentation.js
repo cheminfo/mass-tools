@@ -2,7 +2,7 @@ import { MF } from 'mf-parser';
 import OCL from 'openchemlib';
 import { Reactions, getMF } from 'openchemlib-utils';
 
-import { getDatabases } from './database/getDatabases';
+import { getDatabase } from './database/getDatabase';
 import { getMasses } from './utils/getMasses';
 /**
  * @description Fragment a molecule by applying reactions from a custom database of reactions
@@ -55,7 +55,7 @@ export function reactionFragmentation(oclMolecule, options = {}) {
 
   reactions.appendHead([oclMolecule]);
   reactions.applyOneReactantReactions(
-    getDatabases({ kind: 'ionization', mode, ionizationKind, dwar }),
+    getDatabase({ kind: 'ionization', mode, ionizationKind, dwar }),
     {
       min: minIonizations,
       max: maxIonizations,
@@ -63,7 +63,7 @@ export function reactionFragmentation(oclMolecule, options = {}) {
   );
 
   reactions.applyOneReactantReactions(
-    getDatabases({ kind: 'reaction', mode, ionizationKind, dwar }),
+    getDatabase({ kind: 'reaction', mode, ionizationKind, dwar }),
     {
       min: minReactions,
       max: maxReactions,
