@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>octochemdb 2.1.2 | Documentation</title>
+  <title>octochemdb 2.1.3 | Documentation</title>
   <meta name='description' content='Helper that allows to query the OctoChemDB webservices'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>octochemdb</h3>
-          <div class='mb1'><code>2.1.2</code></div>
+          <div class='mb1'><code>2.1.3</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -1287,9 +1287,9 @@ in the database and a monoisotopic mass.</p>
 
               
                 <tr>
-  <td class='break-word'><span class='code bold'>options.databases</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  <td class='break-word'><span class='code bold'>options.databases</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;(<code>"massBank"</code> | <code>"gnps"</code> | <code>"inSilicoFragments"</code>)></code>
   
-    (default <code>&#39;massBank,gnps&#39;</code>)
+    (default <code>[&#39;massBank&#39;,&#39;gnps&#39;]</code>)
   </td>
   <td class='break-word'><span>List of databases to search for mass spectra
 </span></td>
