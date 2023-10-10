@@ -54,7 +54,9 @@ export async function massSpectra(options = {}) {
           ...options,
           url: route.url,
           link: route.link,
-        }).then(entries => entries.map(entry => ({ ...entry, database: route.name }))),
+        }).then((entries) =>
+          entries.map((entry) => ({ ...entry, database: route.name })),
+        ),
       );
     }
   }
