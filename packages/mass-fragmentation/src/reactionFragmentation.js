@@ -3,7 +3,7 @@ import OCL from 'openchemlib';
 import { Reactions, getMF } from 'openchemlib-utils';
 
 import { getDatabase } from './database/getDatabase';
-import { groupByMZ } from './utils/groupByMZ';
+import { getMasses } from './utils/getMasses';
 /**
  * @description Fragment a molecule by applying reactions from a custom database of reactions
  * @param {import('openchemlib').Molecule} oclMolecule - The OCL molecule to be fragmented
@@ -75,11 +75,12 @@ export function reactionFragmentation(oclMolecule, options = {}) {
 
   const trees = reactions.trees;
   const validNodes = reactions.getValidNodes();
-  const mzs = groupByMZ(validNodes);
+  const masses = getMasses(validNodes);
+
   return {
     trees,
     validNodes,
-    mzs,
+    masses,
     reactions,
   };
 }
