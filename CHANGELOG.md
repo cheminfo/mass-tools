@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.17.0](https://github.com/cheminfo/mass-tools/compare/v7.16.0...v7.17.0) (2023-10-11)
+
+
+### Features
+
+* **mass-fragmentation:** add molecules with same mass ([e3cd1b7](https://github.com/cheminfo/mass-tools/commit/e3cd1b70ac4989b71fb7e0934853ba5c7b1cef91))
+* **mass-fragmentation:** rename getMasses to groupByMZ ([642c96e](https://github.com/cheminfo/mass-tools/commit/642c96e07ebe543df076e6d4d6ff9b2a0f253141))
+
 ## [7.16.0](https://github.com/cheminfo/mass-tools/compare/v7.15.0...v7.16.0) (2023-10-10)
 
 
