@@ -1,4 +1,4 @@
-import { v4 } from '@lukeed/uuid'
+import { v4 } from '@lukeed/uuid';
 import { IsotopicDistribution } from 'isotopic-distribution';
 import { generateMFs } from 'mf-generator';
 import { fcnnlsVector } from 'ml-fcnnls';
@@ -51,8 +51,8 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
   const centroids = getCentroids(spectrum, { threshold });
   let mfs = await generateMFs(ranges, { filter, ionizations });
   mfs.forEach((mf) => {
-    mf.id = v4()
-  })
+    mf.id = v4();
+  });
   mfs = addIsotopicDistributionAndCheckMF(mfs, { logger, peakWidthFct });
 
   mfs.sort((mf1, mf2) => mf1.ms.em - mf2.ms.em);
@@ -122,11 +122,11 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
     getFilteredReconstructed,
   };
 
-  function getFilteredReconstructed(ids = mfs.map(mf => mf.id)) {
-    const filteredW = W.clone()
+  function getFilteredReconstructed(ids = mfs.map((mf) => mf.id)) {
+    const filteredW = W.clone();
     for (let i = 0; i < mfs.length; i++) {
-      if (ids.includes(mfs[i].id)) continue
-      filteredW.set(0, i, 0)
+      if (ids.includes(mfs[i].id)) continue;
+      filteredW.set(0, i, 0);
     }
     const filteredReconstructed = filteredW.mmul(A).getRow(0);
     return {
