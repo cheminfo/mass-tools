@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.18.0](https://github.com/cheminfo/mass-tools/compare/v7.17.0...v7.18.0) (2023-10-13)
+
+
+### Features
+
+* **mfs-deconvolution:** return a function that allows to calculate filteredReconstructed ([bfe5bd5](https://github.com/cheminfo/mass-tools/commit/bfe5bd5df0d4b6dc4782f08957f35589e5ec8090))
+
 ## [7.17.0](https://github.com/cheminfo/mass-tools/compare/v7.16.0...v7.17.0) (2023-10-11)
 
 
