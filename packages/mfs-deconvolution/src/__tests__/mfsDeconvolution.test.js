@@ -121,12 +121,17 @@ describe('mfsDeconvolution', () => {
     const logger = new FifoLogger();
     const text = readFileSync(join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
-    const { mfs, reconstructed, matchingScore, difference } =
-      await mfsDeconvolution(spectrum, ['HValOH', '([13C]C-1)0-10,Br'], {
-        ionizations: 'H+',
-        logger,
-        peakWidthFct: (em) => em / 1000,
-      });
+    const {
+      mfs,
+      reconstructed,
+      matchingScore,
+      difference,
+      getFilteredReconstructed,
+    } = await mfsDeconvolution(spectrum, ['HValOH', '([13C]C-1)0-10,Br'], {
+      ionizations: 'H+',
+      logger,
+      peakWidthFct: (em) => em / 1000,
+    });
     expect(matchingScore).toBeCloseTo(1);
     const absoluteQuantities = mfs.map((mf) => mf.absoluteQuantity);
     expect(absoluteQuantities).toBeDeepCloseTo([100, 50, 20, 10, 0, 0, 0], 3);
@@ -142,5 +147,20 @@ describe('mfsDeconvolution', () => {
     expect(difference.x).toHaveLength(19);
     expect(difference.y).toHaveLength(19);
     expect(logger.getLogs()).toHaveLength(5);
+
+    const filteredReconstructed = getFilteredReconstructed();
+    expect(filteredReconstructed).toStrictEqual(reconstructed);
+
+    const reallyFilteredReconstructed = getFilteredReconstructed(
+      mfs.slice(2, 4).map((mf) => mf.id),
+    );
+    expect(reallyFilteredReconstructed.x).toStrictEqual(
+      filteredReconstructed.x,
+    );
+    expect(reallyFilteredReconstructed.y).toBeDeepCloseTo([
+      0, 0, 19.174220339122392, 10.423872010621597, 0.35511193913682987,
+      0.04532585451294238, 0.0012090061609091609, 0.00005384872306899919,
+      0.0000010912189424224057, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    ]);
   });
 });
