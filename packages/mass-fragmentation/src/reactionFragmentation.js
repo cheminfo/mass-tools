@@ -8,7 +8,6 @@ import { getMasses } from './utils/getMasses';
  * @description Fragment a molecule by applying reactions from a custom database of reactions
  * @param {import('openchemlib').Molecule} oclMolecule - The OCL molecule to be fragmented
  * @param {Object}  [options={}]
- * @param {'positive'|'negative'|'both'}  [options.mode='positive'] - The mode to be used
  * @param {('esiPositive'|'esiNegative'|'ei')[]}  [options.ionizationKind=['esiPositive']] - The ionization technique to be used
  * @param {number}  [options.maxDepth=5] - The maximum depth of the overall fragmentation tree
  * @param {number}  [options.limitReactions=200] - The maximum number of reactions to be applied
