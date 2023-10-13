@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.2.0...mass-fragmentation@1.3.0) (2023-10-13)
+
+
+### Features
+
+* **mass-fragmentation:** add molecules with same mass ([e3cd1b7](https://github.com/cheminfo/mass-tools/commit/e3cd1b70ac4989b71fb7e0934853ba5c7b1cef91))
+
+
+
+
+
 # [1.2.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.1.0...mass-fragmentation@1.2.0) (2023-10-10)
 
 

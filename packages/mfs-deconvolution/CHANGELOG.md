@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/cheminfo/mass-tools/compare/mfs-deconvolution@2.0.6...mfs-deconvolution@2.1.0) (2023-10-13)
+
+
+### Features
+
+* **mfs-deconvolution:** return a function that allows to calculate filteredReconstructed ([bfe5bd5](https://github.com/cheminfo/mass-tools/commit/bfe5bd5df0d4b6dc4782f08957f35589e5ec8090))
+
+
+
+
+
 ## [2.0.6](https://github.com/cheminfo/mass-tools/compare/mfs-deconvolution@2.0.5...mfs-deconvolution@2.0.6) (2023-10-10)
 
 **Note:** Version bump only for package mfs-deconvolution
