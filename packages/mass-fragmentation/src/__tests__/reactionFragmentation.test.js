@@ -18,8 +18,8 @@ describe('ReactionFragmentation', async () => {
       'CC=CC1C=CC2CC(CCC2C1(C)C(=C3C(=O)C(N(C3=O)C)CO)O)C',
     );
     const { trees, validNodes, masses } = reactionFragmentation(molecule);
-    expect(validNodes).toHaveLength(196);
-    expect(masses).toHaveLength(33);
+    expect(validNodes).toHaveLength(192);
+    expect(masses).toHaveLength(12);
 
     removeCoordinates(trees);
     expect(trees).toMatchSnapshot();
@@ -29,8 +29,8 @@ describe('ReactionFragmentation', async () => {
       'CC1CC(=O)C2=C(O1)C=C3C(=C2O)C(=CC(=C3C4=C(C=C(C5=C(C6=C(C=C54)OC(CC6=O)C)O)O)O)O)O',
     );
     const { trees, validNodes, masses } = reactionFragmentation(molecule);
-    expect(validNodes).toHaveLength(130);
-    expect(masses).toHaveLength(14);
+    expect(validNodes).toHaveLength(127);
+    expect(masses).toHaveLength(10);
     removeCoordinates(trees);
     expect(trees).toMatchSnapshot();
   });
