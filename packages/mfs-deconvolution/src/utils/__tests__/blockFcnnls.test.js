@@ -23,6 +23,34 @@ describe('blockFcnnls', () => {
     });
   });
 
+  it('with some 0', () => {
+    const matrix = [
+      [4, 1, 6, 2, 1, 1, 1, 1], // target
+      [1, 1, 0, 0, 0, 0, 0, 0], // x 1
+      [1, 0, 0, 0, 0, 0, 0, 0], // x 3
+      [0, 0, 3, 1, 0, 0, 0, 0], // x 2
+    ];
+    const result = blockFcnnls(matrix);
+    expect(result).toMatchCloseTo({
+      reconstructed: [4, 1, 6, 2, 0, 0, 0, 0],
+      weights: [1, 3, 2],
+    });
+  });
+
+  it('Do not match target', () => {
+    const matrix = [
+      [1, 1, 1, 1, 0, 0, 0, 0], // target
+      [1, 1, 1, 1, 0, 0, 0, 0], // x 1
+      [0, 0, 0, 0, 1, 1, 1, 0], // x 3
+      [0, 0, 0, 0, 0, 1, 1, 1], // x 2
+    ];
+    const result = blockFcnnls(matrix);
+    expect(result).toMatchCloseTo({
+      reconstructed: [1, 1, 1, 1, 0, 0, 0, 0],
+      weights: [1, 0, 0],
+    });
+  });
+
   it('complex case', () => {
     const combined = JSON.parse(
       readFileSync(join(__dirname, './data/combined.json'), 'utf8'),

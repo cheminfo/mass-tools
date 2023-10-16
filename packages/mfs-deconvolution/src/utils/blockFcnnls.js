@@ -5,8 +5,20 @@ import { splitMatrix } from './splitMatrix.js';
 
 export function blockFcnnls(fullMatrix) {
   const target = fullMatrix[0];
-  const matrix = fullMatrix.slice(1);
+  const originalMatrix = fullMatrix.slice(1);
+  const matrix = [];
+  const emptyRow = new Float64Array(originalMatrix[0].length);
+  row: for (const row of originalMatrix) {
+    for (let i = 0; i < row.length; i++) {
+      if (row[i] !== 0 && target[i] !== 0) {
+        matrix.push(row);
+        continue row;
+      }
+    }
+    matrix.push(emptyRow);
+  }
 
+  // if there is no match with first spectrum we just ignore this entry
   const matrices = splitMatrix(matrix);
   appendTarget(matrices, target);
 
