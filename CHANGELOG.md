@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.19.0](https://github.com/cheminfo/mass-tools/compare/v7.18.0...v7.19.0) (2023-10-16)
+
+
+### Features
+
+* **mfs-deconvolution:** improve speed ([e1ac88e](https://github.com/cheminfo/mass-tools/commit/e1ac88eb69ab6549956d3ba613c0e333ff720e30))
+
 ## [7.18.0](https://github.com/cheminfo/mass-tools/compare/v7.17.0...v7.18.0) (2023-10-13)
 
 
