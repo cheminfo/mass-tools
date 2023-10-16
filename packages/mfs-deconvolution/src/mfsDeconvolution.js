@@ -75,8 +75,6 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
     mfs[i].distribution.y = mfs[i].distribution.y.map((y) => y * weights[i]);
   }
 
-  mfs.sort((mf1, mf2) => mf2.absoluteQuantity - mf1.absoluteQuantity);
-
   let matchingScore = 0;
   const difference = [];
   for (let i = 0; i < combined.ys[0].length; i++) {
@@ -84,6 +82,9 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
     difference.push(combined.ys[0][i] - reconstructed[i]);
   }
   matchingScore = matchingScore / xSum(combined.ys[0]);
+
+  let A;
+  let W;
 
   return {
     reconstructed: {
@@ -94,19 +95,26 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
       x: combined.x,
       y: difference,
     },
-    mfs,
+    mfs: mfs.slice().sort((mf1, mf2) => mf2.absoluteQuantity - mf1.absoluteQuantity),
     matchingScore,
     getFilteredReconstructed,
   };
 
+
+
   function getFilteredReconstructed(ids = mfs.map((mf) => mf.id)) {
-    const A = new Matrix(combined.ys.slice(1));
-    const W = new Matrix([weights]);
-    for (let i = 0; i < mfs.length; i++) {
-      if (ids.includes(mfs[i].id)) continue;
-      W.set(0, i, 0);
+    if (!A) A = new Matrix(combined.ys.slice(1));
+    if (!W) W = new Matrix([weights]);
+    let wClone = W
+    if (ids.length !== W.length) {
+      wClone = W.clone()
+      for (let i = 0; i < mfs.length; i++) {
+        if (ids.includes(mfs[i].id)) continue;
+        wClone.set(0, i, 0);
+      }
     }
-    const filteredReconstructed = W.mmul(A).getRow(0);
+
+    const filteredReconstructed = wClone.mmul(A).getRow(0);
     return {
       x: combined.x,
       y: filteredReconstructed,
