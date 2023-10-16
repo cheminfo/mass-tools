@@ -1,5 +1,6 @@
 packages/chemical-groups/src/groups.js
 packages/chemical-elements/src/elements.json
+packages/mfs-deconvolution/src/utils/__tests__/data/combined.json
 coverage
 dist
 docs

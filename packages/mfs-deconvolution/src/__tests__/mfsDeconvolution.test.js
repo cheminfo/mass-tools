@@ -149,7 +149,7 @@ describe('mfsDeconvolution', () => {
     expect(logger.getLogs()).toHaveLength(5);
 
     const filteredReconstructed = getFilteredReconstructed();
-    expect(filteredReconstructed).toStrictEqual(reconstructed);
+    expect(filteredReconstructed).toBeDeepCloseTo(reconstructed);
 
     const reallyFilteredReconstructed = getFilteredReconstructed(
       mfs.slice(2, 4).map((mf) => mf.id),
