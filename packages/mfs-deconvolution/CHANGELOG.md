@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/cheminfo/mass-tools/compare/mfs-deconvolution@2.2.0...mfs-deconvolution@2.2.1) (2023-10-16)
+
+
+### Bug Fixes
+
+* **mfs-deconvolution:** buildCombined was buggy because mfs were reordered ([8f148f6](https://github.com/cheminfo/mass-tools/commit/8f148f62dd837caa45537b9d74422b3a3a1adfcd))
+
+
+
+
+
 # [2.2.0](https://github.com/cheminfo/mass-tools/compare/mfs-deconvolution@2.1.0...mfs-deconvolution@2.2.0) (2023-10-16)
 
 
