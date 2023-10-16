@@ -6,6 +6,7 @@ import { Matrix } from 'ml-matrix';
 import { xyArrayAlignToFirst, xNormed, xSum } from 'ml-spectra-processing';
 
 import { getPeakWidthFct } from './getPeakWidthFct';
+import { blockFcnnls } from './utils/blockFcnnls.js';
 
 /**
  *
@@ -70,24 +71,16 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
     combined,
   );
 
-  // Time to make the NNMF
-  const A = new Matrix(newYSs.slice(1));
-  const At = A.transpose();
-  const b = Array.from(newYSs[0]); // target
 
-  const w = fcnnlsVector(At, b);
-  const W = new Matrix([w]); // weights
+  const { weights, reconstructed } = blockFcnnls(newYSs)
 
-  // now that we know all the weights we need to reconstruct the spectrum to check if it looks ok
-  const reconstructed = W.mmul(A).getRow(0);
-
-  const relativeIntensity = xNormed(w);
+  const relativeIntensity = xNormed(weights);
 
   for (let i = 0; i < mfsWithOverlap.length; i++) {
-    mfsWithOverlap[i].absoluteQuantity = w[i];
+    mfsWithOverlap[i].absoluteQuantity = weights[i];
     mfsWithOverlap[i].relativeQuantity = relativeIntensity[i];
     mfsWithOverlap[i].distribution.y = mfsWithOverlap[i].distribution.y.map(
-      (y) => y * w[i],
+      (y) => y * weights[i],
     );
   }
   for (let i = 0; i < mfsWithoutOverlap.length; i++) {

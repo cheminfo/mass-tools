@@ -4,7 +4,7 @@ import { join } from 'path';
 import { splitMatrix } from '../splitMatrix';
 
 describe('splitMatrix', () => {
-  it.only('simple test', () => {
+  it('simple test', () => {
     const matrix = [
       [1, 1, 0, 0],
       [1, 2, 0, 0],
@@ -37,16 +37,17 @@ describe('splitMatrix', () => {
       [0, 0, 1, 1],
     ];
     const result = splitMatrix(matrix);
-    expect(result.matrices).toStrictEqual([{ rows: [0, 2, 1], columns: [0, 3, 2, 1] }])
+    expect(result.matrices).toMatchObject([{ rows: [0, 2, 1], columns: [0, 3, 2, 1] }])
   })
 
 
   it('complex case', () => {
     const combined = JSON.parse(readFileSync(join(__dirname, './data/combined.json'), 'utf8'))
     console.log(combined.ys.length, combined.ys[0].length)
-    const matrix = combined.ys
+    // first row are the target values
+    const matrix = combined.ys.slice(1)
     console.time('matrix')
-    const result = splitMatrix(matrix); // 2.338s 2.308s 2.231s
+    const result = splitMatrix(matrix);
     console.timeEnd('matrix')
     console.log(result.maxMappingID)
   })

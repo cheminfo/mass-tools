@@ -4,12 +4,7 @@
 export function splitMatrix(matrix) {
   const nbRows = matrix.length;
   const nbColumns = matrix[0].length;
-  const mapping = []
-  for (let i = 0; i < matrix.length; i++) {
-    mapping.push(new Uint16Array(nbColumns))
-  }
-
-  const { nonZeroColumns, nonZeroRows } = createMatrixIndexes(matrix, mapping)
+  const { nonZeroColumns, nonZeroRows } = createMatrixIndexes(matrix)
 
   const rowsMapping = new Uint16Array(nbRows).fill(65535)
   const columnsMapping = new Uint16Array(nbColumns).fill(65535)
