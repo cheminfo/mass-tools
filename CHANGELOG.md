@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.19.1](https://github.com/cheminfo/mass-tools/compare/v7.19.0...v7.19.1) (2023-10-16)
+
+
+### Bug Fixes
+
+* **mfs-deconvolution:** buildCombined was buggy because mfs were reordered ([8f148f6](https://github.com/cheminfo/mass-tools/commit/8f148f62dd837caa45537b9d74422b3a3a1adfcd))
+
 ## [7.19.0](https://github.com/cheminfo/mass-tools/compare/v7.18.0...v7.19.0) (2023-10-16)
 
 
