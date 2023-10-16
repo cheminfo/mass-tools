@@ -10,12 +10,12 @@ describe('splitMatrix', () => {
       [1, 2, 0, 0],
       [0, 0, 1, 1],
     ];
-    const result = splitMatrix(matrix);
-    expect(result.matrices).toMatchObject([
+    const matrices = splitMatrix(matrix);
+    expect(matrices).toMatchObject([
       { rows: [0, 1], columns: [0, 1] },
-      { rows: [2], columns: [2, 3] }
-    ])
-    expect(result.matrices[0].submatrix).toMatchInlineSnapshot(`
+      { rows: [2], columns: [2, 3] },
+    ]);
+    expect(matrices[0].submatrix).toMatchInlineSnapshot(`
       [
         Float64Array [
           1,
@@ -26,9 +26,8 @@ describe('splitMatrix', () => {
           2,
         ],
       ]
-    `)
-  })
-
+    `);
+  });
 
   it('simple test', () => {
     const matrix = [
@@ -36,19 +35,19 @@ describe('splitMatrix', () => {
       [1, 1, 0, 0],
       [0, 0, 1, 1],
     ];
-    const result = splitMatrix(matrix);
-    expect(result.matrices).toMatchObject([{ rows: [0, 2, 1], columns: [0, 3, 2, 1] }])
-  })
-
+    const matrices = splitMatrix(matrix);
+    expect(matrices).toMatchObject([
+      { rows: [0, 2, 1], columns: [0, 3, 2, 1] },
+    ]);
+  });
 
   it('complex case', () => {
-    const combined = JSON.parse(readFileSync(join(__dirname, './data/combined.json'), 'utf8'))
-    console.log(combined.ys.length, combined.ys[0].length)
+    const combined = JSON.parse(
+      readFileSync(join(__dirname, './data/combined.json'), 'utf8'),
+    );
     // first row are the target values
-    const matrix = combined.ys.slice(1)
-    console.time('matrix')
+    const matrix = combined.ys.slice(1);
     const result = splitMatrix(matrix);
-    console.timeEnd('matrix')
-    console.log(result.maxMappingID)
-  })
-})
+    expect(result).toHaveLength(122);
+  });
+});

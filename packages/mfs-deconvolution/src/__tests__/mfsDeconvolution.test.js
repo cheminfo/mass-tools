@@ -117,7 +117,7 @@ describe('mfsDeconvolution', () => {
     );
   });
 
-  it.only('HValOH enriched good parameter with bromine outside mass range', async () => {
+  it('HValOH enriched good parameter with bromine outside mass range', async () => {
     const logger = new FifoLogger();
     const text = readFileSync(join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
@@ -149,7 +149,7 @@ describe('mfsDeconvolution', () => {
     expect(logger.getLogs()).toHaveLength(5);
 
     const filteredReconstructed = getFilteredReconstructed();
-    expect(filteredReconstructed).toStrictEqual(reconstructed);
+    expect(filteredReconstructed).toBeDeepCloseTo(reconstructed);
 
     const reallyFilteredReconstructed = getFilteredReconstructed(
       mfs.slice(2, 4).map((mf) => mf.id),

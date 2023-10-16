@@ -1,7 +1,6 @@
 import { v4 } from '@lukeed/uuid';
 import { IsotopicDistribution } from 'isotopic-distribution';
 import { generateMFs } from 'mf-generator';
-import { fcnnlsVector } from 'ml-fcnnls';
 import { Matrix } from 'ml-matrix';
 import { xyArrayAlignToFirst, xNormed, xSum } from 'ml-spectra-processing';
 
@@ -66,29 +65,14 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
     );
   }
 
-  const { mfsWithOverlap, mfsWithoutOverlap, newYSs } = filterIfOverlap(
-    mfs,
-    combined,
-  );
-
-
-  const { weights, reconstructed } = blockFcnnls(newYSs)
+  const { weights, reconstructed } = blockFcnnls(combined.ys);
 
   const relativeIntensity = xNormed(weights);
 
-  for (let i = 0; i < mfsWithOverlap.length; i++) {
-    mfsWithOverlap[i].absoluteQuantity = weights[i];
-    mfsWithOverlap[i].relativeQuantity = relativeIntensity[i];
-    mfsWithOverlap[i].distribution.y = mfsWithOverlap[i].distribution.y.map(
-      (y) => y * weights[i],
-    );
-  }
-  for (let i = 0; i < mfsWithoutOverlap.length; i++) {
-    mfsWithoutOverlap[i].absoluteQuantity = 0;
-    mfsWithoutOverlap[i].relativeQuantity = 0;
-    mfsWithoutOverlap[i].distribution.y = mfsWithoutOverlap[
-      i
-    ].distribution.y.map((y) => y * 0);
+  for (let i = 0; i < mfs.length; i++) {
+    mfs[i].absoluteQuantity = weights[i];
+    mfs[i].relativeQuantity = relativeIntensity[i];
+    mfs[i].distribution.y = mfs[i].distribution.y.map((y) => y * weights[i]);
   }
 
   mfs.sort((mf1, mf2) => mf2.absoluteQuantity - mf1.absoluteQuantity);
@@ -116,44 +100,18 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
   };
 
   function getFilteredReconstructed(ids = mfs.map((mf) => mf.id)) {
-    const filteredW = W.clone();
+    const A = new Matrix(combined.ys.slice(1));
+    const W = new Matrix([weights]);
     for (let i = 0; i < mfs.length; i++) {
       if (ids.includes(mfs[i].id)) continue;
-      filteredW.set(0, i, 0);
+      W.set(0, i, 0);
     }
-    const filteredReconstructed = filteredW.mmul(A).getRow(0);
+    const filteredReconstructed = W.mmul(A).getRow(0);
     return {
       x: combined.x,
       y: filteredReconstructed,
     };
   }
-}
-
-/**
- * We don't need to calculate the quantity if there is no overlap between the theoretical and experimental spectra
- * @param {*} mfs
- * @param {*} combined
- */
-function filterIfOverlap(mfs, combined) {
-  const mfsWithOverlap = [];
-  const mfsWithoutOverlap = [];
-  const newYSs = [combined.ys[0]];
-  for (let i = 1; i < combined.ys.length; i++) {
-    let overlapWithFirst = false;
-    for (let j = 0; j < combined.ys[i].length; j++) {
-      if (combined.ys[i][j] !== 0 && combined.ys[0][j] !== 0) {
-        overlapWithFirst = true;
-        break;
-      }
-    }
-    if (overlapWithFirst) {
-      mfsWithOverlap.push(mfs[i - 1]);
-      newYSs.push(combined.ys[i]);
-    } else {
-      mfsWithoutOverlap.push(mfs[i - 1]);
-    }
-  }
-  return { mfsWithOverlap, mfsWithoutOverlap, newYSs };
 }
 
 /**
