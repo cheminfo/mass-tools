@@ -95,19 +95,19 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
       x: combined.x,
       y: difference,
     },
-    mfs: mfs.slice().sort((mf1, mf2) => mf2.absoluteQuantity - mf1.absoluteQuantity),
+    mfs: mfs
+      .slice()
+      .sort((mf1, mf2) => mf2.absoluteQuantity - mf1.absoluteQuantity),
     matchingScore,
     getFilteredReconstructed,
   };
 
-
-
   function getFilteredReconstructed(ids = mfs.map((mf) => mf.id)) {
     if (!A) A = new Matrix(combined.ys.slice(1));
     if (!W) W = new Matrix([weights]);
-    let wClone = W
+    let wClone = W;
     if (ids.length !== W.length) {
-      wClone = W.clone()
+      wClone = W.clone();
       for (let i = 0; i < mfs.length; i++) {
         if (ids.includes(mfs[i].id)) continue;
         wClone.set(0, i, 0);
