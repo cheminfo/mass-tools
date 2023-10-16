@@ -1,6 +1,6 @@
 {
   "name": "mass-tools",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "main": "lib/index.js",
   "description": "Many tools allowing to analyze mass spectra",
   "module": "src/index.js",
@@ -29,7 +29,7 @@
     "mf-generator": "^3.0.2",
     "mf-parser": "^3.0.1",
     "mf-utilities": "^3.0.1",
-    "mfs-deconvolution": "^2.1.0",
+    "mfs-deconvolution": "^2.2.0",
     "ms-report": "^3.0.2",
     "ms-spectrum": "^3.0.7",
     "nucleotide": "^3.0.1",
