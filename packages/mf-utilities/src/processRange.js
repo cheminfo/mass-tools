@@ -65,10 +65,19 @@ export function processRange(string, comment, options = {}) {
 
 /**
  * If we have many times the same mf we can combine them
+ * This should only be applied if there are acutally some ranges
  */
 function optimizeRanges(mfs) {
   let newMFs = [];
   let mfsObject = {};
+  let hasRange = false;
+  for (const mf of mfs) {
+    if (mf.min !== mf.max) {
+      hasRange = true;
+      break;
+    }
+  }
+  if (!hasRange) return mfs;
   for (const mf of mfs) {
     if (!mfsObject[mf.mf]) {
       mfsObject[mf.mf] = {

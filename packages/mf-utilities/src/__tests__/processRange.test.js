@@ -18,4 +18,21 @@ describe('processRange', () => {
     });
     expect(result).toHaveLength(532);
   });
+
+  it('C0-1 C0-1', () => {
+    const result = processRange('C0-1 C0-1', '', {
+      optimization: true,
+    });
+    expect(result).toHaveLength(3);
+    expect(result).toStrictEqual(['', 'C', 'C2'])
+  });
+
+  it('C C', () => {
+    const result = processRange('C C', '', {
+      optimization: true,
+    });
+    expect(result).toHaveLength(1);
+    expect(result).toStrictEqual(['C C'])
+  });
+
 });
