@@ -1,7 +1,18 @@
+/**
+ * Expand all the ranges to exact molecular formula
+ * @param {string} string
+ * @param {string} comment
+ * @param {object} [options={}]
+ * @param {number} [options.limit]
+ * @param {boolean} [options.optimization=false] If true, it will simplify the problem by combining identical ranges the ranges.
+ *
+ * @returns
+ */
+
 export function processRange(string, comment, options = {}) {
-  const { limit } = options;
+  const { limit, optimization = false } = options;
   let results = [];
-  let parts = string.split(/(-?[0-9]+--?[0-9]+)/).filter((v) => v); // remove empty parts
+  let parts = string.split(/ *(-?[0-9]+--?[0-9]+) */).filter((v) => v); // remove empty parts
 
   let position = -1;
   let mfs = [];
@@ -20,6 +31,10 @@ export function processRange(string, comment, options = {}) {
       mfs[position].min = Math.min(min, max);
       mfs[position].max = Math.max(min, max);
     }
+  }
+
+  if (optimization) {
+    mfs = optimizeRanges(mfs);
   }
 
   let currents = new Array(mfs.length);
@@ -46,6 +61,28 @@ export function processRange(string, comment, options = {}) {
 
   results.push(getMF(mfs, currents, comment));
   return results;
+}
+
+/**
+ * If we have many times the same mf we can combine them
+ */
+function optimizeRanges(mfs) {
+  let newMFs = [];
+  let mfsObject = {};
+  for (const mf of mfs) {
+    if (!mfsObject[mf.mf]) {
+      mfsObject[mf.mf] = {
+        mf: mf.mf,
+        min: mf.min,
+        max: mf.max,
+      };
+      newMFs.push(mfsObject[mf.mf]);
+    } else {
+      mfsObject[mf.mf].min = mfsObject[mf.mf].min + mf.min;
+      mfsObject[mf.mf].max = mfsObject[mf.mf].max + mf.max;
+    }
+  }
+  return newMFs;
 }
 
 function getMF(mfs, currents, comment) {
