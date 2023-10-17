@@ -1,5 +1,6 @@
 import { ensureCase } from './ensureCase';
 import { parse } from './parse';
+import { flatten } from './util/flatten';
 import { getEA } from './util/getEA';
 import { getElements } from './util/getElements';
 import { getInfo } from './util/getInfo';
@@ -134,5 +135,9 @@ export class MF {
     this.toParts();
     this.cache.displayed = partsToDisplay(this.cache.parts);
     this.cache.html = undefined;
+  }
+
+  flatten(options) {
+    return flatten(this.parsed, options);
   }
 }
