@@ -1,7 +1,7 @@
 import { ELECTRON_MASS } from 'chemical-elements';
 import { msemMatcher } from 'mf-matcher';
 import { MF } from 'mf-parser';
-import { processRange, preprocessIonizations } from 'mf-utilities';
+import { preprocessIonizations } from 'mf-utilities';
 import sum from 'sum-object-keys';
 /**
  * Generate all the possible combinations of molecular formula and calculate
@@ -75,10 +75,6 @@ export async function generateMFs(ranges, options = {}) {
   if (options.canonizeMF === undefined) options.canonizeMF = true;
   options.ionizations = preprocessIonizations(options.ionizations);
 
-  if (!Array.isArray(ranges)) {
-    throw new Error('You need to specify an array of strings or arrays');
-  }
-
   // we allow String delimited by ". or ;" instead of an array
   for (let i = 0; i < ranges.length; i++) {
     if (!Array.isArray(ranges[i])) {
@@ -93,12 +89,12 @@ export async function generateMFs(ranges, options = {}) {
     let newParts = [];
     for (let j = 0; j < parts.length; j++) {
       let part = parts[j];
-      let comment = part.replace(/^([^$]*\$|.*)/, '');
-      part = part.replace(/\$.*/, '').replace(/\s/g, '');
       if (part.match(/[0-9]-[0-9-]/)) {
         // deal with negative numbers
         // there are ranges ... we are in trouble !
-        newParts = newParts.concat(processRange(part, comment, { limit }));
+        newParts = newParts.concat(
+          new MF(part).flatten({ groupIdentical: false, limit }),
+        );
       } else {
         newParts.push(parts[j]); // the part with the comments !
       }

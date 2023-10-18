@@ -110,14 +110,14 @@ describe('test mf-finder', () => {
     let result = await findMFs(24, {
       ranges: [{ mf: 'C', min: 1, max: 2 }],
       precision: 1e6,
-      ionizations: 'H++',
+      ionizations: 'H(+2)',
     });
     expect(result.mfs[1]).toMatchObject({
       em: 12,
       unsaturation: 2,
       mf: 'C',
       charge: 0,
-      ionization: { mf: 'H++', em: 1.00782503223, charge: 2 },
+      ionization: { mf: 'H(+2)', em: 1.00782503223, charge: 2 },
       ms: {
         em: 6.50336393620593,
         delta: 17.49663606379407,

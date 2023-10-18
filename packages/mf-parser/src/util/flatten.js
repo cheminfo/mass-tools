@@ -1,6 +1,6 @@
 export function flatten(parsed, options = {}) {
-  const { groupIdentical = false } = options;
-  if (parsed.length === 0) return [];
+  const { groupIdentical = false, limit = 100000 } = options;
+  if (parsed.length === 0) return [''];
 
   let parts = [];
   let parenthesisLevel = 0;
@@ -9,7 +9,10 @@ export function flatten(parsed, options = {}) {
 
   for (const entry of parsed) {
     if (
-      (entry.kind === 'atom' || entry.kind === 'openingParenthesis') &&
+      (entry.kind === 'atom' ||
+        entry.kind === 'isotope' ||
+        entry.kind === 'openingParenthesis' ||
+        !currentPart) &&
       parenthesisLevel === 0
     ) {
       currentPart = {
@@ -22,6 +25,9 @@ export function flatten(parsed, options = {}) {
     switch (entry.kind) {
       case 'atom':
         currentPart.mf += entry.value;
+        break;
+      case 'isotope':
+        currentPart.mf += `[${entry.value.isotope}${entry.value.atom}]`;
         break;
       case 'multiplier':
         currentPart.mf += entry.value;
@@ -66,7 +72,7 @@ export function flatten(parsed, options = {}) {
   if (groupIdentical) {
     parts = optimizeRanges(parts);
   }
-  const mfs = createMFs(parts, comments.join(' '), options);
+  const mfs = createMFs(parts, comments.join(' '), limit);
   return mfs;
 }
 
@@ -101,8 +107,7 @@ function optimizeRanges(parts) {
   return newParts;
 }
 
-function createMFs(parts, comment, options = {}) {
-  const { limit = 100000 } = options;
+function createMFs(parts, comment, limit) {
   const currents = new Array(parts.length);
   for (let i = 0; i < currents.length; i++) {
     currents[i] = parts[i].min;
@@ -121,7 +126,7 @@ function createMFs(parts, comment, options = {}) {
       position++;
     }
     if (mfs.length > limit) {
-      throw Error(`processRange generates too many fragments (over ${limit})`);
+      throw Error(`MF.flatten generates too many fragments (over ${limit})`);
     }
   }
   mfs.push(getMF(parts, currents, comment));

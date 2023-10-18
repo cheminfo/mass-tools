@@ -76,7 +76,7 @@ exports[`test isotopicDistribution > create distribution for many ionizations, C
       "atoms": {},
       "charge": 2,
       "em": 0,
-      "mf": "++",
+      "mf": "(+2)",
     },
     "isotopesInfo": {
       "charge": 2,
@@ -113,7 +113,7 @@ exports[`test isotopicDistribution > create distribution for many ionizations, C
     "ms": {
       "charge": 2,
       "em": 5.99945142009093,
-      "ionization": "++",
+      "ionization": "(+2)",
     },
     "toX": 6.50112883762593,
     "unsaturation": 2,

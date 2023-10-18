@@ -48,9 +48,27 @@ describe('fromPeptidicSequence', () => {
     expect(peptidic).toMatchSnapshot();
   });
 
-  it('AAKKKKKKKKKKKKKKKKKK allowNeutralLoss', async () => {
+  it('AKKKA allowNeutralLoss', async () => {
     let emdb = new EMDB();
-    await emdb.fromPeptidicSequence('AAKKKKKKKKKKKKKKKKKK', {
+    await emdb.fromPeptidicSequence('AKKKA', {
+      allowNeutralLoss: true,
+      protonation: false,
+      protonationPH: 7,
+      ionizations: 'H+',
+      fragmentation: {
+        a: false,
+      },
+    });
+
+    const peptidic = emdb.databases.peptidic.sort((a, b) => a.ms.em - b.ms.em);
+
+    expect(peptidic).toHaveLength(4);
+    expect(peptidic).toMatchSnapshot();
+  });
+
+  it('AAKKKKKKKKKKK allowNeutralLoss', async () => {
+    let emdb = new EMDB();
+    await emdb.fromPeptidicSequence('AAKKKKKKKKKKK', {
       allowNeutralLoss: true,
       protonation: false,
       protonationPH: 7,
@@ -109,7 +127,7 @@ describe('fromPeptidicSequence', () => {
         },
       }),
     ).rejects.toMatchInlineSnapshot(
-      `[Error: processRange generates to many fragments (over 100)]`,
+      `[Error: MF.flatten generates too many fragments (over 100)]`,
     );
   });
 
