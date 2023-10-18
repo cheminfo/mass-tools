@@ -198,7 +198,7 @@ exports[`fromPeptidicSequence > AAKK with callback 1`] = `
 ]
 `;
 
-exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
+exports[`fromPeptidicSequence > AAKKKKKKKKKKK allowNeutralLoss 1`] = `
 [
   {
     "atoms": {
@@ -228,7 +228,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 226.29582942817723,
     "parts": [
-      "HAlaAlaLys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAK",
     "unsaturation": 3,
@@ -261,7 +261,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 243.32635490179035,
     "parts": [
-      "HAlaAlaLysC-1O-1(+1)",
+      "HAlaAlaLysC-1O-1+",
     ],
     "sequence": "AAK",
     "unsaturation": 2,
@@ -294,7 +294,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 226.29582942817723,
     "parts": [
-      "HAlaAlaLys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAK",
     "unsaturation": 3,
@@ -327,7 +327,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 243.32635490179035,
     "parts": [
-      "HAlaAlaLysC-1O-1(+1)",
+      "HAlaAlaLysC-1O-1+",
     ],
     "sequence": "AAK",
     "unsaturation": 2,
@@ -360,7 +360,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 337.4378197308548,
     "parts": [
-      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKK",
     "unsaturation": 5,
@@ -393,7 +393,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 354.46834520446794,
     "parts": [
-      "HAlaAlaLysLys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLysLys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKK",
     "unsaturation": 4,
@@ -426,7 +426,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 337.4378197308548,
     "parts": [
-      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKK",
     "unsaturation": 5,
@@ -459,7 +459,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 371.49887067808106,
     "parts": [
-      "HAlaAlaLysLysC-1O-1(+1)",
+      "HAlaAlaLysLysC-1O-1+",
     ],
     "sequence": "AAKK",
     "unsaturation": 3,
@@ -492,7 +492,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 354.46834520446794,
     "parts": [
-      "HAlaAlaLysLys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLysLys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKK",
     "unsaturation": 4,
@@ -525,7 +525,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 371.49887067808106,
     "parts": [
-      "HAlaAlaLysLysC-1O-1(+1)",
+      "HAlaAlaLysLysC-1O-1+",
     ],
     "sequence": "AAKK",
     "unsaturation": 3,
@@ -558,7 +558,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 448.57981003353234,
     "parts": [
-      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKKK",
     "unsaturation": 7,
@@ -591,7 +591,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 465.61033550714546,
     "parts": [
-      "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKKK",
     "unsaturation": 6,
@@ -624,7 +624,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 448.57981003353234,
     "parts": [
-      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKKK",
     "unsaturation": 7,
@@ -657,7 +657,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 482.6408609807586,
     "parts": [
-      "HAlaAlaLysLysLys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLysLysLys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKKK",
     "unsaturation": 5,
@@ -690,7 +690,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 465.61033550714546,
     "parts": [
-      "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKKK",
     "unsaturation": 6,
@@ -723,7 +723,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 499.6713864543717,
     "parts": [
-      "HAlaAlaLysLysLysC-1O-1(+1)",
+      "HAlaAlaLysLysLysC-1O-1+",
     ],
     "sequence": "AAKKK",
     "unsaturation": 4,
@@ -756,7 +756,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 482.6408609807586,
     "parts": [
-      "HAlaAlaLysLysLys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLysLysLys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKKK",
     "unsaturation": 5,
@@ -789,7 +789,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 499.6713864543717,
     "parts": [
-      "HAlaAlaLysLysLysC-1O-1(+1)",
+      "HAlaAlaLysLysLysC-1O-1+",
     ],
     "sequence": "AAKKK",
     "unsaturation": 4,
@@ -822,7 +822,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 559.72180033621,
     "parts": [
-      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKKKK",
     "unsaturation": 9,
@@ -855,7 +855,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 576.7523258098231,
     "parts": [
-      "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKKKK",
     "unsaturation": 8,
@@ -888,7 +888,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 559.72180033621,
     "parts": [
-      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKKKK",
     "unsaturation": 9,
@@ -921,7 +921,7 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 593.7828512834362,
     "parts": [
-      "HAlaAlaLysLysLys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLysLysLys(N-1H-3)Lys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKKKK",
     "unsaturation": 7,
@@ -954,10 +954,135 @@ exports[`fromPeptidicSequence > AAKKKKKKKKKKKKKKKKKK allowNeutralLoss 1`] = `
     },
     "mw": 576.7523258098231,
     "parts": [
-      "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1(+1)",
+      "HAlaAlaLysLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)C-1O-1+",
     ],
     "sequence": "AAKKKK",
     "unsaturation": 8,
+  },
+]
+`;
+
+exports[`fromPeptidicSequence > AKKKA allowNeutralLoss 1`] = `
+[
+  {
+    "atoms": {
+      "C": 24,
+      "H": 39,
+      "N": 5,
+      "O": 6,
+    },
+    "charge": 0,
+    "em": 493.29003399654,
+    "ionization": {
+      "atoms": {
+        "H": 1,
+      },
+      "charge": 1,
+      "em": 1.00782503223,
+      "mf": "H+",
+    },
+    "mf": "C24H39N5O6",
+    "ms": {
+      "charge": 1,
+      "em": 494.2973104488609,
+      "ionization": "H+",
+    },
+    "mw": 493.59729653295994,
+    "parts": [
+      "HAlaLys(N-1H-3)Lys(N-1H-3)Lys(N-1H-3)AlaOH",
+    ],
+    "sequence": "AKKKA",
+    "unsaturation": 8,
+  },
+  {
+    "atoms": {
+      "C": 24,
+      "H": 42,
+      "N": 6,
+      "O": 6,
+    },
+    "charge": 0,
+    "em": 510.31658309766004,
+    "ionization": {
+      "atoms": {
+        "H": 1,
+      },
+      "charge": 1,
+      "em": 1.00782503223,
+      "mf": "H+",
+    },
+    "mf": "C24H42N6O6",
+    "ms": {
+      "charge": 1,
+      "em": 511.32385954998097,
+      "ionization": "H+",
+    },
+    "mw": 510.62782200657307,
+    "parts": [
+      "HAlaLysLys(N-1H-3)Lys(N-1H-3)AlaOH",
+    ],
+    "sequence": "AKKKA",
+    "unsaturation": 7,
+  },
+  {
+    "atoms": {
+      "C": 24,
+      "H": 45,
+      "N": 7,
+      "O": 6,
+    },
+    "charge": 0,
+    "em": 527.34313219878,
+    "ionization": {
+      "atoms": {
+        "H": 1,
+      },
+      "charge": 1,
+      "em": 1.00782503223,
+      "mf": "H+",
+    },
+    "mf": "C24H45N7O6",
+    "ms": {
+      "charge": 1,
+      "em": 528.350408651101,
+      "ionization": "H+",
+    },
+    "mw": 527.6583474801862,
+    "parts": [
+      "HAlaLysLysLys(N-1H-3)AlaOH",
+    ],
+    "sequence": "AKKKA",
+    "unsaturation": 6,
+  },
+  {
+    "atoms": {
+      "C": 24,
+      "H": 48,
+      "N": 8,
+      "O": 6,
+    },
+    "charge": 0,
+    "em": 544.3696812999,
+    "ionization": {
+      "atoms": {
+        "H": 1,
+      },
+      "charge": 1,
+      "em": 1.00782503223,
+      "mf": "H+",
+    },
+    "mf": "C24H48N8O6",
+    "ms": {
+      "charge": 1,
+      "em": 545.376957752221,
+      "ionization": "H+",
+    },
+    "mw": 544.6888729537993,
+    "parts": [
+      "HAlaLysLysLysAlaOH",
+    ],
+    "sequence": "AKKKA",
+    "unsaturation": 5,
   },
 ]
 `;

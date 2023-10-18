@@ -5,4 +5,3 @@ export * from './mfDiff.js';
 export * from './preprocessIonizations.js';
 export * from './preprocessRanges.js';
 export * from './getRangesForFragment.js';
-export * from './processRange.js';

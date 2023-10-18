@@ -277,4 +277,16 @@ describe('generateMFs', () => {
     });
     expect(counter).toBe(3);
   });
+
+  it.skip('check range optimisation', async () => {
+    let mfsArray = ['C0-10H0-10C0-10H0-10C0-10'];
+    let counter = 0;
+
+    await generateMFs(mfsArray, {
+      onStep: () => {
+        counter++;
+      },
+    });
+    expect(counter).toBe(650);
+  });
 });

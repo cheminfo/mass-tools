@@ -9,7 +9,7 @@ test('load google sheet', async () => {
   expect(first.ionization).toStrictEqual({
     charge: -1,
     em: 0,
-    mf: '(-)',
+    mf: '(-1)',
     atoms: {},
   });
   expect(first.em).toBeGreaterThan(0);

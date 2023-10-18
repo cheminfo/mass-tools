@@ -1,7 +1,5 @@
 import { MF } from 'mf-parser';
 
-import { processRange } from './processRange';
-
 export function preprocessIonizations(ionizationsString = '') {
   if (Array.isArray(ionizationsString)) return ionizationsString;
   let ionizations = ionizationsString.split(/ *[.,;\t\r\n]+ */);
@@ -11,7 +9,7 @@ export function preprocessIonizations(ionizationsString = '') {
   let results = [];
 
   for (let ionization of ionizations) {
-    let parts = processRange(ionization);
+    let parts = new MF(ionization).flatten();
     for (let part of parts) {
       let info = new MF(part).getInfo();
       results.push({
