@@ -117,6 +117,35 @@ describe('mfsDeconvolution', () => {
     );
   });
 
+  it('HValOH ', async () => {
+    const text = readFileSync(join(__dirname, './data/isotopic.txt'));
+    const spectrum = new Spectrum(parseXY(text));
+
+    const { mfs } = await mfsDeconvolution(spectrum, [
+      'HValOH',
+      '([13C]C-1)0-10',
+    ]);
+
+    const absoluteQuantities = mfs.map((mf) => mf.absoluteQuantity);
+    // results is completely wrong because
+    // we didn't set the ionizations
+    expect(absoluteQuantities).toBeDeepCloseTo([99, 50.5, 20.3, 10, 0, 0], 0);
+  });
+
+  it('HValOH with some manually added MFs', async () => {
+    const text = readFileSync(join(__dirname, './data/isotopic.txt'));
+    const spectrum = new Spectrum(parseXY(text));
+
+    const { mfs } = await mfsDeconvolution(
+      spectrum,
+      ['HValOH', '([13C]C-1)1-2'],
+      { customMFs: ['HValOH[13C]3C-3', 'HValOH[13C]4C-4'] },
+    );
+
+    const absoluteQuantities = mfs.map((mf) => mf.absoluteQuantity);
+    expect(absoluteQuantities).toBeDeepCloseTo([99, 50.5, 20.3, 10], 0);
+  });
+
   it('HValOH enriched good parameter with bromine outside mass range', async () => {
     const logger = new FifoLogger();
     const text = readFileSync(join(__dirname, './data/isotopic.txt'));
