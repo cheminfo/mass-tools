@@ -1,5 +1,16 @@
 # Changelog
 
+## [7.20.0](https://github.com/cheminfo/mass-tools/compare/v7.19.1...v7.20.0) (2023-10-19)
+
+
+### Features
+
+* **mf-parser:** add 'flatten' to mf object to expand all the ranges ([1c461ea](https://github.com/cheminfo/mass-tools/commit/1c461ead14cb7054d26fcc7d7d84f69d955240c8))
+* **mf-parser:** add flatten method on MF (and remove processRange) ([4e3c799](https://github.com/cheminfo/mass-tools/commit/4e3c79964c05f0fba33975069a1b442f4514976f))
+* **mf-utilities:** processRange do not optimize if there is no ranges ([79a8e88](https://github.com/cheminfo/mass-tools/commit/79a8e884cc12a8f086031e78f63f40df7944767f))
+* **mf-utilities:** processRange has an option to optimize in case only unique MF is important ([ab235a0](https://github.com/cheminfo/mass-tools/commit/ab235a00075ff45fdf176f83a4a34b10056d7e62))
+* **mfs-deconvolution:** allow customMFs ([613e4a0](https://github.com/cheminfo/mass-tools/commit/613e4a0f54d9884646987e15c0d70a0a3689b1f0))
+
 ## [7.19.1](https://github.com/cheminfo/mass-tools/compare/v7.19.0...v7.19.1) (2023-10-16)
 
 
