@@ -25,8 +25,8 @@
     "isotopic-distribution": "^3.0.1",
     "mf-generator": "^3.0.2",
     "ml-fcnnls": "^2.1.0",
-    "ml-matrix": "^6.10.4",
-    "ml-spectra-processing": "^12.5.0",
+    "ml-matrix": "6.10.4",
+    "ml-spectra-processing": "^12.6.0",
     "ms-spectrum": "^3.0.7"
   },
   "devDependencies": {
