@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.20.1](https://github.com/cheminfo/mass-tools/compare/v7.20.0...v7.20.1) (2023-10-19)
+
+
+### Bug Fixes
+
+* update dependencies and force old version of ml-matrix and ml-fcnnls ([aaffb31](https://github.com/cheminfo/mass-tools/commit/aaffb31aea9db1855ac5f1587456b411e8c85ba3))
+
 ## [7.20.0](https://github.com/cheminfo/mass-tools/compare/v7.19.1...v7.20.0) (2023-10-19)
 
 
