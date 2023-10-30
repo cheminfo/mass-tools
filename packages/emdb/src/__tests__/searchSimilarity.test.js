@@ -198,10 +198,10 @@ describe('test searchSimilarity', () => {
       similarity: {
         zone: {
           auto: true,
-          limit: 2,
         },
         widthBottom: 0.1,
         widthTop: 0.1,
+        limit: 2,
         common: undefined, // 'first', 'second', 'both' (or true) or 'none' (or undefined)
       },
     });

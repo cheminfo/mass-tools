@@ -31,9 +31,9 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @param {number}   [options.similarity.zone.low=-0.5] - window shift based on observed monoisotopic mass
 * @param {number}   [options.similarity.zone.high=2.5] - to value for the comparison window
 * @param {boolean}  [options.similarity.zone.auto=false] - if true, low / high is determined based on the isotopic distribution and the threshold
-* @param {number}   [options.similarity.zone.limit] - We may define the maximum number of peaks to keep
 * @param {string}   [options.similarity.common]
 * @param {number}   [options.similarity.threshold=0.001] - when calculating similarity we only use the isotopic distribution with peaks over this relative threshold
+* @param {number}   [options.similarity.limit] - We may define the maximum number of peaks to keep
 * @returns {Promise}
 */
 
@@ -70,7 +70,7 @@ export async function searchSimilarity(emdb, options = {}) {
   } else {
     flatEntries = results;
   }
-  let { widthFunction, zone = {}, threshold = 0.001 } = similarity;
+  let { widthFunction, zone = {}, threshold = 0.001, limit } = similarity;
 
   if (widthFunction && typeof widthFunction === 'string') {
     // eslint-disable-next-line no-new-func
@@ -83,7 +83,7 @@ export async function searchSimilarity(emdb, options = {}) {
     }
   }
 
-  const { low = -0.5, high = 2.5, auto, limit } = zone;
+  const { low = -0.5, high = 2.5, auto } = zone;
 
   // we need to calculate the similarity of the isotopic distribution
   let similarityProcessor = new Comparator(similarity);
