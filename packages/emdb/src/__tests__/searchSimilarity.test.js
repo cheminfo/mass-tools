@@ -136,6 +136,80 @@ describe('test searchSimilarity', () => {
     expect(results.test[0].ms.similarity.value).toBeCloseTo(0.895, 2);
   });
 
+  it('Problematic because mass is huge and monoisotopic mass is not there anymore', async () => {
+    let emdb = new EMDB();
+    await emdb.fromArray(['C999-1001'], {
+      databaseName: 'test',
+      ionizations: '+',
+    });
+    emdb.setExperimentalSpectrum({ x: [12010.03355], y: [1] });
+    let results = await emdb.searchSimilarity({
+      ionizations: '+',
+      minSimilarity: 0.1,
+      similarity: {
+        zone: {
+          low: -0.5,
+          high: 2.5,
+        },
+        threshold: 0.1,
+        widthBottom: 0.1,
+        widthTop: 0.1,
+        common: undefined, // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
+    });
+    expect(results.test).toHaveLength(0);
+  });
+
+  it('Problematic because mass is huge but we can ak for auto range', async () => {
+    let emdb = new EMDB();
+    await emdb.fromArray(['C999-1001'], {
+      databaseName: 'test',
+      ionizations: '+',
+    });
+    emdb.setExperimentalSpectrum({ x: [12010.03355], y: [1] });
+    let results = await emdb.searchSimilarity({
+      ionizations: '+',
+      minSimilarity: 0.1,
+      similarity: {
+        zone: {
+          auto: true,
+        },
+        widthBottom: 0.1,
+        widthTop: 0.1,
+        threshold: 0.5,
+        common: undefined, // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
+    });
+    expect(results.test).toHaveLength(1);
+
+    expect(results.test[0].ms.similarity.theoretical[0]).toHaveLength(8);
+  });
+
+  it('Problematic because mass is huge but we can ak for auto range and limit', async () => {
+    let emdb = new EMDB();
+    await emdb.fromArray(['C999-1001'], {
+      databaseName: 'test',
+      ionizations: '+',
+    });
+    emdb.setExperimentalSpectrum({ x: [12010.03355], y: [1] });
+    let results = await emdb.searchSimilarity({
+      ionizations: '+',
+      minSimilarity: 0.1,
+      similarity: {
+        zone: {
+          auto: true,
+          limit: 2,
+        },
+        widthBottom: 0.1,
+        widthTop: 0.1,
+        common: undefined, // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
+    });
+    expect(results.test).toHaveLength(1);
+
+    expect(results.test[0].ms.similarity.theoretical[0]).toHaveLength(2);
+  });
+
   it('should find one result with bad bad distribution, large window huge width', async () => {
     let emdb = new EMDB();
     await emdb.loadTest();

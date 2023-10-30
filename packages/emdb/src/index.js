@@ -34,9 +34,9 @@ export class EMDB {
    */
   setExperimentalSpectrum(data, options = {}) {
     const { normed = true, threshold = 0.00025 } = options;
-    this.experimentalSpectrum = new Spectrum(data, { threshold })
+    this.experimentalSpectrum = new Spectrum(data, { threshold });
     if (normed) {
-      this.experimentalSpectrum.normedY()
+      this.experimentalSpectrum.normedY();
     }
     return this.experimentalSpectrum;
   }

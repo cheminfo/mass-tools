@@ -30,6 +30,8 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @param {object}   [options.similarity.zone={}]
 * @param {number}   [options.similarity.zone.low=-0.5] - window shift based on observed monoisotopic mass
 * @param {number}   [options.similarity.zone.high=2.5] - to value for the comparison window
+* @param {boolean}  [options.similarity.zone.auto=false] - if true, low / high is determined based on the isotopic distribution and the threshold
+* @param {number}   [options.similarity.zone.limit] - We may define the maximum number of peaks to keep
 * @param {string}   [options.similarity.common]
 * @param {number}   [options.similarity.threshold=0.001] - when calculating similarity we only use the isotopic distribution with peaks over this relative threshold
 * @returns {Promise}
@@ -68,8 +70,7 @@ export async function searchSimilarity(emdb, options = {}) {
   } else {
     flatEntries = results;
   }
-
-  let { widthFunction, zone = {} } = similarity;
+  let { widthFunction, zone = {}, threshold = 0.001 } = similarity;
 
   if (widthFunction && typeof widthFunction === 'string') {
     // eslint-disable-next-line no-new-func
@@ -81,7 +82,8 @@ export async function searchSimilarity(emdb, options = {}) {
       );
     }
   }
-  const { low = -0.5, high = 2.5 } = zone;
+
+  const { low = -0.5, high = 2.5, auto, limit } = zone;
 
   // we need to calculate the similarity of the isotopic distribution
   let similarityProcessor = new Comparator(similarity);
@@ -99,14 +101,22 @@ export async function searchSimilarity(emdb, options = {}) {
       allowNeutral: false,
       ionizations: [entry.ionization],
       fwhm: width.top / 2,
-      threshold: 0.001,
+      threshold,
+      limit,
     });
 
     let distribution = isotopicDistribution.getDistribution();
     // we need to define the comparison zone that depends of the charge
-    let from = entry.ms.em + low / Math.abs(entry.ms.charge);
-    let to = entry.ms.em + high / Math.abs(entry.ms.charge);
-    similarityProcessor.setFromTo(from, to);
+    let from, to;
+    if (auto) {
+      from = (distribution.minX - 0.5) / Math.abs(entry.ms.charge);
+      to = (distribution.maxX + 0.5) / Math.abs(entry.ms.charge);
+      similarityProcessor.setFromTo(from, to);
+    } else {
+      from = entry.ms.em + low / Math.abs(entry.ms.charge);
+      to = entry.ms.em + high / Math.abs(entry.ms.charge);
+      similarityProcessor.setFromTo(from, to);
+    }
 
     if (widthFunction) {
       similarityProcessor.setTrapezoid(width.bottom, width.top);

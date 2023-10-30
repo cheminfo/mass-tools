@@ -109,7 +109,6 @@ describe('test Spectrum', () => {
     expect(result).toStrictEqual([]);
   });
 
-
   it('peak picking and same y value', () => {
     const peaks = [{ x: 5, y: 10000, width: 0.2 }];
 

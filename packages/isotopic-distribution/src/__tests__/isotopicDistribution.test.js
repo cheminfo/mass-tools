@@ -1,4 +1,8 @@
+import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
+
 import { IsotopicDistribution } from '..';
+
+expect.extend({ toBeDeepCloseTo });
 
 describe('test isotopicDistribution', () => {
   it('create distribution of CH0', () => {
@@ -204,6 +208,17 @@ describe('test isotopicDistribution', () => {
     expect(isotopicDistribution.confidence).toBeGreaterThan(0.95);
     expect(xy.x[0]).toBe(120);
     expect(xy.y.reduce((previous, current) => previous + current, 0)).toBe(100);
+  });
+
+  it('create distribution of C10 with limit', () => {
+    let isotopicDistribution = new IsotopicDistribution('C10', {
+      limit: 2,
+    });
+    let xy = isotopicDistribution.getXY();
+    expect(xy).toBeDeepCloseTo({
+      x: [120, 121.00335483507],
+      y: [100, 10.815728292732235],
+    });
   });
 
   it('create distribution of C10 and getVariables with maxValue to 100', () => {
