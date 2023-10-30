@@ -31,6 +31,14 @@ export class Distribution {
     return this.array.map((p) => p.y);
   }
 
+  get sumY() {
+    let sumY = 0;
+    for (let item of this.array) {
+      sumY += item.y;
+    }
+    return sumY;
+  }
+
   get minX() {
     if (!this.xSorted) this.sortX();
     return this.array[0].x;
@@ -99,10 +107,7 @@ export class Distribution {
   }
 
   normalize() {
-    let sum = 0;
-    for (let item of this.array) {
-      sum += item.y;
-    }
+    const sum = this.sumY;
     for (let item of this.array) {
       item.y /= sum;
     }
@@ -127,10 +132,8 @@ export class Distribution {
    * @param {number} [relativeValue=0] Should be between 0 and 1. 0 means no peak will be removed, 1 means all peaks will be removed
    */
   threshold(relativeValue = 0) {
-    console.log(this.array);
     if (!relativeValue) return this;
     const maxY = this.maxY;
-    console.log(maxY);
     const threshold = maxY * relativeValue;
     this.array = this.array.filter((point) => point.y >= threshold);
   }

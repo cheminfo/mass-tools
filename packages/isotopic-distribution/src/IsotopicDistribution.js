@@ -28,10 +28,12 @@ export class IsotopicDistribution {
    * @param {number} [options.maxLines=5000] - Maximal number of lines during calculations
    * @param {number} [options.minY=1e-8] - Minimal signal height during calculations
    * @param {boolean} [options.ensureCase=false] - Ensure uppercase / lowercase
+   * @param {number} [options.threshold=0] - We can filter the result based on the relative height of the peaks
    * @param {boolean} [options.allowNeutral=true] - Should we keep the distribution if the molecule has no charge
    */
 
   constructor(value, options = {}) {
+    this.threshold = options.threshold;
     if (Array.isArray(value)) {
       this.parts = JSON.parse(JSON.stringify(value));
       for (let part of this.parts) {
@@ -121,10 +123,10 @@ export class IsotopicDistribution {
             totalDistribution.multiply(distribution, options);
           }
         }
-        this.confidence += totalDistribution.array.reduce(
-          (sum, value) => sum + value.y,
-          0,
-        );
+        this.confidence = 0;
+        for (const item of totalDistribution.array) {
+          this.confidence += item.y;
+        }
 
         // we finally deal with the charge
 
@@ -169,6 +171,15 @@ export class IsotopicDistribution {
       }
     }
     if (finalDistribution) finalDistribution.joinX(this.fwhm);
+
+    // if there is a threshold we will deal with it
+    // and we will correct the confidence
+    if (this.threshold) {
+      const sumBefore = finalDistribution.sumY;
+      finalDistribution.threshold(this.threshold);
+      const sumAfter = finalDistribution.sumY;
+      this.confidence = (this.confidence * sumAfter) / sumBefore;
+    }
 
     for (let entry of finalDistribution.array) {
       if (!entry.composition) continue;

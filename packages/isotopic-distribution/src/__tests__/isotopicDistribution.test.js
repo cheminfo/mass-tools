@@ -196,6 +196,16 @@ describe('test isotopicDistribution', () => {
     expect(xy.y.reduce((previous, current) => previous + current, 0)).toBe(100);
   });
 
+  it('create distribution of C10 with threshold', () => {
+    let isotopicDistribution = new IsotopicDistribution('C10', {
+      threshold: 0.1,
+    });
+    let xy = isotopicDistribution.getXY({ sumValue: 100 });
+    expect(isotopicDistribution.confidence).toBeGreaterThan(0.95);
+    expect(xy.x[0]).toBe(120);
+    expect(xy.y.reduce((previous, current) => previous + current, 0)).toBe(100);
+  });
+
   it('create distribution of C10 and getVariables with maxValue to 100', () => {
     let isotopicDistribution = new IsotopicDistribution('C10');
     let variables = isotopicDistribution.getVariables();

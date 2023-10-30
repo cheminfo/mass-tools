@@ -78,7 +78,7 @@ describe('Distribution', () => {
     ]);
   });
 
-  it('Check the treshold', () => {
+  it('Check the threshold', () => {
     let distribution = new Distribution();
     distribution.push({ x: 1, y: 1 });
     distribution.push({ x: 2, y: 3 });
