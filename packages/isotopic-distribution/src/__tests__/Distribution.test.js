@@ -77,4 +77,14 @@ describe('Distribution', () => {
       { x: 5, y: 1 },
     ]);
   });
+
+  it('Check the treshold', () => {
+    let distribution = new Distribution();
+    distribution.push({ x: 1, y: 1 });
+    distribution.push({ x: 2, y: 3 });
+    distribution.push({ x: 2.25, y: 1 });
+    distribution.push({ x: 5, y: 1 });
+    distribution.threshold(0.5);
+    expect(distribution.array).toStrictEqual([{ x: 2, y: 3 }]);
+  });
 });
