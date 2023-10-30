@@ -58,10 +58,15 @@ describe('Distribution', () => {
 
   it('really joinX array shifted weighted 3', () => {
     let distribution = new Distribution();
-    distribution.push({ x: 1, y: 1 });
     distribution.push({ x: 2, y: 3 });
+    distribution.push({ x: 1, y: 1 });
     distribution.push({ x: 2.25, y: 1 });
+    expect(distribution.minX).toStrictEqual(1);
+    expect(distribution.maxX).toStrictEqual(2.25);
+    expect(distribution.minY).toStrictEqual(1);
+    expect(distribution.maxY).toStrictEqual(3);
     distribution.joinX(1);
+
     expect(distribution.array).toStrictEqual([{ x: 1.85, y: 5 }]);
   });
 

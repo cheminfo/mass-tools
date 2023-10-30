@@ -7,16 +7,14 @@ import { power } from './utils/power.js';
  * Internal class to deal with isotopic distribution calculations
  */
 export class Distribution {
-  constructor(array) {
-    if (Array.isArray(array)) {
-      this.array = array;
-      this.xSorted = false;
-      this.ySorted = false;
-    } else {
-      this.array = [];
-      this.xSorted = true;
-      this.ySorted = true;
-    }
+  constructor(array = []) {
+    this.array = array;
+    this.cache = getEmptyCache();
+  }
+
+  emptyCache() {
+    if (this.cache.isEmpty) return;
+    this.cache = getEmptyCache();
   }
 
   get length() {
@@ -32,54 +30,87 @@ export class Distribution {
   }
 
   get sumY() {
+    if (!isNaN(this.cache.sumY)) return this.cache.sumY;
     let sumY = 0;
     for (let item of this.array) {
       sumY += item.y;
     }
+    this.cache.sumY = sumY;
+    this.cache.isEmpty = false;
     return sumY;
   }
 
   get minX() {
-    if (!this.xSorted) this.sortX();
-    return this.array[0].x;
+    if (!isNaN(this.cache.minX)) return this.cache.minX;
+    let minX = Number.POSITIVE_INFINITY;
+    for (let item of this.array) {
+      if (item.x < minX) {
+        minX = item.x;
+      }
+    }
+    this.cache.minX = minX;
+    this.cache.isEmpty = false;
+    return minX;
   }
 
   get maxX() {
-    if (!this.xSorted) this.sortX();
-    return this.array[this.array.length - 1].x;
-  }
-
-  get maxY() {
-    if (!this.ySorted) this.sortY();
-    return this.array[0].y;
+    if (!isNaN(this.cache.maxX)) return this.cache.maxX;
+    let maxX = Number.NEGATIVE_INFINITY;
+    for (let item of this.array) {
+      if (item.x > maxX) {
+        maxX = item.x;
+      }
+    }
+    this.cache.maxX = maxX;
+    this.cache.isEmpty = false;
+    return maxX;
   }
 
   get minY() {
-    if (!this.ySorted) this.sortY();
-    return this.array[this.array.length - 1].y;
+    if (!isNaN(this.cache.minY)) return this.cache.minY;
+    let minY = Number.POSITIVE_INFINITY;
+    for (let item of this.array) {
+      if (item.y < minY) {
+        minY = item.y;
+      }
+    }
+    this.cache.minY = minY;
+    this.cache.isEmpty = false;
+    return minY;
+  }
+
+  get maxY() {
+    if (!isNaN(this.cache.maxY)) return this.cache.maxY;
+    let maxY = Number.NEGATIVE_INFINITY;
+    for (let item of this.array) {
+      if (item.y > maxY) {
+        maxY = item.y;
+      }
+    }
+    this.cache.maxY = maxY;
+    this.cache.isEmpty = false;
+    return maxY;
   }
 
   multiplyY(value) {
-    this.array.forEach((item) => (item.y *= value));
+    for (const item of this.array) {
+      item.y *= value;
+    }
   }
 
   setArray(array) {
     this.array = array;
-    this.xSorted = false;
-    this.ySorted = false;
+    this.emptyCache();
   }
 
   move(other) {
-    this.xSorted = other.xSorted;
-    this.ySorted = other.ySorted;
     this.array = other.array;
+    this.emptyCache();
   }
 
   push(point) {
     this.array.push(point);
-
-    this.xSorted = false;
-    this.ySorted = false;
+    this.emptyCache();
   }
 
   /**
@@ -87,10 +118,11 @@ export class Distribution {
    * @returns {Distribution}
    */
   sortX() {
-    this.ySorted = false;
-    if (this.xSorted) return this;
+    this.cache.ySorted = false;
+    if (this.cache.xSorted) return this;
     this.array.sort((a, b) => a.x - b.x);
-    this.xSorted = true;
+    this.cache.xSorted = true;
+    this.cache.isEmpty = false;
     return this;
   }
 
@@ -99,10 +131,11 @@ export class Distribution {
    * @returns {Distribution}
    */
   sortY() {
-    this.xSorted = false;
-    if (this.ySorted) return this;
+    this.cache.xSorted = false;
+    if (this.cache.ySorted) return this;
     this.array.sort((a, b) => b.y - a.y);
-    this.ySorted = true;
+    this.cache.ySorted = true;
+    this.cache.isEmpty = false;
     return this;
   }
 
@@ -152,18 +185,14 @@ export class Distribution {
 
   copy() {
     let distCopy = new Distribution();
-    distCopy.xSorted = this.xSorted;
-    distCopy.ySorted = this.ySorted;
+    distCopy.cache = { ...this.cache };
     distCopy.array = JSON.parse(JSON.stringify(this.array));
     return distCopy;
   }
 
   maxToOne() {
     if (this.array.length === 0) return this;
-    let currentMax = this.array[0].y;
-    for (let item of this.array) {
-      if (item.y > currentMax) currentMax = item.y;
-    }
+    let currentMax = this.maxY;
     for (let item of this.array) {
       item.y /= currentMax;
     }
@@ -178,12 +207,24 @@ export class Distribution {
     for (let item of distribution.array) {
       this.array.push(item);
     }
-    this.xSorted = false;
-    this.ySorted = false;
+    this.emptyCache();
   }
 
   closestPointX(target) {
     this.sortX();
     return closestPointX(this.array, target);
   }
+}
+
+function getEmptyCache() {
+  return {
+    isEmpty: true,
+    xSorted: false,
+    ySorted: false,
+    minX: NaN,
+    maxX: NaN,
+    minY: NaN,
+    maxY: NaN,
+    sumY: NaN,
+  };
 }
