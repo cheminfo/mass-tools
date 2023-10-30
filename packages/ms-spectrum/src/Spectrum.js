@@ -25,7 +25,7 @@ export class Spectrum {
    *
    * @param {import('cheminfo-types').DataXY} data
    * @param {object} [options={}]
-   * @param {number} [options.threshold]
+   * @param {number} [options.threshold=0.00025]
    */
   constructor(data = { x: [], y: [] }, options = {}) {
     if (
@@ -36,7 +36,7 @@ export class Spectrum {
       throw new TypeError('Spectrum data must be an object with x:[], y:[]');
     }
     this.data = { ...data };
-    this.options = options;
+    this.options = { threshold: 0.00025, ...options };
     Object.defineProperty(this.data, 'xOriginal', {
       enumerable: false,
       writable: true,

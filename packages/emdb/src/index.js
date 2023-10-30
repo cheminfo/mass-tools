@@ -30,13 +30,13 @@ export class EMDB {
    * @param {*} data
    * @param {object} [options={}]
    * @param {number} [options.normed=true] Should we normed (sum Y to 1) the experimental spectrum ?
+   * @param {number} [options.threshold=0.00025] Should we normed (sum Y to 1) the experimental spectrum ?
    */
   setExperimentalSpectrum(data, options = {}) {
-    const { normed = true } = options;
+    const { normed = true, threshold = 0.00025 } = options;
+    this.experimentalSpectrum = new Spectrum(data, { threshold })
     if (normed) {
-      this.experimentalSpectrum = new Spectrum(data).normedY();
-    } else {
-      this.experimentalSpectrum = new Spectrum(data);
+      this.experimentalSpectrum.normedY()
     }
     return this.experimentalSpectrum;
   }

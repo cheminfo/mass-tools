@@ -95,6 +95,21 @@ describe('test Spectrum', () => {
     ]);
   });
 
+  it('gsd with stupid threshold', () => {
+    const peaks = [{ x: 5, y: 10000, width: 0.2 }];
+
+    const data = generateSpectrum(peaks, {
+      generator: {
+        from: 0,
+        to: 10,
+        nbPoints: 10001,
+      },
+    });
+    const result = new Spectrum(data, { threshold: 1 }).peakPicking();
+    expect(result).toStrictEqual([]);
+  });
+
+
   it('peak picking and same y value', () => {
     const peaks = [{ x: 5, y: 10000, width: 0.2 }];
 
