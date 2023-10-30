@@ -24,14 +24,14 @@ Search for an experimental monoisotopic mass and calculate the similarity
 * @param {object}   [options.filter.atoms] - object of atom:{min, max}
 * @param {object}   [options.filter.callback] - a function to filter the MF
 * @param {object}   [options.similarity={}]
-* @param {object}   [options.similarity.widthBottom]
-* @param {object}   [options.similarity.widthTop]
+* @param {number}   [options.similarity.widthBottom]
+* @param {number}   [options.similarity.widthTop]
 * @param {object}   [options.similarity.widthFunction] - function called with mass that should return an object width containing top and bottom
 * @param {object}   [options.similarity.zone={}]
-* @param {object}   [options.similarity.zone.low=-0.5] - window shift based on observed monoisotopic mass
-* @param {object}   [options.similarity.zone.high=2.5] - to value for the comparison window
-* @param {object}   [options.similarity.common]
-* @param {object}   [options.similarity.threshold=0.0001] - when calculating similarity we only use the isotopic distribution with peaks over this relative threshold
+* @param {number}   [options.similarity.zone.low=-0.5] - window shift based on observed monoisotopic mass
+* @param {number}   [options.similarity.zone.high=2.5] - to value for the comparison window
+* @param {string}   [options.similarity.common]
+* @param {number}   [options.similarity.threshold=0.001] - when calculating similarity we only use the isotopic distribution with peaks over this relative threshold
 * @returns {Promise}
 */
 

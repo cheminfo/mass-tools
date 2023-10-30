@@ -2,16 +2,16 @@ import { Comparator } from 'peaks-similarity';
 
 /**
  * @param {object}   [options={}]
- * @param {object}   [options.minCharge=1]
- * @param {object}   [options.maxCharge=10]
+ * @param {number}   [options.minCharge=1]
+ * @param {number}   [options.maxCharge=10]
  * @param {object}   [options.similarity={}]
- * @param {object}   [options.similarity.widthBottom]
- * @param {object}   [options.similarity.widthTop]
+ * @param {number}   [options.similarity.widthBottom]
+ * @param {number}   [options.similarity.widthTop]
  * @param {object}   [options.similarity.widthFunction] - function called with mass that should return an object width containing top and bottom
  * @param {object}   [options.similarity.zone={}]
- * @param {object}   [options.similarity.zone.low=-0.5] - window shift based on observed monoisotopic mass
- * @param {object}   [options.similarity.zone.high=2.5] - to value for the comparison window
- * @param {object}   [options.similarity.common]
+ * @param {number}   [options.similarity.zone.low=-0.5] - window shift based on observed monoisotopic mass
+ * @param {number}   [options.similarity.zone.high=2.5] - to value for the comparison window
+ * @param {string}   [options.similarity.common]
  */
 
 const NEUTRON_MASS = 1;
