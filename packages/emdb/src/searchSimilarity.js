@@ -109,8 +109,8 @@ export async function searchSimilarity(emdb, options = {}) {
     // we need to define the comparison zone that depends of the charge
     let from, to;
     if (auto) {
-      from = (distribution.minX - 0.5) / Math.abs(entry.ms.charge);
-      to = (distribution.maxX + 0.5) / Math.abs(entry.ms.charge);
+      from = distribution.minX - 0.5;
+      to = distribution.maxX + 0.5;
       similarityProcessor.setFromTo(from, to);
     } else {
       from = entry.ms.em + low / Math.abs(entry.ms.charge);

@@ -210,6 +210,31 @@ describe('test searchSimilarity', () => {
     expect(results.test[0].ms.similarity.theoretical[0]).toHaveLength(2);
   });
 
+  it('Auto range with double charge', async () => {
+    let emdb = new EMDB();
+    await emdb.fromArray(['C1-3'], {
+      databaseName: 'test',
+      ionizations: '++',
+    });
+    emdb.setExperimentalSpectrum({ x: [12], y: [1] });
+    let results = await emdb.searchSimilarity({
+      ionizations: '+',
+      minSimilarity: 0.1,
+      similarity: {
+        zone: {
+          auto: true,
+        },
+        widthBottom: 0.1,
+        widthTop: 0.1,
+        limit: 2,
+        common: undefined, // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
+    });
+    expect(results.test).toHaveLength(1);
+
+    expect(results.test[0].ms.similarity.theoretical[0]).toHaveLength(2);
+  });
+
   it('should find one result with bad bad distribution, large window huge width', async () => {
     let emdb = new EMDB();
     await emdb.loadTest();
