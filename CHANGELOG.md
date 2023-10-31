@@ -1,5 +1,20 @@
 # Changelog
 
+## [7.21.0](https://github.com/cheminfo/mass-tools/compare/v7.20.1...v7.21.0) (2023-10-31)
+
+
+### Features
+
+* **isotopic-distribution:** allow to have an auto zone for search similarity ([d776120](https://github.com/cheminfo/mass-tools/commit/d77612004a90807263e2078573136dc0fea675d0))
+* **isotopic-distribution:** allow to specify a threshold to filter the peaks by height ([b24f392](https://github.com/cheminfo/mass-tools/commit/b24f392b25597d7d2892a7aa9ede3dfc3dfba6dc))
+* **ms-spectrum:** allow to specify threshold for peak picking ([d398012](https://github.com/cheminfo/mass-tools/commit/d398012df99d9c4d924572a5d819f519db5baf2c))
+
+
+### Bug Fixes
+
+* **emdb:** search similarity was not taking into account fwhm ([8475459](https://github.com/cheminfo/mass-tools/commit/84754591161d273451c36058ee6baef5e19f1633))
+* **isotopic-disribution:** calculation of minY and maxY were inverted ([38a1a9f](https://github.com/cheminfo/mass-tools/commit/38a1a9f583eafb7dbf792b02fb01e2976b68fd20))
+
 ## [7.20.1](https://github.com/cheminfo/mass-tools/compare/v7.20.0...v7.20.1) (2023-10-19)
 
 
