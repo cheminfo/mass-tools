@@ -336,6 +336,17 @@
 
 
               
+                <tr>
+  <td class='break-word'><span class='code bold'>options.threshold</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0.00025</code>)
+  </td>
+  <td class='break-word'><span>Should we normed (sum Y to 1) the experimental spectrum ?
+</span></td>
+</tr>
+
+
+              
             </tbody>
           </table>
           
@@ -4399,7 +4410,7 @@ of the mass of the electron</p>
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.widthBottom</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>?</code>
+  <td class='break-word'><span class='code bold'>options.similarity.widthBottom</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
   </td>
   <td class='break-word'><span></span></td>
 </tr>
@@ -4407,7 +4418,7 @@ of the mass of the electron</p>
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.widthTop</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>?</code>
+  <td class='break-word'><span class='code bold'>options.similarity.widthTop</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
   </td>
   <td class='break-word'><span></span></td>
 </tr>
@@ -4433,7 +4444,7 @@ of the mass of the electron</p>
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.zone.low</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  <td class='break-word'><span class='code bold'>options.similarity.zone.low</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
     (default <code>-0.5</code>)
   </td>
@@ -4444,7 +4455,7 @@ of the mass of the electron</p>
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.zone.high</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  <td class='break-word'><span class='code bold'>options.similarity.zone.high</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
     (default <code>2.5</code>)
   </td>
@@ -4454,13 +4465,44 @@ of the mass of the electron</p>
 
 
   
+    <tr>
+  <td class='break-word'><span class='code bold'>options.similarity.zone.auto</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>if true, low / high is determined based on the isotopic distribution and the threshold
+</span></td>
+</tr>
+
+
+  
 
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.common</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>?</code>
+  <td class='break-word'><span class='code bold'>options.similarity.common</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
   </td>
   <td class='break-word'><span></span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.similarity.threshold</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0.001</code>)
+  </td>
+  <td class='break-word'><span>when calculating similarity we only use the isotopic distribution with peaks over this relative threshold
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.similarity.limit</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  </td>
+  <td class='break-word'><span>We may define the maximum number of peaks to keep
+</span></td>
 </tr>
 
 
