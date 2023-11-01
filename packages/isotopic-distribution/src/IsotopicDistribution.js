@@ -145,10 +145,11 @@ export class IsotopicDistribution {
             totalDistribution.array[totalDistribution.array.length - 1].x;
         }
 
-        if (
-          part.ms.target &&
-          part.ms.target.intensity &&
-          part.ms.target.intensity !== 1
+        if (part?.ms.similarity?.factor) {
+          totalDistribution.multiplyY(part.ms.similarity.factor);
+        } else if (
+          part.ms?.target?.intensity &&
+          part.ms?.target?.intensity !== 1
         ) {
           // intensity is the value of the monoisotopic mass !
           // need to find the intensity of the peak corresponding
@@ -159,7 +160,7 @@ export class IsotopicDistribution {
           } else {
             totalDistribution.multiplyY(part.ms.target.intensity);
           }
-        } else if (part.intensity && part.intensity !== 1) {
+        } else if (part?.intensity && part?.intensity !== 1) {
           totalDistribution.multiplyY(part.intensity);
         }
 

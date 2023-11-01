@@ -29,7 +29,7 @@ export class EMDB {
    *
    * @param {*} data
    * @param {object} [options={}]
-   * @param {number} [options.normed=true] Should we normed (sum Y to 1) the experimental spectrum ?
+   * @param {boolean} [options.normed=true] Should we normed (sum Y to 1) the experimental spectrum ?
    * @param {number} [options.threshold=0.00025] Threshold used for peak picking
    */
   setExperimentalSpectrum(data, options = {}) {

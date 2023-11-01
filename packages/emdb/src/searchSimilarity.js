@@ -136,6 +136,7 @@ export async function searchSimilarity(emdb, options = {}) {
         experimentalInfo: result.extractInfo1,
         thereoticalInfo: result.extractInfo2,
         quantity: result.extractInfo1.sum / sumY,
+        factor: result.extractInfo1.max / result.extractInfo2.max, // by how much we should mulitply the extrat2 to reach the spectrum
         width,
       };
     }

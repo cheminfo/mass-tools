@@ -1,4 +1,8 @@
+import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
+
 import { EMDB } from '..';
+
+expect.extend({ toBeDeepCloseTo });
 
 describe('test searchSimilarity', () => {
   it('should find one result with bad distribution', async () => {
@@ -233,6 +237,33 @@ describe('test searchSimilarity', () => {
     expect(results.test).toHaveLength(1);
 
     expect(results.test[0].ms.similarity.theoretical[0]).toHaveLength(2);
+  });
+
+  it('Auto range and check relative intensity', async () => {
+    let emdb = new EMDB();
+    await emdb.fromArray(['C1-3'], {
+      databaseName: 'test',
+      ionizations: '+',
+    });
+    emdb.setExperimentalSpectrum(
+      { x: [12, 24, 36], y: [1, 2, 3] },
+      { normed: false },
+    );
+    let results = await emdb.searchSimilarity({
+      ionizations: '+',
+      minSimilarity: 0.1,
+      similarity: {
+        zone: {
+          auto: true,
+        },
+        widthBottom: 0.1,
+        widthTop: 0.1,
+        limit: 2,
+        common: undefined, // 'first', 'second', 'both' (or true) or 'none' (or undefined)
+      },
+    });
+    const factors = results.test.map((entry) => entry.ms.similarity.factor);
+    expect(factors).toBeDeepCloseTo([1.01, 2.04, 3.1]);
   });
 
   it('should find one result with bad bad distribution, large window huge width', async () => {

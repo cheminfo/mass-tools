@@ -870,6 +870,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.23619255965517275,
           "to": 108.57770174239093,
         },
+        "factor": 0.05617092608421167,
         "quantity": 0.23619255965517313,
         "theoretical": [
           [
@@ -1515,6 +1516,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.2332694864568821,
           "to": 107.32795301429593,
         },
+        "factor": 0.054596969905114257,
         "quantity": 0.2332694864568825,
         "theoretical": [
           [
@@ -2162,6 +2164,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.2332694864568821,
           "to": 107.32929568503594,
         },
+        "factor": 0.05606182541378642,
         "quantity": 0.2332694864568825,
         "theoretical": [
           [
@@ -2525,6 +2528,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.22109791342079058,
           "to": 106.90941411608092,
         },
+        "factor": 0.05639171532802023,
         "quantity": 0.22109791342079094,
         "theoretical": [
           [
@@ -2886,6 +2890,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.22109791342079058,
           "to": 106.91030922990761,
         },
+        "factor": 0.057904724474595326,
         "quantity": 0.22109791342079094,
         "theoretical": [
           [
@@ -3247,6 +3252,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.22109791342079058,
           "to": 106.91315857917759,
         },
+        "factor": 0.05606013334314893,
         "quantity": 0.22109791342079094,
         "theoretical": [
           [
@@ -3894,6 +3900,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.2332694864568821,
           "to": 107.32569036639094,
         },
+        "factor": 0.058790573415456106,
         "quantity": 0.2332694864568825,
         "theoretical": [
           [
@@ -4256,6 +4263,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.22109791342079058,
           "to": 106.91075503341426,
         },
+        "factor": 0.05878879898513202,
         "quantity": 0.22109791342079094,
         "theoretical": [
           [
@@ -4619,6 +4627,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.22109791342079058,
           "to": 106.91165014724093,
         },
+        "factor": 0.06036612271191132,
         "quantity": 0.22109791342079094,
         "theoretical": [
           [
@@ -5260,6 +5269,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.2332694864568821,
           "to": 107.32770174239094,
         },
+        "factor": 0.06128962707797871,
         "quantity": 0.2332694864568825,
         "theoretical": [
           [
@@ -5617,6 +5627,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.22109791342079058,
           "to": 106.9125452610676,
         },
+        "factor": 0.06198576657759478,
         "quantity": 0.22109791342079094,
         "theoretical": [
           [
@@ -5976,6 +5987,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.22109791342079058,
           "to": 106.90880079797094,
         },
+        "factor": 0.06235239723453166,
         "quantity": 0.22109791342079094,
         "theoretical": [
           [
@@ -6336,6 +6348,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.22109791342079058,
           "to": 106.91299106457426,
         },
+        "factor": 0.06293214939427448,
         "quantity": 0.22109791342079094,
         "theoretical": [
           [
@@ -6699,6 +6712,7 @@ exports[`test searchSimilarity for ethylbenzene > should find one result with ba
           "sum": 0.22109791342079058,
           "to": 106.9092466014776,
         },
+        "factor": 0.06330437767422951,
         "quantity": 0.22109791342079094,
         "theoretical": [
           [

@@ -49,6 +49,7 @@ exports[`test searchSimilarity > should find one result with bad distribution 1`
           "sum": 0.5,
           "to": 41.840609785654266,
         },
+        "factor": 0.5569801961410533,
         "quantity": 0.5,
         "theoretical": [
           [
@@ -127,6 +128,7 @@ exports[`test searchSimilarity > should find one result with bad distribution 1`
           "sum": 0.5,
           "to": 123.50727645232094,
         },
+        "factor": 0.556852098062004,
         "quantity": 0.5,
         "theoretical": [
           [
