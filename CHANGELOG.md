@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.22.0](https://github.com/cheminfo/mass-tools/compare/v7.21.0...v7.22.0) (2023-11-01)
+
+
+### Features
+
+* **emdb:** searchSimilarity add a factor that to match the experimental spectrum ([183be3c](https://github.com/cheminfo/mass-tools/commit/183be3c1f0c954bb599cbaad5a8f4ebcdfb9e406))
+
 ## [7.21.0](https://github.com/cheminfo/mass-tools/compare/v7.20.1...v7.21.0) (2023-10-31)
 
 
