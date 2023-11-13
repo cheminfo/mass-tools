@@ -83,7 +83,7 @@ describe('massSpectra', () => {
   it('mdma in inSilicoFragments', async () => {
     const options = {
       limit: 100,
-      masses: [194.118104, 193.110279, 135.044605, 58.065674],
+      masses: [194.117555, 163.075356, 135.044055],
       precision: 100,
       mode: 'positive',
       databases: ['inSilicoFragments'],
@@ -103,7 +103,7 @@ describe('massSpectra', () => {
       databases: ['inSilicoFragments', 'massBank', 'gnps'],
     });
     expect(results[0].url).toMatchInlineSnapshot(
-      '"https://gnps.ucsd.edu/ProteoSAFe/gnpslibraryspectrum.jsp?SpectrumID=CCMSLIB00000085779"',
+      '"https://massbank.eu/MassBank/RecordDisplay?id=MSBNK-Washington_State_Univ-BML00795"',
     );
   }, 10000);
 });
