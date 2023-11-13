@@ -1,6 +1,6 @@
 {
   "name": "mf-parser",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "Parse a molecular formula",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -23,7 +23,7 @@
     "atom-sorter": "^2.0.0",
     "chemical-elements": "^2.0.3",
     "chemical-groups": "^2.1.0",
-    "mf-utilities": "^3.0.1"
+    "mf-utilities": "^3.1.0"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2"

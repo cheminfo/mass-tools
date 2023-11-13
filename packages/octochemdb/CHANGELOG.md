@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.2.2...octochemdb@2.3.0) (2023-11-13)
+
+
+### Bug Fixes
+
+* update dependencies and force old version of ml-matrix and ml-fcnnls ([aaffb31](https://github.com/cheminfo/mass-tools/commit/aaffb31aea9db1855ac5f1587456b411e8c85ba3))
+
+
+### Features
+
+* **mass-fragmentation:** improve reactions DB ([09ce8db](https://github.com/cheminfo/mass-tools/commit/09ce8dbba25836bdacb2afeaaa8ef45543f75c71))
+* **mf-parser:** add flatten method on MF (and remove processRange) ([4e3c799](https://github.com/cheminfo/mass-tools/commit/4e3c79964c05f0fba33975069a1b442f4514976f))
+
+
+
+
+
 ## [2.2.2](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.2.1...octochemdb@2.2.2) (2023-10-13)
 
 **Note:** Version bump only for package octochemdb

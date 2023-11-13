@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/cheminfo/mass-tools/compare/mf-matcher@3.0.1...mf-matcher@3.0.2) (2023-11-13)
+
+
+### Bug Fixes
+
+* update dependencies and force old version of ml-matrix and ml-fcnnls ([aaffb31](https://github.com/cheminfo/mass-tools/commit/aaffb31aea9db1855ac5f1587456b411e8c85ba3))
+
+
+
+
+
 ## [3.0.1](https://github.com/cheminfo/mass-tools/compare/mf-matcher@2.1.1...mf-matcher@3.0.1) (2023-09-04)
 
 **Note:** Version bump only for package mf-matcher

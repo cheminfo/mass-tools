@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/cheminfo/mass-tools/compare/mf-utilities@3.0.1...mf-utilities@3.1.0) (2023-11-13)
+
+
+### Features
+
+* **mf-parser:** add flatten method on MF (and remove processRange) ([4e3c799](https://github.com/cheminfo/mass-tools/commit/4e3c79964c05f0fba33975069a1b442f4514976f))
+* **mf-utilities:** processRange do not optimize if there is no ranges ([79a8e88](https://github.com/cheminfo/mass-tools/commit/79a8e884cc12a8f086031e78f63f40df7944767f))
+* **mf-utilities:** processRange has an option to optimize in case only unique MF is important ([ab235a0](https://github.com/cheminfo/mass-tools/commit/ab235a00075ff45fdf176f83a4a34b10056d7e62))
+
+
+
+
+
 ## [3.0.1](https://github.com/cheminfo/mass-tools/compare/mf-utilities@2.0.5...mf-utilities@3.0.1) (2023-09-04)
 
 **Note:** Version bump only for package mf-utilities

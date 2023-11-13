@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/cheminfo/mass-tools/compare/mf-finder@3.1.0...mf-finder@3.2.0) (2023-11-13)
+
+
+### Features
+
+* **mf-parser:** add flatten method on MF (and remove processRange) ([4e3c799](https://github.com/cheminfo/mass-tools/commit/4e3c79964c05f0fba33975069a1b442f4514976f))
+
+
+
+
+
 # [3.1.0](https://github.com/cheminfo/mass-tools/compare/mf-finder@3.0.1...mf-finder@3.1.0) (2023-10-05)
 
 

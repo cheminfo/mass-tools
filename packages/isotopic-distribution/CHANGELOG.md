@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.0.1...isotopic-distribution@3.1.0) (2023-11-13)
+
+
+### Bug Fixes
+
+* **isotopic-disribution:** calculation of minY and maxY were inverted ([38a1a9f](https://github.com/cheminfo/mass-tools/commit/38a1a9f583eafb7dbf792b02fb01e2976b68fd20))
+
+
+### Features
+
+* **emdb:** searchSimilarity add a factor that to match the experimental spectrum ([183be3c](https://github.com/cheminfo/mass-tools/commit/183be3c1f0c954bb599cbaad5a8f4ebcdfb9e406))
+* **isotopic-distribution:** allow to have an auto zone for search similarity ([d776120](https://github.com/cheminfo/mass-tools/commit/d77612004a90807263e2078573136dc0fea675d0))
+* **isotopic-distribution:** allow to specify a threshold to filter the peaks by height ([b24f392](https://github.com/cheminfo/mass-tools/commit/b24f392b25597d7d2892a7aa9ede3dfc3dfba6dc))
+* **mf-parser:** add flatten method on MF (and remove processRange) ([4e3c799](https://github.com/cheminfo/mass-tools/commit/4e3c79964c05f0fba33975069a1b442f4514976f))
+
+
+
+
+
 ## [3.0.1](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@2.2.1...isotopic-distribution@3.0.1) (2023-09-04)
 
 **Note:** Version bump only for package isotopic-distribution

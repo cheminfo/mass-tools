@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.0.1...mf-parser@3.1.0) (2023-11-13)
+
+
+### Features
+
+* **mf-parser:** add 'flatten' to mf object to expand all the ranges ([1c461ea](https://github.com/cheminfo/mass-tools/commit/1c461ead14cb7054d26fcc7d7d84f69d955240c8))
+* **mf-parser:** add flatten method on MF (and remove processRange) ([4e3c799](https://github.com/cheminfo/mass-tools/commit/4e3c79964c05f0fba33975069a1b442f4514976f))
+
+
+
+
+
 ## [3.0.1](https://github.com/cheminfo/mass-tools/compare/mf-parser@2.3.1...mf-parser@3.0.1) (2023-09-04)
 
 **Note:** Version bump only for package mf-parser

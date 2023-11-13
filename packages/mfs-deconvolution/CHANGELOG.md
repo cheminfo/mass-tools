@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/cheminfo/mass-tools/compare/mfs-deconvolution@2.2.1...mfs-deconvolution@2.3.0) (2023-11-13)
+
+
+### Bug Fixes
+
+* update dependencies and force old version of ml-matrix and ml-fcnnls ([aaffb31](https://github.com/cheminfo/mass-tools/commit/aaffb31aea9db1855ac5f1587456b411e8c85ba3))
+
+
+### Features
+
+* **mfs-deconvolution:** allow customMFs ([613e4a0](https://github.com/cheminfo/mass-tools/commit/613e4a0f54d9884646987e15c0d70a0a3689b1f0))
+
+
+
+
+
 ## [2.2.1](https://github.com/cheminfo/mass-tools/compare/mfs-deconvolution@2.2.0...mfs-deconvolution@2.2.1) (2023-10-16)
 
 

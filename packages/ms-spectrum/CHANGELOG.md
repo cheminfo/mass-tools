@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.0.7...ms-spectrum@3.1.0) (2023-11-13)
+
+
+### Bug Fixes
+
+* update dependencies and force old version of ml-matrix and ml-fcnnls ([aaffb31](https://github.com/cheminfo/mass-tools/commit/aaffb31aea9db1855ac5f1587456b411e8c85ba3))
+
+
+### Features
+
+* **isotopic-distribution:** allow to have an auto zone for search similarity ([d776120](https://github.com/cheminfo/mass-tools/commit/d77612004a90807263e2078573136dc0fea675d0))
+* **ms-spectrum:** allow to specify threshold for peak picking ([d398012](https://github.com/cheminfo/mass-tools/commit/d398012df99d9c4d924572a5d819f519db5baf2c))
+
+
+
+
+
 ## [3.0.7](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.0.6...ms-spectrum@3.0.7) (2023-10-13)
 
 **Note:** Version bump only for package ms-spectrum

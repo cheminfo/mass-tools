@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/cheminfo/mass-tools/compare/emdb@3.0.7...emdb@3.1.0) (2023-11-13)
+
+
+### Bug Fixes
+
+* **emdb:** search similarity was not taking into account fwhm ([8475459](https://github.com/cheminfo/mass-tools/commit/84754591161d273451c36058ee6baef5e19f1633))
+* update dependencies and force old version of ml-matrix and ml-fcnnls ([aaffb31](https://github.com/cheminfo/mass-tools/commit/aaffb31aea9db1855ac5f1587456b411e8c85ba3))
+
+
+### Features
+
+* **emdb:** searchSimilarity add a factor that to match the experimental spectrum ([183be3c](https://github.com/cheminfo/mass-tools/commit/183be3c1f0c954bb599cbaad5a8f4ebcdfb9e406))
+* **isotopic-distribution:** allow to have an auto zone for search similarity ([d776120](https://github.com/cheminfo/mass-tools/commit/d77612004a90807263e2078573136dc0fea675d0))
+* **mf-parser:** add flatten method on MF (and remove processRange) ([4e3c799](https://github.com/cheminfo/mass-tools/commit/4e3c79964c05f0fba33975069a1b442f4514976f))
+* **ms-spectrum:** allow to specify threshold for peak picking ([d398012](https://github.com/cheminfo/mass-tools/commit/d398012df99d9c4d924572a5d819f519db5baf2c))
+
+
+
+
+
 ## [3.0.7](https://github.com/cheminfo/mass-tools/compare/emdb@3.0.6...emdb@3.0.7) (2023-10-13)
 
 **Note:** Version bump only for package emdb
