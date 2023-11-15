@@ -3,14 +3,14 @@ import { getDatabase } from '../getDatabase.js';
 describe('getDatabase', () => {
   it('should return the default database', () => {
     const db = getDatabase();
-    expect(db).toHaveLength(146);
+    expect(db).toHaveLength(190);
   });
   it('kind:all and ionizationKind:esiPositive', () => {
     const db = getDatabase({
       kind: ['ionization', 'resonance', 'reaction'],
       ionizationKind: ['esiPositive'],
     });
-    expect(db).toHaveLength(146);
+    expect(db).toHaveLength(145);
   });
   it('kind:all and ionizationKind:esiNegative', () => {
     const db = getDatabase({
@@ -24,7 +24,7 @@ describe('getDatabase', () => {
       kind: ['ionization', 'resonance', 'reaction'],
       ionizationKind: ['ei'],
     });
-    expect(db).toHaveLength(0);
+    expect(db).toHaveLength(45);
   });
   it('kind:ionization and ionizationKind:all', () => {
     const db = getDatabase({
@@ -87,14 +87,14 @@ describe('getDatabase', () => {
       kind: ['reaction'],
       ionizationKind: ['esiPositive', 'esiNegative', 'ei'],
     });
-    expect(db).toHaveLength(139);
+    expect(db).toHaveLength(183);
   });
   it('kind:reaction and ionizationKind:esiPositive', () => {
     const db = getDatabase({
       kind: ['reaction'],
       ionizationKind: ['esiPositive'],
     });
-    expect(db).toHaveLength(139);
+    expect(db).toHaveLength(138);
   });
   it('kind:reaction and ionizationKind:esiNegative', () => {
     const db = getDatabase({
@@ -108,6 +108,6 @@ describe('getDatabase', () => {
       kind: ['reaction'],
       ionizationKind: ['ei'],
     });
-    expect(db).toHaveLength(0);
+    expect(db).toHaveLength(45);
   });
 });
