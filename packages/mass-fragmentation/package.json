@@ -25,6 +25,6 @@
     "react-tree-svg": "^0.6.1"
   },
   "devDependencies": {
-    "openchemlib": "^8.7.1"
+    "openchemlib": "^8.7.2"
   }
 }
