@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.24.0](https://github.com/cheminfo/mass-tools/compare/v7.23.0...v7.24.0) (2023-11-15)
+
+
+### Features
+
+* **mass-fragmentation:** improve reactions db ([93ec153](https://github.com/cheminfo/mass-tools/commit/93ec15300e3c88af07044b3412f1a1d1506896f9))
+
 ## [7.23.0](https://github.com/cheminfo/mass-tools/compare/v7.22.0...v7.23.0) (2023-11-13)
 
 
