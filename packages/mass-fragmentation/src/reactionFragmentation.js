@@ -10,7 +10,7 @@ import { getMasses } from './utils/getMasses';
  * @param {Object}  [options={}]
  * @param {('esiPositive'|'esiNegative'|'ei')[]}  [options.ionizationKind=['esiPositive']] - The ionization technique to be used
  * @param {number}  [options.maxDepth=5] - The maximum depth of the overall fragmentation tree
- * @param {number}  [options.limitReactions=200] - The maximum number of reactions to be applied
+ * @param {number}  [options.limitReactions=200] - The maximum number of reactions to be applied to each branch
  * @param {string}  [options.dwar] - The dwar entry to be used, if not provided, the default one will be used
  * @param {number}  [options.maxIonizations=1] - The maximum depth of the ionization tree
  * @param {number}  [options.minIonizations=1] - The minimum depth of the ionization tree
@@ -63,14 +63,18 @@ export function reactionFragmentation(oclMolecule, options = {}) {
       max: maxIonizations,
     },
   );
+  const reactionDb = getDatabase({ kind: ['reaction'], ionizationKind, dwar });
 
-  reactions.applyOneReactantReactions(
-    getDatabase({ kind: ['reaction'], ionizationKind, dwar }),
-    {
-      min: minReactions,
-      max: maxReactions,
-    },
-  );
+  for (let i = 1; i <= maxReactions; i++) {
+    let min = 1;
+    if (minReactions < i + 1) {
+      min = 0;
+    }
+    reactions.applyOneReactantReactions(reactionDb, {
+      min,
+      max: 1,
+    });
+  }
 
   const trees = reactions.trees;
   const validNodes = reactions.getValidNodes();
