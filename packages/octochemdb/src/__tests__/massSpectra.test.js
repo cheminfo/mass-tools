@@ -80,7 +80,8 @@ describe('massSpectra', () => {
     expect(results.length).toBeGreaterThan(5);
     expect(results.length).toBeLessThan(50);
   }, 30000);
-  it('mdma in inSilicoFragments', async () => {
+  // skip for now, inSilicoFragments is not ready
+  it.skip('mdma in inSilicoFragments', async () => {
     const options = {
       limit: 100,
       masses: [194.117555, 163.075356, 135.044055],
