@@ -10,7 +10,6 @@ describe('ReactionFragmentation', async () => {
     const { trees, validNodes, masses } = reactionFragmentation(molecule);
     expect(validNodes).toHaveLength(159);
     expect(masses).toHaveLength(18);
-    removeCoordinates(trees);
     expect(trees).toMatchSnapshot();
   });
   it('full process: Equisetin', async () => {
@@ -24,7 +23,6 @@ describe('ReactionFragmentation', async () => {
     expect(validNodes).toHaveLength(294);
     expect(masses).toHaveLength(35);
 
-    removeCoordinates(trees);
     expect(trees).toMatchSnapshot();
   });
   it('full process: Cephalocromin', async () => {
@@ -34,21 +32,6 @@ describe('ReactionFragmentation', async () => {
     const { trees, validNodes, masses } = reactionFragmentation(molecule);
     expect(validNodes).toHaveLength(550);
     expect(masses).toHaveLength(54);
-    removeCoordinates(trees);
     expect(trees).toMatchSnapshot();
   });
 });
-
-function removeCoordinates(trees) {
-  if (trees) {
-    for (const tree of trees) {
-      for (const molecule of tree.molecules) {
-        molecule.molfile = molecule.molfile.replace(/^.{30}/gm, '');
-      }
-
-      if (tree.children) {
-        removeCoordinates(tree.children);
-      }
-    }
-  }
-}
