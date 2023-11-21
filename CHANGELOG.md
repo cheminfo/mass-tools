@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.25.0](https://github.com/cheminfo/mass-tools/compare/v7.24.0...v7.25.0) (2023-11-21)
+
+
+### Features
+
+* **mass-fragmentation:** fragmentation without molfile ([30fc7b9](https://github.com/cheminfo/mass-tools/commit/30fc7b9a17d46ca1864c76f60f058278ff8f55cc))
+
 ## [7.24.0](https://github.com/cheminfo/mass-tools/compare/v7.23.0...v7.24.0) (2023-11-15)
 
 
