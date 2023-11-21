@@ -36,7 +36,7 @@
     "ml-spectra-processing": "^12.6.0",
     "ms-spectrum": "^3.1.1",
     "nucleotide": "^3.0.2",
-    "openchemlib-utils": "5.4.0",
+    "openchemlib-utils": "5.5.0",
     "peaks-similarity": "^3.1.1",
     "peptide": "^2.1.0"
   },
