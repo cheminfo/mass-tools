@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.26.0](https://github.com/cheminfo/mass-tools/compare/v7.25.0...v7.26.0) (2023-11-28)
+
+
+### Features
+
+* background color in svg is related to peak intensity ([340e520](https://github.com/cheminfo/mass-tools/commit/340e5203567a83eb19c4ecdded3a2862b96c5044))
+* **mass-fragmentation:** improve db fragmentation reactions ([1e3eaac](https://github.com/cheminfo/mass-tools/commit/1e3eaac4f68c3597de4257087ac67402618a6a21))
+
 ## [7.25.0](https://github.com/cheminfo/mass-tools/compare/v7.24.0...v7.25.0) (2023-11-21)
 
 
