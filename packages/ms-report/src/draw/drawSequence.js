@@ -12,8 +12,8 @@ export function drawSequence(paper, row, options) {
     let textColor = residue.replaced
       ? 'darkviolet'
       : residue.kind === 'residue'
-        ? '#555'
-        : '#CCC';
+      ? '#555'
+      : '#CCC';
 
     text.font({
       family: options.labelFontFamily,

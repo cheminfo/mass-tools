@@ -10,7 +10,15 @@ test('getFragmentationSVG', () => {
   const { trees } = reactionFragmentation(molecule);
   const svg = getFragmentationSVG(trees, {
     OCL,
-    masses: [97.5624, 105.0697, 58.065, 194.1173, 163.0752, 133.0647, 135.0439],
+    peaks: [
+      { mass: 97.5624, intensity: 100 },
+      { mass: 105.0697, intensity: 100 },
+      { mass: 58.065, intensity: 100 },
+      { mass: 194.1173, intensity: 100 },
+      { mass: 163.0752, intensity: 100 },
+      { mass: 133.0647, intensity: 100 },
+      { mass: 135.0439, intensity: 100 },
+    ],
     accuracy: 50,
   });
 

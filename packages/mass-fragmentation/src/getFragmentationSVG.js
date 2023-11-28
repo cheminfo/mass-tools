@@ -1,7 +1,26 @@
 import { render, moleculeRenderer } from 'react-tree-svg';
 
+/**
+ * @typedef {object} MassPeak
+ * @property {number} mass
+ * @property {number} intensity
+ */
+
+/**
+ * @param {object[]} trees
+ * @param {object} [options={}]
+ * @param {object} [options.OCL]
+ * @param {number} [options.accuracy]
+ * @param {MassPeak[]} [options.peaks]
+ * @returns
+ */
 export function getFragmentationSVG(trees, options = {}) {
-  const { OCL, accuracy, masses = [] } = options;
+  const { OCL, accuracy, peaks = [] } = options;
+
+  const maxIntensity =
+    peaks?.length > 0
+      ? Math.log(Math.max(...peaks.map((peak) => peak.intensity)) + 1)
+      : 0;
 
   const rendererOptions = {
     nodeRenderer: moleculeRenderer,
@@ -19,9 +38,12 @@ export function getFragmentationSVG(trees, options = {}) {
       },
       getBoxStyle: (node) => {
         for (const molecule of node.molecules) {
-          if (isInRange(masses, molecule?.info?.mz, accuracy)) {
+          const peak = getPeakInRange(peaks, molecule?.info?.mz, accuracy);
+          if (peak) {
             return {
-              fillOpacity: 0.2,
+              fillOpacity: maxIntensity
+                ? (0.2 * Math.log(peak.intensity + 1)) / maxIntensity
+                : 0.2,
               fill: 'red',
             };
           }
@@ -41,16 +63,16 @@ export function getFragmentationSVG(trees, options = {}) {
   return render(trees, rendererOptions);
 }
 
-function isInRange(masses, mass, accuracy) {
-  if (!mass || !masses) {
-    return false;
+function getPeakInRange(peaks, mass, accuracy) {
+  if (!mass || !Array.isArray(peaks)) {
+    return undefined;
   }
   const massAccuracy = (accuracy * mass) / 1e6;
 
-  for (const value of masses) {
-    if (Math.abs(value - mass) <= massAccuracy) {
-      return true;
+  for (const peak of peaks) {
+    if (Math.abs(peak.mass - mass) <= massAccuracy) {
+      return peak;
     }
   }
-  return false;
+  return undefined;
 }
