@@ -8,8 +8,8 @@ describe('ReactionFragmentation', async () => {
   it('full process: MDMA', async () => {
     const molecule = Molecule.fromSmiles('CNC(Cc1ccc2c(c1)OCO2)C');
     const { trees, validNodes, masses } = reactionFragmentation(molecule);
-    expect(validNodes).toHaveLength(159);
-    expect(masses).toHaveLength(18);
+    expect(validNodes).toHaveLength(624);
+    expect(masses).toHaveLength(70);
     expect(trees).toMatchSnapshot();
   });
   it('full process: Equisetin', async () => {
@@ -20,7 +20,7 @@ describe('ReactionFragmentation', async () => {
       limitReactions: 20,
       maxReactions: 2,
     });
-    expect(validNodes).toHaveLength(294);
+    expect(validNodes).toHaveLength(297);
     expect(masses).toHaveLength(35);
 
     expect(trees).toMatchSnapshot();
@@ -30,8 +30,8 @@ describe('ReactionFragmentation', async () => {
       'CC1CC(=O)C2=C(O1)C=C3C(=C2O)C(=CC(=C3C4=C(C=C(C5=C(C6=C(C=C54)OC(CC6=O)C)O)O)O)O)O',
     );
     const { trees, validNodes, masses } = reactionFragmentation(molecule);
-    expect(validNodes).toHaveLength(550);
-    expect(masses).toHaveLength(54);
+    expect(validNodes).toHaveLength(1266);
+    expect(masses).toHaveLength(50);
     expect(trees).toMatchSnapshot();
   });
 });
