@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.27.0](https://github.com/cheminfo/mass-tools/compare/v7.26.0...v7.27.0) (2023-12-04)
+
+
+### Features
+
+* **ms-spectrum:** Add new method getSimilarityByMasses ([9409ffb](https://github.com/cheminfo/mass-tools/commit/9409ffb477a52c64713f6b5dcc6138be387760fa))
+* **octochemdb:** add searchInSilicoSpectra ([cef6df1](https://github.com/cheminfo/mass-tools/commit/cef6df1c89dda7f0c4d2cd73617980e8d5a313f6))
+
 ## [7.26.0](https://github.com/cheminfo/mass-tools/compare/v7.25.0...v7.26.0) (2023-11-28)
 
 
