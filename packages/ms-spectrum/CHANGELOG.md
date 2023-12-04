@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.1.3...ms-spectrum@3.2.0) (2023-12-04)
+
+
+### Features
+
+* **ms-spectrum:** Add new method getSimilarityByMasses ([9409ffb](https://github.com/cheminfo/mass-tools/commit/9409ffb477a52c64713f6b5dcc6138be387760fa))
+
+
+
+
+
 ## [3.1.3](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.1.2...ms-spectrum@3.1.3) (2023-11-28)
 
 **Note:** Version bump only for package ms-spectrum

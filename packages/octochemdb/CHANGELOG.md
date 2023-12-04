@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.3.3...octochemdb@2.4.0) (2023-12-04)
+
+
+### Features
+
+* **octochemdb:** add searchInSilicoSpectra ([cef6df1](https://github.com/cheminfo/mass-tools/commit/cef6df1c89dda7f0c4d2cd73617980e8d5a313f6))
+
+
+
+
+
 ## [2.3.3](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.3.2...octochemdb@2.3.3) (2023-11-28)
 
 **Note:** Version bump only for package octochemdb
