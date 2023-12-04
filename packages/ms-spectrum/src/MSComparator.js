@@ -33,6 +33,55 @@ export class MSComparator {
   }
 
   /**
+   * Get the similarity between a spectrum and a list of masses.
+   * The main issue is that we don't have the intensity of the peaks.
+   * So we will use the intensity of the closest peak.
+   * @param {import('cheminfo-types').DataXY} dataXY
+   * @param {number[]} masses
+   */
+  getSimilarityToMasses(dataXY, masses) {
+    const data1 = normalizeAndCacheData(this.cache, dataXY, this.options);
+    const data2 = {
+      x: Float64Array.from(masses),
+      y: new Float64Array(masses.length).fill(1),
+    };
+
+    let aligned;
+    if (this.options.selectedMasses?.length > 0) {
+      aligned = xyArrayAlign(
+        [
+          data1,
+          data2,
+          {
+            // this allows to force the selection of some specific masses
+            x: Float64Array.from(this.options.selectedMasses),
+            y: new Float64Array(this.options.selectedMasses.length).fill(1),
+          },
+        ],
+        {
+          delta: this.options.delta,
+          requiredY: true,
+        },
+      );
+    } else {
+      aligned = xyArrayAlign([data1, data2], {
+        delta: this.options.delta,
+      });
+    }
+    // because we don't have any idea of the intensity we will use the intensity of the experimental peak
+    // and otherwise we ignore the theoretical peak
+    for (let i = 0; i < aligned.ys[0].length; i++) {
+      if (aligned.ys[0][i] === 0) {
+        aligned.ys[1][i] = 0;
+      }
+      if (aligned.ys[0][i] > 0 && aligned.ys[1][i] !== 0) {
+        aligned.ys[1][i] = aligned.ys[0][i];
+      }
+    }
+    return returnSimilarity(aligned, this.options);
+  }
+
+  /**
    *
    * @param {import('cheminfo-types').DataXY} dataXY1
    * @param {import('cheminfo-types').DataXY} dataXY2
@@ -48,6 +97,7 @@ export class MSComparator {
           data1,
           data2,
           {
+            // this allows to force the selection of some specific masses
             x: Float64Array.from(this.options.selectedMasses),
             y: new Float64Array(this.options.selectedMasses.length).fill(1),
           },
@@ -63,28 +113,7 @@ export class MSComparator {
       });
     }
 
-    if (this.options.minNbCommonPeaks) {
-      let commonPeaks = 0;
-      for (let i = 0; i < aligned.ys[0].length; i++) {
-        if (aligned.ys[0][i] !== 0 && aligned.ys[1][i] !== 0) {
-          commonPeaks++;
-        }
-      }
-      if (commonPeaks < this.options.minNbCommonPeaks) return 0;
-    }
-
-    const vector1 = new Float64Array(aligned.x.length);
-    const vector2 = new Float64Array(aligned.x.length);
-    for (let i = 0; i < aligned.x.length; i++) {
-      vector1[i] =
-        aligned.x[i] ** this.options.massPower *
-        aligned.ys[0][i] ** this.options.intensityPower;
-      vector2[i] =
-        aligned.x[i] ** this.options.massPower *
-        aligned.ys[1][i] ** this.options.intensityPower;
-    }
-
-    return similarity.cosine(vector1, vector2);
+    return returnSimilarity(aligned, this.options);
   }
 }
 
@@ -104,15 +133,38 @@ function normalizeAndCacheData(cache, dataXY, options = {}) {
   if (xIsMonotonic(data.x) !== 1) {
     data = xySortX(data);
   }
-
   if (minIntensity !== undefined) {
     data = xyFilterMinYValue(data, minIntensity);
   }
-
   if (nbPeaks !== undefined) {
     data = xyFilterTopYValues(data, nbPeaks);
   }
 
   cache.set(dataXY, data);
   return data;
+}
+
+function returnSimilarity(aligned, options) {
+  if (options.minNbCommonPeaks) {
+    let commonPeaks = 0;
+    for (let i = 0; i < aligned.ys[0].length; i++) {
+      if (aligned.ys[0][i] !== 0 && aligned.ys[1][i] !== 0) {
+        commonPeaks++;
+      }
+    }
+    if (commonPeaks < options.minNbCommonPeaks) return 0;
+  }
+
+  const vector1 = new Float64Array(aligned.x.length);
+  const vector2 = new Float64Array(aligned.x.length);
+  for (let i = 0; i < aligned.x.length; i++) {
+    vector1[i] =
+      aligned.x[i] ** options.massPower *
+      aligned.ys[0][i] ** options.intensityPower;
+    vector2[i] =
+      aligned.x[i] ** options.massPower *
+      aligned.ys[1][i] ** options.intensityPower;
+  }
+
+  return similarity.cosine(vector1, vector2);
 }

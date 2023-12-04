@@ -118,4 +118,16 @@ describe('Comprator', () => {
     const comparator = new MSComparator({ minNbCommonPeaks: 2 });
     expect(comparator.getSimilarity(data1, data2)).toBeCloseTo(0);
   });
+
+  it('No intensity in data2)', () => {
+    const data = {
+      x: [10, 20, 30],
+      y: [1, 2, 3],
+    };
+    const masses = [10, 20.2, 30.2];
+    const comparator = new MSComparator();
+    expect(comparator.getSimilarityToMasses(data, masses)).toBeCloseTo(
+      0.018658382474665287,
+    );
+  });
 });
