@@ -4,14 +4,14 @@ import { fetchJSON } from './utils/fetchJSON.js';
 import { parseMasses } from './utils/parseMasses.js';
 
 /**
+ *
  * @param {object} [options={}]
  * @param {string} [options.baseURL='https://octochemdb.cheminfo.org/'] - URL of the webservice
  * @param {number|string|number[]} [options.masses] - Observed fragment masses
- * @param {string} [options.mode='positive'] - Fragmentation mode for inSilicoFragments (route default positive)
  * @param {string} [options.mf] - Molecular formula of the non ionized molecule (not available for inSilicoFragments)
  * @param {number} [options.precision=100] - Precision (accuracy) of the monoisotopic mass in ppm
  * @param {number} [options.limit=1000] - Maximal number of entries to return
- * @param {string} [options.modifications=''] - Comma
+ * @param {string} [options.modifications=''] - Comma separated list of allowed modifications
  * @param {string} [options.url='massBank/v1/search'] - Route to use
  * @param {string} [options.link='https://massbank.eu/MassBank/RecordDisplay?id='] - Link to the database source
  */
@@ -23,7 +23,6 @@ export async function searchMasses(options = {}) {
     precision = 100,
     limit = 1000,
     mf = '',
-    mode = 'positive',
     link = '',
   } = options;
 
@@ -43,9 +42,7 @@ export async function searchMasses(options = {}) {
       limit,
       mf,
     };
-    if (url.includes('inSilicoFragments')) {
-      searchParams.mode = mode;
-    }
+
     const results = (await fetchJSON(realURL, searchParams)).data;
     results.forEach((result) => {
       const modifiedResult = {
