@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.7.0...mass-fragmentation@1.8.0) (2023-12-05)
+
+
+### Features
+
+* **mass-fragmentation:** improve reactions ([876932b](https://github.com/cheminfo/mass-tools/commit/876932b8bf039f1bd0776a23fb75b2d265e03a54))
+
+
+
+
+
 # [1.7.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.6.0...mass-fragmentation@1.7.0) (2023-11-28)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/cheminfo/mass-tools/compare/ms-report@3.0.3...ms-report@3.1.0) (2023-12-05)
+
+
+### Features
+
+* background color in svg is related to peak intensity ([340e520](https://github.com/cheminfo/mass-tools/commit/340e5203567a83eb19c4ecdded3a2862b96c5044))
+* **mass-fragmentation:** improve db fragmentation reactions ([1e3eaac](https://github.com/cheminfo/mass-tools/commit/1e3eaac4f68c3597de4257087ac67402618a6a21))
+
+
+
+
+
 ## [3.0.3](https://github.com/cheminfo/mass-tools/compare/ms-report@3.0.2...ms-report@3.0.3) (2023-11-13)
 
 **Note:** Version bump only for package ms-report

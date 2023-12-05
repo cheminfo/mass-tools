@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.2.0...ms-spectrum@3.3.0) (2023-12-05)
+
+
+### Features
+
+* **octochemdb:** add searchInsilicoSpectra by masses and mf ([9f5e637](https://github.com/cheminfo/mass-tools/commit/9f5e637fb8ff955810c7a3d8964115c899940a34))
+
+
+
+
+
 # [3.2.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.1.3...ms-spectrum@3.2.0) (2023-12-04)
 
 
