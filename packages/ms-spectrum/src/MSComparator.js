@@ -145,14 +145,17 @@ function normalizeAndCacheData(cache, dataXY, options = {}) {
 }
 
 function returnSimilarity(aligned, options) {
-  if (options.minNbCommonPeaks) {
-    let commonPeaks = 0;
-    for (let i = 0; i < aligned.ys[0].length; i++) {
-      if (aligned.ys[0][i] !== 0 && aligned.ys[1][i] !== 0) {
-        commonPeaks++;
-      }
+  let commonPeaks = 0;
+  for (let i = 0; i < aligned.ys[0].length; i++) {
+    if (aligned.ys[0][i] !== 0 && aligned.ys[1][i] !== 0) {
+      commonPeaks++;
     }
-    if (commonPeaks < options.minNbCommonPeaks) return 0;
+  }
+  if (
+    commonPeaks === 0 ||
+    (options.minNbCommonPeaks && commonPeaks < options.minNbCommonPeaks)
+  ) {
+    return 0;
   }
 
   const vector1 = new Float64Array(aligned.x.length);

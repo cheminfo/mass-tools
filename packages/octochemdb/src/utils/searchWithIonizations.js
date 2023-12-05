@@ -12,7 +12,7 @@ export async function searchWithIonizations(options) {
     fields,
     precision = 100,
     limit = 1000,
-    searchParams,
+    searchParams = {},
     ranges,
   } = options;
 
@@ -30,7 +30,6 @@ export async function searchWithIonizations(options) {
     precision,
     ionizations,
   });
-
   const promises = [];
   for (let ionization of ionizations) {
     for (let mass of masses) {

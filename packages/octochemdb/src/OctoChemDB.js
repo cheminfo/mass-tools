@@ -5,7 +5,8 @@ import { compoundsFromMF } from './compoundsFromMF.js';
 import { massSpectra } from './massSpectra.js';
 import { mfsFromEMs } from './mfsFromEMs.js';
 import { pubmedCompounds } from './pubmedCompounds.js';
-import { searchInSilicoSpectra } from './searchInSilicoSpectra.js';
+import { searchInSilicoSpectraByMF } from './searchInSilicoSpectraByMF.js';
+import { searchInSilicoSpectraByMasses } from './searchInSilicoSpectraByMasses.js';
 import { searchMasses } from './searchMasses.js';
 
 export class OctoChemDB {
@@ -45,8 +46,18 @@ export class OctoChemDB {
     return massSpectra({ baseURL: this.baseURL, ...options });
   }
 
-  async searchInSilicoSpectra(options = {}) {
-    return searchInSilicoSpectra({ baseURL: this.baseURL, ...options });
+  async searchInSilicoSpectraByMF(spectrum, mf, options = {}) {
+    return searchInSilicoSpectraByMF(spectrum, mf, {
+      baseURL: this.baseURL,
+      ...options,
+    });
+  }
+
+  async searchInSilicoSpectraByMasses(spectrum, masses, options = {}) {
+    return searchInSilicoSpectraByMasses(spectrum, masses, {
+      baseURL: this.baseURL,
+      ...options,
+    });
   }
 
   async pubmedCompounds(pubmedID, options = {}) {

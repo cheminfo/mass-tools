@@ -12,13 +12,13 @@ import { parseMasses } from './utils/parseMasses.js';
  * @param {number} [options.precision=100] - Precision (accuracy) of the monoisotopic mass in ppm
  * @param {number} [options.limit=1000] - Maximal number of entries to return
  * @param {string} [options.modifications=''] - Comma separated list of allowed modifications
- * @param {string} [options.url='massBank/v1/search'] - Route to use
+ * @param {string} [options.route='massBank/v1/search'] - Route to use
  * @param {string} [options.link='https://massbank.eu/MassBank/RecordDisplay?id='] - Link to the database source
  */
 
 export async function searchMasses(options = {}) {
   const {
-    url = '',
+    route = 'massBank/v1/search',
     baseURL = 'https://octochemdb.cheminfo.org/',
     precision = 100,
     limit = 1000,
@@ -26,10 +26,10 @@ export async function searchMasses(options = {}) {
     link = '',
   } = options;
 
-  if (url === '') {
-    throw new Error('url is mandatory');
+  if (route === '') {
+    throw new Error('route is mandatory');
   }
-  const realURL = new URL(url, baseURL).toString();
+  const realURL = new URL(route, baseURL).toString();
   const masses = parseMasses(options.masses);
 
   const modifications = preprocessIonizations(options.modifications);
