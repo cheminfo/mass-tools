@@ -38,11 +38,11 @@ export function mfFromEA(targetEA, options = {}) {
   let filterUnsaturation = !!unsaturation;
   // we calculate not the real unsaturation but the one before dividing by 2 + 1
   let fakeMinUnsaturation =
-    unsaturation.min === undefined
+    typeof unsaturation.min === 'undefined'
       ? Number.MIN_SAFE_INTEGER
       : (unsaturation.min - 1) * 2;
   let fakeMaxUnsaturation =
-    unsaturation.max === undefined
+    typeof unsaturation.max === 'undefined'
       ? Number.MAX_SAFE_INTEGER
       : (unsaturation.max - 1) * 2;
 
@@ -129,7 +129,7 @@ export function mfFromEA(targetEA, options = {}) {
     for (let i = 0; i < possibilities.length; i++) {
       const possibility = possibilities[i];
       let ratio = (possibility.mass * possibility.currentCount) / mw;
-      if (possibility.targetEA !== undefined) {
+      if (typeof possibility.targetEA !== 'undefined') {
         let error = Math.abs(possibility.targetEA - ratio);
         if (error > maxElementError) {
           continue mfWhile;

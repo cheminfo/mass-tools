@@ -7,11 +7,15 @@ rules:
     - builtinGlobals: true
       hoist: all
       allow: []
+  no-await-in-loop:
+    - warn
   max-lines-per-function:
     - warn
     - max: 1000
       skipBlankLines: true
       skipComments: true
+  no-undefined:
+    - warn
 overrides:
   - files: '**/__tests__/**'
     rules:

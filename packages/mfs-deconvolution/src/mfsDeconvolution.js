@@ -59,7 +59,8 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
 
   let mfs = await generateMFs(ranges, { filter, ionizations });
   if (customMFs.length > 0) {
-    mfs = mfs.concat(await generateMFs([customMFs], { filter, ionizations }));
+    const newMFs = await generateMFs([customMFs], { filter, ionizations });
+    mfs = mfs.concat(newMFs);
   }
   mfs.forEach((mf) => {
     mf.id = v4();

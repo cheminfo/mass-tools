@@ -3,7 +3,6 @@ import { getAA } from './getAA';
 // SOURCE: https://en.wikipedia.org/wiki/Amino_acid
 
 export function chargePeptide(mf, options = {}) {
-  if (options.pH === undefined) options.pH = 0;
   if (Array.isArray(mf)) {
     for (let i = 0; i < mf.length; i++) {
       mf[i] = chargeOnePeptide(mf[i], options);
@@ -15,7 +14,7 @@ export function chargePeptide(mf, options = {}) {
 }
 
 function chargeOnePeptide(mf, options) {
-  let pH = options.pH;
+  const { pH = 0 } = options;
   // we will allow to charge the peptide at a specific pH
 
   // first amino acids (N-terminal)

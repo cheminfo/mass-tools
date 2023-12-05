@@ -8,6 +8,7 @@ expect.extend({ toBeDeepCloseTo });
 describe('test Spectrum', () => {
   it('constructor', () => {
     expect(() => {
+      // eslint-disable-next-line no-new
       new Spectrum(1);
     }).toThrow('Spectrum data must be an object');
   });
