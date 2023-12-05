@@ -19,19 +19,19 @@ import { searchWithIonizations } from './utils/searchWithIonizations.js';
  * @param {string} [options.kwTitles=''] - Comma separated list of keyword from the compound title
  * @param {string} [options.minNbMassSpectra] - Minimal number of mass spectra
  * @param {number} [options.limit=1000] - Maximal number of entries to return
- * @param {string} [options.url='activesOrNaturals/v1/search'] - URL of the webservice
+ * @param {string} [options.route='activesOrNaturals/v1/search'] - Route to this specific webservice
  * @param {string[]|undefined} [options.includes] - Array of DBref collections to include
- * @param {string} [options.baseURL='https://octochemdb.cheminfo.org/'] - URL of the webservice
+ * @param {string} [options.baseURL='https://octochemdb.cheminfo.org/'] - Base URL of the webservice
  */
 
 export async function activesOrNaturals(options = {}) {
   const {
-    url = 'activesOrNaturals/v1/search',
+    route = 'activesOrNaturals/v1/search',
     baseURL = 'https://octochemdb.cheminfo.org/',
     includes,
   } = options;
 
-  const realURL = new URL(url, baseURL).toString();
+  const realURL = new URL(route, baseURL).toString();
 
   const searchParams = prepareSearchParams(options);
 

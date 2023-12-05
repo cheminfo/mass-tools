@@ -6,19 +6,19 @@ import { normalizeActivities } from './utils/normalizeActivities.js';
  * Search for a specific natural or active compound using its ID
  * @param {object} [options={}]
  * @param {string} [options.fields='_id,data'] - List of fields to retrieve
- * @param {string} [options.url='activesOrNaturals/v1/id'] - URL of the webservice
+ * @param {string} [options.route='activesOrNaturals/v1/id'] - URL of the webservice
  * @param {string} [options.baseURL='https://octochemdb.cheminfo.org/'] - URL of the webservice
  */
 
 export async function activeOrNaturalDetails(id, options = {}) {
   const {
-    url = 'activesOrNaturals/v1/id',
+    route = 'activesOrNaturals/v1/id',
     baseURL = 'https://octochemdb.cheminfo.org/',
     fields = '_id,data',
   } = options;
 
   const activeOrNatural = await fetchActiveOrNatural(id, {
-    url: new URL(url, baseURL).toString(),
+    url: new URL(route, baseURL).toString(),
     fields,
   });
 

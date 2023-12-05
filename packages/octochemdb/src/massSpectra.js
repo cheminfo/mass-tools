@@ -52,7 +52,7 @@ export async function massSpectra(options = {}) {
       promises.push(
         searchMasses({
           ...options,
-          url: route.url,
+          route: route.url,
           link: route.link,
         }).then((entries) =>
           entries.map((entry) => ({ ...entry, database: route.name })),

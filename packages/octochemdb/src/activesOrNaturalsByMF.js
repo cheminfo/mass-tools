@@ -14,7 +14,7 @@ import { activesOrNaturals } from './activesOrNaturals.js';
  * @param {string} [options.kwMeshTerms=''] - Comma separated list of keyword from the medline MeshTerms
  * @param {string} [options.kwTitles=''] - Comma separated list of keyword from compound title
  * @param {number} [options.limit=1000] - Maximal number of entries to return
- * @param {string} [options.url='activesOrNaturals/v1/search'] - URL of the webservice
+ * @param {string} [options.route='activesOrNaturals/v1/search'] - URL of the webservice
  * @param {string} [options.baseURL='https://octochemdb.cheminfo.org/'] - URL of the webservice
  */
 

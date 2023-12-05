@@ -12,19 +12,19 @@ import { searchWithIonizations } from './utils/searchWithIonizations.js';
  * @param {number} [options.minCount=5] - Minimal number of molecules having a specific MF
  * @param {number} [options.fields] - Fields to retrieve from the database
  * @param {string} [options.baseURL='https://octochemdb.cheminfo.org/'] - URL of the webservice
- * @param {string} [options.url='mfs/v1/fromEM'] - URL of the webservice
+ * @param {string} [options.route='mfs/v1/fromEM'] - URL of the webservice
  * @param {string} [options.compoundsURL='mfs/v1/fromMF'] - URL to retrieve corresponding compounds
  */
 
 export async function mfsFromEMs(masses, options = {}) {
   const {
-    url = 'mfs/v1/fromEM',
+    route = 'mfs/v1/fromEM',
     compoundsURL = 'compounds/v1/fromMF',
     baseURL = 'https://octochemdb.cheminfo.org/',
     minCount = 5,
   } = options;
 
-  const realURL = new URL(url, baseURL).toString();
+  const realURL = new URL(route, baseURL).toString();
 
   const searchParams = {};
   searchParams.minCount = String(minCount);

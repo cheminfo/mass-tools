@@ -8,14 +8,14 @@ import { postFetchJSON } from './utils/postFetchJSON.js';
  * @param {object} [options={}]
  * @param {string} [options.fields] - Fields to retrieve from the database
  * @param {string} [options.baseURL='https://octochemdb.cheminfo.org/'] - URL of the webservice
- * @param {string} [options.url='mfs/v1/fromMF'] - URL of the webservice
+ * @param {string} [options.route='mfs/v1/fromMF'] - URL of the webservice
  * @param {string} [options.titleCompoundsURL='titleCompounds/v1/ids'] - URL of the webservice
  * @param {number} [options.limit=50000] - Maximal number of entries to return
  */
 
 export async function compoundsFromMF(mf, options = {}) {
   const {
-    url = 'compounds/v1/fromMF',
+    route = 'compounds/v1/fromMF',
     baseURL = 'https://octochemdb.cheminfo.org/',
     limit = 50000,
     fields = 'data.ocl.idCode,data.ocl.index,data.iupac',
@@ -27,7 +27,7 @@ export async function compoundsFromMF(mf, options = {}) {
     mf,
   };
 
-  const realURL = new URL(url, baseURL).toString();
+  const realURL = new URL(route, baseURL).toString();
   const data = (await fetchJSON(realURL, searchParams)).data;
 
   const ids = data.map((datum) => datum._id);
