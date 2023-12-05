@@ -1,5 +1,18 @@
 # Changelog
 
+## [7.28.0](https://github.com/cheminfo/mass-tools/compare/v7.27.0...v7.28.0) (2023-12-05)
+
+
+### Features
+
+* **mass-fragmentation:** improve reactions ([876932b](https://github.com/cheminfo/mass-tools/commit/876932b8bf039f1bd0776a23fb75b2d265e03a54))
+* **octochemdb:** add searchInsilicoSpectra by masses and mf ([9f5e637](https://github.com/cheminfo/mass-tools/commit/9f5e637fb8ff955810c7a3d8964115c899940a34))
+
+
+### Bug Fixes
+
+* rename url to route ([d894dc5](https://github.com/cheminfo/mass-tools/commit/d894dc545f4cdce6b0cbd77c1e2c2c68afc580d1))
+
 ## [7.27.0](https://github.com/cheminfo/mass-tools/compare/v7.26.0...v7.27.0) (2023-12-04)
 
 
