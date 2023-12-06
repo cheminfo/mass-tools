@@ -127,7 +127,8 @@ export async function getPeaksAnnotation(bestPeaks, options = {}) {
         // we have 2 cases. Either there is a shift and we deal with differences
         // otherwise it is absolute
         // if there is a shift we consider only a neutral loss and the parameter charge is important
-        if (shift) {
+        // we also check that the selected peak (for relative mass) is not the current peak
+        if (shift && Math.abs(peak.x + shift) > Number.EPSILON) {
           // neutral loss
           let currentMfPrefs = {
             ...mfPrefs,
@@ -147,6 +148,7 @@ export async function getPeaksAnnotation(bestPeaks, options = {}) {
         }
 
         let mfs = emdb.get('monoisotopic');
+
         let numberOfMFS = Math.min(mfs.length, numberMFs);
 
         for (let i = 0; i < numberOfMFS; i++) {
