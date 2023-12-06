@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.29.0](https://github.com/cheminfo/mass-tools/compare/v7.28.0...v7.29.0) (2023-12-06)
+
+
+### Features
+
+* if relative mass display possible MF for selected peak ([153a591](https://github.com/cheminfo/mass-tools/commit/153a5913a661c9e516ab53a072940aaa0d970ee6))
+
 ## [7.28.0](https://github.com/cheminfo/mass-tools/compare/v7.27.0...v7.28.0) (2023-12-05)
 
 
