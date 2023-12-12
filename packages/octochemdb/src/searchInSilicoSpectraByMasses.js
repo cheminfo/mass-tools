@@ -72,6 +72,6 @@ export async function searchInSilicoSpectraByMasses(
       });
     }
   }
-  finals.sort((a, b) => b.similarity - a.similarity);
+  finals.sort((a, b) => b.similarity.cosine - a.similarity.cosine);
   return finals;
 }
