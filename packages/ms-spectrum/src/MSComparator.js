@@ -144,30 +144,56 @@ function normalizeAndCacheData(cache, dataXY, options = {}) {
   return data;
 }
 
-function returnSimilarity(aligned, options) {
-  let commonPeaks = 0;
+/**
+ * 
+ * @param {*} aligned 
+ * @param {object} [options={}]
+ * @param {number} [options.massPower]
+ * @param {number} [options.intensityPower]
+ * @param {number} [options.minNbCommonPeaks]
+
+ * @returns 
+ */
+function returnSimilarity(aligned, options = {}) {
+  const { massPower, intensityPower, minNbCommonPeaks } = options;
+  let nbCommonPeaks = 0;
+  let nbPeaks1 = 0;
+  let nbPeaks2 = 0;
   for (let i = 0; i < aligned.ys[0].length; i++) {
+    if (aligned.ys[0][i] !== 0) {
+      nbPeaks1++;
+    }
+    if (aligned.ys[1][i] !== 0) {
+      nbPeaks2++;
+    }
     if (aligned.ys[0][i] !== 0 && aligned.ys[1][i] !== 0) {
-      commonPeaks++;
+      nbCommonPeaks++;
     }
   }
   if (
-    commonPeaks === 0 ||
-    (options.minNbCommonPeaks && commonPeaks < options.minNbCommonPeaks)
+    nbCommonPeaks === 0 ||
+    (minNbCommonPeaks && nbCommonPeaks < minNbCommonPeaks)
   ) {
-    return 0;
+    return {
+      nbCommonPeaks,
+      nbPeaks1,
+      nbPeaks2,
+      tanimoto: 0,
+      cosine: 0,
+    };
   }
 
   const vector1 = new Float64Array(aligned.x.length);
   const vector2 = new Float64Array(aligned.x.length);
   for (let i = 0; i < aligned.x.length; i++) {
-    vector1[i] =
-      aligned.x[i] ** options.massPower *
-      aligned.ys[0][i] ** options.intensityPower;
-    vector2[i] =
-      aligned.x[i] ** options.massPower *
-      aligned.ys[1][i] ** options.intensityPower;
+    vector1[i] = aligned.x[i] ** massPower * aligned.ys[0][i] ** intensityPower;
+    vector2[i] = aligned.x[i] ** massPower * aligned.ys[1][i] ** intensityPower;
   }
-
-  return similarity.cosine(vector1, vector2);
+  return {
+    nbCommonPeaks,
+    nbPeaks1,
+    nbPeaks2,
+    tanimoto: nbCommonPeaks / (nbPeaks1 + nbPeaks2 - nbCommonPeaks),
+    cosine: similarity.cosine(vector1, vector2),
+  };
 }

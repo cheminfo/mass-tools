@@ -105,7 +105,7 @@ function appendAndFilterSimilarity(results, options = {}) {
       JSON.parse(JSON.stringify(result.data.spectrum.data)),
     );
   }
-  results = results.filter((a) => a.similarity >= minSimilarity);
-  results.sort((a, b) => b.similarity - a.similarity);
+  results = results.filter((a) => a.similarity.cosine >= minSimilarity);
+  results.sort((a, b) => b.similarity.cosine - a.similarity.cosine);
   return results;
 }

@@ -54,7 +54,7 @@ export async function searchInSilicoSpectraByMF(spectrum, mf, options = {}) {
       spectrum,
       result.data.spectrum.data.x,
     );
-    if (similarity > 0) {
+    if (similarity.cosine > 0) {
       finals.push({
         ...result,
         similarity,
