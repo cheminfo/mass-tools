@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.30.0](https://github.com/cheminfo/mass-tools/compare/v7.29.0...v7.30.0) (2023-12-12)
+
+
+### Features
+
+* **ms-spectrum:** MSComparator returns a similarity object ([acdfff5](https://github.com/cheminfo/mass-tools/commit/acdfff5d2203bd3c459c05075ba5c39dadf602d5))
+
 ## [7.29.0](https://github.com/cheminfo/mass-tools/compare/v7.28.0...v7.29.0) (2023-12-06)
 
 
