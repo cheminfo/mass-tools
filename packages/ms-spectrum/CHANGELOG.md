@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.3.0...ms-spectrum@3.4.0) (2023-12-12)
+
+
+### Features
+
+* if relative mass display possible MF for selected peak ([153a591](https://github.com/cheminfo/mass-tools/commit/153a5913a661c9e516ab53a072940aaa0d970ee6))
+* **ms-spectrum:** MSComparator returns a similarity object ([acdfff5](https://github.com/cheminfo/mass-tools/commit/acdfff5d2203bd3c459c05075ba5c39dadf602d5))
+
+
+
+
+
 # [3.3.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.2.0...ms-spectrum@3.3.0) (2023-12-05)
 
 

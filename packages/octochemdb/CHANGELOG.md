@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.5.0...octochemdb@2.6.0) (2023-12-12)
+
+
+### Features
+
+* **ms-spectrum:** MSComparator returns a similarity object ([acdfff5](https://github.com/cheminfo/mass-tools/commit/acdfff5d2203bd3c459c05075ba5c39dadf602d5))
+
+
+
+
+
 # [2.5.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.4.0...octochemdb@2.5.0) (2023-12-05)
 
 
