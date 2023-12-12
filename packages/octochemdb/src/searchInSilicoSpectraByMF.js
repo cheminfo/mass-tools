@@ -61,6 +61,6 @@ export async function searchInSilicoSpectraByMF(spectrum, mf, options = {}) {
       });
     }
   }
-  finals.sort((a, b) => b.similarity.cosine - a.similarity.cosine)
+  finals.sort((a, b) => b.similarity.cosine - a.similarity.cosine);
   return finals;
 }
