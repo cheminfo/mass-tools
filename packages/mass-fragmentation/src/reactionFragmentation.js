@@ -8,7 +8,8 @@ import { getMasses } from './utils/getMasses';
  * @description Fragment a molecule by applying reactions from a custom database of reactions
  * @param {import('openchemlib').Molecule} oclMolecule - The OCL molecule to be fragmented
  * @param {Object}  [options={}]
- * @param {('esiPositive'|'esiNegative'|'ei')[]}  [options.ionizationKind=['esiPositive']] - The ionization technique to be used
+ * @param {('esi'|'ei')[]}  [options.ionization=['esi']] - The ionization technique to be used
+ * @param {('positive'|'negative')[]}  [options.mode=['positive']] - The ionization mode to be used
  * @param {number}  [options.maxDepth=5] - The maximum depth of the overall fragmentation tree
  * @param {number}  [options.limitReactions=200] - The maximum number of reactions to be applied to each branch
  * @param {string}  [options.dwar] - The dwar entry to be used, if not provided, the default one will be used
@@ -23,7 +24,8 @@ import { getMasses } from './utils/getMasses';
  */
 export function reactionFragmentation(oclMolecule, options = {}) {
   const {
-    ionizationKind = ['esiPositive'],
+    ionization = ['esi'],
+    mode = ['positive'],
     dwar,
     maxDepth = 5,
     limitReactions = 200,
@@ -55,7 +57,8 @@ export function reactionFragmentation(oclMolecule, options = {}) {
   reactions.applyOneReactantReactions(
     getDatabase({
       kind: ['ionization'],
-      ionizationKind,
+      ionization,
+      mode,
       dwar,
     }),
     {
@@ -63,7 +66,12 @@ export function reactionFragmentation(oclMolecule, options = {}) {
       max: maxIonizations,
     },
   );
-  const reactionDb = getDatabase({ kind: ['reaction'], ionizationKind, dwar });
+  const reactionDb = getDatabase({
+    kind: ['reaction'],
+    ionization,
+    mode,
+    dwar,
+  });
 
   for (let i = 1; i <= maxReactions; i++) {
     let min = 1;
