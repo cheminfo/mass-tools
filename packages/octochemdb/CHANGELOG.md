@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.1](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.6.0...octochemdb@2.6.1) (2023-12-13)
+
+
+### Bug Fixes
+
+* **octochemdb:** sort in silice spectra search by similarity ([328e707](https://github.com/cheminfo/mass-tools/commit/328e70721c718bbb41898d1c16a11844576d20c7))
+
+
+
+
+
 # [2.6.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.5.0...octochemdb@2.6.0) (2023-12-12)
 
 
