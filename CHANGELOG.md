@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.31.0](https://github.com/cheminfo/mass-tools/compare/v7.30.1...v7.31.0) (2023-12-13)
+
+
+### Features
+
+* **mass-fragmentation:** use ionization and mode to get reactions ([ca00605](https://github.com/cheminfo/mass-tools/commit/ca006053b9eca930cf1b6fab61c3e482821595ca))
+
 ## [7.30.1](https://github.com/cheminfo/mass-tools/compare/v7.30.0...v7.30.1) (2023-12-12)
 
 
