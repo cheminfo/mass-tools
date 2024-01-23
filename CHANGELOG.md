@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.31.1](https://github.com/cheminfo/mass-tools/compare/v7.31.0...v7.31.1) (2024-01-23)
+
+
+### Bug Fixes
+
+* **mass-fragmentation:** array variables need to be plural (modes, ionizations) ([672b9b0](https://github.com/cheminfo/mass-tools/commit/672b9b0d6f0ccd02aef305686e5209f371495dc8))
+
 ## [7.31.0](https://github.com/cheminfo/mass-tools/compare/v7.30.1...v7.31.0) (2023-12-13)
 
 
