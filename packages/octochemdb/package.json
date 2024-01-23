@@ -21,7 +21,7 @@
     "type": "git",
     "url": "git+https://github.com/cheminfo/mass-tools.git"
   },
-  "version": "2.6.2",
+  "version": "2.7.0",
   "dependencies": {
     "@orama/orama": "^1.2.11",
     "mf-finder": "^3.2.0",
