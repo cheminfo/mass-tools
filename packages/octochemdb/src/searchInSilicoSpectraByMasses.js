@@ -36,10 +36,7 @@ export async function searchInSilicoSpectraByMasses(
     technique = {},
   } = options;
 
-  const {
-    mode = "positive",
-    ionization = "esi",
-  } = technique
+  const { mode = 'positive', ionization = 'esi' } = technique;
 
   if (!route) {
     throw new Error('route is mandatory');
@@ -58,8 +55,8 @@ export async function searchInSilicoSpectraByMasses(
     ionizations,
     searchParams: {
       mode,
-      ionization
-    }
+      ionization,
+    },
   });
 
   const msComparator = new MSComparator({
