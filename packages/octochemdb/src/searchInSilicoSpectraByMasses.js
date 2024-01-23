@@ -15,6 +15,9 @@ import { searchWithIonizations } from './utils/searchWithIonizations.js';
  * @param {number} [options.massPower=3] - High power will give more weight to the mass. If you would prefer to observe fragments you should use a number less than 1
  * @param {number} [options.intensityPower=0.6] - How important is the intensity. By default we don't give to much importance to it
  * @param {string} [options.route='inSilicoFragments/v1/search'] - Route to use
+ * @param {object} [options.technique={}] - Technique used to generate the spectrum
+ * @param {string} [options.technique.mode="positive"] - Mode of the acquisition
+ * @param {string} [options.technique.ionization="esi"] - Ionization of the acquisition
  */
 
 export async function searchInSilicoSpectraByMasses(
@@ -30,7 +33,13 @@ export async function searchInSilicoSpectraByMasses(
     massPower = 3,
     intensityPower = 0.6,
     ionizations = 'H+',
+    technique = {},
   } = options;
+
+  const {
+    mode = "positive",
+    ionization = "esi",
+  } = technique
 
   if (!route) {
     throw new Error('route is mandatory');
@@ -47,6 +56,10 @@ export async function searchInSilicoSpectraByMasses(
     masses,
     limit,
     ionizations,
+    searchParams: {
+      mode,
+      ionization
+    }
   });
 
   const msComparator = new MSComparator({
