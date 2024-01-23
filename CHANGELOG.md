@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.32.0](https://github.com/cheminfo/mass-tools/compare/v7.31.1...v7.32.0) (2024-01-23)
+
+
+### Features
+
+* allow to select technique in InSilicoSpectra search ([964afbf](https://github.com/cheminfo/mass-tools/commit/964afbfabee005a8f354332bb020dc7f1d9baa72))
+
 ## [7.31.1](https://github.com/cheminfo/mass-tools/compare/v7.31.0...v7.31.1) (2024-01-23)
 
 
