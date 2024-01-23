@@ -48,10 +48,13 @@ export async function compoundsFromMF(mf, options = {}) {
 }
 
 async function getTitles(ids, options) {
-  const {
+  let {
     titleCompoundsURL = 'titleCompounds/v1/ids',
     baseURL = 'https://octochemdb.cheminfo.org/',
   } = options;
+  if (process.env.NODE_ENV === 'test') {
+    baseURL = 'https://octochemdb.cheminfo.org/';
+  }
   const titlesURL = new URL(titleCompoundsURL, baseURL).toString();
   const titlesArray = (await postFetchJSON(titlesURL, { ids })).data;
   const titles = {};

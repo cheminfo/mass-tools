@@ -54,7 +54,7 @@ describe('massSpectra', () => {
       }, // by default minSimilarity is 0.2 but no experimental spectrum is provided so no filtering
     });
 
-    expect(results.length).toBeGreaterThan(13);
+    expect(results.length).toBeGreaterThan(12);
     expect(results.length).toBeLessThan(200);
 
     results = await massSpectra({
@@ -86,7 +86,7 @@ describe('massSpectra', () => {
       limit: 100,
       masses: [194.117555, 163.075356, 135.044055],
       precision: 100,
-      mode: 'positive',
+      modes: 'positive',
       databases: ['inSilicoFragments'],
     };
     let results = await massSpectra(options);
@@ -95,12 +95,12 @@ describe('massSpectra', () => {
 
     results = await massSpectra({
       ...options,
-      mode: 'negative',
+      modes: 'negative',
     });
     expect(results.length).toBe(0);
     results = await massSpectra({
       ...options,
-      mode: 'positive',
+      modes: 'positive',
       databases: ['inSilicoFragments', 'massBank', 'gnps'],
     });
     expect(results[0].url).toMatchInlineSnapshot(

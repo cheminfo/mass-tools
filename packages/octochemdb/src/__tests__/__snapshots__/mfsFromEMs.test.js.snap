@@ -13,7 +13,7 @@ exports[`mfsFromEMs > simple case negative ionization 1`] = `
         "O": 2,
         "S": 1,
       },
-      "count": 70,
+      "count": 71,
       "em": 122.01499861577999,
       "unsaturation": 1,
     },

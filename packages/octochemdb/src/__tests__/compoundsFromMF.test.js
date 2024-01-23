@@ -17,13 +17,14 @@ afterAll(() => {
 
 describe('compoundsFromMF', () => {
   it('simple case', async () => {
-    const url = 'http://localhost/data/compoundsFromMF.json';
-
+    const baseURL = 'http://localhost/data/';
+    const route = 'compoundsFromMF.json';
     let data = await compoundsFromMF('C5H10', {
-      url,
+      baseURL,
+      route,
       fields: 'data.ocl.idCode,data.ocl.index,data.iupac,data.mf',
     });
-    const entry = data.filter((datum) => datum.data.iupac === 'pentane')[0];
-    expect(entry.data.title).toBe('(1,5-Pentanediyl)radical');
+    const entry = data.filter((datum) => datum.data.iupac === 'pent-2-ene')[0];
+    expect(entry.data.title).toBe('2-Pentene');
   }, 30000);
 });
