@@ -1,6 +1,6 @@
 {
   "name": "mfs-deconvolution",
-  "version": "2.3.7",
+  "version": "2.3.8",
   "description": "",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -27,7 +27,7 @@
     "ml-fcnnls": "^2.1.0",
     "ml-matrix": "6.10.4",
     "ml-spectra-processing": "^12.6.0",
-    "ms-spectrum": "^3.4.1"
+    "ms-spectrum": "^3.4.2"
   },
   "devDependencies": {
     "fifo-logger": "^0.6.1",

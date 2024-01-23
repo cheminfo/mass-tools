@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.1](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.9.0...mass-fragmentation@1.9.1) (2024-01-23)
+
+
+### Bug Fixes
+
+* **mass-fragmentation:** array variables need to be plural (modes, ionizations) ([672b9b0](https://github.com/cheminfo/mass-tools/commit/672b9b0d6f0ccd02aef305686e5209f371495dc8))
+
+
+
+
+
 # [1.9.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.8.0...mass-fragmentation@1.9.0) (2023-12-13)
 
 
