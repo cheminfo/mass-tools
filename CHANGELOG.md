@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.33.0](https://github.com/cheminfo/mass-tools/compare/v7.32.0...v7.33.0) (2024-01-30)
+
+
+### Features
+
+* **octochemdb:** search activesOrNaturals with noStereoTautomerID ([52ade5b](https://github.com/cheminfo/mass-tools/commit/52ade5b0333cfc6ee157d3f9d7f8fa62009818b4))
+
 ## [7.32.0](https://github.com/cheminfo/mass-tools/compare/v7.31.1...v7.32.0) (2024-01-23)
 
 
