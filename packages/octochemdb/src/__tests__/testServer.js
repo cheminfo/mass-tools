@@ -12,6 +12,14 @@ export const server = setupServer(
       const data = await readFile(pathname);
       const jsonContent = JSON.parse(data.toString());
       if (req.url.pathname.includes('activesOrNaturals')) {
+        if (req.url.searchParams.get('noStereoTautomerID')) {
+          let filteredContent = jsonContent.filter(
+            (item) =>
+              item._id === req.url.searchParams.get('noStereoTautomerID'),
+          );
+          return res(ctx.json({ data: filteredContent }));
+        }
+
         return res(ctx.json({ data: jsonContent }));
       } else if (req.url.pathname.includes('compoundsFromMF')) {
         const mf = req.url.searchParams.get('mf');

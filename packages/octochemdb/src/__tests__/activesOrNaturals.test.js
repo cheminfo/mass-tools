@@ -17,7 +17,8 @@ afterAll(() => {
 describe('activesOrNaturals', () => {
   it('simple case', async () => {
     let data = await activesOrNaturals({
-      url: 'http://localhost/data/activesOrNaturalsSimple.json',
+      baseURL: 'http://localhost/',
+      route: 'data/activesOrNaturalsSimple.json',
       masses: 300.123,
       ionizations: '(H+)2, H+',
       precision: 1,
@@ -28,7 +29,8 @@ describe('activesOrNaturals', () => {
   });
   it('with range', async () => {
     let data = await activesOrNaturals({
-      url: 'http://localhost/data/activesOrNaturalsWithRange.json',
+      baseURL: 'http://localhost/',
+      route: 'data/activesOrNaturalsWithRange.json',
       masses: 300.123,
       ionizations: 'H+',
       precision: 3,
@@ -44,7 +46,8 @@ describe('activesOrNaturals', () => {
 
   it('with range and many ionizations', async () => {
     let data = await activesOrNaturals({
-      url: 'http://localhost/data/activesOrNaturalsRangeAndIonization.json',
+      baseURL: 'http://localhost/',
+      route: 'data/activesOrNaturalsRangeAndIonization.json',
       masses: 300.123,
       ionizations: 'H+,(H+)2',
       precision: 3,
@@ -61,7 +64,8 @@ describe('activesOrNaturals', () => {
 
   it('search by keywords', async () => {
     let data = await activesOrNaturals({
-      url: 'http://localhost/data/activesOrNaturalsKeywords.json',
+      baseURL: 'http://localhost/',
+      route: 'data/activesOrNaturalsKeywords.json',
       kwMeshTerms: 'antibiotic',
       limit: 10,
       fields: 'data',
@@ -100,4 +104,13 @@ describe('activesOrNaturals', () => {
       'unsaturation',
     ]);
   }, 300000);
+  it('noStereoTautomerID case', async () => {
+    let data = await activesOrNaturals({
+      baseURL: 'http://localhost/',
+      route: 'data/activesOrNaturalsSimple.json',
+      noStereoTautomerID:
+        'ei]REH@MLd^^Dbnco`XZVP@cIEHeDeDidhdmMbimEIUDYGKOFejjjjjjjjjjjjjjh@CWjcGFELZXlpy`KDVDlYXjpuck@vEl[XNp}c{ANJ\\RxUq~fFEUl_CGpwu[Gpq|MSTq|L_C@',
+    });
+    expect(data.length).toBe(1);
+  });
 });

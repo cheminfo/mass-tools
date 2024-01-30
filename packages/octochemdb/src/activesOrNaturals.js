@@ -7,6 +7,7 @@ import { searchWithIonizations } from './utils/searchWithIonizations.js';
  * Search for natural or active compounds using various criteria
  * @param {object} [options={}]
  * @param {number|string|number[]} [options.masses] - Observed monoisotopic mass
+ * @param {string} [options.noStereoTautomerID=''] - ID of the compound to search from the results
  * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
  * @param {string} [options.ranges=''] - Allows to filter by a range of molecular formula
  * @param {string} [options.mf=''] - Search by molecular formula
@@ -64,6 +65,7 @@ export async function activesOrNaturals(options = {}) {
 
 function prepareSearchParams(options) {
   const {
+    noStereoTautomerID,
     kwTaxonomies,
     kwActiveAgainst,
     kwBioassays,
@@ -73,6 +75,9 @@ function prepareSearchParams(options) {
     minNbMassSpectra,
   } = options;
   const searchParams = {};
+  if (noStereoTautomerID) {
+    searchParams.noStereoTautomerID = noStereoTautomerID;
+  }
   if (kwTaxonomies) {
     searchParams.kwTaxonomies = kwTaxonomies;
   }
