@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.33.1](https://github.com/cheminfo/mass-tools/compare/v7.33.0...v7.33.1) (2024-02-15)
+
+
+### Bug Fixes
+
+* **octochemdb:** fix sorting if not data ([3ee9fdd](https://github.com/cheminfo/mass-tools/commit/3ee9fddddfe8b994dcad2979f4c5269761456e8d))
+
 ## [7.33.0](https://github.com/cheminfo/mass-tools/compare/v7.32.0...v7.33.0) (2024-01-30)
 
 
