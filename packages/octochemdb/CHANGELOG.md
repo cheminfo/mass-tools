@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.1](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.8.0...octochemdb@2.8.1) (2024-02-15)
+
+
+### Bug Fixes
+
+* **octochemdb:** fix sorting if not data ([3ee9fdd](https://github.com/cheminfo/mass-tools/commit/3ee9fddddfe8b994dcad2979f4c5269761456e8d))
+
+
+
+
+
 # [2.8.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.7.0...octochemdb@2.8.0) (2024-01-30)
 
 
