@@ -32,7 +32,7 @@ export async function getPatentsDB(patents, options = {}) {
       ...(queryFields.includes('abstract')
         ? { abstract: patent?.data?.abstract }
         : null),
-      nbCompounds: patent.data.nbCompounds + 2 || +2,
+      nbCompounds: patent.data?.nbCompounds ? patent.data.nbCompounds + 2 : 2,
     };
 
     await insert(patentsDB, article);

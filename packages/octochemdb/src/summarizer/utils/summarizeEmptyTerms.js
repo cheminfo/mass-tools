@@ -12,8 +12,8 @@ export function summarizeEmptyTerms(
   // PATENTS
   const patentsMaxNbEntries = options?.patents?.maxNbEntries || 100;
   patents.sort((a, b) => {
-    const nbCompoundsEntryA = a.data.nbCompounds + 2 || 2;
-    const nbCompoundsEntryB = b.data.nbCompounds + 2 || 2;
+    const nbCompoundsEntryA = a.data?.nbCompounds ? a.data.nbCompounds + 2 : 2;
+    const nbCompoundsEntryB = b.data?.nbCompounds ? b.data.nbCompounds + 2 : 2;
     return 1 / Math.log2(nbCompoundsEntryB) - 1 / Math.log2(nbCompoundsEntryA);
   });
   if (patents.length > patentsMaxNbEntries) {
