@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.33.2](https://github.com/cheminfo/mass-tools/compare/v7.33.1...v7.33.2) (2024-02-22)
+
+
+### Bug Fixes
+
+* **octochemdb:** Cannot read property 'length' of undefined ([f34993d](https://github.com/cheminfo/mass-tools/commit/f34993d6127ac9bc2ab239d4e30d38e3300d8dae))
+
 ## [7.33.1](https://github.com/cheminfo/mass-tools/compare/v7.33.0...v7.33.1) (2024-02-15)
 
 
