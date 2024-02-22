@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.2](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.8.1...octochemdb@2.8.2) (2024-02-22)
+
+
+### Bug Fixes
+
+* **octochemdb:** Cannot read property 'length' of undefined ([f34993d](https://github.com/cheminfo/mass-tools/commit/f34993d6127ac9bc2ab239d4e30d38e3300d8dae))
+
+
+
+
+
 ## [2.8.1](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.8.0...octochemdb@2.8.1) (2024-02-15)
 
 
