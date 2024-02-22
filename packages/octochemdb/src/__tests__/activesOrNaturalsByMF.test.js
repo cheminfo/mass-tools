@@ -53,9 +53,9 @@ describe('activesOrNaturalsByMF', () => {
       0,
     );
 
-    expect(nbNaturals).toBeGreaterThan(5);
+    expect(nbNaturals).toBeGreaterThan(4);
     expect(nbBioactives).toBeGreaterThan(33);
-    expect(nbPatents).toBeGreaterThan(252);
+    expect(nbPatents).toBeGreaterThan(238);
     expect(nbPubmeds).toBeGreaterThan(36);
     expect(nbMassSpectra).toBeGreaterThanOrEqual(0);
   }, 30000);

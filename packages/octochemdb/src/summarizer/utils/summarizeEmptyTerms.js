@@ -23,8 +23,8 @@ export function summarizeEmptyTerms(
   const pubmedsMaxNbEntries = options?.pubmeds?.maxNbEntries || 100;
 
   pubmeds.sort((a, b) => {
-    const nbCompoundsEntryA = a.data.compounds.length + 2 || 2;
-    const nbCompoundsEntryB = b.data.compounds.length + 2 || 2;
+    const nbCompoundsEntryA = a.data.compounds?.length + 2 || 2;
+    const nbCompoundsEntryB = b.data.compounds?.length + 2 || 2;
     return 1 / Math.log2(nbCompoundsEntryB) - 1 / Math.log2(nbCompoundsEntryA);
   });
   if (pubmeds.length > pubmedsMaxNbEntries) {
