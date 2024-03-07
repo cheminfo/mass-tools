@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.33.4](https://github.com/cheminfo/mass-tools/compare/v7.33.3...v7.33.4) (2024-03-07)
+
+
+### Bug Fixes
+
+* remove duplicates of ml-spectra-processing ([040da0e](https://github.com/cheminfo/mass-tools/commit/040da0e20eb416be3f308c8a1667627672a89944))
+
 ## [7.33.3](https://github.com/cheminfo/mass-tools/compare/v7.33.2...v7.33.3) (2024-03-07)
 
 
