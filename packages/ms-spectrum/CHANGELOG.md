@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.3](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.4.2...ms-spectrum@3.4.3) (2024-03-07)
+
+
+### Bug Fixes
+
+* remove duplicates of ml-spectra-processing ([040da0e](https://github.com/cheminfo/mass-tools/commit/040da0e20eb416be3f308c8a1667627672a89944))
+* update ml-spectra-processing ([4df865d](https://github.com/cheminfo/mass-tools/commit/4df865dd147c8199f5de3aa74779905445c132b5))
+
+
+
+
+
 ## [3.4.2](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.4.1...ms-spectrum@3.4.2) (2024-01-23)
 
 **Note:** Version bump only for package ms-spectrum

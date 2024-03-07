@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.3](https://github.com/cheminfo/mass-tools/compare/mf-matcher@3.0.2...mf-matcher@3.0.3) (2024-03-07)
+
+
+### Bug Fixes
+
+* update ml-spectra-processing ([4df865d](https://github.com/cheminfo/mass-tools/commit/4df865dd147c8199f5de3aa74779905445c132b5))
+
+
+
+
+
 ## [3.0.2](https://github.com/cheminfo/mass-tools/compare/mf-matcher@3.0.1...mf-matcher@3.0.2) (2023-11-13)
 
 

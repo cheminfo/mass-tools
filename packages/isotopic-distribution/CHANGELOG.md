@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.2](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.1.1...isotopic-distribution@3.1.2) (2024-03-07)
+
+
+### Bug Fixes
+
+* remove duplicates of ml-spectra-processing ([040da0e](https://github.com/cheminfo/mass-tools/commit/040da0e20eb416be3f308c8a1667627672a89944))
+
+
+
+
+
 ## [3.1.1](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.1.0...isotopic-distribution@3.1.1) (2023-12-05)
 
 **Note:** Version bump only for package isotopic-distribution

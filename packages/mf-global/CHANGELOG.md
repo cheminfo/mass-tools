@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.17](https://github.com/cheminfo/mass-tools/compare/mf-global@3.0.16...mf-global@3.0.17) (2024-03-07)
+
+**Note:** Version bump only for package mf-global
+
+
+
+
+
 ## [3.0.16](https://github.com/cheminfo/mass-tools/compare/mf-global@3.0.15...mf-global@3.0.16) (2024-01-23)
 
 **Note:** Version bump only for package mf-global
