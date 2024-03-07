@@ -32,6 +32,6 @@
   "devDependencies": {
     "fifo-logger": "^0.6.1",
     "jest-matcher-deep-close-to": "^3.0.2",
-    "xy-parser": "^5.0.4"
+    "xy-parser": "^5.0.5"
   }
 }
