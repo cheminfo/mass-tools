@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.33.3](https://github.com/cheminfo/mass-tools/compare/v7.33.2...v7.33.3) (2024-03-07)
+
+
+### Bug Fixes
+
+* update ml-spectra-processing ([4df865d](https://github.com/cheminfo/mass-tools/commit/4df865dd147c8199f5de3aa74779905445c132b5))
+
 ## [7.33.2](https://github.com/cheminfo/mass-tools/compare/v7.33.1...v7.33.2) (2024-02-22)
 
 
