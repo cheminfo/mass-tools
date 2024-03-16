@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.2](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.9.1...mass-fragmentation@1.9.2) (2024-03-16)
+
+
+### Bug Fixes
+
+* update dependencies ([#180](https://github.com/cheminfo/mass-tools/issues/180)) ([f4bea76](https://github.com/cheminfo/mass-tools/commit/f4bea76790bbe4d0f25d71a64cbd7578aef5013a))
+
+
+
+
+
 ## [1.9.1](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.9.0...mass-fragmentation@1.9.1) (2024-01-23)
 
 
