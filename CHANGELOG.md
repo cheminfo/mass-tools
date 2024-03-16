@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.33.5](https://github.com/cheminfo/mass-tools/compare/v7.33.4...v7.33.5) (2024-03-16)
+
+
+### Bug Fixes
+
+* update dependencies ([#180](https://github.com/cheminfo/mass-tools/issues/180)) ([f4bea76](https://github.com/cheminfo/mass-tools/commit/f4bea76790bbe4d0f25d71a64cbd7578aef5013a))
+
 ## [7.33.4](https://github.com/cheminfo/mass-tools/compare/v7.33.3...v7.33.4) (2024-03-07)
 
 
