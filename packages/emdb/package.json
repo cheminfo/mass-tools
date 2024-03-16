@@ -33,16 +33,16 @@
     "mf-parser": "^3.1.0",
     "mf-utilities": "^3.1.0",
     "ml-regression-theil-sen": "^2.0.0",
-    "ml-spectra-processing": "^14.2.0",
+    "ml-spectra-processing": "^14.2.2",
     "ms-spectrum": "^3.4.3",
     "nucleotide": "^3.0.2",
-    "openchemlib-utils": "5.5.0",
+    "openchemlib-utils": "^5.12.1",
     "peaks-similarity": "^3.1.1",
     "peptide": "^2.1.1"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2",
-    "openchemlib": "^8.7.2",
+    "openchemlib": "^8.9.0",
     "xy-parser": "^5.0.5"
   }
 }
