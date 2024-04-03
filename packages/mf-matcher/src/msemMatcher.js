@@ -30,7 +30,6 @@ import { unsaturationMatcher } from './unsaturationMatcher.js';
  * @property {Function}       [callback] - a function that contains information about the current MF
  */
 
-
 /**
  * @param {object}             [entry={}]
  * @param {MSEMFilterOptions}  [options={}]
@@ -74,7 +73,6 @@ export function msemMatcher(entry, options = {}) {
     targetMass,
   });
   let ms = msInfo.ms;
-
 
   if (entry.em !== undefined) {
     if (entry.em < minEM || entry.em > maxEM) return false;

@@ -21,16 +21,16 @@ test('various parameters', () => {
   expect(msemMatcher(entry, { targetMass: 120, maxCharge: -1 })).toBe(false);
   expect(msemMatcher(entry, { minMW: 0, maxMW: 0 })).toBe(false);
   expect(msemMatcher(entry, { minMW: 100, maxMW: 140 })).toStrictEqual({
-    "ionization": {
-      "atoms": {},
-      "charge": 0,
-      "em": 0,
-      "mf": "",
+    ionization: {
+      atoms: {},
+      charge: 0,
+      em: 0,
+      mf: '',
     },
-    "ms": {
-      "charge": 0,
-      "em": 0,
-      "ionization": "",
+    ms: {
+      charge: 0,
+      em: 0,
+      ionization: '',
     },
   });
   expect(

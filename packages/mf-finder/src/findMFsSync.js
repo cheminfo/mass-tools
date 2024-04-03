@@ -332,7 +332,7 @@ function setCurrentMinMax(currentAtom, previousAtom, targetMassCache) {
         (targetMassCache.getMinMass(currentCharge) -
           currentMass -
           currentAtom.maxInnerMass) /
-        currentAtom.em,
+          currentAtom.em,
       ),
       currentAtom.originalMinCount,
     );
@@ -341,7 +341,7 @@ function setCurrentMinMax(currentAtom, previousAtom, targetMassCache) {
         (targetMassCache.getMaxMass(currentCharge) -
           currentMass -
           currentAtom.minInnerMass) /
-        currentAtom.em,
+          currentAtom.em,
       ),
       currentAtom.originalMaxCount,
     );
