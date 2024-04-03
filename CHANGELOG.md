@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.34.0](https://github.com/cheminfo/mass-tools/compare/v7.33.5...v7.34.0) (2024-04-03)
+
+
+### Features
+
+* **mf-matcher:** Add filter by minMW and maxMW for msemMatcher ([c46e3b9](https://github.com/cheminfo/mass-tools/commit/c46e3b9ff427160c59b82e8b37f01c1b1f8e3923))
+
 ## [7.33.5](https://github.com/cheminfo/mass-tools/compare/v7.33.4...v7.33.5) (2024-03-16)
 
 
