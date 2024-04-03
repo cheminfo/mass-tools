@@ -2,30 +2,38 @@ import { getMsInfo } from 'mf-utilities';
 import { xFindClosestIndex } from 'ml-spectra-processing';
 
 import { unsaturationMatcher } from './unsaturationMatcher.js';
+
 /**
- * @param {object}         [entry={}]
- * @param {object}         [options={}]
- * @param {object}         [options.ionization={ mf: '', em: 0, charge: 0 }] - ionization method
- * @param {boolean}        [options.forceIonization=false] - If true ignore existing ionizations
- * @param {number}         [options.precision=1000] - The precision on the experimental mass
- * @param {number}         [options.targetMass] - Target mass, allows to calculate error and filter results
- * @param {number[]}       [options.targetMasses] - Target masses: SORTED array of numbers
- * @param {number[]}       [options.targetIntensities] - Target intensities: SORTED array of numbers
- * @param {number}         [options.minEM=0] - Minimal monoisotopic mass
- * @param {number}         [options.maxEM=+Infinity] - Maximal monoisotopic mass
- * @param {number}         [options.minMSEM=0] - Minimal monoisotopic mass observed by mass
- * @param {number}         [options.maxMSEM=+Infinity] - Maximal monoisotopic mass observed by mass
- * @param {number}         [options.minCharge=-Infinity] - Minimal charge
- * @param {number}         [options.maxCharge=+Infinity] - Maximal charge
- * @param {boolean}        [options.absoluteCharge=false] - If true, the charge is absolute (so between 0 and +Infinity by default)
- * @param {boolean}        [options.allowNegativeAtoms=false] - Allow to have negative number of atoms
- * @param {object}         [options.unsaturation={}]
- * @param {number}         [options.unsaturation.min=-Infinity] - Minimal unsaturation
- * @param {number}         [options.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {boolean}        [options.unsaturation.onlyInteger=false] - Integer unsaturation
- * @param {boolean}        [options.unsaturation.onlyNonInteger=false] - Non integer unsaturation
- * @param {boolean}        [options.atoms] - object of atom:{min, max}
- * @param {Function}       [options.callback] - a function that contains information about the current MF
+ * @typedef {object} MSEMFilterOptions
+ * @property {object}         [ionization={ mf: '', em: 0, charge: 0 }] - ionization method
+ * @property {boolean}        [forceIonization=false] - If true ignore existing ionizations
+ * @property {number}         [precision=1000] - The precision on the experimental mass
+ * @property {number}         [targetMass] - Target mass, allows to calculate error and filter results
+ * @property {number[]}       [targetMasses] - Target masses: SORTED array of numbers
+ * @property {number[]}       [targetIntensities] - Target intensities: SORTED array of numbers
+ * @property {number}         [minMW=-Infinity] - Minimal monoisotopic mass
+ * @property {number}         [maxMW=+Infinity] - Maximal monoisotopic mass
+ * @property {number}         [minEM=-Infinity] - Minimal monoisotopic mass
+ * @property {number}         [maxEM=+Infinity] - Maximal monoisotopic mass
+ * @property {number}         [minMSEM=-Infinity] - Minimal monoisotopic mass observed by mass
+ * @property {number}         [maxMSEM=+Infinity] - Maximal monoisotopic mass observed by mass
+ * @property {number}         [minCharge=-Infinity] - Minimal charge
+ * @property {number}         [maxCharge=+Infinity] - Maximal charge
+ * @property {boolean}        [absoluteCharge=false] - If true, the charge is absolute (so between 0 and +Infinity by default)
+ * @property {boolean}        [allowNegativeAtoms=false] - Allow to have negative number of atoms
+ * @property {object}         [unsaturation={}]
+ * @property {number}         [unsaturation.min=-Infinity] - Minimal unsaturation
+ * @property {number}         [unsaturation.max=+Infinity] - Maximal unsaturation
+ * @property {boolean}        [unsaturation.onlyInteger=false] - Integer unsaturation
+ * @property {boolean}        [unsaturation.onlyNonInteger=false] - Non integer unsaturation
+ * @property {boolean}        [atoms] - object of atom:{min, max}
+ * @property {Function}       [callback] - a function that contains information about the current MF
+ */
+
+
+/**
+ * @param {object}             [entry={}]
+ * @param {MSEMFilterOptions}  [options={}]
  * @return {boolean}
  */
 
@@ -49,10 +57,16 @@ export function msemMatcher(entry, options = {}) {
     maxEM = +Infinity,
     minMSEM = -Infinity,
     maxMSEM = +Infinity,
+    minMW = -Infinity,
+    maxMW = +Infinity,
     allowNegativeAtoms = false,
     atoms,
     callback,
   } = options;
+
+  if (entry.mw !== undefined) {
+    if (entry.mw < minMW || entry.mw > maxMW) return false;
+  }
 
   let msInfo = getMsInfo(entry, {
     ionization,
@@ -60,6 +74,7 @@ export function msemMatcher(entry, options = {}) {
     targetMass,
   });
   let ms = msInfo.ms;
+
 
   if (entry.em !== undefined) {
     if (entry.em < minEM || entry.em > maxEM) return false;

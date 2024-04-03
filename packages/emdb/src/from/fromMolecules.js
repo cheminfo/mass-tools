@@ -15,20 +15,7 @@ import { preprocessIonizations } from 'mf-utilities';
  * @param {object}    [options.fragmentation.acyclic=false]
  * @param {object}    [options.fragmentation.cyclic=false]
  * @param {object}    [options.fragmentation.full=true]
- * @param {object}    [options.filter={}]
- * @param {number}    [options.filter.minCharge=-Infinity] - Minimal charge
- * @param {number}    [options.filter.maxCharge=+Infinity] - Maximal charge
- * @param {boolean}   [options.filter.absoluteCharge=false] - If true, the charge is absolute (so between 0 and +Infinity by default)
- * @param {object}    [options.filter.unsaturation={}]
- * @param {number}    [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
- * @param {number}    [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {boolean}   [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
- * @param {boolean}   [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
- * @param {number}    [options.filter.targetMass] - Target mass, allows to calculate error and filter results
- * @param {number[]}  [options.filter.targetMasses] - Target masses: SORTED array of numbers
- * @param {number[]}  [options.filter.targetIntensities] - Target intensities: SORTED array of numbers
- * @param {object}    [options.filter.atoms] - object of atom:{min, max}
- * @param {function}  [options.filter.callback] - a function to filter the MF
+ * @param {import('mf-matcher').MSEMFilterOptions}        [options.filter={}]
  * @returns {Promise}
  */
 

@@ -16,26 +16,7 @@ import sum from 'sum-object-keys';
  * @param {boolean}       [options.uniqueMFs=true] - Force canonization and make MF unique
  * @param {string}        [options.ionizations=''] - Comma separated list of ionizations (to charge the molecule)
  * @param {function}      [options.onStep] - Callback to do after each step
- * @param {object}        [options.filter={}]
- * @param {number}        [options.filter.minMass=0] - Minimal monoisotopic mass
- * @param {number}        [options.filter.maxMass=+Infinity] - Maximal monoisotopic mass
- * @param {number}        [options.filter.minEM=0] - Minimal neutral monoisotopic mass
- * @param {number}        [options.filter.maxEM=+Infinity] - Maximal neutral monoisotopic mass
- * @param {number}        [options.filter.precision=1000] - The precision on the experimental mass
- * @param {number}        [options.filter.targetMass] - Target mass, allows to calculate error and filter results
- * @param {number[]}      [options.filter.targetMasses] - Target masses: SORTED array of numbers
- * @param {number}        [options.filter.precision=1000] - Precision
- * @param {number}        [options.filter.minCharge=-Infinity] - Minimal charge
- * @param {number}        [options.filter.maxCharge=+Infinity] - Maximal charge
- * @param {boolean}       [options.filter.absoluteCharge=false] - If true, the charge is absolute (so between 0 and +Infinity by default)
- * @param {boolean}       [options.filter.allowNegativeAtoms=false] - Allow to have negative number of atoms
- * @param {object}        [options.filter.unsaturation={}]
- * @param {number}        [options.filter.unsaturation.min=-Infinity] - Minimal unsaturation
- * @param {number}        [options.filter.unsaturation.max=+Infinity] - Maximal unsaturation
- * @param {boolean}       [options.filter.unsaturation.onlyInteger=false] - Integer unsaturation
- * @param {boolean}       [options.filter.unsaturation.onlyNonInteger=false] - Non integer unsaturation
- * @param {object}        [options.filter.atoms] - object of atom:{min, max}
- * @param {function}      [options.filter.callback] - a function to filter the MF
+ * @param {import('mf-matcher').MSEMFilterOptions}        [options.filter={}]
  * @param {string}        [options.filterFct]
  * @param {object}        [options.links]
  * @param {boolean}       [options.links.filter] We filter all the MF that do not match the '*X'
@@ -232,7 +213,7 @@ function appendResult(results, currents, keys, options = {}) {
       variables.push(
         result.em,
         (result.em + ionization.em - ionization.charge * ELECTRON_MASS) /
-          Math.abs(ionization.charge),
+        Math.abs(ionization.charge),
         result.charge + result.ionization.charge,
         result.unsaturation,
         result.atoms,
