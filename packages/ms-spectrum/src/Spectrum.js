@@ -144,9 +144,9 @@ export class Spectrum {
     return getPeakChargeBySimilarity(this, targetMass, options);
   }
 
-  getPeaks(options) {
+  getPeaks() {
     peakPicking(this);
-    return getPeaks(this.peaks, options);
+    return getPeaks(this.peaks);
   }
 
   getPeaksAsDataXY(options) {
