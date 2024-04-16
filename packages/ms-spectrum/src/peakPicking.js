@@ -1,23 +1,13 @@
 import { gsd } from 'ml-gsd';
 import { xyEnsureGrowingX } from 'ml-spectra-processing';
 
-import { appendPeaksCharge } from './appendPeaksCharge';
-
 /**
  * Filter the array of peaks
- * @param {Spectrum} spectrum - array of all the peaks
- * @param {object} [options={}]
- * @param {object} [options.charge={}]
- * @param {number} [options.charge.min=1]
- * @param {number} [options.charge.max=10]
- * @param {number} [options.charge.low=-1]
- * @param {number} [options.charge.high=1]
- * @param {number} [options.charge.precision=30]
- * @returns {array} - copy of peaks with 'close' annotation
+ * @param {import('./Spectrum')} spectrum - array of all the peaks
+ * @returns {array}
  */
 
-export function peakPicking(spectrum, options = {}) {
-  const { charge: chargeOptions = {} } = options;
+export function peakPicking(spectrum) {
   if (!spectrum.peaks || spectrum.peaks.length === 0) {
     spectrum.peaks = [];
     const keys = Object.keys(spectrum.data).filter(
@@ -54,12 +44,6 @@ export function peakPicking(spectrum, options = {}) {
         spectrum.peaks.push(peak);
       }
     }
-    // required and linked to https://github.com/mljs/global-spectral-deconvolution/issues/17
-    spectrum.peaks = spectrum.peaks.filter(
-      (peak) => !isNaN(peak.x) && !isNaN(peak.y),
-    );
-    appendPeaksCharge(spectrum.peaks, chargeOptions);
   }
-
   return spectrum.peaks;
 }

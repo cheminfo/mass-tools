@@ -15,16 +15,6 @@ exports[`test getPeaksAnnotation > default options 1`] = `
         },
         "text": "12.00000",
       },
-      {
-        "color": "grey",
-        "position": {
-          "dx": "2px",
-          "dy": "-4px",
-          "x": 12,
-          "y": 1,
-        },
-        "text": "Z:undefined",
-      },
     ],
     "position": [
       {
@@ -53,16 +43,6 @@ exports[`test getPeaksAnnotation > default options 1`] = `
         },
         "text": "24.00000",
       },
-      {
-        "color": "grey",
-        "position": {
-          "dx": "2px",
-          "dy": "-4px",
-          "x": 24,
-          "y": 2,
-        },
-        "text": "Z:undefined",
-      },
     ],
     "position": [
       {
@@ -90,16 +70,6 @@ exports[`test getPeaksAnnotation > default options 1`] = `
           "y": 3,
         },
         "text": "36.00000",
-      },
-      {
-        "color": "grey",
-        "position": {
-          "dx": "2px",
-          "dy": "-4px",
-          "x": 36,
-          "y": 3,
-        },
-        "text": "Z:undefined",
       },
     ],
     "position": [
@@ -137,7 +107,7 @@ exports[`test getPeaksAnnotation > default options 1`] = `
           "x": 42,
           "y": 4,
         },
-        "text": "Z:undefined",
+        "text": "Z:1",
       },
     ],
     "position": [
@@ -172,16 +142,6 @@ exports[`test getPeaksAnnotation > shift -12 1`] = `
         },
         "text": "0.00001",
       },
-      {
-        "color": "grey",
-        "position": {
-          "dx": "2px",
-          "dy": "-4px",
-          "x": 12,
-          "y": 1,
-        },
-        "text": "Z:undefined",
-      },
     ],
     "position": [
       {
@@ -210,16 +170,6 @@ exports[`test getPeaksAnnotation > shift -12 1`] = `
         },
         "text": "12.00001",
       },
-      {
-        "color": "grey",
-        "position": {
-          "dx": "2px",
-          "dy": "-4px",
-          "x": 24,
-          "y": 2,
-        },
-        "text": "Z:undefined",
-      },
     ],
     "position": [
       {
@@ -247,16 +197,6 @@ exports[`test getPeaksAnnotation > shift -12 1`] = `
           "y": 3,
         },
         "text": "24.00001",
-      },
-      {
-        "color": "grey",
-        "position": {
-          "dx": "2px",
-          "dy": "-4px",
-          "x": 36,
-          "y": 3,
-        },
-        "text": "Z:undefined",
       },
     ],
     "position": [
@@ -294,7 +234,7 @@ exports[`test getPeaksAnnotation > shift -12 1`] = `
           "x": 42,
           "y": 4,
         },
-        "text": "Z:undefined",
+        "text": "Z:1",
       },
     ],
     "position": [
