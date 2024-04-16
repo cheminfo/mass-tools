@@ -5,7 +5,7 @@ describe('test getPeaksAnnotation', () => {
     { x: 12, y: 1 },
     { x: 24, y: 2 },
     { x: 36, y: 3 },
-    { x: 42, y: 4 },
+    { x: 42, y: 4, charge: 1 },
   ];
   it('default options', async () => {
     let result = await getPeaksAnnotation(peaks);

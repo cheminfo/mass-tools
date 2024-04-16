@@ -13,6 +13,7 @@ import { getFragmentPeaks } from './getFragmentPeaks';
 import { getMassRemainder } from './getMassRemainder';
 import { getPeakChargeBySimilarity } from './getPeakChargeBySimilarity';
 import { getPeaks } from './getPeaks';
+import { getPeaksWithCharge } from './getPeaksWithCharge.js';
 import { isContinuous } from './isContinuous';
 import { peakPicking } from './peakPicking';
 import { peaksWidth } from './peaksWidth';
@@ -58,6 +59,11 @@ export class Spectrum {
     }
 
     this.cache = {};
+    /**
+     * someProperty is an example property that is set to `true`
+     * @type {array}
+     * @public
+     */
     this.peaks = [];
   }
 
@@ -117,6 +123,21 @@ export class Spectrum {
   getBestPeaks(options) {
     peakPicking(this);
     return getBestPeaks(this.peaks, options);
+  }
+
+  /**
+   * This is a very intensive function so better to calculate it on a selection of peaks
+   * @param {Array} selectedPeaks
+   * @param {object} [options={}]
+   * @param {number} [options.min=1]
+   * @param {number} [options.max=10]
+   * @param {number} [options.low=-1]
+   * @param {number} [options.high=1]
+   * @param {number} [options.precision=30]
+   * @returns
+   */
+  getSelectedPeaksWithCharge(selectedPeaks, options) {
+    return getPeaksWithCharge(selectedPeaks, this.peaks, options);
   }
 
   getPeakChargeBySimilarity(targetMass, options) {

@@ -16,11 +16,8 @@ import { EMDB } from 'emdb';
  * @param {number} [options.displayProperties=[]] Array of properties name to display
  * @returns {Promise}
  */
-
 export async function getPeaksAnnotation(bestPeaks, options = {}) {
   const emdb = new EMDB();
-
-  options = { limit: 5, precision: 100, ...options };
 
   let {
     numberDigits = 5,
@@ -110,7 +107,7 @@ export async function getPeaksAnnotation(bestPeaks, options = {}) {
         ],
       };
 
-      if (displayCharge) {
+      if (displayCharge && peak.charge !== undefined) {
         annotation.labels.push({
           text: `Z:${peak.charge}`,
           color: 'grey',

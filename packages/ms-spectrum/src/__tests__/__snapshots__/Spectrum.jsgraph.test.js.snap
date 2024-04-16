@@ -57,16 +57,6 @@ exports[`test Spectrum JSGraph > getAnnotation 1`] = `
         },
         "text": "1.00000",
       },
-      {
-        "color": "grey",
-        "position": {
-          "dx": "2px",
-          "dy": "-4px",
-          "x": 1,
-          "y": 2,
-        },
-        "text": "Z:undefined",
-      },
     ],
     "position": [
       {

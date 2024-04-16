@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-import { fromText } from '../Spectrum';
+import { fromText, Spectrum } from '../Spectrum';
 
 describe('peakPicking on Spectrum', () => {
   it('lowres2', () => {
@@ -27,5 +27,14 @@ describe('peakPicking on Spectrum', () => {
     const peaksDataXY = spectrum.getPeaksAsDataXY();
     expect(peaksDataXY.x).toHaveLength(136);
     expect(peaksDataXY.y).toHaveLength(136);
+  });
+
+  it('1e6 points', () => {
+    const data = JSON.parse(
+      readFileSync(join(__dirname, 'data/1e6.json'), 'utf8'),
+    );
+    const spectrum = new Spectrum(data);
+    const peaks = spectrum.peakPicking();
+    expect(peaks).toHaveLength(114528);
   });
 });
