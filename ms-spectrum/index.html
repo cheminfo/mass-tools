@@ -42,6 +42,18 @@
                       <li class='h5'><span>Instance members</span></li>
                       
                       <li><a
+                        href='#spectrumpeaks'
+                        class='regular pre-open'>
+                        #peaks
+                      </a></li>
+                      
+                      <li><a
+                        href='#spectrumgetselectedpeakswithcharge'
+                        class='regular pre-open'>
+                        #getSelectedPeaksWithCharge
+                      </a></li>
+                      
+                      <li><a
                         href='#spectrumgetfragmentpeaksfct'
                         class='regular pre-open'>
                         #getFragmentPeaksFct
@@ -93,9 +105,9 @@
               
                 
                 <li><a
-                  href='#neutron_mass'
+                  href='#getpeakswithcharge'
                   class="">
-                  NEUTRON_MASS
+                  getPeaksWithCharge
                   
                 </a>
                 
@@ -277,6 +289,197 @@
   
     <div class='py1 quiet mt1 prose-big'>Instance Members</div>
     <div class="clearfix">
+  
+    <div class='border-bottom' id='spectrumpeaks'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>peaks</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>someProperty is an example property that is set to <code>true</code></p>
+
+    <div class='pre p1 fill-light mt0'>peaks</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='spectrumgetselectedpeakswithcharge'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getSelectedPeaksWithCharge(selectedPeaks, options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>This is a very intensive function so better to calculate it on a selection of peaks</p>
+
+    <div class='pre p1 fill-light mt0'>getSelectedPeaksWithCharge(selectedPeaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>selectedPeaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.min</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>1</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.max</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>10</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.low</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>-1</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.high</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>1</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.precision</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>30</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
   
     <div class='border-bottom' id='spectrumgetfragmentpeaksfct'>
       <div class="clearfix small pointer toggle-sibling">
@@ -878,8 +1081,8 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='neutron_mass'>
-      NEUTRON_MASS
+    <h3 class='fl m0' id='getpeakswithcharge'>
+      getPeaksWithCharge
     </h3>
     
     
@@ -887,12 +1090,7 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
   
 
   
-    <div class='pre p1 fill-light mt0'>NEUTRON_MASS</div>
-  
-    <p>
-      Type:
-      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
-    </p>
+    <div class='pre p1 fill-light mt0'>getPeaksWithCharge(selectedPeaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, allPeaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
   
   
 
@@ -906,6 +1104,22 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
     <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>selectedPeaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>allPeaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    
+          </div>
+          
+        </div>
       
         <div class='space-bottom0'>
           <div>
@@ -928,7 +1142,7 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
             <tbody class='mt1'>
               
                 <tr>
-  <td class='break-word'><span class='code bold'>options.min</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  <td class='break-word'><span class='code bold'>options.min</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
     (default <code>1</code>)
   </td>
@@ -938,7 +1152,7 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
 
               
                 <tr>
-  <td class='break-word'><span class='code bold'>options.max</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  <td class='break-word'><span class='code bold'>options.max</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
     (default <code>10</code>)
   </td>
@@ -948,7 +1162,7 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
 
               
                 <tr>
-  <td class='break-word'><span class='code bold'>options.low</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  <td class='break-word'><span class='code bold'>options.low</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
     (default <code>-1</code>)
   </td>
@@ -958,7 +1172,7 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
 
               
                 <tr>
-  <td class='break-word'><span class='code bold'>options.high</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  <td class='break-word'><span class='code bold'>options.high</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
     (default <code>1</code>)
   </td>
@@ -968,9 +1182,9 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
 
               
                 <tr>
-  <td class='break-word'><span class='code bold'>options.precision</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  <td class='break-word'><span class='code bold'>options.precision</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
-    (default <code>100</code>)
+    (default <code>30</code>)
   </td>
   <td class='break-word'><span></span></td>
 </tr>
@@ -1147,7 +1361,7 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
 
   <p>Filter the array of peaks</p>
 
-    <div class='pre p1 fill-light mt0'>peakPicking(spectrum: <a href="#spectrum">Spectrum</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></div>
+    <div class='pre p1 fill-light mt0'>peakPicking(spectrum: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></div>
   
   
 
@@ -1164,97 +1378,9 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>spectrum</span> <code class='quiet'>(<a href="#spectrum">Spectrum</a>)</code>
-	    array of all the peaks
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
-            = <code>{}</code>)</code>
+            <span class='code bold'>spectrum</span> <code class='quiet'>(any)</code>
 	    
           </div>
-          
-          <table class='mt1 mb2 fixed-table h5 col-12'>
-            <colgroup>
-              <col width='30%' />
-              <col width='70%' />
-            </colgroup>
-            <thead>
-              <tr class='bold fill-light'>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody class='mt1'>
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>options.charge</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
-  
-    (default <code>{}</code>)
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-  
-    <tr>
-  <td class='break-word'><span class='code bold'>options.charge.min</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-  
-    (default <code>1</code>)
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-  
-    <tr>
-  <td class='break-word'><span class='code bold'>options.charge.max</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-  
-    (default <code>10</code>)
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-  
-    <tr>
-  <td class='break-word'><span class='code bold'>options.charge.low</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-  
-    (default <code>-1</code>)
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-  
-    <tr>
-  <td class='break-word'><span class='code bold'>options.charge.high</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-  
-    (default <code>1</code>)
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-  
-    <tr>
-  <td class='break-word'><span class='code bold'>options.charge.precision</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-  
-    (default <code>30</code>)
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-  
-
-
-              
-            </tbody>
-          </table>
           
         </div>
       
@@ -1267,8 +1393,7 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code>:
-        copy of peaks with 'close' annotation
-
+        
       
     
   
