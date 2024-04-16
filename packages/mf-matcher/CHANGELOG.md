@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/cheminfo/mass-tools/compare/mf-matcher@3.0.4...mf-matcher@3.1.0) (2024-04-16)
+
+
+### Features
+
+* **mf-matcher:** Add filter by minMW and maxMW for msemMatcher ([c46e3b9](https://github.com/cheminfo/mass-tools/commit/c46e3b9ff427160c59b82e8b37f01c1b1f8e3923))
+
+
+
+
+
 ## [3.0.4](https://github.com/cheminfo/mass-tools/compare/mf-matcher@3.0.3...mf-matcher@3.0.4) (2024-03-16)
 
 

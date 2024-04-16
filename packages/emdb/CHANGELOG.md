@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/cheminfo/mass-tools/compare/emdb@3.1.10...emdb@3.2.0) (2024-04-16)
+
+
+### Features
+
+* **mf-matcher:** Add filter by minMW and maxMW for msemMatcher ([c46e3b9](https://github.com/cheminfo/mass-tools/commit/c46e3b9ff427160c59b82e8b37f01c1b1f8e3923))
+
+
+
+
+
 ## [3.1.10](https://github.com/cheminfo/mass-tools/compare/emdb@3.1.9...emdb@3.1.10) (2024-03-16)
 
 

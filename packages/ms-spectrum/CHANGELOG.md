@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.4.4...ms-spectrum@3.5.0) (2024-04-16)
+
+
+### Features
+
+* **ms-spectrum:** Charge is not calcluated on peaks anymore ([#184](https://github.com/cheminfo/mass-tools/issues/184)) ([2052187](https://github.com/cheminfo/mass-tools/commit/2052187f723c9370a18a95bfbd3ab067574aa8f4))
+
+
+
+
+
 ## [3.4.4](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.4.3...ms-spectrum@3.4.4) (2024-03-16)
 
 
