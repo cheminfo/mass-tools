@@ -1,5 +1,17 @@
 # Changelog
 
+## [7.36.0](https://github.com/cheminfo/mass-tools/compare/v7.35.0...v7.36.0) (2024-05-10)
+
+
+### Features
+
+* **ms-spectrum:** Charge is not calcluated on peaks anymore ([30e045a](https://github.com/cheminfo/mass-tools/commit/30e045a20e666003150e29d22a0dcd1fa0946e6e))
+
+
+### Bug Fixes
+
+* remove __tests__ from build ([7a6587e](https://github.com/cheminfo/mass-tools/commit/7a6587e2024a4c15763d751ccbdaa65baa5351e2))
+
 ## [7.35.0](https://github.com/cheminfo/mass-tools/compare/v7.34.0...v7.35.0) (2024-04-16)
 
 
