@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.6](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.8.5...octochemdb@2.8.6) (2024-05-10)
+
+
+### Bug Fixes
+
+* remove __tests__ from build ([7a6587e](https://github.com/cheminfo/mass-tools/commit/7a6587e2024a4c15763d751ccbdaa65baa5351e2))
+
+
+
+
+
 ## [2.8.5](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.8.4...octochemdb@2.8.5) (2024-04-16)
 
 **Note:** Version bump only for package octochemdb
