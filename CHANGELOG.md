@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.36.1](https://github.com/cheminfo/mass-tools/compare/v7.36.0...v7.36.1) (2024-05-17)
+
+
+### Bug Fixes
+
+* **emdb:** update dependencies ([b4d0e44](https://github.com/cheminfo/mass-tools/commit/b4d0e44ce75d42f7bd5e29abb6d225471230202d))
+* **ms-spectrum:** update dependencies in ms-spectrum ([3aa0f80](https://github.com/cheminfo/mass-tools/commit/3aa0f807008c7094e4de499133595412025d3cca))
+
 ## [7.36.0](https://github.com/cheminfo/mass-tools/compare/v7.35.0...v7.36.0) (2024-05-10)
 
 
