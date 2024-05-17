@@ -1,6 +1,6 @@
 {
   "name": "mass-fragmentation",
-  "version": "1.9.3",
+  "version": "1.9.4",
   "description": "Code to fragment molecules",
   "main": "lib/index.js",
   "module": "src/index.js",
