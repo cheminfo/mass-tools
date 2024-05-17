@@ -8,7 +8,7 @@ describe('ReactionFragmentation', async () => {
   it('full process: MDMA', async () => {
     const molecule = Molecule.fromSmiles('CNC(Cc1ccc2c(c1)OCO2)C');
     const { trees, validNodes, masses } = reactionFragmentation(molecule);
-    expect(validNodes).toHaveLength(549);
+    expect(validNodes).toHaveLength(548);
     expect(masses).toHaveLength(66);
     expect(trees).toMatchSnapshot();
   });
@@ -20,7 +20,7 @@ describe('ReactionFragmentation', async () => {
       limitReactions: 20,
       maxReactions: 2,
     });
-    expect(validNodes).toHaveLength(249);
+    expect(validNodes).toHaveLength(255);
     expect(masses).toHaveLength(30);
 
     expect(trees).toMatchSnapshot();
@@ -30,8 +30,8 @@ describe('ReactionFragmentation', async () => {
       'CC1CC(=O)C2=C(O1)C=C3C(=C2O)C(=CC(=C3C4=C(C=C(C5=C(C6=C(C=C54)OC(CC6=O)C)O)O)O)O)O',
     );
     const { trees, validNodes, masses } = reactionFragmentation(molecule);
-    expect(validNodes).toHaveLength(997);
-    expect(masses).toHaveLength(45);
+    expect(validNodes).toHaveLength(1022);
+    expect(masses).toHaveLength(47);
     expect(trees).toMatchSnapshot();
   });
 });

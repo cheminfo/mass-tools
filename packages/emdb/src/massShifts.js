@@ -1,4 +1,4 @@
-import Regression from 'ml-regression-theil-sen';
+import { TheilSenRegression } from 'ml-regression-theil-sen';
 import { xMinValue, xMaxValue } from 'ml-spectra-processing';
 
 /**
@@ -51,7 +51,7 @@ export function massShifts(similarities, options = {}) {
     shifts.y.push(Number(datum.delta));
   });
 
-  const regression = new Regression(shifts.x, shifts.y);
+  const regression = new TheilSenRegression(shifts.x, shifts.y);
 
   let minX = xMinValue(shifts.x);
   let maxX = xMaxValue(shifts.x);

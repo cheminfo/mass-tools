@@ -32,17 +32,17 @@
     "mf-matcher": "^3.1.1",
     "mf-parser": "^3.1.1",
     "mf-utilities": "^3.1.1",
-    "ml-regression-theil-sen": "^2.0.0",
-    "ml-spectra-processing": "^14.2.2",
+    "ml-regression-theil-sen": "^3.0.0",
+    "ml-spectra-processing": "^14.5.0",
     "ms-spectrum": "^3.5.1",
     "nucleotide": "^3.0.3",
-    "openchemlib-utils": "^5.12.1",
+    "openchemlib-utils": "^5.19.1",
     "peaks-similarity": "^3.1.1",
     "peptide": "^2.1.2"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2",
-    "openchemlib": "^8.9.0",
+    "openchemlib": "^8.10.0",
     "xy-parser": "^5.0.5"
   }
 }
