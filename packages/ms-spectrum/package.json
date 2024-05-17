@@ -27,8 +27,8 @@
     "mf-utilities": "^3.1.1",
     "ml-distance": "^4.0.1",
     "ml-gsd": "^12.1.6",
-    "ml-regression-power": "^2.0.0",
-    "ml-spectra-processing": "^14.2.2",
+    "ml-regression-power": "^3.0.0",
+    "ml-spectra-processing": "^14.5.0",
     "peaks-similarity": "^3.1.1",
     "xy-parser": "^5.0.5"
   },

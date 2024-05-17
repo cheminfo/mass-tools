@@ -1,4 +1,4 @@
-import Regression from 'ml-regression-power';
+import { PowerRegression } from 'ml-regression-power';
 import { xMaxValue, xMinValue } from 'ml-spectra-processing';
 
 export function peaksWidth(peaks) {
@@ -10,10 +10,7 @@ export function peaksWidth(peaks) {
       `peaksWidth: not enough peaks (less than 2) for automatic width calculation: ${xs.length}`,
     );
   }
-  let regression = new Regression(xs, widths, {
-    computeQuality: true,
-    computeCoefficient: true,
-  });
+  let regression = new PowerRegression(xs, widths);
 
   if (isNaN(regression.A) || isNaN(regression.B)) {
     throw new Error('peaksWidth: can not calculate regression');
