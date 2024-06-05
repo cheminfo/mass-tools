@@ -1,7 +1,7 @@
 {
   "name": "mf-from-ea",
   "version": "2.0.4",
-  "description": "Find a molecular formula from a monoisotopic mass",
+  "description": "Find a molecular formula from elemental analysis results",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [

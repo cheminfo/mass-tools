@@ -3,7 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![npm download][download-image]][download-url]
 
-Find a molecular formula from the result of an elemental analysis based on a molecular formula range.
+Find a molecular formula from atomic ratio based on a molecular formula range.
 
 ## Installation
 
