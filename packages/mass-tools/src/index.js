@@ -32,6 +32,7 @@ export { generateMFs } from 'mf-generator';
 
 export { atomSorter } from 'atom-sorter';
 export { mfFromEA } from 'mf-from-ea';
+export { mfFromAtomicRatio } from 'mf-from-atomic-ratio';
 export {
   OctoChemDB,
   ActiveOrNaturalSummarizer,
