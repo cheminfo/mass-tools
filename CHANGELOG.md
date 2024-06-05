@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.37.0](https://github.com/cheminfo/mass-tools/compare/v7.36.1...v7.37.0) (2024-06-05)
+
+
+### Features
+
+* **mf-from-atomic-ratio:** New package to find f from atomic ratio. Use in XPS for example. ([06c1b3e](https://github.com/cheminfo/mass-tools/commit/06c1b3eb0f6a374af626c837b77f421a3ae98a7c))
+
 ## [7.36.1](https://github.com/cheminfo/mass-tools/compare/v7.36.0...v7.36.1) (2024-05-17)
 
 
