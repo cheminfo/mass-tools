@@ -1,0 +1,29 @@
+{
+  "name": "mf-from-atomic-ratio",
+  "version": "1.0.0",
+  "description": "Find a molecular formula from atomic ratio",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo/mass-tools.git"
+  },
+  "keywords": [],
+  "author": "Luc Patiny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo/mass-tools/issues"
+  },
+  "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/mf-from-atomic-ratio#readme",
+  "dependencies": {
+    "mf-generator": "^3.2.1",
+    "mf-parser": "^3.1.1"
+  },
+  "devDependencies": {
+    "jest-matcher-deep-close-to": "^3.0.2"
+  }
+}
