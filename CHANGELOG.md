@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.38.0](https://github.com/cheminfo/mass-tools/compare/v7.37.0...v7.38.0) (2024-06-05)
+
+
+### Features
+
+* MassTools expostes mfFromAtomicRatio ([ab787f1](https://github.com/cheminfo/mass-tools/commit/ab787f196efd6e662dc5cd29d496e5b63ffda301))
+
 ## [7.37.0](https://github.com/cheminfo/mass-tools/compare/v7.36.1...v7.37.0) (2024-06-05)
 
 
