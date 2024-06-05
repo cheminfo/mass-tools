@@ -18,7 +18,7 @@ test('basic case', async () => {
     mf: 'CH',
     mfAtomicComposition: [
       { element: 'C', count: 1, theoretical: 0.5 },
-      { element: 'H', count: 1, theoretical: 0.5 }
+      { element: 'H', count: 1, theoretical: 0.5 },
     ],
     atomicRatios: [
       {
@@ -26,18 +26,18 @@ test('basic case', async () => {
         experimental: 0.5,
         count: 1,
         theoretical: 0.5,
-        error: 0
+        error: 0,
       },
       {
         element: 'H',
         experimental: 0.5,
         count: 1,
         theoretical: 0.5,
-        error: 0
-      }
+        error: 0,
+      },
     ],
-    totalError: 0
-  })
+    totalError: 0,
+  });
 });
 
 test('More advanced case with filtering', async () => {
@@ -56,7 +56,7 @@ test('More advanced case with filtering', async () => {
     mf: 'C3O2',
     mfAtomicComposition: [
       { element: 'C', count: 3, theoretical: 0.6 },
-      { element: 'O', count: 2, theoretical: 0.4 }
+      { element: 'O', count: 2, theoretical: 0.4 },
     ],
     atomicRatios: [
       {
@@ -64,16 +64,16 @@ test('More advanced case with filtering', async () => {
         experimental: 0.6,
         count: 3,
         theoretical: 0.6,
-        error: 0
+        error: 0,
       },
       {
         element: 'O',
         experimental: 0.4,
         count: 2,
         theoretical: 0.4,
-        error: 0
-      }
+        error: 0,
+      },
     ],
-    totalError: 0
-  })
+    totalError: 0,
+  });
 });

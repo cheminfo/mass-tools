@@ -49,7 +49,7 @@ export async function mfFromAtomicRatio(ratios, options = {}) {
     unsaturation = {},
     minMW = 0,
     maxMW = +Infinity,
-    ranges = "C0-10 H0-10 O0-10 N0-10",
+    ranges = 'C0-10 H0-10 O0-10 N0-10',
     maxElementError = 0.05,
     maxTotalError = 0.1,
   } = options;
@@ -57,21 +57,22 @@ export async function mfFromAtomicRatio(ratios, options = {}) {
   const elements = Object.keys(ratios);
 
   const mfs = await generateMFs([ranges], {
-    limit: 1e7, filter: {
+    limit: 1e7,
+    filter: {
       minMW,
       maxMW,
       unsaturation,
-    }
+    },
   });
 
-  let sumComposition = 0
+  let sumComposition = 0;
   for (const element of elements) {
-    sumComposition += ratios[element]
+    sumComposition += ratios[element];
   }
 
-  const relativeComposition = {}
+  const relativeComposition = {};
   for (const element of elements) {
-    relativeComposition[element] = ratios[element] / sumComposition
+    relativeComposition[element] = ratios[element] / sumComposition;
   }
 
   for (const mf of mfs) {
@@ -81,15 +82,15 @@ export async function mfFromAtomicRatio(ratios, options = {}) {
   const filteredMFs = [];
   mfFor: for (const mf of mfs) {
     if (mf.nbCompositionAtoms === 0) {
-      continue
+      continue;
     }
     mf.totalError = 0;
-    const atomicRatios = []
+    const atomicRatios = [];
     for (const element of elements) {
-      const error = mf.atomicRatio[element] - relativeComposition[element]
+      const error = mf.atomicRatio[element] - relativeComposition[element];
       let absError = Math.abs(error);
       if (absError > maxElementError) {
-        continue mfFor
+        continue mfFor;
       }
       mf.totalError += absError;
       atomicRatios.push({
@@ -98,10 +99,10 @@ export async function mfFromAtomicRatio(ratios, options = {}) {
         count: mf.atoms[element] || 0,
         theoretical: relativeComposition[element],
         error,
-      })
+      });
     }
     if (mf.totalError > maxTotalError) {
-      continue
+      continue;
     }
     filteredMFs.push({
       em: mf.em,
@@ -110,23 +111,23 @@ export async function mfFromAtomicRatio(ratios, options = {}) {
       mfAtomicComposition: getMFAtomicComposition(mf.atoms),
       atomicRatios,
       totalError: mf.totalError,
-    })
+    });
   }
   filteredMFs.sort((a, b) => Math.abs(a.totalError) - Math.abs(b.totalError));
-  return filteredMFs
+  return filteredMFs;
 }
 
 function getMFAtomicComposition(atoms) {
-  const nbAtoms = Object.values(atoms).reduce((acc, val) => acc + val, 0)
+  const nbAtoms = Object.values(atoms).reduce((acc, val) => acc + val, 0);
   const composition = [];
   for (const [element, count] of Object.entries(atoms)) {
     composition.push({
       element,
       count,
       theoretical: count / nbAtoms,
-    })
+    });
   }
-  return composition
+  return composition;
 }
 
 function appendInfo(mf, elements) {
