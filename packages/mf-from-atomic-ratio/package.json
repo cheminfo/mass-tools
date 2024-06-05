@@ -1,6 +1,6 @@
 {
   "name": "mf-from-atomic-ratio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Find a molecular formula from atomic ratio",
   "main": "lib/index.js",
   "module": "src/index.js",
