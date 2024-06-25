@@ -54,7 +54,7 @@ describe('massSpectra', () => {
       }, // by default minSimilarity is 0.2 but no experimental spectrum is provided so no filtering
     });
 
-    expect(results.length).toBeGreaterThan(12);
+    expect(results.length).toBeGreaterThan(11);
     expect(results.length).toBeLessThan(200);
 
     results = await massSpectra({

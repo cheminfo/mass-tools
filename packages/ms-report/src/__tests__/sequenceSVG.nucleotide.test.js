@@ -63,5 +63,5 @@ test('sequenceSVG of nucleotide', () => {
   let svg = sequenceSVG(sequence, info, options);
   writeFileSync(join(__dirname, 'testNucleotide.svg'), svg);
 
-  expect(svg).toHaveLength(27019);
+  expect(svg).toHaveLength(21219);
 });

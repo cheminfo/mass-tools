@@ -452,7 +452,7 @@ exports[`ActiveOrNaturalSummarizer > empty terms 1`] = `
           "em": 193.11027872702,
           "mf": "C11H15NO2",
           "ocl": {
-            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
+            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
@@ -484,7 +484,7 @@ exports[`ActiveOrNaturalSummarizer > empty terms 1`] = `
           "em": 193.11027872702,
           "mf": "C11H15NO2",
           "ocl": {
-            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
+            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
@@ -597,7 +597,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjbbT@",
             "index": [
@@ -699,7 +699,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "index": [
@@ -801,7 +801,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
             "index": [
@@ -842,7 +842,7 @@ M  END
     "nbPubmeds": 73,
     "nbTaxonomies": 5,
     "noStereoOCL": {
-      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\\\Bm?vw__x@m?p",
+      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\Bm?vw__x@m?p",
       "idCode": "dg~D@MBdin]V^G[hHBjb@@",
     },
     "patents": [
@@ -1610,7 +1610,7 @@ exports[`ActiveOrNaturalSummarizer > empty terms, no options 1`] = `
           "em": 193.11027872702,
           "mf": "C11H15NO2",
           "ocl": {
-            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
+            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
@@ -1642,7 +1642,7 @@ exports[`ActiveOrNaturalSummarizer > empty terms, no options 1`] = `
           "em": 193.11027872702,
           "mf": "C11H15NO2",
           "ocl": {
-            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
+            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
@@ -1755,7 +1755,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjbbT@",
             "index": [
@@ -1857,7 +1857,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "index": [
@@ -1959,7 +1959,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
             "index": [
@@ -2000,7 +2000,7 @@ M  END
     "nbPubmeds": 73,
     "nbTaxonomies": 5,
     "noStereoOCL": {
-      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\\\Bm?vw__x@m?p",
+      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\Bm?vw__x@m?p",
       "idCode": "dg~D@MBdin]V^G[hHBjb@@",
     },
     "patents": [
@@ -2769,7 +2769,7 @@ exports[`ActiveOrNaturalSummarizer > multiple terms 2`] = `
           "em": 193.11027872702,
           "mf": "C11H15NO2",
           "ocl": {
-            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
+            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
@@ -2801,7 +2801,7 @@ exports[`ActiveOrNaturalSummarizer > multiple terms 2`] = `
           "em": 193.11027872702,
           "mf": "C11H15NO2",
           "ocl": {
-            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
+            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
@@ -2914,7 +2914,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjbbT@",
             "index": [
@@ -3016,7 +3016,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "index": [
@@ -3118,7 +3118,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
             "index": [
@@ -3159,7 +3159,7 @@ M  END
     "nbPubmeds": 73,
     "nbTaxonomies": 5,
     "noStereoOCL": {
-      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\\\Bm?vw__x@m?p",
+      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\Bm?vw__x@m?p",
       "idCode": "dg~D@MBdin]V^G[hHBjb@@",
     },
     "patents": [
@@ -4063,7 +4063,7 @@ exports[`ActiveOrNaturalSummarizer > taxonomies Bis 1`] = `
         ],
         "cid": "177744",
         "ocl": {
-          "coordinates": "!B?\`BH@k\\\\BbGw~@Ox@m?vH?K_|bOrw?K_|?\`C~@Ox@m?vw_[mTb@Jw@k\\\\BtmBYpK]}",
+          "coordinates": "!B?\`BH@k\\BbGw~@Ox@m?vH?K_|bOrw?K_|?\`C~@Ox@m?vw_[mTb@Jw@k\\BtmBYpK]}",
           "idCode": "fiwaP@B@bdoTfYeeUWmUYIUcA}eoV\`@@@BbjhB@@",
           "noStereoTautomerID": "fiwaP@B@bdoTfYeeUWmUYIUcA}eoV\`@@@BbjhB@@",
         },
@@ -5572,7 +5572,7 @@ exports[`ActiveOrNaturalSummarizer > terms:Apoptosis 2`] = `
           "em": 193.11027872702,
           "mf": "C11H15NO2",
           "ocl": {
-            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
+            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
@@ -5604,7 +5604,7 @@ exports[`ActiveOrNaturalSummarizer > terms:Apoptosis 2`] = `
           "em": 193.11027872702,
           "mf": "C11H15NO2",
           "ocl": {
-            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
+            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
@@ -5717,7 +5717,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjbbT@",
             "index": [
@@ -5819,7 +5819,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "index": [
@@ -5921,7 +5921,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
             "index": [
@@ -5962,7 +5962,7 @@ M  END
     "nbPubmeds": 73,
     "nbTaxonomies": 5,
     "noStereoOCL": {
-      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\\\Bm?vw__x@m?p",
+      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\Bm?vw__x@m?p",
       "idCode": "dg~D@MBdin]V^G[hHBjb@@",
     },
     "patents": [],
@@ -6761,7 +6761,7 @@ exports[`ActiveOrNaturalSummarizer > terms:ethylene 1`] = `
           "em": 193.11027872702,
           "mf": "C11H15NO2",
           "ocl": {
-            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
+            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
@@ -6793,7 +6793,7 @@ exports[`ActiveOrNaturalSummarizer > terms:ethylene 1`] = `
           "em": 193.11027872702,
           "mf": "C11H15NO2",
           "ocl": {
-            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
+            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
@@ -6906,7 +6906,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjbbT@",
             "index": [
@@ -7008,7 +7008,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "index": [
@@ -7110,7 +7110,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
             "index": [
@@ -7151,7 +7151,7 @@ M  END
     "nbPubmeds": 73,
     "nbTaxonomies": 5,
     "noStereoOCL": {
-      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\\\Bm?vw__x@m?p",
+      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\Bm?vw__x@m?p",
       "idCode": "dg~D@MBdin]V^G[hHBjb@@",
     },
     "patents": [
@@ -7636,7 +7636,7 @@ exports[`ActiveOrNaturalSummarizer > terms:inhibition 2`] = `
           "em": 193.11027872702,
           "mf": "C11H15NO2",
           "ocl": {
-            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
+            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
@@ -7668,7 +7668,7 @@ exports[`ActiveOrNaturalSummarizer > terms:inhibition 2`] = `
           "em": 193.11027872702,
           "mf": "C11H15NO2",
           "ocl": {
-            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
+            "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
@@ -7781,7 +7781,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjbbT@",
             "index": [
@@ -7883,7 +7883,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjb@@",
             "index": [
@@ -7985,7 +7985,7 @@ M  END
           "nbFragments": 1,
           "ocl": {
             "acceptorCount": 3,
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "donorCount": 2,
             "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
             "index": [
@@ -8026,7 +8026,7 @@ M  END
     "nbPubmeds": 73,
     "nbTaxonomies": 5,
     "noStereoOCL": {
-      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\\\Bm?vw__x@m?p",
+      "coordinates": "!Bm?vH?_y?mpJH_[_}m?vw@k\\Bm?vw__x@m?p",
       "idCode": "dg~D@MBdin]V^G[hHBjb@@",
     },
     "patents": [],

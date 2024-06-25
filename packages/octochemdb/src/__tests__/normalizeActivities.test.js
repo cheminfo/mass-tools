@@ -45,7 +45,7 @@ describe('normalizeActivities', () => {
           "assay": "qHTS Assay for Spectroscopic Profiling in 4-MU Spectral Region",
           "cid": 442356,
           "ocl": {
-            "coordinates": "!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
             "noStereoID": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },

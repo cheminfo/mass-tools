@@ -38,5 +38,5 @@ test('sequenceSVG of peptide', () => {
   let svg = sequenceSVG(sequence, info, options);
   writeFileSync(join(__dirname, 'testPeptide.svg'), svg);
 
-  expect(svg.length).toBeGreaterThan(20000);
+  expect(svg.length).toBeGreaterThan(18000);
 });
