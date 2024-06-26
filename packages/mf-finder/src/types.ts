@@ -1,7 +1,7 @@
-export type MFFinderOptions = {
+export interface MFFinderOptions {
   /**
    * Maximum number of iterations
-   * @default 10000000
+   * @default 10_000_000
    */
   maxIterations?: number;
   /**
@@ -18,11 +18,11 @@ export type MFFinderOptions = {
    */
   limit?: number;
   /**
-   *  string containing a comma separated list of modifications
+   * String containing a comma separated list of modifications
    */
-  ionizations?: string;
+  ionizations?: string | Array<{ mf: string; min: number; max: number }>;
   /**
-   * range of mfs to search
+   * Range of mfs to search
    * @default 'C0-100 H0-100 O0-100 N0-100'
    */
   ranges?: string;
@@ -31,57 +31,62 @@ export type MFFinderOptions = {
    */
   precision?: number;
   filter?: MFrFilter;
-};
+}
 
-export type MFrFilter = {
+export interface MFrFilter {
   /**
-   * Minimal charge
+   * Minimal charge.
    * @default Number.NEGATIVE_INFINITY
    */
-  minCharge: number;
+  minCharge?: number;
   /**
-   * Maximal charge
+   * Maximal charge.
    * @default Number.POSITIVE_INFINITY
    */
-  maxCharge: number;
-  unsaturation: UnsaturationFilter;
-};
+  maxCharge?: number;
+  /**
+   * If true, the charge is absolute (so between 0 and +Infinity by default).
+   * @default false
+   */
+  absoluteCharge?: boolean;
+  unsaturation?: UnsaturationFilter;
+}
 
-export type UnsaturationFilter = {
+export interface UnsaturationFilter {
   /**
    * Minimal unsaturation
    * @default Number.NEGATIVE_INFINITY
    */
-  min: number;
+  min?: number;
   /**
    * Maximal unsaturation
    * @default Number.POSTIVE_INFINITY
    */
-  max: number;
+  max?: number;
   /**
    * Integer unsaturation
    * @default false
    */
-  onlyInteger: boolean;
+  onlyInteger?: boolean;
   /**
    * Non integer unsaturation
    * @default false
    */
-  onlyNonInteger: boolean;
+  onlyNonInteger?: boolean;
   /**
-   * object of atom:{min, max}
+   * Object of atom:{min, max}.
    */
-  atoms: Recoard<string, { min: number; max: number }>;
+  atoms?: Record<string, { min: number; max: number }>;
   /**
-   * a function to filter the MF
+   * A function to filter the MF.
    */
-  callback: function;
-};
+  callback?: (...args: any[]) => any;
+}
 
-type MFResult = {
+export interface MFResult {
   em: number;
   unsaturation: number;
-  mf: stirng;
+  mf: string;
   charge: number;
   ionization?: {
     mf: string;
@@ -98,9 +103,4 @@ type MFResult = {
     delta: number;
     ppm: number;
   };
-};
-
-export function findMFs(
-  targetMass: number,
-  options?: MFFinderOptions,
-): MFResult[];
+}
