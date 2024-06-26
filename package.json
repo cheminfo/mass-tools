@@ -15,8 +15,8 @@
     "build": "cheminfo-build --out-name mass-tools --entry packages/mass-tools/src/index.js -r MassTools",
     "build-docs": "npm run build-toc && ls packages | xargs -I % sh -c 'cd packages/%; documentation build src/index.js -f html -o ../../docs/%; cd ../..'",
     "build-toc": "node ./src/docs/buildDocs.mjs",
-    "build-lerna": "npm run build-lerna-clean && lerna exec -- rollup -c ../../rollup.config.js",
-    "build-lerna-clean": "rimraf ./packages/*/lib/",
+    "build-lerna": "npm run build-lerna-clean && npm run tsc",
+    "build-lerna-clean": "npm run tsc -- --clean",
     "eslint": "eslint packages --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "postinstall": "cp README.md packages/mass-tools/README.md",
@@ -24,7 +24,8 @@
     "prettier-write": "prettier --write .",
     "publish": "npm run build-lerna && npm run test && lerna publish -y --no-verify-access",
     "test": "npm run test-only && npm run eslint && npm run prettier",
-    "test-only": "npm run build-lerna && vitest --test-timeout=30000 --globals --coverage"
+    "test-only": "npm run build-lerna && vitest --run --test-timeout=30000 --globals",
+    "tsc": "tsc --build"
   },
   "repository": {
     "type": "git",
@@ -39,7 +40,7 @@
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.24.7",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.14.8",
+    "@types/node": "^20.14.9",
     "@vitest/coverage-v8": "^1.6.0",
     "benchmark": "^2.1.4",
     "cheminfo-build": "^1.2.0",
@@ -51,6 +52,7 @@
     "msw": "^2.3.1",
     "prettier": "^3.3.2",
     "rimraf": "^5.0.7",
+    "typescript": "^5.5.2",
     "vitest": "^1.6.0"
   }
 }
