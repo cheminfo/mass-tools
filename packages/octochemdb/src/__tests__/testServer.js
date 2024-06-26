@@ -1,35 +1,35 @@
 import { readFile, stat } from 'fs/promises';
 import { join } from 'path';
 
-import { rest } from 'msw';
+import { http } from 'msw';
 import { setupServer } from 'msw/node';
 
 export const server = setupServer(
-  rest.get(`http://localhost/data*`, async (req, res, ctx) => {
-    const pathname = join(__dirname, req.url.pathname);
+  http.get(`http://localhost/data*`, async ({ request }) => {
+    const url = new URL(request.url);
+    const pathname = join(__dirname, url.pathname);
     const pathnameStat = await stat(pathname);
     if (pathnameStat.isFile()) {
       const data = await readFile(pathname);
       const jsonContent = JSON.parse(data.toString());
-      if (req.url.pathname.includes('activesOrNaturals')) {
-        if (req.url.searchParams.get('noStereoTautomerID')) {
+      if (url.pathname.includes('activesOrNaturals')) {
+        if (url.searchParams.get('noStereoTautomerID')) {
           let filteredContent = jsonContent.filter(
-            (item) =>
-              item._id === req.url.searchParams.get('noStereoTautomerID'),
+            (item) => item._id === url.searchParams.get('noStereoTautomerID'),
           );
-          return res(ctx.json({ data: filteredContent }));
+          return new Response(JSON.stringify({ data: filteredContent }));
         }
 
-        return res(ctx.json({ data: jsonContent }));
-      } else if (req.url.pathname.includes('compoundsFromMF')) {
-        const mf = req.url.searchParams.get('mf');
+        return new Response(JSON.stringify({ data: jsonContent }));
+      } else if (url.pathname.includes('compoundsFromMF')) {
+        const mf = url.searchParams.get('mf');
         const filteredContent = jsonContent.data.filter(
           (item) => item.data.mf === mf,
         );
-        return res(ctx.json({ data: filteredContent }));
-      } else if (req.url.pathname.includes('activeOrNaturalDetails')) {
-        const id = req.url.searchParams.get('id');
-        const fields = req.url.searchParams.get('fields');
+        return new Response(JSON.stringify({ data: filteredContent }));
+      } else if (url.pathname.includes('activeOrNaturalDetails')) {
+        const id = url.searchParams.get('id');
+        const fields = url.searchParams.get('fields');
         const fieldsArray = fields?.split(',');
         const filteredContent = jsonContent.filter(
           (item) => item.data._id === id,
@@ -47,7 +47,7 @@ export const server = setupServer(
           }
         });
 
-        return res(ctx.json({ _id: id, data: filteredItem }));
+        return new Response(JSON.stringify({ _id: id, data: filteredItem }));
       }
     } else {
       throw new Error(`unknown path: ${pathname}`);

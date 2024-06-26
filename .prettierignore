@@ -8,3 +8,4 @@ node_modules
 CHANGELOG.md
 lib
 1e6.json
+/.nx/workspace-data

@@ -61,7 +61,7 @@ test('activeOrNaturalDetails', async () => {
       "data": {
         "assay": "Potency = 12589.3 nM",
         "ocl": {
-          "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p",
+          "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
           "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
           "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
         },
