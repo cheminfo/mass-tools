@@ -40,7 +40,7 @@
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.24.7",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.14.8",
+    "@types/node": "^20.14.9",
     "@vitest/coverage-v8": "^1.6.0",
     "benchmark": "^2.1.4",
     "cheminfo-build": "^1.2.0",
