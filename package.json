@@ -24,7 +24,8 @@
     "prettier-write": "prettier --write .",
     "publish": "npm run build-lerna && npm run test && lerna publish -y --no-verify-access",
     "test": "npm run test-only && npm run eslint && npm run prettier",
-    "test-only": "npm run build-lerna && vitest --test-timeout=30000 --globals --coverage"
+    "test-only": "npm run build-lerna && vitest --test-timeout=30000 --globals --coverage",
+    "tsc": "tsc --build"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "msw": "^2.3.1",
     "prettier": "^3.3.2",
     "rimraf": "^5.0.7",
+    "typescript": "^5.5.2",
     "vitest": "^1.6.0"
   }
 }

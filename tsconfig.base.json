@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": ["es2023"],
+    "target": "es2023",
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "declaration": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+}

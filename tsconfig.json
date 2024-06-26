@@ -1,0 +1,74 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/atom-sorter/tsconfig.json"
+    },
+    {
+      "path": "./packages/chemical-elements/tsconfig.json"
+    },
+    {
+      "path": "./packages/chemical-groups/tsconfig.json"
+    },
+    {
+      "path": "./packages/emdb/tsconfig.json"
+    },
+    {
+      "path": "./packages/isotopic-distribution/tsconfig.json"
+    },
+    {
+      "path": "./packages/mass-fragmentation/tsconfig.json"
+    },
+    {
+      "path": "./packages/mass-tools/tsconfig.json"
+    },
+    {
+      "path": "./packages/mf-finder/tsconfig.json"
+    },
+    {
+      "path": "./packages/mf-from-atomic-ratio/tsconfig.json"
+    },
+    {
+      "path": "./packages/mf-from-ea/tsconfig.json"
+    },
+    {
+      "path": "./packages/mf-from-google-sheet/tsconfig.json"
+    },
+    {
+      "path": "./packages/mf-generator/tsconfig.json"
+    },
+    {
+      "path": "./packages/mf-global/tsconfig.json"
+    },
+    {
+      "path": "./packages/mf-matcher/tsconfig.json"
+    },
+    {
+      "path": "./packages/mf-parser/tsconfig.json"
+    },
+    {
+      "path": "./packages/mf-utilities/tsconfig.json"
+    },
+    {
+      "path": "./packages/mfs-deconvolution/tsconfig.json"
+    },
+    {
+      "path": "./packages/ms-report/tsconfig.json"
+    },
+    {
+      "path": "./packages/ms-spectrum/tsconfig.json"
+    },
+    {
+      "path": "./packages/nucleotide/tsconfig.json"
+    },
+    {
+      "path": "./packages/number-treemap/tsconfig.json"
+    },
+    {
+      "path": "./packages/octochemdb/tsconfig.json"
+    },
+    {
+      "path": "./packages/peptide/tsconfig.json"
+    }
+  ]
+}
