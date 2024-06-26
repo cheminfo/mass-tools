@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/cheminfo/mass-tools/compare/peptide@2.1.2...peptide@2.2.0) (2024-06-26)
+
+
+### Features
+
+* generate TS typings from jsdoc ([#196](https://github.com/cheminfo/mass-tools/issues/196)) ([c6ca610](https://github.com/cheminfo/mass-tools/commit/c6ca610976e04d851420f8b65d8220d39f64a83b))
+
+
+
+
+
 ## [2.1.2](https://github.com/cheminfo/mass-tools/compare/peptide@2.1.1...peptide@2.1.2) (2024-05-10)
 
 

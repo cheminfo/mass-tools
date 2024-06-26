@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/cheminfo/mass-tools/compare/mfs-deconvolution@2.3.13...mfs-deconvolution@2.4.0) (2024-06-26)
+
+
+### Bug Fixes
+
+* update dependencies ([#194](https://github.com/cheminfo/mass-tools/issues/194)) ([70b3dab](https://github.com/cheminfo/mass-tools/commit/70b3dab62fefbec18b05dee6fc1694f72665c390))
+
+
+### Features
+
+* generate TS typings from jsdoc ([#196](https://github.com/cheminfo/mass-tools/issues/196)) ([c6ca610](https://github.com/cheminfo/mass-tools/commit/c6ca610976e04d851420f8b65d8220d39f64a83b))
+
+
+
+
+
 ## [2.3.13](https://github.com/cheminfo/mass-tools/compare/mfs-deconvolution@2.3.12...mfs-deconvolution@2.3.13) (2024-05-17)
 
 **Note:** Version bump only for package mfs-deconvolution
