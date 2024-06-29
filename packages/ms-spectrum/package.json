@@ -1,6 +1,6 @@
 {
   "name": "ms-spectrum",
-  "version": "3.6.0",
+  "version": "3.6.1",
   "description": "A mass spectrum",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -21,7 +21,7 @@
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/emdb#readme",
   "dependencies": {
     "cheminfo-types": "^1.7.3",
-    "emdb": "^3.3.0",
+    "emdb": "^3.3.1",
     "is-any-array": "^2.0.1",
     "mf-parser": "^3.2.0",
     "mf-utilities": "^3.2.0",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.6.1](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.6.0...ms-spectrum@3.6.1) (2024-06-29)
+
+
+### Bug Fixes
+
+* remove dependency on ml-distance ([#198](https://github.com/cheminfo/mass-tools/issues/198)) ([2009cae](https://github.com/cheminfo/mass-tools/commit/2009caeeca901278a8bb9d4bfd9e3740a8147ad1))
+
+
+
+
+
 # [3.6.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.5.2...ms-spectrum@3.6.0) (2024-06-26)
 
 
