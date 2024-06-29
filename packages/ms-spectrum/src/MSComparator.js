@@ -1,4 +1,3 @@
-import { similarity } from 'ml-distance';
 import {
   xIsMonotonic,
   xyArrayAlign,
@@ -145,14 +144,14 @@ function normalizeAndCacheData(cache, dataXY, options = {}) {
 }
 
 /**
- * 
- * @param {*} aligned 
+ *
+ * @param {*} aligned
  * @param {object} [options={}]
  * @param {number} [options.massPower]
  * @param {number} [options.intensityPower]
  * @param {number} [options.minNbCommonPeaks]
 
- * @returns 
+ * @returns
  */
 function returnSimilarity(aligned, options = {}) {
   const { massPower, intensityPower, minNbCommonPeaks } = options;
@@ -194,6 +193,25 @@ function returnSimilarity(aligned, options = {}) {
     nbPeaks1,
     nbPeaks2,
     tanimoto: nbCommonPeaks / (nbPeaks1 + nbPeaks2 - nbCommonPeaks),
-    cosine: similarity.cosine(vector1, vector2),
+    cosine: cosineSimilarity(vector1, vector2),
   };
+}
+
+/**
+ * Returns the average of cosine distances between vectors a and b
+ * Copied from https://github.com/mljs/distance/blob/0b15acd6476413f4111cb4852ca1bec9edaa2805/src/similarities/cosine.ts
+ * @param a {import('cheminfo-types').NumberArray} - first vector
+ * @param b {import('cheminfo-types').NumberArray} - second vector
+ * @returns {number} - cosine similarity
+ */
+function cosineSimilarity(a, b) {
+  let p = 0;
+  let p2 = 0;
+  let q2 = 0;
+  for (let i = 0; i < a.length; i++) {
+    p += a[i] * b[i];
+    p2 += a[i] * a[i];
+    q2 += b[i] * b[i];
+  }
+  return p / (Math.sqrt(p2) * Math.sqrt(q2));
 }

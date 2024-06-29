@@ -25,7 +25,6 @@
     "is-any-array": "^2.0.1",
     "mf-parser": "^3.2.0",
     "mf-utilities": "^3.2.0",
-    "ml-distance": "^4.0.1",
     "ml-gsd": "^12.1.6",
     "ml-regression-power": "^3.0.0",
     "ml-spectra-processing": "^14.5.1",
