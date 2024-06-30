@@ -27,7 +27,7 @@ export const MSComparator = SpectrumPkg.MSComparator;
 export const getBestPeaks = SpectrumPkg.getBestPeaks;
 
 export { MF, ensureCase } from 'mf-parser';
-export { preprocessRanges, getRangesForFragment } from 'mf-utilities';
+export { preprocessRanges, getRangesForFragment, preprocessIonizations } from 'mf-utilities';
 export { generateMFs } from 'mf-generator';
 
 export { atomSorter } from 'atom-sorter';
