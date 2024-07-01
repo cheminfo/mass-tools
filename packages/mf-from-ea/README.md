@@ -12,7 +12,7 @@ Find a molecular formula from the result of an elemental analysis based on a mol
 ## Usage
 
 ```js
-const { mfFromEA } = requier('mf-from-ea');
+const { mfFromEA } = require('mf-from-ea');
 
 let result = mfFromEA(
   { C: 0.8, H: 0.2 }, // elemental analysis result: 80% C, 20% H

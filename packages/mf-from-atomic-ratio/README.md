@@ -12,7 +12,7 @@ Find a molecular formula from atomic ratio based on a molecular formula range.
 ## Usage
 
 ```js
-const { mfFromAtomicRatio } = requier('mf-from-atomic-ratio');
+const { mfFromAtomicRatio } = require('mf-from-atomic-ratio');
 
 const mfs = await mfFromAtomicRatio(
   { C: 3, O: 2 },
