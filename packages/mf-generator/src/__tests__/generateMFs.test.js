@@ -278,6 +278,14 @@ describe('generateMFs', () => {
     expect(counter).toBe(3);
   });
 
+  it('Just an array of real MF', async () => {
+    const mfsArray = [['C', 'C2', 'C3']];
+    const entries = await generateMFs(mfsArray, {
+      ionizations: 'H+,(H+)2',
+    });
+    expect(entries).toHaveLength(6);
+  });
+
   it.skip('check range optimisation', async () => {
     let mfsArray = ['C0-10H0-10C0-10H0-10C0-10'];
     let counter = 0;
