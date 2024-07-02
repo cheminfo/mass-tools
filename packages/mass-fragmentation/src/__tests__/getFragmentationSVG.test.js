@@ -1,5 +1,3 @@
-import { writeFileSync } from 'fs';
-
 import OCL, { Molecule } from 'openchemlib';
 
 import { getFragmentationSVG } from '../getFragmentationSVG';
@@ -22,7 +20,5 @@ test('getFragmentationSVG', () => {
     accuracy: 50,
   });
 
-  // could be previewed on https://www.svgviewer.dev/
-  writeFileSync('/tmp/test.svg', svg, 'utf8');
-  return svg;
+  expect(svg).toMatchSnapshot();
 });

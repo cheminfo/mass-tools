@@ -2,7 +2,7 @@ import { aminoAcids } from './aminoAcids';
 import * as IEP from './isoElectricPoint';
 import { splitPeptide } from './splitPeptide.js';
 
-export * from './allowNeutralLoss';
+export * from './allowNeutralLoss.js';
 export * from './chargePeptide.js';
 export * from './sequenceToMF.js';
 export * from './generatePeptideFragments.js';

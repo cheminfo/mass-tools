@@ -46,13 +46,14 @@
     "cheminfo-build": "^1.2.0",
     "documentation": "^14.0.3",
     "eslint": "^8.54.0",
-    "eslint-config-cheminfo": "^9.2.0",
+    "eslint-config-cheminfo": "^11.0.2",
+    "globals": "^15.8.0",
     "jest-matcher-deep-close-to": "^3.0.2",
     "lerna": "^8.1.5",
     "msw": "^2.3.1",
     "prettier": "^3.3.2",
     "rimraf": "^5.0.7",
-    "typescript": "^5.5.2",
+    "typescript": "^5.5.3",
     "vitest": "^1.6.0"
   }
 }
