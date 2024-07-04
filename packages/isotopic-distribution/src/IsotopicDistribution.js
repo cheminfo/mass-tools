@@ -332,6 +332,8 @@ export class IsotopicDistribution {
    * @param {number} [options.threshold=0.00001] // minimal height to return point
    * @param {number} [options.maxLength=1e6] // minimal height to return point
    * @param {number} [options.maxValue] // rescale Y to reach maxValue
+   * @param {number} [options.from] // minimal x value, default to the first point - 2
+   * @param {number} [options.to] // maximal x value, default to the last point + 2
    * @param {function} [options.peakWidthFct=(mz)=>(this.fwhm)]
    * @return {XY} isotopic distribution as an object containing 2 properties: x:[] and y:[]
    */
