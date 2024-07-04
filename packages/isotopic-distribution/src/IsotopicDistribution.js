@@ -328,7 +328,7 @@ export class IsotopicDistribution {
   /**
    * Returns the isotopic distribution as the sum of gaussian
    * @param {object} [options={}]
-   * @param {number} [options.gaussianWidth=10]
+   * @param {number} [options.gaussianWidth=10] // how good should look the gaussian ? By default we take 10 times the fwhm as number of points
    * @param {number} [options.threshold=0.00001] // minimal height to return point
    * @param {number} [options.maxLength=1e6] // minimal height to return point
    * @param {number} [options.maxValue] // rescale Y to reach maxValue
