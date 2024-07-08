@@ -1,13 +1,16 @@
 import { Kind } from '../Kind.js';
 
+/** @typedef {Record<string, number>} AtomsMap */
+
 /**
- * Convert a MF part to an array of atoms
+ * Convert a MF part to a map of atoms
  * This procedure will suppress the isotopes !
  * This is mainly used to make queries
+ * @returns {AtomsMap}
  */
-
 export function partToAtoms(part) {
-  let atoms = {};
+  /** @type {AtomsMap} */
+  const atoms = {};
   for (let line of part) {
     switch (line.kind) {
       case Kind.ISOTOPE:

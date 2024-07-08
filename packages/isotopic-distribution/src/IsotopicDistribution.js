@@ -8,31 +8,22 @@ import { getDerivedCompositionInfo } from './utils/getDerivedCompositionInfo';
 
 const MINIMAL_FWHM = 1e-8;
 
-/**
- * An object containing two arrays
- * @typedef {object} XY
- * @property {number[]} x - The x array
- * @property {number[]} y - The y array
- */
+/** @typedef {import('mf-parser').IsotopesInfo} IsotopesInfo */
+/** @typedef {import('mf-parser').PartInfo} PartInfo */
+
+/** @typedef {import('./IsotopicDistribution.types').XY} XY */
+/** @typedef {import('./IsotopicDistribution.types').IsotopicDistributionPart} IsotopicDistributionPart */
+/** @typedef {import('./IsotopicDistribution.types').IsotopicDistributionOptions} IsotopicDistributionOptions */
 
 /**
  * A class that allows to manage isotopic distribution
  */
 export class IsotopicDistribution {
   /**
-   * Class that manage isotopic distribution
-   * @param {string|array} value - Molecular formula or an array of parts
-   * @param {object} [options={}]
-   * @param {string} [options.ionizations=''] - string containing a comma separated list of modifications
-   * @param {number} [options.fwhm=0.01] - Amount of Dalton under which 2 peaks are joined
-   * @param {number} [options.maxLines=5000] - Maximal number of lines during calculations
-   * @param {number} [options.minY=1e-8] - Minimal signal height during calculations
-   * @param {boolean} [options.ensureCase=false] - Ensure uppercase / lowercase
-   * @param {number} [options.threshold] - We can filter the result based on the relative height of the peaks
-   * @param {number} [options.limit] - We may define the maximum number of peaks to keep
-   * @param {boolean} [options.allowNeutral=true] - Should we keep the distribution if the molecule has no charge
+   * Class that manages isotopic distribution
+   * @param {string|Array<any>} value - Molecular formula or an array of parts.
+   * @param {IsotopicDistributionOptions} [options]
    */
-
   constructor(value, options = {}) {
     this.threshold = options.threshold;
     this.limit = options.limit;
@@ -47,8 +38,9 @@ export class IsotopicDistribution {
     } else {
       let mf = new MF(value, { ensureCase: options.ensureCase });
       let mfInfo = mf.getInfo();
-      let ionizations = preprocessIonizations(options.ionizations);
-      let parts = mfInfo.parts || [mfInfo];
+      const ionizations = preprocessIonizations(options.ionizations);
+      /** @type {PartInfo} */
+      const parts = 'parts' in mfInfo ? mfInfo.parts : [mfInfo];
       this.parts = [];
       for (let partOriginal of parts) {
         // we calculate information for each part
@@ -79,6 +71,9 @@ export class IsotopicDistribution {
       options.allowNeutral === undefined ? true : options.allowNeutral;
   }
 
+  /**
+   * @returns {Array<IsotopicDistributionPart>}
+   */
   getParts() {
     return this.parts;
   }

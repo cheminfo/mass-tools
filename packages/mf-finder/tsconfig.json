@@ -4,6 +4,24 @@
   "exclude": ["**/__tests__"],
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "lib"
-  }
+    "outDir": "lib",
+    "composite": true
+  },
+  "references": [
+    {
+      "path": "../atom-sorter"
+    },
+    {
+      "path": "../chemical-elements"
+    },
+    {
+      "path": "../mf-matcher"
+    },
+    {
+      "path": "../mf-parser"
+    },
+    {
+      "path": "../mf-utilities"
+    }
+  ]
 }

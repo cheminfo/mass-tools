@@ -2,12 +2,6 @@
   "name": "mass-tools",
   "private": true,
   "version": "7.39.1",
-  "main": "lib/index.js",
-  "module": "src/index.js",
-  "files": [
-    "src",
-    "lib"
-  ],
   "workspaces": [
     "packages/*"
   ],

@@ -4,6 +4,60 @@
   "exclude": ["**/__tests__"],
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "lib"
-  }
+    "outDir": "lib",
+    "composite": true
+  },
+  "references": [
+    {
+      "path": "../atom-sorter"
+    },
+    {
+      "path": "../chemical-elements"
+    },
+    {
+      "path": "../chemical-groups"
+    },
+    {
+      "path": "../emdb"
+    },
+    {
+      "path": "../isotopic-distribution"
+    },
+    {
+      "path": "../mass-fragmentation"
+    },
+    {
+      "path": "../mf-from-atomic-ratio"
+    },
+    {
+      "path": "../mf-from-ea"
+    },
+    {
+      "path": "../mf-generator"
+    },
+    {
+      "path": "../mf-parser"
+    },
+    {
+      "path": "../mf-utilities"
+    },
+    {
+      "path": "../mfs-deconvolution"
+    },
+    {
+      "path": "../ms-report"
+    },
+    {
+      "path": "../ms-spectrum"
+    },
+    {
+      "path": "../nucleotide"
+    },
+    {
+      "path": "../octochemdb"
+    },
+    {
+      "path": "../peptide"
+    }
+  ]
 }

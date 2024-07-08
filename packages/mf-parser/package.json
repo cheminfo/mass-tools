@@ -2,7 +2,7 @@
   "name": "mf-parser",
   "version": "3.2.0",
   "description": "Parse a molecular formula",
-  "main": "lib/index.js",
+  "main": "lib/src/index.js",
   "module": "src/index.js",
   "files": [
     "src",
@@ -22,8 +22,7 @@
   "dependencies": {
     "atom-sorter": "^2.1.0",
     "chemical-elements": "^2.1.0",
-    "chemical-groups": "^2.2.0",
-    "mf-utilities": "^3.2.0"
+    "chemical-groups": "^2.2.0"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2"

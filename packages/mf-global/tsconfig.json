@@ -4,6 +4,39 @@
   "exclude": ["**/__tests__"],
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "lib"
-  }
+    "outDir": "lib",
+    "composite": true
+  },
+  "references": [
+    {
+      "path": "../chemical-elements"
+    },
+    {
+      "path": "../chemical-groups"
+    },
+    {
+      "path": "../emdb"
+    },
+    {
+      "path": "../isotopic-distribution"
+    },
+    {
+      "path": "../mf-generator"
+    },
+    {
+      "path": "../mf-parser"
+    },
+    {
+      "path": "../ms-report"
+    },
+    {
+      "path": "../ms-spectrum"
+    },
+    {
+      "path": "../nucleotide"
+    },
+    {
+      "path": "../peptide"
+    }
+  ]
 }

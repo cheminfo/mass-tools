@@ -4,6 +4,18 @@
   "exclude": ["**/__tests__"],
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "lib"
-  }
+    "outDir": "lib",
+    "composite": true
+  },
+  "references": [
+    {
+      "path": "../chemical-elements"
+    },
+    {
+      "path": "../chemical-groups"
+    },
+    {
+      "path": "../mf-parser"
+    }
+  ]
 }

@@ -4,6 +4,21 @@
   "exclude": ["**/__tests__"],
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "lib"
-  }
+    "outDir": "lib",
+    "composite": true
+  },
+  "references": [
+    {
+      "path": "../mf-finder"
+    },
+    {
+      "path": "../mf-parser"
+    },
+    {
+      "path": "../mf-utilities"
+    },
+    {
+      "path": "../ms-spectrum"
+    }
+  ]
 }
