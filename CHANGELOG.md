@@ -1,5 +1,18 @@
 # Changelog
 
+## [7.40.0](https://github.com/cheminfo/mass-tools/compare/v7.39.1...v7.40.0) (2024-07-08)
+
+
+### Features
+
+* **mass-tools:** expose function preprocessIonizations ([a2cabe8](https://github.com/cheminfo/mass-tools/commit/a2cabe84132429bf61567660997c7e1dceb463da))
+
+
+### Bug Fixes
+
+* enable unicorn ESLint plugin and fix errors ([9303048](https://github.com/cheminfo/mass-tools/commit/93030488bbbd5879dc4639a5d0c81c7664a927b8))
+* improve types in isotopic-distribution and mf-parser ([#202](https://github.com/cheminfo/mass-tools/issues/202)) ([e5769cd](https://github.com/cheminfo/mass-tools/commit/e5769cd588adb69974abfa60f411bc2dc1887fa6))
+
 ## [7.39.1](https://github.com/cheminfo/mass-tools/compare/v7.39.0...v7.39.1) (2024-06-29)
 
 
