@@ -24,6 +24,14 @@ export default [
       },
     },
     rules: {
+      'max-lines-per-function': [
+        'warn',
+        {
+          max: 1000,
+          skipBlankLines: true,
+          skipComments: true,
+        },
+      ],
       'no-shadow': [
         'error',
         {
@@ -33,14 +41,7 @@ export default [
         },
       ],
       'no-await-in-loop': 'warn',
-      'max-lines-per-function': [
-        'warn',
-        {
-          max: 1000,
-          skipBlankLines: true,
-          skipComments: true,
-        },
-      ],
+      'prefer-named-capture-group': 'off',
     },
   },
   {
