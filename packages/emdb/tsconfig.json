@@ -6,5 +6,46 @@
     "baseUrl": ".",
     "outDir": "lib",
     "composite": true
-  }
+  },
+  "references": [
+    {
+      "path": "../chemical-elements"
+    },
+    {
+      "path": "../chemical-groups"
+    },
+    {
+      "path": "../isotopic-distribution"
+    },
+    {
+      "path": "../mass-fragmentation"
+    },
+    {
+      "path": "../mf-finder"
+    },
+    {
+      "path": "../mf-from-google-sheet"
+    },
+    {
+      "path": "../mf-generator"
+    },
+    {
+      "path": "../mf-matcher"
+    },
+    {
+      "path": "../mf-parser"
+    },
+    {
+      "path": "../mf-utilities"
+    },
+    {
+      "path": "../ms-spectrum"
+    },
+    {
+      "path": "../nucleotide"
+    },
+    {
+      "path": "../peptide"
+    }
+  ]
 }

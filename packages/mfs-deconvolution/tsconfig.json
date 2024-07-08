@@ -6,5 +6,16 @@
     "baseUrl": ".",
     "outDir": "lib",
     "composite": true
-  }
+  },
+  "references": [
+    {
+      "path": "../isotopic-distribution"
+    },
+    {
+      "path": "../mf-generator"
+    },
+    {
+      "path": "../ms-spectrum"
+    }
+  ]
 }

@@ -6,5 +6,10 @@
     "baseUrl": ".",
     "outDir": "lib",
     "composite": true
-  }
+  },
+  "references": [
+    {
+      "path": "../mf-utilities"
+    }
+  ]
 }

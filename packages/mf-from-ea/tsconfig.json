@@ -6,5 +6,19 @@
     "baseUrl": ".",
     "outDir": "lib",
     "composite": true
-  }
+  },
+  "references": [
+    {
+      "path": "../atom-sorter"
+    },
+    {
+      "path": "../chemical-elements"
+    },
+    {
+      "path": "../mf-parser"
+    },
+    {
+      "path": "../mf-utilities"
+    }
+  ]
 }

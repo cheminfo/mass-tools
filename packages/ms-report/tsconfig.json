@@ -6,5 +6,19 @@
     "baseUrl": ".",
     "outDir": "lib",
     "composite": true
-  }
+  },
+  "references": [
+    {
+      "path": "../chemical-groups"
+    },
+    {
+      "path": "../mf-utilities"
+    },
+    {
+      "path": "../nucleotide"
+    },
+    {
+      "path": "../peptide"
+    }
+  ]
 }

@@ -6,5 +6,19 @@
     "baseUrl": ".",
     "outDir": "lib",
     "composite": true
-  }
+  },
+  "references": [
+    {
+      "path": "../mf-finder"
+    },
+    {
+      "path": "../mf-parser"
+    },
+    {
+      "path": "../mf-utilities"
+    },
+    {
+      "path": "../ms-spectrum"
+    }
+  ]
 }
