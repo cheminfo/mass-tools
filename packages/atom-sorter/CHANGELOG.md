@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/cheminfo/mass-tools/compare/atom-sorter@2.1.0...atom-sorter@2.1.1) (2024-07-08)
+
+
+### Bug Fixes
+
+* improve types in isotopic-distribution and mf-parser ([#202](https://github.com/cheminfo/mass-tools/issues/202)) ([e5769cd](https://github.com/cheminfo/mass-tools/commit/e5769cd588adb69974abfa60f411bc2dc1887fa6))
+
+
+
+
+
 # [2.1.0](https://github.com/cheminfo/mass-tools/compare/atom-sorter@2.0.1...atom-sorter@2.1.0) (2024-06-26)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.9.2](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.9.1...octochemdb@2.9.2) (2024-07-08)
+
+
+### Bug Fixes
+
+* enable unicorn ESLint plugin and fix errors ([9303048](https://github.com/cheminfo/mass-tools/commit/93030488bbbd5879dc4639a5d0c81c7664a927b8))
+* improve types in isotopic-distribution and mf-parser ([#202](https://github.com/cheminfo/mass-tools/issues/202)) ([e5769cd](https://github.com/cheminfo/mass-tools/commit/e5769cd588adb69974abfa60f411bc2dc1887fa6))
+
+
+
+
+
 ## [2.9.1](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.9.0...octochemdb@2.9.1) (2024-06-29)
 
 **Note:** Version bump only for package octochemdb
