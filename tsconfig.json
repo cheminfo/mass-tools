@@ -2,73 +2,73 @@
   "files": [],
   "references": [
     {
-      "path": "./packages/atom-sorter/tsconfig.json"
+      "path": "packages/atom-sorter"
     },
     {
-      "path": "./packages/chemical-elements/tsconfig.json"
+      "path": "packages/chemical-elements"
     },
     {
-      "path": "./packages/chemical-groups/tsconfig.json"
+      "path": "packages/chemical-groups"
     },
     {
-      "path": "./packages/emdb/tsconfig.json"
+      "path": "packages/emdb"
     },
     {
-      "path": "./packages/isotopic-distribution/tsconfig.json"
+      "path": "packages/isotopic-distribution"
     },
     {
-      "path": "./packages/mass-fragmentation/tsconfig.json"
+      "path": "packages/mass-fragmentation"
     },
     {
-      "path": "./packages/mass-tools/tsconfig.json"
+      "path": "packages/mass-tools"
     },
     {
-      "path": "./packages/mf-finder/tsconfig.json"
+      "path": "packages/mf-finder"
     },
     {
-      "path": "./packages/mf-from-atomic-ratio/tsconfig.json"
+      "path": "packages/mf-from-atomic-ratio"
     },
     {
-      "path": "./packages/mf-from-ea/tsconfig.json"
+      "path": "packages/mf-from-ea"
     },
     {
-      "path": "./packages/mf-from-google-sheet/tsconfig.json"
+      "path": "packages/mf-from-google-sheet"
     },
     {
-      "path": "./packages/mf-generator/tsconfig.json"
+      "path": "packages/mf-generator"
     },
     {
-      "path": "./packages/mf-global/tsconfig.json"
+      "path": "packages/mf-global"
     },
     {
-      "path": "./packages/mf-matcher/tsconfig.json"
+      "path": "packages/mf-matcher"
     },
     {
-      "path": "./packages/mf-parser/tsconfig.json"
+      "path": "packages/mf-parser"
     },
     {
-      "path": "./packages/mf-utilities/tsconfig.json"
+      "path": "packages/mf-utilities"
     },
     {
-      "path": "./packages/mfs-deconvolution/tsconfig.json"
+      "path": "packages/mfs-deconvolution"
     },
     {
-      "path": "./packages/ms-report/tsconfig.json"
+      "path": "packages/ms-report"
     },
     {
-      "path": "./packages/ms-spectrum/tsconfig.json"
+      "path": "packages/ms-spectrum"
     },
     {
-      "path": "./packages/nucleotide/tsconfig.json"
+      "path": "packages/nucleotide"
     },
     {
-      "path": "./packages/number-treemap/tsconfig.json"
+      "path": "packages/number-treemap"
     },
     {
-      "path": "./packages/octochemdb/tsconfig.json"
+      "path": "packages/octochemdb"
     },
     {
-      "path": "./packages/peptide/tsconfig.json"
+      "path": "packages/peptide"
     }
   ]
 }

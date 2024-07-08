@@ -2,7 +2,7 @@
   "name": "mf-utilities",
   "version": "3.2.0",
   "description": "Small utilities dealing with molecular formula",
-  "main": "lib/index.js",
+  "main": "lib/src/index.js",
   "module": "src/index.js",
   "files": [
     "src",

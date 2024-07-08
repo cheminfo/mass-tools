@@ -9,13 +9,13 @@
   },
   "references": [
     {
-      "path": "../chemical-elements/tsconfig.json"
+      "path": "../chemical-elements"
     },
     {
-      "path": "../mf-parser/tsconfig.json"
+      "path": "../mf-parser"
     },
     {
-      "path": "../mf-utilities/tsconfig.json"
+      "path": "../mf-utilities"
     }
   ]
 }

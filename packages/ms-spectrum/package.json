@@ -2,7 +2,7 @@
   "name": "ms-spectrum",
   "version": "3.6.1",
   "description": "A mass spectrum",
-  "main": "lib/index.js",
+  "main": "lib/src/index.js",
   "module": "src/index.js",
   "files": [
     "src",
