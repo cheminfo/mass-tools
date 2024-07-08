@@ -21,8 +21,8 @@ export function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
   let { zone = {}, widthFunction } = similarity;
   let { low = -0.5, high = 2.5 } = zone;
 
-  if (!spectrum || !spectrum.data.x.length > 0) {
-    throw Error(
+  if (!spectrum || spectrum.data.x.length === 0) {
+    throw new Error(
       'You need to add an experimental spectrum first using setMassSpectrum',
     );
   }
@@ -32,7 +32,7 @@ export function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
     top: similarity.widthTop,
   };
 
-  similarity = JSON.parse(JSON.stringify(similarity));
+  similarity = structuredClone(similarity);
   similarity.common = 'second';
 
   let experimentalData = spectrum.data;
@@ -44,7 +44,7 @@ export function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
     widthFunction = new Function('mass', widthFunction);
     let checkTopBottom = widthFunction(123);
     if (!checkTopBottom.bottom || !checkTopBottom.top) {
-      throw Error(
+      throw new Error(
         'widthFunction should return an object with bottom and top properties',
       );
     }

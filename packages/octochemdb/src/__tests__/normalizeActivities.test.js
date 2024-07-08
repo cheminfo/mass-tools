@@ -1,12 +1,12 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 
 import { normalizeActivities } from '../utils/normalizeActivities.js';
 
 describe('normalizeActivities', () => {
   it('normalize Activities', () => {
     const entry = JSON.parse(
-      readFileSync(join(__dirname, './details.json'), 'utf8'),
+      readFileSync(path.join(__dirname, './details.json'), 'utf8'),
     );
 
     const result = normalizeActivities(entry);

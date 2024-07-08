@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 
 import Papa from 'papaparse';
 
@@ -11,7 +11,7 @@ let names = Papa.parse(
 ).data;
 
 let elementsAndIsotopes = JSON.parse(
-  readFileSync(new URL('isotopes.json', import.meta.url), 'utf-8'),
+  readFileSync(new URL('isotopes.json', import.meta.url), 'utf8'),
 );
 
 for (let i = 0; i < elementsAndIsotopes.length; i++) {
@@ -28,8 +28,8 @@ for (let i = 0; i < elementsAndIsotopes.length; i++) {
 
   element.monoisotopicMass = getMonoisotopicMass(element);
 
-  // need to decide which element mass to give, we calculate it ourself
-  element.mass = massFromIsotopes ? massFromIsotopes : null;
+  // need to decide which element mass to give, we calculate it ourselves
+  element.mass = massFromIsotopes > 0 ? massFromIsotopes : null;
 }
 
 writeFileSync(
@@ -41,9 +41,9 @@ writeFileSync(
 function getMass(element) {
   let stable = element.isotopes.filter((a) => a.abundance > 0);
   let mass = 0;
-  stable.forEach((a) => {
+  for (const a of stable) {
     mass += a.abundance * a.mass;
-  });
+  }
   return mass;
 }
 

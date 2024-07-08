@@ -68,7 +68,9 @@ export async function fromNucleicSequence(sequencesString, options = {}) {
     let fragments = generateFragments(sequence, fragmentation);
     if (i === 1) {
       // complementary sequence
-      fragments = fragments.map((fragment) => fragment.replace(/\$/g, '$cmp-'));
+      fragments = fragments.map((fragment) =>
+        fragment.replaceAll('$', '$cmp-'),
+      );
     }
     fragmentsArray = fragmentsArray.concat(fragments);
     if (fragmentation.baseLoss) {
@@ -89,11 +91,11 @@ export async function fromNucleicSequence(sequencesString, options = {}) {
 
   if (Array.isArray(combined)) {
     // not an estimation
-    combined.forEach((result) => {
+    for (const result of combined) {
       result.sequence = groupsToSequence(
-        result.parts.filter((part) => part).join(' '),
+        result.parts.filter(Boolean).join(' '),
       );
-    });
+    }
   }
 
   return combined;

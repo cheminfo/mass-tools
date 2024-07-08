@@ -1,5 +1,5 @@
-import fs from 'fs';
-import { join } from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 
 import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
 import { parseXY } from 'xy-parser';
@@ -134,6 +134,9 @@ describe('test searchSimilarity for peptide', () => {
 });
 
 function loadUbiquitin() {
-  let text = fs.readFileSync(join(__dirname, 'data/ubiquitin.txt'), 'utf8');
+  let text = fs.readFileSync(
+    path.join(__dirname, 'data/ubiquitin.txt'),
+    'utf8',
+  );
   return parseXY(text, { arrayType: 'xxyy' });
 }

@@ -29,7 +29,7 @@ export function sequenceToMF(sequence, options = {}) {
   }
 
   let { kind, circular, fivePrime = 'monophosphate' } = options;
-  fivePrime = fivePrime.replace(/[^a-zA-Z]/g, '').toLowerCase();
+  fivePrime = fivePrime.replaceAll(/[^A-Za-z]/g, '').toLowerCase();
 
   if (!kind) {
     if (sequence.includes('U')) {
@@ -39,7 +39,7 @@ export function sequenceToMF(sequence, options = {}) {
     }
   }
 
-  kind = kind.replace(/[^A-Za-z]/g, '').toLowerCase();
+  kind = kind.replaceAll(/[^A-Za-z]/g, '').toLowerCase();
 
   if (sequence.includes('(') && kind === 'dsdna') {
     throw new Error(
@@ -93,7 +93,7 @@ export function sequenceToMF(sequence, options = {}) {
 
     let nucleotideType = i === 0 ? fivePrime : 'monophosphate';
 
-    currentSymbol = currentSymbol.replace(/[ \t\r\n]/, '');
+    currentSymbol = currentSymbol.replace(/[\t\n\r ]/, '');
     if (!currentSymbol) continue;
 
     switch (kind) {
@@ -116,8 +116,8 @@ export function sequenceToMF(sequence, options = {}) {
   }
 
   if (!circular) {
-    results.forEach((result) => result.unshift(fivePrimeTerminal));
-    results.forEach((result) => result.push(threePrimeTerminal));
+    for (const result of results) result.unshift(fivePrimeTerminal);
+    for (const result of results) result.push(threePrimeTerminal);
   }
 
   return results.map((result) => result.join('')).join('.');
@@ -137,45 +137,35 @@ const desoxyNucleotides = {
   triphosphate: {},
 };
 
-groups
-  .filter((group) => group.kind === 'DNA')
-  .forEach((group) => {
-    if (group.oneLetter) {
-      desoxyNucleotides.alcohol[group.oneLetter] = group.symbol;
-    }
-  });
+for (const group of groups.filter(({ kind }) => kind === 'DNA')) {
+  if (group.oneLetter) {
+    desoxyNucleotides.alcohol[group.oneLetter] = group.symbol;
+  }
+}
 
-groups
-  .filter((group) => group.kind === 'DNAp')
-  .forEach((group) => {
-    if (group.oneLetter) {
-      desoxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
-    }
-  });
+for (const group of groups.filter(({ kind }) => kind === 'DNAp')) {
+  if (group.oneLetter) {
+    desoxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
+  }
+}
 
-groups
-  .filter((group) => group.kind === 'NucleotideP')
-  .forEach((group) => {
-    if (group.oneLetter) {
-      desoxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
-    }
-  });
+for (const group of groups.filter(({ kind }) => kind === 'NucleotideP')) {
+  if (group.oneLetter) {
+    desoxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
+  }
+}
 
-groups
-  .filter((group) => group.kind === 'DNApp')
-  .forEach((group) => {
-    if (group.oneLetter) {
-      desoxyNucleotides.diphosphate[group.oneLetter] = group.symbol;
-    }
-  });
+for (const group of groups.filter(({ kind }) => kind === 'DNApp')) {
+  if (group.oneLetter) {
+    desoxyNucleotides.diphosphate[group.oneLetter] = group.symbol;
+  }
+}
 
-groups
-  .filter((group) => group.kind === 'DNAppp')
-  .forEach((group) => {
-    if (group.oneLetter) {
-      desoxyNucleotides.triphosphate[group.oneLetter] = group.symbol;
-    }
-  });
+for (const group of groups.filter(({ kind }) => kind === 'DNAppp')) {
+  if (group.oneLetter) {
+    desoxyNucleotides.triphosphate[group.oneLetter] = group.symbol;
+  }
+}
 
 const oxyNucleotides = {
   alcohol: {},
@@ -184,42 +174,32 @@ const oxyNucleotides = {
   triphosphate: {},
 };
 
-groups
-  .filter((group) => group.kind === 'RNA')
-  .forEach((group) => {
-    if (group.oneLetter) {
-      oxyNucleotides.alcohol[group.oneLetter] = group.symbol;
-    }
-  });
+for (const group of groups.filter(({ kind }) => kind === 'RNA')) {
+  if (group.oneLetter) {
+    oxyNucleotides.alcohol[group.oneLetter] = group.symbol;
+  }
+}
 
-groups
-  .filter((group) => group.kind === 'RNAp')
-  .forEach((group) => {
-    if (group.oneLetter) {
-      oxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
-    }
-  });
+for (const group of groups.filter(({ kind }) => kind === 'RNAp')) {
+  if (group.oneLetter) {
+    oxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
+  }
+}
 
-groups
-  .filter((group) => group.kind === 'NucleotideP')
-  .forEach((group) => {
-    if (group.oneLetter) {
-      oxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
-    }
-  });
+for (const group of groups.filter(({ kind }) => kind === 'NucleotideP')) {
+  if (group.oneLetter) {
+    oxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
+  }
+}
 
-groups
-  .filter((group) => group.kind === 'RNApp')
-  .forEach((group) => {
-    if (group.oneLetter) {
-      oxyNucleotides.diphosphate[group.oneLetter] = group.symbol;
-    }
-  });
+for (const group of groups.filter(({ kind }) => kind === 'RNApp')) {
+  if (group.oneLetter) {
+    oxyNucleotides.diphosphate[group.oneLetter] = group.symbol;
+  }
+}
 
-groups
-  .filter((group) => group.kind === 'RNAppp')
-  .forEach((group) => {
-    if (group.oneLetter) {
-      oxyNucleotides.triphosphate[group.oneLetter] = group.symbol;
-    }
-  });
+for (const group of groups.filter(({ kind }) => kind === 'RNAppp')) {
+  if (group.oneLetter) {
+    oxyNucleotides.triphosphate[group.oneLetter] = group.symbol;
+  }
+}

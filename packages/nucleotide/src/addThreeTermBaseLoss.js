@@ -4,7 +4,7 @@ export function addThreeTermBaseLoss(mfs, threeTerm, i, options) {
   if (!options.wxyzBaseLoss) return;
   let loss = baseLoss(threeTerm);
 
-  loss.forEach((mf) => {
+  for (const mf of loss) {
     if (options.w) {
       mfs.push(`HO${mf}`.replace('$', `$w${i} `));
     }
@@ -17,5 +17,5 @@ export function addThreeTermBaseLoss(mfs, threeTerm, i, options) {
     if (options.z) {
       mfs.push(`O-3H-1P-1(+)${mf}`.replace('$', `$z${i} `));
     }
-  });
+  }
 }

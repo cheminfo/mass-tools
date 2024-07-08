@@ -40,7 +40,7 @@ export async function searchInSilicoSpectraByMF(spectrum, mf, options = {}) {
     mf,
   };
 
-  const results = (await fetchJSON(realURL, searchParams)).data;
+  const { data: results } = await fetchJSON(realURL, searchParams);
 
   const msComparator = new MSComparator({
     delta: (mass) => mass * 1e-6 * precision,

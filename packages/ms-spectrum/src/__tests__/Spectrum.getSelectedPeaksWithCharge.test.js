@@ -1,11 +1,11 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 
 import { fromText } from '../Spectrum';
 
 describe('test appendPeakCharge on Spectrum', () => {
   let chargedText = readFileSync(
-    join(__dirname, 'data/multicharge.txt'),
+    path.join(__dirname, 'data/multicharge.txt'),
     'utf8',
   );
   it('multicharged', () => {

@@ -37,7 +37,7 @@ export class IsotopicDistribution {
     this.threshold = options.threshold;
     this.limit = options.limit;
     if (Array.isArray(value)) {
-      this.parts = JSON.parse(JSON.stringify(value));
+      this.parts = structuredClone(value);
       for (let part of this.parts) {
         part.confidence = 0;
         part.isotopesInfo = new MF(
@@ -53,7 +53,7 @@ export class IsotopicDistribution {
       for (let partOriginal of parts) {
         // we calculate information for each part
         for (const ionization of ionizations) {
-          let part = JSON.parse(JSON.stringify(partOriginal));
+          let part = structuredClone(partOriginal);
           part.em = part.monoisotopicMass; // TODO: To remove !!! we change the name !?
           part.isotopesInfo = new MF(
             `${part.mf}(${ionization.mf})`,
@@ -111,9 +111,7 @@ export class IsotopicDistribution {
         for (let isotope of part.isotopesInfo.isotopes) {
           if (isotope.number < 0) return { array: [] };
           if (isotope.number > 0) {
-            const newDistribution = JSON.parse(
-              JSON.stringify(isotope.distribution),
-            );
+            const newDistribution = structuredClone(isotope.distribution);
             if (this.fwhm === MINIMAL_FWHM) {
               // add composition
               for (const entry of newDistribution) {
@@ -133,16 +131,15 @@ export class IsotopicDistribution {
         // we finally deal with the charge
 
         if (charge) {
-          totalDistribution.array.forEach((e) => {
+          for (const e of totalDistribution.array) {
             e.x = (e.x - ELECTRON_MASS * charge) / absoluteCharge;
-          });
+          }
         }
 
         if (totalDistribution.array && totalDistribution.array.length > 0) {
           totalDistribution.sortX();
           part.fromX = totalDistribution.array[0].x;
-          part.toX =
-            totalDistribution.array[totalDistribution.array.length - 1].x;
+          part.toX = totalDistribution.array.at(-1).x;
         }
 
         if (part?.ms.similarity?.factor) {
@@ -273,7 +270,7 @@ export class IsotopicDistribution {
     }
     if (factor !== 1) {
       // we need to copy the array because we prefer no side effects
-      peaks = JSON.parse(JSON.stringify(peaks));
+      peaks = structuredClone(peaks);
       for (const peak of peaks) {
         peak.y = peak.y / factor;
       }
@@ -350,10 +347,10 @@ export class IsotopicDistribution {
     let points = this.getTable({ maxValue });
     if (points.length === 0) return { x: [], y: [] };
     const from = Math.floor(options.from || points[0].x - 2);
-    const to = Math.ceil(options.to || points[points.length - 1].x + 2);
+    const to = Math.ceil(options.to || points.at(-1).x + 2);
     const nbPoints = Math.round(((to - from) * gaussianWidth) / this.fwhm + 1);
     if (nbPoints > maxLength) {
-      throw Error(
+      throw new Error(
         `Number of points is over the maxLength: ${nbPoints}>${maxLength}`,
       );
     }

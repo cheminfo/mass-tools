@@ -1,10 +1,10 @@
 import { Kind, MF, parse } from 'mf-parser';
 
 export function preprocessRanges(ranges) {
-  ranges = JSON.parse(JSON.stringify(ranges));
+  ranges = structuredClone(ranges);
   if (typeof ranges === 'string') {
     // need to convert to ranges
-    let parsed = parse(ranges.replace(/[\r\n\t ]/g, ''));
+    let parsed = parse(ranges.replaceAll(/[\t\n\r ]/g, ''));
     let newRanges = [];
     let current = {
       mf: '',
@@ -61,7 +61,7 @@ export function preprocessRanges(ranges) {
           currentMF += ')';
           break;
         default:
-          throw Error(`can not preprocess ${ranges}`);
+          throw new Error(`can not preprocess ${ranges}`);
       }
     }
     if (currentMF) {

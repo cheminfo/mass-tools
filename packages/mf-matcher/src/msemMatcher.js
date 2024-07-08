@@ -63,8 +63,8 @@ export function msemMatcher(entry, options = {}) {
     callback,
   } = options;
 
-  if (entry.mw !== undefined) {
-    if (entry.mw < minMW || entry.mw > maxMW) return false;
+  if (entry.mw !== undefined && (entry.mw < minMW || entry.mw > maxMW)) {
+    return false;
   }
 
   let msInfo = getMsInfo(entry, {
@@ -74,24 +74,28 @@ export function msemMatcher(entry, options = {}) {
   });
   let ms = msInfo.ms;
 
-  if (entry.em !== undefined) {
-    if (entry.em < minEM || entry.em > maxEM) return false;
+  if (entry.em !== undefined && (entry.em < minEM || entry.em > maxEM)) {
+    return false;
   }
 
-  if (ms.em !== undefined) {
-    if (ms.em < minMSEM || ms.em > maxMSEM) return false;
+  if (ms.em !== undefined && (ms.em < minMSEM || ms.em > maxMSEM)) {
+    return false;
   }
 
-  if (targetMass && Math.abs(ms.ppm) > precision) return false;
+  if (targetMass && Math.abs(ms.ppm) > precision) {
+    return false;
+  }
 
   if (ms.charge !== undefined) {
     let charge = absoluteCharge ? Math.abs(ms.charge) : ms.charge;
     if (charge < minCharge || charge > maxCharge) return false;
   }
-  if (unsaturation !== undefined && entry.unsaturation !== undefined) {
-    if (!unsaturationMatcher(entry, unsaturation)) {
-      return false;
-    }
+  if (
+    unsaturation !== undefined &&
+    entry.unsaturation !== undefined &&
+    !unsaturationMatcher(entry, unsaturation)
+  ) {
+    return false;
   }
   if (entry.atoms !== undefined && atoms) {
     // all the atoms of the entry must fit in the range
@@ -131,9 +135,7 @@ export function msemMatcher(entry, options = {}) {
     if (Math.abs(msInfo.ms.ppm) > precision) return false;
   }
 
-  if (callback) {
-    if (!callback(entry)) return false;
-  }
+  if (callback && !callback(entry)) return false;
 
   return msInfo;
 }

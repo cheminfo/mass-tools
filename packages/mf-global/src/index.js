@@ -1,6 +1,3 @@
-import * as NucleotidePkg from 'nucleotide';
-import * as PeptidePkg from 'peptide';
-
 export { EMDB } from 'emdb';
 export { groups } from 'chemical-groups';
 export { elementsAndIsotopes, elements } from 'chemical-elements';
@@ -11,5 +8,5 @@ export { Spectrum, getPeaks, getBestPeaks } from 'ms-spectrum';
 export { generateMFs } from 'mf-generator';
 export { sequenceSVG } from 'ms-report';
 
-export const Peptide = PeptidePkg;
-export const Nucleotide = NucleotidePkg;
+export * as Nucleotide from 'nucleotide';
+export * as Peptide from 'peptide';

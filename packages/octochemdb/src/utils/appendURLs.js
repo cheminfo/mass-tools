@@ -58,10 +58,10 @@ export async function appendURLs(object, options = {}) {
         break;
     }
   }
-  if (Object.keys(unknowns).length) {
+  if (Object.keys(unknowns).length > 0) {
     // eslint-disable-next-line no-console
     console.error(
-      'Unknown url to original data for the following collections: ',
+      'Unknown url to original data for the following collections:',
       unknowns,
     );
   }

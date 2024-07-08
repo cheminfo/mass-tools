@@ -82,7 +82,7 @@ export function getBestPeaks(peaks, options = {}) {
         close = true;
       }
     }
-    let newPeak = JSON.parse(JSON.stringify(item.peak));
+    let newPeak = structuredClone(item.peak);
     newPeak.close = close;
     toReturn.push(newPeak);
     if (toReturn.length === limit) break;

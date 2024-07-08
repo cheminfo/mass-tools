@@ -1,6 +1,6 @@
 import { elements } from './elements.js';
 
 export const elementsObject = {};
-elements.forEach((element) => {
+for (const element of elements) {
   elementsObject[element.symbol] = element;
-});
+}

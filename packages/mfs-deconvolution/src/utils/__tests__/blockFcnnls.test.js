@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 
 import { toMatchCloseTo, toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
 import { xNormed } from 'ml-spectra-processing';
@@ -53,16 +53,16 @@ describe('blockFcnnls', () => {
 
   it('complex case', () => {
     const combined = JSON.parse(
-      readFileSync(join(__dirname, './data/combined.json'), 'utf8'),
+      readFileSync(path.join(__dirname, './data/combined.json'), 'utf8'),
     );
     // first row are the target values
     const result = blockFcnnls(combined.ys);
     let counter = 0;
-    result.reconstructed.forEach((value) => {
+    for (const value of result.reconstructed) {
       if (value > 0) {
         counter++;
       }
-    });
+    }
     expect(counter).toBe(5292);
 
     const relativeIntensity = Array.from(

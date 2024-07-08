@@ -6,8 +6,8 @@ export function parseMasses(masses) {
   }
   if (typeof masses === 'string') {
     return masses
-      .split(/[\r\n\t,; ]+/)
-      .filter((value) => value)
+      .split(/[\t\n\r ,;]+/)
+      .filter(Boolean)
       .map(Number);
   }
   throw new Error('Cannot parse masses');

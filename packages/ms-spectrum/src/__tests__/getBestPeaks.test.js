@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 
 import { xy2ToXY } from 'ml-spectra-processing';
 
@@ -48,7 +48,10 @@ describe('test getBestPeaks', () => {
   it('complex spectrum', () => {
     const data = xy2ToXY(
       JSON.parse(
-        readFileSync(join(__dirname, 'data/CCMSLIB00005716776.json'), 'utf8'),
+        readFileSync(
+          path.join(__dirname, 'data/CCMSLIB00005716776.json'),
+          'utf8',
+        ),
       ),
     );
     const spectrum = new Spectrum(data);
@@ -61,7 +64,7 @@ describe('test getBestPeaks', () => {
       limit: 100,
       threshold: 0.01,
     });
-    bestPeaks.forEach((peak) => (peak.y = peak.y / maxY));
+    for (const peak of bestPeaks) peak.y = peak.y / maxY;
     expect(bestPeaks).toHaveLength(100);
     expect(Math.max(...bestPeaks.map((peak) => peak.y))).toBeCloseTo(1, 5);
   });

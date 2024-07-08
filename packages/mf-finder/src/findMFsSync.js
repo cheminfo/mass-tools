@@ -109,7 +109,7 @@ export function findMFsSync(targetMass, options = {}) {
     let isValid = false; // designed so that the first time it is not a valid solution
     while (!theEnd) {
       if (result.info.numberMFEvaluated++ > maxIterations) {
-        throw Error(
+        throw new Error(
           `Iteration number is over the current maximum of: ${maxIterations}`,
         );
       }
@@ -166,7 +166,7 @@ export function findMFsSync(targetMass, options = {}) {
       }
 
       isValid = true;
-      // we need to setup all the arrays if possible
+      // we need to set up all the arrays if possible
       while (currentPosition < maxPosition && currentPosition >= 0) {
         currentAtom = possibilities[currentPosition];
         previousAtom =
@@ -202,7 +202,9 @@ export function findMFsSync(targetMass, options = {}) {
   if (result.mfs.length > limit) {
     result.mfs.length = limit;
   }
-  result.mfs.forEach((mf) => delete mf.currentCounts);
+  for (const mf of result.mfs) {
+    delete mf.currentCounts;
+  }
   return result;
 }
 
@@ -256,7 +258,7 @@ function getResult(
   ionization,
   orderMapping,
 ) {
-  let lastPossibility = possibilities[possibilities.length - 1];
+  let lastPossibility = possibilities.at(-1);
 
   let result = {
     em: lastPossibility.currentMonoisotopicMass - ionization.em,

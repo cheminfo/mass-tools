@@ -8,20 +8,20 @@ import { isMF } from './isMF.js';
  */
 
 export function capitalizeMF(mf) {
-  if (!mf.match(/^[0-9a-zA-Z ]+/)) return mf;
+  if (!mf.match(/^[\d A-Za-z]+/)) return mf;
   if (isMF(mf)) return mf;
   let oldMF = mf
     .replace(/co/, 'C O')
     .replace(/mn/, ' Mn ')
     .replace(/cd/, ' C D ')
-    .replace(/([0-9])([a-zA-Z])/, '$1 $2');
+    .replace(/(\d)([A-Za-z])/, '$1 $2');
   let newMF = '';
   let parts = oldMF.split(/ +/);
 
   for (let i = 0; i < parts.length; i++) {
     if (parts[i] === '') continue;
-    let label = parts[i].replace(/[0-9]*$/, '');
-    let number = parts[i].replace(/^[a-zA-Z]*/, '');
+    let label = parts[i].replace(/\d*$/, '');
+    let number = parts[i].replace(/^[A-Za-z]*/, '');
 
     let casedLabel = getCasedLabel(label);
 
@@ -41,25 +41,25 @@ function getCasedLabel(label) {
   if (label === '') return label;
 
   let casedLabel =
-    label.substr(0, 1).toUpperCase() + label.substr(1).toLowerCase();
+    label.slice(0, 1).toUpperCase() + label.slice(1).toLowerCase();
   if (elementsObject[label]) return casedLabel;
   if (groupsObject[label]) return casedLabel;
 
   // we would like to cover chcl3, ch2o, ch2cl2, ccl4
   let newLabel = label
     .toLowerCase()
-    .replace(/cl/g, 'Cl')
-    .replace(/br/g, 'Br')
-    .replace(/na/g, 'Na')
-    .replace(/li/g, 'Li')
-    .replace(/si/g, 'Si')
-    .replace(/cr/g, 'Cr')
-    .replace(/c/g, 'C')
-    .replace(/o/g, 'O')
-    .replace(/n/g, 'N')
-    .replace(/h/g, 'H')
-    .replace(/k/g, 'K')
-    .replace(/s/g, 'S');
+    .replaceAll('cl', 'Cl')
+    .replaceAll('br', 'Br')
+    .replaceAll('na', 'Na')
+    .replaceAll('li', 'Li')
+    .replaceAll('si', 'Si')
+    .replaceAll('cr', 'Cr')
+    .replaceAll('c', 'C')
+    .replaceAll('o', 'O')
+    .replaceAll('n', 'N')
+    .replaceAll('h', 'H')
+    .replaceAll('k', 'K')
+    .replaceAll('s', 'S');
   if (isMF(newLabel)) return newLabel;
   return label;
 }

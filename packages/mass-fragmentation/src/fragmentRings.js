@@ -29,8 +29,7 @@ export function fragmentRings(molecule, options = {}) {
       brokenMolecule.markBondForDeletion(bond.index);
       brokenMolecule.setAtomCustomLabel(bond.atom1, '*');
       brokenMolecule.setAtomCustomLabel(bond.atom2, '*');
-      atoms.push(bond.atom1);
-      atoms.push(bond.atom2);
+      atoms.push(bond.atom1, bond.atom2);
       rLinks[bond.atom1] = bond.atom2;
       rLinks[bond.atom2] = bond.atom1;
     }

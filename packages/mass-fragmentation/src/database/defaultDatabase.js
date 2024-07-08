@@ -508,8 +508,7 @@ export const defaultDatabase = [
   },
   {
     label: 'Retro-heteroene (Claisen rearrangement)',
-    rxnCode:
-      'daxH@JrRHiMUHAcEHHA@!daxH@NrSRHmUHAcGHHA@#IZaxla@ IhfP^c@#!Ru{vHo[x@u?sWoY_|e{t]Dop !R@BL?Xs|\\[E|cWs}cOqp]vcp',
+    rxnCode: String.raw`daxH@JrRHiMUHAcEHHA@!daxH@NrSRHmUHAcGHHA@#IZaxla@ IhfP^c@#!Ru{vHo[x@u?sWoY_|e{t]Dop !R@BL?Xs|\[E|cWs}cOqp]vcp`,
     ionization: 'esi',
     reaction: 'CRF',
     doi: 'https://doi.org/10.1039/C5NP00073D',
@@ -673,8 +672,7 @@ export const defaultDatabase = [
   },
   {
     label: 'Retro-Diels–Alder ',
-    rxnCode:
-      'didDB@{iRYefxijh@zRhX!gNpaAQJRs\\uBIzQg@ eF@HhP#IwlDdeZ IwlIEh IFP#!RbMvH?Cx_bMt~@Hc]Oa~H?AtJo@ !Rm{vwoSy?musPO[\\}GYh\\ !R@DL]Akp',
+    rxnCode: String.raw`didDB@{iRYefxijh@zRhX!gNpaAQJRs\uBIzQg@ eF@HhP#IwlDdeZ IwlIEh IFP#!RbMvH?Cx_bMt~@Hc]Oa~H?AtJo@ !Rm{vwoSy?musPO[\}GYh\ !R@DL]Akp`,
     ionization: 'esi',
     reaction: 'CRF',
     doi: 'https://doi.org/10.1039/C5NP00073D',
@@ -898,8 +896,7 @@ export const defaultDatabase = [
   },
   {
     label: 'Phosphates fragmentation',
-    rxnCode:
-      'gNpYHlQxR\\ddqZj@~Tap!gJPYHlQxRX}j@~TaP eF@HhP#qbuKx qbqh q{#!RXs|@Xs}l[@@@[@AcGPi| !Ruwu~@Gx?bGt]vgp !R@FL]Akp',
+    rxnCode: String.raw`gNpYHlQxR\ddqZj@~Tap!gJPYHlQxRX}j@~TaP eF@HhP#qbuKx qbqh q{#!RXs|@Xs}l[@@@[@AcGPi| !Ruwu~@Gx?bGt]vgp !R@FL]Akp`,
     ionization: 'esi,ei',
     reaction: 'CRF',
     doi: 'https://doi.org/10.1016/j.ijms.2010.10.024',

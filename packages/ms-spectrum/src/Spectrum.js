@@ -18,6 +18,8 @@ import { isContinuous } from './isContinuous';
 import { peakPicking } from './peakPicking';
 import { peaksWidth } from './peaksWidth';
 
+const defaultData = { x: [], y: [] };
+
 /**
  * Class dealing with mass spectra and peak picking
  */
@@ -28,7 +30,7 @@ export class Spectrum {
    * @param {object} [options={}]
    * @param {number} [options.threshold=0.00025]
    */
-  constructor(data = { x: [], y: [] }, options = {}) {
+  constructor(data = defaultData, options = {}) {
     if (
       typeof data !== 'object' ||
       !isAnyArray(data.x) ||
@@ -51,10 +53,10 @@ export class Spectrum {
       };
     } else {
       this.info = {
-        minX: NaN,
-        maxX: NaN,
-        minY: NaN,
-        maxY: NaN,
+        minX: Number.NaN,
+        maxX: Number.NaN,
+        minY: Number.NaN,
+        maxY: Number.NaN,
       };
     }
 

@@ -3,8 +3,7 @@ import { Distribution } from '../Distribution.js';
 describe('test distribution normalize', () => {
   it('should yield the product', () => {
     let distribution = new Distribution();
-    distribution.push({ x: 1, y: 2 });
-    distribution.push({ x: 2, y: 3 });
+    distribution.push({ x: 1, y: 2 }, { x: 2, y: 3 });
     distribution.normalize();
 
     expect(distribution.array).toStrictEqual([

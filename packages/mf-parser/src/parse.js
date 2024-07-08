@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/prefer-code-point */
+
 import { Kind } from './Kind';
 import { parseCharge } from './util/parseCharge';
 
@@ -18,11 +20,8 @@ class MFParser {
 
     let lastKind = Kind.BEGIN;
     while (this.i < mf.length) {
-      if (
-        this.result.length > 0 &&
-        this.result[this.result.length - 1].kind !== Kind.TEXT
-      ) {
-        lastKind = this.result[this.result.length - 1].kind;
+      if (this.result.length > 0 && this.result.at(-1).kind !== Kind.TEXT) {
+        lastKind = this.result.at(-1).kind;
       }
       let char = mf.charAt(this.i);
       let ascii = mf.charCodeAt(this.i);
@@ -52,7 +51,7 @@ class MFParser {
           if (value.to) {
             throw new MFError(this.mf, this.i, 'Anchor ID may not contain -');
           }
-          this.result[this.result.length - 1].value = value.from;
+          this.result.at(-1).value = value.from;
         } else if (value.to) {
           this.result.push({
             kind: Kind.MULTIPLIER_RANGE,
@@ -110,7 +109,7 @@ class MFParser {
         // can define an exotic isotopic ratio or mixtures of groups
         let isotopeRatio = this.getCurlyBracketIsotopeRatio(ascii);
         if (lastKind === Kind.ATOM) {
-          let lastResult = this.result[this.result.length - 1];
+          let lastResult = this.result.at(-1);
           lastResult.kind = Kind.ISOTOPE_RATIO;
           lastResult.value = {
             atom: lastResult.value,
@@ -141,7 +140,7 @@ class MFParser {
         // it is a comment after
         this.result.push({
           kind: Kind.COMMENT,
-          value: this.mf.substring(this.i + 1),
+          value: this.mf.slice(this.i + 1),
         });
         break;
       } else {
@@ -189,8 +188,8 @@ class MFParser {
 
     if (indexOfDash > -1) {
       return {
-        from: parseNumberWithDivision(number.substr(0, indexOfDash)),
-        to: parseNumberWithDivision(number.substr(indexOfDash + 1)),
+        from: parseNumberWithDivision(number.slice(0, indexOfDash)),
+        to: parseNumberWithDivision(number.slice(indexOfDash + 1)),
       };
     }
     return { from: parseNumberWithDivision(number) };
@@ -215,8 +214,8 @@ class MFParser {
       ascii = this.mf.charCodeAt(this.i);
     } while (ascii !== 93 && this.i <= this.mf.length);
 
-    let atom = substring.replace(/[^a-zA-Z]/g, '');
-    let isotope = Number(substring.replace(/[^0-9]/g, ''));
+    let atom = substring.replaceAll(/[^A-Za-z]/g, '');
+    let isotope = Number(substring.replaceAll(/\D/g, ''));
     return { atom, isotope };
   }
 
@@ -232,8 +231,8 @@ class MFParser {
       this.i++;
       ascii = this.mf.charCodeAt(this.i);
     } while (ascii !== 125 && this.i <= this.mf.length); // closing curly bracket
-    if (substring.match(/^[0-9,]+$/)) {
-      return substring.split(',').map((a) => Number(a));
+    if (substring.match(/^[\d,]+$/)) {
+      return substring.split(',').map(Number);
     }
     throw new MFError(
       this.mf,
@@ -250,8 +249,8 @@ class MFParser {
       this.i++;
       ascii = this.mf.charCodeAt(this.i);
     } while (ascii !== 41 && this.i <= this.mf.length); // closing parenthesis
-    if (substring.match(/^\([0-9+-]+$/)) {
-      return parseCharge(substring.substring(1));
+    if (substring.match(/^\([\d+-]+$/)) {
+      return parseCharge(substring.slice(1));
     } else {
       this.i = begin;
       return undefined;

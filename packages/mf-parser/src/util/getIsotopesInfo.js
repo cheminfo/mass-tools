@@ -29,7 +29,11 @@ function getProcessedPart(part) {
       case Kind.ISOTOPE: {
         let isotope = isotopes[line.value.isotope + line.value.atom];
         if (!isotope) {
-          throw Error('unknown isotope:', line.value.atom, line.value.isotope);
+          throw new Error(
+            'unknown isotope:',
+            line.value.atom,
+            line.value.isotope,
+          );
         }
         result.isotopes.push({
           atom: `[${line.value.isotope}${line.value.atom}]`,

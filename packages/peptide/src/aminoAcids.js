@@ -21,7 +21,7 @@ export const aminoAcids = [
       pKa: 12.1,
     },
     pKaC: 2.03,
-    pKaN: 9.0,
+    pKaN: 9,
   },
   {
     name: 'Asparagine',
@@ -74,7 +74,7 @@ export const aminoAcids = [
       type: 'polar',
     },
     pKaC: 2.18,
-    pKaN: 9.0,
+    pKaN: 9,
   },
   {
     name: 'Glycine',

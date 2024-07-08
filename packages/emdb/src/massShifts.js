@@ -46,10 +46,10 @@ export function massShifts(similarities, options = {}) {
     .sort((a, b) => a.em - b.em);
 
   let shifts = { x: [], y: [] };
-  data.forEach((datum) => {
+  for (const datum of data) {
     shifts.x.push(Number(datum.em));
     shifts.y.push(Number(datum.delta));
-  });
+  }
 
   const regression = new TheilSenRegression(shifts.x, shifts.y);
 
@@ -57,9 +57,9 @@ export function massShifts(similarities, options = {}) {
   let maxX = xMaxValue(shifts.x);
 
   let shiftsPPM = { x: shifts.x, y: [] };
-  data.forEach((datum) => {
+  for (const datum of data) {
     shiftsPPM.y.push(Number((datum.delta / datum.em) * 1e6));
-  });
+  }
 
   let regressionChart = { x: [], y: [] };
 

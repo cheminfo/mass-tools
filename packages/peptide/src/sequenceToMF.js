@@ -11,19 +11,19 @@ export function sequenceToMF(mf) {
   // or
   // MET PRO VAL GLU ILE THR VAL LYS GLU LEU LEU GLU ALA
   // GLY VAL HIS PHE GLY HIS GLU ARG LYS ARG TRP ASN PRO
-  if (mf.search(/[A-Z]{3} [A-Z]{3} [A-Z]{3}/) > -1) {
+  if (mf.search(/(?:[A-Z]{3} ){2}[A-Z]{3}/) > -1) {
     // this is a PDB !
-    let tmpmf = mf.replace(/[\r\n]+/g, ' ');
-    tmpmf = tmpmf.replace(/(SEQRES|[0-9]+| [A-Z] | [0-9A-Z]{4-50})/g, '');
+    let tmpmf = mf.replaceAll(/[\n\r]+/g, ' ');
+    tmpmf = tmpmf.replaceAll(/(SEQRES|\d+| [A-Z] | [\dA-Z]{4-50})/g, '');
     // we need to correct the uppercase / lowercase
     let parts = tmpmf.split(' ');
     newMF = 'H';
     for (let i = 0; i < parts.length; i++) {
-      newMF += parts[i].substr(0, 1) + parts[i].substr(1).toLowerCase();
+      newMF += parts[i].slice(0, 1) + parts[i].slice(1).toLowerCase();
     }
     newMF += 'OH';
   } else if (mf.includes('(') && isOneLetterCode(mf)) {
-    // we expect one letter code with modification
+    // we expect one-letter code with modification
     newMF = '';
     let nTerminal = 'H';
     let cTerminal = 'OH';
@@ -51,7 +51,7 @@ export function sequenceToMF(mf) {
     newMF = nTerminal + newMF + cTerminal;
   } else if (
     mf.search(/[A-Z]{3}/) > -1 &&
-    mf.search(/[a-zA-Z][a-z0-9]/) === -1
+    mf.search(/[A-Za-z][\da-z]/) === -1
   ) {
     // UNIPROT
     //   370        380        390        400        410        420
@@ -60,7 +60,7 @@ export function sequenceToMF(mf) {
     //    430        440        450        460        470        480
     //SDPRLYKVWV RLSSQVPSMF FGGTDLAADY YVVSPPTAVS VYTKTPYGRL LADTRTSGFR
     // We remove all the number, all the spaces, etc
-    newMF = `H${convertAA1To3(newMF.replace(/[^A-Z]/g, ''))}OH`;
+    newMF = `H${convertAA1To3(newMF.replaceAll(/[^A-Z]/g, ''))}OH`;
   }
 
   return newMF;

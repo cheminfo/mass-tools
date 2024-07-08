@@ -28,13 +28,12 @@ export async function getFragmentPeaks(peaks, mf, options = {}) {
     .join(' ');
   peaks = getPeaks(peaks, options);
   for (let peak of peaks) {
-    peak.mfs = (
-      await emdb.fromMonoisotopicMass(peak.x, {
-        precision,
-        ranges,
-        ionizations,
-      })
-    ).mfs;
+    const { mfs } = await emdb.fromMonoisotopicMass(peak.x, {
+      precision,
+      ranges,
+      ionizations,
+    });
+    peak.mfs = mfs;
   }
   peaks = peaks.filter((peak) => peak.mfs.length > 0);
   return peaks;

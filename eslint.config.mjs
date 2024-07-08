@@ -1,4 +1,5 @@
 import cheminfo from 'eslint-config-cheminfo/base';
+import unicorn from 'eslint-config-cheminfo/unicorn';
 import globals from 'globals';
 
 export default [
@@ -16,6 +17,7 @@ export default [
     ],
   },
   ...cheminfo,
+  ...unicorn,
   {
     languageOptions: {
       globals: {
@@ -40,7 +42,7 @@ export default [
           allow: [],
         },
       ],
-      'no-await-in-loop': 'warn',
+      'no-await-in-loop': 'off',
       'prefer-named-capture-group': 'off',
     },
   },

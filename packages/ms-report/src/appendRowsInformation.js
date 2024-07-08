@@ -1,5 +1,3 @@
-/* eslint-disable no-loop-func */
-
 /**
  * For each row we calculate internals, label over and label under
  * @param {*} data
@@ -11,7 +9,7 @@ export function appendRowsInformation(data) {
     );
     if (filtered.length > 0) {
       row.info.firstResidue = filtered[0].fromBegin;
-      row.info.lastResidue = filtered[filtered.length - 1].fromBegin;
+      row.info.lastResidue = filtered.at(-1).fromBegin;
     }
     row.internals = [];
   }
@@ -24,26 +22,26 @@ export function appendRowsInformation(data) {
       let to = toResidue.fromBegin;
       for (let row of data.rows) {
         if (from <= row.info.lastResidue && to >= row.info.firstResidue) {
-          result = JSON.parse(JSON.stringify(result));
+          result = structuredClone(result);
           result.fromResidue = fromResidue;
           if (from < row.info.firstResidue) {
             result.firstIndex = true;
           } else {
-            row.residues.forEach((residue, index) => {
+            for (const [index, residue] of row.residues.entries()) {
               if (residue.fromBegin === from) {
                 result.firstIndex = index;
               }
-            });
+            }
           }
           result.toResidue = toResidue;
           if (to > row.info.lastResidue) {
             result.lastIndex = true;
           } else {
-            row.residues.forEach((residue, index) => {
+            for (const [index, residue] of row.residues.entries()) {
               if (residue.fromBegin === to) {
                 result.lastIndex = index;
               }
-            });
+            }
           }
           row.internals.push(result);
         }

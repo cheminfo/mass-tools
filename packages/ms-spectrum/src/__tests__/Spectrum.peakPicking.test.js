@@ -1,12 +1,12 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 
 import { fromText, Spectrum } from '../Spectrum';
 
 describe('peakPicking on Spectrum', () => {
   it('lowres2', () => {
     const chargedText = readFileSync(
-      join(__dirname, 'data/lowres2.txt'),
+      path.join(__dirname, 'data/lowres2.txt'),
       'utf8',
     );
     let spectrum = fromText(chargedText, { threshold: 0.1 });
@@ -15,8 +15,8 @@ describe('peakPicking on Spectrum', () => {
     spectrum = fromText(chargedText);
     const peaks = spectrum.peakPicking();
 
-    const nbNaNX = peaks.filter((peak) => isNaN(peak.x));
-    const nbNaNY = peaks.filter((peak) => isNaN(peak.y));
+    const nbNaNX = peaks.filter((peak) => Number.isNaN(peak.x));
+    const nbNaNY = peaks.filter((peak) => Number.isNaN(peak.y));
 
     expect(nbNaNX).toHaveLength(0);
     expect(nbNaNY).toHaveLength(0);
@@ -31,7 +31,7 @@ describe('peakPicking on Spectrum', () => {
 
   it('1e6 points', () => {
     const data = JSON.parse(
-      readFileSync(join(__dirname, 'data/1e6.json'), 'utf8'),
+      readFileSync(path.join(__dirname, 'data/1e6.json'), 'utf8'),
     );
     const spectrum = new Spectrum(data);
     const peaks = spectrum.peakPicking();

@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/mf-from-google-sheet#readme",
   "dependencies": {
-    "cross-fetch": "^4.0.0",
     "mf-generator": "^3.3.0",
     "mf-parser": "^3.2.0",
     "mf-utilities": "^3.2.0",

@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 
 import { massSpectra } from '../massSpectra.js';
 
@@ -24,7 +24,7 @@ describe('massSpectra', () => {
 
   it('mdma and mass', async () => {
     const peaks = JSON.parse(
-      readFileSync(join(__dirname, './mdma.json'), 'utf8'),
+      readFileSync(path.join(__dirname, './mdma.json'), 'utf8'),
     );
 
     let results = await massSpectra({

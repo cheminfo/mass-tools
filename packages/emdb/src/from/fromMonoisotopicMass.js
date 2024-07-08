@@ -28,7 +28,7 @@ import { findMFs } from 'mf-finder';
 
 export async function fromMonoisotopicMass(masses, options = {}) {
   if (typeof masses === 'string') {
-    masses = masses.split(/[ ,;\r\n\t]/).map(Number);
+    masses = masses.split(/[\t\n\r ,;]/).map(Number);
   }
   if (typeof masses === 'number') {
     masses = [masses];
@@ -38,14 +38,14 @@ export async function fromMonoisotopicMass(masses, options = {}) {
     results.push(await findMFs(mass, options));
   }
   return {
-    mfs: results.map((entry) => entry.mfs).flat(),
+    mfs: results.flatMap((entry) => entry.mfs),
     info: {
       numberMFEvaluated: results.reduce(
-        (sum, current) => (sum += current.info.numberMFEvaluated),
+        (sum, current) => sum + current.info.numberMFEvaluated,
         0,
       ),
       numberResults: results.reduce(
-        (sum, current) => (sum += current.info.numberResults),
+        (sum, current) => sum + current.info.numberResults,
         0,
       ),
     },

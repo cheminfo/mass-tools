@@ -34,15 +34,15 @@ function chargeOnePeptide(mf, options) {
   }
 
   // basic AA
-  if (pH < getAA('Arg').sc.pKa) mf = mf.replace(/(Arg)(?!\()/g, '$1(H+)');
-  if (pH < getAA('His').sc.pKa) mf = mf.replace(/(His)(?!\()/g, '$1(H+)');
-  if (pH < getAA('Lys').sc.pKa) mf = mf.replace(/(Lys)(?!\()/g, '$1(H+)');
+  if (pH < getAA('Arg').sc.pKa) mf = mf.replaceAll(/(Arg)(?!\()/g, '$1(H+)');
+  if (pH < getAA('His').sc.pKa) mf = mf.replaceAll(/(His)(?!\()/g, '$1(H+)');
+  if (pH < getAA('Lys').sc.pKa) mf = mf.replaceAll(/(Lys)(?!\()/g, '$1(H+)');
 
   // acid AA
-  if (pH > getAA('Asp').sc.pKa) mf = mf.replace(/(Asp)(?!\()/g, '$1(H-1-)');
-  if (pH > getAA('Glu').sc.pKa) mf = mf.replace(/(Glu)(?!\()/g, '$1(H-1-)');
+  if (pH > getAA('Asp').sc.pKa) mf = mf.replaceAll(/(Asp)(?!\()/g, '$1(H-1-)');
+  if (pH > getAA('Glu').sc.pKa) mf = mf.replaceAll(/(Glu)(?!\()/g, '$1(H-1-)');
 
-  if (pH > getAA('Cys').sc.pKa) mf = mf.replace(/(Cys)(?!\()/g, '$1(H-1-)');
+  if (pH > getAA('Cys').sc.pKa) mf = mf.replaceAll(/(Cys)(?!\()/g, '$1(H-1-)');
 
   return mf;
 }

@@ -1,16 +1,5 @@
 import * as EMDBPkg from 'emdb';
-import * as MassFragmentationPkg from 'mass-fragmentation';
-import * as MFSDeconvolutionPkg from 'mfs-deconvolution';
-import * as ReportPkg from 'ms-report';
 import * as SpectrumPkg from 'ms-spectrum';
-import * as NucleotidePkg from 'nucleotide';
-import * as PeptidePkg from 'peptide';
-
-export const Nucleotide = NucleotidePkg;
-export const Report = ReportPkg;
-export const Peptide = PeptidePkg;
-export const MFSDeconvolution = MFSDeconvolutionPkg;
-export const MassFragmentation = MassFragmentationPkg;
 
 export { groups, groupsObject } from 'chemical-groups';
 export { elements, elementsObject } from 'chemical-elements';
@@ -42,3 +31,8 @@ export {
   ActiveOrNaturalSummarizer,
   createTaxonomyTree,
 } from 'octochemdb';
+export * as MassFragmentation from 'mass-fragmentation';
+export * as Report from 'ms-report';
+export * as MFSDeconvolution from 'mfs-deconvolution';
+export * as Nucleotide from 'nucleotide';
+export * as Peptide from 'peptide';

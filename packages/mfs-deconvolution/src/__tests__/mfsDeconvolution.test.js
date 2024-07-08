@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 
 import { FifoLogger } from 'fifo-logger';
 import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
@@ -12,7 +12,7 @@ expect.extend({ toBeDeepCloseTo });
 
 describe('mfsDeconvolution', () => {
   it('mfsDeconvolution no overlap', async () => {
-    const text = readFileSync(join(__dirname, './data/ionic.txt'));
+    const text = readFileSync(path.join(__dirname, './data/ionic.txt'));
     const spectrum = new Spectrum(parseXY(text));
     expect(async () =>
       mfsDeconvolution(spectrum, ['C.N', 'N.O']),
@@ -22,7 +22,7 @@ describe('mfsDeconvolution', () => {
   });
 
   it('complex case without slots', async () => {
-    const text = readFileSync(join(__dirname, './data/ionic.txt'));
+    const text = readFileSync(path.join(__dirname, './data/ionic.txt'));
     const spectrum = new Spectrum(parseXY(text));
     const { mfs } = await mfsDeconvolution(
       spectrum,
@@ -70,7 +70,7 @@ describe('mfsDeconvolution', () => {
   });
 
   it('no ranges', async () => {
-    const text = readFileSync(join(__dirname, './data/isotopic.txt'));
+    const text = readFileSync(path.join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
     // @ts-ignore
     expect(async () => mfsDeconvolution(spectrum)).rejects.toThrow(
@@ -79,7 +79,7 @@ describe('mfsDeconvolution', () => {
   });
 
   it('HValOH default parameter', async () => {
-    const text = readFileSync(join(__dirname, './data/isotopic.txt'));
+    const text = readFileSync(path.join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
 
     const { mfs } = await mfsDeconvolution(spectrum, [
@@ -94,7 +94,7 @@ describe('mfsDeconvolution', () => {
   });
 
   it('HValOH default parameter with logger', async () => {
-    const text = readFileSync(join(__dirname, './data/isotopic.txt'));
+    const text = readFileSync(path.join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
     const logger = new FifoLogger();
     const result = await mfsDeconvolution(
@@ -118,7 +118,7 @@ describe('mfsDeconvolution', () => {
   });
 
   it('HValOH ', async () => {
-    const text = readFileSync(join(__dirname, './data/isotopic.txt'));
+    const text = readFileSync(path.join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
 
     const { mfs } = await mfsDeconvolution(spectrum, [
@@ -133,7 +133,7 @@ describe('mfsDeconvolution', () => {
   });
 
   it('HValOH with some manually added MFs', async () => {
-    const text = readFileSync(join(__dirname, './data/isotopic.txt'));
+    const text = readFileSync(path.join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
 
     const { mfs } = await mfsDeconvolution(
@@ -148,7 +148,7 @@ describe('mfsDeconvolution', () => {
 
   it('HValOH enriched good parameter with bromine outside mass range', async () => {
     const logger = new FifoLogger();
-    const text = readFileSync(join(__dirname, './data/isotopic.txt'));
+    const text = readFileSync(path.join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
     const {
       mfs,
@@ -169,9 +169,9 @@ describe('mfsDeconvolution', () => {
       0.555556, 0.277778, 0.111111, 0.055554, 0, 0, 0,
     ]);
     let totalDifference = 0;
-    spectrum.peaks.forEach((peak, index) => {
+    for (const [index, peak] of spectrum.peaks.entries()) {
       totalDifference += Math.abs(reconstructed.y[index] - peak.y);
-    });
+    }
     expect(totalDifference).toBeLessThan(0.001);
     expect(difference.x).toHaveLength(19);
     expect(difference.y).toHaveLength(19);

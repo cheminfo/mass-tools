@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 
 import { createTaxonomyTree } from '../createTaxonomyTree';
 
@@ -202,14 +202,14 @@ test('True data', () => {
   expect(tree).toMatchSnapshot();
 });
 test('over 200 entries', () => {
-  const path = join(__dirname, 'data/manyTaxonomies.json');
-  const taxonomies = JSON.parse(readFileSync(path, 'utf8'));
+  const filePath = path.join(__dirname, 'data/manyTaxonomies.json');
+  const taxonomies = JSON.parse(readFileSync(filePath, 'utf8'));
   let tree = createTaxonomyTree(taxonomies);
   expect(tree).toMatchSnapshot();
 });
 test('full data', () => {
-  const path = join(__dirname, 'data/fullData.json');
-  const taxonomies = JSON.parse(readFileSync(path, 'utf8'));
+  const filePath = path.join(__dirname, 'data/fullData.json');
+  const taxonomies = JSON.parse(readFileSync(filePath, 'utf8'));
   let tree = createTaxonomyTree(taxonomies);
   expect(tree).toMatchSnapshot();
 });

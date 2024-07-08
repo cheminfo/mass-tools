@@ -59,7 +59,7 @@ export async function generateMFs(ranges, options = {}) {
   // we allow String delimited by ". or ;" instead of an array
   for (let i = 0; i < ranges.length; i++) {
     if (!Array.isArray(ranges[i])) {
-      ranges[i] = ranges[i].split(/[.,]/);
+      ranges[i] = ranges[i].split(/[,.]/);
     }
   }
 
@@ -70,7 +70,7 @@ export async function generateMFs(ranges, options = {}) {
     let newParts = [];
     for (let j = 0; j < parts.length; j++) {
       let part = parts[j];
-      if (part.match(/[0-9]-[0-9-]/)) {
+      if (part.match(/\d-[\d-]/)) {
         // deal with negative numbers
         // there are ranges ... we are in trouble !
         newParts = newParts.concat(
@@ -123,9 +123,9 @@ export async function generateMFs(ranges, options = {}) {
   appendResult(results, currents, ranges, options);
   if (uniqueMFs) {
     let uniqueMFsObject = {};
-    results.forEach((result) => {
+    for (const result of results) {
       uniqueMFsObject[result.mf + result.ionization.mf] = result;
-    });
+    }
     results = Object.keys(uniqueMFsObject).map((k) => uniqueMFsObject[k]);
   }
   results.sort((a, b) => a.em - b.em);
@@ -192,7 +192,7 @@ function appendResult(results, currents, keys, options = {}) {
   if (links.filter) {
     let sharps = [];
     for (let i = 0; i < keys.length; i++) {
-      let anchors = keys[i][currents[i]].match(/#[0-9]+/g);
+      let anchors = keys[i][currents[i]].match(/#\d+/g);
       if (anchors) sharps.push(...anchors);
     }
     if (sharps.length % 2 === 1) return;
@@ -228,7 +228,7 @@ function appendResult(results, currents, keys, options = {}) {
     for (let i = 0; i < keys.length; i++) {
       let key = keys[i][currents[i]];
       if (key) {
-        if (key.indexOf('$') > -1) {
+        if (key.includes('$')) {
           comments.push(key.replace(/^[^$]*\$/, ''));
           key = key.replace(/\$.*/, '');
         }

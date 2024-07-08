@@ -1,5 +1,5 @@
-import { writeFileSync } from 'fs';
-import { join } from 'path';
+import { writeFileSync } from 'node:fs';
+import path from 'node:path';
 
 import { sequenceSVG } from '../sequenceSVG';
 
@@ -61,7 +61,7 @@ test('sequenceSVG of nucleotide', () => {
     { type: 'w5:a5-B', similarity: 0.73, charge: -2 },
   ];
   let svg = sequenceSVG(sequence, info, options);
-  writeFileSync(join(__dirname, 'testNucleotide.svg'), svg);
+  writeFileSync(path.join(__dirname, 'testNucleotide.svg'), svg);
 
   expect(svg).toHaveLength(21219);
 });

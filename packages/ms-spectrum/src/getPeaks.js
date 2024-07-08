@@ -40,10 +40,12 @@ export function getPeaks(peaks, options = {}) {
     peaks = peaks.slice(0, limit);
   }
   if (sumValue) {
-    peaks = JSON.parse(JSON.stringify(peaks));
+    peaks = structuredClone(peaks);
     const currentSum = xyObjectSumY(peaks);
     const ratio = sumValue / currentSum;
-    peaks.forEach((peak) => (peak.y *= ratio));
+    for (const peak of peaks) {
+      peak.y *= ratio;
+    }
   }
 
   return peaks.sort((a, b) => a.x - b.x);

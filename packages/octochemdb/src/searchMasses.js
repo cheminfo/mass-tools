@@ -43,8 +43,8 @@ export async function searchMasses(options = {}) {
       mf,
     };
 
-    const results = (await fetchJSON(realURL, searchParams)).data;
-    results.forEach((result) => {
+    const { data: results } = await fetchJSON(realURL, searchParams);
+    for (const result of results) {
       const modifiedResult = {
         ...result,
         modification,
@@ -53,7 +53,7 @@ export async function searchMasses(options = {}) {
         modifiedResult.url = link + result._id;
       }
       allResults.push(modifiedResult);
-    });
+    }
   }
 
   return allResults;

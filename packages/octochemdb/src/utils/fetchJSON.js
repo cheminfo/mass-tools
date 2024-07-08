@@ -4,7 +4,7 @@ export async function fetchJSON(url, data) {
       const searchParams = new URLSearchParams(data);
       const result = await fetch(`${url}?${searchParams.toString()}`);
       return result.json();
-    } catch (e) {
+    } catch {
       const searchParams = new URLSearchParams(data);
       const result = await fetch(`${url}?${searchParams.toString()}`);
       return result.json();

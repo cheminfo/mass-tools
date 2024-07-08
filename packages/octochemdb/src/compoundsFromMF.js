@@ -28,7 +28,7 @@ export async function compoundsFromMF(mf, options = {}) {
   };
 
   const realURL = new URL(route, baseURL).toString();
-  const data = (await fetchJSON(realURL, searchParams)).data;
+  const { data } = await fetchJSON(realURL, searchParams);
 
   const ids = data.map((datum) => datum._id);
 
@@ -56,7 +56,7 @@ async function getTitles(ids, options) {
     baseURL = 'https://octochemdb.cheminfo.org/';
   }
   const titlesURL = new URL(titleCompoundsURL, baseURL).toString();
-  const titlesArray = (await postFetchJSON(titlesURL, { ids })).data;
+  const { data: titlesArray } = await postFetchJSON(titlesURL, { ids });
   const titles = {};
   for (const entry of titlesArray) {
     if (entry.data.title.match(/CID /)) continue;

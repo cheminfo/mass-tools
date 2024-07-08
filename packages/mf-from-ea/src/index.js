@@ -38,11 +38,11 @@ export function mfFromEA(targetEA, options = {}) {
   let filterUnsaturation = !!unsaturation;
   // we calculate not the real unsaturation but the one before dividing by 2 + 1
   let fakeMinUnsaturation =
-    typeof unsaturation.min === 'undefined'
+    unsaturation.min === undefined
       ? Number.MIN_SAFE_INTEGER
       : (unsaturation.min - 1) * 2;
   let fakeMaxUnsaturation =
-    typeof unsaturation.max === 'undefined'
+    unsaturation.max === undefined
       ? Number.MAX_SAFE_INTEGER
       : (unsaturation.max - 1) * 2;
 
@@ -100,7 +100,7 @@ export function mfFromEA(targetEA, options = {}) {
     }
 
     if (results.info.numberMFEvaluated++ > maxIterations) {
-      throw Error(
+      throw new Error(
         `Iteration number is over the current maximum of: ${maxIterations}`,
       );
     }
@@ -129,7 +129,7 @@ export function mfFromEA(targetEA, options = {}) {
     for (let i = 0; i < possibilities.length; i++) {
       const possibility = possibilities[i];
       let ratio = (possibility.mass * possibility.currentCount) / mw;
-      if (typeof possibility.targetEA !== 'undefined') {
+      if (possibility.targetEA !== undefined) {
         let error = Math.abs(possibility.targetEA - ratio);
         if (error > maxElementError) {
           continue mfWhile;
@@ -139,7 +139,7 @@ export function mfFromEA(targetEA, options = {}) {
 
       possibility.currentValue = ratio;
     }
-    if (isNaN(totalError) || totalError > maxTotalError) continue;
+    if (Number.isNaN(totalError) || totalError > maxTotalError) continue;
     results.mfs.push(getResult(possibilities, totalError, orderMapping));
     results.info.numberResults++;
   }

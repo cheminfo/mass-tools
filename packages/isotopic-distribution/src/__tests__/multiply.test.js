@@ -3,11 +3,9 @@ import { Distribution } from '../Distribution.js';
 describe('test distribution multiply', () => {
   it('should yield the product', () => {
     let dist1 = new Distribution();
-    dist1.push({ x: 1, y: 2 });
-    dist1.push({ x: 2, y: 3 });
+    dist1.push({ x: 1, y: 2 }, { x: 2, y: 3 });
     let dist2 = new Distribution();
-    dist2.push({ x: 1, y: 2 });
-    dist2.push({ x: 2, y: 3 });
+    dist2.push({ x: 1, y: 2 }, { x: 2, y: 3 });
     let dist3 = dist1.multiply(dist2);
 
     dist3.sortX();

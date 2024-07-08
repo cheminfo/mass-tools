@@ -22,8 +22,8 @@ export function getPeakWidthFct(options = {}) {
       'mass',
       `return ${peakWidthFct} + ${precision} * mass / 1e6`,
     );
-  } catch (e) {
-    logger?.warn(`error in peakWidthFct: ${e.toString()}`);
+  } catch (error) {
+    logger?.warn(`error in peakWidthFct: ${error.toString()}`);
     return () => 0.01;
   }
 }

@@ -1,5 +1,5 @@
-import { readFile, stat } from 'fs/promises';
-import { join } from 'path';
+import { readFile, stat } from 'node:fs/promises';
+import path from 'node:path';
 
 import { http } from 'msw';
 import { setupServer } from 'msw/node';
@@ -7,7 +7,7 @@ import { setupServer } from 'msw/node';
 export const server = setupServer(
   http.get(`http://localhost/data*`, async ({ request }) => {
     const url = new URL(request.url);
-    const pathname = join(__dirname, url.pathname);
+    const pathname = path.join(__dirname, url.pathname);
     const pathnameStat = await stat(pathname);
     if (pathnameStat.isFile()) {
       const data = await readFile(pathname);
@@ -31,21 +31,23 @@ export const server = setupServer(
         const id = url.searchParams.get('id');
         const fields = url.searchParams.get('fields');
         const fieldsArray = fields?.split(',');
-        const filteredContent = jsonContent.filter(
+        const filteredContent = jsonContent.find(
           (item) => item.data._id === id,
-        )[0].data;
+        ).data;
 
         const filteredItem = {};
 
-        fieldsArray?.forEach((field) => {
-          let dataFields = field.split('.');
-          if (dataFields.length === 1) {
-            filteredItem[field] = filteredContent[field];
-          } else {
-            filteredItem[dataFields[0]][dataFields[1]] =
-              filteredContent[dataFields[0]][dataFields[1]];
+        if (fieldsArray) {
+          for (const field of fieldsArray) {
+            let dataFields = field.split('.');
+            if (dataFields.length === 1) {
+              filteredItem[field] = filteredContent[field];
+            } else {
+              filteredItem[dataFields[0]][dataFields[1]] =
+                filteredContent[dataFields[0]][dataFields[1]];
+            }
           }
-        });
+        }
 
         return new Response(JSON.stringify({ _id: id, data: filteredItem }));
       }

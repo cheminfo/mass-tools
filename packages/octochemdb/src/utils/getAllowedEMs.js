@@ -5,14 +5,15 @@ export async function getAllowedEMs(options) {
   if (!ranges) return;
   const allowedEMs = [];
   for (let mass of masses) {
-    (
-      await findMFs(mass, {
-        ionizations,
-        precision,
-        ranges,
-        limit: 100000,
-      })
-    ).mfs.forEach((mf) => allowedEMs.push(mf.em));
+    const { mfs } = await findMFs(mass, {
+      ionizations,
+      precision,
+      ranges,
+      limit: 100000,
+    });
+    for (const mf of mfs) {
+      allowedEMs.push(mf.em);
+    }
   }
   return Float64Array.from(allowedEMs).sort();
 }

@@ -54,7 +54,7 @@ export async function searchWithIonizations(options) {
     for (const entry of result.data) {
       if (
         allowedEMs &&
-        !allowedEMs.find((em) => Math.abs(em - entry.data.em) < 0.0000001)
+        !allowedEMs.some((em) => Math.abs(em - entry.data.em) < 0.0000001)
       ) {
         continue;
       }
@@ -69,9 +69,9 @@ export async function searchWithIonizations(options) {
           ionization,
         }).ms;
         entries.push(entry);
-      } catch (e) {
+      } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn(`${e}`);
+        console.warn(`${error}`);
       }
     }
   }

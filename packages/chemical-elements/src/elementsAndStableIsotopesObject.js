@@ -1,6 +1,6 @@
 import { elementsAndStableIsotopes } from './elementsAndStableIsotopes.js';
 
 export const elementsAndStableIsotopesObject = {};
-elementsAndStableIsotopes.forEach((element) => {
+for (const element of elementsAndStableIsotopes) {
   elementsAndStableIsotopesObject[element.symbol] = element;
-});
+}

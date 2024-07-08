@@ -17,8 +17,8 @@ describe('test isotopicDistribution', () => {
   it('create distribution of C1 and getGaussian', () => {
     let isotopicDistribution = new IsotopicDistribution('C', { fwhm: 0.1 });
     let gaussian = isotopicDistribution.getGaussian({
-      from: 11.0,
-      to: 13.0,
+      from: 11,
+      to: 13,
     });
 
     expect(gaussian.x).toHaveLength(57);
@@ -31,8 +31,8 @@ describe('test isotopicDistribution', () => {
   it('create distribution of C1 and getGaussian with maxValue', () => {
     let isotopicDistribution = new IsotopicDistribution('C', { fwhm: 0.1 });
     let gaussian = isotopicDistribution.getGaussian({
-      from: 11.0,
-      to: 13.0,
+      from: 11,
+      to: 13,
       maxValue: 100,
     });
 

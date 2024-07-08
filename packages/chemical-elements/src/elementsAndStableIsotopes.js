@@ -1,9 +1,7 @@
 import { elementsAndIsotopes } from './elementsAndIsotopes.js';
 
-export const elementsAndStableIsotopes = JSON.parse(
-  JSON.stringify(elementsAndIsotopes),
-);
+export const elementsAndStableIsotopes = structuredClone(elementsAndIsotopes);
 
-elementsAndStableIsotopes.forEach((element) => {
+for (const element of elementsAndStableIsotopes) {
   element.isotopes = element.isotopes.filter((i) => i.abundance > 0);
-});
+}
