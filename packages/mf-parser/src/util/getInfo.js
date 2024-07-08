@@ -12,10 +12,14 @@ import { getIsotopeRatioInfo } from './getIsotopeRatioInfo';
 import { partToAtoms } from './partToAtoms';
 import { partToMF } from './partToMF';
 
+/** @typedef {import('./getInfo.types').PartInfo} PartInfo */
+/** @typedef {import('./getInfo.types').PartInfoWithParts} PartInfoWithParts */
+
 /**
  *
  * @param {*} parts
  * @param {*} [options={}]
+ * @returns {object|PartInfo|PartInfoWithParts}
  */
 export function getInfo(parts, options = {}) {
   let {
@@ -67,6 +71,7 @@ export function getInfo(parts, options = {}) {
 function getProcessedPart(part, options) {
   let { customUnsaturations, emFieldName, msemFieldName } = options;
 
+  /** @type {PartInfo} */
   let currentPart = {
     mass: 0,
     charge: 0,

@@ -5,10 +5,12 @@ import {
 
 import { Kind } from '../Kind';
 
+/** @typedef {import('./getIsotopesInfo.types').IsotopesInfo} IsotopesInfo
+
 /**
  *
  * @param {*} parts
- * @param {*} options
+ * @returns {[]|IsotopesInfo}
  */
 export function getIsotopesInfo(parts) {
   if (parts.length === 0) return [];
@@ -19,7 +21,11 @@ export function getIsotopesInfo(parts) {
   return getProcessedPart(parts[0]);
 }
 
+/**
+ * @returns {IsotopesInfo}
+ */
 function getProcessedPart(part) {
+  /** @type {IsotopesInfo} */
   let result = {
     charge: 0,
     isotopes: [],
