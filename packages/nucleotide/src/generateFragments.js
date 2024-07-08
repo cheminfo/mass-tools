@@ -30,7 +30,7 @@ export function generateFragments(mf, options) {
   let mfs = [];
   // need to allow 0-9 to deal with neutral loss
   let mfparts = mf
-    .replace(/([a-z)0-9])([A-Z][a-z](?=[a-z]))/g, '$1 $2')
+    .replaceAll(/([\d)a-z])([A-Z][a-z](?=[a-z]))/g, '$1 $2')
     .split(/ /);
 
   let fiveTerm = '';
@@ -41,12 +41,9 @@ export function generateFragments(mf, options) {
     mfparts = mfparts.splice(1);
   }
 
-  if (mfparts[mfparts.length - 1].includes('(')) {
-    threeTerm += mfparts[mfparts.length - 1].replace(/^[^()]*/, '');
-    mfparts[mfparts.length - 1] = mfparts[mfparts.length - 1].replace(
-      /\(.*/,
-      '',
-    );
+  if (mfparts.at(-1).includes('(')) {
+    threeTerm += mfparts.at(-1).replace(/^[^()]*/, '');
+    mfparts[mfparts.length - 1] = mfparts.at(-1).replace(/\(.*/, '');
   }
 
   for (let ter5 = 1; ter5 < mfparts.length; ter5++) {

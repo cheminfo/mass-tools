@@ -2,7 +2,7 @@ import { generateMFs } from '../index.js';
 
 describe('generateMFs', () => {
   it('empty', async () => {
-    expect(async () => generateMFs()).rejects.toThrow(
+    await expect(generateMFs()).rejects.toThrow(
       'Ranges must be an array of string or object',
     );
   });
@@ -17,17 +17,17 @@ describe('generateMFs', () => {
 
   it('from array of string with empty', async () => {
     let mfsArray = ['C,H,', 'Cl,Br'];
-    let result = (await generateMFs(mfsArray)).map((entry) => entry.mf);
+    const mfs = await generateMFs(mfsArray);
+    const result = mfs.map((entry) => entry.mf);
     expect(result).toStrictEqual(['Cl', 'HCl', 'CCl', 'Br', 'HBr', 'CBr']);
   });
 
   it('from array of string with comment', async () => {
     let mfsArray = ['C.H.O', '+,++', ['Cl', 'Br$XX']];
-    let result = (await generateMFs(mfsArray)).sort(
-      (a, b) => a.ms.em - b.ms.em,
-    );
-    expect(result[0].mf).toBe('HCl(+2)');
-    expect(result).toHaveLength(12);
+    const mfs = await generateMFs(mfsArray);
+    mfs.sort((a, b) => a.ms.em - b.ms.em);
+    expect(mfs[0].mf).toBe('HCl(+2)');
+    expect(mfs).toHaveLength(12);
   });
 
   it('from  array of string with some range and non range', async () => {
@@ -163,7 +163,7 @@ describe('generateMFs', () => {
 
   it('Check info', async () => {
     let mfsArray = ['C', '', 'C5(C)2'];
-    let result = (await generateMFs(mfsArray, { canonizeMF: true }))[0];
+    let [result] = await generateMFs(mfsArray, { canonizeMF: true });
     expect(result).toMatchInlineSnapshot(`
       {
         "atoms": {
@@ -253,16 +253,15 @@ describe('generateMFs', () => {
       ['H#1', 'H#1H', 'H#2'],
     ];
 
-    let result = (await generateMFs(mfsArray, { links: { filter: true } })).map(
-      (item) => item.mf,
-    );
+    const mfs = await generateMFs(mfsArray, { links: { filter: true } });
+    let result = mfs.map((item) => item.mf);
     expect(result).toStrictEqual(['CH', 'CH2', 'C2H', 'C2H2']);
-    result = (
-      await generateMFs(mfsArray, {
-        uniqueMFs: false,
-        links: { filter: true },
-      })
-    ).map((item) => item.mf);
+    const notUniqueMFs = await generateMFs(mfsArray, {
+      uniqueMFs: false,
+      links: { filter: true },
+    });
+
+    result = notUniqueMFs.map((item) => item.mf);
     expect(result).toStrictEqual(['CH', 'CH2', 'C2H', 'C2H', 'C2H2']);
   });
 

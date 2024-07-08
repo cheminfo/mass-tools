@@ -6,7 +6,7 @@ for (let i = 0; i < aminoAcids.length; i++) {
   aaObject[aminoAcids[i].aa3] = aminoAcids[i];
 }
 
-export function calculateCharge(aas, pH = 7.0) {
+export function calculateCharge(aas, pH = 7) {
   let combined = combine(aas);
   if (!combined) return;
   let charge = calculateForPh(combined, pH);
@@ -78,8 +78,8 @@ function combine(aas) {
   } else {
     return;
   }
-  if (aaObject[aas[aas.length - 1]]) {
-    combined.last = aaObject[aas[aas.length - 1]].pKaC;
+  if (aaObject[aas.at(-1)]) {
+    combined.last = aaObject[aas.at(-1)].pKaC;
   } else {
     return;
   }

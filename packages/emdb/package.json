@@ -22,7 +22,6 @@
   "dependencies": {
     "chemical-elements": "^2.1.0",
     "chemical-groups": "^2.2.0",
-    "cross-fetch": "^4.0.0",
     "isotopic-distribution": "^3.2.0",
     "jszip": "^3.10.1",
     "mass-fragmentation": "^1.10.0",

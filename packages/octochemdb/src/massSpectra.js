@@ -60,7 +60,8 @@ export async function massSpectra(options = {}) {
       );
     }
   }
-  let results = (await Promise.all(promises)).flat();
+  const allResults = await Promise.all(promises);
+  let results = allResults.flat();
   results = appendAndFilterSimilarity(results, options);
   if (uniqueMolecules) {
     results = uniqueMol(results);
@@ -70,11 +71,11 @@ export async function massSpectra(options = {}) {
 
 function uniqueMol(results) {
   const unique = {};
-  results.forEach((result) => {
+  for (const result of results) {
     if (!unique[result.data.ocl.idCode]) {
       unique[result.data.ocl.idCode] = result;
     }
-  });
+  }
   return Object.values(unique);
 }
 
@@ -102,7 +103,7 @@ function appendAndFilterSimilarity(results, options = {}) {
   for (const result of results) {
     result.similarity = comparator.getSimilarity(
       experimental,
-      JSON.parse(JSON.stringify(result.data.spectrum.data)),
+      structuredClone(result.data.spectrum.data),
     );
   }
   results = results.filter((a) => a.similarity.cosine >= minSimilarity);

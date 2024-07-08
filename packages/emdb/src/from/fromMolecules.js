@@ -93,15 +93,13 @@ function groupFragmentationResults(results) {
       delete currentResult.fragment;
       groupedResults.push(currentResult);
     } else {
-      const lastFragment =
-        currentResult.fragments[currentResult.fragments.length - 1];
+      const lastFragment = currentResult.fragments.at(-1);
       if (lastFragment.idCode === result.fragment.idCode) {
         lastFragment.count++;
         if (
-          lastFragment.parents[lastFragment.parents.length - 1].idCode ===
-          result.fragment.parent.idCode
+          lastFragment.parents.at(-1).idCode === result.fragment.parent.idCode
         ) {
-          lastFragment.parents[lastFragment.parents.length - 1].count++;
+          lastFragment.parents.at(-1).count++;
         } else {
           lastFragment.parents.push({ ...result.fragment.parent, count: 1 });
         }

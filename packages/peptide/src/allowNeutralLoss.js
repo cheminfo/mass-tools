@@ -15,8 +15,8 @@ export function allowNeutralLoss(mf) {
 }
 
 function allowOneNeutralLoss(mf) {
-  mf = mf.replace(/(Ser|Thr|Asp|Glu)(?!\()/g, '$1(H-2O-1)0-1');
-  mf = mf.replace(/(Arg|Lys|Asn|Gln)(?!\()/g, '$1(N-1H-3)0-1');
+  mf = mf.replaceAll(/(Ser|Thr|Asp|Glu)(?!\()/g, '$1(H-2O-1)0-1');
+  mf = mf.replaceAll(/(Arg|Lys|Asn|Gln)(?!\()/g, '$1(N-1H-3)0-1');
 
   return mf;
 }

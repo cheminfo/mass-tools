@@ -12,7 +12,7 @@ export function peaksWidth(peaks) {
   }
   let regression = new PowerRegression(xs, widths);
 
-  if (isNaN(regression.A) || isNaN(regression.B)) {
+  if (Number.isNaN(regression.A) || Number.isNaN(regression.B)) {
     throw new Error('peaksWidth: can not calculate regression');
   }
 

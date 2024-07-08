@@ -49,7 +49,7 @@ export function createTaxonomyTree(taxonomies, options = {}) {
 }
 
 function cleanEmptyBranches(branch) {
-  branch.children.forEach((child) => cleanEmptyBranches(child));
+  for (const child of branch.children) cleanEmptyBranches(child);
 
   branch.children = branch.children.filter((child) => {
     // This part is used empty nodes

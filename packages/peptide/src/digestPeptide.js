@@ -15,18 +15,15 @@ export function digestPeptide(sequence, options = {}) {
   if (options.minResidue === undefined) options.minResidue = 0;
   if (options.maxResidue === undefined) options.maxResidue = Number.MAX_VALUE;
   let regexp = getRegexp(options.enzyme);
-  let fragments = sequence
-    .replace(regexp, '$1 ')
-    .split(/ /)
-    .filter((entry) => entry);
+  let fragments = sequence.replace(regexp, '$1 ').split(/ /).filter(Boolean);
 
   {
     let from = 0;
     for (let i = 0; i < fragments.length; i++) {
       let nbResidue = fragments[i]
-        .replace(/([A-Z][a-z][a-z])/g, ' $1')
+        .replaceAll(/([A-Z][a-z]{2})/g, ' $1')
         .split(/ /)
-        .filter((entry) => entry).length;
+        .filter(Boolean).length;
       fragments[i] = {
         sequence: fragments[i],
         nbResidue,
@@ -67,7 +64,7 @@ export function digestPeptide(sequence, options = {}) {
 }
 
 function getRegexp(enzyme) {
-  switch (enzyme.toLowerCase().replace(/[^a-z0-9]/g, '')) {
+  switch (enzyme.toLowerCase().replaceAll(/[^\da-z]/g, '')) {
     case 'chymotrypsin':
       return /(Phe|Tyr|Trp)(?!Pro)/g;
     case 'trypsin':
@@ -83,7 +80,7 @@ function getRegexp(enzyme) {
     case 'cyanogenbromide':
       return /(Met)/g;
     case 'any':
-      return /()(?=[A-Z][a-z][a-z])/g;
+      return /()(?=[A-Z][a-z]{2})/g;
     default:
       throw new Error(`Digestion enzyme: ${enzyme} is unknown`);
   }

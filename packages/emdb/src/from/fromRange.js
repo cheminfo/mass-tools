@@ -40,7 +40,7 @@ import { generateMFs } from 'mf-generator';
  */
 
 export async function fromRange(rangesString, options = {}) {
-  let ranges = rangesString.split(/ *[;\r\n] */);
+  let ranges = rangesString.split(/ *[\n\r;] */);
   for (let i = 0; i < ranges.length; i++) {
     let range = ranges[i];
     if (range.includes(',')) {

@@ -1,5 +1,5 @@
-import { writeFileSync } from 'fs';
-import { join } from 'path';
+import { writeFileSync } from 'node:fs';
+import path from 'node:path';
 
 import { info } from '../../data/ACGGCTT(C8H14N2O)AGG';
 import { sequenceSVG } from '../sequenceSVG';
@@ -19,7 +19,7 @@ test('sequenceSVG of big nucleotide', () => {
   let sequence = 'ACGGCTT(C8H14N2O)AGG';
   let svg = sequenceSVG(sequence, filteredInfo, options);
 
-  writeFileSync(join(__dirname, 'testBigNucleotide.svg'), svg);
+  writeFileSync(path.join(__dirname, 'testBigNucleotide.svg'), svg);
 
   expect(true).toBe(true);
 });

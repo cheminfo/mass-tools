@@ -1,12 +1,12 @@
 import { elementsAndIsotopesObject as elements } from './elementsAndIsotopesObject';
 
 export const isotopesObject = {};
-Object.keys(elements).forEach((key) => {
+for (const key of Object.keys(elements)) {
   let e = elements[key];
-  e.isotopes.forEach((i) => {
+  for (const i of e.isotopes) {
     isotopesObject[i.nominal + key] = {
       abundance: i.abundance,
       mass: i.mass,
     };
-  });
-});
+  }
+}

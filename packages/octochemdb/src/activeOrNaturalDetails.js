@@ -52,5 +52,6 @@ async function fetchActiveOrNatural(id, options) {
   if (fields) {
     searchParams.fields = fields;
   }
-  return (await fetchJSON(url, searchParams)).data;
+  const results = await fetchJSON(url, searchParams);
+  return results.data;
 }

@@ -25,7 +25,7 @@ export async function pubmedCompounds(pubmedID, options = {}) {
     limit,
   };
 
-  const result = (await fetchJSON(realURL, searchParams)).data;
-  await includeDBRefs(result, { baseURL });
-  return result.data.compounds;
+  const { data: results } = await fetchJSON(realURL, searchParams);
+  await includeDBRefs(results, { baseURL });
+  return results.data.compounds;
 }

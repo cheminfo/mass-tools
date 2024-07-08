@@ -16,7 +16,7 @@ afterAll(() => {
 });
 
 test('activeOrNaturalDetails', async () => {
-  const id = 'dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgEx\x7FRLjmcxX~F@';
+  const id = 'dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgEx\u007FRLjmcxX~F@';
   const url = 'http://localhost/data/activeOrNaturalDetails.json';
 
   const entry = await activeOrNaturalDetails(id, {

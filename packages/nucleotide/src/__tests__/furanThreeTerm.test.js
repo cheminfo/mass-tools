@@ -28,6 +28,6 @@ describe('test nucleotide', () => {
     let modified = furanThreeTerm('HODamp');
     expect(modified).toBe('HOFurp');
     let mass = new MF(modified).getInfo().monoisotopicMass;
-    expect(mass).toBeCloseTo(178.0, 2);
+    expect(mass).toBeCloseTo(178, 2);
   });
 });

@@ -4,7 +4,7 @@ export function addFiveTermBaseLoss(mfs, fiveTerm, i, options) {
   if (!options.abcdBaseLoss) return;
   let loss = baseLoss(fiveTerm);
 
-  loss.forEach((mf) => {
+  for (const mf of loss) {
     if (options.a) {
       mfs.push(`${mf}`.replace('$', `O-1H-1$a${i} `));
     }
@@ -17,5 +17,5 @@ export function addFiveTermBaseLoss(mfs, fiveTerm, i, options) {
     if (options.d) {
       mfs.push(`${mf}`.replace('$', `PO3H2$d${i} `));
     }
-  });
+  }
 }

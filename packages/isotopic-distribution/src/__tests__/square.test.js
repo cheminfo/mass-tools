@@ -3,8 +3,7 @@ import { Distribution } from '../Distribution.js';
 describe('test array-object-xy square', () => {
   it('should yield the product', () => {
     let distribution = new Distribution();
-    distribution.push({ x: 1, y: 2 });
-    distribution.push({ x: 2, y: 3 });
+    distribution.push({ x: 1, y: 2 }, { x: 2, y: 3 });
     distribution.square();
     expect(distribution.array).toStrictEqual([
       { x: 2, y: 4 },

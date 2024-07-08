@@ -109,7 +109,7 @@ function postMultiplier(currentPart, value, previousKind) {
     }
   } else {
     // just applies to the previous element
-    currentPart.lines[currentPart.lines.length - 1].multiplier *= value;
+    currentPart.lines.at(-1).multiplier *= value;
   }
 }
 
@@ -142,7 +142,7 @@ function expandgroupsObject(parts) {
         }
       }
     }
-    if (expanded) part.lines = part.lines.filter((a) => a);
+    if (expanded) part.lines = part.lines.filter(Boolean);
   }
 }
 
@@ -162,13 +162,12 @@ function combineAtomsIsotopesCharges(parts) {
             value: key.value.value * key.value.multiplier,
           });
         } else {
-          result[result.length - 1].value +=
-            key.value.value * key.value.multiplier;
+          result.at(-1).value += key.value.value * key.value.multiplier;
         }
       } else if (currentKey !== key.key) {
         result.push(key.value);
       } else {
-        result[result.length - 1].multiplier += key.value.multiplier;
+        result.at(-1).multiplier += key.value.multiplier;
       }
       currentKey = key.key;
     }

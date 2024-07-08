@@ -48,7 +48,7 @@ describe('isoelectric point', () => {
   });
 
   it('calculateCharge', () => {
-    let result = calculateCharge('HAlaGlySerLysLysHisOH', 2.0);
+    let result = calculateCharge('HAlaGlySerLysLysHisOH', 2);
     expect(result).toBe(3.334);
   });
 });

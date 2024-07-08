@@ -45,7 +45,7 @@ describe('fromArray', () => {
       .get('generated')
       .map((entry) => entry.mf)
       .sort()
-      .join();
+      .join(',');
     expect(result).toBe('BrN,C,CBr,CCl,ClN,N');
   });
 });

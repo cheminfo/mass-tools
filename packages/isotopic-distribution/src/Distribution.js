@@ -30,7 +30,7 @@ export class Distribution {
   }
 
   get sumY() {
-    if (!isNaN(this.cache.sumY)) return this.cache.sumY;
+    if (!Number.isNaN(this.cache.sumY)) return this.cache.sumY;
     let sumY = 0;
     for (let item of this.array) {
       sumY += item.y;
@@ -41,7 +41,7 @@ export class Distribution {
   }
 
   get minX() {
-    if (!isNaN(this.cache.minX)) return this.cache.minX;
+    if (!Number.isNaN(this.cache.minX)) return this.cache.minX;
     let minX = Number.POSITIVE_INFINITY;
     for (let item of this.array) {
       if (item.x < minX) {
@@ -54,7 +54,7 @@ export class Distribution {
   }
 
   get maxX() {
-    if (!isNaN(this.cache.maxX)) return this.cache.maxX;
+    if (!Number.isNaN(this.cache.maxX)) return this.cache.maxX;
     let maxX = Number.NEGATIVE_INFINITY;
     for (let item of this.array) {
       if (item.x > maxX) {
@@ -67,7 +67,7 @@ export class Distribution {
   }
 
   get minY() {
-    if (!isNaN(this.cache.minY)) return this.cache.minY;
+    if (!Number.isNaN(this.cache.minY)) return this.cache.minY;
     let minY = Number.POSITIVE_INFINITY;
     for (let item of this.array) {
       if (item.y < minY) {
@@ -80,7 +80,7 @@ export class Distribution {
   }
 
   get maxY() {
-    if (!isNaN(this.cache.maxY)) return this.cache.maxY;
+    if (!Number.isNaN(this.cache.maxY)) return this.cache.maxY;
     let maxY = Number.NEGATIVE_INFINITY;
     for (let item of this.array) {
       if (item.y > maxY) {
@@ -108,8 +108,8 @@ export class Distribution {
     this.emptyCache();
   }
 
-  push(point) {
-    this.array.push(point);
+  push(...points) {
+    this.array.push(...points);
     this.emptyCache();
   }
 
@@ -186,7 +186,7 @@ export class Distribution {
   copy() {
     let distCopy = new Distribution();
     distCopy.cache = { ...this.cache };
-    distCopy.array = JSON.parse(JSON.stringify(this.array));
+    distCopy.array = structuredClone(this.array);
     return distCopy;
   }
 
@@ -221,10 +221,10 @@ function getEmptyCache() {
     isEmpty: true,
     xSorted: false,
     ySorted: false,
-    minX: NaN,
-    maxX: NaN,
-    minY: NaN,
-    maxY: NaN,
-    sumY: NaN,
+    minX: Number.NaN,
+    maxX: Number.NaN,
+    minY: Number.NaN,
+    maxY: Number.NaN,
+    sumY: Number.NaN,
   };
 }

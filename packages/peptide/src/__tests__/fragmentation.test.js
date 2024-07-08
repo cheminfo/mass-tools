@@ -226,8 +226,8 @@ describe('generatePeptideFragments', () => {
 
 function clean(mfs) {
   for (let i = 0; i < mfs.length; i++) {
-    mfs[i] = mfs[i].replace(/\([^(]*\)[0-9-]*/g, '');
-    mfs[i] = mfs[i].replace(/^[H\d+]*(?=[A-Z])/, '');
+    mfs[i] = mfs[i].replaceAll(/\([^(]*\)[\d-]*/g, '');
+    mfs[i] = mfs[i].replace(/^[\d+H]*(?=[A-Z])/, '');
     mfs[i] = mfs[i].replace(/O[H-]\$/, '$');
   }
 }

@@ -1,6 +1,4 @@
-import crossFetch from 'cross-fetch';
-
 export async function fetchArrayBuffer(url) {
-  const result = await crossFetch(url);
+  const result = await fetch(url);
   return result.arrayBuffer();
 }

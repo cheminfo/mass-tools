@@ -2,7 +2,7 @@ import { MF } from 'mf-parser';
 
 export function preprocessIonizations(ionizationsString = '') {
   if (Array.isArray(ionizationsString)) return ionizationsString;
-  let ionizations = ionizationsString.split(/ *[.,;\t\r\n]+ */);
+  let ionizations = ionizationsString.split(/ *[\t\n\r,.;]+ */);
 
   // it is allowed to have ranges in Ionizations. We need to explode them.
 

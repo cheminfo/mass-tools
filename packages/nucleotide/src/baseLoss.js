@@ -1,19 +1,19 @@
 import { mfDiff } from 'mf-utilities';
 
 const mfLosses = {};
-['Amp', 'Tmp', 'Cmp', 'Gmp', 'Ump'].forEach((nucleotide) => {
+for (const nucleotide of ['Amp', 'Tmp', 'Cmp', 'Gmp', 'Ump']) {
   mfLosses[nucleotide] = {
     code: nucleotide.charAt(0),
     diff: mfDiff('Rmp', nucleotide),
   };
-});
+}
 
-['Damp', 'Dtmp', 'Dcmp', 'Dgmp', 'Dump'].forEach((nucleotide) => {
+for (const nucleotide of ['Damp', 'Dtmp', 'Dcmp', 'Dgmp', 'Dump']) {
   mfLosses[nucleotide] = {
     code: nucleotide.charAt(1).toUpperCase(),
     diff: mfDiff('Drmp', nucleotide),
   };
-});
+}
 
 export function baseLoss(nucleotide) {
   // any residue can loose a base

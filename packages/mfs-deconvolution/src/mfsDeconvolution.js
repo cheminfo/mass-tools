@@ -62,9 +62,9 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
     const newMFs = await generateMFs([customMFs], { filter, ionizations });
     mfs = mfs.concat(newMFs);
   }
-  mfs.forEach((mf) => {
+  for (const mf of mfs) {
     mf.id = v4();
-  });
+  }
   mfs = addIsotopicDistributionAndCheckMF(mfs, { logger, peakWidthFct });
 
   mfs.sort((mf1, mf2) => mf1.ms.em - mf2.ms.em);
@@ -179,7 +179,9 @@ function buildCombined(centroids, mfs, options = {}) {
   }
 
   const data = [centroids];
-  mfs.forEach((mf) => data.push(mf.distribution));
+  for (const mf of mfs) {
+    data.push(mf.distribution);
+  }
 
   // we align all the spectra to the first one but if some values (X) are missing we will add them
   let combined = xyArrayAlignToFirst(data, {

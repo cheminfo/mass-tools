@@ -1,5 +1,5 @@
-import fs from 'fs';
-import { join } from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 
 import { parseXY } from 'xy-parser';
 
@@ -47,6 +47,9 @@ describe('test searchSimilarity for ethylbenzene', () => {
 });
 
 function loadEthylbenzene() {
-  let text = fs.readFileSync(join(__dirname, 'data/ethylbenzene.txt'), 'utf8');
+  let text = fs.readFileSync(
+    path.join(__dirname, 'data/ethylbenzene.txt'),
+    'utf8',
+  );
   return parseXY(text);
 }

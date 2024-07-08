@@ -1,5 +1,5 @@
-import fs from 'fs';
-import { join } from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 
 import { parseXY } from 'xy-parser';
 
@@ -39,7 +39,7 @@ describe('test appendFragmentsInfo for ethylbenzene', () => {
 
 function loadEthylbenzene() {
   let text = fs.readFileSync(
-    join(__dirname, '../../__tests__/data/ethylbenzene.txt'),
+    path.join(__dirname, '../../__tests__/data/ethylbenzene.txt'),
     'utf8',
   );
   return parseXY(text);

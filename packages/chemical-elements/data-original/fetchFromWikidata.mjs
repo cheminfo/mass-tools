@@ -1,8 +1,6 @@
-let crossFetch = require('cross-fetch');
-let Wikidata = require('wikidata-sdk');
+import Wikidata from 'wikidata-sdk';
 
-async function compileIsotopes() {
-  let url = Wikidata.sparqlQuery(`
+let url = Wikidata.sparqlQuery(`
     PREFIX wd: <http://www.wikidata.org/entity/>
     PREFIX wdt: <http://www.wikidata.org/prop/direct/>
     
@@ -34,13 +32,12 @@ async function compileIsotopes() {
     LIMIT 10
        `);
 
-  let result = await crossFetch(url);
-  let data = await result.text();
+let result = await fetch(url, {
+  headers: {
+    'User-Agent': 'cheminfo/mass-tools',
+  },
+});
+let data = await result.text();
 
-  // eslint-disable-next-line no-console
-  console.log(data);
-
-  return true;
-}
-
-compileIsotopes();
+// eslint-disable-next-line no-console
+console.log(data);

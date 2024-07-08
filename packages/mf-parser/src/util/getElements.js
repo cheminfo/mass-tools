@@ -27,9 +27,9 @@ export function getElements(parts) {
           if (!element) {
             throw new Error(`element unknown: ${part.value.atom} - ${line}`);
           }
-          let isotope = element.isotopes.filter(
+          let isotope = element.isotopes.find(
             (a) => a.nominal === line.value.isotope,
-          )[0];
+          );
           if (!isotope) {
             throw new Error(`isotope unknown: ${line.value.isotope} - ${line}`);
           }

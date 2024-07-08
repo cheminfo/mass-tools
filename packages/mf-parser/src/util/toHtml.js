@@ -12,14 +12,12 @@ export function toHtml(lines) {
         html.push(`<sup>${line.value}</sup>`);
         break;
       case Format.SUPERIMPOSE:
-        html.push(`<span style="${Style.SUPERIMPOSE}">`);
         html.push(
+          `<span style="${Style.SUPERIMPOSE}">`,
           `<sup style="${Style.SUPERIMPOSE_SUP_SUB}">${line.over}</sup>`,
-        );
-        html.push(
           `<sub style="${Style.SUPERIMPOSE_SUP_SUB}">${line.under}</sub>`,
+          '</span>',
         );
-        html.push('</span>');
         break;
       default:
         html.push(line.value);

@@ -43,7 +43,7 @@ export function getEA(parts) {
           let element = elements[line.value];
           if (!element) {
             element = groups[line.value];
-            if (!element) throw Error(`Unknown element: ${line.value}`);
+            if (!element) throw new Error(`Unknown element: ${line.value}`);
             // need to explode group ????
           }
           addMass(results, line.value, element.mass * line.multiplier);
@@ -68,9 +68,9 @@ export function getEA(parts) {
     });
   }
 
-  eas.forEach((ea) => {
+  for (const ea of eas) {
     ea.ratio = ea.mass / sum;
-  });
+  }
   return eas;
 }
 

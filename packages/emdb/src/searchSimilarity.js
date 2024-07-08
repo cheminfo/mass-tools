@@ -47,9 +47,9 @@ export async function searchSimilarity(emdb, options = {}) {
 
   if (
     !emdb.experimentalSpectrum ||
-    !emdb.experimentalSpectrum.data.x.length > 0
+    emdb.experimentalSpectrum.data.x.length === 0
   ) {
-    throw Error(
+    throw new Error(
       'You need to add an experimental spectrum first using setMassSpectrum',
     );
   }
@@ -77,7 +77,7 @@ export async function searchSimilarity(emdb, options = {}) {
     widthFunction = new Function('mass', widthFunction);
     let checkTopBottom = widthFunction(123);
     if (!checkTopBottom.bottom || !checkTopBottom.top) {
-      throw Error(
+      throw new Error(
         'widthFunction should return an object with bottom and top properties',
       );
     }

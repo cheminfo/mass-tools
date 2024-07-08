@@ -89,7 +89,7 @@ function getProcessedPart(part, options) {
         // todo should we have a kind GROUP ?
         if (!element) {
           element = groups[line.value];
-          if (!element) throw Error(`Unknown element: ${line.value}`);
+          if (!element) throw new Error(`Unknown element: ${line.value}`);
           if (!customUnsaturations[line.value]) {
             customUnsaturations[line.value] = element.unsaturation;
           }

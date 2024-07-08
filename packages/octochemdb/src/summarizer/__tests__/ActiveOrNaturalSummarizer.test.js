@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 
 import { normalizeActivities } from '../../utils/normalizeActivities.js';
 import { ActiveOrNaturalSummarizer } from '../ActiveOrNaturalSummarizer.js';
@@ -7,7 +7,7 @@ import { ActiveOrNaturalSummarizer } from '../ActiveOrNaturalSummarizer.js';
 describe('ActiveOrNaturalSummarizer', () => {
   it('multiple terms', async () => {
     const entry = JSON.parse(
-      readFileSync(join(__dirname, './details.json'), 'utf8'),
+      readFileSync(path.join(__dirname, './details.json'), 'utf8'),
     );
     normalizeActivities(entry);
     const options = {
@@ -36,7 +36,7 @@ describe('ActiveOrNaturalSummarizer', () => {
 
   it('empty terms', async () => {
     const entry = JSON.parse(
-      readFileSync(join(__dirname, './details.json'), 'utf8'),
+      readFileSync(path.join(__dirname, './details.json'), 'utf8'),
     );
     normalizeActivities(entry);
 
@@ -65,7 +65,7 @@ describe('ActiveOrNaturalSummarizer', () => {
 
   it('empty terms, no options', async () => {
     const entry = JSON.parse(
-      readFileSync(join(__dirname, './details.json'), 'utf8'),
+      readFileSync(path.join(__dirname, './details.json'), 'utf8'),
     );
     normalizeActivities(entry);
 
@@ -78,7 +78,7 @@ describe('ActiveOrNaturalSummarizer', () => {
   });
   it('terms:ethylene', async () => {
     const entry = JSON.parse(
-      readFileSync(join(__dirname, './details.json'), 'utf8'),
+      readFileSync(path.join(__dirname, './details.json'), 'utf8'),
     );
     normalizeActivities(entry);
 
@@ -94,7 +94,7 @@ describe('ActiveOrNaturalSummarizer', () => {
   });
   it('terms:inhibition', async () => {
     const entry = JSON.parse(
-      readFileSync(join(__dirname, './details.json'), 'utf8'),
+      readFileSync(path.join(__dirname, './details.json'), 'utf8'),
     );
     normalizeActivities(entry);
 
@@ -111,7 +111,7 @@ describe('ActiveOrNaturalSummarizer', () => {
   });
   it('terms:Apoptosis', async () => {
     const entry = JSON.parse(
-      readFileSync(join(__dirname, './details.json'), 'utf8'),
+      readFileSync(path.join(__dirname, './details.json'), 'utf8'),
     );
     normalizeActivities(entry);
 
@@ -130,7 +130,7 @@ describe('ActiveOrNaturalSummarizer', () => {
   });
   it('abstractsLimit', async () => {
     const entry = JSON.parse(
-      readFileSync(join(__dirname, './details.json'), 'utf8'),
+      readFileSync(path.join(__dirname, './details.json'), 'utf8'),
     );
     normalizeActivities(entry);
     const options = {
@@ -156,7 +156,7 @@ describe('ActiveOrNaturalSummarizer', () => {
   });
   it('taxonomies', async () => {
     const entry = JSON.parse(
-      readFileSync(join(__dirname, './details.json'), 'utf8'),
+      readFileSync(path.join(__dirname, './details.json'), 'utf8'),
     );
     normalizeActivities(entry);
 
@@ -169,7 +169,7 @@ describe('ActiveOrNaturalSummarizer', () => {
   });
   it('taxonomies Bis', async () => {
     const entry = JSON.parse(
-      readFileSync(join(__dirname, './detailsTestBis.json'), 'utf8'),
+      readFileSync(path.join(__dirname, './detailsTestBis.json'), 'utf8'),
     );
     normalizeActivities(entry);
     const activeOrNaturalSummarizer = new ActiveOrNaturalSummarizer(entry);

@@ -6,8 +6,8 @@ import { groupsObject } from './groupsObject.js';
  */
 
 export function groupsToSequence(mf) {
-  mf = mf.replace(/\([^(]*\)/g, '');
-  let parts = mf.split(/(?=[A-Z ])/);
+  mf = mf.replaceAll(/\([^(]*\)/g, '');
+  let parts = mf.split(/(?=[ A-Z])/);
   let usefulParts = [];
   for (let part of parts) {
     if (part === ' ') {
@@ -21,5 +21,5 @@ export function groupsToSequence(mf) {
       usefulParts.push('?');
     }
   }
-  return usefulParts.join('').replace(/ +/g, ' ').trim();
+  return usefulParts.join('').replaceAll(/ +/g, ' ').trim();
 }

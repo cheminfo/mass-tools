@@ -1,14 +1,14 @@
 import { Kind, parse } from 'mf-parser';
 
 export function getRangesForFragment(ranges) {
-  ranges = JSON.parse(JSON.stringify(ranges));
+  ranges = structuredClone(ranges);
   if (typeof ranges === 'string') {
     // need to convert to ranges
-    let parsed = parse(ranges.replace(/[\r\n\t ]/g, ''));
+    let parsed = parse(ranges.replaceAll(/[\t\n\r ]/g, ''));
     let newRanges = [];
 
     // example ClBr2(CH2)0-2NO
-    // the idea is that has long as we don't have a range we don't really care
+    // the idea is that as long as we don't have a range we don't really care
     // there is a limitation is that the range has to be first level of parenthesis
     let parenthesisLevel = 0;
     let currentMF = ''; // start at an atom first level or a parenthesis
@@ -69,7 +69,7 @@ export function getRangesForFragment(ranges) {
           currentMF += ')';
           break;
         default:
-          throw Error(`can not preprocess ${ranges}`);
+          throw new Error(`can not preprocess ${ranges}`);
       }
     }
     if (currentMF) {

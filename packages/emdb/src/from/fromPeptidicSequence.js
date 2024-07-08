@@ -76,8 +76,8 @@ export async function fromPeptidicSequence(sequences, options = {}) {
   } = options;
 
   const hasLinked = sequences.includes('#');
-  const mfsArrayLinked = JSON.parse(JSON.stringify(originalMFsArray));
-  const mfsArrayUnlinked = JSON.parse(JSON.stringify(originalMFsArray));
+  const mfsArrayLinked = structuredClone(originalMFsArray);
+  const mfsArrayUnlinked = structuredClone(originalMFsArray);
   const unlinked = [];
   mfsArrayUnlinked.push(unlinked);
 
@@ -120,11 +120,11 @@ export async function fromPeptidicSequence(sequences, options = {}) {
   }
 
   if (!estimate) {
-    combined.forEach((result) => {
+    for (const result of combined) {
       result.sequence = groupsToSequence(
-        result.parts.filter((part) => part).join(' '),
+        result.parts.filter(Boolean).join(' '),
       );
-    });
+    }
   }
 
   return combined;

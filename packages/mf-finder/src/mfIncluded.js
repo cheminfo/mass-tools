@@ -25,13 +25,12 @@ import { findMFsSync } from './findMFsSync.js';
 export function mfIncluded(mf, range, options = {}) {
   let targetEM = new MF(mf).getInfo().monoisotopicMass;
   let results = findMFsSync(targetEM, {
-    ...{ allowNeutral: true },
+    allowNeutral: true,
     ...options,
-    ...{
-      ranges: range,
-      precision: 0.0000001,
-      limit: 1,
-    },
+
+    ranges: range,
+    precision: 0.0000001,
+    limit: 1,
   });
   return results.mfs.length > 0;
 }

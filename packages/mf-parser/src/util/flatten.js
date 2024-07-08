@@ -126,7 +126,9 @@ function createMFs(parts, comment, limit) {
       position++;
     }
     if (mfs.length > limit) {
-      throw Error(`MF.flatten generates too many fragments (over ${limit})`);
+      throw new Error(
+        `MF.flatten generates too many fragments (over ${limit})`,
+      );
     }
   }
   mfs.push(getMF(parts, currents, comment));

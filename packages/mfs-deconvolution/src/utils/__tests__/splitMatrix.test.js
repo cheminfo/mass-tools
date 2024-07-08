@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 
 import { splitMatrix } from '../splitMatrix';
 
@@ -43,7 +43,7 @@ describe('splitMatrix', () => {
 
   it('complex case', () => {
     const combined = JSON.parse(
-      readFileSync(join(__dirname, './data/combined.json'), 'utf8'),
+      readFileSync(path.join(__dirname, './data/combined.json'), 'utf8'),
     );
     // first row are the target values
     const matrix = combined.ys.slice(1);

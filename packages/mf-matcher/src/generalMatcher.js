@@ -33,12 +33,12 @@ export function generalMatcher(entry, options = {}) {
     atoms,
   } = options;
 
-  if (entry.mw !== undefined) {
-    if (entry.mw < minMW || entry.mw > maxMW) return false;
+  if (entry.mw !== undefined && (entry.mw < minMW || entry.mw > maxMW)) {
+    return false;
   }
 
-  if (entry.em !== undefined) {
-    if (entry.em < minEM || entry.em > maxEM) return false;
+  if (entry.em !== undefined && (entry.em < minEM || entry.em > maxEM)) {
+    return false;
   }
 
   if (entry.charge !== undefined) {
@@ -46,8 +46,12 @@ export function generalMatcher(entry, options = {}) {
     if (charge < minCharge || charge > maxCharge) return false;
   }
 
-  if (unsaturation !== undefined && entry.unsaturation !== undefined) {
-    if (!unsaturationMatcher(entry, unsaturation)) return false;
+  if (
+    unsaturation !== undefined &&
+    entry.unsaturation !== undefined &&
+    !unsaturationMatcher(entry, unsaturation)
+  ) {
+    return false;
   }
 
   if (entry.atoms !== undefined && atoms) {

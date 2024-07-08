@@ -12,7 +12,7 @@ Search for an experimental monoisotopic mass
 */
 
 export function searchMSEM(emdb, msem, options = {}) {
-  let filter = { ...(options.filter || {}), targetMass: msem };
+  let filter = { ...options.filter, targetMass: msem };
   let { databases = Object.keys(emdb.databases), flatten = false } = options;
 
   let ionizations = preprocessIonizations(options.ionizations);
@@ -46,9 +46,9 @@ export function searchMSEM(emdb, msem, options = {}) {
     flattenResults.sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
     return flattenResults;
   } else {
-    Object.keys(results).forEach((k) =>
-      results[k].sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm)),
-    );
+    for (const k of Object.keys(results)) {
+      results[k].sort((a, b) => Math.abs(a.ms.ppm) - Math.abs(b.ms.ppm));
+    }
     return results;
   }
 }

@@ -20,7 +20,7 @@ export function generatePeptideFragments(mf, options) {
   let mfs = [];
   // need to allow 0-9 to deal with neutral loss
   let mfparts = mf
-    .replace(/([a-z)0-9])([A-Z][a-z](?=[a-z]))/g, '$1 $2')
+    .replaceAll(/([\d)a-z])([A-Z][a-z](?=[a-z]))/g, '$1 $2')
     .split(/ /);
 
   let nTerm = '';
@@ -31,12 +31,9 @@ export function generatePeptideFragments(mf, options) {
     mfparts = mfparts.splice(1);
   }
 
-  if (mfparts[mfparts.length - 1].includes('(')) {
-    cTerm += mfparts[mfparts.length - 1].replace(/^[^()]*/, '');
-    mfparts[mfparts.length - 1] = mfparts[mfparts.length - 1].replace(
-      /\(.*/,
-      '',
-    );
+  if (mfparts.at(-1).includes('(')) {
+    cTerm += mfparts.at(-1).replace(/^[^()]*/, '');
+    mfparts[mfparts.length - 1] = mfparts.at(-1).replace(/\(.*/, '');
   }
 
   for (let i = 1; i < mfparts.length; i++) {

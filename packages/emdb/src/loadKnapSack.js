@@ -19,9 +19,9 @@ export async function loadKnapSack(options = {}) {
   let fileData = await zip.files['ms.json'].async('string');
   let data = JSON.parse(fileData);
 
-  data.forEach((d) => {
+  for (const d of data) {
     d.url = `http://kanaya.naist.jp/knapsack_jsp/information.jsp?word=${d.id}`;
-  });
+  }
 
   data.sort((a, b) => a.em - b.em);
 

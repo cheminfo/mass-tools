@@ -47,9 +47,9 @@ async function addDataForOneCollection(collection, baseURL, entries) {
   if (!result.data) {
     throw new Error(`No data for ${url}`);
   }
-  result.data.forEach((entry) => {
+  for (const entry of result.data) {
     data[entry._id] = entry.data;
-  });
+  }
   for (let datum of entries) {
     datum.data = data[datum.$id];
   }
