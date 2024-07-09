@@ -19,7 +19,8 @@
     "publish": "npm run build-lerna && npm run test && lerna publish -y --no-verify-access",
     "test": "npm run test-only && npm run eslint && npm run prettier",
     "test-only": "npm run build-lerna && vitest --run --test-timeout=30000 --globals",
-    "tsc": "tsc --build"
+    "tsc": "tsc --build",
+    "tsc-watch": "tsc --build --watch"
   },
   "repository": {
     "type": "git",

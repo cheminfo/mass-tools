@@ -1,12 +1,11 @@
 /**
  * Implementation of the Hill system for sorting atoms
  * https://en.wikipedia.org/wiki/Chemical_formula#Hill_system
- * @param {string} a - first atom to compare
- * @param {string} b - second atom to compare
- * @returns
+ * @param a - first atom to compare
+ * @param b - second atom to compare
+ * @returns A value suitable for use in Array.prototype.sort.
  */
-
-export function atomSorter(a, b) {
+export function atomSorter(a: string, b: string): 0 | -1 | 1 {
   if (a === b) return 0;
   if (a === 'C') return -1;
   if (b === 'C') return 1;

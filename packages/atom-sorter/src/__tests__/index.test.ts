@@ -1,3 +1,5 @@
+import { test, expect } from 'vitest';
+
 import { atomSorter } from '..';
 
 test('atom-sorter test', () => {
@@ -9,13 +11,13 @@ test('atom-sorter test', () => {
 });
 
 test('sort an array', () => {
-  let atoms = ['H', 'Cl', 'C', 'O', 'N', 'Br'];
+  const atoms = ['H', 'Cl', 'C', 'O', 'N', 'Br'];
   atoms.sort((a, b) => atomSorter(a, b));
   expect(atoms).toStrictEqual(['C', 'H', 'Br', 'Cl', 'N', 'O']);
 });
 
 test('sort an array HCl', () => {
-  let atoms = ['Cl', 'H'];
+  const atoms = ['Cl', 'H'];
   atoms.sort((a, b) => atomSorter(a, b));
   expect(atoms).toStrictEqual(['H', 'Cl']);
 });
