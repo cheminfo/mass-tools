@@ -36,7 +36,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.24.7",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.10",
-    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/coverage-v8": "^2.0.1",
     "benchmark": "^2.1.4",
     "cheminfo-build": "^1.2.0",
     "documentation": "^14.0.3",
@@ -47,8 +47,7 @@
     "lerna": "^8.1.6",
     "msw": "^2.3.1",
     "prettier": "^3.3.2",
-    "rimraf": "^5.0.8",
     "typescript": "^5.5.3",
-    "vitest": "^1.6.0"
+    "vitest": "^2.0.1"
   }
 }
