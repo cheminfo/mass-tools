@@ -30,3 +30,9 @@ test('getIsotopesInfo from (CH3(+))2', () => {
   let info = mf.getIsotopesInfo();
   expect(info.charge).toBe(2);
 });
+
+test('getIsotopesInfo from [13C]', () => {
+  let mf = new MF('[12C]');
+  let info = mf.getIsotopesInfo();
+  expect(info.isotopes[0]).toStrictEqual({ atom: 'C', number: 1, distribution: [{ x: 12, y: 1 }] })
+});
