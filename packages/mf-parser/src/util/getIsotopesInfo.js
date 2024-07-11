@@ -42,7 +42,7 @@ function getProcessedPart(part) {
           );
         }
         result.isotopes.push({
-          atom: `[${line.value.isotope}${line.value.atom}]`,
+          atom: line.value.atom,
           number: line.multiplier,
           distribution: [{ x: isotope.mass, y: 1 }],
         });
@@ -58,7 +58,7 @@ function getProcessedPart(part) {
             line.value.ratio,
           );
           result.isotopes.push({
-            atom: `${line.value.atom}{${line.value.ratio.join(',')}}`,
+            atom: line.value.atom,
             number: line.multiplier,
             distribution,
           });
