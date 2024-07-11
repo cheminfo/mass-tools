@@ -97,7 +97,7 @@ export class IsotopicDistribution {
         {
           x: 0,
           y: 1,
-          composition: this.fwhm === MINIMAL_FWHM ? {} : undefined,
+          composition: this.fwhm === MINIMAL_FWHM ? {} : undefined, // should we calculate composition in isotopes of each peak
         },
       ]);
       let charge = part.ms.charge;

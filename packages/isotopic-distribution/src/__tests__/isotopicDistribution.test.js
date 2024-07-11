@@ -25,6 +25,21 @@ describe('test isotopicDistribution', () => {
     expect(distribution.array[0].x).toBe(12);
   });
 
+  it('create distribution of [13C]', () => {
+    const isotopicDistribution = new IsotopicDistribution('[13C]', {
+      fwhm: 1e-8,
+    });
+    const peaks = isotopicDistribution.getXY();
+    expect(peaks).toBeDeepCloseTo({
+      x: [13.00335483507],
+      y: [100],
+      composition: [{ '13C': 1 }],
+      label: ['¹³C'],
+      shortComposition: [{ '13C': 1 }],
+      shortLabel: ['¹³C'],
+    });
+  });
+
   it('create distribution of C Ag+', () => {
     let isotopicDistribution = new IsotopicDistribution('C', {
       ionizations: 'Ag+',
