@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.40.1](https://github.com/cheminfo/mass-tools/compare/v7.40.0...v7.40.1) (2024-07-11)
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** deal correctly with isotopologues in case of non natural isotopic distribution ([74684ba](https://github.com/cheminfo/mass-tools/commit/74684ba33cd61023bec0ce13eec88873e2458893))
+* **mf-parser:** getIsotopesInfo set correctly in the atom property the atom and not the isotope or enriched isotope ([43f1046](https://github.com/cheminfo/mass-tools/commit/43f1046b17274f8d739df6230f57eee038610ced))
+
 ## [7.40.0](https://github.com/cheminfo/mass-tools/compare/v7.39.1...v7.40.0) (2024-07-08)
 
 
