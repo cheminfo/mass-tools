@@ -21,6 +21,8 @@ export interface IsotopicDistributionOptions {
   ionizations?: string;
   /**
    * Amount of Dalton under which 2 peaks are joined.
+   * If the fwhm is smaller than 1e-8 we will calculate the composition in isotopes for each peak and add the corresponding property.
+   * This allows to annotate the isotopic composition at the level of each peak.
    * @default 0.01
    */
   fwhm?: number;
