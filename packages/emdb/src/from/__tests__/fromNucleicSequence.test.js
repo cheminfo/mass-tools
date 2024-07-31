@@ -5,7 +5,7 @@ import { EMDB } from '../..';
 expect.extend({ toBeDeepCloseTo });
 
 describe('fromNucleicSequence', () => {
-  it('fromNucleicSequence', async () => {
+  it('AAA', async () => {
     let emdb = new EMDB();
     await emdb.fromNucleicSequence('AAA', {
       ionizations: 'H+,Na+',

@@ -17,6 +17,13 @@ describe('sequenceToMF', () => {
     expect(mass).toBeCloseTo(1889.23, 1);
   });
 
+  it('A', () => {
+    let sequence = sequenceToMF('A');
+    expect(sequence).toBe('HODampH.HODtmpH');
+    let mass = new MF(sequence).getInfo().mass;
+    expect(mass).toBeCloseTo(653.43, 1);
+  });
+
   it('ATC', () => {
     let sequence = sequenceToMF('ATC');
     expect(sequence).toBe('HODampDtmpDcmpH.HODgmpDampDtmpH');
