@@ -49,10 +49,7 @@ export function sequenceToMF(mf) {
       newMF += convertAA1To3(currentSymbol);
     }
     newMF = nTerminal + newMF + cTerminal;
-  } else if (
-    mf.search(/[A-Z]{3}/) > -1 &&
-    mf.search(/[A-Za-z][\da-z]/) === -1
-  ) {
+  } else if (mf.search(/[A-Za-z][\da-z]/) === -1) {
     // UNIPROT
     //   370        380        390        400        410        420
     //GFKPNLRKTF VSGLFRESCG AHFYRGVDVK PFYIKKPVDN LFALMLILNR LRGWGVVGGM
