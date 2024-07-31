@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2](https://github.com/cheminfo/mass-tools/compare/peptide@2.2.1...peptide@2.2.2) (2024-07-31)
+
+
+### Bug Fixes
+
+* **peptide:** allow convertion of peptide sequences if only one letter ([69338f2](https://github.com/cheminfo/mass-tools/commit/69338f259474cb9f40a54181801a9172f7e4b915))
+
+
+
+
+
 ## [2.2.1](https://github.com/cheminfo/mass-tools/compare/peptide@2.2.0...peptide@2.2.1) (2024-07-08)
 
 
