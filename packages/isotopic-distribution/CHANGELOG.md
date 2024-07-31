@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.2](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.2.1...isotopic-distribution@3.2.2) (2024-07-31)
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** deal correctly with isotopologues in case of non natural isotopic distribution ([74684ba](https://github.com/cheminfo/mass-tools/commit/74684ba33cd61023bec0ce13eec88873e2458893))
+
+
+
+
+
 ## [3.2.1](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.2.0...isotopic-distribution@3.2.1) (2024-07-08)
 
 
