@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.40.2](https://github.com/cheminfo/mass-tools/compare/v7.40.1...v7.40.2) (2024-07-31)
+
+
+### Bug Fixes
+
+* **peptide:** allow convertion of peptide sequences if only one letter ([69338f2](https://github.com/cheminfo/mass-tools/commit/69338f259474cb9f40a54181801a9172f7e4b915))
+
 ## [7.40.1](https://github.com/cheminfo/mass-tools/compare/v7.40.0...v7.40.1) (2024-07-11)
 
 
