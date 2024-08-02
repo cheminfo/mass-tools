@@ -12,6 +12,7 @@ describe('isotopicDistribution with composition', () => {
     const distribution = isotopicDistribution
       .getDistribution()
       .array.sort((a, b) => b.y - a.y);
+
     expect(distribution).toBeDeepCloseTo([
       {
         x: 26.003074004429998,
@@ -20,6 +21,7 @@ describe('isotopicDistribution with composition', () => {
         label: '¹²C¹⁴N',
         shortComposition: {},
         shortLabel: '',
+        deltaNeutrons: 0,
       },
       {
         x: 27.0064288395,
@@ -28,6 +30,7 @@ describe('isotopicDistribution with composition', () => {
         label: '¹³C¹⁴N',
         shortComposition: { '13C': 1 },
         shortLabel: '¹³C',
+        deltaNeutrons: 1,
       },
       {
         x: 27.00010889888,
@@ -36,6 +39,7 @@ describe('isotopicDistribution with composition', () => {
         label: '¹²C¹⁵N',
         shortComposition: { '15N': 1 },
         shortLabel: '¹⁵N',
+        deltaNeutrons: 1,
       },
       {
         x: 28.00346373395,
@@ -44,6 +48,7 @@ describe('isotopicDistribution with composition', () => {
         label: '¹³C¹⁵N',
         shortComposition: { '13C': 1, '15N': 1 },
         shortLabel: '¹³C¹⁵N',
+        deltaNeutrons: 2,
       },
     ]);
   });
@@ -55,6 +60,7 @@ describe('isotopicDistribution with composition', () => {
     const distribution = isotopicDistribution
       .getDistribution()
       .array.sort((a, b) => b.y - a.y);
+
     expect(distribution).toBeDeepCloseTo([
       {
         x: 24,
@@ -63,6 +69,7 @@ describe('isotopicDistribution with composition', () => {
         label: '¹²C₂',
         shortComposition: {},
         shortLabel: '',
+        deltaNeutrons: 0,
       },
       {
         x: 25.00335483507,
@@ -71,6 +78,7 @@ describe('isotopicDistribution with composition', () => {
         label: '¹²C¹³C',
         shortComposition: { '13C': 1 },
         shortLabel: '¹³C',
+        deltaNeutrons: 1,
       },
       {
         x: 26.00670967014,
@@ -79,6 +87,7 @@ describe('isotopicDistribution with composition', () => {
         label: '¹³C₂',
         shortComposition: { '13C': 2 },
         shortLabel: '¹³C₂',
+        deltaNeutrons: 2,
       },
     ]);
   });
@@ -91,12 +100,14 @@ describe('isotopicDistribution with composition', () => {
       .getDistribution()
       .array.sort((a, b) => b.y - a.y)
       .slice(0, 2);
+
     expect(distribution).toBeDeepCloseTo([
       {
         x: 1201.00335483507,
         y: 0.36885585055424797,
         composition: { '12C': 99, '13C': 1 },
         label: '¹²C₉₉¹³C',
+        deltaNeutrons: 1,
         shortComposition: { '13C': 1 },
         shortLabel: '¹³C',
       },
@@ -105,6 +116,7 @@ describe('isotopicDistribution with composition', () => {
         y: 0.34103653547039026,
         composition: { '12C': 100 },
         label: '¹²C₁₀₀',
+        deltaNeutrons: 0,
         shortComposition: {},
         shortLabel: '',
       },
@@ -125,6 +137,7 @@ describe('isotopicDistribution with composition', () => {
         y: 0.3646380645014197,
         composition: { '12C': 99, '13C': 1, '1H': 100 },
         label: '¹²C₉₉¹³C¹H₁₀₀',
+        deltaNeutrons: 1,
         shortComposition: { '13C': 1 },
         shortLabel: '¹³C',
       },
@@ -133,6 +146,7 @@ describe('isotopicDistribution with composition', () => {
         y: 0.33713685720678,
         composition: { '12C': 100, '1H': 100 },
         label: '¹²C₁₀₀¹H₁₀₀',
+        deltaNeutrons: 0,
         shortComposition: {},
         shortLabel: '',
       },
@@ -141,6 +155,7 @@ describe('isotopicDistribution with composition', () => {
         y: 0.1952193984263388,
         composition: { '12C': 98, '13C': 2, '1H': 100 },
         label: '¹²C₉₈¹³C₂¹H₁₀₀',
+        deltaNeutrons: 2,
         shortComposition: { '13C': 2 },
         shortLabel: '¹³C₂',
       },
@@ -168,6 +183,7 @@ describe('isotopicDistribution with composition', () => {
           '34S': 4,
         },
         label: '¹²C₂₉₇¹³C₃¹H₅₀₀¹⁴N₁₀₀¹⁶O₁₀₀³²S₉₆³⁴S₄',
+        deltaNeutrons: 11,
         shortComposition: { '13C': 3, '34S': 4 },
         shortLabel: '¹³C₃³⁴S₄',
       },
@@ -184,6 +200,7 @@ describe('isotopicDistribution with composition', () => {
           '34S': 4,
         },
         label: '¹²C₂₉₈¹³C₂¹H₅₀₀¹⁴N₁₀₀¹⁶O₁₀₀³²S₉₆³⁴S₄',
+        deltaNeutrons: 10,
         shortComposition: { '13C': 2, '34S': 4 },
         shortLabel: '¹³C₂³⁴S₄',
       },
@@ -200,9 +217,35 @@ describe('isotopicDistribution with composition', () => {
           '34S': 3,
         },
         label: '¹²C₂₉₇¹³C₃¹H₅₀₀¹⁴N₁₀₀¹⁶O₁₀₀³²S₉₇³⁴S₃',
+        deltaNeutrons: 9,
         shortComposition: { '13C': 3, '34S': 3 },
         shortLabel: '¹³C₃³⁴S₃',
       },
     ]);
+  });
+
+  it('create distribution of C1.C2 and getPeaks', () => {
+    let isotopicDistribution = new IsotopicDistribution('C1++.C2(-).B', {
+      fwhm: 0,
+    });
+    let peaks = isotopicDistribution.getPeaks({ maxValue: 1 });
+    expect(peaks[0]).toStrictEqual({
+      x: 5.99945142009093,
+      y: 1,
+      composition: { '12C': 1 },
+      label: '¹²C',
+      shortComposition: {},
+      shortLabel: '',
+      deltaNeutrons: 0,
+    });
+    expect(peaks[2]).toStrictEqual({
+      x: 10.01293695,
+      y: 0.20115232993025373,
+      composition: { '10B': 1 },
+      label: '¹⁰B',
+      shortComposition: { '10B': 1 },
+      shortLabel: '¹⁰B',
+      deltaNeutrons: -1,
+    });
   });
 });
