@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.41.0](https://github.com/cheminfo/mass-tools/compare/v7.40.2...v7.41.0) (2024-08-02)
+
+
+### Features
+
+* add deltaNeutrons in isotopicDistribution when calculating the isotopic distribution ([#208](https://github.com/cheminfo/mass-tools/issues/208)) ([a543d38](https://github.com/cheminfo/mass-tools/commit/a543d38e5b4afc5ed0d59968f701fb926818f897))
+
 ## [7.40.2](https://github.com/cheminfo/mass-tools/compare/v7.40.1...v7.40.2) (2024-07-31)
 
 
