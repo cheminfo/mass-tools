@@ -1,6 +1,11 @@
 import { stableIsotopesObject } from 'chemical-elements';
 import { subscript, superscript } from 'mf-parser';
 
+/**
+ * Calcultes informations about the isotopic composition explaining a specific mass
+ * @param {Record<string, number>} composition
+ * @returns
+ */
 export function getDerivedCompositionInfo(composition) {
   const shortComposition = {};
   let label = '';

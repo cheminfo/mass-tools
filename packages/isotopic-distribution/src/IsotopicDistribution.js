@@ -158,6 +158,19 @@ export class IsotopicDistribution {
 
         part.isotopicDistribution = totalDistribution.array;
 
+        const absoluteChargeOrOne = absoluteCharge || 1;
+
+        for (let entry of totalDistribution.array) {
+          if (!entry.composition) continue;
+          const deltaNeutrons =
+            Math.round(entry.x * absoluteChargeOrOne - part.monoisotopicMass) +
+            0; // +0 to avoid -0
+          Object.assign(entry, {
+            ...getDerivedCompositionInfo(entry.composition),
+            deltaNeutrons,
+          });
+        }
+
         if (finalDistribution.array.length === 0) {
           finalDistribution = totalDistribution;
         } else {
@@ -178,11 +191,6 @@ export class IsotopicDistribution {
       }
       const sumAfter = finalDistribution.sumY;
       this.confidence = (this.confidence * sumAfter) / sumBefore;
-    }
-
-    for (let entry of finalDistribution.array) {
-      if (!entry.composition) continue;
-      Object.assign(entry, getDerivedCompositionInfo(entry.composition));
     }
 
     this.confidence /= this.parts.length;
@@ -249,7 +257,7 @@ export class IsotopicDistribution {
    * @param {object} [options={}]
    * @param {number} [options.maxValue=100]
    * @param {number} [options.sumValue] // if sumValue is defined, maxValue is ignored
-   * @return {Array<any>} an object containing at least the 2 properties: x:[] and y:[]
+   * @return {Array<{x:number,y:number}|{x:number,y:number,label:string,shortComposition:string,shortLabel:string,deltaNeutrons:number}>}
    */
   getPeaks(options = {}) {
     const { maxValue = 100, sumValue } = options;
@@ -278,7 +286,7 @@ export class IsotopicDistribution {
    * @param {object} [options={}]
    * @param {number} [options.maxValue=100]
    * @param {number} [options.sumValue] // if sumValue is defined, maxValue is ignored
-   * @return {XY} an object containing at least the 2 properties: x:[] and y:[]
+   * @return {{x:number[],y:number[]}|{x:number[],y:number[],label:string[],shortComposition:string[],shortLabel:string[],deltaNeutrons:[]}}
    */
   getXY(options = {}) {
     let peaks = this.getPeaks(options);

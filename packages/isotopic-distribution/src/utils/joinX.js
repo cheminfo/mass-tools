@@ -16,11 +16,7 @@ export function joinX(self, threshold = Number.EPSILON) {
         (item.y / (current.y + item.y)) * (item.x - current.x) + current.x;
       current.y += item.y;
     } else {
-      current = {
-        x: item.x,
-        y: item.y,
-      };
-      if (item.composition) current.composition = item.composition;
+      current = { ...item };
       result.push(current);
     }
   }

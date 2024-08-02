@@ -36,6 +36,7 @@ describe('test isotopicDistribution', () => {
       composition: [{ '13C': 1 }],
       label: ['¹³C'],
       shortComposition: [{ '13C': 1 }],
+      deltaNeutrons: [0],
       shortLabel: ['¹³C'],
     });
   });
@@ -199,6 +200,7 @@ describe('test isotopicDistribution', () => {
       y: 1,
       composition: { '12C': 10 },
       label: '¹²C₁₀',
+      deltaNeutrons: 0,
       shortComposition: {},
       shortLabel: '',
     });
