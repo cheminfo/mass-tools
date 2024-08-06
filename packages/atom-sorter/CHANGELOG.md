@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.3](https://github.com/cheminfo/mass-tools/compare/atom-sorter@2.1.2...atom-sorter@2.1.3) (2024-08-06)
+
+
+### Bug Fixes
+
+* need to build-lerna before build for browser because some code in in TS ([#210](https://github.com/cheminfo/mass-tools/issues/210)) ([3ee2466](https://github.com/cheminfo/mass-tools/commit/3ee246647c309e1dd526161ef9c253557e89ca3e))
+
+
+
+
+
 ## [2.1.2](https://github.com/cheminfo/mass-tools/compare/atom-sorter@2.1.1...atom-sorter@2.1.2) (2024-07-31)
 
 **Note:** Version bump only for package atom-sorter

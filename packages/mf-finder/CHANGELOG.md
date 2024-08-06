@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.3](https://github.com/cheminfo/mass-tools/compare/mf-finder@3.4.2...mf-finder@3.4.3) (2024-08-06)
+
+**Note:** Version bump only for package mf-finder
+
+
+
+
+
 ## [3.4.2](https://github.com/cheminfo/mass-tools/compare/mf-finder@3.4.1...mf-finder@3.4.2) (2024-07-31)
 
 **Note:** Version bump only for package mf-finder

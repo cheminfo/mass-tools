@@ -1,6 +1,6 @@
 {
   "name": "number-treemap",
-  "version": "3.1.2",
+  "version": "3.1.3",
   "description": "Manage a sorted tree of numbers",
   "main": "lib/src/index.js",
   "module": "src/index.js",
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/number-treemap#readme",
   "dependencies": {
-    "mf-utilities": "^3.2.2"
+    "mf-utilities": "^3.2.3"
   }
 }
