@@ -4,8 +4,8 @@
   "description": "Callback allowing to sort chemical elements (atoms) in Hill order",
   "main": "lib/src/index.js",
   "files": [
-    "lib",
-    "src"
+    "src",
+    "lib"
   ],
   "repository": {
     "type": "git",
