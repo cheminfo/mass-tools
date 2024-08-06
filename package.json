@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "cheminfo-build --out-name mass-tools --entry packages/mass-tools/src/index.js -r MassTools",
+    "build": "npm run build-lerna && cheminfo-build --out-name mass-tools --entry packages/mass-tools/src/index.js -r MassTools",
     "build-docs": "npm run build-toc && ls packages | xargs -I % sh -c 'cd packages/%; documentation build src/index.js -f html -o ../../docs/%; cd ../..'",
     "build-toc": "node ./src/docs/buildDocs.mjs",
     "build-lerna": "npm run build-lerna-clean && npm run tsc",
