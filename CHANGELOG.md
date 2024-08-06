@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.41.1](https://github.com/cheminfo/mass-tools/compare/v7.41.0...v7.41.1) (2024-08-06)
+
+
+### Bug Fixes
+
+* need to build-lerna before build for browser because some code in in TS ([#210](https://github.com/cheminfo/mass-tools/issues/210)) ([3ee2466](https://github.com/cheminfo/mass-tools/commit/3ee246647c309e1dd526161ef9c253557e89ca3e))
+
 ## [7.41.0](https://github.com/cheminfo/mass-tools/compare/v7.40.2...v7.41.0) (2024-08-02)
 
 
