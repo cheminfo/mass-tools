@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.41.2](https://github.com/cheminfo/mass-tools/compare/v7.41.1...v7.41.2) (2024-10-01)
+
+
+### Bug Fixes
+
+* generateMFs with charges was giving wrong results ([#213](https://github.com/cheminfo/mass-tools/issues/213)) ([e6d5ac1](https://github.com/cheminfo/mass-tools/commit/e6d5ac1be3ce31e1aa9e20b42984fd9da48d2669))
+
 ## [7.41.1](https://github.com/cheminfo/mass-tools/compare/v7.41.0...v7.41.1) (2024-08-06)
 
 
