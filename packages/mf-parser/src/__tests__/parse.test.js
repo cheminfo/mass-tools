@@ -1,6 +1,11 @@
 import { parse } from '../parse';
 
 let tests = {
+  'C0-5(+)': [
+    { kind: 'atom', value: 'C' },
+    { kind: 'multiplierRange', value: { from: 0, to: 5 } },
+    { kind: 'charge', value: 1 },
+  ],
   C10: [
     { kind: 'atom', value: 'C' },
     { kind: 'multiplier', value: 10 },
