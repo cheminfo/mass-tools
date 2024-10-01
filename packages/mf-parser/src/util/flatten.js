@@ -10,6 +10,7 @@ export function flatten(parsed, options = {}) {
   for (const entry of parsed) {
     if (
       (entry.kind === 'atom' ||
+        entry.kind === 'charge' ||
         entry.kind === 'isotope' ||
         entry.kind === 'openingParenthesis' ||
         !currentPart) &&
@@ -69,6 +70,7 @@ export function flatten(parsed, options = {}) {
         );
     }
   }
+
   if (groupIdentical) {
     parts = optimizeRanges(parts);
   }

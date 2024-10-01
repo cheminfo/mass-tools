@@ -18,6 +18,19 @@ describe('MF Flatten', () => {
     expect(mfObject.flatten()).toStrictEqual(value);
   });
 
+  it('OC0-5+', () => {
+    const mf = new MF('OC0-5+');
+    const flatten = mf.flatten();
+    expect(flatten).toStrictEqual([
+      'O+',
+      'OC+',
+      'OC2+',
+      'OC3+',
+      'OC4+',
+      'OC5+',
+    ]);
+  });
+
   it('C1-10 H1-10 C1-10 H1-10 C1-10', () => {
     const mf = new MF('C1-10 H1-10 C1-10 H1-10 C1-9 C0-1 C');
     const flatten = mf.flatten({ groupIdentical: true });
