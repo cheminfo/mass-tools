@@ -25,6 +25,7 @@
     "react-tree-svg": "^1.0.0"
   },
   "devDependencies": {
+    "jsdom": "^25.0.1",
     "openchemlib": "^8.14.0"
   }
 }

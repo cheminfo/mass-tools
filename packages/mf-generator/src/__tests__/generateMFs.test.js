@@ -15,6 +15,20 @@ describe('generateMFs', () => {
     expect(result).toHaveLength(4);
   });
 
+  it('Range C0-5(+)', async () => {
+    let mfsArray = [['C0-5(+)']];
+    let result = await generateMFs(mfsArray);
+    const mfs = result.map((entry) => entry.mf);
+    expect(mfs).toStrictEqual([
+      '(+1)',
+      'C(+1)',
+      'C2(+1)',
+      'C3(+1)',
+      'C4(+1)',
+      'C5(+1)',
+    ]);
+  });
+
   it('from array of string with empty', async () => {
     let mfsArray = ['C,H,', 'Cl,Br'];
     const mfs = await generateMFs(mfsArray);
