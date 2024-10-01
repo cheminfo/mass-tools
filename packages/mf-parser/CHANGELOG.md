@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.4](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.2.3...mf-parser@3.2.4) (2024-10-01)
+
+
+### Bug Fixes
+
+* generateMFs with charges was giving wrong results ([#213](https://github.com/cheminfo/mass-tools/issues/213)) ([e6d5ac1](https://github.com/cheminfo/mass-tools/commit/e6d5ac1be3ce31e1aa9e20b42984fd9da48d2669))
+
+
+
+
+
 ## [3.2.3](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.2.2...mf-parser@3.2.3) (2024-08-06)
 
 **Note:** Version bump only for package mf-parser

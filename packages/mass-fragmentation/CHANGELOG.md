@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.4](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.10.3...mass-fragmentation@1.10.4) (2024-10-01)
+
+
+### Bug Fixes
+
+* generateMFs with charges was giving wrong results ([#213](https://github.com/cheminfo/mass-tools/issues/213)) ([e6d5ac1](https://github.com/cheminfo/mass-tools/commit/e6d5ac1be3ce31e1aa9e20b42984fd9da48d2669))
+
+
+
+
+
 ## [1.10.3](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.10.2...mass-fragmentation@1.10.3) (2024-08-06)
 
 **Note:** Version bump only for package mass-fragmentation
