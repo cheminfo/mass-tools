@@ -4,7 +4,6 @@ import { EMDB } from 'emdb';
  *
  * @param {array} bestPeaks
  * @param {object} [options={}]
- * @param {array} [options.mfColors={}]
  * @param {number} [options.numberDigits=5]
  * @param {number} [options.numberMFs=0]
  * @param {boolean} [options.showMF=false]
