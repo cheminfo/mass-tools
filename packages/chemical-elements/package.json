@@ -21,6 +21,6 @@
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/chemical-elements#readme",
   "devDependencies": {
     "papaparse": "^5.4.1",
-    "wikidata-sdk": "^8.1.0"
+    "wikidata-sdk": "^8.1.1"
   }
 }

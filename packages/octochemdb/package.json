@@ -28,6 +28,6 @@
     "mf-parser": "^3.2.4",
     "mf-utilities": "^3.2.4",
     "ms-spectrum": "^3.6.7",
-    "react-tree-svg": "^1.0.0"
+    "react-tree-svg": "^1.4.0"
   }
 }
