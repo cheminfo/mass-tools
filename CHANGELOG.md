@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.41.3](https://github.com/cheminfo/mass-tools/compare/v7.41.2...v7.41.3) (2024-10-14)
+
+
+### Bug Fixes
+
+* **ms-spectrum:** remove duplicate param type ([#215](https://github.com/cheminfo/mass-tools/issues/215)) ([63e2a08](https://github.com/cheminfo/mass-tools/commit/63e2a085925b78669b337d57d91dd8e1d4fc8bb3))
+
 ## [7.41.2](https://github.com/cheminfo/mass-tools/compare/v7.41.1...v7.41.2) (2024-10-01)
 
 
