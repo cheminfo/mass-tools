@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.6.8](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.6.7...ms-spectrum@3.6.8) (2024-10-14)
+
+
+### Bug Fixes
+
+* **ms-spectrum:** remove duplicate param type ([#215](https://github.com/cheminfo/mass-tools/issues/215)) ([63e2a08](https://github.com/cheminfo/mass-tools/commit/63e2a085925b78669b337d57d91dd8e1d4fc8bb3))
+
+
+
+
+
 ## [3.6.7](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.6.6...ms-spectrum@3.6.7) (2024-10-01)
 
 **Note:** Version bump only for package ms-spectrum
