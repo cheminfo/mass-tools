@@ -198,12 +198,28 @@ export class IsotopicDistribution {
     return finalDistribution;
   }
 
-  getCSV() {
-    return this.getText({ delimiter: ', ' });
+  /**
+   *
+   * @param {object} options
+   * @param {string} [options.delimiter=', ']
+   * @param {number} [options.numberXDecimals=4]
+   * @param {number} [options.numberYDecimals=4]
+   * @returns
+   */
+  getCSV(options) {
+    return this.getText({ ...options, delimiter: ', ' });
   }
 
-  getTSV() {
-    return this.getText({ delimiter: '\t' });
+  /**
+   *
+   * @param {object} options
+   * @param {string} [options.delimiter='\t']
+   * @param {number} [options.numberXDecimals=4]
+   * @param {number} [options.numberYDecimals=4]
+   * @returns
+   */
+  getTSV(options) {
+    return this.getText({ ...options, delimiter: '\t' });
   }
 
   getTable(options = {}) {
@@ -222,15 +238,27 @@ export class IsotopicDistribution {
     });
   }
 
+  /**
+   *
+   * @param {object} options
+   * @param {string} [options.delimiter='\t']
+   * @param {number} [options.numberXDecimals=4]
+   * @param {number} [options.numberYDecimals=4]
+   * @returns
+   */
   getText(options = {}) {
-    const { delimiter = '\t', numberDecimals = 3 } = options;
+    const {
+      delimiter = '\t',
+      numberXDecimals = 5,
+      numberYDecimals = 3,
+    } = options;
     let points = this.getDistribution().array;
     let csv = [];
     for (let point of points) {
       csv.push(
-        `${point.x.toFixed(5)}${delimiter}${(point.y * 100).toFixed(
-          numberDecimals,
-        )}`,
+        `${point.x.toFixed(numberXDecimals)}${delimiter}${(
+          point.y * 100
+        ).toFixed(numberYDecimals)}`,
       );
     }
     return csv.join('\n');

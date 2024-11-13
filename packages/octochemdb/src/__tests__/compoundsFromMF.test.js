@@ -25,6 +25,6 @@ describe('compoundsFromMF', () => {
       fields: 'data.ocl.idCode,data.ocl.index,data.iupac,data.mf',
     });
     const entry = data.find((datum) => datum.data.iupac === 'pent-2-ene');
-    expect(entry.data.title).toBe('2-Pentene');
+    expect(entry.data.title).toBe('Pent-2-ene');
   }, 30000);
 });

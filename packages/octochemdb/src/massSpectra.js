@@ -72,6 +72,7 @@ export async function massSpectra(options = {}) {
 function uniqueMol(results) {
   const unique = {};
   for (const result of results) {
+    if (!result.data?.ocl?.idCode) continue;
     if (!unique[result.data.ocl.idCode]) {
       unique[result.data.ocl.idCode] = result;
     }

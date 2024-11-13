@@ -11,6 +11,20 @@ describe('test isotopicDistribution', () => {
       { x: 12, y: 0.9893 },
       { x: 13.00335483507, y: 0.0107 },
     ]);
+    expect(isotopicDistribution.getText()).toStrictEqual(`12.00000	98.930
+13.00335	1.070`);
+    expect(isotopicDistribution.getText({ delimiter: ',' }))
+      .toStrictEqual(`12.00000,98.930
+13.00335,1.070`);
+    expect(
+      isotopicDistribution.getText({
+        delimiter: ',',
+        numberXDecimals: 2,
+        numberYDecimals: 4,
+      }),
+    ).toStrictEqual(`12.00,98.9300
+13.00,1.0700`);
+
     expect(
       isotopicDistribution.getTable({ xLabel: 'mz', yLabel: 'intensity' }),
     ).toStrictEqual([
