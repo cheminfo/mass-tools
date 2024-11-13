@@ -9,7 +9,7 @@ describe('ReactionFragmentation', async () => {
     const molecule = Molecule.fromSmiles('CNC(Cc1ccc2c(c1)OCO2)C');
     const { trees, validNodes, masses } = reactionFragmentation(molecule);
     expect(validNodes).toHaveLength(548);
-    expect(masses).toBeGreaterThan(50);
+    expect(masses.length).toBeGreaterThan(50);
     expect(trees).toMatchSnapshot();
   });
   it('full process: Equisetin', async () => {
