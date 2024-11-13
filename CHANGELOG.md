@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.42.0](https://github.com/cheminfo/mass-tools/compare/v7.41.3...v7.42.0) (2024-11-13)
+
+
+### Features
+
+* **isotopic-distribution:** allow to select number of decimals during export ([#218](https://github.com/cheminfo/mass-tools/issues/218)) ([a927b8a](https://github.com/cheminfo/mass-tools/commit/a927b8a236a7bb18a72cbbc53064d9fd550adf0a))
+
 ## [7.41.3](https://github.com/cheminfo/mass-tools/compare/v7.41.2...v7.41.3) (2024-10-14)
 
 
