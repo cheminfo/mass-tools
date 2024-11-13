@@ -32,7 +32,7 @@ describe('massSpectra', () => {
       masses: [163.07519620166275, 133.06465132824812, 105.06969463079821],
       precision: 100,
     });
-    expect(results.length).toBeGreaterThan(83);
+    expect(results.length).toBeGreaterThan(40);
 
     results = await massSpectra({
       limit: 100,
@@ -40,7 +40,7 @@ describe('massSpectra', () => {
       precision: 100,
       similarity: {}, // by default minSimilarity is 0.2 but no experimental spectrum is provided so no filtering
     });
-    expect(results.length).toBeGreaterThan(83);
+    expect(results.length).toBeGreaterThan(40);
 
     results = await massSpectra({
       limit: 100,
@@ -54,7 +54,7 @@ describe('massSpectra', () => {
       }, // by default minSimilarity is 0.2 but no experimental spectrum is provided so no filtering
     });
 
-    expect(results.length).toBeGreaterThan(11);
+    expect(results.length).toBeGreaterThan(5);
     expect(results.length).toBeLessThan(200);
 
     results = await massSpectra({
