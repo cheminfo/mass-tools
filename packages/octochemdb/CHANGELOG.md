@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.10.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.9.8...octochemdb@2.10.0) (2024-11-13)
+
+
+### Features
+
+* **isotopic-distribution:** allow to select number of decimals during export ([#218](https://github.com/cheminfo/mass-tools/issues/218)) ([a927b8a](https://github.com/cheminfo/mass-tools/commit/a927b8a236a7bb18a72cbbc53064d9fd550adf0a))
+
+
+
+
+
 ## [2.9.8](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.9.7...octochemdb@2.9.8) (2024-10-14)
 
 **Note:** Version bump only for package octochemdb

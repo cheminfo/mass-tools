@@ -1,6 +1,6 @@
 {
   "name": "isotopic-distribution",
-  "version": "3.3.3",
+  "version": "3.4.0",
   "description": "Calculate the isotopic distribution of a molecular formula",
   "main": "lib/src/index.js",
   "module": "src/index.js",

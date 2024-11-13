@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.10.5...mass-fragmentation@1.11.0) (2024-11-13)
+
+
+### Features
+
+* **isotopic-distribution:** allow to select number of decimals during export ([#218](https://github.com/cheminfo/mass-tools/issues/218)) ([a927b8a](https://github.com/cheminfo/mass-tools/commit/a927b8a236a7bb18a72cbbc53064d9fd550adf0a))
+
+
+
+
+
 ## [1.10.5](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.10.4...mass-fragmentation@1.10.5) (2024-10-14)
 
 **Note:** Version bump only for package mass-fragmentation
