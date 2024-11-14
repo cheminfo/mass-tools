@@ -29,6 +29,13 @@ describe('generateMFs', () => {
     ]);
   });
 
+  it.only('Complexe range', async () => {
+    let mfsArray = ['Me (CH2CH2O)0-100 CH2SiMe(OSiMe3)2'];
+    let result = await generateMFs(mfsArray);
+    console.table(result);
+    expect(result[0].mf).toBe('HCl');
+  });
+
   it('from array of string with empty', async () => {
     let mfsArray = ['C,H,', 'Cl,Br'];
     const mfs = await generateMFs(mfsArray);
