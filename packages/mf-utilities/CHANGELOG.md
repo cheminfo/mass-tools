@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.6](https://github.com/cheminfo/mass-tools/compare/mf-utilities@3.2.5...mf-utilities@3.2.6) (2024-11-19)
+
+
+### Bug Fixes
+
+* **mf-utilities:** preprocessRanges was not dealing correctly with parenthesis ([#220](https://github.com/cheminfo/mass-tools/issues/220)) ([54b6845](https://github.com/cheminfo/mass-tools/commit/54b6845d1b7fbbc8db0dfbdabdc8c18d057e4aa1))
+
+
+
+
+
 ## [3.2.5](https://github.com/cheminfo/mass-tools/compare/mf-utilities@3.2.4...mf-utilities@3.2.5) (2024-10-14)
 
 **Note:** Version bump only for package mf-utilities
