@@ -14,6 +14,7 @@ export function preprocessRanges(ranges) {
 
     // example ClBr2(CH2)0-2NO
     // the idea is that has long as we don't have a range we don't really care
+    // but the range should only applied on the previous atom, group or parenthesis
     // there is a limitation is that the range has to be first level of parenthesis
     let parenthesisLevel = 0;
     let currentMF = ''; // start at an atom first level or a parenthesis
@@ -53,6 +54,10 @@ export function preprocessRanges(ranges) {
           currentMF = '';
           break;
         case Kind.OPENING_PARENTHESIS:
+          if (parenthesisLevel === 0 && currentMF) {
+            current.mf += currentMF;
+            currentMF = '';
+          }
           parenthesisLevel++;
           currentMF += '(';
           break;
