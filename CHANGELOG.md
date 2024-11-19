@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.42.1](https://github.com/cheminfo/mass-tools/compare/v7.42.0...v7.42.1) (2024-11-19)
+
+
+### Bug Fixes
+
+* **mf-utilities:** preprocessRanges was not dealing correctly with parenthesis ([#220](https://github.com/cheminfo/mass-tools/issues/220)) ([54b6845](https://github.com/cheminfo/mass-tools/commit/54b6845d1b7fbbc8db0dfbdabdc8c18d057e4aa1))
+
 ## [7.42.0](https://github.com/cheminfo/mass-tools/compare/v7.41.3...v7.42.0) (2024-11-13)
 
 
