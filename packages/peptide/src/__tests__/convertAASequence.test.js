@@ -6,6 +6,16 @@ describe('Checking convert AA sequence', () => {
     expect(result).toBe('HAlaAlaAlaAlaAlaAlaAlaOH');
   });
 
+  it('aaaaaaa', () => {
+    const result = sequenceToMF('aaaaaaa');
+    expect(result).toBe('HAlaAlaAlaAlaAlaAlaAlaOH');
+  });
+
+  it('(H)aaaaaaa', () => {
+    const result = sequenceToMF('(H)aaaaaaa');
+    expect(result).toBe('(H)AlaAlaAlaAlaAlaAlaAlaOH');
+  });
+
   it('X', () => {
     const result = sequenceToMF('X');
     expect(result).toBe('HXaaOH');
