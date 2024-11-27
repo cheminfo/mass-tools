@@ -45,6 +45,31 @@ describe('test getBestPeaks', () => {
     ]);
   });
 
+  it('maxValue', () => {
+    let result = getBestPeaks(peaks, { maxValue: 2 });
+    expect(result).toStrictEqual([
+      { x: 1, y: 1, close: false },
+      { x: 3, y: 2, close: false },
+    ]);
+  });
+
+  it('minValue', () => {
+    let result = getBestPeaks(peaks, { minValue: 3 });
+    expect(result).toStrictEqual([
+      { x: 2, y: 4, close: false },
+      { x: 4, y: 5, close: false },
+      { x: 5, y: 3, close: false },
+    ]);
+  });
+
+  it('minValue maxValue', () => {
+    let result = getBestPeaks(peaks, { minValue: 2, maxValue: 3 });
+    expect(result).toStrictEqual([
+      { x: 3, y: 2, close: false },
+      { x: 5, y: 3, close: false },
+    ]);
+  });
+
   it('complex spectrum', () => {
     const data = xy2ToXY(
       JSON.parse(

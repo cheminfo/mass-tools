@@ -9,6 +9,8 @@ import { xyObjectMaxXPoint, xyObjectMinXPoint } from 'ml-spectra-processing';
  * @param {object} [options={}]
  * @param {number} [options.from] - min X value of the window to consider
  * @param {number} [options.to] - max X value of the window to consider
+ * @param {number} [options.minValue=Number.NEGATIVE_INFINITY] - min Y value of the window to consider
+ * @param {number} [options.maxValue=Number.POSITIVE_INFINITY] - max Y value of the window to consider
  * @param {number} [options.searchMonoisotopicRatio=0] - search previous peaks with at least ratio height
  * @param {number} [options.limit=20] - max number of peaks
  * @param {number} [options.threshold=0.01] - minimal intensity compare to base peak
@@ -26,11 +28,14 @@ export function getBestPeaks(peaks, options = {}) {
     threshold = 0.01,
     numberCloseSlots = 50,
     numberSlots = 10,
+    minValue = Number.NEGATIVE_INFINITY,
+    maxValue = Number.POSITIVE_INFINITY,
   } = options;
   let slot = (to - from) / numberSlots;
   let closeSlot = (to - from) / numberCloseSlots;
   let selected = peaks
     .filter((peak) => peak.x >= from && peak.x <= to)
+    .filter((peak) => peak.y >= minValue && peak.y <= maxValue)
     .map((peak) => {
       return {
         peak,
