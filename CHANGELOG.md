@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.43.0](https://github.com/cheminfo/mass-tools/compare/v7.42.1...v7.43.0) (2024-11-27)
+
+
+### Features
+
+* **ms-spectrum:** getBestPeaks have now min and maxValue ([#224](https://github.com/cheminfo/mass-tools/issues/224)) ([8a3ae33](https://github.com/cheminfo/mass-tools/commit/8a3ae3322d53a911fe1473c8c8eb192f86613627))
+* **peptide:** allow conversion of lowercase AA sequences ([#223](https://github.com/cheminfo/mass-tools/issues/223)) ([f547db4](https://github.com/cheminfo/mass-tools/commit/f547db4bb9fe3c877524dc64fad97d3d1140758c))
+
 ## [7.42.1](https://github.com/cheminfo/mass-tools/compare/v7.42.0...v7.42.1) (2024-11-19)
 
 
