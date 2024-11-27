@@ -1,6 +1,10 @@
+import { ensureUppercaseSequence } from 'mf-utilities';
+
 import { aminoAcids } from './aminoAcids';
 
 export function sequenceToMF(mf) {
+  if (mf === '') return '';
+  mf = ensureUppercaseSequence(mf);
   // this function will check if it is a sequence of aa in 1 letter or 3 letters and convert them if it is the case
   // it could be a multiline mf !
   // if it is a multiline we could make some "tricks" ...

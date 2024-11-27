@@ -1,6 +1,5 @@
 /**
  * Ensure that the sequence is in uppercase taking into account possible modifications
- * @param {string} [options.circular=false]
  */
 
 export function ensureUppercaseSequence(sequence) {
