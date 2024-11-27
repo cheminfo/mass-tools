@@ -1,6 +1,5 @@
 import { groups } from 'chemical-groups';
-
-import { ensureUppercaseSequence } from './ensureUppercaseSequence';
+import { ensureUppercaseSequence } from 'mf-utilities';
 
 /**
  * Convert a nucleic sequence to a MF
