@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.6.10...ms-spectrum@3.7.0) (2024-11-27)
+
+
+### Features
+
+* **ms-spectrum:** getBestPeaks have now min and maxValue ([#224](https://github.com/cheminfo/mass-tools/issues/224)) ([8a3ae33](https://github.com/cheminfo/mass-tools/commit/8a3ae3322d53a911fe1473c8c8eb192f86613627)), closes [#223](https://github.com/cheminfo/mass-tools/issues/223)
+
+
+
+
+
 ## [3.6.10](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.6.9...ms-spectrum@3.6.10) (2024-11-19)
 
 **Note:** Version bump only for package ms-spectrum

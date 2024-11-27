@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/cheminfo/mass-tools/compare/mf-utilities@3.2.6...mf-utilities@3.3.0) (2024-11-27)
+
+
+### Features
+
+* **peptide:** allow conversion of lowercase AA sequences ([#223](https://github.com/cheminfo/mass-tools/issues/223)) ([f547db4](https://github.com/cheminfo/mass-tools/commit/f547db4bb9fe3c877524dc64fad97d3d1140758c))
+
+
+
+
+
 ## [3.2.6](https://github.com/cheminfo/mass-tools/compare/mf-utilities@3.2.5...mf-utilities@3.2.6) (2024-11-19)
 
 

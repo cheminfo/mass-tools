@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/cheminfo/mass-tools/compare/nucleotide@3.1.7...nucleotide@3.2.0) (2024-11-27)
+
+
+### Features
+
+* **peptide:** allow conversion of lowercase AA sequences ([#223](https://github.com/cheminfo/mass-tools/issues/223)) ([f547db4](https://github.com/cheminfo/mass-tools/commit/f547db4bb9fe3c877524dc64fad97d3d1140758c))
+
+
+
+
+
 ## [3.1.7](https://github.com/cheminfo/mass-tools/compare/nucleotide@3.1.6...nucleotide@3.1.7) (2024-11-19)
 
 **Note:** Version bump only for package nucleotide
