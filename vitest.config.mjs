@@ -4,7 +4,15 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     coverage: {
-      exclude: ['packages/*/lib/**', ...coverageConfigDefaults.exclude],
+      exclude: [
+        'benchmark/**',
+        'examples/**',
+        'packages/*/lib/**',
+        'packages/chemical-elements/data-original/**',
+        'profiling/**',
+        'src/**',
+        ...coverageConfigDefaults.exclude,
+      ],
     },
   },
 });
