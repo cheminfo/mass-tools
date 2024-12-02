@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 import { EMDB } from '..';
 
 test('EMDB contaminants and knapSack', async () => {

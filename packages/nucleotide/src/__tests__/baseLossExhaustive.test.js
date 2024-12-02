@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { baseLossExhaustive } from '../baseLossExhaustive';
 
 describe('test base loss', () => {

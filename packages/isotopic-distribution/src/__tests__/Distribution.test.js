@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { Distribution } from '../Distribution.js';
 
 describe('Distribution', () => {

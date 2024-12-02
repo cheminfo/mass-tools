@@ -3,9 +3,10 @@ import path from 'node:path';
 
 import { FifoLogger } from 'fifo-logger';
 import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
+import { Spectrum } from 'ms-spectrum';
+import { describe, expect, it } from 'vitest';
 import { parseXY } from 'xy-parser';
 
-import { Spectrum } from '../../../ms-spectrum/src/Spectrum';
 import { mfsDeconvolution } from '../mfsDeconvolution';
 
 expect.extend({ toBeDeepCloseTo });

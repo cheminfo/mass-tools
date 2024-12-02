@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 
 import { xy2ToXY } from 'ml-spectra-processing';
+import { describe, expect, it } from 'vitest';
 
 import { Spectrum } from '../Spectrum.js';
 import { getBestPeaks } from '../getBestPeaks';

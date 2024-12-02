@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { mfsFromEMs } from '../mfsFromEMs.js';
 
 describe('mfsFromEMs', () => {

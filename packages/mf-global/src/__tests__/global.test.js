@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 import { groups, elements } from '..';
 
 test('mf-global', () => {

@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { generateMFs } from '../index.js';
 
 describe('generateMFs', () => {

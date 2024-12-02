@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 import { loadGoogleSheet } from '../loadGoogleSheet';
 
 test('load google sheet', async () => {

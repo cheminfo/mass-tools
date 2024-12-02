@@ -1,4 +1,5 @@
 import OCL from 'openchemlib';
+import { describe, expect, it } from 'vitest';
 
 import { fragment } from '../fragment.js';
 

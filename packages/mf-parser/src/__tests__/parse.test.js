@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 import { parse } from '../parse';
 
 let tests = {

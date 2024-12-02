@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { IsotopicDistribution } from '../IsotopicDistribution.js';
 
 describe('test isotopicDistribution', () => {

@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 import { parseCharge } from '../parseCharge';
 
 test('parseCharge', () => {

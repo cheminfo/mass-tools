@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 import { parseToHtml } from '..';
 
 test('parseToHtml', () => {

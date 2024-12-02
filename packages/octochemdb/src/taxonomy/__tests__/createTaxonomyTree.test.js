@@ -1,6 +1,8 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 
+import { expect, test } from 'vitest';
+
 import { createTaxonomyTree } from '../createTaxonomyTree';
 
 test('createTaxonomyTree', () => {
@@ -56,6 +58,7 @@ test('createTaxonomyTree', () => {
 
   expect(tree).toMatchSnapshot();
 });
+
 test('only one entry', () => {
   const taxonomies = [
     {
@@ -70,6 +73,7 @@ test('only one entry', () => {
 
   expect(tree).toMatchSnapshot();
 });
+
 test('multiple undefined fields', () => {
   const taxonomies = [
     {
@@ -103,6 +107,7 @@ test('multiple undefined fields', () => {
   expect(tree[0].children[0].count).toBe(3);
   expect(tree).toMatchSnapshot();
 });
+
 test('Rank Limit', () => {
   const taxonomies = [
     {
@@ -152,6 +157,7 @@ test('Rank Limit', () => {
 
   expect(tree).toMatchSnapshot();
 });
+
 test('True data', () => {
   const taxonomies = [
     {
@@ -201,12 +207,14 @@ test('True data', () => {
   let tree = createTaxonomyTree(taxonomies);
   expect(tree).toMatchSnapshot();
 });
+
 test('over 200 entries', () => {
   const filePath = path.join(__dirname, 'data/manyTaxonomies.json');
   const taxonomies = JSON.parse(readFileSync(filePath, 'utf8'));
   let tree = createTaxonomyTree(taxonomies);
   expect(tree).toMatchSnapshot();
 });
+
 test('full data', () => {
   const filePath = path.join(__dirname, 'data/fullData.json');
   const taxonomies = JSON.parse(readFileSync(filePath, 'utf8'));

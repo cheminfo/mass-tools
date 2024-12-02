@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 import { taxonomyComparator } from '../taxonomyComparator.js';
 
 test('taxonomyComparator', () => {

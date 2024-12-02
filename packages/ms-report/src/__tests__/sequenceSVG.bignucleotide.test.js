@@ -1,6 +1,8 @@
 import { writeFileSync } from 'node:fs';
 import path from 'node:path';
 
+import { expect, test } from 'vitest';
+
 import { info } from '../../data/ACGGCTT(C8H14N2O)AGG';
 import { sequenceSVG } from '../sequenceSVG';
 

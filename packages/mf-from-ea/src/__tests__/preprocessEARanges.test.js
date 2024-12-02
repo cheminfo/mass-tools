@@ -1,4 +1,5 @@
 import { toMatchCloseTo } from 'jest-matcher-deep-close-to';
+import { describe, expect, it } from 'vitest';
 
 import { preprocessEARanges } from '../preprocessEARanges';
 

@@ -1,4 +1,5 @@
 import { MF } from 'mf-parser';
+import { describe, expect, it } from 'vitest';
 
 import { furanThreeTerm } from '..';
 

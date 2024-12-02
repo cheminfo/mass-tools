@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 import { MF } from '../MF';
 
 test('getIsotopesInfo from C{50,50}[13C]H2', () => {

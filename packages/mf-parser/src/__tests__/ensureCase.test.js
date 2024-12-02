@@ -1,4 +1,6 @@
 // import { capitalizeMF as ensureCase } from '../util/capitalizeMF.js';
+import { expect, test } from 'vitest';
+
 import { ensureCase } from '../ensureCase.js';
 
 test('ensureCase', () => {

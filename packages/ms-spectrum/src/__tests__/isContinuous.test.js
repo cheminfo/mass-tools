@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 
+import { describe, expect, it } from 'vitest';
 import { parseXY } from 'xy-parser';
 
 import { isContinuous } from '../isContinuous';

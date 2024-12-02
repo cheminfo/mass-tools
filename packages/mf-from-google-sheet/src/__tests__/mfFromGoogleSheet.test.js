@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 import { mfFromGoogleSheet } from '..';
 
 // The original document is on: https://docs.google.com/spreadsheets/d/15Kuc5MeOhvm4oeTMvEuP1rWdRFiVWosxXhYwAmuf3Uo/edit#gid=0
