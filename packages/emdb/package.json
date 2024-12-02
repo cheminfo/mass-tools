@@ -32,7 +32,7 @@
     "mf-parser": "^3.2.5",
     "mf-utilities": "^3.3.0",
     "ml-regression-theil-sen": "^3.0.0",
-    "ml-spectra-processing": "^14.6.0",
+    "ml-spectra-processing": "^14.7.0",
     "ms-spectrum": "^3.7.0",
     "nucleotide": "^3.2.0",
     "openchemlib-utils": "^6.4.1",
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2",
-    "openchemlib": "^8.15.0",
+    "openchemlib": "^8.17.0",
     "xy-parser": "^5.0.5"
   }
 }

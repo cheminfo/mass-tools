@@ -5,6 +5,8 @@
     "moduleResolution": "node",
     "module": "CommonJS",
     "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
     "allowJs": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
