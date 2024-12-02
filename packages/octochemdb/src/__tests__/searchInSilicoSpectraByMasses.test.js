@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 
 import { Spectrum } from 'ms-spectrum';
+import { expect, test } from 'vitest';
 
 import { OctoChemDB } from '../OctoChemDB.js';
 

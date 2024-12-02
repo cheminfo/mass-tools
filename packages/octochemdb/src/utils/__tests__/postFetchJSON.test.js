@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 import { postFetchJSON } from '../postFetchJSON.js';
 
 test('postFetchJSON', async () => {

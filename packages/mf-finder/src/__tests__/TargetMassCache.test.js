@@ -1,4 +1,5 @@
 import { preprocessRanges } from 'mf-utilities';
+import { describe, expect, it } from 'vitest';
 
 import { TargetMassCache } from '../TargetMassCache';
 

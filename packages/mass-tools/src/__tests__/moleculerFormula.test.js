@@ -1,4 +1,6 @@
-import { MF, IsotopicDistribution } from '..';
+import { describe, expect, it } from 'vitest';
+
+import { IsotopicDistribution, MF } from '..';
 
 describe('mass-tools', () => {
   it('isotopicDistrbution', () => {

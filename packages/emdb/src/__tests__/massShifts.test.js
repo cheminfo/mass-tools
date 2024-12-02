@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { massShifts } from '../massShifts';
 
 describe('test massShifts', () => {

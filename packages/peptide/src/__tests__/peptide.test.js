@@ -1,9 +1,11 @@
+import { describe, expect, it } from 'vitest';
+
 import {
+  calculateCharge,
   calculateIEP,
   calculateIEPChart,
-  getColorForIEP,
-  calculateCharge,
   generatePeptideFragments,
+  getColorForIEP,
 } from '..';
 
 describe('generatePeptideFragments', () => {

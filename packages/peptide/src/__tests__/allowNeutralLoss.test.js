@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { allowNeutralLoss } from '../index.js';
 
 describe('Checking allow neutral loss of peptides', () => {

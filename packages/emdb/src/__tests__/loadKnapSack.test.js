@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 import { loadKnapSack } from '../loadKnapSack';
 
 test('loadKnapSack', async () => {

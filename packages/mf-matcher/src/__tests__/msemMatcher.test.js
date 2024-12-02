@@ -1,4 +1,5 @@
 import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
+import { expect, test } from 'vitest';
 
 import { msemMatcher } from '..';
 

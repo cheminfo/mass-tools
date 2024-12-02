@@ -1,8 +1,9 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 
-import { toMatchCloseTo, toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
+import { toBeDeepCloseTo, toMatchCloseTo } from 'jest-matcher-deep-close-to';
 import { xNormed } from 'ml-spectra-processing';
+import { describe, expect, it } from 'vitest';
 
 import { blockFcnnls } from '../blockFcnnls.js';
 

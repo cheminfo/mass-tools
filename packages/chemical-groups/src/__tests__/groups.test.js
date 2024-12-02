@@ -1,4 +1,6 @@
-import { groupsObject, groups } from '..';
+import { expect, test } from 'vitest';
+
+import { groups, groupsObject } from '..';
 
 test('data size', () => {
   expect(groups.length).toBeGreaterThan(200);

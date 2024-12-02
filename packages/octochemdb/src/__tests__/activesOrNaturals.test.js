@@ -1,3 +1,5 @@
+import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest';
+
 import { activesOrNaturals } from '../activesOrNaturals.js';
 
 import { server } from './testServer';

@@ -1,4 +1,5 @@
 import { toMatchCloseTo } from 'jest-matcher-deep-close-to';
+import { expect, test } from 'vitest';
 
 import { MF } from '../MF';
 

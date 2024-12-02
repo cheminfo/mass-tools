@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 import { getDerivedCompositionInfo } from '../getDerivedCompositionInfo';
 
 test('getDerivedCompositionInfo', () => {

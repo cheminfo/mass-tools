@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { JsGraph } from '..';
 
 describe('test Spectrum JSGraph', () => {

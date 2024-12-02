@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 import { pubmedCompounds } from '../pubmedCompounds.js';
 
 test('pubmedCompounds', async () => {

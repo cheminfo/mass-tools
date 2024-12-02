@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
+import { describe, expect, it } from 'vitest';
 import { parseXY } from 'xy-parser';
 
 import { EMDB } from '..';

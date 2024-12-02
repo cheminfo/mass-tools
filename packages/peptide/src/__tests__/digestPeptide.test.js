@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { digestPeptide } from '..';
 
 describe('Checking digest sequence', () => {

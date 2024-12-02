@@ -1,6 +1,8 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 
+import { expect, test } from 'vitest';
+
 import { searchInSilicoSpectraByMF } from '../searchInSilicoSpectraByMF.js';
 
 test('searchInsilicoSpectra', async () => {

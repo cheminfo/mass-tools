@@ -1,4 +1,5 @@
 import OCL, { Molecule } from 'openchemlib';
+import { expect, test } from 'vitest';
 
 import { getFragmentationSVG } from '../getFragmentationSVG';
 import { reactionFragmentation } from '../reactionFragmentation.js';
