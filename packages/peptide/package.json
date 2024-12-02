@@ -22,5 +22,8 @@
   "files": [
     "src",
     "lib"
-  ]
+  ],
+  "dependencies": {
+    "mf-utilities": "^3.3.0"
+  }
 }
