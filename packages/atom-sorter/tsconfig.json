@@ -5,7 +5,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "lib",
-    "composite": true
+    "composite": true,
+    "allowJs": false
   },
   "references": []
 }
