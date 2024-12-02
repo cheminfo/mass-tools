@@ -14,7 +14,7 @@ describe('mfsDeconvolution', () => {
   it('mfsDeconvolution no overlap', async () => {
     const text = readFileSync(path.join(__dirname, './data/ionic.txt'));
     const spectrum = new Spectrum(parseXY(text));
-    expect(async () =>
+    await expect(async () =>
       mfsDeconvolution(spectrum, ['C.N', 'N.O']),
     ).rejects.toThrow(
       'Could not find any overlaping peaks between experimental and theoretical spectra.',
@@ -64,7 +64,7 @@ describe('mfsDeconvolution', () => {
 
   it('no spectrum', async () => {
     // @ts-ignore
-    expect(async () => mfsDeconvolution()).rejects.toThrow(
+    await expect(async () => mfsDeconvolution()).rejects.toThrow(
       'spectrum must be an instance of Spectrum',
     );
   });
@@ -73,7 +73,7 @@ describe('mfsDeconvolution', () => {
     const text = readFileSync(path.join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
     // @ts-ignore
-    expect(async () => mfsDeconvolution(spectrum)).rejects.toThrow(
+    await expect(async () => mfsDeconvolution(spectrum)).rejects.toThrow(
       'Ranges must be an array of string or object',
     );
   });
