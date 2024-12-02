@@ -1,3 +1,7 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 import cheminfo from 'eslint-config-cheminfo/base';
 import unicorn from 'eslint-config-cheminfo/unicorn';
 import globals from 'globals';
@@ -51,4 +55,26 @@ export default [
       'max-lines-per-function': 'off',
     },
   },
+  ...createNoExtraneousConfigs(),
 ];
+
+function createNoExtraneousConfigs() {
+  const configs = [];
+  for (const pkg of fs.readdirSync('packages')) {
+    configs.push({
+      files: [`packages/${pkg}/**`],
+      rules: {
+        'import/no-extraneous-dependencies': [
+          'error',
+          {
+            packageDir: [
+              fileURLToPath(new URL(`packages/${pkg}`, import.meta.url)),
+              path.dirname(fileURLToPath(import.meta.url)),
+            ],
+          },
+        ],
+      },
+    });
+  }
+  return configs;
+}

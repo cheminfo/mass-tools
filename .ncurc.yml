@@ -1,8 +1,6 @@
 root: true
 workspaces: true
 reject:
-  # https://github.com/cheminfo/eslint-config/issues/49
-  - eslint
   # https://github.com/cheminfo/mass-tools/issues/192
   - ml-fcnnls
   # https://github.com/cheminfo/mass-tools/issues/193

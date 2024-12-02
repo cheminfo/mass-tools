@@ -26,6 +26,6 @@
   },
   "devDependencies": {
     "jsdom": "^25.0.1",
-    "openchemlib": "^8.15.0"
+    "openchemlib": "^8.17.0"
   }
 }
