@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src/**/*"],
+  "exclude": ["**/__tests__"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "lib",
+    "composite": true
+  },
+  "references": [
+    {
+      "path": "../atom-sorter/tsconfig.build.json"
+    },
+    {
+      "path": "../chemical-elements/tsconfig.build.json"
+    },
+    {
+      "path": "../chemical-groups/tsconfig.build.json"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src/**/*"],
+  "exclude": ["**/__tests__"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "lib",
+    "composite": true
+  },
+  "references": [
+    {
+      "path": "../atom-sorter/tsconfig.build.json"
+    },
+    {
+      "path": "../chemical-elements/tsconfig.build.json"
+    },
+    {
+      "path": "../mf-matcher/tsconfig.build.json"
+    },
+    {
+      "path": "../mf-parser/tsconfig.build.json"
+    },
+    {
+      "path": "../mf-utilities/tsconfig.build.json"
+    }
+  ]
+}

@@ -2,8 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import cheminfo from 'eslint-config-cheminfo/base';
-import unicorn from 'eslint-config-cheminfo/unicorn';
+import cheminfo from 'eslint-config-cheminfo-typescript/base';
+import unicorn from 'eslint-config-cheminfo-typescript/unicorn';
 import globals from 'globals';
 
 export default [

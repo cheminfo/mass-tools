@@ -1,24 +1,14 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "include": ["src/**/*"],
-  "exclude": ["**/__tests__"],
+  "files": [],
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "lib",
     "composite": true
   },
   "references": [
     {
-      "path": "../mf-finder"
+      "path": "./tsconfig.build.json"
     },
     {
-      "path": "../mf-parser"
-    },
-    {
-      "path": "../mf-utilities"
-    },
-    {
-      "path": "../ms-spectrum"
+      "path": "./tsconfig.test.json"
     }
   ]
 }

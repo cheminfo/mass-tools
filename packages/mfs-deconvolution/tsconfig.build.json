@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src/**/*"],
+  "exclude": ["**/__tests__"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "lib",
+    "composite": true
+  },
+  "references": [
+    {
+      "path": "../isotopic-distribution/tsconfig.build.json"
+    },
+    {
+      "path": "../mf-generator/tsconfig.build.json"
+    },
+    {
+      "path": "../ms-spectrum/tsconfig.build.json"
+    }
+  ]
+}

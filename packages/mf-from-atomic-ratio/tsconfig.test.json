@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.build.json",
+  "include": ["src/**/__tests__/*"],
+  "exclude": [],
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "references": [
+    {
+      "path": "./tsconfig.build.json"
+    }
+  ]
+}

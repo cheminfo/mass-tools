@@ -1,18 +1,14 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "include": ["src/**/*"],
-  "exclude": ["**/__tests__"],
+  "files": [],
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "lib",
     "composite": true
   },
   "references": [
     {
-      "path": "../mf-generator"
+      "path": "./tsconfig.build.json"
     },
     {
-      "path": "../mf-parser"
+      "path": "./tsconfig.test.json"
     }
   ]
 }
