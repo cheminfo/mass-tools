@@ -16,5 +16,6 @@ test('stableIsotopesObject', () => {
     name: 'Carbon',
     mass: 13.00335483507,
     symbol: 'C',
+    mostAbundant: false,
   });
 });

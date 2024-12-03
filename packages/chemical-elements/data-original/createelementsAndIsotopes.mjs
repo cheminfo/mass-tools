@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 
 import Papa from 'papaparse';
+import { format } from 'prettier';
 
 let names = Papa.parse(
   readFileSync(new URL('names.tsv', import.meta.url), 'utf8'),
@@ -33,8 +34,18 @@ for (let i = 0; i < elementsAndIsotopes.length; i++) {
 }
 
 writeFileSync(
-  new URL('../src/elementsAndIsotopes.js', import.meta.url),
-  `export const elementsAndIsotopes=${JSON.stringify(elementsAndIsotopes)}`,
+  new URL('../src/elementsAndIsotopes.ts', import.meta.url),
+  await format(
+    `import type { ElementAndIsotopes } from './types.js';\n\nexport const elementsAndIsotopes: ElementAndIsotopes[] = ${JSON.stringify(elementsAndIsotopes)};`,
+    {
+      filepath: 'elementsAndIsotopes.ts',
+      arrowParens: 'always',
+      semi: true,
+      singleQuote: true,
+      tabWidth: 2,
+      trailingComma: 'all',
+    },
+  ),
   'utf8',
 );
 
