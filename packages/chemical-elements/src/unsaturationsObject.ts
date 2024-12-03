@@ -1,4 +1,4 @@
-export const unsaturationsObject = {
+export const unsaturationsObject: Record<string, number | undefined> = {
   O: 0,
   N: 1,
   H: -1,

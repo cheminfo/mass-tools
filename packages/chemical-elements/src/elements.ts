@@ -1,6 +1,7 @@
 import { elementsAndIsotopes } from './elementsAndIsotopes.js';
+import type { Element } from './types.js';
 
-export const elements = elementsAndIsotopes.map((element) => ({
+export const elements: Element[] = elementsAndIsotopes.map((element) => ({
   number: element.number,
   symbol: element.symbol,
   mass: element.mass,

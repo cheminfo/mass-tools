@@ -1,4 +1,6 @@
-export const elementsAndIsotopes = [
+import type { ElementAndIsotopes } from './types.js';
+
+export const elementsAndIsotopes: ElementAndIsotopes[] = [
   {
     number: 1,
     isotopes: [
