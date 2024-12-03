@@ -1,0 +1,51 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src/**/*"],
+  "exclude": ["**/__tests__"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "lib",
+    "composite": true
+  },
+  "references": [
+    {
+      "path": "../chemical-elements/tsconfig.build.json"
+    },
+    {
+      "path": "../chemical-groups/tsconfig.build.json"
+    },
+    {
+      "path": "../isotopic-distribution/tsconfig.build.json"
+    },
+    {
+      "path": "../mass-fragmentation/tsconfig.build.json"
+    },
+    {
+      "path": "../mf-finder/tsconfig.build.json"
+    },
+    {
+      "path": "../mf-from-google-sheet/tsconfig.build.json"
+    },
+    {
+      "path": "../mf-generator/tsconfig.build.json"
+    },
+    {
+      "path": "../mf-matcher/tsconfig.build.json"
+    },
+    {
+      "path": "../mf-parser/tsconfig.build.json"
+    },
+    {
+      "path": "../mf-utilities/tsconfig.build.json"
+    },
+    {
+      "path": "../ms-spectrum/tsconfig.build.json"
+    },
+    {
+      "path": "../nucleotide/tsconfig.build.json"
+    },
+    {
+      "path": "../peptide/tsconfig.build.json"
+    }
+  ]
+}

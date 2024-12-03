@@ -1,51 +1,14 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "include": ["src/**/*"],
-  "exclude": ["**/__tests__"],
+  "files": [],
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "lib",
     "composite": true
   },
   "references": [
     {
-      "path": "../chemical-elements"
+      "path": "./tsconfig.build.json"
     },
     {
-      "path": "../chemical-groups"
-    },
-    {
-      "path": "../isotopic-distribution"
-    },
-    {
-      "path": "../mass-fragmentation"
-    },
-    {
-      "path": "../mf-finder"
-    },
-    {
-      "path": "../mf-from-google-sheet"
-    },
-    {
-      "path": "../mf-generator"
-    },
-    {
-      "path": "../mf-matcher"
-    },
-    {
-      "path": "../mf-parser"
-    },
-    {
-      "path": "../mf-utilities"
-    },
-    {
-      "path": "../ms-spectrum"
-    },
-    {
-      "path": "../nucleotide"
-    },
-    {
-      "path": "../peptide"
+      "path": "./tsconfig.test.json"
     }
   ]
 }

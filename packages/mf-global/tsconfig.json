@@ -1,42 +1,14 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "include": ["src/**/*"],
-  "exclude": ["**/__tests__"],
+  "files": [],
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "lib",
     "composite": true
   },
   "references": [
     {
-      "path": "../chemical-elements"
+      "path": "./tsconfig.build.json"
     },
     {
-      "path": "../chemical-groups"
-    },
-    {
-      "path": "../emdb"
-    },
-    {
-      "path": "../isotopic-distribution"
-    },
-    {
-      "path": "../mf-generator"
-    },
-    {
-      "path": "../mf-parser"
-    },
-    {
-      "path": "../ms-report"
-    },
-    {
-      "path": "../ms-spectrum"
-    },
-    {
-      "path": "../nucleotide"
-    },
-    {
-      "path": "../peptide"
+      "path": "./tsconfig.test.json"
     }
   ]
 }

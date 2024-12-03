@@ -1,24 +1,14 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "include": ["src/**/*"],
-  "exclude": ["**/__tests__"],
+  "files": [],
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "lib",
     "composite": true
   },
   "references": [
     {
-      "path": "../chemical-groups"
+      "path": "./tsconfig.build.json"
     },
     {
-      "path": "../mf-utilities"
-    },
-    {
-      "path": "../nucleotide"
-    },
-    {
-      "path": "../peptide"
+      "path": "./tsconfig.test.json"
     }
   ]
 }

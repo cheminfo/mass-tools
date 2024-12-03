@@ -41,7 +41,7 @@
     "cheminfo-build": "^1.2.0",
     "documentation": "^14.0.3",
     "eslint": "^9.16.0",
-    "eslint-config-cheminfo": "^13.0.0",
+    "eslint-config-cheminfo-typescript": "^17.0.0",
     "globals": "^15.13.0",
     "jest-matcher-deep-close-to": "^3.0.2",
     "lerna": "^8.1.9",

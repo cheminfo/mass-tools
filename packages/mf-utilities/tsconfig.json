@@ -1,21 +1,14 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "include": ["src/**/*"],
-  "exclude": ["**/__tests__"],
+  "files": [],
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "lib",
     "composite": true
   },
   "references": [
     {
-      "path": "../chemical-elements"
+      "path": "./tsconfig.build.json"
     },
     {
-      "path": "../chemical-groups"
-    },
-    {
-      "path": "../mf-parser"
+      "path": "./tsconfig.test.json"
     }
   ]
 }
