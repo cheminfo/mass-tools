@@ -28,11 +28,20 @@ export class MF {
     this.cache = {};
   }
 
+  /**
+   * Returns an array of objects with kind and value that can be used to easily
+   * display the molecular formula.
+   * @returns {{kind: string, value: string}[]}
+   */
   toDisplay() {
     if (!this.cache.displayed) this.cache.displayed = toDisplay(this.parsed);
     return this.cache.displayed;
   }
 
+  /**
+   * Returns a string that represents the molecular formula adding subscript and superscript in HTML.
+   * @returns {string}
+   */
   toHtml() {
     if (!this.cache.html) {
       this.toDisplay();
@@ -41,6 +50,11 @@ export class MF {
     return this.cache.html;
   }
 
+  /**
+   * Returns a string that represents the molecular formula adding subscript and superscript
+   * using unicode characters. This can not be parsed anymore so kind of dead end ...
+   * @returns {string}
+   */
   toText() {
     if (!this.cache.text) {
       this.toDisplay();
@@ -49,6 +63,10 @@ export class MF {
     return this.cache.text;
   }
 
+  /**
+   * Similar to toText but returns a canonic string in which the atoms are sorted using the Hill system
+   * @returns {string}
+   */
   toCanonicText() {
     if (!this.cache.canonicText) {
       this.cache.canonicText = new MF(this.toMF()).toText(this.cache.displayed);
@@ -117,6 +135,7 @@ export class MF {
 
   /**
    * Get a canonized MF
+   * @returns {string}
    */
   toMF() {
     if (!this.cache.mf) {
