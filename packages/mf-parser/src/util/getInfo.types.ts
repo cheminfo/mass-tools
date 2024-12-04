@@ -4,7 +4,7 @@ type CustomNameFields<Options extends GetInfoOptions<string, string>> = Record<
   Exclude<Options['emFieldName'], undefined>,
   number
 > &
-  Record<Exclude<Options['msemFieldName'], undefined>, number>;
+  Record<Exclude<Options['msemFieldName'], undefined>, number | undefined>;
 
 export type PartInfo<Options extends GetInfoOptions<string, string>> = {
   mass: number;
