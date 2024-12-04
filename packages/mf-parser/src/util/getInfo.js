@@ -13,13 +13,13 @@ import { partToAtoms } from './partToAtoms';
 import { partToMF } from './partToMF';
 
 /** @typedef {import('./getInfo.types').PartInfo} PartInfo */
-/** @typedef {import('./getInfo.types').PartInfoWithParts} PartInfoWithParts */
 
 /**
+ * @template {import('./util/getInfo.types').GetInfoOptions<string, string>} [GIO=import('./util/getInfo.types').GetInfoOptions]
  *
  * @param {*} parts
- * @param {*} [options={}]
- * @returns {object|PartInfo|PartInfoWithParts}
+ * @param {GIO} [options={}]
+ * @returns {import('./util/getInfo.types').PartInfo<GIO> | import('./util/getInfo.types').PartInfoWithParts<GIO>}
  */
 export function getInfo(parts, options = {}) {
   let {
@@ -27,7 +27,6 @@ export function getInfo(parts, options = {}) {
     emFieldName = 'monoisotopicMass',
     msemFieldName = 'observedMonoisotopicMass',
   } = options;
-  if (parts.length === 0) return {};
   if (parts.length === 1) {
     return getProcessedPart(parts[0], {
       customUnsaturations,
@@ -65,6 +64,9 @@ export function getInfo(parts, options = {}) {
       result.atoms[atom] += part.atoms[atom];
     }
   }
+
+  if (result.parts.length === 0) delete result.parts;
+
   return result;
 }
 
