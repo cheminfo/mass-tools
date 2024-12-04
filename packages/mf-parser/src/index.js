@@ -9,3 +9,6 @@ export * from './Style.js';
 export * from './ensureCase.js';
 export * from './MF.js';
 export * from './parseToHtml.js';
+// needed to exports types from ./util/getInfo.types.ts
+// eslint-disable-next-line import/export
+export * from './util/getInfo.types.js';
