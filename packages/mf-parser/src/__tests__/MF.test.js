@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { MF } from '..';
+import { MF } from '../../lib/src';
 
 describe('MF', () => {
   it('C', () => {
@@ -300,6 +300,24 @@ describe('MF', () => {
       unsaturation: 4,
       atoms: { O: 4, S: 1 },
     });
+  });
+
+  it('default customFieldName (type test)', () => {
+    {
+      const mf = new MF('Na+.Cl-');
+      const info = mf.getInfo();
+      expect(info.monoisotopicMass).toBe(57.958621964);
+    }
+
+    {
+      const mf = new MF('Na+.Cl-');
+      /**
+       * @type {{emFieldName: 'test'}}
+       */
+      const options = { emFieldName: 'test' };
+      const info = mf.getInfo(options);
+      expect(info.test).toBe(57.958621964);
+    }
   });
 
   it('customFieldName', () => {
