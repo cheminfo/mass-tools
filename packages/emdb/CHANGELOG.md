@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.12](https://github.com/cheminfo/mass-tools/compare/emdb@3.3.11...emdb@3.3.12) (2024-12-05)
+
+
+### Bug Fixes
+
+* update dependencies and add source mapping ([01767cf](https://github.com/cheminfo/mass-tools/commit/01767cfc06c047cd07d687fe4ccdad492952360b))
+
+
+
+
+
 ## [3.3.11](https://github.com/cheminfo/mass-tools/compare/emdb@3.3.10...emdb@3.3.11) (2024-11-27)
 
 **Note:** Version bump only for package emdb

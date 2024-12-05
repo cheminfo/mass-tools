@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/cheminfo/mass-tools/compare/atom-sorter@2.1.3...atom-sorter@2.2.0) (2024-12-05)
+
+
+### Features
+
+* **chemical-elements:** rewrite in TypeScript ([f663e61](https://github.com/cheminfo/mass-tools/commit/f663e61c0b8c6d27360d95b182204cf64cbf70cb))
+
+
+
+
+
 ## [2.1.3](https://github.com/cheminfo/mass-tools/compare/atom-sorter@2.1.2...atom-sorter@2.1.3) (2024-08-06)
 
 

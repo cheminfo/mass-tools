@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.3](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.2...isotopic-distribution@3.4.3) (2024-12-05)
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** getGaussian was returning NaN when only one point ([#237](https://github.com/cheminfo/mass-tools/issues/237)) ([2f62b8f](https://github.com/cheminfo/mass-tools/commit/2f62b8f19706f11f5880c3596918e73e010e66c4))
+
+
+
+
+
 ## [3.4.2](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.1...isotopic-distribution@3.4.2) (2024-11-27)
 
 **Note:** Version bump only for package isotopic-distribution

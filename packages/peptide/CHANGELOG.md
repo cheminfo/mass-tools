@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/cheminfo/mass-tools/compare/peptide@2.3.0...peptide@2.3.1) (2024-12-05)
+
+
+### Bug Fixes
+
+* declare missing dependencies ([29ee58c](https://github.com/cheminfo/mass-tools/commit/29ee58cee2e5fd5412d6477a71d56b1d8174dc90))
+
+
+
+
+
 # [2.3.0](https://github.com/cheminfo/mass-tools/compare/peptide@2.2.2...peptide@2.3.0) (2024-11-27)
 
 

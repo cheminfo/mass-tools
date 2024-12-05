@@ -1,6 +1,6 @@
 {
   "name": "mf-generator",
-  "version": "3.3.7",
+  "version": "3.3.8",
   "description": "Generate molecular formula based on a range and filters",
   "main": "lib/src/index.js",
   "module": "src/index.js",
@@ -20,11 +20,11 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/mf-generator#readme",
   "dependencies": {
-    "chemical-elements": "^2.1.2",
-    "mf-finder": "^3.4.7",
-    "mf-matcher": "^3.2.7",
-    "mf-parser": "^3.2.5",
-    "mf-utilities": "^3.3.0",
+    "chemical-elements": "^2.2.0",
+    "mf-finder": "^3.4.8",
+    "mf-matcher": "^3.2.8",
+    "mf-parser": "^3.2.6",
+    "mf-utilities": "^3.3.1",
     "sum-object-keys": "^1.0.2"
   },
   "devDependencies": {

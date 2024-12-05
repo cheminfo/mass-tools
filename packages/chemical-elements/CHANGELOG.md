@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/cheminfo/mass-tools/compare/chemical-elements@2.1.2...chemical-elements@2.2.0) (2024-12-05)
+
+
+### Features
+
+* **chemical-elements:** rewrite in TypeScript ([f663e61](https://github.com/cheminfo/mass-tools/commit/f663e61c0b8c6d27360d95b182204cf64cbf70cb))
+
+
+
+
+
 ## [2.1.2](https://github.com/cheminfo/mass-tools/compare/chemical-elements@2.1.1...chemical-elements@2.1.2) (2024-10-14)
 
 **Note:** Version bump only for package chemical-elements
