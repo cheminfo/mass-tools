@@ -361,4 +361,29 @@ describe('test isotopicDistribution', () => {
     const distribution = isotopicDistribution.getGaussian();
     expect(distribution).toStrictEqual({ x: [], y: [] });
   });
+
+  it('extreme case with very few points', () => {
+    const isotopicDistribution = new IsotopicDistribution('C1000000', {
+      fwhm: 600, // Used both to determine gaussian width and whether to merge close centroids.
+      maxLines: 2e6, // Maximal number of peaks during calculations.
+      limit: 1e6, // Maximum number of peaks to keep.
+      minY: 1e-8, // Optimization parameter. The lower, the slower.
+      allowNeutral: true, // Whether to keep the distribution if the molecule has no charge.
+      ensureCase: false, // Ensure uppercase / lowercase.
+    });
+
+    const peaks = isotopicDistribution.getXY();
+    expect(peaks.x).toHaveLength(1);
+    expect(peaks.y).toStrictEqual([100]);
+
+    const profile = isotopicDistribution.getGaussian({
+      gaussianWidth: 10,
+      maxValue: 100,
+      threshold: 0,
+      maxLength: 1e7,
+    });
+
+    expect(profile.x[0]).toBeCloseTo(12010735.5);
+    expect(profile.y[0]).toBeCloseTo(100);
+  });
 });
