@@ -1,5 +1,18 @@
 # Changelog
 
+## [7.44.0](https://github.com/cheminfo/mass-tools/compare/v7.43.0...v7.44.0) (2024-12-05)
+
+
+### Features
+
+* **chemical-elements:** rewrite in TypeScript ([f663e61](https://github.com/cheminfo/mass-tools/commit/f663e61c0b8c6d27360d95b182204cf64cbf70cb))
+
+
+### Bug Fixes
+
+* declare missing dependencies ([29ee58c](https://github.com/cheminfo/mass-tools/commit/29ee58cee2e5fd5412d6477a71d56b1d8174dc90))
+* update dependencies and add source mapping ([01767cf](https://github.com/cheminfo/mass-tools/commit/01767cfc06c047cd07d687fe4ccdad492952360b))
+
 ## [7.43.0](https://github.com/cheminfo/mass-tools/compare/v7.42.1...v7.43.0) (2024-11-27)
 
 
