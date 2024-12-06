@@ -1,34 +1,59 @@
 import type { AtomsMap } from './partToAtoms';
 
-type CustomNameFields<Options extends GetInfoOptions<string, string>> = Record<
-  Exclude<Options['emFieldName'], undefined>,
-  number
-> &
-  Record<Exclude<Options['msemFieldName'], undefined>, number | undefined>;
+type ImpossibleCustomNames =
+  | 'mass'
+  | 'charge'
+  | 'mf'
+  | 'atoms'
+  | 'unsaturation'
+  | 'parts';
+type AllowedCustomNames = Exclude<string, ImpossibleCustomNames>;
 
-export type PartInfo<Options extends GetInfoOptions<string, string>> = {
+type GetEM<GIO extends GetInfoOptions<AllowedCustomNames, AllowedCustomNames>> =
+  GIO extends GetInfoOptions<infer em, string>
+    ? em extends undefined
+      ? 'monoisotopicMass'
+      : em
+    : never;
+type GetMSEM<
+  GIO extends GetInfoOptions<AllowedCustomNames, AllowedCustomNames>,
+> =
+  GIO extends GetInfoOptions<string, infer msem>
+    ? msem extends undefined
+      ? 'observedMonoisotopicMass'
+      : msem
+    : never;
+
+type CustomNameFields<
+  GIO extends GetInfoOptions<AllowedCustomNames, AllowedCustomNames>,
+> = Record<GetEM<GIO>, number> & Record<GetMSEM<GIO>, number | undefined>;
+
+export type PartInfo<GIO extends GetInfoOptionsAllowed> = {
   mass: number;
   charge: number;
   mf: string;
   atoms: AtomsMap;
   unsaturation?: number;
-} & CustomNameFields<Options>;
+} & CustomNameFields<GIO>;
 
-export type PartInfoWithParts<Options extends GetInfoOptions<string, string>> =
-  {
-    parts: Array<PartInfo<Options>>;
-    mass: number;
-    charge: number;
-    unsaturation: number;
-    atoms: AtomsMap;
-    mf: string;
-  } & CustomNameFields<Options>;
+export type PartInfoWithParts<GIO extends GetInfoOptionsAllowed> = Omit<
+  PartInfo<GIO>,
+  'unsaturation'
+> & {
+  parts: Array<PartInfo<GIO>>;
+  unsaturation: number;
+} & CustomNameFields<GIO>;
 
 export interface GetInfoOptions<
-  EM extends string = 'monoisotopicMass',
-  MSEM extends string = 'observedMonoisotopicMass',
+  EM extends AllowedCustomNames = 'monoisotopicMass',
+  MSEM extends AllowedCustomNames = 'observedMonoisotopicMass',
 > {
   customUnsaturations?: object;
   emFieldName?: EM;
   msemFieldName?: MSEM;
 }
+
+export type GetInfoOptionsAllowed = GetInfoOptions<
+  AllowedCustomNames,
+  AllowedCustomNames
+>;

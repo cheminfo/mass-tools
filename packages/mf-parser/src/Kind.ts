@@ -17,4 +17,7 @@ export const Kind = {
   TEXT: 'text',
   ANCHOR: 'anchor',
   COMMENT: 'comment',
-};
+} as const;
+
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+export type Kind = (typeof Kind)[keyof typeof Kind];
