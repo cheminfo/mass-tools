@@ -13,8 +13,6 @@ import { toParts } from './util/toParts';
 import { toText } from './util/toText';
 
 /** @typedef {import('./util/getIsotopesInfo.types').IsotopesInfo} IsotopesInfo */
-/** @typedef {import('./util/getInfo.types').PartInfo} PartInfo */
-/** @typedef {import('./util/getInfo.types').PartInfoWithParts} PartInfoWithParts */
 
 /**
  * Class allowing to deal with molecular formula and derived information
@@ -84,11 +82,9 @@ export class MF {
   /**
    * Returns an object with the global MF, global charge, monoisotopic mass and mass
    * as well as the same information for all the parts
-   * @param {object} [options={}] options
-   * @param {object} [options.customUnsaturations={}] custom unsaturations
-   * @param {string} [options.emFieldName='monoisotopicMass'] name of the monoisotopic mass field
-   * @param {string} [options.msemFieldName='observedMonoisotopicMass'] name of the observed monoisotopic mass field
-   * @returns {PartInfo|PartInfoWithParts}
+   * @template {import('./util/getInfo.types').GetInfoOptions<string, string>} [GIO=import('./util/getInfo.types').GetInfoOptions]
+   * @param {GIO} [options={}] options
+   * @returns {import('./util/getInfo.types').PartInfo<GIO> | import('./util/getInfo.types').PartInfoWithParts<GIO>}
    */
   getInfo(options = {}) {
     if (!this.cache.info) {

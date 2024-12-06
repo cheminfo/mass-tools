@@ -1,4 +1,4 @@
-import type { IsotopesInfo, PartInfo } from 'mf-parser';
+import type { GetInfoOptions, IsotopesInfo, PartInfo } from 'mf-parser';
 
 /**
  * An object containing two arrays.
@@ -8,10 +8,10 @@ export interface XY {
   y: number[];
 }
 
-export interface IsotopicDistributionPart extends PartInfo {
+export interface IsotopicDistributionPart
+  extends PartInfo<GetInfoOptions<'em'>> {
   confidence: number;
   isotopesInfo: IsotopesInfo;
-  em: number;
 }
 
 export interface IsotopicDistributionOptions {

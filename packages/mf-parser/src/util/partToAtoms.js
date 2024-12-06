@@ -1,4 +1,4 @@
-import { Kind } from '../Kind.js';
+import { Kind } from '../Kind.ts';
 
 /** @typedef {Record<string, number>} AtomsMap */
 
