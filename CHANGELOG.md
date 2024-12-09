@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.44.1](https://github.com/cheminfo/mass-tools/compare/v7.44.0...v7.44.1) (2024-12-09)
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** crash with getGaussian and maxValue when no peaks ([#239](https://github.com/cheminfo/mass-tools/issues/239)) ([80906a9](https://github.com/cheminfo/mass-tools/commit/80906a9de20a34d1fd3a9faf71b190299621ab26))
+
 ## [7.44.0](https://github.com/cheminfo/mass-tools/compare/v7.43.0...v7.44.0) (2024-12-05)
 
 
