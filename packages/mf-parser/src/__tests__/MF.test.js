@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { MF } from '../../lib/src';
+import { MF } from '..';
 
 describe('MF', () => {
   it('C', () => {
