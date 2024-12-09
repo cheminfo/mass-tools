@@ -221,6 +221,16 @@ describe('test isotopicDistribution', () => {
     });
   });
 
+  it('negative number of atoms', () => {
+    const isotopicDistribution = new IsotopicDistribution('CH-1');
+    const xy = isotopicDistribution.getXY({ sumValue: 100 });
+    expect(xy).toStrictEqual({ x: [], y: [] });
+    const gaussian = isotopicDistribution.getGaussian({ maxValue: 100 });
+    expect(gaussian).toStrictEqual({ x: [], y: [] });
+    const table = isotopicDistribution.getTable();
+    expect(table).toStrictEqual([]);
+  });
+
   it('create distribution of C10 and getXY with sumValue to 100', () => {
     const isotopicDistribution = new IsotopicDistribution('C10');
     const xy = isotopicDistribution.getXY({ sumValue: 100 });
