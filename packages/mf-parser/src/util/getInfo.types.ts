@@ -7,26 +7,26 @@ type ImpossibleCustomNames =
   | 'atoms'
   | 'unsaturation'
   | 'parts';
-type AllowedCustomNames = Exclude<string, ImpossibleCustomNames>;
+type AllowedCustomNames = Exclude<string, ImpossibleCustomNames> | undefined;
 
-type GetEM<GIO extends GetInfoOptions<AllowedCustomNames, AllowedCustomNames>> =
+type GetEM<GIO extends GetInfoOptionsAllowed> =
   GIO extends GetInfoOptions<infer em, string>
     ? em extends undefined
       ? 'monoisotopicMass'
       : em
     : never;
-type GetMSEM<
-  GIO extends GetInfoOptions<AllowedCustomNames, AllowedCustomNames>,
-> =
+type GetMSEM<GIO extends GetInfoOptionsAllowed> =
   GIO extends GetInfoOptions<string, infer msem>
     ? msem extends undefined
       ? 'observedMonoisotopicMass'
       : msem
     : never;
 
-type CustomNameFields<
-  GIO extends GetInfoOptions<AllowedCustomNames, AllowedCustomNames>,
-> = Record<GetEM<GIO>, number> & Record<GetMSEM<GIO>, number | undefined>;
+type CustomNameFields<GIO extends GetInfoOptionsAllowed> = Record<
+  GetEM<GIO>,
+  number
+> &
+  Record<GetMSEM<GIO>, number | undefined>;
 
 export type PartInfo<GIO extends GetInfoOptionsAllowed> = {
   mass: number;
