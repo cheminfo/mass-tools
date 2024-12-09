@@ -139,7 +139,6 @@ export class MF {
 
   /**
    * Get the different elements for each part
-   * @returns an array
    */
   getElements(): Element[] {
     if (!this.cache.elements) {
@@ -152,7 +151,6 @@ export class MF {
 
   /**
    * Returns an array with each atom and isotopic composition
-   * @returns {IsotopesInfo}
    */
   getIsotopesInfo(): IsotopesInfo {
     if (!this.cache.isotopesInfo) {
