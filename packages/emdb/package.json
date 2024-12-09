@@ -1,6 +1,6 @@
 {
   "name": "emdb",
-  "version": "3.3.12",
+  "version": "3.3.13",
   "description": "Database manager for exact mass query",
   "main": "lib/src/index.js",
   "module": "src/index.js",
@@ -22,7 +22,7 @@
   "dependencies": {
     "chemical-elements": "^2.2.0",
     "chemical-groups": "^2.2.2",
-    "isotopic-distribution": "^3.4.3",
+    "isotopic-distribution": "^3.4.4",
     "jszip": "^3.10.1",
     "mass-fragmentation": "^1.11.1",
     "mf-finder": "^3.4.8",
@@ -33,7 +33,7 @@
     "mf-utilities": "^3.3.1",
     "ml-regression-theil-sen": "^3.0.0",
     "ml-spectra-processing": "^14.7.0",
-    "ms-spectrum": "^3.7.1",
+    "ms-spectrum": "^3.7.2",
     "nucleotide": "^3.2.1",
     "openchemlib-utils": "^6.4.1",
     "peaks-similarity": "^3.1.1",
