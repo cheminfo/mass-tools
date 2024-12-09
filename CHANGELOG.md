@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.44.2](https://github.com/cheminfo/mass-tools/compare/v7.44.1...v7.44.2) (2024-12-09)
+
+
+### Bug Fixes
+
+* **mf-parser:** provide getInfo advanced typings ([#241](https://github.com/cheminfo/mass-tools/issues/241)) ([06a4121](https://github.com/cheminfo/mass-tools/commit/06a41211a12b98f35f47fbbca9442c9bae55ed8a))
+
 ## [7.44.1](https://github.com/cheminfo/mass-tools/compare/v7.44.0...v7.44.1) (2024-12-09)
 
 
