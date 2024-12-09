@@ -225,6 +225,7 @@ export class IsotopicDistribution {
   getTable(options = {}) {
     const { maxValue, xLabel = 'x', yLabel = 'y' } = options;
     let points = this.getDistribution().array;
+    if (points.length === 0) return [];
     let factor = 1;
     if (maxValue) {
       let maxY = this.getMaxY(points);
