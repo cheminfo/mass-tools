@@ -3,7 +3,7 @@ import { parse } from './parse';
 import { flatten } from './util/flatten';
 import { getEA } from './util/getEA';
 import { getElements } from './util/getElements';
-import { getInfo } from './util/getInfo';
+import { getInfoInternal } from './util/getInfoInternal';
 import { getIsotopesInfo } from './util/getIsotopesInfo';
 import { partsToDisplay } from './util/partsToDisplay';
 import { partsToMF } from './util/partsToMF';
@@ -93,7 +93,7 @@ export class MF {
   getInfo(options = {}) {
     if (!this.cache.info) {
       this.toParts();
-      this.cache.info = getInfo(this.cache.parts, options);
+      this.cache.info = getInfoInternal(this.cache.parts, options);
     }
     return this.cache.info;
   }
