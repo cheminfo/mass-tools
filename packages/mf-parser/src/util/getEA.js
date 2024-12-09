@@ -9,9 +9,7 @@ import { Kind } from '../Kind';
 import { getIsotopeRatioInfo } from './getIsotopeRatioInfo';
 
 /**
- *
  * @param {*} parts
- * @param {*} [options={}]
  */
 export function getEA(parts) {
   let results = {};

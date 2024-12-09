@@ -3,9 +3,7 @@ import { elementsObject, elementsAndIsotopesObject } from 'chemical-elements';
 import { Kind } from '../Kind';
 
 /**
- *
  * @param {*} parts
- * @param {*} [options={}]
  */
 export function getElements(parts) {
   const elements = [];
