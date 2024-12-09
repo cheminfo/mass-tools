@@ -8,10 +8,12 @@ import { Kind } from '../Kind';
 
 import { getIsotopeRatioInfo } from './getIsotopeRatioInfo';
 
+/** @typedef {import('./toParts.types').ToPartsPart} ToPartsPart */
+/** @typedef {import('./getEA.types').EA} EA */
+
 /**
- *
- * @param {*} parts
- * @param {*} [options={}]
+ * @param {ToPartsPart[][]} parts
+ * @returns {EA[]}
  */
 export function getEA(parts) {
   let results = {};

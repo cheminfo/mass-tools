@@ -93,7 +93,7 @@ interface AtomPart {
 
 interface IsotopePart {
   kind: (typeof Kind)['ISOTOPE'];
-  value: { atom: string; isotope: string };
+  value: { atom: string; isotope: number };
   multiplier: number;
 }
 
@@ -156,7 +156,7 @@ function getProcessedPart<GIO extends GetInfoOptionsAllowed = GetInfoOptions>(
       }
       case Kind.ISOTOPE: {
         currentElement = line.value.atom;
-        const isotope = isotopes[line.value.isotope + line.value.atom];
+        const isotope = isotopes[`${line.value.isotope}${line.value.atom}`];
         if (!isotope) {
           throw new Error(
             `Unknown isotope: ${line.value.isotope}${line.value.atom}`,

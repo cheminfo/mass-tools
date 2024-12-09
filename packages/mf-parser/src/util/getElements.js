@@ -2,10 +2,12 @@ import { elementsObject, elementsAndIsotopesObject } from 'chemical-elements';
 
 import { Kind } from '../Kind';
 
+/** @typedef {import('./toParts.types').ToPartsPart} ToPartsPart */
+/** @typedef {import('./getElements.types').Element} Element */
+
 /**
- *
- * @param {*} parts
- * @param {*} [options={}]
+ * @param {ToPartsPart[][]} parts
+ * @returns {Element[]}
  */
 export function getElements(parts) {
   const elements = [];

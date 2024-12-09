@@ -5,20 +5,19 @@ import {
 
 import { Kind } from '../Kind';
 
-/** @typedef {import('./getIsotopesInfo.types').IsotopesInfo} IsotopesInfo
+/** @typedef {import('./getIsotopesInfo.types').IsotopesInfo} IsotopesInfo */
+/** @typedef {import('./toParts.types').ToPartsPart} ToPartsPart */
 
 /**
- *
- * @param {*} parts
- * @returns {[]|IsotopesInfo}
+ * @param {ToPartsPart[][]} parts
+ * @returns {IsotopesInfo}
  */
 export function getIsotopesInfo(parts) {
-  if (parts.length === 0) return [];
   if (parts.length > 1) {
     throw new Error('getIsotopesInfo can not be applied on multipart MF');
   }
 
-  return getProcessedPart(parts[0]);
+  return getProcessedPart(parts.length === 0 ? [] : parts[0]);
 }
 
 /**

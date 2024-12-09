@@ -4,10 +4,18 @@ import { Kind } from '../Kind';
 import { formatCharge } from './formatCharge.js';
 
 /**
- * Converts an array of mf elements to an array of formatting information
- * @param {object[]} lines of the parse method
+ * @typedef {import('../parse.types').MFParsedPart} MFParsedPart
  */
 
+/**
+ * @typedef {import('./toDisplay.types').ToDisplayParts} ToDisplayParts
+ */
+
+/**
+ * Converts an array of mf elements to an array of formatting information
+ * @param {MFParsedPart[]} lines of the parse method
+ * @returns {ToDisplayParts[]}
+ */
 export function toDisplay(lines) {
   let results = [];
   let result = {};

@@ -4,12 +4,16 @@ import { Kind } from './Kind';
 import { parseCharge } from './util/parseCharge';
 
 /**
- * Parse a mf to an array of kind / value
- * @param {String} mf
+ * @typedef {import('./parse.types').MFParsedPart} MFParsedPart
  */
 
+/**
+ * Parse a mf to an array of kind / value
+ * @param {string} [mf=''] - Molecular formula
+ * @returns {MFParsedPart[]}
+ */
 export function parse(mf) {
-  return new MFParser().parse(mf);
+  return new MFParser().parse(mf || '');
 }
 
 class MFParser {
@@ -275,6 +279,11 @@ class MFError extends SyntaxError {
   }
 }
 
+/**
+ *
+ * @param string
+ * @return {number}
+ */
 function parseNumberWithDivision(string) {
   if (string.includes('/')) {
     let parts = string.split('/');

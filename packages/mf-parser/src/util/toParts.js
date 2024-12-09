@@ -4,12 +4,23 @@ import { groupsObject } from 'chemical-groups';
 import { Kind } from '../Kind';
 
 /**
- *
- * @param {*} lines
- * @param {object} [options={}]
- * @param {boolean} [options.expand=true] - Should we expand the groupsObject
+ * @typedef {import('../parse.types').MFParsedPart} MFParsedPart
  */
 
+/**
+ * @typedef {import('./toParts.types').ToPartsOptions} ToPartsOptions
+ */
+
+/**
+ * @typedef {import('./toParts.types').ToPartsPart} ToPartsParts
+ */
+
+/**
+ *
+ * @param {MFParsedPart[]} lines
+ * @param {ToPartsOptions} [options={}]
+ * @returns {ToPartsParts[][]}
+ */
 export function toParts(lines, options = {}) {
   const { expand: shouldExpandgroupsObject = true } = options;
   let parts = [];

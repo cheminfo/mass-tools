@@ -1,6 +1,10 @@
 import { Format } from '../Format';
 import { Style } from '../Style';
 
+/**
+ * @param {Array<import('./toDisplay.types').ToDisplayParts>} lines
+ * @return {string}
+ */
 export function toHtml(lines) {
   let html = [];
   for (let line of lines) {

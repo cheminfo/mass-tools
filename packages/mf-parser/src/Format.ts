@@ -7,4 +7,7 @@ export const Format = {
   SUPERSCRIPT: 'superscript',
   SUPERIMPOSE: 'superimpose',
   TEXT: 'text',
-};
+} as const;
+
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+export type Format = (typeof Format)[keyof typeof Format];

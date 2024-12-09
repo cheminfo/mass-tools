@@ -2,7 +2,8 @@ import { parse, toDisplay, toHtml } from './index.js';
 
 /**
  * Parse a molecular formula and converts it to an HTML code
- * @param {String} mf String containing the molecular formula
+ * @param {string} mf String containing the molecular formula
+ * @returns {string} HTML code
  */
 export function parseToHtml(mf) {
   let parsed = parse(mf);

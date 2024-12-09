@@ -2,6 +2,10 @@ import { Format } from '../Format';
 
 import { superscript, subscript } from './subSuperscript';
 
+/**
+ * @param {Array<import('./toDisplay.types').ToDisplayParts>} lines
+ * @return {string}
+ */
 export function toText(lines) {
   let text = [];
   for (let line of lines) {

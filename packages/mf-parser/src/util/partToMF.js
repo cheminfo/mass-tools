@@ -1,5 +1,13 @@
 import { Kind } from '../Kind';
 
+/** @typedef {import('./partToMF.types').PartToMFOptions} PartToMFOptions */
+/** @typedef {import('./toParts.types').ToPartsPart} ToPartsPart */
+
+/**
+ * @param {ToPartsPart[]} part
+ * @param {PartToMFOptions} [options={}]
+ * @return {string}
+ */
 export function partToMF(part, options = {}) {
   let mf = [];
   for (let line of part) {

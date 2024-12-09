@@ -1,27 +1,58 @@
 import { ensureCase } from './ensureCase';
 import { parse } from './parse';
+import type { MFParsedPart } from './parse.types';
 import { flatten } from './util/flatten';
+import type { FlattenOptions } from './util/flatten.types';
 import { getEA } from './util/getEA';
+import type { EA } from './util/getEA.types';
 import { getElements } from './util/getElements';
+import type { Element } from './util/getElements.types';
 import { getInfo } from './util/getInfo';
+import type {
+  GetInfoOptions,
+  GetInfoOptionsAllowed,
+  PartInfo,
+  PartInfoWithParts,
+} from './util/getInfo.types';
 import { getIsotopesInfo } from './util/getIsotopesInfo';
+import type { IsotopesInfo } from './util/getIsotopesInfo.types';
 import { partsToDisplay } from './util/partsToDisplay';
 import { partsToMF } from './util/partsToMF';
 import { toDisplay } from './util/toDisplay';
+import type { ToDisplayParts } from './util/toDisplay.types';
 import { toHtml } from './util/toHtml';
 import { toParts } from './util/toParts';
+import type { ToPartsOptions, ToPartsPart } from './util/toParts.types';
 import { toText } from './util/toText';
 
-/** @typedef {import('./util/getIsotopesInfo.types').IsotopesInfo} IsotopesInfo */
+interface MFConstructorOptions {
+  ensureCase?: boolean;
+}
 
 /**
  * Class allowing to deal with molecular formula and derived information
  */
 export class MF {
-  constructor(mf, options = {}) {
-    if (options.ensureCase) {
+  private readonly parsed: MFParsedPart[];
+  private cache: {
+    displayed?: ReturnType<typeof toDisplay>;
+    html?: ReturnType<typeof toHtml>;
+    text?: ReturnType<typeof toText>;
+    canonicText?: ReturnType<typeof toText>;
+    parts?: ReturnType<typeof toParts>;
+    info?: ReturnType<typeof getInfo>;
+    ea?: ReturnType<typeof getEA>;
+    elements?: ReturnType<typeof getElements>;
+    isotopesInfo?: ReturnType<typeof getIsotopesInfo>;
+    mf?: ReturnType<typeof partsToMF>;
+    neutralMF?: ReturnType<typeof partsToMF>;
+  };
+
+  constructor(mf: string, options?: MFConstructorOptions) {
+    if (options?.ensureCase) {
       mf = ensureCase(mf);
     }
+
     this.parsed = parse(mf);
     this.cache = {};
   }
@@ -29,20 +60,19 @@ export class MF {
   /**
    * Returns an array of objects with kind and value that can be used to easily
    * display the molecular formula.
-   * @returns {{kind: string, value: string}[]}
    */
-  toDisplay() {
+  toDisplay(): ToDisplayParts[] {
     if (!this.cache.displayed) this.cache.displayed = toDisplay(this.parsed);
     return this.cache.displayed;
   }
 
   /**
    * Returns a string that represents the molecular formula adding subscript and superscript in HTML.
-   * @returns {string}
    */
-  toHtml() {
+  toHtml(): string {
     if (!this.cache.html) {
       this.toDisplay();
+      assertIsDefined(this.cache.displayed);
       this.cache.html = toHtml(this.cache.displayed);
     }
     return this.cache.html;
@@ -51,11 +81,11 @@ export class MF {
   /**
    * Returns a string that represents the molecular formula adding subscript and superscript
    * using unicode characters. This can not be parsed anymore so kind of dead end ...
-   * @returns {string}
    */
-  toText() {
+  toText(): string {
     if (!this.cache.text) {
       this.toDisplay();
+      assertIsDefined(this.cache.displayed);
       this.cache.text = toText(this.cache.displayed);
     }
     return this.cache.text;
@@ -63,16 +93,17 @@ export class MF {
 
   /**
    * Similar to toText but returns a canonic string in which the atoms are sorted using the Hill system
-   * @returns {string}
    */
-  toCanonicText() {
+  toCanonicText(): string {
     if (!this.cache.canonicText) {
-      this.cache.canonicText = new MF(this.toMF()).toText(this.cache.displayed);
+      this.toDisplay();
+      assertIsDefined(this.cache.displayed);
+      this.cache.canonicText = new MF(this.toMF()).toText();
     }
     return this.cache.canonicText;
   }
 
-  toParts(options) {
+  toParts(options?: ToPartsOptions): ToPartsPart[][] {
     if (!this.cache.parts) {
       this.cache.parts = toParts(this.parsed, options);
     }
@@ -82,13 +113,13 @@ export class MF {
   /**
    * Returns an object with the global MF, global charge, monoisotopic mass and mass
    * as well as the same information for all the parts
-   * @template {import('./util/getInfo.types').GetInfoOptions<string, string>} [GIO=import('./util/getInfo.types').GetInfoOptions]
-   * @param {GIO} [options={}] options
-   * @returns {import('./util/getInfo.types').PartInfo<GIO> | import('./util/getInfo.types').PartInfoWithParts<GIO>}
    */
-  getInfo(options = {}) {
+  getInfo<GIO extends GetInfoOptionsAllowed = GetInfoOptions>(
+    options?: GIO,
+  ): PartInfo<GIO> | PartInfoWithParts<GIO> {
     if (!this.cache.info) {
       this.toParts();
+      assertIsDefined(this.cache.parts);
       this.cache.info = getInfo(this.cache.parts, options);
     }
     return this.cache.info;
@@ -97,10 +128,11 @@ export class MF {
   /**
    * Returns an object with the elemental analysis
    */
-  getEA(options = {}) {
+  getEA(): EA[] {
     if (!this.cache.ea) {
       this.toParts();
-      this.cache.ea = getEA(this.cache.parts, options);
+      assertIsDefined(this.cache.parts);
+      this.cache.ea = getEA(this.cache.parts);
     }
     return this.cache.ea;
   }
@@ -109,9 +141,10 @@ export class MF {
    * Get the different elements for each part
    * @returns an array
    */
-  getElements() {
+  getElements(): Element[] {
     if (!this.cache.elements) {
       this.toParts();
+      assertIsDefined(this.cache.parts);
       this.cache.elements = getElements(this.cache.parts);
     }
     return this.cache.elements;
@@ -121,21 +154,22 @@ export class MF {
    * Returns an array with each atom and isotopic composition
    * @returns {IsotopesInfo}
    */
-  getIsotopesInfo(options = {}) {
+  getIsotopesInfo(): IsotopesInfo {
     if (!this.cache.isotopesInfo) {
       this.toParts();
-      this.cache.isotopesInfo = getIsotopesInfo(this.cache.parts, options);
+      assertIsDefined(this.cache.parts);
+      this.cache.isotopesInfo = getIsotopesInfo(this.cache.parts);
     }
     return this.cache.isotopesInfo;
   }
 
   /**
    * Get a canonized MF
-   * @returns {string}
    */
-  toMF() {
+  toMF(): string {
     if (!this.cache.mf) {
       this.toParts();
+      assertIsDefined(this.cache.parts);
       this.cache.mf = partsToMF(this.cache.parts);
     }
     return this.cache.mf;
@@ -144,9 +178,10 @@ export class MF {
   /**
    * Get a canonized MF
    */
-  toNeutralMF() {
+  toNeutralMF(): string {
     if (!this.cache.neutralMF) {
       this.toParts();
+      assertIsDefined(this.cache.parts);
       this.cache.neutralMF = partsToMF(this.cache.parts, { neutral: true });
     }
     return this.cache.neutralMF;
@@ -158,7 +193,15 @@ export class MF {
     this.cache.html = undefined;
   }
 
-  flatten(options) {
+  flatten(options?: FlattenOptions): string[] {
     return flatten(this.parsed, options);
+  }
+}
+
+function assertIsDefined<T>(
+  value: T | null | undefined,
+): asserts value is Exclude<T, null | undefined> {
+  if (value === undefined || value === null) {
+    throw new Error('unexpected null or undefined value');
   }
 }

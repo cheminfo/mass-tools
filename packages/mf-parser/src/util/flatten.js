@@ -1,3 +1,12 @@
+/** @typedef {import('../parse.types').MFParsedPart} MFParsedPart */
+/** @typedef {import('./flatten.types').FlattenOptions} FlattenOptions */
+
+/**
+ *
+ * @param {MFParsedPart[]} parsed
+ * @param {FlattenOptions} [options={}]
+ * @return {string[]}
+ */
 export function flatten(parsed, options = {}) {
   const { groupIdentical = false, limit = 100000 } = options;
   if (parsed.length === 0) return [''];
@@ -109,6 +118,12 @@ function optimizeRanges(parts) {
   return newParts;
 }
 
+/**
+ * @param parts
+ * @param comment
+ * @param limit
+ * @return {string[]}
+ */
 function createMFs(parts, comment, limit) {
   const currents = new Array(parts.length);
   for (let i = 0; i < currents.length; i++) {
