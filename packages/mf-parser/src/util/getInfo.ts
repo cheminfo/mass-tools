@@ -17,9 +17,10 @@ import type {
 import { getIsotopeRatioInfo } from './getIsotopeRatioInfo';
 import { partToAtoms } from './partToAtoms';
 import { partToMF } from './partToMF';
+import type { ToPartsPart } from './toParts.types';
 
 export function getInfo<GIO extends GetInfoOptionsAllowed = GetInfoOptions>(
-  parts: Part[][],
+  parts: ToPartsPart[][],
   options?: GIO,
 ): PartInfo<GIO> | PartInfoWithParts<GIO> {
   const {
@@ -85,33 +86,8 @@ export function getInfo<GIO extends GetInfoOptionsAllowed = GetInfoOptions>(
   return result;
 }
 
-interface AtomPart {
-  kind: (typeof Kind)['ATOM'];
-  value: string;
-  multiplier: number;
-}
-
-interface IsotopePart {
-  kind: (typeof Kind)['ISOTOPE'];
-  value: { atom: string; isotope: number };
-  multiplier: number;
-}
-
-interface IsotopeRatioPart {
-  kind: (typeof Kind)['ISOTOPE_RATIO'];
-  value: { atom: string; ratio: number[] };
-  multiplier: number;
-}
-
-interface ChargePart {
-  kind: (typeof Kind)['CHARGE'];
-  value: number;
-}
-
-type Part = AtomPart | IsotopePart | IsotopeRatioPart | ChargePart;
-
 function getProcessedPart<GIO extends GetInfoOptionsAllowed = GetInfoOptions>(
-  part: Part[],
+  part: ToPartsPart[],
   options: Required<GIO>,
 ): PartInfo<GIO> {
   const { emFieldName, msemFieldName } = options;
@@ -134,18 +110,21 @@ function getProcessedPart<GIO extends GetInfoOptionsAllowed = GetInfoOptions>(
     switch (line.kind) {
       case Kind.ATOM: {
         currentElement = line.value;
-        let element = elements[line.value];
+        let element = elements[currentElement];
 
         // todo should we have a kind GROUP ?
         if (!element) {
-          element = groups[line.value];
-          if (!element) throw new Error(`Unknown element: ${line.value}`);
-          if (!customUnsaturations?.[line.value] && 'unsaturation' in element) {
-            customUnsaturations[line.value] = element.unsaturation;
+          element = groups[currentElement];
+          if (!element) throw new Error(`Unknown element: ${currentElement}`);
+          if (
+            !customUnsaturations?.[currentElement] &&
+            'unsaturation' in element
+          ) {
+            customUnsaturations[currentElement] = element.unsaturation;
           }
         }
 
-        if (!element) throw new Error(`Unknown element: ${line.value}`);
+        if (!element) throw new Error(`Unknown element: ${currentElement}`);
 
         // @ts-expect-error indexable only for reading
         // eslint-disable-next-line @typescript-eslint/restrict-plus-operands

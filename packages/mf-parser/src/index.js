@@ -12,3 +12,4 @@ export * from './ensureCase.js';
 export * from './MF.js';
 export * from './parseToHtml.js';
 export * from './util/getInfo.types.js';
+export * from './util/getIsotopesInfo.types.js';

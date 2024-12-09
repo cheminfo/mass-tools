@@ -25,11 +25,6 @@ interface ToPartsBase extends ToPartsMultipliersBase {
   lines: ToPartsLine[];
   multiplier: number;
   keys: Array<{ key: string; value: ToPartsLine }>;
-  kind:
-    | (typeof Kind)['ATOM']
-    | (typeof Kind)['ISOTOPE_RATIO']
-    | (typeof Kind)['ISOTOPE']
-    | (typeof Kind)['CHARGE'];
 }
 
 export type ToPartsPart = ToPartsBase & ToPartsLine;
