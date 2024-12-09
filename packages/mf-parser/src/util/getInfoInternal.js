@@ -21,7 +21,7 @@ import { partToMF } from './partToMF';
  * @param {*} [options={}]
  * @returns {object|PartInfo|PartInfoWithParts}
  */
-export function getInfo(parts, options = {}) {
+export function getInfoInternal(parts, options = {}) {
   let {
     customUnsaturations = {},
     emFieldName = 'monoisotopicMass',

@@ -19,7 +19,7 @@ import { toText } from './util/toText';
 /**
  * Class allowing to deal with molecular formula and derived information
  */
-export class MF {
+export class MFInternal {
   constructor(mf, options = {}) {
     if (options.ensureCase) {
       mf = ensureCase(mf);
@@ -52,7 +52,7 @@ export class MF {
 
   /**
    * Returns a string that represents the molecular formula adding subscript and superscript
-   * using unicode characters. This can not be parsed anymore so kind of dead end ...
+   * using Unicode characters. This can not be parsed anymore so kind of dead end ...
    * @returns {string}
    */
   toText() {
@@ -69,7 +69,7 @@ export class MF {
    */
   toCanonicText() {
     if (!this.cache.canonicText) {
-      this.cache.canonicText = new MF(this.toMF()).toText(this.cache.displayed);
+      this.cache.canonicText = new MFInternal(this.toMF()).toText();
     }
     return this.cache.canonicText;
   }
@@ -100,18 +100,19 @@ export class MF {
 
   /**
    * Returns an object with the elemental analysis
+   * @returns {*[]}
    */
-  getEA(options = {}) {
+  getEA() {
     if (!this.cache.ea) {
       this.toParts();
-      this.cache.ea = getEA(this.cache.parts, options);
+      this.cache.ea = getEA(this.cache.parts);
     }
     return this.cache.ea;
   }
 
   /**
    * Get the different elements for each part
-   * @returns an array
+   * @returns {*[]}
    */
   getElements() {
     if (!this.cache.elements) {
@@ -147,6 +148,7 @@ export class MF {
 
   /**
    * Get a canonized MF
+   * @returns {string}
    */
   toNeutralMF() {
     if (!this.cache.neutralMF) {

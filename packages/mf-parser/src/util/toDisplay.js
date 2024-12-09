@@ -6,6 +6,7 @@ import { formatCharge } from './formatCharge.js';
 /**
  * Converts an array of mf elements to an array of formatting information
  * @param {object[]} lines of the parse method
+ * @returns {{kind: string, value: string}[]}
  */
 
 export function toDisplay(lines) {

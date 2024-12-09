@@ -1,25 +1,25 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, expectTypeOf } from 'vitest';
 
 import { MF } from '..';
 
 describe('MF', () => {
   it('C', () => {
-    let mf = new MF('C');
-    let parts = mf.toParts();
+    const mf = new MF('C');
+    const parts = mf.toParts();
 
     expect(parts).toStrictEqual([
       [{ kind: 'atom', value: 'C', multiplier: 1 }],
     ]);
 
-    let newMF = mf.toMF();
+    const newMF = mf.toMF();
     expect(newMF).toBe('C');
 
     mf.canonize();
-    let html = mf.toHtml();
+    const html = mf.toHtml();
 
     expect(html).toBe('C');
 
-    let info = mf.getInfo();
+    const info = mf.getInfo();
 
     expect(info).toStrictEqual({
       monoisotopicMass: 12,
@@ -32,23 +32,23 @@ describe('MF', () => {
   });
 
   it('C.C', () => {
-    let mf = new MF('C.C');
-    let parts = mf.toParts();
+    const mf = new MF('C.C');
+    const parts = mf.toParts();
 
     expect(parts).toStrictEqual([
       [{ kind: 'atom', value: 'C', multiplier: 1 }],
       [{ kind: 'atom', value: 'C', multiplier: 1 }],
     ]);
 
-    let newMF = mf.toMF();
+    const newMF = mf.toMF();
     expect(newMF).toBe('C . C');
 
     mf.canonize();
-    let html = mf.toHtml();
+    const html = mf.toHtml();
 
     expect(html).toBe('C • C');
 
-    let info = mf.getInfo();
+    const info = mf.getInfo();
 
     expect(info).toStrictEqual({
       parts: [
@@ -79,8 +79,8 @@ describe('MF', () => {
   });
 
   it('[11C][11C]', () => {
-    let mf = new MF('[11C][11C]');
-    let parts = mf.toParts();
+    const mf = new MF('[11C][11C]');
+    const parts = mf.toParts();
 
     expect(parts).toStrictEqual([
       [
@@ -95,15 +95,15 @@ describe('MF', () => {
       ],
     ]);
 
-    let newMF = mf.toMF();
+    const newMF = mf.toMF();
     expect(newMF).toBe('[11C]2');
 
     mf.canonize();
-    let html = mf.toHtml();
+    const html = mf.toHtml();
 
     expect(html).toBe('<sup>11</sup>C<sub>2</sub>');
 
-    let info = mf.getInfo();
+    const info = mf.getInfo();
 
     expect(info).toStrictEqual({
       monoisotopicMass: 22.0228672,
@@ -116,10 +116,10 @@ describe('MF', () => {
   });
 
   it('D', () => {
-    let mfD = new MF('D');
-    let infoD = mfD.getInfo();
-    let mf2H = new MF('[2H]');
-    let info2H = mf2H.getInfo();
+    const mfD = new MF('D');
+    const infoD = mfD.getInfo();
+    const mf2H = new MF('[2H]');
+    const info2H = mf2H.getInfo();
     expect(infoD).toStrictEqual(info2H);
     expect(infoD).toStrictEqual({
       atoms: { H: 1 },
@@ -132,10 +132,10 @@ describe('MF', () => {
   });
 
   it('T', () => {
-    let mfT = new MF('T');
-    let infoT = mfT.getInfo();
-    let mf3H = new MF('[3H]');
-    let info3H = mf3H.getInfo();
+    const mfT = new MF('T');
+    const infoT = mfT.getInfo();
+    const mf3H = new MF('[3H]');
+    const info3H = mf3H.getInfo();
 
     expect(infoT).toStrictEqual(info3H);
     expect(infoT).toStrictEqual({
@@ -149,7 +149,7 @@ describe('MF', () => {
   });
 
   it('H2Si(OH)2', () => {
-    let mf = new MF('H2Si(OH)2');
+    const mf = new MF('H2Si(OH)2');
     expect(mf.getInfo()).toStrictEqual({
       mass: 64.11607157056562,
       monoisotopicMass: 63.99805590271001,
@@ -161,8 +161,8 @@ describe('MF', () => {
   });
 
   it('Et3N.HCl', () => {
-    let mf = new MF('Et3N.HCl');
-    let parts = mf.toParts();
+    const mf = new MF('Et3N.HCl');
+    const parts = mf.toParts();
 
     expect(parts).toStrictEqual([
       [
@@ -176,15 +176,15 @@ describe('MF', () => {
       ],
     ]);
 
-    let newMF = mf.toMF();
+    const newMF = mf.toMF();
     expect(newMF).toBe('C6H15N . HCl');
 
     mf.canonize();
-    let html = mf.toHtml();
+    const html = mf.toHtml();
 
     expect(html).toBe('C<sub>6</sub>H<sub>15</sub>N • HCl');
 
-    let info = mf.getInfo();
+    const info = mf.getInfo();
     expect(info).toStrictEqual({
       parts: [
         {
@@ -214,13 +214,13 @@ describe('MF', () => {
   });
 
   it('(ch3ch2)3n', () => {
-    let mf = new MF('(ch3ch2)3n', { ensureCase: true });
+    const mf = new MF('(ch3ch2)3n', { ensureCase: true });
     expect(mf.toMF()).toBe('C6H15N');
   });
 
   it('(Me2CH)3N no expand', () => {
-    let mf = new MF('(Me2CH)3N');
-    let parts = mf.toParts({ expand: false });
+    const mf = new MF('(Me2CH)3N');
+    const parts = mf.toParts({ expand: false });
 
     expect(parts).toStrictEqual([
       [
@@ -231,10 +231,10 @@ describe('MF', () => {
       ],
     ]);
 
-    let newMF = mf.toMF();
+    const newMF = mf.toMF();
     expect(newMF).toBe('C3H3Me6N');
 
-    let info = mf.getInfo();
+    const info = mf.getInfo();
     expect(info).toStrictEqual({
       mass: 143.27008211723435,
       monoisotopicMass: 143.16739968126,
@@ -246,8 +246,8 @@ describe('MF', () => {
   });
 
   it('(Me2CH)3N with expand', () => {
-    let mf = new MF('(Me2CH)3N');
-    let parts = mf.toParts({ expand: true });
+    const mf = new MF('(Me2CH)3N');
+    const parts = mf.toParts({ expand: true });
 
     expect(parts).toStrictEqual([
       [
@@ -257,10 +257,10 @@ describe('MF', () => {
       ],
     ]);
 
-    let newMF = mf.toMF();
+    const newMF = mf.toMF();
     expect(newMF).toBe('C9H21N');
 
-    let info = mf.getInfo();
+    const info = mf.getInfo();
     expect(info).toStrictEqual({
       mass: 143.27008211723435,
       monoisotopicMass: 143.16739968126,
@@ -272,8 +272,8 @@ describe('MF', () => {
   });
 
   it('(+)SO4(+)(-2)2', () => {
-    let mf = new MF('(+)SO4(+)(-2)2');
-    let parts = mf.toParts();
+    const mf = new MF('(+)SO4(+)(-2)2');
+    const parts = mf.toParts();
 
     expect(parts).toStrictEqual([
       [
@@ -287,10 +287,10 @@ describe('MF', () => {
     expect(mf.toText()).toBe('⁺SO₄⁺⁻²₂');
     expect(mf.toCanonicText()).toBe('O₄S⁻²');
 
-    let neutralMF = mf.toNeutralMF();
+    const neutralMF = mf.toNeutralMF();
     expect(neutralMF).toBe('O4S');
 
-    let info = mf.getInfo({ customUnsaturations: { S: 4 } });
+    const info = mf.getInfo({ customUnsaturations: { S: 4 } });
     expect(info).toStrictEqual({
       monoisotopicMass: 95.95172965268,
       mass: 96.06240710340018,
@@ -303,9 +303,9 @@ describe('MF', () => {
   });
 
   it('customFieldName', () => {
-    let mf = new MF('Na+.Cl-');
+    const mf = new MF('Na+.Cl-');
 
-    let info = mf.getInfo({ emFieldName: 'em', msemFieldName: 'msem' });
+    const info = mf.getInfo({ emFieldName: 'em', msemFieldName: 'msem' });
     expect(info).toMatchObject({
       parts: [
         {
@@ -348,8 +348,8 @@ describe('MF', () => {
   });
 
   it('NC[13C][15N]2NN2', () => {
-    let mf = new MF('NC[13C][15N]2NN2');
-    let parts = mf.toParts();
+    const mf = new MF('NC[13C][15N]2NN2');
+    const parts = mf.toParts();
     expect(parts).toStrictEqual([
       [
         { kind: 'atom', value: 'C', multiplier: 1 },
@@ -359,7 +359,7 @@ describe('MF', () => {
       ],
     ]);
 
-    let info = mf.getInfo();
+    const info = mf.getInfo();
     expect(info).toStrictEqual({
       monoisotopicMass: 111.01586865055,
       mass: 111.04112137534844,
@@ -375,8 +375,8 @@ describe('MF', () => {
   });
 
   it('DNA HODampDtmpDcmpDgmpH', () => {
-    let mf = new MF('HODampDtmpDgmpDcmpH');
-    let info = mf.getInfo();
+    const mf = new MF('HODampDtmpDgmpDcmpH');
+    const info = mf.getInfo();
     expect(info).toStrictEqual({
       mass: 1253.8043977028433,
       monoisotopicMass: 1253.21310019311,
@@ -388,8 +388,8 @@ describe('MF', () => {
   });
 
   it('RNA HOAmpUmpH', () => {
-    let mf = new MF('HOAmpUmpH');
-    let info = mf.getInfo();
+    const mf = new MF('HOAmpUmpH');
+    const info = mf.getInfo();
     expect(info).toStrictEqual({
       mass: 653.388021231099,
       monoisotopicMass: 653.08838712715,
@@ -401,8 +401,8 @@ describe('MF', () => {
   });
 
   it('CC{50,50}H', () => {
-    let mf = new MF('HC{50,50}C');
-    let parts = mf.toParts();
+    const mf = new MF('HC{50,50}C');
+    const parts = mf.toParts();
     expect(parts).toStrictEqual([
       [
         { kind: 'atom', value: 'C', multiplier: 1 },
@@ -418,7 +418,7 @@ describe('MF', () => {
     expect(mf.toMF()).toBe('CC{50,50}H');
     expect(mf.toText()).toBe('HC⁽⁵⁰˙⁵⁰⁾C');
 
-    let info = mf.getInfo();
+    const info = mf.getInfo();
     expect(info).toStrictEqual({
       monoisotopicMass: 25.00782503223,
       mass: 25.520354068326025,
@@ -430,11 +430,11 @@ describe('MF', () => {
   });
 
   it('H(+)(H+)-1H', () => {
-    let mf = new MF('H(+)(H+)-1H');
+    const mf = new MF('H(+)(H+)-1H');
 
     expect(mf.toMF()).toBe('H');
 
-    let info = mf.getInfo();
+    const info = mf.getInfo();
     expect(info).toStrictEqual({
       atoms: { H: 1 },
       charge: 0,
@@ -446,11 +446,11 @@ describe('MF', () => {
   });
 
   it('C10#1H20', () => {
-    let mf = new MF('C10#1H20');
+    const mf = new MF('C10#1H20');
 
     expect(mf.toMF()).toBe('C10H20');
 
-    let info = mf.getInfo();
+    const info = mf.getInfo();
     expect(info).toStrictEqual({
       mass: 140.26617404846803,
       monoisotopicMass: 140.1565006446,
@@ -462,9 +462,39 @@ describe('MF', () => {
   });
 
   it('2NH3 . 2HCl', () => {
-    let mf = new MF('2NH3 . 2HCl');
+    const mf = new MF('2NH3 . 2HCl');
 
     expect(mf.toMF()).toBe('H6N2 . H2Cl2');
     expect(mf.toText()).toBe('2NH₃  •  2HCl');
+  });
+
+  it('Types getInfo default shape', () => {
+    const mf = new MF('C10#1H20');
+    const info = mf.getInfo();
+    expectTypeOf(info).toMatchTypeOf<{ monoisotopicMass: number }>();
+    expectTypeOf(info).not.toMatchTypeOf<{ em: number }>();
+    expect(info).toStrictEqual({
+      mass: 140.26617404846803,
+      monoisotopicMass: 140.1565006446,
+      charge: 0,
+      mf: 'C10H20',
+      atoms: { C: 10, H: 20 },
+      unsaturation: 1,
+    });
+  });
+
+  it('Types getInfo custom shape', () => {
+    const mf = new MF('C10#1H20');
+    const info = mf.getInfo({ emFieldName: 'em' as const });
+    expectTypeOf(info).toMatchTypeOf<{ em: number }>();
+    expectTypeOf(info).not.toMatchTypeOf<{ monoisotopicMass: number }>();
+    expect(info).toStrictEqual({
+      mass: 140.26617404846803,
+      em: 140.1565006446,
+      charge: 0,
+      mf: 'C10H20',
+      atoms: { C: 10, H: 20 },
+      unsaturation: 1,
+    });
   });
 });

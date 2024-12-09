@@ -7,5 +7,14 @@ export * from './Kind.js';
 export * from './Format.js';
 export * from './Style.js';
 export * from './ensureCase.js';
-export * from './MF.js';
+export * from './MF';
 export * from './parseToHtml.js';
+
+// types
+export { IsotopesInfo } from './util/getIsotopesInfo.types';
+export {
+  PartInfo,
+  PartInfoWithParts,
+  GetInfoOptions,
+  GetInfoOptionsAllowed,
+} from './util/getInfo.types';
