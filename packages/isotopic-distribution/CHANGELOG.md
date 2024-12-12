@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.5](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.4...isotopic-distribution@3.4.5) (2024-12-12)
+
+
+### Bug Fixes
+
+* **mf-parser:** provide getInfo advanced typings ([#241](https://github.com/cheminfo/mass-tools/issues/241)) ([06a4121](https://github.com/cheminfo/mass-tools/commit/06a41211a12b98f35f47fbbca9442c9bae55ed8a)), closes [/github.com/cheminfo/mass-tools/pull/231#issuecomment-2518047600](https://github.com//github.com/cheminfo/mass-tools/pull/231/issues/issuecomment-2518047600)
+
+
+
+
+
 ## [3.4.4](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.3...isotopic-distribution@3.4.4) (2024-12-09)
 
 
