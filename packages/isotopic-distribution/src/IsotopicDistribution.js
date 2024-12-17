@@ -1,6 +1,7 @@
 import { ELECTRON_MASS } from 'chemical-elements';
 import { MF } from 'mf-parser';
 import { preprocessIonizations, getMsInfo } from 'mf-utilities';
+import { xNormed } from 'ml-spectra-processing';
 import { SpectrumGenerator } from 'spectrum-generator';
 
 import { Distribution } from './Distribution';
@@ -398,6 +399,13 @@ export class IsotopicDistribution {
       spectrumGenerator.addPeak([point.x, point.y]);
     }
     let spectrum = spectrumGenerator.getSpectrum({ threshold });
+    if (maxValue) {
+      spectrum.y = xNormed(spectrum.y, {
+        algorithm: 'max',
+        value: maxValue,
+        output: spectrum.y,
+      });
+    }
     return spectrum;
   }
 }
