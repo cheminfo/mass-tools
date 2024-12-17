@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.3](https://github.com/cheminfo/mass-tools/compare/mf-utilities@3.3.2...mf-utilities@3.3.3) (2024-12-17)
+
+**Note:** Version bump only for package mf-utilities
+
+
+
+
+
 ## [3.3.2](https://github.com/cheminfo/mass-tools/compare/mf-utilities@3.3.1...mf-utilities@3.3.2) (2024-12-12)
 
 **Note:** Version bump only for package mf-utilities

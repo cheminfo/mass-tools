@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.8](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.2.7...mf-parser@3.2.8) (2024-12-17)
+
+
+### Bug Fixes
+
+* **mf-parser:** package.json exposes only main ([#247](https://github.com/cheminfo/mass-tools/issues/247)) ([7a77ffc](https://github.com/cheminfo/mass-tools/commit/7a77ffc4620c74ccacd0bf0d3cf6fda825017d35))
+
+
+
+
+
 ## [3.2.7](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.2.6...mf-parser@3.2.7) (2024-12-12)
 
 
