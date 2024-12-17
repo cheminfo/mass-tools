@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.6](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.5...isotopic-distribution@3.4.6) (2024-12-17)
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** maxValue was not correctly managed in getGaussian ([#245](https://github.com/cheminfo/mass-tools/issues/245)) ([3b8aaf2](https://github.com/cheminfo/mass-tools/commit/3b8aaf278e47512c61b8565eed76c574be7d9362))
+
+
+
+
+
 ## [3.4.5](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.4...isotopic-distribution@3.4.5) (2024-12-12)
 
 
