@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.44.4](https://github.com/cheminfo/mass-tools/compare/v7.44.3...v7.44.4) (2024-12-17)
+
+
+### Bug Fixes
+
+* **mf-parser:** package.json exposes only main ([#247](https://github.com/cheminfo/mass-tools/issues/247)) ([7a77ffc](https://github.com/cheminfo/mass-tools/commit/7a77ffc4620c74ccacd0bf0d3cf6fda825017d35))
+
 ## [7.44.3](https://github.com/cheminfo/mass-tools/compare/v7.44.2...v7.44.3) (2024-12-17)
 
 
