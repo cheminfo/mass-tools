@@ -11,9 +11,9 @@ export * from './MF';
 export * from './parseToHtml.js';
 
 // types
-export { AtomsMap } from './util/partToAtoms.types';
-export { IsotopesInfo } from './util/getIsotopesInfo.types';
-export {
+export type { AtomsMap } from './util/partToAtoms.types';
+export type { IsotopesInfo } from './util/getIsotopesInfo.types';
+export type {
   PartInfo,
   PartInfoWithParts,
   GetInfoOptions,
