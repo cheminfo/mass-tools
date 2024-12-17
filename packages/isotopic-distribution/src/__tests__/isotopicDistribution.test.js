@@ -1,4 +1,5 @@
 import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
+import { xMaxValue } from 'ml-spectra-processing';
 import { describe, expect, it } from 'vitest';
 
 import { IsotopicDistribution } from '..';
@@ -395,5 +396,21 @@ describe('test isotopicDistribution', () => {
 
     expect(profile.x[0]).toBeCloseTo(12010735.5);
     expect(profile.y[0]).toBeCloseTo(100);
+  });
+
+  it('Cys100 should not give a gaussian with y over 100', () => {
+    const isotopicDistribution = new IsotopicDistribution('Cys100', {
+      fwhm: 0.01,
+    });
+
+    const profile = isotopicDistribution.getGaussian({
+      gaussianWidth: 10,
+      maxValue: 100,
+      threshold: 0,
+      maxLength: 1e7,
+      peakWidthFct: () => 1,
+    });
+    const maxValue = xMaxValue(profile.y);
+    expect(maxValue).toBeCloseTo(100);
   });
 });
