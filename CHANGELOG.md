@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.44.3](https://github.com/cheminfo/mass-tools/compare/v7.44.2...v7.44.3) (2024-12-17)
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** maxValue was not correctly managed in getGaussian ([#245](https://github.com/cheminfo/mass-tools/issues/245)) ([3b8aaf2](https://github.com/cheminfo/mass-tools/commit/3b8aaf278e47512c61b8565eed76c574be7d9362))
+
 ## [7.44.2](https://github.com/cheminfo/mass-tools/compare/v7.44.1...v7.44.2) (2024-12-09)
 
 
