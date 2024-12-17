@@ -3,7 +3,6 @@
   "version": "3.2.7",
   "description": "Parse a molecular formula",
   "main": "lib/src/index.js",
-  "module": "src/index.js",
   "files": [
     "src",
     "lib"

@@ -1,4 +1,6 @@
-import { parse, toDisplay, toHtml } from './index.js';
+import { parse } from './parse.js';
+import { toDisplay } from './util/toDisplay.js';
+import { toHtml } from './util/toHtml.js';
 
 /**
  * Parse a molecular formula and converts it to an HTML code
