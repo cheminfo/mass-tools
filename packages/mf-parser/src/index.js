@@ -11,6 +11,7 @@ export * from './MF';
 export * from './parseToHtml.js';
 
 // types
+export { AtomsMap } from './util/partToAtoms.types';
 export { IsotopesInfo } from './util/getIsotopesInfo.types';
 export {
   PartInfo,

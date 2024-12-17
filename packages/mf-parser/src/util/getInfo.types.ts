@@ -1,4 +1,4 @@
-import type { AtomsMap } from './partToAtoms';
+import type { AtomsMap } from './partToAtoms.types';
 
 type ImpossibleCustomNames =
   | 'mass'

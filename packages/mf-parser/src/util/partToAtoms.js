@@ -1,6 +1,6 @@
 import { Kind } from '../Kind.js';
 
-/** @typedef {Record<string, number>} AtomsMap */
+/** @typedef {import('./partToAtoms.types').AtomsMap} AtomsMap */
 
 /**
  * Convert a MF part to a map of atoms
