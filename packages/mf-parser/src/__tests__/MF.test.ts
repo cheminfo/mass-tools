@@ -416,7 +416,7 @@ describe('MF', () => {
     ]);
 
     expect(mf.toMF()).toBe('CC{50,50}H');
-    expect(mf.toText()).toBe('HC⁽⁵⁰˙⁵⁰⁾C');
+    expect(mf.toText()).toBe('HC⁽⁵⁰˒⁵⁰⁾C');
 
     const info = mf.getInfo();
     expect(info).toStrictEqual({
@@ -424,6 +424,36 @@ describe('MF', () => {
       mass: 25.520354068326025,
       charge: 0,
       mf: 'CC{50,50}H',
+      unsaturation: 2.5,
+      atoms: { C: 2, H: 1 },
+    });
+  });
+
+  it('CC{0.5,0.5}H', () => {
+    const mf = new MF('HC{0.5,0.5}C');
+    const parts = mf.toParts();
+    expect(parts).toStrictEqual([
+      [
+        { kind: 'atom', value: 'C', multiplier: 1 },
+        {
+          kind: 'isotopeRatio',
+          value: { atom: 'C', ratio: [0.5, 0.5] },
+          multiplier: 1,
+        },
+        { kind: 'atom', value: 'H', multiplier: 1 },
+      ],
+    ]);
+
+    expect(mf.toMF()).toBe('CC{0.5,0.5}H');
+    expect(mf.toHtml()).toBe('HC<sup>{0.5,0.5}</sup>C');
+    expect(mf.toText()).toBe('HC⁽⁰˙⁵˒⁰˙⁵⁾C');
+
+    const info = mf.getInfo();
+    expect(info).toStrictEqual({
+      monoisotopicMass: 25.00782503223,
+      mass: 25.520354068326025,
+      charge: 0,
+      mf: 'CC{0.5,0.5}H',
       unsaturation: 2.5,
       atoms: { C: 2, H: 1 },
     });
