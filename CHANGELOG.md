@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.45.0](https://github.com/cheminfo/mass-tools/compare/v7.44.4...v7.45.0) (2024-12-18)
+
+
+### Features
+
+* **mf-parser:** allow decimal isotopic composition ([#253](https://github.com/cheminfo/mass-tools/issues/253)) ([9696c50](https://github.com/cheminfo/mass-tools/commit/9696c50b180913bfbf3d193ff7cda56e4e3d9bd6))
+
 ## [7.44.4](https://github.com/cheminfo/mass-tools/compare/v7.44.3...v7.44.4) (2024-12-17)
 
 
