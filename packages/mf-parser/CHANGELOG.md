@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.2.8...mf-parser@3.3.0) (2024-12-18)
+
+
+### Features
+
+* **mf-parser:** allow decimal isotopic composition ([#253](https://github.com/cheminfo/mass-tools/issues/253)) ([9696c50](https://github.com/cheminfo/mass-tools/commit/9696c50b180913bfbf3d193ff7cda56e4e3d9bd6))
+
+
+
+
+
 ## [3.2.8](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.2.7...mf-parser@3.2.8) (2024-12-17)
 
 

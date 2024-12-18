@@ -1,6 +1,6 @@
 {
   "name": "mf-from-ea",
-  "version": "2.1.10",
+  "version": "2.1.11",
   "description": "Find a molecular formula from elemental analysis results",
   "main": "lib/src/index.js",
   "module": "src/index.js",
@@ -22,8 +22,8 @@
   "dependencies": {
     "atom-sorter": "^2.2.0",
     "chemical-elements": "^2.2.0",
-    "mf-parser": "^3.2.8",
-    "mf-utilities": "^3.3.3"
+    "mf-parser": "^3.3.0",
+    "mf-utilities": "^3.3.4"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2"

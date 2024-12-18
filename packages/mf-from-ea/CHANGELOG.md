@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.11](https://github.com/cheminfo/mass-tools/compare/mf-from-ea@2.1.10...mf-from-ea@2.1.11) (2024-12-18)
+
+**Note:** Version bump only for package mf-from-ea
+
+
+
+
+
 ## [2.1.10](https://github.com/cheminfo/mass-tools/compare/mf-from-ea@2.1.9...mf-from-ea@2.1.10) (2024-12-17)
 
 **Note:** Version bump only for package mf-from-ea
