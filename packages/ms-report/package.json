@@ -6,7 +6,6 @@
   "version": "3.2.12",
   "description": "Generate report for mass analysis",
   "main": "lib/src/index.js",
-  "module": "src/index.js",
   "files": [
     "src",
     "lib"

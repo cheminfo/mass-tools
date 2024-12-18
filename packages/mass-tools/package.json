@@ -3,7 +3,6 @@
   "version": "2.2.15",
   "main": "lib/src/index.js",
   "description": "Many tools allowing to analyze mass spectra",
-  "module": "src/index.js",
   "files": [
     "src",
     "lib"

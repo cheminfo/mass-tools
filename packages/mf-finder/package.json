@@ -3,7 +3,6 @@
   "version": "3.4.11",
   "description": "Find a molecular formula from a monoisotopic mass",
   "main": "lib/src/index.js",
-  "module": "src/index.js",
   "files": [
     "src",
     "lib"

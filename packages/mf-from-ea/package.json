@@ -3,7 +3,6 @@
   "version": "2.1.11",
   "description": "Find a molecular formula from elemental analysis results",
   "main": "lib/src/index.js",
-  "module": "src/index.js",
   "files": [
     "src",
     "lib"

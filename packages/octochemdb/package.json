@@ -8,7 +8,6 @@
   "deprecated": false,
   "description": "Helper that allows to query the OctoChemDB webservices",
   "main": "lib/src/index.js",
-  "module": "src/index.js",
   "files": [
     "src",
     "lib"

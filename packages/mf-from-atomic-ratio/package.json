@@ -3,7 +3,6 @@
   "version": "1.2.11",
   "description": "Find a molecular formula from atomic ratio",
   "main": "lib/src/index.js",
-  "module": "src/index.js",
   "files": [
     "src",
     "lib"
