@@ -231,13 +231,13 @@ class MFParser {
       this.i++;
       ascii = this.mf.charCodeAt(this.i);
     } while (ascii !== 125 && this.i <= this.mf.length); // closing curly bracket
-    if (substring.match(/^[\d,]+$/)) {
+    if (substring.match(/^[0-9.,]+$/)) {
       return substring.split(',').map(Number);
     }
     throw new MFError(
       this.mf,
       this.i,
-      'Curly brackets should contain only number and comma',
+      'Curly brackets should contain only number, dot and comma',
     );
   }
 

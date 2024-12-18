@@ -218,6 +218,13 @@ let tests = {
     { kind: 'anchor', value: 2 },
     { kind: 'atom', value: 'H' },
   ],
+  'C{50,50}': [{ kind: 'isotopeRatio', value: { atom: 'C', ratio: [50, 50] } }],
+  'C{0.50,0.50}': [
+    {
+      kind: 'isotopeRatio',
+      value: { atom: 'C', ratio: [0.5, 0.5] },
+    },
+  ],
 };
 
 test.each(Object.keys(tests))('parse molecular formula %s', (key) => {

@@ -16,7 +16,7 @@ export const superscript = {
   '{': '⁽',
   '}': '⁾',
   '.': '˙',
-  ',': '˙',
+  ',': '˒',
 };
 
 export const subscript = {
