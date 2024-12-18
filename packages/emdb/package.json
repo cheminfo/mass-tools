@@ -3,7 +3,6 @@
   "version": "3.3.17",
   "description": "Database manager for exact mass query",
   "main": "lib/src/index.js",
-  "module": "src/index.js",
   "files": [
     "src",
     "lib"

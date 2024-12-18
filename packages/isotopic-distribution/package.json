@@ -3,7 +3,6 @@
   "version": "3.4.8",
   "description": "Calculate the isotopic distribution of a molecular formula",
   "main": "lib/src/index.js",
-  "module": "src/index.js",
   "files": [
     "src",
     "lib"

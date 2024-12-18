@@ -8,7 +8,6 @@
   "deprecated": false,
   "description": "Deal with nucleotides and molecular formula",
   "main": "lib/src/index.js",
-  "module": "src/index.js",
   "files": [
     "src",
     "lib"
