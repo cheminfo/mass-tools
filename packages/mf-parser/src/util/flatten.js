@@ -1,3 +1,8 @@
+/**
+ * @param parsed
+ * @param options
+ * @return {string[]}
+ */
 export function flatten(parsed, options = {}) {
   const { groupIdentical = false, limit = 100000 } = options;
   if (parsed.length === 0) return [''];
@@ -114,6 +119,8 @@ function createMFs(parts, comment, limit) {
   for (let i = 0; i < currents.length; i++) {
     currents[i] = parts[i].min;
   }
+
+  /** @type {string[]} */
   const mfs = [];
   let position = 0;
   while (position < currents.length) {
