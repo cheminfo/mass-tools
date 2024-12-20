@@ -1,6 +1,6 @@
-import { EMDB } from 'emdb';
 import { MF } from 'mf-parser';
 
+import { fromMonoisotopicMass } from './from/fromMonoisotopicMass';
 import { getPeaks } from './getPeaks.js';
 
 /**
@@ -18,8 +18,6 @@ import { getPeaks } from './getPeaks.js';
  */
 
 export async function getFragmentPeaks(peaks, mf, options = {}) {
-  const emdb = new EMDB();
-
   const { ionizations = '', precision } = options;
 
   const mfInfo = new MF(mf).getInfo();
@@ -28,7 +26,7 @@ export async function getFragmentPeaks(peaks, mf, options = {}) {
     .join(' ');
   peaks = getPeaks(peaks, options);
   for (let peak of peaks) {
-    const { mfs } = await emdb.fromMonoisotopicMass(peak.x, {
+    const { mfs } = await fromMonoisotopicMass(peak.x, {
       precision,
       ranges,
       ionizations,

@@ -9,6 +9,7 @@ import globals from 'globals';
 export default [
   {
     ignores: [
+      'packages/*/coverage',
       'packages/*/dist',
       'packages/*/docs',
       'packages/*/examples',
