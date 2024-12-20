@@ -22,4 +22,11 @@ describe('test getPeaksAnnotation', () => {
     });
     expect(result).toMatchSnapshot();
   });
+
+  it('cap numberMFs to 2', async () => {
+    let result = await getPeaksAnnotation(peaks, {
+      numberMFs: 2,
+    });
+    expect(result).toMatchSnapshot();
+  });
 });
