@@ -20,8 +20,8 @@
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/emdb#readme",
   "dependencies": {
     "cheminfo-types": "^1.8.1",
-    "emdb": "^3.3.17",
     "is-any-array": "^2.0.1",
+    "mf-finder": "^3.4.11",
     "mf-parser": "^3.3.0",
     "mf-utilities": "^3.3.4",
     "ml-gsd": "^12.1.8",

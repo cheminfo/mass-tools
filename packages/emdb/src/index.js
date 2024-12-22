@@ -1,9 +1,8 @@
-import { Spectrum } from 'ms-spectrum';
+import { Spectrum, fromMonoisotopicMass } from 'ms-spectrum';
 
 import { appendFragmentsInfo } from './append/appendFragmentsInfo.js';
 import { fromArray } from './from/fromArray.js';
 import { fromMolecules } from './from/fromMolecules.js';
-import { fromMonoisotopicMass } from './from/fromMonoisotopicMass.js';
 import { fromNucleicSequence } from './from/fromNucleicSequence.js';
 import { fromPeptidicSequence } from './from/fromPeptidicSequence.js';
 import { fromRange } from './from/fromRange.js';

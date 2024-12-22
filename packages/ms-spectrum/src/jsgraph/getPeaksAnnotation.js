@@ -1,4 +1,4 @@
-import { EMDB } from 'emdb';
+import { fromMonoisotopicMass } from '../from/fromMonoisotopicMass';
 
 /**
  *
@@ -16,8 +16,6 @@ import { EMDB } from 'emdb';
  * @returns {Promise}
  */
 export async function getPeaksAnnotation(bestPeaks, options = {}) {
-  const emdb = new EMDB();
-
   let {
     numberDigits = 5,
     shift = 0,
@@ -119,6 +117,8 @@ export async function getPeaksAnnotation(bestPeaks, options = {}) {
         });
       }
 
+      let mfs = [];
+
       if (numberMFs) {
         // we have 2 cases. Either there is a shift and we deal with differences
         // otherwise it is absolute
@@ -135,15 +135,16 @@ export async function getPeaksAnnotation(bestPeaks, options = {}) {
           currentMfPrefs.precision =
             (currentMfPrefs.precision / Math.max(Math.abs(peak.x + shift), 1)) *
             peak.x;
-          await emdb.fromMonoisotopicMass(
+          ({ mfs } = await fromMonoisotopicMass(
             Math.abs((peak.x + shift) * charge),
             currentMfPrefs,
-          );
+          ));
         } else {
-          await emdb.fromMonoisotopicMass(Math.abs(peak.x * charge), mfPrefs);
+          ({ mfs } = await fromMonoisotopicMass(
+            Math.abs(peak.x * charge),
+            mfPrefs,
+          ));
         }
-
-        let mfs = emdb.get('monoisotopic');
 
         let numberOfMFS = Math.min(mfs.length, numberMFs);
 

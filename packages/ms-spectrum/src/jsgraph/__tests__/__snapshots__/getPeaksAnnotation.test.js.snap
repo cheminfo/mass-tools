@@ -1,5 +1,132 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`test getPeaksAnnotation > cap numberMFs to 2 1`] = `
+[
+  {
+    "_highlight": undefined,
+    "labels": [
+      {
+        "color": "red",
+        "position": {
+          "dx": "2px",
+          "dy": "-17px",
+          "x": 12,
+          "y": 1,
+        },
+        "text": "12.00000",
+      },
+    ],
+    "position": [
+      {
+        "dy": "-5px",
+        "x": 12,
+        "y": 1,
+      },
+      {
+        "dy": "-25px",
+        "x": 12,
+        "y": 1,
+      },
+    ],
+    "type": "line",
+  },
+  {
+    "_highlight": undefined,
+    "labels": [
+      {
+        "color": "red",
+        "position": {
+          "dx": "2px",
+          "dy": "-17px",
+          "x": 24,
+          "y": 2,
+        },
+        "text": "24.00000",
+      },
+    ],
+    "position": [
+      {
+        "dy": "-5px",
+        "x": 24,
+        "y": 2,
+      },
+      {
+        "dy": "-25px",
+        "x": 24,
+        "y": 2,
+      },
+    ],
+    "type": "line",
+  },
+  {
+    "_highlight": undefined,
+    "labels": [
+      {
+        "color": "red",
+        "position": {
+          "dx": "2px",
+          "dy": "-17px",
+          "x": 36,
+          "y": 3,
+        },
+        "text": "36.00000",
+      },
+    ],
+    "position": [
+      {
+        "dy": "-5px",
+        "x": 36,
+        "y": 3,
+      },
+      {
+        "dy": "-25px",
+        "x": 36,
+        "y": 3,
+      },
+    ],
+    "type": "line",
+  },
+  {
+    "_highlight": undefined,
+    "labels": [
+      {
+        "color": "red",
+        "position": {
+          "dx": "2px",
+          "dy": "-17px",
+          "x": 42,
+          "y": 4,
+        },
+        "text": "42.00000",
+      },
+      {
+        "color": "grey",
+        "position": {
+          "dx": "2px",
+          "dy": "-4px",
+          "x": 42,
+          "y": 4,
+        },
+        "text": "Z:1",
+      },
+    ],
+    "position": [
+      {
+        "dy": "-5px",
+        "x": 42,
+        "y": 4,
+      },
+      {
+        "dy": "-25px",
+        "x": 42,
+        "y": 4,
+      },
+    ],
+    "type": "line",
+  },
+]
+`;
+
 exports[`test getPeaksAnnotation > default options 1`] = `
 [
   {
