@@ -10,6 +10,8 @@ import { formatCharge } from './formatCharge.js';
  */
 
 export function toDisplay(lines) {
+  const special = specialCases(lines);
+  if (special) return special;
   let results = [];
   let result = {};
   for (let line of lines) {
@@ -99,4 +101,68 @@ export function toDisplay(lines) {
     }
   }
   return results;
+}
+
+/**
+ * Some special changes for specific cases
+ * @param {} lines
+ */
+function specialCases(lines) {
+  // (-)
+  if (lines.length === 1 && lines[0].kind === Kind.CHARGE) {
+    const charge = lines[0].value;
+    if (charge === 0) return [];
+    if (charge === 1) {
+      return [
+        { kind: Format.TEXT, value: '-e' },
+        { kind: Format.SUPERSCRIPT, value: '-' },
+      ];
+    }
+    if (charge === -1) {
+      return [
+        { kind: Format.TEXT, value: '+e' },
+        { kind: Format.SUPERSCRIPT, value: '-' },
+      ];
+    }
+    if (charge > 1) {
+      return [
+        { kind: Format.TEXT, value: `-${charge}e` },
+        { kind: Format.SUPERSCRIPT, value: '-' },
+      ];
+    }
+    if (charge < -1) {
+      return [
+        { kind: Format.TEXT, value: `+${-charge}e` },
+        { kind: Format.SUPERSCRIPT, value: '-' },
+      ];
+    }
+  }
+
+  // (-)2, (-)-1, (+)2, (+)-1, (2+)2, (2+)-1, (2-)+1, (2-)-1
+  if (
+    lines.length === 2 &&
+    lines[0].kind === Kind.CHARGE &&
+    lines[1].kind === Kind.MULTIPLIER
+  ) {
+    const charge = lines[0].value;
+    const nbElectrons = -lines[1].value * charge;
+    const results = [];
+    if (nbElectrons === 0) return [];
+    if (nbElectrons === 1) {
+      results.push({ kind: Format.TEXT, value: '+e' });
+    }
+    if (nbElectrons === -1) {
+      results.push({ kind: Format.TEXT, value: '-e' });
+    }
+    if (nbElectrons > 1) {
+      results.push({ kind: Format.TEXT, value: `+${nbElectrons}e` });
+    }
+    if (nbElectrons < -1) {
+      results.push({ kind: Format.TEXT, value: `${nbElectrons}e` });
+    }
+    results.push({ kind: Format.SUPERSCRIPT, value: '-' });
+    return results;
+  }
+
+  return undefined;
 }
