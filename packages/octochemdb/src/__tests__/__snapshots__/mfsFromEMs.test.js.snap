@@ -141,7 +141,7 @@ exports[`mfsFromEMs > string containing more than 1 monoisotopic mass 1`] = `
       "atoms": {
         "C": 1,
       },
-      "count": 5,
+      "count": 8,
       "em": 12,
       "unsaturation": 2,
     },
