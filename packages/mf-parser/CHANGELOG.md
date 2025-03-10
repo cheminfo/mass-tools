@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.1](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.3.0...mf-parser@3.3.1) (2025-03-10)
+
+
+### Bug Fixes
+
+* **mf-parser:** toDisplay deals correctly with simple charges ([#261](https://github.com/cheminfo/mass-tools/issues/261)) ([42d2b7a](https://github.com/cheminfo/mass-tools/commit/42d2b7a6d0f6778fc0b01cd4c17bd3e8e475452b))
+* **mf-utilities:** types returned by preprocessIonizations ([#258](https://github.com/cheminfo/mass-tools/issues/258)) ([629973d](https://github.com/cheminfo/mass-tools/commit/629973d8175d3d3b0c75d1a488cfc83261c578f4))
+
+
+
+
+
 # [3.3.0](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.2.8...mf-parser@3.3.0) (2024-12-18)
 
 

@@ -20,14 +20,14 @@
     "type": "git",
     "url": "git+https://github.com/cheminfo/mass-tools.git"
   },
-  "version": "2.10.8",
+  "version": "2.10.9",
   "dependencies": {
     "@orama/orama": "^1.2.11",
     "chemical-elements": "^2.2.0",
-    "mf-finder": "^3.4.11",
-    "mf-parser": "^3.3.0",
-    "mf-utilities": "^3.3.4",
-    "ms-spectrum": "^3.7.6",
+    "mf-finder": "^3.4.12",
+    "mf-parser": "^3.3.1",
+    "mf-utilities": "^3.3.5",
+    "ms-spectrum": "^3.8.0",
     "react-tree-svg": "^1.4.0"
   }
 }

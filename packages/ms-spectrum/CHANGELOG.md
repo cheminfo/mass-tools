@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.7.6...ms-spectrum@3.8.0) (2025-03-10)
+
+
+### Bug Fixes
+
+* only expose build code in packages ([#255](https://github.com/cheminfo/mass-tools/issues/255)) ([f295376](https://github.com/cheminfo/mass-tools/commit/f2953761ba2e44ebee1d01dbbcf88e3896b2a644))
+
+
+### Features
+
+* **ms-spectrum:** export `fromMonoisotopicMass` ([#260](https://github.com/cheminfo/mass-tools/issues/260)) ([dd8d2a4](https://github.com/cheminfo/mass-tools/commit/dd8d2a46a25b552003fa5e771b6190fd36794c27))
+
+
+
+
+
 ## [3.7.6](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.7.5...ms-spectrum@3.7.6) (2024-12-18)
 
 **Note:** Version bump only for package ms-spectrum

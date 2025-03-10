@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.5](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.11.4...mass-fragmentation@1.11.5) (2025-03-10)
+
+
+### Bug Fixes
+
+* **mf-parser:** toDisplay deals correctly with simple charges ([#261](https://github.com/cheminfo/mass-tools/issues/261)) ([42d2b7a](https://github.com/cheminfo/mass-tools/commit/42d2b7a6d0f6778fc0b01cd4c17bd3e8e475452b))
+* only expose build code in packages ([#255](https://github.com/cheminfo/mass-tools/issues/255)) ([f295376](https://github.com/cheminfo/mass-tools/commit/f2953761ba2e44ebee1d01dbbcf88e3896b2a644))
+
+
+
+
+
 ## [1.11.4](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.11.3...mass-fragmentation@1.11.4) (2024-12-18)
 
 **Note:** Version bump only for package mass-fragmentation
