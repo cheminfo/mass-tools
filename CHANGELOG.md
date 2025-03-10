@@ -1,5 +1,19 @@
 # Changelog
 
+## [7.46.0](https://github.com/cheminfo/mass-tools/compare/v7.45.0...v7.46.0) (2025-03-10)
+
+
+### Features
+
+* **ms-spectrum:** export `fromMonoisotopicMass` ([#260](https://github.com/cheminfo/mass-tools/issues/260)) ([dd8d2a4](https://github.com/cheminfo/mass-tools/commit/dd8d2a46a25b552003fa5e771b6190fd36794c27))
+
+
+### Bug Fixes
+
+* **mf-parser:** toDisplay deals correctly with simple charges ([#261](https://github.com/cheminfo/mass-tools/issues/261)) ([42d2b7a](https://github.com/cheminfo/mass-tools/commit/42d2b7a6d0f6778fc0b01cd4c17bd3e8e475452b))
+* **mf-utilities:** types returned by preprocessIonizations ([#258](https://github.com/cheminfo/mass-tools/issues/258)) ([629973d](https://github.com/cheminfo/mass-tools/commit/629973d8175d3d3b0c75d1a488cfc83261c578f4))
+* only expose build code in packages ([#255](https://github.com/cheminfo/mass-tools/issues/255)) ([f295376](https://github.com/cheminfo/mass-tools/commit/f2953761ba2e44ebee1d01dbbcf88e3896b2a644))
+
 ## [7.45.0](https://github.com/cheminfo/mass-tools/compare/v7.44.4...v7.45.0) (2024-12-18)
 
 
