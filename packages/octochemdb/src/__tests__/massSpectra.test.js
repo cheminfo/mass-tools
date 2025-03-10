@@ -24,7 +24,8 @@ describe('massSpectra', () => {
     expect(resultsAll.length).toBeGreaterThan(resultsUnique.length);
   }, 30000);
 
-  it('mdma and mass', async () => {
+  // calling massSpectra with a single mass is too slow. Need to more the API or add a test without calling the API
+  it.skip('mdma and mass', async () => {
     const peaks = JSON.parse(
       readFileSync(path.join(__dirname, './mdma.json'), 'utf8'),
     );
