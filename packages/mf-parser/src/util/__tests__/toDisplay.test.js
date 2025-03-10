@@ -1,5 +1,6 @@
 import { expect, test } from 'vitest';
 
+import { MFInternal } from '../../MFInternal.js';
 import { toDisplay } from '../toDisplay';
 
 let tests = [
@@ -111,5 +112,70 @@ let tests = [
 
 test.each(tests)('toDisplay', (aTest) => {
   let display = toDisplay(aTest.parsed);
+  expect(display).toMatchObject(aTest.result);
+});
+
+const testsCharges = [
+  {
+    mf: '(+)',
+    result: [
+      { kind: 'text', value: '-e' },
+      { kind: 'superscript', value: '-' },
+    ],
+  },
+  {
+    mf: '(-)',
+    result: [
+      { kind: 'text', value: '+e' },
+      { kind: 'superscript', value: '-' },
+    ],
+  },
+  {
+    mf: '(+3)',
+    result: [
+      { kind: 'text', value: '-3e' },
+      { kind: 'superscript', value: '-' },
+    ],
+  },
+  {
+    mf: '(-3)',
+    result: [
+      { kind: 'text', value: '+3e' },
+      { kind: 'superscript', value: '-' },
+    ],
+  },
+  {
+    mf: '(-)1',
+    result: [
+      { kind: 'text', value: '+e' },
+      { kind: 'superscript', value: '-' },
+    ],
+  },
+  {
+    mf: '(+)1',
+    result: [
+      { kind: 'text', value: '-e' },
+      { kind: 'superscript', value: '-' },
+    ],
+  },
+  {
+    mf: '(-)2',
+    result: [
+      { kind: 'text', value: '+2e' },
+      { kind: 'superscript', value: '-' },
+    ],
+  },
+  {
+    mf: '(+)2',
+    result: [
+      { kind: 'text', value: '-2e' },
+      { kind: 'superscript', value: '-' },
+    ],
+  },
+];
+
+test.each(testsCharges)('toDisplay simple charges', (aTest) => {
+  const parsed = new MFInternal(aTest.mf).parsed;
+  let display = toDisplay(parsed);
   expect(display).toMatchObject(aTest.result);
 });
