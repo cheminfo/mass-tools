@@ -2,6 +2,7 @@ import { Format } from '../Format';
 import { Kind } from '../Kind';
 
 import { formatCharge } from './formatCharge.js';
+import { improveLinesForDisplay } from './improveLinesForDisplay.js';
 
 /**
  * Converts an array of mf elements to an array of formatting information
@@ -10,6 +11,7 @@ import { formatCharge } from './formatCharge.js';
  */
 
 export function toDisplay(lines) {
+  lines = improveLinesForDisplay(lines);
   const special = specialCases(lines);
   if (special) return special;
   let results = [];

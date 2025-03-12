@@ -179,3 +179,72 @@ test.each(testsCharges)('toDisplay simple charges', (aTest) => {
   let display = toDisplay(parsed);
   expect(display).toMatchObject(aTest.result);
 });
+
+const testsParenthesis = [
+  {
+    mf: 'CH2',
+    result: [
+      { kind: 'text', value: 'CH' },
+      { kind: 'subscript', value: '2' },
+    ],
+  },
+  {
+    mf: 'CH2+',
+    result: [
+      { kind: 'text', value: 'CH' },
+      { kind: 'superimpose', over: '+', under: '2' },
+    ],
+  },
+  {
+    mf: '(((CH2)2)3)1',
+    result: [
+      { kind: 'text', value: '((CH' },
+      { kind: 'subscript', value: '2' },
+      { kind: 'text', value: ')' },
+      { kind: 'subscript', value: '2' },
+      { kind: 'text', value: ')' },
+      { kind: 'subscript', value: '3' },
+    ],
+  },
+  {
+    mf: 'CH(CH2(CH3))1',
+    result: [
+      { kind: 'text', value: 'CH(CH' },
+      { kind: 'subscript', value: '2' },
+      { kind: 'text', value: '(CH' },
+      { kind: 'subscript', value: '3' },
+      { kind: 'text', value: '))' },
+    ],
+  },
+  {
+    mf: 'C(CH2)2',
+    result: [
+      { kind: 'text', value: 'C(CH' },
+      { kind: 'subscript', value: '2' },
+      { kind: 'text', value: ')' },
+      { kind: 'subscript', value: '2' },
+    ],
+  },
+  {
+    mf: 'C(CH2)1+',
+    result: [
+      { kind: 'text', value: 'C(CH' },
+      { kind: 'subscript', value: '2' },
+      { kind: 'text', value: ')' },
+      { kind: 'superscript', value: '+' },
+    ],
+  },
+  {
+    mf: '((CH2)1)(+)',
+    result: [
+      { kind: 'text', value: 'CH' },
+      { kind: 'superimpose', value: undefined, over: '+', under: '2' },
+    ],
+  },
+];
+
+test.each(testsParenthesis)('toDisplay parenthesis', (aTest) => {
+  const parsed = new MFInternal(aTest.mf).parsed;
+  let display = toDisplay(parsed);
+  expect(display).toMatchObject(aTest.result);
+});
