@@ -302,6 +302,24 @@ describe('MF', () => {
     });
   });
 
+  it('(CH2)1+ useless parenthesis', () => {
+    const mf = new MF('(CH2)1+');
+    const info = mf.getInfo();
+    expect(info).toStrictEqual({
+      mass: 14.026617404846803,
+      charge: 1,
+      mf: 'CH2(+1)',
+      atoms: { C: 1, H: 2 },
+      monoisotopicMass: 14.01565006446,
+      observedMonoisotopicMass: 14.01510148455093,
+      unsaturation: 0.5,
+    });
+    const html = mf.toHtml();
+    expect(html).toBe(
+      'CH<span style="flex-direction: column;display: inline-flex;justify-content: center;text-align: left;vertical-align: middle;"><sup style="line-height: 1; font-size: 70%">+</sup><sub style="line-height: 1; font-size: 70%">2</sub></span>',
+    );
+  });
+
   it('customFieldName', () => {
     const mf = new MF('Na+.Cl-');
 
