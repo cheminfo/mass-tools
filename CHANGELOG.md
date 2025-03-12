@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.47.0](https://github.com/cheminfo/mass-tools/compare/v7.46.0...v7.47.0) (2025-03-12)
+
+
+### Features
+
+* **mf-parser:** remove useless surrounding parenthesis and 1 multiplier when displaying a MF ([#262](https://github.com/cheminfo/mass-tools/issues/262)) ([a9b9947](https://github.com/cheminfo/mass-tools/commit/a9b99479c4d145b228a5b2f721a0d77d41f48bef))
+
 ## [7.46.0](https://github.com/cheminfo/mass-tools/compare/v7.45.0...v7.46.0) (2025-03-10)
 
 
