@@ -1,6 +1,6 @@
 {
   "name": "emdb",
-  "version": "3.4.0",
+  "version": "3.4.1",
   "description": "Database manager for exact mass query",
   "main": "lib/src/index.js",
   "files": [
@@ -21,22 +21,22 @@
   "dependencies": {
     "chemical-elements": "^2.2.0",
     "chemical-groups": "^2.2.3",
-    "isotopic-distribution": "^3.4.9",
+    "isotopic-distribution": "^3.4.10",
     "jszip": "^3.10.1",
-    "mass-fragmentation": "^1.11.5",
-    "mf-finder": "^3.4.12",
-    "mf-from-google-sheet": "^3.1.12",
-    "mf-generator": "^3.3.12",
-    "mf-matcher": "^3.2.12",
-    "mf-parser": "^3.3.1",
-    "mf-utilities": "^3.3.5",
+    "mass-fragmentation": "^1.11.6",
+    "mf-finder": "^3.4.13",
+    "mf-from-google-sheet": "^3.1.13",
+    "mf-generator": "^3.3.13",
+    "mf-matcher": "^3.2.13",
+    "mf-parser": "^3.4.0",
+    "mf-utilities": "^3.3.6",
     "ml-regression-theil-sen": "^3.0.0",
     "ml-spectra-processing": "^14.7.0",
-    "ms-spectrum": "^3.8.0",
-    "nucleotide": "^3.2.5",
+    "ms-spectrum": "^3.8.1",
+    "nucleotide": "^3.2.6",
     "openchemlib-utils": "^6.4.1",
     "peaks-similarity": "^3.1.1",
-    "peptide": "^2.3.5"
+    "peptide": "^2.3.6"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2",

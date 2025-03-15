@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.3.1...mf-parser@3.4.0) (2025-03-15)
+
+
+### Features
+
+* **mf-parser:** remove useless surrounding parenthesis and 1 multiplier when displaying a MF ([#262](https://github.com/cheminfo/mass-tools/issues/262)) ([a9b9947](https://github.com/cheminfo/mass-tools/commit/a9b99479c4d145b228a5b2f721a0d77d41f48bef))
+
+
+
+
+
 ## [3.3.1](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.3.0...mf-parser@3.3.1) (2025-03-10)
 
 
