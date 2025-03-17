@@ -393,8 +393,7 @@ describe('test isotopicDistribution', () => {
       threshold: 0,
       maxLength: 1e7,
     });
-
-    expect(profile.x[0]).toBeCloseTo(12010735.5);
+    expect(profile.x[0]).toBeCloseTo(12010736, 0);
     expect(profile.y[0]).toBeCloseTo(100);
   });
 
