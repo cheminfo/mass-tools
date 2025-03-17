@@ -379,8 +379,8 @@ export class IsotopicDistribution {
 
     let points = this.getTable({ maxValue });
     if (points.length === 0) return { x: [], y: [] };
-    const from = Math.floor(options.from || points[0].x - 2);
-    const to = Math.ceil(options.to || points.at(-1).x + 2);
+    const from = options.from || points[0].x - 2;
+    const to = options.to || points.at(-1).x + 2;
     const nbPoints = Math.round(((to - from) * gaussianWidth) / this.fwhm + 1);
     if (nbPoints > maxLength) {
       throw new Error(

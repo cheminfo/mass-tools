@@ -5,8 +5,7 @@ import { IsotopicDistribution } from '../IsotopicDistribution.js';
 describe('test isotopicDistribution', () => {
   it('create distribution of C1 with default options', () => {
     let isotopicDistribution = new IsotopicDistribution('C', { fwhm: 0.1 });
-    let gaussian = isotopicDistribution.getGaussian();
-
+    let gaussian = isotopicDistribution.getGaussian({ from: 11, to: 14 });
     expect(gaussian.y[15]).toBeCloseTo(gaussian.y[25], 5);
     expect(gaussian.y[15]).toBeCloseTo(gaussian.y[20] / 2, 5);
 
