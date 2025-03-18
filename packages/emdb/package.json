@@ -1,6 +1,6 @@
 {
   "name": "emdb",
-  "version": "3.4.1",
+  "version": "3.4.2",
   "description": "Database manager for exact mass query",
   "main": "lib/src/index.js",
   "files": [
@@ -21,7 +21,7 @@
   "dependencies": {
     "chemical-elements": "^2.2.0",
     "chemical-groups": "^2.2.3",
-    "isotopic-distribution": "^3.4.10",
+    "isotopic-distribution": "^3.4.11",
     "jszip": "^3.10.1",
     "mass-fragmentation": "^1.11.6",
     "mf-finder": "^3.4.13",

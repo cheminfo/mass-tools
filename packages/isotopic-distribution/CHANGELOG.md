@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.11](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.10...isotopic-distribution@3.4.11) (2025-03-18)
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** do not round limits in getGaussian ([#264](https://github.com/cheminfo/mass-tools/issues/264)) ([a2a9995](https://github.com/cheminfo/mass-tools/commit/a2a9995a01c4af16944168a1cec9c6ddbf76c22e))
+
+
+
+
+
 ## [3.4.10](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.9...isotopic-distribution@3.4.10) (2025-03-15)
 
 **Note:** Version bump only for package isotopic-distribution
