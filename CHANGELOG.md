@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.47.1](https://github.com/cheminfo/mass-tools/compare/v7.47.0...v7.47.1) (2025-03-17)
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** do not round limits in getGaussian ([#264](https://github.com/cheminfo/mass-tools/issues/264)) ([a2a9995](https://github.com/cheminfo/mass-tools/commit/a2a9995a01c4af16944168a1cec9c6ddbf76c22e))
+
 ## [7.47.0](https://github.com/cheminfo/mass-tools/compare/v7.46.0...v7.47.0) (2025-03-12)
 
 
