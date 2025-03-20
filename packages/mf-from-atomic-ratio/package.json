@@ -1,6 +1,6 @@
 {
   "name": "mf-from-atomic-ratio",
-  "version": "1.2.13",
+  "version": "1.2.14",
   "description": "Find a molecular formula from atomic ratio",
   "main": "lib/src/index.js",
   "files": [
@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/mf-from-atomic-ratio#readme",
   "dependencies": {
-    "mf-generator": "^3.3.13",
-    "mf-parser": "^3.4.0"
+    "mf-generator": "^3.3.14",
+    "mf-parser": "^3.4.1"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2"

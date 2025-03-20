@@ -1,6 +1,6 @@
 {
   "name": "peptide",
-  "version": "2.3.6",
+  "version": "2.3.7",
   "description": "Peptide",
   "keywords": [
     "peptide",
@@ -23,6 +23,6 @@
     "lib"
   ],
   "dependencies": {
-    "mf-utilities": "^3.3.6"
+    "mf-utilities": "^3.3.7"
   }
 }
