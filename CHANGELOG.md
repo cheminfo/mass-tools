@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.48.0](https://github.com/cheminfo/mass-tools/compare/v7.47.1...v7.48.0) (2025-03-20)
+
+
+### Features
+
+* **mf-parser:** add info about number of isotopologues ([#270](https://github.com/cheminfo/mass-tools/issues/270)) ([ba80823](https://github.com/cheminfo/mass-tools/commit/ba808235a6b9e471e4650c9028cc75eb9628f76e))
+
 ## [7.47.1](https://github.com/cheminfo/mass-tools/compare/v7.47.0...v7.47.1) (2025-03-17)
 
 
