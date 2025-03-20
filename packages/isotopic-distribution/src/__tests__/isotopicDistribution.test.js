@@ -418,12 +418,14 @@ describe('test isotopicDistribution', () => {
     expect(maxValue).toBeCloseTo(100);
   });
 
-  it('Cys20 and check max / min values', () => {
-    const isotopicDistribution = new IsotopicDistribution('Cys20', {
-      fwhm: 1e-3,
+  it('Cys and check max / min values', () => {
+    const isotopicDistribution = new IsotopicDistribution('Cys', {
+      fwhm: 0,
+      maxLines: 1e5,
+      limit: 1e5,
       minY: 1e-8,
-      threshold: 1e-8,
-      limit: 1e4,
+      allowNeutral: true,
+      ensureCase: false,
     });
 
     const peaks = isotopicDistribution.getPeaks();
