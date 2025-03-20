@@ -110,9 +110,10 @@ let tests = [
   },
 ];
 
-test.each(tests)('toDisplay', (aTest) => {
-  let display = toDisplay(aTest.parsed);
-  expect(display).toMatchObject(aTest.result);
+// eslint-disable-next-line no-unused-vars
+test.each(tests)('toDisplay $mf', ({ mf, parsed, result }) => {
+  let display = toDisplay(parsed);
+  expect(display).toMatchObject(result);
 });
 
 const testsCharges = [
@@ -174,10 +175,10 @@ const testsCharges = [
   },
 ];
 
-test.each(testsCharges)('toDisplay simple charges', (aTest) => {
-  const parsed = new MFInternal(aTest.mf).parsed;
+test.each(testsCharges)('toDisplay simple charges $mf', ({ mf, result }) => {
+  const parsed = new MFInternal(mf).parsed;
   let display = toDisplay(parsed);
-  expect(display).toMatchObject(aTest.result);
+  expect(display).toMatchObject(result);
 });
 
 const testsParenthesis = [
@@ -243,8 +244,8 @@ const testsParenthesis = [
   },
 ];
 
-test.each(testsParenthesis)('toDisplay parenthesis', (aTest) => {
-  const parsed = new MFInternal(aTest.mf).parsed;
+test.each(testsParenthesis)('toDisplay parenthesis $mf', ({ mf, result }) => {
+  const parsed = new MFInternal(mf).parsed;
   let display = toDisplay(parsed);
-  expect(display).toMatchObject(aTest.result);
+  expect(display).toMatchObject(result);
 });

@@ -29,10 +29,28 @@ type CustomNameFields<GIO extends GetInfoOptionsAllowed> = Record<
   Record<GetMSEM<GIO>, number | undefined>;
 
 export type PartInfo<GIO extends GetInfoOptionsAllowed> = {
+  /**
+   * Molecular weight of the molecule formula
+   */
   mass: number;
+  /**
+   * Charge of the molecule formula
+   */
   charge: number;
   mf: string;
+  /**
+   * Object containing the atom and the number of atoms
+   * This object will take only the atom label and will not take into account isotopic enrichments
+   */
   atoms: AtomsMap;
+  /**
+   * Theoretical number of isotopologues not taking into account the abundance of isotopes
+   */
+  nbIsotopologues: number;
+  /**
+   * Double bond equivalent (DBE) or unsaturation index (UI)
+   * This value can be undefined if some not supported atoms are present
+   */
   unsaturation?: number;
 } & CustomNameFields<GIO>;
 

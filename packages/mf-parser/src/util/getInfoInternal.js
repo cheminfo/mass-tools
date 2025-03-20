@@ -9,6 +9,7 @@ import { groupsObject as groups } from 'chemical-groups';
 import { Kind } from '../Kind';
 
 import { getIsotopeRatioInfo } from './getIsotopeRatioInfo';
+import { getNumberOfIsotopologues } from './getNumberOfIsotopologues';
 import { partToAtoms } from './partToAtoms';
 import { partToMF } from './partToMF';
 
@@ -65,6 +66,7 @@ export function getInfoInternal(parts, options = {}) {
       result.atoms[atom] += part.atoms[atom];
     }
   }
+  result.nbIsotopologues = getNumberOfIsotopologues(result.atoms);
   return result;
 }
 
