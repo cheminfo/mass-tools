@@ -123,6 +123,16 @@ describe('isotopicDistribution with composition', () => {
       },
     ]);
   });
+
+  it('C100 with all peaks (isotopologues)', () => {
+    let isotopicDistribution = new IsotopicDistribution('C100', {
+      fwhm: 0,
+      threshold: 0,
+      minY: 0,
+    });
+    const peaks = isotopicDistribution.getPeaks();
+    expect(peaks.length).toBe(101);
+  });
   it('C100H100', () => {
     let isotopicDistribution = new IsotopicDistribution('C100H100', {
       fwhm: 1e-10,

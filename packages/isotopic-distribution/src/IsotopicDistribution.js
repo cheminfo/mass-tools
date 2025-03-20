@@ -8,6 +8,7 @@ import { Distribution } from './Distribution';
 import { getDerivedCompositionInfo } from './utils/getDerivedCompositionInfo';
 
 const MINIMAL_FWHM = 1e-8;
+const MINIMAL_Y = 1e-8;
 
 /** @typedef {import('mf-parser').IsotopesInfo} IsotopesInfo */
 /** @typedef {import('mf-parser').PartInfo} PartInfo */
@@ -66,7 +67,7 @@ export class IsotopicDistribution {
     this.fwhm = options.fwhm === undefined ? 0.01 : options.fwhm;
     // if fwhm is under 1e-8 there are some artifacts in the spectra
     if (this.fwhm < MINIMAL_FWHM) this.fwhm = MINIMAL_FWHM;
-    this.minY = options.minY === undefined ? MINIMAL_FWHM : options.minY;
+    this.minY = options.minY === undefined ? MINIMAL_Y : options.minY;
     this.maxLines = options.maxLines || 5000;
     this.allowNeutral =
       options.allowNeutral === undefined ? true : options.allowNeutral;
