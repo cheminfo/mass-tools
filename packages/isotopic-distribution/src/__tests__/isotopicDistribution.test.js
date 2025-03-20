@@ -2,7 +2,6 @@ import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
 import { MF } from 'mf-parser';
 import {
   xMaxValue,
-  xyMaxY,
   xyObjectMaxYPoint,
   xyObjectMinYPoint,
 } from 'ml-spectra-processing';
