@@ -298,17 +298,24 @@ export class IsotopicDistribution {
     if (sumValue) {
       let sumY = this.getSumY(peaks);
       factor = sumY / sumValue;
+      if (factor !== 1) {
+        peaks = structuredClone(peaks);
+        for (const peak of peaks) {
+          peak.y = peak.y / factor;
+        }
+      }
     } else if (maxValue) {
       let maxY = this.getMaxY(peaks);
-      factor = maxY / maxValue;
-    }
-    if (factor !== 1) {
-      // we need to copy the array because we prefer no side effects
-      peaks = structuredClone(peaks);
-      for (const peak of peaks) {
-        peak.y = peak.y / factor;
+      if (maxValue !== maxY) {
+        // we need to copy the array because we prefer no side effects
+        peaks = structuredClone(peaks);
+        for (const peak of peaks) {
+          // we rescale the Y values by first dividing by maxY and then multiplying by maxValue in order to avoid approximation errors
+          peak.y = (peak.y / maxY) * maxValue;
+        }
       }
     }
+
     return peaks;
   }
 

@@ -1,5 +1,10 @@
 import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
-import { xMaxValue } from 'ml-spectra-processing';
+import { MF } from 'mf-parser';
+import {
+  xMaxValue,
+  xyObjectMaxYPoint,
+  xyObjectMinYPoint,
+} from 'ml-spectra-processing';
 import { describe, expect, it } from 'vitest';
 
 import { IsotopicDistribution } from '..';
@@ -411,5 +416,47 @@ describe('test isotopicDistribution', () => {
     });
     const maxValue = xMaxValue(profile.y);
     expect(maxValue).toBeCloseTo(100);
+  });
+
+  it('Cys and check max / min values', () => {
+    const mf = 'CysH(+1)'; // Cys with H+ Ionization
+    const info = new MF(mf).getInfo();
+    const observedMass = info.observedMonoisotopicMass || info.monoisotopicMass;
+    const fwhm = observedMass / 2e4;
+
+    const isotopicDistributionForGaussian = new IsotopicDistribution(mf, {
+      fwhm: Math.min(fwhm || 1e-4, 0.1),
+      maxLines: 2e6,
+      limit: 1e6,
+      minY: 1e-8,
+      allowNeutral: true,
+      ensureCase: false,
+    });
+
+    const profile = isotopicDistributionForGaussian.getGaussian({
+      gaussianWidth: 10,
+      maxValue: 100,
+      threshold: 0,
+      maxLength: 1e7,
+      peakWidthFct: () => fwhm || 1e-4,
+    });
+
+    const isotopicDistributionForPeaks = new IsotopicDistribution(mf, {
+      fwhm: 0, // we will not merge close centroids and we can therefore calculate the exact isotopic composition (isotopologues) of each peak.
+      maxLines: 1e5, // Maximal number of peaks during calculations.
+      limit: 1e5, // Maximum number of peaks to keep.
+      minY: 1e-8, // Optimization parameter. The lower, the slower.
+      allowNeutral: true, // Whether to keep the distribution if the molecule has no charge.
+      ensureCase: false, // Ensure uppercase / lowercase.
+    });
+
+    const peaks = isotopicDistributionForPeaks.getPeaks();
+    const maxPoint = xyObjectMaxYPoint(peaks);
+    expect(maxPoint.y).toBe(100);
+    const minPoint = xyObjectMinYPoint(peaks);
+    expect(minPoint.y).greaterThanOrEqual(0);
+
+    const maxValue = xMaxValue(profile.y);
+    expect(maxValue).toBe(100);
   });
 });
