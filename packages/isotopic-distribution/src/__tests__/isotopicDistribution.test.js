@@ -1,5 +1,10 @@
 import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
-import { xMaxValue } from 'ml-spectra-processing';
+import {
+  xMaxValue,
+  xyMaxY,
+  xyObjectMaxYPoint,
+  xyObjectMinYPoint,
+} from 'ml-spectra-processing';
 import { describe, expect, it } from 'vitest';
 
 import { IsotopicDistribution } from '..';
@@ -411,5 +416,31 @@ describe('test isotopicDistribution', () => {
     });
     const maxValue = xMaxValue(profile.y);
     expect(maxValue).toBeCloseTo(100);
+  });
+
+  it('Cys20 and check max / min values', () => {
+    const isotopicDistribution = new IsotopicDistribution('Cys20', {
+      fwhm: 1e-3,
+      minY: 1e-8,
+      threshold: 1e-8,
+      limit: 1e4,
+    });
+
+    const peaks = isotopicDistribution.getPeaks();
+    const maxPoint = xyObjectMaxYPoint(peaks);
+    expect(maxPoint.y).toBe(100);
+    const minPoint = xyObjectMinYPoint(peaks);
+    expect(minPoint.y).greaterThanOrEqual(0);
+
+    const profile = isotopicDistribution.getGaussian({
+      gaussianWidth: 10,
+      maxValue: 100,
+      threshold: 0,
+      maxLength: 1e8,
+      peakWidthFct: () => 1,
+    });
+
+    const maxValue = xMaxValue(profile.y);
+    expect(maxValue).toBe(100);
   });
 });
