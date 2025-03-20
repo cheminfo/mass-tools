@@ -1,4 +1,5 @@
 import { toBeDeepCloseTo } from 'jest-matcher-deep-close-to';
+import { MF } from 'mf-parser';
 import {
   xMaxValue,
   xyMaxY,
@@ -419,28 +420,42 @@ describe('test isotopicDistribution', () => {
   });
 
   it('Cys and check max / min values', () => {
-    const isotopicDistribution = new IsotopicDistribution('Cys', {
-      fwhm: 0,
-      maxLines: 1e5,
-      limit: 1e5,
+    const mf = 'CysH(+1)'; // Cys with H+ Ionization
+    const info = new MF(mf).getInfo();
+    const observedMass = info.observedMonoisotopicMass || info.monoisotopicMass;
+    const fwhm = observedMass / 2e4;
+
+    const isotopicDistributionForGaussian = new IsotopicDistribution(mf, {
+      fwhm: Math.min(fwhm || 1e-4, 0.1),
+      maxLines: 2e6,
+      limit: 1e6,
       minY: 1e-8,
       allowNeutral: true,
       ensureCase: false,
     });
 
-    const peaks = isotopicDistribution.getPeaks();
+    const profile = isotopicDistributionForGaussian.getGaussian({
+      gaussianWidth: 10,
+      maxValue: 100,
+      threshold: 0,
+      maxLength: 1e7,
+      peakWidthFct: () => fwhm || 1e-4,
+    });
+
+    const isotopicDistributionForPeaks = new IsotopicDistribution(mf, {
+      fwhm: 0, // we will not merge close centroids and we can therefore calculate the exact isotopic composition (isotopologues) of each peak.
+      maxLines: 1e5, // Maximal number of peaks during calculations.
+      limit: 1e5, // Maximum number of peaks to keep.
+      minY: 1e-8, // Optimization parameter. The lower, the slower.
+      allowNeutral: true, // Whether to keep the distribution if the molecule has no charge.
+      ensureCase: false, // Ensure uppercase / lowercase.
+    });
+
+    const peaks = isotopicDistributionForPeaks.getPeaks();
     const maxPoint = xyObjectMaxYPoint(peaks);
     expect(maxPoint.y).toBe(100);
     const minPoint = xyObjectMinYPoint(peaks);
     expect(minPoint.y).greaterThanOrEqual(0);
-
-    const profile = isotopicDistribution.getGaussian({
-      gaussianWidth: 10,
-      maxValue: 100,
-      threshold: 0,
-      maxLength: 1e8,
-      peakWidthFct: () => 1,
-    });
 
     const maxValue = xMaxValue(profile.y);
     expect(maxValue).toBe(100);
