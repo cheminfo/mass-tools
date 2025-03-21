@@ -1,7 +1,7 @@
 {
   "name": "ms-report",
   "browser": {
-    "./src/getPaper.js": "./src/getPaper.browser.js"
+    "./lib/src/getPaper.js": "./lib/src/getPaper.browser.js"
   },
   "version": "3.2.15",
   "description": "Generate report for mass analysis",
