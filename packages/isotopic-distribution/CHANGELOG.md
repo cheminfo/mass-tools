@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.13](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.12...isotopic-distribution@3.4.13) (2025-03-21)
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** avoid approximation issues with getPeaks ([4230c58](https://github.com/cheminfo/mass-tools/commit/4230c582befb77ce66616b496a705abe4e716fa6))
+
+
+
+
+
 ## [3.4.12](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.11...isotopic-distribution@3.4.12) (2025-03-20)
 
 **Note:** Version bump only for package isotopic-distribution

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.12](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.10.11...octochemdb@2.10.12) (2025-03-21)
+
+
+### Bug Fixes
+
+* **octochemdb:** update orama to solve build issue ([#275](https://github.com/cheminfo/mass-tools/issues/275)) ([4674fd1](https://github.com/cheminfo/mass-tools/commit/4674fd1515cc71a45731d04d4117fcd34298b802))
+
+
+
+
+
 ## [2.10.11](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.10.10...octochemdb@2.10.11) (2025-03-20)
 
 **Note:** Version bump only for package octochemdb
