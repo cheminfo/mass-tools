@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.16](https://github.com/cheminfo/mass-tools/compare/ms-report@3.2.15...ms-report@3.2.16) (2025-03-21)
+
+
+### Bug Fixes
+
+* **ms-report:** correct shim for browser after TS migration ([#276](https://github.com/cheminfo/mass-tools/issues/276)) ([62507b3](https://github.com/cheminfo/mass-tools/commit/62507b33fa1f948a033ad4143aff60eb47df8fbb))
+
+
+
+
+
 ## [3.2.15](https://github.com/cheminfo/mass-tools/compare/ms-report@3.2.14...ms-report@3.2.15) (2025-03-20)
 
 **Note:** Version bump only for package ms-report
