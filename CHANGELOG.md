@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.48.2](https://github.com/cheminfo/mass-tools/compare/v7.48.1...v7.48.2) (2025-03-21)
+
+
+### Bug Fixes
+
+* **ms-report:** correct shim for browser after TS migration ([#276](https://github.com/cheminfo/mass-tools/issues/276)) ([62507b3](https://github.com/cheminfo/mass-tools/commit/62507b33fa1f948a033ad4143aff60eb47df8fbb))
+
 ## [7.48.1](https://github.com/cheminfo/mass-tools/compare/v7.48.0...v7.48.1) (2025-03-21)
 
 
