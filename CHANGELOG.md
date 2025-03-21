@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.48.1](https://github.com/cheminfo/mass-tools/compare/v7.48.0...v7.48.1) (2025-03-21)
+
+
+### Bug Fixes
+
+* **isotopic-distribution:** avoid approximation issues with getPeaks ([4230c58](https://github.com/cheminfo/mass-tools/commit/4230c582befb77ce66616b496a705abe4e716fa6))
+* **octochemdb:** update orama to solve build issue ([#275](https://github.com/cheminfo/mass-tools/issues/275)) ([4674fd1](https://github.com/cheminfo/mass-tools/commit/4674fd1515cc71a45731d04d4117fcd34298b802))
+
 ## [7.48.0](https://github.com/cheminfo/mass-tools/compare/v7.47.1...v7.48.0) (2025-03-20)
 
 
