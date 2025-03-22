@@ -3,17 +3,21 @@ import { elementsAndStableIsotopesObject } from 'chemical-elements';
 import type { AtomsMap } from './partToAtoms';
 
 /**
- * Return the theoretical number of isotopologues for a given MF.
- * This method will not take into account possible non natural isotopic distribution (e.g. 13C enrichment)
+ * Returns the theoretical number of isotopologues for a given MF based on stable isotopes for each element.
+ * This method will not take into account possible non natural isotopic composition (e.g. 13C enrichment)
+ * If one element does not have any stable isotope, the result will be 0.
  * @param atoms
  * @returns
  */
-export function getNumberOfIsotopologues(atoms: AtomsMap) {
+export function getNumberOfIsotopologues(atoms: AtomsMap): number {
+  if (Object.keys(atoms).length === 0) {
+    return 0;
+  }
   let result = 1;
   for (const atom in atoms) {
     const nbIsotopes = elementsAndStableIsotopesObject[atom]?.isotopes.length;
     if (!nbIsotopes) {
-      throw new Error(`No stable isotopes found for ${atom}`);
+      return 0;
     }
     const nbAtoms = atoms[atom];
     result *= getNbCombinationsPerAtom(nbAtoms, nbIsotopes);
