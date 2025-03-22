@@ -1,6 +1,6 @@
 {
   "name": "mf-matcher",
-  "version": "3.2.14",
+  "version": "3.2.15",
   "description": "Returns true / false for an object using mw, em, msem, unsaturation and atoms",
   "main": "lib/src/index.js",
   "files": [
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/mf-matcher#readme",
   "dependencies": {
-    "mf-utilities": "^3.3.7",
+    "mf-utilities": "^3.3.8",
     "ml-spectra-processing": "^14.7.0"
   },
   "devDependencies": {

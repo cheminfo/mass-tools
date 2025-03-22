@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.13](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.10.12...octochemdb@2.10.13) (2025-03-22)
+
+
+### Bug Fixes
+
+* **mf-parser:** mf.getInfo always returns the nbIsotopologues property ([032b1da](https://github.com/cheminfo/mass-tools/commit/032b1da800ac360aa0e422b19de1702d7553687b))
+
+
+
+
+
 ## [2.10.12](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.10.11...octochemdb@2.10.12) (2025-03-21)
 
 

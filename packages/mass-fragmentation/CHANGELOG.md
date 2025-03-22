@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.8](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.11.7...mass-fragmentation@1.11.8) (2025-03-22)
+
+
+### Bug Fixes
+
+* **mf-parser:** mf.getInfo always returns the nbIsotopologues property ([032b1da](https://github.com/cheminfo/mass-tools/commit/032b1da800ac360aa0e422b19de1702d7553687b))
+
+
+
+
+
 ## [1.11.7](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.11.6...mass-fragmentation@1.11.7) (2025-03-20)
 
 **Note:** Version bump only for package mass-fragmentation

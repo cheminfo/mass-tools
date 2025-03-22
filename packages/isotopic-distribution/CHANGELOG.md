@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.14](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.13...isotopic-distribution@3.4.14) (2025-03-22)
+
+
+### Bug Fixes
+
+* **mf-parser:** mf.getInfo always returns the nbIsotopologues property ([032b1da](https://github.com/cheminfo/mass-tools/commit/032b1da800ac360aa0e422b19de1702d7553687b))
+* **mf-parser:** rename types PartInfo -> MFInfo, PartInfoWithParts -> MFInfoWithParts ([3388b75](https://github.com/cheminfo/mass-tools/commit/3388b7561527ea41f7ffa93c297964dce292b746))
+
+
+
+
+
 ## [3.4.13](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.12...isotopic-distribution@3.4.13) (2025-03-21)
 
 
