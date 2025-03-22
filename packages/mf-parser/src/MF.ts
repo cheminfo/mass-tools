@@ -9,8 +9,8 @@ import { MFInternal } from './MFInternal';
 import type {
   GetInfoOptions,
   GetInfoOptionsAllowed,
-  PartInfo,
-  PartInfoWithParts,
+  MFInfo,
+  MFInfoWithParts,
 } from './util/getInfo.types';
 import type { IsotopesInfo } from './util/getIsotopesInfo.types';
 
@@ -65,7 +65,7 @@ export class MF {
    */
   getInfo<GIO extends GetInfoOptionsAllowed = GetInfoOptions>(
     options?: GIO,
-  ): PartInfo<GIO> | PartInfoWithParts<GIO> {
+  ): MFInfo<GIO> | MFInfoWithParts<GIO> {
     return this.internal.getInfo(options);
   }
 

@@ -14,8 +14,8 @@ export * from './parseToHtml.js';
 export type { AtomsMap } from './util/partToAtoms.types';
 export type { IsotopesInfo } from './util/getIsotopesInfo.types';
 export type {
-  PartInfo,
-  PartInfoWithParts,
+  MFInfo,
+  MFInfoWithParts,
   GetInfoOptions,
   GetInfoOptionsAllowed,
 } from './util/getInfo.types';

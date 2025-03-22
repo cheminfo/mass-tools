@@ -1,4 +1,4 @@
-import type { IsotopesInfo, PartInfo, GetInfoOptions } from 'mf-parser';
+import type { IsotopesInfo, MFInfo, GetInfoOptions } from 'mf-parser';
 
 /**
  * An object containing two arrays.
@@ -8,7 +8,7 @@ export interface XY {
   y: number[];
 }
 
-export interface IsotopicDistributionPart extends PartInfo<GetInfoOptions> {
+export interface IsotopicDistributionPart extends MFInfo<GetInfoOptions> {
   confidence: number;
   isotopesInfo: IsotopesInfo;
   /** alias to monoisotopicMass */

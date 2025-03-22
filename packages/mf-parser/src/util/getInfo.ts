@@ -1,8 +1,8 @@
 import type {
   GetInfoOptions,
   GetInfoOptionsAllowed,
-  PartInfo,
-  PartInfoWithParts,
+  MFInfo,
+  MFInfoWithParts,
 } from './getInfo.types';
 import { getInfoInternal } from './getInfoInternal';
 
@@ -13,6 +13,6 @@ type Part = any;
 export function getInfo<GIO extends GetInfoOptionsAllowed = GetInfoOptions>(
   parts: Part[][],
   options?: GIO,
-): PartInfo<GIO> | PartInfoWithParts<GIO> {
+): MFInfo<GIO> | MFInfoWithParts<GIO> {
   return getInfoInternal(parts, options);
 }
