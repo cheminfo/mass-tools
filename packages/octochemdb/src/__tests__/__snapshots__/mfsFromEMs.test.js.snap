@@ -37,6 +37,7 @@ exports[`mfsFromEMs > simple case negative ionization 1`] = `
       "em": 122.01499861577999,
       "mass": 122.14611999546037,
       "mf": "C2H6N2O2S",
+      "nbIsotopologues": 1512,
       "unsaturation": 1,
     },
     "ms": {
@@ -80,6 +81,7 @@ exports[`mfsFromEMs > simple case negative ionization 1`] = `
       "em": 122.01345714675,
       "mass": 122.55027629657599,
       "mf": "C4H7ClO2",
+      "nbIsotopologues": 480,
       "unsaturation": 1,
     },
     "ms": {
@@ -119,6 +121,7 @@ exports[`mfsFromEMs > simple case negative ionization 1`] = `
       "em": 61.00782503223,
       "mass": 61.061620237732015,
       "mf": "C5H",
+      "nbIsotopologues": 12,
       "unsaturation": 5.5,
     },
     "ms": {
@@ -159,6 +162,7 @@ exports[`mfsFromEMs > string containing more than 1 monoisotopic mass 1`] = `
       "em": 12,
       "mass": 12.010735896735248,
       "mf": "C",
+      "nbIsotopologues": 2,
       "unsaturation": 2,
     },
     "ms": {
@@ -194,6 +198,7 @@ exports[`mfsFromEMs > string containing more than 1 monoisotopic mass 1`] = `
       "em": 24,
       "mass": 24.021471793470496,
       "mf": "C2",
+      "nbIsotopologues": 3,
       "unsaturation": 3,
     },
     "ms": {
@@ -229,6 +234,7 @@ exports[`mfsFromEMs > string containing more than 1 monoisotopic mass 1`] = `
       "em": 36,
       "mass": 36.032207690205745,
       "mf": "C3",
+      "nbIsotopologues": 4,
       "unsaturation": 4,
     },
     "ms": {

@@ -25,6 +25,7 @@ describe('MF', () => {
       monoisotopicMass: 12,
       mass: 12.010735896735248,
       charge: 0,
+      nbIsotopologues: 2,
       unsaturation: 2,
       mf: 'C',
       atoms: { C: 1 },
@@ -113,6 +114,7 @@ describe('MF', () => {
       unsaturation: 3,
       mf: '[11C]2',
       atoms: { C: 2 },
+      nbIsotopologues: 3,
     });
   });
 
@@ -129,6 +131,7 @@ describe('MF', () => {
       mf: '[2H]',
       monoisotopicMass: 2.01410177812,
       unsaturation: 0.5,
+      nbIsotopologues: 2,
     });
   });
 
@@ -146,6 +149,7 @@ describe('MF', () => {
       mf: '[3H]',
       monoisotopicMass: 3.0160492779,
       unsaturation: 0.5,
+      nbIsotopologues: 2,
     });
   });
 
@@ -158,6 +162,7 @@ describe('MF', () => {
       mf: 'H4O2Si',
       atoms: { H: 4, O: 2, Si: 1 },
       unsaturation: 0,
+      nbIsotopologues: 90,
     });
   });
 
@@ -222,8 +227,9 @@ describe('MF', () => {
 
   it('(Me2CH)3N no expand', () => {
     const mf = new MF('(Me2CH)3N');
-    const parts = mf.toParts({ expand: false });
 
+    // we don't want that expand has any side effects
+    const parts = mf.toParts({ expand: false });
     expect(parts).toStrictEqual([
       [
         { kind: 'atom', value: 'C', multiplier: 3 },
@@ -233,17 +239,33 @@ describe('MF', () => {
       ],
     ]);
 
+    // if we don't want to expand anything, the option expand should be place
+    // in the constructor of MF
     const newMF = mf.toMF();
-    expect(newMF).toBe('C3H3Me6N');
+    expect(newMF).toBe('C9H21N');
 
     const info = mf.getInfo();
     expect(info).toStrictEqual({
       mass: 143.27008211723435,
-      monoisotopicMass: 143.16739968126,
       charge: 0,
-      mf: 'C3H3Me6N',
+      mf: 'C9H21N',
+      atoms: { C: 9, H: 21, N: 1 },
+      monoisotopicMass: 143.16739968126,
       unsaturation: 0,
-      atoms: { C: 3, H: 3, Me: 6, N: 1 },
+      nbIsotopologues: 440,
+    });
+  });
+
+  it('Hs, no stable isotopes', () => {
+    const mf = new MF('Hs');
+    const info = mf.getInfo();
+    expect(info).toStrictEqual({
+      mass: 0,
+      charge: 0,
+      mf: 'Hs',
+      atoms: { Hs: 1 },
+      monoisotopicMass: Number.NaN,
+      nbIsotopologues: 0,
     });
   });
 
@@ -270,6 +292,7 @@ describe('MF', () => {
       mf: 'C9H21N',
       unsaturation: 0,
       atoms: { C: 9, H: 21, N: 1 },
+      nbIsotopologues: 440,
     });
   });
 
@@ -301,6 +324,7 @@ describe('MF', () => {
       mf: 'O4S(-2)',
       unsaturation: 4,
       atoms: { O: 4, S: 1 },
+      nbIsotopologues: 60,
     });
   });
 
@@ -315,6 +339,7 @@ describe('MF', () => {
       monoisotopicMass: 14.01565006446,
       observedMonoisotopicMass: 14.01510148455093,
       unsaturation: 0.5,
+      nbIsotopologues: 6,
     });
     const html = mf.toHtml();
     expect(html).toBe(
@@ -387,6 +412,7 @@ describe('MF', () => {
       mf: 'C[13C]N4[15N]2',
       unsaturation: 6,
       atoms: { C: 2, N: 6 },
+      nbIsotopologues: 21,
     });
 
     expect(mf.toMF()).toBe('C[13C]N4[15N]2');
@@ -404,6 +430,7 @@ describe('MF', () => {
       mf: 'C39H51N15O25P4',
       atoms: { C: 39, H: 51, N: 15, O: 25, P: 4 },
       unsaturation: 24,
+      nbIsotopologues: 11681280,
     });
   });
 
@@ -417,6 +444,7 @@ describe('MF', () => {
       mf: 'C19H25N7O15P2',
       atoms: { C: 19, H: 25, N: 7, O: 15, P: 2 },
       unsaturation: 12,
+      nbIsotopologues: 565760,
     });
   });
 
@@ -446,6 +474,7 @@ describe('MF', () => {
       mf: 'CC{50,50}H',
       unsaturation: 2.5,
       atoms: { C: 2, H: 1 },
+      nbIsotopologues: 6,
     });
   });
 
@@ -476,6 +505,7 @@ describe('MF', () => {
       mf: 'CC{0.5,0.5}H',
       unsaturation: 2.5,
       atoms: { C: 2, H: 1 },
+      nbIsotopologues: 6,
     });
   });
 
@@ -492,6 +522,7 @@ describe('MF', () => {
       mf: 'H',
       monoisotopicMass: 1.00782503223,
       unsaturation: 0.5,
+      nbIsotopologues: 2,
     });
   });
 
@@ -506,6 +537,7 @@ describe('MF', () => {
       monoisotopicMass: 140.1565006446,
       charge: 0,
       mf: 'C10H20',
+      nbIsotopologues: 231,
       atoms: { C: 10, H: 20 },
       unsaturation: 1,
     });
@@ -530,6 +562,7 @@ describe('MF', () => {
       mf: 'C10H20',
       atoms: { C: 10, H: 20 },
       unsaturation: 1,
+      nbIsotopologues: 231,
     });
   });
 
@@ -545,6 +578,7 @@ describe('MF', () => {
       mf: 'C10H20',
       atoms: { C: 10, H: 20 },
       unsaturation: 1,
+      nbIsotopologues: 231,
     });
   });
 });

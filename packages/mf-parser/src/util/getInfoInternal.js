@@ -30,11 +30,13 @@ export function getInfoInternal(parts, options = {}) {
   } = options;
   if (parts.length === 0) return {};
   if (parts.length === 1) {
-    return getProcessedPart(parts[0], {
+    let oneResult = getProcessedPart(parts[0], {
       customUnsaturations,
       emFieldName,
       msemFieldName,
     });
+    oneResult.nbIsotopologues = getNumberOfIsotopologues(oneResult.atoms);
+    return oneResult;
   }
 
   let result = { parts: [] };
