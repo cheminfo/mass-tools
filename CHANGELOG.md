@@ -1,5 +1,15 @@
 # Changelog
 
+## [7.48.3](https://github.com/cheminfo/mass-tools/compare/v7.48.2...v7.48.3) (2025-03-22)
+
+
+### Bug Fixes
+
+* **mf-parser:** getNumberOfIsotopologues always returns a number. 0 if no stable isotopoe of no MF ([ece391a](https://github.com/cheminfo/mass-tools/commit/ece391ab98a75eec89c42e9ca06cfb4309d15760))
+* **mf-parser:** mf.getInfo always returns the nbIsotopologues property ([032b1da](https://github.com/cheminfo/mass-tools/commit/032b1da800ac360aa0e422b19de1702d7553687b))
+* **mf-parser:** rename types PartInfo -&gt; MFInfo, PartInfoWithParts -> MFInfoWithParts ([3388b75](https://github.com/cheminfo/mass-tools/commit/3388b7561527ea41f7ffa93c297964dce292b746))
+* **mf-parser:** toParts({expand:false}) does not have side effects anymore ([dec8cf9](https://github.com/cheminfo/mass-tools/commit/dec8cf910fffa5b224cef00b5e2d710a461d546f))
+
 ## [7.48.2](https://github.com/cheminfo/mass-tools/compare/v7.48.1...v7.48.2) (2025-03-21)
 
 
