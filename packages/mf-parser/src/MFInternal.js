@@ -13,8 +13,8 @@ import { toParts } from './util/toParts';
 import { toText } from './util/toText';
 
 /** @typedef {import('./util/getIsotopesInfo.types').IsotopesInfo} IsotopesInfo */
-/** @typedef {import('./util/getInfo.types').PartInfo} PartInfo */
-/** @typedef {import('./util/getInfo.types').PartInfoWithParts} PartInfoWithParts */
+/** @typedef {import('./util/getInfo.types').MFInfo} MFInfo */
+/** @typedef {import('./util/getInfo.types').MFInfoWithParts} MFInfoWithParts */
 
 /**
  * Class allowing to deal with molecular formula and derived information
@@ -92,7 +92,7 @@ export class MFInternal {
    * @param {object} [options.customUnsaturations={}] custom unsaturations
    * @param {string} [options.emFieldName='monoisotopicMass'] name of the monoisotopic mass field
    * @param {string} [options.msemFieldName='observedMonoisotopicMass'] name of the observed monoisotopic mass field
-   * @returns {PartInfo|PartInfoWithParts}
+   * @returns {MFInfo|MFInfoWithParts}
    */
   getInfo(options = {}) {
     if (!this.cache.info) {

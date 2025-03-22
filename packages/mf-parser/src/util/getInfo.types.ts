@@ -28,7 +28,7 @@ type CustomNameFields<GIO extends GetInfoOptionsAllowed> = Record<
 > &
   Record<GetMSEM<GIO>, number | undefined>;
 
-export type PartInfo<GIO extends GetInfoOptionsAllowed> = {
+export type MFInfo<GIO extends GetInfoOptionsAllowed> = {
   /**
    * Molecular weight of the molecule formula
    */
@@ -54,11 +54,11 @@ export type PartInfo<GIO extends GetInfoOptionsAllowed> = {
   unsaturation?: number;
 } & CustomNameFields<GIO>;
 
-export type PartInfoWithParts<GIO extends GetInfoOptionsAllowed> = Omit<
-  PartInfo<GIO>,
+export type MFInfoWithParts<GIO extends GetInfoOptionsAllowed> = Omit<
+  MFInfo<GIO>,
   'unsaturation'
 > & {
-  parts: Array<PartInfo<GIO>>;
+  parts: Array<MFInfo<GIO>>;
   unsaturation: number;
 } & CustomNameFields<GIO>;
 
@@ -87,7 +87,7 @@ export interface GetInfoOptions<
  * Guard type to check if the provided options are allowed
  * @example
  * ```ts
- * function getInfo<GIO extends GetInfoOptionsAllowed = GetInfoOptions>(options?: GIO): PartInfo<GIO> | PartInfoWithParts<GIO>;`
+ * function getInfo<GIO extends GetInfoOptionsAllowed = GetInfoOptions>(options?: GIO): MFInfo<GIO> | MFInfoWithParts<GIO>;`
  * ```
  */
 export type GetInfoOptionsAllowed = GetInfoOptions<

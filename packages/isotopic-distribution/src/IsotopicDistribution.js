@@ -11,7 +11,7 @@ const MINIMAL_FWHM = 1e-8;
 const MINIMAL_Y = 1e-8;
 
 /** @typedef {import('mf-parser').IsotopesInfo} IsotopesInfo */
-/** @typedef {import('mf-parser').PartInfo} PartInfo */
+/** @typedef {import('mf-parser').MFInfo} MFInfo */
 
 /** @typedef {import('./IsotopicDistribution.types').XY} XY */
 /** @typedef {import('./IsotopicDistribution.types').IsotopicDistributionPart} IsotopicDistributionPart */
@@ -41,7 +41,7 @@ export class IsotopicDistribution {
       let mf = new MF(value, { ensureCase: options.ensureCase });
       let mfInfo = mf.getInfo();
       const ionizations = preprocessIonizations(options.ionizations);
-      /** @type {PartInfo} */
+      /** @type {MFInfo} */
       const parts = 'parts' in mfInfo ? mfInfo.parts : [mfInfo];
       this.parts = [];
       for (let partOriginal of parts) {

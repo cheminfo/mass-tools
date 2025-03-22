@@ -13,14 +13,14 @@ import { getNumberOfIsotopologues } from './getNumberOfIsotopologues';
 import { partToAtoms } from './partToAtoms';
 import { partToMF } from './partToMF';
 
-/** @typedef {import('./getInfo.types').PartInfo} PartInfo */
-/** @typedef {import('./getInfo.types').PartInfoWithParts} PartInfoWithParts */
+/** @typedef {import('./getInfo.types').MFInfo} MFInfo */
+/** @typedef {import('./getInfo.types').MFInfoWithParts} MFInfoWithParts */
 
 /**
  *
  * @param {*} parts
  * @param {*} [options={}]
- * @returns {object|PartInfo|PartInfoWithParts}
+ * @returns {object|MFInfo|MFInfoWithParts}
  */
 export function getInfoInternal(parts, options = {}) {
   let {
@@ -75,7 +75,7 @@ export function getInfoInternal(parts, options = {}) {
 function getProcessedPart(part, options) {
   let { customUnsaturations, emFieldName, msemFieldName } = options;
 
-  /** @type {PartInfo} */
+  /** @type {MFInfo} */
   let currentPart = {
     mass: 0,
     charge: 0,
