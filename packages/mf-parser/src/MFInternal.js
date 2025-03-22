@@ -75,6 +75,10 @@ export class MFInternal {
   }
 
   toParts(options) {
+    if (options) {
+      return toParts(this.parsed, options);
+    }
+    // we don't want to cache the parts if we are using options
     if (!this.cache.parts) {
       this.cache.parts = toParts(this.parsed, options);
     }
