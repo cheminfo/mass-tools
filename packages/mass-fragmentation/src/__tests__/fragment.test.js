@@ -116,6 +116,7 @@ describe('fragment', () => {
           mf: '',
           atoms: {},
           unsaturation: 1,
+          nbIsotopologues: 0,
         },
         fragmentType: 'molecule',
       },
