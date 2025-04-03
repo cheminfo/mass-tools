@@ -31,6 +31,15 @@ describe('test Spectrum', () => {
     expect(new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).maxY()).toBe(2);
   });
 
+  it('maxY', () => {
+    expect(
+      new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).maxY({
+        from: 1,
+        to: 2,
+      }),
+    ).toBe(1);
+  });
+
   it('info', () => {
     expect(
       new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).info,

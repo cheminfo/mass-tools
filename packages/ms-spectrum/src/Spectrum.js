@@ -5,18 +5,19 @@ import {
   xNormed,
   xSum,
   xMinValue,
+  xyMaxY,
 } from 'ml-spectra-processing';
 import { parseXY } from 'xy-parser';
 
-import { getBestPeaks } from './getBestPeaks';
-import { getFragmentPeaks } from './getFragmentPeaks';
-import { getMassRemainder } from './getMassRemainder';
-import { getPeakChargeBySimilarity } from './getPeakChargeBySimilarity';
-import { getPeaks } from './getPeaks';
+import { getBestPeaks } from './getBestPeaks.js';
+import { getFragmentPeaks } from './getFragmentPeaks.js';
+import { getMassRemainder } from './getMassRemainder.js';
+import { getPeakChargeBySimilarity } from './getPeakChargeBySimilarity.js';
+import { getPeaks } from './getPeaks.js';
 import { getPeaksWithCharge } from './getPeaksWithCharge.js';
-import { isContinuous } from './isContinuous';
-import { peakPicking } from './peakPicking';
-import { peaksWidth } from './peaksWidth';
+import { isContinuous } from './isContinuous.js';
+import { peakPicking } from './peakPicking.js';
+import { peaksWidth } from './peaksWidth.js';
 
 const defaultData = { x: [], y: [] };
 
@@ -73,8 +74,13 @@ export class Spectrum {
     return xMinMaxValues(this.data.x);
   }
 
-  maxY() {
-    return xMaxValue(this.data.y);
+  /**
+   *
+   * @param {import('ml-spectra-processing').XYMaxYOptions} options
+   * @returns
+   */
+  maxY(options) {
+    return xyMaxY(this.data, options);
   }
 
   sumY() {
