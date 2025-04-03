@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.9.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.8.3...ms-spectrum@3.9.0) (2025-04-03)
+
+
+### Features
+
+* **ms-spectrum:** add options to Spectrum.maxY ([#280](https://github.com/cheminfo/mass-tools/issues/280)) ([6a4f3fa](https://github.com/cheminfo/mass-tools/commit/6a4f3faf091b062384559ca95952a01e3d25fae6))
+
+
+
+
+
 ## [3.8.3](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.8.2...ms-spectrum@3.8.3) (2025-03-22)
 
 **Note:** Version bump only for package ms-spectrum

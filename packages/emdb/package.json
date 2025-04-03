@@ -1,6 +1,6 @@
 {
   "name": "emdb",
-  "version": "3.4.5",
+  "version": "3.4.6",
   "description": "Database manager for exact mass query",
   "main": "lib/src/index.js",
   "files": [
@@ -32,7 +32,7 @@
     "mf-utilities": "^3.3.8",
     "ml-regression-theil-sen": "^3.0.0",
     "ml-spectra-processing": "^14.7.0",
-    "ms-spectrum": "^3.8.3",
+    "ms-spectrum": "^3.9.0",
     "nucleotide": "^3.2.8",
     "openchemlib-utils": "^6.4.1",
     "peaks-similarity": "^3.1.1",
