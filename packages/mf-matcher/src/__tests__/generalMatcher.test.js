@@ -49,6 +49,13 @@ test('mfFilter', () => {
       },
     }),
   ).toBe(true);
+  expect(
+    generalMatcher(entry, {
+      atoms: {
+        N: { min: 0, max: 5 },
+      },
+    }),
+  ).toBe(false);
 });
 
 test('negative charge', () => {
