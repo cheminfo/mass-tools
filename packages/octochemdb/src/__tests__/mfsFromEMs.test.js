@@ -59,7 +59,7 @@ describe('mfsFromEMs', () => {
       precision: 10,
       limit: 10,
     });
-    expect(data).toHaveLength(3);
+    expect(data).toHaveLength(4);
     expect(data).toMatchSnapshot();
   }, 30000);
 
