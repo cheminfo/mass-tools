@@ -1,9 +1,10 @@
 import { MF } from 'mf-parser';
 import OCL from 'openchemlib';
-import { Reactions, getMF } from 'openchemlib-utils';
+import { getMF, Reactions } from 'openchemlib-utils';
 
 import { getDatabase } from './database/getDatabase';
 import { getMasses } from './utils/getMasses';
+
 /**
  * @description Fragment a molecule by applying reactions from a custom database of reactions
  * @param {import('openchemlib').Molecule} oclMolecule - The OCL molecule to be fragmented

@@ -1,4 +1,4 @@
-import OCL from 'openchemlib/full.js';
+import OCL from 'openchemlib';
 import { describe, expect, it } from 'vitest';
 
 import { EMDB } from '../..';

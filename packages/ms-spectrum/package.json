@@ -24,14 +24,14 @@
     "mf-finder": "^3.4.15",
     "mf-parser": "^3.4.2",
     "mf-utilities": "^3.3.8",
-    "ml-gsd": "^12.1.8",
+    "ml-gsd": "^13.0.1",
     "ml-regression-power": "^3.0.0",
-    "ml-spectra-processing": "^14.7.0",
+    "ml-spectra-processing": "^14.13.0",
     "peaks-similarity": "^3.1.1",
     "xy-parser": "^5.0.5"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2",
-    "spectrum-generator": "^8.0.11"
+    "spectrum-generator": "^8.1.0"
   }
 }
