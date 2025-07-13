@@ -1,3 +1,5 @@
+// @vitest-environment jsdom
+
 import OCL, { Molecule } from 'openchemlib';
 import { expect, test } from 'vitest';
 
