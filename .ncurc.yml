@@ -3,7 +3,5 @@ workspaces: true
 reject:
   # https://github.com/cheminfo/mass-tools/issues/192
   - ml-fcnnls
-  # https://github.com/cheminfo/mass-tools/issues/193
-  - svgdom
   # https://github.com/cheminfo/mass-tools/issues/191
   - '@orama/orama'

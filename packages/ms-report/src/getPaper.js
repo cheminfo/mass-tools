@@ -1,6 +1,7 @@
 import { SVG, registerWindow } from '@svgdotjs/svg.js';
-import window from 'svgdom';
+import { createSVGWindow } from 'svgdom';
 
+const window = createSVGWindow();
 const document = window.document;
 registerWindow(window, document);
 
