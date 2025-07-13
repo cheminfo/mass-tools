@@ -13,7 +13,7 @@ exports[`mfsFromEMs > simple case negative ionization 1`] = `
         "O": 2,
         "S": 1,
       },
-      "count": 71,
+      "count": 77,
       "em": 122.01499861577999,
       "unsaturation": 1,
     },
@@ -49,6 +49,48 @@ exports[`mfsFromEMs > simple case negative ionization 1`] = `
     },
   },
   {
+    "_id": "H10N2Si3",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=H10N2Si3",
+    "data": {
+      "atoms": {
+        "H": 10,
+        "N": 2,
+        "Si": 3,
+      },
+      "count": 5,
+      "em": 122.01517793511,
+      "unsaturation": 0,
+    },
+    "ionization": {
+      "atoms": {
+        "H": -2,
+      },
+      "charge": -2,
+      "em": -2.01565006446,
+      "mf": "(H+)-2",
+    },
+    "mfInfo": {
+      "atoms": {
+        "H": 10,
+        "N": 2,
+        "Si": 3,
+      },
+      "charge": 0,
+      "em": 122.01517793511,
+      "mass": 122.34931008056722,
+      "mf": "H10N2Si3",
+      "nbIsotopologues": 330,
+      "unsaturation": 0,
+    },
+    "ms": {
+      "charge": -2,
+      "delta": -0.0003125152340714976,
+      "em": 60.00031251523407,
+      "ionization": "(H+)-2",
+      "ppm": -5.208560105285286,
+    },
+  },
+  {
     "_id": "C4H7ClO2",
     "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C4H7ClO2",
     "data": {
@@ -58,7 +100,7 @@ exports[`mfsFromEMs > simple case negative ionization 1`] = `
         "H": 7,
         "O": 2,
       },
-      "count": 156,
+      "count": 159,
       "em": 122.01345714675,
       "unsaturation": 1,
     },
@@ -144,7 +186,7 @@ exports[`mfsFromEMs > string containing more than 1 monoisotopic mass 1`] = `
       "atoms": {
         "C": 1,
       },
-      "count": 8,
+      "count": 11,
       "em": 12,
       "unsaturation": 2,
     },
