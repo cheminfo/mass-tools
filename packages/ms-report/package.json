@@ -27,6 +27,6 @@
     "mf-utilities": "^3.3.8",
     "nucleotide": "^3.2.8",
     "peptide": "^2.3.8",
-    "svgdom": "0.0.21"
+    "svgdom": "^0.1.22"
   }
 }
