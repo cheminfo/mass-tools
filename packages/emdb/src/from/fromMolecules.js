@@ -2,9 +2,10 @@ import { fragment } from 'mass-fragmentation';
 import { msemMatcher } from 'mf-matcher';
 import { MF } from 'mf-parser';
 import { preprocessIonizations } from 'mf-utilities';
+
 /** * Generates a database 'monoisotopic' from a monoisotopic mass and various options
  * @param {{smiles?:string,molecule?:string,idCode?:string}[]}    entries - Array of object containing a property to recreate the molecule
- * @param {import('openchemlib')} ocl - The OCL library
+ * @param {typeof import('openchemlib')} OCL - The OCL library
  * @param {object}    [options={}]
  * @param {function}  [options.onStep] - Callback to do after each step
  * @param {boolean}   [options.allowNeutral=true]
@@ -18,8 +19,7 @@ import { preprocessIonizations } from 'mf-utilities';
  * @param {import('mf-matcher').MSEMFilterOptions}        [options.filter={}]
  * @returns {Promise}
  */
-
-export async function fromMolecules(entries, ocl, options = {}) {
+export async function fromMolecules(entries, OCL, options = {}) {
   let {
     onStep,
     ionizations,
@@ -32,7 +32,7 @@ export async function fromMolecules(entries, ocl, options = {}) {
   let results = [];
   for (let i = 0; i < entries.length; i++) {
     const entry = entries[i];
-    const molecule = getMolecule(entry, ocl);
+    const molecule = getMolecule(entry, OCL);
     if (!molecule) continue;
 
     const { acyclic = false, cyclic = false, full = true } = fragmentation;
@@ -122,20 +122,20 @@ function groupFragmentationResults(results) {
 /**
  *
  * @param {object} entry
- * @param {import('openchemlib')} ocl - The OCL library
+ * @param {typeof import('openchemlib')} OCL - The OCL library
  */
-function getMolecule(entry, ocl) {
+function getMolecule(entry, OCL) {
   if (entry.idCode) {
-    return ocl.Molecule.fromIDCode(entry.idCode);
+    return OCL.Molecule.fromIDCode(entry.idCode);
   }
   if (entry.ocl && entry.ocl.idCode) {
-    return ocl.Molecule.fromIDCode(entry.ocl.idCode);
+    return OCL.Molecule.fromIDCode(entry.ocl.idCode);
   }
   if (entry.smiles) {
-    return ocl.Molecule.fromSmiles(entry.smiles);
+    return OCL.Molecule.fromSmiles(entry.smiles);
   }
   if (entry.molfile) {
-    return ocl.Molecule.fromMolfile(entry.molfile);
+    return OCL.Molecule.fromMolfile(entry.molfile);
   }
   return undefined;
 }

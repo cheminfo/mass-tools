@@ -1,6 +1,11 @@
-import Wikidata from 'wikidata-sdk';
+import wikiBase from 'wikibase-sdk';
 
-let url = Wikidata.sparqlQuery(`
+const wikidata = wikiBase({
+  instance: 'https://www.wikidata.org',
+  sparqlEndpoint: 'https://query.wikidata.org/sparql',
+});
+
+const url = wikidata.sparqlQuery(`
     PREFIX wd: <http://www.wikidata.org/entity/>
     PREFIX wdt: <http://www.wikidata.org/prop/direct/>
     
@@ -32,12 +37,12 @@ let url = Wikidata.sparqlQuery(`
     LIMIT 10
        `);
 
-let result = await fetch(url, {
+const result = await fetch(url, {
   headers: {
     'User-Agent': 'cheminfo/mass-tools',
   },
 });
-let data = await result.text();
+const data = await result.text();
 
 // eslint-disable-next-line no-console
 console.log(data);
