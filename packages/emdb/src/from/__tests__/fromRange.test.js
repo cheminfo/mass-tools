@@ -6,12 +6,14 @@ describe('fromRange', () => {
   it('no filter', async () => {
     let emdb = new EMDB();
     await emdb.fromRange('C1-10, H1-10; Cl0-1 Br0-1');
+
     expect(emdb.databases.generated).toHaveLength(80);
   });
 
   it('with charge', async () => {
     let emdb = new EMDB();
     await emdb.fromRange('C1-10 H1-10 (-)');
+
     expect(emdb.databases.generated[0].charge).toBe(-1);
   });
 
@@ -22,6 +24,7 @@ describe('fromRange', () => {
         callback: (entry) => entry.atoms.C - entry.atoms.H === 0,
       },
     });
+
     expect(emdb.databases.generated).toHaveLength(4);
   });
 });

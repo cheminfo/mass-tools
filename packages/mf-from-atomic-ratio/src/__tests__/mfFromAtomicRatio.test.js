@@ -12,6 +12,7 @@ test('basic case', async () => {
       ranges: 'C0-1 H0-1',
     },
   );
+
   expect(mfs).toHaveLength(1);
   expect(mfs[0]).toMatchCloseTo({
     em: 13.00782503223,
@@ -50,6 +51,7 @@ test('More advanced case with filtering', async () => {
       maxTotalError: 0.02,
     },
   );
+
   expect(mfs).toHaveLength(363);
   expect(mfs[0]).toMatchCloseTo({
     em: 67.98982923914,

@@ -7,6 +7,7 @@ test('fromMonoisotopicMass', async () => {
   await emdb.fromMonoisotopicMass(120, {
     allowNeutral: true,
   });
+
   expect(emdb.databases.monoisotopic).toHaveLength(8);
 });
 
@@ -15,6 +16,7 @@ test('fromMonoisotopicMass string', async () => {
   await emdb.fromMonoisotopicMass('120,60', {
     allowNeutral: true,
   });
+
   expect(emdb.databases.monoisotopic).toHaveLength(10);
 });
 
@@ -23,6 +25,7 @@ test('fromMonoisotopicMass array', async () => {
   await emdb.fromMonoisotopicMass([60, 120], {
     allowNeutral: true,
   });
+
   expect(emdb.databases.monoisotopic).toHaveLength(10);
 });
 
@@ -33,6 +36,7 @@ test('fromMonoisotopicMass with ionizations', async () => {
     ionizations: ', H+, K+',
     precision: 100,
   });
+
   expect(emdb.databases.monoisotopic).toHaveLength(9);
 });
 
@@ -51,5 +55,6 @@ test('fromMonoisotopicMass large database', async () => {
     allowNeutral: true,
     limit: 10000,
   });
+
   expect(emdb.databases.monoisotopic).toHaveLength(1407);
 });

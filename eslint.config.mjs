@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import cheminfo from 'eslint-config-cheminfo-typescript/base';
 import unicorn from 'eslint-config-cheminfo-typescript/unicorn';
+import vitest from 'eslint-config-cheminfo-typescript/vitest';
 import globals from 'globals';
 
 export default defineConfig(
@@ -22,6 +23,7 @@ export default defineConfig(
   ]),
   cheminfo,
   unicorn,
+  vitest,
   {
     languageOptions: {
       globals: {

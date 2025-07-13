@@ -16,6 +16,7 @@ describe('test getPeaksWithCharge', () => {
       high: 1,
       precision: 30,
     });
+
     expect(peaksWithCharge[0].charge).toBe(1);
     expect(peaksWithCharge[1].charge).toBe(1);
     expect(peaksWithCharge[2].charge).toBe(1);
@@ -34,6 +35,7 @@ describe('test getPeaksWithCharge', () => {
       high: 1,
       precision: 30,
     });
+
     expect(newPeaks).toStrictEqual([{ x: 1.5, y: 2, charge: 1 }]);
   });
 
@@ -44,6 +46,7 @@ describe('test getPeaksWithCharge', () => {
       { x: 2.5, y: 3 },
     ];
     const peaksWithCharge = getPeaksWithCharge(peaks, peaks);
+
     expect(peaksWithCharge[0].charge).toBe(2);
     expect(peaksWithCharge[1].charge).toBe(1);
     expect(peaksWithCharge[2].charge).toBe(1);
@@ -61,6 +64,7 @@ describe('test getPeaksWithCharge', () => {
 
     const peaksWithCharge = getPeaksWithCharge(peaks, peaks);
     const charges = peaksWithCharge.map((peak) => peak.charge);
+
     expect(charges).toStrictEqual([2, 1, 2, 3, 3, 3]);
   });
 
@@ -86,6 +90,7 @@ describe('test getPeaksWithCharge', () => {
     ];
 
     const peaksWithCharge = getPeaksWithCharge(selectedPeaks, allPeaks);
+
     expect(peaksWithCharge).toStrictEqual([
       { x: 1.5, y: 2, charge: 1 },
       { x: 3.3333, y: 5, charge: 3 },

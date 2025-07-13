@@ -11,6 +11,7 @@ describe('test distribution multiply', () => {
     let dist3 = dist1.multiply(dist2);
 
     dist3.sortX();
+
     expect(dist1.array).toStrictEqual([
       { x: 2, y: 4 },
       { x: 3, y: 12 },

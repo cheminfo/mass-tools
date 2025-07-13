@@ -5,6 +5,7 @@ import { baseLoss } from '..';
 describe('baseLoss', () => {
   it('Base loss of HAlaDampDtmpDcmpDcmpOH', () => {
     let nucleotides = baseLoss('HAlaDampDtmpDcmpDcmpOH');
+
     expect(nucleotides).toHaveLength(3);
     expect(nucleotides).toStrictEqual([
       'HAlaDampDtmpDcmpDcmpOH(C-5H-5N-5)$A*',
@@ -15,6 +16,7 @@ describe('baseLoss', () => {
 
   it('Base loss of HODampDtmpDcmpDcmpH', () => {
     let nucleotides = baseLoss('HODampDtmpDcmpDcmpH');
+
     expect(nucleotides).toHaveLength(3);
     expect(nucleotides).toStrictEqual([
       'HODampDtmpDcmpDcmpH(C-5H-5N-5)$A*',
@@ -25,6 +27,7 @@ describe('baseLoss', () => {
 
   it('Base loss of HODampH', () => {
     let nucleotides = baseLoss('HODampH');
+
     expect(nucleotides).toHaveLength(1);
     expect(nucleotides).toStrictEqual(['HODampH(C-5H-5N-5)$A*']);
   });

@@ -12,6 +12,7 @@ describe('normalizeActivities', () => {
     );
 
     const result = normalizeActivities(entry);
+
     expect(result.data.activities[0]).toMatchInlineSnapshot(`
       {
         "$id": "NPC294249",

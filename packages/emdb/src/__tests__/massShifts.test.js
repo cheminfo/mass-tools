@@ -29,6 +29,7 @@ describe('test massShifts', () => {
     ];
 
     let result = massShifts(data, { minLength: 2 });
+
     expect(result.intercept).toBe(0.1);
     expect(result.slope).toBe(0.01);
     expect(result.shifts).toStrictEqual({

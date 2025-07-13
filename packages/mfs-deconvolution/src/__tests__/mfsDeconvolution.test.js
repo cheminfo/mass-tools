@@ -15,6 +15,7 @@ describe('mfsDeconvolution', () => {
   it('mfsDeconvolution no overlap', async () => {
     const text = readFileSync(path.join(__dirname, './data/ionic.txt'));
     const spectrum = new Spectrum(parseXY(text));
+
     await expect(async () =>
       mfsDeconvolution(spectrum, ['C.N', 'N.O']),
     ).rejects.toThrow(
@@ -45,6 +46,7 @@ describe('mfsDeconvolution', () => {
     const relativeQuantities = mfs
       .map((mf) => mf.relativeQuantity)
       .filter((value) => value > 0.01);
+
     expect(relativeQuantities).toBeDeepCloseTo(
       [
         0.021505061805686832, 0.031194555558935227, 0.028292482806339267,
@@ -73,6 +75,7 @@ describe('mfsDeconvolution', () => {
   it('no ranges', async () => {
     const text = readFileSync(path.join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
+
     // @ts-ignore
     await expect(async () => mfsDeconvolution(spectrum)).rejects.toThrow(
       'Ranges must be an array of string or object',
@@ -89,6 +92,7 @@ describe('mfsDeconvolution', () => {
     ]);
 
     const absoluteQuantities = mfs.map((mf) => mf.absoluteQuantity);
+
     // results is completely wrong because
     // we didn't set the ionizations
     expect(absoluteQuantities).toBeDeepCloseTo([99, 50.5, 20.3, 10, 0, 0], 0);
@@ -105,10 +109,13 @@ describe('mfsDeconvolution', () => {
     );
 
     const absoluteQuantities = result.mfs.map((mf) => mf.absoluteQuantity);
+
     // results is completely wrong because
     // we didn't set the ionizations
     expect(absoluteQuantities).toBeDeepCloseTo([99, 50.5, 20.3, 10, 0, 0], 0);
+
     const logs = logger.getLogs();
+
     expect(logs).toHaveLength(6);
     expect(logs[0].message).toBe(
       'No ionizations provided this could be an error if the molecule is not naturally charged.',
@@ -118,7 +125,7 @@ describe('mfsDeconvolution', () => {
     );
   });
 
-  it('HValOH ', async () => {
+  it('HValOH', async () => {
     const text = readFileSync(path.join(__dirname, './data/isotopic.txt'));
     const spectrum = new Spectrum(parseXY(text));
 
@@ -128,6 +135,7 @@ describe('mfsDeconvolution', () => {
     ]);
 
     const absoluteQuantities = mfs.map((mf) => mf.absoluteQuantity);
+
     // results is completely wrong because
     // we didn't set the ionizations
     expect(absoluteQuantities).toBeDeepCloseTo([99, 50.5, 20.3, 10, 0, 0], 0);
@@ -144,6 +152,7 @@ describe('mfsDeconvolution', () => {
     );
 
     const absoluteQuantities = mfs.map((mf) => mf.absoluteQuantity);
+
     expect(absoluteQuantities).toBeDeepCloseTo([99, 50.5, 20.3, 10], 0);
   });
 
@@ -162,28 +171,37 @@ describe('mfsDeconvolution', () => {
       logger,
       peakWidthFct: (em) => em / 1000,
     });
+
     expect(matchingScore).toBeCloseTo(1);
+
     const absoluteQuantities = mfs.map((mf) => mf.absoluteQuantity);
+
     expect(absoluteQuantities).toBeDeepCloseTo([100, 50, 20, 10, 0, 0, 0], 3);
+
     const relativeQuantities = mfs.map((mf) => mf.relativeQuantity);
+
     expect(relativeQuantities).toBeDeepCloseTo([
       0.555556, 0.277778, 0.111111, 0.055554, 0, 0, 0,
     ]);
+
     let totalDifference = 0;
     for (const [index, peak] of spectrum.peaks.entries()) {
       totalDifference += Math.abs(reconstructed.y[index] - peak.y);
     }
+
     expect(totalDifference).toBeLessThan(0.001);
     expect(difference.x).toHaveLength(19);
     expect(difference.y).toHaveLength(19);
     expect(logger.getLogs()).toHaveLength(5);
 
     const filteredReconstructed = getFilteredReconstructed();
+
     expect(filteredReconstructed).toBeDeepCloseTo(reconstructed);
 
     const reallyFilteredReconstructed = getFilteredReconstructed(
       mfs.slice(2, 4).map((mf) => mf.id),
     );
+
     expect(reallyFilteredReconstructed.x).toStrictEqual(
       filteredReconstructed.x,
     );

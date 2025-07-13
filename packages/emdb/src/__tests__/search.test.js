@@ -11,6 +11,7 @@ describe('test search', () => {
       minEM: 100.123,
       maxEM: 140,
     });
+
     expect(results.contaminants).toHaveLength(30);
   });
 
@@ -27,6 +28,7 @@ describe('test search', () => {
         flatten: true,
       },
     );
+
     expect(results).toHaveLength(30);
     expect(results[0].database).toBe('contaminants');
   });

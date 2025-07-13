@@ -16,6 +16,7 @@ describe('test search commercial', () => {
         flatten: true,
       },
     );
+
     expect(results).toHaveLength(66);
 
     results = emdb.search(
@@ -27,11 +28,13 @@ describe('test search commercial', () => {
         flatten: false,
       },
     );
+
     expect(results.commercials).toHaveLength(66);
 
     results = emdb.searchMSEM(100, {
       flatten: true,
     });
+
     expect(results).toHaveLength(0);
 
     results = emdb.searchMSEM(100, {
@@ -47,6 +50,7 @@ describe('test search commercial', () => {
         },
       },
     });
+
     expect(results[0].ms.charge).toBe(1);
     expect(results[0].ms.em).toBeCloseTo(100, 1);
     expect(results[0].ms.ppm).toBeLessThan(500);

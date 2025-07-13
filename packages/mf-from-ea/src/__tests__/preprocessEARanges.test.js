@@ -18,6 +18,7 @@ describe('preprocessEARanges', () => {
       ],
       { C: 0.8, H: 0.2 },
     );
+
     expect(Array.isArray(possibilities)).toBe(true);
     expect(possibilities).toHaveLength(5);
 
@@ -42,6 +43,7 @@ describe('preprocessEARanges', () => {
       C: 0.8,
       H: 0.2,
     });
+
     expect(Array.isArray(possibilities)).toBe(true);
     expect(possibilities).toHaveLength(3);
     expect(possibilities[2]).toMatchCloseTo(

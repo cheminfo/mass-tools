@@ -34,6 +34,7 @@ describe('isotopicDistribution with array', () => {
       .array.sort((a, b) => b.y - a.y)
       .map((entry) => entry.y)
       .slice(0, 3);
+
     expect(intensities).toBeDeepCloseTo([2.9, 1.96, 0.989], 2);
   });
 });

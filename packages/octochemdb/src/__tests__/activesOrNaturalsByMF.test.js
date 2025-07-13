@@ -8,6 +8,7 @@ import { server } from './testServer';
 beforeAll(() => {
   server.listen();
 });
+
 // Reset handlers so that each test could alter them
 //without affecting other, unrelated tests.
 afterEach(() => server.resetHandlers());
@@ -16,7 +17,8 @@ afterEach(() => server.resetHandlers());
 afterAll(() => {
   server.close();
 });
-describe('activesOrNaturalsByMF', () => {
+
+describe('activesOrNaturalsByMF', { timeout: 30_000 }, () => {
   it('simple case', async () => {
     let data = await activesOrNaturalsByMF({
       url: 'http://localhost/data/activesOrNaturalsByMFSimple.json',
@@ -25,10 +27,11 @@ describe('activesOrNaturalsByMF', () => {
       precision: 1,
       limit: 100,
     });
-    expect(data.length).toBeGreaterThan(2);
-  }, 30000);
 
-  it('with range', async () => {
+    expect(data.length).toBeGreaterThan(2);
+  });
+
+  it('with range', { timeout: 30_000 }, async () => {
     let entries = await activesOrNaturalsByMF({
       url: 'http://localhost/data/activesOrNaturalsByMFRange.json',
       masses: 300.123,
@@ -60,5 +63,5 @@ describe('activesOrNaturalsByMF', () => {
     expect(nbPatents).toBeGreaterThan(238);
     expect(nbPubmeds).toBeGreaterThan(36);
     expect(nbMassSpectra).toBeGreaterThanOrEqual(0);
-  }, 30000);
+  });
 });

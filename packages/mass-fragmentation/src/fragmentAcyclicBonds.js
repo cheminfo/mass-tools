@@ -52,7 +52,7 @@ export function fragmentAcyclicBonds(molecule, options = {}) {
 
   let brokenMolecule = {};
   let fragmentMap = [];
-  let nbFragments = [];
+  let nbFragments = 0;
   let results = [];
 
   for (let bond of bonds) {

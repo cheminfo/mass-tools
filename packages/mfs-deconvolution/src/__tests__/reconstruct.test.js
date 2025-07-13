@@ -32,6 +32,7 @@ test('reconstruct', () => {
       peakWidthFct: 'mass * 0.1',
     },
   });
+
   expect(reconstructed).toMatchCloseTo({
     x: [1.05, 1.5, 2.05, 2.5, 3.05, 3.5],
     y: [2, 1, 4, 2, 6, 3],

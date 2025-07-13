@@ -17,6 +17,7 @@ describe('Comprator', () => {
     };
     const comparator = new MSComparator();
     const similarity = comparator.getSimilarity(data1, data2);
+
     expect(similarity).toBeDeepCloseTo({
       nbCommonPeaks: 3,
       nbPeaks2: 3,
@@ -25,6 +26,7 @@ describe('Comprator', () => {
       cosine: 1,
     });
   });
+
   it('scaled values', () => {
     const data1 = {
       x: [10, 20, 30],
@@ -36,6 +38,7 @@ describe('Comprator', () => {
     };
     const comparator = new MSComparator();
     const similarity = comparator.getSimilarity(data1, data2);
+
     expect(similarity).toBeDeepCloseTo({
       nbCommonPeaks: 3,
       nbPeaks1: 3,
@@ -44,6 +47,7 @@ describe('Comprator', () => {
       cosine: 1,
     });
   });
+
   it('default values', () => {
     const data1 = {
       x: [10, 20, 30],
@@ -55,6 +59,7 @@ describe('Comprator', () => {
     };
     const comparator = new MSComparator();
     const similarity = comparator.getSimilarity(data1, data2);
+
     expect(similarity).toBeDeepCloseTo({
       nbCommonPeaks: 3,
       nbPeaks1: 3,
@@ -63,6 +68,7 @@ describe('Comprator', () => {
       cosine: 1,
     });
   });
+
   it('default values but nothing match', () => {
     const data1 = {
       x: [10, 20, 30],
@@ -74,6 +80,7 @@ describe('Comprator', () => {
     };
     const comparator = new MSComparator();
     const similarity = comparator.getSimilarity(data1, data2);
+
     expect(similarity).toStrictEqual({
       nbCommonPeaks: 0,
       nbPeaks1: 3,
@@ -82,6 +89,7 @@ describe('Comprator', () => {
       cosine: 0,
     });
   });
+
   it('default values delta 1', () => {
     const data1 = {
       x: [10, 20, 30],
@@ -93,6 +101,7 @@ describe('Comprator', () => {
     };
     const comparator = new MSComparator({ delta: 1 });
     const similarity = comparator.getSimilarity(data1, data2);
+
     expect(similarity).toBeDeepCloseTo({
       nbCommonPeaks: 3,
       nbPeaks1: 3,
@@ -101,6 +110,7 @@ describe('Comprator', () => {
       cosine: 1,
     });
   });
+
   it('default values massPower 1', () => {
     const data1 = {
       x: [10, 20, 30],
@@ -112,6 +122,7 @@ describe('Comprator', () => {
     };
     const comparator = new MSComparator({ massPower: 1 });
     const similarity = comparator.getSimilarity(data1, data2);
+
     expect(similarity).toBeDeepCloseTo({
       nbCommonPeaks: 1,
       nbPeaks1: 3,
@@ -120,6 +131,7 @@ describe('Comprator', () => {
       cosine: 0.07092177177707934,
     });
   });
+
   it('default values requiredY true', () => {
     const data1 = {
       x: [10, 20, 30],
@@ -134,6 +146,7 @@ describe('Comprator', () => {
       selectedMasses: [10],
     });
     const similarity = comparator.getSimilarity(data1, data2);
+
     expect(similarity).toStrictEqual({
       nbCommonPeaks: 1,
       nbPeaks1: 1,
@@ -154,6 +167,7 @@ describe('Comprator', () => {
     };
     const comparator = new MSComparator({ minNbCommonPeaks: 1 });
     const similarity = comparator.getSimilarity(data1, data2);
+
     expect(similarity).toBeDeepCloseTo({
       nbCommonPeaks: 1,
       nbPeaks1: 3,
@@ -174,6 +188,7 @@ describe('Comprator', () => {
     };
     const comparator = new MSComparator({ minNbCommonPeaks: 2 });
     const similarity = comparator.getSimilarity(data1, data2);
+
     expect(similarity).toStrictEqual({
       nbCommonPeaks: 1,
       nbPeaks1: 3,
@@ -191,6 +206,7 @@ describe('Comprator', () => {
     const masses = [10, 20.2, 30.2];
     const comparator = new MSComparator();
     const similarity = comparator.getSimilarityToMasses(data, masses);
+
     expect(similarity).toBeDeepCloseTo({
       nbCommonPeaks: 1,
       nbPeaks1: 3,

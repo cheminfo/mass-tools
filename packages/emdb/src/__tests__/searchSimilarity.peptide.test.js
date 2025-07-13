@@ -10,7 +10,7 @@ import { EMDB } from '..';
 expect.extend({ toBeDeepCloseTo });
 
 describe('test searchSimilarity for peptide', () => {
-  let experimental = loadUbiquitin();
+  const experimental = loadUbiquitin();
 
   it('should find one result with bad distribution', async () => {
     let emdb = new EMDB();
@@ -46,6 +46,7 @@ describe('test searchSimilarity for peptide', () => {
       },
     });
     delete results.peptidic[0].ms.similarity.experimental;
+
     expect(results.peptidic[0]).toBeDeepCloseTo({
       charge: 1,
       em: 4210.304872186381,

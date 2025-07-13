@@ -12,6 +12,7 @@ describe('generateMFs advanced', () => {
       ['C-1', 'H-1'],
     ];
     let result = await generateMFs(mfsArray, { ionizations: 'H+' });
+
     expect(result).toBeDeepCloseTo([
       {
         charge: 0,

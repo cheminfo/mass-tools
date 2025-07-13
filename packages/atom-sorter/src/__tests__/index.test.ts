@@ -13,11 +13,13 @@ test('atom-sorter test', () => {
 test('sort an array', () => {
   const atoms = ['H', 'Cl', 'C', 'O', 'N', 'Br'];
   atoms.sort((a, b) => atomSorter(a, b));
+
   expect(atoms).toStrictEqual(['C', 'H', 'Br', 'Cl', 'N', 'O']);
 });
 
 test('sort an array HCl', () => {
   const atoms = ['Cl', 'H'];
   atoms.sort((a, b) => atomSorter(a, b));
+
   expect(atoms).toStrictEqual(['H', 'Cl']);
 });

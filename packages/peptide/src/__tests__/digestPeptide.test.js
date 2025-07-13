@@ -9,6 +9,7 @@ describe('Checking digest sequence', () => {
       minMissed: 0,
       maxMissed: 0,
     });
+
     expect(result).toStrictEqual([
       'HLysOH$D1>1',
       'HLysOH$D2>2',
@@ -22,6 +23,7 @@ describe('Checking digest sequence', () => {
       minMissed: 0,
       maxMissed: 1,
     });
+
     expect(result).toStrictEqual([
       'HLysOH$D1>1',
       'HLysLysOH$D1>2',
@@ -37,11 +39,13 @@ describe('Checking digest sequence', () => {
       minMissed: 1,
       maxMissed: 1,
     });
+
     expect(result).toStrictEqual(['HLysLysOH$D1>2', 'HLysAlaAlaLysOH$D2>5']);
   });
 
   it('Normal small sequence digest, default value', () => {
     let result = digestPeptide('HLysAlaOH');
+
     expect(result).toStrictEqual(['HLysOH$D1>1', 'HAlaOH$D2>2']);
   });
 
@@ -52,6 +56,7 @@ describe('Checking digest sequence', () => {
       minMissed: 0,
       maxMissed: 0,
     });
+
     expect(result).toStrictEqual([
       'HLysOH$D1>1',
       'HLeuProOH$D2>3',

@@ -31,7 +31,7 @@ describe('test Spectrum', () => {
     expect(new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).maxY()).toBe(2);
   });
 
-  it('maxY', () => {
+  it('maxY with from-to', () => {
     expect(
       new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).maxY({
         from: 1,
@@ -53,8 +53,10 @@ describe('test Spectrum', () => {
 
   it('sumY', () => {
     let spectrum = new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] });
+
     expect(spectrum.sumY()).toBe(5);
   });
+
   it('scaleY', () => {
     expect(
       new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] }).scaleY(100).data,
@@ -74,6 +76,7 @@ describe('test Spectrum', () => {
       data.x.push(i);
       data.y.push(i > 3 ? 6 - i : i);
     }
+
     expect(new Spectrum(data).peakPicking()).toStrictEqual([
       { width: 0, x: 0, y: 0 },
       { width: 0, x: 1, y: 1 },
@@ -96,6 +99,7 @@ describe('test Spectrum', () => {
       },
     });
     const result = new Spectrum(data).peakPicking();
+
     expect(result).toBeDeepCloseTo([
       {
         x: 5,
@@ -116,6 +120,7 @@ describe('test Spectrum', () => {
       },
     });
     const result = new Spectrum(data, { threshold: 1 }).peakPicking();
+
     expect(result).toStrictEqual([]);
   });
 
@@ -132,6 +137,7 @@ describe('test Spectrum', () => {
 
     data.y[99] = data.y[100];
     let result = new Spectrum(data).peakPicking();
+
     expect(result).toBeDeepCloseTo([
       { x: 4.975, y: 10491.836675359205, width: 0.2 },
     ]);
@@ -143,5 +149,6 @@ test('fromText', () => {
     1 2
     2 3
     3 4`);
+
   expect(spectrum.data).toStrictEqual({ x: [1, 2, 3], y: [2, 3, 4] });
 });

@@ -7,9 +7,9 @@ import { parseXY } from 'xy-parser';
 import { EMDB } from '..';
 
 describe('test searchSimilarity for ethylbenzene', () => {
-  let experimental = loadEthylbenzene();
   it('should find one result with bad distribution', async () => {
-    let emdb = new EMDB();
+    const experimental = loadEthylbenzene();
+    const emdb = new EMDB();
     await emdb.fromMonoisotopicMass(106.077, {
       ionizations: 'Na+,K+,(H+),(H+)2,(H+)3,+',
       ranges: 'C0-100 H0-100 N0-100 O0-100',

@@ -15,6 +15,7 @@ test('getEA', () => {
   let result2 = new MF('2C2').getEA();
   let result3 = new MF('C4').getEA();
   let result4 = new MF('C2 . 2C').getEA();
+
   expect(result1).toStrictEqual(result2);
   expect(result1).toStrictEqual(result3);
   expect(result1).toStrictEqual(result4);

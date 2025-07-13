@@ -18,6 +18,7 @@ describe('test mf-from-ea', () => {
         maxTotalError: 10,
       },
     );
+
     expect(result.mfs).toHaveLength(5);
 
     expect(result.mfs[2]).toMatchCloseTo({
@@ -43,6 +44,7 @@ describe('test mf-from-ea', () => {
         maxTotalError: 0.002,
       },
     );
+
     expect(result.mfs).toHaveLength(23);
   });
 
@@ -72,6 +74,7 @@ describe('test mf-from-ea', () => {
         maxTotalError: 10,
       },
     );
+
     expect(result.mfs).toHaveLength(5);
     expect(result.mfs[2]).toMatchCloseTo({
       mf: 'C',
@@ -97,6 +100,7 @@ describe('test mf-from-ea', () => {
         maxMW: 12.5,
       },
     );
+
     expect(result.mfs).toHaveLength(1);
   });
 
@@ -123,6 +127,7 @@ describe('test mf-from-ea', () => {
         maxTotalError: 1,
       },
     );
+
     expect(result.mfs).toHaveLength(3);
   });
 
@@ -156,6 +161,7 @@ describe('test mf-from-ea', () => {
         maxTotalError: 0.01,
       },
     );
+
     expect(result.mfs).toHaveLength(108);
   });
 
@@ -176,6 +182,7 @@ describe('test mf-from-ea', () => {
         },
       },
     );
+
     expect(result.mfs).toHaveLength(1);
   });
 
@@ -195,6 +202,7 @@ describe('test mf-from-ea', () => {
         },
       },
     );
+
     expect(result.mfs).toHaveLength(2);
   });
 });

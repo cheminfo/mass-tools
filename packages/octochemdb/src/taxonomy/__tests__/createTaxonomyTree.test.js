@@ -49,6 +49,7 @@ test('createTaxonomyTree', () => {
   ];
 
   let tree = createTaxonomyTree(taxonomies);
+
   expect(tree[1].children).toHaveLength(2);
   expect(tree[1].children[0].name).toBe('');
   expect(tree[1].children[0].rank).toBe('kingdom');
@@ -205,6 +206,7 @@ test('True data', () => {
   ];
 
   let tree = createTaxonomyTree(taxonomies);
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -212,6 +214,7 @@ test('over 200 entries', () => {
   const filePath = path.join(__dirname, 'data/manyTaxonomies.json');
   const taxonomies = JSON.parse(readFileSync(filePath, 'utf8'));
   let tree = createTaxonomyTree(taxonomies);
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -219,5 +222,6 @@ test('full data', () => {
   const filePath = path.join(__dirname, 'data/fullData.json');
   const taxonomies = JSON.parse(readFileSync(filePath, 'utf8'));
   let tree = createTaxonomyTree(taxonomies);
+
   expect(tree).toMatchSnapshot();
 });

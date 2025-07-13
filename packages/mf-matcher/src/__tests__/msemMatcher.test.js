@@ -144,7 +144,7 @@ test('forced ionization', () => {
   });
 });
 
-test('test msemMatcher with list of target mass', () => {
+test('msemMatcher with list of target mass', () => {
   let entry = {
     mf: 'C10',
     em: 120,
@@ -191,7 +191,7 @@ test('test msemMatcher with list of target mass', () => {
   });
 });
 
-test('test msemMatcher with list of target mass, no forced ionization', () => {
+test('msemMatcher with list of target mass, no forced ionization', () => {
   let entry = {
     mf: 'C10',
     em: 120,
@@ -232,6 +232,7 @@ test('negative atoms', () => {
       C: -10,
     },
   };
+
   expect(msemMatcher(entry, { allowNegativeAtoms: true })).toStrictEqual({
     ionization: { atoms: {}, charge: 0, em: 0, mf: '' },
     ms: { charge: 0, em: 0, ionization: '' },
@@ -253,6 +254,7 @@ test('negative ionizations', () => {
       C: 10,
     },
   };
+
   expect(
     msemMatcher(entry, {
       allowNegativeAtoms: true,

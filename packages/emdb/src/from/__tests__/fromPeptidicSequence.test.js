@@ -110,6 +110,7 @@ describe('fromPeptidicSequence', () => {
 
   it('AAKKKKKK allowNeutralLoss limit: 1000', async () => {
     let emdb = new EMDB();
+
     await expect(
       emdb.fromPeptidicSequence('AAKKKKKKKKK', {
         allowNeutralLoss: true,
@@ -146,6 +147,7 @@ describe('fromPeptidicSequence', () => {
     const peptidic = emdb.databases.peptidic
       .sort((a, b) => a.ms.em - b.ms.em)
       .map((item) => item.parts);
+
     expect(peptidic).toHaveLength(9);
     expect(peptidic).toMatchSnapshot();
   });
@@ -163,6 +165,7 @@ describe('fromPeptidicSequence', () => {
     const peptidic = emdb.databases.peptidic
       .sort((a, b) => a.ms.em - b.ms.em)
       .map((item) => item.parts);
+
     expect(peptidic).toHaveLength(6);
     expect(peptidic).toMatchSnapshot();
   });

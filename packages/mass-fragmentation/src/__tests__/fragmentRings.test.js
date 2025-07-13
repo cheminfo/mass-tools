@@ -12,19 +12,26 @@ describe('fragmentRings', () => {
 
     expect(result).toStrictEqual([]);
   });
+
   it('C1CC1', () => {
     const molecule = Molecule.fromSmiles('C1CC1'); // butane
     const result = fragmentRings(molecule);
+
     expect(result).toStrictEqual([]);
   });
+
   it('C1CCC1', () => {
     const molecule = Molecule.fromSmiles('C1CCC1'); // butane
     const results = fragmentRings(molecule, { calculateHoseCodes: true });
+
     expect(results).toHaveLength(4);
+
     const mfs = results.map((result) => result.mfInfo.mf);
+
     expect(mfs).toStrictEqual(['C2H4', 'C2H4', 'C2H4', 'C2H4']);
     expect(results).toMatchSnapshot();
   });
+
   it('c1ccncc1', () => {
     const molecule = Molecule.fromSmiles('c1ccncc1'); // benzene
     const results = fragmentRings(molecule);
@@ -43,6 +50,7 @@ describe('fragmentRings', () => {
     const molecule = Molecule.fromSmiles('C2CCC1CCCCC1C2'); //2 cyclohexane
     const results = fragmentRings(molecule);
     const mfs = results.map((result) => result.mfInfo.mf);
+
     expect(mfs).toStrictEqual([
       'C2H4',
       'C2H4',
@@ -73,6 +81,7 @@ describe('fragmentRings', () => {
 
     // Bug: getRingSet do not reconise rings with less than 6 carbons and with more than 7
   });
+
   it('C2CCC1CCCC3CCCC4CCCC1', () => {
     const molecule = Molecule.fromSmiles('C2CCC1CCCC3CCCC4CCCC1(CC2)C34'); //4 rings (2 hexane & 2 heptane)
     const results = fragmentRings(molecule);

@@ -3,7 +3,7 @@ import { expect, test } from 'vitest';
 import { MFInternal } from '../../MFInternal.js';
 import { toDisplay } from '../toDisplay';
 
-let tests = [
+const tests = [
   {
     mf: 'C10',
     parsed: [
@@ -110,9 +110,9 @@ let tests = [
   },
 ];
 
-// eslint-disable-next-line no-unused-vars
-test.each(tests)('toDisplay $mf', ({ mf, parsed, result }) => {
+test.each(tests)('toDisplay $mf', ({ parsed, result }) => {
   let display = toDisplay(parsed);
+
   expect(display).toMatchObject(result);
 });
 
@@ -177,7 +177,8 @@ const testsCharges = [
 
 test.each(testsCharges)('toDisplay simple charges $mf', ({ mf, result }) => {
   const parsed = new MFInternal(mf).parsed;
-  let display = toDisplay(parsed);
+  const display = toDisplay(parsed);
+
   expect(display).toMatchObject(result);
 });
 
@@ -247,5 +248,6 @@ const testsParenthesis = [
 test.each(testsParenthesis)('toDisplay parenthesis $mf', ({ mf, result }) => {
   const parsed = new MFInternal(mf).parsed;
   let display = toDisplay(parsed);
+
   expect(display).toMatchObject(result);
 });

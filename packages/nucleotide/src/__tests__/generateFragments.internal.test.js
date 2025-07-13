@@ -7,6 +7,7 @@ describe('test generate internal fragments', () => {
     let fragments = generateFragments('HODampDtmpDcmpDgmpDampH', {
       abw: true,
     });
+
     expect(fragments).toStrictEqual([
       'HODtmpFurp$w4:a3-B',
       'HODtmpDcmpFurp$w4:a4-B',
@@ -18,6 +19,7 @@ describe('test generate internal fragments', () => {
     let fragments = generateFragments('HODthyDcmpDcmpDgmpDtmpDcmpH', {
       aby: true,
     });
+
     expect(fragments).toStrictEqual([
       'O-2P-1DcmpFurp$y5:a3-B',
       'O-2P-1DcmpDcmpFurp$y5:a4-B',
@@ -35,6 +37,7 @@ describe('test generate internal fragments', () => {
         abw: true,
       },
     );
+
     expect(fragments).toMatchSnapshot();
   });
 
@@ -42,6 +45,7 @@ describe('test generate internal fragments', () => {
     let fragments = generateFragments('HODampDtmpDcmpDgmpDampH', {
       aw: true,
     });
+
     expect(fragments).toStrictEqual([
       'HODtmpDcmpO-1H-1$w4:a3',
       'HODtmpDcmpDgmpO-1H-1$w4:a4',
@@ -53,6 +57,7 @@ describe('test generate internal fragments', () => {
     let fragments = generateFragments('HODampDtmpDcmpDgmpDampH', {
       bw: true,
     });
+
     expect(fragments).toStrictEqual([
       'HODtmpDcmpH$w4:b3',
       'HODtmpDcmpDgmpH$w4:b4',
@@ -64,6 +69,7 @@ describe('test generate internal fragments', () => {
     let fragments = generateFragments('HODampDampDtmp(NH2)DampH', {
       abw: true,
     });
+
     expect(fragments).toStrictEqual(['HODampFurp$w3:a3-B']);
   });
 });

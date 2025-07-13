@@ -12,9 +12,11 @@ describe('getRingsInfo', () => {
 
     expect(result).toStrictEqual([]);
   });
+
   it('C1CC1', () => {
     const molecule = Molecule.fromSmiles('C1CC1'); // butane
     const result = getRingsInfo(molecule);
+
     expect(result).toMatchInlineSnapshot(`
       [
         {
@@ -51,6 +53,7 @@ describe('getRingsInfo', () => {
       ]
     `);
   });
+
   it('c1ccncc1', () => {
     const molecule = Molecule.fromSmiles('c1ccncc1'); // benzene
     const result = getRingsInfo(molecule);
@@ -118,6 +121,7 @@ describe('getRingsInfo', () => {
       ]
     `);
   });
+
   it('C1CC2CCCC3CCCC(C1)C23', () => {
     const molecule = Molecule.fromSmiles('C1CC2CCCC3CCCC(C1)C23'); //3 cyclohexane connected
     const result = getRingsInfo(molecule);
@@ -301,6 +305,7 @@ describe('getRingsInfo', () => {
       ]
     `);
   });
+
   it('C2CCC1CCCCC1C2', () => {
     const molecule = Molecule.fromSmiles('C2CCC1CCCCC1C2'); //2 cyclohexane
     const result2 = getRingsInfo(molecule);
@@ -426,9 +431,11 @@ describe('getRingsInfo', () => {
       ]
     `);
   });
+
   it('C2CCC1CCCC3CCCC4CCCC1(CC2)C34', () => {
     const molecule = Molecule.fromSmiles('C2CCC1CCCC3CCCC4CCCC1(CC2)C34'); //4 rings (2 hexane & 2 heptane)
     const result3 = getRingsInfo(molecule);
+
     expect(result3).toMatchInlineSnapshot(`
       [
         {

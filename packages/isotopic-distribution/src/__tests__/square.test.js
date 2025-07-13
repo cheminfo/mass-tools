@@ -7,6 +7,7 @@ describe('test array-object-xy square', () => {
     let distribution = new Distribution();
     distribution.push({ x: 1, y: 2 }, { x: 2, y: 3 });
     distribution.square();
+
     expect(distribution.array).toStrictEqual([
       { x: 2, y: 4 },
       { x: 3, y: 12 },

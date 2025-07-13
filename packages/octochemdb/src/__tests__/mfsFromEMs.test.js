@@ -3,12 +3,13 @@ import { describe, expect, it } from 'vitest';
 import { mfsFromEMs } from '../mfsFromEMs.js';
 
 describe('mfsFromEMs', () => {
-  it('simple case', async () => {
+  it('simple case', { timeout: 30_000 }, async () => {
     let data = await mfsFromEMs(60, {
       ionizations: '(H+)2,H+',
       precision: 10,
       limit: 10,
     });
+
     expect(data).toHaveLength(2);
     expect(data[0]).toMatchObject({
       _id: 'C2H4N2P2',
@@ -40,45 +41,53 @@ describe('mfsFromEMs', () => {
         ppm: 3.958021817087773,
       },
     });
-  }, 30000);
+  });
 
-  it('string containing more than 1 monoisotopic mass', async () => {
-    let data = await mfsFromEMs('12,24,36', {
-      ionizations: '',
-      precision: 10,
-      minCount: 0,
-      limit: 10,
-    });
-    expect(data).toHaveLength(3);
-    expect(data).toMatchSnapshot();
-  }, 30000);
+  it(
+    'string containing more than 1 monoisotopic mass',
+    { timeout: 30_000 },
+    async () => {
+      let data = await mfsFromEMs('12,24,36', {
+        ionizations: '',
+        precision: 10,
+        minCount: 0,
+        limit: 10,
+      });
 
-  it('simple case negative ionization', async () => {
+      expect(data).toHaveLength(3);
+      expect(data).toMatchSnapshot();
+    },
+  );
+
+  it('simple case negative ionization', { timeout: 30_000 }, async () => {
     let data = await mfsFromEMs(60, {
       ionizations: '(H+)-2, (H+)-1',
       precision: 10,
       limit: 10,
     });
+
     expect(data).toHaveLength(4);
     expect(data).toMatchSnapshot();
-  }, 30000);
+  });
 
-  it('highly precise', async () => {
+  it('highly precise', { timeout: 30_000 }, async () => {
     let data = await mfsFromEMs(81.06987671016094, {
       ionizations: 'H+',
       precision: 1,
       limit: 10,
     });
-    expect(data).toHaveLength(1);
-  }, 30000);
 
-  it('simple case with range filter', async () => {
+    expect(data).toHaveLength(1);
+  });
+
+  it('simple case with range filter', { timeout: 30_000 }, async () => {
     let data = await mfsFromEMs(60, {
       ionizations: '(H+)2, H+',
       precision: 100,
       ranges: 'C0-10H0-10N0-10O0-10',
       limit: 50,
     });
+
     expect(data).toHaveLength(1);
     expect(data[0]).toMatchObject({
       _id: 'C3H2O5',
@@ -103,5 +112,5 @@ describe('mfsFromEMs', () => {
         ppm: -39.798973910819804,
       },
     });
-  }, 30000);
+  });
 });

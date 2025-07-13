@@ -8,6 +8,7 @@ test('loadKnapSack', async () => {
   expect(data.length).toBeGreaterThan(40000);
 
   let first = data[0];
+
   expect(first.mf).toBe('H3N');
   expect(first.em).toBeGreaterThan(0);
   expect(first.charge).toBe(0);

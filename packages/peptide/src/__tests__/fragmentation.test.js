@@ -9,7 +9,7 @@ import {
 
 // http://www.matrixscience.com/help/fragmentation_help.html
 
-let allowed = [
+const allowed = [
   'Ala$b1',
   'AlaLys$b2',
   'AlaLysLeu$b3',
@@ -39,6 +39,7 @@ describe('generatePeptideFragments', () => {
       yb: false,
       ya: false,
     });
+
     expect(result).toHaveLength(4);
   });
 
@@ -54,7 +55,9 @@ describe('generatePeptideFragments', () => {
       yb: false,
       ya: false,
     });
+
     expect(result).toHaveLength(14);
+
     checkAllowed(result);
   });
 
@@ -69,6 +72,7 @@ describe('generatePeptideFragments', () => {
       yb: false,
       ya: false,
     });
+
     expect(result).toHaveLength(2);
     expect(result).toStrictEqual(['HLys(+1)$b1', 'H2(+1)AlaOH$y1']);
   });
@@ -84,6 +88,7 @@ describe('generatePeptideFragments', () => {
       yb: false,
       ya: false,
     });
+
     expect(result).toHaveLength(2);
     expect(result).toStrictEqual(['HLys(COH)(+1)$b1', 'H2(+1)AlaOH$y1']);
   });
@@ -101,7 +106,9 @@ describe('generatePeptideFragments', () => {
       yb: false,
       ya: false,
     });
+
     expect(result).toHaveLength(14);
+
     checkAllowed(result);
   });
 
@@ -118,7 +125,9 @@ describe('generatePeptideFragments', () => {
       yb: false,
       ya: false,
     });
+
     expect(result).toHaveLength(14);
+
     checkAllowed(result);
   });
 
@@ -136,7 +145,9 @@ describe('generatePeptideFragments', () => {
       yb: false,
       ya: false,
     });
+
     expect(result).toHaveLength(14);
+
     checkAllowed(result);
   });
 
@@ -154,7 +165,9 @@ describe('generatePeptideFragments', () => {
       yb: false,
       ya: false,
     });
+
     expect(result).toHaveLength(14);
+
     checkAllowed(result);
   });
 
@@ -171,7 +184,9 @@ describe('generatePeptideFragments', () => {
       yb: false,
       ya: false,
     });
+
     expect(result).toHaveLength(14);
+
     checkAllowed(result);
   });
 
@@ -184,6 +199,7 @@ describe('generatePeptideFragments', () => {
     let result2 = generatePeptideFragments(sequence2);
     let result3 = generatePeptideFragments(sequence3);
     let result4 = generatePeptideFragments(sequence4);
+
     expect(result1).toStrictEqual([
       'HAla(+1)$b1',
       'H2(+1)ProOH$y1',
@@ -203,6 +219,7 @@ describe('generatePeptideFragments', () => {
   it('AK(*1)T(H-1*2)Y', () => {
     let sequence = sequenceToMF('AK(*1)T(H-1*2)Y');
     let result = generatePeptideFragments(sequence);
+
     expect(result).toStrictEqual([
       'HAla(+1)$b1',
       'H2(+1)TyrOH$y1',
@@ -212,9 +229,11 @@ describe('generatePeptideFragments', () => {
       'H2(+1)Lys(*1)Thr(H-1*2)TyrOH$y3',
     ]);
   });
+
   it('HAlaLys(*1)Thr(H-1*2)TyrOH', () => {
     let sequence = sequenceToMF('HAlaLys(*1)Thr(H-1*2)TyrOH');
     let result = generatePeptideFragments(sequence);
+
     expect(result).toStrictEqual([
       'HAla(+1)$b1',
       'H2(+1)TyrOH$y1',
@@ -237,6 +256,6 @@ function clean(mfs) {
 function checkAllowed(mfs) {
   clean(mfs);
   for (let mf of mfs) {
-    expect(allowed).toContain(mf);
+    expect(mf).toBeOneOf(allowed);
   }
 }

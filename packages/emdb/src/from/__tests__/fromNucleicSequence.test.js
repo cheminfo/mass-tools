@@ -18,6 +18,7 @@ describe('fromNucleicSequence', () => {
       },
     });
     let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+
     expect(nucleic).toHaveLength(6);
     expect(nucleic[0]).toBeDeepCloseTo({
       charge: 0,
@@ -69,6 +70,7 @@ describe('fromNucleicSequence', () => {
       if (a.ms.comment < b.ms.comment) return 1;
       return -1;
     });
+
     expect(nucleic).toHaveLength(56);
 
     expect(nucleic[0]).toBeDeepCloseTo({
@@ -109,6 +111,7 @@ describe('fromNucleicSequence', () => {
       if (a.ms.comment < b.ms.comment) return 1;
       return -1;
     });
+
     expect(nucleic).toHaveLength(30);
   });
 
@@ -124,6 +127,7 @@ describe('fromNucleicSequence', () => {
       },
     });
     let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+
     expect(nucleic).toHaveLength(6);
     expect(nucleic).toMatchSnapshot();
   });
@@ -142,6 +146,7 @@ describe('fromNucleicSequence', () => {
       },
     });
     let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+
     expect(nucleic).toHaveLength(5);
     expect(nucleic).toMatchSnapshot();
   });
@@ -158,6 +163,7 @@ describe('fromNucleicSequence', () => {
       },
     });
     let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+
     expect(nucleic).toHaveLength(5);
     expect(nucleic).toMatchSnapshot();
   });

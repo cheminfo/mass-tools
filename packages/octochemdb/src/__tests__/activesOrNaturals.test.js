@@ -8,6 +8,7 @@ import { server } from './testServer';
 beforeAll(() => {
   server.listen();
 });
+
 // Reset handlers so that each test could alter them
 // without affecting other, unrelated tests.
 afterEach(() => server.resetHandlers());
@@ -16,6 +17,7 @@ afterEach(() => server.resetHandlers());
 afterAll(() => {
   server.close();
 });
+
 describe('activesOrNaturals', () => {
   it('simple case', async () => {
     let data = await activesOrNaturals({
@@ -27,9 +29,10 @@ describe('activesOrNaturals', () => {
       limit: 100,
     });
 
-    expect(data.length).toBe(100);
+    expect(data).toHaveLength(100);
   });
-  it('with range', async () => {
+
+  it('with range', { timeout: 30_000 }, async () => {
     let data = await activesOrNaturals({
       baseURL: 'http://localhost/',
       route: 'data/activesOrNaturalsWithRange.json',
@@ -43,10 +46,11 @@ describe('activesOrNaturals', () => {
     for (const entry of data) {
       uniqueMFs.add(entry.data.mf);
     }
-    expect([...uniqueMFs]).toStrictEqual(['C17H17NO4']);
-  }, 30000);
 
-  it('with range and many ionizations', async () => {
+    expect([...uniqueMFs]).toStrictEqual(['C17H17NO4']);
+  });
+
+  it('with range and many ionizations', { timeout: 30_000 }, async () => {
     let data = await activesOrNaturals({
       baseURL: 'http://localhost/',
       route: 'data/activesOrNaturalsRangeAndIonization.json',
@@ -62,9 +66,9 @@ describe('activesOrNaturals', () => {
     }
 
     expect([...uniqueMFs]).toStrictEqual(['C17H17NO4', 'C34H34N2O8']);
-  }, 30000);
+  });
 
-  it('search by keywords', async () => {
+  it('search by keywords', { timeout: 300_000 }, async () => {
     let data = await activesOrNaturals({
       baseURL: 'http://localhost/',
       route: 'data/activesOrNaturalsKeywords.json',
@@ -78,6 +82,7 @@ describe('activesOrNaturals', () => {
         fields.add(field);
       }
     }
+
     expect([...fields].sort()).toStrictEqual([
       'activities',
       'bioactive',
@@ -105,7 +110,8 @@ describe('activesOrNaturals', () => {
       'titles',
       'unsaturation',
     ]);
-  }, 300000);
+  });
+
   it('noStereoTautomerID case', async () => {
     let data = await activesOrNaturals({
       baseURL: 'http://localhost/',
@@ -113,6 +119,7 @@ describe('activesOrNaturals', () => {
       noStereoTautomerID:
         'ei]REH@MLd^^Dbnco`XZVP@cIEHeDeDidhdmMbimEIUDYGKOFejjjjjjjjjjjjjjh@CWjcGFELZXlpy`KDVDlYXjpuck@vEl[XNp}c{ANJ\\RxUq~fFEUl_CGpwu[Gpq|MSTq|L_C@',
     });
-    expect(data.length).toBe(1);
+
+    expect(data).toHaveLength(1);
   });
 });

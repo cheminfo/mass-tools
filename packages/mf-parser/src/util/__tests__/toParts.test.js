@@ -3,7 +3,7 @@ import { expect, test } from 'vitest';
 import { parse } from '../../parse';
 import { toParts } from '../toParts';
 
-let tests = [
+const tests = [
   { mf: 'C', result: [[{ kind: 'atom', value: 'C', multiplier: 1 }]] },
   { mf: 'C2', result: [[{ kind: 'atom', value: 'C', multiplier: 2 }]] },
   { mf: 'CCC', result: [[{ kind: 'atom', value: 'C', multiplier: 3 }]] },
@@ -54,5 +54,6 @@ let tests = [
 test.each(tests)('toParts %p', (aTest) => {
   let parsed = parse(aTest.mf);
   let parts = toParts(parsed);
+
   expect(parts).toMatchObject(aTest.result);
 });

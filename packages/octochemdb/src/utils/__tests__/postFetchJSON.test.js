@@ -7,5 +7,6 @@ test('postFetchJSON', async () => {
     'https://octochemdb.cheminfo.org/patents/v1/ids',
     { ids: ['EP-2078065-A2, EP-1293521-A2'] },
   );
-  expect(patents.data.length).toBe(2);
+
+  expect(patents.data).toHaveLength(2);
 });

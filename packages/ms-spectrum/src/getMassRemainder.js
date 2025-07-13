@@ -1,11 +1,11 @@
 import { xyJoinX, xySortX } from 'ml-spectra-processing';
 
 /**
- * Remove an integer number of time the specifiedd monoisotopic mass
+ * Remove an integer number of time the specifiedd monoisotopic mass.
  * Mass remainder analysis (MARA): https://doi.org/10.1021/acs.analchem.7b04730
  * @param {object} spectrum
  * @param {number} mass
- * @param {object} [options={}
+ * @param {object} [options={}]
  * @param {number} [options.delta=0.001]
  */
 export function getMassRemainder(spectrum, mass, options = {}) {

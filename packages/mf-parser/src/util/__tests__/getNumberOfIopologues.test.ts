@@ -18,6 +18,7 @@ test.each(tests)(
   'getNumberOfIsotopologues $mf to be $expected',
   ({ mf, expected }) => {
     const atoms = new MF(mf).getInfo().atoms;
+
     expect(getNumberOfIsotopologues(atoms)).toBe(expected);
   },
 );
