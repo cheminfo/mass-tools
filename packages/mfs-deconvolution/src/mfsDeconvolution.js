@@ -183,11 +183,10 @@ function buildCombined(centroids, mfs, options = {}) {
     data.push(mf.distribution);
   }
 
-  // we align all the spectra to the first one but if some values (X) are missing we will add them
-  let combined = xyArrayAlignToFirst(data, {
+  // We align all the spectra to the first one, but if some values (X) are missing, we will add them.
+  return xyArrayAlignToFirst(data, {
     delta: peakWidthFct,
   });
-  return combined;
 }
 
 /**

@@ -8,6 +8,7 @@ describe('addFiveTermBaseLoss', () => {
       x: true,
       wxyzBaseLoss: true,
     });
+
     expect(fragments).toStrictEqual([
       'H-1DcmpH$x1',
       'H-1DcmpH(C-4H-5N-3O-1)$x1 C*',

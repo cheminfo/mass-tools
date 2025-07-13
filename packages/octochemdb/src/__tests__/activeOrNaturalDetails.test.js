@@ -8,6 +8,7 @@ import { server } from './testServer';
 beforeAll(() => {
   server.listen();
 });
+
 // Reset handlers so that each test could alter them
 // without affecting other, unrelated tests.
 afterEach(() => server.resetHandlers());
@@ -27,6 +28,7 @@ test('activeOrNaturalDetails', async () => {
   });
 
   const fields = Object.keys(entry.data).sort();
+
   expect(fields).toStrictEqual([
     'activities',
     'bioactive',
@@ -55,7 +57,9 @@ test('activeOrNaturalDetails', async () => {
     'titles',
     'unsaturation',
   ]);
+
   const activities = entry.data.activities;
+
   expect(activities[0]).toMatchInlineSnapshot(`
     {
       "$id": "NPC294249",

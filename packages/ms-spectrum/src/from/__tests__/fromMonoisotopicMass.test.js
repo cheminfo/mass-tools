@@ -6,6 +6,7 @@ test('fromMonoisotopicMass', async () => {
   const { mfs } = await fromMonoisotopicMass(120, {
     allowNeutral: true,
   });
+
   expect(mfs).toHaveLength(8);
 });
 
@@ -13,6 +14,7 @@ test('fromMonoisotopicMass string', async () => {
   const { mfs } = await fromMonoisotopicMass('120,60', {
     allowNeutral: true,
   });
+
   expect(mfs).toHaveLength(10);
 });
 
@@ -20,6 +22,7 @@ test('fromMonoisotopicMass array', async () => {
   const { mfs } = await fromMonoisotopicMass([60, 120], {
     allowNeutral: true,
   });
+
   expect(mfs).toHaveLength(10);
 });
 
@@ -29,6 +32,7 @@ test('fromMonoisotopicMass with ionizations', async () => {
     ionizations: ', H+, K+',
     precision: 100,
   });
+
   expect(mfs).toHaveLength(9);
 });
 
@@ -46,5 +50,6 @@ test('fromMonoisotopicMass large database', async () => {
     allowNeutral: true,
     limit: 10000,
   });
+
   expect(mfs).toHaveLength(1407);
 });

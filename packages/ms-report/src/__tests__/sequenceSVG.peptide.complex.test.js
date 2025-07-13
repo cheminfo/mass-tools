@@ -58,5 +58,6 @@ test('sequenceSVG of peptide', () => {
     },
   ];
   let svg = sequenceSVG(sequence, info, options);
+
   expect(svg).toHaveLength(7839);
 });

@@ -6,14 +6,18 @@ describe('fromArray', () => {
   it('using an array of string', async () => {
     let emdb = new EMDB();
     await emdb.fromArray(['C.N', 'N.O']);
+
     expect(emdb.databases.generated).toHaveLength(4);
   });
 
   it('with ranges and group', async () => {
     let emdb = new EMDB();
     await emdb.fromArray(['(CH2)0-2N0-1', 'O0-1']);
+
     expect(emdb.databases.generated).toHaveLength(12);
+
     let mfs = emdb.databases.generated.map((entry) => entry.mf).sort();
+
     expect(mfs).toStrictEqual([
       '',
       'C2H4',
@@ -37,6 +41,7 @@ describe('fromArray', () => {
         callback: (entry) => entry.atoms.C === entry.atoms.H,
       },
     });
+
     expect(emdb.databases.generated).toHaveLength(101);
   });
 
@@ -48,6 +53,7 @@ describe('fromArray', () => {
       .map((entry) => entry.mf)
       .sort()
       .join(',');
+
     expect(result).toBe('BrN,C,CBr,CCl,ClN,N');
   });
 });

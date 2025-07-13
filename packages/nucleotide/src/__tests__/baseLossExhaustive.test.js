@@ -5,6 +5,7 @@ import { baseLossExhaustive } from '../baseLossExhaustive';
 describe('test base loss', () => {
   it('Base loss of HAlaDampDtmpDcmpDcmpOH', () => {
     let nucleotides = baseLossExhaustive('HAlaDampDtmpDcmpDcmpOH');
+
     expect(nucleotides).toHaveLength(4);
     expect(nucleotides).toStrictEqual([
       'HAlaDrmpDtmpDcmpDcmpOH$-B1',
@@ -16,6 +17,7 @@ describe('test base loss', () => {
 
   it('Base loss of HODampDtmpDcmpDcmpH', () => {
     let nucleotides = baseLossExhaustive('HODampDtmpDcmpDcmpH');
+
     expect(nucleotides).toHaveLength(4);
     expect(nucleotides).toStrictEqual([
       'HODrmpDtmpDcmpDcmpH$-B1',
@@ -27,6 +29,7 @@ describe('test base loss', () => {
 
   it('Base loss of HODampH', () => {
     let nucleotides = baseLossExhaustive('HODampH');
+
     expect(nucleotides).toHaveLength(1);
     expect(nucleotides).toStrictEqual(['HODrmpH$-B1']);
   });

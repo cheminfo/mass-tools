@@ -5,6 +5,7 @@ import { IsotopicDistribution, MF } from '..';
 test('isotopicDistrbution', () => {
   let isotopicDistribution = new IsotopicDistribution('C10');
   let xy = isotopicDistribution.getXY();
+
   expect(xy.x[0]).toBe(120);
   expect(xy.y[0]).toBe(100);
 });

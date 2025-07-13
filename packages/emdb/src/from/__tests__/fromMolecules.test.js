@@ -9,6 +9,7 @@ describe('fromMolecules', () => {
     const entries = [{ smiles: 'CC' }, { smiles: 'CCC' }, { smiles: 'CCOC' }];
 
     await emdb.fromMolecules(entries, OCL);
+
     expect(emdb.databases.molecules).toHaveLength(3);
     expect(emdb).toMatchSnapshot();
   });
@@ -18,6 +19,7 @@ describe('fromMolecules', () => {
     const entries = [{ smiles: 'CC' }, { smiles: 'CCC' }, { smiles: 'CCOC' }];
 
     await emdb.fromMolecules(entries, OCL, { ionizations: 'H+,Na+' });
+
     expect(emdb.databases.molecules).toHaveLength(6);
     expect(emdb).toMatchSnapshot();
   });
@@ -27,6 +29,7 @@ describe('fromMolecules', () => {
     const entries = [{ smiles: '[NH4+]' }, { smiles: 'CC.OC' }];
 
     await emdb.fromMolecules(entries, OCL);
+
     expect(emdb.databases.molecules).toHaveLength(2);
     expect(emdb).toMatchSnapshot();
   });
@@ -39,6 +42,7 @@ describe('fromMolecules', () => {
       fragmentation: { acyclic: true },
       groupResults: true,
     });
+
     expect(emdb.databases.molecules[1].fragments[0]).toStrictEqual({
       count: 3,
       idCode: 'eMBAYRZ@',
@@ -64,6 +68,7 @@ describe('fromMolecules', () => {
         targetIntensities: [10, 20, 30],
       },
     });
+
     expect(emdb.databases.molecules).toHaveLength(1);
     expect(emdb.databases.molecules).toMatchSnapshot();
   });
@@ -75,6 +80,7 @@ describe('fromMolecules', () => {
     await emdb.fromMolecules(entries, OCL, {
       fragmentation: { cyclic: true, acyclic: true },
     });
+
     expect(emdb.databases.molecules).toHaveLength(16);
     expect(emdb).toMatchSnapshot();
   });

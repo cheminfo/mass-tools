@@ -75,6 +75,7 @@ describe('test searchSimilarity', () => {
         // common: undefined,  // 'first', 'second', 'both' (or true) or 'none' (or undefined)
       },
     });
+
     //   expect(results.test).toMatchSnapshot();
     expect(results.test[0].ms.similarity.value).toBe(1);
   });
@@ -114,6 +115,7 @@ describe('test searchSimilarity', () => {
         precision: 1,
       },
     });
+
     expect(results.test).toHaveLength(0);
   });
 
@@ -137,6 +139,7 @@ describe('test searchSimilarity', () => {
         // common: undefined,  // 'first', 'second', 'both' (or true) or 'none' (or undefined)
       },
     });
+
     expect(results.test[0].ms.similarity.value).toBeCloseTo(0.895, 2);
   });
 
@@ -161,6 +164,7 @@ describe('test searchSimilarity', () => {
         // common: undefined,  // 'first', 'second', 'both' (or true) or 'none' (or undefined)
       },
     });
+
     expect(results.test).toHaveLength(0);
   });
 
@@ -184,6 +188,7 @@ describe('test searchSimilarity', () => {
         // common: undefined,  // 'first', 'second', 'both' (or true) or 'none' (or undefined)
       },
     });
+
     expect(results.test).toHaveLength(1);
 
     expect(results.test[0].ms.similarity.theoretical[0]).toHaveLength(8);
@@ -209,6 +214,7 @@ describe('test searchSimilarity', () => {
         // common: undefined,  // 'first', 'second', 'both' (or true) or 'none' (or undefined)
       },
     });
+
     expect(results.test).toHaveLength(1);
 
     expect(results.test[0].ms.similarity.theoretical[0]).toHaveLength(2);
@@ -234,6 +240,7 @@ describe('test searchSimilarity', () => {
         // common: undefined,  // 'first', 'second', 'both' (or true) or 'none' (or undefined)
       },
     });
+
     expect(results.test).toHaveLength(1);
 
     expect(results.test[0].ms.similarity.theoretical[0]).toHaveLength(2);
@@ -263,6 +270,7 @@ describe('test searchSimilarity', () => {
       },
     });
     const factors = results.test.map((entry) => entry.ms.similarity.factor);
+
     expect(factors).toBeDeepCloseTo([1.01, 2.04, 3.1]);
   });
 
@@ -286,6 +294,7 @@ describe('test searchSimilarity', () => {
         // common: undefined,  // 'first', 'second', 'both' (or true) or 'none' (or undefined)
       },
     });
+
     expect(results.test[0].ms.similarity.value).toBe(1);
   });
 
@@ -309,6 +318,7 @@ describe('test searchSimilarity', () => {
         common: 'first', // 'first', 'second', 'both' (or true) or 'none' (or undefined)
       },
     });
+
     expect(results.test[0].ms.similarity.value).toBe(1);
   });
 
@@ -328,6 +338,7 @@ describe('test searchSimilarity', () => {
         // common: undefined,  // 'first', 'second', 'both' (or true) or 'none' (or undefined)
       },
     });
+
     expect(results.test[0].ms.similarity.value).toBeCloseTo(0.995, 2);
   });
 });

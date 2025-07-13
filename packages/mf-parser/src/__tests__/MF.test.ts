@@ -12,6 +12,7 @@ describe('MF', () => {
     ]);
 
     const newMF = mf.toMF();
+
     expect(newMF).toBe('C');
 
     mf.canonize();
@@ -42,6 +43,7 @@ describe('MF', () => {
     ]);
 
     const newMF = mf.toMF();
+
     expect(newMF).toBe('C . C');
 
     mf.canonize();
@@ -98,6 +100,7 @@ describe('MF', () => {
     ]);
 
     const newMF = mf.toMF();
+
     expect(newMF).toBe('[11C]2');
 
     mf.canonize();
@@ -123,6 +126,7 @@ describe('MF', () => {
     const infoD = mfD.getInfo();
     const mf2H = new MF('[2H]');
     const info2H = mf2H.getInfo();
+
     expect(infoD).toStrictEqual(info2H);
     expect(infoD).toStrictEqual({
       atoms: { H: 1 },
@@ -155,6 +159,7 @@ describe('MF', () => {
 
   it('H2Si(OH)2', () => {
     const mf = new MF('H2Si(OH)2');
+
     expect(mf.getInfo()).toStrictEqual({
       mass: 64.11607157056562,
       monoisotopicMass: 63.99805590271001,
@@ -183,6 +188,7 @@ describe('MF', () => {
     ]);
 
     const newMF = mf.toMF();
+
     expect(newMF).toBe('C6H15N . HCl');
 
     mf.canonize();
@@ -191,6 +197,7 @@ describe('MF', () => {
     expect(html).toBe('C<sub>6</sub>H<sub>15</sub>N • HCl');
 
     const info = mf.getInfo();
+
     expect(info).toStrictEqual({
       parts: [
         {
@@ -222,6 +229,7 @@ describe('MF', () => {
 
   it('(ch3ch2)3n', () => {
     const mf = new MF('(ch3ch2)3n', { ensureCase: true });
+
     expect(mf.toMF()).toBe('C6H15N');
   });
 
@@ -230,6 +238,7 @@ describe('MF', () => {
 
     // we don't want that expand has any side effects
     const parts = mf.toParts({ expand: false });
+
     expect(parts).toStrictEqual([
       [
         { kind: 'atom', value: 'C', multiplier: 3 },
@@ -242,9 +251,11 @@ describe('MF', () => {
     // if we don't want to expand anything, the option expand should be place
     // in the constructor of MF
     const newMF = mf.toMF();
+
     expect(newMF).toBe('C9H21N');
 
     const info = mf.getInfo();
+
     expect(info).toStrictEqual({
       mass: 143.27008211723435,
       charge: 0,
@@ -259,6 +270,7 @@ describe('MF', () => {
   it('Hs, no stable isotopes', () => {
     const mf = new MF('Hs');
     const info = mf.getInfo();
+
     expect(info).toStrictEqual({
       mass: 0,
       charge: 0,
@@ -282,9 +294,11 @@ describe('MF', () => {
     ]);
 
     const newMF = mf.toMF();
+
     expect(newMF).toBe('C9H21N');
 
     const info = mf.getInfo();
+
     expect(info).toStrictEqual({
       mass: 143.27008211723435,
       monoisotopicMass: 143.16739968126,
@@ -313,9 +327,11 @@ describe('MF', () => {
     expect(mf.toCanonicText()).toBe('O₄S⁻²');
 
     const neutralMF = mf.toNeutralMF();
+
     expect(neutralMF).toBe('O4S');
 
     const info = mf.getInfo({ customUnsaturations: { S: 4 } });
+
     expect(info).toStrictEqual({
       monoisotopicMass: 95.95172965268,
       mass: 96.06240710340018,
@@ -331,6 +347,7 @@ describe('MF', () => {
   it('(CH2)1+ useless parenthesis', () => {
     const mf = new MF('(CH2)1+');
     const info = mf.getInfo();
+
     expect(info).toStrictEqual({
       mass: 14.026617404846803,
       charge: 1,
@@ -341,7 +358,9 @@ describe('MF', () => {
       unsaturation: 0.5,
       nbIsotopologues: 6,
     });
+
     const html = mf.toHtml();
+
     expect(html).toBe(
       'CH<span style="flex-direction: column;display: inline-flex;justify-content: center;text-align: left;vertical-align: middle;"><sup style="line-height: 1; font-size: 70%">+</sup><sub style="line-height: 1; font-size: 70%">2</sub></span>',
     );
@@ -351,6 +370,7 @@ describe('MF', () => {
     const mf = new MF('Na+.Cl-');
 
     const info = mf.getInfo({ emFieldName: 'em', msemFieldName: 'msem' });
+
     expect(info).toMatchObject({
       parts: [
         {
@@ -395,6 +415,7 @@ describe('MF', () => {
   it('NC[13C][15N]2NN2', () => {
     const mf = new MF('NC[13C][15N]2NN2');
     const parts = mf.toParts();
+
     expect(parts).toStrictEqual([
       [
         { kind: 'atom', value: 'C', multiplier: 1 },
@@ -405,6 +426,7 @@ describe('MF', () => {
     ]);
 
     const info = mf.getInfo();
+
     expect(info).toStrictEqual({
       monoisotopicMass: 111.01586865055,
       mass: 111.04112137534844,
@@ -423,6 +445,7 @@ describe('MF', () => {
   it('DNA HODampDtmpDcmpDgmpH', () => {
     const mf = new MF('HODampDtmpDgmpDcmpH');
     const info = mf.getInfo();
+
     expect(info).toStrictEqual({
       mass: 1253.8043977028433,
       monoisotopicMass: 1253.21310019311,
@@ -437,6 +460,7 @@ describe('MF', () => {
   it('RNA HOAmpUmpH', () => {
     const mf = new MF('HOAmpUmpH');
     const info = mf.getInfo();
+
     expect(info).toStrictEqual({
       mass: 653.388021231099,
       monoisotopicMass: 653.08838712715,
@@ -451,6 +475,7 @@ describe('MF', () => {
   it('CC{50,50}H', () => {
     const mf = new MF('HC{50,50}C');
     const parts = mf.toParts();
+
     expect(parts).toStrictEqual([
       [
         { kind: 'atom', value: 'C', multiplier: 1 },
@@ -467,6 +492,7 @@ describe('MF', () => {
     expect(mf.toText()).toBe('HC⁽⁵⁰˒⁵⁰⁾C');
 
     const info = mf.getInfo();
+
     expect(info).toStrictEqual({
       monoisotopicMass: 25.00782503223,
       mass: 25.520354068326025,
@@ -481,6 +507,7 @@ describe('MF', () => {
   it('CC{0.5,0.5}H', () => {
     const mf = new MF('HC{0.5,0.5}C');
     const parts = mf.toParts();
+
     expect(parts).toStrictEqual([
       [
         { kind: 'atom', value: 'C', multiplier: 1 },
@@ -498,6 +525,7 @@ describe('MF', () => {
     expect(mf.toText()).toBe('HC⁽⁰˙⁵˒⁰˙⁵⁾C');
 
     const info = mf.getInfo();
+
     expect(info).toStrictEqual({
       monoisotopicMass: 25.00782503223,
       mass: 25.520354068326025,
@@ -515,6 +543,7 @@ describe('MF', () => {
     expect(mf.toMF()).toBe('H');
 
     const info = mf.getInfo();
+
     expect(info).toStrictEqual({
       atoms: { H: 1 },
       charge: 0,
@@ -532,6 +561,7 @@ describe('MF', () => {
     expect(mf.toMF()).toBe('C10H20');
 
     const info = mf.getInfo();
+
     expect(info).toStrictEqual({
       mass: 140.26617404846803,
       monoisotopicMass: 140.1565006446,
@@ -553,8 +583,10 @@ describe('MF', () => {
   it('Types getInfo default shape', () => {
     const mf = new MF('C10#1H20');
     const info = mf.getInfo();
+
     expectTypeOf(info).toExtend<{ monoisotopicMass: number }>();
     expectTypeOf(info).not.toExtend<{ em: number }>();
+
     expect(info).toStrictEqual({
       mass: 140.26617404846803,
       monoisotopicMass: 140.1565006446,
@@ -569,8 +601,10 @@ describe('MF', () => {
   it('Types getInfo custom shape', () => {
     const mf = new MF('C10#1H20');
     const info = mf.getInfo({ emFieldName: 'em' as const });
+
     expectTypeOf(info).toExtend<{ em: number }>();
     expectTypeOf(info).not.toExtend<{ monoisotopicMass: number }>();
+
     expect(info).toStrictEqual({
       mass: 140.26617404846803,
       em: 140.1565006446,

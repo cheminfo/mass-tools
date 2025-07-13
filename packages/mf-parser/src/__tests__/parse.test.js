@@ -2,7 +2,7 @@ import { expect, test } from 'vitest';
 
 import { parse } from '../parse';
 
-let tests = {
+const tests = {
   C10: [
     { kind: 'atom', value: 'C' },
     { kind: 'multiplier', value: 10 },
@@ -228,7 +228,8 @@ let tests = {
 };
 
 test.each(Object.keys(tests))('parse molecular formula %s', (key) => {
-  let parsed = parse(key);
+  const parsed = parse(key);
+
   expect(parsed).toMatchObject(tests[key]);
 });
 

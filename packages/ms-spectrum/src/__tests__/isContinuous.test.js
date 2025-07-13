@@ -13,6 +13,7 @@ describe('test isContinuous', () => {
       data.x.push(i / 20);
       data.y.push(i + 1);
     }
+
     expect(isContinuous({ data })).toBe(false);
   });
 
@@ -22,6 +23,7 @@ describe('test isContinuous', () => {
       data.x.push(i / 5);
       data.y.push(i + 1);
     }
+
     expect(isContinuous({ data })).toBe(false);
   });
 
@@ -32,6 +34,7 @@ describe('test isContinuous', () => {
       data.y.push(i + 1);
     }
     data.x.push(200);
+
     expect(isContinuous({ data })).toBe(true);
   });
 
@@ -41,6 +44,7 @@ describe('test isContinuous', () => {
       data.x.push(i / 20);
       data.y.push(i + 1);
     }
+
     expect(isContinuous({ data })).toBe(true);
   });
 
@@ -52,6 +56,7 @@ describe('test isContinuous', () => {
     }
     data.x.push(200);
     data.y.push(0);
+
     expect(isContinuous({ data })).toBe(true);
   });
 
@@ -61,6 +66,7 @@ describe('test isContinuous', () => {
       'utf8',
     );
     const data = parseXY(text);
+
     expect(isContinuous({ data })).toBe(true);
   });
 
@@ -70,12 +76,14 @@ describe('test isContinuous', () => {
       'utf8',
     );
     const data = parseXY(text);
+
     expect(isContinuous({ data })).toBe(true);
   });
 
   it('low experimental data', () => {
     const text = readFileSync(path.join(__dirname, 'data/lowres.txt'), 'utf8');
     const data = parseXY(text);
+
     expect(isContinuous({ data })).toBe(true);
   });
 
@@ -85,6 +93,7 @@ describe('test isContinuous', () => {
       'utf8',
     );
     const data = parseXY(text);
+
     expect(isContinuous({ data })).toBe(true);
   });
 });

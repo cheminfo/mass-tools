@@ -8,6 +8,7 @@ test('getMsInfo', () => {
     em: 120,
     charge: 0,
   };
+
   expect(getMsInfo(mf).ms).toMatchObject({
     ionization: '',
     em: 0,

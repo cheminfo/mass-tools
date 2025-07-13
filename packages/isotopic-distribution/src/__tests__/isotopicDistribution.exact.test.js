@@ -53,6 +53,7 @@ describe('isotopicDistribution with composition', () => {
       },
     ]);
   });
+
   it('C2', () => {
     let isotopicDistribution = new IsotopicDistribution('C2', {
       fwhm: 1e-10,
@@ -92,6 +93,7 @@ describe('isotopicDistribution with composition', () => {
       },
     ]);
   });
+
   it('C100', () => {
     let isotopicDistribution = new IsotopicDistribution('C100', {
       fwhm: 1e-10,
@@ -131,8 +133,10 @@ describe('isotopicDistribution with composition', () => {
       minY: 0,
     });
     const peaks = isotopicDistribution.getPeaks();
-    expect(peaks.length).toBe(101);
+
+    expect(peaks).toHaveLength(101);
   });
+
   it('C100H100', () => {
     let isotopicDistribution = new IsotopicDistribution('C100H100', {
       fwhm: 1e-10,
@@ -142,6 +146,7 @@ describe('isotopicDistribution with composition', () => {
       .getDistribution()
       .array.sort((a, b) => b.y - a.y)
       .slice(0, 3);
+
     expect(distribution).toBeDeepCloseTo([
       {
         x: 1301.78585805807,
@@ -172,6 +177,7 @@ describe('isotopicDistribution with composition', () => {
       },
     ]);
   });
+
   it('Cys100', () => {
     let isotopicDistribution = new IsotopicDistribution('Cys100', {
       fwhm: 1e-10,
@@ -180,6 +186,7 @@ describe('isotopicDistribution with composition', () => {
       .getDistribution()
       .array.sort((a, b) => b.y - a.y)
       .slice(0, 3);
+
     expect(distribution).toBeDeepCloseTo([
       {
         x: 10311.91174377861,
@@ -240,6 +247,7 @@ describe('isotopicDistribution with composition', () => {
       fwhm: 0,
     });
     let peaks = isotopicDistribution.getPeaks({ maxValue: 1 });
+
     expect(peaks[0]).toStrictEqual({
       x: 5.99945142009093,
       y: 1,

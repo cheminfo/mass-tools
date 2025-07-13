@@ -78,6 +78,7 @@ describe('ActiveOrNaturalSummarizer', () => {
 
     expect(results).toMatchSnapshot();
   });
+
   it('terms:ethylene', async () => {
     const entry = JSON.parse(
       readFileSync(path.join(__dirname, './details.json'), 'utf8'),
@@ -94,6 +95,7 @@ describe('ActiveOrNaturalSummarizer', () => {
 
     expect(results).toMatchSnapshot();
   });
+
   it('terms:inhibition', async () => {
     const entry = JSON.parse(
       readFileSync(path.join(__dirname, './details.json'), 'utf8'),
@@ -111,6 +113,7 @@ describe('ActiveOrNaturalSummarizer', () => {
 
     expect(results).toMatchSnapshot();
   });
+
   it('terms:Apoptosis', async () => {
     const entry = JSON.parse(
       readFileSync(path.join(__dirname, './details.json'), 'utf8'),
@@ -130,6 +133,7 @@ describe('ActiveOrNaturalSummarizer', () => {
 
     expect(results).toMatchSnapshot();
   });
+
   it('abstractsLimit', async () => {
     const entry = JSON.parse(
       readFileSync(path.join(__dirname, './details.json'), 'utf8'),
@@ -156,6 +160,7 @@ describe('ActiveOrNaturalSummarizer', () => {
     expect(result.data.patents).toHaveLength(0);
     expect(result.data.activities).toHaveLength(3);
   });
+
   it('taxonomies', async () => {
     const entry = JSON.parse(
       readFileSync(path.join(__dirname, './details.json'), 'utf8'),
@@ -169,6 +174,7 @@ describe('ActiveOrNaturalSummarizer', () => {
 
     expect(results.data.taxonomies).toMatchSnapshot();
   });
+
   it('taxonomies Bis', async () => {
     const entry = JSON.parse(
       readFileSync(path.join(__dirname, './detailsTestBis.json'), 'utf8'),

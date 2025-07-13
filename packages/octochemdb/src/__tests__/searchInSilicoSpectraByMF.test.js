@@ -13,5 +13,6 @@ test('searchInsilicoSpectra', async () => {
   const results = await searchInSilicoSpectraByMF(mdma, 'C11H15NO2', {
     precision: 50,
   });
+
   expect(results.length).toBeGreaterThan(5);
 });

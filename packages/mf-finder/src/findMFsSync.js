@@ -230,7 +230,6 @@ function ensureUniqueMF(result) {
           mfs.pop();
           mfs.push(current);
           bestCounts = current.currentCounts;
-          continue;
         } else if (current.currentCounts[i] < bestCounts[i]) {
           continue next;
         }

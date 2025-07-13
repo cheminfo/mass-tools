@@ -11,7 +11,7 @@ import {
 
 // ['HLysNH3(+1)$c2y3', 'HLysAspNH3(+1)$c3y3', 'HAspNH3(+1)$c3y2'];
 
-let allowed = [
+const allowed = [
   'Lys$b2y3',
   'LysAsp$b3y3',
   'Asp$b3y2',
@@ -36,7 +36,9 @@ describe('Check internal fragmentation', () => {
       yb: true,
       ya: false,
     });
+
     expect(result).toHaveLength(3);
+
     checkAllowed(result);
   });
 
@@ -53,7 +55,9 @@ describe('Check internal fragmentation', () => {
       yb: true,
       ya: false,
     });
+
     expect(result).toHaveLength(3);
+
     checkAllowed(result);
   });
 
@@ -70,7 +74,9 @@ describe('Check internal fragmentation', () => {
       yb: true,
       ya: false,
     });
+
     expect(result).toHaveLength(3);
+
     checkAllowed(result);
   });
 
@@ -88,7 +94,9 @@ describe('Check internal fragmentation', () => {
       yb: true,
       ya: false,
     });
+
     expect(result).toHaveLength(3);
+
     checkAllowed(result);
   });
 
@@ -106,7 +114,9 @@ describe('Check internal fragmentation', () => {
       yb: true,
       ya: false,
     });
+
     expect(result).toHaveLength(3);
+
     checkAllowed(result);
   });
 
@@ -123,7 +133,9 @@ describe('Check internal fragmentation', () => {
       yb: true,
       ya: false,
     });
+
     expect(result).toHaveLength(3);
+
     checkAllowed(result);
   });
 
@@ -141,7 +153,9 @@ describe('Check internal fragmentation', () => {
       yc: true,
       zc: false,
     });
+
     expect(result).toHaveLength(3);
+
     checkAllowed(result);
   });
 
@@ -160,7 +174,9 @@ describe('Check internal fragmentation', () => {
       yc: false,
       zc: true,
     });
+
     expect(result).toHaveLength(3);
+
     checkAllowed(result);
   });
 });
@@ -178,6 +194,6 @@ function clean(mfs) {
 function checkAllowed(mfs) {
   clean(mfs);
   for (let mf of mfs) {
-    expect(allowed).toContain(mf);
+    expect(mf).toBeOneOf(allowed);
   }
 }

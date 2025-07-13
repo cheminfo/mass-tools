@@ -14,6 +14,7 @@ test('getDerivedCompositionInfo', () => {
     '33S': 1,
   };
   const result = getDerivedCompositionInfo(data);
+
   expect(result).toStrictEqual({
     label: '¹²C₂₉₄¹³C₆¹H₅₀₀¹⁴N₁₀₀¹⁶O₁₀₀³²S₈₇³⁴S₁₂³³S',
     shortComposition: { '13C': 6, '34S': 12, '33S': 1 },

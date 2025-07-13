@@ -18,6 +18,7 @@ describe('blockFcnnls', () => {
       [0, 0, 3, 1], // x 2
     ];
     const result = blockFcnnls(matrix);
+
     expect(result).toMatchCloseTo({
       reconstructed: [4, 1, 6, 2],
       weights: [1, 3, 2],
@@ -32,6 +33,7 @@ describe('blockFcnnls', () => {
       [0, 0, 3, 1, 0, 0, 0, 0], // x 2
     ];
     const result = blockFcnnls(matrix);
+
     expect(result).toMatchCloseTo({
       reconstructed: [4, 1, 6, 2, 0, 0, 0, 0],
       weights: [1, 3, 2],
@@ -46,6 +48,7 @@ describe('blockFcnnls', () => {
       [0, 0, 0, 0, 0, 1, 1, 1], // x 2
     ];
     const result = blockFcnnls(matrix);
+
     expect(result).toMatchCloseTo({
       reconstructed: [1, 1, 1, 1, 0, 0, 0, 0],
       weights: [1, 0, 0],
@@ -64,6 +67,7 @@ describe('blockFcnnls', () => {
         counter++;
       }
     }
+
     expect(counter).toBe(5292);
 
     const relativeIntensity = Array.from(

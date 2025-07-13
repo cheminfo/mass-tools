@@ -9,6 +9,7 @@ describe('test mf-finder', () => {
       precision: 1e5,
       allowNeutral: true,
     });
+
     expect(result.mfs).toHaveLength(1);
   });
 
@@ -18,6 +19,7 @@ describe('test mf-finder', () => {
       precision: 1e5,
       allowNeutral: true,
     });
+
     expect(result.mfs).toHaveLength(1);
   });
 
@@ -27,6 +29,7 @@ describe('test mf-finder', () => {
       precision: 1,
       allowNeutral: true,
     });
+
     expect(result.mfs).toHaveLength(1);
   });
 
@@ -36,6 +39,7 @@ describe('test mf-finder', () => {
       precision: 1e5,
       ionizations: 'H+',
     });
+
     expect(result.mfs).toHaveLength(1);
     expect(result.mfs[0]).toMatchObject({
       em: 24,
@@ -59,6 +63,7 @@ describe('test mf-finder', () => {
       precision: 1e5,
       ionizations: 'Cl-',
     });
+
     expect(result.mfs).toHaveLength(1);
   });
 
@@ -69,6 +74,7 @@ describe('test mf-finder', () => {
       precision: 1e5,
       ionizations: 'Cl-',
     });
+
     expect(result.mfs).toHaveLength(0);
   });
 
@@ -78,6 +84,7 @@ describe('test mf-finder', () => {
       precision: 1e6,
       ionizations: 'H+',
     });
+
     expect(result.mfs).toHaveLength(2);
   });
 
@@ -93,6 +100,7 @@ describe('test mf-finder', () => {
         callback: (entry) => entry.atoms.H === entry.atoms.C,
       },
     });
+
     expect(result.mfs).toHaveLength(10);
   });
 
@@ -104,6 +112,7 @@ describe('test mf-finder', () => {
       ionizations: ',H+',
       limit: 1,
     });
+
     expect(result.mfs).toHaveLength(1);
     expect(result.mfs[0].ms.ppm).toBe(0);
   });
@@ -114,6 +123,7 @@ describe('test mf-finder', () => {
       precision: 1e6,
       ionizations: 'H(+2)',
     });
+
     expect(result.mfs[1]).toMatchObject({
       em: 12,
       unsaturation: 2,
@@ -140,6 +150,7 @@ describe('test mf-finder', () => {
       precision: 1e5,
       allowNeutral: true,
     });
+
     expect(result.mfs).toHaveLength(2);
     expect(result.mfs[0].mf).toBe('C2');
     expect(result.mfs[1].mf).toBe('C2H');
@@ -150,6 +161,7 @@ describe('test mf-finder', () => {
       ranges: 'C0-2 C0-2',
       allowNeutral: true,
     });
+
     expect(result.mfs).toHaveLength(3);
   });
 
@@ -159,6 +171,7 @@ describe('test mf-finder', () => {
       allowNeutral: true,
       uniqueMFs: true,
     });
+
     expect(result.mfs).toHaveLength(1);
   });
 
@@ -168,6 +181,7 @@ describe('test mf-finder', () => {
       allowNeutral: true,
       uniqueMFs: true,
     });
+
     expect(result.mfs).toHaveLength(1);
     expect(result.mfs[0].mf).toBe('(Me)2');
   });
@@ -178,6 +192,7 @@ describe('test mf-finder', () => {
       allowNeutral: true,
       uniqueMFs: true,
     });
+
     expect(result.mfs).toHaveLength(1);
     expect(result.mfs[0].mf).toBe('CH2MePh');
   });
@@ -193,6 +208,7 @@ describe('test mf-finder', () => {
       allowNeutral: true,
       uniqueMFs: true,
     });
+
     expect(result1.mfs).toHaveLength(result2.mfs.length);
   });
 
@@ -202,6 +218,7 @@ describe('test mf-finder', () => {
       allowNeutral: true,
       uniqueMFs: true,
     });
+
     expect(result.mfs).toHaveLength(1);
     expect(result.mfs[0].mf).toBe('(CH3)2');
   });
@@ -212,6 +229,7 @@ describe('test mf-finder', () => {
       allowNeutral: true,
       uniqueMFs: true,
     });
+
     expect(result.mfs).toHaveLength(1);
     expect(result.mfs[0].mf).toBe('HEt');
   });
@@ -231,6 +249,7 @@ describe('test mf-finder', () => {
         },
       },
     });
+
     expect(result.mfs).toHaveLength(2);
     expect(result.mfs[0].mf).toBe('CH4');
   });
@@ -251,6 +270,7 @@ describe('test mf-finder', () => {
         },
       },
     });
+
     expect(result.mfs).toHaveLength(1);
     expect(result.mfs[0].mf).toBe('CH4');
   });
@@ -265,6 +285,7 @@ describe('test mf-finder', () => {
       precision: 1e5,
       allowNeutral: true,
     });
+
     expect(result.mfs).toHaveLength(2);
     expect(result.mfs[0].mf).toBe('C2');
     expect(result.mfs[1].mf).toBe('C2H');
@@ -276,6 +297,7 @@ describe('test mf-finder', () => {
       precision: 1e5,
       allowNeutral: true,
     });
+
     expect(result.mfs).toHaveLength(2);
     expect(result.mfs[0].mf).toBe('C2');
     expect(result.mfs[1].mf).toBe('C2H');
@@ -287,17 +309,20 @@ describe('test mf-finder', () => {
       precision: 1e10,
       allowNeutral: true,
     });
+
     expect(result.mfs[0].atoms).toStrictEqual({ C: 2, H: 2 });
     expect(result.mfs[0].groups).toStrictEqual({ '(CH2)': 1 });
     expect(result.mfs[2].atoms).toStrictEqual({ C: 1 });
     expect(result.mfs[2].groups).toStrictEqual({});
   });
+
   it('simple combinations for polymers', async () => {
     let result = await findMFs(92.99814, {
       ranges: '(CH2)0-10NOCl',
       precision: 1e4,
       allowNeutral: true,
     });
+
     expect(result.mfs).toHaveLength(1);
     expect(result.mfs[0].mf).toBe('(CH2)2NOCl');
   });
@@ -312,6 +337,7 @@ describe('test mf-finder', () => {
       precision: 1e5,
       ionizations: 'H+, H++',
     });
+
     expect(result.mfs).toHaveLength(4);
     expect(result.mfs[0].mf).toBe('C2');
   });
@@ -326,6 +352,7 @@ describe('test mf-finder', () => {
       precision: 1e4,
       allowNeutral: true,
     });
+
     expect(result.mfs).toHaveLength(0);
   });
 
@@ -339,6 +366,7 @@ describe('test mf-finder', () => {
       precision: 1000,
       allowNeutral: true,
     });
+
     expect(result.info.numberResults).toBe(1);
     expect(result.mfs).toHaveLength(1);
     expect(result.mfs[0].mf).toBe('C2');
@@ -354,6 +382,7 @@ describe('test mf-finder', () => {
       precision: 10000,
       allowNeutral: true,
     });
+
     expect(result.info.numberResults).toBe(3);
     expect(result.mfs).toHaveLength(3);
     expect(result.mfs[0].mf).toBe('C2');
@@ -370,6 +399,7 @@ describe('test mf-finder', () => {
       precision: 1,
       allowNeutral: true,
     });
+
     expect(result.info.numberMFEvaluated).toBeLessThan(50);
     expect(result.info.numberResults).toBe(1);
     expect(result.mfs).toHaveLength(1);
@@ -388,6 +418,7 @@ describe('test mf-finder', () => {
       precision: 0.0001,
       allowNeutral: true,
     });
+
     expect(result.info.numberMFEvaluated).toBeLessThan(500000);
     expect(result.info.numberResults).toBe(1);
     expect(result.mfs).toHaveLength(1);
@@ -406,6 +437,7 @@ describe('test mf-finder', () => {
       precision: 1,
       allowNeutral: true,
     });
+
     expect(result.mfs[0].mf).toBe('C88H5N3O4S');
   });
 
@@ -417,6 +449,7 @@ describe('test mf-finder', () => {
       ],
       precision: 1e4,
     });
+
     expect(result.mfs).toHaveLength(0);
   });
 
@@ -428,6 +461,7 @@ describe('test mf-finder', () => {
       ],
       precision: 1e5,
     });
+
     expect(result.mfs).toHaveLength(2);
   });
 
@@ -457,6 +491,7 @@ describe('test mf-finder', () => {
         minCharge: 1,
       },
     });
+
     expect(result.mfs).toHaveLength(1);
     expect(result.mfs[0].mf).toBe('C+');
   });
@@ -466,6 +501,7 @@ describe('test mf-finder', () => {
       ranges: [{ mf: 'C', min: 1, max: 1 }],
       allowNeutral: true,
     });
+
     expect(result.mfs).toHaveLength(1);
     expect(result.mfs[0].mf).toBe('C');
   });
@@ -478,6 +514,7 @@ describe('test mf-finder', () => {
       ],
       allowNeutral: true,
     });
+
     expect(result.mfs).toHaveLength(1);
     expect(result.mfs[0].mf).toBe('C2');
   });
@@ -491,6 +528,7 @@ describe('test mf-finder', () => {
       precision: 10000,
       allowNeutral: true,
     });
+
     expect(result.mfs).toHaveLength(3);
   });
 
@@ -499,6 +537,7 @@ describe('test mf-finder', () => {
       ranges: [{ mf: 'C+', min: 1, max: 2 }],
       allowNeutral: true,
     });
+
     expect(result.mfs).toHaveLength(2);
     expect(result.mfs[0].mf).toBe('C+');
     expect(result.mfs[1].mf).toBe('(C+)2');

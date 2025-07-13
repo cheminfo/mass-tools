@@ -26,6 +26,7 @@ describe('test searchMSEM', () => {
         precision: 1000,
       },
     });
+
     expect(results.contaminants).toHaveLength(4);
   });
 

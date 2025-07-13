@@ -8,6 +8,7 @@ import { server } from './testServer';
 beforeAll(() => {
   server.listen();
 });
+
 // Reset handlers so that each test could alter them
 // without affecting other, unrelated tests.
 afterEach(() => server.resetHandlers());
@@ -17,7 +18,7 @@ afterAll(() => {
   server.close();
 });
 
-describe('compoundsFromMF', () => {
+describe('compoundsFromMF', { timeout: 30_000 }, () => {
   it('simple case', async () => {
     const baseURL = 'http://localhost/data/';
     const route = 'compoundsFromMF.json';
@@ -27,6 +28,7 @@ describe('compoundsFromMF', () => {
       fields: 'data.ocl.idCode,data.ocl.index,data.iupac,data.mf',
     });
     const entry = data.find((datum) => datum.data.iupac === 'pent-2-ene');
+
     expect(entry.data.title).toBe('Pent-2-ene');
-  }, 30000);
+  });
 });

@@ -12,6 +12,7 @@ describe('peakPicking on Spectrum', () => {
       'utf8',
     );
     let spectrum = fromText(chargedText, { threshold: 0.1 });
+
     expect(spectrum.peakPicking()).toHaveLength(55);
 
     spectrum = fromText(chargedText);
@@ -27,6 +28,7 @@ describe('peakPicking on Spectrum', () => {
     expect(peaks).toHaveLength(2159);
 
     const peaksDataXY = spectrum.getPeaksAsDataXY();
+
     expect(peaksDataXY.x).toHaveLength(136);
     expect(peaksDataXY.y).toHaveLength(136);
   });
@@ -37,6 +39,7 @@ describe('peakPicking on Spectrum', () => {
     );
     const spectrum = new Spectrum(data);
     const peaks = spectrum.peakPicking();
+
     expect(peaks).toHaveLength(114528);
   });
 });

@@ -10,27 +10,34 @@ describe('fragment', () => {
     const molecule = Molecule.fromSmiles('CC'); // just ring
     const results = fragment(molecule);
     const mfs = results.map((result) => result.mfInfo.mf);
+
     expect(mfs).toStrictEqual(['CH3', 'CH3', 'C2H6']);
     expect(results).toMatchSnapshot();
   });
+
   it('CCC', () => {
     const molecule = Molecule.fromSmiles('CCC'); // just ring
     const results = fragment(molecule);
     const mfs = results.map((result) => result.mfInfo.mf);
+
     expect(mfs).toStrictEqual(['CH3', 'CH3', 'C2H5', 'C2H5', 'C3H8']);
     expect(results).toMatchSnapshot();
   });
+
   it('C1CCC1', () => {
     const molecule = Molecule.fromSmiles('C1CCC1'); // just ring
     const results = fragment(molecule);
     const mfs = results.map((result) => result.mfInfo.mf);
+
     expect(mfs).toStrictEqual(['C2H4', 'C2H4', 'C2H4', 'C2H4', 'C4H8']);
     expect(results).toMatchSnapshot();
   });
+
   it('CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes', () => {
     const molecule = Molecule.fromSmiles('CCCCC2CCC1C(CC)CC(=O)CC1C2'); //3 cyclohexane connected
     const results = fragment(molecule, { calculateHoseCodes: true });
     const mfs = results.map((result) => result.mfInfo.mf);
+
     expect(mfs).toStrictEqual([
       'CH3',
       'CH3',
@@ -77,6 +84,7 @@ describe('fragment', () => {
     const molecule = Molecule.fromSmiles('CCCCCC(CC)CCC'); // just ring
     const results = fragment(molecule);
     const mfs = results.map((result) => result.mfInfo.mf);
+
     expect(mfs).toStrictEqual([
       'CH3',
       'CH3',
@@ -102,9 +110,11 @@ describe('fragment', () => {
     ]);
     expect(results).toMatchSnapshot();
   });
+
   it('noMolecule', () => {
     const molecule = Molecule.fromSmiles('');
     const results = fragment(molecule);
+
     expect(results).toStrictEqual([
       {
         idCode: 'd@',

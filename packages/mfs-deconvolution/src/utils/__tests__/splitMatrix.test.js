@@ -13,6 +13,7 @@ describe('splitMatrix', () => {
       [0, 0, 1, 1],
     ];
     const matrices = splitMatrix(matrix);
+
     expect(matrices).toMatchObject([
       { rows: [0, 1], columns: [0, 1] },
       { rows: [2], columns: [2, 3] },
@@ -31,13 +32,14 @@ describe('splitMatrix', () => {
     `);
   });
 
-  it('simple test', () => {
+  it('simple test 2', () => {
     const matrix = [
       [1, 0, 0, 1],
       [1, 1, 0, 0],
       [0, 0, 1, 1],
     ];
     const matrices = splitMatrix(matrix);
+
     expect(matrices).toMatchObject([
       { rows: [0, 2, 1], columns: [0, 3, 2, 1] },
     ]);
@@ -50,6 +52,7 @@ describe('splitMatrix', () => {
     // first row are the target values
     const matrix = combined.ys.slice(1);
     const result = splitMatrix(matrix);
+
     expect(result).toHaveLength(122);
   });
 });

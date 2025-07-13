@@ -22,5 +22,6 @@ test('searchInSilicoSpectraByMasses', async () => {
       ionizations: 'H+',
     },
   );
+
   expect(results.length).toBeGreaterThan(5);
 });

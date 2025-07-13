@@ -6,11 +6,12 @@ import { describe, expect, it } from 'vitest';
 import { fromText } from '../Spectrum';
 
 describe('test appendPeakCharge on Spectrum', () => {
-  let chargedText = readFileSync(
-    path.join(__dirname, 'data/multicharge.txt'),
-    'utf8',
-  );
   it('multicharged', () => {
+    const chargedText = readFileSync(
+      path.join(__dirname, 'data/multicharge.txt'),
+      'utf8',
+    );
+
     let spectrum = fromText(chargedText);
     let peaks = spectrum.peakPicking();
     const peaksWithCharge = spectrum

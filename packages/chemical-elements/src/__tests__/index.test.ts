@@ -9,6 +9,7 @@ describe('chemical-lements', () => {
 
   it('elementsObject', () => {
     const keys = Object.keys(elementsObject);
+
     expect(keys).toHaveLength(118);
   });
 });

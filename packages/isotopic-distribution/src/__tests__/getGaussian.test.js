@@ -6,6 +6,7 @@ describe('test isotopicDistribution', () => {
   it('create distribution of C1 with default options', () => {
     let isotopicDistribution = new IsotopicDistribution('C', { fwhm: 0.1 });
     let gaussian = isotopicDistribution.getGaussian({ from: 11, to: 14 });
+
     expect(gaussian.y[15]).toBeCloseTo(gaussian.y[25], 5);
     expect(gaussian.y[15]).toBeCloseTo(gaussian.y[20] / 2, 5);
 
@@ -15,6 +16,7 @@ describe('test isotopicDistribution', () => {
     expect(Math.min(...gaussian.y)).toBeCloseTo(0, 3);
     expect(Math.max(...gaussian.y)).toBeCloseTo(0.9893, 2);
   });
+
   it('create distribution of C1 and getGaussian', () => {
     let isotopicDistribution = new IsotopicDistribution('C', { fwhm: 0.1 });
     let gaussian = isotopicDistribution.getGaussian({
@@ -61,6 +63,7 @@ describe('test isotopicDistribution', () => {
     let isotopicDistribution = new IsotopicDistribution('C10000', {
       fwhm: 0.001,
     });
+
     expect(() => {
       isotopicDistribution.getGaussian({});
     }).toThrow('Number of points is over the maxLength');

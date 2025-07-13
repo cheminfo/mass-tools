@@ -7,9 +7,9 @@ import { parseXY } from 'xy-parser';
 import { EMDB } from '../..';
 
 describe('test appendFragmentsInfo for ethylbenzene', () => {
-  let experimental = loadEthylbenzene();
   it('should find one result with bad distribution', async () => {
-    let emdb = new EMDB();
+    const experimental = loadEthylbenzene();
+    const emdb = new EMDB();
     await emdb.fromMonoisotopicMass(106.077, {
       ionizations: '+',
       ranges: 'C0-100 H0-100 N0-100 O0-100 F0-10 Cl0-10',
@@ -30,7 +30,7 @@ describe('test appendFragmentsInfo for ethylbenzene', () => {
       precision: 5,
       ionizations: '+',
     });
-    //    console.log(results);
+
     expect(results).toHaveLength(2);
     expect(results[0].fragments.nbFound).toBe(5);
     expect(results[0].fragments.intensityFound).toBeCloseTo(0.9708522002544118);
