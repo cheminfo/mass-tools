@@ -1,5 +1,5 @@
 import { MF } from 'mf-parser';
-import { getMF, getHoseCodesForAtoms } from 'openchemlib-utils';
+import { getHoseCodesForAtoms, getMF } from 'openchemlib-utils';
 
 import { getFragmentableRings } from './utils/getFragmentableRings.js';
 

@@ -1,6 +1,6 @@
 import { Format } from '../Format';
 
-import { superscript, subscript } from './subSuperscript';
+import { subscript, superscript } from './subSuperscript';
 
 export function toText(lines) {
   let text = [];

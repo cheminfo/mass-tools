@@ -3,7 +3,7 @@ import path from 'node:path';
 
 import { describe, expect, it } from 'vitest';
 
-import { fromText, Spectrum } from '../Spectrum';
+import { Spectrum, fromText } from '../Spectrum';
 
 describe('peakPicking on Spectrum', () => {
   it('lowres2', () => {

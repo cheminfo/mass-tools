@@ -1,5 +1,5 @@
-import { MF } from 'mf-parser';
 import type { AtomsMap } from 'mf-parser';
+import { MF } from 'mf-parser';
 
 export interface Ionization {
   mf: string;

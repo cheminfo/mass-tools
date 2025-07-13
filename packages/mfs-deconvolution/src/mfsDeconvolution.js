@@ -2,7 +2,7 @@ import { v4 } from '@lukeed/uuid';
 import { IsotopicDistribution } from 'isotopic-distribution';
 import { generateMFs } from 'mf-generator';
 import { Matrix } from 'ml-matrix';
-import { xyArrayAlignToFirst, xNormed, xSum } from 'ml-spectra-processing';
+import { xNormed, xSum, xyArrayAlignToFirst } from 'ml-spectra-processing';
 
 import { getPeakWidthFct } from './getPeakWidthFct';
 import { blockFcnnls } from './utils/blockFcnnls.js';

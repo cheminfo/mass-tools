@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 
-import { groups, elements } from '..';
+import { elements, groups } from '..';
 
 test('mf-global', () => {
   expect(groups).toHaveLength(304);

@@ -1,4 +1,4 @@
-import type { IsotopesInfo, MFInfo, GetInfoOptions } from 'mf-parser';
+import type { GetInfoOptions, IsotopesInfo, MFInfo } from 'mf-parser';
 
 /**
  * An object containing two arrays.

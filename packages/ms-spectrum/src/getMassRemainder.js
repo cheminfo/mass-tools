@@ -1,4 +1,4 @@
-import { xySortX, xyJoinX } from 'ml-spectra-processing';
+import { xyJoinX, xySortX } from 'ml-spectra-processing';
 
 /**
  * Remove an integer number of time the specifiedd monoisotopic mass

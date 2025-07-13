@@ -1,9 +1,9 @@
 import { atomSorter } from 'atom-sorter';
 import { msemMatcher } from 'mf-matcher';
 import {
+  getMsInfo,
   preprocessIonizations,
   preprocessRanges,
-  getMsInfo,
 } from 'mf-utilities';
 
 import { TargetMassCache } from './TargetMassCache';

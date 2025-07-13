@@ -1,9 +1,9 @@
 import {
-  digestPeptide,
-  chargePeptide,
   allowNeutralLoss,
-  sequenceToMF,
+  chargePeptide,
+  digestPeptide,
   generatePeptideFragments,
+  sequenceToMF,
 } from 'peptide';
 
 export function fragmentPeptide(sequence, options = {}) {
