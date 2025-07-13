@@ -1,4 +1,4 @@
-import { describe, expect, it, expectTypeOf } from 'vitest';
+import { describe, expect, expectTypeOf, it } from 'vitest';
 
 import { MF } from '..';
 
@@ -553,8 +553,8 @@ describe('MF', () => {
   it('Types getInfo default shape', () => {
     const mf = new MF('C10#1H20');
     const info = mf.getInfo();
-    expectTypeOf(info).toMatchTypeOf<{ monoisotopicMass: number }>();
-    expectTypeOf(info).not.toMatchTypeOf<{ em: number }>();
+    expectTypeOf(info).toExtend<{ monoisotopicMass: number }>();
+    expectTypeOf(info).not.toExtend<{ em: number }>();
     expect(info).toStrictEqual({
       mass: 140.26617404846803,
       monoisotopicMass: 140.1565006446,
@@ -569,8 +569,8 @@ describe('MF', () => {
   it('Types getInfo custom shape', () => {
     const mf = new MF('C10#1H20');
     const info = mf.getInfo({ emFieldName: 'em' as const });
-    expectTypeOf(info).toMatchTypeOf<{ em: number }>();
-    expectTypeOf(info).not.toMatchTypeOf<{ monoisotopicMass: number }>();
+    expectTypeOf(info).toExtend<{ em: number }>();
+    expectTypeOf(info).not.toExtend<{ monoisotopicMass: number }>();
     expect(info).toStrictEqual({
       mass: 140.26617404846803,
       em: 140.1565006446,
