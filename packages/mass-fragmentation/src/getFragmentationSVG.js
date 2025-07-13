@@ -1,4 +1,4 @@
-import { render, moleculeRenderer } from 'react-tree-svg';
+import { moleculeRenderer, render } from 'react-tree-svg';
 
 /**
  * @typedef {object} MassPeak

@@ -1,5 +1,5 @@
 import { TheilSenRegression } from 'ml-regression-theil-sen';
-import { xMinValue, xMaxValue } from 'ml-spectra-processing';
+import { xMaxValue, xMinValue } from 'ml-spectra-processing';
 
 /**
  * Calculates a function that allows post-calibration on mass spectra based on the error in assignment

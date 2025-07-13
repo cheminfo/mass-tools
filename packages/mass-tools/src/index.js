@@ -17,9 +17,9 @@ export const getBestPeaks = SpectrumPkg.getBestPeaks;
 
 export { MF, ensureCase } from 'mf-parser';
 export {
-  preprocessRanges,
   getRangesForFragment,
   preprocessIonizations,
+  preprocessRanges,
 } from 'mf-utilities';
 export { generateMFs } from 'mf-generator';
 
@@ -27,8 +27,8 @@ export { atomSorter } from 'atom-sorter';
 export { mfFromEA } from 'mf-from-ea';
 export { mfFromAtomicRatio } from 'mf-from-atomic-ratio';
 export {
-  OctoChemDB,
   ActiveOrNaturalSummarizer,
+  OctoChemDB,
   createTaxonomyTree,
 } from 'octochemdb';
 export * as MassFragmentation from 'mass-fragmentation';

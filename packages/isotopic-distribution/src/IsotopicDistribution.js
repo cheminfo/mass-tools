@@ -1,6 +1,6 @@
 import { ELECTRON_MASS } from 'chemical-elements';
 import { MF } from 'mf-parser';
-import { preprocessIonizations, getMsInfo } from 'mf-utilities';
+import { getMsInfo, preprocessIonizations } from 'mf-utilities';
 import { xNormed } from 'ml-spectra-processing';
 import { SpectrumGenerator } from 'spectrum-generator';
 

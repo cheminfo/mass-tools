@@ -2,27 +2,26 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { defineConfig, globalIgnores } from 'eslint/config';
 import cheminfo from 'eslint-config-cheminfo-typescript/base';
 import unicorn from 'eslint-config-cheminfo-typescript/unicorn';
 import globals from 'globals';
 
-export default [
-  {
-    ignores: [
-      'packages/*/coverage',
-      'packages/*/dist',
-      'packages/*/docs',
-      'packages/*/examples',
-      'packages/*/example',
-      'packages/*/lib',
-      'packages/*/lib-module',
-      'packages/*/node_modules',
-      'packages/chemical-groups/src/groups.js',
-      'packages/chemical-groups/src/groupsObject.js',
-    ],
-  },
-  ...cheminfo,
-  ...unicorn,
+export default defineConfig(
+  globalIgnores([
+    'packages/*/coverage',
+    'packages/*/dist',
+    'packages/*/docs',
+    'packages/*/examples',
+    'packages/*/example',
+    'packages/*/lib',
+    'packages/*/lib-module',
+    'packages/*/node_modules',
+    'packages/chemical-groups/src/groups.js',
+    'packages/chemical-groups/src/groupsObject.js',
+  ]),
+  cheminfo,
+  unicorn,
   {
     languageOptions: {
       globals: {
@@ -56,8 +55,8 @@ export default [
       'max-lines-per-function': 'off',
     },
   },
-  ...createNoExtraneousConfigs(),
-];
+  createNoExtraneousConfigs(),
+);
 
 function createNoExtraneousConfigs() {
   const configs = [];

@@ -1,4 +1,4 @@
-import { elementsObject, elementsAndIsotopesObject } from 'chemical-elements';
+import { elementsAndIsotopesObject, elementsObject } from 'chemical-elements';
 
 import { Kind } from '../Kind';
 

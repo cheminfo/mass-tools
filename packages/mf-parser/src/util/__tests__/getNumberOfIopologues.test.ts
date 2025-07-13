@@ -1,4 +1,4 @@
-import { test, expect } from 'vitest';
+import { expect, test } from 'vitest';
 
 import { MF } from '../../MF';
 import { getNumberOfIsotopologues } from '../getNumberOfIsotopologues';

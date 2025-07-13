@@ -1,6 +1,6 @@
 import {
-  isotopesObject as isotopes,
   elementsObject as elements,
+  isotopesObject as isotopes,
 } from 'chemical-elements';
 import { groupsObject as groups } from 'chemical-groups';
 

@@ -10,7 +10,7 @@
 export function getPeakWidthFct(options = {}) {
   const { logger, mass: massOptions = {} } = options;
   const { precision = 0, peakWidthFct } = massOptions;
-  if (peakWidthFct instanceof Function) {
+  if (typeof peakWidthFct === 'function') {
     return peakWidthFct;
   }
   if (!peakWidthFct) {

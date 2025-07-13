@@ -2,9 +2,9 @@ import { isAnyArray } from 'is-any-array';
 import {
   xMaxValue,
   xMinMaxValues,
+  xMinValue,
   xNormed,
   xSum,
-  xMinValue,
   xyMaxY,
 } from 'ml-spectra-processing';
 import { parseXY } from 'xy-parser';

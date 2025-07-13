@@ -1,6 +1,6 @@
 import { groupsToSequence } from 'chemical-groups';
 import { generateMFs } from 'mf-generator';
-import { sequenceToMF, generateFragments, baseLoss } from 'nucleotide';
+import { baseLoss, generateFragments, sequenceToMF } from 'nucleotide';
 
 /**
  * Add a database starting from a peptidic sequence

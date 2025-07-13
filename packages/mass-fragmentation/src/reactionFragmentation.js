@@ -1,6 +1,6 @@
 import { MF } from 'mf-parser';
 import OCL from 'openchemlib';
-import { getMF, Reactions } from 'openchemlib-utils';
+import { Reactions, getMF } from 'openchemlib-utils';
 
 import { getDatabase } from './database/getDatabase';
 import { getMasses } from './utils/getMasses';
