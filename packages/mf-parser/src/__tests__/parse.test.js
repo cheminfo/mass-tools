@@ -238,3 +238,75 @@ test('not same opening and closing parenthesis', () => {
     parse('C(');
   }).toThrow(/.*opening and closing.*/);
 });
+
+test('expanding groups: D', () => {
+  const parsed = parse('D', { expandGroups: true });
+  expect(parsed).toStrictEqual([
+    { kind: 'openingParenthesis', value: '(' },
+    { kind: 'isotope', value: { atom: 'H', isotope: 2 } },
+    { kind: 'closingParenthesis', value: ')' },
+  ]);
+});
+
+test('simplify: C', () => {
+  const parsed = parse('C', { simplify: true });
+  expect(parsed).toStrictEqual([{ kind: 'atom', value: 'C' }]);
+});
+test('simplify: C2', () => {
+  const parsed = parse('C2', { simplify: true });
+  expect(parsed).toStrictEqual([
+    { kind: 'atom', value: 'C' },
+    { kind: 'multiplier', value: 2 },
+  ]);
+});
+
+test('simplify: C2H3', () => {
+  const parsed = parse('C2H3', { simplify: true });
+  expect(parsed).toStrictEqual([
+    { kind: 'atom', value: 'C' },
+    { kind: 'multiplier', value: 2 },
+    { kind: 'atom', value: 'H' },
+    { kind: 'multiplier', value: 3 },
+  ]);
+});
+
+test('simplify with isotopes: [13C](CH3)2', () => {
+  const parsed = parse('[13C](CH3)2', { simplify: true });
+  expect(parsed).toStrictEqual([
+    { kind: 'isotope', value: { atom: 'C', isotope: 13 } },
+    { kind: 'atom', value: 'C' },
+    { kind: 'multiplier', value: 2 },
+    { kind: 'atom', value: 'H' },
+    { kind: 'multiplier', value: 6 },
+  ]);
+});
+
+test('simplify with groups, no expand: (Et2)3Me2C5H10', () => {
+  const parsed = parse('(Et2)3Me2C5H10', { simplify: true });
+  expect(parsed).toStrictEqual([
+    { kind: 'atom', value: 'C' },
+    { kind: 'multiplier', value: 5 },
+    { kind: 'atom', value: 'H' },
+    { kind: 'multiplier', value: 10 },
+    { kind: 'atom', value: 'Et' },
+    { kind: 'multiplier', value: 6 },
+    { kind: 'atom', value: 'Me' },
+    { kind: 'multiplier', value: 2 },
+  ]);
+});
+
+test('expanding and simplify groups: Et2(C(CH3)2)2Me1-2ClBr2', () => {
+  const parsed = parse('Et2(C(CH3)2)2Me1-2ClBr2', {
+    expandGroups: true,
+    simplify: true,
+  });
+  expect(parsed).toStrictEqual([
+    { kind: 'atom', value: 'C' },
+    { kind: 'multiplierRange', value: { from: 11, to: 12 } },
+    { kind: 'atom', value: 'H' },
+    { kind: 'multiplierRange', value: { from: 25, to: 28 } },
+    { kind: 'atom', value: 'Br' },
+    { kind: 'multiplier', value: 2 },
+    { kind: 'atom', value: 'Cl' },
+  ]);
+});
