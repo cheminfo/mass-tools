@@ -411,6 +411,9 @@ function simplify(parsed) {
 
   const distinctParsed = [];
   for (const item of sorted) {
+    if (item.multiplier.from === 0 && item.multiplier.to === 0) {
+      continue;
+    }
     distinctParsed.push({
       kind: item.kind,
       value: item.value,

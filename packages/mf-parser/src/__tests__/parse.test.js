@@ -310,3 +310,14 @@ test('expanding and simplify groups: Et2(C(CH3)2)2Me1-2ClBr2', () => {
     { kind: 'atom', value: 'Cl' },
   ]);
 });
+
+test('simplify with 0 multipliers: C0(Et2(CH3))0C2Br0', () => {
+  const parsed = parse('C0(Et2(CH3))0C2Br0', {
+    simplify: true,
+    expandGroups: true,
+  });
+  expect(parsed).toStrictEqual([
+    { kind: 'atom', value: 'C' },
+    { kind: 'multiplier', value: 2 },
+  ]);
+});
