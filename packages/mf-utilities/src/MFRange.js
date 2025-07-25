@@ -51,7 +51,6 @@ function getRange(mf) {
   const ranges = [];
   let currentRange;
 
-  let currentElement = '';
   for (const item of parsed) {
     switch (item.kind) {
       case 'atom':

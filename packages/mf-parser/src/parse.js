@@ -1,10 +1,11 @@
 /* eslint-disable unicorn/prefer-code-point */
 
+import { atomSorter } from 'atom-sorter';
+import { elementsObject } from 'chemical-elements';
 import { groupsObject } from 'chemical-groups';
+
 import { Kind } from './Kind';
 import { parseCharge } from './util/parseCharge';
-import { elementsObject } from 'chemical-elements';
-import { atomSorter } from 'atom-sorter';
 
 /**
  * Parse a mf to an array of kind / value
@@ -19,7 +20,7 @@ export function parse(mf, options = {}) {
 }
 
 class MFParser {
-  parse(mf = '', options) {
+  parse(mf = '', options = {}) {
     this.expandGroups = options?.expandGroups ?? false;
     this.simplify = options?.simplify ?? false;
     this.mf = mf;
@@ -234,7 +235,7 @@ class MFParser {
         { kind: Kind.CLOSING_PARENTHESIS, value: ')' },
       ];
     }
-    throw new MFError('Not able to expand group: ' + this.mf);
+    throw new MFError(`Not able to expand group: ${this.mf}`);
   }
 
   getIsotope(ascii) {
@@ -337,24 +338,26 @@ function simplify(parsed) {
     switch (item.kind) {
       case 'atom':
       case 'isotope':
-        let realMultiplier = currentMultiplier;
-        for (const multiplier of multipliers) {
-          realMultiplier = {
-            from: multiplier.from * realMultiplier.from,
-            to: multiplier.to * realMultiplier.to,
-          };
+        {
+          let realMultiplier = currentMultiplier;
+          for (const multiplier of multipliers) {
+            realMultiplier = {
+              from: multiplier.from * realMultiplier.from,
+              to: multiplier.to * realMultiplier.to,
+            };
+          }
+          newParsed.push(
+            {
+              kind: item.kind,
+              value: item.value,
+            },
+            {
+              kind: 'multiplierRange',
+              value: realMultiplier,
+            },
+          );
+          currentMultiplier = { from: 1, to: 1 };
         }
-        newParsed.push(
-          {
-            kind: item.kind,
-            value: item.value,
-          },
-          {
-            kind: 'multiplierRange',
-            value: realMultiplier,
-          },
-        );
-        currentMultiplier = { from: 1, to: 1 };
         break;
       case 'multiplier':
         currentMultiplier = { from: item.value, to: item.value };
