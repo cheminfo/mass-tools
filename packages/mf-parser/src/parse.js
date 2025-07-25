@@ -1,19 +1,27 @@
 /* eslint-disable unicorn/prefer-code-point */
 
+import { groupsObject } from 'chemical-groups';
 import { Kind } from './Kind';
 import { parseCharge } from './util/parseCharge';
+import { elementsObject } from 'chemical-elements';
+import { atomSorter } from 'atom-sorter';
 
 /**
  * Parse a mf to an array of kind / value
  * @param {String} mf
+ * @param {Object} [options={}]
+ * @param {Boolean} [options.expandGroups=false] - if true, expand groups
+ * @param {Boolean} [options.simplify=false] - if true, remove all the parenthesis and join identical atoms / groups
  */
 
-export function parse(mf) {
-  return new MFParser().parse(mf);
+export function parse(mf, options = {}) {
+  return new MFParser().parse(mf, options);
 }
 
 class MFParser {
-  parse(mf = '') {
+  parse(mf = '', options) {
+    this.expandGroups = options?.expandGroups ?? false;
+    this.simplify = options?.simplify ?? false;
     this.mf = mf;
     this.i = 0;
     this.result = [];
@@ -76,8 +84,7 @@ class MFParser {
         // it must be in a salt
       } else if (ascii > 64 && ascii < 91) {
         // an uppercase = new atom
-        let value = this.getAtom(ascii);
-        this.result.push({ kind: Kind.ATOM, value });
+        this.result.push(...this.getAtom(ascii));
         continue;
       } else if (ascii > 96 && ascii < 123) {
         // a lowercase
@@ -150,6 +157,9 @@ class MFParser {
     }
 
     this.checkParenthesis();
+    if (this.simplify) {
+      this.result = simplify(this.result);
+    }
     return this.result;
   }
 
@@ -202,7 +212,29 @@ class MFParser {
       this.i++;
       ascii = this.mf.charCodeAt(this.i);
     } while (ascii > 96 && ascii < 123);
-    return atom;
+
+    if (elementsObject[atom] || !this.expandGroups) {
+      return [
+        {
+          kind: Kind.ATOM,
+          value: atom,
+        },
+      ];
+    }
+
+    if (groupsObject[atom]) {
+      const group = groupsObject[atom].mf;
+      const expandedGroups = parse(group, {
+        expandGroups: this.expandGroups,
+      });
+      // need to surround with parenthesis
+      return [
+        { kind: Kind.OPENING_PARENTHESIS, value: '(' },
+        ...expandedGroups,
+        { kind: Kind.CLOSING_PARENTHESIS, value: ')' },
+      ];
+    }
+    throw new MFError('Not able to expand group: ' + this.mf);
   }
 
   getIsotope(ascii) {
@@ -285,4 +317,122 @@ function parseNumberWithDivision(string) {
   } else {
     return Number(string);
   }
+}
+
+/**
+ * Remove all the parenthesis and multipliers
+ * Merge atoms and groups if present many times
+ * We will also sort the atoms and groups
+ * @param {*} parsed
+ * @returns
+ */
+function simplify(parsed) {
+  if (!parsed || parsed.length === 0) return [];
+
+  const multipliers = [];
+  let currentMultiplier = { from: 1, to: 1 };
+  let newParsed = [];
+  for (let i = parsed.length - 1; i >= 0; i--) {
+    const item = parsed[i];
+    switch (item.kind) {
+      case 'atom':
+      case 'isotope':
+        let realMultiplier = currentMultiplier;
+        for (const multiplier of multipliers) {
+          realMultiplier = {
+            from: multiplier.from * realMultiplier.from,
+            to: multiplier.to * realMultiplier.to,
+          };
+        }
+        newParsed.push(
+          {
+            kind: item.kind,
+            value: item.value,
+          },
+          {
+            kind: 'multiplierRange',
+            value: realMultiplier,
+          },
+        );
+        currentMultiplier = { from: 1, to: 1 };
+        break;
+      case 'multiplier':
+        currentMultiplier = { from: item.value, to: item.value };
+        break;
+      case 'multiplierRange':
+        currentMultiplier = item.value;
+        break;
+      case 'openingParenthesis':
+        multipliers.pop();
+        break;
+      case 'closingParenthesis':
+        multipliers.push(currentMultiplier);
+        currentMultiplier = { from: 1, to: 1 };
+        break;
+      default:
+        throw new Error(`Unexpected kind ${item.kind} in removeParenthesis`);
+    }
+  }
+
+  // if we have many times the same atom / group, we can merge them
+  const distinctParsedObject = {};
+  for (let i = 0; i < newParsed.length; i = i + 2) {
+    const item = newParsed[i];
+    const multiplier = newParsed[i + 1];
+    const key = JSON.stringify(item.value);
+    if (!distinctParsedObject[key]) {
+      distinctParsedObject[key] = {
+        ...item,
+        multiplier: multiplier.value,
+      };
+    } else {
+      distinctParsedObject[key].multiplier.from += multiplier.value.from;
+      distinctParsedObject[key].multiplier.to += multiplier.value.to;
+    }
+  }
+
+  const sorted = Object.values(distinctParsedObject).sort((a, b) => {
+    const atomA = a.kind === 'atom' ? a.value : a.value.atom;
+    const atomB = b.kind === 'atom' ? b.value : b.value.atom;
+    if (atomA === atomB) {
+      if (a.kind === 'isotope' && b.kind === 'isotope') {
+        return a.value.isotope - b.value.isotope;
+      }
+      if (a.kind === 'isotope' && b.kind !== 'isotope') {
+        return -1; // isotope comes before non-isotope
+      }
+      if (a.kind !== 'isotope' && b.kind === 'isotope') {
+        return 1; // non-isotope comes after isotope
+      }
+      return 0;
+    }
+    return atomSorter(atomA, atomB);
+  });
+
+  const distinctParsed = [];
+  for (const item of sorted) {
+    distinctParsed.push({
+      kind: item.kind,
+      value: item.value,
+    });
+    if (item.multiplier.from === 1 && item.multiplier.to === 1) {
+      continue; // no need to add a multiplier
+    }
+    if (item.multiplier.from === item.multiplier.to) {
+      distinctParsed.push({
+        kind: 'multiplier',
+        value: item.multiplier.from,
+      });
+    } else {
+      distinctParsed.push({
+        kind: 'multiplierRange',
+        value: {
+          from: item.multiplier.from,
+          to: item.multiplier.to,
+        },
+      });
+    }
+  }
+
+  return distinctParsed;
 }
