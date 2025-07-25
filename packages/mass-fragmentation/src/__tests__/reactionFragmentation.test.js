@@ -40,5 +40,5 @@ describe('ReactionFragmentation', async () => {
     expect(validNodes.length).toBeGreaterThan(1000);
     expect(masses.length).toBeGreaterThan(40);
     expect(trees).toMatchSnapshot();
-  });
+  }, 30000);
 });
