@@ -1,4 +1,7 @@
 /**
+ * This method will generate all possible molecular formulas
+ * from ranges.
+ * It should rather be called expand because it expands all the ranges
  * @param parsed
  * @param options
  * @return {string[]}
@@ -85,7 +88,7 @@ export function flatten(parsed, options = {}) {
 
 /**
  * If we have many times the same mf we can combine them
- * This should only be applied if there are acutally some ranges
+ * This should only be applied if there are acutaly some ranges
  */
 function optimizeRanges(parts) {
   let newParts = [];
