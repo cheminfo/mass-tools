@@ -2,11 +2,6 @@ import { Node } from './Node.js';
 
 /** javascript TreeMap implementation */
 export class TreeMap {
-  constructor() {
-    this.root = null;
-    this.size = 0;
-  }
-
   get(key) {
     let currentNode = this.root;
     while (currentNode != null) {
@@ -107,4 +102,6 @@ export class TreeMap {
     }
     return bestMatch;
   }
+  root = null;
+  size = 0;
 }
