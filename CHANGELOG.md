@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.51.0](https://github.com/cheminfo/mass-tools/compare/v7.50.0...v7.51.0) (2025-07-28)
+
+
+### Features
+
+* **mass-tools:** expose MFRange ([f62bca2](https://github.com/cheminfo/mass-tools/commit/f62bca2f7d55d429bee80a2b57bb387e1067051f))
+
 ## [7.50.0](https://github.com/cheminfo/mass-tools/compare/v7.49.0...v7.50.0) (2025-07-28)
 
 
