@@ -1,5 +1,18 @@
 # Changelog
 
+## [7.50.0](https://github.com/cheminfo/mass-tools/compare/v7.49.0...v7.50.0) (2025-07-28)
+
+
+### Features
+
+* **mf-parser:** parseMF has 2 options to expandGroups and simplify result ([157425c](https://github.com/cheminfo/mass-tools/commit/157425c3b3121c3ccfe1bcde20f187eac4e247b2))
+* **mf-utilities:** add MFRange ([e9c166d](https://github.com/cheminfo/mass-tools/commit/e9c166d64ed881547a9e0960727a44dddaabdd16))
+
+
+### Bug Fixes
+
+* update dependencies ([e5b3a5c](https://github.com/cheminfo/mass-tools/commit/e5b3a5cbee9d45293001258f3b438391343604ec))
+
 ## [7.49.0](https://github.com/cheminfo/mass-tools/compare/v7.48.3...v7.49.0) (2025-04-03)
 
 
