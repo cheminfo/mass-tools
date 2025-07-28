@@ -17,6 +17,7 @@ export const getBestPeaks = SpectrumPkg.getBestPeaks;
 
 export { MF, ensureCase } from 'mf-parser';
 export {
+  MFRange,
   getRangesForFragment,
   preprocessIonizations,
   preprocessRanges,
