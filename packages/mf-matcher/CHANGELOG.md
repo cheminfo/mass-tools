@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.16](https://github.com/cheminfo/mass-tools/compare/mf-matcher@3.2.15...mf-matcher@3.2.16) (2025-07-28)
+
+
+### Bug Fixes
+
+* update dependencies ([e5b3a5c](https://github.com/cheminfo/mass-tools/commit/e5b3a5cbee9d45293001258f3b438391343604ec))
+
+
+
+
+
 ## [3.2.15](https://github.com/cheminfo/mass-tools/compare/mf-matcher@3.2.14...mf-matcher@3.2.15) (2025-03-22)
 
 **Note:** Version bump only for package mf-matcher

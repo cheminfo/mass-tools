@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/cheminfo/mass-tools/compare/mf-utilities@3.3.8...mf-utilities@3.4.0) (2025-07-28)
+
+
+### Features
+
+* **mf-utilities:** add MFRange ([e9c166d](https://github.com/cheminfo/mass-tools/commit/e9c166d64ed881547a9e0960727a44dddaabdd16))
+
+
+
+
+
 ## [3.3.8](https://github.com/cheminfo/mass-tools/compare/mf-utilities@3.3.7...mf-utilities@3.3.8) (2025-03-22)
 
 **Note:** Version bump only for package mf-utilities

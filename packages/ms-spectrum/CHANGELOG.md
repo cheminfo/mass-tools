@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.1](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.9.0...ms-spectrum@3.9.1) (2025-07-28)
+
+
+### Bug Fixes
+
+* update dependencies ([e5b3a5c](https://github.com/cheminfo/mass-tools/commit/e5b3a5cbee9d45293001258f3b438391343604ec))
+
+
+
+
+
 # [3.9.0](https://github.com/cheminfo/mass-tools/compare/ms-spectrum@3.8.3...ms-spectrum@3.9.0) (2025-04-03)
 
 
