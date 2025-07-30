@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/cheminfo/mass-tools/compare/mass-tools@2.2.24...mass-tools@2.3.0) (2025-07-30)
+
+
+### Features
+
+* **mass-tools:** expose MFRange ([f62bca2](https://github.com/cheminfo/mass-tools/commit/f62bca2f7d55d429bee80a2b57bb387e1067051f))
+
+
+
+
+
 ## [2.2.24](https://github.com/cheminfo/mass-tools/compare/mass-tools@2.2.23...mass-tools@2.2.24) (2025-07-28)
 
 **Note:** Version bump only for package mass-tools
