@@ -1,7 +1,7 @@
 {
   "name": "mass-tools",
   "private": true,
-  "version": "7.50.0",
+  "version": "7.51.0",
   "workspaces": [
     "packages/*"
   ],
