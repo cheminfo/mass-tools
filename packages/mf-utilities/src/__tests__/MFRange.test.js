@@ -6,6 +6,9 @@ test('No ranges', () => {
   const range = 'C10H20O3';
   const mfRange = new MFRange(range);
 
+  expect(mfRange.isInRange('C10H20O3')).toBe(true);
+  expect(mfRange.isInRange('C10 H20 O3')).toBe(true);
+  expect(mfRange.isInRange('Et5H-5O3')).toBe(true);
   expect(mfRange.isInRange('H20C10O3')).toBe(true);
   expect(mfRange.isInRange('H20C10O3Br')).toBe(false);
   expect(mfRange.isInRange('C10O3H20')).toBe(true);

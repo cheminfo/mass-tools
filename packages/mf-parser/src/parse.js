@@ -372,8 +372,12 @@ function simplify(parsed) {
         multipliers.push(currentMultiplier);
         currentMultiplier = { from: 1, to: 1 };
         break;
+      case 'text':
+        break;
       default:
-        throw new Error(`Unexpected kind ${item.kind} in removeParenthesis`);
+        throw new Error(
+          `Unexpected kind --${item.kind}-- in removeParenthesis`,
+        );
     }
   }
 
