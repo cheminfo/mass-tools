@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.5.0...mf-parser@3.6.0) (2025-08-11)
+
+
+### Features
+
+* **mf-parser:** simplify method skip text elements (like spaces) ([bf322e2](https://github.com/cheminfo/mass-tools/commit/bf322e25b47a70ed77adcfd10014ff2997b10a7c))
+
+
+
+
+
 # [3.5.0](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.4.2...mf-parser@3.5.0) (2025-07-28)
 
 

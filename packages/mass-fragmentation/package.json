@@ -1,6 +1,6 @@
 {
   "name": "mass-fragmentation",
-  "version": "1.11.9",
+  "version": "1.11.10",
   "description": "Code to fragment molecules",
   "main": "lib/src/index.js",
   "files": [
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/mass-fragmentation#readme",
   "dependencies": {
-    "mf-parser": "^3.5.0",
+    "mf-parser": "^3.6.0",
     "openchemlib-utils": "^8.2.0",
     "react-tree-svg": "^1.4.0"
   },

@@ -3,7 +3,7 @@
   "browser": {
     "./lib/src/getPaper.js": "./lib/src/getPaper.browser.js"
   },
-  "version": "3.2.18",
+  "version": "3.2.19",
   "description": "Generate report for mass analysis",
   "main": "lib/src/index.js",
   "files": [
@@ -24,9 +24,9 @@
   "dependencies": {
     "@svgdotjs/svg.js": "^3.2.4",
     "chemical-groups": "^2.2.3",
-    "mf-utilities": "^3.4.0",
-    "nucleotide": "^3.2.9",
-    "peptide": "^2.3.9",
+    "mf-utilities": "^3.5.0",
+    "nucleotide": "^3.2.10",
+    "peptide": "^2.3.10",
     "svgdom": "^0.1.22"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "mf-parser",
-  "version": "3.5.0",
+  "version": "3.6.0",
   "description": "Parse a molecular formula",
   "main": "lib/src/index.js",
   "files": [

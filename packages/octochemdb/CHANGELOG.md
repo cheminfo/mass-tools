@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.16](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.10.15...octochemdb@2.10.16) (2025-08-11)
+
+**Note:** Version bump only for package octochemdb
+
+
+
+
+
 ## [2.10.15](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.10.14...octochemdb@2.10.15) (2025-07-28)
 
 **Note:** Version bump only for package octochemdb
