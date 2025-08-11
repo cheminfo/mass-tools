@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.52.0](https://github.com/cheminfo/mass-tools/compare/v7.51.0...v7.52.0) (2025-08-07)
+
+
+### Features
+
+* **mf-parser:** simplify method skip text elements (like spaces) ([bf322e2](https://github.com/cheminfo/mass-tools/commit/bf322e25b47a70ed77adcfd10014ff2997b10a7c))
+
 ## [7.51.0](https://github.com/cheminfo/mass-tools/compare/v7.50.0...v7.51.0) (2025-07-28)
 
 
