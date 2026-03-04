@@ -11,7 +11,7 @@ import { Kind } from '../Kind';
  */
 
 export function toParts(lines, options = {}) {
-  const { expand: shouldExpandgroupsObject = true } = options;
+  const { expand: shouldExpandGroupsObject = true } = options;
   let parts = [];
   let currentPart = createNewPart();
   let previousKind = Kind.BEGIN;
@@ -53,7 +53,7 @@ export function toParts(lines, options = {}) {
     previousKind = line.kind;
   }
   globalPartMultiplier(currentPart);
-  if (shouldExpandgroupsObject) expandgroupsObject(parts);
+  if (shouldExpandGroupsObject) expandGroupsObject(parts);
   return combineAtomsIsotopesCharges(parts);
 }
 
@@ -113,7 +113,7 @@ function postMultiplier(currentPart, value, previousKind) {
   }
 }
 
-function expandgroupsObject(parts) {
+function expandGroupsObject(parts) {
   for (let part of parts) {
     let expanded = false;
     for (let i = 0; i < part.lines.length; i++) {
