@@ -137,7 +137,7 @@ function createMFs(parts, comment, limit) {
     } else {
       position++;
     }
-    if (mfs.length > limit) {
+    if (mfs.length >= limit) {
       throw new Error(
         `MF.flatten generates too many fragments (over ${limit})`,
       );

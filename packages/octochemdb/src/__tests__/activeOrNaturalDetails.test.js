@@ -76,6 +76,7 @@ test('activeOrNaturalDetails', async () => {
             "class": "Bacilli",
             "family": "Bacillaceae",
             "genus": "Bacillus",
+            "kingdom": "Bacillati",
             "order": "Bacillales",
             "phylum": "Bacillota",
             "species": "Bacillus anthracis",

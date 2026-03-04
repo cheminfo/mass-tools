@@ -15,7 +15,17 @@ import type {
 import type { IsotopesInfo } from './util/getIsotopesInfo.types';
 
 export interface MFConstructorOptions {
+  /**
+   * If true the we will try to ensure that the case of the atoms is correct. This can be useful if you want to parse a MF like 'c2h5oh' that is not correctly formatted but it can also lead to unexpected results if the MF is not correctly formatted and the case of the atoms is not correct.
+   * @default false
+   */
   ensureCase?: boolean;
+  /**
+   * Some MF can contain a 'range' like C1-3 that means that the MF can be C, C2 or C3.
+   * If flattenLimit is larger than 0, the flatten method will return all the possible combinations of the MF up to the flattenLimit. If flattenLimit is 0, the flatten method will return all the possible combinations of the MF without any limit. If flattenLimit is -1, the flatten method will return only the first combination of the MF if the number is smaller that the limit.
+   * @default 0
+   */
+  flattenLimit?: number;
 }
 
 export class MF {

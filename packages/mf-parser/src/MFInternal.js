@@ -1,3 +1,4 @@
+import { Kind } from './Kind';
 import { ensureCase } from './ensureCase';
 import { parse } from './parse';
 import { flatten } from './util/flatten';
@@ -21,10 +22,26 @@ import { toText } from './util/toText';
  */
 export class MFInternal {
   constructor(mf, options = {}) {
+    const { flattenLimit = 0 } = options;
     if (options.ensureCase) {
       mf = ensureCase(mf);
     }
     this.parsed = parse(mf);
+
+    // This is definitely not the fastest way to do it but it allows to flatten the formula if needed and then parse it again to have a clean structure without multiplier ranges. We can consider doing it in one pass in the future if performance is an issue.
+    if (
+      flattenLimit > 0 &&
+      this.parsed.some((entry) => entry.kind === Kind.MULTIPLIER_RANGE)
+    ) {
+      try {
+        const flattened = flatten(this.parsed, { limit: flattenLimit });
+        this.parsed = parse(flattened.join('.'));
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.error(error.toString());
+      }
+    }
+
     this.cache = {};
   }
 
