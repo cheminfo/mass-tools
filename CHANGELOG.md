@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.53.1](https://github.com/cheminfo/mass-tools/compare/v7.53.0...v7.53.1) (2026-03-04)
+
+
+### Bug Fixes
+
+* **octochemdb:** patents with no products are at the end of the list ([808d3fc](https://github.com/cheminfo/mass-tools/commit/808d3fcd694abd2986cc89f01f17d0873d1d1d02))
+
 ## [7.53.0](https://github.com/cheminfo/mass-tools/compare/v7.52.0...v7.53.0) (2026-03-04)
 
 
