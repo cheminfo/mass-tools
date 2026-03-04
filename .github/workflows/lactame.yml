@@ -1,4 +1,4 @@
-name: Deploy build on lactame.com
+name: Deploy on lactame.com
 
 on:
   workflow_dispatch:
@@ -7,19 +7,8 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24.x
-      - name: Install dependencies
-        run: npm install
-      - name: Build project
-        run: npm run build
-      - name: Deploy to lactame.com
-        uses: zakodium/lactame-action@v1
-        with:
-          token: ${{ secrets.LACTAME_TOKEN }}
-          name: 'mass-tools'
-          folder: dist
+    # Documentation: https://github.com/zakodium/workflows#lactame-deploy
+    uses: zakodium/workflows/.github/workflows/lactame-deploy.yml@lactame-deploy-v1
+    secrets:
+      lactame-token: ${{ secrets.LACTAME_TOKEN }}
+      name: Deploy build on lactame.com
