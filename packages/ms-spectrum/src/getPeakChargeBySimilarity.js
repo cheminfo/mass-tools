@@ -88,5 +88,5 @@ export function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
     results.push({ charge, similarity: result.similarity });
   }
 
-  return results.sort((a, b) => b.similarity - a.similarity)[0].charge;
+  return results.toSorted((a, b) => b.similarity - a.similarity)[0].charge;
 }

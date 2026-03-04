@@ -196,7 +196,7 @@ function appendResult(results, currents, keys, options = {}) {
       if (anchors) sharps.push(...anchors);
     }
     if (sharps.length % 2 === 1) return;
-    sharps = sharps.sort();
+    sharps = sharps.toSorted();
     for (let i = 0; i < sharps.length; i += 2) {
       if (sharps[i] !== sharps[i + 1]) return;
     }

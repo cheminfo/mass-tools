@@ -398,7 +398,7 @@ function simplify(parsed) {
     }
   }
 
-  const sorted = Object.values(distinctParsedObject).sort((a, b) => {
+  const sorted = Object.values(distinctParsedObject).toSorted((a, b) => {
     const atomA = a.kind === 'atom' ? a.value : a.value.atom;
     const atomB = b.kind === 'atom' ? b.value : b.value.atom;
     if (atomA === atomB) {

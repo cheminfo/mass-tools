@@ -76,7 +76,7 @@ export function fragmentRings(molecule, options = {}) {
     }
   }
 
-  fragmentationResults = fragmentationResults.sort((a, b) => {
+  fragmentationResults = fragmentationResults.toSorted((a, b) => {
     return a.mfInfo.monoisotopicMass - b.mfInfo.monoisotopicMass;
   });
   return fragmentationResults;

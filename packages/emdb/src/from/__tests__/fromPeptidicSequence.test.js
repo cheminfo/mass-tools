@@ -21,7 +21,9 @@ describe('fromPeptidicSequence', () => {
       },
     });
 
-    const peptidic = emdb.databases.peptidic.sort((a, b) => a.ms.em - b.ms.em);
+    const peptidic = emdb.databases.peptidic.toSorted(
+      (a, b) => a.ms.em - b.ms.em,
+    );
 
     expect(peptidic).toHaveLength(2);
     expect(peptidic).toMatchSnapshot();
@@ -44,7 +46,9 @@ describe('fromPeptidicSequence', () => {
       },
     });
 
-    const peptidic = emdb.databases.peptidic.sort((a, b) => a.ms.em - b.ms.em);
+    const peptidic = emdb.databases.peptidic.toSorted(
+      (a, b) => a.ms.em - b.ms.em,
+    );
 
     expect(peptidic).toHaveLength(4);
     expect(peptidic).toMatchSnapshot();
@@ -62,7 +66,9 @@ describe('fromPeptidicSequence', () => {
       },
     });
 
-    const peptidic = emdb.databases.peptidic.sort((a, b) => a.ms.em - b.ms.em);
+    const peptidic = emdb.databases.peptidic.toSorted(
+      (a, b) => a.ms.em - b.ms.em,
+    );
 
     expect(peptidic).toHaveLength(4);
     expect(peptidic).toMatchSnapshot();
@@ -87,7 +93,9 @@ describe('fromPeptidicSequence', () => {
       },
     });
 
-    const peptidic = emdb.databases.peptidic.sort((a, b) => a.ms.em - b.ms.em);
+    const peptidic = emdb.databases.peptidic.toSorted(
+      (a, b) => a.ms.em - b.ms.em,
+    );
 
     expect(peptidic).toHaveLength(23);
     expect(peptidic).toMatchSnapshot();
@@ -145,7 +153,7 @@ describe('fromPeptidicSequence', () => {
     });
 
     const peptidic = emdb.databases.peptidic
-      .sort((a, b) => a.ms.em - b.ms.em)
+      .toSorted((a, b) => a.ms.em - b.ms.em)
       .map((item) => item.parts);
 
     expect(peptidic).toHaveLength(9);
@@ -163,7 +171,7 @@ describe('fromPeptidicSequence', () => {
     });
 
     const peptidic = emdb.databases.peptidic
-      .sort((a, b) => a.ms.em - b.ms.em)
+      .toSorted((a, b) => a.ms.em - b.ms.em)
       .map((item) => item.parts);
 
     expect(peptidic).toHaveLength(6);

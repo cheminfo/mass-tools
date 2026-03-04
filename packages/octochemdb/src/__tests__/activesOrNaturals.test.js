@@ -83,7 +83,7 @@ describe('activesOrNaturals', () => {
       }
     }
 
-    expect([...fields].sort()).toStrictEqual([
+    expect([...fields].toSorted()).toStrictEqual([
       'activities',
       'bioactive',
       'cas',

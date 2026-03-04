@@ -22,11 +22,11 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/ms-report#readme",
   "dependencies": {
-    "@svgdotjs/svg.js": "^3.2.4",
+    "@svgdotjs/svg.js": "^3.2.5",
     "chemical-groups": "^2.2.3",
     "mf-utilities": "^3.5.0",
     "nucleotide": "^3.2.10",
     "peptide": "^2.3.10",
-    "svgdom": "^0.1.22"
+    "svgdom": "^0.1.23"
   }
 }

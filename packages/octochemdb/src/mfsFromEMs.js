@@ -26,8 +26,9 @@ export async function mfsFromEMs(masses, options = {}) {
 
   const realURL = new URL(route, baseURL).toString();
 
-  const searchParams = {};
-  searchParams.minCount = String(minCount);
+  const searchParams = {
+    minCount: String(minCount),
+  };
 
   const entries = await searchWithIonizations({
     ...options,

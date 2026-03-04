@@ -12,7 +12,7 @@ describe('isotopicDistribution with composition', () => {
     });
     const distribution = isotopicDistribution
       .getDistribution()
-      .array.sort((a, b) => b.y - a.y);
+      .array.toSorted((a, b) => b.y - a.y);
 
     expect(distribution).toBeDeepCloseTo([
       {
@@ -61,7 +61,7 @@ describe('isotopicDistribution with composition', () => {
 
     const distribution = isotopicDistribution
       .getDistribution()
-      .array.sort((a, b) => b.y - a.y);
+      .array.toSorted((a, b) => b.y - a.y);
 
     expect(distribution).toBeDeepCloseTo([
       {
@@ -101,7 +101,7 @@ describe('isotopicDistribution with composition', () => {
 
     const distribution = isotopicDistribution
       .getDistribution()
-      .array.sort((a, b) => b.y - a.y)
+      .array.toSorted((a, b) => b.y - a.y)
       .slice(0, 2);
 
     expect(distribution).toBeDeepCloseTo([
@@ -144,7 +144,7 @@ describe('isotopicDistribution with composition', () => {
 
     const distribution = isotopicDistribution
       .getDistribution()
-      .array.sort((a, b) => b.y - a.y)
+      .array.toSorted((a, b) => b.y - a.y)
       .slice(0, 3);
 
     expect(distribution).toBeDeepCloseTo([
@@ -184,7 +184,7 @@ describe('isotopicDistribution with composition', () => {
     });
     const distribution = isotopicDistribution
       .getDistribution()
-      .array.sort((a, b) => b.y - a.y)
+      .array.toSorted((a, b) => b.y - a.y)
       .slice(0, 3);
 
     expect(distribution).toBeDeepCloseTo([

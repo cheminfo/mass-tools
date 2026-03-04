@@ -210,7 +210,7 @@ function getKey(line) {
       if (typeof line.value === 'string') {
         key.push(line.value);
       } else {
-        for (let prop of Object.keys(line.value).sort()) {
+        for (let prop of Object.keys(line.value).toSorted()) {
           key.push(line.value[prop]);
         }
       }

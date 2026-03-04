@@ -17,16 +17,16 @@ export const server = setupServer(
           let filteredContent = jsonContent.filter(
             (item) => item._id === url.searchParams.get('noStereoTautomerID'),
           );
-          return new Response(JSON.stringify({ data: filteredContent }));
+          return Response.json({ data: filteredContent });
         }
 
-        return new Response(JSON.stringify({ data: jsonContent }));
+        return Response.json({ data: jsonContent });
       } else if (url.pathname.includes('compoundsFromMF')) {
         const mf = url.searchParams.get('mf');
         const filteredContent = jsonContent.data.filter(
           (item) => item.data.mf === mf,
         );
-        return new Response(JSON.stringify({ data: filteredContent }));
+        return Response.json({ data: filteredContent });
       } else if (url.pathname.includes('activeOrNaturalDetails')) {
         const id = url.searchParams.get('id');
         const fields = url.searchParams.get('fields');
@@ -49,7 +49,7 @@ export const server = setupServer(
           }
         }
 
-        return new Response(JSON.stringify({ _id: id, data: filteredItem }));
+        return Response.json({ _id: id, data: filteredItem });
       }
     } else {
       throw new Error(`unknown path: ${pathname}`);

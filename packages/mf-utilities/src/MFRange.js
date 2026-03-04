@@ -87,7 +87,7 @@ function getRange(mf) {
         throw new Error(`MFRange: Unknown kind: ${item.kind} in MF: ${mf}`);
     }
   }
-  return ranges.sort((a, b) => {
+  return ranges.toSorted((a, b) => {
     if (a.element < b.element) return -1;
     if (a.element > b.element) return 1;
     return 0;

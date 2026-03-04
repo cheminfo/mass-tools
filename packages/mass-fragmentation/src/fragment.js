@@ -42,7 +42,7 @@ export function fragment(molecule, options = {}) {
     : [];
   let result = [...molecularIon, ...acyclicBonds, ...cyclicBonds];
 
-  return result.sort(
+  return result.toSorted(
     (a, b) => a.mfInfo.monoisotopicMass - b.mfInfo.monoisotopicMass,
   );
 }

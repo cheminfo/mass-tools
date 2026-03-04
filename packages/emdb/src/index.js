@@ -157,13 +157,13 @@ export class EMDB {
   }
 
   listDatabases() {
-    return Object.keys(this.databases).sort();
+    return Object.keys(this.databases).toSorted();
   }
 
   getInfo() {
     return {
       databases: Object.keys(this.databases)
-        .sort()
+        .toSorted()
         .map((key) => {
           return { name: key, nbEntries: this.databases[key].length };
         }),

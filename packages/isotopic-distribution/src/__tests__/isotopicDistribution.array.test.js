@@ -31,7 +31,7 @@ describe('isotopicDistribution with array', () => {
     );
     const intensities = isotopicDistribution
       .getDistribution()
-      .array.sort((a, b) => b.y - a.y)
+      .array.toSorted((a, b) => b.y - a.y)
       .map((entry) => entry.y)
       .slice(0, 3);
 

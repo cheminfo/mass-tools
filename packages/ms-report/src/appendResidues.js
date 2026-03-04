@@ -103,10 +103,10 @@ export function appendResidues(data, sequence, options = {}) {
         begin: [],
         end: [],
       },
+      fromBegin: i + 1,
+      fromEnd: result.residues.length - i,
+      kind: 'residue',
     };
-    residue.fromBegin = i + 1;
-    residue.fromEnd = result.residues.length - i;
-    residue.kind = 'residue';
     if (label.includes('(')) {
       getModifiedReplacement(label, residue, alternatives, replacements);
     } else if (groupsObject[label] && groupsObject[label].oneLetter) {

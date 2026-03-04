@@ -112,7 +112,7 @@ describe('test mf-from-ea', () => {
           maxIterations: 2,
         },
       );
-    }).toThrow('Iteration number is over the current maximum of: 2');
+    }).toThrowError('Iteration number is over the current maximum of: 2');
   });
 
   it('filter maxTotalError', () => {

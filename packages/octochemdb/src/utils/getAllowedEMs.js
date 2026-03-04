@@ -15,5 +15,5 @@ export async function getAllowedEMs(options) {
       allowedEMs.push(mf.em);
     }
   }
-  return Float64Array.from(allowedEMs).sort();
+  return Float64Array.from(allowedEMs).toSorted();
 }

@@ -16,7 +16,7 @@ describe('fromArray', () => {
 
     expect(emdb.databases.generated).toHaveLength(12);
 
-    let mfs = emdb.databases.generated.map((entry) => entry.mf).sort();
+    let mfs = emdb.databases.generated.map((entry) => entry.mf).toSorted();
 
     expect(mfs).toStrictEqual([
       '',
@@ -51,7 +51,7 @@ describe('fromArray', () => {
     let result = emdb
       .get('generated')
       .map((entry) => entry.mf)
-      .sort()
+      .toSorted()
       .join(',');
 
     expect(result).toBe('BrN,C,CBr,CCl,ClN,N');

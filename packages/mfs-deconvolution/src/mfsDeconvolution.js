@@ -108,7 +108,7 @@ export async function mfsDeconvolution(spectrum, ranges, options = {}) {
     },
     mfs: mfs
       .slice()
-      .sort((mf1, mf2) => mf2.absoluteQuantity - mf1.absoluteQuantity),
+      .toSorted((mf1, mf2) => mf2.absoluteQuantity - mf1.absoluteQuantity),
     matchingScore,
     getFilteredReconstructed,
   };

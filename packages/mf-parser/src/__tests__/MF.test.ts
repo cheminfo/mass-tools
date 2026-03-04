@@ -96,7 +96,7 @@ test('C1-2', () => {
 test('C1-3', () => {
   const mf = new MF('C1-3', { flattenLimit: 2 });
 
-  expect(() => mf.toParts()).toThrow(
+  expect(() => mf.toParts()).toThrowError(
     'Can not process mf having: multiplierRange',
   );
 });

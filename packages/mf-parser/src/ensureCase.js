@@ -1,7 +1,7 @@
 import { elementsObject } from 'chemical-elements';
 
 const elements = new Set(
-  Object.keys(elementsObject).sort((a, b) => b.length - a.length),
+  Object.keys(elementsObject).toSorted((a, b) => b.length - a.length),
 );
 
 /**

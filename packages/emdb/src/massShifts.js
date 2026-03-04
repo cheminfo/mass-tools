@@ -43,7 +43,7 @@ export function massShifts(similarities, options = {}) {
         delta: result.ms.delta,
       };
     })
-    .sort((a, b) => a.em - b.em);
+    .toSorted((a, b) => a.em - b.em);
 
   let shifts = { x: [], y: [] };
   for (const datum of data) {

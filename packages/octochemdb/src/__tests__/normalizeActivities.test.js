@@ -39,7 +39,7 @@ describe('normalizeActivities', () => {
         "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
       }
     `);
-    expect(result.data.activities[5]).toMatchInlineSnapshot(`
+    expect(result.data.activities[5]).toMatchInlineSnapshot(String.raw`
       {
         "$id": "442356_589",
         "$ref": "bioassays",
@@ -48,7 +48,7 @@ describe('normalizeActivities', () => {
           "assay": "qHTS Assay for Spectroscopic Profiling in 4-MU Spectral Region",
           "cid": 442356,
           "ocl": {
-            "coordinates": "!BmpK~_?x@m?vH@k\\BmpJw?X?Cc}qO_Gy?SpL",
+            "coordinates": "!BmpK~_?x@m?vH@k\BmpJw?X?Cc}qO_Gy?SpL",
             "noStereoID": "dg~D@MBdin]V^G[hHBjb@@",
             "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
           },
