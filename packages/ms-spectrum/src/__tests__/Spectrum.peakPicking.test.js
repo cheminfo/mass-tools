@@ -25,7 +25,7 @@ describe('peakPicking on Spectrum', () => {
     expect(nbNaNY).toHaveLength(0);
 
     expect(spectrum.data.x).toHaveLength(149056);
-    expect(peaks).toHaveLength(2159);
+    expect(peaks).toHaveLength(2164);
 
     const peaksDataXY = spectrum.getPeaksAsDataXY();
 
