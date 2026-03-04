@@ -12,8 +12,12 @@ export function summarizeEmptyTerms(
   // PATENTS
   const patentsMaxNbEntries = options?.patents?.maxNbEntries || 100;
   patents.sort((a, b) => {
-    const nbCompoundsEntryA = a.data?.nbCompounds ? a.data.nbCompounds + 2 : 2;
-    const nbCompoundsEntryB = b.data?.nbCompounds ? b.data.nbCompounds + 2 : 2;
+    const nbCompoundsEntryA = a.data?.nbCompounds
+      ? a.data.nbCompounds + 2
+      : Number.MAX_VALUE;
+    const nbCompoundsEntryB = b.data?.nbCompounds
+      ? b.data.nbCompounds + 2
+      : Number.MAX_VALUE;
     return 1 / Math.log2(nbCompoundsEntryB) - 1 / Math.log2(nbCompoundsEntryA);
   });
   if (patents.length > patentsMaxNbEntries) {
@@ -23,8 +27,12 @@ export function summarizeEmptyTerms(
   const pubmedsMaxNbEntries = options?.pubmeds?.maxNbEntries || 100;
 
   pubmeds.sort((a, b) => {
-    const nbCompoundsEntryA = a.data.compounds?.length + 2 || 2;
-    const nbCompoundsEntryB = b.data.compounds?.length + 2 || 2;
+    const nbCompoundsEntryA = a.data.compounds?.length
+      ? a.data.compounds.length + 2
+      : Number.MAX_VALUE;
+    const nbCompoundsEntryB = b.data.compounds?.length
+      ? b.data.compounds.length + 2
+      : Number.MAX_VALUE;
     return 1 / Math.log2(nbCompoundsEntryB) - 1 / Math.log2(nbCompoundsEntryA);
   });
   if (pubmeds.length > pubmedsMaxNbEntries) {
