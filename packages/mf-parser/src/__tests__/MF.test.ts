@@ -91,12 +91,18 @@ test('C1-2', () => {
   const newMF = mf.toMF();
 
   expect(newMF).toBe('C . C2');
+
+  const html = mf.toHtml();
+
+  expect(html).toBe('C • C<sub>2</sub>');
 });
 
 test('C1-3', () => {
   const mf = new MF('C1-3', { flattenLimit: 2 });
 
-  expect(() => mf.toParts()).toThrowError(
+  expect(mf.toHtml()).toBe('C<sub>1-3</sub>');
+
+  expect(() => mf.toParts()).toThrow(
     'Can not process mf having: multiplierRange',
   );
 });
