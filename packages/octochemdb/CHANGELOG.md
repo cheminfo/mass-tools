@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.1](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.11.0...octochemdb@2.11.1) (2026-03-04)
+
+
+### Bug Fixes
+
+* **octochemdb:** patents with no products are at the end of the list ([808d3fc](https://github.com/cheminfo/mass-tools/commit/808d3fcd694abd2986cc89f01f17d0873d1d1d02))
+
+
+
+
+
 # [2.11.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.10.16...octochemdb@2.11.0) (2026-03-04)
 
 
