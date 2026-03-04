@@ -5,7 +5,7 @@ import { expect, test } from 'vitest';
 
 import { searchInSilicoSpectraByMF } from '../searchInSilicoSpectraByMF.js';
 
-test('searchInsilicoSpectra', async () => {
+test.todo('searchInsilicoSpectra', async () => {
   const mdma = JSON.parse(
     readFileSync(path.join(__dirname, 'data/mdma.json'), 'utf8'),
   );

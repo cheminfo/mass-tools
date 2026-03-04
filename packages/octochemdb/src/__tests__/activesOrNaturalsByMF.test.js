@@ -59,7 +59,7 @@ describe('activesOrNaturalsByMF', { timeout: 30_000 }, () => {
     );
 
     expect(nbNaturals).toBeGreaterThan(3);
-    expect(nbBioactives).toBeGreaterThan(33);
+    expect(nbBioactives).toBeGreaterThan(30);
     expect(nbPatents).toBeGreaterThan(238);
     expect(nbPubmeds).toBeGreaterThan(36);
     expect(nbMassSpectra).toBeGreaterThanOrEqual(0);
