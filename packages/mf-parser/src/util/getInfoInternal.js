@@ -81,8 +81,8 @@ function getProcessedPart(part, options) {
     charge: 0,
     mf: '',
     atoms: partToAtoms(part),
+    [emFieldName]: 0,
   };
-  currentPart[emFieldName] = 0;
 
   let unsaturation = 0;
   let validUnsaturation = true;

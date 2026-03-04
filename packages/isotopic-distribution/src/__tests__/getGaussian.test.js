@@ -66,6 +66,6 @@ describe('test isotopicDistribution', () => {
 
     expect(() => {
       isotopicDistribution.getGaussian({});
-    }).toThrow('Number of points is over the maxLength');
+    }).toThrowError('Number of points is over the maxLength');
   });
 });

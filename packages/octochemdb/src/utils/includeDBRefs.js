@@ -40,8 +40,9 @@ export async function includeDBRefs(object, options = {}) {
 
 async function addDataForOneCollection(collection, baseURL, entries) {
   const url = new URL(`${collection}/v1/ids`, baseURL).toString();
-  const searchParams = {};
-  searchParams.ids = entries.map((entry) => entry.$id).join(',');
+  const searchParams = {
+    ids: entries.map((entry) => entry.$id).join(','),
+  };
   const data = {};
   const result = await postFetchJSON(url, searchParams);
   if (!result.data) {

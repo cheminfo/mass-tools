@@ -47,8 +47,7 @@ function ensureArray(activeOrNatural) {
 
 async function fetchActiveOrNatural(id, options) {
   const { fields, url } = options;
-  const searchParams = {};
-  searchParams.id = id;
+  const searchParams = { id };
   if (fields) {
     searchParams.fields = fields;
   }

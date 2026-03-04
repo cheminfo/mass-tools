@@ -11,9 +11,9 @@ export async function getActivitiesDB(activities, options = {}) {
   for (const activity of activities) {
     let assay = {
       $id: activity.$id,
+      assay: activity.data.assay,
     };
 
-    assay.assay = activity.data.assay;
     await insert(activitiesDB, assay);
   }
   return activitiesDB;

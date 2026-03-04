@@ -234,9 +234,7 @@ export class IsotopicDistribution {
       factor = maxValue / maxY;
     }
     return points.map((point) => {
-      let newPoint = {};
-      newPoint[xLabel] = point.x;
-      newPoint[yLabel] = point.y * factor;
+      let newPoint = { [xLabel]: point.x, [yLabel]: point.y * factor };
       return newPoint;
     });
   }

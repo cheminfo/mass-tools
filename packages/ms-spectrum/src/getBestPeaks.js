@@ -44,7 +44,7 @@ export function getBestPeaks(peaks, options = {}) {
     });
 
   if (searchMonoisotopicRatio) {
-    selected = selected.sort((a, b) => b.peak.x - a.peak.x);
+    selected = selected.toSorted((a, b) => b.peak.x - a.peak.x);
 
     for (let i = 0; i < selected.length; i++) {
       let item = selected[i];
@@ -61,7 +61,7 @@ export function getBestPeaks(peaks, options = {}) {
     }
   }
 
-  selected = selected.sort((a, b) => {
+  selected = selected.toSorted((a, b) => {
     if (a.monoisotopic && !b.monoisotopic) return -1;
     if (b.monoisotopic && !a.monoisotopic) return 1;
     return b.peak.y - a.peak.y;
@@ -92,5 +92,5 @@ export function getBestPeaks(peaks, options = {}) {
     toReturn.push(newPeak);
     if (toReturn.length === limit) break;
   }
-  return toReturn.sort((a, b) => a.x - b.x);
+  return toReturn.toSorted((a, b) => a.x - b.x);
 }

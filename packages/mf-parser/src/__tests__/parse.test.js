@@ -236,7 +236,7 @@ test.each(Object.keys(tests))('parse molecular formula %s', (key) => {
 test('not same opening and closing parenthesis', () => {
   expect(() => {
     parse('C(');
-  }).toThrow(/.*opening and closing.*/);
+  }).toThrowError(/.*opening and closing.*/);
 });
 
 test('expanding groups: D', () => {

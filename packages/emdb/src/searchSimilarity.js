@@ -146,7 +146,7 @@ export async function searchSimilarity(emdb, options = {}) {
     for (let database of Object.keys(results)) {
       results[database] = results[database]
         .filter((entry) => entry.ms.similarity)
-        .sort((a, b) => b.ms.similarity.value - a.ms.similarity.value);
+        .toSorted((a, b) => b.ms.similarity.value - a.ms.similarity.value);
       for (let entry of results[database]) {
         flatEntries.push(entry);
       }
@@ -154,7 +154,7 @@ export async function searchSimilarity(emdb, options = {}) {
   } else {
     results = results
       .filter((entry) => entry.ms.similarity)
-      .sort((a, b) => b.ms.similarity.value - a.ms.similarity.value);
+      .toSorted((a, b) => b.ms.similarity.value - a.ms.similarity.value);
   }
 
   return results;

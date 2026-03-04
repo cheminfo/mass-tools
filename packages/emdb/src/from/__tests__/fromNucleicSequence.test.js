@@ -17,7 +17,7 @@ describe('fromNucleicSequence', () => {
         kind: 'dna',
       },
     });
-    let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    let nucleic = emdb.databases.nucleic.toSorted((a, b) => a.ms.em - b.ms.em);
 
     expect(nucleic).toHaveLength(6);
     expect(nucleic[0]).toBeDeepCloseTo({
@@ -47,7 +47,7 @@ describe('fromNucleicSequence', () => {
       },
     });
 
-    let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    let nucleic = emdb.databases.nucleic.toSorted((a, b) => a.ms.em - b.ms.em);
 
     expect(nucleic).toHaveLength(12);
     expect(nucleic).toMatchSnapshot();
@@ -65,7 +65,7 @@ describe('fromNucleicSequence', () => {
       },
     });
 
-    let nucleic = emdb.databases.nucleic.sort((a, b) => {
+    let nucleic = emdb.databases.nucleic.toSorted((a, b) => {
       if (a.ms.em !== b.ms.em) return a.ms.em - b.ms.em;
       if (a.ms.comment < b.ms.comment) return 1;
       return -1;
@@ -106,7 +106,7 @@ describe('fromNucleicSequence', () => {
       filter: { callback: (entry) => entry.unsaturation % 2 === 0 },
     });
 
-    let nucleic = emdb.databases.nucleic.sort((a, b) => {
+    let nucleic = emdb.databases.nucleic.toSorted((a, b) => {
       if (a.ms.em !== b.ms.em) return a.ms.em - b.ms.em;
       if (a.ms.comment < b.ms.comment) return 1;
       return -1;
@@ -126,7 +126,7 @@ describe('fromNucleicSequence', () => {
         kind: 'dna',
       },
     });
-    let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    let nucleic = emdb.databases.nucleic.toSorted((a, b) => a.ms.em - b.ms.em);
 
     expect(nucleic).toHaveLength(6);
     expect(nucleic).toMatchSnapshot();
@@ -145,7 +145,7 @@ describe('fromNucleicSequence', () => {
         kind: 'dna',
       },
     });
-    let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    let nucleic = emdb.databases.nucleic.toSorted((a, b) => a.ms.em - b.ms.em);
 
     expect(nucleic).toHaveLength(5);
     expect(nucleic).toMatchSnapshot();
@@ -162,7 +162,7 @@ describe('fromNucleicSequence', () => {
         kind: 'dna',
       },
     });
-    let nucleic = emdb.databases.nucleic.sort((a, b) => a.ms.em - b.ms.em);
+    let nucleic = emdb.databases.nucleic.toSorted((a, b) => a.ms.em - b.ms.em);
 
     expect(nucleic).toHaveLength(5);
     expect(nucleic).toMatchSnapshot();

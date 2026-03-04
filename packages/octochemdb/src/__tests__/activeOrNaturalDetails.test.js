@@ -27,7 +27,7 @@ test('activeOrNaturalDetails', async () => {
     fields: '_id,data',
   });
 
-  const fields = Object.keys(entry.data).sort();
+  const fields = Object.keys(entry.data).toSorted();
 
   expect(fields).toStrictEqual([
     'activities',
@@ -60,14 +60,14 @@ test('activeOrNaturalDetails', async () => {
 
   const activities = entry.data.activities;
 
-  expect(activities[0]).toMatchInlineSnapshot(`
+  expect(activities[0]).toMatchInlineSnapshot(String.raw`
     {
       "$id": "NPC294249",
       "$ref": "npasses",
       "data": {
         "assay": "Potency = 12589.3 nM",
         "ocl": {
-          "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
+          "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\Bm?vw?_x@m?p",
           "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
           "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
         },

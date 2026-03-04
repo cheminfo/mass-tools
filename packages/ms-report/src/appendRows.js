@@ -1,5 +1,5 @@
 export function appendRows(data) {
-  let allResidues = data.residues.all.sort((a, b) => a.line - b.line);
+  let allResidues = data.residues.all.toSorted((a, b) => a.line - b.line);
   data.rows = [];
   for (let residue of allResidues) {
     let line = residue.paper.line;

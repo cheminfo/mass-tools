@@ -4,7 +4,7 @@ import { generateMFs } from '../index.js';
 
 describe('generateMFs', () => {
   it('empty', async () => {
-    await expect(generateMFs()).rejects.toThrow(
+    await expect(generateMFs()).rejects.toThrowError(
       'Ranges must be an array of string or object',
     );
   });
@@ -188,7 +188,7 @@ describe('generateMFs', () => {
   it('Combine with ionizations', async () => {
     let result = await generateMFs(['C1-2'], { ionizations: 'H+,Na+,H++' });
 
-    expect(result.map((a) => a.ms.em).sort((a, b) => a - b)).toStrictEqual([
+    expect(result.map((a) => a.ms.em).toSorted((a, b) => a - b)).toStrictEqual([
       6.50336393620593, 12.503363936205929, 13.00727645232093,
       25.00727645232093, 34.989220702090925, 46.989220702090925,
     ]);
@@ -249,7 +249,7 @@ describe('generateMFs', () => {
     let mfsArray = ['(H+)2-3'];
     let result = await generateMFs(mfsArray, { ionizations: '(H+)-2,Na+' });
 
-    expect(result.map((a) => a.ms.em).sort((a, b) => a - b)).toStrictEqual([
+    expect(result.map((a) => a.ms.em).toSorted((a, b) => a - b)).toStrictEqual([
       0, 1.0072764523209299, 6.50276251476343, 8.334591202244264,
     ]);
   });
@@ -289,7 +289,7 @@ describe('generateMFs', () => {
       filter: { allowNegativeAtoms: true },
     });
 
-    expect(result.map((a) => a.ms.em).sort((a, b) => a - b)).toStrictEqual([
+    expect(result.map((a) => a.ms.em).toSorted((a, b) => a - b)).toStrictEqual([
       -1.0072764523209299, -1.0072764523209299, -1.0072764523209299,
     ]);
   });

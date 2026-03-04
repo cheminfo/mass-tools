@@ -24,6 +24,10 @@ export function getPeakWidthFct(options = {}) {
     );
   } catch (error) {
     logger?.warn(`error in peakWidthFct: ${error.toString()}`);
-    return () => 0.01;
+    return fixedWidthFct;
   }
+}
+
+function fixedWidthFct() {
+  return 0.01;
 }

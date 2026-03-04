@@ -56,7 +56,7 @@ export async function fromMolecules(entries, OCL, options = {}) {
   if (groupResults) {
     results = groupFragmentationResults(results);
   }
-  return results.sort((a, b) => a.em - b.em);
+  return results.toSorted((a, b) => a.em - b.em);
 }
 
 /**
@@ -64,7 +64,7 @@ export async function fromMolecules(entries, OCL, options = {}) {
  * @param {*} results
  */
 function groupFragmentationResults(results) {
-  const sortedResults = results.slice().sort((a, b) => {
+  const sortedResults = results.slice().toSorted((a, b) => {
     if (a.em !== b.em) {
       return a.em - b.em;
     }
@@ -81,15 +81,17 @@ function groupFragmentationResults(results) {
       result.em !== currentResult.em ||
       result.ms.em !== currentResult.ms.em
     ) {
-      currentResult = { ...result };
-      currentResult.fragments = [
-        {
-          idCode: result.fragment.idCode,
-          type: result.fragment.type,
-          count: 1,
-          parents: [{ ...result.fragment.parent, count: 1 }],
-        },
-      ];
+      currentResult = {
+        ...result,
+        fragments: [
+          {
+            idCode: result.fragment.idCode,
+            type: result.fragment.type,
+            count: 1,
+            parents: [{ ...result.fragment.parent, count: 1 }],
+          },
+        ],
+      };
       delete currentResult.fragment;
       groupedResults.push(currentResult);
     } else {
@@ -114,7 +116,7 @@ function groupFragmentationResults(results) {
     }
   }
   for (let group of groupedResults) {
-    group.fragments = group.fragments.sort((a, b) => b.count - a.count);
+    group.fragments = group.fragments.toSorted((a, b) => b.count - a.count);
   }
   return groupedResults;
 }

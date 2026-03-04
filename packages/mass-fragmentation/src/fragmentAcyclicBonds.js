@@ -23,16 +23,16 @@ export function fragmentAcyclicBonds(molecule, options = {}) {
   }
   let bonds = [];
   for (let i = 0; i < molecule.getAllBonds(); i++) {
-    let bond = {};
-    // get informations of bonds
-    bond.index = i;
-    bond.order = molecule.getBondOrder(i); // dative, single , double, triple
-    bond.atom1 = molecule.getBondAtom(0, i); // atom 1 index
-    bond.atom2 = molecule.getBondAtom(1, i); // atom 2 index
-
-    bond.type = molecule.getBondType(i); // cBondTypeSingle,cBondTypeDouble,cBondTypeTriple,cBondTypeDelocalized
-    bond.isAromatic = molecule.isAromaticBond(i);
-    bond.isRingBond = molecule.isRingBond(i);
+    let bond = {
+      index: i,
+      order: molecule.getBondOrder(i),
+      atom1: molecule.getBondAtom(0, i),
+      atom2: molecule.getBondAtom(1, i),
+      type: molecule.getBondType(i),
+      isAromatic: molecule.isAromaticBond(i),
+      isRingBond: molecule.isRingBond(i),
+      selected: false,
+    };
 
     // Mapping of bonds to be fragmented, only if they are single bond not aromatic and cyclic the mapping occurs
     if (
@@ -126,7 +126,7 @@ export function fragmentAcyclicBonds(molecule, options = {}) {
     }
   }
   // sort result in order fragment 1-2; 3-4; ...
-  results = results.sort((a, b) => {
+  results = results.toSorted((a, b) => {
     return a.mfInfo.monoisotopicMass - b.mfInfo.monoisotopicMass;
   });
 

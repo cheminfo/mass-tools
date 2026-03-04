@@ -48,5 +48,5 @@ export function getPeaks(peaks, options = {}) {
     }
   }
 
-  return peaks.sort((a, b) => a.x - b.x);
+  return peaks.toSorted((a, b) => a.x - b.x);
 }

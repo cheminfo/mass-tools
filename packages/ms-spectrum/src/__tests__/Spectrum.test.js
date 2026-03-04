@@ -11,7 +11,7 @@ describe('test Spectrum', () => {
     expect(() => {
       // eslint-disable-next-line no-new
       new Spectrum(1);
-    }).toThrow('Spectrum data must be an object');
+    }).toThrowError('Spectrum data must be an object');
   });
 
   it('empty data', () => {
