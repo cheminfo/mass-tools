@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.6.0...mf-parser@3.7.0) (2026-03-04)
+
+
+### Features
+
+* **mf-parser:** allow to expand range MF ([7585788](https://github.com/cheminfo/mass-tools/commit/7585788dda55581d828a91f90b42549beb839fa3))
+
+
+
+
+
 # [3.6.0](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.5.0...mf-parser@3.6.0) (2025-08-11)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.11.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.10.16...octochemdb@2.11.0) (2026-03-04)
+
+
+### Features
+
+* **mf-parser:** allow to expand range MF ([7585788](https://github.com/cheminfo/mass-tools/commit/7585788dda55581d828a91f90b42549beb839fa3))
+
+
+
+
+
 ## [2.10.16](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.10.15...octochemdb@2.10.16) (2025-08-11)
 
 **Note:** Version bump only for package octochemdb
