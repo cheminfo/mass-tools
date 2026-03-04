@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.53.0](https://github.com/cheminfo/mass-tools/compare/v7.52.0...v7.53.0) (2026-03-04)
+
+
+### Features
+
+* **mf-parser:** allow to expand range MF ([7585788](https://github.com/cheminfo/mass-tools/commit/7585788dda55581d828a91f90b42549beb839fa3))
+
 ## [7.52.0](https://github.com/cheminfo/mass-tools/compare/v7.51.0...v7.52.0) (2025-08-07)
 
 
