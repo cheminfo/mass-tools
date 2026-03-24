@@ -18,7 +18,7 @@ describe('mfsDeconvolution', () => {
 
     await expect(async () =>
       mfsDeconvolution(spectrum, ['C.N', 'N.O']),
-    ).rejects.toThrowError(
+    ).rejects.toThrow(
       'Could not find any overlaping peaks between experimental and theoretical spectra.',
     );
   });
@@ -67,7 +67,7 @@ describe('mfsDeconvolution', () => {
 
   it('no spectrum', async () => {
     // @ts-ignore
-    await expect(async () => mfsDeconvolution()).rejects.toThrowError(
+    await expect(async () => mfsDeconvolution()).rejects.toThrow(
       'spectrum must be an instance of Spectrum',
     );
   });
@@ -77,7 +77,7 @@ describe('mfsDeconvolution', () => {
     const spectrum = new Spectrum(parseXY(text));
 
     // @ts-ignore
-    await expect(async () => mfsDeconvolution(spectrum)).rejects.toThrowError(
+    await expect(async () => mfsDeconvolution(spectrum)).rejects.toThrow(
       'Ranges must be an array of string or object',
     );
   });

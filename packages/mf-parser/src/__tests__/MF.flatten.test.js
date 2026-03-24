@@ -45,7 +45,7 @@ describe('MF Flatten', () => {
   it('C1-10 H1-10 C1-10 H1-10 C1-10 without grouping', () => {
     const mf = new MF('C1-10 H1-10 C1-10 H1-10 C1-9 C0-1 C');
 
-    expect(() => mf.flatten()).toThrowError(
+    expect(() => mf.flatten()).toThrow(
       'MF.flatten generates too many fragments (over 100000)',
     );
   });

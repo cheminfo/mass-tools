@@ -43,7 +43,7 @@ describe('test test peakWidth', () => {
   it('one peak', () => {
     expect(() => {
       peaksWidth([{ width: 2, x: 1, y: 1 }]);
-    }).toThrowError('not enough peaks');
+    }).toThrow('not enough peaks');
   });
 
   it('two peaks zero width', () => {
@@ -52,6 +52,6 @@ describe('test test peakWidth', () => {
         { width: 0, x: 1, y: 1 },
         { width: 0, x: 2, y: 1 },
       ]);
-    }).toThrowError('peaksWidth: can not calculate');
+    }).toThrow('peaksWidth: can not calculate');
   });
 });

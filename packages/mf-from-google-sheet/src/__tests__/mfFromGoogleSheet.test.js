@@ -19,5 +19,5 @@ test('getReferenceList with non existing document', async () => {
     mfFromGoogleSheet(
       'https://googledocs.cheminfo.org/spreadsheets/d/15Kuc5MeOhvm4xxxVWosxXhYwAmuf3Uo/export?format=tsv',
     ),
-  ).rejects.toThrowError('404');
+  ).rejects.toThrow('404');
 });

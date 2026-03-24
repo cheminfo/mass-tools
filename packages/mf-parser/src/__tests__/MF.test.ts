@@ -102,7 +102,7 @@ test('C1-3', () => {
 
   expect(mf.toHtml()).toBe('C<sub>1-3</sub>');
 
-  expect(() => mf.toParts()).toThrowError(
+  expect(() => mf.toParts()).toThrow(
     'Can not process mf having: multiplierRange',
   );
 });

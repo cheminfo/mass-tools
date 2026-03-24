@@ -4,7 +4,7 @@ import { generateMFs } from '../index.js';
 
 describe('generateMFs', () => {
   it('empty', async () => {
-    await expect(generateMFs()).rejects.toThrowError(
+    await expect(generateMFs()).rejects.toThrow(
       'Ranges must be an array of string or object',
     );
   });

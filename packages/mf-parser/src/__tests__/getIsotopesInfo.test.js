@@ -24,7 +24,7 @@ test('getIsotopesInfo from C.H', () => {
   expect(() => {
     let mf = new MF('C.H');
     mf.getIsotopesInfo();
-  }).toThrowError('getIsotopesInfo can not be applied on multipart MF');
+  }).toThrow('getIsotopesInfo can not be applied on multipart MF');
 });
 
 test('getIsotopesInfo from (CH3(+))2', () => {
