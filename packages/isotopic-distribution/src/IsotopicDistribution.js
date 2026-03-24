@@ -34,7 +34,9 @@ export class IsotopicDistribution {
       for (let part of this.parts) {
         part.confidence = 0;
         part.isotopesInfo = new MF(
-          `${part.mf}(${part.ionization.mf})`,
+          part.ionization?.mf
+            ? `${part.mf}(${part.ionization.mf})`
+            : part.mf || '',
         ).getIsotopesInfo();
       }
     } else {
@@ -50,7 +52,7 @@ export class IsotopicDistribution {
           let part = structuredClone(partOriginal);
           part.em = part.monoisotopicMass; // TODO: To remove !!! we change the name !?
           part.isotopesInfo = new MF(
-            `${part.mf}(${ionization.mf})`,
+            ionization.mf ? `${part.mf}(${ionization.mf})` : part.mf || '',
           ).getIsotopesInfo();
           part.confidence = 0;
           let msInfo = getMsInfo(part, {
@@ -102,7 +104,7 @@ export class IsotopicDistribution {
           composition: this.fwhm === MINIMAL_FWHM ? {} : undefined, // should we calculate composition in isotopes of each peak
         },
       ]);
-      let charge = part.ms.charge;
+      let charge = part.ms?.charge || part.isotopesInfo.charge || 0;
       let absoluteCharge = Math.abs(charge);
       if (charge || this.allowNeutral) {
         for (let isotope of part.isotopesInfo.isotopes) {
@@ -139,7 +141,7 @@ export class IsotopicDistribution {
           part.toX = totalDistribution.array.at(-1).x;
         }
 
-        if (part?.ms.similarity?.factor) {
+        if (part.ms?.similarity?.factor) {
           totalDistribution.multiplyY(part.ms.similarity.factor);
         } else if (
           part.ms?.target?.intensity &&
