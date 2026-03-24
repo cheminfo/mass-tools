@@ -1,5 +1,17 @@
 # Changelog
 
+## [7.54.0](https://github.com/cheminfo/mass-tools/compare/v7.53.1...v7.54.0) (2026-03-24)
+
+
+### Features
+
+* provide a simple isotopicDistribution calculation ([10ba88f](https://github.com/cheminfo/mass-tools/commit/10ba88ff456548c4c69cd73bb4987f0dff241824))
+
+
+### Bug Fixes
+
+* increase vitest snapshot maxOutputLength to prevent truncation ([827d9d3](https://github.com/cheminfo/mass-tools/commit/827d9d3393a6932c9bbab1116f689d274dfbe916))
+
 ## [7.53.1](https://github.com/cheminfo/mass-tools/compare/v7.53.0...v7.53.1) (2026-03-04)
 
 
