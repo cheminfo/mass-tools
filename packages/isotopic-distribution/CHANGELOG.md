@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.18...isotopic-distribution@3.5.0) (2026-03-24)
+
+
+### Features
+
+* provide a simple isotopicDistribution calculation ([10ba88f](https://github.com/cheminfo/mass-tools/commit/10ba88ff456548c4c69cd73bb4987f0dff241824))
+
+
+
+
+
 ## [3.4.18](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.17...isotopic-distribution@3.4.18) (2026-03-04)
 
 **Note:** Version bump only for package isotopic-distribution

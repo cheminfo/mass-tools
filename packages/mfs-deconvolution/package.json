@@ -1,6 +1,6 @@
 {
   "name": "mfs-deconvolution",
-  "version": "2.4.28",
+  "version": "2.4.29",
   "description": "",
   "main": "lib/src/index.js",
   "files": [
@@ -21,12 +21,12 @@
   "dependencies": {
     "@lukeed/uuid": "^2.0.1",
     "cheminfo-types": "^1.10.0",
-    "isotopic-distribution": "^3.4.18",
-    "mf-generator": "^3.3.19",
+    "isotopic-distribution": "^3.5.0",
+    "mf-generator": "^3.3.20",
     "ml-fcnnls": "^2.1.0",
     "ml-matrix": "^6.12.1",
     "ml-spectra-processing": "^14.21.0",
-    "ms-spectrum": "^3.9.4"
+    "ms-spectrum": "^3.9.5"
   },
   "devDependencies": {
     "fifo-logger": "^2.0.1",
