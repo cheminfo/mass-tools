@@ -37,4 +37,42 @@ describe('isotopicDistribution with array', () => {
 
     expect(intensities).toBeDeepCloseTo([2.9, 1.96, 0.989], 2);
   });
+
+  it('C,C2,C3 simplified', () => {
+    let isotopicDistribution = new IsotopicDistribution(
+      [
+        {
+          mf: 'C',
+          ionization: { mf: 'H+' },
+          intensity: 1,
+        },
+        {
+          mf: 'C2 H(++)',
+          intensity: 2,
+        },
+        {
+          mf: 'C3 H(++)',
+          ionization: { mf: '' },
+          intensity: 3,
+        },
+      ],
+      {
+        fwhm: 1e-10,
+      },
+    );
+    const intensities = isotopicDistribution
+      .getDistribution()
+      .array.toSorted((a, b) => b.y - a.y)
+      .map((entry) => ({ x: entry.x, y: entry.y }))
+      .slice(0, 3);
+
+    expect(intensities).toBeDeepCloseTo(
+      [
+        { x: 18.503, y: 2.904 },
+        { x: 12.503, y: 1.957 },
+        { x: 13.007, y: 0.989 },
+      ],
+      2,
+    );
+  });
 });
