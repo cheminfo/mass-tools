@@ -1,5 +1,19 @@
 # Changelog
 
+## [7.55.0](https://github.com/cheminfo/mass-tools/compare/v7.54.0...v7.55.0) (2026-03-26)
+
+
+### Features
+
+* **chemical-elements:** add deltaNeutrons to stableIsotopesObject ([c801d2d](https://github.com/cheminfo/mass-tools/commit/c801d2d7c466913cf95624037951a924045572a5))
+* **isotopic-distribution:** compute deltaNeutrons from composition ([f18e0ba](https://github.com/cheminfo/mass-tools/commit/f18e0ba85814ff2a669a844ae5f467cfd515a261))
+* **mf-parser:** add naturalDeltaNeutrons to getIsotopesInfo isotope entries ([8b60101](https://github.com/cheminfo/mass-tools/commit/8b60101df7b2380a54c78502e1c09dfc5679a5af))
+
+
+### Bug Fixes
+
+* **chemical-elements:** rename deltaNeutron to deltaNeutrons for consistency ([8266a3f](https://github.com/cheminfo/mass-tools/commit/8266a3fb7fb317a25272a6e4417ab1e907379f79))
+
 ## [7.54.0](https://github.com/cheminfo/mass-tools/compare/v7.53.1...v7.54.0) (2026-03-24)
 
 
