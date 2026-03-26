@@ -10,6 +10,7 @@ test('stableIsotopesObject', () => {
     mass: 12,
     symbol: 'C',
     mostAbundant: true,
+    deltaNeutron: 0,
   });
 
   expect(data['13C']).toStrictEqual({
@@ -17,5 +18,22 @@ test('stableIsotopesObject', () => {
     mass: 13.00335483507,
     symbol: 'C',
     mostAbundant: false,
+    deltaNeutron: 1,
+  });
+
+  expect(data['10B']).toStrictEqual({
+    name: 'Boron',
+    mass: 10.01293695,
+    symbol: 'B',
+    mostAbundant: false,
+    deltaNeutron: -1,
+  });
+
+  expect(data['11B']).toStrictEqual({
+    name: 'Boron',
+    mass: 11.00930536,
+    symbol: 'B',
+    mostAbundant: true,
+    deltaNeutron: 0,
   });
 });

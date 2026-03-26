@@ -5,6 +5,7 @@ interface StableIsotope {
   mass: number;
   symbol: string;
   mostAbundant: boolean;
+  deltaNeutron: number;
 }
 
 export const stableIsotopesObject: Record<string, StableIsotope | undefined> =
@@ -31,6 +32,7 @@ for (const element of elementsAndIsotopes) {
       mass: isotope.mass,
       symbol: element.symbol,
       mostAbundant: false,
+      deltaNeutron: isotope.nominal - mostAbundant,
     };
     if (isotope.nominal === mostAbundant) {
       entry.mostAbundant = true;
