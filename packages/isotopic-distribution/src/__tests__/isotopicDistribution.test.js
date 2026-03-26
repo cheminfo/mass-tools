@@ -55,6 +55,7 @@ describe('test isotopicDistribution', () => {
     });
     const peaks = isotopicDistribution.getXY();
 
+    expect(peaks.deltaNeutrons).toStrictEqual([0]);
     expect(peaks).toBeDeepCloseTo({
       x: [13.00335483507],
       y: [100],
@@ -64,6 +65,46 @@ describe('test isotopicDistribution', () => {
       deltaNeutrons: [0],
       shortLabel: ['¹³C'],
     });
+  });
+
+  it('[13C] getPeaks deltaNeutrons', () => {
+    const isotopicDistribution = new IsotopicDistribution('[13C]', {
+      fwhm: 0,
+    });
+    const peaks = isotopicDistribution.getPeaks();
+
+    expect(peaks).toStrictEqual([
+      {
+        x: 13.00335483507,
+        y: 100,
+        composition: { '13C': 1 },
+        label: '¹³C',
+        shortComposition: { '13C': 1 },
+        deltaNeutrons: 0,
+        shortLabel: '¹³C',
+      },
+    ]);
+  });
+
+  it('C[13C] getPeaks deltaNeutrons', () => {
+    const isotopicDistribution = new IsotopicDistribution('C[13C]', {
+      fwhm: 0,
+    });
+    const peaks = isotopicDistribution.getPeaks({ maxValue: 1 });
+
+    expect(peaks[0]).toMatchObject({ deltaNeutrons: 0 });
+    expect(peaks[1]).toMatchObject({ deltaNeutrons: 1 });
+  });
+
+  it('C2[13C]2 getPeaks deltaNeutrons', () => {
+    const isotopicDistribution = new IsotopicDistribution('C2[13C]2', {
+      fwhm: 0,
+    });
+    const peaks = isotopicDistribution.getPeaks({ maxValue: 1 });
+
+    expect(peaks[0]).toMatchObject({ deltaNeutrons: 0 });
+    expect(peaks[1]).toMatchObject({ deltaNeutrons: 1 });
+    expect(peaks[2]).toMatchObject({ deltaNeutrons: 2 });
   });
 
   it('create distribution of C Ag+', () => {

@@ -104,6 +104,12 @@ export class IsotopicDistribution {
           composition: this.fwhm === MINIMAL_FWHM ? {} : undefined, // should we calculate composition in isotopes of each peak
         },
       ]);
+      let partNaturalDeltaNeutrons = 0;
+      for (let isotope of part.isotopesInfo.isotopes) {
+        partNaturalDeltaNeutrons +=
+          (isotope.naturalDeltaNeutrons ?? 0) * isotope.number;
+      }
+
       let charge = part.ms?.charge || part.isotopesInfo.charge || 0;
       let absoluteCharge = Math.abs(charge);
       if (charge || this.allowNeutral) {
@@ -162,17 +168,11 @@ export class IsotopicDistribution {
 
         part.isotopicDistribution = totalDistribution.array;
 
-        const absoluteChargeOrOne = absoluteCharge || 1;
-
         for (let entry of totalDistribution.array) {
           if (!entry.composition) continue;
-          const deltaNeutrons =
-            Math.round(entry.x * absoluteChargeOrOne - part.monoisotopicMass) +
-            0; // +0 to avoid -0
-          Object.assign(entry, {
-            ...getDerivedCompositionInfo(entry.composition),
-            deltaNeutrons,
-          });
+          const info = getDerivedCompositionInfo(entry.composition);
+          info.deltaNeutrons -= partNaturalDeltaNeutrons;
+          Object.assign(entry, info);
         }
 
         if (finalDistribution.array.length === 0) {

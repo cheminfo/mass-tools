@@ -74,5 +74,65 @@ describe('isotopicDistribution with array', () => {
       ],
       2,
     );
+
+    const peaks = isotopicDistribution
+      .getPeaks({ maxValue: 100 })
+      .toSorted((a, b) => b.y - a.y);
+    const deltaNeutrons = peaks.slice(0, 4).map((p) => p.deltaNeutrons);
+
+    expect(deltaNeutrons).toStrictEqual([0, 0, 0, 1]);
+  });
+
+  it('C,[13C] simplified', () => {
+    let isotopicDistribution = new IsotopicDistribution(
+      [
+        {
+          mf: 'C',
+          ionization: { mf: 'H+' },
+          intensity: 1,
+        },
+        {
+          mf: '[13C]',
+          intensity: 2,
+        },
+      ],
+      {
+        fwhm: 1e-10,
+      },
+    );
+
+    const peaks = isotopicDistribution
+      .getPeaks({ maxValue: 100 })
+      .toSorted((a, b) => b.y - a.y);
+
+    expect(peaks.slice(0, 3)).toBeDeepCloseTo([
+      {
+        x: 13.00335483507,
+        y: 100,
+        composition: { '13C': 1 },
+        label: '¹³C',
+        shortComposition: { '13C': 1 },
+        shortLabel: '¹³C',
+        deltaNeutrons: 0,
+      },
+      {
+        x: 13.00727645232093,
+        y: 49.459311525,
+        composition: { '12C': 1, '1H': 1 },
+        label: '¹²C¹H',
+        shortComposition: {},
+        shortLabel: '',
+        deltaNeutrons: 0,
+      },
+      {
+        x: 14.01063128739093,
+        y: 0.534938475,
+        composition: { '13C': 1, '1H': 1 },
+        label: '¹³C¹H',
+        shortComposition: { '13C': 1 },
+        shortLabel: '¹³C',
+        deltaNeutrons: 1,
+      },
+    ]);
   });
 });

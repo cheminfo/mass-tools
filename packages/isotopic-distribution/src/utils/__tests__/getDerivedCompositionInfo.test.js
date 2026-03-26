@@ -19,5 +19,6 @@ test('getDerivedCompositionInfo', () => {
     label: '¹²C₂₉₄¹³C₆¹H₅₀₀¹⁴N₁₀₀¹⁶O₁₀₀³²S₈₇³⁴S₁₂³³S',
     shortComposition: { '13C': 6, '34S': 12, '33S': 1 },
     shortLabel: '¹³C₆³⁴S₁₂³³S',
+    deltaNeutrons: 31,
   });
 });
