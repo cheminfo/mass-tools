@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/cheminfo/mass-tools/compare/chemical-elements@2.2.2...chemical-elements@2.3.0) (2026-03-26)
+
+
+### Bug Fixes
+
+* **chemical-elements:** rename deltaNeutron to deltaNeutrons for consistency ([8266a3f](https://github.com/cheminfo/mass-tools/commit/8266a3fb7fb317a25272a6e4417ab1e907379f79))
+
+
+### Features
+
+* **chemical-elements:** add deltaNeutrons to stableIsotopesObject ([c801d2d](https://github.com/cheminfo/mass-tools/commit/c801d2d7c466913cf95624037951a924045572a5))
+
+
+
+
+
 ## [2.2.2](https://github.com/cheminfo/mass-tools/compare/chemical-elements@2.2.1...chemical-elements@2.2.2) (2026-03-04)
 
 **Note:** Version bump only for package chemical-elements

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.5.0...isotopic-distribution@3.6.0) (2026-03-26)
+
+
+### Features
+
+* **isotopic-distribution:** compute deltaNeutrons from composition ([f18e0ba](https://github.com/cheminfo/mass-tools/commit/f18e0ba85814ff2a669a844ae5f467cfd515a261))
+
+
+
+
+
 # [3.5.0](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.4.18...isotopic-distribution@3.5.0) (2026-03-24)
 
 

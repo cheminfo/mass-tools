@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.7.2...mf-parser@3.8.0) (2026-03-26)
+
+
+### Features
+
+* **mf-parser:** add naturalDeltaNeutrons to getIsotopesInfo isotope entries ([8b60101](https://github.com/cheminfo/mass-tools/commit/8b60101df7b2380a54c78502e1c09dfc5679a5af))
+
+
+
+
+
 ## [3.7.2](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.7.1...mf-parser@3.7.2) (2026-03-24)
 
 **Note:** Version bump only for package mf-parser
