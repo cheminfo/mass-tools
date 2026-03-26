@@ -1,6 +1,7 @@
 import {
   elementsAndStableIsotopesObject as elements,
   isotopesObject as isotopes,
+  stableIsotopesObject,
 } from 'chemical-elements';
 
 import { Kind } from '../Kind';
@@ -33,7 +34,8 @@ function getProcessedPart(part) {
   for (let line of part) {
     switch (line.kind) {
       case Kind.ISOTOPE: {
-        let isotope = isotopes[line.value.isotope + line.value.atom];
+        let isotopeKey = line.value.isotope + line.value.atom;
+        let isotope = isotopes[isotopeKey];
         if (!isotope) {
           throw new Error(
             'unknown isotope:',
@@ -45,6 +47,8 @@ function getProcessedPart(part) {
           atom: line.value.atom,
           number: line.multiplier,
           distribution: [{ x: isotope.mass, y: 1 }],
+          naturalDeltaNeutrons:
+            stableIsotopesObject[isotopeKey]?.deltaNeutrons ?? 0,
         });
         break;
       }
@@ -57,10 +61,20 @@ function getProcessedPart(part) {
             element.isotopes,
             line.value.ratio,
           );
+          let maxIndex = 0;
+          for (let i = 1; i < distribution.length; i++) {
+            if (distribution[i].y > distribution[maxIndex].y) {
+              maxIndex = i;
+            }
+          }
+          let mostAbundantKey =
+            Math.round(distribution[maxIndex].x) + line.value.atom;
           result.isotopes.push({
             atom: line.value.atom,
             number: line.multiplier,
             distribution,
+            naturalDeltaNeutrons:
+              stableIsotopesObject[mostAbundantKey]?.deltaNeutrons ?? 0,
           });
         }
         break;
@@ -74,6 +88,7 @@ function getProcessedPart(part) {
             x: e.mass,
             y: e.abundance,
           })),
+          naturalDeltaNeutrons: 0,
         });
         break;
       }
