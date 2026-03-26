@@ -10,7 +10,7 @@ test('stableIsotopesObject', () => {
     mass: 12,
     symbol: 'C',
     mostAbundant: true,
-    deltaNeutron: 0,
+    deltaNeutrons: 0,
   });
 
   expect(data['13C']).toStrictEqual({
@@ -18,7 +18,7 @@ test('stableIsotopesObject', () => {
     mass: 13.00335483507,
     symbol: 'C',
     mostAbundant: false,
-    deltaNeutron: 1,
+    deltaNeutrons: 1,
   });
 
   expect(data['10B']).toStrictEqual({
@@ -26,7 +26,7 @@ test('stableIsotopesObject', () => {
     mass: 10.01293695,
     symbol: 'B',
     mostAbundant: false,
-    deltaNeutron: -1,
+    deltaNeutrons: -1,
   });
 
   expect(data['11B']).toStrictEqual({
@@ -34,6 +34,6 @@ test('stableIsotopesObject', () => {
     mass: 11.00930536,
     symbol: 'B',
     mostAbundant: true,
-    deltaNeutron: 0,
+    deltaNeutrons: 0,
   });
 });
