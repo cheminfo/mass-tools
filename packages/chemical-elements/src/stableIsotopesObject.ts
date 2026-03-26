@@ -1,10 +1,15 @@
 import { elementsAndIsotopes } from './elementsAndIsotopes.js';
 
 interface StableIsotope {
+  /** Element name (e.g., "Carbon"). */
   name: string;
+  /** Exact mass of the isotope in Da. */
   mass: number;
+  /** Element symbol (e.g., "C"). */
   symbol: string;
+  /** Whether this is the most abundant stable isotope of the element. */
   mostAbundant: boolean;
+  /** Difference in neutron count relative to the most abundant isotope (e.g., +1 for 13C, -1 for 10B). */
   deltaNeutrons: number;
 }
 
