@@ -10,6 +10,7 @@ export function getDerivedCompositionInfo(composition) {
   const shortComposition = {};
   let label = '';
   let shortLabel = '';
+  let deltaNeutrons = 0;
   for (let key in composition) {
     let isotopeLabel = '';
     for (let i = 0; i < key.length; i++) {
@@ -26,10 +27,12 @@ export function getDerivedCompositionInfo(composition) {
       }
     }
     label += isotopeLabel;
-    if (stableIsotopesObject[key].mostAbundant) continue;
+    const isotope = stableIsotopesObject[key];
+    deltaNeutrons += isotope.deltaNeutrons * composition[key];
+    if (isotope.mostAbundant) continue;
     shortLabel += isotopeLabel;
     shortComposition[key] = composition[key];
   }
 
-  return { label, shortComposition, shortLabel };
+  return { label, shortComposition, shortLabel, deltaNeutrons };
 }
