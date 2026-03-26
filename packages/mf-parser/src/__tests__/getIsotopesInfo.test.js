@@ -42,5 +42,36 @@ test('getIsotopesInfo from [13C]', () => {
     atom: 'C',
     number: 1,
     distribution: [{ x: 12, y: 1 }],
+    naturalDeltaNeutrons: 0,
   });
+});
+
+test('naturalDeltaNeutrons for Kind.ATOM', () => {
+  let info = new MF('C').getIsotopesInfo();
+
+  expect(info.isotopes[0].naturalDeltaNeutrons).toBe(0);
+});
+
+test('naturalDeltaNeutrons for Kind.ISOTOPE', () => {
+  let info = new MF('[13C]').getIsotopesInfo();
+
+  expect(info.isotopes[0].naturalDeltaNeutrons).toBe(1);
+});
+
+test('naturalDeltaNeutrons for Kind.ISOTOPE [12C]', () => {
+  let info = new MF('[12C]').getIsotopesInfo();
+
+  expect(info.isotopes[0].naturalDeltaNeutrons).toBe(0);
+});
+
+test('naturalDeltaNeutrons for Kind.ISOTOPE_RATIO C{50,50}', () => {
+  let info = new MF('C{50,50}').getIsotopesInfo();
+
+  expect(info.isotopes[0].naturalDeltaNeutrons).toBe(0);
+});
+
+test('naturalDeltaNeutrons for Kind.ISOTOPE_RATIO C{10,90}', () => {
+  let info = new MF('C{10,90}').getIsotopesInfo();
+
+  expect(info.isotopes[0].naturalDeltaNeutrons).toBe(1);
 });
