@@ -135,4 +135,25 @@ describe('isotopicDistribution with array', () => {
       },
     ]);
   });
+
+  it('supports deltaNeutrons', () => {
+    const isotopicDistributionForPeaks = new IsotopicDistribution(
+      [{ mf: `C2H7O+`, intensity: 1 }],
+      {
+        fwhm: 0,
+        maxLines: 1e5,
+        limit: 1e5,
+        minY: 1e-8,
+        allowNeutral: true,
+        ensureCase: false,
+      },
+    );
+
+    const isotopologues = isotopicDistributionForPeaks.getPeaks();
+    const deltaNeutronsNaN = isotopologues
+      .map((i) => i.deltaNeutrons)
+      .filter(Number.isNaN);
+
+    expect(deltaNeutronsNaN).toHaveLength(0);
+  });
 });
