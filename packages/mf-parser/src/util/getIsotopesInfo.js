@@ -52,32 +52,28 @@ function getProcessedPart(part) {
         });
         break;
       }
-      case Kind.ISOTOPE_RATIO:
-        {
-          let element = elements[line.value.atom];
-          if (!element) throw new Error('unknown element:', line.value);
+      case Kind.ISOTOPE_RATIO: {
+        let element = elements[line.value.atom];
+        if (!element) throw new Error('unknown element:', line.value);
 
-          let distribution = getDistribution(
-            element.isotopes,
-            line.value.ratio,
-          );
-          let maxIndex = 0;
-          for (let i = 1; i < distribution.length; i++) {
-            if (distribution[i].y > distribution[maxIndex].y) {
-              maxIndex = i;
-            }
+        let distribution = getDistribution(element.isotopes, line.value.ratio);
+        let maxIndex = 0;
+        for (let i = 1; i < distribution.length; i++) {
+          if (distribution[i].y > distribution[maxIndex].y) {
+            maxIndex = i;
           }
-          let mostAbundantKey =
-            Math.round(distribution[maxIndex].x) + line.value.atom;
-          result.isotopes.push({
-            atom: line.value.atom,
-            number: line.multiplier,
-            distribution,
-            naturalDeltaNeutrons:
-              stableIsotopesObject[mostAbundantKey]?.deltaNeutrons ?? 0,
-          });
         }
+        let mostAbundantKey =
+          Math.round(distribution[maxIndex].x) + line.value.atom;
+        result.isotopes.push({
+          atom: line.value.atom,
+          number: line.multiplier,
+          distribution,
+          naturalDeltaNeutrons:
+            stableIsotopesObject[mostAbundantKey]?.deltaNeutrons ?? 0,
+        });
         break;
+      }
       case Kind.ATOM: {
         let element = elements[line.value];
         if (!element) throw new Error('unknown element:', line.value);
