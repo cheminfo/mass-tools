@@ -1,12 +1,12 @@
 /**
  * Generate peptide fragments from a molecular formula.
  * @param {string} mf - The molecular formula to fragment.
- * @param {object} [options={}] - Fragmentation options.
+ * @param {object} [options] - Fragmentation options.
  * @param {boolean} [options.a=false] - Generate a-type fragments.
- * @param {boolean} [options.b=true] - Generate b-type fragments.
+ * @param {boolean} [options.b] - Generate b-type fragments. Defaults to `true` if no options are specified, otherwise `false`.
  * @param {boolean} [options.c=false] - Generate c-type fragments.
  * @param {boolean} [options.x=false] - Generate x-type fragments.
- * @param {boolean} [options.y=true] - Generate y-type fragments.
+ * @param {boolean} [options.y] - Generate y-type fragments. Defaults to `true` if no options are specified, otherwise `false`.
  * @param {boolean} [options.z=false] - Generate z-type fragments.
  * @param {boolean} [options.i=false] - Generate internal fragments.
  * @param {boolean} [options.ya=false] - Generate ya-type double fragmentation.
@@ -17,13 +17,18 @@
  * @param {number} [options.minInternal=0] - Minimum number of residues for internal fragments.
  * @returns {string[]} Array of fragment molecular formulas.
  */
-export function generatePeptideFragments(mf, options = {}) {
+export function generatePeptideFragments(mf, options) {
+  const isDefaultCall = options === undefined;
+  if (isDefaultCall) {
+    options = {};
+  }
+
   const {
     a = false,
-    b = true,
+    b = isDefaultCall,
     c = false,
     x = false,
-    y = true,
+    y = isDefaultCall,
     z = false,
     i: internal = false,
     ya = false,

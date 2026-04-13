@@ -4,7 +4,7 @@ import { getCombinationsIterator } from 'ml-spectra-processing';
  * Digest a peptide sequence using a specified enzyme.
  * @param {string} sequence - The peptide sequence to digest.
  * @param {object} [options={}] - Digestion options.
- * @param {string} [options.enzyme='trypsin'] - The enzyme to use for digestion. Supported values: 'chymotrypsin', 'trypsin', 'lysc', 'glucph4', 'glucph8', 'thermolysin', 'cyanogenbromide', 'any'.
+ * @param {string} options.enzyme - The enzyme to use for digestion. Required. Supported values: 'chymotrypsin', 'trypsin', 'lysc', 'glucph4', 'glucph8', 'thermolysin', 'cyanogenbromide', 'any'.
  * @param {number} [options.minMissed=0] - Minimum number of missed cleavages.
  * @param {number} [options.maxMissed=0] - Maximum number of missed cleavages.
  * @param {number} [options.minResidue=0] - Minimum number of residues in a fragment.
@@ -15,7 +15,7 @@ import { getCombinationsIterator } from 'ml-spectra-processing';
  */
 export function digestPeptide(sequence, options = {}) {
   const {
-    enzyme = 'trypsin',
+    enzyme,
     minMissed = 0,
     maxMissed = 0,
     minResidue = 0,
@@ -23,6 +23,10 @@ export function digestPeptide(sequence, options = {}) {
     minDigestions = 0,
     maxDigestions = Number.MAX_VALUE,
   } = options;
+
+  if (!enzyme) {
+    return [];
+  }
 
   sequence = sequence.replace(/^H([^a-z])/, '$1').replace(/OH$/, '');
   let regexp = getRegexp(enzyme);
@@ -42,8 +46,6 @@ export function digestPeptide(sequence, options = {}) {
     return [];
   }
 
-  const allResults = new Set();
-
   // Determine if we need combinatorial approach
   // Use combinatorial logic when maxDigestions explicitly limits cleavages OR minDigestions > 0
   const useCombinatorial = maxDigestions < numCleavages || minDigestions > 0;
@@ -55,6 +57,7 @@ export function digestPeptide(sequence, options = {}) {
 
   if (!useCombinatorial) {
     // Default behavior: use all available cleavage sites
+    const results = [];
     const fragments = [];
     let fragmentStart = 0;
     for (let i = 0; i < allFragments.length; i++) {
@@ -86,55 +89,53 @@ export function digestPeptide(sequence, options = {}) {
         let from = fragments[i].from + 1;
         let to = fragments[i + j].to + 1;
         if (fragment && nbResidue >= minResidue && nbResidue <= maxResidue) {
-          allResults.add(`H${fragment}OH$D${from}>${to}`);
+          results.push(`H${fragment}OH$D${from}>${to}`);
         }
       }
     }
-  } else {
-    // Combinatorial approach: generate all combinations of cleavage sites
-    for (
-      let numDigestions = startDigestions;
-      numDigestions <= effectiveMaxDigestions;
-      numDigestions++
-    ) {
-      const combinations = getCombinationsIterator(numCleavages, numDigestions);
+    return results;
+  }
 
-      for (const cleavageSites of combinations) {
-        // Create fragments based on selected cleavage sites
-        const fragments = createFragmentsFromCleavages(
-          allFragments,
-          cleavageSites,
-        );
+  // Combinatorial approach: generate all combinations of cleavage sites
+  const allResults = new Set();
+  for (
+    let numDigestions = startDigestions;
+    numDigestions <= effectiveMaxDigestions;
+    numDigestions++
+  ) {
+    const combinations = getCombinationsIterator(numCleavages, numDigestions);
 
-        // Generate results with missed cleavages
-        for (let i = 0; i < fragments.length - minMissed; i++) {
-          for (
-            let j = minMissed;
-            j <= Math.min(maxMissed, fragments.length - i - 1);
-            j++
-          ) {
-            let fragment = '';
-            let nbResidue = 0;
-            for (let k = i; k <= i + j; k++) {
-              fragment += fragments[k].sequence;
-              nbResidue += fragments[k].nbResidue;
-            }
-            let from = fragments[i].from + 1;
-            let to = fragments[i + j].to + 1;
-            if (
-              fragment &&
-              nbResidue >= minResidue &&
-              nbResidue <= maxResidue
-            ) {
-              allResults.add(`H${fragment}OH$D${from}>${to}`);
-            }
+    for (const cleavageSites of combinations) {
+      // Create fragments based on selected cleavage sites
+      const fragments = createFragmentsFromCleavages(
+        allFragments,
+        cleavageSites,
+      );
+
+      // Generate results with missed cleavages
+      for (let i = 0; i < fragments.length - minMissed; i++) {
+        for (
+          let j = minMissed;
+          j <= Math.min(maxMissed, fragments.length - i - 1);
+          j++
+        ) {
+          let fragment = '';
+          let nbResidue = 0;
+          for (let k = i; k <= i + j; k++) {
+            fragment += fragments[k].sequence;
+            nbResidue += fragments[k].nbResidue;
+          }
+          let from = fragments[i].from + 1;
+          let to = fragments[i + j].to + 1;
+          if (fragment && nbResidue >= minResidue && nbResidue <= maxResidue) {
+            allResults.add(`H${fragment}OH$D${from}>${to}`);
           }
         }
       }
     }
   }
 
-  return [...allResults].toSorted();
+  return [...allResults];
 }
 
 /**

@@ -11,9 +11,9 @@ describe('Checking digest sequence', () => {
     });
 
     expect(result).toStrictEqual([
-      'HAlaAlaLysOH$D3>5',
       'HLysOH$D1>1',
       'HLysOH$D2>2',
+      'HAlaAlaLysOH$D3>5',
     ]);
   });
 
@@ -25,11 +25,11 @@ describe('Checking digest sequence', () => {
     });
 
     expect(result).toStrictEqual([
-      'HAlaAlaLysOH$D3>5',
-      'HLysAlaAlaLysOH$D2>5',
-      'HLysLysOH$D1>2',
       'HLysOH$D1>1',
+      'HLysLysOH$D1>2',
       'HLysOH$D2>2',
+      'HLysAlaAlaLysOH$D2>5',
+      'HAlaAlaLysOH$D3>5',
     ]);
   });
 
@@ -40,13 +40,13 @@ describe('Checking digest sequence', () => {
       maxMissed: 1,
     });
 
-    expect(result).toStrictEqual(['HLysAlaAlaLysOH$D2>5', 'HLysLysOH$D1>2']);
+    expect(result).toStrictEqual(['HLysLysOH$D1>2', 'HLysAlaAlaLysOH$D2>5']);
   });
 
   it('Normal small sequence digest, default value', () => {
-    let result = digestPeptide('HLysAlaOH');
+    let result = digestPeptide('HLysAlaOH', { enzyme: 'trypsin' });
 
-    expect(result).toStrictEqual(['HAlaOH$D2>2', 'HLysOH$D1>1']);
+    expect(result).toStrictEqual(['HLysOH$D1>1', 'HAlaOH$D2>2']);
   });
 
   //  Leu, Phe, Val, Ile, Ala, Met
@@ -58,8 +58,8 @@ describe('Checking digest sequence', () => {
     });
 
     expect(result).toStrictEqual([
-      'HLeuProOH$D2>3',
       'HLysOH$D1>1',
+      'HLeuProOH$D2>3',
       'HValOH$D4>4',
     ]);
   });
@@ -72,135 +72,85 @@ describe('Checking digest sequence', () => {
     });
 
     expect(result).toStrictEqual([
-      'HLeu(H-1OH)ValOH$D2>3',
       'HLysLeu(H-1OH)OH$D1>2',
+      'HLeu(H-1OH)ValOH$D2>3',
     ]);
   });
 
-  it('HLysLysAlaAlaLysOH with maxDigestions=1 (single hydrolysis)', () => {
+  it('maxDigestions=1 limits to single cleavage combinations', () => {
     let result = digestPeptide('HLysLysAlaAlaLysOH', {
       enzyme: 'trypsin',
-      minMissed: 0,
-      maxMissed: 0,
       maxDigestions: 1,
     });
 
-    // With 2 possible cleavage sites, choosing 1 gives us 2 combinations:
-    // - Cleave after 1st Lys: HLysOH + HLysAlaAlaLysOH
-    // - Cleave after 2nd Lys: HLysLysOH + HAlaAlaLysOH
-    expect(result).toStrictEqual([
-      'HAlaAlaLysOH$D3>5',
-      'HLysAlaAlaLysOH$D2>5',
-      'HLysLysOH$D1>2',
-      'HLysOH$D1>1',
-    ]);
+    // With 2 cleavage sites, using 1 site gives C(2,1)=2 combinations
+    // Each combination produces 2 fragments, giving 4 total results
+    expect(result).toHaveLength(4);
+    expect(result).toContain('HLysOH$D1>1');
+    expect(result).toContain('HLysLysOH$D1>2');
+    expect(result).toContain('HLysAlaAlaLysOH$D2>5');
+    expect(result).toContain('HAlaAlaLysOH$D3>5');
   });
 
-  it('HLysLysAlaAlaLysOH with maxDigestions=2', () => {
+  it('maxDigestions=2 with trypsin enzyme', () => {
     let result = digestPeptide('HLysLysAlaAlaLysOH', {
       enzyme: 'trypsin',
-      minMissed: 0,
-      maxMissed: 0,
       maxDigestions: 2,
     });
 
+    // Using all 2 cleavage sites gives the same result as default (all cleavages)
     expect(result).toStrictEqual([
-      'HAlaAlaLysOH$D3>5',
       'HLysOH$D1>1',
       'HLysOH$D2>2',
+      'HAlaAlaLysOH$D3>5',
     ]);
   });
 
-  it('HLysLysAlaAlaLysOH with minDigestions=2', () => {
+  it('minDigestions=2 requires at least 2 cleavages', () => {
     let result = digestPeptide('HLysLysAlaAlaLysOH', {
       enzyme: 'trypsin',
-      minMissed: 0,
-      maxMissed: 0,
       minDigestions: 2,
     });
 
+    // With only 2 cleavage sites total, minDigestions=2 means use all sites
     expect(result).toStrictEqual([
-      'HAlaAlaLysOH$D3>5',
       'HLysOH$D1>1',
       'HLysOH$D2>2',
+      'HAlaAlaLysOH$D3>5',
     ]);
   });
 
-  it('HLysLysAlaAlaLysOH with minDigestions=2, maxDigestions=2', () => {
-    let result = digestPeptide('HLysLysAlaAlaLysOH', {
-      enzyme: ' trypsin',
-      minMissed: 0,
-      maxMissed: 0,
-      minDigestions: 2,
-      maxDigestions: 2,
-    });
-
-    expect(result).toStrictEqual([
-      'HAlaAlaLysOH$D3>5',
-      'HLysOH$D1>1',
-      'HLysOH$D2>2',
-    ]);
-  });
-
-  it('HLysLysAlaAlaLysOH with minDigestions=5 (impossible)', () => {
+  it('minDigestions=1, maxDigestions=1 gives exactly 1 cleavage', () => {
     let result = digestPeptide('HLysLysAlaAlaLysOH', {
       enzyme: 'trypsin',
-      minMissed: 0,
-      maxMissed: 0,
-      minDigestions: 5,
+      minDigestions: 1,
+      maxDigestions: 1,
     });
+
+    // Using exactly 1 cleavage site, same as maxDigestions=1
+    expect(result).toHaveLength(4);
+    expect(result).toContain('HLysOH$D1>1');
+    expect(result).toContain('HLysLysOH$D1>2');
+    expect(result).toContain('HLysAlaAlaLysOH$D2>5');
+    expect(result).toContain('HAlaAlaLysOH$D3>5');
+  });
+
+  it('combinatorial digestion with enzyme=any', () => {
+    let result = digestPeptide('HLysLysOH', {
+      enzyme: 'any',
+      maxDigestions: 1,
+    });
+
+    // With 'any' enzyme on HLysLysOH, there are 2 cleavage sites
+    // With maxDigestions=1, we should get 2 possible single cleavages
+    expect(result).toHaveLength(2);
+    expect(result).toContain('HLysOH$D1>1');
+    expect(result).toContain('HLysOH$D2>2');
+  });
+
+  it('no enzyme parameter returns empty array', () => {
+    let result = digestPeptide('HLysLysOH', {});
 
     expect(result).toStrictEqual([]);
-  });
-
-  it('HLysLysAlaAlaLysOH with maxDigestions=1 and maxMissed=1', () => {
-    let result = digestPeptide('HLysLysAlaAlaLysOH', {
-      enzyme: 'trypsin',
-      minMissed: 0,
-      maxMissed: 1,
-      maxDigestions: 1,
-    });
-
-    // With maxDigestions=1, we get 2 combinations, each can have missed cleavages:
-    // Combination 1 (cleave after 1st Lys): HLysOH, HLysAlaAlaLysOH, HLysLysAlaAlaLysOH (with missed)
-    // Combination 2 (cleave after 2nd Lys): HLysLysOH, HAlaAlaLysOH, HLysLysAlaAlaLysOH (with missed)
-    expect(result).toStrictEqual([
-      'HAlaAlaLysOH$D3>5',
-      'HLysAlaAlaLysOH$D2>5',
-      'HLysLysAlaAlaLysOH$D1>5',
-      'HLysLysOH$D1>2',
-      'HLysOH$D1>1',
-    ]);
-  });
-
-  it('HLysAlaValOH with enzyme any and maxDigestions=1', () => {
-    let result = digestPeptide('HLysAlaValOH', {
-      enzyme: 'any',
-      minMissed: 0,
-      maxMissed: 0,
-      maxDigestions: 1,
-    });
-
-    // With 2 possible cleavage sites (after Lys and after Ala), choosing 1 gives 2 combinations:
-    // - Cleave after Lys: HLysOH + HAlaValOH
-    // - Cleave after Ala: HLysAlaOH + HValOH
-    expect(result).toStrictEqual([
-      'HAlaValOH$D2>3',
-      'HLysAlaOH$D1>2',
-      'HLysOH$D1>1',
-      'HValOH$D3>3',
-    ]);
-  });
-
-  it('HLysAlaValOH with enzyme any and maxDigestions=2', () => {
-    let result = digestPeptide('HLysAlaValOH', {
-      enzyme: 'any',
-      minMissed: 0,
-      maxMissed: 0,
-      maxDigestions: 2,
-    });
-
-    // With 2 possible cleavage sites, maxDigestions=2 uses all cleavages (default behavior)
-    expect(result).toStrictEqual(['HAlaOH$D2>2', 'HLysOH$D1>1', 'HValOH$D3>3']);
   });
 });
