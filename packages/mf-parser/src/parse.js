@@ -337,28 +337,27 @@ function simplify(parsed) {
     const item = parsed[i];
     switch (item.kind) {
       case 'atom':
-      case 'isotope':
-        {
-          let realMultiplier = currentMultiplier;
-          for (const multiplier of multipliers) {
-            realMultiplier = {
-              from: multiplier.from * realMultiplier.from,
-              to: multiplier.to * realMultiplier.to,
-            };
-          }
-          newParsed.push(
-            {
-              kind: item.kind,
-              value: item.value,
-            },
-            {
-              kind: 'multiplierRange',
-              value: realMultiplier,
-            },
-          );
-          currentMultiplier = { from: 1, to: 1 };
+      case 'isotope': {
+        let realMultiplier = currentMultiplier;
+        for (const multiplier of multipliers) {
+          realMultiplier = {
+            from: multiplier.from * realMultiplier.from,
+            to: multiplier.to * realMultiplier.to,
+          };
         }
+        newParsed.push(
+          {
+            kind: item.kind,
+            value: item.value,
+          },
+          {
+            kind: 'multiplierRange',
+            value: realMultiplier,
+          },
+        );
+        currentMultiplier = { from: 1, to: 1 };
         break;
+      }
       case 'multiplier':
         currentMultiplier = { from: item.value, to: item.value };
         break;

@@ -22,7 +22,7 @@
     "chemical-elements": "^2.3.0",
     "mf-parser": "^3.8.0",
     "mf-utilities": "^3.5.4",
-    "ml-spectra-processing": "^14.21.0",
+    "ml-spectra-processing": "^14.24.0",
     "spectrum-generator": "^8.1.1"
   },
   "devDependencies": {

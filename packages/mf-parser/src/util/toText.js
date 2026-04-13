@@ -6,19 +6,18 @@ export function toText(lines) {
   let text = [];
   for (let line of lines) {
     switch (line.kind) {
-      case Format.SUBSCRIPT:
-        {
-          const value = String(line.value);
-          for (let i = 0; i < value.length; i++) {
-            const char = value[i];
-            if (subscript[char]) {
-              text.push(subscript[char]);
-            } else {
-              throw new Error(`Subscript problem with: ${char}`);
-            }
+      case Format.SUBSCRIPT: {
+        const value = String(line.value);
+        for (let i = 0; i < value.length; i++) {
+          const char = value[i];
+          if (subscript[char]) {
+            text.push(subscript[char]);
+          } else {
+            throw new Error(`Subscript problem with: ${char}`);
           }
         }
         break;
+      }
       case Format.SUPERSCRIPT: {
         const value = String(line.value);
         for (let i = 0; i < value.length; i++) {

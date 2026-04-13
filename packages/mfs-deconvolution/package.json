@@ -20,12 +20,12 @@
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/emdb#readme",
   "dependencies": {
     "@lukeed/uuid": "^2.0.1",
-    "cheminfo-types": "^1.10.0",
+    "cheminfo-types": "^1.15.0",
     "isotopic-distribution": "^3.6.0",
     "mf-generator": "^3.3.21",
     "ml-fcnnls": "^2.1.0",
     "ml-matrix": "^6.12.1",
-    "ml-spectra-processing": "^14.21.0",
+    "ml-spectra-processing": "^14.24.0",
     "ms-spectrum": "^3.9.6"
   },
   "devDependencies": {
