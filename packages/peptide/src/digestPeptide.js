@@ -1,20 +1,25 @@
-/*
-Iotuibs:
-* minMissed (default: 0)
-* maxMissed (default: 0)
-* minResidue: 0;
-* maxResidue: infinity
-* enzyme: chymotrypsin, trypsin, glucph4, glucph8, thermolysin, cyanogenbromide : Mandatory, no default value !
+/**
+ * Digest a peptide sequence using a specified enzyme.
+ * @param {string} sequence - The peptide sequence to digest.
+ * @param {object} [options={}] - Digestion options.
+ * @param {string} [options.enzyme='trypsin'] - The enzyme to use for digestion. Supported values: 'chymotrypsin', 'trypsin', 'lysc', 'glucph4', 'glucph8', 'thermolysin', 'cyanogenbromide', 'any'.
+ * @param {number} [options.minMissed=0] - Minimum number of missed cleavages.
+ * @param {number} [options.maxMissed=0] - Maximum number of missed cleavages.
+ * @param {number} [options.minResidue=0] - Minimum number of residues in a fragment.
+ * @param {number} [options.maxResidue=Infinity] - Maximum number of residues in a fragment.
+ * @returns {string[]} Array of digested peptide fragments.
  */
-
 export function digestPeptide(sequence, options = {}) {
+  const {
+    enzyme = 'trypsin',
+    minMissed = 0,
+    maxMissed = 0,
+    minResidue = 0,
+    maxResidue = Number.MAX_VALUE,
+  } = options;
+
   sequence = sequence.replace(/^H([^a-z])/, '$1').replace(/OH$/, '');
-  options.enzyme = options.enzyme || 'trypsin';
-  if (options.minMissed === undefined) options.minMissed = 0;
-  if (options.maxMissed === undefined) options.maxMissed = 0;
-  if (options.minResidue === undefined) options.minResidue = 0;
-  if (options.maxResidue === undefined) options.maxResidue = Number.MAX_VALUE;
-  let regexp = getRegexp(options.enzyme);
+  let regexp = getRegexp(enzyme);
   let fragments = sequence.replace(regexp, '$1 ').split(/ /).filter(Boolean);
 
   {
@@ -36,10 +41,10 @@ export function digestPeptide(sequence, options = {}) {
 
   let results = [];
 
-  for (let i = 0; i < fragments.length - options.minMissed; i++) {
+  for (let i = 0; i < fragments.length - minMissed; i++) {
     for (
-      let j = options.minMissed;
-      j <= Math.min(options.maxMissed, fragments.length - i - 1);
+      let j = minMissed;
+      j <= Math.min(maxMissed, fragments.length - i - 1);
       j++
     ) {
       let fragment = '';
@@ -50,11 +55,7 @@ export function digestPeptide(sequence, options = {}) {
       }
       let from = fragments[i].from + 1;
       let to = fragments[i + j].to + 1;
-      if (
-        fragment &&
-        nbResidue >= options.minResidue &&
-        nbResidue <= options.maxResidue
-      ) {
+      if (fragment && nbResidue >= minResidue && nbResidue <= maxResidue) {
         results.push(`H${fragment}OH$D${from}>${to}`);
       }
     }
