@@ -11,4 +11,3 @@ jobs:
     uses: zakodium/workflows/.github/workflows/lactame-deploy.yml@lactame-deploy-v1
     secrets:
       lactame-token: ${{ secrets.LACTAME_TOKEN }}
-      name: Deploy build on lactame.com
