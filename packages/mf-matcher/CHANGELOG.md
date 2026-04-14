@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/cheminfo/mass-tools/compare/mf-matcher@3.2.21...mf-matcher@3.3.0) (2026-04-14)
+
+
+### Features
+
+* **peptide:** add minDigestions and maxDigestions ([#308](https://github.com/cheminfo/mass-tools/issues/308)) ([658ade2](https://github.com/cheminfo/mass-tools/commit/658ade27cdb7c7a128586e04d9ccf23652280b15))
+
+
+
+
+
 ## [3.2.21](https://github.com/cheminfo/mass-tools/compare/mf-matcher@3.2.20...mf-matcher@3.2.21) (2026-03-26)
 
 **Note:** Version bump only for package mf-matcher

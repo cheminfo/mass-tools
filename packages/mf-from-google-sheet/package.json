@@ -1,6 +1,6 @@
 {
   "name": "mf-from-google-sheet",
-  "version": "3.1.21",
+  "version": "3.1.22",
   "description": "Retrieve and format molecular formula from google sheet",
   "main": "lib/src/index.js",
   "files": [
@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/mf-from-google-sheet#readme",
   "dependencies": {
-    "mf-generator": "^3.3.21",
-    "mf-parser": "^3.8.0",
-    "mf-utilities": "^3.5.4",
+    "mf-generator": "^3.3.22",
+    "mf-parser": "^3.9.0",
+    "mf-utilities": "^3.5.5",
     "papaparse": "^5.5.3"
   }
 }

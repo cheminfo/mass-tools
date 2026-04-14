@@ -1,6 +1,6 @@
 {
   "name": "mf-global",
-  "version": "3.1.31",
+  "version": "3.1.32",
   "description": "Various libraries to deal with molecular formula and mass spectra",
   "main": "lib/src/index.js",
   "files": [
@@ -21,13 +21,13 @@
   "dependencies": {
     "chemical-elements": "^2.3.0",
     "chemical-groups": "^2.2.3",
-    "emdb": "^3.4.12",
-    "isotopic-distribution": "^3.6.0",
-    "mf-generator": "^3.3.21",
-    "mf-parser": "^3.8.0",
-    "ms-report": "^3.2.23",
-    "ms-spectrum": "^3.9.6",
-    "nucleotide": "^3.2.14",
-    "peptide": "^2.3.14"
+    "emdb": "^3.5.0",
+    "isotopic-distribution": "^3.7.0",
+    "mf-generator": "^3.3.22",
+    "mf-parser": "^3.9.0",
+    "ms-report": "^3.2.24",
+    "ms-spectrum": "^3.10.0",
+    "nucleotide": "^3.2.15",
+    "peptide": "^2.4.0"
   }
 }

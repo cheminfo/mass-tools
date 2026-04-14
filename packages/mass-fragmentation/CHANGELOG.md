@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.11.14...mass-fragmentation@1.12.0) (2026-04-14)
+
+
+### Features
+
+* **peptide:** add minDigestions and maxDigestions ([#308](https://github.com/cheminfo/mass-tools/issues/308)) ([658ade2](https://github.com/cheminfo/mass-tools/commit/658ade27cdb7c7a128586e04d9ccf23652280b15))
+
+
+
+
+
 ## [1.11.14](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.11.13...mass-fragmentation@1.11.14) (2026-03-26)
 
 **Note:** Version bump only for package mass-fragmentation

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.22](https://github.com/cheminfo/mass-tools/compare/number-treemap@3.1.21...number-treemap@3.1.22) (2026-04-14)
+
+**Note:** Version bump only for package number-treemap
+
+
+
+
+
 ## [3.1.21](https://github.com/cheminfo/mass-tools/compare/number-treemap@3.1.20...number-treemap@3.1.21) (2026-03-26)
 
 **Note:** Version bump only for package number-treemap
