@@ -10,12 +10,14 @@ import {
 import { parseXY } from 'xy-parser';
 
 import { getBestPeaks } from './getBestPeaks.js';
+import { getDeconvolutedPeaks } from './getDeconvolutedPeaks.js';
 import { getFragmentPeaks } from './getFragmentPeaks.js';
 import { getMassRemainder } from './getMassRemainder.js';
 import { getPeakChargeBySimilarity } from './getPeakChargeBySimilarity.js';
 import { getPeaks } from './getPeaks.js';
 import { getPeaksWithCharge } from './getPeaksWithCharge.js';
 import { isContinuous } from './isContinuous.js';
+import { optimizePeaks } from './optimizePeaks.js';
 import { peakPicking } from './peakPicking.js';
 import { peaksWidth } from './peaksWidth.js';
 
@@ -123,6 +125,18 @@ export class Spectrum {
     return this.peaks;
   }
 
+  /**
+   * Optimize peaks using least-squares fitting against a shape model.
+   * Returns peaks with improved x, y, width, and shape information.
+   * Only works on continuous (profile) data.
+   * @param {import('ml-gsd').OptimizePeaksOptions} [options={}]
+   * @returns {import('ml-gsd').GSDPeakOptimized[]}
+   */
+  optimizePeaks(options) {
+    peakPicking(this);
+    return optimizePeaks(this, options);
+  }
+
   peaksWidth() {
     peakPicking(this);
     return peaksWidth(this.peaks);
@@ -164,6 +178,23 @@ export class Spectrum {
       x: peaks.map((peak) => peak.x),
       y: peaks.map((peak) => peak.y),
     };
+  }
+
+  /**
+   * Deconvolute peaks from large molecules where isotopic distribution is not resolved.
+   * Groups peaks by charge state based on m/z spacing patterns.
+   * Useful for proteins and other large biomolecules where individual isotopologues cannot be distinguished.
+   *
+   * @param {object} [options={}]
+   * @param {string} [options.ionizations='(H+)1-50'] - Ionization possibilities (e.g., 'H+, Na+, K+' or '(H+)5-20' for charge range)
+   * @param {number} [options.tolerance=1.0] - Tolerance for grouping peaks (in Da). Use 1.0 for real data, 0.1 for high-resolution simulated data
+   * @param {number} [options.minGroupSize=3] - Minimum number of peaks required to form a charge group. Use 3-4 for real data, 5+ for clean simulated data
+   * @returns {Array} Array of peak groups with charge assignments and deconvoluted masses
+   */
+  getDeconvolutedPeaks(options) {
+    if (this.data.x.length === 0) return [];
+    peakPicking(this);
+    return getDeconvolutedPeaks(this.peaks, options);
   }
 
   /**
