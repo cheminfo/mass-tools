@@ -26,12 +26,12 @@
     "mf-utilities": "^3.5.5",
     "ml-gsd": "^13.1.1",
     "ml-regression-power": "^3.0.0",
-    "ml-spectra-processing": "^14.24.0",
+    "ml-spectra-processing": "^14.28.1",
     "peaks-similarity": "^3.1.1",
     "xy-parser": "^6.0.1"
   },
   "devDependencies": {
     "jest-matcher-deep-close-to": "^3.0.2",
-    "spectrum-generator": "^8.1.1"
+    "spectrum-generator": "^8.2.0"
   }
 }

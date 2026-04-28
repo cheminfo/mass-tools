@@ -41,6 +41,8 @@ export function findMFsSync(targetMass, options = {}) {
     minCharge = Number.MIN_SAFE_INTEGER,
     maxCharge = Number.MAX_SAFE_INTEGER,
     unsaturation = {},
+    atoms,
+    callback,
   } = filter;
 
   let filterUnsaturation = !!unsaturation;
@@ -59,10 +61,10 @@ export function findMFsSync(targetMass, options = {}) {
     maxCharge !== Number.MAX_SAFE_INTEGER;
 
   let advancedFilter;
-  if (filter.atoms || filter.callback) {
+  if (atoms || callback) {
     advancedFilter = {
-      atoms: filter.atoms,
-      callback: filter.callback,
+      atoms,
+      callback,
     };
   }
 

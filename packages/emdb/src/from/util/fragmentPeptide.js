@@ -14,9 +14,9 @@ export function fragmentPeptide(sequence, options = {}) {
   // do we also have some digest fragments ?
   if (digestion.enzyme) {
     let digests = digestPeptide(sequence, digestion);
-    if (options.protonation) {
+    if (protonation) {
       digests = chargePeptide(digests, {
-        pH: options.protonationPH,
+        pH: protonationPH,
       });
     }
     fragmentsArray = fragmentsArray.concat(digests);

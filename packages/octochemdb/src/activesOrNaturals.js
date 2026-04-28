@@ -45,7 +45,7 @@ export async function activesOrNaturals(options = {}) {
     searchParams,
   });
 
-  if (options.includes) {
+  if (includes) {
     await includeDBRefs(entries, { baseURL, collections: includes });
   }
   appendURLs(entries);
