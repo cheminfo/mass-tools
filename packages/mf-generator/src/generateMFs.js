@@ -30,31 +30,43 @@ export async function generateMFs(ranges, options = {}) {
 
   options = { ...options };
 
-  let { limit = 100000, uniqueMFs = true, estimate = false, onStep } = options;
+  let {
+    limit = 100000,
+    uniqueMFs = true,
+    estimate = false,
+    onStep,
+    filterFct,
+    canonizeMF,
+    ionizations: rawIonizations,
+  } = options;
 
-  options.filterFctVariables = {};
+  let filterFctVariables = {};
   for (let i = 0; i < ranges.length; i++) {
     const range = ranges[i];
     if (typeof range === 'object' && range.name) {
-      options.filterFctVariables[range.name] = i;
+      filterFctVariables[range.name] = i;
       ranges[i] = range.value;
     }
   }
 
-  if (options.filterFct) {
+  if (filterFct) {
     // we create a real javascript function
-    let variables = Object.keys(options.filterFctVariables);
+    let variables = Object.keys(filterFctVariables);
     variables.push('mm', 'mz', 'charge', 'unsaturation', 'atoms');
     // eslint-disable-next-line no-new-func
-    options.filterFct = new Function(
-      ...variables,
-      `return ${options.filterFct}`,
-    );
+    filterFct = new Function(...variables, `return ${filterFct}`);
   }
 
-  if (uniqueMFs === true) options.canonizeMF = true;
-  if (options.canonizeMF === undefined) options.canonizeMF = true;
-  options.ionizations = preprocessIonizations(options.ionizations);
+  if (uniqueMFs === true) canonizeMF = true;
+  if (canonizeMF === undefined) canonizeMF = true;
+  const ionizations = preprocessIonizations(rawIonizations);
+  options = {
+    ...options,
+    filterFctVariables,
+    filterFct,
+    canonizeMF,
+    ionizations,
+  };
 
   // we allow String delimited by ". or ;" instead of an array
   for (let i = 0; i < ranges.length; i++) {
@@ -88,7 +100,7 @@ export async function generateMFs(ranges, options = {}) {
       (previous, current) => previous * current.length,
       1,
     );
-    return total * options.ionizations.length;
+    return total * ionizations.length;
   }
 
   let results = [];
@@ -184,7 +196,14 @@ function getEMFromParts(parts, currents, ionization) {
 }
 
 function appendResult(results, currents, keys, options = {}) {
-  const { canonizeMF, filter, ionizations, links = {} } = options;
+  const {
+    canonizeMF,
+    filter,
+    ionizations,
+    filterFct,
+    filterFctVariables,
+    links = {},
+  } = options;
   // this script is designed to combine molecular formula
   // that may contain comments after a "$" sign
   // therefore we should put all the comments at the ned
@@ -204,10 +223,10 @@ function appendResult(results, currents, keys, options = {}) {
 
   for (let ionization of ionizations) {
     let result = getEMFromParts(keys, currents, ionization);
-    if (options.filterFct) {
+    if (filterFct) {
       let variables = [];
-      for (let key in options.filterFctVariables) {
-        variables.push(currents[options.filterFctVariables[key]]);
+      for (let key in filterFctVariables) {
+        variables.push(currents[filterFctVariables[key]]);
       }
 
       variables.push(
@@ -218,7 +237,7 @@ function appendResult(results, currents, keys, options = {}) {
         result.unsaturation,
         result.atoms,
       );
-      if (!options.filterFct.apply(null, variables)) continue;
+      if (!filterFct(...variables)) continue;
     }
 
     result.parts = [];

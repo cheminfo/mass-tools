@@ -38,7 +38,13 @@ Search for an experimental monoisotopic mass and calculate the similarity
 */
 
 export async function searchSimilarity(emdb, options = {}) {
-  const { similarity = {}, minSimilarity = 0.5, filter = {}, onStep } = options;
+  const {
+    similarity = {},
+    minSimilarity = 0.5,
+    filter = {},
+    onStep,
+    flatten,
+  } = options;
 
   let width = {
     bottom: similarity.widthBottom,
@@ -54,14 +60,14 @@ export async function searchSimilarity(emdb, options = {}) {
     );
   }
 
-  let experimentalData = emdb.experimentalSpectrum.data;
+  const experimentalData = emdb.experimentalSpectrum.data;
   let sumY = emdb.experimentalSpectrum.sumY();
 
   // the result of emdb query will be stored in a property 'ms'
 
   let results = emdb.searchMSEM(filter.msem, options);
   let flatEntries = [];
-  if (!options.flatten) {
+  if (!flatten) {
     for (let database of Object.keys(results)) {
       for (let entry of results[database]) {
         flatEntries.push(entry);
@@ -142,7 +148,7 @@ export async function searchSimilarity(emdb, options = {}) {
     }
   }
 
-  if (!options.flatten) {
+  if (!flatten) {
     for (let database of Object.keys(results)) {
       results[database] = results[database]
         .filter((entry) => entry.ms.similarity)

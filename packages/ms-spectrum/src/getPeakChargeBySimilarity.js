@@ -18,7 +18,7 @@ const NEUTRON_MASS = 1;
 
 export function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
   let { similarity = {}, minCharge = 1, maxCharge = 10 } = options;
-  let { zone = {}, widthFunction } = similarity;
+  let { zone = {}, widthFunction, widthBottom, widthTop } = similarity;
   let { low = -0.5, high = 2.5 } = zone;
 
   if (!spectrum || spectrum.data.x.length === 0) {
@@ -28,8 +28,8 @@ export function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
   }
 
   let width = {
-    bottom: similarity.widthBottom,
-    top: similarity.widthTop,
+    bottom: widthBottom,
+    top: widthTop,
   };
 
   similarity = structuredClone(similarity);
