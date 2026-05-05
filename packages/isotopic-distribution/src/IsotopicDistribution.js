@@ -2,7 +2,7 @@ import { ELECTRON_MASS } from 'chemical-elements';
 import { MF } from 'mf-parser';
 import { getMsInfo, preprocessIonizations } from 'mf-utilities';
 import { xNormed } from 'ml-spectra-processing';
-import { SpectrumGenerator } from 'spectrum-generator';
+import { SparseSpectrumGenerator, SpectrumGenerator } from 'spectrum-generator';
 
 import { Distribution } from './Distribution';
 import { getDerivedCompositionInfo } from './utils/getDerivedCompositionInfo';
@@ -368,11 +368,12 @@ export class IsotopicDistribution {
    * @param {object} [options={}]
    * @param {number} [options.gaussianWidth=10] // how good should look the gaussian ? By default we take 10 times the fwhm as number of points
    * @param {number} [options.threshold=0.00001] // minimal height to return point
-   * @param {number} [options.maxLength=1e6] // minimal height to return point
+   * @param {number} [options.maxLength=1e6] // maximal number of points; ignored when sparse is true
    * @param {number} [options.maxValue] // rescale Y to reach maxValue
    * @param {number} [options.from] // minimal x value, default to the first point - 2
    * @param {number} [options.to] // maximal x value, default to the last point + 2
    * @param {function} [options.peakWidthFct=(mz)=>(this.fwhm)]
+   * @param {boolean} [options.sparse=false] // use SparseSpectrumGenerator; only generates points in peak regions, avoids maxLength limit
    * @return {XY} isotopic distribution as an object containing 2 properties: x:[] and y:[]
    */
 
@@ -383,30 +384,31 @@ export class IsotopicDistribution {
       gaussianWidth = 10,
       maxValue,
       maxLength = 1e6,
+      sparse = false,
     } = options;
 
-    let points = this.getTable({ maxValue });
-    if (points.length === 0) return { x: [], y: [] };
-    const from = options.from || points[0].x - 2;
-    const to = options.to || points.at(-1).x + 2;
-    const nbPoints = Math.round(((to - from) * gaussianWidth) / this.fwhm + 1);
-    if (nbPoints > maxLength) {
-      throw new Error(
-        `Number of points is over the maxLength: ${nbPoints}>${maxLength}`,
-      );
-    }
-    let gaussianOptions = {
-      from,
-      to,
-      nbPoints,
-      peakWidthFct,
-    };
+    let peaks = this.getTable({ maxValue });
+    if (peaks.length === 0) return { x: [], y: [] };
+    const from = options.from || peaks[0].x - 2;
+    const to = options.to || peaks.at(-1).x + 2;
 
-    let spectrumGenerator = new SpectrumGenerator(gaussianOptions);
-    for (let point of points) {
-      spectrumGenerator.addPeak([point.x, point.y]);
+    let spectrum;
+    const nbPoints = Math.round(((to - from) * gaussianWidth) / this.fwhm + 1);
+    const generatorOptions = { from, to, peakWidthFct, nbPoints };
+    if (sparse) {
+      const generator = new SparseSpectrumGenerator(generatorOptions);
+      spectrum = generator.generateSparseSpectrum(peaks, { threshold });
+    } else {
+      if (nbPoints > maxLength) {
+        throw new Error(
+          `Number of points is over the maxLength: ${nbPoints}>${maxLength}`,
+        );
+      }
+      const generator = new SpectrumGenerator(generatorOptions);
+      spectrum = generator.generateSpectrum(peaks, { threshold });
     }
-    let spectrum = spectrumGenerator.getSpectrum({ threshold });
+
+    //TODO not clear why maxValue it can not be directly provided as a parameter in the generateSpectrum function but some tests would fail
     if (maxValue) {
       spectrum.y = xNormed(spectrum.y, {
         algorithm: 'max',

@@ -1,3 +1,4 @@
+import { xMaxValue, xMinValue } from 'ml-spectra-processing';
 import { describe, expect, it } from 'vitest';
 
 import { IsotopicDistribution } from '../IsotopicDistribution.js';
@@ -67,5 +68,33 @@ describe('test isotopicDistribution', () => {
     expect(() => {
       isotopicDistribution.getGaussian({});
     }).toThrow('Number of points is over the maxLength');
+  });
+
+  it('create distribution of C1 with sparse option', () => {
+    let isotopicDistribution = new IsotopicDistribution('C', { fwhm: 0.1 });
+    const from = 11;
+    const to = 14;
+    let gaussian = isotopicDistribution.getGaussian({ from, to, sparse: true });
+
+    expect(gaussian.x).toHaveLength(92);
+
+    expect(xMinValue(gaussian.x)).toBe(from);
+    expect(xMaxValue(gaussian.x)).toBe(to);
+    expect(xMaxValue(gaussian.y)).toBeCloseTo(0.9893, 2);
+  });
+
+  it('C10000 with sparse option does not throw maxLength', () => {
+    let isotopicDistribution = new IsotopicDistribution('C10000', {
+      fwhm: 0.001,
+    });
+    const gaussian = isotopicDistribution.getGaussian({
+      sparse: true,
+      maxValue: 100,
+    });
+
+    expect(gaussian.x).toHaveLength(4658);
+    expect(xMinValue(gaussian.x)).toBeCloseTo(120057.1979);
+    expect(xMaxValue(gaussian.x)).toBeCloseTo(120164.5434);
+    expect(xMaxValue(gaussian.y)).toBe(100);
   });
 });
