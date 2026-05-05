@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.57.0](https://github.com/cheminfo/mass-tools/compare/v7.56.0...v7.57.0) (2026-05-05)
+
+
+### Features
+
+* **isotopic-distribution:** add sparse option to getGaussian ([63679da](https://github.com/cheminfo/mass-tools/commit/63679dac8af99c7ca34a1fdf8e63dcbd33f7ae99))
+
 ## [7.56.0](https://github.com/cheminfo/mass-tools/compare/v7.55.0...v7.56.0) (2026-04-13)
 
 
