@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>isotopic-distribution 3.6.0 | Documentation</title>
+  <title>isotopic-distribution 3.7.0 | Documentation</title>
   <meta name='description' content='Calculate the isotopic distribution of a molecular formula'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>isotopic-distribution</h3>
-          <div class='mb1'><code>3.6.0</code></div>
+          <div class='mb1'><code>3.7.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -1451,7 +1451,7 @@
   
     (default <code>1e6</code>)
   </td>
-  <td class='break-word'><span>// minimal height to return point
+  <td class='break-word'><span>// maximal number of points; ignored when sparse is true
 </span></td>
 </tr>
 
@@ -1490,6 +1490,17 @@
     (default <code>(mz)=&gt;(this.fwhm)</code>)
   </td>
   <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.sparse</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>// use SparseSpectrumGenerator; only generates points in peak regions, avoids maxLength limit
+</span></td>
 </tr>
 
 
@@ -2426,7 +2437,7 @@
   
     (default <code>1e6</code>)
   </td>
-  <td class='break-word'><span>// minimal height to return point
+  <td class='break-word'><span>// maximal number of points; ignored when sparse is true
 </span></td>
 </tr>
 
@@ -2465,6 +2476,17 @@
     (default <code>(mz)=&gt;(this.fwhm)</code>)
   </td>
   <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.sparse</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>// use SparseSpectrumGenerator; only generates points in peak regions, avoids maxLength limit
+</span></td>
 </tr>
 
 
@@ -3401,7 +3423,7 @@
   
     (default <code>1e6</code>)
   </td>
-  <td class='break-word'><span>// minimal height to return point
+  <td class='break-word'><span>// maximal number of points; ignored when sparse is true
 </span></td>
 </tr>
 
@@ -3440,6 +3462,17 @@
     (default <code>(mz)=&gt;(this.fwhm)</code>)
   </td>
   <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.sparse</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>// use SparseSpectrumGenerator; only generates points in peak regions, avoids maxLength limit
+</span></td>
 </tr>
 
 
@@ -4376,7 +4409,7 @@
   
     (default <code>1e6</code>)
   </td>
-  <td class='break-word'><span>// minimal height to return point
+  <td class='break-word'><span>// maximal number of points; ignored when sparse is true
 </span></td>
 </tr>
 
@@ -4415,6 +4448,17 @@
     (default <code>(mz)=&gt;(this.fwhm)</code>)
   </td>
   <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.sparse</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>// use SparseSpectrumGenerator; only generates points in peak regions, avoids maxLength limit
+</span></td>
 </tr>
 
 
@@ -5351,7 +5395,7 @@
   
     (default <code>1e6</code>)
   </td>
-  <td class='break-word'><span>// minimal height to return point
+  <td class='break-word'><span>// maximal number of points; ignored when sparse is true
 </span></td>
 </tr>
 
@@ -5390,6 +5434,17 @@
     (default <code>(mz)=&gt;(this.fwhm)</code>)
   </td>
   <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.sparse</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>// use SparseSpectrumGenerator; only generates points in peak regions, avoids maxLength limit
+</span></td>
 </tr>
 
 
@@ -6328,7 +6383,7 @@
   
     (default <code>1e6</code>)
   </td>
-  <td class='break-word'><span>// minimal height to return point
+  <td class='break-word'><span>// maximal number of points; ignored when sparse is true
 </span></td>
 </tr>
 
@@ -6367,6 +6422,17 @@
     (default <code>(mz)=&gt;(this.fwhm)</code>)
   </td>
   <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.sparse</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>// use SparseSpectrumGenerator; only generates points in peak regions, avoids maxLength limit
+</span></td>
 </tr>
 
 
