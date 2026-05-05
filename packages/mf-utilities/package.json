@@ -1,6 +1,6 @@
 {
   "name": "mf-utilities",
-  "version": "3.5.5",
+  "version": "3.5.6",
   "description": "Small utilities dealing with molecular formula",
   "main": "lib/src/index.js",
   "files": [
@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/mf-utilities#readme",
   "dependencies": {
-    "chemical-elements": "^2.3.0",
+    "chemical-elements": "^2.3.1",
     "chemical-groups": "^2.2.3",
-    "mf-parser": "^3.9.0"
+    "mf-parser": "^3.9.1"
   }
 }

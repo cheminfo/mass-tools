@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.23](https://github.com/cheminfo/mass-tools/compare/mf-from-atomic-ratio@1.2.22...mf-from-atomic-ratio@1.2.23) (2026-05-05)
+
+**Note:** Version bump only for package mf-from-atomic-ratio
+
+
+
+
+
 ## [1.2.22](https://github.com/cheminfo/mass-tools/compare/mf-from-atomic-ratio@1.2.21...mf-from-atomic-ratio@1.2.22) (2026-04-14)
 
 **Note:** Version bump only for package mf-from-atomic-ratio

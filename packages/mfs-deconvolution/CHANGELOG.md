@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.1](https://github.com/cheminfo/mass-tools/compare/mfs-deconvolution@2.5.0...mfs-deconvolution@2.5.1) (2026-05-05)
+
+**Note:** Version bump only for package mfs-deconvolution
+
+
+
+
+
 # [2.5.0](https://github.com/cheminfo/mass-tools/compare/mfs-deconvolution@2.4.30...mfs-deconvolution@2.5.0) (2026-04-14)
 
 

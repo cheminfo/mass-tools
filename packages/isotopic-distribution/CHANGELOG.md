@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.7.0...isotopic-distribution@3.8.0) (2026-05-05)
+
+
+### Features
+
+* **isotopic-distribution:** add sparse option to getGaussian ([63679da](https://github.com/cheminfo/mass-tools/commit/63679dac8af99c7ca34a1fdf8e63dcbd33f7ae99))
+
+
+
+
+
 # [3.7.0](https://github.com/cheminfo/mass-tools/compare/isotopic-distribution@3.6.0...isotopic-distribution@3.7.0) (2026-04-14)
 
 
