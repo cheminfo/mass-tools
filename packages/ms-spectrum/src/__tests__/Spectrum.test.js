@@ -70,6 +70,51 @@ describe('test Spectrum', () => {
     ).toStrictEqual({ x: [1, 4, 9, 16], y: [1, 1, 2, 1] });
   });
 
+  it('scaleY invalidates what was derived from the data', () => {
+    const spectrum = new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] });
+
+    expect(spectrum.sumY()).toBe(5);
+    expect(spectrum.peakPicking()).toHaveLength(4);
+
+    spectrum.scaleY(100);
+
+    expect(spectrum.sumY()).toBe(250);
+    expect(spectrum.info).toStrictEqual({
+      minX: 1,
+      maxX: 4,
+      minY: 50,
+      maxY: 100,
+    });
+    expect(spectrum.peakPicking()[2]).toStrictEqual({ x: 3, y: 100, width: 0 });
+  });
+
+  it('normedY invalidates what was derived from the data', () => {
+    const spectrum = new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] });
+
+    expect(spectrum.sumY()).toBe(5);
+
+    spectrum.normedY();
+
+    expect(spectrum.sumY()).toBeCloseTo(1, 10);
+    expect(spectrum.info.maxY).toBeCloseTo(0.4, 10);
+  });
+
+  it('rescaleX invalidates what was derived from the data', () => {
+    const spectrum = new Spectrum({ x: [1, 2, 3, 4], y: [1, 1, 2, 1] });
+
+    expect(spectrum.peakPicking()[2].x).toBe(3);
+
+    spectrum.rescaleX((x) => x ** 2);
+
+    expect(spectrum.info).toStrictEqual({
+      minX: 1,
+      maxX: 16,
+      minY: 1,
+      maxY: 2,
+    });
+    expect(spectrum.peakPicking()[2].x).toBe(9);
+  });
+
   it('gsd of non continuous spectrum', () => {
     let data = { x: [], y: [] };
     for (let i = 0; i <= 6; i++) {
