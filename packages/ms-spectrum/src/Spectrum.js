@@ -30,6 +30,9 @@ export class Spectrum {
    * @param {import('cheminfo-types').DataXY} data
    * @param {object} [options={}]
    * @param {number} [options.threshold=0.00025]
+   * @param {number} [options.noiseFactor=3] - peaks under `median + noiseFactor * sd`
+   * of the noise are ignored when peak picking a continuous spectrum. Set it to 0
+   * to let the peak picking decide by itself.
    */
   constructor(data = defaultData, options = {}) {
     if (
@@ -40,7 +43,7 @@ export class Spectrum {
       throw new TypeError('Spectrum data must be an object with x:[], y:[]');
     }
     this.data = { ...data };
-    this.options = { threshold: 0.00025, ...options };
+    this.options = { threshold: 0.00025, noiseFactor: 3, ...options };
     Object.defineProperty(this.data, 'xOriginal', {
       enumerable: false,
       writable: true,

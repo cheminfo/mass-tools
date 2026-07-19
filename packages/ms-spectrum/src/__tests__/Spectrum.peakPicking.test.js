@@ -38,8 +38,13 @@ describe('peakPicking on Spectrum', () => {
       readFileSync(path.join(__dirname, 'data/1e6.json'), 'utf8'),
     );
     const spectrum = new Spectrum(data);
-    const peaks = spectrum.peakPicking();
 
-    expect(peaks).toHaveLength(114528);
+    expect(spectrum.peakPicking()).toHaveLength(2552);
+
+    // nearly all the maxima of this spectrum are under the noise level: without
+    // the filter they are picked as well, and only 2640 of them reach median + 3 sd
+    const unfiltered = new Spectrum(data, { noiseFactor: 0 });
+
+    expect(unfiltered.peakPicking()).toHaveLength(114528);
   });
 });
