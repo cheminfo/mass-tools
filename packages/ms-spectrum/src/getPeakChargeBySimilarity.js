@@ -1,6 +1,14 @@
 import { Comparator } from 'peaks-similarity';
 
 /**
+ * Evaluate the charge of a peak by comparing the experimental isotopologues with
+ * theoretical ones placed NEUTRON_MASS / charge apart.
+ *
+ * The comparison is done on the peaks of the spectrum, never on the raw data: a
+ * continuous spectrum has to be peak picked first, otherwise the baseline points
+ * take part in the comparison and an unresolved peak matches any charge.
+ * @param {import('./Spectrum.js').Spectrum} spectrum
+ * @param {number} targetMass
  * @param {object}   [options={}]
  * @param {number}   [options.minCharge=1]
  * @param {number}   [options.maxCharge=10]
@@ -12,6 +20,8 @@ import { Comparator } from 'peaks-similarity';
  * @param {number}   [options.similarity.zone.low=-0.5] - window shift based on observed monoisotopic mass
  * @param {number}   [options.similarity.zone.high=2.5] - to value for the comparison window
  * @param {string}   [options.similarity.common]
+ * @returns {number|undefined} the most likely charge, or undefined when the zone
+ * holds less than 2 peaks and no isotopologue distance can be measured
  */
 
 const NEUTRON_MASS = 1;
@@ -35,7 +45,18 @@ export function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
   similarity = structuredClone(similarity);
   similarity.common = 'second';
 
-  let experimentalData = spectrum.data;
+  // a single peak carries no isotopologue distance, so no charge can be evaluated
+  let peaksInZone = spectrum.getPeaks({
+    from: targetMass + low,
+    to: targetMass + high,
+    threshold: 0,
+  });
+  if (peaksInZone.length < 2) return undefined;
+
+  // for a centroid spectrum every point is a peak, so this keeps the historical
+  // behaviour, while a continuous spectrum is reduced to its real maxima
+  let experimentalData = spectrum.getPeaksAsDataXY({ threshold: 0 });
+
   let similarityProcessor = new Comparator(similarity);
   similarityProcessor.setPeaks1([experimentalData.x, experimentalData.y]);
 
