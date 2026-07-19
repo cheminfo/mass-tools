@@ -76,3 +76,20 @@ test('a real peak stays over the noise', () => {
   expect(byHeight[0].y).toBeCloseTo(1.05, 1);
   expect(byHeight[1].y).toBeLessThan(0.3);
 });
+
+test('a centroid spectrum is not noise filtered', () => {
+  // there is no baseline to measure on a centroid spectrum: the median of the
+  // intensities is signal, not noise, so filtering would empty an already
+  // cleaned peak list
+  const data = {
+    x: [1, 2, 3, 4, 4.333, 4.666, 7, 8, 9],
+    y: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+  };
+  const spectrum = new Spectrum(data);
+
+  expect(spectrum.isContinuous()).toBe(false);
+  expect(spectrum.peakPicking()).toHaveLength(9);
+
+  // the noiseFactor changes nothing, every point stays a peak
+  expect(new Spectrum(data, { noiseFactor: 5 }).peakPicking()).toHaveLength(9);
+});

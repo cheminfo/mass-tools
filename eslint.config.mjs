@@ -49,6 +49,9 @@ export default defineConfig(
       ],
       'no-await-in-loop': 'off',
       'prefer-named-capture-group': 'off',
+      // we manipulate trees of plain objects holding a `children` array, like
+      // the taxonomy ones, that the rule mistakes for DOM elements
+      'unicorn/better-dom-traversing': 'off',
     },
   },
   {

@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prefer-https -- the urls come from the json fixtures, they are the data as it is stored */
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 

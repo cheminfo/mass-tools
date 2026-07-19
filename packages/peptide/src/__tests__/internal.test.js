@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 
 import { generatePeptideFragments } from '..';
 
-// http://www.matrixscience.com/help/fragmentation_help.html
+// https://www.matrixscience.com/help/fragmentation_help.html
 
 describe('Generate internal fragments', () => {
   it('Check internal fragments for yb', () => {

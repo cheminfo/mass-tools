@@ -172,6 +172,7 @@ export const defaultDatabase = [
     section: '',
     description: '',
     kind: 'reaction',
+    // eslint-disable-next-line unicorn/prefer-https -- this host serves http only
     web: 'http://people.whitman.edu/~dunnivfm/C_MS_Ebook/CH6/6_9_5.html',
     mode: 'positive',
     isbn: '',
@@ -1807,7 +1808,7 @@ export const defaultDatabase = [
       'gC`a@aJRm@_PP!eMHAIhOh` eFH`fND#qbq qq@ Qd#!R@FL@[@AcG_I| !R@Fp@XqwZ_@ !R@FL]^gp',
     ionization: 'esi',
     reaction: 'CRF',
-    doi: 'http://dx.doi.org/10.1088/1468-6996/10/3/034602',
+    doi: 'https://dx.doi.org/10.1088/1468-6996/10/3/034602',
     section: 'Results',
     description: 'Fig. 5',
     kind: 'reaction',

@@ -7,6 +7,13 @@ import { groupsObject } from 'chemical-groups';
 import { Kind } from './Kind';
 import { parseCharge } from './util/parseCharge';
 
+// module level: the parsing loop would otherwise allocate it for each token
+const PREMULTIPLIER_KINDS = new Set([
+  Kind.SALT,
+  Kind.BEGIN,
+  Kind.OPENING_PARENTHESIS,
+]);
+
 /**
  * Parse a mf to an array of kind / value
  * @param {String} mf
@@ -43,11 +50,7 @@ class MFParser {
       ) {
         // a number
         let value = this.getNumber(ascii);
-        if (
-          lastKind === Kind.SALT ||
-          lastKind === Kind.BEGIN ||
-          lastKind === Kind.OPENING_PARENTHESIS
-        ) {
+        if (PREMULTIPLIER_KINDS.has(lastKind)) {
           if (value.to) {
             throw new MFError(
               this.mf,

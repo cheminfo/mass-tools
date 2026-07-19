@@ -1,12 +1,7 @@
 import type { AtomsMap } from './partToAtoms.types';
 
 type ImpossibleCustomNames =
-  | 'mass'
-  | 'charge'
-  | 'mf'
-  | 'atoms'
-  | 'unsaturation'
-  | 'parts';
+  'mass' | 'charge' | 'mf' | 'atoms' | 'unsaturation' | 'parts';
 type AllowedCustomNames = Exclude<string, ImpossibleCustomNames> | undefined;
 
 type GetEM<GIO extends GetInfoOptionsAllowed> =

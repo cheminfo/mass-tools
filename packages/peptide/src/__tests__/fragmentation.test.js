@@ -7,7 +7,7 @@ import {
   sequenceToMF,
 } from '..';
 
-// http://www.matrixscience.com/help/fragmentation_help.html
+// https://www.matrixscience.com/help/fragmentation_help.html
 
 const allowed = [
   'Ala$b1',

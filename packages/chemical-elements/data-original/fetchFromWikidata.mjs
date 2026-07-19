@@ -5,6 +5,7 @@ const wikidata = wikiBase({
   sparqlEndpoint: 'https://query.wikidata.org/sparql',
 });
 
+/* eslint-disable unicorn/prefer-https -- RDF namespaces are opaque identifiers that have to match wikidata's exactly, they are not URLs to fetch */
 const url = wikidata.sparqlQuery(`
     PREFIX wd: <http://www.wikidata.org/entity/>
     PREFIX wdt: <http://www.wikidata.org/prop/direct/>
@@ -36,6 +37,7 @@ const url = wikidata.sparqlQuery(`
     ORDER BY ?protons
     LIMIT 10
        `);
+/* eslint-enable unicorn/prefer-https */
 
 const result = await fetch(url, {
   headers: {

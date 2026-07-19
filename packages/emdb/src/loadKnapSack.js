@@ -20,6 +20,7 @@ export async function loadKnapSack(options = {}) {
   let data = JSON.parse(fileData);
 
   for (const d of data) {
+    // eslint-disable-next-line unicorn/prefer-https -- the host answers neither in http nor in https anymore
     d.url = `http://kanaya.naist.jp/knapsack_jsp/information.jsp?word=${d.id}`;
   }
 
