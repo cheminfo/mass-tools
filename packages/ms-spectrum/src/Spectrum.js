@@ -45,29 +45,41 @@ export class Spectrum {
       enumerable: false,
       writable: true,
     });
-    if (this.data && this.data.x.length > 0) {
-      this.info = {
-        minX: xMinValue(this.data.x),
-        maxX: xMaxValue(this.data.x),
-        minY: xMinValue(this.data.y),
-        maxY: xMaxValue(this.data.y),
-      };
-    } else {
-      this.info = {
-        minX: Number.NaN,
-        maxX: Number.NaN,
-        minY: Number.NaN,
-        maxY: Number.NaN,
-      };
-    }
 
-    this.cache = {};
     /**
      * someProperty is an example property that is set to `true`
      * @type {array}
      * @public
      */
     this.peaks = [];
+    this.clearCache();
+  }
+
+  /**
+   * Forget everything that was derived from the data. Has to be called by any
+   * method changing `data`, otherwise the peaks, the sums or the min / max
+   * values would still describe the previous data.
+   * @returns {this}
+   */
+  clearCache() {
+    this.cache = {};
+    this.peaks = [];
+    this.continuous = undefined;
+    this.info =
+      this.data && this.data.x.length > 0
+        ? {
+            minX: xMinValue(this.data.x),
+            maxX: xMaxValue(this.data.x),
+            minY: xMinValue(this.data.y),
+            maxY: xMaxValue(this.data.y),
+          }
+        : {
+            minX: Number.NaN,
+            maxX: Number.NaN,
+            minY: Number.NaN,
+            maxY: Number.NaN,
+          };
+    return this;
   }
 
   minMaxX() {
@@ -94,7 +106,7 @@ export class Spectrum {
     this.data.y = Array.from(
       xNormed(this.data.y, { value: intensity, algorithm: 'max' }),
     );
-    return this;
+    return this.clearCache();
   }
 
   rescaleX(callback) {
@@ -104,7 +116,7 @@ export class Spectrum {
       this.data.x[i] = callback(this.data.xOriginal[i]);
     }
 
-    return this;
+    return this.clearCache();
   }
 
   ensureOriginalX() {
@@ -115,7 +127,7 @@ export class Spectrum {
 
   normedY(total = 1) {
     this.data.y = xNormed(this.data.y, { value: total });
-    return this;
+    return this.clearCache();
   }
 
   peakPicking() {
