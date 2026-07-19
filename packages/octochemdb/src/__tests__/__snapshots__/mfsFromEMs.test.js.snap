@@ -135,6 +135,46 @@ exports[`mfsFromEMs > simple case negative ionization 1`] = `
     },
   },
   {
+    "_id": "C10H2",
+    "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C10H2",
+    "data": {
+      "atoms": {
+        "C": 10,
+        "H": 2,
+      },
+      "count": 5,
+      "em": 122.01565006446,
+      "unsaturation": 10,
+    },
+    "ionization": {
+      "atoms": {
+        "H": -2,
+      },
+      "charge": -2,
+      "em": -2.01565006446,
+      "mf": "(H+)-2",
+    },
+    "mfInfo": {
+      "atoms": {
+        "C": 10,
+        "H": 2,
+      },
+      "charge": 0,
+      "em": 122.01565006446,
+      "mass": 122.12324047546403,
+      "mf": "C10H2",
+      "nbIsotopologues": 33,
+      "unsaturation": 10,
+    },
+    "ms": {
+      "charge": -2,
+      "delta": -0.0005485799090720889,
+      "em": 60.00054857990907,
+      "ionization": "(H+)-2",
+      "ppm": -9.142914890877822,
+    },
+  },
+  {
     "_id": "C5H",
     "compoundsURL": "https://octochemdb.cheminfo.org/compounds/v1/fromMF?mf=C5H",
     "data": {

@@ -7,7 +7,7 @@ const refresh = false;
 let text;
 if (refresh) {
   const response = await fetch(
-    'http://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=&ascii=ascii2&isotype=all',
+    'https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=&ascii=ascii2&isotype=all',
   );
   text = await response.text();
   fs.writeFileSync(path.join(import.meta.dirname, 'isotopes.txt'), text);

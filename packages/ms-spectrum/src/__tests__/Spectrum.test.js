@@ -115,6 +115,21 @@ describe('test Spectrum', () => {
     expect(spectrum.peakPicking()[2].x).toBe(9);
   });
 
+  it('rescaleX invalidates the continuous state', () => {
+    const data = generateSpectrum([{ x: 500, y: 1, width: 0.1 }], {
+      generator: { from: 400, to: 600, nbPoints: 20001 },
+    });
+    const spectrum = new Spectrum(data);
+
+    // a step of 0.01
+    expect(spectrum.isContinuous()).toBe(true);
+
+    // isContinuous refuses a step over 0.1, and the step becomes 1
+    spectrum.rescaleX((x) => x * 100);
+
+    expect(spectrum.isContinuous()).toBe(false);
+  });
+
   it('gsd of non continuous spectrum', () => {
     let data = { x: [], y: [] };
     for (let i = 0; i <= 6; i++) {

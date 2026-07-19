@@ -77,14 +77,14 @@ test('activeOrNaturalDetails', async () => {
             "family": "Bacillaceae",
             "genus": "Bacillus",
             "kingdom": "Bacillati",
-            "order": "Bacillales",
+            "order": "Caryophanales",
             "phylum": "Bacillota",
             "species": "Bacillus anthracis",
             "superkingdom": "Bacteria",
           },
         ],
       },
-      "url": "http://bidd.group/NPASS/compound.php?compoundID=NPC294249",
+      "url": "https://bidd.group/NPASS/compound.php?compoundID=NPC294249",
     }
   `);
 }, 100000);

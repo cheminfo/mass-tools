@@ -36,10 +36,10 @@ export async function appendURLs(object, options = {}) {
         )}`;
         break;
       case 'npasses':
-        entry.url = `http://bidd.group/NPASS/compound.php?compoundID=${entry.$id}`;
+        entry.url = `https://bidd.group/NPASS/compound.php?compoundID=${entry.$id}`;
         break;
       case 'cmaups':
-        entry.url = `http://bidd.group/CMAUP/ingredient.php?ingredient=${entry.$id}`;
+        entry.url = `https://bidd.group/CMAUP/ingredient.php?ingredient=${entry.$id}`;
         break;
       case 'coconuts':
         entry.url = `https://coconut.naturalproducts.net/compound/coconut_id/${entry.$id}`;

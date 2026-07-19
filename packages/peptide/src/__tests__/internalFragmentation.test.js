@@ -7,7 +7,7 @@ import {
   sequenceToMF,
 } from '..';
 
-// http://www.matrixscience.com/help/fragmentation_help.html
+// https://www.matrixscience.com/help/fragmentation_help.html
 
 // ['HLysNH3(+1)$c2y3', 'HLysAspNH3(+1)$c3y3', 'HAspNH3(+1)$c3y2'];
 
