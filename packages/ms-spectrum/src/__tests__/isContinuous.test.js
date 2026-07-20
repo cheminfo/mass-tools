@@ -60,6 +60,32 @@ describe('test isContinuous', () => {
     expect(isContinuous({ data })).toBe(true);
   });
 
+  it('a step allowed at high mass but not at low mass', () => {
+    // the same 0.33 Da step: a profile spectrum of a time of flight around
+    // m/z 3000, points much too separated around m/z 100
+    const highMass = { x: [], y: [] };
+    const lowMass = { x: [], y: [] };
+    for (let i = 0; i < 400; i++) {
+      highMass.x.push(3000 + i * 0.33);
+      highMass.y.push(i + 1);
+      lowMass.x.push(100 + i * 0.33);
+      lowMass.y.push(i + 1);
+    }
+
+    expect(isContinuous({ data: highMass })).toBe(true);
+    expect(isContinuous({ data: lowMass })).toBe(false);
+  });
+
+  it('centroids one dalton apart are not continuous, whatever the mass', () => {
+    const data = { x: [], y: [] };
+    for (let i = 0; i < 150; i++) {
+      data.x.push(3000 + i);
+      data.y.push(100 + ((i * 37) % 90));
+    }
+
+    expect(isContinuous({ data })).toBe(false);
+  });
+
   it('big experimental data', () => {
     const text = readFileSync(
       path.join(__dirname, 'data/continuous.txt'),

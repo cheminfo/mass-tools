@@ -121,13 +121,15 @@ describe('test Spectrum', () => {
     });
     const spectrum = new Spectrum(data);
 
-    // a step of 0.01
     expect(spectrum.isContinuous()).toBe(true);
+    // the answer is now cached on the spectrum
+    expect(spectrum.continuous).toBe(true);
 
-    // isContinuous refuses a step over 0.1, and the step becomes 1
     spectrum.rescaleX((x) => x * 100);
 
-    expect(spectrum.isContinuous()).toBe(false);
+    // the cache is dropped, so the next call looks at the new x values
+    expect(spectrum.continuous).toBeUndefined();
+    expect(spectrum.isContinuous()).toBe(true);
   });
 
   it('gsd of non continuous spectrum', () => {
