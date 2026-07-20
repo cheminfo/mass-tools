@@ -1,0 +1,7 @@
+{
+  "method": "GET",
+  "url": "https://octochemdb.cheminfo.org/mfs/v1/fromEM?minCount=5&precision=1&limit=10&em=80.06260025784",
+  "requestBody": "",
+  "status": 200,
+  "body": "{\"data\":[{\"_id\":\"C6H8\",\"data\":{\"em\":80.06260025784,\"atoms\":{\"C\":6,\"H\":8},\"unsaturation\":3,\"count\":215}}]}"
+}

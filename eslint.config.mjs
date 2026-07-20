@@ -60,6 +60,21 @@ export default defineConfig(
       'max-lines-per-function': 'off',
     },
   },
+  {
+    // the vitest config brings the plugin, and the rule has to be set in the
+    // same object as the plugin it comes from
+    files: ['**/*.test.js'],
+    plugins: vitest.find((config) => config.plugins)?.plugins,
+    rules: {
+      // useMockServer registers the beforeAll / afterEach / afterAll that
+      // isolate a test file from the network, so it has to be called while the
+      // file is collected, not inside a hook
+      'vitest/require-hook': [
+        'error',
+        { allowedFunctionCalls: ['useMockServer'] },
+      ],
+    },
+  },
   createNoExtraneousConfigs(),
 );
 

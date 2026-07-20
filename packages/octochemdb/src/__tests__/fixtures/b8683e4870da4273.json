@@ -1,0 +1,7 @@
+{
+  "method": "POST",
+  "url": "https://octochemdb.cheminfo.org/lotuses/v1/ids",
+  "requestBody": "ids=LTS0064081,LTS0005803,LTS0005803,LTS0064081",
+  "status": 200,
+  "body": "{\"data\":[{\"_id\":\"LTS0005803\",\"data\":{\"ocl\":{\"idCode\":\"dg~D@MBdin]V^G[hHBjbbX@\",\"coordinates\":\"!BbGvw__y?bOrw?Xa}bGvH@hc|bGvH__x@bOp\",\"noStereoTautomerID\":\"dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@\"},\"iupacName\":\"(1S)-7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol\",\"taxonomies\":[{\"superkingdom\":\"Eukaryota\",\"kingdom\":\"Viridiplantae\",\"phylum\":\"Streptophyta\",\"class\":\"Magnoliopsida\",\"order\":\"Caryophyllales\",\"family\":\"Chenopodiaceae\",\"genus\":\"Xylosalsola\",\"species\":\"Xylosalsola paletzkiana\",\"dbRef\":{\"$ref\":\"lotuses\",\"$id\":\"LTS0005803\"}}]}},{\"_id\":\"LTS0064081\",\"data\":{\"ocl\":{\"idCode\":\"dg~D@MBdin]V^G[hHBjb@@\",\"coordinates\":\"!BbGvw__y?bOrw?Xa}bGvH@hc|bGvH__x@bOp\",\"noStereoTautomerID\":\"dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@\"},\"iupacName\":\"7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol\",\"taxonomies\":[{\"superkingdom\":\"Eukaryota\",\"kingdom\":\"Viridiplantae\",\"phylum\":\"Streptophyta\",\"class\":\"Magnoliopsida\",\"order\":\"Fabales\",\"family\":\"Fabaceae\",\"genus\":\"Desmodium\",\"species\":\"Desmodium adscendens\",\"dbRef\":{\"$ref\":\"lotuses\",\"$id\":\"LTS0064081\"}}]}}]}"
+}

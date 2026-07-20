@@ -1,0 +1,7 @@
+{
+  "method": "GET",
+  "url": "https://octochemdb.cheminfo.org/mfs/v1/fromEM?minCount=5&precision=10&limit=10&em=61.00727645232093",
+  "requestBody": "",
+  "status": 200,
+  "body": "{\"data\":[{\"_id\":\"C5H\",\"data\":{\"em\":61.00782503223,\"atoms\":{\"C\":5,\"H\":1},\"unsaturation\":5.5,\"count\":9}}]}"
+}

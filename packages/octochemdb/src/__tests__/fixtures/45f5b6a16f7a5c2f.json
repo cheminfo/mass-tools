@@ -1,0 +1,7 @@
+{
+  "method": "GET",
+  "url": "https://octochemdb.cheminfo.org/pubmeds/v1/id?id=15455066&fields=data.compounds&limit=10",
+  "requestBody": "",
+  "status": 200,
+  "body": "{\"data\":{\"_id\":15455066,\"data\":{\"compounds\":[{\"$ref\":\"compounds\",\"$id\":86138},{\"$ref\":\"compounds\",\"$id\":86400},{\"$ref\":\"compounds\",\"$id\":28780}]}}}"
+}

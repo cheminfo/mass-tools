@@ -2,6 +2,10 @@ import { describe, expect, it } from 'vitest';
 
 import { mfsFromEMs } from '../mfsFromEMs.js';
 
+import { useMockServer } from './testServer.js';
+
+useMockServer();
+
 describe('mfsFromEMs', () => {
   it('simple case', { timeout: 30_000 }, async () => {
     let data = await mfsFromEMs(60, {

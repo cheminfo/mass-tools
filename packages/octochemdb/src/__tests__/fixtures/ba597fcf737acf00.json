@@ -1,0 +1,7 @@
+{
+  "method": "POST",
+  "url": "https://octochemdb.cheminfo.org/coconuts/v1/ids",
+  "requestBody": "ids=CNP0237841.2,CNP0237841.1,CNP0237841.1,CNP0237841.1,CNP0237841.1",
+  "status": 200,
+  "body": "{\"data\":[{\"_id\":\"CNP0237841.1\",\"data\":{\"ocl\":{\"idCode\":\"dg~D@MBdin]V^G[hHBjbbX@\",\"coordinates\":\"!BbGvw__y?bOrw?Xa}bGvH@hc|bGvH__x@bOp\",\"noStereoTautomerID\":\"dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@\"},\"cas\":\"89-31-6\",\"iupacName\":\"(1~{S})-7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol\",\"taxonomies\":[{\"species\":\"Alangium lamarckii\",\"dbRef\":{\"$ref\":\"coconuts\",\"$id\":\"CNP0237841.1\"}},{\"species\":\"Salsola collina\",\"dbRef\":{\"$ref\":\"coconuts\",\"$id\":\"CNP0237841.1\"}},{\"species\":\"Salsola kali\",\"dbRef\":{\"$ref\":\"coconuts\",\"$id\":\"CNP0237841.1\"}},{\"species\":\"Salsola richteri\",\"dbRef\":{\"$ref\":\"coconuts\",\"$id\":\"CNP0237841.1\"}}],\"name\":\"(-)-Salsoline\"}},{\"_id\":\"CNP0237841.2\",\"data\":{\"ocl\":{\"idCode\":\"dg~D@MBdin]V^G[hHBjbbT@\",\"coordinates\":\"!BbGvw__y?bOrw?Xa}bGvH@hc|bGvH__x@bOp\",\"noStereoTautomerID\":\"dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@\"},\"cas\":\"101467-40-7\",\"iupacName\":\"(1~{R})-7-methoxy-1-methyl-1,2,3,4-tetrahydroisoquinolin-6-ol\",\"name\":\"(R)-salsoline\"}}]}"
+}

@@ -1,0 +1,7 @@
+{
+  "method": "GET",
+  "url": "https://octochemdb.cheminfo.org/mfs/v1/fromEM?minCount=5&precision=100&limit=50&em=58.99272354767907",
+  "requestBody": "",
+  "status": 200,
+  "body": "{\"data\":[{\"_id\":\"CH2NP\",\"data\":{\"em\":58.99248606731,\"atoms\":{\"C\":1,\"H\":2,\"N\":1,\"P\":1},\"unsaturation\":2,\"count\":8}},{\"_id\":\"CH3OSi\",\"data\":{\"em\":58.99531625091,\"atoms\":{\"C\":1,\"H\":3,\"O\":1,\"Si\":1},\"unsaturation\":1.5,\"count\":7}},{\"_id\":\"C2H3S\",\"data\":{\"em\":58.99554627109,\"atoms\":{\"C\":2,\"H\":3,\"S\":1},\"unsaturation\":1.5,\"count\":7}}]}"
+}

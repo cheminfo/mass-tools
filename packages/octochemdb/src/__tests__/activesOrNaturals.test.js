@@ -1,22 +1,10 @@
-import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { activesOrNaturals } from '../activesOrNaturals.js';
 
-import { server } from './testServer';
+import { useMockServer } from './testServer.js';
 
-// Enable request interception.
-beforeAll(() => {
-  server.listen();
-});
-
-// Reset handlers so that each test could alter them
-// without affecting other, unrelated tests.
-afterEach(() => server.resetHandlers());
-
-// Don't forget to clean up afterwards.
-afterAll(() => {
-  server.close();
-});
+useMockServer();
 
 describe('activesOrNaturals', () => {
   it('simple case', async () => {

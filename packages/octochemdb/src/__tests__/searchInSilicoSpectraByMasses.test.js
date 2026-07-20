@@ -6,6 +6,10 @@ import { expect, test } from 'vitest';
 
 import { OctoChemDB } from '../OctoChemDB.js';
 
+import { useMockServer } from './testServer.js';
+
+useMockServer();
+
 test.todo('searchInSilicoSpectraByMasses', async () => {
   const mdma = JSON.parse(
     readFileSync(path.join(__dirname, 'data/mdma.json'), 'utf8'),

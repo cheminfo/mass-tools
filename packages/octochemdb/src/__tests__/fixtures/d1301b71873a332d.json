@@ -1,0 +1,7 @@
+{
+  "method": "GET",
+  "url": "https://octochemdb.cheminfo.org/mfs/v1/fromEM?minCount=5&precision=10&limit=10&em=122.01455290464186",
+  "requestBody": "",
+  "status": 200,
+  "body": "{\"data\":[{\"_id\":\"C4H7ClO2\",\"data\":{\"em\":122.01345714675,\"atoms\":{\"C\":4,\"H\":7,\"Cl\":1,\"O\":2},\"unsaturation\":1,\"count\":158}},{\"_id\":\"C2H6N2O2S\",\"data\":{\"em\":122.01499861577999,\"atoms\":{\"C\":2,\"H\":6,\"N\":2,\"O\":2,\"S\":1},\"unsaturation\":1,\"count\":78}},{\"_id\":\"H10N2Si3\",\"data\":{\"em\":122.01517793511,\"atoms\":{\"H\":10,\"N\":2,\"Si\":3},\"unsaturation\":0,\"count\":5}},{\"_id\":\"C10H2\",\"data\":{\"em\":122.01565006446,\"atoms\":{\"C\":10,\"H\":2},\"unsaturation\":10,\"count\":5}}]}"
+}

@@ -1,6 +1,9 @@
 import { expect, test } from 'vitest';
 
+import { useMockServer } from '../../__tests__/testServer.js';
 import { postFetchJSON } from '../postFetchJSON.js';
+
+useMockServer();
 
 test('postFetchJSON', async () => {
   const patents = await postFetchJSON(
