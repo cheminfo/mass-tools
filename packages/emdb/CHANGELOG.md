@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.2](https://github.com/cheminfo/mass-tools/compare/emdb@3.5.1...emdb@3.5.2) (2026-07-20)
+
+
+### Bug Fixes
+
+* **emdb:** point the KnapSack links to the new domain ([c2bbbf4](https://github.com/cheminfo/mass-tools/commit/c2bbbf40ed851130b8eb1af18c0fb4f871d040cc))
+
+
+
+
+
 ## [3.5.1](https://github.com/cheminfo/mass-tools/compare/emdb@3.5.0...emdb@3.5.1) (2026-05-05)
 
 **Note:** Version bump only for package emdb
