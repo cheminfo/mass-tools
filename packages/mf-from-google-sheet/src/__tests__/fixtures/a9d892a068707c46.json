@@ -1,0 +1,7 @@
+{
+  "method": "GET",
+  "url": "https://googledocs.cheminfo.org/spreadsheets/d/15Kuc5MeOhvm4oeTMvEuP1rWdRFiVWosxXhYwAmuf3Uo/export?format=tsv",
+  "requestBody": "",
+  "status": 200,
+  "body": "mf\tmodif\tionType\tmfInfo\torigin\tcomments\tESI\tMALDI\tpositive\tnegative\treferences\r\n(CH2)1-60(H2)\t(H+).(Na+).(K+).+\t[CnH(2n+2)+X]+\tCnH2n+2\tHCs\t240\t\t\t\t\t\r\n(CH2)1-60(H-2)1-4\t(H+).(Na+).(K+).+\t[CnH(2n)-mH2+X]+\tCnH(2n-Xm)\tUnsaturated HCs\t960\t\t\t\t\t\r\n(CH2)1-60(H-2)1-2(H2O)1\t(H+).(Na+).(K+).+\t[CnH(2n)-mH2+H2O+X]+\tCnH2n-2H2+H2O\tOx- HcS\t480\t\t\t\t\t\r\nC16H26O3\t(H+).(Na+).(K+).+\tM+X+\t(HJ-III)+X+\tNIST\t4\t\t\t\t\t\r\n\t\t\t\t\t1684\t\t\t\t\t"
+}
