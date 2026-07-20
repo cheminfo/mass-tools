@@ -1,5 +1,20 @@
 # Changelog
 
+## [7.58.0](https://github.com/cheminfo/mass-tools/compare/v7.57.0...v7.58.0) (2026-07-20)
+
+
+### Features
+
+* **ms-spectrum:** evaluate the charge on the isotopologue clusters ([#321](https://github.com/cheminfo/mass-tools/issues/321)) ([a3e0de5](https://github.com/cheminfo/mass-tools/commit/a3e0de5fc3e2505b7f1ef160b62991202bc7abd5))
+* **ms-spectrum:** ignore the noise when peak picking a continuous spectrum ([29089af](https://github.com/cheminfo/mass-tools/commit/29089afa56b98f98e20e3aa5c8531a18e26faf47))
+
+
+### Bug Fixes
+
+* **emdb:** point the KnapSack links to the new domain ([c2bbbf4](https://github.com/cheminfo/mass-tools/commit/c2bbbf40ed851130b8eb1af18c0fb4f871d040cc))
+* **ms-spectrum:** clear the derived data when the spectrum changes ([2c241a8](https://github.com/cheminfo/mass-tools/commit/2c241a8b055020301751dbc128a5d076c3de6542))
+* **ms-spectrum:** evaluate the charge on the peaks and not on the raw data ([50e2faf](https://github.com/cheminfo/mass-tools/commit/50e2faf071ee5f95eb2f66f7b2a253e3cdf3d2b6))
+
 ## [7.57.0](https://github.com/cheminfo/mass-tools/compare/v7.56.0...v7.57.0) (2026-05-05)
 
 
