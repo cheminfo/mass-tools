@@ -29,8 +29,9 @@ describe('test appendPeakCharge on Spectrum', () => {
     }
 
     // an electrospray of a protein: the charges are distributed around 3
-    expect(stats).toStrictEqual([0, 14, 126, 181, 119, 0, 0, 2, 0, 0]);
-    // every peak selected here is far over the noise and resolved
-    expect(withoutCharge).toBe(0);
+    expect(stats).toStrictEqual([0, 1, 127, 183, 111, 0, 0, 0, 0, 0]);
+    // the peaks belonging to no series of at least three isotopologues get
+    // nothing rather than a charge nothing shows
+    expect(withoutCharge).toBe(20);
   });
 });

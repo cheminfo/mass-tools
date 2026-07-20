@@ -120,18 +120,25 @@ test('an unresolved envelope gets no charge through getSelectedPeaksWithCharge e
 });
 
 test('peaks that do not stand out of the noise get no charge', () => {
-  // a region of the reflectron where only one peak is real: the maxima of the
-  // noise around it used to be given charges of 2, 5, 7 and 8, because their
-  // position is random and one of them always falls near an isotopologue
+  // a noisy region of the reflectron: the maxima of the noise used to be given
+  // charges of 2, 5, 7 and 8, because their position is random and one of them
+  // always falls close to a theoretical isotopologue
   const spectrum = loadSlice('maldiReflectronNoisySlice.txt');
-  const peaks = spectrum.getPeaks({ from: 2011.5, to: 2015.5, threshold: 0 });
-  const withCharge = spectrum.getSelectedPeaksWithCharge(peaks);
-
+  const withCharge = spectrum.getSelectedPeaksWithCharge(
+    spectrum.peakPicking(),
+  );
   const charged = withCharge.filter((peak) => peak.charge !== undefined);
 
-  expect(charged).toHaveLength(1);
-  expect(charged[0].x).toBeCloseTo(2011.638, 2);
-  expect(charged[0].charge).toBe(1);
-  // it is 25 times more intense than the maxima of the noise around it
-  expect(charged[0].y).toBeGreaterThan(700);
+  // one singly charged series explains the whole region
+  expect(charged.map((peak) => peak.charge)).toStrictEqual([1, 1, 1, 1]);
+  expect(charged.map((peak) => Number(peak.x.toFixed(3)))).toStrictEqual([
+    2009.639, 2010.648, 2011.638, 2012.637,
+  ]);
+
+  // 2010.908 is over the noise as well, but belongs to no series: being intense
+  // enough is not the same as showing a charge
+  const alone = withCharge.find((peak) => Math.abs(peak.x - 2010.908) < 0.01);
+
+  expect(alone.y).toBeGreaterThan(150);
+  expect(alone.charge).toBeUndefined();
 });

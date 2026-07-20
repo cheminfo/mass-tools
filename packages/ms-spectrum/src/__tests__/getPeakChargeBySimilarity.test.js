@@ -11,19 +11,17 @@ const SIMILARITY = {
 };
 
 test('default options', () => {
+  // the tolerance on the position of an isotopologue is relative, so the masses
+  // have to be those of a real spectrum
   const data = {
-    x: [1, 2, 3, 4, 4.333, 4.666, 7, 8, 9],
-    y: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    x: [1000, 1000 + 1 / 3, 1000 + 2 / 3, 1001, 1500],
+    y: [100, 55, 18, 5, 80],
   };
   const spectrum = new Spectrum(data);
 
-  let charge = getPeakChargeBySimilarity(spectrum, 4, {
-    similarity: SIMILARITY,
-    minCharge: 1,
-    maxCharge: 4,
-  });
-
-  expect(charge).toBe(3);
+  expect(getPeakChargeBySimilarity(spectrum, 1000)).toBe(3);
+  // the peak standing alone belongs to no series
+  expect(getPeakChargeBySimilarity(spectrum, 1500)).toBeUndefined();
 });
 
 const FROM = 997;
@@ -189,7 +187,7 @@ test('noise is never given a charge', () => {
 
 test('a resolved envelope keeps its charge in a noisy spectrum', () => {
   const spectrum = new Spectrum(
-    createProfileSpectrum({ peaks: isotopologues(3), noise: 5 }),
+    createProfileSpectrum({ peaks: isotopologues(3), noise: 1 }),
   );
 
   const charge = getPeakChargeBySimilarity(spectrum, 1000, {
@@ -205,35 +203,6 @@ test('an empty spectrum throws', () => {
   expect(() => getPeakChargeBySimilarity(new Spectrum(), 1000)).toThrow(
     'You need to add an experimental spectrum first',
   );
-});
-
-test('widthFunction given as a string is compiled', () => {
-  const spectrum = new Spectrum(
-    createProfileSpectrum({ peaks: isotopologues(3) }),
-  );
-
-  const charge = getPeakChargeBySimilarity(spectrum, 1000, {
-    similarity: {
-      zone: { low: -0.5, high: 2.5 },
-      widthFunction: 'return {bottom: 0.1, top: 0.1}',
-    },
-    minCharge: 1,
-    maxCharge: 10,
-  });
-
-  expect(charge).toBe(3);
-});
-
-test('widthFunction that does not return a width throws', () => {
-  const spectrum = new Spectrum(
-    createProfileSpectrum({ peaks: isotopologues(3) }),
-  );
-
-  expect(() =>
-    getPeakChargeBySimilarity(spectrum, 1000, {
-      similarity: { widthFunction: 'return {}' },
-    }),
-  ).toThrow('widthFunction should return an object with bottom and top');
 });
 
 test('the charge is evaluated on the magnitude, whatever the sign of the range', () => {

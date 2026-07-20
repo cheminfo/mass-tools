@@ -1,104 +1,85 @@
-import { describe, expect, it } from 'vitest';
+import { expect, test } from 'vitest';
 
 import { getPeaksWithCharge } from '../getPeaksWithCharge';
 
-describe('test getPeaksWithCharge', () => {
-  it('custom options', () => {
-    let peaks = [
-      { x: 1, y: 1 },
-      { x: 1.5, y: 2 },
-      { x: 3, y: 3 },
-    ];
-    const peaksWithCharge = getPeaksWithCharge(peaks, peaks, {
-      min: 1,
-      max: 1,
-      low: -1,
-      high: 1,
-      precision: 30,
-    });
+/**
+ * An isotopologue series of `nbPeaks` peaks of a given charge, with decreasing
+ * intensities. Real masses, because the tolerance on their position is relative.
+ * @param {number} from - mass of the first isotopologue
+ * @param {number} charge
+ * @param {number} nbPeaks
+ * @returns {Array<{x: number, y: number}>}
+ */
+function series(from, charge, nbPeaks) {
+  const peaks = [];
+  for (let i = 0; i < nbPeaks; i++) {
+    peaks.push({ x: from + i / charge, y: 100 / (i + 1) });
+  }
+  return peaks;
+}
 
-    expect(peaksWithCharge[0].charge).toBe(1);
-    expect(peaksWithCharge[1].charge).toBe(1);
-    // nothing else in its zone: there is no distance to measure, so no charge
-    // rather than the charge we started the search with
-    expect(peaksWithCharge[2].charge).toBeUndefined();
-  });
+test('every peak of a series takes the charge of the series', () => {
+  const peaks = series(1000, 2, 4);
 
-  it('selected peaks', () => {
-    let peaks = [
-      { x: 1, y: 1 },
-      { x: 1.5, y: 2 },
-      { x: 3, y: 3 },
-    ];
-    const newPeaks = getPeaksWithCharge([{ x: 1.5, y: 2 }], peaks, {
-      min: 1,
-      max: 1,
-      low: -1,
-      high: 1,
-      precision: 30,
-    });
+  const charges = getPeaksWithCharge(peaks, peaks).map((peak) => peak.charge);
 
-    expect(newPeaks).toStrictEqual([{ x: 1.5, y: 2, charge: 1 }]);
-  });
+  // the last one included: on its own it has nothing after it to be compared
+  // with, its neighbours are what shows the charge
+  expect(charges).toStrictEqual([2, 2, 2, 2]);
+});
 
-  it('charge 1 or 2', () => {
-    let peaks = [
-      { x: 1, y: 1 },
-      { x: 1.5, y: 2 },
-      { x: 2.5, y: 3 },
-    ];
-    const peaksWithCharge = getPeaksWithCharge(peaks, peaks);
+test('only the selected peaks are returned', () => {
+  const peaks = series(1000, 3, 5);
+  const selected = [peaks[1], peaks[3]];
 
-    expect(peaksWithCharge[0].charge).toBe(2);
-    expect(peaksWithCharge[1].charge).toBe(1);
-    // alone in its zone, so no charge can be evaluated
-    expect(peaksWithCharge[2].charge).toBeUndefined();
-  });
+  const result = getPeaksWithCharge(selected, peaks);
 
-  it('charge various', () => {
-    let peaks = [
-      { x: 1, y: 1 },
-      { x: 1.5, y: 2 },
-      { x: 2.5, y: 3 },
-      { x: 3, y: 4 },
-      { x: 3.3333, y: 5 },
-      { x: 3.6666, y: 6 },
-    ];
+  expect(result).toStrictEqual([
+    { ...peaks[1], charge: 3 },
+    { ...peaks[3], charge: 3 },
+  ]);
+});
 
-    const peaksWithCharge = getPeaksWithCharge(peaks, peaks);
-    const charges = peaksWithCharge.map((peak) => peak.charge);
+test('a peak belonging to no series gets no charge', () => {
+  const peaks = series(1000, 1, 3);
+  const alone = { x: 1500, y: 80 };
+  const all = [...peaks, alone];
 
-    // the zone looks at the isotopologues that follow the peak, so the last one
-    // of a group has nothing after it to be compared with
-    expect(charges).toStrictEqual([2, 1, 2, 3, 3, 1]);
-  });
+  expect(getPeaksWithCharge(all, all).map((peak) => peak.charge)).toStrictEqual(
+    [1, 1, 1, undefined],
+  );
+});
 
-  it('charge various with selected', () => {
-    const allPeaks = [
-      { x: 1, y: 1 },
-      { x: 1.5, y: 2 },
-      { x: 2.5, y: 3 },
-      { x: 3, y: 4 },
-      { x: 3.3333, y: 5 },
-      { x: 3.6666, y: 6 },
-    ];
+test('two peaks at the right distance are not a series', () => {
+  const peaks = series(1000, 2, 2);
 
-    const selectedPeaks = [
-      {
-        x: 1.5,
-        y: 2,
-      },
-      {
-        x: 3.3333,
-        y: 5,
-      },
-    ];
+  expect(
+    getPeaksWithCharge(peaks, peaks).map((peak) => peak.charge),
+  ).toStrictEqual([undefined, undefined]);
+});
 
-    const peaksWithCharge = getPeaksWithCharge(selectedPeaks, allPeaks);
+test('two series of different charges live side by side', () => {
+  const doubly = series(1000, 2, 5);
+  const triply = series(1200, 3, 5);
+  const peaks = [...doubly, ...triply];
 
-    expect(peaksWithCharge).toStrictEqual([
-      { x: 1.5, y: 2, charge: 1 },
-      { x: 3.3333, y: 5, charge: 3 },
-    ]);
-  });
+  const charges = getPeaksWithCharge(peaks, peaks).map((peak) => peak.charge);
+
+  expect(charges).toStrictEqual([2, 2, 2, 2, 2, 3, 3, 3, 3, 3]);
+});
+
+test('a peak of the spectrum can be asked for by its mass only', () => {
+  const peaks = series(1000, 4, 5);
+
+  const [found] = getPeaksWithCharge([{ x: 1000.25, y: 0 }], peaks);
+
+  expect(found.charge).toBe(4);
+});
+
+test('a mass matching no peak gets no charge', () => {
+  const peaks = series(1000, 4, 5);
+
+  const [found] = getPeaksWithCharge([{ x: 1050, y: 0 }], peaks);
+
+  expect(found.charge).toBeUndefined();
 });
