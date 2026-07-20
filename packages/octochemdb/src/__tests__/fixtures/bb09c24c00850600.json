@@ -1,0 +1,7 @@
+{
+  "method": "GET",
+  "url": "https://octochemdb.cheminfo.org/mfs/v1/fromEM?minCount=0&precision=10&limit=10&em=12",
+  "requestBody": "",
+  "status": 200,
+  "body": "{\"data\":[{\"_id\":\"C\",\"data\":{\"em\":12,\"atoms\":{\"C\":1},\"unsaturation\":2,\"count\":11}}]}"
+}

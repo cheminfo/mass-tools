@@ -1,0 +1,7 @@
+{
+  "method": "POST",
+  "url": "https://octochemdb.cheminfo.org/massBank/v1/ids",
+  "requestBody": "ids=MSBNK-Washington_State_Univ-BML82135,MSBNK-Washington_State_Univ-BML82137",
+  "status": 200,
+  "body": "{\"data\":[{\"_id\":\"MSBNK-Washington_State_Univ-BML82135\",\"data\":{\"ocl\":{\"idCode\":\"dg~D@MBdin]V^G[hHBjb@@\",\"coordinates\":\"!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p\",\"noStereoTautomerID\":\"dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@\"},\"spectrum\":{\"data\":{\"x\":[194.1175765],\"y\":[1]},\"numberOfPeaks\":1,\"instrument\":\"Agilent 1200 RRLC; Agilent 6520 QTOF\",\"ionSource\":\"LC-ESI-QTOF\",\"precursorMz\":null,\"ionMode\":\"Positive\",\"adduct\":null,\"collisionEnergy\":null,\"msLevel\":\"\"},\"em\":193.11027872702,\"mf\":\"C11H15NO2\"}},{\"_id\":\"MSBNK-Washington_State_Univ-BML82137\",\"data\":{\"ocl\":{\"idCode\":\"dg~D@MBdin]V^G[hHBjb@@\",\"coordinates\":\"!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p\",\"noStereoTautomerID\":\"dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@\"},\"spectrum\":{\"data\":{\"x\":[194.1175765],\"y\":[1]},\"numberOfPeaks\":1,\"instrument\":\"Agilent 1200 RRLC; Agilent 6520 QTOF\",\"ionSource\":\"LC-APCI-QTOF\",\"precursorMz\":null,\"ionMode\":\"Positive\",\"adduct\":null,\"collisionEnergy\":null,\"msLevel\":\"\"},\"em\":193.11027872702,\"mf\":\"C11H15NO2\"}}]}"
+}

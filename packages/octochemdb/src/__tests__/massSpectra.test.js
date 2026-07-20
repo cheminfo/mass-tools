@@ -5,6 +5,10 @@ import { describe, expect, it } from 'vitest';
 
 import { massSpectra } from '../massSpectra.js';
 
+import { useMockServer } from './testServer.js';
+
+useMockServer();
+
 describe('massSpectra', () => {
   it('simple case', { timeout: 30_000 }, async () => {
     const resultsAll = await massSpectra({

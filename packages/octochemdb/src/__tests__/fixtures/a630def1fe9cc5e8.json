@@ -1,0 +1,7 @@
+{
+  "method": "POST",
+  "url": "https://octochemdb.cheminfo.org/cmaups/v1/ids",
+  "requestBody": "ids=NPC294249,NPC294249",
+  "status": 200,
+  "body": "{\"data\":[{\"_id\":\"NPC294249\",\"data\":{\"ocl\":{\"idCode\":\"dg~D@MBdin]V^G[hHBjbbX@\",\"coordinates\":\"!Bm?vH?_y?mpJH?[_}m?vw@k\\\\Bm?vw?_x@m?p\",\"noStereoTautomerID\":\"dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@\"},\"cid\":\"442356\",\"commonName\":\"(1S)-7-Methoxy-1-Methyl-1,2,3,4-Tetrahydroisoquinolin-6-Ol\",\"chemblId\":\"CHEMBL1187592\",\"activities\":[{\"assay\":\"Potency = 39810.7 nM\",\"externalRef\":\"PMID : 535786\",\"geneSymbol\":\"HSD17B10\",\"proteinName\":\"Endoplasmic reticulum-associated amyloid beta-peptide-binding protein\",\"uniprotId\":\"Q99714\",\"chemblId\":\"CHEMBL4159\"},{\"assay\":\"Potency = 19952.6 nM\",\"externalRef\":\"PMID : 535786\",\"geneSymbol\":\"CYP2D6\",\"proteinName\":\"Cytochrome P450 2D6\",\"uniprotId\":\"P10635\",\"chemblId\":\"CHEMBL289\",\"ttdId\":\"T57392\"}]}}]}"
+}

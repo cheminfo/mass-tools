@@ -1,0 +1,7 @@
+{
+  "method": "POST",
+  "url": "https://octochemdb.cheminfo.org/bioassays/v1/ids",
+  "requestBody": "ids=442356_589,442356_590",
+  "status": 200,
+  "body": "{\"data\":[{\"_id\":\"442356_589\",\"data\":{\"cid\":442356,\"aid\":589,\"assay\":\"qHTS Assay for Spectroscopic Profiling in 4-MU Spectral Region\",\"ocl\":{\"idCode\":\"dg~D@MBdin]V^G[hHBjbbX@\",\"noStereoTautomerID\":\"dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@\",\"coordinates\":\"!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL\"}}},{\"_id\":\"442356_590\",\"data\":{\"cid\":442356,\"aid\":590,\"assay\":\"qHTS Assay for Spectroscopic Profiling in A350 Spectral Region\",\"ocl\":{\"idCode\":\"dg~D@MBdin]V^G[hHBjbbX@\",\"noStereoTautomerID\":\"dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@\",\"coordinates\":\"!BmpK~_?x@m?vH@k\\\\BmpJw?X?Cc}qO_Gy?SpL\"}}}]}"
+}
