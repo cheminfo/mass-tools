@@ -19,7 +19,9 @@ describe('test getPeaksWithCharge', () => {
 
     expect(peaksWithCharge[0].charge).toBe(1);
     expect(peaksWithCharge[1].charge).toBe(1);
-    expect(peaksWithCharge[2].charge).toBe(1);
+    // nothing else in its zone: there is no distance to measure, so no charge
+    // rather than the charge we started the search with
+    expect(peaksWithCharge[2].charge).toBeUndefined();
   });
 
   it('selected peaks', () => {
@@ -49,7 +51,8 @@ describe('test getPeaksWithCharge', () => {
 
     expect(peaksWithCharge[0].charge).toBe(2);
     expect(peaksWithCharge[1].charge).toBe(1);
-    expect(peaksWithCharge[2].charge).toBe(1);
+    // alone in its zone, so no charge can be evaluated
+    expect(peaksWithCharge[2].charge).toBeUndefined();
   });
 
   it('charge various', () => {
@@ -65,7 +68,9 @@ describe('test getPeaksWithCharge', () => {
     const peaksWithCharge = getPeaksWithCharge(peaks, peaks);
     const charges = peaksWithCharge.map((peak) => peak.charge);
 
-    expect(charges).toStrictEqual([2, 1, 2, 3, 3, 3]);
+    // the zone looks at the isotopologues that follow the peak, so the last one
+    // of a group has nothing after it to be compared with
+    expect(charges).toStrictEqual([2, 1, 2, 3, 3, 1]);
   });
 
   it('charge various with selected', () => {

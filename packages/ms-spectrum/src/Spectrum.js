@@ -12,7 +12,10 @@ import { parseXY } from 'xy-parser';
 import { getBestPeaks } from './getBestPeaks.js';
 import { getFragmentPeaks } from './getFragmentPeaks.js';
 import { getMassRemainder } from './getMassRemainder.js';
-import { getPeakChargeBySimilarity } from './getPeakChargeBySimilarity.js';
+import {
+  getMinIntensity,
+  getPeakChargeBySimilarity,
+} from './getPeakChargeBySimilarity.js';
 import { getPeaks } from './getPeaks.js';
 import { getPeaksWithCharge } from './getPeaksWithCharge.js';
 import { isContinuous } from './isContinuous.js';
@@ -159,8 +162,12 @@ export class Spectrum {
    * @param {number} [options.precision=30]
    * @returns
    */
-  getSelectedPeaksWithCharge(selectedPeaks, options) {
-    return getPeaksWithCharge(selectedPeaks, this.peaks, options);
+  getSelectedPeaksWithCharge(selectedPeaks, options = {}) {
+    peakPicking(this);
+    return getPeaksWithCharge(selectedPeaks, this.peaks, {
+      minIntensity: getMinIntensity(this, options),
+      ...options,
+    });
   }
 
   getPeakChargeBySimilarity(targetMass, options) {

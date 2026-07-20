@@ -19,10 +19,18 @@ describe('test appendPeakCharge on Spectrum', () => {
       .filter((peak) => peak.y > 1000);
 
     let stats = new Array(10).fill(0);
+    let withoutCharge = 0;
     for (const peak of peaksWithCharge) {
-      stats[peak.charge]++;
+      if (peak.charge === undefined) {
+        withoutCharge++;
+      } else {
+        stats[peak.charge]++;
+      }
     }
 
-    expect(stats).toStrictEqual([0, 10, 124, 186, 122, 0, 0, 0, 0, 0]);
+    // an electrospray of a protein: the charges are distributed around 3
+    expect(stats).toStrictEqual([0, 14, 126, 181, 119, 0, 0, 2, 0, 0]);
+    // every peak selected here is far over the noise and resolved
+    expect(withoutCharge).toBe(0);
   });
 });
