@@ -1,142 +1,75 @@
-// We can not really take the real value of the neutron because it varies from one element to another.
-const NEUTRON_MASS = 1;
+import { xFindClosestIndex } from 'ml-spectra-processing';
+
+import { getPeaksWithClusterCharge } from './getChargeClusters.js';
 
 /**
+ * Evaluate the charge of a selection of peaks.
  *
- * @param {Array} selectedPeaks
- * @param {Array} allPeaks
+ * The charge comes from the isotopologue clusters of `allPeaks`: a peak takes
+ * the charge of the series it belongs to. Evaluating a peak on its own can not
+ * work, because an isotopologue in the middle of an envelope looks the same
+ * whatever the charge and the last one of an envelope has nothing after it.
+ *
+ * A peak that belongs to no series gets no `charge` at all.
+ * @param {Array} selectedPeaks - peaks to evaluate
+ * @param {Array} allPeaks - all the peaks of the spectrum, sorted by mass
  * @param {object} [options={}]
- * @param {number} [options.min=1]
- * @param {number} [options.max=10]
- * @param {number} [options.low=-1]
- * @param {number} [options.high=1]
- * @param {number} [options.precision=30]
- * @returns
+ * @param {number} [options.min=1] - lowest charge to consider
+ * @param {number} [options.max=10] - highest charge to consider
+ * @param {number} [options.precision=20] - tolerance on the position of an
+ * isotopologue, in ppm
+ * @param {number} [options.minLength=3] - shortest series that shows a charge
+ * @param {number} [options.minIntensity=0] - peaks under it are noise and take
+ * no part in the series
+ * @returns {Array} copy of `selectedPeaks`, with a `charge` when one was found
  */
 export function getPeaksWithCharge(selectedPeaks, allPeaks, options = {}) {
-  let {
-    precision = 100,
-    low = -1,
-    high = 1,
+  const {
+    precision = 20,
     min: minCharge = 1,
     max: maxCharge = 10,
+    minLength = 3,
+    minIntensity = 0,
   } = options;
-  let fromCharge =
-    minCharge * maxCharge > 0
-      ? Math.round(Math.min(Math.abs(minCharge), Math.abs(maxCharge)))
-      : 1;
-  let toCharge = Math.round(Math.max(Math.abs(minCharge), Math.abs(maxCharge)));
 
-  let fromIsotope = Math.ceil(low);
-  let toIsotope = Math.floor(high);
-  let numberIsotopes = toIsotope - fromIsotope + 1;
-  let isotopeIntensity = 1 / numberIsotopes;
-  let fromIndex = 0;
-  let localFromIndex = 0;
-  let localToIndex = 0;
+  const significant = [];
+  for (const peak of allPeaks) {
+    if (peak.y >= minIntensity) significant.push(peak);
+  }
+
+  const clustered = getPeaksWithClusterCharge(significant, {
+    minCharge,
+    maxCharge,
+    precision,
+    minLength,
+  });
+
+  const masses = new Float64Array(clustered.length);
+  for (let i = 0; i < clustered.length; i++) masses[i] = clustered[i].x;
+
   const peaksWithCharge = [];
   for (const peak of selectedPeaks) {
-    let targetMass = peak.x;
-    localFromIndex = fromIndex;
-    let bestCharge = fromCharge;
-    let bestChargeMatch = 0;
-    for (let charge = fromCharge; charge < toCharge + 1; charge++) {
-      let theoreticalPositions = {
-        x: [],
-        y: new Array(numberIsotopes).fill(isotopeIntensity),
-      };
-
-      let massRange = precision * 1e-6 * targetMass;
-      for (
-        let isotopePosition = fromIsotope;
-        isotopePosition < toIsotope + 1;
-        isotopePosition++
-      ) {
-        theoreticalPositions.x.push(
-          targetMass + (isotopePosition * NEUTRON_MASS) / charge,
-        );
-      }
-      let fromMass = targetMass + low / Math.abs(charge) - massRange;
-      let toMass = targetMass + high / Math.abs(charge) + massRange;
-
-      if (charge === 1) {
-        // we may move the fromIndex
-        while (allPeaks[fromIndex].x < fromMass) {
-          fromIndex++;
-        }
-      }
-
-      /*
-       * Find the from / to index for the specific peak and specific charge
-       */
-      while (allPeaks[localFromIndex].x < fromMass) {
-        localFromIndex++;
-      }
-      localToIndex = localFromIndex;
-      let localHeightSum = 0;
-      while (
-        localToIndex < allPeaks.length &&
-        allPeaks[localToIndex].x < toMass
-      ) {
-        localHeightSum += allPeaks[localToIndex].y;
-        localToIndex++;
-      }
-      localToIndex--;
-
-      //  console.log({ localFromIndex, localToIndex });
-      /*
-        Calculate the overlap for a specific peak and specific charge
-      */
-      let currentTheoreticalPosition = 0;
-      let theoreticalMaxValue = 1 / numberIsotopes;
-      let totalMatch = 0;
-
-      for (let index = localFromIndex; index <= localToIndex; index++) {
-        let minMass =
-          theoreticalPositions.x[currentTheoreticalPosition] -
-          massRange / charge;
-        let maxMass =
-          theoreticalPositions.x[currentTheoreticalPosition] +
-          massRange / charge;
-
-        while (maxMass < allPeaks[index].x) {
-          currentTheoreticalPosition++;
-          theoreticalMaxValue = 1 / numberIsotopes;
-          minMass =
-            theoreticalPositions.x[currentTheoreticalPosition] -
-            massRange / charge;
-          maxMass =
-            theoreticalPositions.x[currentTheoreticalPosition] +
-            massRange / charge;
-        }
-
-        while (index < allPeaks.length && allPeaks[index].x < minMass) {
-          index++;
-        }
-
-        //    console.log({ index, minMass, maxMass, massRange, localHeightSum });
-        if (index < allPeaks.length && allPeaks[index].x <= maxMass) {
-          while (index < allPeaks.length && allPeaks[index].x <= maxMass) {
-            if (allPeaks[index].x >= minMass && allPeaks[index].x <= maxMass) {
-              let value = allPeaks[index].y / localHeightSum;
-              //      console.log({ theoreticalMaxValue, value });
-              value = Math.min(theoreticalMaxValue, value);
-
-              theoreticalMaxValue -= value;
-              totalMatch += value;
-            }
-            index++;
-          }
-          index--;
-        }
-
-        if (totalMatch > bestChargeMatch) {
-          bestCharge = charge;
-          bestChargeMatch = totalMatch;
-        }
-      }
-    }
-    peaksWithCharge.push({ ...peak, charge: bestCharge });
+    const charge = getChargeAtMass(clustered, masses, peak.x, precision);
+    peaksWithCharge.push(
+      charge === undefined ? { ...peak } : { ...peak, charge },
+    );
   }
   return peaksWithCharge;
+}
+
+/**
+ * Charge of the clustered peak lying at a mass, if there is one there.
+ * @param {Array} clustered - peaks carrying their charge, sorted by mass
+ * @param {import('cheminfo-types').NumberArray} masses - their masses
+ * @param {number} targetMass
+ * @param {number} precision - in ppm
+ * @returns {number|undefined}
+ */
+export function getChargeAtMass(clustered, masses, targetMass, precision) {
+  if (masses.length === 0) return undefined;
+  const index = xFindClosestIndex(masses, targetMass);
+  const peak = clustered[index];
+  const tolerance = precision * 1e-6 * targetMass;
+  if (Math.abs(peak.x - targetMass) > tolerance) return undefined;
+  return peak.charge;
 }

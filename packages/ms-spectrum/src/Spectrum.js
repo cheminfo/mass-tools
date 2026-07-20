@@ -10,9 +10,13 @@ import {
 import { parseXY } from 'xy-parser';
 
 import { getBestPeaks } from './getBestPeaks.js';
+import { getChargeClusters } from './getChargeClusters.js';
 import { getFragmentPeaks } from './getFragmentPeaks.js';
 import { getMassRemainder } from './getMassRemainder.js';
-import { getPeakChargeBySimilarity } from './getPeakChargeBySimilarity.js';
+import {
+  getMinIntensity,
+  getPeakChargeBySimilarity,
+} from './getPeakChargeBySimilarity.js';
 import { getPeaks } from './getPeaks.js';
 import { getPeaksWithCharge } from './getPeaksWithCharge.js';
 import { isContinuous } from './isContinuous.js';
@@ -159,8 +163,30 @@ export class Spectrum {
    * @param {number} [options.precision=30]
    * @returns
    */
-  getSelectedPeaksWithCharge(selectedPeaks, options) {
-    return getPeaksWithCharge(selectedPeaks, this.peaks, options);
+  getSelectedPeaksWithCharge(selectedPeaks, options = {}) {
+    peakPicking(this);
+    return getPeaksWithCharge(selectedPeaks, this.peaks, {
+      minIntensity: getMinIntensity(this, options),
+      ...options,
+    });
+  }
+
+  /**
+   * The isotopologue clusters of the spectrum, from the one holding the most
+   * intensity to the one holding the least. To give their charge to the peaks
+   * themselves, use `getSelectedPeaksWithCharge`.
+   * @param {object} [options={}] - see `getChargeClusters`
+   * @param {number} [options.minSignalToNoise=10]
+   * @returns {Array<{charge: number, peaks: Array}>}
+   */
+  getChargeClusters(options = {}) {
+    peakPicking(this);
+    const minIntensity = getMinIntensity(this, options);
+    const peaks = [];
+    for (const peak of this.peaks) {
+      if (peak.y >= minIntensity) peaks.push(peak);
+    }
+    return getChargeClusters(peaks, options);
   }
 
   getPeakChargeBySimilarity(targetMass, options) {

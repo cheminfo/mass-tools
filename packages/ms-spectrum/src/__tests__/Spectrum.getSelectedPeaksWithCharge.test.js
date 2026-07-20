@@ -19,10 +19,19 @@ describe('test appendPeakCharge on Spectrum', () => {
       .filter((peak) => peak.y > 1000);
 
     let stats = new Array(10).fill(0);
+    let withoutCharge = 0;
     for (const peak of peaksWithCharge) {
-      stats[peak.charge]++;
+      if (peak.charge === undefined) {
+        withoutCharge++;
+      } else {
+        stats[peak.charge]++;
+      }
     }
 
-    expect(stats).toStrictEqual([0, 10, 124, 186, 122, 0, 0, 0, 0, 0]);
+    // an electrospray of a protein: the charges are distributed around 3
+    expect(stats).toStrictEqual([0, 1, 127, 183, 111, 0, 0, 0, 0, 0]);
+    // the peaks belonging to no series of at least three isotopologues get
+    // nothing rather than a charge nothing shows
+    expect(withoutCharge).toBe(20);
   });
 });

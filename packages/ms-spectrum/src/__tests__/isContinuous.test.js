@@ -4,7 +4,7 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { parseXY } from 'xy-parser';
 
-import { isContinuous } from '../isContinuous';
+import { defaultMaxDeltaX, isContinuous } from '../isContinuous';
 
 describe('test isContinuous', () => {
   it('to small', () => {
@@ -58,6 +58,55 @@ describe('test isContinuous', () => {
     data.y.push(0);
 
     expect(isContinuous({ data })).toBe(true);
+  });
+
+  it('a step allowed at high mass but not at low mass', () => {
+    // the same 0.33 Da step: a profile spectrum of a time of flight around
+    // m/z 3000, points much too separated around m/z 100
+    const highMass = { x: [], y: [] };
+    const lowMass = { x: [], y: [] };
+    for (let i = 0; i < 400; i++) {
+      highMass.x.push(3000 + i * 0.33);
+      highMass.y.push(i + 1);
+      lowMass.x.push(100 + i * 0.33);
+      lowMass.y.push(i + 1);
+    }
+
+    expect(isContinuous({ data: highMass })).toBe(true);
+    expect(isContinuous({ data: lowMass })).toBe(false);
+  });
+
+  it('centroids one dalton apart are not continuous, whatever the mass', () => {
+    for (const from of [3000, 10_000, 100_000]) {
+      const data = { x: [], y: [] };
+      for (let i = 0; i < 150; i++) {
+        data.x.push(from + i);
+        data.y.push(100 + ((i * 37) % 90));
+      }
+
+      expect(isContinuous({ data })).toBe(false);
+    }
+  });
+
+  it('defaultMaxDeltaX stays between its two bounds', () => {
+    expect(defaultMaxDeltaX(10)).toBe(0.1);
+    expect(defaultMaxDeltaX(1000)).toBeCloseTo(0.3, 10);
+    expect(defaultMaxDeltaX(3026)).toBeCloseTo(0.6, 10);
+    expect(defaultMaxDeltaX(100_000)).toBe(0.6);
+  });
+
+  it('maxDeltaX can be given', () => {
+    const data = { x: [], y: [] };
+    for (let i = 0; i < 200; i++) {
+      data.x.push(i / 5);
+      data.y.push(i + 1);
+    }
+
+    // the same data that `to separated` refuses with the default
+    expect(isContinuous({ data })).toBe(false);
+    expect(
+      isContinuous({ data: structuredClone(data) }, { maxDeltaX: () => 1 }),
+    ).toBe(true);
   });
 
   it('big experimental data', () => {
