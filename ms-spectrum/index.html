@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>ms-spectrum 3.10.0 | Documentation</title>
+  <title>ms-spectrum 3.10.1 | Documentation</title>
   <meta name='description' content='A mass spectrum'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>ms-spectrum</h3>
-          <div class='mb1'><code>3.10.0</code></div>
+          <div class='mb1'><code>3.10.1</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -48,6 +48,12 @@
                       </a></li>
                       
                       <li><a
+                        href='#spectrumclearcache'
+                        class='regular pre-open'>
+                        #clearCache
+                      </a></li>
+                      
+                      <li><a
                         href='#spectrummaxy'
                         class='regular pre-open'>
                         #maxY
@@ -57,6 +63,12 @@
                         href='#spectrumgetselectedpeakswithcharge'
                         class='regular pre-open'>
                         #getSelectedPeaksWithCharge
+                      </a></li>
+                      
+                      <li><a
+                        href='#spectrumgetchargeclusters'
+                        class='regular pre-open'>
+                        #getChargeClusters
                       </a></li>
                       
                       <li><a
@@ -76,6 +88,46 @@
                   
                   
                 </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getchargeclusters'
+                  class="">
+                  getChargeClusters
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#buildclusters'
+                  class="">
+                  buildClusters
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getpeakswithclustercharge'
+                  class="">
+                  getPeaksWithClusterCharge
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isonposition'
+                  class="">
+                  isOnPosition
+                  
+                </a>
                 
                 </li>
               
@@ -101,9 +153,19 @@
               
                 
                 <li><a
-                  href='#neutron_mass'
+                  href='#getpeakchargebysimilarity'
                   class="">
-                  NEUTRON_MASS
+                  getPeakChargeBySimilarity
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getminintensity'
+                  class="">
+                  getMinIntensity
                   
                 </a>
                 
@@ -121,6 +183,16 @@
               
                 
                 <li><a
+                  href='#getchargeatmass'
+                  class="">
+                  getChargeAtMass
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#iscontinuous'
                   class="">
                   isContinuous
@@ -131,9 +203,29 @@
               
                 
                 <li><a
+                  href='#defaultmaxdeltax'
+                  class="">
+                  defaultMaxDeltaX
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#peakpicking'
                   class="">
                   peakPicking
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getnoiselevel'
+                  class="">
+                  getNoiseLevel
                   
                 </a>
                 
@@ -370,6 +462,64 @@
       </div>
     </div>
   
+    <div class='border-bottom' id='spectrumclearcache'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>clearCache()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Forget everything that was derived from the data. Has to be called by any
+method changing <code>data</code>, otherwise the peaks, the sums or the min / max
+values would still describe the previous data.</p>
+
+    <div class='pre p1 fill-light mt0'>clearCache(): this</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>this</code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
     <div class='border-bottom' id='spectrummaxy'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
@@ -568,6 +718,106 @@
       </div>
     </div>
   
+    <div class='border-bottom' id='spectrumgetchargeclusters'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getChargeClusters(options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The isotopologue clusters of the spectrum, from the one holding the most
+intensity to the one holding the least. To give their charge to the peaks
+themselves, use <code>getSelectedPeaksWithCharge</code>.</p>
+
+    <div class='pre p1 fill-light mt0'>getChargeClusters(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{charge: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>}></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    see 
+<code>getChargeClusters</code>
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.minSignalToNoise</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>10</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{charge: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>}></code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
     <div class='border-bottom' id='spectrumgetfragmentpeaksfct'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
@@ -718,6 +968,438 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
     </div>
   
 </div>
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getchargeclusters'>
+      getChargeClusters
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Group the peaks into isotopologue clusters and give a charge to each cluster.</p>
+<p>The charge of a single peak can not be evaluated: an isotopologue in the
+middle of an envelope looks the same whatever the charge, and the last one of
+an envelope has nothing after it. What carries the charge is the series: a
+run of peaks separated by NEUTRON_MASS / charge. So the series are searched
+first, and the charge of a series is given to all the peaks it holds.</p>
+<p>A series of charge 1 is always a subseries of a series of charge 2, which is
+one of a series of charge 4: the clusters are therefore assigned from the one
+explaining the most intensity to the one explaining the least, and a peak
+only takes the charge of the first cluster that claims it.</p>
+
+    <div class='pre p1 fill-light mt0'>getChargeClusters(peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{charge: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>}></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>peaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}>)</code>
+	    sorted by mass
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.minCharge</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>1</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.maxCharge</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>10</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.precision</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>20</code>)
+  </td>
+  <td class='break-word'><span>tolerance on the position of an
+isotopologue, in ppm. It is never allowed to reach half of the distance
+between two isotopologues, otherwise a series could jump from one to another.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.minLength</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>3</code>)
+  </td>
+  <td class='break-word'><span>two peaks that happen to be at the
+right distance are common, three in a row much less
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{charge: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>}></code>:
+        the clusters, from the one
+holding the most intensity to the one holding the least
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='buildclusters'>
+      buildClusters
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The clusters as the two functions above need them: the position of the peaks
+rather than the peaks, and the intensity they hold to be able to sort them.</p>
+
+    <div class='pre p1 fill-light mt0'>buildClusters(peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{charge: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, indexes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, intensity: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>peaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{charge: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, indexes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, intensity: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}></code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getpeakswithclustercharge'>
+      getPeaksWithClusterCharge
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Give to each peak the charge of the cluster that explains it.</p>
+
+    <div class='pre p1 fill-light mt0'>getPeaksWithClusterCharge(peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>peaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}>)</code>
+	    sorted by mass
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    same as 
+<code>getChargeClusters</code>
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        copy of the peaks, with a 
+<code>charge</code>
+ when one was found
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isonposition'>
+      isOnPosition
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Is the peak at <code>index</code> where the next isotopologue is expected?</p>
+<p>The isotopologues of the charges <code>z</code> and <code>z + 1</code> are only <code>spacing / (z + 1)</code>
+apart, and that distance shrinks fast: 0.5 Da between the charges 1 and 2,
+but 0.024 Da between 6 and 7. A tolerance that reaches it would let the same
+peaks be read with either charge, so it is capped well under.</p>
+
+    <div class='pre p1 fill-light mt0'>isOnPosition(masses: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Float64Array">Float64Array</a>, index: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, expected: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, spacing: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, charge: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, precision: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>masses</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Float64Array">Float64Array</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>index</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>expected</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>spacing</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>charge</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>precision</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    in ppm
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -1003,21 +1685,20 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='neutron_mass'>
-      NEUTRON_MASS
+    <h3 class='fl m0' id='getpeakchargebysimilarity'>
+      getPeakChargeBySimilarity
     </h3>
     
     
   </div>
   
 
-  
-    <div class='pre p1 fill-light mt0'>NEUTRON_MASS</div>
-  
-    <p>
-      Type:
-      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
-    </p>
+  <p>Evaluate the charge of the peak observed at a mass.</p>
+<p>The charge is the one of the isotopologue cluster the peak belongs to, see
+<code>getChargeClusters</code>. A peak on its own shows no charge: what shows it is the
+series of peaks around it, separated by one dalton over the charge.</p>
+
+    <div class='pre p1 fill-light mt0'>getPeakChargeBySimilarity(spectrum: any, targetMass: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)</div>
   
   
 
@@ -1031,6 +1712,22 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
     <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>spectrum</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>targetMass</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
       
         <div class='space-bottom0'>
           <div>
@@ -1073,81 +1770,44 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
 
               
                 <tr>
-  <td class='break-word'><span class='code bold'>options.similarity</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  <td class='break-word'><span class='code bold'>options.precision</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
-    (default <code>{}</code>)
+    (default <code>20</code>)
   </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-  
-    <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.widthBottom</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-  
-    <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.widthTop</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-  
-    <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.widthFunction</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>?</code>
-  </td>
-  <td class='break-word'><span>function called with mass that should return an object width containing top and bottom
+  <td class='break-word'><span>tolerance on the position of an
+isotopologue, in ppm
 </span></td>
 </tr>
 
 
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.minLength</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
-    <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.zone</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
-  
-    (default <code>{}</code>)
+    (default <code>3</code>)
   </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-  
-    <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.zone.low</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-  
-    (default <code>-0.5</code>)
-  </td>
-  <td class='break-word'><span>window shift based on observed monoisotopic mass
+  <td class='break-word'><span>shortest series that shows a charge
 </span></td>
 </tr>
 
 
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.minSignalToNoise</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
-    <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.zone.high</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-  
-    (default <code>2.5</code>)
+    (default <code>10</code>)
   </td>
-  <td class='break-word'><span>to value for the comparison window
+  <td class='break-word'><span>a peak under 
+<code>median</code>
+ plus
+
+<code>minSignalToNoise</code>
+ times the standard deviation of the noise takes no part in
+the series: the position of a maximum of the noise is random and would give a
+charge to what is only noise. Only for a continuous spectrum, a list of
+centroids does not describe its noise anymore.
 </span></td>
 </tr>
-
-
-  
-
-
-  
-    <tr>
-  <td class='break-word'><span class='code bold'>options.similarity.common</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-  
 
 
               
@@ -1161,6 +1821,122 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)</code>:
+        the charge, or undefined when no series of peaks
+shows one at that mass
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getminintensity'>
+      getMinIntensity
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Intensity under which a peak is too close to the noise to say anything about
+a charge. The peak picking already removes what is under <code>median + 3 sd</code>, but
+a gaussian noise still leaves some of its maxima over it.</p>
+
+    <div class='pre p1 fill-light mt0'>getMinIntensity(spectrum: any, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>spectrum</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.minSignalToNoise</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>10</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        
+      
+    
   
 
   
@@ -1194,8 +1970,14 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
   </div>
   
 
-  
-    <div class='pre p1 fill-light mt0'>getPeaksWithCharge(selectedPeaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, allPeaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+  <p>Evaluate the charge of a selection of peaks.</p>
+<p>The charge comes from the isotopologue clusters of <code>allPeaks</code>: a peak takes
+the charge of the series it belongs to. Evaluating a peak on its own can not
+work, because an isotopologue in the middle of an envelope looks the same
+whatever the charge and the last one of an envelope has nothing after it.</p>
+<p>A peak that belongs to no series gets no <code>charge</code> at all.</p>
+
+    <div class='pre p1 fill-light mt0'>getPeaksWithCharge(selectedPeaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, allPeaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
   
   
 
@@ -1213,7 +1995,8 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>selectedPeaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
-	    
+	    peaks to evaluate
+
           </div>
           
         </div>
@@ -1221,7 +2004,8 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>allPeaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
-	    
+	    all the peaks of the spectrum, sorted by mass
+
           </div>
           
         </div>
@@ -1251,7 +2035,8 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
   
     (default <code>1</code>)
   </td>
-  <td class='break-word'><span></span></td>
+  <td class='break-word'><span>lowest charge to consider
+</span></td>
 </tr>
 
 
@@ -1261,27 +2046,8 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
   
     (default <code>10</code>)
   </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>options.low</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-  
-    (default <code>-1</code>)
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>options.high</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-  
-    (default <code>1</code>)
-  </td>
-  <td class='break-word'><span></span></td>
+  <td class='break-word'><span>highest charge to consider
+</span></td>
 </tr>
 
 
@@ -1289,9 +2055,34 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
                 <tr>
   <td class='break-word'><span class='code bold'>options.precision</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
-    (default <code>30</code>)
+    (default <code>20</code>)
   </td>
-  <td class='break-word'><span></span></td>
+  <td class='break-word'><span>tolerance on the position of an
+isotopologue, in ppm
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.minLength</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>3</code>)
+  </td>
+  <td class='break-word'><span>shortest series that shows a charge
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.minIntensity</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0</code>)
+  </td>
+  <td class='break-word'><span>peaks under it are noise and take
+no part in the series
+</span></td>
 </tr>
 
 
@@ -1306,6 +2097,114 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        copy of 
+<code>selectedPeaks</code>
+, with a 
+<code>charge</code>
+ when one was found
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getchargeatmass'>
+      getChargeAtMass
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Charge of the clustered peak lying at a mass, if there is one there.</p>
+
+    <div class='pre p1 fill-light mt0'>getChargeAtMass(clustered: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, masses: any, targetMass: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, precision: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>clustered</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    peaks carrying their charge, sorted by mass
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>masses</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>targetMass</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>precision</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    in ppm
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)</code>:
+        
+      
+    
   
 
   
@@ -1343,7 +2242,7 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
 <ul>
 <li>has more than 100 points</li>
 <li>deltaX change can not be more than a factor 2</li>
-<li>deltaX may not be larger than 0.1</li>
+<li>deltaX may not be larger than what <code>maxDeltaX</code> allows at that mass</li>
 <li>if y is zero it does not count</li>
 </ul>
 
@@ -1421,6 +2320,19 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
 
 
               
+                <tr>
+  <td class='break-word'><span class='code bold'>options.maxDeltaX</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>?</code>
+  </td>
+  <td class='break-word'><span>function called with the mass that
+returns the largest step a profile spectrum may have there. Defaults to
+
+<code>defaultMaxDeltaX</code>
+.
+</span></td>
+</tr>
+
+
+              
             </tbody>
           </table>
           
@@ -1431,6 +2343,88 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='defaultmaxdeltax'>
+      defaultMaxDeltaX
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Largest step a profile spectrum may have around a mass.</p>
+<p>A time of flight is sampled evenly in time and an orbitrap evenly in
+frequency, so in both the m/z step grows with the m/z: a MALDI-TOF is sampled
+every 0.19 Da around m/z 1000 and every 0.47 Da around m/z 6000, and is still
+a profile spectrum. The step is therefore allowed to grow with the mass,
+between two bounds:</p>
+<ul>
+<li>never under <code>0.1</code> Da, so that a spectrum of small molecules keeps the step
+it always had</li>
+<li>never over <code>0.6</code> Da, because the isotopologues of a singly charged ion are
+one dalton apart: over that a profile could not describe them, and a list
+of centroids would pass for one whatever its mass</li>
+</ul>
+
+    <div class='pre p1 fill-light mt0'>defaultMaxDeltaX(mass: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mass</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        
+      
+    
   
 
   
@@ -1498,6 +2492,90 @@ Mass remainder analysis (MARA): <a href="https://doi.org/10.1021/acs.analchem.7b
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getnoiselevel'>
+      getNoiseLevel
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Intensity under which a maximum is considered to be noise.</p>
+<p>We have to compute it ourselves: left alone, gsd only estimates a noise level
+when the x values are equally spaced within 5%, and falls back to 0 otherwise.
+A mass spectrum is sampled in time or in frequency, so over a wide m/z range
+the steps grow by far more than that and the noise would not be filtered.</p>
+
+    <div class='pre p1 fill-light mt0'>getNoiseLevel(y: any, noiseFactor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>y</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>noiseFactor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            = <code>3</code>)</code>
+	    0 leaves the decision to gsd
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)</code>:
         
       
     
