@@ -3,6 +3,10 @@ import { describe, expect, it } from 'vitest';
 
 import { EMDB } from '..';
 
+import { useMockServer } from './testServer.js';
+
+useMockServer();
+
 expect.extend({ toBeDeepCloseTo });
 
 describe('test searchSimilarity', () => {

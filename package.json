@@ -11,7 +11,7 @@
     "build-toc": "node ./src/docs/buildDocs.mjs",
     "build-lerna": "npm run build-lerna-clean && npm run tsc",
     "build-lerna-clean": "npm run tsc -- --clean",
-    "eslint": "eslint packages --cache",
+    "eslint": "eslint packages test-utils --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "postinstall": "cp README.md packages/mass-tools/README.md",
     "prettier": "prettier --check .",

@@ -2,6 +2,10 @@ import { describe, expect, it } from 'vitest';
 
 import { EMDB } from '..';
 
+import { useMockServer } from './testServer.js';
+
+useMockServer();
+
 describe('test searchMSEM', () => {
   it('should filter one database with existing ionization', async () => {
     let emdb = new EMDB();

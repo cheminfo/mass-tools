@@ -6,6 +6,10 @@ import { parseXY } from 'xy-parser';
 
 import { EMDB } from '..';
 
+import { useMockServer } from './testServer.js';
+
+useMockServer();
+
 describe('test searchSimilarity for ethylbenzene', () => {
   it('should find one result with bad distribution', async () => {
     const experimental = loadEthylbenzene();

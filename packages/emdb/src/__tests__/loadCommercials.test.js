@@ -2,6 +2,10 @@ import { expect, test } from 'vitest';
 
 import { loadCommercials } from '../loadCommercials';
 
+import { useMockServer } from './testServer.js';
+
+useMockServer();
+
 test('loadCommercials', async () => {
   let data = await loadCommercials();
 

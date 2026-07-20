@@ -2,6 +2,10 @@ import { expect, test } from 'vitest';
 
 import { loadGoogleSheet } from '../loadGoogleSheet';
 
+import { useMockServer } from './testServer.js';
+
+useMockServer();
+
 test('load google sheet', async () => {
   let data = await loadGoogleSheet();
 

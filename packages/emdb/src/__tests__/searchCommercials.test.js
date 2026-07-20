@@ -2,6 +2,10 @@ import { describe, expect, it } from 'vitest';
 
 import { EMDB } from '..';
 
+import { useMockServer } from './testServer.js';
+
+useMockServer();
+
 describe('test search commercial', () => {
   it('should filter the commercial database', async () => {
     let emdb = new EMDB();

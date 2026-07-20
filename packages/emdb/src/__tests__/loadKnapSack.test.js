@@ -2,6 +2,10 @@ import { expect, test } from 'vitest';
 
 import { loadKnapSack } from '../loadKnapSack';
 
+import { useMockServer } from './testServer.js';
+
+useMockServer();
+
 test('loadKnapSack', async () => {
   let data = await loadKnapSack();
 

@@ -5,11 +5,12 @@ import { afterAll, afterEach, beforeAll } from 'vitest';
 
 import { fixtureHandler } from '../../../../test-utils/fixtureHandler.js';
 
+const fixtures = path.join(__dirname, 'fixtures');
+
 export const server = setupServer(
-  fixtureHandler(
-    'https://googledocs.cheminfo.org',
-    path.join(__dirname, 'fixtures'),
-  ),
+  // the zipped databases
+  fixtureHandler('https://couch.cheminfo.org', fixtures),
+  fixtureHandler('https://googledocs.cheminfo.org', fixtures),
 );
 
 /**
