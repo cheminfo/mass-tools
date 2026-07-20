@@ -20,8 +20,9 @@ export async function loadKnapSack(options = {}) {
   let data = JSON.parse(fileData);
 
   for (const d of data) {
-    // eslint-disable-next-line unicorn/prefer-https -- the host answers neither in http nor in https anymore
-    d.url = `http://kanaya.naist.jp/knapsack_jsp/information.jsp?word=${d.id}`;
+    // the database moved away from kanaya.naist.jp, whose host does not answer
+    // anymore, to its own domain. Same ids, same `word` parameter.
+    d.url = `https://www.knapsackfamily.com/knapsack_core/information.php?word=${d.id}`;
   }
 
   data.sort((a, b) => a.em - b.em);
