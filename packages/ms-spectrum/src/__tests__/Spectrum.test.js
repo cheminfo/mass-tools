@@ -127,9 +127,10 @@ describe('test Spectrum', () => {
 
     spectrum.rescaleX((x) => x * 100);
 
-    // the cache is dropped, so the next call looks at the new x values
+    // the cache is dropped, so the next call looks at the new x values: the
+    // step became 1 Da, too much for the isotopologues to be described
     expect(spectrum.continuous).toBeUndefined();
-    expect(spectrum.isContinuous()).toBe(true);
+    expect(spectrum.isContinuous()).toBe(false);
   });
 
   it('gsd of non continuous spectrum', () => {
