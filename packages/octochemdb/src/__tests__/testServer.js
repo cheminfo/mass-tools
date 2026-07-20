@@ -5,7 +5,7 @@ import { http } from 'msw';
 import { setupServer } from 'msw/node';
 import { afterAll, afterEach, beforeAll } from 'vitest';
 
-import { fixtureHandler } from './fixtureHandler.js';
+import { fixtureHandler } from '../../../../test-utils/fixtureHandler.js';
 
 export const server = setupServer(
   fixtureHandler(

@@ -72,9 +72,15 @@ Record it by running the test with the recorder, or add the fixture by hand.`,
         { cause: error },
       );
     }
-    return new Response(recorded.body, {
+    // a binary response, like the zipped databases, is kept as a file of its
+    // own next to the metadata rather than encoded in the json
+    const body = recorded.bodyFile
+      ? readFileSync(path.join(directory, recorded.bodyFile))
+      : recorded.body;
+
+    return new Response(body, {
       status: recorded.status,
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': recorded.contentType || 'application/json' },
     });
   });
 }

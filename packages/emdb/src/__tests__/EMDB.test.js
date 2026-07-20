@@ -2,6 +2,10 @@ import { expect, test } from 'vitest';
 
 import { EMDB } from '..';
 
+import { useMockServer } from './testServer.js';
+
+useMockServer();
+
 test('EMDB contaminants and knapSack', async () => {
   let emdb = new EMDB();
 
