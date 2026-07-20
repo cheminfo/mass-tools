@@ -2,6 +2,10 @@ import { expect, test } from 'vitest';
 
 import { mfFromGoogleSheet } from '..';
 
+import { useMockServer } from './testServer.js';
+
+useMockServer();
+
 // The original document is on: https://docs.google.com/spreadsheets/d/15Kuc5MeOhvm4oeTMvEuP1rWdRFiVWosxXhYwAmuf3Uo/edit#gid=0
 test('getReferenceList with existing', async () => {
   let result = await mfFromGoogleSheet(
