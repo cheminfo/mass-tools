@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.3](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.12.2...mass-fragmentation@1.12.3) (2026-07-23)
+
+
+### Bug Fixes
+
+* update ml-gsd ([#322](https://github.com/cheminfo/mass-tools/issues/322)) ([c10a4e9](https://github.com/cheminfo/mass-tools/commit/c10a4e9f246176e5b8b1b341d3d021fd7b28dd61))
+
+
+
+
+
 ## [1.12.2](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.12.1...mass-fragmentation@1.12.2) (2026-07-20)
 
 **Note:** Version bump only for package mass-fragmentation
