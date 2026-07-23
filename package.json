@@ -16,7 +16,7 @@
     "postinstall": "cp README.md packages/mass-tools/README.md",
     "prettier": "prettier --check .",
     "prettier-write": "prettier --write .",
-    "publish": "npm run build-lerna && npm run test && lerna publish -y --no-verify-access",
+    "publish": "npm run build-lerna && npm run test && lerna publish -y",
     "test": "npm run test-only && npm run eslint && npm run prettier",
     "test-only": "npm run build-lerna && vitest --run --test-timeout=30000 --coverage",
     "tsc": "tsc --build",
