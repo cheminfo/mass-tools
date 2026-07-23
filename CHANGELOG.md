@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.58.1](https://github.com/cheminfo/mass-tools/compare/v7.58.0...v7.58.1) (2026-07-23)
+
+
+### Bug Fixes
+
+* update ml-gsd ([#322](https://github.com/cheminfo/mass-tools/issues/322)) ([c10a4e9](https://github.com/cheminfo/mass-tools/commit/c10a4e9f246176e5b8b1b341d3d021fd7b28dd61))
+
 ## [7.58.0](https://github.com/cheminfo/mass-tools/compare/v7.57.0...v7.58.0) (2026-07-20)
 
 
