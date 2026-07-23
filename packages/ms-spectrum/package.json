@@ -24,7 +24,7 @@
     "mf-finder": "^3.4.24",
     "mf-parser": "^3.9.2",
     "mf-utilities": "^3.5.7",
-    "ml-gsd": "^13.1.1",
+    "ml-gsd": "^14.2.1",
     "ml-regression-power": "^3.0.0",
     "ml-spectra-processing": "^14.28.1",
     "peaks-similarity": "^3.1.1",
