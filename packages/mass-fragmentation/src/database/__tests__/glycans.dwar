@@ -1,0 +1,94 @@
+<datawarrior-fileinfo>
+<version="3.3">
+<created="1771421441680">
+<rowcount="22">
+</datawarrior-fileinfo>
+<column properties>
+<columnName="atomMapping">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	atomMapping">
+<columnName="idcoordinates2D">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	idcoordinates2D">
+<columnName="reactionFP">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	RxnFP">
+<columnProperty="version	1.0.0">
+<columnName="reactantFFP">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	FragFp">
+<columnProperty="reactionPart	reactants">
+<columnProperty="version	1.2.1">
+<columnName="productFFP">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	FragFp">
+<columnProperty="reactionPart	products">
+<columnProperty="version	1.2.1">
+<columnName="rxnCode">
+<columnProperty="isFragment	true">
+<columnProperty="specialType	rxncode">
+</column properties>
+atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	rxnCode	reaction	description	mode	label	ionization	kind
+qTN Qd qH Qp	!R@Fq?[@@SG]K| !R@AL]Vkp !RGPY| !RG\Y|	080V0V!4F04JVV!2(1#1B2!FV#84F!2F)k08$8$6!VF0F52801!1!22//////!	N//////0	F//////0	gC`@Dij@qRQ`DLc@HYPXnds|!eF@Hp_zQd fH@LYF@PjP fH@LYF@PjP	Mechanism X	We should add a method to determine if charge is on reducing end or not	positive	Mechanism X	esi	reaction
+qJlp Qg qM	!R@AM?DpAl@AL]|kp !R_qL@DqwZ_@ !R@AL]~gp	0X0F1F#8V1#112O#V#XV#4402c880FV1#28#V01G40HF8a#2V030B0G0H$80808////0F*8/(	jZW&V/////&	4FV04$V.V////&	gJPaAaJT}TA_Q~gy_`!eMH`fM`` eFHBLD	Mechanism B		positive<NL>	Mechanism B	esi	reaction
+qFaS@ Qd qYp	!R?RXb}dd]onM?|huIGVJ| !ROg|]vcp !R@AwnVGtzG@	V0c180852F10J020@FF@FW1!190V!49V2V0@F0408F044B%4!T$BF!5x0G201Fk01F22080V!F//////0	yZV4F$V!4/$V///-	4F/%8////)	gNpaAQJTkuU@YVPhtFJ}hxqppSa@o}c@!eF@HhYIE@ eMH`eIdLfactQN@h	Mechanism Z	Small bug, one of the possibilities breaks the molecule	positive<NL>	Mechanism Z	esi	reaction
+qsP` QX q^	!R@NZUyjkie^d]lop !R@AL]Vkp !R@NgcjoP	V!9#9&F4G1G2080V08O4!441V#8244F01040420V81#F01V#2cFD0J0N!JV$cAF#F//////0	o0V4%V!4/////010	4F/%8////)	gJPaAAJTmTAd`|^twhHcMCAN@FvX!eF@HhP eFDbIcA|dTS`F@	Mechanism Y		positive<NL>	Mechanism Y	esi	reaction
+qTN Qd qH Qp	!R@Fq?[@@SG]K| !R@AL]Vkp !RGPY| !RG\Y|	080V0V!4F04JVV!2(1#1B2!FV#84F!2F)k08$8$6!VF0F52801!1!22//////!	N//////0	F//////0	gC`@Dij@qRQ`DLc@HYPXnds|!eF@Hp_zQd fH@LYF@PjP fH@LYF@PjP	Mechanism A	The only difference with mechanism X is were the charge is located <NL>For A it should be on non-reducing end	positive<NL>	Mechanism A	esi	reaction
+qVa QX qq	!R_uqtpk{k|zQT !R@NRcRlp !RhW}sBjP	&85$F0209FH2F(V#1V2V08!4&8%8!H01V04F2V01#80F!1F02B@$F,4///*8/(	y4V4%V!4/////#	4FV/$8////&10	gCaA@IRfhCKREF`!eFH`fLGtP eF@HhP	Mechanism C		positive<NL>	Mechanism C	esi	reaction
+qTN Qd qH Qp	!R@Fq?[@@SG]K| !R@AL]Vkp !RGPY| !RG\Y|	080V0V!4F04JVV!2(1#1B2!FV#84F!2F)k08$8$6!VF0F52801!1!22//////!	N//////0	F//////0	gC`@Dij@qRQ`DLc@HYPXnds|!eF@Hp_zQd fH@LYF@PjP fH@LYF@PjP	Mechanism A	The only difference with mechanism X is were the charge is located <NL>For A it should be on non-reducing end	negative	Mechanism A	esi	reaction
+IKJyHdV IKDFFh IzP	!RS`@?VPc|K}K}B@c}VTA?SavZP` !RmpJw?_y?mpI??ovHGXY| !R@AL]ygp	860V0H4VFNV406VHG@V308F0Vce040F!K0884FF49130@2#548120F0544@02W10H8V3!VXF5e08041FFF/)V0F$W#F+1)F$2$844/%	zj_DtT6eLY21DXo0V042J4!8VV$4/%F*V/)10	:W64L0X0X!4040V!404#V/)1!F*V/(F10	didBB@saGdieTjjjj@OhzIq`I~{@a~cHAOz_`!gOqaAknRVzmjj@sdA@ eFHBLGtP	Mechanism B<NL>		negative	Mechanism B<NL>	esi	reaction
+qVah QX qnH	!R_{OxxxDOqET]Lip !R@Nl]Vkp !R_?Q?aquzo@	4!24J899040F0X01%F0WVV040G!K11840F0c10V208F08#20J0440N02W!2$V041!28/#4*F//.8/(	z_W4%V!4//+F//&	q0V4%V!4/////F!	gJPa@SrT}TAeiBcQ~|D@!eFH`zLFUP eOHBNZ``	Mechanism C		negative	Mechanism C	esi	reaction
+qqU|X qq|P qk	!RDtVbEToz@ItB~clUr?SD !RoR|@U[R\Gh`gDj` !R_w]WTf`	J2590R818Z40F0V0Y21#g2W0d04!C0G0Fcw2FJ0l!2k0FV01!24J0VJ0B02V0R3!28X0410FH8kV804-4///*8/(	zb_BGR0V0Z!Z0VF#4#4////&	qFV444#V!4&4////(F!	gOqaAk^RfUFjj@rXbPhsfGDy`P!gKP`AdelVj@~db\`H eFH`zLD	Mechanism Y		negative	Mechanism Y	esi	reaction
+qVakx QX qisx	!R_?EXCVEkVKfsK_z]G]jB !R@Kl]QjH !R[@@S@@Al@AL]YnH	0X0d4F01FNX4#kG!a08!VdV04$K08840F08120@0F$c121F4140802W!G!140V2!288!1F0F/)V0F$V#F+1)F$2$844/%	zj_D9L0X0X204X!V$4#V/,F*V/)10	zjW60L0X0X!4#V!404#V/)1!F*V/(F10	gNqa@V^RgnjhCzNOwh`Q~g~_u~!eFHBLGtP gKPa@SrT|UU@P	Mechanism Z		negative	Mechanism Z	esi	reaction
+qTN Qd qq	!R_qL@Dw}lGYJ| !R@AL]Vkp !R_?x]^gp	080V0V!4F04JVV!2(1#1B2!FV#84F!2F)k08$8$6!VF0F52801!1!22//////!	N//////0	F//////0	gC`@Dij@qRQ`DLc@HYPXnds|!eF@Hp_zQd eD@@CEDXABQ`DOzQd	Mechanism X		negative	Mechanism X	esi	reaction
+a` a`	!RGZi| !RGUi|	/////////%4//1+	//////!	//////!	fI@GuD[N@PBO|j!fIS`L[N@PB@	Ionization	ionization	negative	Ionization	esi	ionization
+Qg QKP	!R@CARarMbs@ !R[AVvGx@@XphL	#1!4$V&F&F(V09)V&8F&F$1-4#108F//!1//%8/(	2//////0	X2#F$1/////012!	eMHBN`qcN@PBO|b`!gCaIHLbRduPFLf\@`D@	Ionization	ionization	positive	Ionization-K	esi	ionization
+Qg QKP	!RAG\p@INB]@ !RDrkz@I^I@rh\	%1%V&G&F!F!10V08)V$V08)8!4.4%8F//!1//%8/(	2//////0	X2#F$1/////012!	eMHBN`qcN@PBO|b`!gCaIHMBRduPFLf\@`D@	Ionization	ionization	positive	Ionization-Na	esi	ionization
+Qg Qg	!RcJl@U@l|e@ !RWI\l@CNRu@	//////-8/$1/%F%V!8$8/%40	2//////0	2//////0	eMHBN`qcN@PBO|b`!eMH`fN`~bHqg@HA@	Ionization	ionization	positive	Ionization-H	esi	ionization
+Q^ Qp Qd	!RWrL@@qvrO@ !RG]i| !R@@L]~kp	$F10V!104#1#6$1$4&14X0F!4&F#4F03VV!2V02!1N#49#830Z//////$	k//////0	0F/%8////)	eMHJN`pksPqFdD@`!fI@GudYA@H@ eF@HhP	CRF		positive	Water elimination	esi	reaction
+QX QP a`	!R@AL]|gp !RGUi| !RG[i|	08$F!F#180F&V08$4)F0F20F018%@!F8)2#F!8#F!1//////&	40V/////,10	4//////0	eFH`fLGtX!fI@Gu` fHT`P	CMF		positive	Water elimination	esi	reaction
+qNT qH Qg	!R@BL@[@@cGPj| !RG]i| !Rog~w?Qwzo@	04!28FF010F0190GV0V4!V084#4&14!F2FF0GN!402N!F808!82V02020F018V!8081!2//#1//%8/(	40X/////,W0	6020201!F/////$k0	gCiALAJRu@_HYlgHE@!fI@Gu` eO``fNZ`~cIrE@	CRF		positive	Water elimination	esi	reaction
+Qy Qp Qd	!R@Fp@XqtJ_@ !RG]i| !R@FL]^gp	0808#V2F1!1V0108840Z(4!2!810F0F20J%4!@04J9$42V42!1F$90F0810V02//////!	JF!4/////,	4F/%8////)	eMH`eIXOda`!fI@Gu` eF@bXhP	CMF		positive	Water elimination	esi	reaction
+Qdp a` Q\	!R@Fq?[@@SG_K| !RG]i| !R@AL]~kp	V04F8F0V!1402!10104$VB#402V0809#F0V4FF40F%4F01V01V2V430G1N!V09V0F83//////&	k//////0	0F/%8////)	gCa@@eMPFtWihb```DJFCX`!fI@GuDYA@H@ eF@HhP	CMF		positive	Ether/water elimination	esi	reaction
+Q[@ a` Qt	!R_qL@Xs}lG[J| !RG]i| !R_qp]^op	V84F8F!2F1602!10180VZ1!B#4!V09080FVF#H040F#201FF$V2V420GVF0@#WFF81!F//////#	k//////0	0F/%8////)	gCaAHiRfhCZ[tTQTPPBMCAlp!fI@GuDYA@H@ eF@bXhP	CRF		positive	Ether/water elimination	esi	reaction
+<hitlist data>
+<hitlistName="<selection>">
+<hitlistData="@@@A">
+</hitlist data>
+<datawarrior properties>
+<columnFilter_Table="">
+<columnOrder_Table="label	rxnCode	description	ionization	mode	reaction	kind">
+<columnWidth_Table_description="80">
+<columnWidth_Table_ionization="80">
+<columnWidth_Table_kind="80">
+<columnWidth_Table_label="244">
+<columnWidth_Table_mode="125">
+<columnWidth_Table_reaction="80">
+<columnWidth_Table_rxnCode="460">
+<columnWrapping_Table_description="true">
+<columnWrapping_Table_label="true">
+<columnWrapping_Table_mode="true">
+<columnWrapping_Table_reaction="true">
+<detailView="height[Data]=0.5;height[rxnCode]=0.5">
+<filter0="#string#	reaction">
+<filter1="#string#	description">
+<filter2="#string#	mode">
+<filter3="#string#	label">
+<filter4="#string#	ionization">
+<filter5="#string#	kind">
+<formLayout_Form View="TableLayout,3,6.0,-1.0,6.0,3,4.0,-1.0,4.0">
+<formObjectCount_Form View="0">
+<headerLines_Table="2">
+<mainSplitting="0.75495">
+<mainView="Table">
+<mainViewCount="2">
+<mainViewDockInfo0="root">
+<mainViewDockInfo1="Table	center">
+<mainViewInFront0="true">
+<mainViewName0="Table">
+<mainViewName1="Form View">
+<mainViewType0="tableView">
+<mainViewType1="formView">
+<rightSplitting="0.67482">
+<rowHeight_Table="80">
+</datawarrior properties>
