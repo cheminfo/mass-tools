@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/emdb#readme",
   "dependencies": {
+    "chemical-elements": "^2.3.2",
     "cheminfo-types": "^1.15.0",
     "is-any-array": "^3.0.0",
     "mf-finder": "^3.4.24",

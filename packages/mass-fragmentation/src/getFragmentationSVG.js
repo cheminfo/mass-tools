@@ -28,7 +28,7 @@ export function getFragmentationSVG(trees, options = {}) {
       getLabel: (node) => {
         return node?.reaction?.label;
       },
-      labelPosition: 'center',
+      horizontalPosition: 'center',
     },
     nodeRendererOptions: {
       getTopLabel: (node) => {
