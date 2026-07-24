@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.59.0](https://github.com/cheminfo/mass-tools/compare/v7.58.1...v7.59.0) (2026-07-24)
+
+
+### Features
+
+* **ms-spectrum:** reconstruct charge of multiply charged species via charge-state ladders ([#326](https://github.com/cheminfo/mass-tools/issues/326)) ([7086c56](https://github.com/cheminfo/mass-tools/commit/7086c5653e39dab698b461eb5c2ddadd258a80ea))
+
 ## [7.58.1](https://github.com/cheminfo/mass-tools/compare/v7.58.0...v7.58.1) (2026-07-23)
 
 
