@@ -48,6 +48,8 @@ export default defineConfig(
         },
       ],
       'no-await-in-loop': 'off',
+      // allow dropping a property with `const { drop, ...rest } = obj`
+      'no-unused-vars': ['error', { ignoreRestSiblings: true }],
       'prefer-named-capture-group': 'off',
       // we manipulate trees of plain objects holding a `children` array, like
       // the taxonomy ones, that the rule mistakes for DOM elements

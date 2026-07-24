@@ -21,7 +21,7 @@
   "dependencies": {
     "mf-parser": "^3.9.2",
     "openchemlib-utils": "^8.15.0",
-    "react-tree-svg": "^1.4.0"
+    "react-tree-svg": "^1.5.1"
   },
   "devDependencies": {
     "jsdom": "^29.1.0",

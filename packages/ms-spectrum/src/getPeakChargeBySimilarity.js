@@ -1,6 +1,6 @@
 import { xNoiseStandardDeviation } from 'ml-spectra-processing';
 
-import { getPeaksWithCharge } from './getPeaksWithCharge.js';
+import { getChargeAtMass, getPeaksWithCharge } from './getPeaksWithCharge.js';
 
 /**
  * Evaluate the charge of the peak observed at a mass.
@@ -31,18 +31,16 @@ export function getPeakChargeBySimilarity(spectrum, targetMass, options = {}) {
     );
   }
 
-  const { minCharge = 1, maxCharge = 10 } = options;
-  const [peak] = getPeaksWithCharge(
-    [{ x: targetMass, y: 0 }],
-    spectrum.getPeaks({ threshold: 0 }),
-    {
-      ...options,
-      min: minCharge,
-      max: maxCharge,
-      minIntensity: getMinIntensity(spectrum, options),
-    },
-  );
-  return peak.charge;
+  const { minCharge = 1, maxCharge = 10, precision = 20 } = options;
+  const peaks = getPeaksWithCharge(spectrum.getPeaks({ threshold: 0 }), {
+    ...options,
+    min: minCharge,
+    max: maxCharge,
+    minIntensity: getMinIntensity(spectrum, options),
+  });
+  const masses = new Float64Array(peaks.length);
+  for (let i = 0; i < peaks.length; i++) masses[i] = peaks[i].x;
+  return getChargeAtMass(peaks, masses, targetMass, precision);
 }
 
 /**
