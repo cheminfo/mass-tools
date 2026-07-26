@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>ms-spectrum 3.11.0 | Documentation</title>
+  <title>ms-spectrum 3.11.1 | Documentation</title>
   <meta name='description' content='A mass spectrum'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>ms-spectrum</h3>
-          <div class='mb1'><code>3.11.0</code></div>
+          <div class='mb1'><code>3.11.1</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -60,6 +60,12 @@
                       </a></li>
                       
                       <li><a
+                        href='#spectrumgetpeakswithcharge'
+                        class='regular pre-open'>
+                        #getPeaksWithCharge
+                      </a></li>
+                      
+                      <li><a
                         href='#spectrumgetselectedpeakswithcharge'
                         class='regular pre-open'>
                         #getSelectedPeaksWithCharge
@@ -69,6 +75,18 @@
                         href='#spectrumgetchargeclusters'
                         class='regular pre-open'>
                         #getChargeClusters
+                      </a></li>
+                      
+                      <li><a
+                        href='#spectrumsetionizations'
+                        class='regular pre-open'>
+                        #setIonizations
+                      </a></li>
+                      
+                      <li><a
+                        href='#spectrumgetchargeladders'
+                        class='regular pre-open'>
+                        #getChargeLadders
                       </a></li>
                       
                       <li><a
@@ -126,6 +144,46 @@
                   href='#isonposition'
                   class="">
                   isOnPosition
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getchargeladders'
+                  class="">
+                  getChargeLadders
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#assignladdercharge'
+                  class="">
+                  assignLadderCharge
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#buildladders'
+                  class="">
+                  buildLadders
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#growladder'
+                  class="">
+                  growLadder
                   
                 </a>
                 
@@ -581,11 +639,11 @@ values would still describe the previous data.</p>
       </div>
     </div>
   
-    <div class='border-bottom' id='spectrumgetselectedpeakswithcharge'>
+    <div class='border-bottom' id='spectrumgetpeakswithcharge'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>getSelectedPeaksWithCharge(selectedPeaks, options)</span>
+            <span class='code strong strong truncate'>getPeaksWithCharge(options)</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -593,9 +651,13 @@ values would still describe the previous data.</p>
 
   
 
-  <p>This is a very intensive function so better to calculate it on a selection of peaks</p>
+  <p>All the peaks of the spectrum, each carrying the <code>charge</code> of the series it
+belongs to — an isotopologue cluster or, on an unresolved multiply charged
+species, a charge-state ladder — when one was found. The charges are
+evaluated once, over all the peaks, and cached; <code>getSelectedPeaksWithCharge</code>
+reads them out of this result rather than recomputing them.</p>
 
-    <div class='pre p1 fill-light mt0'>getSelectedPeaksWithCharge(selectedPeaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+    <div class='pre p1 fill-light mt0'>getPeaksWithCharge(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
   
   
 
@@ -609,14 +671,6 @@ values would still describe the previous data.</p>
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
     <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>selectedPeaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
-	    
-          </div>
-          
-        </div>
       
         <div class='space-bottom0'>
           <div>
@@ -643,7 +697,9 @@ values would still describe the previous data.</p>
   
     (default <code>1</code>)
   </td>
-  <td class='break-word'><span></span></td>
+  <td class='break-word'><span>lowest charge the isotopologue clusters
+consider
+</span></td>
 </tr>
 
 
@@ -651,29 +707,15 @@ values would still describe the previous data.</p>
                 <tr>
   <td class='break-word'><span class='code bold'>options.max</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
-    (default <code>10</code>)
+    (default <code>100</code>)
   </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>options.low</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-  
-    (default <code>-1</code>)
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>options.high</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-  
-    (default <code>1</code>)
-  </td>
-  <td class='break-word'><span></span></td>
+  <td class='break-word'><span>highest charge to consider; shared by the
+isotopologue clusters and the charge-state ladder (which spans 
+<code>1</code>
+ to 
+<code>max</code>
+)
+</span></td>
 </tr>
 
 
@@ -681,9 +723,123 @@ values would still describe the previous data.</p>
                 <tr>
   <td class='break-word'><span class='code bold'>options.precision</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
-    (default <code>30</code>)
+    (default <code>20</code>)
   </td>
-  <td class='break-word'><span></span></td>
+  <td class='break-word'><span>tolerance on the position of an
+isotopologue, in ppm
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.minLength</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>3</code>)
+  </td>
+  <td class='break-word'><span>shortest series that shows a charge
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.minSignalToNoise</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>10</code>)
+  </td>
+  <td class='break-word'><span>on a continuous spectrum a
+peak under 
+<code>median + minSignalToNoise * sd</code>
+ of the noise takes no part in a
+series; ignored for a centroided spectrum
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.ionizations</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)?</code>
+  </td>
+  <td class='break-word'><span>the charge carriers a
+charge-state ladder may show, see 
+<code>getChargeLadders</code>
+. Defaults to the
+spectrum's 
+<code>ionizations</code>
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.ladder</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  
+    (default <code>{}</code>)
+  </td>
+  <td class='break-word'><span>options forwarded to 
+<code>getChargeLadders</code>
+,
+kept apart because a ladder is broader than an isotopologue and needs its own
+tolerances. 
+<code>max</code>
+ above is shared and caps both, so the ladder has no
+
+<code>maxCharge</code>
+ of its own
+</span></td>
+</tr>
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.ladder.tolerance</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>500</code>)
+  </td>
+  <td class='break-word'><span>tolerance on the position of
+the next charge state, in ppm
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.ladder.minLength</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>5</code>)
+  </td>
+  <td class='break-word'><span>shortest ladder that shows a
+charge
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.ladder.minRelativeIntensity</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0.05</code>)
+  </td>
+  <td class='break-word'><span>peaks under this
+fraction of the most intense one take no part in the ladders
+</span></td>
+</tr>
+
+
+  
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.maxClusteredFraction</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0.2</code>)
+  </td>
+  <td class='break-word'><span>the charge-state ladders
+are ignored when the isotopologue clusters already explain more than this
+fraction of the significant peaks: a resolved spectrum (where the ladders
+would only be coincidences) is read from its isotopologues alone
+</span></td>
 </tr>
 
 
@@ -698,6 +854,106 @@ values would still describe the previous data.</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        copy of the peaks, with a 
+<code>charge</code>
+ when one was found
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='spectrumgetselectedpeakswithcharge'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getSelectedPeaksWithCharge(selectedPeaks, options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Give to each of <code>selectedPeaks</code> the charge of the peak at the same mass in
+<code>getPeaksWithCharge</code>. A peak matching none keeps no <code>charge</code>. Both arrays are
+sorted by mass, so one pointer walks the precomputed peaks a single time.
+This only reads the precomputed charges, so both entry points always agree.</p>
+
+    <div class='pre p1 fill-light mt0'>getSelectedPeaksWithCharge(selectedPeaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>selectedPeaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    peaks to evaluate
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    see 
+<code>getPeaksWithCharge</code>
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        copy of 
+<code>selectedPeaks</code>
+ sorted by mass, with a 
+<code>charge</code>
+ when
+one was found
+
+      
+    
   
 
   
@@ -795,6 +1051,141 @@ themselves, use <code>getSelectedPeaksWithCharge</code>.</p>
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{charge: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>}></code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='spectrumsetionizations'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>setIonizations(ionizations)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The charge carriers a multiply charged species may show, tried by
+<code>getChargeLadders</code>. Changing them clears only the caches that depend on
+them, so the peak picking and the noise estimate are kept.</p>
+
+    <div class='pre p1 fill-light mt0'>setIonizations(ionizations: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)): this</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ionizations</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</code>
+	    a comma separated list (
+<code>'H+,Na+,K+'</code>
+)
+or an array of preprocessed ionizations
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>this</code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='spectrumgetchargeladders'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getChargeLadders()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The charge-state ladders of a multiply charged species (a protein
+electrospray, ...). Contrary to <code>getChargeClusters</code>, which reads the charge
+on the isotopologues of a single envelope, this reconstructs the neutral
+mass from a series of peaks of the same molecule ionized a growing number of
+times by the spectrum's <code>ionizations</code>. See <code>getChargeLadders</code>.</p>
+
+    <div class='pre p1 fill-light mt0'>getChargeLadders(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{mass: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, ionization: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>}></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{mass: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, ionization: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>}></code>:
         
       
     
@@ -1416,6 +1807,541 @@ peaks be read with either charge, so it is capped well under.</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='getchargeladders'>
+      getChargeLadders
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Group the peaks of a multiply charged species into charge-state ladders.</p>
+<p>An electrospray of a protein does not show its isotopologues but a ladder of
+charge states: the same molecule of neutral mass <code>M</code> ionized a growing number
+of times by a charge carrier (a proton, a sodium, ...). A peak of charge <code>z</code>
+sits at <code>m/z = M / z + delta</code>, where <code>delta</code> is the m/z shift of one charge
+carrier, so a whole series shares one <code>M</code> while each of its peaks has its own
+charge. The charge of a single peak can therefore not be read on its own:
+what shows it is the ladder it belongs to.</p>
+<p>A ladder is grown from its most intense peak by predicting, one charge state
+at a time, where the next one must lie, and it is kept only when it spans at
+least <code>minLength</code> consecutive charge states. Ladders are assigned from the one
+holding the most intensity to the one holding the least, and a peak only takes
+the charge of the first ladder that claims it, so a harmonic (every other
+state of a real ladder) can not steal the peaks of the series it mimics.</p>
+
+    <div class='pre p1 fill-light mt0'>getChargeLadders(peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{mass: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, ionization: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>}></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>peaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}>)</code>
+	    the peaks of the spectrum
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.ionizations</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+  
+    (default <code>&#39;H+&#39;</code>)
+  </td>
+  <td class='break-word'><span>the charge carriers to try,
+as a comma separated list (
+<code>'H+,Na+,K+'</code>
+) or an array of preprocessed
+ionizations. Each envelope is assigned the carrier that explains it best.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.maxCharge</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>100</code>)
+  </td>
+  <td class='break-word'><span>highest charge state to consider;
+the ladder is grown over the states 
+<code>1</code>
+ to 
+<code>maxCharge</code>
+ (its magnitude is used,
+so a negative-mode range such as 
+<code>-100</code>
+ behaves like 
+<code>100</code>
+)
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.tolerance</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>500</code>)
+  </td>
+  <td class='break-word'><span>tolerance on the position of the
+next charge state, in ppm. Larger than for isotopologues because the charge
+states of a protein are broad and rarely mass resolved.
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.minLength</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>5</code>)
+  </td>
+  <td class='break-word'><span>shortest ladder that shows a charge
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.minRelativeIntensity</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0.05</code>)
+  </td>
+  <td class='break-word'><span>peaks under this
+fraction of the most intense one are satellites, adducts or noise and take no
+part in the ladders
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{mass: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, ionization: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>}></code>:
+        the
+ladders, from the one holding the most intensity to the one holding the
+least. 
+<code>mass</code>
+ is the neutral mass they reconstruct, 
+<code>ionization</code>
+ the carrier
+that explains them and each peak carries its 
+<code>charge</code>
+.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='assignladdercharge'>
+      assignLadderCharge
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Give to each of <code>selectedPeaks</code> the charge of the ladder peak at its mass.</p>
+<p>A peak that matches no ladder peak gets no <code>charge</code>. Used by
+<code>getPeaksWithCharge</code> to complete the charge the isotopologue clusters can not
+give to a multiply charged species.</p>
+
+    <div class='pre p1 fill-light mt0'>assignLadderCharge(selectedPeaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, ladders: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>}>, tolerance: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>selectedPeaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    peaks to evaluate
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ladders</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>}>)</code>
+	    as returned by 
+<code>getChargeLadders</code>
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>tolerance</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            = <code>20</code>)</code>
+	    tolerance, in ppm, to match a selected peak
+to a ladder peak
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        copy of 
+<code>selectedPeaks</code>
+, carrying a 
+<code>charge</code>
+ when matched
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='buildladders'>
+      buildLadders
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The ladders the exported functions need, each with its reconstructed neutral
+mass, its carrier and its peaks (carrying their charge), sorted from the one
+holding the most intensity to the one holding the least.</p>
+
+    <div class='pre p1 fill-light mt0'>buildLadders(peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{mass: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, ionization: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, intensity: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>}></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>peaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{mass: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, ionization: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, intensity: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>}></code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='growladder'>
+      growLadder
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Grow a ladder around an anchor peak assumed to carry <code>charge</code>.</p>
+<p>The next charge state is predicted from the last matched peak rather than from
+the anchor, so the error of a broad, unresolved peak never accumulates over
+the whole ladder. Growth stops at the first state that is missing or already
+claimed by a more intense ladder.</p>
+
+    <div class='pre p1 fill-light mt0'>growLadder(significant: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, claim: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>}>, masses: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Float64Array">Float64Array</a>, anchor: {x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}, charge: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, bounds: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{peak: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>, charge: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>significant</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, claim: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>}>)</code>
+	    the significant peaks, sorted by mass
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>masses</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Float64Array">Float64Array</a>)</code>
+	    their masses, for the closest-peak search
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>anchor</span> <code class='quiet'>({x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>})</code>
+	    the peak to grow from
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>charge</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    hypothesised charge of the anchor
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>bounds</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>bounds.from</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  </td>
+  <td class='break-word'><span>lowest charge state
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>bounds.to</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  </td>
+  <td class='break-word'><span>highest charge state
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>bounds.relativeTolerance</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  </td>
+  <td class='break-word'><span>tolerance as a plain factor (ppm * 1e-6)
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>bounds.delta</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  </td>
+  <td class='break-word'><span>m/z shift of one charge carrier
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;{peak: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>, charge: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}></code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='getfragmentpeaks'>
       getFragmentPeaks
     </h3>
@@ -1970,14 +2896,19 @@ a gaussian noise still leaves some of its maxima over it.</p>
   </div>
   
 
-  <p>Evaluate the charge of a selection of peaks.</p>
-<p>The charge comes from the isotopologue clusters of <code>allPeaks</code>: a peak takes
-the charge of the series it belongs to. Evaluating a peak on its own can not
-work, because an isotopologue in the middle of an envelope looks the same
-whatever the charge and the last one of an envelope has nothing after it.</p>
-<p>A peak that belongs to no series gets no <code>charge</code> at all.</p>
+  <p>Evaluate the charge of every peak.</p>
+<p>The charge comes from the isotopologue clusters: a peak takes the charge of
+the series it belongs to. Evaluating a peak on its own can not work, because
+an isotopologue in the middle of an envelope looks the same whatever the
+charge and the last one of an envelope has nothing after it.</p>
+<p>A multiply charged species (a protein electrospray, ...) shows no resolved
+isotopologues but a ladder of charge states. When such ladders are present
+(an unresolved spectrum, see <code>maxClusteredFraction</code>) they take precedence: an
+unresolved envelope peak often forms a spurious charge-1 cluster from its
+neighbours, and the ladder gives the real, much higher charge. A peak that
+belongs to neither gets no <code>charge</code> at all.</p>
 
-    <div class='pre p1 fill-light mt0'>getPeaksWithCharge(selectedPeaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, allPeaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+    <div class='pre p1 fill-light mt0'>getPeaksWithCharge(peaks: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
   
   
 
@@ -1994,16 +2925,7 @@ whatever the charge and the last one of an envelope has nothing after it.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>selectedPeaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
-	    peaks to evaluate
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>allPeaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+            <span class='code bold'>peaks</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
 	    all the peaks of the spectrum, sorted by mass
 
           </div>
@@ -2035,7 +2957,8 @@ whatever the charge and the last one of an envelope has nothing after it.</p>
   
     (default <code>1</code>)
   </td>
-  <td class='break-word'><span>lowest charge to consider
+  <td class='break-word'><span>lowest charge the isotopologue clusters
+consider
 </span></td>
 </tr>
 
@@ -2044,9 +2967,14 @@ whatever the charge and the last one of an envelope has nothing after it.</p>
                 <tr>
   <td class='break-word'><span class='code bold'>options.max</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
   
-    (default <code>10</code>)
+    (default <code>100</code>)
   </td>
-  <td class='break-word'><span>highest charge to consider
+  <td class='break-word'><span>highest charge to consider; shared by the
+isotopologue clusters and the charge-state ladder (which spans 
+<code>1</code>
+ to 
+<code>max</code>
+)
 </span></td>
 </tr>
 
@@ -2058,7 +2986,7 @@ whatever the charge and the last one of an envelope has nothing after it.</p>
     (default <code>20</code>)
   </td>
   <td class='break-word'><span>tolerance on the position of an
-isotopologue, in ppm
+isotopologue, in ppm (isotopologue clusters)
 </span></td>
 </tr>
 
@@ -2069,7 +2997,12 @@ isotopologue, in ppm
   
     (default <code>3</code>)
   </td>
-  <td class='break-word'><span>shortest series that shows a charge
+  <td class='break-word'><span>shortest isotopologue series that
+shows a charge. This is the cluster length, not the ladder's: a ladder has its
+own 
+<code>minLength</code>
+ (default 5) inside 
+<code>options.ladder</code>
 </span></td>
 </tr>
 
@@ -2084,6 +3017,100 @@ isotopologue, in ppm
 no part in the series
 </span></td>
 </tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.ionizations</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+  
+    (default <code>&#39;H+&#39;</code>)
+  </td>
+  <td class='break-word'><span>the charge carriers a
+charge-state ladder may show, see 
+<code>getChargeLadders</code>
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.maxClusteredFraction</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0.2</code>)
+  </td>
+  <td class='break-word'><span>the charge-state ladders
+are ignored when the isotopologue clusters already explain more than this
+fraction of the significant peaks: a resolved spectrum (where the ladders
+would only be coincidences) is read from its isotopologues alone
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.ladder</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  
+    (default <code>{}</code>)
+  </td>
+  <td class='break-word'><span>options forwarded to 
+<code>getChargeLadders</code>
+,
+kept apart because a ladder is broader than an isotopologue and needs its own
+tolerances. The 
+<code>min</code>
+/
+<code>precision</code>
+/
+<code>minLength</code>
+ above are the isotopologue
+cluster parameters and do not reach the ladder; 
+<code>max</code>
+ is shared and caps both,
+so the ladder has no 
+<code>maxCharge</code>
+ of its own
+</span></td>
+</tr>
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.ladder.tolerance</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>500</code>)
+  </td>
+  <td class='break-word'><span>tolerance on the position of
+the next charge state, in ppm. Larger than for isotopologues because the charge
+states of a protein are broad and rarely mass resolved
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.ladder.minLength</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>5</code>)
+  </td>
+  <td class='break-word'><span>shortest ladder that shows a
+charge
+</span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.ladder.minRelativeIntensity</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0.05</code>)
+  </td>
+  <td class='break-word'><span>peaks under this
+fraction of the most intense one are satellites, adducts or noise and take no
+part in the ladders
+</span></td>
+</tr>
+
+
+  
 
 
               
@@ -2102,7 +3129,7 @@ no part in the series
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
         copy of 
-<code>selectedPeaks</code>
+<code>peaks</code>
 , with a 
 <code>charge</code>
  when one was found
