@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.12.3...mass-fragmentation@1.13.0) (2026-07-26)
+
+
+### Features
+
+* **ms-spectrum:** reconstruct charge of multiply charged species via charge-state ladders ([#326](https://github.com/cheminfo/mass-tools/issues/326)) ([7086c56](https://github.com/cheminfo/mass-tools/commit/7086c5653e39dab698b461eb5c2ddadd258a80ea))
+
+
+
+
+
 ## [1.12.3](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.12.2...mass-fragmentation@1.12.3) (2026-07-23)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.11.7...octochemdb@2.12.0) (2026-07-26)
+
+
+### Features
+
+* **ms-spectrum:** reconstruct charge of multiply charged species via charge-state ladders ([#326](https://github.com/cheminfo/mass-tools/issues/326)) ([7086c56](https://github.com/cheminfo/mass-tools/commit/7086c5653e39dab698b461eb5c2ddadd258a80ea))
+
+
+
+
+
 ## [2.11.7](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.11.6...octochemdb@2.11.7) (2026-07-23)
 
 **Note:** Version bump only for package octochemdb
