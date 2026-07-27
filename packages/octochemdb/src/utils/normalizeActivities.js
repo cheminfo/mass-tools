@@ -13,8 +13,7 @@ export function normalizeActivities(activeOrNatural) {
           $ref: activity.$ref,
           $id: activity.$id,
           data: {
-            assay: activityEntry.assay,
-
+            ...activityEntry,
             ocl: activity.data.ocl,
           },
           url: activity.url,
