@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.12.0...octochemdb@2.13.0) (2026-07-27)
+
+
+### Features
+
+* **octochemdb:** keep externalRef of activities ([#328](https://github.com/cheminfo/mass-tools/issues/328)) ([cf70211](https://github.com/cheminfo/mass-tools/commit/cf702111f6f66c02e3fa581af42d0522ef6a54b8))
+
+
+
+
+
 # [2.12.0](https://github.com/cheminfo/mass-tools/compare/octochemdb@2.11.7...octochemdb@2.12.0) (2026-07-26)
 
 
