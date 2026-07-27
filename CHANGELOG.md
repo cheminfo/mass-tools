@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.60.0](https://github.com/cheminfo/mass-tools/compare/v7.59.0...v7.60.0) (2026-07-27)
+
+
+### Features
+
+* **octochemdb:** keep externalRef of activities ([#328](https://github.com/cheminfo/mass-tools/issues/328)) ([cf70211](https://github.com/cheminfo/mass-tools/commit/cf702111f6f66c02e3fa581af42d0522ef6a54b8))
+
 ## [7.59.0](https://github.com/cheminfo/mass-tools/compare/v7.58.1...v7.59.0) (2026-07-24)
 
 
