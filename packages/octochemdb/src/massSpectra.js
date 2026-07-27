@@ -69,18 +69,23 @@ export async function massSpectra(options = {}) {
   return results;
 }
 
-function uniqueMol(results) {
+export function uniqueMol(results) {
   const unique = {};
   for (const result of results) {
-    if (!result.data?.ocl?.idCode) continue;
-    if (!unique[result.data.ocl.idCode]) {
-      unique[result.data.ocl.idCode] = result;
+    const ocl = result.data?.ocl;
+    // massBank / GNPS entries carry a real structure `idCode`; in-silico
+    // fragment entries only carry the no-stereo-tautomer id, so fall back to it
+    // (otherwise every in-silico result is dropped here).
+    const key = ocl?.idCode || ocl?.noStereoTautomerID;
+    if (!key) continue;
+    if (!unique[key]) {
+      unique[key] = result;
     }
   }
   return Object.values(unique);
 }
 
-function appendAndFilterSimilarity(results, options = {}) {
+export function appendAndFilterSimilarity(results, options = {}) {
   const { similarity } = options;
   if (!similarity || !similarity.experimental) return results;
 
@@ -101,13 +106,21 @@ function appendAndFilterSimilarity(results, options = {}) {
     delta: (mass) => mass * precision,
     minNbCommonPeaks,
   });
+  const scored = [];
   for (const result of results) {
-    result.similarity = comparator.getSimilarity(
-      experimental,
-      structuredClone(result.data.spectrum.data),
-    );
+    const data = result.data?.spectrum?.data;
+    if (!data?.x?.length) continue;
+    // In-silico fragment spectra list predicted m/z with no intensity (`y`):
+    // score them by mass overlap with `getSimilarityToMasses`, which borrows the
+    // experimental peak's intensity for each matched mass. `getSimilarity` would
+    // call `y.slice()` on the missing intensity and throw. Real reference
+    // spectra (massBank / GNPS) carry intensities, so use the full weighted
+    // cosine. A fresh `{ x, y }` gives the comparator a distinct cache key.
+    result.similarity = data.y
+      ? comparator.getSimilarity(experimental, { x: data.x, y: data.y })
+      : comparator.getSimilarityToMasses(experimental, data.x);
+    if (result.similarity.cosine >= minSimilarity) scored.push(result);
   }
-  results = results.filter((a) => a.similarity.cosine >= minSimilarity);
-  results.sort((a, b) => b.similarity.cosine - a.similarity.cosine);
-  return results;
+  scored.sort((a, b) => b.similarity.cosine - a.similarity.cosine);
+  return scored;
 }
