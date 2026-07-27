@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.60.1](https://github.com/cheminfo/mass-tools/compare/v7.60.0...v7.60.1) (2026-07-27)
+
+
+### Bug Fixes
+
+* **octochemdb:** allow to search in silico fragmentation database ([#330](https://github.com/cheminfo/mass-tools/issues/330)) ([f6a088f](https://github.com/cheminfo/mass-tools/commit/f6a088fcc86c723469fc40d9ae9adb3bb74933eb))
+
 ## [7.60.0](https://github.com/cheminfo/mass-tools/compare/v7.59.0...v7.60.0) (2026-07-27)
 
 
