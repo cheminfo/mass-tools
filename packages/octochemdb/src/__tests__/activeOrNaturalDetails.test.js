@@ -48,17 +48,21 @@ test('activeOrNaturalDetails', async () => {
 
   const activities = entry.data.activities;
 
-  expect(activities[0]).toMatchInlineSnapshot(String.raw`
+  expect(activities[0]).toMatchInlineSnapshot(`
     {
       "$id": "NPC294249",
       "$ref": "npasses",
       "data": {
         "assay": "Potency = 12589.3 nM",
+        "assayOrganism": "Bacillus anthracis str. A2012",
+        "externalRef": "PMID : 535786",
         "ocl": {
-          "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\Bm?vw?_x@m?p",
+          "coordinates": "!Bm?vH?_y?mpJH?[_}m?vw@k\\Bm?vw?_x@m?p",
           "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
           "noStereoTautomerID": "dg~D@MBdin]V^G[jjjjj@MQSFXKEX[GXgExRLjmcxX~F@",
         },
+        "targetName": "Anthrax lethal factor",
+        "targetOrganism": "Bacillus anthracis",
         "targetTaxonomies": [
           {
             "class": "Bacilli",
@@ -71,6 +75,7 @@ test('activeOrNaturalDetails', async () => {
             "superkingdom": "Bacteria",
           },
         ],
+        "targetType": "Individual Protein",
       },
       "url": "https://bidd.group/NPASS/compound.php?compoundID=NPC294249",
     }

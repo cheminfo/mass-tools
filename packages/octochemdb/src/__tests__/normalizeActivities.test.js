@@ -20,6 +20,7 @@ describe('normalizeActivities', () => {
         "$ref": "npasses",
         "data": {
           "assay": "Potency : 12589.3 nM",
+          "externalRef": "Dataset : PubChem BioAssay data set",
           "ocl": {
             "coordinates": "!BbOvw?_y?bOrw?Xa}bGvH@hc|bGvH?_x@bOp",
             "idCode": "dg~D@MBdin]V^G[hHBjbbX@",
