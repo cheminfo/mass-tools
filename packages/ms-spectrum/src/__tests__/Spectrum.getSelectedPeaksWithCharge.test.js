@@ -29,9 +29,9 @@ describe('test appendPeakCharge on Spectrum', () => {
     }
 
     // an electrospray of a protein: the charges are distributed around 3
-    expect(stats).toStrictEqual([0, 1, 127, 183, 111, 0, 0, 0, 0, 0]);
+    expect(stats).toStrictEqual([0, 1, 121, 181, 122, 0, 0, 0, 0, 0]);
     // the peaks belonging to no series of at least three isotopologues get
     // nothing rather than a charge nothing shows
-    expect(withoutCharge).toBe(20);
+    expect(withoutCharge).toBe(17);
   });
 });

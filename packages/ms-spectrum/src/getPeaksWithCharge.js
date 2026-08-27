@@ -6,50 +6,42 @@ import { assignLadderCharge, getChargeLadders } from './getChargeLadders.js';
 /**
  * Evaluate the charge of every peak.
  *
- * The charge comes from the isotopologue clusters: a peak takes the charge of
- * the series it belongs to. Evaluating a peak on its own can not work, because
- * an isotopologue in the middle of an envelope looks the same whatever the
- * charge and the last one of an envelope has nothing after it.
- *
- * A multiply charged species (a protein electrospray, ...) shows no resolved
- * isotopologues but a ladder of charge states. When such ladders are present
- * (an unresolved spectrum, see `maxClusteredFraction`) they take precedence: an
- * unresolved envelope peak often forms a spurious charge-1 cluster from its
- * neighbours, and the ladder gives the real, much higher charge. A peak that
- * belongs to neither gets no `charge` at all.
+ * A peak takes the charge of the isotopologue cluster it belongs to. On an
+ * unresolved spectrum (see `maxClusteredFraction`) the charge-state ladders
+ * take precedence, because an unresolved envelope forms spurious charge-1
+ * clusters. A peak that belongs to neither gets no `charge`.
  * @param {Array} peaks - all the peaks of the spectrum, sorted by mass
  * @param {object} [options={}]
  * @param {number} [options.min=1] - lowest charge the isotopologue clusters
  * consider
- * @param {number} [options.max=100] - highest charge to consider; shared by the
- * isotopologue clusters and the charge-state ladder (which spans `1` to `max`)
+ * @param {number} [options.max=100] - highest charge to consider, shared by the
+ * isotopologue clusters and the charge-state ladders
  * @param {number} [options.precision=20] - tolerance on the position of an
- * isotopologue, in ppm (isotopologue clusters)
+ * isotopologue, in ppm
  * @param {number} [options.minLength=3] - shortest isotopologue series that
- * shows a charge. This is the cluster length, not the ladder's: a ladder has its
- * own `minLength` (default 5) inside `options.ladder`
- * @param {number} [options.minIntensity=0] - peaks under it are noise and take
- * no part in the series
+ * shows a charge, the ladders have their own in `options.ladder`
+ * @param {number} [options.minIntensity=0] - peaks under it take no part in the
+ * series
+ * @param {number} [options.minRelativeIntensity=0.001] - same, as a fraction of
+ * the tallest peak. The higher of the two floors applies
+ * @param {number} [options.neutronMass] - the step from one isotopologue to the
+ * next of a singly charged species, see `getChargeClusters`
+ * @param {number} [options.minRatio] - shortest drop between two consecutive
+ * isotopologues of a series, see `getChargeClusters`
+ * @param {number} [options.daltonPerCarbon] - the chemistry the envelope width
+ * assumes, `Infinity` to switch that rule off, see `getChargeClusters`
  * @param {string|Array} [options.ionizations='H+'] - the charge carriers a
  * charge-state ladder may show, see `getChargeLadders`
  * @param {number} [options.maxClusteredFraction=0.2] - the charge-state ladders
  * are ignored when the isotopologue clusters already explain more than this
- * fraction of the significant peaks: a resolved spectrum (where the ladders
- * would only be coincidences) is read from its isotopologues alone
- * @param {object} [options.ladder={}] - options forwarded to `getChargeLadders`,
- * kept apart because a ladder is broader than an isotopologue and needs its own
- * tolerances. The `min`/`precision`/`minLength` above are the isotopologue
- * cluster parameters and do not reach the ladder; `max` is shared and caps both,
- * so the ladder has no `maxCharge` of its own
+ * fraction of the significant peaks
+ * @param {object} [options.ladder={}] - options forwarded to `getChargeLadders`
  * @param {number} [options.ladder.tolerance=500] - tolerance on the position of
- * the next charge state, in ppm. Larger than for isotopologues because the charge
- * states of a protein are broad and rarely mass resolved
+ * the next charge state, in ppm
  * @param {number} [options.ladder.minLength=5] - shortest ladder that shows a
  * charge
  * @param {number} [options.ladder.minRelativeIntensity=0.05] - peaks under this
- * fraction of the most intense one are satellites, adducts or noise and take no
- * part in the ladders
-
+ * fraction of the most intense one take no part in the ladders
  * @returns {Array} copy of `peaks`, with a `charge` when one was found
  */
 export function getPeaksWithCharge(peaks, options = {}) {
@@ -59,14 +51,24 @@ export function getPeaksWithCharge(peaks, options = {}) {
     max: maxCharge = 100,
     minLength = 3,
     minIntensity = 0,
+    minRelativeIntensity = 0.001,
     ionizations = 'H+',
     ladder = {},
     maxClusteredFraction = 0.2,
+    neutronMass,
+    minRatio,
+    daltonPerCarbon,
   } = options;
+
+  let tallest = 0;
+  for (const peak of peaks) {
+    if (peak.y > tallest) tallest = peak.y;
+  }
+  const floor = Math.max(minIntensity, minRelativeIntensity * tallest);
 
   const significant = [];
   for (const peak of peaks) {
-    if (peak.y >= minIntensity) significant.push(peak);
+    if (peak.y >= floor) significant.push(peak);
   }
 
   const clustered = getPeaksWithClusterCharge(significant, {
@@ -74,13 +76,14 @@ export function getPeaksWithCharge(peaks, options = {}) {
     maxCharge,
     precision,
     minLength,
+    neutronMass,
+    minRatio,
+    daltonPerCarbon,
   });
 
   const masses = new Float64Array(clustered.length);
   for (let i = 0; i < clustered.length; i++) masses[i] = clustered[i].x;
 
-  // calculate the percentage of peaks that were clustered with a charge:
-  // when it is too high, the spectrum is resolved and the ladders are only coincidences
   let clusteredWithCharge = 0;
   for (const peak of clustered) {
     if (peak.charge !== undefined) clusteredWithCharge++;
@@ -101,8 +104,6 @@ export function getPeaksWithCharge(peaks, options = {}) {
   const peaksWithCharge = [];
   for (let i = 0; i < peaks.length; i++) {
     const peak = peaks[i];
-    // when a ladder explains the peak it wins over the isotopologue clusters,
-    // which on an unresolved envelope only see a spurious low charge
     let charge =
       withLadderCharge === null ? undefined : withLadderCharge[i].charge;
     if (charge === undefined) {

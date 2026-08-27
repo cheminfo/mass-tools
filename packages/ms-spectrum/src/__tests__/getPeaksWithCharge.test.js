@@ -1,5 +1,6 @@
 import { expect, test } from 'vitest';
 
+import { NEUTRON_MASS } from '../getChargeClusters';
 import { getChargeAtMass, getPeaksWithCharge } from '../getPeaksWithCharge';
 
 /**
@@ -84,4 +85,32 @@ test('a mass matching no peak gets no charge', () => {
   const masses = Float64Array.from(withCharge, (peak) => peak.x);
 
   expect(getChargeAtMass(withCharge, masses, 1050, 20)).toBeUndefined();
+});
+
+test('a faint maximum takes no part in a series, however well it lines up', () => {
+  // three isotopologues of a real fragment, and beside them three maxima at a
+  // ten-thousandth of the base peak, a third of a dalton apart. The 1.1 kDa a
+  // threefold charge claims is an envelope of three, so only their height can
+  // refuse them
+  const peaks = [
+    { x: 375, y: 100 },
+    { x: 375 + NEUTRON_MASS, y: 10.4 },
+    { x: 375 + 2 * NEUTRON_MASS, y: 0.74 },
+    { x: 380, y: 0.01 },
+    { x: 380 + NEUTRON_MASS / 3, y: 0.012 },
+    { x: 380 + (2 * NEUTRON_MASS) / 3, y: 0.009 },
+  ];
+
+  const charges = getPeaksWithCharge(peaks, { max: 100 }).map(
+    (peak) => peak.charge,
+  );
+
+  expect(charges).toStrictEqual([1, 1, 1, undefined, undefined, undefined]);
+
+  const unfiltered = getPeaksWithCharge(peaks, {
+    max: 100,
+    minRelativeIntensity: 0,
+  }).map((peak) => peak.charge);
+
+  expect(unfiltered.slice(3)).toStrictEqual([3, 3, 3]);
 });

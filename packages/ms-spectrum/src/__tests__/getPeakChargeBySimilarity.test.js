@@ -63,16 +63,25 @@ function createProfileSpectrum(options = {}) {
 }
 
 /**
- * Isotopologues of `charge` around m/z 1000, with decreasing heights.
+ * Isotopologues of `charge` around m/z 1000, with the Poisson envelope of the
+ * mass that charge implies.
  * @param {number} charge
- * @returns {Array<[number, number]>}
+ * @returns {Array<[number, number]>} m/z and relative height of each
  */
 function isotopologues(charge) {
-  return [
-    [1000, 1],
-    [1000 + 1 / charge, 0.55],
-    [1000 + 2 / charge, 0.18],
-  ];
+  const mean = (charge * 1000 * 0.0107) / 27;
+  const heights = [];
+  let height = 1;
+  let tallest = 1;
+  for (let k = 0; height > 0.02 * tallest; k++) {
+    heights.push(height);
+    height *= mean / (k + 1);
+    if (height > tallest) tallest = height;
+  }
+  return heights.map((each, k) => [
+    1000 + k / charge,
+    Number((each / tallest).toFixed(4)),
+  ]);
 }
 
 test('continuous spectrum, resolved charge 3', () => {
@@ -145,20 +154,20 @@ test('continuous spectrum, an unresolved peak has no charge', () => {
 });
 
 test('continuous spectrum, coarse sampling that still resolves the isotopologues', () => {
-  // only ~4 points per isotopologue distance, but gsd separates the 3 peaks,
-  // so the charge must be found rather than lowered to a "safer" one
+  // only ~6 points per isotopologue distance, but gsd still separates all five
+  // of them, so the charge must be found rather than lowered to a "safer" one
   const spectrum = new Spectrum(
     createProfileSpectrum({
       peaks: isotopologues(3),
-      spacing: 0.08,
-      width: 0.15,
+      spacing: 0.06,
+      width: 0.12,
     }),
   );
 
   expect(spectrum.isContinuous()).toBe(true);
   expect(
     spectrum.getPeaks({ from: 999.5, to: 1002.5, threshold: 0 }),
-  ).toHaveLength(3);
+  ).toHaveLength(5);
 
   const charge = getPeakChargeBySimilarity(spectrum, 1000, {
     similarity: SIMILARITY,
