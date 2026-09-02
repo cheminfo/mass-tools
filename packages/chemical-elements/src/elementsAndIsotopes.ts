@@ -4367,7 +4367,7 @@ export const elementsAndIsotopes: ElementAndIsotopes[] = [
       { nominal: 294, mass: 294.21046 },
     ],
     symbol: 'Ts',
-    name: 'Teennessine',
+    name: 'Tennessine',
     mass: null,
   },
   {
