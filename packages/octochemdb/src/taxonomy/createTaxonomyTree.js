@@ -2,6 +2,12 @@ import { taxonomyRanks } from './taxonomyRanks';
 /**
  * @description Creates a tree structure from an array of taxonomies.
  *
+ * Names that differ only by case or by surrounding whitespace are the same
+ * taxon: sources disagree on the binomial (CMAUP writes `Stevia Mercedensis`
+ * where LOTUS, NPASS and COCONUT write `Stevia mercedensis`). They are merged
+ * into one node, displayed with the spelling closest to the convention — an
+ * initial capital and nothing capitalized after it.
+ *
  * @param {import('./Taxonomy.js').Taxonomy[]} taxonomies - The array of taxonomies to create a tree from.
  * @returns {Object[]} The tree structure.
  */
@@ -9,6 +15,7 @@ export function createTaxonomyTree(taxonomies, options = {}) {
   let { rankLimit = '' } = options;
   rankLimit = rankLimit.toLowerCase();
   const tree = [];
+  const indexes = new WeakMap();
 
   for (let taxonomy of taxonomies) {
     let reachedRankLimit = false;
@@ -21,9 +28,13 @@ export function createTaxonomyTree(taxonomies, options = {}) {
         break;
       }
       const name = taxonomy[rank] || '';
-      let existing = current.find(
-        (node) => node.name === name && node.rank === rank,
-      );
+      let index = indexes.get(current);
+      if (!index) {
+        index = new Map();
+        indexes.set(current, index);
+      }
+      const key = taxonKey(name);
+      let existing = index.get(key);
       if (!existing) {
         existing = {
           name,
@@ -35,8 +46,19 @@ export function createTaxonomyTree(taxonomies, options = {}) {
           existing.url = taxonomy.dbRef.url;
         }
         current.push(existing);
+        index.set(key, existing);
       } else {
         existing.count++;
+        if (spellingScore(name) < spellingScore(existing.name)) {
+          existing.name = name;
+        }
+        if (
+          existing.url === undefined &&
+          rank === 'species' &&
+          taxonomy?.dbRef?.url
+        ) {
+          existing.url = taxonomy.dbRef.url;
+        }
       }
       current = existing.children;
     }
@@ -46,6 +68,20 @@ export function createTaxonomyTree(taxonomies, options = {}) {
     nbTaxonomies(branch);
   }
   return tree;
+}
+
+function taxonKey(name) {
+  return name.trim().replaceAll(/\s+/g, ' ').toLowerCase();
+}
+
+/** How far a spelling is from the convention; the lowest score wins. */
+function spellingScore(name) {
+  let score = name && name[0] === name[0].toUpperCase() ? 0 : 1000;
+  for (let index = 1; index < name.length; index++) {
+    const character = name[index];
+    if (character !== character.toLowerCase()) score++;
+  }
+  return score;
 }
 
 function cleanEmptyBranches(branch) {

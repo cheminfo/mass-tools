@@ -225,3 +225,89 @@ test('full data', () => {
 
   expect(tree).toMatchSnapshot();
 });
+
+test('merges names that differ only by case', () => {
+  // CMAUP capitalizes the epithet where every other source writes the binomial.
+  const taxonomies = [
+    {
+      superkingdom: 'Eukaryota',
+      kingdom: 'Viridiplantae',
+      family: 'Asteraceae',
+      genus: 'Stevia',
+      species: 'Stevia mercedensis',
+      dbRef: { $ref: 'lotuses', $id: 'LTS0000001', url: 'https://lotus/1' },
+    },
+    {
+      superkingdom: 'Eukaryota',
+      kingdom: 'Viridiplantae',
+      family: 'Asteraceae',
+      genus: 'stevia',
+      species: 'Stevia Mercedensis',
+      dbRef: { $ref: 'cmaups', $id: 'NPC207541' },
+    },
+  ];
+
+  const tree = createTaxonomyTree(taxonomies);
+
+  const genus = findNode(tree, 'genus', 'Stevia');
+
+  expect(genus.count).toBe(2);
+  expect(genus.nbTaxonomies).toBe(1);
+  expect(genus.children).toHaveLength(1);
+
+  const species = genus.children[0];
+
+  expect(species.name).toBe('Stevia mercedensis');
+  expect(species.count).toBe(2);
+  expect(species.url).toBe('https://lotus/1');
+});
+
+test('keeps the source link of the merged spelling', () => {
+  const taxonomies = [
+    { genus: 'Verbesina', species: 'Verbesina Rupestris' },
+    {
+      genus: 'Verbesina',
+      species: 'Verbesina rupestris',
+      dbRef: { $ref: 'npasses', $id: 'NPC157740', url: 'https://npass/1' },
+    },
+  ];
+
+  const tree = createTaxonomyTree(taxonomies);
+
+  const species = findNode(tree, 'species', 'Verbesina rupestris');
+
+  expect(species.count).toBe(2);
+  expect(species.url).toBe('https://npass/1');
+});
+
+test('keeps a capital that is part of the name', () => {
+  const taxonomies = [
+    { species: 'Influenza A Virus' },
+    { species: 'Influenza A virus' },
+    { species: 'Aspergillus sp. PSU-RSPG185' },
+  ];
+
+  const tree = createTaxonomyTree(taxonomies);
+
+  expect(collectNames(tree, 'species')).toStrictEqual([
+    'Influenza A virus',
+    'Aspergillus sp. PSU-RSPG185',
+  ]);
+});
+
+function findNode(nodes, rank, name) {
+  for (const node of nodes) {
+    if (node.rank === rank && node.name === name) return node;
+    const found = node.children && findNode(node.children, rank, name);
+    if (found) return found;
+  }
+  return undefined;
+}
+
+function collectNames(nodes, rank, names = []) {
+  for (const node of nodes) {
+    if (node.rank === rank) names.push(node.name);
+    if (node.children) collectNames(node.children, rank, names);
+  }
+  return names;
+}
