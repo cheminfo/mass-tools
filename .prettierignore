@@ -1,4 +1,4 @@
-packages/chemical-groups/src/groups.js
+packages/chemical-groups/src/groups.ts
 packages/chemical-elements/src/elements.json
 packages/mfs-deconvolution/src/utils/__tests__/data/combined.json
 coverage
