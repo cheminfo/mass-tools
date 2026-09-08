@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.60.2](https://github.com/cheminfo/mass-tools/compare/v7.60.1...v7.60.2) (2026-09-08)
+
+
+### Bug Fixes
+
+* **chemical-elements:** correct spelling of Tennessine ([6282ec0](https://github.com/cheminfo/mass-tools/commit/6282ec0811c4209c30d5d8166c35b986110b45cb))
+* wrong groups and migrate to TS ([#337](https://github.com/cheminfo/mass-tools/issues/337)) ([2d9193a](https://github.com/cheminfo/mass-tools/commit/2d9193ae9588c3891de96939bcac20508d019d57))
+
 ## [7.60.1](https://github.com/cheminfo/mass-tools/compare/v7.60.0...v7.60.1) (2026-07-27)
 
 
