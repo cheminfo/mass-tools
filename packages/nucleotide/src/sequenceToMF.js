@@ -148,7 +148,7 @@ for (const group of groups.filter(({ kind }) => kind === 'DNAp')) {
   }
 }
 
-for (const group of groups.filter(({ kind }) => kind === 'NucleotideP')) {
+for (const group of groups.filter(({ kind }) => kind === 'RNApMod')) {
   if (group.oneLetter) {
     desoxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
   }
@@ -185,7 +185,7 @@ for (const group of groups.filter(({ kind }) => kind === 'RNAp')) {
   }
 }
 
-for (const group of groups.filter(({ kind }) => kind === 'NucleotideP')) {
+for (const group of groups.filter(({ kind }) => kind === 'RNApMod')) {
   if (group.oneLetter) {
     oxyNucleotides.monophosphate[group.oneLetter] = group.symbol;
   }
