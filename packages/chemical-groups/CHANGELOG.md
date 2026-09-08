@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.4](https://github.com/cheminfo/mass-tools/compare/chemical-groups@2.2.3...chemical-groups@2.2.4) (2026-09-08)
+
+
+### Bug Fixes
+
+* wrong groups and migrate to TS ([#337](https://github.com/cheminfo/mass-tools/issues/337)) ([2d9193a](https://github.com/cheminfo/mass-tools/commit/2d9193ae9588c3891de96939bcac20508d019d57))
+
+
+
+
+
 ## [2.2.3](https://github.com/cheminfo/mass-tools/compare/chemical-groups@2.2.2...chemical-groups@2.2.3) (2025-03-10)
 
 

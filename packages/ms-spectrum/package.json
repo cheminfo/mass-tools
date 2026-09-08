@@ -1,6 +1,6 @@
 {
   "name": "ms-spectrum",
-  "version": "3.12.0",
+  "version": "3.12.1",
   "description": "A mass spectrum",
   "main": "lib/src/index.js",
   "files": [
@@ -19,12 +19,12 @@
   },
   "homepage": "https://github.com/cheminfo/mass-tools/tree/main/packages/emdb#readme",
   "dependencies": {
-    "chemical-elements": "^2.3.2",
+    "chemical-elements": "^2.3.3",
     "cheminfo-types": "^1.15.0",
     "is-any-array": "^3.0.0",
-    "mf-finder": "^3.4.24",
-    "mf-parser": "^3.9.2",
-    "mf-utilities": "^3.5.7",
+    "mf-finder": "^3.4.25",
+    "mf-parser": "^3.9.3",
+    "mf-utilities": "^3.5.8",
     "ml-gsd": "^14.2.1",
     "ml-regression-power": "^3.0.0",
     "ml-spectra-processing": "^14.28.1",

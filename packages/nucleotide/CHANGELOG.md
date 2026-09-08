@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.18](https://github.com/cheminfo/mass-tools/compare/nucleotide@3.2.17...nucleotide@3.2.18) (2026-09-08)
+
+
+### Bug Fixes
+
+* wrong groups and migrate to TS ([#337](https://github.com/cheminfo/mass-tools/issues/337)) ([2d9193a](https://github.com/cheminfo/mass-tools/commit/2d9193ae9588c3891de96939bcac20508d019d57))
+
+
+
+
+
 ## [3.2.17](https://github.com/cheminfo/mass-tools/compare/nucleotide@3.2.16...nucleotide@3.2.17) (2026-07-20)
 
 **Note:** Version bump only for package nucleotide

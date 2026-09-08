@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.37](https://github.com/cheminfo/mass-tools/compare/mf-global@3.1.36...mf-global@3.1.37) (2026-09-08)
+
+
+### Bug Fixes
+
+* wrong groups and migrate to TS ([#337](https://github.com/cheminfo/mass-tools/issues/337)) ([2d9193a](https://github.com/cheminfo/mass-tools/commit/2d9193ae9588c3891de96939bcac20508d019d57))
+
+
+
+
+
 ## [3.1.36](https://github.com/cheminfo/mass-tools/compare/mf-global@3.1.35...mf-global@3.1.36) (2026-07-26)
 
 **Note:** Version bump only for package mf-global

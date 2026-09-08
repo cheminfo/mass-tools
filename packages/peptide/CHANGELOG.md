@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.3](https://github.com/cheminfo/mass-tools/compare/peptide@2.4.2...peptide@2.4.3) (2026-09-08)
+
+**Note:** Version bump only for package peptide
+
+
+
+
+
 ## [2.4.2](https://github.com/cheminfo/mass-tools/compare/peptide@2.4.1...peptide@2.4.2) (2026-07-20)
 
 **Note:** Version bump only for package peptide

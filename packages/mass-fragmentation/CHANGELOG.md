@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.1](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.13.0...mass-fragmentation@1.13.1) (2026-09-08)
+
+**Note:** Version bump only for package mass-fragmentation
+
+
+
+
+
 # [1.13.0](https://github.com/cheminfo/mass-tools/compare/mass-fragmentation@1.12.3...mass-fragmentation@1.13.0) (2026-07-26)
 
 
