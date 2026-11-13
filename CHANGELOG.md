@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.60.3](https://github.com/cheminfo/mass-tools/compare/v7.60.2...v7.60.3) (2026-11-13)
+
+
+### Bug Fixes
+
+* **mf-from-atomic-ratio:** experimental and theoretical were inverted ([fea9bc6](https://github.com/cheminfo/mass-tools/commit/fea9bc6476525355186d57d5ee9e7ea0b3e1bfd1))
+
 ## [7.60.2](https://github.com/cheminfo/mass-tools/compare/v7.60.1...v7.60.2) (2026-09-08)
 
 
