@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>mf-from-atomic-ratio 1.2.24 | Documentation</title>
+  <title>mf-from-atomic-ratio 1.2.25 | Documentation</title>
   <meta name='description' content='Find a molecular formula from atomic ratio'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>mf-from-atomic-ratio</h3>
-          <div class='mb1'><code>1.2.24</code></div>
+          <div class='mb1'><code>1.2.25</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -115,37 +115,46 @@
       
         <div class='space-bottom0'>
           <span class='code bold'>em</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
-          
+          : monoisotopic mass of the formula
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>mw</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
-          
+          : molecular weight of the formula
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>mf</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-          
+          : the formula
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>mfAtomicComposition</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#mfatomiccomposition">MFAtomicComposition</a>>)</code>
-          
+          : every element of the formula and its share of all its atoms
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>atomicRatios</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#atomicratio">AtomicRatio</a>>)</code>
-          
+          : every element of 
+<code>ratios</code>
+, the given ratio against the one of the formula
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>totalError</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
-          
+          : sum of the absolute errors of 
+<code>atomicRatios</code>
+
           
         </div>
       
@@ -216,25 +225,15 @@
       
         <div class='space-bottom0'>
           <span class='code bold'>count</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
-          
+          : number of atoms of the element in the formula
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>theoretical</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
-          
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <span class='code bold'>experimental</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
-          
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <span class='code bold'>error</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
-          
+          : share of the atoms of the formula that are this element
+
           
         </div>
       
@@ -305,13 +304,35 @@
       
         <div class='space-bottom0'>
           <span class='code bold'>count</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : number of atoms of the element in the formula
+
           
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>experimental</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : share of the element in 
+<code>ratios</code>
+, over the elements of 
+<code>ratios</code>
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>theoretical</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : share of the element in the formula, over the elements of 
+<code>ratios</code>
+
           
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>error</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : <code>theoretical</code>
+ minus 
+<code>experimental</code>
+
           
         </div>
       
@@ -353,7 +374,7 @@
 
   <p>Returns possible combinations</p>
 
-    <div class='pre p1 fill-light mt0'>mfFromAtomicRatio(ratios: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>?, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#atomicratiomf">AtomicRatioMF</a>>></div>
+    <div class='pre p1 fill-light mt0'>mfFromAtomicRatio(ratios: Record&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#atomicratiomf">AtomicRatioMF</a>>></div>
   
   
 
@@ -370,8 +391,9 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>ratios</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>?)</code>
-	    
+            <span class='code bold'>ratios</span> <code class='quiet'>(Record&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    atomic ratio of each element, at any scale
+
           </div>
           
         </div>
