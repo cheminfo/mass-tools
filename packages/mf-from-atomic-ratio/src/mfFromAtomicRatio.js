@@ -3,33 +3,33 @@ import { MF } from 'mf-parser';
 
 /**
  * @typedef {object} AtomicRatioMF
- * @property {number} em
- * @property {number} mw
- * @property {string} mf
- * @property {Array<MFAtomicComposition>} mfAtomicComposition
- * @property {Array<AtomicRatio>} atomicRatios
- * @property {number} totalError
+ * @property {number} em - monoisotopic mass of the formula
+ * @property {number} mw - molecular weight of the formula
+ * @property {string} mf - the formula
+ * @property {Array<MFAtomicComposition>} mfAtomicComposition - every element of the formula and its share of all its atoms
+ * @property {Array<AtomicRatio>} atomicRatios - every element of `ratios`, the given ratio against the one of the formula
+ * @property {number} totalError - sum of the absolute errors of `atomicRatios`
  */
 
 /**
  * @typedef {object} MFAtomicComposition
  * @property {string} element
- * @property {number} count
- * @property {number} theoretical
- * @property {number} experimental
- * @property {number} error
+ * @property {number} count - number of atoms of the element in the formula
+ * @property {number} theoretical - share of the atoms of the formula that are this element
  */
 
 /**
  * @typedef {object} AtomicRatio
  * @property {string} element
- * @property {number} count
- * @property {number} theoretical
+ * @property {number} count - number of atoms of the element in the formula
+ * @property {number} experimental - share of the element in `ratios`, over the elements of `ratios`
+ * @property {number} theoretical - share of the element in the formula, over the elements of `ratios`
+ * @property {number} error - `theoretical` minus `experimental`
  */
 
 /**
  * Returns possible combinations
- * @param {object} [ratios]
+ * @param {Record<string, number>} ratios - atomic ratio of each element, at any scale
  * @param {object} [options={}]
  * @param {string} [options.ranges='C0-10 H0-10 O0-10 N0-10'] - range of mfs to search
  * @param {number} [options.maxElementError=0.05]
@@ -95,9 +95,9 @@ export async function mfFromAtomicRatio(ratios, options = {}) {
       mf.totalError += absError;
       atomicRatios.push({
         element,
-        experimental: mf.atomicRatio[element],
+        experimental: relativeComposition[element],
         count: mf.atoms[element] || 0,
-        theoretical: relativeComposition[element],
+        theoretical: mf.atomicRatio[element],
         error,
       });
     }
