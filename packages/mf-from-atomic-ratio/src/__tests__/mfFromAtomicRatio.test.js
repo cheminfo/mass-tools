@@ -80,3 +80,38 @@ test('More advanced case with filtering', async () => {
     totalError: 0,
   });
 });
+
+test('the given ratio is experimental, the one of the formula theoretical', async () => {
+  const mfs = await mfFromAtomicRatio(
+    { C: 2, O: 1.1 },
+    {
+      ranges: 'C0-2 O0-1',
+    },
+  );
+
+  expect(mfs).toHaveLength(1);
+  expect(mfs[0]).toMatchCloseTo({
+    mf: 'C2O',
+    mfAtomicComposition: [
+      { element: 'C', count: 2, theoretical: 2 / 3 },
+      { element: 'O', count: 1, theoretical: 1 / 3 },
+    ],
+    atomicRatios: [
+      {
+        element: 'C',
+        count: 2,
+        experimental: 2 / 3.1,
+        theoretical: 2 / 3,
+        error: 2 / 3 - 2 / 3.1,
+      },
+      {
+        element: 'O',
+        count: 1,
+        experimental: 1.1 / 3.1,
+        theoretical: 1 / 3,
+        error: 1 / 3 - 1.1 / 3.1,
+      },
+    ],
+    totalError: 2 * (2 / 3 - 2 / 3.1),
+  });
+});
