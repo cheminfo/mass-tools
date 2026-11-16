@@ -19,7 +19,7 @@ import { TargetMassCache } from './TargetMassCache';
  * @param {string|{mf:string,min:number,max:number}[]}        [options.ranges='C0-100 H0-100 O0-100 N0-100'] - range of mfs to search
  * @param {number}        [options.precision=100] - Allowed mass range based on precision
  * @param {import('mf-matcher').MSEMFilterOptions}        [options.filter={}]
- * @returns {object}
+ * @returns {import('./types').MFFinderResult} the formulas found, closest first, and how many were evaluated
  */
 
 export function findMFsSync(targetMass, options = {}) {

@@ -104,3 +104,21 @@ export interface MFResult {
     ppm: number;
   };
 }
+
+/**
+ * What a search returns: the formulas found, closest first, and how much of the
+ * space was evaluated to find them.
+ */
+export interface MFFinderResult {
+  mfs: MFResult[];
+  info: {
+    /**
+     * How many formulas were evaluated.
+     */
+    numberMFEvaluated: number;
+    /**
+     * How many formulas matched, before `limit` was applied.
+     */
+    numberResults: number;
+  };
+}
