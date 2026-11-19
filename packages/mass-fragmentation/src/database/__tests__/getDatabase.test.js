@@ -1,3 +1,6 @@
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
 import { describe, expect, it } from 'vitest';
 
 import { getDatabase } from '../getDatabase.js';
@@ -153,5 +156,14 @@ describe('getDatabase', () => {
     });
 
     expect(db).toHaveLength(46);
+  });
+
+  it('load custom glycan database', () => {
+    const glycansDwar = readFileSync(join(import.meta.dirname, 'glycans.dwar'));
+    const db = getDatabase({
+      dwar: glycansDwar,
+    });
+
+    expect(db).toHaveLength(17);
   });
 });
