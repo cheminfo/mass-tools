@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.60.4](https://github.com/cheminfo/mass-tools/compare/v7.60.3...v7.60.4) (2026-11-23)
+
+
+### Bug Fixes
+
+* format correctly a single negative charge ([#352](https://github.com/cheminfo/mass-tools/issues/352)) ([21d854f](https://github.com/cheminfo/mass-tools/commit/21d854f6845adcd06764f0562059162f653c7da2))
+* **mf-finder:** type the result of findMFs as { mfs, info } ([#350](https://github.com/cheminfo/mass-tools/issues/350)) ([7254745](https://github.com/cheminfo/mass-tools/commit/72547457d62de3f55131393db097187b784ef4d8))
+
 ## [7.60.3](https://github.com/cheminfo/mass-tools/compare/v7.60.2...v7.60.3) (2026-11-13)
 
 
