@@ -1,6 +1,6 @@
 {
   "name": "ms-spectrum",
-  "version": "3.12.1",
+  "version": "3.12.2",
   "description": "A mass spectrum",
   "main": "lib/src/index.js",
   "files": [
@@ -22,9 +22,9 @@
     "chemical-elements": "^2.3.3",
     "cheminfo-types": "^1.15.0",
     "is-any-array": "^3.0.0",
-    "mf-finder": "^3.4.25",
-    "mf-parser": "^3.9.3",
-    "mf-utilities": "^3.5.8",
+    "mf-finder": "^3.4.26",
+    "mf-parser": "^3.9.4",
+    "mf-utilities": "^3.5.9",
     "ml-gsd": "^14.2.1",
     "ml-regression-power": "^3.0.0",
     "ml-spectra-processing": "^14.28.1",

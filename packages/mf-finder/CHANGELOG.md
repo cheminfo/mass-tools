@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.26](https://github.com/cheminfo/mass-tools/compare/mf-finder@3.4.25...mf-finder@3.4.26) (2026-11-23)
+
+
+### Bug Fixes
+
+* **mf-finder:** type the result of findMFs as { mfs, info } ([#350](https://github.com/cheminfo/mass-tools/issues/350)) ([7254745](https://github.com/cheminfo/mass-tools/commit/72547457d62de3f55131393db097187b784ef4d8))
+
+
+
+
+
 ## [3.4.25](https://github.com/cheminfo/mass-tools/compare/mf-finder@3.4.24...mf-finder@3.4.25) (2026-09-08)
 
 **Note:** Version bump only for package mf-finder

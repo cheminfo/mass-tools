@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.4](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.9.3...mf-parser@3.9.4) (2026-11-23)
+
+
+### Bug Fixes
+
+* format correctly a single negative charge ([#352](https://github.com/cheminfo/mass-tools/issues/352)) ([21d854f](https://github.com/cheminfo/mass-tools/commit/21d854f6845adcd06764f0562059162f653c7da2))
+
+
+
+
+
 ## [3.9.3](https://github.com/cheminfo/mass-tools/compare/mf-parser@3.9.2...mf-parser@3.9.3) (2026-09-08)
 
 **Note:** Version bump only for package mf-parser
