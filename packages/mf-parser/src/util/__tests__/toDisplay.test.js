@@ -77,6 +77,30 @@ const tests = [
     ],
   },
   {
+    mf: 'BF4(-)',
+    parsed: [
+      { kind: 'atom', value: 'B' },
+      { kind: 'atom', value: 'F' },
+      { kind: 'multiplier', value: 4 },
+      { kind: 'charge', value: -1 },
+    ],
+    result: [
+      { kind: 'text', value: 'BF' },
+      { kind: 'superimpose', over: '-', under: '4' },
+    ],
+  },
+  {
+    mf: 'Cl(-)',
+    parsed: [
+      { kind: 'atom', value: 'Cl' },
+      { kind: 'charge', value: -1 },
+    ],
+    result: [
+      { kind: 'text', value: 'Cl' },
+      { kind: 'superscript', value: '-' },
+    ],
+  },
+  {
     mf: 'C(H-2)',
     parsed: [
       { kind: 'atom', value: 'C' },
